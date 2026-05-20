@@ -1,0 +1,61 @@
+<%- include('../partials/header') %>
+  <article class="article-page">
+    <div class="article-header">
+      <div class="article-breadcrumbs">
+        <a href="/">Home</a> / <a href="/sector/<%= article.sector %>"><%= article.sector.toUpperCase() %></a> / <span><%= article.ticker %></span>
+      </div>
+
+      <div class="article-ticker-bar">
+        <span class="ticker-badge large <%= article.sentiment || 'neutral' %>"><%= article.ticker %></span>
+        <% if (prices && prices[article.ticker]) { %>
+          <span class="price-info">
+            <span class="price-value">$<%= prices[article.ticker].price?.toFixed(2) %></span>
+            <span class="price-change <%= (prices[article.ticker].change || 0) >= 0 ? 'up' : 'down' %>">
+              <%= (prices[article.ticker].change || 0) >= 0 ? '+' : '' %><%= prices[article.ticker].change?.toFixed(2) %> (<%= (prices[article.ticker].changePercent || 0) >= 0 ? '+' : '' %><%= prices[article.ticker].changePercent?.toFixed(2) %>%)
+            </span>
+          </span>
+        <% } %>
+        <span class="sentiment-label large <%= article.sentiment || 'neutral' %>">
+          <%= article.sentiment === 'bullish' ? '▲ Bullish' : article.sentiment === 'bearish' ? '▼ Bearish' : '– Neutral' %>
+        </span>
+      </div>
+
+      <h1 class="article-title"><%= article.title %></h1>
+      <% if (article.subtitle) { %><p class="article-subtitle"><%= article.subtitle %></p><% } %>
+
+      <div class="article-meta">
+        <span class="article-date"><%= new Date(article.date).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' }) %></span>
+        <span class="article-source">The Signal</span>
+      </div>
+    </div>
+
+    <% if (article.image) { %>
+      <div class="article-image">
+        <img src="<%= typeof article.image === 'object' ? article.image.src : article.image %>" alt="<%= article.title %>" loading="eager">
+      </div>
+    <% } %>
+
+    <div class="article-body">
+      <%- article.bodyHtml %>
+    </div>
+
+    <div class="article-footer">
+      <div class="article-tags">
+        <span class="tag">$<%= article.ticker %></span>
+        <span class="tag"><%= article.sector %></span>
+        <% if (article.tags) { article.tags.forEach(function(t) { %><span class="tag"><%= t %></span><% }); } %>
+      </div>
+
+      <% if (article.links && article.links.length) { %>
+      <div class="article-links">
+        <h4>🔗 Learn More</h4>
+        <ul>
+          <% article.links.forEach(function(l) { %>
+            <li><a href="<%= l.url %>" target="_blank" rel="noopener"><%= l.label %></a></li>
+          <% }) %>
+        </ul>
+      </div>
+      <% } %>
+    </div>
+  </article>
+<%- include('../partials/footer') %>

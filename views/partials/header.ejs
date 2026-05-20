@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08080e">
+  <meta name="robots" content="max-image-preview:large">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  <% if (typeof article !== 'undefined' && article) { %>
+    <title><%= article.title %> — The Signal</title>
+    <meta name="description" content="<%= article.summary %>">
+    <meta property="og:title" content="<%= article.title %>">
+    <meta property="og:description" content="<%= article.summary %>">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://readthesignal.com/article/<%= article.slug %>">
+    <% if (article.image) { %><meta property="og:image" content="<%= typeof article.image === 'object' ? article.image.src : article.image %>"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="675"><% } %>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<%= article.title %>">
+    <meta name="twitter:description" content="<%= article.summary %>">
+    <% if (article.image) { %><meta name="twitter:image" content="<%= typeof article.image === 'object' ? article.image.src : article.image %>"><% } %>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "headline": "<%= article.title.replace(/"/g, '\\"').replace(/'/g, "\\'") %>",
+      "description": "<%= article.summary.replace(/"/g, '\\"').replace(/'/g, "\\'") %>",
+      "datePublished": "<%= article.date %>",
+      "dateModified": "<%= article.date %>",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://readthesignal.com/article/<%= article.slug %>"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "The Signal",
+        "url": "https://readthesignal.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "The Signal",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://readthesignal.com/img/logo.png",
+          "width": 600,
+          "height": 60
+        }
+      },
+      "image": <%= article.image ? (typeof article.image === 'object' ? JSON.stringify(article.image.src) : JSON.stringify(article.image)) : '"https://readthesignal.com/img/og-default.png"' %>
+    }
+    </script>
+  <% } else { %>
+    <title>The Signal — Market Intelligence for AI, Defense, Space & Cyber</title>
+    <meta name="description" content="The Signal delivers sharp analysis on AI, defense, space, and cybersecurity stocks. Earnings deep-dives, contract analysis, and market-moving insights.">
+    <meta property="og:title" content="The Signal — Market Intelligence">
+    <meta property="og:description" content="AI, defense, space & cyber stock analysis. Earnings, contracts, and what moves the needle.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://readthesignal.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Signal — Market Intelligence">
+    <meta name="twitter:description" content="AI, defense, space & cyber stock analysis.">
+  <% } %>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">
+        <span class="logo-icon">◈</span>
+        <span class="logo-text">THE <strong>SIGNAL</strong></span>
+      </a>
+      <div class="nav-links">
+        <a href="/" class="nav-link">Live</a>
+        <a href="/sector/ai" class="nav-link">AI</a>
+        <a href="/sector/cyber" class="nav-link">Cyber</a>
+        <a href="/sector/defense" class="nav-link">Defense</a>
+        <a href="/sector/space" class="nav-link">Space</a>
+        <a href="/sector/mega-cap" class="nav-link">Mega-Cap</a>
+      </div>
+    </div>
+  </nav>
+  <main class="main">

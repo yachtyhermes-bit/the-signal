@@ -1,0 +1,46 @@
+<%- include('../partials/header') %>
+  <section class="sector-page">
+    <div class="sector-header">
+      <h1 class="sector-title"><%= name %></h1>
+      <div class="sector-tickers">
+        <% tickers.forEach(function(t) { %>
+          <a href="/ticker/<%= t %>" class="mini-ticker"><%= t %></a>
+        <% }) %>
+      </div>
+    </div>
+
+    <div class="sector-prices">
+      <% tickers.forEach(function(t) { %>
+        <% if (prices[t]) { %>
+          <div class="mini-price-card">
+            <span class="mini-symbol"><%= t %></span>
+            <span class="mini-price">$<%= prices[t].price?.toFixed(2) %></span>
+            <span class="mini-change <%= (prices[t].change || 0) >= 0 ? 'up' : 'down' %>">
+              <%= (prices[t].changePercent || 0) >= 0 ? '+' : '' %><%= prices[t].changePercent?.toFixed(1) %>%
+            </span>
+          </div>
+        <% } %>
+      <% }) %>
+    </div>
+
+    <div class="article-grid">
+      <% articles.forEach(function(a) { %>
+        <a href="/article/<%= a.slug %>" class="article-card">
+          <div class="card-top">
+            <span class="ticker-badge <%= a.sentiment || 'neutral' %>"><%= a.ticker %></span>
+            <span class="sentiment-label <%= a.sentiment || 'neutral' %>">
+              <%= a.sentiment === 'bullish' ? '▲ Bullish' : a.sentiment === 'bearish' ? '▼ Bearish' : '– Neutral' %>
+            </span>
+          </div>
+          <h3 class="card-title"><%= a.title %></h3>
+          <p class="card-summary"><%= a.summary.length > 200 ? a.summary.slice(0, 200) + '…' : a.summary %></p>
+          <div class="card-meta">
+            <span class="card-date"><%= new Date(a.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) %></span>
+          </div>
+        </a>
+      <% }); if (articles.length === 0) { %>
+        <div class="empty-state">No articles yet in this sector.</div>
+      <% } %>
+    </div>
+  </section>
+<%- include('../partials/footer') %>

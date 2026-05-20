@@ -1,0 +1,47 @@
+<%- include('../partials/header') %>
+  <section class="ticker-page">
+    <div class="ticker-hero">
+      <div class="ticker-hero-left">
+        <h1 class="ticker-symbol">$<%= symbol %></h1>
+        <% if (price) { %>
+          <div class="ticker-price-block">
+            <span class="price-value large">$<%= price.price?.toFixed(2) %></span>
+            <span class="price-change large <%= (price.change || 0) >= 0 ? 'up' : 'down' %>">
+              <%= (price.change || 0) >= 0 ? '+' : '' %><%= price.change?.toFixed(2) %>
+              (<%= (price.changePercent || 0) >= 0 ? '+' : '' %><%= price.changePercent?.toFixed(2) %>%)
+            </span>
+            <% if (price.volume) { %><span class="price-volume">Vol: <%= (price.volume / 1000000).toFixed(1) %>M</span><% } %>
+          </div>
+        <% } else { %>
+          <div class="ticker-price-block"><span class="price-missing">Price data unavailable</span></div>
+        <% } %>
+        <% if (price && price.companyUrl) { %>
+          <a href="<%= price.companyUrl %>" target="_blank" rel="noopener" class="company-link">Visit Company Website →</a>
+        <% } %>
+      </div>
+      <div class="ticker-hero-right">
+        <span class="article-count"><%= articles.length %> articles</span>
+      </div>
+    </div>
+
+    <div class="article-grid">
+      <% articles.forEach(function(a) { %>
+        <a href="/article/<%= a.slug %>" class="article-card">
+          <div class="card-top">
+            <span class="ticker-badge <%= a.sentiment || 'neutral' %>"><%= a.ticker %></span>
+            <span class="sentiment-label <%= a.sentiment || 'neutral' %>">
+              <%= a.sentiment === 'bullish' ? '▲ Bullish' : a.sentiment === 'bearish' ? '▼ Bearish' : '– Neutral' %>
+            </span>
+          </div>
+          <h3 class="card-title"><%= a.title %></h3>
+          <p class="card-summary"><%= a.summary.length > 200 ? a.summary.slice(0, 200) + '…' : a.summary %></p>
+          <div class="card-meta">
+            <span class="card-date"><%= new Date(a.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) %></span>
+          </div>
+        </a>
+      <% }); if (articles.length === 0) { %>
+        <div class="empty-state">No articles yet for $<%= symbol %>. Check back soon.</div>
+      <% } %>
+    </div>
+  </section>
+<%- include('../partials/footer') %>

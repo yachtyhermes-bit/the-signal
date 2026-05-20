@@ -1,0 +1,40 @@
+<%- include('../partials/header') %>
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Read the <span class="accent-pink">signal</span> before the market moves</h1>
+      <p class="hero-sub">AI · Defense · Space · Cybersecurity — analysis that connects the dots</p>
+    </div>
+  </section>
+
+  <section class="feed">
+    <div class="feed-header">
+      <h2 class="feed-title"><span class="accent-dot">●</span> Live Feed</h2>
+      <div class="feed-sectors">
+        <a href="/sector/ai" class="sector-badge ai">AI</a>
+        <a href="/sector/cyber" class="sector-badge cyber">Cyber</a>
+        <a href="/sector/defense" class="sector-badge defense">Defense</a>
+        <a href="/sector/space" class="sector-badge space">Space</a>
+        <a href="/sector/mega-cap" class="sector-badge megacap">Mega-Cap</a>
+      </div>
+    </div>
+
+    <div class="article-grid">
+      <% articles.forEach(function(a) { %>
+        <a href="/article/<%= a.slug %>" class="article-card">
+          <div class="card-top">
+            <span class="ticker-badge <%= a.sentiment || 'neutral' %>"><%= a.ticker %></span>
+            <span class="sentiment-label <%= a.sentiment || 'neutral' %>">
+              <%= a.sentiment === 'bullish' ? '▲ Bullish' : a.sentiment === 'bearish' ? '▼ Bearish' : '– Neutral' %>
+            </span>
+          </div>
+          <h3 class="card-title"><%= a.title %></h3>
+          <p class="card-summary"><%= a.summary.length > 200 ? a.summary.slice(0, 200) + '…' : a.summary %></p>
+          <div class="card-meta">
+            <span class="card-date"><%= new Date(a.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) %></span>
+            <span class="card-read"><%= Math.ceil(a.summary.split(' ').length / 200) %> min read</span>
+          </div>
+        </a>
+      <% }) %>
+    </div>
+  </section>
+<%- include('../partials/footer') %>
