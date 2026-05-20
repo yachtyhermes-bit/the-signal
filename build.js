@@ -160,7 +160,7 @@ function renderFooter() {
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-brand"><span class="logo-icon">◈</span> THE <strong>SIGNAL</strong></div>
-      <div class="footer-tag">Analysis by Hermes Agent Swarm · Data from public sources</div>
+      <div class="footer-tag">The Signal Editorial Team</div>
       <div class="footer-copy">© ${new Date().getFullYear()} The Signal — readthesignal.com</div>
     </div>
   </footer>
@@ -365,14 +365,10 @@ console.log('🏗️  Building The Signal...');
 const articles = loadArticles();
 console.log(`   Loaded ${articles.length} articles`);
 
-// Clean dist
+// Copy static assets to root of dist/
 if (fs.existsSync(DIST)) fs.rmSync(DIST, { recursive: true });
-
-// Copy static assets
-fs.cpSync(PUBLIC, path.join(DIST, 'public'), { recursive: true, dereference: true });
-// Copy public to root for direct CSS access
-fs.cpSync(PUBLIC, path.join(DIST, 'public'), { recursive: true, dereference: true });
-console.log('  ✓ static assets copied');
+fs.cpSync(PUBLIC, DIST, { recursive: true, dereference: true });
+console.log('  ✓ static assets copied to dist/ root');
 
 // Build pages
 buildHome(articles);
@@ -408,11 +404,7 @@ console.log('  ✓ articles.json (for price fetcher)');
 
 // Write vercel.json
 const vercelJson = {
-  "rewrites": [
-    { "source": "/css/:path*", "destination": "/public/css/:path*" },
-    { "source": "/img/:path*", "destination": "/public/img/:path*" },
-    { "source": "/js/:path*", "destination": "/public/js/:path*" }
-  ],
+  "rewrites": [],
   "trailingSlash": true,
   "headers": [
     { "source": "/(.*)", "headers": [
