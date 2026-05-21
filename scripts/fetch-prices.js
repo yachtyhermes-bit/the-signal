@@ -16,7 +16,9 @@ const TICKERS = [
   // Space & Emerging Defense
   'RKLB', 'RDW', 'KTOS', 'AVAV', 'LUNR', 'ASTS', 'PL',
   // Mega-cap Tech
-  'AAPL', 'MSFT', 'GOOGL', 'AMZN', 'META', 'TSLA'
+  'AAPL', 'MSFT', 'GOOGL', 'AMZN', 'META', 'TSLA',
+  // The Signal coverage
+  'AXON', 'CRWV'
 ];
 
 // Company names & websites for reference
@@ -60,7 +62,9 @@ const COMPANY_INFO = {
   'AVAV': { name: 'AeroVironment Inc.', url: 'https://www.avinc.com/' },
   'LUNR': { name: 'Intuitive Machines', url: 'https://www.intuitivemachines.com/' },
   'ASTS': { name: 'AST SpaceMobile', url: 'https://www.ast-science.com/' },
-  'PL': { name: 'Planet Labs', url: 'https://www.planet.com/' }
+  'PL': { name: 'Planet Labs', url: 'https://www.planet.com/' },
+  'AXON': { name: 'Axon Enterprise', url: 'https://www.axon.com/' },
+  'CRWV': { name: 'CoreWeave Inc.', url: 'https://www.coreweave.com/' }
 };
 
 // Fetch from Yahoo Finance v8 API
@@ -77,9 +81,11 @@ function fetchQuote(ticker) {
           if (!result) return resolve(null);
           const meta = result.meta;
           const quotes = result.indicators?.quote?.[0];
-          const close = meta.chartPreviousClose || null;
-          const current = meta.regularMarketPrice || quotes?.close?.[quotes.close.length - 1] || null;
-          const open = quotes?.open?.[0] || null;
+          // Use actual quote closes for accuracy, not chartPreviousClose
+          const closes = quotes?.close?.filter(c => c != null) || [];
+          const current = closes.length ? closes[closes.length - 1] : (meta.regularMarketPrice || null);
+          const close = closes.length >= 2 ? closes[closes.length - 2] : (meta.chartPreviousClose || null);
+          const open = quotes?.open?.filter(o => o != null)?.[0] || null;
           const change = current && close ? current - close : null;
           const changePercent = current && close ? (change / close) * 100 : null;
           const volume = quotes?.volume?.[quotes.volume.length - 1] || null;

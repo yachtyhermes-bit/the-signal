@@ -58,7 +58,6 @@ const COMPANY_INFO = {
   'LUNR': { name: 'Intuitive Machines', url: 'https://www.intuitivemachines.com/' },
   'ASTS': { name: 'AST SpaceMobile', url: 'https://www.ast-science.com/' },
   'PL': { name: 'Planet Labs', url: 'https://www.planet.com/' },
-  'SPCE': { name: 'SpaceX / Starlink', url: 'https://www.spacex.com/' },
   'AXON': { name: 'Axon Enterprise', url: 'https://www.axon.com/' },
   'CRWV': { name: 'CoreWeave Inc.', url: 'https://www.coreweave.com/' }
 };
@@ -90,7 +89,7 @@ function readMin(a) {
   return Math.max(1, Math.ceil((a.summary || '').split(' ').length / 200));
 }
 
-const TICKER_SYMBOLS = ['NVDA','PLTR','AVGO','AMD','RKLB','RDW','GOOGL','META','AMZN','LMT','CRWD','CBRS','TSLA','AAPL','MSFT','ASML','AXON','RTX','MRVL','CRWV'];
+const TICKER_SYMBOLS = ['NVDA','PLTR','AVGO','AMD','GOOGL','META','MSFT','AMZN','TSLA','CRWV'];
 
 function renderTickerTape(prices) {
   let items = '';
@@ -165,6 +164,7 @@ function renderHeader(title, desc, article) {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/main.css">
+  <script src="/js/prices.js" defer></script>
   <title>${esc(title)}</title>
   <meta name="description" content="${esc(desc)}">
   <meta property="og:title" content="${esc(title)}">
