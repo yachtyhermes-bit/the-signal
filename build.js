@@ -10,7 +10,7 @@ const PUBLIC = path.join(ROOT, 'public');
 const DATA_DIR = path.join(ROOT, 'data');
 
 const SECTORS = {
-  ai: { name: 'AI', tickers: ['NVDA','AMD','AVGO','MRVL','TSM','ASML','MU','CBRS'], color: '#3b82f6' },
+  ai: { name: 'AI', tickers: ['NVDA','AMD','AVGO','MRVL','TSM','ASML','MU','CBRS','CRWV'], color: '#3b82f6' },
   cyber: { name: 'Cybersecurity', tickers: ['CRWD','PANW','FTNT','ZS','S','CHKP','CYBR','TENB'], color: '#22c55e' },
   defense: { name: 'Defense', tickers: ['LMT','RTX','NOC','GD','LHX','KTOS','AVAV','PL','AXON'], color: '#fbbf24' },
   space: { name: 'Space', tickers: ['RKLB','RDW','LUNR','ASTS'], color: '#a78bfa' },
@@ -59,7 +59,8 @@ const COMPANY_INFO = {
   'ASTS': { name: 'AST SpaceMobile', url: 'https://www.ast-science.com/' },
   'PL': { name: 'Planet Labs', url: 'https://www.planet.com/' },
   'SPCE': { name: 'SpaceX / Starlink', url: 'https://www.spacex.com/' },
-  'AXON': { name: 'Axon Enterprise', url: 'https://www.axon.com/' }
+  'AXON': { name: 'Axon Enterprise', url: 'https://www.axon.com/' },
+  'CRWV': { name: 'CoreWeave Inc.', url: 'https://www.coreweave.com/' }
 };
 
 // === Load articles ===
@@ -89,7 +90,7 @@ function readMin(a) {
   return Math.max(1, Math.ceil((a.summary || '').split(' ').length / 200));
 }
 
-const TICKER_SYMBOLS = ['NVDA','PLTR','AVGO','AMD','RKLB','RDW','GOOGL','META','AMZN','LMT','CRWD','CBRS','TSLA','AAPL','MSFT','ASML','AXON','RTX'];
+const TICKER_SYMBOLS = ['NVDA','PLTR','AVGO','AMD','RKLB','RDW','GOOGL','META','AMZN','LMT','CRWD','CBRS','TSLA','AAPL','MSFT','ASML','AXON','RTX','MRVL','CRWV'];
 
 function renderTickerTape(prices) {
   let items = '';
