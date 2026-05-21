@@ -5,10 +5,9 @@ const path = require('path');
 
 const ROOT = __dirname;
 const ARTICLES_DIR = path.join(ROOT, 'articles', 'posts');
-const INDEX_FILE = path.join(ROOT, 'articles', 'index.json');
 const DIST = path.join(ROOT, 'dist');
 const PUBLIC = path.join(ROOT, 'public');
-const TEMPLATES_DIR = path.join(ROOT, 'templates');
+const DATA_DIR = path.join(ROOT, 'data');
 
 const SECTORS = {
   ai: { name: 'AI', tickers: ['NVDA','AMD','AVGO','MRVL','TSM','ASML','MU','CBRS'], color: '#3b82f6' },
@@ -58,7 +57,8 @@ const COMPANY_INFO = {
   'AVAV': { name: 'AeroVironment Inc.', url: 'https://www.avinc.com/' },
   'LUNR': { name: 'Intuitive Machines', url: 'https://www.intuitivemachines.com/' },
   'ASTS': { name: 'AST SpaceMobile', url: 'https://www.ast-science.com/' },
-  'PL': { name: 'Planet Labs', url: 'https://www.planet.com/' }
+  'PL': { name: 'Planet Labs', url: 'https://www.planet.com/' },
+  'SPCE': { name: 'SpaceX / Starlink', url: 'https://www.spacex.com/' }
 };
 
 // === Load articles ===
@@ -86,6 +86,37 @@ function formatDateLong(iso) {
 
 function readMin(a) {
   return Math.max(1, Math.ceil((a.summary || '').split(' ').length / 200));
+}
+
+const TICKER_SYMBOLS = ['NVDA','PLTR','AVGO','AMD','RKLB','RDW','GOOGL','META','AMZN','LMT','CRWD','CBRS','TSLA','AAPL','MSFT','ASML'];
+
+function renderTickerTape(prices) {
+  let items = '';
+  const tickers = TICKER_SYMBOLS;
+  for (let r = 0; r < 2; r++) {
+    for (const sym of tickers) {
+      const p = prices && prices[sym];
+      if (!p || !p.price) continue;
+      const prc = p.price.toFixed(2);
+      const chg = p.changePercent;
+      const cls = chg >= 0 ? 'up' : 'down';
+      const chgStr = (chg >= 0 ? '+' : '') + chg.toFixed(2);
+      items += `<span class="ticker-item"><span class="ticker-sym">${sym}</span><span class="ticker-prc">$${prc}</span><span class="ticker-chg ${cls}">${chgStr}%</span></span>`;
+    }
+  }
+  if (!items) {
+    for (let r = 0; r < 2; r++) {
+      for (const sym of tickers) {
+        items += `<span class="ticker-item"><span class="ticker-sym">${sym}</span><span class="ticker-prc">$---.--</span><span class="ticker-chg">0.00%</span></span>`;
+      }
+    }
+  }
+  return `<div class="ticker-tape"><div class="ticker-track">${items}</div></div>`;
+}
+
+function getYouTubeId(url) {
+  const m = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([a-zA-Z0-9_-]+)/);
+  return m ? m[1] : '';
 }
 
 function esc(s) {
@@ -130,7 +161,7 @@ function renderHeader(title, desc, article) {
   <meta name="theme-color" content="#08080e">
   <meta name="robots" content="max-image-preview:large">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/main.css">
   <title>${esc(title)}</title>
   <meta name="description" content="${esc(desc)}">
@@ -141,9 +172,8 @@ function renderHeader(title, desc, article) {
 <body>
   <nav class="nav">
     <div class="nav-inner">
-      <a href="/" class="logo"><span class="logo-icon">◈</span><span class="logo-text">THE <strong>SIGNAL</strong></span></a>
+      <a href="/" class="logo"><img src="/img/logo-hex.jpg" alt="The Signal" class="logo-img"><span class="logo-text">THE <strong>SIGNAL</strong></span></a>
       <div class="nav-links">
-        <a href="/" class="nav-link">Live</a>
         <a href="/sector/ai" class="nav-link">AI</a>
         <a href="/sector/cyber" class="nav-link">Cyber</a>
         <a href="/sector/defense" class="nav-link">Defense</a>
@@ -159,58 +189,146 @@ function renderFooter() {
   return `  </main>
   <footer class="footer">
     <div class="footer-inner">
-      <div class="footer-brand"><span class="logo-icon">◈</span> THE <strong>SIGNAL</strong></div>
-      <div class="footer-tag">The Signal Editorial Team</div>
-      <div class="footer-copy">© ${new Date().getFullYear()} The Signal — readthesignal.com</div>
+      <div class="footer-brand"><img src="/img/logo-hex.jpg" alt="The Signal" class="footer-logo"> THE <strong>SIGNAL</strong></div>
+      <div class="footer-tag">The Signal Editorial Team · readthesignal.com</div>
+      <div class="footer-copy">© ${new Date().getFullYear()} The Signal — Market Intelligence. Data from public sources.</div>
     </div>
   </footer>
 </body>
 </html>`;
 }
 
-function renderCard(a) {
+function renderCard(a, prices) {
   const sentLabel = a.sentiment === 'bullish' ? '▲ Bullish' : a.sentiment === 'bearish' ? '▼ Bearish' : '– Neutral';
+  const img = typeof a.image === 'object' ? a.image : (a.image ? { src: a.image } : null);
+  const imgHtml = img ? `<div class="card-image"><img src="${esc(img.src)}" alt="${esc(a.title)}" loading="lazy"></div>` : '';
+  const p = prices ? prices[a.ticker] : null;
+  const priceHtml = p && p.price
+    ? `<span class="price-chip ${p.changePercent >= 0 ? 'up' : 'down'}">$${p.price.toFixed(2)} <span>${(p.changePercent >= 0 ? '+' : '')}${p.changePercent.toFixed(2)}%</span></span>`
+    : '';
   return `<a href="/article/${a.slug}" class="article-card">
+    ${imgHtml}
+    <div class="card-body">
     <div class="card-top">
       <span class="ticker-badge ${a.sentiment || 'neutral'}">${a.ticker}</span>
+      ${priceHtml}
       <span class="sentiment-label ${a.sentiment || 'neutral'}">${sentLabel}</span>
     </div>
     <h3 class="card-title">${esc(a.title)}</h3>
-    <p class="card-summary">${esc(a.summary.length > 200 ? a.summary.slice(0, 200) + '…' : a.summary)}</p>
+    <p class="card-summary">${esc(a.summary.length > 200 ? a.summary.slice(0, 200) + '...' : a.summary)}</p>
     <div class="card-meta">
-      <span class="card-date">${formatDate(a.date)}</span>
-      <span class="card-read">${readMin(a)} min read</span>
+      <span>${formatDate(a.date)}</span>
+      <span>${readMin(a)} min read</span>
+    </div>
     </div>
   </a>`;
 }
 
-function renderSectorBadge(s) {
-  const cssClass = s.toLowerCase().replace(/ /g, '-');
-  return `<a href="/sector/${s.toLowerCase()}" class="sector-badge ${cssClass}">${s.toUpperCase()}</a>`;
+function renderFeatured(a) {
+  const sentLabel = a.sentiment === 'bullish' ? '▲ Bullish' : a.sentiment === 'bearish' ? '▼ Bearish' : '– Neutral';
+  const img = typeof a.image === 'object' ? a.image : (a.image ? { src: a.image } : null);
+  const imgHtml = img ? `<div class="featured-image"><img src="${esc(img.src)}" alt="${esc(a.title)}" loading="eager"></div>` : '';
+  return `<a href="/article/${a.slug}" class="featured-card">
+    <div class="featured-content">
+      <div class="featured-label">Featured Story</div>
+      <div class="featured-ticker">
+        <span class="ticker-badge ${a.sentiment || 'neutral'}">${a.ticker}</span>
+        <span class="sentiment-label ${a.sentiment || 'neutral'}">${sentLabel}</span>
+      </div>
+      <h3 class="featured-title">${esc(a.title)}</h3>
+      <p class="featured-summary">${esc(a.summary)}</p>
+      <div class="featured-meta">
+        <span>${formatDate(a.date)}</span>
+        <span>${readMin(a)} min read</span>
+      </div>
+    </div>
+    ${imgHtml}
+  </a>`;
+}
+
+function renderSectorBadge(key, name) {
+  const cssMap = {
+    'ai': 'ai', 'cyber': 'cyber', 'defense': 'defense',
+    'space': 'space', 'mega-cap': 'megacap'
+  };
+  const cssClass = cssMap[key] || 'ai';
+  return `<a href="/sector/${key}" class="sector-badge ${cssClass}">${name.toUpperCase()}</a>`;
+}
+
+function renderVideoCard(v) {
+  const vid = getYouTubeId(v.url);
+  if (!vid) return '';
+  return `<div class="video-section">
+    <div class="video-section-title">▶ ${esc(v.source)}</div>
+    <div class="video-embed">
+      <iframe src="https://www.youtube.com/embed/${vid}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+    </div>
+    <div class="video-info">
+      <div class="video-info-title">${esc(v.title)}</div>
+    </div>
+  </div>`;
+}
+
+function injectVideos(bodyHtml, videos) {
+  if (!videos || !videos.length) return bodyHtml;
+  let result = bodyHtml;
+  for (let i = 0; i < videos.length; i++) {
+    const marker = `<!-- VIDEO ${i} -->`;
+    const card = renderVideoCard(videos[i]);
+    if (card) result = result.replace(marker, card);
+  }
+  return result;
 }
 
 // === Build pages ===
-function buildHome(articles) {
+function buildHome(articles, prices) {
+  const ticker = renderTickerTape(prices);
   const hero = `<section class="hero">
-    <div class="hero-content">
-      <h1 class="hero-title">Read the <span class="accent-blue">signal</span> before the market moves</h1>
-      <p class="hero-sub">AI · Defense · Space · Cybersecurity — analysis that connects the dots</p>
+    <div class="hero-video-bg">
+      <video autoplay muted loop playsinline src="/img/hero-bg.mp4" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:0.55;pointer-events:none;"></video>
     </div>
-  </section>`;
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Live Market Intelligence
+      </div>
+      <h1 class="hero-title">Read the <span class="hero-gradient">signal</span> before the market moves</h1>
+      <p class="hero-sub">Deep-dive analysis on the stocks shaping the future — AI, defense, space, cybersecurity, and the mega-cap giants that connect them all.</p>
+      <p class="hero-desc">The Signal delivers sharp analysis on the stocks shaping tomorrow — AI, defense, space, cybersecurity, and the mega-cap movers that connect them all. Earnings deep-dives, contract analysis, and market-moving insights. No fluff, no noise — just what matters for your portfolio.</p>
+    </div>
+  </section>
+  <div class="focus-bar">
+    <span class="focus-item focus-ai">AI</span>
+    <span class="focus-divider">·</span>
+    <span class="focus-item focus-cyber">Cyber</span>
+    <span class="focus-divider">·</span>
+    <span class="focus-item focus-defense">Defense</span>
+    <span class="focus-divider">·</span>
+    <span class="focus-item focus-space">Space</span>
+    <span class="focus-divider">·</span>
+    <span class="focus-item focus-mega">Mega-Cap</span>
+  </div>`;
+
+  const hasFeatured = articles.length > 0;
+  const featured = hasFeatured ? renderFeatured(articles[0]) : '';
+  const grid = hasFeatured
+    ? `<div class="article-grid">${articles.slice(1).map(a => renderCard(a, prices)).join('\n      ')}</div>`
+    : '<div class="empty-state">No articles yet. Check back soon.</div>';
+
   const feed = `<section class="feed">
     <div class="feed-header">
-      <h2 class="feed-title">● Live Feed</h2>
+      <h2 class="feed-title"><span class="dot"></span> Live Feed</h2>
       <div class="feed-sectors">
-        ${Object.keys(SECTORS).map(s => renderSectorBadge(SECTORS[s].name)).join('\n        ')}
+        ${Object.keys(SECTORS).map(s => renderSectorBadge(s, SECTORS[s].name)).join('\n        ')}
       </div>
     </div>
-    <div class="article-grid">
-      ${articles.map(renderCard).join('\n      ')}
-    </div>
+    ${hasFeatured ? featured : ''}
+    ${grid}
   </section>`;
+
   const html = renderHeader('The Signal — Market Intelligence for AI, Defense, Space & Cyber',
     'The Signal delivers sharp analysis on AI, defense, space, and cybersecurity stocks. Earnings deep-dives, contract analysis, and market-moving insights.')
-    + hero + feed + renderFooter();
+    + ticker + hero + feed + renderFooter();
   fs.mkdirSync(DIST, { recursive: true });
   fs.writeFileSync(path.join(DIST, 'index.html'), html);
   console.log('  ✓ index.html');
@@ -223,6 +341,7 @@ function buildArticle(article) {
   const linksHtml = article.links && article.links.length
     ? `<div class="article-links"><h4>🔗 Learn More</h4><ul>${article.links.map(l => `<li><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a></li>`).join('\n          ')}</ul></div>`
     : '';
+  const bodyHtml = injectVideos(article.bodyHtml || '', article.videos);
 
   const body = `<article class="article-page">
     <div class="article-header">
@@ -242,7 +361,7 @@ function buildArticle(article) {
     </div>
     ${img ? `<div class="article-image"><img src="${esc(img.src)}" alt="${esc(article.title)}" loading="eager"></div>` : ''}
     <div class="article-body">
-      ${article.bodyHtml || ''}
+      ${bodyHtml}
     </div>
     <div class="article-footer">
       <div class="article-tags">
@@ -261,7 +380,7 @@ function buildArticle(article) {
   console.log(`  ✓ article/${article.slug}/`);
 }
 
-function buildTicker(symbol, articles) {
+function buildTicker(symbol, articles, prices) {
   const info = COMPANY_INFO[symbol] || {};
   const body = `<section class="ticker-page">
     <div class="ticker-hero">
@@ -275,7 +394,7 @@ function buildTicker(symbol, articles) {
       </div>
     </div>
     <div class="article-grid">
-      ${articles.length ? articles.map(renderCard).join('\n      ') : '<div class="empty-state">No articles yet for $' + symbol + '. Check back soon.</div>'}
+      ${articles.length ? articles.map(a => renderCard(a, prices)).join('\n      ') : '<div class="empty-state">No articles yet for $' + symbol + '. Check back soon.</div>'}
     </div>
   </section>`;
   const html = renderHeader(symbol + ' Stock Analysis — The Signal',
@@ -287,7 +406,7 @@ function buildTicker(symbol, articles) {
   console.log(`  ✓ ticker/${symbol}/`);
 }
 
-function buildSector(key, sec, articles, allArticles) {
+function buildSector(key, sec, articles, prices) {
   const pricesHtml = sec.tickers.map(t => {
     const info = COMPANY_INFO[t];
     return `<a href="/ticker/${t}" class="mini-price-card">
@@ -306,7 +425,7 @@ function buildSector(key, sec, articles, allArticles) {
       ${pricesHtml}
     </div>
     <div class="article-grid">
-      ${articles.length ? articles.map(renderCard).join('\n      ') : '<div class="empty-state">No articles yet in this sector.</div>'}
+      ${articles.length ? articles.map(a => renderCard(a, prices)).join('\n      ') : '<div class="empty-state">No articles yet in this sector.</div>'}
     </div>
   </section>`;
   const html = renderHeader(`${sec.name} Stocks — The Signal`,
@@ -327,7 +446,6 @@ function buildSitemap(articles) {
   for (const key of Object.keys(SECTORS)) {
     xml += `  <url><loc>https://readthesignal.com/sector/${key}</loc><priority>0.7</priority></url>\n`;
   }
-  // Add ticker pages
   const tickers = new Set(articles.map(a => a.ticker));
   for (const t of tickers) {
     xml += `  <url><loc>https://readthesignal.com/ticker/${t}</loc><priority>0.6</priority></url>\n`;
@@ -360,61 +478,72 @@ function buildRSS(articles) {
   console.log('  ✓ rss.xml');
 }
 
+// === Write articles.json for price fetcher ===
+function writeArticlesJson(articles) {
+  const out = articles.map(a => ({
+    slug: a.slug,
+    title: a.title,
+    summary: a.summary,
+    ticker: a.ticker,
+    sector: a.sector,
+    sentiment: a.sentiment,
+    date: a.date,
+    image: typeof a.image === 'object' ? a.image.src : a.image
+  }));
+  fs.writeFileSync(path.join(DIST, 'data', 'articles.json'), JSON.stringify(out, null, 2));
+  console.log('  ✓ articles.json (for price fetcher)');
+}
+
 // === Entry point ===
 console.log('🏗️  Building The Signal...');
 const articles = loadArticles();
 console.log(`   Loaded ${articles.length} articles`);
 
-// Copy static assets to root of dist/
+// Load prices
+let prices = {};
+try {
+  prices = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'prices.json'), 'utf8'));
+  console.log(`   Loaded prices for ${Object.keys(prices).length} tickers`);
+} catch (e) {
+  console.log('   No price data found — using ticker defaults');
+}
+
+// Copy static assets
 if (fs.existsSync(DIST)) fs.rmSync(DIST, { recursive: true });
+fs.mkdirSync(DIST, { recursive: true });
 fs.cpSync(PUBLIC, DIST, { recursive: true, dereference: true });
-console.log('  ✓ static assets copied to dist/ root');
+// Also ensure data dir exists in dist
+fs.mkdirSync(path.join(DIST, 'data'), { recursive: true });
+console.log('  ✓ static assets copied');
 
 // Build pages
-buildHome(articles);
+buildHome(articles, prices);
 
-for (const a of articles) buildArticle(a);
-
-// Build ticker pages
-const tickerArticles = {};
 for (const a of articles) {
-  if (!tickerArticles[a.ticker]) tickerArticles[a.ticker] = [];
-  tickerArticles[a.ticker].push(a);
-}
-for (const [symbol, arts] of Object.entries(tickerArticles)) {
-  buildTicker(symbol, arts);
+  buildArticle(a);
 }
 
-// Build sector pages
+// Ticker pages
+const tickerMap = {};
+for (const a of articles) {
+  if (!tickerMap[a.ticker]) tickerMap[a.ticker] = [];
+  tickerMap[a.ticker].push(a);
+}
+for (const [sym, arts] of Object.entries(tickerMap)) {
+  buildTicker(sym, arts, prices);
+}
+
+// Sector pages
+const sectorMap = {};
+for (const a of articles) {
+  if (!sectorMap[a.sector]) sectorMap[a.sector] = [];
+  sectorMap[a.sector].push(a);
+}
 for (const [key, sec] of Object.entries(SECTORS)) {
-  const sectorArticles = articles.filter(a => sec.tickers.includes(a.ticker));
-  buildSector(key, sec, sectorArticles, articles);
+  buildSector(key, sec, sectorMap[key] || [], prices);
 }
 
-// Build sitemap & RSS
 buildSitemap(articles);
 buildRSS(articles);
-
-// Write articles index
-fs.writeFileSync(path.join(DIST, 'articles.json'), JSON.stringify(articles.map(a => ({
-  slug: a.slug, title: a.title, summary: a.summary, ticker: a.ticker,
-  sector: a.sector, sentiment: a.sentiment, date: a.date
-})), null, 2));
-console.log('  ✓ articles.json (for price fetcher)');
-
-// Write vercel.json
-const vercelJson = {
-  "rewrites": [],
-  "trailingSlash": true,
-  "headers": [
-    { "source": "/(.*)", "headers": [
-      { "key": "X-Content-Type-Options", "value": "nosniff" },
-      { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
-    ]}
-  ],
-  "cleanUrls": false
-};
-fs.writeFileSync(path.join(DIST, 'vercel.json'), JSON.stringify(vercelJson, null, 2));
-console.log('  ✓ vercel.json');
-
+writeArticlesJson(articles);
 console.log('✅ Build complete! Output in dist/');

@@ -1,14 +1,56 @@
 <%- include('../partials/header') %>
+  <!-- Ticker Tape -->
+  <div class="ticker-tape">
+    <div class="ticker-track">
+      <% 
+      const mockTickers = [
+        {sym:'NVDA',prc:'892.40',chg:'+2.34'},{sym:'PLTR',prc:'84.16',chg:'-0.87'},
+        {sym:'AVGO',prc:'1032.50',chg:'+1.12'},{sym:'AMD',prc:'156.78',chg:'-0.45'},
+        {sym:'RKLB',prc:'28.91',chg:'+3.21'},{sym:'RDW',prc:'19.45',chg:'+5.68'},
+        {sym:'GOOGL',prc:'185.22',chg:'+0.56'},{sym:'META',prc:'542.10',chg:'-1.03'},
+        {sym:'AMZN',prc:'216.84',chg:'+0.92'},{sym:'LMT',prc:'489.33',chg:'-0.28'},
+        {sym:'CRWD',prc:'352.67',chg:'+1.45'},{sym:'CBRS',prc:'311.00',chg:'-2.10'}
+      ];
+      // Double the items for seamless loop
+      for (let r = 0; r < 2; r++) {
+        for (const t of mockTickers) {
+      %>
+        <span class="ticker-item">
+          <span class="ticker-sym"><%= t.sym %></span>
+          <span class="ticker-prc">$<%= t.prc %></span>
+          <span class="ticker-chg <%= t.chg.startsWith('+') ? 'up' : 'down' %>"><%= t.chg %>%</span>
+        </span>
+      <% }} %>
+    </div>
+  </div>
+
   <section class="hero">
     <div class="hero-content">
-      <h1 class="hero-title">Read the <span class="accent-pink">signal</span> before the market moves</h1>
-      <p class="hero-sub">AI · Defense · Space · Cybersecurity — analysis that connects the dots</p>
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Live Market Intelligence
+      </div>
+      <h1 class="hero-title">Read the <span class="hero-gradient">signal</span> before the market moves</h1>
+      <p class="hero-sub">Deep-dive analysis on the stocks shaping the future — AI, defense, space, cybersecurity, and the mega-cap giants that connect them all.</p>
+      <p class="hero-desc">The Signal delivers sharp analysis on the stocks shaping tomorrow — AI, defense, space, cybersecurity, and the mega-cap movers that connect them all. Earnings deep-dives, contract analysis, and market-moving insights. No fluff, no noise — just what matters for your portfolio.</p>
     </div>
   </section>
 
+  <div class="focus-bar">
+    <span class="focus-item focus-ai">AI</span>
+    <span class="focus-divider">·</span>
+    <span class="focus-item focus-cyber">Cyber</span>
+    <span class="focus-divider">·</span>
+    <span class="focus-item focus-defense">Defense</span>
+    <span class="focus-divider">·</span>
+    <span class="focus-item focus-space">Space</span>
+    <span class="focus-divider">·</span>
+    <span class="focus-item focus-mega">Mega-Cap</span>
+  </div>
+
   <section class="feed">
     <div class="feed-header">
-      <h2 class="feed-title"><span class="accent-dot">●</span> Live Feed</h2>
+      <h2 class="feed-title"><span class="dot"></span> Live Feed</h2>
       <div class="feed-sectors">
         <a href="/sector/ai" class="sector-badge ai">AI</a>
         <a href="/sector/cyber" class="sector-badge cyber">Cyber</a>
@@ -18,23 +60,60 @@
       </div>
     </div>
 
-    <div class="article-grid">
-      <% articles.forEach(function(a) { %>
-        <a href="/article/<%= a.slug %>" class="article-card">
-          <div class="card-top">
-            <span class="ticker-badge <%= a.sentiment || 'neutral' %>"><%= a.ticker %></span>
-            <span class="sentiment-label <%= a.sentiment || 'neutral' %>">
-              <%= a.sentiment === 'bullish' ? '▲ Bullish' : a.sentiment === 'bearish' ? '▼ Bearish' : '– Neutral' %>
+    <% if (articles.length > 0) { %>
+      <!-- Featured Story -->
+      <% var featured = articles[0]; %>
+      <a href="/article/<%= featured.slug %>" class="featured-card">
+        <div class="featured-content">
+          <div class="featured-label">Featured Story</div>
+          <div class="featured-ticker">
+            <span class="ticker-badge <%= featured.sentiment || 'neutral' %>"><%= featured.ticker %></span>
+            <span class="sentiment-label <%= featured.sentiment || 'neutral' %>">
+              <%= featured.sentiment === 'bullish' ? '▲ Bullish' : featured.sentiment === 'bearish' ? '▼ Bearish' : '– Neutral' %>
             </span>
           </div>
-          <h3 class="card-title"><%= a.title %></h3>
-          <p class="card-summary"><%= a.summary.length > 200 ? a.summary.slice(0, 200) + '…' : a.summary %></p>
-          <div class="card-meta">
-            <span class="card-date"><%= new Date(a.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) %></span>
-            <span class="card-read"><%= Math.ceil(a.summary.split(' ').length / 200) %> min read</span>
+          <h3 class="featured-title"><%= featured.title %></h3>
+          <p class="featured-summary"><%= featured.summary %></p>
+          <div class="featured-meta">
+            <span><%= new Date(featured.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) %></span>
+            <span><%= Math.ceil(featured.summary.split(' ').length / 200) %> min read</span>
           </div>
-        </a>
-      <% }) %>
-    </div>
+        </div>
+        <% if (featured.image) { %>
+          <div class="featured-image">
+            <img src="<%= typeof featured.image === 'object' ? featured.image.src : featured.image %>" alt="<%= featured.title %>" loading="eager">
+          </div>
+        <% } %>
+      </a>
+
+      <!-- Remaining Articles -->
+      <div class="article-grid">
+        <% articles.slice(1).forEach(function(a) { %>
+          <a href="/article/<%= a.slug %>" class="article-card">
+            <% if (a.image) { %>
+              <div class="card-image">
+                <img src="<%= typeof a.image === 'object' ? a.image.src : a.image %>" alt="<%= a.title %>" loading="lazy">
+              </div>
+            <% } %>
+            <div class="card-body">
+            <div class="card-top">
+              <span class="ticker-badge <%= a.sentiment || 'neutral' %>"><%= a.ticker %></span>
+              <span class="sentiment-label <%= a.sentiment || 'neutral' %>">
+                <%= a.sentiment === 'bullish' ? '▲ Bullish' : a.sentiment === 'bearish' ? '▼ Bearish' : '– Neutral' %>
+              </span>
+            </div>
+            <h3 class="card-title"><%= a.title %></h3>
+            <p class="card-summary"><%= a.summary.length > 200 ? a.summary.slice(0, 200) + '…' : a.summary %></p>
+            <div class="card-meta">
+              <span><%= new Date(a.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) %></span>
+              <span><%= Math.ceil(a.summary.split(' ').length / 200) %> min read</span>
+            </div>
+            </div>
+          </a>
+        <% }) %>
+      </div>
+    <% } else { %>
+      <div class="empty-state">No articles yet. Check back soon.</div>
+    <% } %>
   </section>
 <%- include('../partials/footer') %>

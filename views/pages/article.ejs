@@ -36,7 +36,30 @@
     <% } %>
 
     <div class="article-body">
-      <%- article.bodyHtml %>
+      <%
+        // Inject video markers inline into the body
+        var bodyHtml = article.bodyHtml || '';
+        if (article.videos && article.videos.length) {
+          article.videos.forEach(function(v, i) {
+            var vid = '';
+            var m = v.url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([a-zA-Z0-9_-]+)/);
+            if (m) vid = m[1];
+            if (vid) {
+              var card = '<div class="video-section">' +
+                '<div class="video-section-title">▶ ' + v.source + '</div>' +
+                '<div class="video-embed">' +
+                '<iframe src="https://www.youtube.com/embed/' + vid + '" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>' +
+                '</div>' +
+                '<div class="video-info">' +
+                '<div class="video-info-title">' + v.title + '</div>' +
+                '</div>' +
+                '</div>';
+              bodyHtml = bodyHtml.replace('<!-- VIDEO ' + i + ' -->', card);
+            }
+          });
+        }
+      %>
+      <%- bodyHtml %>
     </div>
 
     <div class="article-footer">
