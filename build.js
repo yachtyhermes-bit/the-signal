@@ -12,7 +12,7 @@ const DATA_DIR = path.join(ROOT, 'data');
 const SECTORS = {
   ai: { name: 'AI', tickers: ['NVDA','AMD','AVGO','MRVL','TSM','ASML','MU','CBRS'], color: '#3b82f6' },
   cyber: { name: 'Cybersecurity', tickers: ['CRWD','PANW','FTNT','ZS','S','CHKP','CYBR','TENB'], color: '#22c55e' },
-  defense: { name: 'Defense', tickers: ['LMT','RTX','NOC','GD','LHX','KTOS','AVAV','PL'], color: '#fbbf24' },
+  defense: { name: 'Defense', tickers: ['LMT','RTX','NOC','GD','LHX','KTOS','AVAV','PL','AXON'], color: '#fbbf24' },
   space: { name: 'Space', tickers: ['RKLB','RDW','LUNR','ASTS'], color: '#a78bfa' },
   'mega-cap': { name: 'Mega-Cap', tickers: ['AAPL','MSFT','GOOGL','AMZN','META','TSLA'], color: '#f87171' },
 };
@@ -58,7 +58,8 @@ const COMPANY_INFO = {
   'LUNR': { name: 'Intuitive Machines', url: 'https://www.intuitivemachines.com/' },
   'ASTS': { name: 'AST SpaceMobile', url: 'https://www.ast-science.com/' },
   'PL': { name: 'Planet Labs', url: 'https://www.planet.com/' },
-  'SPCE': { name: 'SpaceX / Starlink', url: 'https://www.spacex.com/' }
+  'SPCE': { name: 'SpaceX / Starlink', url: 'https://www.spacex.com/' },
+  'AXON': { name: 'Axon Enterprise', url: 'https://www.axon.com/' }
 };
 
 // === Load articles ===
@@ -88,7 +89,7 @@ function readMin(a) {
   return Math.max(1, Math.ceil((a.summary || '').split(' ').length / 200));
 }
 
-const TICKER_SYMBOLS = ['NVDA','PLTR','AVGO','AMD','RKLB','RDW','GOOGL','META','AMZN','LMT','CRWD','CBRS','TSLA','AAPL','MSFT','ASML'];
+const TICKER_SYMBOLS = ['NVDA','PLTR','AVGO','AMD','RKLB','RDW','GOOGL','META','AMZN','LMT','CRWD','CBRS','TSLA','AAPL','MSFT','ASML','AXON'];
 
 function renderTickerTape(prices) {
   let items = '';
