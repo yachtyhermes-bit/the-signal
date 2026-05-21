@@ -89,7 +89,7 @@ function readMin(a) {
   return Math.max(1, Math.ceil((a.summary || '').split(' ').length / 200));
 }
 
-const TICKER_SYMBOLS = ['NVDA','PLTR','AVGO','AMD','RKLB','RDW','GOOGL','META','AMZN','LMT','CRWD','CBRS','TSLA','AAPL','MSFT','ASML','AXON'];
+const TICKER_SYMBOLS = ['NVDA','PLTR','AVGO','AMD','RKLB','RDW','GOOGL','META','AMZN','LMT','CRWD','CBRS','TSLA','AAPL','MSFT','ASML','AXON','RTX'];
 
 function renderTickerTape(prices) {
   let items = '';
