@@ -116,7 +116,7 @@ app.post('/api/pulse', async (req, res) => {
     }
     articles.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-    const genAI = new GoogleGenerativeAI('AIzaSyDLpweLQTfZkdlpCtarQOnRX36Uiza3fiQ');
+    const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || '');
     const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash', tools: [{ googleSearch: {} }] });
 
     const articleContext = articles.map(a =>

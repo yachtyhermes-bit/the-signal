@@ -7,8 +7,8 @@
 import fs from 'fs';
 import path from 'path';
 
-const GEMINI_KEY = 'AIzaSyDLpweLQTfZkdlpCtarQOnRX36Uiza3fiQ';
-const SERPER_KEY = 'ec8dbd92689d56ad69354e1b92691441c28773c0';
+const GEMINI_KEY = process.env.GEMINI_API_KEY || '';
+const SERPER_KEY = process.env.SERPER_API_KEY || '';
 const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_KEY}`;
 const SERPER_URL = 'https://google.serper.dev/search';
 
