@@ -1,5 +1,399 @@
 [
   {
+    "slug": "rocketlab-growth-engine",
+    "title": "Rocket Lab Just Became the Most Important Space Stock You Don't Own",
+    "subtitle": "87 launches, 250+ satellites deployed, and Neutron on the horizon. At $20B market cap, RKLB is the purest space-company asymmetrical bet in the market.",
+    "summary": "Rocket Lab just hit 87 Electron launches, deployed 250+ satellites, and is building Neutron — a reusable medium-lift rocket. With end-to-end spacecraft manufacturing, growing government contracts, and a fraction of SpaceX's valuation, RKLB is the space stock that actually makes sense.",
+    "ticker": "RKLB",
+    "sector": "space",
+    "sentiment": "bullish",
+    "date": "2026-05-21T18:00:00.000Z",
+    "image": {
+      "src": "/img/articles/rocketlab-electron.jpg",
+      "caption": "Rocket Lab Electron launch — the second most frequently launched US rocket"
+    },
+    "tags": [
+      "Rocket Lab",
+      "RKLB",
+      "Space",
+      "Electron",
+      "Neutron",
+      "Space Stocks",
+      "Launch Services",
+      "Space Systems"
+    ]
+  },
+  {
+    "slug": "marvell-ai-silicon-sleeper",
+    "title": "Marvell Is the AI Semiconductor Giant Wall Street Is Ignoring",
+    "subtitle": "Custom silicon. Optical interconnects. Data infrastructure. MRVL just ran from $53 to $189 — and it's still cheaper than Nvidia on every metric that matters.",
+    "summary": "Marvell hit $189 after a 263% run from its 52-week low, posting $8.2B revenue and a 32.6% profit margin. With custom AI silicon exploding and optical interconnect demand surging, MRVL is the most underfollowed pure AI infrastructure play in semiconductors.",
+    "ticker": "MRVL",
+    "sector": "ai",
+    "sentiment": "bullish",
+    "date": "2026-05-21T16:00:00.000Z",
+    "image": {
+      "src": "/img/articles/marvell-ai-chip.jpg",
+      "caption": "Marvell Technology — powering AI data center infrastructure with custom silicon and optical interconnects"
+    },
+    "tags": [
+      "Marvell",
+      "MRVL",
+      "Semiconductors",
+      "AI Infrastructure",
+      "Custom Silicon",
+      "Data Center",
+      "Optical Interconnects",
+      "Networking"
+    ]
+  },
+  {
+    "slug": "coreweave-ai-cloud-dark-horse",
+    "title": "CoreWeave Is the AI Cloud Dark Horse Nobody's Talking About",
+    "subtitle": "$58B market cap, $6.2B revenue, up 50% YTD — and still 30% below analyst targets. CoreWeave is the GPU-as-a-service infrastructure play that's redefining cloud computing.",
+    "summary": "CoreWeave (CRWV) runs $6.2B in annual revenue as the premier GPU-as-a-service cloud for AI workloads. Up 50% YTD with a $138 analyst target, this is the infrastructure bet that captures AI compute demand without guessing which model wins.",
+    "ticker": "CRWV",
+    "sector": "ai",
+    "sentiment": "bullish",
+    "date": "2026-05-21T14:00:00.000Z",
+    "image": {
+      "src": "/img/articles/coreweave-hero.jpg",
+      "caption": "CoreWeave — the essential AI cloud platform powering next-generation GPU infrastructure"
+    },
+    "tags": [
+      "CoreWeave",
+      "CRWV",
+      "AI Cloud",
+      "GPU Infrastructure",
+      "Cloud Computing",
+      "AI Compute",
+      "Data Center",
+      "Nvidia"
+    ]
+  },
+  {
+    "slug": "karpathy-anthropic",
+    "title": "Andrej Karpathy Just Joined Anthropic. Here's Why That Terrifies OpenAI",
+    "subtitle": "The OpenAI co-founder and former Tesla AI leader is crossing enemy lines. Karpathy's move to Anthropic isn't just a talent grab — it's a declaration of war in the battle for AI supremacy.",
+    "summary": "Andrej Karpathy — OpenAI co-founder, former Tesla AI director, and arguably the most recognizable AI researcher on the planet — just joined Anthropic to lead pretraining research. This isn't just a headline. It's the kind of talent shift that reshapes the competitive landscape of frontier AI. Anthropic gets a legend. OpenAI loses a founding father. The market should pay attention.",
+    "ticker": "",
+    "sector": "ai",
+    "sentiment": "bullish",
+    "date": "2026-05-21T14:00:00.000Z",
+    "image": {
+      "src": "/img/articles/karpathy-hero.jpg",
+      "caption": "Andrej Karpathy — OpenAI co-founder, former Tesla AI leader, and Anthropic's newest weapon in the frontier AI arms race"
+    },
+    "tags": [
+      "Anthropic",
+      "OpenAI",
+      "Andrej Karpathy",
+      "AI Talent War",
+      "Frontier AI",
+      "Claude",
+      "GPT",
+      "Pretraining"
+    ]
+  },
+  {
+    "slug": "rtx-defense-buy-opportunity",
+    "title": "RTX Just Dipped 18% From Its Highs. Here's Why That's Your Entry Point.",
+    "subtitle": "The defense giant printed $90B in revenue and $7B in free cash flow — and the market yawned. At $176, RTX is the most mispriced steady compounder in the S&P 500.",
+    "summary": "RTX dropped 18% from its $214 high despite posting $90B revenue, $7.2B FCF, and a growing dividend. At 25x forward earnings with a 28% analyst upside and defense budgets only expanding, this is the kind of dip you buy, not fear.",
+    "ticker": "RTX",
+    "sector": "defense",
+    "sentiment": "bullish",
+    "date": "2026-05-21T12:00:00.000Z",
+    "image": {
+      "src": "/img/articles/rtx-defense.jpg",
+      "caption": "RTX Corporation — one of the world's largest defense and aerospace contractors"
+    },
+    "tags": [
+      "RTX",
+      "Raytheon",
+      "Defense",
+      "Aerospace",
+      "Dividend",
+      "Government Contracts",
+      "Value Play",
+      "Defense Spending"
+    ]
+  },
+  {
+    "slug": "axon-enterprise-ai-monopoly",
+    "title": "Why AXON is the Ultimate Unkillable Portfolio Diversifier",
+    "subtitle": "Axon quietly built a recession-proof AI software monopoly backed by government contracts — and Q1 2026 proves it's massively mispriced.",
+    "summary": "Axon Enterprise (AXON) crossed $1.5B in ARR with 125% NRR and AI revenue exploding 700% YoY. At $386 — nearly 50% off highs — this defense-style AI monopoly is the ultimate asymmetric portfolio hedge.",
+    "ticker": "AXON",
+    "sector": "defense",
+    "sentiment": "bullish",
+    "date": "2026-05-21T10:00:00.000Z",
+    "image": {
+      "src": "/img/articles/axon-ai-software.jpg",
+      "caption": "Axon's AI-powered public safety platform — Draft One, body cameras, and Evidence.com"
+    },
+    "tags": [
+      "Axon",
+      "AXON",
+      "Public Safety",
+      "AI Software",
+      "Government Contracts",
+      "Draft One",
+      "Body Cameras",
+      "Recurring Revenue"
+    ]
+  },
+  {
+    "slug": "spacex-ipo-analysis",
+    "title": "SpaceX IPO: Everything Investors Need to Know Before the Biggest Space Debut in History",
+    "subtitle": "With Starlink approaching $10B in revenue and Starship finally operational, SpaceX is preparing for a 2026 IPO. Our analysts break down valuation, risks, and the optimal entry strategy.",
+    "summary": "SpaceX is preparing what could be the largest IPO in history with a potential $300B+ valuation. With Starlink's cash flow accelerating and Starship achieving orbit, the bull case is compelling — but history says the best entry may come months after the debut.",
+    "ticker": "SPCE",
+    "sector": "space",
+    "sentiment": "bullish",
+    "date": "2026-05-21T08:00:00.000Z",
+    "image": {
+      "src": "/img/articles/spacex-crew-12.jpg",
+      "caption": "SpaceX Crew-12 mission preparation — Falcon 9 and Crew Dragon at the launch pad"
+    },
+    "tags": [
+      "SpaceX",
+      "IPO",
+      "Starlink",
+      "Starship",
+      "Space",
+      "Elon Musk"
+    ]
+  },
+  {
+    "slug": "meta-ai-capex-deep-dive",
+    "title": "Meta Is Spending $65B on AI in 2026 — Smart Bet or Billionaire's Gamble?",
+    "subtitle": "With $65B in planned AI capex, Meta is spending more on infrastructure than most countries' GDP. We analyze whether Zuckerberg's AI bet will pay off — or become a value-destroying overbuild.",
+    "summary": "Meta's $65B AI capex plan has investors divided. With Llama 4 open-source AI gaining traction, Advantage+ ad revenue accelerating, and the metaverse pivot fading into the background, the bull case is stronger than ever — but the spending has no modern precedent.",
+    "ticker": "META",
+    "sector": "mega-cap",
+    "sentiment": "bullish",
+    "date": "2026-05-21T06:00:00.000Z",
+    "image": {
+      "src": "/img/articles/meta-server-racks.jpg",
+      "caption": "Meta's AI data center — server racks powering Llama 4 and $65B AI capex"
+    },
+    "tags": [
+      "Meta",
+      "AI",
+      "Capex",
+      "Advertising",
+      "Llama",
+      "Open Source",
+      "Zuckerberg"
+    ]
+  },
+  {
+    "slug": "broadcom-ai-networking-dominance",
+    "title": "Broadcom's AI Networking Dominance: Tomahawk, Custom ASICs, and the VMware Pivot",
+    "subtitle": "While the market fixates on Nvidia GPUs, Broadcom quietly powers the networking fabric connecting every AI cluster. With Tomahawk 5, custom ASIC partnerships, and a VMware transformation unlocking recurring revenue, AVGO is becoming a compound machine.",
+    "summary": "Broadcom's Tomahawk 5 switches connect Nvidia GPUs in every major hyperscaler cluster. Custom ASIC deals with Google, Meta, and Apple add $10B+ in AI revenue. VMware is pivoting to subscription, and the dividend just grew 18% — making AVGO a must-own in AI infrastructure.",
+    "ticker": "AVGO",
+    "sector": "ai",
+    "sentiment": "bullish",
+    "date": "2026-05-21T04:00:00.000Z",
+    "image": {
+      "src": "/img/articles/broadcom-jericho4-chip.jpg",
+      "caption": "Broadcom's Jericho4 AI networking ASIC — powering hyperscale data center switches"
+    },
+    "tags": [
+      "Broadcom",
+      "AVGO",
+      "Tomahawk",
+      "AI Networking",
+      "Custom ASICs",
+      "VMware",
+      "Semiconductors",
+      "Dividend Growth"
+    ]
+  },
+  {
+    "slug": "amd-vs-nvidia-ai-2026",
+    "title": "AMD vs Nvidia in AI: Is 2026 Finally AMD's Year to Compete?",
+    "subtitle": "With MI350 shipping, ROCm maturing, and hyperscalers demanding a second source, AMD is in its strongest competitive position ever. But Nvidia's CUDA moat and Blackwell ramp are formidable.",
+    "summary": "AMD's Instinct MI350 is winning real hyperscaler deployments, and MI400 is on track for 2027. But Nvidia's Blackwell ramp and CUDA ecosystem remain formidable. We analyze whether AMD can capture 20%+ of the AI GPU market.",
+    "ticker": "AMD",
+    "sector": "ai",
+    "sentiment": "bullish",
+    "date": "2026-05-21T02:00:00.000Z",
+    "image": {
+      "src": "/img/articles/amd-vs-nvidia.jpg",
+      "caption": "AMD vs NVIDIA — the AI chip battle heats up in 2026"
+    },
+    "tags": [
+      "AMD",
+      "Nvidia",
+      "AI",
+      "GPU",
+      "Semiconductors",
+      "ROCm",
+      "CUDA",
+      "MI350"
+    ]
+  },
+  {
+    "slug": "spacex-ipo-debt-hype",
+    "title": "SpaceX: Inside the Hidden Debt and Hype Behind the Biggest IPO in Human History",
+    "subtitle": "The S-1 is out. SpaceX is going public under SPCX. The valuation target? $1.75 Trillion. The debt load? $29 Billion. Here's what the hype isn't telling you.",
+    "summary": "SpaceX filed its S-1 for the largest IPO in history under ticker SPCX, targeting a $1.75-2 trillion valuation. But the filings reveal $29.1B in debt, $4.9B net loss last year, and a stunning $7.72B quarterly spend on AI infrastructure through the xAI merger. Starlink generates over $3.25B in quarterly revenue, but that cash is being funneled into the AI arms race against OpenAI. The technology is historic, but the financial math is as risky as it gets.",
+    "ticker": "SPCE",
+    "sector": "space",
+    "sentiment": "bearish",
+    "date": "2026-05-21T00:00:00.000Z",
+    "image": {
+      "src": "/img/articles/spacex-starship.jpg",
+      "caption": "SpaceX Starship on the launchpad at Starbase, Texas"
+    },
+    "tags": [
+      "SpaceX",
+      "IPO",
+      "SPCX",
+      "Debt",
+      "Starlink",
+      "xAI",
+      "Valuation"
+    ]
+  },
+  {
+    "slug": "palantir-aip-government-ai",
+    "title": "Palantir's AIP Is the Government AI Engine — Here's the Bull Case for $PLTR",
+    "subtitle": "With $3B+ in annual revenue, expanding government contracts, and a commercial AI platform that's gaining traction, Palantir is becoming the definitive AI infrastructure play for the public sector.",
+    "summary": "Palantir's AIP platform is driving a new wave of government AI adoption, with TITAN, Maven, and other defense contracts pushing revenue toward $4B. Combined with accelerating commercial growth and improving margins, PLTR presents a compelling AI investment.",
+    "ticker": "PLTR",
+    "sector": "ai",
+    "sentiment": "bullish",
+    "date": "2026-05-20T22:00:00.000Z",
+    "image": {
+      "src": "/img/articles/palantir-data.jpg",
+      "caption": "Palantir data analytics platform — powering AI-driven decision intelligence"
+    },
+    "tags": [
+      "Palantir",
+      "AIP",
+      "Government",
+      "Defense",
+      "AI",
+      "Contracts"
+    ]
+  },
+  {
+    "slug": "nvidia-blackwell-ramp-2026",
+    "title": "Nvidia's Blackwell Ramp: Inside the $100B AI Infrastructure Super-Cycle",
+    "subtitle": "With Blackwell in full production and every hyperscaler doubling down, Nvidia's data center revenue is on track to exceed $100B. We examine the supply chain, competitive threats, and whether the valuation still makes sense.",
+    "summary": "Nvidia's Blackwell B200 is shipping in volume, hyperscaler orders are accelerating, and data center revenue is tracking toward $100B+. But with AMD's MI350 on the horizon and custom ASICs gaining traction, the bull case faces its most credible challenge yet.",
+    "ticker": "NVDA",
+    "sector": "ai",
+    "sentiment": "bullish",
+    "date": "2026-05-20T20:00:00.000Z",
+    "image": {
+      "src": "/img/articles/nvidia-vera-rubin-chip.jpg",
+      "caption": "NVIDIA Vera Rubin chip architecture — the next-generation AI platform powering Blackwell's successor"
+    },
+    "tags": [
+      "Nvidia",
+      "Blackwell",
+      "AI Chips",
+      "Datacenter",
+      "GPU",
+      "Semiconductor",
+      "Infrastructure"
+    ]
+  },
+  {
+    "slug": "bill-gates-selling-microsoft",
+    "title": "Bill Gates Has Sold $20B+ of Microsoft Stock. Should You Follow?",
+    "subtitle": "The Microsoft co-founder has been selling shares every quarter for years. But his reasons have nothing to do with the company's performance — and MSFT's AI-driven growth tells a very different story.",
+    "summary": "Bill Gates has sold billions in Microsoft stock over the past five years, leading some retail investors to question their positions. But a deeper look reveals the sales are about diversification and philanthropy — not concern about Microsoft's AI-driven growth trajectory.",
+    "ticker": "MSFT",
+    "sector": "mega-cap",
+    "sentiment": "bullish",
+    "date": "2026-05-20T18:00:00.000Z",
+    "image": {
+      "src": "/img/articles/microsoft-surface.jpg",
+      "caption": "Microsoft Surface — the consumer face of the company Bill Gates built"
+    },
+    "tags": [
+      "Microsoft",
+      "Bill Gates",
+      "Insider Selling",
+      "AI",
+      "Azure",
+      "Mega-Cap"
+    ]
+  },
+  {
+    "slug": "redwire-next-space-runner",
+    "title": "Redwire's Contract Runway: Why This $14 Stock Could Be the Next Space Rocket",
+    "subtitle": "With a $500M backlog, growing revenue, and an expanding role in NASA's Artemis program, Redwire is positioning itself as the next small-cap space giant. Here's the bull case.",
+    "summary": "Redwire has quietly built a $500M+ contract backlog across space manufacturing, solar arrays, and 3D printing. With revenue growing 30%+ annually and expanding roles in NASA's Artemis program, this small-cap space stock has the same setup Rocket Lab had at $5.",
+    "ticker": "RDW",
+    "sector": "space",
+    "sentiment": "bullish",
+    "date": "2026-05-20T16:00:00.000Z",
+    "image": {
+      "src": "/img/articles/redwire-irosa-iss.jpg",
+      "caption": "Redwire's iROSA solar array deployed on the International Space Station"
+    },
+    "tags": [
+      "Space",
+      "Redwire",
+      "NASA",
+      "Artemis",
+      "Space Manufacturing",
+      "Contracts"
+    ]
+  },
+  {
+    "slug": "crowdstrike-vs-palo-alto-2026",
+    "title": "CrowdStrike vs Palo Alto Networks: Two Cybersecurity Giants, One Winner?",
+    "subtitle": "Both stocks are up 40%+ in 2026. We break down growth, margins, platform strategy, and valuation to see which cyber leader belongs in your portfolio.",
+    "summary": "CrowdStrike and Palo Alto Networks have both surged in 2026, but their paths to growth are diverging. This head-to-head analysis compares revenue growth, margins, free cash flow, platform approach (Falcon vs Prisma/Strata), TAM expansion in XDR and SASE, and valuation to determine which cybersecurity giant offers the better risk-reward today.",
+    "ticker": "CRWD",
+    "sector": "cyber",
+    "sentiment": "neutral",
+    "date": "2026-05-20T14:00:00.000Z",
+    "image": {
+      "src": "/img/articles/cybersecurity.jpg",
+      "caption": "Cybersecurity threat landscape — CrowdStrike vs Palo Alto Networks"
+    },
+    "tags": [
+      "Cybersecurity",
+      "CrowdStrike",
+      "Palo Alto",
+      "XDR",
+      "SASE"
+    ]
+  },
+  {
+    "slug": "google-io-2026-takeaways",
+    "title": "Google I/O 2026: 5 Takeaways That Reshape the AI Landscape",
+    "subtitle": "Gemini 3.0 matches GPT-5, AI Search goes default, Android 17 embeds AI at the OS level, and Google Cloud hits an $18B AI run rate. Here's what it means for investors.",
+    "summary": "Google I/O 2026 was a declaration that the AI wars have entered their platform phase. Gemini 3.0 closes the gap with GPT-5, AI Search monetizes at 15-20% higher CPMs, and TPU v6 gives Google a structural cost advantage competitors can't match.",
+    "ticker": "GOOGL",
+    "sector": "ai",
+    "sentiment": "bullish",
+    "date": "2026-05-20T12:00:00.000Z",
+    "image": {
+      "src": "/img/articles/google-io-2026.jpg",
+      "caption": "Google I/O 2026 keynote — Sundar Pichai on stage announcing Gemini 3.0 and the agentic AI era"
+    },
+    "tags": [
+      "Google I/O",
+      "Gemini 3.0",
+      "AI Search",
+      "Android",
+      "Google Cloud",
+      "Artificial Intelligence",
+      "TPU v6",
+      "Alphabet"
+    ]
+  },
+  {
     "slug": "cerebras-ipo-nvidia-threat-analysis",
     "title": "Cerebras Landed 2026's Biggest IPO. Here's Why Nvidia Isn't Losing Sleep.",
     "subtitle": "A $26.6B market debut, a $20B OpenAI deal, and a chip the size of a dinner plate — but can Cerebras actually challenge the GPU king?",
@@ -9,8 +403,14 @@
     "sentiment": "neutral",
     "date": "2026-05-20T10:00:00.000Z",
     "image": {
-      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Cerebras_Wafer_Scale_Engine.jpg/1200px-Cerebras_Wafer_Scale_Engine.jpg",
-      "caption": "Cerebras Wafer Scale Engine — the world's largest chip"
-    }
+      "src": "/img/articles/cerebras-hero-chip.jpg",
+      "caption": "Cerebras celebrates its Nasdaq debut — the biggest AI hardware IPO of 2026"
+    },
+    "tags": [
+      "IPO",
+      "AI Chips",
+      "Inference",
+      "Nasdaq"
+    ]
   }
 ]

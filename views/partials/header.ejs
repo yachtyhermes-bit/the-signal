@@ -9,6 +9,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/main.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-98KDVDFBCW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-98KDVDFBCW');
+  </script>
   <% if (typeof article !== 'undefined' && article) { %>
     <title><%= article.title %> — The Signal</title>
     <meta name="description" content="<%= article.summary %>">
@@ -77,6 +85,55 @@
         <a href="/sector/space" class="nav-link">Space</a>
         <a href="/sector/mega-cap" class="nav-link">Mega-Cap</a>
       </div>
+      <div class="nav-actions">
+        <button class="nav-btn search-btn" id="searchToggle" aria-label="Search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <div class="auth-container" id="authContainer">
+          <button class="nav-btn auth-btn" id="authToggle" aria-label="Sign In">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span class="auth-label" id="authLabel">Sign In</span>
+          </button>
+          <div class="auth-dropdown" id="authDropdown">
+            <div class="auth-user-info" id="authUserInfo" style="display:none">
+              <img class="auth-avatar" id="authAvatar" src="" alt="">
+              <span class="auth-name" id="authName"></span>
+              <button class="auth-signout-btn" id="authSignOut">Sign Out</button>
+            </div>
+            <div class="auth-options" id="authOptions">
+              <button class="auth-option google" id="authGoogle"><span class="auth-icon">G</span> Sign in with Google</button>
+              <button class="auth-option github" id="authGithub"><span class="auth-icon">⌘</span> Sign in with GitHub</button>
+              <button class="auth-option email" id="authEmail"><span class="auth-icon">✉</span> Sign in with Email</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </nav>
   <main class="main">
+
+  <!-- Search Overlay -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-backdrop" id="searchBackdrop"></div>
+    <div class="search-modal">
+      <div class="search-header">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search articles by title, ticker, sector, or tag…" autofocus>
+        <button class="search-close" id="searchClose" aria-label="Close search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+      <div class="search-empty" id="searchEmpty">Start typing to search articles…</div>
+    </div>
+  </div>
+
+  <script id="articles-data" type="application/json"><%- JSON.stringify(typeof allArticles !== 'undefined' ? allArticles : []) %></script>

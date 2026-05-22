@@ -37,15 +37,15 @@
   </section>
 
   <div class="focus-bar">
-    <span class="focus-item focus-ai">AI</span>
+    <a href="/sector/ai" class="focus-item focus-ai">AI</a>
     <span class="focus-divider">·</span>
-    <span class="focus-item focus-cyber">Cyber</span>
+    <a href="/sector/cyber" class="focus-item focus-cyber">Cyber</a>
     <span class="focus-divider">·</span>
-    <span class="focus-item focus-defense">Defense</span>
+    <a href="/sector/defense" class="focus-item focus-defense">Defense</a>
     <span class="focus-divider">·</span>
-    <span class="focus-item focus-space">Space</span>
+    <a href="/sector/space" class="focus-item focus-space">Space</a>
     <span class="focus-divider">·</span>
-    <span class="focus-item focus-mega">Mega-Cap</span>
+    <a href="/sector/mega-cap" class="focus-item focus-mega">Mega-Cap</a>
   </div>
 
   <section class="feed">
@@ -86,9 +86,38 @@
         <% } %>
       </a>
 
-      <!-- Remaining Articles -->
+      <!-- PULSE AI RESEARCH AGENT -->
+      <section class="pulse-section" id="pulseSection">
+        <div class="pulse-header">
+          <img src="/img/logo-hex.jpg" alt="Pulse" class="pulse-avatar">
+          <div class="pulse-header-text">
+            <h2 class="pulse-title">Ask <span class="pulse-gradient">Pulse</span></h2>
+            <p class="pulse-desc">Your AI research agent — ask about real-time market data, earnings, contracts, or any covered stock. Pulse searches the web to get you answers that go beyond our articles.</p>
+          </div>
+        </div>
+        <div class="pulse-chat" id="pulseChat">
+          <div class="pulse-messages" id="pulseMessages">
+            <div class="pulse-message pulse-message-bot">
+              <img src="/img/logo-hex.jpg" alt="Pulse" class="pulse-message-avatar">
+              <div class="pulse-bubble">Hey, I'm <strong>Pulse</strong>. Ask me anything — earnings data, stock analysis, market moves, or company filings. I search the web for real-time info.</div>
+            </div>
+          </div>
+          <div class="pulse-input-area">
+            <input type="text" class="pulse-input" id="pulseInput" placeholder="e.g. What were Nvidia's latest earnings?">
+            <button class="pulse-send" id="pulseSend" aria-label="Send">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- First 4 Articles -->
       <div class="article-grid">
-        <% articles.slice(1).forEach(function(a) { %>
+        <% var gridCards = articles.slice(1, 5); %>
+        <% gridCards.forEach(function(a) { %>
           <a href="/article/<%= a.slug %>" class="article-card">
             <% if (a.image) { %>
               <div class="card-image">
@@ -112,8 +141,38 @@
           </a>
         <% }) %>
       </div>
-    <% } else { %>
-      <div class="empty-state">No articles yet. Check back soon.</div>
     <% } %>
   </section>
+
+  <!-- Remaining Articles (after Pulse) -->
+  <% if (articles.length > 5) { %>
+  <section class="feed feed-continued">
+    <div class="article-grid">
+      <% var restCards = articles.slice(5); %>
+      <% restCards.forEach(function(a) { %>
+        <a href="/article/<%= a.slug %>" class="article-card">
+          <% if (a.image) { %>
+            <div class="card-image">
+              <img src="<%= typeof a.image === 'object' ? a.image.src : a.image %>" alt="<%= a.title %>" loading="lazy">
+            </div>
+          <% } %>
+          <div class="card-body">
+          <div class="card-top">
+            <span class="ticker-badge <%= a.sentiment || 'neutral' %>"><%= a.ticker %></span>
+            <span class="sentiment-label <%= a.sentiment || 'neutral' %>">
+              <%= a.sentiment === 'bullish' ? '▲ Bullish' : a.sentiment === 'bearish' ? '▼ Bearish' : '– Neutral' %>
+            </span>
+          </div>
+          <h3 class="card-title"><%= a.title %></h3>
+          <p class="card-summary"><%= a.summary.length > 200 ? a.summary.slice(0, 200) + '…' : a.summary %></p>
+          <div class="card-meta">
+            <span><%= new Date(a.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) %></span>
+            <span><%= Math.ceil(a.summary.split(' ').length / 200) %> min read</span>
+          </div>
+          </div>
+        </a>
+      <% }) %>
+    </div>
+  </section>
+  <% } %>
 <%- include('../partials/footer') %>

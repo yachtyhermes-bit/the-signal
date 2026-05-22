@@ -81,4 +81,73 @@
       <% } %>
     </div>
   </article>
+
+  <!-- Suggested / Related Articles -->
+  <% if (typeof allArticles !== 'undefined' && allArticles && allArticles.length > 1) { %>
+  <section class="related-articles" id="relatedArticles">
+    <h3 class="related-title">Related Articles</h3>
+    <div class="related-grid" id="relatedGrid">
+      <% 
+        var current = article;
+        var related = allArticles.filter(function(a) {
+          if (a.slug === current.slug) return false;
+          // Match by same sector, same ticker, or overlapping tags
+          var sameSector = a.sector === current.sector;
+          var sameTicker = a.ticker === current.ticker;
+          var tagOverlap = false;
+          if (current.tags && a.tags) {
+            for (var i = 0; i < current.tags.length; i++) {
+              if (a.tags.indexOf(current.tags[i]) !== -1) {
+                tagOverlap = true;
+                break;
+              }
+            }
+          }
+          return sameSector || sameTicker || tagOverlap;
+        }).slice(0, 4);
+      %>
+      <% if (related.length > 0) { %>
+        <% related.forEach(function(a) { %>
+          <a href="/article/<%= a.slug %>" class="related-card">
+            <% if (a.image) { %>
+              <div class="related-card-image">
+                <img src="<%= typeof a.image === 'object' ? a.image.src : a.image %>" alt="<%= a.title %>" loading="lazy">
+              </div>
+            <% } %>
+            <div class="related-card-body">
+              <span class="ticker-badge <%= a.sentiment || 'neutral' %>"><%= a.ticker %></span>
+              <h4 class="related-card-title"><%= a.title.length > 80 ? a.title.slice(0, 80) + '…' : a.title %></h4>
+              <span class="related-card-date"><%= new Date(a.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) %></span>
+            </div>
+          </a>
+        <% }); %>
+      <% } %>
+    </div>
+  </section>
+  <% } %>
+
+  <!-- Giscus Comments -->
+  <section class="article-comments">
+    <h3 class="comments-title">Discussion</h3>
+    <p class="comments-intro">Comments powered by Giscus — sign in with GitHub to join the discussion.</p>
+    <div class="giscus-container">
+      <script src="https://giscus.app/client.js"
+        data-repo="[ENTER REPO HERE]"
+        data-repo-id="[ENTER REPO ID HERE]"
+        data-category="Announcements"
+        data-category-id="[ENTER CATEGORY ID HERE]"
+        data-mapping="specific"
+        data-term="<%= article.slug %>"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="dark"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+      </script>
+    </div>
+  </section>
+
 <%- include('../partials/footer') %>

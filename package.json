@@ -9,6 +9,7 @@
     "prices": "node scripts/fetch-prices.js"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.24.1",
     "ejs": "^3.1.10",
     "express": "^4.18.2"
   }

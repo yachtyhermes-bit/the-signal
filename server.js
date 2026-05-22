@@ -1,11 +1,13 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
+const { GoogleGenerativeAI } = require('@google/generative-ai');
 const app = express();
 const PORT = process.env.PORT || 3004;
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Load articles index
@@ -35,7 +37,7 @@ function loadTickerArticles(ticker) {
 app.get('/', (req, res) => {
   const articles = loadArticles();
   const prices = loadPrices();
-  res.render('pages/index', { articles: articles.slice(0, 30), prices });
+  res.render('pages/index', { articles: articles.slice(0, 30), prices, allArticles: articles });
 });
 
 app.get('/ticker/:symbol', (req, res) => {
@@ -43,7 +45,8 @@ app.get('/ticker/:symbol', (req, res) => {
   const articles = loadTickerArticles(symbol);
   const prices = loadPrices();
   const price = prices[symbol] || null;
-  res.render('pages/ticker', { symbol, articles, price, prices });
+  const allArticles = loadArticles();
+  res.render('pages/ticker', { symbol, articles, price, prices, allArticles });
 });
 
 app.get('/sector/:name', (req, res) => {
@@ -62,7 +65,7 @@ app.get('/sector/:name', (req, res) => {
     ? allArticles.filter(a => tickers.includes(a.ticker))
     : allArticles;
   const prices = loadPrices();
-  res.render('pages/sector', { name: name.toUpperCase(), articles, prices, tickers });
+  res.render('pages/sector', { name: name.toUpperCase(), articles, prices, tickers, allArticles });
 });
 
 app.get('/article/:slug', (req, res) => {
@@ -70,9 +73,96 @@ app.get('/article/:slug', (req, res) => {
   try {
     const article = JSON.parse(fs.readFileSync(path.join(__dirname, 'articles', 'posts', `${slug}.json`), 'utf8'));
     const prices = loadPrices();
-    res.render('pages/article', { article, prices });
+    const allArticles = loadArticles();
+    res.render('pages/article', { article, prices, allArticles });
   } catch {
     res.status(404).render('pages/404');
+  }
+});
+
+app.get('/api/articles.json', (req, res) => {
+  const articles = loadArticles();
+  res.json(articles);
+});
+
+// Pulse AI Research Agent API
+app.post('/api/pulse', async (req, res) => {
+  try {
+    const { question } = req.body;
+    if (!question || question.trim().length < 3) {
+      return res.status(400).json({ error: 'Please ask a meaningful question.' });
+    }
+
+    // Load articles
+    const articlesDir = path.join(__dirname, 'articles', 'posts');
+    const articles = [];
+    if (fs.existsSync(articlesDir)) {
+      const files = fs.readdirSync(articlesDir).filter(f => f.endsWith('.json'));
+      for (const file of files) {
+        try {
+          const article = JSON.parse(fs.readFileSync(path.join(articlesDir, file), 'utf8'));
+          articles.push({
+            title: article.title,
+            slug: article.slug,
+            ticker: article.ticker,
+            sector: article.sector,
+            date: article.date,
+            tags: article.tags || [],
+            summary: article.summary,
+            bodyText: (article.bodyHtml || '').replace(/<[^>]*>/g, '').slice(0, 3000)
+          });
+        } catch(e) {}
+      }
+    }
+    articles.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    const genAI = new GoogleGenerativeAI('AIzaSyDLpweLQTfZkdlpCtarQOnRX36Uiza3fiQ');
+    const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash', tools: [{ googleSearch: {} }] });
+
+    const articleContext = articles.map(a =>
+      `[${a.ticker}] ${a.title} (${a.sector}, ${a.date.slice(0,10)})\nSummary: ${a.summary}\nBody excerpt: ${a.bodyText.slice(0, 1500)}`
+    ).join('\n\n---\n\n');
+
+    const systemPrompt = `You are Pulse, an AI research assistant for The Signal — covering AI, defense, space, cybersecurity, and mega-cap stocks.
+
+You have TWO capabilities:
+1. **Web Search** — You can search Google in real-time for current earnings, stock data, SEC filings, news, and any financial information. USE THIS whenever users ask about real-time or recent data.
+2. **Article Library** — The Signal's analysis articles below. Reference these when relevant but don't limit yourself to them.
+
+Your tone: Direct, punchy, data-driven (AXON style). Bold key numbers. Cite sources clearly. If you search the web, mention that you did.
+
+The Signal's article library (for reference):
+${articleContext.slice(0, 20000)}`;
+
+    const result = await model.generateContent([
+      { text: systemPrompt },
+      { text: `User question: ${question}` }
+    ]);
+
+    let answer = '';
+    try { answer = result.response.text(); } catch (e) {
+      try {
+        const parts = result.response.candidates?.[0]?.content?.parts || [];
+        answer = parts.map(p => p.text || '').join('\n');
+      } catch(e2) { answer = ''; }
+    }
+
+    // Find sources from articles
+    const sources = [];
+    for (const a of articles) {
+      if (answer.includes(a.ticker) || answer.includes(a.title.slice(0, 30))) {
+        sources.push({ title: a.title, slug: a.slug, ticker: a.ticker });
+        if (sources.length >= 3) break;
+      }
+    }
+
+    return res.json({ answer, sources });
+  } catch (error) {
+    console.error('Pulse API error:', error.message);
+    return res.json({
+      answer: 'I hit a processing limit — try asking that in a different way.',
+      sources: []
+    });
   }
 });
 

@@ -12,7 +12,7 @@ const DATA_DIR = path.join(ROOT, 'data');
 const SECTORS = {
   ai: { name: 'AI', tickers: ['NVDA','AMD','AVGO','MRVL','TSM','ASML','MU','CBRS','CRWV'], color: '#3b82f6' },
   cyber: { name: 'Cybersecurity', tickers: ['CRWD','PANW','FTNT','ZS','S','CHKP','CYBR','TENB'], color: '#22c55e' },
-  defense: { name: 'Defense', tickers: ['LMT','RTX','NOC','GD','LHX','KTOS','AVAV','PL','AXON'], color: '#fbbf24' },
+  defense: { name: 'Defense', tickers: ['LMT','RTX','NOC','GD','LHX','KTOS','AVAV','PL','AXON','GE'], color: '#fbbf24' },
   space: { name: 'Space', tickers: ['RKLB','RDW','LUNR','ASTS'], color: '#a78bfa' },
   'mega-cap': { name: 'Mega-Cap', tickers: ['AAPL','MSFT','GOOGL','AMZN','META','TSLA'], color: '#f87171' },
 };
@@ -59,7 +59,8 @@ const COMPANY_INFO = {
   'ASTS': { name: 'AST SpaceMobile', url: 'https://www.ast-science.com/' },
   'PL': { name: 'Planet Labs', url: 'https://www.planet.com/' },
   'AXON': { name: 'Axon Enterprise', url: 'https://www.axon.com/' },
-  'CRWV': { name: 'CoreWeave Inc.', url: 'https://www.coreweave.com/' }
+  'CRWV': { name: 'CoreWeave Inc.', url: 'https://www.coreweave.com/' },
+  'GE': { name: 'GE Aerospace', url: 'https://www.geaerospace.com/' }
 };
 
 // === Load articles ===
@@ -125,7 +126,7 @@ function esc(s) {
 }
 
 // === HTML rendering ===
-function renderHeader(title, desc, article) {
+function renderHeader(title, desc, article, allArticles) {
   let ogExtra = '';
   let ldJson = '';
   if (article) {
@@ -154,37 +155,8 @@ function renderHeader(title, desc, article) {
     }
     </script>`;
   }
-  return `<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#08080e">
-  <meta name="robots" content="max-image-preview:large">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/main.css">
-  <script src="/js/prices.js" defer></script>
-  <title>${esc(title)}</title>
-  <meta name="description" content="${esc(desc)}">
-  <meta property="og:title" content="${esc(title)}">
-  <meta property="og:description" content="${esc(desc)}">
-  ${ogExtra}
-</head>
-<body>
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="/" class="logo"><img src="/img/logo-hex.jpg" alt="The Signal" class="logo-img"><span class="logo-text">THE <strong>SIGNAL</strong></span></a>
-      <div class="nav-links">
-        <a href="/sector/ai" class="nav-link">AI</a>
-        <a href="/sector/cyber" class="nav-link">Cyber</a>
-        <a href="/sector/defense" class="nav-link">Defense</a>
-        <a href="/sector/space" class="nav-link">Space</a>
-        <a href="/sector/mega-cap" class="nav-link">Mega-Cap</a>
-      </div>
-    </div>
-  </nav>
-  <main class="main">${ldJson ? ldJson : ''}`;
+  return `<!DOCTYPE html>\n<html lang="en">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <meta name="theme-color" content="#08080e">\n  <meta name="robots" content="max-image-preview:large">\n  <link rel="preconnect" href="https://fonts.googleapis.com">\n  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">\n  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/pulse-badge.css">\n  <script src="/js/prices.js" defer></script>\n  <script src="/js/search.js" defer></script>\n  <script src="/js/auth.js" defer></script>\n  <script src="/js/pulse.js" defer></script>\n  <title>${esc(title)}</title>\n  <meta name="description" content="${esc(desc)}">\n  <meta property="og:title" content="${esc(title)}">\n  <meta property="og:description" content="${esc(desc)}">\n  ${ogExtra}\n</head>\n<body>\n  <nav class="nav">\n    <div class="nav-inner">\n      <a href="/" class="logo"><img src="/img/logo-hex.jpg" alt="The Signal" class="logo-img"><span class="logo-text">THE <strong>SIGNAL</strong></span></a>\n      <div class="nav-links">\n        <a href="/sector/ai" class="nav-link">AI</a>\n        <a href="/sector/cyber" class="nav-link">Cyber</a>\n        <a href="/sector/defense" class="nav-link">Defense</a>\n        <a href="/sector/space" class="nav-link">Space</a>\n        <a href="/sector/mega-cap" class="nav-link">Mega-Cap</a>\n      </div>\n      <div class="nav-actions">\n        <button class="nav-btn search-btn" id="searchToggle" aria-label="Search">\n          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">\n            <circle cx="11" cy="11" r="8"></circle>\n            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>\n          </svg>\n        </button>\n        <div class="auth-container" id="authContainer">\n          <button class="nav-btn auth-btn" id="authToggle" aria-label="Sign In">\n            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">\n              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>\n              <circle cx="12" cy="7" r="4"></circle>\n            </svg>\n            <span class="auth-label" id="authLabel">Sign In</span>\n          </button>\n          <div class="auth-dropdown" id="authDropdown">\n            <div class="auth-user-info" id="authUserInfo" style="display:none">\n              <img class="auth-avatar" id="authAvatar" src="" alt="">\n              <span class="auth-name" id="authName"></span>\n              <button class="auth-signout-btn" id="authSignOut">Sign Out</button>\n            </div>\n            <div class="auth-options" id="authOptions">\n              <button class="auth-option google" id="authGoogle"><span class="auth-icon">G</span> Sign in with Google</button>\n              <button class="auth-option github" id="authGithub"><span class="auth-icon">⌘</span> Sign in with GitHub</button>\n              <button class="auth-option email" id="authEmail"><span class="auth-icon">✉</span> Sign in with Email</button>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </nav>\n\n  <!-- Search Overlay -->\n  <div class="search-overlay" id="searchOverlay">\n    <div class="search-backdrop" id="searchBackdrop"></div>\n    <div class="search-modal">\n      <div class="search-header">\n        <input type="text" class="search-input" id="searchInput" placeholder="Search articles by title, ticker, sector, or tag…" autofocus>\n        <button class="search-close" id="searchClose" aria-label="Close search">\n          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">\n            <line x1="18" y1="6" x2="6" y2="18"></line>\n            <line x1="6" y1="6" x2="18" y2="18"></line>\n          </svg>\n        </button>\n      </div>\n      <div class="search-results" id="searchResults"></div>\n      <div class="search-empty" id="searchEmpty">Start typing to search articles…</div>\n    </div>\n  </div>\n\n  <script id="articles-data" type="application/json">${JSON.stringify(allArticles || [])}</script>\n  <main class="main">${ldJson ? ldJson : ''}`;
 }
 
 function renderFooter() {
@@ -195,8 +167,10 @@ function renderFooter() {
       <div class="footer-tag">The Signal Editorial Team · readthesignal.com</div>
       <div class="footer-copy">© ${new Date().getFullYear()} The Signal — Market Intelligence. Data from public sources.</div>
     </div>
-  </footer>
-</body>
+  <script src="/js/prices.js" defer></script>
+  <script src="/js/search.js" defer></script>
+  <script src="/js/auth.js" defer></script>
+  <script src="/js/pulse.js" defer></script>
 </html>`;
 }
 
@@ -282,6 +256,35 @@ function injectVideos(bodyHtml, videos) {
   return result;
 }
 
+function renderPulse() {
+  return `<section class="pulse-section" id="pulseSection">
+    <div class="pulse-header">
+      <img src="/img/logo-hex.jpg" alt="Pulse" class="pulse-avatar">
+      <div class="pulse-header-text">
+        <h2 class="pulse-title">Ask <span class="pulse-gradient">Pulse</span></h2>
+        <p class="pulse-desc">Your AI research agent — ask about real-time market data, earnings, contracts, or any covered stock. Pulse searches the web to get you answers that go beyond our articles.</p>
+      </div>
+    </div>
+    <div class="pulse-chat" id="pulseChat">
+      <div class="pulse-messages" id="pulseMessages">
+        <div class="pulse-message pulse-message-bot">
+          <img src="/img/logo-hex.jpg" alt="Pulse" class="pulse-message-avatar">
+          <div class="pulse-bubble">Hey, I'm <strong>Pulse</strong>. Ask me anything — earnings data, stock analysis, market moves, or company filings. I search the web for real-time info.</div>
+        </div>
+      </div>
+      <div class="pulse-input-area">
+        <input type="text" class="pulse-input" id="pulseInput" placeholder="e.g. What were Nvidia's latest earnings?">
+        <button class="pulse-send" id="pulseSend" aria-label="Send">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>`;
+}
+
 // === Build pages ===
 function buildHome(articles, prices) {
   const ticker = renderTickerTape(prices);
@@ -300,22 +303,25 @@ function buildHome(articles, prices) {
     </div>
   </section>
   <div class="focus-bar">
-    <span class="focus-item focus-ai">AI</span>
+    <a href="/sector/ai" class="focus-item focus-ai">AI</a>
     <span class="focus-divider">·</span>
-    <span class="focus-item focus-cyber">Cyber</span>
+    <a href="/sector/cyber" class="focus-item focus-cyber">Cyber</a>
     <span class="focus-divider">·</span>
-    <span class="focus-item focus-defense">Defense</span>
+    <a href="/sector/defense" class="focus-item focus-defense">Defense</a>
     <span class="focus-divider">·</span>
-    <span class="focus-item focus-space">Space</span>
+    <a href="/sector/space" class="focus-item focus-space">Space</a>
     <span class="focus-divider">·</span>
-    <span class="focus-item focus-mega">Mega-Cap</span>
+    <a href="/sector/mega-cap" class="focus-item focus-mega">Mega-Cap</a>
   </div>`;
-
   const hasFeatured = articles.length > 0;
   const featured = hasFeatured ? renderFeatured(articles[0]) : '';
-  const grid = hasFeatured
-    ? `<div class="article-grid">${articles.slice(1).map(a => renderCard(a, prices)).join('\n      ')}</div>`
-    : '<div class="empty-state">No articles yet. Check back soon.</div>';
+  const gridFirst4 = hasFeatured && articles.length > 1
+    ? `<div class="article-grid">${articles.slice(1, 5).map(a => renderCard(a, prices)).join('\n      ')}</div>`
+    : '';
+  const gridRest = hasFeatured && articles.length > 5
+    ? `<section class="feed feed-continued"><div class="article-grid">${articles.slice(5).map(a => renderCard(a, prices)).join('\n      ')}</div></section>`
+    : '';
+  const pulse = renderPulse();
 
   const feed = `<section class="feed">
     <div class="feed-header">
@@ -325,18 +331,21 @@ function buildHome(articles, prices) {
       </div>
     </div>
     ${hasFeatured ? featured : ''}
-    ${grid}
-  </section>`;
+    ${hasFeatured ? pulse : ''}
+    ${gridFirst4}
+  </section>
+  ${gridRest}`;
 
   const html = renderHeader('The Signal — Market Intelligence for AI, Defense, Space & Cyber',
-    'The Signal delivers sharp analysis on AI, defense, space, and cybersecurity stocks. Earnings deep-dives, contract analysis, and market-moving insights.')
+    'The Signal delivers sharp analysis on AI, defense, space, and cybersecurity stocks. Earnings deep-dives, contract analysis, and market-moving insights.',
+    null, articles)
     + ticker + hero + feed + renderFooter();
   fs.mkdirSync(DIST, { recursive: true });
   fs.writeFileSync(path.join(DIST, 'index.html'), html);
   console.log('  ✓ index.html');
 }
 
-function buildArticle(article) {
+function buildArticle(article, allArticles) {
   const sentLabel = article.sentiment === 'bullish' ? '▲ Bullish' : article.sentiment === 'bearish' ? '▼ Bearish' : '– Neutral';
   const img = typeof article.image === 'object' ? article.image : (article.image ? { src: article.image } : null);
   const info = COMPANY_INFO[article.ticker] || {};
@@ -344,6 +353,65 @@ function buildArticle(article) {
     ? `<div class="article-links"><h4>🔗 Learn More</h4><ul>${article.links.map(l => `<li><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a></li>`).join('\n          ')}</ul></div>`
     : '';
   const bodyHtml = injectVideos(article.bodyHtml || '', article.videos);
+
+  // Build related articles
+  let relatedHtml = '';
+  if (allArticles && allArticles.length > 1) {
+    const related = allArticles.filter(function(a) {
+      if (a.slug === article.slug) return false;
+      var sameSector = a.sector === article.sector;
+      var sameTicker = a.ticker === article.ticker;
+      var tagOverlap = false;
+      if (article.tags && a.tags) {
+        for (var i = 0; i < article.tags.length; i++) {
+          if (a.tags.indexOf(article.tags[i]) !== -1) { tagOverlap = true; break; }
+        }
+      }
+      return sameSector || sameTicker || tagOverlap;
+    }).slice(0, 4);
+    if (related.length > 0) {
+      relatedHtml = `\n  <section class="related-articles">
+    <h3 class="related-title">Related Articles</h3>
+    <div class="related-grid">
+      ${related.map(function(a) {
+        const relImg = typeof a.image === 'object' ? a.image : (a.image ? { src: a.image } : null);
+        return `<a href="/article/${a.slug}" class="related-card">
+        ${relImg ? `<div class="related-card-image"><img src="${esc(relImg.src)}" alt="${esc(a.title)}" loading="lazy"></div>` : ''}
+        <div class="related-card-body">
+          <span class="ticker-badge ${a.sentiment || 'neutral'}">${a.ticker}</span>
+          <h4 class="related-card-title">${esc(a.title.length > 80 ? a.title.slice(0, 80) + '…' : a.title)}</h4>
+          <span class="related-card-date">${formatDate(a.date)}</span>
+        </div>
+      </a>`;
+      }).join('\n      ')}
+    </div>
+  </section>`;
+    }
+  }
+
+  // Build Giscus comments
+  const giscusHtml = `\n  <section class="article-comments">
+    <h3 class="comments-title">Discussion</h3>
+    <p class="comments-intro">Comments powered by Giscus — sign in with GitHub to join the discussion.</p>
+    <div class="giscus-container">
+      <script src="https://giscus.app/client.js"
+        data-repo="[ENTER REPO HERE]"
+        data-repo-id="[ENTER REPO ID HERE]"
+        data-category="Announcements"
+        data-category-id="[ENTER CATEGORY ID HERE]"
+        data-mapping="specific"
+        data-term="${article.slug}"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="dark"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+      </script>
+    </div>
+  </section>`;
 
   const body = `<article class="article-page">
     <div class="article-header">
@@ -373,9 +441,11 @@ function buildArticle(article) {
       </div>
       ${linksHtml}
     </div>
-  </article>`;
+  </article>
+  ${relatedHtml}
+  ${giscusHtml}`;
 
-  const html = renderHeader(article.title + ' — The Signal', article.summary, article) + body + renderFooter();
+  const html = renderHeader(article.title + ' — The Signal', article.summary, article, allArticles) + body + renderFooter();
   const dir = path.join(DIST, 'article', article.slug);
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, 'index.html'), html);
@@ -522,7 +592,7 @@ console.log('  ✓ static assets copied');
 buildHome(articles, prices);
 
 for (const a of articles) {
-  buildArticle(a);
+  buildArticle(a, articles);
 }
 
 // Ticker pages
