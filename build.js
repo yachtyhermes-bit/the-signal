@@ -10,8 +10,8 @@ const PUBLIC = path.join(ROOT, 'public');
 const DATA_DIR = path.join(ROOT, 'data');
 
 const SECTORS = {
-  ai: { name: 'AI', tickers: ['NVDA','AMD','AVGO','MRVL','TSM','ASML','MU','CBRS','CRWV'], color: '#3b82f6' },
-  cyber: { name: 'Cybersecurity', tickers: ['CRWD','PANW','FTNT','ZS','S','CHKP','CYBR','TENB'], color: '#22c55e' },
+  ai: { name: 'AI', tickers: ['NVDA','AMD','AVGO','MRVL','TSM','ASML','MU','CBRS','CRWV','NBIS'], color: '#3b82f6' },
+  cyber: { name: 'Cybersecurity', tickers: ['CRWD','PANW','FTNT','ZS','S','CHKP','CYBR','TENB','RBRK'], color: '#22c55e' },
   defense: { name: 'Defense', tickers: ['LMT','RTX','NOC','GD','LHX','KTOS','AVAV','PL','AXON','GE'], color: '#fbbf24' },
   space: { name: 'Space', tickers: ['RKLB','RDW','LUNR','ASTS'], color: '#a78bfa' },
   'mega-cap': { name: 'Mega-Cap', tickers: ['AAPL','MSFT','GOOGL','AMZN','META','TSLA'], color: '#f87171' },
@@ -60,7 +60,9 @@ const COMPANY_INFO = {
   'PL': { name: 'Planet Labs', url: 'https://www.planet.com/' },
   'AXON': { name: 'Axon Enterprise', url: 'https://www.axon.com/' },
   'CRWV': { name: 'CoreWeave Inc.', url: 'https://www.coreweave.com/' },
-  'GE': { name: 'GE Aerospace', url: 'https://www.geaerospace.com/' }
+  'GE': { name: 'GE Aerospace', url: 'https://www.geaerospace.com/' },
+  'RBRK': { name: 'Rubrik Inc.', url: 'https://www.rubrik.com/' },
+  'NBIS': { name: 'Nebius Group', url: 'https://nebius.com/' }
 };
 
 // === Load articles ===
@@ -125,21 +127,38 @@ function esc(s) {
   return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 }
 
+// Render image with WebP support, lazy loading, and CLS prevention
+function renderImg(src, alt, cls, eager) {
+  const webpSrc = src.replace(/\.(jpg|jpeg|png)$/i, '.webp');
+  const lazyAttr = eager ? 'loading="eager"' : 'loading="lazy" decoding="async"';
+  return '<picture>' +
+    '<source srcset="' + esc(webpSrc) + '" type="image/webp">' +
+    '<img src="' + esc(src) + '" alt="' + esc(alt) + '"' +
+    (cls ? ' class="' + cls + '"' : '') +
+    ' ' + lazyAttr + ' width="1200" height="675">' +
+    '</picture>';
+}
+
 // === HTML rendering ===
-function renderHeader(title, desc, article, allArticles) {
+function renderHeader(title, desc, article, allArticles, canonical) {
   let ogExtra = '';
   let ldJson = '';
+  const canon = canonical ? canonical : article
+    ? `https://readthesignal.net/article/${article.slug}`
+    : 'https://readthesignal.net/';
+  const canonTag = `  <link rel="canonical" href="${canon}">\n`;
   if (article) {
     const img = typeof article.image === 'object' ? article.image.src : article.image;
+    const absImg = img ? (img.startsWith('http') ? img : 'https://readthesignal.net' + (img.startsWith('/') ? '' : '/') + img) : '';
     ogExtra = `<meta property="og:title" content="${esc(article.title)}">
     <meta property="og:description" content="${esc(article.summary)}">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://readthesignal.com/article/${article.slug}">
-    ${img ? `<meta property="og:image" content="${esc(img)}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="675">` : ''}
+    <meta property="og:url" content="https://readthesignal.net/article/${article.slug}">
+    ${img ? `<meta property="og:image" content="${absImg}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="675">` : ''}
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="${esc(article.title)}">
     <meta name="twitter:description" content="${esc(article.summary)}">
-    ${img ? `<meta name="twitter:image" content="${esc(img)}">` : ''}`;
+    ${img ? `<meta name="twitter:image" content="${absImg}">` : ''}`;
     ldJson = `<script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -148,15 +167,70 @@ function renderHeader(title, desc, article, allArticles) {
       "description": ${JSON.stringify(article.summary)},
       "datePublished": "${article.date}",
       "dateModified": "${article.date}",
-      "mainEntityOfPage": {"@type":"WebPage","@id":"https://readthesignal.com/article/${article.slug}"},
-      "author": {"@type":"Organization","name":"The Signal","url":"https://readthesignal.com"},
-      "publisher": {"@type":"Organization","name":"The Signal","logo":{"@type":"ImageObject","url":"https://readthesignal.com/img/logo.png","width":600,"height":60}},
-      "image": ${JSON.stringify(img || 'https://readthesignal.com/img/og-default.png')}
+      "mainEntityOfPage": {"@type":"WebPage","@id":"https://readthesignal.net/article/${article.slug}"},
+      "author": {"@type":"Organization","name":"The Signal","url":"https://readthesignal.net"},
+      "publisher": {"@type":"Organization","name":"The Signal","logo":{"@type":"ImageObject","url":"https://readthesignal.net/img/logo-hex.jpg","width":600,"height":60}},
+      "image": ${JSON.stringify(img || 'https://readthesignal.net/img/logo-hex.jpg')},
+      "thumbnailUrl": ${JSON.stringify(img || 'https://readthesignal.net/img/logo-hex.jpg')},
+      "isAccessibleForFree": true,
+      "wordCount": ${(article.bodyHtml || '').replace(/<[^>]+>/g, '').split(/\s+/).filter(Boolean).length},
+      "keywords": ${JSON.stringify(article.tags.join(', '))},
+      "articleSection": "${SECTORS[article.sector]?.name || article.sector}"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "The Signal",
+        "item": "https://readthesignal.net"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "${SECTORS[article.sector]?.name || article.sector}",
+        "item": "https://readthesignal.net/sector/${article.sector}"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": ${JSON.stringify(article.title)},
+        "item": "https://readthesignal.net/article/${article.slug}"
+      }]
+    }
+    </script>`;
+  } else {
+    // Homepage / section pages — Organization + WebSite schema
+    ldJson = `<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "The Signal",
+      "url": "https://readthesignal.net",
+      "logo": {"@type":"ImageObject","url":"https://readthesignal.net/img/logo-hex.jpg","width":600,"height":60},
+      "description": "Market intelligence for AI, defense, space, and cybersecurity stocks."
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "The Signal",
+      "url": "https://readthesignal.net",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://readthesignal.net/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
     }
     </script>`;
   }
-  return `<!DOCTYPE html>\n<html lang="en">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <meta name="theme-color" content="#08080e">\n  <meta name="robots" content="max-image-preview:large">\n  <link rel="preconnect" href="https://fonts.googleapis.com">\n  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">\n  <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="/css/pulse-badge.css">\n  <script src="/js/prices.js" defer></script>\n  <script src="/js/search.js" defer></script>\n  <script src="/js/auth.js" defer></script>\n  <script src="/js/pulse.js" defer></script>\n  <title>${esc(title)}</title>\n  <meta name="description" content="${esc(desc)}">\n  <meta property="og:title" content="${esc(title)}">\n  <meta property="og:description" content="${esc(desc)}">\n  ${ogExtra}\n</head>\n<body>\n  <nav class="nav">\n    <div class="nav-inner">\n      <a href="/" class="logo"><img src="/img/logo-hex.jpg" alt="The Signal" class="logo-img"><span class="logo-text">THE <strong>SIGNAL</strong></span></a>\n      <div class="nav-links">\n        <a href="/sector/ai" class="nav-link">AI</a>\n        <a href="/sector/cyber" class="nav-link">Cyber</a>\n        <a href="/sector/defense" class="nav-link">Defense</a>\n        <a href="/sector/space" class="nav-link">Space</a>\n        <a href="/sector/mega-cap" class="nav-link">Mega-Cap</a>\n      </div>\n      <div class="nav-actions">\n        <button class="nav-btn search-btn" id="searchToggle" aria-label="Search">\n          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">\n            <circle cx="11" cy="11" r="8"></circle>\n            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>\n          </svg>\n        </button>\n        <div class="auth-container" id="authContainer">\n          <button class="nav-btn auth-btn" id="authToggle" aria-label="Sign In">\n            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">\n              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>\n              <circle cx="12" cy="7" r="4"></circle>\n            </svg>\n            <span class="auth-label" id="authLabel">Sign In</span>\n          </button>\n          <div class="auth-dropdown" id="authDropdown">\n            <div class="auth-user-info" id="authUserInfo" style="display:none">\n              <img class="auth-avatar" id="authAvatar" src="" alt="">\n              <span class="auth-name" id="authName"></span>\n              <button class="auth-signout-btn" id="authSignOut">Sign Out</button>\n            </div>\n            <div class="auth-options" id="authOptions">\n              <button class="auth-option google" id="authGoogle"><span class="auth-icon">G</span> Sign in with Google</button>\n              <button class="auth-option github" id="authGithub"><span class="auth-icon">⌘</span> Sign in with GitHub</button>\n              <button class="auth-option email" id="authEmail"><span class="auth-icon">✉</span> Sign in with Email</button>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </nav>\n\n  <!-- Search Overlay -->\n  <div class="search-overlay" id="searchOverlay">\n    <div class="search-backdrop" id="searchBackdrop"></div>\n    <div class="search-modal">\n      <div class="search-header">\n        <input type="text" class="search-input" id="searchInput" placeholder="Search articles by title, ticker, sector, or tag…" autofocus>\n        <button class="search-close" id="searchClose" aria-label="Close search">\n          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">\n            <line x1="18" y1="6" x2="6" y2="18"></line>\n            <line x1="6" y1="6" x2="18" y2="18"></line>\n          </svg>\n        </button>\n      </div>\n      <div class="search-results" id="searchResults"></div>\n      <div class="search-empty" id="searchEmpty">Start typing to search articles…</div>\n    </div>\n  </div>\n\n  <script id="articles-data" type="application/json">${JSON.stringify(allArticles || [])}</script>\n  <main class="main">${ldJson ? ldJson : ''}`;
+  return `<!DOCTYPE html>\n<html lang="en">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <meta name="theme-color" content="#08080e">\n  ${canonTag}  <link rel="icon" type="image/x-icon" href="/favicon.ico">\n  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">\n  <meta name="robots" content="max-image-preview:large">\n  <link rel="preconnect" href="https://fonts.googleapis.com">\n  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">\n  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/pulse-badge.css">\n  <!-- Google tag (gtag.js) -->\n  <script async src="https://www.googletagmanager.com/gtag/js?id=G-98KDVDFBCW"></script>\n  <script>\n    window.dataLayer = window.dataLayer || [];\n    function gtag(){dataLayer.push(arguments);}\n    gtag('js', new Date());\n    gtag('config', 'G-98KDVDFBCW');\n  </script>\n  <script src="/js/prices.js" defer></script>\n  <script src="/js/search.js" defer></script>\n  <script src="/js/auth.js" defer></script>\n  <script src="/js/pulse.js" defer></script>\n  <title>${esc(title)}</title>\n  <meta name="description" content="${esc(desc)}">\n  <meta property="og:title" content="${esc(title)}">\n  <meta property="og:description" content="${esc(desc)}">\n  ${ogExtra}${ldJson ? '\\n  ' + ldJson : ''}\n</head>\n<body>\n  <nav class="nav">\n    <div class="nav-inner">\n      <a href="/" class="logo"><img src="/img/logo-hex.jpg" alt="The Signal" class="logo-img"><span class="logo-text">THE <strong>SIGNAL</strong></span></a>\n      <div class="nav-links">\n        <a href="/sector/ai" class="nav-link">AI</a>\n        <a href="/sector/cyber" class="nav-link">Cyber</a>\n        <a href="/sector/defense" class="nav-link">Defense</a>\n        <a href="/sector/space" class="nav-link">Space</a>\n        <a href="/sector/mega-cap" class="nav-link">Mega-Cap</a>\n      </div>\n      <div class="nav-actions">\n        <button class="nav-btn search-btn" id="searchToggle" aria-label="Search">\n          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">\n            <circle cx="11" cy="11" r="8"></circle>\n            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>\n          </svg>\n        </button>\n        <div class="auth-container" id="authContainer">\n          <button class="nav-btn auth-btn" id="authToggle" aria-label="Sign In">\n            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">\n              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>\n              <circle cx="12" cy="7" r="4"></circle>\n            </svg>\n            <span class="auth-label" id="authLabel">Sign In</span>\n          </button>\n          <div class="auth-dropdown" id="authDropdown">\n            <div class="auth-user-info" id="authUserInfo" style="display:none">\n              <img class="auth-avatar" id="authAvatar" src="" alt="">\n              <span class="auth-name" id="authName"></span>\n              <button class="auth-signout-btn" id="authSignOut">Sign Out</button>\n            </div>\n            <div class="auth-options" id="authOptions">\n              <button class="auth-option google" id="authGoogle"><span class="auth-icon">G</span> Sign in with Google</button>\n              <button class="auth-option github" id="authGithub"><span class="auth-icon">⌘</span> Sign in with GitHub</button>\n              <button class="auth-option email" id="authEmail"><span class="auth-icon">✉</span> Sign in with Email</button>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </nav>\n\n  <!-- Search Overlay -->\n  <div class="search-overlay" id="searchOverlay">\n    <div class="search-backdrop" id="searchBackdrop"></div>\n    <div class="search-modal">\n      <div class="search-header">\n        <input type="text" class="search-input" id="searchInput" placeholder="Search articles by title, ticker, sector, or tag…" autofocus>\n        <button class="search-close" id="searchClose" aria-label="Close search">\n          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">\n            <line x1="18" y1="6" x2="6" y2="18"></line>\n            <line x1="6" y1="6" x2="18" y2="18"></line>\n          </svg>\n        </button>\n      </div>\n      <div class="search-results" id="searchResults"></div>\n      <div class="search-empty" id="searchEmpty">Start typing to search articles…</div>\n    </div>\n  </div>\n\n  <script id="articles-data" type="application/json">${JSON.stringify(allArticles || [])}</script>\n  <main class="main">`;
 }
 
 function renderFooter() {
@@ -164,7 +238,7 @@ function renderFooter() {
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-brand"><img src="/img/logo-hex.jpg" alt="The Signal" class="footer-logo"> THE <strong>SIGNAL</strong></div>
-      <div class="footer-tag">The Signal Editorial Team · readthesignal.com</div>
+      <div class="footer-tag">The Signal Editorial Team · readthesignal.net</div>
       <div class="footer-copy">© ${new Date().getFullYear()} The Signal — Market Intelligence. Data from public sources.</div>
     </div>
   <script src="/js/prices.js" defer></script>
@@ -177,7 +251,7 @@ function renderFooter() {
 function renderCard(a, prices) {
   const sentLabel = a.sentiment === 'bullish' ? '▲ Bullish' : a.sentiment === 'bearish' ? '▼ Bearish' : '– Neutral';
   const img = typeof a.image === 'object' ? a.image : (a.image ? { src: a.image } : null);
-  const imgHtml = img ? `<div class="card-image"><img src="${esc(img.src)}" alt="${esc(a.title)}" loading="lazy"></div>` : '';
+  const imgHtml = img ? `<div class="card-image">${renderImg(img.src, a.title)}</div>` : '';
   const p = prices ? prices[a.ticker] : null;
   const priceHtml = p && p.price
     ? `<span class="price-chip ${p.changePercent >= 0 ? 'up' : 'down'}">$${p.price.toFixed(2)} <span>${(p.changePercent >= 0 ? '+' : '')}${p.changePercent.toFixed(2)}%</span></span>`
@@ -203,7 +277,7 @@ function renderCard(a, prices) {
 function renderFeatured(a) {
   const sentLabel = a.sentiment === 'bullish' ? '▲ Bullish' : a.sentiment === 'bearish' ? '▼ Bearish' : '– Neutral';
   const img = typeof a.image === 'object' ? a.image : (a.image ? { src: a.image } : null);
-  const imgHtml = img ? `<div class="featured-image"><img src="${esc(img.src)}" alt="${esc(a.title)}" loading="eager"></div>` : '';
+  const imgHtml = img ? `<div class="featured-image">${renderImg(img.src, a.title, null, true)}</div>` : '';
   return `<a href="/article/${a.slug}" class="featured-card">
     <div class="featured-content">
       <div class="featured-label">Featured Story</div>
@@ -245,13 +319,60 @@ function renderVideoCard(v) {
   </div>`;
 }
 
+function cleanupBody(html) {
+  // Strip literal \n between HTML tags — subagents often write them
+  return html.replace(/>\n\n</g, '><').replace(/>\n</g, '><');
+}
+
 function injectVideos(bodyHtml, videos) {
-  if (!videos || !videos.length) return bodyHtml;
-  let result = bodyHtml;
-  for (let i = 0; i < videos.length; i++) {
-    const marker = `<!-- VIDEO ${i} -->`;
-    const card = renderVideoCard(videos[i]);
-    if (card) result = result.replace(marker, card);
+  let result = cleanupBody(bodyHtml);
+  if (videos && videos.length) {
+    for (let i = 0; i < videos.length; i++) {
+      const marker = `<!-- VIDEO ${i} -->`;
+      const card = renderVideoCard(videos[i]);
+      if (card) result = result.replace(marker, card);
+    }
+  }
+  return result;
+}
+
+// Build ticker → best article slug map for internal linking
+function buildTickerLinkMap(articles) {
+  var map = {};
+  for (var i = 0; i < articles.length; i++) {
+    var a = articles[i];
+    if (a.ticker) {
+      // Keep the most recent article for each ticker
+      if (!map[a.ticker] || new Date(a.date) > new Date(map[a.ticker].date)) {
+        map[a.ticker] = a;
+      }
+    }
+  }
+  return map;
+}
+
+// Inject inline links: replace $TICKER mentions with links to related articles
+function injectInlineLinks(html, tickerLinkMap, currentSlug) {
+  if (!tickerLinkMap) return html;
+  var result = html;
+  var linkedTickers = {};
+  for (var ticker in tickerLinkMap) {
+    if (!tickerLinkMap.hasOwnProperty(ticker)) continue;
+    var target = tickerLinkMap[ticker];
+    if (target.slug === currentSlug) continue;
+    var regex = new RegExp('\\$' + ticker + '(?![^<]*</a>)', 'g');
+    if (regex.test(result)) {
+      linkedTickers[ticker] = target;
+      result = result.replace(regex, '<a href="/article/' + target.slug + '">$' + ticker + '</a>');
+    }
+  }
+  // Also inject a "Read more" box for the first linked ticker, if not already inside one
+  var tickerKeys = Object.keys(linkedTickers);
+  if (tickerKeys.length > 0) {
+    var firstTicker = linkedTickers[tickerKeys[0]];
+    var readMoreBox = '<div class="related-inline"><strong>📖 Read more:</strong> <a href="/article/' + firstTicker.slug + '">' + esc(firstTicker.title) + '</a></div>';
+    // Insert after the first <h2> in the article (natural break point)
+    result = result.replace('<h2>', readMoreBox + '\n<h2>');
   }
   return result;
 }
@@ -352,7 +473,8 @@ function buildArticle(article, allArticles) {
   const linksHtml = article.links && article.links.length
     ? `<div class="article-links"><h4>🔗 Learn More</h4><ul>${article.links.map(l => `<li><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a></li>`).join('\n          ')}</ul></div>`
     : '';
-  const bodyHtml = injectVideos(article.bodyHtml || '', article.videos);
+  const tickerLinkMap = buildTickerLinkMap(allArticles || []);
+  const bodyHtml = injectInlineLinks(injectVideos(article.bodyHtml || '', article.videos), tickerLinkMap, article.slug);
 
   // Build related articles
   let relatedHtml = '';
@@ -376,7 +498,7 @@ function buildArticle(article, allArticles) {
       ${related.map(function(a) {
         const relImg = typeof a.image === 'object' ? a.image : (a.image ? { src: a.image } : null);
         return `<a href="/article/${a.slug}" class="related-card">
-        ${relImg ? `<div class="related-card-image"><img src="${esc(relImg.src)}" alt="${esc(a.title)}" loading="lazy"></div>` : ''}
+        ${relImg ? `<div class="related-card-image">${renderImg(relImg.src, a.title)}</div>` : ''}
         <div class="related-card-body">
           <span class="ticker-badge ${a.sentiment || 'neutral'}">${a.ticker}</span>
           <h4 class="related-card-title">${esc(a.title.length > 80 ? a.title.slice(0, 80) + '…' : a.title)}</h4>
@@ -429,7 +551,7 @@ function buildArticle(article, allArticles) {
         <span class="article-source">The Signal</span>
       </div>
     </div>
-    ${img ? `<div class="article-image"><img src="${esc(img.src)}" alt="${esc(article.title)}" loading="eager"></div>` : ''}
+    ${img ? `<div class="article-image">${renderImg(img.src, article.title)}</div>` : ''}
     <div class="article-body">
       ${bodyHtml}
     </div>
@@ -470,7 +592,8 @@ function buildTicker(symbol, articles, prices) {
     </div>
   </section>`;
   const html = renderHeader(symbol + ' Stock Analysis — The Signal',
-    `Latest analysis for ${info.name || symbol} (${symbol}). Articles, earnings, and market intelligence.`)
+    `Latest analysis for ${info.name || symbol} (${symbol}). Articles, earnings, and market intelligence.`,
+    null, null, `https://readthesignal.net/ticker/${symbol}`)
     + body + renderFooter();
   const dir = path.join(DIST, 'ticker', symbol);
   fs.mkdirSync(dir, { recursive: true });
@@ -501,7 +624,8 @@ function buildSector(key, sec, articles, prices) {
     </div>
   </section>`;
   const html = renderHeader(`${sec.name} Stocks — The Signal`,
-    `Latest analysis of ${sec.name.toLowerCase()} stocks including ${sec.tickers.slice(0, 5).join(', ')}.`)
+    `Latest analysis of ${sec.name.toLowerCase()} stocks including ${sec.tickers.slice(0, 5).join(', ')}.`,
+    null, null, `https://readthesignal.net/sector/${key}`)
     + body + renderFooter();
   const dir = path.join(DIST, 'sector', key);
   fs.mkdirSync(dir, { recursive: true });
@@ -511,16 +635,16 @@ function buildSector(key, sec, articles, prices) {
 
 function buildSitemap(articles) {
   let xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
-  xml += '  <url><loc>https://readthesignal.com/</loc><priority>1.0</priority></url>\n';
+  xml += '  <url><loc>https://readthesignal.net/</loc><priority>1.0</priority></url>\n';
   for (const a of articles) {
-    xml += `  <url><loc>https://readthesignal.com/article/${a.slug}</loc><lastmod>${a.date.split('T')[0]}</lastmod><priority>0.9</priority></url>\n`;
+    xml += `  <url><loc>https://readthesignal.net/article/${a.slug}</loc><lastmod>${a.date.split('T')[0]}</lastmod><priority>0.9</priority></url>\n`;
   }
   for (const key of Object.keys(SECTORS)) {
-    xml += `  <url><loc>https://readthesignal.com/sector/${key}</loc><priority>0.7</priority></url>\n`;
+    xml += `  <url><loc>https://readthesignal.net/sector/${key}</loc><priority>0.7</priority></url>\n`;
   }
   const tickers = new Set(articles.map(a => a.ticker));
   for (const t of tickers) {
-    xml += `  <url><loc>https://readthesignal.com/ticker/${t}</loc><priority>0.6</priority></url>\n`;
+    xml += `  <url><loc>https://readthesignal.net/ticker/${t}</loc><priority>0.6</priority></url>\n`;
   }
   xml += '</urlset>';
   fs.writeFileSync(path.join(DIST, 'sitemap.xml'), xml);
@@ -532,17 +656,17 @@ function buildRSS(articles) {
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
   <title>The Signal — Market Intelligence</title>
-  <link>https://readthesignal.com/</link>
+  <link>https://readthesignal.net/</link>
   <description>AI, defense, space &amp; cyber stock analysis</description>
-  <atom:link href="https://readthesignal.com/rss" rel="self" type="application/rss+xml"/>`;
+  <atom:link href="https://readthesignal.net/rss" rel="self" type="application/rss+xml"/>`;
   for (const a of articles.slice(0, 50)) {
     rss += `
   <item>
     <title><![CDATA[${a.title}]]></title>
-    <link>https://readthesignal.com/article/${a.slug}</link>
+    <link>https://readthesignal.net/article/${a.slug}</link>
     <description><![CDATA[${a.summary}]]></description>
     <pubDate>${new Date(a.date).toUTCString()}</pubDate>
-    <guid>https://readthesignal.com/article/${a.slug}</guid>
+    <guid>https://readthesignal.net/article/${a.slug}</guid>
   </item>`;
   }
   rss += '\n</channel>\n</rss>';
