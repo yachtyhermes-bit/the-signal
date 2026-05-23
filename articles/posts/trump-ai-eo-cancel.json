@@ -1,0 +1,38 @@
+{
+  "slug": "trump-ai-eo-cancel",
+  "title": "Trump Torpedoes AI Executive Order — And Markets Are Loving It",
+  "subtitle": "President pulls the plug on federal AI oversight hours before signing, citing 'certain aspects' he didn't like. AI stocks rip higher.",
+  "summary": "President Trump abruptly canceled the signing of an executive order that would have given the federal government sweeping oversight of advanced AI models. He cited concerns about overregulation and the need to compete with China. AI stocks surged on the news as investors cheered the lighter regulatory touch.",
+  "ticker": "NVDA",
+  "sector": "ai",
+  "sentiment": "bullish",
+  "date": "2026-05-22T12:00:00.000Z",
+  "image": {
+    "src": "/img/articles/trump-ai-eo-cancel.jpg",
+    "caption": "President Trump in the Oval Office — hours before he was set to sign an executive order granting the government oversight of AI models, he pulled the plug. (Official White House Photo / Public Domain)"
+  },
+  "tags": ["AI Regulation", "Trump", "Executive Order", "Artificial Intelligence", "Policy"],
+  "links": [
+    { "label": "NYT: Trump Cancels Signing of Executive Order on A.I. Models →", "url": "https://www.nytimes.com/2026/05/21/technology/trump-ai-executive-order-canceled.html" },
+    { "label": "WSJ: Trump Postpones AI Order Over Regulation Concerns →", "url": "https://www.wsj.com/articles/trump-postpones-ai-executive-order-overregulation-2026-05-21" },
+    { "label": "Bloomberg: Trump Says He Called Off AI Order Signing →", "url": "https://www.bloomberg.com/news/articles/2026-05-21/trump-says-he-called-off-ai-order-signing-over-parts-he-disliked" },
+    { "label": "Reuters: Trump postpones AI executive order, cites competition with China →", "url": "https://www.reuters.com/technology/trump-postpones-ai-executive-order-signing-2026-05-21/" }
+  ],
+  "bodyHtml": "<p>President Trump just did something the AI industry wasn't expecting: he walked away from the signing table.</p><div class=\"youtube-embed\"><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/4QjD6Qe_un0\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe></div><p>On Thursday, Trump pulled the plug on a signing ceremony for a sweeping AI executive order that would have given the federal government unprecedented oversight over advanced AI models. His reason? <strong>\"I didn't like certain aspects,\"</strong> he told reporters. Translation: the order was too heavy on regulation and risked strangling American AI competitiveness.</p><p>The decision sent a shockwave through Washington — and a tailwind through the AI sector. <strong>Nvidia (NVDA) jumped 2%</strong> in after-hours trading. The broader AI complex followed suit.</p><p><strong>Here's what was in the order that now isn't:</strong></p><ul><li><strong>Mandatory government access</strong> to advanced AI model weights for safety testing</li><li><strong>Cybersecurity disclosure requirements</strong> for frontier AI developers</li><li><strong>Federal oversight board</strong> with authority to pause AI deployments deemed too risky</li></ul><p>The order would have applied to any company training models above a certain compute threshold — which, in practice, meant every major AI lab at <strong>Google ($GOOGL), Microsoft ($MSFT), Amazon ($AMZN), and Meta ($META)</strong>.</p><p>Trump explicitly framed the decision around competition with China. <strong>\"We're not going to handcuff ourselves while China runs,\"</strong> he said. The message is unmistakable: American AI dominance comes before safety bureaucracy.</p><blockquote>\"We're not going to handcuff ourselves while China runs.\"<footer>— President Donald Trump, on postponing the AI executive order</footer></blockquote><p>The calculus here is brutally simple. The US and China are in what analysts are calling <strong>\"the AI arms race of the century.\"</strong> Every quarter of regulatory delay gives American companies a compounding advantage in deployment speed, data accumulation, and model iteration.</p><p>This is especially significant for <strong>Nvidia</strong>. The company's <strong>$253.5 billion in trailing revenue</strong> is built on the back of hyperscaler AI infrastructure spending. Less regulation means faster deployment cycles, which means more GPU orders, which means more revenue acceleration. Nvidia's data center segment alone grew <strong>85% year-over-year</strong> last quarter.</p><p>The cancellation also carries a subtext that California Governor <strong>Gavin Newsom</strong> has noticed. Reporting from the New York Times indicates Newsom is preparing state-level AI safeguards to fill the federal void — potentially creating a patchwork of regulations that could be <strong>more burdensome</strong> for AI companies than a single federal standard.</p><p>For now, though, the market is voting with its wallet. AI stocks are up. The regulatory cloud that was gathering on Thursday morning has dissipated. And the message from the White House is crystal clear: <strong>AI innovation comes first.</strong></p><p>The question investors need to ask isn't whether this is good or bad for safety — it's whether the <strong>$5.3 trillion Nvidia trade</strong> just got a new tailwind. The answer, for now, is yes.</p><p><em>This article is for informational purposes only and does not constitute investment advice. Always do your own research before making investment decisions.</em></p>",
+  "meta": {
+    "author": "The Signal Editorial Team",
+    "estimatedReadTime": "4 minutes",
+    "editorialTags": ["Breaking News", "AI Policy", "Trump Administration", "Regulation"],
+    "seoKeywords": ["Trump AI executive order", "AI regulation 2026", "Nvidia stock", "AI stocks", "artificial intelligence policy", "Trump postpones AI order"],
+    "relatedTickers": ["NVDA", "GOOGL", "MSFT", "AMZN", "META"],
+    "keyMetrics": {
+      "revenueTTM": "$253.5B",
+      "marketCap": "$5.32T",
+      "ytdReturn": "+15.1%",
+      "priceSales": "21.2x",
+      "cashOnHand": "$80.6B",
+      "enterpriseValue": "$5.25T",
+      "fiftyTwoWeekRange": "$129.16 – $236.54"
+    }
+  }
+}

@@ -880,6 +880,56 @@ body::before {
   color: var(--text-muted);
 }
 
+/* === STATS CARD — "The Numbers That Matter" === */
+.article-body .stats-card {
+  background: #1a1a2e;
+  border: 1px solid #2a2a44;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 24px 0;
+}
+.article-body .stats-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+.article-body .stats-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.article-body .stats-table tr {
+  border-bottom: 1px solid #2a2a44;
+}
+.article-body .stats-table tr:last-child {
+  border-bottom: none;
+}
+.article-body .stats-table td {
+  padding: 12px 4px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.article-body .stats-table .stat-label {
+  color: #8888aa;
+  font-weight: 400;
+  text-align: left;
+  width: 50%;
+}
+.article-body .stats-table .stat-value {
+  color: #ffffff;
+  font-weight: 700;
+  text-align: right;
+  width: 50%;
+}
+.article-body .stats-table .stat-value.positive {
+  color: #22c55e;
+}
+.article-body .stats-table .stat-value.negative {
+  color: #ef4444;
+}
+
 /* === FOOTER === */
 .footer {
   border-top: 1px solid var(--border);
@@ -1761,4 +1811,20 @@ body::before {
 /* Prevent body scroll when modal is open */
 body.pulse-modal-open {
   overflow: hidden;
+}
+
+
+/* Inline related article box - internal linking */
+.related-inline {
+  background: #1a1a2e;
+  border-left: 4px solid #3b82f6;
+  padding: 12px 16px;
+  margin: 24px 0;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.related-inline a {
+  color: #60a5fa;
+  text-decoration: underline;
 }

@@ -11,7 +11,15 @@
     "src": "/img/articles/meta-ai-budget-blowout.jpg",
     "caption": "Meta's AI data center infrastructure — the hardware behind the $125B-$145B spending plan that has Wall Street divided"
   },
-  "tags": ["Meta", "AI", "Earnings", "Capex", "Zuckerberg", "META", "Artificial Intelligence"],
+  "tags": [
+    "Meta",
+    "AI",
+    "Earnings",
+    "Capex",
+    "Zuckerberg",
+    "META",
+    "Artificial Intelligence"
+  ],
   "links": [
     {
       "label": "Yahoo Finance: Meta stock sinks on AI spend →",
@@ -30,9 +38,29 @@
   "meta": {
     "author": "The Signal Editorial Team",
     "estimatedReadTime": "5 minutes",
-    "editorialTags": ["Meta", "AI", "Capex", "Earnings", "Contrarian"],
-    "seoKeywords": ["Meta stock", "META", "AI spending", "Mark Zuckerberg", "capex", "2026 forecast", "Meta earnings Q1 2026", "AI infrastructure"],
-    "relatedTickers": ["GOOGL", "MSFT", "NVDA", "AMZN"],
+    "editorialTags": [
+      "Meta",
+      "AI",
+      "Capex",
+      "Earnings",
+      "Contrarian"
+    ],
+    "seoKeywords": [
+      "Meta stock",
+      "META",
+      "AI spending",
+      "Mark Zuckerberg",
+      "capex",
+      "2026 forecast",
+      "Meta earnings Q1 2026",
+      "AI infrastructure"
+    ],
+    "relatedTickers": [
+      "GOOGL",
+      "MSFT",
+      "NVDA",
+      "AMZN"
+    ],
     "keyMetrics": {
       "2026 AI Spend": "$125B-$145B",
       "Q1 Revenue Growth": "33%",

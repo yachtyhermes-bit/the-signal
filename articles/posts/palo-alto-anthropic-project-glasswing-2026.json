@@ -1,0 +1,62 @@
+{
+  "slug": "palo-alto-anthropic-project-glasswing-2026",
+  "title": "Anthropic Just Made Palo Alto Networks Indispensable",
+  "subtitle": "Project Glasswing ends the cybersecurity selloff as AI proves it's a tailwind, not a threat, for PANW",
+  "summary": "The cybersecurity sector was panicking that AI would make defense tools obsolete. Then Anthropic launched Project Glasswing with Palo Alto Networks as a core partner. AI doesn't replace security — it makes it more vital.",
+  "ticker": "PANW",
+  "sector": "cyber",
+  "sentiment": "bullish",
+  "date": "2026-05-22T07:00:00.000Z",
+  "image": {
+    "src": "/img/articles/palo-alto-anthropic-project-glasswing-2026.jpg",
+    "caption": "Anthropic's Project Glasswing — a coalition including Palo Alto Networks, CrowdStrike, Apple, Google, and Microsoft to secure critical software in the AI era"
+  },
+  "tags": [
+    "palo alto networks",
+    "anthropic",
+    "cybersecurity",
+    "ai",
+    "project glasswing",
+    "claude"
+  ],
+  "links": [
+    {
+      "label": "Barron's: How Anthropic Ended the Cybersecurity Stock Selloff →",
+      "url": "https://www.barrons.com/articles/palo-alto-networks-anthropic-stock-2026"
+    },
+    {
+      "label": "Anthropic Announces Project Glasswing →",
+      "url": "https://www.anthropic.com/glasswing"
+    }
+  ],
+  "bodyHtml": "<p>Two weeks ago, cybersecurity stocks were getting crushed. Palo Alto Networks dropped 6%. Okta tumbled 7%. The fear was simple: if AI can automate security, why pay for human-built tools?</p><p>Then Anthropic dropped Project Glasswing — and that thesis flipped 180 degrees.</p><p><strong>Anthropic didn't build a security tool. It built a security multiplier.</strong> Project Glasswing uses Claude AI to detect, analyze, and neutralize AI-driven cyberattacks. And Palo Alto Networks is standing right next to Anthropic as a core launch partner, integrating Claude directly into its security platform.</p><div class=\"youtube-embed\"><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/INGOC6-LLv0\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe></div><p>The data backs this up. AI models running on Project Glasswing uncovered <strong>7x more security flaws</strong> than traditional scanning tools. That's not a threat to cybersecurity companies — that's a value unlock. Enterprises now need MORE security, not less, because the attackers have AI too.</p><p>Palo Alto already has the deepest enterprise security footprint in the industry. Adding Claude's AI capabilities on top creates a moat that competitors without AI partnerships can't replicate. And with Verizon joining Glasswing as the first telecom partner, the ecosystem is expanding fast.</p><p><strong>The contrarian take:</strong> The AI competition panic was wrong. AI doesn't commoditize cybersecurity — it escalates the arms race. And Palo Alto Networks just got the best weapons. PANW at these levels is a gift.</p>",
+  "meta": {
+    "author": "The Signal Editorial Team",
+    "estimatedReadTime": "4 minutes",
+    "editorialTags": [
+      "Palo Alto Networks",
+      "Anthropic",
+      "Cybersecurity",
+      "AI",
+      "Project Glasswing"
+    ],
+    "seoKeywords": [
+      "PANW stock",
+      "Palo Alto Networks",
+      "Project Glasswing",
+      "Anthropic cybersecurity",
+      "AI security",
+      "cybersecurity stocks"
+    ],
+    "relatedTickers": [
+      "CRWD",
+      "ZS",
+      "FTNT"
+    ],
+    "keyMetrics": {
+      "aiFlawDetectionRate": "7x more flaws",
+      "partnersLaunched": "5+",
+      "sectorImpact": "Ended cybersecurity selloff"
+    }
+  }
+}

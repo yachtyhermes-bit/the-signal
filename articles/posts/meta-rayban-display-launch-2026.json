@@ -1,0 +1,25 @@
+{
+  "slug": "meta-rayban-display-launch-2026",
+  "title": "Meta's Smart Glasses Are Here — And They're Already Too Popular",
+  "subtitle": "Ray-Ban Display sells out instantly, forcing delayed global rollout as Meta proves the AI wearable market is real",
+  "summary": "Meta's $800 Ray-Ban Display smart glasses with built-in display are flying off shelves so fast the company had to delay international launch. Apple hasn't shipped. Google is still pre-announcing. Meta just delivered.",
+  "ticker": "META",
+  "sector": "mega-cap",
+  "sentiment": "bullish",
+  "date": "2026-05-22T07:00:00.000Z",
+  "image": { "src": "/img/articles/meta-rayban-display-launch-2026.jpg", "caption": "Meta Ray-Ban Display smart glasses with built-in display and wristband controller" },
+  "tags": ["meta", "smart glasses", "wearables", "ai", "ray-ban", "hardware"],
+  "links": [
+    { "label": "Meta Announces Ray-Ban Display →", "url": "https://about.fb.com/news/2025/09/meta-ray-ban-display-ai-glasses-emg-wristband/" },
+    { "label": "The Verge: Meta pauses international rollout on strong US demand →", "url": "https://www.theverge.com/news/856216/meta-ray-ban-display-smart-glasses-international-expansion-paused" }
+  ],
+  "bodyHtml": "<p>Meta just did something Apple hasn't managed: ship a genuinely useful pair of smart glasses that people actually want to buy.</p><p>The Ray-Ban Display — Meta's first smart glasses with a built-in heads-up display — launched at $800 and immediately sold out. The company had to delay its global rollout because US demand is so strong it can't keep up with supply.</p><p>That's the kind of 'problem' that keeps Zuck smiling.</p><p><strong>The specs matter less than the signal.</strong> After years of VR winter and AR vaporware, Meta has shipped a wearable that works. The display shows notifications, directions, and teleprompter feeds. The neural wristband translates handwriting into text. Third-party developers can build apps for it via an open SDK. And it costs less than the Apple Vision Pro's carrying case.</p><div class=\"youtube-embed\"><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/aEglZkaLSig\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe></div><p>The numbers tell the story. Meta's Reality Labs revenue hit $2.3 billion last quarter, up 78% year-over-year. The Ray-Ban Meta non-display glasses already tripled sales in 2025. The Display version is a step-change — and supply chains are scrambling.</p><p><strong>Apple's response? Silence.</strong> Its smart glasses project has been pushed back repeatedly. Google just showed a concept for fall. Samsung's entry is 2027 at best. Meta is running the table on smart glasses the same way it crushed the VR headset market: ship early, iterate fast, subsidize aggressively.</p><p>The contrarian take: smart glasses aren't a niche. They're the next smartphone-sized market. And Meta just grabbed pole position.</p>",
+  "meta": {
+    "author": "The Signal Editorial Team",
+    "estimatedReadTime": "4 minutes",
+    "editorialTags": ["Meta", "Smart Glasses", "Wearables", "Hardware", "AI"],
+    "seoKeywords": ["Meta smart glasses", "Ray-Ban Display", "META stock", "smart glasses 2026", "AR glasses", "wearable AI"],
+    "relatedTickers": ["GOOGL", "AAPL"],
+    "keyMetrics": { "productPrice": "$800", "marketSegment": "Smart Glasses", "competitorsOnMarket": "0" }
+  }
+}
