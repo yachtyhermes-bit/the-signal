@@ -92,7 +92,7 @@ function readMin(a) {
   return Math.max(1, Math.ceil((a.summary || '').split(' ').length / 200));
 }
 
-const TICKER_SYMBOLS = ['NVDA','PLTR','AVGO','AMD','GOOGL','META','MSFT','AMZN','TSLA','CRWV'];
+const TICKER_SYMBOLS = ['NVDA','PLTR','AVGO','AMD','GOOGL','META','MSFT','AMZN','TSLA','MU'];
 
 function renderTickerTape(prices) {
   let items = '';
