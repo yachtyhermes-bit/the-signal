@@ -1,0 +1,43 @@
+{
+  "slug": "anthropic-mythos-10000-vulnerabilities",
+  "title": "Anthropic's Claude Mythos Has Already Found 10,000+ Critical Bugs — And It's Not Even Public Yet",
+  "subtitle": "Project Glasswing's one-month update reveals 10,000+ vulnerabilities found, Microsoft's patches 'trending larger,' and OpenAI just launched a competitor called Daybreak",
+  "summary": "Anthropic published the first Project Glasswing progress report, revealing Claude Mythos Preview has helped partners find over 10,000 vulnerabilities in one month — 6,200+ of them critical-severity in open-source code alone. Cloudflare found 2,000 bugs. Mozilla patched 271 Firefox flaws. Microsoft says its patch releases will keep growing because of Mythos findings. Underscoring the strategic importance, OpenAI launched 'Daybreak' as its competitive answer.",
+  "ticker": "CRWD",
+  "sector": "cyber",
+  "sentiment": "bullish",
+  "date": "2026-05-24T15:00:00.000Z",
+  "image": {
+    "src": "/img/articles/anthropic-mythos-10000-vulnerabilities.jpg",
+    "caption": "Anthropic CEO Dario Amodei. The company's Project Glasswing has uncovered over 10,000 software vulnerabilities in its first month using Claude Mythos Preview."
+  },
+  "tags": ["anthropic", "claude mythos", "project glasswing", "cybersecurity", "ai safety", "openai daybreak", "crowdstrike"],
+  "links": [
+    { "label": "Engadget: Anthropic says Mythos has already found more than 10,000 vulnerabilities →", "url": "https://www.engadget.com/2180028/anthropic-claude-mythos-preview-project-glasswing-update/" },
+    { "label": "Anthropic: Project Glasswing Initial Report →", "url": "https://www.anthropic.com/news/project-glasswing" },
+    { "label": "Gizmodo: OpenAI's 'Daybreak' answers Anthropic's Glasswing →", "url": "https://gizmodo.com/daybreak-openai-answer-anthropic-project-glasswing-1854001234" }
+  ],
+  "bodyHtml": "<p>Anthropic dropped its first Project Glasswing progress report today — and the numbers are staggering.</p><!-- VIDEO 0 --><p>Claude Mythos Preview, the company's unreleased AI model deemed too dangerous for public release, has already found more than <strong>10,000 software vulnerabilities</strong> across its partner network in just one month since Glasswing launched.</p><p>Anthropic used Mythos Preview to scan 1,000 open-source projects and discovered <strong>6,202 high- and critical-severity vulnerabilities</strong> out of 23,019 total findings. That's a 27% critical-bug rate in widely used open-source software that runs the internet.</p><h2>What the Partners Found</h2><p>Most partners have \"each found hundreds of critical- or high-severity vulnerabilities in their software\" using the model, Anthropic reported. The bug-finding rate has increased by more than a factor of ten across the board.</p><p><strong>Cloudflare</strong> (NET) found 2,000 bugs — 400 of them high or critical severity.</p><p><strong>Mozilla</strong> previously disclosed it found and fixed 271 vulnerabilities in Firefox, a 10x improvement over what it caught using an older Claude model.</p><p><strong>Microsoft</strong> (MSFT) confirmed that its recent announcement about patch releases \"continuing to trend larger for some time\" is directly attributable to bugs uncovered through Mythos Preview.</p><p>A security research firm recently claimed it breached macOS — an OS known for tight security — using Mythos' bug-finding capabilities.</p><h2>The AI That's Too Dangerous to Release</h2><p>Anthropic explicitly stated it hasn't released Mythos Preview publicly because no company — including Anthropic itself — has developed safeguards strong enough to prevent the model from being misused. The company plans to release \"Mythos-class models\" when those safeguards exist.</p><p>Project Glasswing partners include $CRWD, $AMZN, $AAPL, $GOOGL, $MSFT, $NVDA, $JPM, and $PANW. The initiative also expanded to include Verizon and the US government.</p><h2>OpenAI Fires Back With 'Daybreak'</h2><p>The same day Anthropic published its report, Gizmodo reported that OpenAI launched <strong>Daybreak</strong> — its own initiative to compete with Project Glasswing. The move confirms that AI-powered vulnerability discovery is now a strategic battleground for frontier AI companies.</p><h2>Anthropic Nears Profitability</h2><p>The Wall Street Journal reports Anthropic is on track to post $10.9 billion in revenue with a $559 million operating profit for the quarter ending June — its first profitable quarter since founding in 2021. The company doesn't expect profitability to persist as it reinvests in compute infrastructure.</p><h2>What It Means for Cybersecurity Stocks</h2><p>The initial market reaction — a selloff in cybersecurity stocks on fears AI would make defense tools obsolete — has reversed. Far from being replaced, CrowdStrike, Cloudflare, and Palo Alto Networks are core Glasswing partners. AI is proving to be a massive tailwind for security spending, not a headwind.</p><p>Mythos isn't replacing cybersecurity companies. It's giving them a superpower. And the 10,000-bug count in month one is just the beginning.</p><p><em>Disclosure: The Signal does not hold positions in any stocks mentioned. This article is for informational purposes only and does not constitute investment advice.</em></p>",
+  "videos": [
+    {
+      "url": "https://www.youtube.com/watch?v=JmFKaqJg5X4",
+      "source": "Bloomberg Originals",
+      "title": "Why Anthropic's Mythos Is Sparking Alarm"
+    }
+  ],
+  "meta": {
+    "author": "The Signal Editorial Team",
+    "estimatedReadTime": "4 minutes",
+    "editorialTags": ["breaking news", "AI", "cybersecurity", "Anthropic", "vulnerability disclosure"],
+    "seoKeywords": ["Anthropic", "Claude Mythos", "Project Glasswing", "AI cybersecurity", "10,000 vulnerabilities", "open source", "OpenAI Daybreak"],
+    "relatedTickers": ["CRWD", "PANW", "NET", "MSFT", "NVDA", "AMZN", "GOOGL", "AAPL"],
+    "keyMetrics": {
+      "vulnerabilitiesFound": "10,000+",
+      "openSourceBugs": "6,202 critical/high",
+      "cloudflareBugs": "2,000",
+      "mozillaBugs": "271",
+      "anthropicRevenue": "$10.9B",
+      "anthropicProfit": "$559M"
+    }
+  }
+}

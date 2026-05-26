@@ -409,6 +409,190 @@ function renderPulse() {
   </section>`;
 }
 
+
+function renderScorecard(prices) {
+  var sc;
+  try { sc = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'scorecard.json'), 'utf8')); } catch(e) { return ''; }
+  if (!sc || !sc.length) return '';
+  var svgW = 100, svgH = 48, cx = svgW / 2, cy = svgH - 2, r = 40;
+  var circ = Math.PI * r;
+  var cards = '';
+  for (var i = 0; i < sc.length; i++) {
+    var s = sc[i];
+    var offset = circ - (s.score / 100) * circ;
+    var angle = (s.score / 100) * 180 - 90;
+    var tipX = cx, tipY = cy - 38;
+    var drivers = '';
+    for (var j = 0; j < (s.drivers || []).length; j++) {
+      drivers += '<div class="sc-driver"><span class="sc-dot" style="background:' + s.color + '"></span>' + esc(s.drivers[j]) + '</div>';
+    }
+    var signalLabel = esc(s.signal).toUpperCase() + ' SIGNAL ' + s.score;
+    cards += '<div class="sc-card" data-sc-idx="' + i + '">' +
+      '<div class="sc-card-header">' +
+        '<img class="sc-logo" src="' + esc(s.logo) + '" alt="' + esc(s.ticker) + '" onerror="this.style.display=' + "'none'" + '" crossorigin="anonymous">' +
+        '<div class="sc-card-info">' +
+          '<div class="sc-card-name">' + esc(s.ticker) + '</div>' +
+          '<div class="sc-card-sub">' + esc(s.name) + '</div>' +
+        '</div>' +
+      '</div>' +
+      '<div class="sc-gauge-wrap">' +
+        '<svg width="' + svgW + '" height="' + svgH + '" viewBox="0 0 ' + svgW + ' ' + svgH + '" class="sc-gauge-svg">' +
+          '<defs>' +
+            '<filter id="glow-' + s.ticker + '"><feGaussianBlur stdDeviation="3" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>' +
+            '<filter id="arcglow-' + s.ticker + '"><feGaussianBlur stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>' +
+          '</defs>' +
+          '<path d="M ' + (cx - r) + ' ' + cy + ' A ' + r + ' ' + r + ' 0 0 1 ' + (cx + r) + ' ' + cy + '" fill="none" stroke="#1e293b" stroke-width="8" stroke-linecap="round"/>' +
+          '<path d="M ' + (cx - r) + ' ' + cy + ' A ' + r + ' ' + r + ' 0 0 1 ' + (cx + r) + ' ' + cy + '" fill="none" stroke="' + s.color + '" stroke-width="8" stroke-linecap="round" stroke-dasharray="' + circ + '" stroke-dashoffset="' + offset + '" filter="url(#arcglow-' + s.ticker + ')"/>' +
+          '<polygon points="' + (cx - 4) + ',' + (cy - 2) + ' ' + (cx + 4) + ',' + (cy - 2) + ' ' + tipX + ',' + tipY + '" fill="' + s.color + '" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" transform="rotate(' + angle + ', ' + cx + ', ' + cy + ')" filter="url(#glow-' + s.ticker + ')"/>' +
+        '</svg>' +
+      '</div>' +
+      '<div class="sc-signal-label" style="color:' + s.color + '">' + signalLabel + '</div>' +
+      '<div class="sc-drivers">' + drivers + '</div>' +
+    '</div>';
+  }
+  var tickers = [];
+  for (var i = 0; i < sc.length; i++) {
+    tickers.push(sc[i]);
+  }
+  var metricRows = '';
+  var metricDefs = [
+    { label: 'Revenue (TTM)', key: 'revenue', cls: '' },
+    { label: 'Rev Growth (YoY)', key: 'growth', cls: 'positive' },
+    { label: 'Net Income', key: 'netIncome', cls: '' },
+    { label: 'P/E Ratio', key: 'pe', cls: '' },
+    { label: 'Price/Sales', key: 'ps', cls: '' },
+    { label: 'Target Upside', key: 'upside', cls: 'positive' }
+  ];
+  for (var m = 0; m < metricDefs.length; m++) {
+    var def = metricDefs[m];
+    var row = '<tr><td class="metric-label">' + def.label + '</td>';
+    for (var t = 0; t < tickers.length; t++) {
+      var s = tickers[t];
+      var val = '---';
+      if (def.key === 'upside') {
+        val = s.upside || (s.metrics ? s.metrics[def.key] : null) || '---';
+      } else if (s.metrics) {
+        val = s.metrics[def.key] || '---';
+      }
+      row += '<td' + (def.cls ? ' class="' + def.cls + '"' : '') + '>' + esc(val) + '</td>';
+    }
+    row += '</tr>';
+    metricRows += row;
+  }
+  var thRow = '<tr><th>Metric</th>';
+  for (var t = 0; t < tickers.length; t++) {
+    thRow += '<th>' + esc(tickers[t].ticker) + '</th>';
+  }
+  thRow += '</tr>';
+  return '<div class="section-divider"></div>' +
+    '<section class="scorecard-section">' +
+    '<div class="scorecard-inner">' +
+      '<div class="scorecard-header-top">' +
+        '<img class="sc-header-logo" src="/img/logo-hex.jpg" alt="The Signal">' +
+        '<h2 class="scorecard-title">Signal <span>Scorecard</span></h2>' +
+      '</div>' +
+      '<p class="scorecard-subtitle">High-signal intelligence powered by our proprietary AI engine</p>' +
+      '<div class="scorecard-grid" id="scorecardGrid">' + cards + '</div>' +
+      '<div class="sc-table-container">' +
+        '<div class="sc-table-header"><h3><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:6px"><rect x="3" y="12" width="4" height="8"/><rect x="10" y="6" width="4" height="14"/><rect x="17" y="2" width="4" height="18"/></svg>Key Metrics (TTM)</h3></div>' +
+        '<div class="sc-table-scroll">' +
+          '<table class="sc-table">' +
+            '<thead>' + thRow + '</thead>' +
+            '<tbody>' + metricRows + '</tbody>' +
+          '</table>' +
+        '</div>' +
+      '</div>' +
+    '</div>' +
+  '</section>';
+}
+
+function renderSignalHighlights(prices) {
+  if (!prices || !prices['KTOS'] || !prices['CRWV']) return '';
+  function card(ticker, name, fairVal, upsidePct, rev, growth, ni, consensus, target, buyPct) {
+    var p = prices[ticker];
+    var price = p && p.price ? '$' + p.price.toFixed(2) : '$---';
+    var cls = p && p.changePercent >= 0 ? 'up' : 'down';
+    var chg = p && p.changePercent ? ((p.changePercent >= 0 ? '+' : '') + p.changePercent.toFixed(2) + '%') : '0.00%';
+    var holdPct = 100 - buyPct;
+    return '<a href="/ticker/' + ticker + '" class="detail-card-link">' +
+      '<div class="detail-card-accent"></div>' +
+      '<div class="detail-card-inner">' +
+        '<div class="detail-header">' +
+          '<div class="detail-header-left">' +
+            '<div class="detail-badge">Signal Highlight</div>' +
+            '<div class="detail-ticker">' + ticker + '</div>' +
+            '<div class="detail-name">' + esc(name) + '</div>' +
+          '</div>' +
+          '<div class="detail-header-right">' +
+            '<div class="detail-price">' + price + '</div>' +
+            '<div class="detail-change ' + cls + '">' + chg + '</div>' +
+          '</div>' +
+        '</div>' +
+        '<div class="detail-card-section">' +
+          '<div class="detail-section-title">Fair Value</div>' +
+          '<div class="detail-fair-value">' +
+            '<div class="detail-fv-status"><span class="detail-fv-badge">Undervalued</span></div>' +
+            '<div class="detail-fv-rows">' +
+              '<div class="detail-fv-row"><span class="detail-fv-label">Fair Value</span><span class="detail-fv-val">$' + fairVal + '</span></div>' +
+              '<div class="detail-fv-row"><span class="detail-fv-label">Current Price</span><span class="detail-fv-val">' + price + '</span></div>' +
+              '<div class="detail-fv-row"><span class="detail-fv-label">Upside</span><span class="detail-fv-val detail-fv-upside">+' + upsidePct + '%</span></div>' +
+            '</div>' +
+          '</div>' +
+        '</div>' +
+        '<div class="detail-card-section">' +
+          '<div class="detail-section-title">Earnings</div>' +
+          '<div class="detail-earnings">' +
+            '<div class="detail-earn-row"><span class="detail-earn-label">Revenue (TTM)</span><span class="detail-earn-val">' + rev + '</span></div>' +
+            '<div class="detail-earn-row"><span class="detail-earn-label">Revenue Growth</span><span class="detail-earn-val detail-revision-up">' + growth + '</span></div>' +
+            '<div class="detail-earn-row"><span class="detail-earn-label">Net Income</span><span class="detail-earn-val">' + ni + '</span></div>' +
+          '</div>' +
+        '</div>' +
+        '<div class="detail-card-section detail-section-last">' +
+          '<div class="detail-section-title">Analyst Ratings</div>' +
+          '<div class="detail-analyst">' +
+            '<div class="detail-ana-top">' +
+              '<span class="detail-consensus-badge">' + consensus + '</span>' +
+              '<span class="detail-ana-target">Target <strong>$' + target + '</strong></span>' +
+            '</div>' +
+            '<div class="detail-rating-bar">' +
+              '<div class="detail-rating-seg detail-rating-buy" style="width:' + buyPct + '%"></div>' +
+              '<div class="detail-rating-seg detail-rating-hold" style="width:' + holdPct + '%"></div>' +
+            '</div>' +
+            '<div class="detail-rating-legend">' +
+              '<span class="detail-legend-item"><span class="detail-rating-dot detail-dot-buy"></span>Buy</span>' +
+              '<span class="detail-legend-item"><span class="detail-rating-dot detail-dot-hold"></span>Hold</span>' +
+            '</div>' +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+    '</a>';
+  }
+  return '<div class="section-divider"></div>' +
+    '<section class="detail-stocks-section">' +
+    '<div class="detail-stocks-header"><span class="detail-star">*</span> Signal Highlights</div>' +
+    '<div class="detail-stocks-grid">' +
+      card('KTOS', 'Kratos Defense & Security', '41.50', '42.8', '$1.52B', '+18.4%', '$124M', 'Buy', '46.00', 67) +
+      card('CRWV', 'CoreWeave Inc.', '95.00', '38.2', '$3.8B', '+187%', '-$412M', 'Buy', '120.00', 75) +
+    '</div>' +
+  '</section>';
+}
+
+function renderNewsletter() {
+  return '<div class="section-divider"></div>' +
+    '<section class="newsletter-section" id="subscribe">' +
+    '<div class="newsletter-inner">' +
+      '<div class="newsletter-badge">Early Access</div>' +
+      '<h2 class="newsletter-title">Get the <span class="newsletter-gradient">Signal</span> in your inbox</h2>' +
+      '<p class="newsletter-desc">Weekly stock intelligence on AI, defense, space &amp; cyber. No spam. Unsubscribe anytime.</p>' +
+      '<form class="newsletter-form" id="newsletterForm">' +
+        '<input type="email" class="newsletter-input" id="newsletterEmail" placeholder="your@email.com" required autocomplete="email">' +
+        '<button type="submit" class="newsletter-btn">Subscribe</button>' +
+      '</form>' +
+      '<p class="newsletter-status" id="newsletterStatus"></p>' +
+    '</div>' +
+  '</section>';
+}
+
 // === Build pages ===
 function buildHome(articles, prices) {
   const ticker = renderTickerTape(prices);
@@ -443,7 +627,10 @@ function buildHome(articles, prices) {
     ? `<div class="article-grid">${articles.slice(1, 5).map(a => renderCard(a, prices)).join('\n      ')}</div>`
     : '';
   const gridRest = hasFeatured && articles.length > 5
-    ? `<section class="feed feed-continued"><div class="article-grid">${articles.slice(5).map(a => renderCard(a, prices)).join('\n      ')}</div></section>`
+    ? `<section class="feed feed-continued"><div class="article-grid">${articles.slice(5, 9).map(a => renderCard(a, prices)).join('\n      ')}</div></section>`
+    : '';
+  const gridRemaining = hasFeatured && articles.length > 9
+    ? `<div class="section-divider"></div><section class="feed feed-continued"><div class="article-grid">${articles.slice(9).map(a => renderCard(a, prices)).join('\n      ')}</div></section>`
     : '';
   const pulse = renderPulse();
 
@@ -463,7 +650,7 @@ function buildHome(articles, prices) {
   const html = renderHeader('The Signal — Market Intelligence for AI, Defense, Space & Cyber',
     'The Signal delivers sharp analysis on AI, defense, space, and cybersecurity stocks. Earnings deep-dives, contract analysis, and market-moving insights.',
     null, articles)
-    + ticker + hero + feed + renderFooter();
+    + ticker + hero + feed + renderScorecard(prices) + gridRest + renderSignalHighlights(prices) + renderNewsletter() + gridRemaining + renderFooter();
   fs.mkdirSync(DIST, { recursive: true });
   fs.writeFileSync(path.join(DIST, 'index.html'), html);
   console.log('  ✓ index.html');
