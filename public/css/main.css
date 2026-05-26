@@ -1831,12 +1831,13 @@ body.pulse-modal-open {
 
 /* === Section Divider === */
 .section-divider {
-  height: 1px;
-  background: linear-gradient(to right, transparent, rgba(255,255,255,0.08), transparent);
-  margin: 36px 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, rgba(204,0,0,0.3), rgba(204,0,0,0.5), rgba(204,0,0,0.3), transparent);
+  margin: 48px 0;
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 2px;
 }
 
 /* === Scorecard Section === */
@@ -1869,7 +1870,7 @@ body.pulse-modal-open {
   margin: 0;
 }
 .scorecard-title span {
-  color: var(--accent, #3b82f6);
+  color: #cc0000;
 }
 .scorecard-subtitle {
   font-size: 13px;
@@ -1893,6 +1894,34 @@ body.pulse-modal-open {
   text-align: center;
   box-shadow: 0 0 30px rgba(204,0,0,0.3), 0 0 60px rgba(204,0,0,0.1);
   position: relative;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  will-change: transform, opacity;
+}
+.sc-card.reveal {
+  opacity: 1;
+  transform: translateY(0);
+  animation: glowPulse 3s ease-in-out infinite;
+}
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 30px rgba(204,0,0,0.3), 0 0 60px rgba(204,0,0,0.1); }
+  50% { box-shadow: 0 0 40px rgba(204,0,0,0.45), 0 0 80px rgba(204,0,0,0.2); }
+}
+.sc-card:nth-child(1) { transition-delay: 0s; }
+.sc-card:nth-child(2) { transition-delay: 0.08s; }
+.sc-card:nth-child(3) { transition-delay: 0.16s; }
+.sc-card:nth-child(4) { transition-delay: 0.24s; }
+.sc-card:nth-child(5) { transition-delay: 0.32s; }
+.sc-card:nth-child(6) { transition-delay: 0.4s; }
+.sc-card:hover {
+  box-shadow: 0 0 40px rgba(204,0,0,0.5), 0 0 80px rgba(204,0,0,0.2);
+  transform: translateY(-4px);
+}
+.sc-card:active {
+  transform: scale(0.97);
+  transition: transform 0.08s ease;
 }
 .sc-card-header {
   display: flex;
@@ -1957,6 +1986,11 @@ body.pulse-modal-open {
 .sc-table-container {
   border-top: 1px solid var(--border, #222);
   padding-top: 20px;
+  background: #000000;
+  border: 1px solid #1a1a1a;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 0 30px rgba(204,0,0,0.25), 0 0 60px rgba(204,0,0,0.08);
 }
 .sc-table-header h3 {
   font-size: 14px;
@@ -2006,17 +2040,22 @@ body.pulse-modal-open {
   padding: 0 24px;
 }
 .detail-stocks-header {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
-  color: var(--text-primary, #e8e8f0);
+  color: #ff6b6b;
   margin-bottom: 20px;
+  display: inline-block;
+  background: rgba(139,0,0,0.25);
+  padding: 6px 16px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
 }
 .detail-star {
-  color: #fbbf24;
+  color: #ff3333;
 }
 .detail-stocks-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   gap: 20px;
 }
 
@@ -2025,28 +2064,52 @@ body.pulse-modal-open {
   display: block;
   border-radius: 12px;
   overflow: hidden;
-  transition: transform 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 0 20px rgba(204,0,0,0.2);
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.2s;
+  will-change: transform, opacity;
 }
+.detail-card-link.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+.detail-card-link:nth-child(1) { transition-delay: 0s; }
+.detail-card-link:nth-child(2) { transition-delay: 0.15s; }
 .detail-card-link:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 0 30px rgba(204,0,0,0.4);
+}
+.detail-card-link:active {
+  transform: scale(0.98);
+  transition: transform 0.08s ease;
 }
 .detail-card-accent {
   height: 4px;
-  background: linear-gradient(to right, var(--accent, #3b82f6), #60a5fa);
+  background: linear-gradient(to right, #cc0000, #ff3333);
+}
+.detail-card-link.reveal .detail-card-accent {
+  animation: accentGlow 2.5s ease-in-out infinite;
+}
+@keyframes accentGlow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
 }
 .detail-card-inner {
-  background: var(--card-bg, #14141e);
-  border: 1px solid var(--border, #222);
+  background: #000000;
+  border: 1px solid #1a1a1a;
   border-top: none;
   border-radius: 0 0 12px 12px;
-  padding: 20px;
+  padding: 16px;
+  box-shadow: 0 0 40px rgba(204,0,0,0.45), 0 0 80px rgba(204,0,0,0.2);
 }
 
 .detail-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 .detail-header-left {}
 .detail-badge {
@@ -2058,31 +2121,31 @@ body.pulse-modal-open {
   margin-bottom: 4px;
 }
 .detail-ticker {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 800;
   color: var(--text-primary, #e8e8f0);
 }
 .detail-name {
-  font-size: 12px;
+  font-size: 11px;
   color: var(--text-secondary, #999);
 }
 .detail-header-right {
   text-align: right;
 }
 .detail-price {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   color: var(--text-primary, #e8e8f0);
 }
 .detail-change {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
 }
 .detail-change.up { color: #22c55e; }
 .detail-change.down { color: #ef4444; }
 
 .detail-card-section {
-  padding: 12px 0;
+  padding: 8px 0;
   border-bottom: 1px solid rgba(255,255,255,0.04);
 }
 .detail-section-last {
@@ -2090,21 +2153,24 @@ body.pulse-modal-open {
   padding-bottom: 0;
 }
 .detail-section-title {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--text-muted, #666);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 /* Fair Value */
 .detail-fair-value {
   display: flex;
-  gap: 16px;
+  justify-content: space-between;
   align-items: center;
+  gap: 8px;
 }
-.detail-fv-status {}
+.detail-fv-status {
+  flex-shrink: 0;
+}
 .detail-fv-badge {
   font-size: 11px;
   font-weight: 600;
@@ -2115,12 +2181,13 @@ body.pulse-modal-open {
 }
 .detail-fv-rows {
   flex: 1;
+  max-width: 180px;
 }
 .detail-fv-row {
   display: flex;
   justify-content: space-between;
-  padding: 2px 0;
-  font-size: 13px;
+  padding: 1px 0;
+  font-size: 12px;
 }
 .detail-fv-label {
   color: var(--text-secondary, #999);
@@ -2128,6 +2195,7 @@ body.pulse-modal-open {
 .detail-fv-val {
   color: var(--text-primary, #e8e8f0);
   font-weight: 600;
+  text-align: right;
 }
 .detail-fv-upside {
   color: #22c55e !important;
@@ -2309,7 +2377,72 @@ body.pulse-modal-open {
     padding: 20px 16px;
   }
   .scorecard-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+  .sc-card {
+    padding: 10px 8px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4px;
+    text-align: left;
+  }
+  .sc-card-header {
+    width: auto;
+    margin-bottom: 0;
+    gap: 6px;
+    justify-content: flex-start;
+    flex-shrink: 0;
+  }
+  .sc-logo {
+    width: 18px;
+    height: 18px;
+  }
+  .sc-card-name {
+    font-size: 11px;
+  }
+  .sc-card-sub {
+    font-size: 9px;
+  }
+  .sc-gauge-wrap {
+    margin: 0;
+    flex-shrink: 0;
+  }
+  .sc-gauge-svg {
+    width: 56px;
+    height: 28px;
+  }
+  .sc-signal-label {
+    font-size: 8px;
+    margin-bottom: 0;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+  .sc-drivers {
+    width: 100%;
+    margin-top: 4px;
+  }
+  .sc-driver {
+    font-size: 9px;
+    padding: 1px 0;
+    line-height: 1.3;
+  }
+  .sc-dot {
+    width: 4px;
+    height: 4px;
+    margin-top: 3px;
+  }
+  .sc-table-container {
+    padding: 12px;
+  }
+  .sc-table th,
+  .sc-table td {
+    padding: 4px 6px;
+    font-size: 10px;
   }
   .detail-stocks-grid {
     grid-template-columns: 1fr;
@@ -2324,8 +2457,26 @@ body.pulse-modal-open {
     font-size: 20px;
   }
   .detail-fair-value {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .detail-fv-rows {
+    max-width: 140px;
+  }
+  .detail-card-inner {
+    padding: 12px;
+  }
+  .detail-ticker {
+    font-size: 15px;
+  }
+  .detail-price {
+    font-size: 14px;
+  }
+  .detail-card-section {
+    padding: 6px 0;
+  }
+  .detail-fv-row {
+    font-size: 11px;
   }
 }

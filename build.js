@@ -245,6 +245,16 @@ function renderFooter() {
   <script src="/js/search.js" defer></script>
   <script src="/js/auth.js" defer></script>
   <script src="/js/pulse.js" defer></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function(){
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('reveal'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.sc-card, .detail-card-link, .sc-table-container, .newsletter-inner').forEach(function(el){ observer.observe(el); });
+  });
+  </script>
 </html>`;
 }
 
@@ -507,13 +517,19 @@ function renderScorecard(prices) {
 }
 
 function renderSignalHighlights(prices) {
-  if (!prices || !prices['KTOS'] || !prices['CRWV']) return '';
+  var hl;
+  try { hl = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'highlights.json'), 'utf8')); } catch(e) { hl = null; }
+  if (!hl || !hl.length) {
+    // Fallback: render nothing if no data
+    return '';
+  }
   function card(ticker, name, fairVal, upsidePct, rev, growth, ni, consensus, target, buyPct) {
-    var p = prices[ticker];
+    var p = prices && prices[ticker];
     var price = p && p.price ? '$' + p.price.toFixed(2) : '$---';
     var cls = p && p.changePercent >= 0 ? 'up' : 'down';
     var chg = p && p.changePercent ? ((p.changePercent >= 0 ? '+' : '') + p.changePercent.toFixed(2) + '%') : '0.00%';
     var holdPct = 100 - buyPct;
+    var upArrow = upsidePct && upsidePct.indexOf('-') !== 0 ? 'detail-fv-upside' : '';
     return '<a href="/ticker/' + ticker + '" class="detail-card-link">' +
       '<div class="detail-card-accent"></div>' +
       '<div class="detail-card-inner">' +
@@ -535,7 +551,7 @@ function renderSignalHighlights(prices) {
             '<div class="detail-fv-rows">' +
               '<div class="detail-fv-row"><span class="detail-fv-label">Fair Value</span><span class="detail-fv-val">$' + fairVal + '</span></div>' +
               '<div class="detail-fv-row"><span class="detail-fv-label">Current Price</span><span class="detail-fv-val">' + price + '</span></div>' +
-              '<div class="detail-fv-row"><span class="detail-fv-label">Upside</span><span class="detail-fv-val detail-fv-upside">+' + upsidePct + '%</span></div>' +
+              '<div class="detail-fv-row"><span class="detail-fv-label">Upside</span><span class="detail-fv-val ' + upArrow + '">' + upsidePct + '</span></div>' +
             '</div>' +
           '</div>' +
         '</div>' +
@@ -567,13 +583,33 @@ function renderSignalHighlights(prices) {
       '</div>' +
     '</a>';
   }
+  var cards = '';
+  for (var i = 0; i < hl.length; i++) {
+    var h = hl[i];
+    if (!h || !h.ticker || !h.analyst) continue;
+    var total = (h.analyst.buys || 0) + (h.analyst.holds || 0) + (h.analyst.sells || 0);
+    var buyPct = total > 0 ? Math.round((h.analyst.buys || 0) / total * 100) : 50;
+    var upsideStr = h.fairValue && h.fairValue.upside ? h.fairValue.upside.replace('+', '') : '0%';
+    var targetStr = h.analyst && h.analyst.target ? h.analyst.target.toFixed(2) : '0';
+    var fairValStr = h.fairValue && h.fairValue.price ? h.fairValue.price.toFixed(2) : '0.00';
+    cards += card(
+      h.ticker,
+      h.name || h.ticker,
+      fairValStr,
+      upsideStr,
+      h.earnings && h.earnings.revTtm || 'N/A',
+      h.earnings && h.earnings.revGrowth || 'N/A',
+      h.earnings && h.earnings.netIncome || 'N/A',
+      h.analyst.consensus || 'N/A',
+      targetStr,
+      buyPct
+    );
+  }
+  if (!cards) return '';
   return '<div class="section-divider"></div>' +
     '<section class="detail-stocks-section">' +
     '<div class="detail-stocks-header"><span class="detail-star">*</span> Signal Highlights</div>' +
-    '<div class="detail-stocks-grid">' +
-      card('KTOS', 'Kratos Defense & Security', '41.50', '42.8', '$1.52B', '+18.4%', '$124M', 'Buy', '46.00', 67) +
-      card('CRWV', 'CoreWeave Inc.', '95.00', '38.2', '$3.8B', '+187%', '-$412M', 'Buy', '120.00', 75) +
-    '</div>' +
+    '<div class="detail-stocks-grid">' + cards + '</div>' +
   '</section>';
 }
 
@@ -644,8 +680,7 @@ function buildHome(articles, prices) {
     ${hasFeatured ? featured : ''}
     ${hasFeatured ? pulse : ''}
     ${gridFirst4}
-  </section>
-  ${gridRest}`;
+  </section>`;
 
   const html = renderHeader('The Signal — Market Intelligence for AI, Defense, Space & Cyber',
     'The Signal delivers sharp analysis on AI, defense, space, and cybersecurity stocks. Earnings deep-dives, contract analysis, and market-moving insights.',
