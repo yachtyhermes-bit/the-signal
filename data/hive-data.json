@@ -1,5 +1,47 @@
 {
-  "portfolios": {},
-  "priceCache": {},
-  "accounts": {}
+  "portfolios": {
+    "hive_mpntxl2n_2g9div": {
+      "uid": "hive_mpntxl2n_2g9div",
+      "displayName": "Fleeko21",
+      "photoURL": null,
+      "cash": 100000,
+      "holdings": {},
+      "trades": [],
+      "createdAt": "2026-05-27T09:55:56.105Z"
+    },
+    "usr_ee2913dcbfd9625a": {
+      "uid": "usr_ee2913dcbfd9625a",
+      "displayName": "Charlie9",
+      "photoURL": null,
+      "cash": 92479.8999786377,
+      "holdings": {
+        "NVDA": 35
+      },
+      "trades": [
+        {
+          "ticker": "NVDA",
+          "action": "buy",
+          "shares": 35,
+          "price": 214.86,
+          "date": "2026-05-27T10:22:03.938Z"
+        }
+      ],
+      "createdAt": "2026-05-27T10:21:15.693Z"
+    }
+  },
+  "priceCache": {
+    "NVDA": {
+      "price": 214.86000061035156,
+      "updatedAt": "2026-05-27T10:22:03.938Z"
+    }
+  },
+  "accounts": {
+    "charlie943": {
+      "username": "charlie943",
+      "displayName": "Charlie9",
+      "passwordHash": "0b06b7c509c6f9740bf1ac13119477046d2d7d45226ecd5585a16e0b364a2047",
+      "createdAt": "2026-05-27T10:21:15.693Z",
+      "uid": "usr_ee2913dcbfd9625a"
+    }
+  }
 }
