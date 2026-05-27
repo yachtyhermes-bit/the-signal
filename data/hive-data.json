@@ -13,17 +13,18 @@
       "uid": "usr_ee2913dcbfd9625a",
       "displayName": "Charlie9",
       "photoURL": null,
-      "cash": 24070.959716796875,
+      "cash": 2665.459762573242,
       "holdings": {
         "NVDA": 50,
-        "CRWV": 78,
+        "CRWV": 123,
         "META": 13,
-        "AMZN": 30,
+        "AMZN": 35,
         "KTOS": 150,
         "RBRK": 110,
-        "RTX": 50,
+        "RTX": 75,
         "RDW": 325,
-        "AXON": 23
+        "AXON": 23,
+        "TSLA": 25
       },
       "trades": [
         {
@@ -102,6 +103,34 @@
           "shares": 5,
           "price": 612.34,
           "date": "2026-05-27T10:31:45.770Z"
+        },
+        {
+          "ticker": "RTX",
+          "action": "buy",
+          "shares": 25,
+          "price": 178.97,
+          "date": "2026-05-27T10:36:21.189Z"
+        },
+        {
+          "ticker": "TSLA",
+          "action": "buy",
+          "shares": 25,
+          "price": 433.59,
+          "date": "2026-05-27T10:38:48.817Z"
+        },
+        {
+          "ticker": "CRWV",
+          "action": "buy",
+          "shares": 45,
+          "price": 105.89,
+          "date": "2026-05-27T10:40:14.267Z"
+        },
+        {
+          "ticker": "AMZN",
+          "action": "buy",
+          "shares": 5,
+          "price": 265.29,
+          "date": "2026-05-27T10:42:15.576Z"
         }
       ],
       "createdAt": "2026-05-27T10:21:15.693Z"
@@ -110,39 +139,43 @@
   "priceCache": {
     "NVDA": {
       "price": 214.86000061035156,
-      "updatedAt": "2026-05-27T10:27:27.068Z"
+      "updatedAt": "2026-05-27T10:42:14.984Z"
     },
     "CRWV": {
       "price": 105.88999938964844,
-      "updatedAt": "2026-05-27T10:28:13.761Z"
+      "updatedAt": "2026-05-27T10:42:15.081Z"
     },
     "META": {
       "price": 612.3400268554688,
-      "updatedAt": "2026-05-27T10:29:38.395Z"
+      "updatedAt": "2026-05-27T10:42:15.165Z"
     },
     "AMZN": {
       "price": 265.2900085449219,
-      "updatedAt": "2026-05-27T10:30:06.896Z"
+      "updatedAt": "2026-05-27T10:42:14.871Z"
     },
     "KTOS": {
       "price": 56.79999923706055,
-      "updatedAt": "2026-05-27T10:30:38.849Z"
+      "updatedAt": "2026-05-27T10:42:15.255Z"
     },
     "RBRK": {
       "price": 68.30999755859375,
-      "updatedAt": "2026-05-27T10:27:26.987Z"
+      "updatedAt": "2026-05-27T10:42:15.341Z"
     },
     "RTX": {
       "price": 178.97000122070312,
-      "updatedAt": "2026-05-27T10:28:13.669Z"
+      "updatedAt": "2026-05-27T10:42:15.407Z"
     },
     "RDW": {
       "price": 22.040000915527344,
-      "updatedAt": "2026-05-27T10:29:38.242Z"
+      "updatedAt": "2026-05-27T10:42:15.488Z"
     },
     "AXON": {
       "price": 385.29998779296875,
-      "updatedAt": "2026-05-27T10:31:16.096Z"
+      "updatedAt": "2026-05-27T10:42:15.576Z"
+    },
+    "TSLA": {
+      "price": 433.5899963378906,
+      "updatedAt": "2026-05-27T10:38:48.817Z"
     }
   },
   "accounts": {
