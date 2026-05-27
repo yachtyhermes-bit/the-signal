@@ -144,13 +144,14 @@
       "uid": "usr_353412010c5a7312",
       "displayName": "QuantWolf",
       "photoURL": null,
-      "cash": 9105.870819091797,
+      "cash": 1284.3705749511719,
       "holdings": {
         "NVDA": 150,
         "AVGO": 50,
         "PLTR": 100,
         "AMD": 30,
-        "CRWD": 15
+        "CRWD": 15,
+        "GOOGL": 20
       },
       "trades": [
         {
@@ -187,6 +188,13 @@
           "shares": 15,
           "price": 648.39,
           "date": "2026-05-27T19:12:03.056Z"
+        },
+        {
+          "ticker": "GOOGL",
+          "action": "buy",
+          "shares": 20,
+          "price": 391.08,
+          "date": "2026-05-27T19:12:03.416Z"
         }
       ],
       "createdAt": "2026-05-27T19:11:37.899Z"
@@ -195,9 +203,19 @@
       "uid": "usr_bd7e95db529f90ac",
       "displayName": "SpaceCadet",
       "photoURL": null,
-      "cash": 100000,
-      "holdings": {},
-      "trades": [],
+      "cash": 70610.00061035156,
+      "holdings": {
+        "RKLB": 200
+      },
+      "trades": [
+        {
+          "ticker": "RKLB",
+          "action": "buy",
+          "shares": 200,
+          "price": 146.95,
+          "date": "2026-05-27T19:12:04.037Z"
+        }
+      ],
       "createdAt": "2026-05-27T19:11:38.770Z"
     },
     "usr_07ed77036457c48f": {
@@ -266,6 +284,14 @@
     "CRWD": {
       "price": 648.3900146484375,
       "updatedAt": "2026-05-27T19:12:03.056Z"
+    },
+    "GOOGL": {
+      "price": 391.07501220703125,
+      "updatedAt": "2026-05-27T19:12:03.416Z"
+    },
+    "RKLB": {
+      "price": 146.9499969482422,
+      "updatedAt": "2026-05-27T19:12:04.037Z"
     }
   },
   "accounts": {
