@@ -332,6 +332,15 @@
         }
       ],
       "createdAt": "2026-05-27T19:11:39.556Z"
+    },
+    "usr_a5c30f0cf35d04c8": {
+      "uid": "usr_a5c30f0cf35d04c8",
+      "displayName": "cruthaissue",
+      "photoURL": null,
+      "cash": 100000,
+      "holdings": {},
+      "trades": [],
+      "createdAt": "2026-05-27T22:53:30.262Z"
     }
   },
   "priceCache": {
@@ -460,6 +469,16 @@
       "passwordHash": "e67b62b4f193cc254c30978629804cb6fbbd5bf6a2150360a500154f7739b56f",
       "createdAt": "2026-05-27T19:11:39.556Z",
       "uid": "usr_07ed77036457c48f"
+    },
+    "google_112407934104114628815": {
+      "username": "google_112407934104114628815",
+      "displayName": "cruthaissue",
+      "passwordHash": "",
+      "createdAt": "2026-05-27T22:53:30.262Z",
+      "uid": "usr_a5c30f0cf35d04c8",
+      "googleId": "112407934104114628815",
+      "email": "cruthaissue@gmail.com",
+      "photoURL": null
     }
   }
 }
