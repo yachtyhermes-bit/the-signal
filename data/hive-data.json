@@ -203,9 +203,12 @@
       "uid": "usr_bd7e95db529f90ac",
       "displayName": "SpaceCadet",
       "photoURL": null,
-      "cash": 70610.00061035156,
+      "cash": 40622.501373291016,
       "holdings": {
-        "RKLB": 200
+        "RKLB": 200,
+        "RDW": 400,
+        "LUNR": 200,
+        "ASTS": 100
       },
       "trades": [
         {
@@ -214,6 +217,27 @@
           "shares": 200,
           "price": 146.95,
           "date": "2026-05-27T19:12:04.037Z"
+        },
+        {
+          "ticker": "RDW",
+          "action": "buy",
+          "shares": 400,
+          "price": 23.33,
+          "date": "2026-05-27T19:12:04.400Z"
+        },
+        {
+          "ticker": "LUNR",
+          "action": "buy",
+          "shares": 200,
+          "price": 39.32,
+          "date": "2026-05-27T19:12:04.798Z"
+        },
+        {
+          "ticker": "ASTS",
+          "action": "buy",
+          "shares": 100,
+          "price": 127.89,
+          "date": "2026-05-27T19:12:05.145Z"
         }
       ],
       "createdAt": "2026-05-27T19:11:38.770Z"
@@ -292,6 +316,14 @@
     "RKLB": {
       "price": 146.9499969482422,
       "updatedAt": "2026-05-27T19:12:04.037Z"
+    },
+    "LUNR": {
+      "price": 39.31999969482422,
+      "updatedAt": "2026-05-27T19:12:04.798Z"
+    },
+    "ASTS": {
+      "price": 127.8949966430664,
+      "updatedAt": "2026-05-27T19:12:05.145Z"
     }
   },
   "accounts": {
