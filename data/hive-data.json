@@ -4,10 +4,10 @@
       "uid": "usr_ee2913dcbfd9625a",
       "displayName": "Charlie9",
       "photoURL": null,
-      "cash": 95.63984680175781,
+      "cash": 23.939865112304688,
       "holdings": {
         "NVDA": 50,
-        "CRWV": 123,
+        "CRWV": 63,
         "META": 13,
         "AMZN": 35,
         "KTOS": 150,
@@ -15,7 +15,8 @@
         "RTX": 76,
         "RDW": 325,
         "AXON": 23,
-        "TSLA": 25
+        "TSLA": 25,
+        "AVGO": 15
       },
       "trades": [
         {
@@ -136,6 +137,20 @@
           "shares": 1,
           "price": 178.97,
           "date": "2026-05-27T10:46:07.663Z"
+        },
+        {
+          "ticker": "CRWV",
+          "action": "sell",
+          "shares": 60,
+          "price": 104.27,
+          "date": "2026-05-27T23:34:52.734Z"
+        },
+        {
+          "ticker": "AVGO",
+          "action": "buy",
+          "shares": 15,
+          "price": 421.86,
+          "date": "2026-05-27T23:35:28.189Z"
         }
       ],
       "createdAt": "2026-05-27T10:21:15.693Z"
