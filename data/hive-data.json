@@ -262,10 +262,13 @@
       "uid": "usr_07ed77036457c48f",
       "displayName": "CyberVet",
       "photoURL": null,
-      "cash": 63154.69985961914,
+      "cash": 34275.299224853516,
       "holdings": {
         "PANW": 70,
-        "CRWD": 30
+        "CRWD": 30,
+        "FTNT": 100,
+        "ZS": 70,
+        "S": 400
       },
       "trades": [
         {
@@ -281,6 +284,27 @@
           "shares": 30,
           "price": 648.39,
           "date": "2026-05-27T19:12:06.571Z"
+        },
+        {
+          "ticker": "FTNT",
+          "action": "buy",
+          "shares": 100,
+          "price": 127.94,
+          "date": "2026-05-27T19:12:06.956Z"
+        },
+        {
+          "ticker": "ZS",
+          "action": "buy",
+          "shares": 70,
+          "price": 127.22,
+          "date": "2026-05-27T19:12:07.410Z"
+        },
+        {
+          "ticker": "S",
+          "action": "buy",
+          "shares": 400,
+          "price": 17.95,
+          "date": "2026-05-27T19:12:07.772Z"
         }
       ],
       "createdAt": "2026-05-27T19:11:39.556Z"
@@ -366,6 +390,18 @@
     "PANW": {
       "price": 248.47999572753906,
       "updatedAt": "2026-05-27T19:12:06.291Z"
+    },
+    "FTNT": {
+      "price": 127.94000244140625,
+      "updatedAt": "2026-05-27T19:12:06.956Z"
+    },
+    "ZS": {
+      "price": 127.22000122070312,
+      "updatedAt": "2026-05-27T19:12:07.410Z"
+    },
+    "S": {
+      "price": 17.950000762939453,
+      "updatedAt": "2026-05-27T19:12:07.772Z"
     }
   },
   "accounts": {
