@@ -13,16 +13,17 @@
       "uid": "usr_ee2913dcbfd9625a",
       "displayName": "Charlie9",
       "photoURL": null,
-      "cash": 35994.5595703125,
+      "cash": 24070.959716796875,
       "holdings": {
         "NVDA": 50,
         "CRWV": 78,
-        "META": 8,
+        "META": 13,
         "AMZN": 30,
         "KTOS": 150,
         "RBRK": 110,
         "RTX": 50,
-        "RDW": 325
+        "RDW": 325,
+        "AXON": 23
       },
       "trades": [
         {
@@ -87,6 +88,20 @@
           "shares": 325,
           "price": 22.04,
           "date": "2026-05-27T10:29:38.396Z"
+        },
+        {
+          "ticker": "AXON",
+          "action": "buy",
+          "shares": 23,
+          "price": 385.3,
+          "date": "2026-05-27T10:31:16.096Z"
+        },
+        {
+          "ticker": "META",
+          "action": "buy",
+          "shares": 5,
+          "price": 612.34,
+          "date": "2026-05-27T10:31:45.770Z"
         }
       ],
       "createdAt": "2026-05-27T10:21:15.693Z"
@@ -111,7 +126,7 @@
     },
     "KTOS": {
       "price": 56.79999923706055,
-      "updatedAt": "2026-05-27T10:25:31.273Z"
+      "updatedAt": "2026-05-27T10:30:38.849Z"
     },
     "RBRK": {
       "price": 68.30999755859375,
@@ -124,6 +139,10 @@
     "RDW": {
       "price": 22.040000915527344,
       "updatedAt": "2026-05-27T10:29:38.242Z"
+    },
+    "AXON": {
+      "price": 385.29998779296875,
+      "updatedAt": "2026-05-27T10:31:16.096Z"
     }
   },
   "accounts": {
