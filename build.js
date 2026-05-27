@@ -246,8 +246,6 @@ function renderFooter() {
   <script src="/js/auth.js" defer></script>
   <script src="/js/pulse.js" defer></script>
   <script>
-  
-  <script>
   document.addEventListener('DOMContentLoaded', function(){
     var btn = document.getElementById('hamburgerToggle');
     var menu = document.getElementById('mobileMenu');
