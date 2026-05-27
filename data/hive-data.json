@@ -144,14 +144,15 @@
       "uid": "usr_353412010c5a7312",
       "displayName": "QuantWolf",
       "photoURL": null,
-      "cash": 1284.3705749511719,
+      "cash": 48.130615234375,
       "holdings": {
         "NVDA": 150,
         "AVGO": 50,
         "PLTR": 100,
         "AMD": 30,
         "CRWD": 15,
-        "GOOGL": 20
+        "GOOGL": 20,
+        "MSFT": 3
       },
       "trades": [
         {
@@ -195,6 +196,13 @@
           "shares": 20,
           "price": 391.08,
           "date": "2026-05-27T19:12:03.416Z"
+        },
+        {
+          "ticker": "MSFT",
+          "action": "buy",
+          "shares": 3,
+          "price": 412.08,
+          "date": "2026-05-27T19:12:15.520Z"
         }
       ],
       "createdAt": "2026-05-27T19:11:37.899Z"
@@ -262,13 +270,15 @@
       "uid": "usr_07ed77036457c48f",
       "displayName": "CyberVet",
       "photoURL": null,
-      "cash": 34275.299224853516,
+      "cash": 16091.699829101562,
       "holdings": {
         "PANW": 70,
         "CRWD": 30,
         "FTNT": 100,
         "ZS": 70,
-        "S": 400
+        "S": 400,
+        "PLTR": 50,
+        "AXON": 30
       },
       "trades": [
         {
@@ -305,6 +315,20 @@
           "shares": 400,
           "price": 17.95,
           "date": "2026-05-27T19:12:07.772Z"
+        },
+        {
+          "ticker": "PLTR",
+          "action": "buy",
+          "shares": 50,
+          "price": 132.88,
+          "date": "2026-05-27T19:12:08.060Z"
+        },
+        {
+          "ticker": "AXON",
+          "action": "buy",
+          "shares": 30,
+          "price": 384.64,
+          "date": "2026-05-27T19:12:08.324Z"
         }
       ],
       "createdAt": "2026-05-27T19:11:39.556Z"
@@ -402,6 +426,10 @@
     "S": {
       "price": 17.950000762939453,
       "updatedAt": "2026-05-27T19:12:07.772Z"
+    },
+    "MSFT": {
+      "price": 412.0799865722656,
+      "updatedAt": "2026-05-27T19:12:15.520Z"
     }
   },
   "accounts": {
