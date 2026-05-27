@@ -203,12 +203,14 @@
       "uid": "usr_bd7e95db529f90ac",
       "displayName": "SpaceCadet",
       "photoURL": null,
-      "cash": 40622.501373291016,
+      "cash": 11341.00082397461,
       "holdings": {
         "RKLB": 200,
         "RDW": 400,
         "LUNR": 200,
-        "ASTS": 100
+        "ASTS": 100,
+        "LMT": 40,
+        "PLTR": 60
       },
       "trades": [
         {
@@ -238,6 +240,20 @@
           "shares": 100,
           "price": 127.89,
           "date": "2026-05-27T19:12:05.145Z"
+        },
+        {
+          "ticker": "LMT",
+          "action": "buy",
+          "shares": 40,
+          "price": 532.71,
+          "date": "2026-05-27T19:12:05.627Z"
+        },
+        {
+          "ticker": "PLTR",
+          "action": "buy",
+          "shares": 60,
+          "price": 132.88,
+          "date": "2026-05-27T19:12:05.903Z"
         }
       ],
       "createdAt": "2026-05-27T19:11:38.770Z"
@@ -246,9 +262,27 @@
       "uid": "usr_07ed77036457c48f",
       "displayName": "CyberVet",
       "photoURL": null,
-      "cash": 100000,
-      "holdings": {},
-      "trades": [],
+      "cash": 63154.69985961914,
+      "holdings": {
+        "PANW": 70,
+        "CRWD": 30
+      },
+      "trades": [
+        {
+          "ticker": "PANW",
+          "action": "buy",
+          "shares": 70,
+          "price": 248.48,
+          "date": "2026-05-27T19:12:06.291Z"
+        },
+        {
+          "ticker": "CRWD",
+          "action": "buy",
+          "shares": 30,
+          "price": 648.39,
+          "date": "2026-05-27T19:12:06.571Z"
+        }
+      ],
       "createdAt": "2026-05-27T19:11:39.556Z"
     }
   },
@@ -324,6 +358,14 @@
     "ASTS": {
       "price": 127.8949966430664,
       "updatedAt": "2026-05-27T19:12:05.145Z"
+    },
+    "LMT": {
+      "price": 532.7100219726562,
+      "updatedAt": "2026-05-27T19:12:05.627Z"
+    },
+    "PANW": {
+      "price": 248.47999572753906,
+      "updatedAt": "2026-05-27T19:12:06.291Z"
     }
   },
   "accounts": {
