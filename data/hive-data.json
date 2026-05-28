@@ -1,461 +1,4 @@
 {
-  "portfolios": {
-    "usr_ee2913dcbfd9625a": {
-      "uid": "usr_ee2913dcbfd9625a",
-      "displayName": "Charlie9",
-      "photoURL": null,
-      "cash": 445.7998504638672,
-      "holdings": {
-        "NVDA": 50,
-        "CRWV": 63,
-        "META": 13,
-        "AMZN": 35,
-        "KTOS": 150,
-        "RBRK": 145,
-        "RTX": 76,
-        "RDW": 325,
-        "AXON": 23,
-        "TSLA": 25,
-        "AVGO": 14
-      },
-      "trades": [
-        {
-          "ticker": "NVDA",
-          "action": "buy",
-          "shares": 35,
-          "price": 214.86,
-          "date": "2026-05-27T10:22:03.938Z"
-        },
-        {
-          "ticker": "CRWV",
-          "action": "buy",
-          "shares": 78,
-          "price": 105.89,
-          "date": "2026-05-27T10:23:06.584Z"
-        },
-        {
-          "ticker": "META",
-          "action": "buy",
-          "shares": 8,
-          "price": 612.34,
-          "date": "2026-05-27T10:24:19.055Z"
-        },
-        {
-          "ticker": "AMZN",
-          "action": "buy",
-          "shares": 30,
-          "price": 265.29,
-          "date": "2026-05-27T10:24:57.908Z"
-        },
-        {
-          "ticker": "KTOS",
-          "action": "buy",
-          "shares": 150,
-          "price": 56.8,
-          "date": "2026-05-27T10:25:31.273Z"
-        },
-        {
-          "ticker": "NVDA",
-          "action": "buy",
-          "shares": 15,
-          "price": 214.86,
-          "date": "2026-05-27T10:25:58.151Z"
-        },
-        {
-          "ticker": "RBRK",
-          "action": "buy",
-          "shares": 110,
-          "price": 68.31,
-          "date": "2026-05-27T10:27:27.068Z"
-        },
-        {
-          "ticker": "RTX",
-          "action": "buy",
-          "shares": 50,
-          "price": 178.97,
-          "date": "2026-05-27T10:28:13.762Z"
-        },
-        {
-          "ticker": "RDW",
-          "action": "buy",
-          "shares": 325,
-          "price": 22.04,
-          "date": "2026-05-27T10:29:38.396Z"
-        },
-        {
-          "ticker": "AXON",
-          "action": "buy",
-          "shares": 23,
-          "price": 385.3,
-          "date": "2026-05-27T10:31:16.096Z"
-        },
-        {
-          "ticker": "META",
-          "action": "buy",
-          "shares": 5,
-          "price": 612.34,
-          "date": "2026-05-27T10:31:45.770Z"
-        },
-        {
-          "ticker": "RTX",
-          "action": "buy",
-          "shares": 25,
-          "price": 178.97,
-          "date": "2026-05-27T10:36:21.189Z"
-        },
-        {
-          "ticker": "TSLA",
-          "action": "buy",
-          "shares": 25,
-          "price": 433.59,
-          "date": "2026-05-27T10:38:48.817Z"
-        },
-        {
-          "ticker": "CRWV",
-          "action": "buy",
-          "shares": 45,
-          "price": 105.89,
-          "date": "2026-05-27T10:40:14.267Z"
-        },
-        {
-          "ticker": "AMZN",
-          "action": "buy",
-          "shares": 5,
-          "price": 265.29,
-          "date": "2026-05-27T10:42:15.576Z"
-        },
-        {
-          "ticker": "RBRK",
-          "action": "buy",
-          "shares": 35,
-          "price": 68.31,
-          "date": "2026-05-27T10:45:36.552Z"
-        },
-        {
-          "ticker": "RTX",
-          "action": "buy",
-          "shares": 1,
-          "price": 178.97,
-          "date": "2026-05-27T10:46:07.663Z"
-        },
-        {
-          "ticker": "CRWV",
-          "action": "sell",
-          "shares": 60,
-          "price": 104.27,
-          "date": "2026-05-28T00:00:32.092Z"
-        },
-        {
-          "ticker": "AVGO",
-          "action": "buy",
-          "shares": 14,
-          "price": 421.86,
-          "date": "2026-05-28T00:18:45.092Z"
-        }
-      ],
-      "createdAt": "2026-05-27T10:21:15.693Z"
-    },
-    "usr_353412010c5a7312": {
-      "uid": "usr_353412010c5a7312",
-      "displayName": "QuantWolf",
-      "photoURL": null,
-      "cash": 48.130615234375,
-      "holdings": {
-        "NVDA": 150,
-        "AVGO": 50,
-        "PLTR": 100,
-        "AMD": 30,
-        "CRWD": 15,
-        "GOOGL": 20,
-        "MSFT": 3
-      },
-      "trades": [
-        {
-          "ticker": "NVDA",
-          "action": "buy",
-          "shares": 150,
-          "price": 212.95,
-          "date": "2026-05-27T19:12:01.177Z"
-        },
-        {
-          "ticker": "AVGO",
-          "action": "buy",
-          "shares": 50,
-          "price": 420.9,
-          "date": "2026-05-27T19:12:01.794Z"
-        },
-        {
-          "ticker": "PLTR",
-          "action": "buy",
-          "shares": 100,
-          "price": 132.88,
-          "date": "2026-05-27T19:12:02.274Z"
-        },
-        {
-          "ticker": "AMD",
-          "action": "buy",
-          "shares": 30,
-          "price": 496.4,
-          "date": "2026-05-27T19:12:02.668Z"
-        },
-        {
-          "ticker": "CRWD",
-          "action": "buy",
-          "shares": 15,
-          "price": 648.39,
-          "date": "2026-05-27T19:12:03.056Z"
-        },
-        {
-          "ticker": "GOOGL",
-          "action": "buy",
-          "shares": 20,
-          "price": 391.08,
-          "date": "2026-05-27T19:12:03.416Z"
-        },
-        {
-          "ticker": "MSFT",
-          "action": "buy",
-          "shares": 3,
-          "price": 412.08,
-          "date": "2026-05-27T19:12:15.520Z"
-        }
-      ],
-      "createdAt": "2026-05-27T19:11:37.899Z"
-    },
-    "usr_bd7e95db529f90ac": {
-      "uid": "usr_bd7e95db529f90ac",
-      "displayName": "SpaceCadet",
-      "photoURL": null,
-      "cash": 11341.00082397461,
-      "holdings": {
-        "RKLB": 200,
-        "RDW": 400,
-        "LUNR": 200,
-        "ASTS": 100,
-        "LMT": 40,
-        "PLTR": 60
-      },
-      "trades": [
-        {
-          "ticker": "RKLB",
-          "action": "buy",
-          "shares": 200,
-          "price": 146.95,
-          "date": "2026-05-27T19:12:04.037Z"
-        },
-        {
-          "ticker": "RDW",
-          "action": "buy",
-          "shares": 400,
-          "price": 23.33,
-          "date": "2026-05-27T19:12:04.400Z"
-        },
-        {
-          "ticker": "LUNR",
-          "action": "buy",
-          "shares": 200,
-          "price": 39.32,
-          "date": "2026-05-27T19:12:04.798Z"
-        },
-        {
-          "ticker": "ASTS",
-          "action": "buy",
-          "shares": 100,
-          "price": 127.89,
-          "date": "2026-05-27T19:12:05.145Z"
-        },
-        {
-          "ticker": "LMT",
-          "action": "buy",
-          "shares": 40,
-          "price": 532.71,
-          "date": "2026-05-27T19:12:05.627Z"
-        },
-        {
-          "ticker": "PLTR",
-          "action": "buy",
-          "shares": 60,
-          "price": 132.88,
-          "date": "2026-05-27T19:12:05.903Z"
-        }
-      ],
-      "createdAt": "2026-05-27T19:11:38.770Z"
-    },
-    "usr_07ed77036457c48f": {
-      "uid": "usr_07ed77036457c48f",
-      "displayName": "CyberVet",
-      "photoURL": null,
-      "cash": 16091.699829101562,
-      "holdings": {
-        "PANW": 70,
-        "CRWD": 30,
-        "FTNT": 100,
-        "ZS": 70,
-        "S": 400,
-        "PLTR": 50,
-        "AXON": 30
-      },
-      "trades": [
-        {
-          "ticker": "PANW",
-          "action": "buy",
-          "shares": 70,
-          "price": 248.48,
-          "date": "2026-05-27T19:12:06.291Z"
-        },
-        {
-          "ticker": "CRWD",
-          "action": "buy",
-          "shares": 30,
-          "price": 648.39,
-          "date": "2026-05-27T19:12:06.571Z"
-        },
-        {
-          "ticker": "FTNT",
-          "action": "buy",
-          "shares": 100,
-          "price": 127.94,
-          "date": "2026-05-27T19:12:06.956Z"
-        },
-        {
-          "ticker": "ZS",
-          "action": "buy",
-          "shares": 70,
-          "price": 127.22,
-          "date": "2026-05-27T19:12:07.410Z"
-        },
-        {
-          "ticker": "S",
-          "action": "buy",
-          "shares": 400,
-          "price": 17.95,
-          "date": "2026-05-27T19:12:07.772Z"
-        },
-        {
-          "ticker": "PLTR",
-          "action": "buy",
-          "shares": 50,
-          "price": 132.88,
-          "date": "2026-05-27T19:12:08.060Z"
-        },
-        {
-          "ticker": "AXON",
-          "action": "buy",
-          "shares": 30,
-          "price": 384.64,
-          "date": "2026-05-27T19:12:08.324Z"
-        }
-      ],
-      "createdAt": "2026-05-27T19:11:39.556Z"
-    },
-    "usr_a5c30f0cf35d04c8": {
-      "uid": "usr_a5c30f0cf35d04c8",
-      "displayName": "cruthaissue",
-      "photoURL": null,
-      "cash": 100000,
-      "holdings": {},
-      "trades": [],
-      "createdAt": "2026-05-27T22:53:30.262Z"
-    }
-  },
-  "priceCache": {
-    "NVDA": {
-      "price": 212.60000610351562,
-      "updatedAt": "2026-05-28T00:38:01.582Z"
-    },
-    "CRWV": {
-      "price": 104.2699966430664,
-      "updatedAt": "2026-05-28T00:38:01.624Z"
-    },
-    "META": {
-      "price": 635.2550048828125,
-      "updatedAt": "2026-05-28T00:38:01.701Z"
-    },
-    "AMZN": {
-      "price": 271.8500061035156,
-      "updatedAt": "2026-05-28T00:38:01.742Z"
-    },
-    "KTOS": {
-      "price": 57.29999923706055,
-      "updatedAt": "2026-05-28T00:38:01.774Z"
-    },
-    "RBRK": {
-      "price": 65.80999755859375,
-      "updatedAt": "2026-05-28T00:38:01.884Z"
-    },
-    "RTX": {
-      "price": 176.58999633789062,
-      "updatedAt": "2026-05-28T00:38:01.918Z"
-    },
-    "RDW": {
-      "price": 24,
-      "updatedAt": "2026-05-28T00:38:01.949Z"
-    },
-    "AXON": {
-      "price": 391.32000732421875,
-      "updatedAt": "2026-05-28T00:38:01.979Z"
-    },
-    "TSLA": {
-      "price": 440.3599853515625,
-      "updatedAt": "2026-05-28T00:38:02.011Z"
-    },
-    "AVGO": {
-      "price": 421.8599853515625,
-      "updatedAt": "2026-05-28T00:38:02.056Z"
-    },
-    "PLTR": {
-      "price": 132.50999450683594,
-      "updatedAt": "2026-05-28T00:42:11.109Z"
-    },
-    "AMD": {
-      "price": 495.5400085449219,
-      "updatedAt": "2026-05-28T00:42:11.140Z"
-    },
-    "CRWD": {
-      "price": 645.3599853515625,
-      "updatedAt": "2026-05-28T00:42:11.193Z"
-    },
-    "GOOGL": {
-      "price": 388.8299865722656,
-      "updatedAt": "2026-05-28T00:42:11.241Z"
-    },
-    "RKLB": {
-      "price": 150.22999572753906,
-      "updatedAt": "2026-05-28T00:42:11.392Z"
-    },
-    "LUNR": {
-      "price": 40.34000015258789,
-      "updatedAt": "2026-05-28T00:42:12.004Z"
-    },
-    "ASTS": {
-      "price": 129.60000610351562,
-      "updatedAt": "2026-05-28T00:42:12.061Z"
-    },
-    "LMT": {
-      "price": 531.1400146484375,
-      "updatedAt": "2026-05-28T00:42:12.093Z"
-    },
-    "PANW": {
-      "price": 248.47000122070312,
-      "updatedAt": "2026-05-28T00:42:12.125Z"
-    },
-    "FTNT": {
-      "price": 127.93000030517578,
-      "updatedAt": "2026-05-28T00:42:12.161Z"
-    },
-    "ZS": {
-      "price": 126.41000366210938,
-      "updatedAt": "2026-05-28T00:42:12.194Z"
-    },
-    "S": {
-      "price": 17.950000762939453,
-      "updatedAt": "2026-05-28T00:42:12.233Z"
-    },
-    "MSFT": {
-      "price": 412.6700134277344,
-      "updatedAt": "2026-05-28T00:42:11.358Z"
-    }
-  },
   "accounts": {
     "charlie943": {
       "username": "charlie943",
@@ -495,5 +38,319 @@
       "email": "cruthaissue@gmail.com",
       "photoURL": null
     }
-  }
+  },
+  "trades": [
+    {
+      "ticker": "NVDA",
+      "action": "buy",
+      "shares": 35,
+      "price": 214.86,
+      "date": "2026-05-27T10:22:03.938Z",
+      "uid": "usr_ee2913dcbfd9625a"
+    },
+    {
+      "ticker": "CRWV",
+      "action": "buy",
+      "shares": 78,
+      "price": 105.89,
+      "date": "2026-05-27T10:23:06.584Z",
+      "uid": "usr_ee2913dcbfd9625a"
+    },
+    {
+      "ticker": "META",
+      "action": "buy",
+      "shares": 8,
+      "price": 612.34,
+      "date": "2026-05-27T10:24:19.055Z",
+      "uid": "usr_ee2913dcbfd9625a"
+    },
+    {
+      "ticker": "AMZN",
+      "action": "buy",
+      "shares": 30,
+      "price": 265.29,
+      "date": "2026-05-27T10:24:57.908Z",
+      "uid": "usr_ee2913dcbfd9625a"
+    },
+    {
+      "ticker": "KTOS",
+      "action": "buy",
+      "shares": 150,
+      "price": 56.8,
+      "date": "2026-05-27T10:25:31.273Z",
+      "uid": "usr_ee2913dcbfd9625a"
+    },
+    {
+      "ticker": "NVDA",
+      "action": "buy",
+      "shares": 15,
+      "price": 214.86,
+      "date": "2026-05-27T10:25:58.151Z",
+      "uid": "usr_ee2913dcbfd9625a"
+    },
+    {
+      "ticker": "RBRK",
+      "action": "buy",
+      "shares": 110,
+      "price": 68.31,
+      "date": "2026-05-27T10:27:27.068Z",
+      "uid": "usr_ee2913dcbfd9625a"
+    },
+    {
+      "ticker": "RTX",
+      "action": "buy",
+      "shares": 50,
+      "price": 178.97,
+      "date": "2026-05-27T10:28:13.762Z",
+      "uid": "usr_ee2913dcbfd9625a"
+    },
+    {
+      "ticker": "RDW",
+      "action": "buy",
+      "shares": 325,
+      "price": 22.04,
+      "date": "2026-05-27T10:29:38.396Z",
+      "uid": "usr_ee2913dcbfd9625a"
+    },
+    {
+      "ticker": "AXON",
+      "action": "buy",
+      "shares": 23,
+      "price": 385.3,
+      "date": "2026-05-27T10:31:16.096Z",
+      "uid": "usr_ee2913dcbfd9625a"
+    },
+    {
+      "ticker": "META",
+      "action": "buy",
+      "shares": 5,
+      "price": 612.34,
+      "date": "2026-05-27T10:31:45.770Z",
+      "uid": "usr_ee2913dcbfd9625a"
+    },
+    {
+      "ticker": "RTX",
+      "action": "buy",
+      "shares": 25,
+      "price": 178.97,
+      "date": "2026-05-27T10:36:21.189Z",
+      "uid": "usr_ee2913dcbfd9625a"
+    },
+    {
+      "ticker": "TSLA",
+      "action": "buy",
+      "shares": 25,
+      "price": 433.59,
+      "date": "2026-05-27T10:38:48.817Z",
+      "uid": "usr_ee2913dcbfd9625a"
+    },
+    {
+      "ticker": "CRWV",
+      "action": "buy",
+      "shares": 45,
+      "price": 105.89,
+      "date": "2026-05-27T10:40:14.267Z",
+      "uid": "usr_ee2913dcbfd9625a"
+    },
+    {
+      "ticker": "AMZN",
+      "action": "buy",
+      "shares": 5,
+      "price": 265.29,
+      "date": "2026-05-27T10:42:15.576Z",
+      "uid": "usr_ee2913dcbfd9625a"
+    },
+    {
+      "ticker": "RBRK",
+      "action": "buy",
+      "shares": 35,
+      "price": 68.31,
+      "date": "2026-05-27T10:45:36.552Z",
+      "uid": "usr_ee2913dcbfd9625a"
+    },
+    {
+      "ticker": "RTX",
+      "action": "buy",
+      "shares": 1,
+      "price": 178.97,
+      "date": "2026-05-27T10:46:07.663Z",
+      "uid": "usr_ee2913dcbfd9625a"
+    },
+    {
+      "ticker": "CRWV",
+      "action": "sell",
+      "shares": 60,
+      "price": 104.27,
+      "date": "2026-05-28T00:00:32.092Z",
+      "uid": "usr_ee2913dcbfd9625a"
+    },
+    {
+      "ticker": "AVGO",
+      "action": "buy",
+      "shares": 14,
+      "price": 421.86,
+      "date": "2026-05-28T00:18:45.092Z",
+      "uid": "usr_ee2913dcbfd9625a"
+    },
+    {
+      "ticker": "NVDA",
+      "action": "buy",
+      "shares": 150,
+      "price": 212.95,
+      "date": "2026-05-27T19:12:01.177Z",
+      "uid": "usr_353412010c5a7312"
+    },
+    {
+      "ticker": "AVGO",
+      "action": "buy",
+      "shares": 50,
+      "price": 420.9,
+      "date": "2026-05-27T19:12:01.794Z",
+      "uid": "usr_353412010c5a7312"
+    },
+    {
+      "ticker": "PLTR",
+      "action": "buy",
+      "shares": 100,
+      "price": 132.88,
+      "date": "2026-05-27T19:12:02.274Z",
+      "uid": "usr_353412010c5a7312"
+    },
+    {
+      "ticker": "AMD",
+      "action": "buy",
+      "shares": 30,
+      "price": 496.4,
+      "date": "2026-05-27T19:12:02.668Z",
+      "uid": "usr_353412010c5a7312"
+    },
+    {
+      "ticker": "CRWD",
+      "action": "buy",
+      "shares": 15,
+      "price": 648.39,
+      "date": "2026-05-27T19:12:03.056Z",
+      "uid": "usr_353412010c5a7312"
+    },
+    {
+      "ticker": "GOOGL",
+      "action": "buy",
+      "shares": 20,
+      "price": 391.08,
+      "date": "2026-05-27T19:12:03.416Z",
+      "uid": "usr_353412010c5a7312"
+    },
+    {
+      "ticker": "MSFT",
+      "action": "buy",
+      "shares": 3,
+      "price": 412.08,
+      "date": "2026-05-27T19:12:15.520Z",
+      "uid": "usr_353412010c5a7312"
+    },
+    {
+      "ticker": "RKLB",
+      "action": "buy",
+      "shares": 200,
+      "price": 146.95,
+      "date": "2026-05-27T19:12:04.037Z",
+      "uid": "usr_bd7e95db529f90ac"
+    },
+    {
+      "ticker": "RDW",
+      "action": "buy",
+      "shares": 400,
+      "price": 23.33,
+      "date": "2026-05-27T19:12:04.400Z",
+      "uid": "usr_bd7e95db529f90ac"
+    },
+    {
+      "ticker": "LUNR",
+      "action": "buy",
+      "shares": 200,
+      "price": 39.32,
+      "date": "2026-05-27T19:12:04.798Z",
+      "uid": "usr_bd7e95db529f90ac"
+    },
+    {
+      "ticker": "ASTS",
+      "action": "buy",
+      "shares": 100,
+      "price": 127.89,
+      "date": "2026-05-27T19:12:05.145Z",
+      "uid": "usr_bd7e95db529f90ac"
+    },
+    {
+      "ticker": "LMT",
+      "action": "buy",
+      "shares": 40,
+      "price": 532.71,
+      "date": "2026-05-27T19:12:05.627Z",
+      "uid": "usr_bd7e95db529f90ac"
+    },
+    {
+      "ticker": "PLTR",
+      "action": "buy",
+      "shares": 60,
+      "price": 132.88,
+      "date": "2026-05-27T19:12:05.903Z",
+      "uid": "usr_bd7e95db529f90ac"
+    },
+    {
+      "ticker": "PANW",
+      "action": "buy",
+      "shares": 70,
+      "price": 248.48,
+      "date": "2026-05-27T19:12:06.291Z",
+      "uid": "usr_07ed77036457c48f"
+    },
+    {
+      "ticker": "CRWD",
+      "action": "buy",
+      "shares": 30,
+      "price": 648.39,
+      "date": "2026-05-27T19:12:06.571Z",
+      "uid": "usr_07ed77036457c48f"
+    },
+    {
+      "ticker": "FTNT",
+      "action": "buy",
+      "shares": 100,
+      "price": 127.94,
+      "date": "2026-05-27T19:12:06.956Z",
+      "uid": "usr_07ed77036457c48f"
+    },
+    {
+      "ticker": "ZS",
+      "action": "buy",
+      "shares": 70,
+      "price": 127.22,
+      "date": "2026-05-27T19:12:07.410Z",
+      "uid": "usr_07ed77036457c48f"
+    },
+    {
+      "ticker": "S",
+      "action": "buy",
+      "shares": 400,
+      "price": 17.95,
+      "date": "2026-05-27T19:12:07.772Z",
+      "uid": "usr_07ed77036457c48f"
+    },
+    {
+      "ticker": "PLTR",
+      "action": "buy",
+      "shares": 50,
+      "price": 132.88,
+      "date": "2026-05-27T19:12:08.060Z",
+      "uid": "usr_07ed77036457c48f"
+    },
+    {
+      "ticker": "AXON",
+      "action": "buy",
+      "shares": 30,
+      "price": 384.64,
+      "date": "2026-05-27T19:12:08.324Z",
+      "uid": "usr_07ed77036457c48f"
+    }
+  ]
 }
