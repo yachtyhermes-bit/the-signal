@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 cd /home/chino/thesignal
+# Clear placeholder tracking
+rm -f /tmp/placeholder-articles.txt
 
 echo '=== SIGNAL DEPLOY PIPELINE ==='
 echo ''
@@ -58,6 +60,7 @@ from PIL import Image, ImageDraw, ImageFont
 import json, os, sys
 
 generated = 0
+placeholders = []
 fonts = []
 for p in ['/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf']:
     if os.path.exists(p): fonts.append(p)
@@ -111,10 +114,15 @@ for f in sorted(os.listdir('articles/posts')):
     im.save(webp, 'WEBP', quality=88)
     print(f'    🖼️ Generated: {src}', flush=True)
     generated += 1
+    placeholders.append(slug)
 if generated > 0:
     print(f'  ✅ {generated} missing images auto-generated')
 else:
     print('✅')
+# Write placeholder slugs for Phase 4 image hunt
+with open('/tmp/placeholder-articles.txt', 'w') as ph:
+    for s in placeholders:
+        ph.write(s + '\n')
 " && echo '' || { echo '  ❌ Image generation failed'; exit 1; }
 
 # Phase 1.5: Refresh Data
@@ -136,6 +144,11 @@ node build.js && echo '  ✅ Build success' || { echo '  ❌ Build failed'; exit
 echo ''
 echo '🚀 Phase 3: Deploy'
 vercel --prod --token "$(cat /home/chino/.vercel/token 2>/dev/null)" && echo '  ✅ Deployed to https://readthesignal.net' || { echo '  ❌ Deploy failed'; exit 1; }
+
+# Phase 4: Replace placeholder images with real ones
+echo ''
+echo '📸 Phase 4: Replace Placeholder Images'
+bash scripts/fetch-missing-images.sh || echo '  ⚠️  Image fetch had warnings (non-fatal)'
 
 echo ''
 echo '✅ PIPELINE COMPLETE'
