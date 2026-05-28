@@ -37,20 +37,6 @@
       "googleId": "112407934104114628815",
       "email": "cruthaissue@gmail.com",
       "photoURL": null
-    },
-    "e2etest1": {
-      "username": "e2etest1",
-      "displayName": "E2ETest",
-      "passwordHash": "937e8d5fbb48bd4949536cd65b8d35c426b80d2f830c5c308e2cdec422ae2244",
-      "createdAt": "2026-05-28T07:43:44.202Z",
-      "uid": "usr_576a2d515132b287"
-    },
-    "e2etest2": {
-      "username": "e2etest2",
-      "displayName": "E2ETest2",
-      "passwordHash": "937e8d5fbb48bd4949536cd65b8d35c426b80d2f830c5c308e2cdec422ae2244",
-      "createdAt": "2026-05-28T07:43:55.398Z",
-      "uid": "usr_ccfa6d066143f110"
     }
   },
   "trades": [
@@ -365,60 +351,6 @@
       "price": 384.64,
       "date": "2026-05-27T19:12:08.324Z",
       "uid": "usr_07ed77036457c48f"
-    },
-    {
-      "uid": "usr_ccfa6d066143f110",
-      "ticker": "NVDA",
-      "action": "buy",
-      "shares": 10,
-      "price": 212.6,
-      "date": "2026-05-28T07:43:56.937Z",
-      "id": "t_mpp6sn49_go3mvr"
-    },
-    {
-      "uid": "usr_ccfa6d066143f110",
-      "ticker": "NVDA",
-      "action": "buy",
-      "shares": 10,
-      "price": 212.6,
-      "date": "2026-05-28T07:43:56.937Z",
-      "id": "t_mpp6sn49_go3mvr"
-    },
-    {
-      "uid": "usr_ccfa6d066143f110",
-      "ticker": "AMD",
-      "action": "buy",
-      "shares": 20,
-      "price": 495.54,
-      "date": "2026-05-28T07:43:58.067Z",
-      "id": "t_mpp6snzn_1bqwol"
-    },
-    {
-      "uid": "usr_ccfa6d066143f110",
-      "ticker": "AMD",
-      "action": "buy",
-      "shares": 20,
-      "price": 495.54,
-      "date": "2026-05-28T07:43:58.067Z",
-      "id": "t_mpp6snzn_1bqwol"
-    },
-    {
-      "uid": "usr_ccfa6d066143f110",
-      "ticker": "AVGO",
-      "action": "buy",
-      "shares": 5,
-      "price": 421.86,
-      "date": "2026-05-28T07:43:59.118Z",
-      "id": "t_mpp6sosu_dvjg0j"
-    },
-    {
-      "uid": "usr_ccfa6d066143f110",
-      "ticker": "AVGO",
-      "action": "buy",
-      "shares": 5,
-      "price": 421.86,
-      "date": "2026-05-28T07:43:59.118Z",
-      "id": "t_mpp6sosu_dvjg0j"
     }
   ]
 }
