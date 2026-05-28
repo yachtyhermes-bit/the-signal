@@ -37,13 +37,6 @@
       "googleId": "112407934104114628815",
       "email": "cruthaissue@gmail.com",
       "photoURL": null
-    },
-    "finaltest1": {
-      "username": "finaltest1",
-      "displayName": "FinalTest",
-      "passwordHash": "937e8d5fbb48bd4949536cd65b8d35c426b80d2f830c5c308e2cdec422ae2244",
-      "createdAt": "2026-05-28T07:45:47.951Z",
-      "uid": "usr_6371026d491dc914"
     }
   },
   "trades": [
@@ -358,33 +351,6 @@
       "price": 384.64,
       "date": "2026-05-27T19:12:08.324Z",
       "uid": "usr_07ed77036457c48f"
-    },
-    {
-      "uid": "usr_6371026d491dc914",
-      "ticker": "NVDA",
-      "action": "buy",
-      "shares": 10,
-      "price": 212.6,
-      "date": "2026-05-28T07:45:49.652Z",
-      "id": "t_mpp6v238_xjg0kh"
-    },
-    {
-      "uid": "usr_6371026d491dc914",
-      "ticker": "AMD",
-      "action": "buy",
-      "shares": 20,
-      "price": 495.54,
-      "date": "2026-05-28T07:45:50.977Z",
-      "id": "t_mpp6v341_kfq50m"
-    },
-    {
-      "uid": "usr_6371026d491dc914",
-      "ticker": "AVGO",
-      "action": "buy",
-      "shares": 5,
-      "price": 421.86,
-      "date": "2026-05-28T07:45:52.180Z",
-      "id": "t_mpp6v41g_6yyhw6"
     }
   ]
 }
