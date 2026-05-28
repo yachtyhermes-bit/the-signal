@@ -4042,3 +4042,143 @@ body.pulse-modal-open {
   color: #1a1a2e;
 }
 
+/* === Light Theme — Article Page Content === */
+[data-theme="light"] .article-page {
+  color: #1a1a2e;
+}
+[data-theme="light"] .article-title {
+  color: #111127;
+}
+[data-theme="light"] .article-subtitle {
+  color: #555570;
+}
+[data-theme="light"] .article-meta {
+  color: #777790;
+}
+[data-theme="light"] .article-breadcrumbs {
+  color: #777790;
+}
+[data-theme="light"] .article-breadcrumbs a {
+  color: #555570;
+}
+[data-theme="light"] .article-breadcrumbs a:hover {
+  color: #3b82f6;
+}
+[data-theme="light"] .article-breadcrumbs span {
+  color: #777790;
+}
+[data-theme="light"] .article-body {
+  color: #33334d;
+}
+[data-theme="light"] .article-body p {
+  color: #33334d;
+}
+[data-theme="light"] .article-body h2 {
+  color: #111127;
+}
+[data-theme="light"] .article-body h3 {
+  color: #111127;
+}
+[data-theme="light"] .article-body strong {
+  color: #111127;
+}
+[data-theme="light"] .article-body a {
+  color: #2563eb;
+  text-decoration-color: rgba(37, 99, 235, 0.3);
+}
+[data-theme="light"] .article-body a:hover {
+  color: #1d4ed8;
+  text-decoration-color: #1d4ed8;
+}
+[data-theme="light"] .article-body li {
+  color: #33334d;
+}
+[data-theme="light"] .article-body blockquote {
+  background: #f0f0f5;
+  border-left-color: #3b82f6;
+}
+[data-theme="light"] .article-image {
+  border-color: #d0d0da;
+}
+[data-theme="light"] .article-footer {
+  border-top-color: #d0d0da;
+}
+[data-theme="light"] .tag {
+  background: #ffffff;
+  border-color: #d0d0da;
+  color: #555570;
+}
+[data-theme="light"] .article-links {
+  background: #ffffff;
+  border-color: #d0d0da;
+}
+[data-theme="light"] .article-links h4 {
+  color: #3b82f6;
+}
+[data-theme="light"] .article-links a {
+  color: #2563eb;
+}
+[data-theme="light"] .price-value {
+  color: #111127;
+}
+[data-theme="light"] .related-articles {
+  border-top-color: #d0d0da;
+}
+[data-theme="light"] .related-title {
+  color: #111127;
+}
+[data-theme="light"] .related-card {
+  background: #ffffff;
+  border-color: #d0d0da;
+}
+[data-theme="light"] .related-card-title {
+  color: #1a1a2e;
+}
+[data-theme="light"] .related-card-date {
+  color: #777790;
+}
+[data-theme="light"] .article-comments {
+  border-top-color: #d0d0da;
+}
+[data-theme="light"] .comments-title {
+  color: #111127;
+}
+[data-theme="light"] .comments-intro {
+  color: #555570;
+}
+[data-theme="light"] .video-section {
+  background: #f0f0f5;
+  border-color: #d0d0da;
+}
+[data-theme="light"] .video-section-title {
+  color: #111127;
+}
+[data-theme="light"] .video-info-title {
+  color: #33334d;
+}
+[data-theme="light"] .video-info-source {
+  color: #555570;
+}
+[data-theme="light"] .article-body .stats-card {
+  background: #ffffff;
+  border-color: #d0d0da;
+}
+[data-theme="light"] .article-body .stats-card-title {
+  color: #111127;
+}
+[data-theme="light"] .article-body .stats-table tr {
+  border-bottom-color: #d0d0da;
+}
+[data-theme="light"] .article-body .stats-table .stat-label {
+  color: #555570;
+}
+[data-theme="light"] .article-body .stats-table .stat-value {
+  color: #111127;
+}
+[data-theme="light"] .article-body .stats-table .stat-value.positive {
+  color: #16a34a;
+}
+[data-theme="light"] .article-body .stats-table .stat-value.negative {
+  color: #dc2626;
+}
+
