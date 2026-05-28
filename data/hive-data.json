@@ -4,7 +4,7 @@
       "uid": "usr_ee2913dcbfd9625a",
       "displayName": "Charlie9",
       "photoURL": null,
-      "cash": 6351.839645385742,
+      "cash": 445.7998504638672,
       "holdings": {
         "NVDA": 50,
         "CRWV": 63,
@@ -15,7 +15,8 @@
         "RTX": 76,
         "RDW": 325,
         "AXON": 23,
-        "TSLA": 25
+        "TSLA": 25,
+        "AVGO": 14
       },
       "trades": [
         {
@@ -143,6 +144,13 @@
           "shares": 60,
           "price": 104.27,
           "date": "2026-05-28T00:00:32.092Z"
+        },
+        {
+          "ticker": "AVGO",
+          "action": "buy",
+          "shares": 14,
+          "price": 421.86,
+          "date": "2026-05-28T00:18:45.092Z"
         }
       ],
       "createdAt": "2026-05-27T10:21:15.693Z"
