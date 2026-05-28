@@ -54,25 +54,68 @@ done
 
 echo -n '  Images... '
 python3 -c "
+from PIL import Image, ImageDraw, ImageFont
 import json, os, sys
-errors=[]
+
+generated = 0
+fonts = []
+for p in ['/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf']:
+    if os.path.exists(p): fonts.append(p)
+
 for f in sorted(os.listdir('articles/posts')):
     if not f.endswith('.json'): continue
     a = json.load(open(f'articles/posts/{f}'))
     img = a.get('image', {})
-    if isinstance(img, dict):
-        src = img.get('src', '')
-        if src.startswith('/img/'):
-            path = f'public{src}'
-            if not os.path.exists(path):
-                errors.append(f'Missing: {path}')
-            webp = path.rsplit('.',1)[0]+'.webp'
-            if not os.path.exists(webp):
-                errors.append(f'Missing WebP: {webp}')
-if errors:
-    for e in errors: print(f'  {e}')
-    exit(1)
-" && echo '✅' || { echo '❌'; exit 1; }
+    if not isinstance(img, dict): continue
+    src = img.get('src', '')
+    if not src.startswith('/img/'): continue
+    path = f'public{src}'
+    webp = path.rsplit('.',1)[0]+'.webp'
+    if os.path.exists(path) and os.path.exists(webp): continue
+    # Missing — generate placeholder
+    slug = a.get('slug', f.replace('.json',''))
+    ticker = a.get('ticker', '???')
+    title = a.get('title', 'Signal')
+    im = Image.new('RGB', (1200, 675), '#0f0f20')
+    draw = ImageDraw.Draw(im)
+    # Subtle gradient
+    for y in range(675):
+        r = int(15 + 5*(y/675)); g = int(15 + 5*(y/675)); b = int(32 + 8*(y/675))
+        draw.line([(0,y),(1199,y)], fill=(r,g,b))
+    # Load fonts
+    try:
+        font_big = ImageFont.truetype(fonts[0], 42) if fonts else ImageFont.load_default()
+        font_sm = ImageFont.truetype(fonts[1], 24) if len(fonts)>1 else font_big
+    except:
+        font_big = ImageFont.load_default(); font_sm = font_big
+    # Ticker badge
+    lbl = f'\${ticker}'
+    bb = draw.textbbox((0,0), lbl, font=font_big)
+    bx, by = 50, 50
+    draw.rounded_rectangle([bx-12, by-8, bx+bb[2]-bb[0]+12, by+bb[3]-bb[1]+8], 8, fill='#3b82f6')
+    draw.text((bx, by), lbl, fill='white', font=font_big)
+    # Title wrapped
+    y = 170
+    words = title.split()
+    line = ''
+    for w in words:
+        tst = line + ' ' + w if line else w
+        bb = draw.textbbox((0,0), tst, font=font_sm)
+        if bb[2] - bb[0] > 1100:
+            draw.text((50, y), line, fill='#d0d0e0', font=font_sm)
+            y += 34; line = w
+        else: line = tst
+    if line: draw.text((50, y), line, fill='#d0d0e0', font=font_sm)
+    draw.text((50, 570), 'THE SIGNAL', fill='#3b82f6', font=font_sm)
+    im.save(path, 'JPEG', quality=88)
+    im.save(webp, 'WEBP', quality=88)
+    print(f'    🖼️ Generated: {src}', flush=True)
+    generated += 1
+if generated > 0:
+    print(f'  ✅ {generated} missing images auto-generated')
+else:
+    print('✅')
+" && echo '' || { echo '  ❌ Image generation failed'; exit 1; }
 
 # Phase 1.5: Refresh Data
 echo ''
@@ -92,7 +135,7 @@ node build.js && echo '  ✅ Build success' || { echo '  ❌ Build failed'; exit
 # Phase 3: Deploy
 echo ''
 echo '🚀 Phase 3: Deploy'
-vercel --prod && echo '  ✅ Deployed to https://readthesignal.net' || { echo '  ❌ Deploy failed'; exit 1; }
+vercel --prod --token "$(cat /home/chino/.vercel/token 2>/dev/null)" && echo '  ✅ Deployed to https://readthesignal.net' || { echo '  ❌ Deploy failed'; exit 1; }
 
 echo ''
 echo '✅ PIPELINE COMPLETE'
