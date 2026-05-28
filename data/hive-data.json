@@ -365,6 +365,15 @@
       "price": 384.64,
       "date": "2026-05-27T19:12:08.324Z",
       "uid": "usr_07ed77036457c48f"
+    },
+    {
+      "uid": "usr_ccfa6d066143f110",
+      "ticker": "NVDA",
+      "action": "buy",
+      "shares": 10,
+      "price": 212.6,
+      "date": "2026-05-28T07:43:56.937Z",
+      "id": "t_mpp6sn49_go3mvr"
     }
   ]
 }
