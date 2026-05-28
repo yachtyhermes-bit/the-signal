@@ -1,0 +1,139 @@
+{
+  "factcheck_id": "fc-kratos-defense-drones-2026",
+  "article_slug": "kratos-defense-drones-valkyrie-2026",
+  "ticker": "KTOS",
+  "factcheck_date": "2026-05-27",
+  "data_sources": [
+    "yfinance (Yahoo Finance API)",
+    "Google News RSS",
+    "Stock Titan",
+    "Air & Space Forces Magazine",
+    "UASweekly.com",
+    "Simple Flying",
+    "DefenseScoop",
+    "The War Zone",
+    "Seapower Magazine"
+  ],
+  "claims": [
+    {
+      "claim": "$1.42B TTM revenue",
+      "article_value": "$1.42B",
+      "verified_value": "$1,415,200,000 (TTM = $1.415B)",
+      "status": "CORRECT",
+      "method": "yfinance TTM revenue (sum of last 4 quarters: Q2'25-Q1'26 = $351.5M + $347.6M + $345.1M + $371.0M)",
+      "notes": "FY2025 annual was $1.347B, but TTM through Q1 2026 is $1.415B. Article's stated $1.42B is a reasonable rounding."
+    },
+    {
+      "claim": "22.6% YoY growth",
+      "article_value": "22.6%",
+      "verified_value": "22.6%",
+      "status": "CORRECT",
+      "method": "yfinance revenueGrowth field shows 0.226 (22.6%). Q1'26 ($371M) vs Q1'25 ($302.6M) = 22.6% YoY.",
+      "notes": "FY2024→FY2025 annual growth was 18.5% ($1.136B→$1.347B). The 22.6% figure is the more recent TTM/Q1 YoY growth rate."
+    },
+    {
+      "claim": "$29M net income",
+      "article_value": "$29M",
+      "verified_value": "$29,400,000 (TTM net income)",
+      "status": "CORRECT",
+      "method": "yfinance netIncomeToCommon = $29,400,000. Sum of last 4 quarters: Q2'25 ($2.9M) + Q3'25 ($8.7M) + Q4'25 ($5.9M) + Q1'26 ($11.9M) = $29.4M.",
+      "notes": "FY2025 annual net income was $22M. The $29M figure is the more current TTM metric."
+    },
+    {
+      "claim": "Backlog approaching $1.8B",
+      "article_value": "$1.8B (both summary and body)",
+      "verified_value": "$2.01B (actual Q1 2026 backlog per earnings report)",
+      "status": "UNDERSTATED - actual backlog is higher",
+      "method": "Stock Titan (May 6, 2026): 'Kratos lands $605M in Q1 bookings, backlog reaches $2.01B'. Also confirmed by Stock Titan article snippet: 'Q1 2026 revenue $371.0M, backlog $2.010B and bookings $605.2M.'",
+      "notes": "The article's $1.8B figure is understated by ~$210M vs the actual $2.01B backlog. The task description noted a possible discrepancy between $1.5B (summary) and $1.8B (body) — the actual article file shows $1.8B in both places; no $1.5B figure appears in the article."
+    },
+    {
+      "claim": "BQM-177A program generated 'over $400M in contracts'",
+      "article_value": "over $400M",
+      "verified_value": "LIKELY CORRECT (cumulative contracts exceed $400M)",
+      "status": "CORRECT (plausible)",
+      "method": "Multiple DoD contract awards found: $61.1M (Navy FRP modification for 70 units), $59.3M (additional BQM-177A), $95M (Army target drones), $13.3M (sustainment), plus earlier multi-year awards. Cumulative across all contract vehicles likely exceeds $400M.",
+      "notes": "Cannot verify exact cumulative total without full DoD contract data, but the multiple awards found support the claim."
+    },
+    {
+      "claim": "Stock at $56",
+      "article_value": "$56",
+      "verified_value": "$56.80 (as of May 26, 2026 close)",
+      "status": "CORRECT",
+      "method": "yfinance: 'Close' on May 26 = $56.80. May 22 close was $56.18.",
+      "notes": "Close enough. Stock was $56.18 two days before article date, $56.80 on article date."
+    },
+    {
+      "claim": "Forward P/E of 53x",
+      "article_value": "53x",
+      "verified_value": "52.9x",
+      "status": "CORRECT",
+      "method": "yfinance forwardPE = 52.897243. Rounding to 53x is accurate.",
+      "notes": "Trailing P/E is 334x. The high trailing P/E reflects the company's low current earnings relative to growth expectations priced in."
+    },
+    {
+      "claim": "Analysts have a mean buy target of $113 (range $75-$150 from 20 analysts)",
+      "article_value": "$113 mean, $75-$150 range, 20 analysts",
+      "verified_value": "$113.05 mean, $75 low, $150 high, 20 analysts, 'Buy' rating",
+      "status": "CORRECT",
+      "method": "yfinance: targetMeanPrice = $113.05, targetLowPrice = $75, targetHighPrice = $150, numberOfAnalystOpinions = 20, recommendationKey = 'buy', recommendationMean = 1.58.",
+      "notes": "The task fact-check item says 'Analysts have a $46 buy target' — this $46 figure does NOT appear in the article. The article correctly cites $113 mean target. The $46 figure appears to be a task-description error."
+    },
+    {
+      "claim": "CCA program calls for 1,000+ autonomous aircraft",
+      "article_value": "1,000+ autonomous aircraft",
+      "verified_value": "CONFIRMED",
+      "status": "CORRECT",
+      "method": "Simple Flying: 'The US Air Force Wants 1,000 AI Drones To Fly Alongside Its F-35s'. Airforce Technology: CCA program details. DefenseScoop: CCA procurement plans. Multiple corroborating sources confirm the Air Force's plan for 1,000+ CCAs.",
+      "notes": "The Air Force's Increment 1 of CCA plans for initial procurement, with full program reaching 1,000+ aircraft across multiple increments."
+    },
+    {
+      "claim": "Valkyrie has flown alongside F-35s and F-22s in exercises",
+      "article_value": "flown alongside F-35s and F-22s",
+      "verified_value": "CONFIRMED",
+      "status": "CORRECT",
+      "method": "Air & Space Forces Magazine: 'Skyborg Drone Translates Between F-35 and F-22 in Test'. UASweekly.com: 'Kratos XQ-58 Valkyrie UAS completes Formation Flight with F-22 Raptor and F-35'. Multiple sources confirm Valkyrie formation flights with both aircraft types.",
+      "notes": "Some nuance: a C4ISRNet article noted a test where Valkyrie couldn't translate between F-35 and F-22 data links, but formation flights alongside both jets are well-documented."
+    },
+    {
+      "claim": "If Kratos captures 20% of CCA contract value, that's $8-10B in revenue over a decade",
+      "article_value": "$8-10B over a decade at 20% share",
+      "verified_value": "PLAUSIBLE (not directly verifiable)",
+      "status": "PLAUSIBLE ESTIMATE",
+      "method": "Implies total CCA program value of $40-50B. Air Force FY2027 budget requests ~$1B for initial CCA procurement. Full program-of-record over multiple increments across a decade could reasonably reach $40-50B+ given 1,000+ aircraft at estimated $20-50M per unit plus sustainment.",
+      "notes": "This is a forward-looking estimate, not a verifiable fact. $8-10B at 20% share is a reasonable back-of-envelope calculation assuming $40-50B total program value, which is within plausible range for a major DoD aircraft procurement program."
+    }
+  ],
+  "url_checks": [
+    {
+      "url": "https://ir.kratosdefense.com/",
+      "status": "HTTP 200 - LOADS SUCCESSFULLY",
+      "note": "Kratos Investor Relations page loads correctly."
+    },
+    {
+      "url": "https://www.defense.gov/Spotlight/Autonomous-Systems/",
+      "status": "HTTP 403 - BLOCKED",
+      "note": "DoD website returns 403 (standard security measure for government sites). Could not verify content directly, but the URL is legitimate and exists."
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=0YWuPZYiGEs",
+      "status": "HTTP 200 - EXISTS",
+      "note": "YouTube video exists. Title per article metadata: '$KTOS - Kratos Stock Jumps Big! Should You Buy Now?' by 'Live Options Trading with JR'."
+    }
+  ],
+  "overall_assessment": {
+    "accuracy_rating": "HIGH (10/11 claims verified correct or plausible)",
+    "key_issues": [
+      "Backlog figure of $1.8B is UNDERSTATED vs actual $2.01B (Q1 2026 backlog)",
+      "CCA total contract value claim is a forward estimate not directly verifiable, but is reasonable",
+      "BQM-177A cumulative contract total of '$400M+' could not be precisely audited but appears plausible given multiple awards"
+    ],
+    "no_errors_found": [
+      "Revenue ($1.42B), growth (22.6%), net income ($29M) all match yfinance TTM data",
+      "Stock price ($56), forward P/E (53x), analyst targets ($113 mean, $75-150 range) all match",
+      "CCA 1,000+ aircraft claim confirmed by multiple sources",
+      "Valkyrie F-35/F-22 flight tests confirmed by Air & Space Forces Magazine and UASweekly.com"
+    ],
+    "task_note": "The fact-check task description included '$46 buy target' but the actual article states '$113 mean buy target'. yfinance confirms $113.05. The $46 figure does not appear in the article and appears to be a task-input error."
+  }
+}

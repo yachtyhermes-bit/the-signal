@@ -8,17 +8,17 @@
     "color": "#84cc16",
     "drivers": [
       "Revenue up +33.5% YoY to $2.98B",
-      "Premium valuation at 156x P/E",
-      "Target upside +75.2%"
+      "Premium valuation at 158x P/E",
+      "Target upside +72.5%"
     ],
-    "upside": "+75.2%",
+    "upside": "+72.5%",
     "logo": "https://logo.clearbit.com/axon.com",
     "metrics": {
       "revenue": "$2.98B",
       "growth": "+33.5%",
       "netIncome": "$205.99M",
-      "pe": "156.0x",
-      "ps": "10.4x"
+      "pe": "158.4x",
+      "ps": "10.6x"
     }
   },
   {
@@ -30,17 +30,17 @@
     "color": "#10b981",
     "drivers": [
       "Revenue up +22.2% YoY to $214.96B",
-      "P/E at 22.3x \u2014 attractively valued",
-      "Target upside +34.7%"
+      "P/E at 23.1x \u2014 attractively valued",
+      "Target upside +29.9%"
     ],
-    "upside": "+34.7%",
+    "upside": "+29.9%",
     "logo": "https://logo.clearbit.com/meta.com",
     "metrics": {
       "revenue": "$214.96B",
       "growth": "+22.2%",
       "netIncome": "$70.59B",
-      "pe": "22.3x",
-      "ps": "7.2x"
+      "pe": "23.1x",
+      "ps": "7.5x"
     }
   },
   {
@@ -48,21 +48,21 @@
     "name": "Palantir Technologies",
     "sector": "AI Software",
     "signal": "Strong Bullish",
-    "score": 82,
+    "score": 83,
     "color": "#10b981",
     "drivers": [
       "Revenue up +56.2% YoY to $5.22B",
-      "Premium valuation at 153x P/E",
-      "Target upside +46.4%"
+      "Premium valuation at 149x P/E",
+      "Target upside +50.9%"
     ],
-    "upside": "+46.4%",
+    "upside": "+50.9%",
     "logo": "https://logo.clearbit.com/palantir.com",
     "metrics": {
       "revenue": "$5.22B",
       "growth": "+56.2%",
       "netIncome": "$2.28B",
-      "pe": "153.5x",
-      "ps": "62.7x"
+      "pe": "148.9x",
+      "ps": "60.8x"
     }
   },
   {
@@ -74,17 +74,17 @@
     "color": "#84cc16",
     "drivers": [
       "Revenue up +9.7% YoY to $90.37B",
-      "Target upside +22.9%",
+      "Target upside +24.6%",
       "Net income $7.26B"
     ],
-    "upside": "+22.9%",
+    "upside": "+24.6%",
     "logo": "https://logo.clearbit.com/rtx.com",
     "metrics": {
       "revenue": "$90.37B",
       "growth": "+9.7%",
       "netIncome": "$7.26B",
-      "pe": "33.6x",
-      "ps": "2.7x"
+      "pe": "33.1x",
+      "ps": "2.6x"
     }
   },
   {
@@ -92,21 +92,21 @@
     "name": "Netflix Inc.",
     "sector": "Entertainment",
     "signal": "Bullish",
-    "score": 74,
+    "score": 75,
     "color": "#84cc16",
     "drivers": [
       "Revenue up +15.9% YoY to $46.89B",
-      "P/E at 28.3x \u2014 attractively valued",
-      "Target upside +31.2%"
+      "P/E at 28.2x \u2014 attractively valued",
+      "Target upside +31.7%"
     ],
-    "upside": "+31.2%",
+    "upside": "+31.7%",
     "logo": "https://logo.clearbit.com/netflix.com",
     "metrics": {
       "revenue": "$46.89B",
       "growth": "+15.9%",
       "netIncome": "$13.37B",
-      "pe": "28.3x",
-      "ps": "7.9x"
+      "pe": "28.2x",
+      "ps": "7.8x"
     }
   },
   {
@@ -119,16 +119,16 @@
     "drivers": [
       "Revenue up +48.5% YoY to $1.32B",
       "Still operating at net loss $-348.83M",
-      "Target upside +21.5%"
+      "Target upside +26.1%"
     ],
-    "upside": "+21.5%",
+    "upside": "+26.1%",
     "logo": "https://logo.clearbit.com/rubrik.com",
     "metrics": {
       "revenue": "$1.32B",
       "growth": "+48.5%",
       "netIncome": "$-348.83M",
       "pe": "N/A",
-      "ps": "10.7x"
+      "ps": "10.3x"
     }
   }
 ]

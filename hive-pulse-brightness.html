@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Hive × Pulse — Lighter Variants</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #0a0a12;
+    color: #e2e8f0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+  }
+
+  .cmp-header {
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 900px;
+  }
+  .cmp-header h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: 42px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #60a5fa, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+  }
+  .cmp-header p {
+    color: #8892a0;
+    font-size: 14px;
+  }
+
+  /* 3-column grid */
+  .cmp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px;
+    max-width: 1500px;
+    width: 100%;
+  }
+
+  /* ====== COMMON CARD STYLES ====== */
+  .variant {
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .variant .v-label {
+    padding: 10px 16px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .variant .v-body { padding: 24px; }
+
+  .v-body h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: 22px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+  .v-body .tagline {
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+
+  /* Tabs */
+  .tabs-row {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+  }
+  .tabs-row .tab {
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: default;
+    transition: all 0.2s;
+  }
+  .tabs-row .tab.active { font-weight: 700; }
+
+  /* Summary cards */
+  .summary-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .summary-card {
+    border-radius: 10px;
+    padding: 12px;
+  }
+  .summary-card .label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .summary-card .val {
+    font-family: 'Anton', sans-serif;
+    font-size: 22px;
+    letter-spacing: 1px;
+    margin-top: 2px;
+  }
+
+  /* Pulse glow dot */
+  .pulse-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+  }
+
+  /* Pulse bar */
+  .pulse-bar-wrap {
+    height: 6px;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .pulse-bar-fill {
+    height: 100%;
+    border-radius: 3px;
+  }
+
+  /* ====== VARIANT 1: DARK PULSE (current) ====== */
+  .v-dark-pulse {
+    border: 1px solid rgba(59,130,246,0.15);
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(59,130,246,0.06), transparent 70%),
+                radial-gradient(ellipse 60% 40% at 80% 100%, rgba(139,92,246,0.04), transparent 60%),
+                #08080e;
+    box-shadow: 0 0 40px rgba(59,130,246,0.04);
+  }
+  .v-dark-pulse .v-label {
+    background: linear-gradient(90deg, rgba(59,130,246,0.12), rgba(139,92,246,0.12));
+    color: #60a5fa;
+    border-bottom: 1px solid rgba(59,130,246,0.08);
+  }
+  .v-dark-pulse h2 {
+    background: linear-gradient(135deg, #60a5fa, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 30px rgba(59,130,246,0.2);
+  }
+  .v-dark-pulse .tagline { color: #4b5563; }
+  .v-dark-pulse .tabs-row { border-bottom: 1px solid rgba(59,130,246,0.08); }
+  .v-dark-pulse .tabs-row .tab { color: #4b5563; }
+  .v-dark-pulse .tabs-row .tab.active {
+    background: rgba(59,130,246,0.12);
+    color: #60a5fa;
+    box-shadow: 0 0 12px rgba(59,130,246,0.08);
+  }
+  .v-dark-pulse .summary-card {
+    background: rgba(59,130,246,0.04);
+    border: 1px solid rgba(59,130,246,0.1);
+  }
+  .v-dark-pulse .summary-card .label { color: #4b5563; }
+  .v-dark-pulse .summary-card .val {
+    background: linear-gradient(135deg, #e2e8f0, #94a3b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .v-dark-pulse .summary-card .val.green {
+    background: linear-gradient(135deg, #22c55e, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .v-dark-pulse .pulse-dot { background: #60a5fa; box-shadow: 0 0 8px rgba(59,130,246,0.5); }
+
+  /* ====== VARIANT 2: MID-TONE PULSE ====== */
+  .v-mid-pulse {
+    border: 1px solid rgba(59,130,246,0.2);
+    background: linear-gradient(135deg, #111827, #0f172a);
+    box-shadow: 0 0 30px rgba(59,130,246,0.06);
+  }
+  .v-mid-pulse .v-label {
+    background: linear-gradient(90deg, rgba(59,130,246,0.1), rgba(139,92,246,0.1));
+    color: #818cf8;
+    border-bottom: 1px solid rgba(59,130,246,0.1);
+  }
+  .v-mid-pulse h2 {
+    background: linear-gradient(135deg, #818cf8, #c084fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .v-mid-pulse .tagline { color: #6b7280; }
+  .v-mid-pulse .tabs-row { border-bottom: 1px solid rgba(59,130,246,0.1); }
+  .v-mid-pulse .tabs-row .tab { color: #6b7280; }
+  .v-mid-pulse .tabs-row .tab.active {
+    background: rgba(99,102,241,0.12);
+    color: #818cf8;
+    box-shadow: 0 0 12px rgba(99,102,241,0.06);
+  }
+  .v-mid-pulse .summary-card {
+    background: rgba(99,102,241,0.04);
+    border: 1px solid rgba(99,102,241,0.1);
+  }
+  .v-mid-pulse .summary-card .label { color: #6b7280; }
+  .v-mid-pulse .summary-card .val { color: #f1f5f9; }
+  .v-mid-pulse .summary-card .val.green { color: #4ade80; }
+  .v-mid-pulse .pulse-dot { background: #818cf8; box-shadow: 0 0 8px rgba(99,102,241,0.5); }
+
+  /* ====== VARIANT 3: LIGHT PULSE ====== */
+  .v-light-pulse {
+    border: 1px solid rgba(59,130,246,0.15);
+    background: linear-gradient(135deg, #f8fafc, #eef2ff);
+    box-shadow: 0 0 30px rgba(59,130,246,0.04), 0 4px 20px rgba(0,0,0,0.04);
+    color: #1e293b;
+  }
+  .v-light-pulse .v-label {
+    background: linear-gradient(90deg, rgba(59,130,246,0.06), rgba(139,92,246,0.06));
+    color: #6366f1;
+    border-bottom: 1px solid rgba(59,130,246,0.1);
+  }
+  .v-light-pulse h2 {
+    color: #1e293b;
+  }
+  .v-light-pulse .tagline { color: #64748b; }
+  .v-light-pulse .tabs-row { border-bottom: 1px solid #e2e8f0; }
+  .v-light-pulse .tabs-row .tab { color: #64748b; }
+  .v-light-pulse .tabs-row .tab.active {
+    background: linear-gradient(135deg, rgba(99,102,241,0.1), rgba(139,92,246,0.1));
+    color: #6366f1;
+    font-weight: 700;
+  }
+  .v-light-pulse .summary-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .v-light-pulse .summary-card .label { color: #64748b; }
+  .v-light-pulse .summary-card .val { color: #0f172a; }
+  .v-light-pulse .summary-card .val.green { color: #16a34a; }
+  .v-light-pulse .pulse-dot { background: #6366f1; box-shadow: 0 0 6px rgba(99,102,241,0.3); }
+
+  /* Light table */
+  .v-light-pulse .holdings-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+  }
+  .v-light-pulse .holdings-table th {
+    text-align: left;
+    color: #64748b;
+    padding: 6px 8px;
+    border-bottom: 2px solid #e2e8f0;
+    font-weight: 600;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .v-light-pulse .holdings-table td {
+    padding: 8px;
+    border-bottom: 1px solid #f1f5f9;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+  }
+  .v-light-pulse .holdings-table .ticker {
+    font-family: 'Anton', sans-serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: #6366f1;
+  }
+  .v-light-pulse .holdings-table .name { font-family: 'Inter', sans-serif; font-size: 10px; color: #94a3b8; }
+  .v-light-pulse .holdings-table .pos { color: #16a34a; }
+
+  /* Dark/mid tables */
+  .holdings-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+  }
+  .holdings-table th {
+    text-align: left;
+    font-weight: 500;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .holdings-table td {
+    padding: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+  }
+  .holdings-table .ticker {
+    font-family: 'Anton', sans-serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+  .holdings-table .name { font-family: 'Inter', sans-serif; font-size: 10px; }
+  .holdings-table .pos { }
+
+  .v-dark-pulse .holdings-table th { color: #4b5563; border-bottom: 1px solid rgba(59,130,246,0.08); }
+  .v-dark-pulse .holdings-table td { border-bottom: 1px solid rgba(59,130,246,0.04); color: #94a3b8; }
+  .v-dark-pulse .holdings-table .ticker {
+    background: linear-gradient(135deg, #60a5fa, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .v-dark-pulse .holdings-table .name { color: #4b5563; }
+  .v-dark-pulse .holdings-table .pos { color: #22c55e; }
+
+  .v-mid-pulse .holdings-table th { color: #6b7280; border-bottom: 1px solid rgba(99,102,241,0.1); }
+  .v-mid-pulse .holdings-table td { border-bottom: 1px solid rgba(99,102,241,0.04); color: #9ca3af; }
+  .v-mid-pulse .holdings-table .ticker {
+    background: linear-gradient(135deg, #818cf8, #c084fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .v-mid-pulse .holdings-table .name { color: #6b7280; }
+  .v-mid-pulse .holdings-table .pos { color: #4ade80; }
+
+  /* Spotlight */
+  .spotlight-box {
+    margin-top: 16px;
+    padding: 12px;
+    border-radius: 8px;
+  }
+  .v-dark-pulse .spotlight-box {
+    border: 1px solid rgba(139,92,246,0.1);
+    background: rgba(139,92,246,0.03);
+  }
+  .v-mid-pulse .spotlight-box {
+    border: 1px solid rgba(99,102,241,0.12);
+    background: rgba(99,102,241,0.04);
+  }
+  .v-light-pulse .spotlight-box {
+    border: 1px solid #e0e7ff;
+    background: #f8fafc;
+  }
+
+  .spotlight-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  .spotlight-header span {
+    font-family: 'Anton', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  .spotlight-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+  .spotlight-row .bar-wrap {
+    flex: 1;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .v-dark-pulse .bar-wrap { background: rgba(59,130,246,0.06); }
+  .v-mid-pulse .bar-wrap { background: rgba(99,102,241,0.08); }
+  .v-light-pulse .bar-wrap { background: #e0e7ff; }
+
+  .spotlight-row .bar-fill {
+    width: 78%;
+    height: 6px;
+    border-radius: 3px;
+  }
+  .v-dark-pulse .bar-fill { background: linear-gradient(90deg, #60a5fa, #a78bfa); box-shadow: 0 0 6px rgba(59,130,246,0.15); }
+  .v-mid-pulse .bar-fill { background: linear-gradient(90deg, #818cf8, #c084fc); box-shadow: 0 0 4px rgba(99,102,241,0.1); }
+  .v-light-pulse .bar-fill { background: linear-gradient(90deg, #6366f1, #a855f7); }
+
+  .spotlight-row .bar-pct {
+    font-family: 'Anton', sans-serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+  .v-dark-pulse .bar-pct { color: #60a5fa; }
+  .v-mid-pulse .bar-pct { color: #818cf8; }
+  .v-light-pulse .bar-pct { color: #6366f1; }
+
+  @media (max-width: 1100px) {
+    .cmp-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 700px) {
+    .cmp-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cmp-header">
+  <h1>🐝 The Hive × Pulse — Brightness Variants</h1>
+  <p>Three takes on the Pulse AI aesthetic — from super dark to light mode</p>
+</div>
+
+<div class="cmp-grid">
+
+  <!-- === VARIANT 1: Dark Pulse === -->
+  <div class="variant v-dark-pulse">
+    <div class="v-label"><span class="pulse-dot"></span> Dark Pulse</div>
+    <div class="v-body">
+      <h2>🐝 THE HIVE</h2>
+      <p class="tagline">Track the smartest money in the room</p>
+      <div class="tabs-row">
+        <span class="tab active">Portfolio</span>
+        <span class="tab">Stocks</span>
+        <span class="tab">Leaderboard</span>
+        <span class="tab">Rules</span>
+      </div>
+      <div class="summary-row">
+        <div class="summary-card">
+          <div class="label">Cash</div>
+          <div class="val">$72,415</div>
+        </div>
+        <div class="summary-card">
+          <div class="label">Holdings</div>
+          <div class="val">$29,673</div>
+        </div>
+        <div class="summary-card">
+          <div class="label">Total</div>
+          <div class="val">$102,089</div>
+        </div>
+        <div class="summary-card">
+          <div class="label">Return</div>
+          <div class="val green">+2.09%</div>
+        </div>
+      </div>
+      <table class="holdings-table">
+        <thead><tr><th>Ticker</th><th>Shares</th><th>Value</th><th>% PF</th></tr></thead>
+        <tbody>
+          <tr><td><span class="ticker">NVDA</span><div class="name">NVIDIA Corp.</div></td><td>150</td><td class="pos">$31,940</td><td>31.3%</td></tr>
+          <tr><td><span class="ticker">AVGO</span><div class="name">Broadcom Inc.</div></td><td>50</td><td class="pos">$21,041</td><td>20.6%</td></tr>
+          <tr><td><span class="ticker">PLTR</span><div class="name">Palantir Tech.</div></td><td>100</td><td class="pos">$13,288</td><td>13.0%</td></tr>
+        </tbody>
+      </table>
+      <div class="spotlight-box">
+        <div class="spotlight-header">
+          <span class="pulse-dot"></span>
+          <span style="background:linear-gradient(135deg,#a78bfa,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">SIGNAL MASTER</span>
+        </div>
+        <div class="spotlight-row">
+          <div class="bar-wrap"><div class="bar-fill"></div></div>
+          <span class="bar-pct">78%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- === VARIANT 2: Mid Pulse === -->
+  <div class="variant v-mid-pulse">
+    <div class="v-label"><span class="pulse-dot"></span> Mid Pulse</div>
+    <div class="v-body">
+      <h2>🐝 THE HIVE</h2>
+      <p class="tagline">Track the smartest money in the room</p>
+      <div class="tabs-row">
+        <span class="tab active">Portfolio</span>
+        <span class="tab">Stocks</span>
+        <span class="tab">Leaderboard</span>
+        <span class="tab">Rules</span>
+      </div>
+      <div class="summary-row">
+        <div class="summary-card">
+          <div class="label">Cash</div>
+          <div class="val">$72,415</div>
+        </div>
+        <div class="summary-card">
+          <div class="label">Holdings</div>
+          <div class="val">$29,673</div>
+        </div>
+        <div class="summary-card">
+          <div class="label">Total</div>
+          <div class="val">$102,089</div>
+        </div>
+        <div class="summary-card">
+          <div class="label">Return</div>
+          <div class="val green">+2.09%</div>
+        </div>
+      </div>
+      <table class="holdings-table">
+        <thead><tr><th>Ticker</th><th>Shares</th><th>Value</th><th>% PF</th></tr></thead>
+        <tbody>
+          <tr><td><span class="ticker">NVDA</span><div class="name">NVIDIA Corp.</div></td><td>150</td><td class="pos">$31,940</td><td>31.3%</td></tr>
+          <tr><td><span class="ticker">AVGO</span><div class="name">Broadcom Inc.</div></td><td>50</td><td class="pos">$21,041</td><td>20.6%</td></tr>
+          <tr><td><span class="ticker">PLTR</span><div class="name">Palantir Tech.</div></td><td>100</td><td class="pos">$13,288</td><td>13.0%</td></tr>
+        </tbody>
+      </table>
+      <div class="spotlight-box">
+        <div class="spotlight-header">
+          <span class="pulse-dot"></span>
+          <span style="background:linear-gradient(135deg,#c084fc,#818cf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">SIGNAL MASTER</span>
+        </div>
+        <div class="spotlight-row">
+          <div class="bar-wrap"><div class="bar-fill"></div></div>
+          <span class="bar-pct">78%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- === VARIANT 3: Light Pulse === -->
+  <div class="variant v-light-pulse">
+    <div class="v-label"><span class="pulse-dot"></span> Light Pulse</div>
+    <div class="v-body">
+      <h2>🐝 THE HIVE</h2>
+      <p class="tagline">Track the smartest money in the room</p>
+      <div class="tabs-row">
+        <span class="tab active">Portfolio</span>
+        <span class="tab">Stocks</span>
+        <span class="tab">Leaderboard</span>
+        <span class="tab">Rules</span>
+      </div>
+      <div class="summary-row">
+        <div class="summary-card">
+          <div class="label">Cash</div>
+          <div class="val">$72,415</div>
+        </div>
+        <div class="summary-card">
+          <div class="label">Holdings</div>
+          <div class="val">$29,673</div>
+        </div>
+        <div class="summary-card">
+          <div class="label">Total</div>
+          <div class="val">$102,089</div>
+        </div>
+        <div class="summary-card">
+          <div class="label">Return</div>
+          <div class="val green">+2.09%</div>
+        </div>
+      </div>
+      <table class="holdings-table">
+        <thead><tr><th>Ticker</th><th>Shares</th><th>Value</th><th>% PF</th></tr></thead>
+        <tbody>
+          <tr><td><span class="ticker">NVDA</span><div class="name">NVIDIA Corp.</div></td><td>150</td><td class="pos">$31,940</td><td>31.3%</td></tr>
+          <tr><td><span class="ticker">AVGO</span><div class="name">Broadcom Inc.</div></td><td>50</td><td class="pos">$21,041</td><td>20.6%</td></tr>
+          <tr><td><span class="ticker">PLTR</span><div class="name">Palantir Tech.</div></td><td>100</td><td class="pos">$13,288</td><td>13.0%</td></tr>
+        </tbody>
+      </table>
+      <div class="spotlight-box">
+        <div class="spotlight-header">
+          <span class="pulse-dot"></span>
+          <span style="color:#6366f1">SIGNAL MASTER</span>
+        </div>
+        <div class="spotlight-row">
+          <div class="bar-wrap"><div class="bar-fill"></div></div>
+          <span class="bar-pct">78%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div style="margin-top:40px;text-align:center;color:#4b5563;font-size:13px;max-width:700px">
+  <p><strong style="color:#e2e8f0">Dark Pulse</strong> (#08080e) — current dark theme with blue/purple glow<br>
+  <strong style="color:#e2e8f0">Mid Pulse</strong> (#111827) — slightly lifted slate background, softer contrast<br>
+  <strong style="color:#e2e8f0">Light Pulse</strong> (#f8fafc) — light mode with indigo/violet accents and white cards</p>
+  <p style="margin-top:6px;font-size:12px">All three use Anton font for headings &amp; tickers, with indigo/violet accent gradients</p>
+</div>
+
+</body>
+</html>

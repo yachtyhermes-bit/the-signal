@@ -15,6 +15,7 @@ const SECTORS = {
   defense: { name: 'Defense', tickers: ['LMT','RTX','NOC','GD','LHX','KTOS','AVAV','PL','AXON','GE'], color: '#fbbf24' },
   space: { name: 'Space', tickers: ['RKLB','RDW','LUNR','ASTS'], color: '#a78bfa' },
   'mega-cap': { name: 'Mega-Cap', tickers: ['AAPL','MSFT','GOOGL','AMZN','META','TSLA'], color: '#f87171' },
+  quantum: { name: 'Quantum', tickers: ['IONQ','QBTS','QUBT','RGTI'], color: '#06b6d4' },
 };
 
 const COMPANY_INFO = {
@@ -62,7 +63,11 @@ const COMPANY_INFO = {
   'CRWV': { name: 'CoreWeave Inc.', url: 'https://www.coreweave.com/' },
   'GE': { name: 'GE Aerospace', url: 'https://www.geaerospace.com/' },
   'RBRK': { name: 'Rubrik Inc.', url: 'https://www.rubrik.com/' },
-  'NBIS': { name: 'Nebius Group', url: 'https://nebius.com/' }
+  'NBIS': { name: 'Nebius Group', url: 'https://nebius.com/' },
+  'IONQ': { name: 'IonQ Inc.', url: 'https://ionq.com/' },
+  'QBTS': { name: 'D-Wave Quantum Inc.', url: 'https://www.dwavesys.com/' },
+  'QUBT': { name: 'Quantum Computing Inc.', url: 'https://www.quantumcomputinginc.com/' },
+  'RGTI': { name: 'Rigetti Computing Inc.', url: 'https://www.rigetti.com/' },
 };
 
 // === Load articles ===
@@ -229,8 +234,8 @@ function renderHeader(title, desc, article, allArticles, canonical) {
     }
     </script>`;
   }
-  return `<!DOCTYPE html>\n<html lang="en">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <meta name="theme-color" content="#08080e">\n  ${canonTag}  <link rel="icon" type="image/x-icon" href="/favicon.ico">\n  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">\n  <meta name="robots" content="max-image-preview:large">\n  <link rel="preconnect" href="https://fonts.googleapis.com">\n  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">\n  <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="/css/pulse-badge.css">\n  <!-- Google tag (gtag.js) -->\n  <script async src="https://www.googletagmanager.com/gtag/js?id=G-98KDVDFBCW"></script>\n  <script>\n    window.dataLayer = window.dataLayer || [];\n    function gtag(){dataLayer.push(arguments);}\n    gtag('js', new Date());\n    gtag('config', 'G-98KDVDFBCW');\n  </script>\n  <script src="/js/prices.js" defer></script>\n  <script src="/js/search.js" defer></script>\n  <script src="/js/auth.js" defer></script>\n  <script src="/js/pulse.js" defer></script>\n  <title>${esc(title)}</title>\n  <meta name="description" content="${esc(desc)}">\n  <meta property="og:title" content="${esc(title)}">\n  <meta property="og:description" content="${esc(desc)}">\n  ${ogExtra}${ldJson ? '\n  ' + ldJson : ''}\n</head>\n<body>\n  <nav class="nav">\n    <div class="nav-inner">\n      <a href="/" class="logo"><img src="/img/logo-hex.jpg" alt="The Signal" class="logo-img"><span class="logo-text">THE <strong>SIGNAL</strong></span></a>\n      <div class="nav-links">\n        <a href="/sector/ai" class="nav-link">AI</a>\n        <a href="/sector/cyber" class="nav-link">Cyber</a>\n        <a href="/sector/defense" class="nav-link">Defense</a>\n        <a href="/sector/space" class="nav-link">Space</a>\n        <a href="/sector/mega-cap" class="nav-link">Mega-Cap</a>\n      </div>\n      <div class="nav-actions">\n        <button class="nav-btn search-btn" id="searchToggle" aria-label="Search">\n          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">\n            <circle cx="11" cy="11" r="8"></circle>\n            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>\n          </svg>\n        </button>\n        <div class="auth-container" id="authContainer">\n          <button class="nav-btn auth-btn" id="authToggle" aria-label="Sign In">\n            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">\n              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>\n              <circle cx="12" cy="7" r="4"></circle>\n            </svg>\n            <span class="auth-label" id="authLabel">Sign In</span>\n          </button>\n          <div class="auth-dropdown" id="authDropdown">\n            <div class="auth-user-info" id="authUserInfo" style="display:none">\n              <img class="auth-avatar" id="authAvatar" src="" alt="">\n              <span class="auth-name" id="authName"></span>\n              <button class="auth-signout-btn" id="authSignOut">Sign Out</button>\n            </div>\n            <div class="auth-options" id="authOptions">\n              <button class="auth-option google" id="authGoogle"><span class="auth-icon">G</span> Sign in with Google</button>\n              <button class="auth-option github" id="authGithub"><span class="auth-icon">⌘</span> Sign in with GitHub</button>\n              <button class="auth-option email" id="authEmail"><span class="auth-icon">✉</span> Sign in with Email</button>\n            </div>\n          </div>\n        </div>\n        <button class="nav-btn hamburger-btn" id="hamburgerToggle" aria-label="Menu">\n          <span class="hamburger-line"></span>\n          <span class="hamburger-line"></span>\n          <span class="hamburger-line"></span>\n        </button>\n      </div>\n    </div>\n  </nav>\n  <div class="mobile-menu" id="mobileMenu">\n    <div class="mobile-menu-links">\n      <a href="/sector/ai" class="mobile-nav-link">AI</a>\n      <a href="/sector/cyber" class="mobile-nav-link">Cyber</a>\n      <a href="/sector/defense" class="mobile-nav-link">Defense</a>\n      <a href="/sector/space" class="mobile-nav-link">Space</a>\n      <a href="/sector/mega-cap" class="mobile-nav-link">Mega-Cap</a>\n    </div>\n  </div>\n\n  <!-- Search Overlay -->\n  <div class="search-overlay" id="searchOverlay">\n    <div class="search-backdrop" id="searchBackdrop"></div>\n    <div class="search-modal">\n      <div class="search-header">\n        <input type="text" class="search-input" id="searchInput" placeholder="Search articles by title, ticker, sector, or tag…" autofocus>\n        <button class="search-close" id="searchClose" aria-label="Close search">\n          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">\n            <line x1="18" y1="6" x2="6" y2="18"></line>\n            <line x1="6" y1="6" x2="18" y2="18"></line>\n          </svg>\n        </button>\n      </div>\n      <div class="search-results" id="searchResults"></div>\n      <div class="search-empty" id="searchEmpty">Start typing to search articles…</div>\n    </div>\n  </div>\n\n  <script id="articles-data" type="application/json">${JSON.stringify(allArticles || [])}</script>\n  <main class="main">`;
+  return `<!DOCTYPE html>\n<html lang="en">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <meta name="theme-color" content="#08080e">\n  ${canonTag}  <link rel="icon" type="image/x-icon" href="/favicon.ico">\n  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">\n  <meta name="robots" content="max-image-preview:large">\n  <link rel="preconnect" href="https://fonts.googleapis.com">\n  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">\n  <link rel="stylesheet" href="/css/main.css?v=6">
+  <link rel="stylesheet" href="/css/pulse-badge.css">\n  <!-- Google tag (gtag.js) -->\n  <script async src="https://www.googletagmanager.com/gtag/js?id=G-98KDVDFBCW"></script>\n  <script>\n    window.dataLayer = window.dataLayer || [];\n    function gtag(){dataLayer.push(arguments);}\n    gtag('js', new Date());\n    gtag('config', 'G-98KDVDFBCW');\n  </script>\n  <script src="/js/prices.js" defer></script>\n  <script src="/js/search.js" defer></script>\n  <script src="/js/auth.js?v=2" defer></script>\n  <script src="/js/pulse.js" defer></script>\n  <script src="/js/theme.js" defer></script>\n  <script src="/js/comments.js" defer></script>\n  <script src="/js/share.js" defer></script>\n  <script src="/js/hive.js?v=2" defer></script>\n  <title>${esc(title)}</title>\n  <meta name="description" content="${esc(desc)}">\n  <meta property="og:title" content="${esc(title)}">\n  <meta property="og:description" content="${esc(desc)}">\n  ${ogExtra}${ldJson ? '\n  ' + ldJson : ''}\n</head>\n<body>\n  <nav class="nav">\n    <div class="nav-inner">\n      <a href="/" class="logo"><img src="/img/logo-hex.jpg" alt="The Signal" class="logo-img"><span class="logo-text"><span class="logo-the">THE</span> <strong>SIGNAL</strong></span></a>\n      <div class="nav-links">\n        <a href="/sector/ai" class="nav-link">AI</a>\n        <a href="/sector/cyber" class="nav-link">Cyber</a>\n        <a href="/sector/defense" class="nav-link">Defense</a>\n        <a href="/sector/space" class="nav-link">Space</a>\n        <a href="/sector/mega-cap" class="nav-link">Mega-Cap</a>\n        <a href="/sector/quantum" class="nav-link">Quantum</a>\n        <a href="/hive" class="nav-link">Hive</a>\n      </div>\n      <div class="nav-actions">\n        <button class="nav-btn search-btn" id="searchToggle" aria-label="Search">\n          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">\n            <circle cx="11" cy="11" r="8"></circle>\n            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>\n          </svg>\n        </button>\n        <div class="auth-container" id="authContainer">\n            <button class="nav-btn auth-btn" id="authToggle" aria-label="Sign In">\n              <div class="auth-btn-avatar" id="authBtnAvatar">\n                <span class="auth-btn-initial" id="authBtnInitial"></span>\n                <img class="auth-btn-img" id="authBtnImg" src="" alt="" style="display:none">\n              </div>\n              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="auth-btn-icon" id="authBtnIcon">\n                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>\n                <circle cx="12" cy="7" r="4"></circle>\n              </svg>\n              <span class="auth-label" id="authLabel">Sign In</span>\n            </button>\n            <div class="auth-dropdown" id="authDropdown">\n              <div class="auth-profile" id="authProfile" style="display:none">\n                <div class="auth-profile-header">\n                  <div class="auth-profile-avatar" id="authProfileAvatar">\n                    <img id="authProfileImg" src="" alt="" style="display:none">\n                    <span class="auth-profile-initial" id="authProfileInitial"></span>\n                  </div>\n                  <div class="auth-profile-info">\n                    <span class="auth-profile-name" id="authProfileName"></span>\n                    <span class="auth-profile-username" id="authProfileUsername"></span>\n                  </div>\n                </div>\n                <div class="auth-profile-stats" id="authProfileStats">\n                  <div class="auth-stat">\n                    <span class="auth-stat-label">Portfolio</span>\n                    <span class="auth-stat-value" id="authStatValue">—</span>\n                  </div>\n                  <div class="auth-stat">\n                    <span class="auth-stat-label">Return</span>\n                    <span class="auth-stat-value" id="authStatReturn">—</span>\n                  </div>\n                </div>\n                <div class="auth-profile-links">\n                  <a href="/hive" class="auth-profile-link">🐝 My Hive</a>\n                  <a href="/hive" class="auth-profile-link" onclick="navigateToHiveLeaderboard(event)">🏆 Leaderboard</a>\n                </div>\n                <button class="auth-profile-signout" id="authSignOut">Sign Out</button>\n              </div>\n              <div class="auth-guest" id="authGuest">\n                <button class="auth-option" onclick="showHiveJoinModal(\'login\')" style="display:flex"><span class="auth-option-icon">🔑</span> Sign In</button>\n                <button class="auth-option" onclick="showHiveJoinModal(\'register\')" style="display:flex"><span class="auth-option-icon">✨</span> Create Account</button>\n              </div>\n            </div>\n        <button class="nav-btn hamburger-btn" id="hamburgerToggle" aria-label="Menu">\n          <span class="hamburger-line"></span>\n          <span class="hamburger-line"></span>\n          <span class="hamburger-line"></span>\n        </button>\n      </div>\n    </div>\n  </nav>\n  <div class="mobile-menu" id="mobileMenu">\n    <div class="mobile-menu-links">\n      <a href="/sector/ai" class="mobile-nav-link">AI</a>\n      <a href="/sector/cyber" class="mobile-nav-link">Cyber</a>\n      <a href="/sector/defense" class="mobile-nav-link">Defense</a>\n      <a href="/sector/space" class="mobile-nav-link">Space</a>\n      <a href="/sector/mega-cap" class="mobile-nav-link">Mega-Cap</a>\n      <a href="/sector/quantum" class="mobile-nav-link">Quantum</a>\n      <a href="/hive" class="mobile-nav-link">Hive</a>\n    </div>\n  </div>\n\n  <!-- Search Overlay -->\n  <div class="search-overlay" id="searchOverlay">\n    <div class="search-backdrop" id="searchBackdrop"></div>\n    <div class="search-modal">\n      <div class="search-header">\n        <input type="text" class="search-input" id="searchInput" placeholder="Search articles by title, ticker, sector, or tag…" autofocus>\n        <button class="search-close" id="searchClose" aria-label="Close search">\n          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">\n            <line x1="18" y1="6" x2="6" y2="18"></line>\n            <line x1="6" y1="6" x2="18" y2="18"></line>\n          </svg>\n        </button>\n      </div>\n      <div class="search-results" id="searchResults"></div>\n      <div class="search-empty" id="searchEmpty">Start typing to search articles…</div>\n    </div>\n  </div>\n\n  <script id="articles-data" type="application/json">${JSON.stringify(allArticles || [])}</script>\n  <main class="main">`;
 }
 
 function renderFooter() {
@@ -243,8 +248,8 @@ function renderFooter() {
     </div>
   <script src="/js/prices.js" defer></script>
   <script src="/js/search.js" defer></script>
-  <script src="/js/auth.js" defer></script>
-  <script src="/js/pulse.js" defer></script>
+  <script src="/js/auth.js?v=2" defer></script>
+  <script src="/js/pulse.js" defer></script>\n  <script src="/js/theme.js" defer></script>\n  <script src="/js/comments.js" defer></script>\n  <script src="/js/share.js" defer></script>\n  <script src="/js/hive.js?v=2" defer></script>
   <script>
   document.addEventListener('DOMContentLoaded', function(){
     var btn = document.getElementById('hamburgerToggle');
@@ -647,6 +652,32 @@ function renderNewsletter() {
   '</section>';
 }
 
+function renderHiveHome() {
+  return '<div class="section-divider"></div>' +
+    '<section class="hive-home-section" id="hiveHomeSection">' +
+    '<div class="hive-home-inner">' +
+      '<div class="hive-home-header">' +
+        '<div class="hive-home-title">🐝 The Hive</div>' +
+        '<a href="/hive" class="hive-home-cta">Enter The Hive →</a>' +
+      '</div>' +
+      '<div class="hive-home-grid">' +
+        '<div class="hive-home-card">' +
+          '<div class="hive-home-card-title">Signal Master Spotlight</div>' +
+          '<div class="hive-spotlight-holdings">' +
+            '<div class="hive-loading"><div class="hive-spinner"></div><span>Loading...</span></div>' +
+          '</div>' +
+        '</div>' +
+        '<div class="hive-home-card">' +
+          '<div class="hive-home-card-title">Leaderboard Top 5</div>' +
+          '<div class="hive-preview-entries">' +
+            '<div class="hive-loading"><div class="hive-spinner"></div><span>Loading...</span></div>' +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+    '</div>' +
+  '</section>';
+}
+
 // === Build pages ===
 function buildHome(articles, prices) {
   const ticker = renderTickerTape(prices);
@@ -703,10 +734,75 @@ function buildHome(articles, prices) {
   const html = renderHeader('The Signal — Market Intelligence for AI, Defense, Space & Cyber',
     'The Signal delivers sharp analysis on AI, defense, space, and cybersecurity stocks. Earnings deep-dives, contract analysis, and market-moving insights.',
     null, articles)
-    + ticker + hero + feed + renderScorecard(prices) + gridRest + renderSignalHighlights(prices) + renderNewsletter() + gridRemaining + renderFooter();
+    + ticker + hero + feed + renderScorecard(prices) + gridRest + renderSignalHighlights(prices) + renderHiveHome() + renderNewsletter() + gridRemaining + renderFooter();
   fs.mkdirSync(DIST, { recursive: true });
   fs.writeFileSync(path.join(DIST, 'index.html'), html);
   console.log('  ✓ index.html');
+}
+
+function buildHive() {
+  const body = '<div class="hive-app">' +
+    '<div class="hive-header-area">' +
+      '<div>' +
+        '<div class="hive-header-title"><span class="hive-header-icon">🐝</span> The Hive</div>' +
+        '<div class="hive-header-sub">Simulated trading &amp; portfolio leaderboard for The Signal community</div>' +
+      '</div>' +
+    '</div>' +
+    '<div class="hive-auth-bar" id="hiveAuthSection">' +
+      '<div id="authOptions">' +
+        '<button class="hive-cta-btn" onclick="showHiveJoinModal(\'login\')" style="font-size:12px;padding:6px 14px">Sign In</button>' +
+        '<button class="hive-cta-btn hive-cta-sm" onclick="showHiveJoinModal(\'register\')" style="font-size:12px;padding:6px 14px;background:transparent;border:1px solid var(--border);color:var(--text-secondary)">Register</button>' +
+      '</div>' +
+      '<div id="authUserInfo" style="display:none;align-items:center;gap:8px">' +
+        '<span id="authName" class="hive-auth-name"></span>' +
+        '<button class="hive-cta-btn" onclick="hiveLogout()" style="font-size:11px;padding:4px 12px;background:transparent;border:1px solid var(--border);color:var(--text-muted)">Sign Out</button>' +
+      '</div>' +
+    '</div>' +
+    '<div class="hive-tabs" id="hiveTabs">' +
+      '<button class="hive-tab hive-tab-active" data-tab="portfolio">Portfolio</button>' +
+      '<button class="hive-tab" data-tab="leaderboard">Leaderboard</button>' +
+      '<button class="hive-tab" data-tab="signalmaster">Signal Master</button>' +
+      '<button class="hive-tab" data-tab="stocks">Stocks</button>' +
+      '<button class="hive-tab" data-tab="rules">Rules</button>' +
+    '</div>' +
+    '<div id="hiveTabPortfolio" class="hive-tab-content hive-tab-active">' +
+      '<div id="hivePortfolioContent">' +
+        '<div class="hive-loading"><div class="hive-spinner"></div><span>Loading portfolio...</span></div>' +
+      '</div>' +
+    '</div>' +
+    '<div id="hiveTabLeaderboard" class="hive-tab-content">' +
+      '<div class="hive-lb-periods">' +
+        '<button class="hive-lb-period-btn" data-period="weekly">Weekly</button>' +
+        '<button class="hive-lb-period-btn hive-lb-period-active" data-period="monthly">30 Day</button>' +
+        '<button class="hive-lb-period-btn" data-period="alltime">All-Time</button>' +
+      '</div>' +
+      '<div id="hiveLeaderboardContent">' +
+        '<div class="hive-loading"><div class="hive-spinner"></div><span>Loading leaderboard...</span></div>' +
+      '</div>' +
+    '</div>' +
+    '<div id="hiveTabSignalmaster" class="hive-tab-content">' +
+      '<div id="hiveSignalMasterContent">' +
+        '<div class="hive-loading"><div class="hive-spinner"></div><span>Loading Signal Master...</span></div>' +
+      '</div>' +
+    '</div>' +
+    '<div id="hiveTabStocks" class="hive-tab-content">' +
+      '<div id="hiveStocksContent">' +
+        '<div class="hive-loading"><div class="hive-spinner"></div><span>Loading stocks...</span></div>' +
+      '</div>' +
+    '</div>' +
+    '<div id="hiveTabRules" class="hive-tab-content">' +
+      '<div id="hiveRulesContent"></div>' +
+    '</div>' +
+  '</div>';
+
+  const html = renderHeader('The Hive — Simulated Trading & Portfolio Leaderboard — The Signal',
+    'Join The Hive at The Signal. Get a $100,000 simulated portfolio to trade AI, defense, space, cyber, mega-cap, and quantum stocks. Compete on the leaderboard.',
+    null, null, 'https://readthesignal.net/hive')
+    + body + renderFooter();
+  const dir = path.join(DIST, 'hive');
+  fs.mkdirSync(dir, { recursive: true });
+  fs.writeFileSync(path.join(dir, 'index.html'), html);
+  console.log('  ✓ hive/index.html');
 }
 
 function buildArticle(article, allArticles) {
@@ -957,6 +1053,7 @@ console.log('  ✓ static assets copied');
 
 // Build pages
 buildHome(articles, prices);
+buildHive();
 
 for (const a of articles) {
   buildArticle(a, articles);

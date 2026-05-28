@@ -1,181 +1,288 @@
 (function() {
   'use strict';
 
-  // Placeholder Firebase config — swap in real values when ready
-  const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT.firebaseapp.com",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_PROJECT.appspot.com",
-    messagingSenderId: "YOUR_SENDER_ID",
-    appId: "YOUR_APP_ID"
-  };
+  // Auth system for The Signal — nav sign-in & profile dropdown
+  // Integrates with hive.js auth (localStorage tokens) and the Hive API
 
-  const authToggle = document.getElementById('authToggle');
-  const authDropdown = document.getElementById('authDropdown');
-  const authLabel = document.getElementById('authLabel');
-  const authUserInfo = document.getElementById('authUserInfo');
-  const authOptions = document.getElementById('authOptions');
-  const authAvatar = document.getElementById('authAvatar');
-  const authName = document.getElementById('authName');
-  const authSignOut = document.getElementById('authSignOut');
-  const authGoogle = document.getElementById('authGoogle');
-  const authGithub = document.getElementById('authGithub');
-  const authEmail = document.getElementById('authEmail');
+  var authToggle = document.getElementById('authToggle');
+  var authDropdown = document.getElementById('authDropdown');
+  var authLabel = document.getElementById('authLabel');
+  var authBtnIcon = document.getElementById('authBtnIcon');
+  var authBtnImg = document.getElementById('authBtnImg');
+  var authBtnInitial = document.getElementById('authBtnInitial');
+  var authBtnAvatar = document.getElementById('authBtnAvatar');
+
+  var authProfile = document.getElementById('authProfile');
+  var authGuest = document.getElementById('authGuest');
+  var authProfileName = document.getElementById('authProfileName');
+  var authProfileUsername = document.getElementById('authProfileUsername');
+  var authProfileImg = document.getElementById('authProfileImg');
+  var authProfileInitial = document.getElementById('authProfileInitial');
+  var authStatValue = document.getElementById('authStatValue');
+  var authStatReturn = document.getElementById('authStatReturn');
+  var authSignOut = document.getElementById('authSignOut');
 
   if (!authToggle) return;
 
-  let firebaseApp = null;
-  let firebaseAuth = null;
-  let firebaseInitialized = false;
+  var userCache = null;
+  var portfolioCache = null;
 
-  // Try to initialize Firebase if SDK is loaded
-  function initFirebase() {
-    if (firebaseInitialized) return;
-    try {
-      if (typeof firebase !== 'undefined' && firebase.initializeApp) {
-        firebaseApp = firebase.initializeApp(firebaseConfig, 'thesignal');
-        firebaseAuth = firebaseApp.auth();
-        firebaseInitialized = true;
-        console.log('Auth: Firebase initialized');
+  // === Utilities ===
 
-        // Listen for auth state changes
-        firebaseAuth.onAuthStateChanged(function(user) {
-          if (user) {
-            updateUIForUser(user);
-            saveUserSession(user);
-          } else {
-            updateUIForGuest();
-            clearUserSession();
-          }
-        });
-      } else {
-        console.log('Auth: Firebase SDK not loaded. Drop-in UI functional.');
-      }
-    } catch (err) {
-      console.warn('Auth: Firebase init failed —', err.message);
-    }
+  function getHiveToken() {
+    try { return localStorage.getItem('hive_token'); } catch(e) { return null; }
   }
 
-  // Session persistence via localStorage for page refresh
-  function saveUserSession(user) {
+  function getHiveUser() {
     try {
-      localStorage.setItem('thesignal_user', JSON.stringify({
-        displayName: user.displayName,
-        email: user.email,
-        photoURL: user.photoURL,
-        uid: user.uid
-      }));
-    } catch (e) {}
-  }
-
-  function clearUserSession() {
-    try { localStorage.removeItem('thesignal_user'); } catch (e) {}
-  }
-
-  function getStoredUser() {
-    try {
-      var data = localStorage.getItem('thesignal_user');
+      var data = localStorage.getItem('hive_user');
       return data ? JSON.parse(data) : null;
-    } catch (e) { return null; }
+    } catch(e) { return null; }
   }
 
-  function updateUIForUser(user) {
-    if (!user) return;
-    if (authLabel) authLabel.textContent = user.displayName || user.email || 'User';
-    if (authUserInfo) authUserInfo.style.display = 'flex';
-    if (authOptions) authOptions.style.display = 'none';
-    if (authAvatar) {
-      authAvatar.src = user.photoURL || '';
-      authAvatar.style.display = user.photoURL ? 'block' : 'none';
+  function clearHiveSession() {
+    try {
+      localStorage.removeItem('hive_token');
+      localStorage.removeItem('hive_user');
+    } catch(e) {}
+  }
+
+  // === Button avatar display ===
+
+  function setButtonAvatar(user) {
+    if (!authBtnAvatar || !authBtnIcon || !authBtnInitial || !authBtnImg) return;
+    if (!user) {
+      authBtnAvatar.style.display = 'none';
+      authBtnIcon.style.display = '';
+      return;
     }
-    if (authName) authName.textContent = user.displayName || user.email || 'User';
+    authBtnAvatar.style.display = '';
+    authBtnIcon.style.display = 'none';
+    var initial = (user.displayName || user.username || '?').charAt(0).toUpperCase();
+    authBtnInitial.textContent = initial;
+    if (user.photoURL) {
+      authBtnImg.src = user.photoURL;
+      authBtnImg.style.display = '';
+      authBtnInitial.style.display = 'none';
+    } else {
+      authBtnImg.style.display = 'none';
+      authBtnInitial.style.display = '';
+      authBtnInitial.textContent = initial;
+    }
   }
 
-  function updateUIForGuest() {
-    if (authLabel) authLabel.textContent = 'Sign In';
-    if (authUserInfo) authUserInfo.style.display = 'none';
-    if (authOptions) authOptions.style.display = 'flex';
-    if (authAvatar) authAvatar.style.display = 'none';
+  // === Profile dropdown ===
+
+  function updateProfileDropdown(user, portfolio) {
+    if (!authProfile || !authGuest) return;
+
+    if (!user) {
+      authProfile.style.display = 'none';
+      authGuest.style.display = '';
+      if (authLabel) authLabel.textContent = 'Sign In';
+      setButtonAvatar(null);
+      return;
+    }
+
+    authProfile.style.display = '';
+    authGuest.style.display = 'none';
+    if (authLabel) authLabel.textContent = user.displayName || user.username || 'User';
+    setButtonAvatar(user);
+
+    // Name and username
+    if (authProfileName) authProfileName.textContent = user.displayName || user.username || 'User';
+    if (authProfileUsername) authProfileUsername.textContent = '@' + (user.username || user.uid || 'user');
+
+    // Avatar in dropdown
+    if (authProfileImg && authProfileInitial) {
+      var initial = (user.displayName || user.username || '?').charAt(0).toUpperCase();
+      authProfileInitial.textContent = initial;
+      if (user.photoURL) {
+        authProfileImg.src = user.photoURL;
+        authProfileImg.style.display = '';
+        authProfileInitial.style.display = 'none';
+      } else {
+        authProfileImg.style.display = 'none';
+        authProfileInitial.style.display = '';
+      }
+    }
+
+    // Portfolio stats
+    if (portfolio && portfolio.cash !== undefined) {
+      if (authStatValue) authStatValue.textContent = '$' + (portfolio.totalValue || 0).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+      if (authStatReturn) {
+        var ret = portfolio.return || 0;
+        authStatReturn.textContent = (ret >= 0 ? '+' : '') + ret + '%';
+        authStatReturn.className = 'auth-stat-value' + (ret >= 0 ? ' auth-stat-positive' : ' auth-stat-negative');
+      }
+    }
   }
 
-  // Restore session on page load
-  var storedUser = getStoredUser();
-  if (storedUser) {
-    updateUIForUser(storedUser);
+  // === Fetch portfolio stats ===
+
+  function fetchPortfolioStats(user) {
+    if (!user) return;
+    var uid = user.uid;
+    var token = getHiveToken();
+    var url = '/api/hive?uid=' + encodeURIComponent(uid)
+      + '&displayName=' + encodeURIComponent(user.displayName || '')
+      + '&photoURL=' + encodeURIComponent(user.photoURL || '');
+    if (token) url += '&token=' + encodeURIComponent(token);
+
+    fetch(url)
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        portfolioCache = data;
+        updateProfileDropdown(user, data);
+      })
+      .catch(function() {
+        // Keep dropdown info without stats
+        updateProfileDropdown(user, null);
+      });
   }
 
-  // Dropdown toggle
+  // === UI update for current auth state ===
+
+  function updateAuthUI() {
+    var user = getHiveUser();
+    var token = getHiveToken();
+    userCache = user;
+
+    if (user && token) {
+      // Verify with server
+      fetch('/api/hive?action=me&token=' + encodeURIComponent(token))
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          if (data.authenticated) {
+            var updatedUser = {
+              uid: data.uid,
+              username: data.username,
+              displayName: data.displayName,
+              photoURL: data.photoURL
+            };
+            try { localStorage.setItem('hive_user', JSON.stringify(updatedUser)); } catch(e) {}
+            userCache = updatedUser;
+            updateProfileDropdown(updatedUser, null);
+            fetchPortfolioStats(updatedUser);
+          } else {
+            clearHiveSession();
+            userCache = null;
+            portfolioCache = null;
+            updateProfileDropdown(null, null);
+          }
+        })
+        .catch(function() {
+          // Server unreachable — use cached data
+          updateProfileDropdown(user, portfolioCache);
+        });
+    } else {
+      updateProfileDropdown(null, null);
+    }
+  }
+
+  // === Dropdown toggle ===
+
+  var isDropdownOpen = false;
+
+  function openDropdown() {
+    authDropdown.classList.add('active');
+    isDropdownOpen = true;
+    // Refresh stats when opening
+    var user = getHiveUser();
+    if (user) fetchPortfolioStats(user);
+  }
+
+  function closeDropdown() {
+    authDropdown.classList.remove('active');
+    isDropdownOpen = false;
+  }
+
+  function toggleDropdown() {
+    if (isDropdownOpen) closeDropdown();
+    else openDropdown();
+  }
+
   authToggle.addEventListener('click', function(e) {
     e.stopPropagation();
-    var isOpen = authDropdown.classList.contains('active');
-    // Close all dropdowns
-    document.querySelectorAll('.auth-dropdown.active').forEach(function(d) {
-      d.classList.remove('active');
-    });
-    if (!isOpen) {
-      authDropdown.classList.add('active');
-    }
-  });
-
-  // Close dropdown when clicking outside
-  document.addEventListener('click', function(e) {
-    if (!e.target.closest('.auth-container')) {
-      authDropdown.classList.remove('active');
-    }
-  });
-
-  // Auth action handlers
-  function showNotConfigured() {
-    if (authLabel) authLabel.textContent = 'Coming Soon';
-    setTimeout(function() {
-      var stored = getStoredUser();
-      if (authLabel) authLabel.textContent = stored ? (stored.displayName || stored.email || 'User') : 'Sign In';
-    }, 2000);
-  }
-
-  if (authGoogle) {
-    authGoogle.addEventListener('click', function() {
-      if (!firebaseInitialized) { showNotConfigured(); return; }
-      try {
-        var provider = new firebase.auth.GoogleAuthProvider();
-        firebaseAuth.signInWithPopup(provider);
-      } catch(e) { showNotConfigured(); }
-    });
-  }
-
-  if (authGithub) {
-    authGithub.addEventListener('click', function() {
-      if (!firebaseInitialized) { showNotConfigured(); return; }
-      try {
-        var provider = new firebase.auth.GithubAuthProvider();
-        firebaseAuth.signInWithPopup(provider);
-      } catch(e) { showNotConfigured(); }
-    });
-  }
-
-  if (authEmail) {
-    authEmail.addEventListener('click', function() {
-      // Could show an email/password form; for now show a prompt
-      var email = prompt('Enter your email to sign in (Firebase not configured — this is a placeholder):');
-      if (email) {
-        showNotConfigured();
+    var user = getHiveUser();
+    if (user) {
+      toggleDropdown();
+    } else {
+      if (typeof showHiveJoinModal === 'function') {
+        showHiveJoinModal('login');
+      } else {
+        window.location.href = '/hive';
       }
-    });
-  }
+    }
+  });
+
+  // Close dropdown on outside click
+  document.addEventListener('click', function(e) {
+    if (isDropdownOpen && !e.target.closest('.auth-container')) {
+      closeDropdown();
+    }
+  });
+
+  // Close dropdown on Escape
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && isDropdownOpen) {
+      closeDropdown();
+    }
+  });
+
+  // === Sign Out ===
 
   if (authSignOut) {
     authSignOut.addEventListener('click', function() {
-      if (firebaseInitialized && firebaseAuth) {
-        firebaseAuth.signOut();
-      }
-      updateUIForGuest();
-      clearUserSession();
-      authDropdown.classList.remove('active');
+      clearHiveSession();
+      userCache = null;
+      portfolioCache = null;
+      updateProfileDropdown(null, null);
+      closeDropdown();
+      if (typeof loadHomepageHive === 'function') loadHomepageHive();
+      if (typeof loadPortfolio === 'function') loadPortfolio();
     });
   }
 
-  // Try Firebase init after a short delay (in case scripts load asynchronously)
-  setTimeout(initFirebase, 500);
+  // === Navigate to Hive Leaderboard ===
+
+  window.navigateToHiveLeaderboard = function(e) {
+    if (e) e.preventDefault();
+    closeDropdown();
+    // Redirect to /hive — the SPA defaults to Portfolio tab
+    // After navigation, we can't programmatically click Leaderboard
+    // So we use a sessionStorage hint
+    try { sessionStorage.setItem('hive_open_tab', 'leaderboard'); } catch(e2) {}
+    window.location.href = '/hive';
+  };
+
+  // Check if redirected from leaderboard click
+  var pendingTab = null;
+  try { pendingTab = sessionStorage.getItem('hive_open_tab'); } catch(e) {}
+  if (pendingTab) {
+    try { sessionStorage.removeItem('hive_open_tab'); } catch(e) {}
+    // The hive.js will handle this via init
+  }
+
+  // === Listen for auth changes (cross-tab) ===
+
+  window.addEventListener('storage', function(e) {
+    if (e.key === 'hive_user') {
+      var newUser = e.newValue ? JSON.parse(e.newValue) : null;
+      if (newUser) {
+        userCache = newUser;
+        updateProfileDropdown(newUser, null);
+        fetchPortfolioStats(newUser);
+      } else {
+        userCache = null;
+        portfolioCache = null;
+        updateProfileDropdown(null, null);
+      }
+    }
+  });
+
+  // === Initial load ===
+
+  updateAuthUI();
 
 })();

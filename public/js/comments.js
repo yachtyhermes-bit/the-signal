@@ -1,5 +1,5 @@
-// The Signal — Threaded Comments System
-// Google sign-in OR guest posting (Reddit-style) with nested replies
+// The Signal — Secure Comments System
+// Only authenticated users can comment: Google sign-in OR The Hive account
 (function() {
   'use strict';
 
@@ -9,15 +9,100 @@
   var articleSlug = container.getAttribute('data-slug');
   if (!articleSlug) return;
 
-  // Guest name from localStorage
-  function getGuestName() {
-    try { return localStorage.getItem('signal_guest_name') || ''; } catch { return ''; }
+  var API_BASE = '/api/comments';
+  var HIVE_API = '/api/hive';
+  var FIREBASE_CONFIG = {
+    apiKey: "AIzaSyDhlnHXYACuXc0VWk07JEUA9gMQ3CwZ8Eo",
+    authDomain: "kalitta-logs.firebaseapp.com",
+    projectId: "kalitta-logs"
+  };
+
+  var firebaseApp = null;
+  var firebaseUser = null;
+  var currentUser = null; // { type: 'google'|'hive', displayName, photoURL, uid, token? }
+
+  // ─── Hive auth helpers ───
+  function getHiveToken() {
+    try { return localStorage.getItem('hive_token'); } catch(e) { return null; }
   }
-  function setGuestName(name) {
-    try { localStorage.setItem('signal_guest_name', name); } catch {}
+  function getHiveUser() {
+    try {
+      var data = localStorage.getItem('hive_user');
+      return data ? JSON.parse(data) : null;
+    } catch(e) { return null; }
   }
 
-  // ─── Build threaded tree from flat list ───
+  // ─── Auth state ───
+  function resolveCurrentUser(firebaseUserData, callback) {
+    // Priority: Hive auth over Google auth
+    var hiveToken = getHiveToken();
+    var hiveUser = getHiveUser();
+
+    if (hiveToken && hiveUser) {
+      // Verify Hive token is still valid
+      fetch(HIVE_API + '?action=me&token=' + encodeURIComponent(hiveToken))
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          if (data.authenticated) {
+            currentUser = {
+              type: 'hive',
+              displayName: data.displayName || hiveUser.displayName,
+              photoURL: null,
+              uid: data.uid,
+              token: hiveToken
+            };
+            if (callback) callback(currentUser);
+            return;
+          }
+          // Token expired — fall through to Google
+          checkFirebaseAuth(callback);
+        })
+        .catch(function() {
+          // Server unreachable — use cached user
+          currentUser = {
+            type: 'hive',
+            displayName: hiveUser.displayName || 'User',
+            photoURL: null,
+            uid: hiveUser.uid,
+            token: hiveToken
+          };
+          if (callback) callback(currentUser);
+        });
+    } else if (firebaseUserData) {
+      currentUser = {
+        type: 'google',
+        displayName: firebaseUserData.displayName || firebaseUserData.email || 'Google User',
+        photoURL: firebaseUserData.photoURL || null,
+        uid: firebaseUserData.uid,
+        token: null
+      };
+      if (callback) callback(currentUser);
+    } else {
+      currentUser = null;
+      if (callback) callback(null);
+    }
+  }
+
+  function checkFirebaseAuth(callback) {
+    if (firebaseApp && firebase.auth) {
+      firebase.auth(firebaseApp).onAuthStateChanged(function(user) {
+        firebaseUser = user;
+        if (user) {
+          currentUser = {
+            type: 'google',
+            displayName: user.displayName || user.email || 'Google User',
+            photoURL: user.photoURL || null,
+            uid: user.uid,
+            token: null
+          };
+          renderComments();
+        }
+        if (callback) callback(currentUser);
+      });
+    }
+  }
+
+  // ─── Build threaded tree ───
   function buildTree(comments) {
     var map = {};
     var roots = [];
@@ -46,63 +131,63 @@
   }
 
   // ─── Render ───
-  function render(comments, user) {
+  function render(comments) {
     var roots = buildTree(comments);
     var totalCount = countAll(roots);
     var html = '';
 
-    // Comment form
-    html += '<div class="comment-form-area" id="commentFormArea">';
-    if (user && user.email) {
-      html += '<div class="comment-user-bar">';
-      if (user.photoURL) {
-        html += '<img src="' + escAttr(user.photoURL) + '" class="comment-avatar" alt="" width="28" height="28">';
-      } else {
-        html += '<div class="comment-avatar comment-avatar-fallback">' + escHtml((user.displayName || user.email || '?')[0]) + '</div>';
-      }
-      html += '<span class="comment-user-name">' + escHtml(user.displayName || user.email) + '</span>';
-      html += '<span class="comment-user-badge">Google</span>';
-      html += '</div>';
-    } else if (getGuestName()) {
-      html += '<div class="comment-user-bar">';
-      html += '<div class="comment-avatar comment-avatar-fallback">' + escHtml(getGuestName()[0]) + '</div>';
-      html += '<span class="comment-user-name">' + escHtml(getGuestName()) + '</span>';
-      html += '<button class="comment-name-btn" id="commentChangeName">Change name</button>';
-      html += '</div>';
-    } else {
-      html += '<div class="comment-user-bar comment-guest-bar">';
-      html += '<input type="text" class="comment-name-input" id="commentGuestName" placeholder="Your name (optional)" maxlength="40" autocomplete="name">';
-      html += '</div>';
-    }
-    html += '<textarea class="comment-textarea" id="commentTextarea" placeholder="Share your thoughts…" maxlength="2000" rows="3"></textarea>';
-    html += '<button class="comment-submit" id="commentSubmitBtn">Post</button>';
-    html += '</div>';
+    // Comment form — only show if authenticated
+    html += renderAuthSection();
 
-    // Sign in prompt
-    if (!user || !user.email) {
-      html += '<div class="comment-signin-prompt">';
-      html += '<button class="comment-google-btn" id="commentGoogleBtn"><span class="comment-google-icon">G</span> Sign in with Google (optional)</button>';
-      html += '<span class="comment-signin-note">Or just enter a name above</span>';
-      html += '</div>';
-    }
-
-    // Comments list
+    // Comment list
     html += '<div class="comment-list" id="commentList">';
     if (roots.length === 0) {
-      html += '<div class="comment-empty">No comments yet. Be the first to share your thoughts.</div>';
+      html += '<div class="comment-empty">No comments yet. Sign in to be the first.</div>';
     } else {
       html += '<div class="comment-count">' + totalCount + ' comment' + (totalCount !== 1 ? 's' : '') + '</div>';
       roots.forEach(function(c) {
-        html += renderComment(c, user, 0);
+        html += renderComment(c, 0);
       });
     }
     html += '</div>';
 
     container.innerHTML = html;
-    bindEvents(user, comments);
+    bindEvents(comments);
   }
 
-  function renderComment(c, user, depth) {
+  function renderAuthSection() {
+    var html = '<div class="comment-form-area" id="commentFormArea">';
+
+    if (currentUser) {
+      // Signed in — show comment form
+      var photoHtml = currentUser.photoURL
+        ? '<img src="' + escAttr(currentUser.photoURL) + '" class="comment-avatar" alt="" width="28" height="28" onerror="this.style.display=\'none\'">'
+        : '<div class="comment-avatar-fallback">' + escHtml((currentUser.displayName || 'U')[0].toUpperCase()) + '</div>';
+
+      var badge = currentUser.type === 'google' ? 'Google' : 'The Hive';
+
+      html += '<div class="comment-user-bar">';
+      html += photoHtml;
+      html += '<span class="comment-user-name">' + escHtml(currentUser.displayName) + '</span>';
+      html += '<span class="comment-user-badge">' + badge + '</span>';
+      html += '</div>';
+      html += '<textarea class="comment-textarea" id="commentTextarea" placeholder="Share your thoughts…" maxlength="2000" rows="3"></textarea>';
+      html += '<button class="comment-submit" id="commentSubmitBtn">Post Comment</button>';
+    } else {
+      // Not signed in — show auth options
+      html += '<div class="comment-signin-prompt">';
+      html += '<p class="comment-signin-title">Sign in to comment</p>';
+      html += '<button class="comment-google-btn" id="commentGoogleBtn"><span class="comment-google-icon">G</span> Sign in with Google</button>';
+      html += '<div class="comment-auth-divider"><span>or</span></div>';
+      html += '<button class="comment-hive-btn" id="commentHiveBtn">🐝 Sign in with The Hive</button>';
+      html += '</div>';
+    }
+
+    html += '</div>';
+    return html;
+  }
+
+  function renderComment(c, depth) {
     var date = new Date(c.createdAt);
     var timeAgo = getTimeAgo(date);
     var initials = (c.author || '?')[0].toUpperCase();
@@ -114,10 +199,9 @@
     html += '<div class="comment-item' + (depth > 0 ? ' comment-threaded' : '') + '"' + indentStyle + ' data-comment-id="' + c.id + '">';
     html += '<div class="comment-item-avatar">';
     if (c.photoURL) {
-      html += '<img src="' + escAttr(c.photoURL) + '" alt="" width="32" height="32">';
-    } else {
-      html += '<div class="comment-avatar-fallback sm">' + escHtml(initials) + '</div>';
+      html += '<img src="' + escAttr(c.photoURL) + '" alt="" width="32" height="32" onerror="this.style.display=\'none\'">';
     }
+    html += '<div class="comment-avatar-fallback sm">' + escHtml(initials) + '</div>';
     html += '</div>';
     html += '<div class="comment-item-body">';
     html += '<div class="comment-item-header">';
@@ -128,9 +212,11 @@
     }
     html += '</div>';
     html += '<div class="comment-item-text">' + linkify(escHtml(c.text)) + '</div>';
-    html += '<div class="comment-item-actions">';
-    html += '<button class="comment-reply-btn" data-parent="' + c.id + '">Reply</button>';
-    html += '</div>';
+    if (currentUser) {
+      html += '<div class="comment-item-actions">';
+      html += '<button class="comment-reply-btn" data-parent="' + c.id + '">Reply</button>';
+      html += '</div>';
+    }
     // Inline reply form (hidden initially)
     html += '<div class="comment-reply-form" id="replyForm-' + c.id + '" style="display:none">';
     html += '<textarea class="comment-textarea comment-reply-textarea" placeholder="Write a reply…" maxlength="2000" rows="2"></textarea>';
@@ -143,7 +229,7 @@
     if (hasReplies) {
       html += '<div class="comment-replies">';
       c.replies.forEach(function(r) {
-        html += renderComment(r, user, depth + 1);
+        html += renderComment(r, depth + 1);
       });
       html += '</div>';
     }
@@ -153,18 +239,60 @@
     return html;
   }
 
-  function bindEvents(user, comments) {
+  function bindEvents(comments) {
+    // ─── Google sign-in ───
+    var googleBtn = document.getElementById('commentGoogleBtn');
+    if (googleBtn) {
+      googleBtn.addEventListener('click', function() {
+        if (firebaseApp && firebase.auth) {
+          var provider = new firebase.auth.GoogleAuthProvider();
+          firebase.auth(firebaseApp).signInWithPopup(provider)
+            .then(function() {
+              // onAuthStateChanged will fire and re-render
+            })
+            .catch(function(err) {
+              if (err.code !== 'auth/popup-closed-by-user') {
+                alert('Google sign-in failed: ' + err.message);
+              }
+            });
+        } else {
+          alert('Google sign-in not available. Try The Hive sign-in.');
+        }
+      });
+    }
+
+    // ─── Hive sign-in ───
+    var hiveBtn = document.getElementById('commentHiveBtn');
+    if (hiveBtn) {
+      hiveBtn.addEventListener('click', function() {
+        // Check if already have a hive session
+        var hiveUser = getHiveUser();
+        var hiveToken = getHiveToken();
+        if (hiveUser && hiveToken) {
+          // Re-resolve auth
+          resolveCurrentUser(firebaseUser, function() { renderComments(); });
+          return;
+        }
+        // Open hive auth modal
+        if (typeof showHiveJoinModal === 'function') {
+          showHiveJoinModal('login');
+        } else {
+          window.location.href = '/hive';
+        }
+      });
+    }
+
     // ─── Top-level submit ───
     var textarea = document.getElementById('commentTextarea');
     var submitBtn = document.getElementById('commentSubmitBtn');
     if (textarea && submitBtn) {
       submitBtn.addEventListener('click', function() {
-        submitComment(textarea.value, null, user, comments);
+        submitComment(textarea.value, null, comments);
       });
       textarea.addEventListener('keydown', function(e) {
         if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) {
           e.preventDefault();
-          submitComment(textarea.value, null, user, comments);
+          submitComment(textarea.value, null, comments);
         }
       });
     }
@@ -209,97 +337,75 @@
         if (!form) return;
         var ta = form.querySelector('.comment-reply-textarea');
         if (!ta) return;
-        submitComment(ta.value, parentId, user, comments, function() {
+        submitComment(ta.value, parentId, comments, function() {
           ta.value = '';
           form.style.display = 'none';
         });
       });
     });
-
-    // ─── Change guest name ───
-    var changeNameBtn = document.getElementById('commentChangeName');
-    if (changeNameBtn) {
-      changeNameBtn.addEventListener('click', function() {
-        var name = prompt('Enter your display name:');
-        if (name && name.trim()) {
-          setGuestName(name.trim());
-          render(comments, user);
-        }
-      });
-    }
-
-    // ─── Google sign-in button ───
-    var googleBtn = document.getElementById('commentGoogleBtn');
-    if (googleBtn) {
-      googleBtn.addEventListener('click', function() {
-        if (typeof firebase !== 'undefined' && firebase.auth) {
-          var provider = new firebase.auth.GoogleAuthProvider();
-          firebase.auth().signInWithPopup(provider).catch(function(err) {
-            if (err.code === 'auth/popup-blocked') {
-              firebase.auth().signInWithRedirect(provider);
-            }
-          });
-        }
-      });
-    }
   }
 
-  // ─── Central comment submit (top-level + reply) ───
-  function submitComment(rawText, parentId, user, comments, onSuccess) {
+  // ─── Central comment submit ───
+  function submitComment(rawText, parentId, comments, onSuccess) {
+    if (!currentUser) {
+      alert('You must sign in to comment.');
+      renderComments();
+      return;
+    }
+
     var text = rawText.trim();
     if (!text) return;
-
-    var author;
-    var photoURL = null;
-    var uid = null;
-
-    if (user && user.email) {
-      author = user.displayName || user.email;
-      photoURL = user.photoURL || null;
-      uid = user.uid;
-    } else {
-      var nameInput = document.getElementById('commentGuestName');
-      if (nameInput && nameInput.value.trim()) {
-        author = nameInput.value.trim();
-        setGuestName(author);
-      } else {
-        var storedName = getGuestName();
-        if (storedName) {
-          author = storedName;
-        } else {
-          author = 'Anonymous';
-        }
-      }
-    }
 
     var body = {
       article: articleSlug,
       text: text,
-      author: author,
-      photoURL: photoURL,
-      uid: uid
+      author: currentUser.displayName,
+      photoURL: currentUser.photoURL || null,
+      uid: currentUser.uid
     };
     if (parentId) body.parentId = parentId;
+    if (currentUser.token) body.token = currentUser.token;
 
-    fetch('/api/comments/', {
+    var btn = document.getElementById('commentSubmitBtn');
+    if (btn) { btn.disabled = true; btn.textContent = 'Posting...'; }
+
+    fetch(API_BASE, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(body)
     })
     .then(function(r) { return r.json(); })
     .then(function(d) {
+      if (btn) { btn.disabled = false; btn.textContent = 'Post Comment'; }
       if (d.status === 'success') {
         comments.push(d.comment);
-        // Re-render entirely — safe even if inline form elements are stale
-        render(comments, user);
+        render(comments);
         if (onSuccess) onSuccess();
       } else {
         alert(d.error || 'Failed to post comment');
       }
     })
     .catch(function() {
+      if (btn) { btn.disabled = false; btn.textContent = 'Post Comment'; }
       alert('Connection error. Try again.');
     });
+  }
+
+  function renderComments() {
+    loadComments();
+  }
+
+  // ─── Load ───
+  function loadComments() {
+    fetch(API_BASE + '?article=' + encodeURIComponent(articleSlug))
+      .then(function(r) { return r.json(); })
+      .then(function(d) {
+        var comments = d.comments || [];
+        render(comments);
+      })
+      .catch(function() {
+        container.innerHTML = '<div class="comment-error">Failed to load comments.</div>';
+      });
   }
 
   // ─── Helpers ───
@@ -326,30 +432,41 @@
     return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
   }
 
-  // ─── Load comments ───
-  function load() {
-    fetch('/api/comments/?article=' + encodeURIComponent(articleSlug))
-      .then(function(r) { return r.json(); })
-      .then(function(d) {
-        var comments = d.comments || [];
-        if (typeof firebase !== 'undefined' && firebase.auth) {
-          firebase.auth().onAuthStateChanged(function(firebaseUser) {
-            var user = firebaseUser ? {
-              uid: firebaseUser.uid,
-              email: firebaseUser.email,
-              displayName: firebaseUser.displayName,
-              photoURL: firebaseUser.photoURL
-            } : null;
-            render(comments, user);
-          });
-        } else {
-          render(comments, null);
-        }
-      })
-      .catch(function() {
-        container.innerHTML = '<div class="comment-error">Failed to load comments.</div>';
+  // ─── Init ───
+  function init() {
+    // Initialize Firebase
+    if (typeof firebase !== 'undefined' && firebase.initializeApp) {
+      try {
+        firebaseApp = firebase.initializeApp(FIREBASE_CONFIG, 'thesignal-comments');
+      } catch(e) {
+        // Already initialized
+        firebaseApp = firebase.app('thesignal-comments');
+      }
+
+      // Listen for auth state changes
+      firebase.auth(firebaseApp).onAuthStateChanged(function(user) {
+        firebaseUser = user;
+        resolveCurrentUser(user, function() {
+          // Re-render comments if container exists
+          if (document.getElementById('commentsContainer')) {
+            loadComments();
+          }
+        });
       });
+    } else {
+      // No Firebase — just use Hive auth
+      resolveCurrentUser(null, function() {
+        loadComments();
+      });
+    }
+
+    // Listen for Hive auth changes (cross-tab)
+    window.addEventListener('storage', function(e) {
+      if (e.key === 'hive_user' || e.key === 'hive_token') {
+        resolveCurrentUser(firebaseUser, function() { loadComments(); });
+      }
+    });
   }
 
-  load();
+  init();
 })();

@@ -3,7 +3,12 @@
 // .mjs for ESM on Vercel
 
 const TICKERS = [
-  'NVDA', 'PLTR', 'AVGO', 'AMD', 'GOOGL', 'META', 'MSFT', 'AMZN', 'TSLA', 'CRWV'
+  'NVDA','AMD','AVGO','MRVL','TSM','ASML','MU','CBRS','CRWV','NBIS','INTC','IREN','LRCX','AMAT','QCOM','SMCI',
+  'CRWD','PANW','FTNT','ZS','S','CHKP','CYBR','TENB','RBRK',
+  'LMT','RTX','NOC','GD','LHX','KTOS','AVAV','PL','AXON','GE','PLTR',
+  'RKLB','RDW','LUNR','ASTS',
+  'AAPL','MSFT','GOOGL','AMZN','META','TSLA','NFLX',
+  'IONQ','QBTS','QUBT','RGTI'
 ];
 
 async function fetchQuote(ticker) {
@@ -41,6 +46,20 @@ export default async function handler(req, res) {
   if (req.method === 'OPTIONS') return res.status(200).end();
 
   try {
+    // If specific ticker requested, return single format
+    const singleTicker = req.query.ticker;
+    if (singleTicker) {
+      const ticker = singleTicker.toUpperCase();
+      if (TICKERS.indexOf(ticker) === -1) {
+        return res.status(404).json({ error: 'Ticker not in coverage universe' });
+      }
+      const quote = await fetchQuote(ticker);
+      if (!quote) {
+        return res.status(502).json({ error: 'Failed to fetch price' });
+      }
+      return res.status(200).json(quote);
+    }
+
     const results = {};
     const batchSize = 5;
     for (let i = 0; i < TICKERS.length; i += batchSize) {

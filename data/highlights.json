@@ -2,22 +2,22 @@
   {
     "ticker": "KTOS",
     "name": "Kratos Defense & Security",
-    "currentPrice": 56.8,
+    "currentPrice": 57.3,
     "fairValue": {
       "status": "Undervalued",
-      "price": 111.95,
+      "price": 113.05,
       "upside": "+99.3%"
     },
     "earnings": {
       "revTtm": "$1.42B",
       "revGrowth": "+18.5%",
       "netIncome": "$29.40M",
-      "peRatio": "334.1x",
-      "psRatio": "7.5x"
+      "peRatio": "337.1x",
+      "psRatio": "7.6x"
     },
     "analyst": {
       "consensus": "Strong Buy",
-      "target": 111.95,
+      "target": 113.05,
       "buys": 15,
       "holds": 5,
       "sells": 0
@@ -26,7 +26,7 @@
   {
     "ticker": "CRWV",
     "name": "CoreWeave Inc.",
-    "currentPrice": 105.89,
+    "currentPrice": 104.27,
     "fairValue": {
       "status": "Undervalued",
       "price": 138.9,
@@ -37,7 +37,7 @@
       "revGrowth": "+167.9%",
       "netIncome": "$-1.59B",
       "peRatio": "N/A",
-      "psRatio": "9.3x"
+      "psRatio": "9.1x"
     },
     "analyst": {
       "consensus": "Buy",

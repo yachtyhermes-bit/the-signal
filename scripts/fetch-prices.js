@@ -6,7 +6,7 @@ const path = require('path');
 
 const TICKERS = [
   // AI & Semis
-  'NVDA', 'AMD', 'AVGO', 'MRVL', 'TSM', 'ASML', 'MU', 'CBRS',
+  'NVDA', 'AMD', 'AVGO', 'MRVL', 'TSM', 'ASML', 'MU', 'CBRS', 'INTC', 'IREN', 'LRCX', 'AMAT', 'QCOM', 'SMCI',
   // Cybersecurity
   'CRWD', 'PANW', 'FTNT', 'ZS', 'S', 'CHKP', 'CYBR', 'TENB',
   // AI Software
@@ -16,7 +16,7 @@ const TICKERS = [
   // Space & Emerging Defense
   'RKLB', 'RDW', 'KTOS', 'AVAV', 'LUNR', 'ASTS', 'PL',
   // Mega-cap Tech
-  'AAPL', 'MSFT', 'GOOGL', 'AMZN', 'META', 'TSLA',
+  'AAPL', 'MSFT', 'GOOGL', 'AMZN', 'META', 'TSLA', 'NFLX',
   // The Signal coverage
   'AXON', 'CRWV'
 ];
@@ -64,7 +64,14 @@ const COMPANY_INFO = {
   'ASTS': { name: 'AST SpaceMobile', url: 'https://www.ast-science.com/' },
   'PL': { name: 'Planet Labs', url: 'https://www.planet.com/' },
   'AXON': { name: 'Axon Enterprise', url: 'https://www.axon.com/' },
-  'CRWV': { name: 'CoreWeave Inc.', url: 'https://www.coreweave.com/' }
+  'CRWV': { name: 'CoreWeave Inc.', url: 'https://www.coreweave.com/' },
+  'INTC': { name: 'Intel Corporation', url: 'https://www.intel.com/' },
+  'IREN': { name: 'Iris Energy', url: 'https://www.irisenergy.co/' },
+  'LRCX': { name: 'Lam Research Corp.', url: 'https://www.lamresearch.com/' },
+  'AMAT': { name: 'Applied Materials Inc.', url: 'https://www.appliedmaterials.com/' },
+  'NFLX': { name: 'Netflix Inc.', url: 'https://www.netflix.com/' },
+  'QCOM': { name: 'Qualcomm Inc.', url: 'https://www.qualcomm.com/' },
+  'SMCI': { name: 'Super Micro Computer Inc.', url: 'https://www.supermicro.com/' }
 };
 
 // Fetch from Yahoo Finance v8 API
