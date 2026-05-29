@@ -2129,6 +2129,510 @@
       "price": 277.66,
       "timestamp": "2026-003-03T17:43:29Z",
       "id": "a0471aae69b00db8"
+    },
+    {
+      "uid": "usr_94badc24a68a4ca1",
+      "ticker": "RDW",
+      "action": "buy",
+      "shares": 8,
+      "price": 59.3,
+      "timestamp": "2026-03-18T10:31:00Z",
+      "id": "9834c2315a613933"
+    },
+    {
+      "uid": "usr_94badc24a68a4ca1",
+      "ticker": "NOC",
+      "action": "buy",
+      "shares": 252,
+      "price": 15.57,
+      "timestamp": "2026-03-18T10:31:00Z",
+      "id": "1c32fb00ddcaf199"
+    },
+    {
+      "uid": "usr_d9a4e248bb9cdc0e",
+      "ticker": "LMT",
+      "action": "buy",
+      "shares": 5,
+      "price": 297.86,
+      "timestamp": "2026-02-02T10:08:45Z",
+      "id": "2cda353ea90468e2"
+    },
+    {
+      "uid": "usr_bb3634a037315b83",
+      "ticker": "FTNT",
+      "action": "buy",
+      "shares": 4,
+      "price": 479.86,
+      "timestamp": "2026-04-25T10:31:18Z",
+      "id": "5bbd9fddd3b7aaf8"
+    },
+    {
+      "uid": "usr_bb3634a037315b83",
+      "ticker": "LMT",
+      "action": "buy",
+      "shares": 15,
+      "price": 241.95,
+      "timestamp": "2026-04-25T10:31:18Z",
+      "id": "3c09ba8d586edb14"
+    },
+    {
+      "uid": "usr_63a5f948290cbc43",
+      "ticker": "INTC",
+      "action": "buy",
+      "shares": 7,
+      "price": 382.68,
+      "timestamp": "2026-02-01T16:48:44Z",
+      "id": "7d3dd7bdbe13fafe"
+    },
+    {
+      "uid": "usr_63a5f948290cbc43",
+      "ticker": "PANW",
+      "action": "buy",
+      "shares": 3,
+      "price": 235.23,
+      "timestamp": "2026-02-01T16:48:44Z",
+      "id": "8217feac2e9b8a91"
+    },
+    {
+      "uid": "usr_63a5f948290cbc43",
+      "ticker": "LUNR",
+      "action": "buy",
+      "shares": 7,
+      "price": 287.99,
+      "timestamp": "2026-02-01T16:48:44Z",
+      "id": "e4a1cc9aab5d849e"
+    },
+    {
+      "uid": "usr_63a5f948290cbc43",
+      "ticker": "HOOD",
+      "action": "buy",
+      "shares": 4,
+      "price": 410.08,
+      "timestamp": "2026-02-01T16:48:44Z",
+      "id": "08d12afe63717bcd"
+    },
+    {
+      "uid": "usr_cf8b38bc10316048",
+      "ticker": "COIN",
+      "action": "buy",
+      "shares": 3,
+      "price": 162.56,
+      "timestamp": "2026-02-25T12:37:54Z",
+      "id": "601a03119c36fe00"
+    },
+    {
+      "uid": "usr_cf8b38bc10316048",
+      "ticker": "QBTS",
+      "action": "buy",
+      "shares": 11,
+      "price": 206.9,
+      "timestamp": "2026-02-25T12:37:54Z",
+      "id": "a875f8fd764c79a1"
+    },
+    {
+      "uid": "usr_cf8b38bc10316048",
+      "ticker": "TSM",
+      "action": "buy",
+      "shares": 2,
+      "price": 310.73,
+      "timestamp": "2026-02-25T12:37:54Z",
+      "id": "601514c555a26e41"
+    },
+    {
+      "uid": "usr_85b318fa7f5386be",
+      "ticker": "AMD",
+      "action": "buy",
+      "shares": 24,
+      "price": 136.7,
+      "timestamp": "2026-02-20T10:30:43Z",
+      "id": "0bf958ef69326080"
+    },
+    {
+      "uid": "usr_85b318fa7f5386be",
+      "ticker": "PANW",
+      "action": "buy",
+      "shares": 10,
+      "price": 152.91,
+      "timestamp": "2026-02-20T10:30:43Z",
+      "id": "a5c097d0426ebeb7"
+    },
+    {
+      "uid": "usr_85b318fa7f5386be",
+      "ticker": "AAPL",
+      "action": "buy",
+      "shares": 94,
+      "price": 37.3,
+      "timestamp": "2026-02-20T10:30:43Z",
+      "id": "bf2f6f30a7243bc8"
+    },
+    {
+      "uid": "usr_2403c9113f45afe1",
+      "ticker": "TSM",
+      "action": "buy",
+      "shares": 100,
+      "price": 28.49,
+      "timestamp": "2026-02-11T10:14:11Z",
+      "id": "2be1557a6aece697"
+    },
+    {
+      "uid": "usr_2403c9113f45afe1",
+      "ticker": "NFLX",
+      "action": "buy",
+      "shares": 2,
+      "price": 288.27,
+      "timestamp": "2026-02-11T10:14:11Z",
+      "id": "6f7cc3405cb4995c"
+    },
+    {
+      "uid": "usr_a9a2eebf1bb5c32e",
+      "ticker": "TSM",
+      "action": "buy",
+      "shares": 96,
+      "price": 26.48,
+      "timestamp": "2026-01-22T14:59:18Z",
+      "id": "b25d34565d9afa0d"
+    },
+    {
+      "uid": "usr_a9a2eebf1bb5c32e",
+      "ticker": "MU",
+      "action": "buy",
+      "shares": 20,
+      "price": 138.56,
+      "timestamp": "2026-01-22T14:59:18Z",
+      "id": "92977c90df9bdc65"
+    },
+    {
+      "uid": "usr_f5c5d8724fe99417",
+      "ticker": "MU",
+      "action": "buy",
+      "shares": 3,
+      "price": 473.27,
+      "timestamp": "2026-02-15T15:04:07Z",
+      "id": "bb9d427c07840d8d"
+    },
+    {
+      "uid": "usr_f5c5d8724fe99417",
+      "ticker": "IONQ",
+      "action": "buy",
+      "shares": 4,
+      "price": 279.02,
+      "timestamp": "2026-02-15T15:04:07Z",
+      "id": "8bd4faf0bda5964f"
+    },
+    {
+      "uid": "usr_a1dea1d07736d875",
+      "ticker": "NFLX",
+      "action": "buy",
+      "shares": 11,
+      "price": 301.03,
+      "timestamp": "2026-02-06T18:22:18Z",
+      "id": "0858b24e73d842cb"
+    },
+    {
+      "uid": "usr_a1dea1d07736d875",
+      "ticker": "COIN",
+      "action": "buy",
+      "shares": 2,
+      "price": 466.39,
+      "timestamp": "2026-02-06T18:22:18Z",
+      "id": "0753e96e23c0f331"
+    },
+    {
+      "uid": "usr_a1dea1d07736d875",
+      "ticker": "PLTR",
+      "action": "buy",
+      "shares": 4,
+      "price": 472.02,
+      "timestamp": "2026-02-06T18:22:18Z",
+      "id": "de5d97551770334e"
+    },
+    {
+      "uid": "usr_58de6363e9419f04",
+      "ticker": "PANW",
+      "action": "buy",
+      "shares": 37,
+      "price": 28.02,
+      "timestamp": "2026-01-10T18:08:48Z",
+      "id": "f52e64ef17895e99"
+    },
+    {
+      "uid": "usr_31dbadba8ecb839e",
+      "ticker": "AMD",
+      "action": "buy",
+      "shares": 9,
+      "price": 323.15,
+      "timestamp": "2026-02-05T10:01:39Z",
+      "id": "88486cec74101f30"
+    },
+    {
+      "uid": "usr_31dbadba8ecb839e",
+      "ticker": "PLTR",
+      "action": "buy",
+      "shares": 21,
+      "price": 176.82,
+      "timestamp": "2026-02-05T10:01:39Z",
+      "id": "9f902c2d1da7d68b"
+    },
+    {
+      "uid": "usr_31dbadba8ecb839e",
+      "ticker": "AMD",
+      "action": "sell",
+      "shares": 4,
+      "price": 300.12,
+      "timestamp": "2026-02-05T10:01:39Z",
+      "id": "d6eb13c12d0c5fe6"
+    },
+    {
+      "uid": "usr_779ec87afc2e8d0b",
+      "ticker": "CRWD",
+      "action": "buy",
+      "shares": 2,
+      "price": 321.18,
+      "timestamp": "2026-04-22T10:40:26Z",
+      "id": "87933e1c60296f11"
+    },
+    {
+      "uid": "usr_779ec87afc2e8d0b",
+      "ticker": "RKLB",
+      "action": "buy",
+      "shares": 2,
+      "price": 312.44,
+      "timestamp": "2026-04-22T10:40:26Z",
+      "id": "6ffa6e9c9e046262"
+    },
+    {
+      "uid": "usr_a9ee61dbe78c6e74",
+      "ticker": "MU",
+      "action": "buy",
+      "shares": 7,
+      "price": 156.34,
+      "timestamp": "2026-03-19T13:16:03Z",
+      "id": "414ec8ad56955d88"
+    },
+    {
+      "uid": "usr_a9ee61dbe78c6e74",
+      "ticker": "RDW",
+      "action": "buy",
+      "shares": 19,
+      "price": 166.18,
+      "timestamp": "2026-03-19T13:16:03Z",
+      "id": "56070ebafc44f49c"
+    },
+    {
+      "uid": "usr_bb93e637234053b7",
+      "ticker": "ASML",
+      "action": "buy",
+      "shares": 4,
+      "price": 394.26,
+      "timestamp": "2026-03-14T09:28:13Z",
+      "id": "29c51f21dbace9b2"
+    },
+    {
+      "uid": "usr_bb93e637234053b7",
+      "ticker": "QUBT",
+      "action": "buy",
+      "shares": 9,
+      "price": 289.84,
+      "timestamp": "2026-03-14T09:28:13Z",
+      "id": "b381c32d1c17c23d"
+    },
+    {
+      "uid": "usr_bb93e637234053b7",
+      "ticker": "INTC",
+      "action": "buy",
+      "shares": 1,
+      "price": 326.37,
+      "timestamp": "2026-03-14T09:28:13Z",
+      "id": "61f1f1b6fb8a8036"
+    },
+    {
+      "uid": "usr_13bd8462edda2b24",
+      "ticker": "TSLA",
+      "action": "buy",
+      "shares": 8,
+      "price": 145.95,
+      "timestamp": "2026-04-25T17:14:43Z",
+      "id": "8cdd224cf24a90ed"
+    },
+    {
+      "uid": "usr_13bd8462edda2b24",
+      "ticker": "MU",
+      "action": "buy",
+      "shares": 9,
+      "price": 404.71,
+      "timestamp": "2026-04-25T17:14:43Z",
+      "id": "d8b5741575cbc486"
+    },
+    {
+      "uid": "usr_b4ab31f3882d061d",
+      "ticker": "MU",
+      "action": "buy",
+      "shares": 6,
+      "price": 350.78,
+      "timestamp": "2026-01-12T16:54:08Z",
+      "id": "269af54b0f10b842"
+    },
+    {
+      "uid": "usr_b4ab31f3882d061d",
+      "ticker": "NFLX",
+      "action": "buy",
+      "shares": 10,
+      "price": 107.84,
+      "timestamp": "2026-01-12T16:54:08Z",
+      "id": "8fc88bc1f860e970"
+    },
+    {
+      "uid": "usr_9edfb43eca35a4a2",
+      "ticker": "TSLA",
+      "action": "buy",
+      "shares": 7,
+      "price": 305.9,
+      "timestamp": "2026-02-25T18:09:01Z",
+      "id": "4d2331b02d96059c"
+    },
+    {
+      "uid": "usr_9edfb43eca35a4a2",
+      "ticker": "ASML",
+      "action": "buy",
+      "shares": 55,
+      "price": 66.51,
+      "timestamp": "2026-02-25T18:09:01Z",
+      "id": "52d50cf3a5621e64"
+    },
+    {
+      "uid": "usr_9edfb43eca35a4a2",
+      "ticker": "IONQ",
+      "action": "buy",
+      "shares": 6,
+      "price": 189.79,
+      "timestamp": "2026-02-25T18:09:01Z",
+      "id": "69146783961fccc6"
+    },
+    {
+      "uid": "usr_ca82227c1e8f96c6",
+      "ticker": "NOC",
+      "action": "buy",
+      "shares": 1,
+      "price": 448.65,
+      "timestamp": "2026-01-06T14:14:20Z",
+      "id": "53038754710673c7"
+    },
+    {
+      "uid": "usr_ca82227c1e8f96c6",
+      "ticker": "TSLA",
+      "action": "buy",
+      "shares": 15,
+      "price": 226.47,
+      "timestamp": "2026-01-06T14:14:20Z",
+      "id": "e3e77af121643bbe"
+    },
+    {
+      "uid": "usr_ca82227c1e8f96c6",
+      "ticker": "HOOD",
+      "action": "buy",
+      "shares": 11,
+      "price": 200.83,
+      "timestamp": "2026-01-06T14:14:20Z",
+      "id": "85728e354269b57c"
+    },
+    {
+      "uid": "usr_f478bee0ab61c9b2",
+      "ticker": "SOFI",
+      "action": "buy",
+      "shares": 10,
+      "price": 337.72,
+      "timestamp": "2026-03-27T14:03:14Z",
+      "id": "ecf4e12cc4e604fc"
+    },
+    {
+      "uid": "usr_f478bee0ab61c9b2",
+      "ticker": "HOOD",
+      "action": "buy",
+      "shares": 3,
+      "price": 457.68,
+      "timestamp": "2026-03-27T14:03:14Z",
+      "id": "38ae9d8b6ec31a0e"
+    },
+    {
+      "uid": "usr_f478bee0ab61c9b2",
+      "ticker": "PANW",
+      "action": "buy",
+      "shares": 1,
+      "price": 475.89,
+      "timestamp": "2026-03-27T14:03:14Z",
+      "id": "01a75c79761fdbdf"
+    },
+    {
+      "uid": "usr_46dc83645688750b",
+      "ticker": "RGTI",
+      "action": "buy",
+      "shares": 29,
+      "price": 134.55,
+      "timestamp": "2026-02-11T12:12:10Z",
+      "id": "362266018bf7af04"
+    },
+    {
+      "uid": "usr_57d599bfd3e04b0a",
+      "ticker": "TSM",
+      "action": "buy",
+      "shares": 5,
+      "price": 140.36,
+      "timestamp": "2026-03-18T12:56:34Z",
+      "id": "c9a16ceb302cf27e"
+    },
+    {
+      "uid": "usr_57d599bfd3e04b0a",
+      "ticker": "INTC",
+      "action": "buy",
+      "shares": 115,
+      "price": 29.98,
+      "timestamp": "2026-03-18T12:56:34Z",
+      "id": "6ece5ab44031fc28"
+    },
+    {
+      "uid": "usr_5b66bc6e49025e41",
+      "ticker": "SMCI",
+      "action": "buy",
+      "shares": 3,
+      "price": 222.32,
+      "timestamp": "2026-04-06T12:23:00Z",
+      "id": "23865bd5550a71df"
+    },
+    {
+      "uid": "usr_5b66bc6e49025e41",
+      "ticker": "LUNR",
+      "action": "buy",
+      "shares": 16,
+      "price": 128.34,
+      "timestamp": "2026-04-06T12:23:00Z",
+      "id": "bea8f98ea877bc9b"
+    },
+    {
+      "uid": "usr_8ab5296d0b2b69a0",
+      "ticker": "GOOGL",
+      "action": "buy",
+      "shares": 6,
+      "price": 413.02,
+      "timestamp": "2026-03-20T17:35:57Z",
+      "id": "56accf4b60093f8d"
+    },
+    {
+      "uid": "usr_b7f62bd39a065227",
+      "ticker": "LMT",
+      "action": "buy",
+      "shares": 8,
+      "price": 227.31,
+      "timestamp": "2026-02-08T10:46:03Z",
+      "id": "6f76d1639c880d36"
+    },
+    {
+      "uid": "usr_b7f62bd39a065227",
+      "ticker": "RGTI",
+      "action": "buy",
+      "shares": 30,
+      "price": 70.72,
+      "timestamp": "2026-02-08T10:46:03Z",
+      "id": "e438701c0c6ef3dc"
     }
   ]
 }
