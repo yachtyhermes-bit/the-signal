@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/pulse-badge.css">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-98KDVDFBCW"></script>
   <script>
@@ -84,6 +85,9 @@
         <a href="/sector/defense" class="nav-link">Defense</a>
         <a href="/sector/space" class="nav-link">Space</a>
         <a href="/sector/mega-cap" class="nav-link">Mega-Cap</a>
+        <a href="/sector/quantum" class="nav-link">Quantum</a>
+        <a href="/hive" class="nav-link">Hive</a>
+        <a href="/signal-vs-the-street" class="nav-link signal-vs-link">Signal vs. The Street</a>
       </div>
       <div class="nav-actions">
         <button class="nav-btn search-btn" id="searchToggle" aria-label="Search">
@@ -93,29 +97,70 @@
           </svg>
         </button>
         <div class="auth-container" id="authContainer">
-          <button class="nav-btn auth-btn" id="authToggle" aria-label="Sign In">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-              <circle cx="12" cy="7" r="4"></circle>
-            </svg>
-            <span class="auth-label" id="authLabel">Sign In</span>
-          </button>
-          <div class="auth-dropdown" id="authDropdown">
-            <div class="auth-user-info" id="authUserInfo" style="display:none">
-              <img class="auth-avatar" id="authAvatar" src="" alt="">
-              <span class="auth-name" id="authName"></span>
-              <button class="auth-signout-btn" id="authSignOut">Sign Out</button>
+            <button class="nav-btn auth-btn" id="authToggle" aria-label="Sign In">
+              <div class="auth-btn-avatar" id="authBtnAvatar">
+                <span class="auth-btn-initial" id="authBtnInitial"></span>
+                <img class="auth-btn-img" id="authBtnImg" src="" alt="" style="display:none">
+              </div>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="auth-btn-icon" id="authBtnIcon">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              <span class="auth-label" id="authLabel">Sign In</span>
+            </button>
+            <div class="auth-dropdown" id="authDropdown">
+              <div class="auth-profile" id="authProfile" style="display:none">
+                <div class="auth-profile-header">
+                  <div class="auth-profile-avatar" id="authProfileAvatar">
+                    <img id="authProfileImg" src="" alt="" style="display:none">
+                    <span class="auth-profile-initial" id="authProfileInitial"></span>
+                  </div>
+                  <div class="auth-profile-info">
+                    <span class="auth-profile-name" id="authProfileName"></span>
+                    <span class="auth-profile-username" id="authProfileUsername"></span>
+                  </div>
+                </div>
+                <div class="auth-profile-stats" id="authProfileStats">
+                  <div class="auth-stat">
+                    <span class="auth-stat-label">Portfolio</span>
+                    <span class="auth-stat-value" id="authStatValue">—</span>
+                  </div>
+                  <div class="auth-stat">
+                    <span class="auth-stat-label">Return</span>
+                    <span class="auth-stat-value" id="authStatReturn">—</span>
+                  </div>
+                </div>
+                <div class="auth-profile-links">
+                  <a href="/hive" class="auth-profile-link">🐝 My Hive</a>
+                  <a href="/hive" class="auth-profile-link" onclick="navigateToHiveLeaderboard(event)">🏆 Leaderboard</a>
+                </div>
+                <button class="auth-profile-signout" id="authSignOut">Sign Out</button>
+              </div>
+              <div class="auth-guest" id="authGuest">
+                <button class="auth-option" onclick="showHiveJoinModal('login')" style="display:flex"><span class="auth-option-icon">🔑</span> Sign In</button>
+                <button class="auth-option" onclick="showHiveJoinModal('register')" style="display:flex"><span class="auth-option-icon">✨</span> Create Account</button>
+              </div>
             </div>
-            <div class="auth-options" id="authOptions">
-              <button class="auth-option google" id="authGoogle"><span class="auth-icon">G</span> Sign in with Google</button>
-              <button class="auth-option github" id="authGithub"><span class="auth-icon">⌘</span> Sign in with GitHub</button>
-              <button class="auth-option email" id="authEmail"><span class="auth-icon">✉</span> Sign in with Email</button>
-            </div>
-          </div>
-        </div>
+        <button class="nav-btn hamburger-btn" id="hamburgerToggle" aria-label="Menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
       </div>
     </div>
   </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-links">
+      <a href="/sector/ai" class="mobile-nav-link">AI</a>
+      <a href="/sector/cyber" class="mobile-nav-link">Cyber</a>
+      <a href="/sector/defense" class="mobile-nav-link">Defense</a>
+      <a href="/sector/space" class="mobile-nav-link">Space</a>
+      <a href="/sector/mega-cap" class="mobile-nav-link">Mega-Cap</a>
+      <a href="/sector/quantum" class="mobile-nav-link">Quantum</a>
+      <a href="/hive" class="mobile-nav-link">Hive</a>
+      <a href="/signal-vs-the-street" class="mobile-nav-link">Signal vs. The Street</a>
+    </div>
+  </div>
   <main class="main">
 
   <!-- Search Overlay -->

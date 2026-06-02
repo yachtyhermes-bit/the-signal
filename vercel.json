@@ -1,5 +1,5 @@
 {
-  "buildCommand": "node build.js",
+  "buildCommand": "node build.js && node scripts/postbuild.js",
   "outputDirectory": "dist",
   "trailingSlash": true,
   "headers": [
