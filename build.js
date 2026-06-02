@@ -850,27 +850,36 @@ function buildArticle(article, allArticles) {
     }
   }
 
-  // Build Giscus comments
-  const giscusHtml = `\n  <section class="article-comments">
-    <h3 class="comments-title">Discussion</h3>
-    <p class="comments-intro">Comments powered by Giscus — sign in with GitHub to join the discussion.</p>
-    <div class="giscus-container">
-      <script src="https://giscus.app/client.js"
-        data-repo="[ENTER REPO HERE]"
-        data-repo-id="[ENTER REPO ID HERE]"
-        data-category="Announcements"
-        data-category-id="[ENTER CATEGORY ID HERE]"
-        data-mapping="specific"
-        data-term="${article.slug}"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="dark"
-        data-lang="en"
-        crossorigin="anonymous"
-        async>
-      </script>
+  // Build comments
+  const commentsHtml = `\\n  <section class="article-comments" data-slug="${article.slug}">
+    <h3 class="comments-title">
+      Discussion
+      <span class="comment-count-badge" id="commentCount">0</span>
+    </h3>
+    <div class="comment-form-container">
+      <form class="comment-form" id="commentForm">
+        <div class="comment-form-header">
+          <span class="comment-form-icon">💬</span>
+          <span class="comment-form-label">Join the Discussion</span>
+        </div>
+        <div class="comment-form-row">
+          <input type="text" id="commentName" placeholder="Your display name..." class="comment-input-name" maxlength="30" required>
+          <button type="submit" class="comment-submit-btn">Post</button>
+        </div>
+        <textarea id="commentContent" placeholder="Share your take on this story..." class="comment-input-content" maxlength="500" required></textarea>
+        <input type="hidden" id="commentParentId" value="">
+        <div class="comment-reply-to" id="replyIndicator" style="display:none">
+          <span>Replying to <strong id="replyTargetName"></strong></span>
+          <button type="button" class="reply-cancel-btn" id="cancelReply">✕</button>
+        </div>
+      </form>
+    </div>
+    <div class="comments-list" id="commentsList">
+      <div class="comments-loading">Loading discussion...</div>
+    </div>
+    <div class="hive-badge">
+      <span class="hive-badge-icon">🐝</span>
+      <span class="hive-badge-text">The Hive — AI-powered community discussion</span>
     </div>
   </section>`;
 
@@ -904,7 +913,7 @@ function buildArticle(article, allArticles) {
     </div>
   </article>
   ${relatedHtml}
-  ${giscusHtml}`;
+  ${commentsHtml}`;
 
   const html = renderHeader(article.title + ' — The Signal', article.summary, article, allArticles) + body + renderFooter();
   const dir = path.join(DIST, 'article', article.slug);
