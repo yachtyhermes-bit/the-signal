@@ -126,28 +126,7 @@
   </section>
   <% } %>
 
-  <!-- Giscus Comments -->
-  <section class="article-comments">
-    <h3 class="comments-title">Discussion</h3>
-    <p class="comments-intro">Comments powered by Giscus — sign in with GitHub to join the discussion.</p>
-    <div class="giscus-container">
-      <script src="https://giscus.app/client.js"
-        data-repo="[ENTER REPO HERE]"
-        data-repo-id="[ENTER REPO ID HERE]"
-        data-category="Announcements"
-        data-category-id="[ENTER CATEGORY ID HERE]"
-        data-mapping="specific"
-        data-term="<%= article.slug %>"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="dark"
-        data-lang="en"
-        crossorigin="anonymous"
-        async>
-      </script>
-    </div>
-  </section>
+  <!-- The Hive — AI-Powered Comments -->
+  <%- include('../partials/comments') %>
 
 <%- include('../partials/footer') %>
