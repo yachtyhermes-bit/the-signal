@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f0eb">
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <title>The Hive — The Signal</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { background: #f5f0eb; }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: #f5f0eb;
+      color: #2d2824;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ===== DESIGN 3 — THE SUITE ===== */
+    /* Luxury minimal — cream/stone palette, gold accents, serif headlines, airy */
+
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('/img/hive-hero.jpg');
+      background-size: cover;
+      background-position: center 40%;
+      opacity: 0.06;
+      z-index: 0;
+      filter: sepia(0.3) saturate(0.6);
+    }
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(245,240,235,0.2) 0%, rgba(245,240,235,0.7) 40%, #f5f0eb 100%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 620px;
+      padding: 120px 32px;
+      text-align: center;
+    }
+
+    .brand-line {
+      font-family: 'Inter', sans-serif;
+      font-size: 9px;
+      font-weight: 400;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: rgba(45,40,36,0.25);
+      margin-bottom: 48px;
+    }
+    .brand-line span {
+      display: inline-block;
+      width: 24px;
+      height: 1px;
+      background: rgba(212,175,55,0.4);
+      vertical-align: middle;
+      margin: 0 12px;
+    }
+
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(38px, 6vw, 56px);
+      line-height: 1.12;
+      letter-spacing: -0.5px;
+      color: #2d2824;
+      margin-bottom: 20px;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: rgba(212,175,55,0.7);
+    }
+
+    .hero-sub {
+      font-size: clamp(13px, 1.5vw, 15px);
+      font-weight: 300;
+      line-height: 1.8;
+      color: rgba(45,40,36,0.45);
+      max-width: 480px;
+      margin: 0 auto 48px;
+    }
+    .hero-sub strong {
+      color: rgba(45,40,36,0.7);
+      font-weight: 500;
+    }
+
+    .gold-line {
+      width: 32px;
+      height: 1px;
+      background: rgba(212,175,55,0.4);
+      margin: 0 auto 40px;
+    }
+
+    .cta-row {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 36px;
+      border: none;
+      background: #2d2824;
+      color: #f5f0eb;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .btn-primary:hover {
+      background: #3d3834;
+    }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 36px;
+      border: 1px solid rgba(45,40,36,0.12);
+      background: transparent;
+      color: rgba(45,40,36,0.4);
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .btn-secondary:hover {
+      border-color: rgba(212,175,55,0.3);
+      color: rgba(45,40,36,0.6);
+    }
+
+    .footnote {
+      font-size: 10px;
+      color: rgba(45,40,36,0.2);
+      letter-spacing: 1px;
+    }
+    .footnote span { color: rgba(212,175,55,0.3); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 100px 24px 60px; }
+      .brand-line { margin-bottom: 32px; }
+      .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="brand-line">The Signal <span></span> The Hive</div>
+      <h1>Where the <em>Community</em><br>Beats the Market</h1>
+      <p class="hero-sub">
+        You read the signals. Now trade on them. Get <strong>$100K in paper capital</strong>, compete against the sharpest minds, and prove your thesis.
+      </p>
+      <div class="gold-line"></div>
+      <div class="cta-row">
+        <button class="btn-primary">Claim Your $100K Fund</button>
+        <a href="#leaderboard" class="btn-secondary">View Leaderboard</a>
+      </div>
+      <div class="footnote">70+ stocks · 6 sectors · <span>real-time</span> · free to play</div>
+    </div>
+  </section>
+</body>
+</html>

@@ -1,7 +1,10 @@
 {
-  "buildCommand": "node build.js",
+  "buildCommand": "node build.js && node scripts/postbuild.js",
   "outputDirectory": "dist",
   "trailingSlash": true,
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/$1" }
+  ],
   "headers": [
     {
       "source": "/(.*)",

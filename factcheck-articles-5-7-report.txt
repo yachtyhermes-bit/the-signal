@@ -1,0 +1,89 @@
+======================================================================
+  THE SIGNAL - FACT-CHECK REPORT: Articles 5, 6, 7
+  Completed: 2026-05-29 15:00
+======================================================================
+
+--- ARTICLE 5: REDWIRE (RDW) -- Severity: LOW-MEDIUM ---
+
+YOUTUBE BLOCKLIST: ALL CLEAR
+  - "6e3N4FNfM7E" and "aEx3mCsN1rw" - NOT in blocklist
+
+SOURCES:
+  rdw.com/newsroom/ ................ 200 OK
+  rdw.com/press-release/ .......... 200 OK  
+  finance.yahoo.com/quote/RDW/ ... 200 OK
+  businesswire.com/...SHIELD ....... 403 (bot block, URL valid)
+  cnbc.com/2026/05/28/golden-dome .. 404 NOT FOUND
+  barrons.com/redwire-stock ........ 401 (paywall, URL valid)
+
+METRICS: 11/12 PASS
+  PASS: Price $25.90, MktCap $5.15B, Rev $371M, Growth 57.9%
+  PASS: Net Income -$343M, P/S 13.9x, EV $5.19B
+  PASS: 52W $4.87-$26.64 (article wrote $26.62 - rounding)
+  PASS: 9 analysts Strong Buy, Target $14.33, Volume 80M+
+  FAIL: '30% in single session' - max day was ~26% (May 26)
+        May 28 was only ~8% ($24.00->$25.90)
+        Cumulative week gain: ~75% ($14.77->$25.90)
+
+--- ARTICLE 6: ASTERALABS (ALAB) -- Severity: MEDIUM ---
+
+YOUTUBE BLOCKLIST: ALL CLEAR
+  - "S5HRJm6d1tc" - NOT in blocklist
+
+SOURCES:
+  finance.yahoo.com/quote/ALAB/ ... 200 OK
+  barrons.com/alera-labs-stock .... 401 (paywall, URL valid)
+  asteralabs.com/news ............. 200 OK
+
+METRICS: 13/16 PASS
+  PASS: Price $349.17, MktCap $59.9B, Rev Growth 93.4%
+  PASS: Earnings Growth 144%, Fwd P/E 83x, Trailing ~239x
+  PASS: Profit Margin 26.7%, ROE 21%, 22 analysts Buy
+  PASS: Targets: Mean $245, High $297
+  FAIL: '227% in a year' - Actual 1Y: 261% ($96.61->$349.17)
+  FAIL: 'YTD Return ~227%' in metadata - Actual YTD: 94.5%
+        ($179.56->$349.17). The 227% figure is wrong.
+  FAIL: '48% in five days' - Last 5 sessions: 17.2%
+        47.8% matches May 18->May 26 window, not May 21->28
+
+--- ARTICLE 7: TESLA/SPACEX (TSLA) -- Severity: HIGH ---
+
+YOUTUBE BLOCKLIST: ALL CLEAR
+  - "oRntlcxw8P8" - NOT in blocklist
+
+SOURCES:
+  cnbc.com/2026/05/29/spacex-tesla-merger   404 NOT FOUND
+  theguardian.com/.../spacex-tesla-merger    404 NOT FOUND
+  bloomberg.com/...spacex-merger-tesla ..    403 (bot block)
+  reuters.com/...spacex-merger-tesla .....   401 (auth req)
+  seekingalpha.com/...spacex-tesla-merger    403 (bot block)
+
+METRICS: 8/8 PASS
+  PASS: Price $442, MktCap $1.66T, Rev $97.9B, Growth 15.8%
+  PASS: Fwd P/E 176x, Op CF $16.5B, 41 analysts Buy, Target $411
+
+CRITICAL ISSUES:
+  1. Article claims "Bloomberg, Reuters, and CNBC all independently
+     confirmed" - CNBC URL returns 404. 3 alternative URLs also 404.
+  2. The Guardian URL returns explicit 404 'Page Not Found'.
+  3. 2 of 5 source URLs are dead. Central premise unverifiable.
+  4. Remaining 3 sources behind paywalls/bot protection.
+
+======================================================================
+SUMMARY
+======================================================================
+All three articles have ACCURATE financial metrics verified against
+Yahoo Finance API via yfinance. Credibility issues:
+
+Article 5 (Redwire): LOW-MEDIUM - One exaggerated claim (30% vs actual
+~26% max single-day), but otherwise solid. Sources mostly verified.
+
+Article 6 (Astera Labs): MEDIUM - Two metric errors in metadata
+(YTD is 94.5% not 227%; 1Y is 261% not 227%). '48% in 5 days'
+also misleading based on final 5 sessions.
+
+Article 7 (Tesla/SpaceX): HIGH - All TSLA numbers correct but the
+article's central premise (media confirmation) cannot be verified.
+CNBC and Guardian URLs return 404. This is the most concerning.
+
+No rickroll/meme videos found in any article.

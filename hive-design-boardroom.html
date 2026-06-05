@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="theme-color" content="#050505">
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <title>The Hive — The Signal</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { background: #050505; }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: #050505;
+      color: rgba(255,255,255,0.85);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ===== DESIGN 1 — THE BOARDROOM ===== */
+    /* Ultra dark, gold accents, thin elegance, sharp corners */
+
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('/img/hive-hero.jpg');
+      background-size: cover;
+      background-position: center 30%;
+      opacity: 0.2;
+      z-index: 0;
+    }
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(5,5,5,0.4) 0%, rgba(5,5,5,0.8) 50%, #050505 100%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 680px;
+      padding: 120px 32px;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border: 1px solid rgba(212,175,55,0.25);
+      border-radius: 0;
+      background: rgba(212,175,55,0.04);
+      margin-bottom: 40px;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(212,175,55,0.7);
+    }
+    .badge-dot {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: rgba(212,175,55,0.6);
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      font-size: clamp(36px, 6vw, 56px);
+      line-height: 1.15;
+      letter-spacing: -0.3px;
+      margin-bottom: 20px;
+      color: rgba(255,255,255,0.9);
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: rgba(212,175,55,0.7);
+    }
+
+    .hero-sub {
+      font-size: clamp(13px, 1.6vw, 15px);
+      font-weight: 300;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.45);
+      max-width: 520px;
+      margin: 0 auto 40px;
+      letter-spacing: 0.2px;
+    }
+    .hero-sub strong {
+      color: rgba(255,255,255,0.7);
+      font-weight: 500;
+    }
+
+    .divider {
+      width: 40px;
+      height: 1px;
+      background: rgba(212,175,55,0.3);
+      margin: 0 auto 40px;
+    }
+
+    .cta-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 36px;
+      border: none;
+      background: rgba(212,175,55,0.9);
+      color: #050505;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .btn-primary:hover {
+      background: rgba(212,175,55,1);
+      transform: translateY(-1px);
+    }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 36px;
+      border: 1px solid rgba(255,255,255,0.15);
+      background: transparent;
+      color: rgba(255,255,255,0.5);
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .btn-secondary:hover {
+      border-color: rgba(255,255,255,0.3);
+      color: rgba(255,255,255,0.8);
+    }
+
+    .stats-row {
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      margin-top: 60px;
+    }
+    .stat {
+      text-align: center;
+    }
+    .stat-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 20px;
+      font-weight: 500;
+      color: rgba(212,175,55,0.6);
+    }
+    .stat-label {
+      font-size: 9px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.2);
+      margin-top: 4px;
+    }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 100px 20px 60px; }
+      .stats-row { gap: 24px; }
+      .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="badge"><span class="badge-dot"></span> Live Competition</div>
+      <h1>Where the <em>Community</em><br>Beats the Market</h1>
+      <p class="hero-sub">
+        You read the signals. Now trade on them. Get <strong>$100K in paper capital</strong>, compete against the sharpest minds, and prove your thesis.
+      </p>
+      <div class="divider"></div>
+      <div class="cta-row">
+        <button class="btn-primary">⚡ Claim Your $100K Fund</button>
+        <a href="#leaderboard" class="btn-secondary">View Leaderboard</a>
+      </div>
+      <div class="stats-row">
+        <div class="stat"><span class="stat-num">70+</span><span class="stat-label">Stocks</span></div>
+        <div class="stat"><span class="stat-num">6</span><span class="stat-label">Sectors</span></div>
+        <div class="stat"><span class="stat-num">$100K</span><span class="stat-label">Capital</span></div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=PT+Serif:wght@400;700&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>The Hive — The Signal</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { background: #ffffff; }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ===== DESIGN 4 — THE BRIEFING ===== */
+    /* WSJ/editorial — white bg, navy accents, serif body, authoritative */
+
+    .masthead {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 16px 32px;
+      border-bottom: 1px solid #e8e8e8;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(8px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .masthead-logo {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #1a1a1a;
+    }
+    .masthead-logo span { color: rgba(30,64,175,0.6); font-weight: 400; }
+    .masthead-nav {
+      display: flex;
+      gap: 24px;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #888;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 60px;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('/img/hive-hero.jpg');
+      background-size: cover;
+      background-position: center 25%;
+      opacity: 0.04;
+      z-index: 0;
+      filter: saturate(0);
+    }
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.3) 0%, #fff 100%);
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 32px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-left {
+      text-align: left;
+    }
+
+    .eyebrow {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(30,64,175,0.5);
+      margin-bottom: 20px;
+    }
+    .eyebrow .num { font-family: 'Source Serif 4', serif; font-size: 11px; }
+
+    .hero h1 {
+      font-family: 'Source Serif 4', serif;
+      font-weight: 700;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.15;
+      letter-spacing: -0.3px;
+      color: #1a1a1a;
+      margin-bottom: 16px;
+    }
+    .hero h1 .hl {
+      color: rgba(30,64,175,0.7);
+    }
+
+    .byline {
+      font-size: 11px;
+      color: #999;
+      margin-bottom: 24px;
+      font-family: 'Inter', sans-serif;
+    }
+    .byline strong { color: #555; }
+
+    .hero-sub {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(13px, 1.4vw, 15px);
+      font-weight: 400;
+      line-height: 1.7;
+      color: rgba(26,26,26,0.5);
+      margin-bottom: 32px;
+      max-width: 440px;
+    }
+    .hero-sub strong {
+      color: rgba(26,26,26,0.7);
+      font-weight: 600;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 28px;
+      border: none;
+      background: rgba(30,64,175,0.9);
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .btn-primary:hover {
+      background: rgba(30,64,175,1);
+    }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 28px;
+      border: 1px solid #d0d0d0;
+      background: transparent;
+      color: #888;
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .btn-secondary:hover {
+      border-color: rgba(30,64,175,0.3);
+      color: rgba(30,64,175,0.6);
+    }
+
+    .hero-right {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .insight-card {
+      padding: 20px 24px;
+      background: #f8f8f8;
+      border-left: 3px solid rgba(30,64,175,0.2);
+    }
+    .insight-card .label {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #aaa;
+      margin-bottom: 4px;
+    }
+    .insight-card .value {
+      font-family: 'Source Serif 4', serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: #1a1a1a;
+    }
+    .insight-card .desc {
+      font-size: 11px;
+      color: #999;
+      margin-top: 2px;
+    }
+
+    @media (max-width: 800px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 32px; padding: 60px 20px; }
+      .masthead { padding: 12px 20px; }
+      .masthead-nav { display: none; }
+      .hero-right { flex-direction: row; overflow-x: auto; }
+      .insight-card { min-width: 140px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="masthead">
+    <div class="masthead-logo">The <span>Signal</span></div>
+    <div class="masthead-nav">
+      <span>AI</span><span>Defense</span><span>Space</span><span>Cyber</span><span>Quantum</span>
+    </div>
+  </div>
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="eyebrow"><span class="num">→</span> The Hive · Live Competition</div>
+        <h1>Where the <span class="hl">Community</span><br>Beats the Market</h1>
+        <div class="byline">By <strong>The Signal Editorial Team</strong> · May 2026</div>
+        <p class="hero-sub">
+          You read the signals. Now trade on them. Get <strong>$100K in paper capital</strong>, compete against the sharpest minds in the community, and prove your thesis across AI, defense, space, cyber, and quantum.
+        </p>
+        <div class="cta-row">
+          <button class="btn-primary">⚡ Claim Your $100K Fund</button>
+          <a href="#leaderboard" class="btn-secondary">View Leaderboard →</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="insight-card">
+          <div class="label">Coverage Universe</div>
+          <div class="value">70+</div>
+          <div class="desc">Stocks across 6 sectors</div>
+        </div>
+        <div class="insight-card" style="border-left-color: rgba(212,175,55,0.3);">
+          <div class="label">Starting Capital</div>
+          <div class="value">$100K</div>
+          <div class="desc">Simulated paper trading</div>
+        </div>
+        <div class="insight-card">
+          <div class="label">Leaderboard</div>
+          <div class="value">Live</div>
+          <div class="desc">Real-time portfolio ranking</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

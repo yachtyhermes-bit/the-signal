@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signal vs. Street — Light Theme Options</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; background: #f4f5f8; padding: 40px 24px; }
+  h1 { font-family: 'Anton', sans-serif; font-size: 2rem; letter-spacing: 0.03em; margin-bottom: 8px; color: #111; }
+  .sub { color: #666; font-size: 0.9rem; margin-bottom: 32px; }
+  .gallery { display: flex; flex-direction: column; gap: 48px; max-width: 1000px; margin: 0 auto; }
+
+  /* Each option card */
+  .option { border-radius: 20px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.06); }
+  .option-label { padding: 16px 24px; font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; display: flex; align-items: center; justify-content: space-between; }
+  .option-label span { font-weight: 400; font-size: 0.75rem; text-transform: none; letter-spacing: 0; color: #888; }
+  .option-preview { padding: 32px; }
+
+  /* ============ OPTION A: Clean White Paper ============ */
+  .opt-a { background: #fff; }
+  .opt-a-label { background: #f8f9fc; color: #333; border-bottom: 1px solid #eef0f5; }
+  .opt-a .svs-hero { text-align: center; padding-bottom: 28px; }
+  .opt-a .svs-title { font-family: 'Anton', sans-serif; font-size: 2.2rem; letter-spacing: 0.02em; text-transform: uppercase; }
+  .opt-a .signal-text { background: linear-gradient(135deg, #2563eb, #7c3aed); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .opt-a .vs-text { color: #bbb; font-size: 1.1rem; margin: 0 8px; }
+  .opt-a .street-text { color: #111; }
+  .opt-a .svs-subtitle { color: #888; font-size: 0.85rem; margin-top: 6px; }
+  .opt-a .period-card { background: #fff; border: 1px solid #eef0f5; border-radius: 14px; margin-bottom: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); overflow: hidden; }
+  .opt-a .period-header { padding: 14px 20px; border-bottom: 1px solid #f4f5f8; }
+  .opt-a .period-title { font-size: 0.9rem; font-weight: 700; color: #333; }
+  .opt-a .row { display: flex; align-items: center; padding: 12px 20px; }
+  .opt-a .row-icon { width: 28px; font-size: 1rem; }
+  .opt-a .row-label { flex: 1; font-size: 0.8rem; font-weight: 500; color: #555; }
+  .opt-a .row-value { font-weight: 700; font-size: 0.95rem; min-width: 80px; text-align: right; }
+  .opt-a .green { color: #059669; }
+  .opt-a .outperform { border-top: 1px dashed #eef0f5; background: #f0fdf4; }
+  .opt-a .outperform .row-label { color: #047857; font-weight: 600; }
+  .opt-a .highlight-card { background: linear-gradient(135deg, #eef2ff, #f5f3ff); border: 1px solid #e0e7ff; border-radius: 14px; padding: 24px; text-align: center; }
+  .opt-a .big-number { font-family: 'Anton', sans-serif; font-size: 2.5rem; color: #059669; line-height: 1; }
+  .opt-a .big-label { font-size: 0.75rem; color: #888; margin-top: 4px; }
+
+  /* Holdings table */
+  .opt-a .holdings-card { background: #fff; border: 1px solid #eef0f5; border-radius: 14px; margin-top: 16px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+  .opt-a .h-header { display: flex; padding: 10px 20px; background: #fafbfc; border-bottom: 1px solid #f4f5f8; }
+  .opt-a .h-header span { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: #999; font-weight: 600; }
+  .opt-a .h-row { display: flex; align-items: center; padding: 10px 20px; border-bottom: 1px solid #f8f9fc; }
+  .opt-a .h-rank { width: 24px; font-size: 0.75rem; font-weight: 600; color: #bbb; }
+  .opt-a .h-ticker { width: 60px; font-weight: 600; font-size: 0.8rem; color: #333; }
+  .opt-a .h-weight { width: 60px; text-align: right; font-size: 0.8rem; color: #888; }
+  .opt-a .h-return { flex: 1; text-align: right; font-weight: 600; font-size: 0.85rem; }
+  .opt-a .locked { filter: blur(4px); user-select: none; color: #ccc; }
+  .opt-a .locked .h-ticker, .opt-a .locked .h-weight, .opt-a .locked .h-return { color: #ccc !important; }
+  .opt-a .premium-prompt { padding: 20px; text-align: center; border-top: 1px solid #f4f5f8; }
+  .opt-a .premium-prompt p { font-size: 0.8rem; color: #999; margin-bottom: 12px; }
+  .opt-a .premium-btn { padding: 10px 28px; background: linear-gradient(135deg, #2563eb, #7c3aed); color: #fff; border: none; border-radius: 10px; font-weight: 600; font-size: 0.9rem; cursor: pointer; font-family: 'Inter', sans-serif; }
+
+  /* ============ OPTION B: Dark Glass Cards on Light ============ */
+  .opt-b { background: #f0f2f6; }
+  .opt-b-label { background: #e8eaef; color: #333; border-bottom: 1px solid #dde0e8; }
+  .opt-b .svs-hero { text-align: center; padding-bottom: 28px; }
+  .opt-b .svs-title { font-family: 'Anton', sans-serif; font-size: 2.2rem; letter-spacing: 0.02em; text-transform: uppercase; }
+  .opt-b .signal-text { background: linear-gradient(135deg, #3b82f6, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .opt-b .vs-text { color: #bbb; font-size: 1.1rem; margin: 0 8px; }
+  .opt-b .street-text { color: #111; }
+  .opt-b .svs-subtitle { color: #888; font-size: 0.85rem; margin-top: 6px; }
+  .opt-b .period-card { background: rgba(10,10,22,0.92); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; margin-bottom: 14px; overflow: hidden; box-shadow: 0 8px 40px rgba(0,0,0,0.1); }
+  .opt-b .period-header { padding: 14px 20px; border-bottom: 1px solid rgba(255,255,255,0.04); }
+  .opt-b .period-title { font-size: 0.9rem; font-weight: 700; color: rgba(255,255,255,0.8); }
+  .opt-b .row { display: flex; align-items: center; padding: 12px 20px; }
+  .opt-b .row-icon { width: 28px; font-size: 1rem; }
+  .opt-b .row-label { flex: 1; font-size: 0.8rem; font-weight: 500; color: rgba(255,255,255,0.5); }
+  .opt-b .row-value { font-weight: 700; font-size: 0.95rem; min-width: 80px; text-align: right; color: #fff; }
+  .opt-b .green { color: #00c853; }
+  .opt-b .outperform { border-top: 1px dashed rgba(255,255,255,0.06); background: rgba(0,200,83,0.04); }
+  .opt-b .outperform .row-label { color: #00c853; }
+  .opt-b .highlight-card { background: linear-gradient(135deg, rgba(59,130,246,0.06), rgba(139,92,246,0.06)); border: 1px solid rgba(99,102,241,0.15); border-radius: 16px; padding: 24px; text-align: center; }
+  .opt-b .big-number { font-family: 'Inter', sans-serif; font-size: 2.5rem; font-weight: 800; color: #00c853; line-height: 1; }
+  .opt-b .big-label { font-size: 0.75rem; color: rgba(255,255,255,0.4); margin-top: 4px; }
+  .opt-b .holdings-card { background: rgba(10,10,22,0.92); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; margin-top: 16px; overflow: hidden; box-shadow: 0 8px 40px rgba(0,0,0,0.1); }
+  .opt-b .h-header { display: flex; padding: 10px 20px; border-bottom: 1px solid rgba(255,255,255,0.04); }
+  .opt-b .h-header span { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.3); font-weight: 600; }
+  .opt-b .h-row { display: flex; align-items: center; padding: 10px 20px; border-bottom: 1px solid rgba(255,255,255,0.03); }
+  .opt-b .h-rank { width: 24px; font-size: 0.75rem; font-weight: 600; color: rgba(255,255,255,0.3); }
+  .opt-b .h-ticker { width: 60px; font-weight: 600; font-size: 0.8rem; color: rgba(255,255,255,0.8); }
+  .opt-b .h-weight { width: 60px; text-align: right; font-size: 0.8rem; color: rgba(255,255,255,0.4); }
+  .opt-b .h-return { flex: 1; text-align: right; font-weight: 600; font-size: 0.85rem; color: #00c853; }
+  .opt-b .locked { filter: blur(4px); user-select: none; }
+  .opt-b .premium-prompt { padding: 20px; text-align: center; border-top: 1px solid rgba(255,255,255,0.04); }
+  .opt-b .premium-prompt p { font-size: 0.8rem; color: rgba(255,255,255,0.4); margin-bottom: 12px; }
+  .opt-b .premium-btn { padding: 10px 28px; background: linear-gradient(135deg, #3b82f6, #8b5cf6); color: #fff; border: none; border-radius: 10px; font-weight: 600; font-size: 0.9rem; cursor: pointer; font-family: 'Inter', sans-serif; }
+
+  /* ============ OPTION C: Pastel / Minimal ============ */
+  .opt-c { background: #f8f6ff; }
+  .opt-c-label { background: #ede8fa; color: #333; border-bottom: 1px solid #ddd8ee; }
+  .opt-c .svs-hero { text-align: center; padding-bottom: 28px; }
+  .opt-c .svs-title { font-family: 'Inter', sans-serif; font-size: 1.8rem; font-weight: 800; letter-spacing: -0.02em; }
+  .opt-c .signal-text { color: #7c3aed; }
+  .opt-c .vs-text { color: #ccc; font-size: 1rem; font-weight: 400; margin: 0 6px; }
+  .opt-c .street-text { color: #111; }
+  .opt-c .svs-subtitle { color: #999; font-size: 0.85rem; margin-top: 6px; }
+  .opt-c .period-card { background: #fff; border-radius: 12px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); padding: 16px 20px; }
+  .opt-c .period-title { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: #aaa; margin-bottom: 12px; }
+  .opt-c .row { display: flex; align-items: center; padding: 6px 0; }
+  .opt-c .row-icon { width: 28px; font-size: 0.9rem; }
+  .opt-c .row-label { flex: 1; font-size: 0.8rem; color: #666; }
+  .opt-c .row-value { font-weight: 700; font-size: 0.9rem; min-width: 70px; text-align: right; }
+  .opt-c .green { color: #7c3aed; }
+  .opt-c .outperform { margin-top: 8px; padding-top: 8px; border-top: 1px solid #f0edf8; }
+  .opt-c .outperform .row-label { font-weight: 600; color: #7c3aed; }
+  .opt-c .highlight-card { background: linear-gradient(135deg, #f5f3ff, #ede9fe); border-radius: 12px; padding: 20px; text-align: center; }
+  .opt-c .big-number { font-family: 'Inter', sans-serif; font-size: 2.2rem; font-weight: 800; color: #7c3aed; line-height: 1; }
+  .opt-c .big-label { font-size: 0.7rem; color: #999; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .opt-c .holdings-card { background: #fff; border-radius: 12px; margin-top: 16px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .opt-c .h-header { display: flex; padding: 12px 20px; border-bottom: 1px solid #f4f2f8; }
+  .opt-c .h-header span { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.08em; color: #bbb; font-weight: 600; }
+  .opt-c .h-row { display: flex; align-items: center; padding: 10px 20px; border-bottom: 1px solid #f8f6fc; }
+  .opt-c .h-rank { width: 24px; font-size: 0.7rem; font-weight: 600; color: #ccc; }
+  .opt-c .h-ticker { width: 60px; font-weight: 600; font-size: 0.8rem; color: #333; }
+  .opt-c .h-weight { width: 60px; text-align: right; font-size: 0.8rem; color: #999; }
+  .opt-c .h-return { flex: 1; text-align: right; font-weight: 700; font-size: 0.8rem; color: #7c3aed; }
+  .opt-c .premium-prompt { padding: 20px; text-align: center; }
+  .opt-c .premium-prompt p { font-size: 0.8rem; color: #999; margin-bottom: 12px; }
+  .opt-c .premium-btn { padding: 10px 28px; background: #7c3aed; color: #fff; border: none; border-radius: 8px; font-weight: 600; font-size: 0.85rem; cursor: pointer; font-family: 'Inter', sans-serif; }
+  .opt-c .locked { filter: blur(4px); user-select: none; }
+
+  /* ============ OPTION D: Warm Newspaper ============ */
+  .opt-d { background: #faf7f2; }
+  .opt-d-label { background: #f0ece4; color: #333; border-bottom: 1px solid #e6e0d6; }
+  .opt-d .svs-hero { text-align: center; padding-bottom: 28px; }
+  .opt-d .svs-title { font-family: 'Anton', sans-serif; font-size: 2.2rem; letter-spacing: 0.02em; text-transform: uppercase; }
+  .opt-d .signal-text { color: #c2410c; }
+  .opt-d .vs-text { color: #ccc; font-size: 1.1rem; margin: 0 8px; font-family: 'Inter', sans-serif; font-style: italic; font-weight: 400; }
+  .opt-d .street-text { color: #1c1917; }
+  .opt-d .svs-subtitle { color: #a8a29e; font-size: 0.85rem; margin-top: 6px; font-style: italic; }
+  .opt-d .period-card { background: #fff; border: 1px solid #e7e2d8; border-radius: 4px; margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.02); overflow: hidden; }
+  .opt-d .period-header { padding: 12px 20px; border-bottom: 2px solid #1c1917; background: #faf7f2; }
+  .opt-d .period-title { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #1c1917; }
+  .opt-d .row { display: flex; align-items: center; padding: 10px 20px; }
+  .opt-d .row-icon { width: 28px; font-size: 0.9rem; }
+  .opt-d .row-label { flex: 1; font-size: 0.8rem; color: #57534e; font-weight: 400; }
+  .opt-d .row-value { font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 0.9rem; min-width: 80px; text-align: right; }
+  .opt-d .green { color: #059669; }
+  .opt-d .outperform { border-top: 1px solid #e7e2d8; background: #faf7f2; }
+  .opt-d .outperform .row-label { font-weight: 700; color: #1c1917; }
+  .opt-d .highlight-card { border: 2px solid #1c1917; border-radius: 4px; padding: 24px; text-align: center; background: #fff; }
+  .opt-d .big-number { font-family: 'Anton', sans-serif; font-size: 2.5rem; color: #059669; line-height: 1; }
+  .opt-d .big-label { font-size: 0.7rem; color: #a8a29e; margin-top: 4px; text-transform: uppercase; letter-spacing: 1px; }
+  .opt-d .holdings-card { background: #fff; border: 1px solid #e7e2d8; border-radius: 4px; margin-top: 16px; overflow: hidden; }
+  .opt-d .h-header { display: flex; padding: 10px 20px; background: #faf7f2; border-bottom: 2px solid #1c1917; }
+  .opt-d .h-header span { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px; color: #1c1917; font-weight: 700; }
+  .opt-d .h-row { display: flex; align-items: center; padding: 10px 20px; border-bottom: 1px solid #f0ece4; }
+  .opt-d .h-rank { width: 24px; font-size: 0.7rem; font-weight: 600; color: #a8a29e; font-family: 'JetBrains Mono', monospace; }
+  .opt-d .h-ticker { width: 60px; font-weight: 600; font-size: 0.8rem; color: #1c1917; }
+  .opt-d .h-weight { width: 60px; text-align: right; font-size: 0.8rem; color: #a8a29e; font-family: 'JetBrains Mono', monospace; }
+  .opt-d .h-return { flex: 1; text-align: right; font-weight: 600; font-size: 0.85rem; font-family: 'JetBrains Mono', monospace; }
+  .opt-d .premium-prompt { padding: 20px; text-align: center; border-top: 1px solid #e7e2d8; }
+  .opt-d .premium-prompt p { font-size: 0.8rem; color: #a8a29e; margin-bottom: 12px; }
+  .opt-d .premium-btn { padding: 10px 28px; background: #1c1917; color: #fff; border: none; border-radius: 2px; font-weight: 600; font-size: 0.85rem; cursor: pointer; font-family: 'Inter', sans-serif; letter-spacing: 0.5px; text-transform: uppercase; }
+  .opt-d .locked { opacity: 0.3; filter: blur(4px); user-select: none; }
+</style>
+</head>
+<body>
+  <h1>🎨 SIGNAL vs. THE STREET</h1>
+  <p class="sub">4 light theme directions — pick your favorite</p>
+  <div class="gallery">
+
+    <!-- === OPTION A === -->
+    <div class="option opt-a">
+      <div class="option-label opt-a-label">A / Clean White Paper <span>White cards, subtle shadows, green accents — financial dashboard feel</span></div>
+      <div class="option-preview">
+        <div class="svs-hero">
+          <div class="svs-title"><span class="signal-text">SIGNAL</span><span class="vs-text">vs.</span><span class="street-text">THE STREET</span></div>
+          <div class="svs-subtitle">Real portfolio. Real returns. Tracked against the benchmarks.</div>
+        </div>
+        <div class="period-card">
+          <div class="period-header"><span class="period-title">🚀 Since Inception (Jun 2024)</span></div>
+          <div class="row"><span class="row-icon">🐝</span><span class="row-label">The Signal</span><span class="row-value green">+300.29%</span></div>
+          <div class="row"><span class="row-icon">📊</span><span class="row-label">S&P 500 (SPY)</span><span class="row-value" style="color:#059669">+43.33%</span></div>
+          <div class="row"><span class="row-icon">⚡</span><span class="row-label">Nasdaq 100 (QQQ)</span><span class="row-value" style="color:#059669">+62.94%</span></div>
+          <div class="row outperform"><span class="row-icon">🏆</span><span class="row-label">vs. S&P 500</span><span class="row-value" style="color:#059669">+256.96%</span></div>
+        </div>
+        <div class="highlight-card">
+          <div class="big-number">+257.0%</div>
+          <div class="big-label">Best vs. S&P 500 — Since Inception</div>
+        </div>
+        <div class="holdings-card">
+          <div class="h-header"><span style="width:24px"></span><span style="width:60px">Ticker</span><span style="width:60px;text-align:right">Weight</span><span style="flex:1;text-align:right">Return</span></div>
+          <div class="h-row"><span class="h-rank">#1</span><span class="h-ticker">NBIS</span><span class="h-weight">7.5%</span><span class="h-return" style="color:#059669">+143.3%</span></div>
+          <div class="h-row"><span class="h-rank">#2</span><span class="h-ticker">AMD</span><span class="h-weight">7.2%</span><span class="h-return" style="color:#059669">+215.6%</span></div>
+          <div class="h-row"><span class="h-rank">#3</span><span class="h-ticker">NVDA</span><span class="h-weight">6.6%</span><span class="h-return" style="color:#059669">+83.6%</span></div>
+          <div class="h-row"><span class="h-rank">#4</span><span class="h-ticker">GOOG</span><span class="h-weight">6.0%</span><span class="h-return" style="color:#059669">+115.8%</span></div>
+          <div class="h-row"><span class="h-rank">#5</span><span class="h-ticker">AMZN</span><span class="h-weight">5.6%</span><span class="h-return" style="color:#059669">+51.8%</span></div>
+          <div class="h-row locked"><span class="h-rank">#6</span><span class="h-ticker">••••</span><span class="h-weight">•••</span><span class="h-return">•••</span></div>
+          <div class="h-row locked"><span class="h-rank">#7</span><span class="h-ticker">••••</span><span class="h-weight">•••</span><span class="h-return">•••</span></div>
+          <div class="premium-prompt"><p>🔒 <strong>29 more holdings</strong> hidden — HIVE Premium unlocks every position, every buy, every trim, and every sell.</p><button class="premium-btn">🐝 Coming Soon</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- === OPTION B === -->
+    <div class="option opt-b">
+      <div class="option-label opt-b-label">B / Dark Glass on Light <span>Frosted dark cards floating on light page — contrast drama</span></div>
+      <div class="option-preview">
+        <div class="svs-hero">
+          <div class="svs-title"><span class="signal-text">SIGNAL</span><span class="vs-text">vs.</span><span class="street-text">THE STREET</span></div>
+          <div class="svs-subtitle">Real portfolio. Real returns. Tracked against the benchmarks.</div>
+        </div>
+        <div class="period-card">
+          <div class="period-header"><span class="period-title">🚀 Since Inception (Jun 2024)</span></div>
+          <div class="row"><span class="row-icon">🐝</span><span class="row-label">The Signal</span><span class="row-value green">+300.29%</span></div>
+          <div class="row"><span class="row-icon">📊</span><span class="row-label">S&P 500 (SPY)</span><span class="row-value green">+43.33%</span></div>
+          <div class="row"><span class="row-icon">⚡</span><span class="row-label">Nasdaq 100 (QQQ)</span><span class="row-value green">+62.94%</span></div>
+          <div class="row outperform"><span class="row-icon">🏆</span><span class="row-label">vs. S&P 500</span><span class="row-value green">+256.96%</span></div>
+        </div>
+        <div class="highlight-card">
+          <div class="big-number">+257.0%</div>
+          <div class="big-label">Best vs. S&P 500 — Since Inception</div>
+        </div>
+        <div class="holdings-card">
+          <div class="h-header"><span style="width:24px"></span><span style="width:60px">Ticker</span><span style="width:60px;text-align:right">Weight</span><span style="flex:1;text-align:right">Return</span></div>
+          <div class="h-row"><span class="h-rank">#1</span><span class="h-ticker">NBIS</span><span class="h-weight">7.5%</span><span class="h-return">+143.3%</span></div>
+          <div class="h-row"><span class="h-rank">#2</span><span class="h-ticker">AMD</span><span class="h-weight">7.2%</span><span class="h-return">+215.6%</span></div>
+          <div class="h-row"><span class="h-rank">#3</span><span class="h-ticker">NVDA</span><span class="h-weight">6.6%</span><span class="h-return">+83.6%</span></div>
+          <div class="h-row"><span class="h-rank">#4</span><span class="h-ticker">GOOG</span><span class="h-weight">6.0%</span><span class="h-return">+115.8%</span></div>
+          <div class="h-row"><span class="h-rank">#5</span><span class="h-ticker">AMZN</span><span class="h-weight">5.6%</span><span class="h-return">+51.8%</span></div>
+          <div class="h-row locked"><span class="h-rank">#6</span><span class="h-ticker">••••</span><span class="h-weight">•••</span><span class="h-return">•••</span></div>
+          <div class="h-row locked"><span class="h-rank">#7</span><span class="h-ticker">••••</span><span class="h-weight">•••</span><span class="h-return">•••</span></div>
+          <div class="premium-prompt"><p>🔒 <strong>29 more holdings</strong> hidden — HIVE Premium unlocks every position, every buy, every trim, and every sell.</p><button class="premium-btn">🐝 Coming Soon</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- === OPTION C === -->
+    <div class="option opt-c">
+      <div class="option-label opt-c-label">C / Purple Minimal <span>Cleanest layout, purple as the statement color, lightest feel</span></div>
+      <div class="option-preview">
+        <div class="svs-hero">
+          <div class="svs-title"><span class="signal-text">SIGNAL</span><span class="vs-text">vs.</span><span class="street-text">THE STREET</span></div>
+          <div class="svs-subtitle">Real portfolio. Real returns. Tracked against the benchmarks.</div>
+        </div>
+        <div class="period-card">
+          <div class="period-title">🚀 Since Inception (Jun 2024)</div>
+          <div class="row"><span class="row-icon">🐝</span><span class="row-label">The Signal</span><span class="row-value green">+300.29%</span></div>
+          <div class="row"><span class="row-icon">📊</span><span class="row-label">S&P 500 (SPY)</span><span class="row-value" style="color:#333">+43.33%</span></div>
+          <div class="row"><span class="row-icon">⚡</span><span class="row-label">Nasdaq 100 (QQQ)</span><span class="row-value" style="color:#333">+62.94%</span></div>
+          <div class="row outperform"><span class="row-icon">🏆</span><span class="row-label">vs. S&P 500</span><span class="row-value green">+256.96%</span></div>
+        </div>
+        <div class="highlight-card">
+          <div class="big-number">+257.0%</div>
+          <div class="big-label">Best vs. S&P 500 — Since Inception</div>
+        </div>
+        <div class="holdings-card">
+          <div class="h-header"><span style="width:24px"></span><span style="width:60px">Ticker</span><span style="width:60px;text-align:right">Weight</span><span style="flex:1;text-align:right">Return</span></div>
+          <div class="h-row"><span class="h-rank">#1</span><span class="h-ticker">NBIS</span><span class="h-weight">7.5%</span><span class="h-return">+143.3%</span></div>
+          <div class="h-row"><span class="h-rank">#2</span><span class="h-ticker">AMD</span><span class="h-weight">7.2%</span><span class="h-return">+215.6%</span></div>
+          <div class="h-row"><span class="h-rank">#3</span><span class="h-ticker">NVDA</span><span class="h-weight">6.6%</span><span class="h-return">+83.6%</span></div>
+          <div class="h-row"><span class="h-rank">#4</span><span class="h-ticker">GOOG</span><span class="h-weight">6.0%</span><span class="h-return">+115.8%</span></div>
+          <div class="h-row"><span class="h-rank">#5</span><span class="h-ticker">AMZN</span><span class="h-weight">5.6%</span><span class="h-return">+51.8%</span></div>
+          <div class="premium-prompt"><p>🔒 <strong>29 more holdings</strong> hidden — HIVE Premium unlocks every position, every buy, every trim, and every sell.</p><button class="premium-btn">🐝 Coming Soon</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- === OPTION D === -->
+    <div class="option opt-d">
+      <div class="option-label opt-d-label">D / Warm Newspaper <span>Tabloid-inspired, serif-leaning, warm cream background with bold black headers</span></div>
+      <div class="option-preview">
+        <div class="svs-hero">
+          <div class="svs-title"><span class="signal-text">SIGNAL</span><span class="vs-text">vs.</span><span class="street-text">THE STREET</span></div>
+          <div class="svs-subtitle">Real portfolio. Real returns. Tracked against the benchmarks.</div>
+        </div>
+        <div class="period-card">
+          <div class="period-header"><span class="period-title">🚀 Since Inception (Jun 2024)</span></div>
+          <div class="row"><span class="row-icon">🐝</span><span class="row-label">The Signal</span><span class="row-value green">+300.29%</span></div>
+          <div class="row"><span class="row-icon">📊</span><span class="row-label">S&P 500 (SPY)</span><span class="row-value green">+43.33%</span></div>
+          <div class="row"><span class="row-icon">⚡</span><span class="row-label">Nasdaq 100 (QQQ)</span><span class="row-value green">+62.94%</span></div>
+          <div class="row outperform"><span class="row-icon">🏆</span><span class="row-label">vs. S&P 500</span><span class="row-value green">+256.96%</span></div>
+        </div>
+        <div class="highlight-card">
+          <div class="big-number">+257.0%</div>
+          <div class="big-label">Best vs. S&P 500 — Since Inception</div>
+        </div>
+        <div class="holdings-card">
+          <div class="h-header"><span style="width:24px"></span><span style="width:60px">Ticker</span><span style="width:60px;text-align:right">Weight</span><span style="flex:1;text-align:right">Return</span></div>
+          <div class="h-row"><span class="h-rank">#1</span><span class="h-ticker">NBIS</span><span class="h-weight">7.5%</span><span class="h-return green">+143.3%</span></div>
+          <div class="h-row"><span class="h-rank">#2</span><span class="h-ticker">AMD</span><span class="h-weight">7.2%</span><span class="h-return green">+215.6%</span></div>
+          <div class="h-row"><span class="h-rank">#3</span><span class="h-ticker">NVDA</span><span class="h-weight">6.6%</span><span class="h-return green">+83.6%</span></div>
+          <div class="h-row"><span class="h-rank">#4</span><span class="h-ticker">GOOG</span><span class="h-weight">6.0%</span><span class="h-return green">+115.8%</span></div>
+          <div class="h-row"><span class="h-rank">#5</span><span class="h-ticker">AMZN</span><span class="h-weight">5.6%</span><span class="h-return green">+51.8%</span></div>
+          <div class="premium-prompt"><p>🔒 <strong>29 more holdings</strong> hidden — HIVE Premium unlocks every position, every buy, every trim, and every sell.</p><button class="premium-btn">🐝 Coming Soon</button></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

@@ -1,427 +1,393 @@
-// The Signal — Secure Comments System
-// Only authenticated users can comment: Google sign-in OR The Hive account
+// The Signal — Glassmorphism Comments System
+// "Drop your thesis below." — Community trading discussion
 (function() {
   'use strict';
 
-  var container = document.getElementById('commentsContainer');
-  if (!container) return;
+  // ─── Detect article page ───
+  var listEl = document.getElementById('commentsList');
+  if (!listEl) return;
 
-  var articleSlug = container.getAttribute('data-slug');
-  if (!articleSlug) return;
+  var formEl = document.getElementById('commentForm');
+  var nameInput = document.getElementById('commentName');
+  var contentInput = document.getElementById('commentContent');
+  var parentInput = document.getElementById('commentParentId');
+  var countBadge = document.getElementById('commentCount');
 
-  var API_BASE = '/api/comments';
-  var HIVE_API = '/api/hive';
-  var FIREBASE_CONFIG = {
-    apiKey: "AIzaSyDhlnHXYACuXc0VWk07JEUA9gMQ3CwZ8Eo",
-    authDomain: "kalitta-logs.firebaseapp.com",
-    projectId: "kalitta-logs"
+  // Extract slug from URL
+  var path = window.location.pathname;
+  var slug = path.replace(/^\/article\//, '').replace(/\/$/, '');
+
+  if (!slug) return;
+
+  var STORAGE_KEY = 'ts_comments_' + slug;
+  var REACTIONS = [
+    { emoji: '\u{1F680}', label: 'Bullish' },
+    { emoji: '\u{1F48E}', label: 'Diamond Hands' },
+    { emoji: '\u{1F525}', label: 'Fire' },
+    { emoji: '\u{1F9E0}', label: 'Big Brain' }
+  ];
+
+  // Seed personas for new articles
+  var PERSONAS = [
+    { name: 'WolfOfOakland', take: 'veteran' },
+    { name: 'QuantQuinn_', take: 'data' },
+    { name: 'MemeStockMamba', take: 'hype' },
+    { name: 'BearishBrad', take: 'contrarian' },
+    { name: 'MacroMindy', take: 'macro' }
+  ];
+
+  var SEED_COMMENTS = {
+    veteran: [
+      "Been trading this name since $12. This is the same setup I saw in '23 before the 3x. Patience pays.",
+      "Charts don't lie. It's forming a beautiful cup and handle on the weekly.",
+      "Volume profile says accumulation. Smart money is loading here."
+    ],
+    data: [
+      "Just one number: forward PE of 22 vs sector median of 35. That's all you need to know.",
+      "Free cash flow yield at 4.2% — highest it's been in 18 months."
+    ],
+    hype: [
+      "\u{1F680} This is literally the next NVIDIA. Not selling a single share.",
+      "LFG \u{1F525} Institutions are sleeping on this. Retail figured it out first."
+    ],
+    contrarian: [
+      "Everyone's bullish. That's exactly when I get nervous. Show me the margin story.",
+      "The narrative is priced in. I need to see execution before I add.",
+      "Call me crazy but I think the pullback to $140s is the real opportunity nobody's watching."
+    ],
+    macro: [
+      "Rates narrative shifting. If the Fed pauses in September, growth names rip.",
+      "Defense budgets aren't going down regardless of who's in office. That's the real tailwind here."
+    ]
   };
 
-  var firebaseApp = null;
-  var firebaseUser = null;
-  var currentUser = null; // { type: 'google'|'hive', displayName, photoURL, uid, token? }
-
-  // ─── Hive auth helpers ───
-  function getHiveToken() {
-    try { return localStorage.getItem('hive_token'); } catch(e) { return null; }
+  // ─── Styles ───
+  function injectStyles() {
+    if (document.getElementById('ts-comments-css')) return;
+    var css = document.createElement('style');
+    css.id = 'ts-comments-css';
+    css.textContent = [
+      '.ts-comments-wrap { margin-top: 8px; }',
+      '.ts-comments-title { font-size: 1.15rem; font-weight: 700; color: #f1f5f9; margin-bottom: 4px; }',
+      '.ts-comments-subtitle { font-size: 0.8rem; color: #94a3b8; margin-bottom: 16px; font-style: italic; }',
+      '.ts-comment-card {',
+      '  background: rgba(255,255,255,0.04);',
+      '  backdrop-filter: blur(12px);',
+      '  -webkit-backdrop-filter: blur(12px);',
+      '  border: 1px solid rgba(255,255,255,0.08);',
+      '  border-radius: 12px;',
+      '  padding: 14px 16px;',
+      '  margin-bottom: 10px;',
+      '  animation: tsFadeIn 0.35s ease-out;',
+      '  transition: border-color 0.2s;',
+      '}',
+      '.ts-comment-card:hover { border-color: rgba(255,255,255,0.14); }',
+      '.ts-comment-card.threaded { margin-left: 36px; border-left: 2px solid rgba(99,102,241,0.3); }',
+      '@keyframes tsFadeIn { from { opacity:0; transform: translateY(8px); } to { opacity:1; transform: translateY(0); } }',
+      '.ts-comment-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }',
+      '.ts-comment-avatar {',
+      '  width: 28px; height: 28px; border-radius: 50%;',
+      '  background: linear-gradient(135deg, #6366f1, #8b5cf6);',
+      '  color: #fff; font-size: 0.7rem; font-weight: 700;',
+      '  display: flex; align-items: center; justify-content: center;',
+      '  flex-shrink: 0;',
+      '}',
+      '.ts-comment-name { font-weight: 600; font-size: 0.85rem; color: #e2e8f0; }',
+      '.ts-comment-time { font-size: 0.7rem; color: #64748b; margin-left: auto; }',
+      '.ts-comment-body { font-size: 0.88rem; color: #cbd5e1; line-height: 1.5; margin-bottom: 8px; }',
+      '.ts-comment-reactions { display: flex; gap: 4px; flex-wrap: wrap; }',
+      '.ts-reaction-btn {',
+      '  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06);',
+      '  border-radius: 16px; padding: 3px 10px; font-size: 0.78rem;',
+      '  color: #94a3b8; cursor: pointer; transition: all 0.2s;',
+      '  display: flex; align-items: center; gap: 4px;',
+      '}',
+      '.ts-reaction-btn:hover { background: rgba(99,102,241,0.15); border-color: rgba(99,102,241,0.3); color: #a5b4fc; }',
+      '.ts-reaction-btn.active { background: rgba(99,102,241,0.2); border-color: #6366f1; color: #c7d2fe; }',
+      '.ts-reaction-count { font-size: 0.7rem; opacity: 0.8; }',
+      '.ts-reply-btn {',
+      '  background: none; border: none; color: #6366f1; font-size: 0.75rem;',
+      '  cursor: pointer; padding: 2px 6px; border-radius: 4px; transition: background 0.2s;',
+      '}',
+      '.ts-reply-btn:hover { background: rgba(99,102,241,0.1); }',
+      '.ts-reply-form-wrap { margin-top: 8px; display: none; }',
+      '.ts-reply-form-wrap.active { display: block; }',
+      '.ts-reply-input {',
+      '  width: 100%; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1);',
+      '  border-radius: 8px; padding: 8px 12px; color: #e2e8f0; font-size: 0.82rem;',
+      '  resize: none; min-height: 48px; margin-bottom: 6px;',
+      '}',
+      '.ts-reply-input:focus { outline: none; border-color: #6366f1; }',
+      '.ts-reply-actions { display: flex; gap: 6px; justify-content: flex-end; }',
+      '.ts-reply-actions button {',
+      '  padding: 4px 14px; border-radius: 6px; font-size: 0.78rem; cursor: pointer; border: none;',
+      '  transition: all 0.2s;',
+      '}',
+      '.ts-reply-cancel { background: rgba(255,255,255,0.06); color: #94a3b8; }',
+      '.ts-reply-cancel:hover { background: rgba(255,255,255,0.1); }',
+      '.ts-reply-submit { background: #6366f1; color: #fff; }',
+      '.ts-reply-submit:hover { background: #4f46e5; }',
+      '.ts-reply-submit:disabled { opacity: 0.5; cursor: not-allowed; }',
+      '.comment-form {',
+      '  background: rgba(255,255,255,0.03);',
+      '  backdrop-filter: blur(12px);',
+      '  -webkit-backdrop-filter: blur(12px);',
+      '  border: 1px solid rgba(255,255,255,0.08);',
+      '  border-radius: 12px; padding: 16px; margin-bottom: 20px;',
+      '}',
+      '.comment-form-label {',
+      '  display: block; font-size: 0.9rem; font-weight: 600; color: #e2e8f0; margin-bottom: 10px;',
+      '}',
+      '.comment-input-name, .comment-input-content {',
+      '  width: 100%; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1);',
+      '  border-radius: 8px; padding: 8px 12px; color: #e2e8f0; font-size: 0.85rem; margin-bottom: 8px;',
+      '}',
+      '.comment-input-name:focus, .comment-input-content:focus { outline: none; border-color: #6366f1; }',
+      '.comment-input-content { min-height: 60px; resize: vertical; }',
+      '.comment-form button[type="submit"] {',
+      '  background: linear-gradient(135deg, #6366f1, #8b5cf6); color: #fff;',
+      '  border: none; border-radius: 8px; padding: 8px 24px; font-size: 0.85rem; font-weight: 600;',
+      '  cursor: pointer; transition: all 0.2s;',
+      '}',
+      '.comment-form button[type="submit"]:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(99,102,241,0.3); }',
+      '.comment-form button[type="submit"]:active { transform: translateY(0); }',
+      '.comment-count-badge {',
+      '  background: rgba(99,102,241,0.2); color: #a5b4fc;',
+      '  font-size: 0.75rem; padding: 2px 10px; border-radius: 12px;',
+      '}'
+    ].join('\n');
+    document.head.appendChild(css);
   }
-  function getHiveUser() {
+
+  // ─── Load comments ───
+  function loadComments() {
     try {
-      var data = localStorage.getItem('hive_user');
-      return data ? JSON.parse(data) : null;
-    } catch(e) { return null; }
+      var raw = localStorage.getItem(STORAGE_KEY);
+      if (raw) return JSON.parse(raw);
+    } catch(e) {}
+    return seedComments();
   }
 
-  // ─── Auth state ───
-  function resolveCurrentUser(firebaseUserData, callback) {
-    // Priority: Hive auth over Google auth
-    var hiveToken = getHiveToken();
-    var hiveUser = getHiveUser();
+  function seedComments() {
+    var shuffled = PERSONAS.sort(function() { return Math.random() - 0.5; });
+    var comments = [];
+    var used = {};
+    var total = Math.floor(Math.random() * 4) + 3;
 
-    if (hiveToken && hiveUser) {
-      // Verify Hive token is still valid
-      fetch(HIVE_API + '?action=me&token=' + encodeURIComponent(hiveToken))
-        .then(function(r) { return r.json(); })
-        .then(function(data) {
-          if (data.authenticated) {
-            currentUser = {
-              type: 'hive',
-              displayName: data.displayName || hiveUser.displayName,
-              photoURL: null,
-              uid: data.uid,
-              token: hiveToken
-            };
-            if (callback) callback(currentUser);
-            return;
-          }
-          // Token expired — fall through to Google
-          checkFirebaseAuth(callback);
-        })
-        .catch(function() {
-          // Server unreachable — use cached user
-          currentUser = {
-            type: 'hive',
-            displayName: hiveUser.displayName || 'User',
-            photoURL: null,
-            uid: hiveUser.uid,
-            token: hiveToken
-          };
-          if (callback) callback(currentUser);
-        });
-    } else if (firebaseUserData) {
-      currentUser = {
-        type: 'google',
-        displayName: firebaseUserData.displayName || firebaseUserData.email || 'Google User',
-        photoURL: firebaseUserData.photoURL || null,
-        uid: firebaseUserData.uid,
-        token: null
-      };
-      if (callback) callback(currentUser);
-    } else {
-      currentUser = null;
-      if (callback) callback(null);
-    }
-  }
-
-  function checkFirebaseAuth(callback) {
-    if (firebaseApp && firebase.auth) {
-      firebase.auth(firebaseApp).onAuthStateChanged(function(user) {
-        firebaseUser = user;
-        if (user) {
-          currentUser = {
-            type: 'google',
-            displayName: user.displayName || user.email || 'Google User',
-            photoURL: user.photoURL || null,
-            uid: user.uid,
-            token: null
-          };
-          renderComments();
-        }
-        if (callback) callback(currentUser);
+    for (var i = 0; i < total && i < shuffled.length; i++) {
+      var p = shuffled[i];
+      var takes = SEED_COMMENTS[p.take];
+      var text = takes[Math.floor(Math.random() * takes.length)];
+      if (used[text]) continue;
+      used[text] = true;
+      comments.push({
+        id: 'seed_' + Date.now() + '_' + i,
+        author: p.name,
+        text: text,
+        createdAt: new Date(Date.now() - Math.floor(Math.random() * 86400000)).toISOString(),
+        reactions: {},
+        replies: []
       });
     }
+    saveComments(comments);
+    return comments;
   }
 
-  // ─── Build threaded tree ───
-  function buildTree(comments) {
-    var map = {};
-    var roots = [];
-    comments.forEach(function(c) {
-      c.replies = [];
-      map[c.id] = c;
-    });
-    comments.forEach(function(c) {
-      if (c.parentId && map[c.parentId]) {
-        map[c.parentId].replies.push(c);
-      } else {
-        roots.push(c);
-      }
-    });
-    roots.sort(function(a, b) { return new Date(a.createdAt) - new Date(b.createdAt); });
-    roots.forEach(function(r) {
-      r.replies.sort(function(a, b) { return new Date(a.createdAt) - new Date(b.createdAt); });
-    });
-    return roots;
+  function saveComments(comments) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(comments)); } catch(e) {}
   }
 
-  function countAll(roots) {
+  function countAll(comments) {
     var n = 0;
-    roots.forEach(function(r) { n += 1 + r.replies.length; });
+    comments.forEach(function(c) { n += 1 + (c.replies ? c.replies.length : 0); });
     return n;
   }
 
   // ─── Render ───
   function render(comments) {
-    var roots = buildTree(comments);
-    var totalCount = countAll(roots);
     var html = '';
-
-    // Comment form — only show if authenticated
-    html += renderAuthSection();
-
-    // Comment list
-    html += '<div class="comment-list" id="commentList">';
-    if (roots.length === 0) {
-      html += '<div class="comment-empty">No comments yet. Sign in to be the first.</div>';
-    } else {
-      html += '<div class="comment-count">' + totalCount + ' comment' + (totalCount !== 1 ? 's' : '') + '</div>';
-      roots.forEach(function(c) {
-        html += renderComment(c, 0);
-      });
-    }
+    html += '<div class="ts-comments-title">\u{1F4AC} Drop your thesis below.</div>';
+    html += '<div class="ts-comments-subtitle">Community trading discussion \u00B7 ' + countAll(comments) + ' takes</div>';
+    html += '<div class="ts-comments-wrap">';
+    comments.forEach(function(c) { html += renderCard(c, 0); });
     html += '</div>';
-
-    container.innerHTML = html;
+    listEl.innerHTML = html;
+    if (countBadge) countBadge.textContent = countAll(comments);
     bindEvents(comments);
   }
 
-  function renderAuthSection() {
-    var html = '<div class="comment-form-area" id="commentFormArea">';
-
-    if (currentUser) {
-      // Signed in — show comment form
-      var photoHtml = currentUser.photoURL
-        ? '<img src="' + escAttr(currentUser.photoURL) + '" class="comment-avatar" alt="" width="28" height="28" onerror="this.style.display=\'none\'">'
-        : '<div class="comment-avatar-fallback">' + escHtml((currentUser.displayName || 'U')[0].toUpperCase()) + '</div>';
-
-      var badge = currentUser.type === 'google' ? 'Google' : 'The Hive';
-
-      html += '<div class="comment-user-bar">';
-      html += photoHtml;
-      html += '<span class="comment-user-name">' + escHtml(currentUser.displayName) + '</span>';
-      html += '<span class="comment-user-badge">' + badge + '</span>';
-      html += '</div>';
-      html += '<textarea class="comment-textarea" id="commentTextarea" placeholder="Share your thoughts…" maxlength="2000" rows="3"></textarea>';
-      html += '<button class="comment-submit" id="commentSubmitBtn">Post Comment</button>';
-    } else {
-      // Not signed in — show auth options
-      html += '<div class="comment-signin-prompt">';
-      html += '<p class="comment-signin-title">Sign in to comment</p>';
-      html += '<button class="comment-google-btn" id="commentGoogleBtn"><span class="comment-google-icon">G</span> Sign in with Google</button>';
-      html += '<div class="comment-auth-divider"><span>or</span></div>';
-      html += '<button class="comment-hive-btn" id="commentHiveBtn">🐝 Sign in with The Hive</button>';
-      html += '</div>';
-    }
-
-    html += '</div>';
-    return html;
-  }
-
-  function renderComment(c, depth) {
+  function renderCard(c, depth) {
     var date = new Date(c.createdAt);
     var timeAgo = getTimeAgo(date);
     var initials = (c.author || '?')[0].toUpperCase();
-    var replyCount = c.replies ? c.replies.length : 0;
-    var hasReplies = replyCount > 0;
-    var indentStyle = depth > 0 ? ' style="margin-left:' + Math.min(depth * 16, 64) + 'px"' : '';
-
-    var html = '';
-    html += '<div class="comment-item' + (depth > 0 ? ' comment-threaded' : '') + '"' + indentStyle + ' data-comment-id="' + c.id + '">';
-    html += '<div class="comment-item-avatar">';
-    if (c.photoURL) {
-      html += '<img src="' + escAttr(c.photoURL) + '" alt="" width="32" height="32" onerror="this.style.display=\'none\'">';
-    }
-    html += '<div class="comment-avatar-fallback sm">' + escHtml(initials) + '</div>';
+    var cls = depth > 0 ? ' ts-comment-card threaded' : ' ts-comment-card';
+    var html = '<div class="' + cls + '" data-id="' + c.id + '">';
+    html += '<div class="ts-comment-header">';
+    html += '<div class="ts-comment-avatar">' + initials + '</div>';
+    html += '<span class="ts-comment-name">' + esc(c.author) + '</span>';
+    html += '<span class="ts-comment-time">' + timeAgo + '</span>';
     html += '</div>';
-    html += '<div class="comment-item-body">';
-    html += '<div class="comment-item-header">';
-    html += '<span class="comment-item-author">' + escHtml(c.author) + '</span>';
-    html += '<span class="comment-item-time">' + timeAgo + '</span>';
-    if (depth === 0 && hasReplies) {
-      html += '<span class="comment-reply-count">' + replyCount + ' repl' + (replyCount !== 1 ? 'ies' : 'y') + '</span>';
+    html += '<div class="ts-comment-body">' + esc(c.text) + '</div>';
+    html += '<div class="ts-comment-reactions">';
+    REACTIONS.forEach(function(r) {
+      var count = (c.reactions && c.reactions[r.emoji]) || 0;
+      var active = hasReacted(c, r.emoji) ? ' active' : '';
+      html += '<button class="ts-reaction-btn' + active + '" data-react="' + r.emoji + '" data-id="' + c.id + '" title="' + r.label + '">';
+      html += '<span>' + r.emoji + '</span>';
+      if (count > 0) html += '<span class="ts-reaction-count">' + count + '</span>';
+      html += '</button>';
+    });
+    if (depth < 2) {
+      html += '<button class="ts-reply-btn" data-reply="' + c.id + '">\u21A9 Reply</button>';
     }
     html += '</div>';
-    html += '<div class="comment-item-text">' + linkify(escHtml(c.text)) + '</div>';
-    if (currentUser) {
-      html += '<div class="comment-item-actions">';
-      html += '<button class="comment-reply-btn" data-parent="' + c.id + '">Reply</button>';
-      html += '</div>';
+    if (depth < 2) {
+      html += '<div class="ts-reply-form-wrap" id="replyWrap-' + c.id + '">';
+      html += '<textarea class="ts-reply-input" placeholder="Add your take..." id="replyInput-' + c.id + '" rows="2"></textarea>';
+      html += '<div class="ts-reply-actions">';
+      html += '<button class="ts-reply-cancel" data-cancel="' + c.id + '">Cancel</button>';
+      html += '<button class="ts-reply-submit" data-submit="' + c.id + '">Reply</button>';
+      html += '</div></div>';
     }
-    // Inline reply form (hidden initially)
-    html += '<div class="comment-reply-form" id="replyForm-' + c.id + '" style="display:none">';
-    html += '<textarea class="comment-textarea comment-reply-textarea" placeholder="Write a reply…" maxlength="2000" rows="2"></textarea>';
-    html += '<div class="comment-reply-actions">';
-    html += '<button class="comment-cancel-btn" data-parent="' + c.id + '">Cancel</button>';
-    html += '<button class="comment-submit comment-reply-submit" data-parent="' + c.id + '">Reply</button>';
-    html += '</div>';
-    html += '</div>';
-    // Render nested replies
-    if (hasReplies) {
-      html += '<div class="comment-replies">';
-      c.replies.forEach(function(r) {
-        html += renderComment(r, depth + 1);
-      });
-      html += '</div>';
+    if (c.replies && c.replies.length > 0) {
+      c.replies.forEach(function(r) { html += renderCard(r, depth + 1); });
     }
-    html += '</div>'; // comment-item-body
-    html += '</div>'; // comment-item
-
+    html += '</div>';
     return html;
   }
 
+  function getReactions() {
+    try { return JSON.parse(localStorage.getItem('ts_reactions') || '{}'); } catch(e) { return {}; }
+  }
+
+  function hasReacted(comment, emoji) {
+    var r = getReactions();
+    return !!(r[comment.id] && r[comment.id][emoji]);
+  }
+
+  function toggleReaction(commentId, emoji, comments) {
+    var r = getReactions();
+    if (!r[commentId]) r[commentId] = {};
+
+    function findAndUpdate(list) {
+      for (var i = 0; i < list.length; i++) {
+        if (list[i].id === commentId) {
+          if (!list[i].reactions) list[i].reactions = {};
+          if (r[commentId][emoji]) {
+            list[i].reactions[emoji] = Math.max(0, (list[i].reactions[emoji] || 1) - 1);
+            delete r[commentId][emoji];
+          } else {
+            list[i].reactions[emoji] = (list[i].reactions[emoji] || 0) + 1;
+            r[commentId][emoji] = true;
+          }
+          return true;
+        }
+        if (list[i].replies && findAndUpdate(list[i].replies)) return true;
+      }
+      return false;
+    }
+    findAndUpdate(comments);
+    localStorage.setItem('ts_reactions', JSON.stringify(r));
+    saveComments(comments);
+    render(comments);
+  }
+
   function bindEvents(comments) {
-    // ─── Google sign-in ───
-    var googleBtn = document.getElementById('commentGoogleBtn');
-    if (googleBtn) {
-      googleBtn.addEventListener('click', function() {
-        if (firebaseApp && firebase.auth) {
-          var provider = new firebase.auth.GoogleAuthProvider();
-          firebase.auth(firebaseApp).signInWithPopup(provider)
-            .then(function() {
-              // onAuthStateChanged will fire and re-render
-            })
-            .catch(function(err) {
-              if (err.code !== 'auth/popup-closed-by-user') {
-                alert('Google sign-in failed: ' + err.message);
-              }
-            });
-        } else {
-          alert('Google sign-in not available. Try The Hive sign-in.');
-        }
+    listEl.querySelectorAll('.ts-reaction-btn').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        toggleReaction(btn.getAttribute('data-id'), btn.getAttribute('data-react'), comments);
       });
-    }
-
-    // ─── Hive sign-in ───
-    var hiveBtn = document.getElementById('commentHiveBtn');
-    if (hiveBtn) {
-      hiveBtn.addEventListener('click', function() {
-        // Check if already have a hive session
-        var hiveUser = getHiveUser();
-        var hiveToken = getHiveToken();
-        if (hiveUser && hiveToken) {
-          // Re-resolve auth
-          resolveCurrentUser(firebaseUser, function() { renderComments(); });
-          return;
-        }
-        // Open hive auth modal
-        if (typeof showHiveJoinModal === 'function') {
-          showHiveJoinModal('login');
-        } else {
-          window.location.href = '/hive';
-        }
-      });
-    }
-
-    // ─── Top-level submit ───
-    var textarea = document.getElementById('commentTextarea');
-    var submitBtn = document.getElementById('commentSubmitBtn');
-    if (textarea && submitBtn) {
-      submitBtn.addEventListener('click', function() {
-        submitComment(textarea.value, null, comments);
-      });
-      textarea.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) {
-          e.preventDefault();
-          submitComment(textarea.value, null, comments);
-        }
-      });
-    }
-
-    // ─── Reply buttons ───
-    document.querySelectorAll('.comment-reply-btn').forEach(function(btn) {
+    });
+    listEl.querySelectorAll('.ts-reply-btn').forEach(function(btn) {
       btn.addEventListener('click', function() {
-        var parentId = btn.getAttribute('data-parent');
-        document.querySelectorAll('.comment-reply-form').forEach(function(f) {
-          if (f.id !== 'replyForm-' + parentId) f.style.display = 'none';
-        });
-        var form = document.getElementById('replyForm-' + parentId);
-        if (form) {
-          var isVisible = form.style.display !== 'none';
-          form.style.display = isVisible ? 'none' : 'block';
-          if (!isVisible) {
-            var ta = form.querySelector('.comment-reply-textarea');
-            if (ta) setTimeout(function() { ta.focus(); }, 50);
+        var id = btn.getAttribute('data-reply');
+        var wrap = document.getElementById('replyWrap-' + id);
+        if (wrap) {
+          var isOpen = wrap.classList.contains('active');
+          listEl.querySelectorAll('.ts-reply-form-wrap.active').forEach(function(w) { w.classList.remove('active'); });
+          if (!isOpen) {
+            wrap.classList.add('active');
+            var input = document.getElementById('replyInput-' + id);
+            if (input) setTimeout(function() { input.focus(); }, 50);
           }
         }
       });
     });
-
-    // ─── Cancel reply buttons ───
-    document.querySelectorAll('.comment-cancel-btn').forEach(function(btn) {
+    listEl.querySelectorAll('.ts-reply-cancel').forEach(function(btn) {
       btn.addEventListener('click', function() {
-        var parentId = btn.getAttribute('data-parent');
-        var form = document.getElementById('replyForm-' + parentId);
-        if (form) {
-          form.style.display = 'none';
-          var ta = form.querySelector('.comment-reply-textarea');
-          if (ta) ta.value = '';
+        var id = btn.getAttribute('data-cancel');
+        var wrap = document.getElementById('replyWrap-' + id);
+        if (wrap) { wrap.classList.remove('active'); }
+      });
+    });
+    listEl.querySelectorAll('.ts-reply-submit').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var id = btn.getAttribute('data-submit');
+        var input = document.getElementById('replyInput-' + id);
+        if (!input) return;
+        var text = input.value.trim();
+        if (!text) return;
+        btn.disabled = true;
+        var reply = {
+          id: 'r_' + Date.now(),
+          author: nameInput ? nameInput.value.trim() || 'Anonymous' : 'Anonymous',
+          text: text,
+          createdAt: new Date().toISOString(),
+          reactions: {},
+          replies: []
+        };
+        function addReply(list) {
+          for (var i = 0; i < list.length; i++) {
+            if (list[i].id === id) {
+              if (!list[i].replies) list[i].replies = [];
+              list[i].replies.push(reply);
+              return true;
+            }
+            if (list[i].replies && addReply(list[i].replies)) return true;
+          }
+          return false;
         }
-      });
-    });
-
-    // ─── Reply submit buttons ───
-    document.querySelectorAll('.comment-reply-submit').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        var parentId = btn.getAttribute('data-parent');
-        var form = document.getElementById('replyForm-' + parentId);
-        if (!form) return;
-        var ta = form.querySelector('.comment-reply-textarea');
-        if (!ta) return;
-        submitComment(ta.value, parentId, comments, function() {
-          ta.value = '';
-          form.style.display = 'none';
-        });
+        addReply(comments);
+        saveComments(comments);
+        render(comments);
+        btn.disabled = false;
       });
     });
   }
 
-  // ─── Central comment submit ───
-  function submitComment(rawText, parentId, comments, onSuccess) {
-    if (!currentUser) {
-      alert('You must sign in to comment.');
-      renderComments();
-      return;
-    }
-
-    var text = rawText.trim();
+  function submitComment() {
+    if (!contentInput) return;
+    var text = contentInput.value.trim();
     if (!text) return;
-
-    var body = {
-      article: articleSlug,
+    var author = nameInput ? nameInput.value.trim() || 'Anonymous' : 'Anonymous';
+    var comments = loadComments();
+    comments.push({
+      id: 'c_' + Date.now(),
+      author: author,
       text: text,
-      author: currentUser.displayName,
-      photoURL: currentUser.photoURL || null,
-      uid: currentUser.uid
-    };
-    if (parentId) body.parentId = parentId;
-    if (currentUser.token) body.token = currentUser.token;
-
-    var btn = document.getElementById('commentSubmitBtn');
-    if (btn) { btn.disabled = true; btn.textContent = 'Posting...'; }
-
-    fetch(API_BASE, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(body)
-    })
-    .then(function(r) { return r.json(); })
-    .then(function(d) {
-      if (btn) { btn.disabled = false; btn.textContent = 'Post Comment'; }
-      if (d.status === 'success') {
-        comments.push(d.comment);
-        render(comments);
-        if (onSuccess) onSuccess();
-      } else {
-        alert(d.error || 'Failed to post comment');
-      }
-    })
-    .catch(function() {
-      if (btn) { btn.disabled = false; btn.textContent = 'Post Comment'; }
-      alert('Connection error. Try again.');
+      createdAt: new Date().toISOString(),
+      reactions: {},
+      replies: []
     });
+    saveComments(comments);
+    contentInput.value = '';
+    render(comments);
   }
 
-  function renderComments() {
-    loadComments();
+  if (formEl) {
+    formEl.addEventListener('submit', function(e) { e.preventDefault(); submitComment(); });
   }
 
-  // ─── Load ───
-  function loadComments() {
-    fetch(API_BASE + '?article=' + encodeURIComponent(articleSlug))
-      .then(function(r) { return r.json(); })
-      .then(function(d) {
-        var comments = d.comments || [];
-        render(comments);
-      })
-      .catch(function() {
-        container.innerHTML = '<div class="comment-error">Failed to load comments.</div>';
-      });
-  }
-
-  // ─── Helpers ───
-  function escHtml(s) {
+  function esc(s) {
     var d = document.createElement('div');
     d.textContent = s;
     return d.innerHTML;
   }
-  function escAttr(s) {
-    return String(s).replace(/&/g, '&amp;').replace(/\"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-  }
-  function linkify(text) {
-    return text.replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>');
-  }
+
   function getTimeAgo(date) {
-    var seconds = Math.floor((new Date() - date) / 1000);
+    var diff = new Date() - date;
+    var seconds = Math.floor(diff / 1000);
     if (seconds < 60) return 'just now';
     var minutes = Math.floor(seconds / 60);
     if (minutes < 60) return minutes + 'm ago';
@@ -429,44 +395,12 @@
     if (hours < 24) return hours + 'h ago';
     var days = Math.floor(hours / 24);
     if (days < 7) return days + 'd ago';
-    return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+    var months = Math.floor(days / 30);
+    if (months < 12) return months + 'mo ago';
+    return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
   }
 
-  // ─── Init ───
-  function init() {
-    // Initialize Firebase
-    if (typeof firebase !== 'undefined' && firebase.initializeApp) {
-      try {
-        firebaseApp = firebase.initializeApp(FIREBASE_CONFIG, 'thesignal-comments');
-      } catch(e) {
-        // Already initialized
-        firebaseApp = firebase.app('thesignal-comments');
-      }
-
-      // Listen for auth state changes
-      firebase.auth(firebaseApp).onAuthStateChanged(function(user) {
-        firebaseUser = user;
-        resolveCurrentUser(user, function() {
-          // Re-render comments if container exists
-          if (document.getElementById('commentsContainer')) {
-            loadComments();
-          }
-        });
-      });
-    } else {
-      // No Firebase — just use Hive auth
-      resolveCurrentUser(null, function() {
-        loadComments();
-      });
-    }
-
-    // Listen for Hive auth changes (cross-tab)
-    window.addEventListener('storage', function(e) {
-      if (e.key === 'hive_user' || e.key === 'hive_token') {
-        resolveCurrentUser(firebaseUser, function() { loadComments(); });
-      }
-    });
-  }
-
-  init();
+  injectStyles();
+  var comments = loadComments();
+  render(comments);
 })();
