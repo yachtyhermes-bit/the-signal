@@ -4,6 +4,26 @@ const path = require('path');
 
 const DIST = path.join(__dirname, '..', 'dist');
 
+// 0. Restore 807KB homepage backup (preserves polished design) 
+//    and inject new glassmorphism comments.js
+const homepageBackup = path.join(__dirname, '..', 'public', 'index-homepage-backup.html');
+const distIndex = path.join(__dirname, '..', 'dist', 'index.html');
+const commentsSrc = path.join(__dirname, '..', 'public', 'js', 'comments.js');
+const commentsDest = path.join(__dirname, '..', 'dist', 'js', 'comments.js');
+
+if (fs.existsSync(homepageBackup)) {
+  fs.copyFileSync(homepageBackup, distIndex);
+  console.log('✓ homepage restored from backup (' + fs.statSync(distIndex).size + ' bytes)');
+} else {
+  console.log('⚠ homepage backup not found — using build.js output');
+}
+
+if (fs.existsSync(commentsSrc)) {
+  fs.mkdirSync(path.dirname(commentsDest), { recursive: true });
+  fs.copyFileSync(commentsSrc, commentsDest);
+  console.log('✓ comments.js injected');
+}
+
 // 1. Copy updated assets from public/ to dist/
 const assets = [
   ['public/js/hive-comments-widget.js', 'dist/js/hive-comments-widget.js'],
