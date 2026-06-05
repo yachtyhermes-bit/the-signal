@@ -3,7 +3,8 @@
   "outputDirectory": "dist",
   "trailingSlash": true,
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api/$1" }
+    { "source": "/api/(.*)", "destination": "/api/$1" },
+    { "source": "/images/(.*)", "destination": "/img/$1" }
   ],
   "headers": [
     {

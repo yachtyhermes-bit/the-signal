@@ -24,9 +24,9 @@ for (const f of RESTORE) {
   }
 }
 
-// Copy entire directories from backup
-const RESTORE_DIRS = ['css', 'js', 'img'];
-for (const dir of RESTORE_DIRS) {
+// Copy css/ and js/ from backup (replace entirely)
+const REPLACE_DIRS = ['css', 'js'];
+for (const dir of REPLACE_DIRS) {
   const srcDir = path.join(BACKUP, dir);
   const destDir = path.join(DIST, dir);
   if (fs.existsSync(srcDir)) {
@@ -34,6 +34,26 @@ for (const dir of RESTORE_DIRS) {
     fs.cpSync(srcDir, destDir, { recursive: true });
     console.log('✓ ' + dir + '/ restored');
   }
+}
+
+// MERGE img/ — keep build's img/articles/, add backup's root images
+const backupImgDir = path.join(BACKUP, 'img');
+const distImgDir = path.join(DIST, 'img');
+if (fs.existsSync(backupImgDir)) {
+  const backupFiles = fs.readdirSync(backupImgDir);
+  let copied = 0;
+  for (const f of backupFiles) {
+    const src = path.join(backupImgDir, f);
+    const dest = path.join(distImgDir, f);
+    const stat = fs.statSync(src);
+    if (stat.isFile()) {
+      fs.copyFileSync(src, dest);
+      copied++;
+    } else if (stat.isDirectory() && !fs.existsSync(dest)) {
+      fs.cpSync(src, dest, { recursive: true });
+    }
+  }
+  console.log('✓ img/ merged (' + copied + ' backup files, kept build articles)');
 }
 
 // ─── 2. Inject new glassmorphism comments.js ───
@@ -70,6 +90,28 @@ if (fs.existsSync(apiDir)) {
     fs.copyFileSync(path.join(apiDir, f), path.join(distApiDir, f));
     console.log('✓ api/' + f);
   }
+}
+
+// ─── 5. Fill missing article images with default fallback ───
+const defaultImg = path.join(BACKUP, 'img', '_default.jpg');
+const articlesDir = path.join(DIST, 'img', 'articles');
+if (fs.existsSync(defaultImg) && fs.existsSync(articlesDir)) {
+  // Scan homepage for /img/articles/ and /images/articles/ references
+  const htmlContent = fs.readFileSync(path.join(DIST, 'index.html'), 'utf8');
+  const imgRefs = htmlContent.match(/\/i(mg|mages)\/articles\/[^"]+\.jpg/g) || [];
+  const uniqueRefs = [...new Set(imgRefs)];
+  let filled = 0;
+  for (const ref of uniqueRefs) {
+    // Normalize /images/ → /img/
+    const normalized = ref.replace('/images/', '/img/');
+    const destFile = path.join(DIST, normalized);
+    if (!fs.existsSync(destFile)) {
+      fs.mkdirSync(path.dirname(destFile), { recursive: true });
+      fs.copyFileSync(defaultImg, destFile);
+      filled++;
+    }
+  }
+  if (filled > 0) console.log('✓ ' + filled + ' missing article images → default fallback');
 }
 
 // ─── Summary ───
