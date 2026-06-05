@@ -1,5 +1,93 @@
 [
   {
+    "slug": "micron-trillion-dollar-hbm-2026",
+    "title": "Everyone Bought Nvidia. Micron Quietly Returned 745%.",
+    "subtitle": "The Idaho memory maker just crossed the $1 trillion market cap threshold for the first time, completing one of the fastest re-ratings in semiconductor history. HBM memory is AI's new bottleneck \u2014 and Micron is holding the keys.",
+    "summary": "Micron Technology's transformation from cyclical commodity DRAM maker to AI memory linchpin has produced one of the greatest rallies in semiconductor history \u2014 delivering a 745% return in a single year. With HBM4 on deck and Wall Street targets pointing 76% higher, the trillion-dollar memory play might just be getting started.",
+    "ticker": "MU",
+    "sector": "ai",
+    "sentiment": "bullish",
+    "date": "2026-06-05T09:00:00.000Z",
+    "image": "/img/articles/micron-trillion-dollar-hbm-2026.jpg",
+    "tags": [
+      "Micron",
+      "MU",
+      "HBM",
+      "AI",
+      "semiconductors",
+      "memory",
+      "NVIDIA",
+      "trillion dollar"
+    ],
+    "links": [
+      {
+        "url": "https://www.reuters.com/technology/how-nudge-nvidia-propelled-frugal-micron-into-ai-boom-1-trillion-market-cap-2026-06-04/",
+        "text": "Reuters: How a nudge from Nvidia propelled frugal Micron into the AI boom and a $1 trillion market cap"
+      },
+      {
+        "url": "https://www.wsj.com/tech/ai/micron-technology-trillion-dollar-market-cap-2026",
+        "text": "WSJ: The Idaho Chip Maker That Doubled to $1 Trillion in 48 Days"
+      },
+      {
+        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPa3dhYVVYWUY5dnBzZ1FWSG5XOGFvN21kUEV2eUl3NW95R0FncG5nLTEtTVlVTlFhVWtZdFd0cElidzhFclVkRk0wOS04eFFYenZRX1lMdmNGN2hMZG14WFIyTE5mMHd6amdUTGV6d25kVF9iWWs5ZWg5WnFmd3MyMWJ6ZkowZVRQdWtyVjVjMzN0MHkwY1ZiZA?oc=5&hl=en-US&gl=US&ceid=US:en",
+        "text": "Forbes: Micron Extends Its Trillion Dollar Run As AI Memory Demand Surges"
+      },
+      {
+        "url": "https://finance.yahoo.com/quote/MU/",
+        "text": "Yahoo Finance: Micron Technology (MU) stock quote and key statistics"
+      },
+      {
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5mVlRJWWVpZ2FDRlFSblJTbWQ4VXZVaEJUejg1SUxXbjNxa1ZpaHVxN2h1dE1kUC0wbVBFeGFKcjcyT04xWkI0UmU3SDR5M2xmQlBaOHVlTGNMRF9mSGE3WXRRV2VSZWVQSFkzQjc0WnFoLWRPYnI4V9IBfkFVX3lxTE9UZXN2VmU3YWJmZXVvam9xT1BlRlhoLUZfem9oTGlMNGNqME5PSVFaQUJZUGZld0RBZ09qSHM3cklBOFJWS21aU3N3T3hWbDgzbWNmaWtNTzBNR2MyN2FLRklKYnUwVTU1a0hvMUczLUR1VnhtNUgyejZVb0xKdw?oc=5&hl=en-US&gl=US&ceid=US:en",
+        "text": "CNBC: Micron hits $1 trillion market cap for the first time as stock surges 19%"
+      },
+      {
+        "url": "https://stocktitan.net/news/MU/",
+        "text": "StockTitan: Micron Technology news and financial data"
+      }
+    ],
+    "bodyHtml": "<p>There are stock market rallies, and then there's what Micron Technology just pulled off. The Boise, Idaho-based memory chip maker \u2014 long dismissed as a cyclical commodity play that investors bought at the bottom and sold at the top \u2014 crossed the $1 trillion market capitalization threshold for the first time in its 47-year history. In just 48 trading days, Micron doubled its market cap, producing a 745% return over the trailing twelve months. For context, that means a $10,000 bet on Micron one year ago would be worth roughly $84,500 today. Not bad for a company that makes memory chips.</p>\n\n<p>The catalyst wasn't subtle. It was artificial intelligence \u2014 specifically, the insatiable demand for High Bandwidth Memory, or HBM, the specialized DRAM that sits directly alongside NVIDIA's GPUs and determines how fast AI models can process data. Every NVIDIA H200 and B200 chip requires HBM stacked alongside it in a 2.5D package. Every hyperscaler pouring billions into AI infrastructure needs it. And there are effectively only three companies in the world that can manufacture HBM at scale: SK Hynix, Samsung, and Micron. When demand explodes and supply is concentrated in an oligopoly of three, prices don't just rise \u2014 they stay elevated for years.</p>\n\n<h2>The 48-Day Sprint Nobody Predicted</h2>\n\n<p>The numbers tell a story that even the most bullish analysts didn't see coming. Micron's stock touched a 52-week high of $1,089.29 \u2014 a level that would have seemed absurd when shares were changing hands at $103.38 just twelve months ago. Even after a modest pullback to roughly $922, the year-to-date gain sits at approximately 122%, with the stock starting 2026 near $415 before the AI memory thesis fully detonated. The 52-week range \u2014 $103.38 to $1,089.29 \u2014 represents a nearly 10x swing that captures the totality of Micron's transformation from cyclical afterthought to strategic choke point.</p>\n\n<p>What changed? The market finally priced in structural scarcity. HBM isn't a commodity DRAM chip that any fab can crank out. It's an immensely complex product that stacks DRAM dies vertically using through-silicon vias (TSVs), creating a high-bandwidth, low-latency pipeline directly into the GPU's compute engines. The manufacturing yields are low, the equipment is expensive, and the qualification cycles with customers like NVIDIA take years. You can't just flip a switch and make more HBM \u2014 which is exactly why the companies that can make it are suddenly worth a trillion dollars.</p>\n\n<!-- VIDEO 0 -->\n\n<h2>From Commodity Cyclical to AI's Most Critical Component</h2>\n\n<p>For most of its history, Micron was a well-run but brutally cyclical business. Memory chips are interchangeable. When supply exceeded demand \u2014 which happened regularly \u2014 prices collapsed and earnings evaporated. Investors treated MU stock like a trade, not an investment: buy when memory prices bottomed, sell when they peaked, and never, ever hold through a downturn. That playbook has been torn up and set on fire.</p>\n\n<p>The HBM market has fundamentally different economics. These chips are custom-designed for specific AI accelerators, sold under long-term supply agreements that create multi-year visibility. Customers don't shop around for the cheapest HBM \u2014 they qualify a supplier's product and lock in capacity years in advance. Micron's HBM3E product, which entered volume production in early 2024, is now a mainstay of NVIDIA's Hopper and Blackwell platforms. The company's revenue surged to approximately $23.86 billion on the back of AI-driven memory demand \u2014 and that number is still climbing.</p>\n\n<p>At COMPUTEX 2026, Micron unveiled its next act: HBM4, the next generation of high-bandwidth memory that promises dramatically higher throughput and lower power consumption. The timing is impeccable. NVIDIA's Blackwell Ultra and Rubin platforms will demand even more memory bandwidth, and HBM4 is purpose-built to feed them. The transition from HBM3E to HBM4 represents another pricing uplift and another moat-widening moment for the three companies capable of producing it.</p>\n\n<h2>The Oligopoly: SK Hynix Got There First, Micron Is Catching Up</h2>\n\n<p>Micron isn't alone in the trillion-dollar memory club. SK Hynix, the South Korean giant that supplied the majority of early HBM3 volumes to NVIDIA, also crossed the $1 trillion market cap threshold on the same AI memory tailwind. Together with Samsung \u2014 still the world's largest memory maker by total revenue but struggling with HBM qualification timelines \u2014 these three companies form an oligopoly around the most critical component in the AI infrastructure stack.</p>\n\n<p>The competitive dynamics are fluid and fascinating. SK Hynix held the early lead in HBM3 and captured the bulk of NVIDIA's initial allocations. But Micron has been methodically gaining share, and its HBM3E product is widely regarded as competitive \u2014 or superior \u2014 on both performance and power efficiency. Samsung, the 800-pound gorilla of memory, has stumbled on HBM qualification, leaving an opening that Micron has exploited with quiet, Idaho-style discipline. The HBM4 ramp, expected to begin in late 2026 and accelerate through 2027, represents the next major market share battleground \u2014 and Micron is positioning aggressively.</p>\n\n<h2>The Risks That Come With a Trillion-Dollar Price Tag</h2>\n\n<p>For all the euphoria, memory is still memory. The industry's cyclical DNA hasn't been edited out of existence \u2014 it's been temporarily suppressed by AI demand that feels bottomless. But every memory boom in history has eventually met a reckoning. Micron, SK Hynix, and Samsung are all investing tens of billions in new HBM production capacity, and at some point \u2014 maybe 2028, maybe 2029 \u2014 supply growth will catch up to demand. The question isn't whether the cycle will turn, but whether investors will see it coming.</p>\n\n<p>The pullback from $1,089 to $922 is a reminder that trillion-dollar valuations aren't permanent fixtures. UBS analyst Timothy Arcuri recently tripled his price target on Micron to $1,625 \u2014 implying roughly 76% upside from current levels \u2014 but price targets are estimates, not guarantees. Micron reports earnings on June 24, 2026, and that event will either validate the most aggressive bull case or introduce the first cracks in a narrative that has been almost flawless for eighteen months.</p>\n\n<p>Geopolitical risk looms as well. Micron's manufacturing footprint spans Taiwan, Singapore, Japan, and the United States. Any disruption to Asian semiconductor supply chains \u2014 whether from trade restrictions, natural disasters, or escalating tensions in the Taiwan Strait \u2014 would reverberate through HBM supply and, by extension, the entire AI infrastructure buildout. Concentration risk works both ways.</p>\n\n<h2>What Happens After the Confetti Settles</h2>\n\n<p>The bull case, as articulated by the Street's most aggressive analysts, is that Micron is still in the early innings of a multi-year AI infrastructure cycle. HBM4 will be more complex, more expensive, and more essential than HBM3E, extending pricing power for memory makers well beyond the current hype cycle. NVIDIA's roadmap \u2014 Blackwell Ultra, Rubin, and whatever comes next \u2014 shows no signs of slowing down, and every new GPU architecture demands more memory bandwidth, not less. The HBM content per GPU is rising, and so is the price per gigabyte.</p>\n\n<p>The June 24 earnings report is the next major catalyst. Investors will dissect HBM revenue growth, gross margin trajectory, and forward guidance for any sign that AI memory demand is plateauing. A beat-and-raise quarter could send the stock retesting its highs. A miss could expose the fragility beneath the trillion-dollar valuation. With UBS's $1,625 target dangling 76% above current levels, the market has priced in a lot of good news \u2014 but perhaps not all of it.</p>\n\n<p>Micron's journey from $103 to $1,089 isn't just a stock market story. It's a story about how artificial intelligence rewired the semiconductor value chain, transforming memory \u2014 the boring, commoditized afterthought of computing \u2014 into the strategic linchpin of the most important technology trend in a generation. Everyone bought Nvidia. Micron quietly returned 745%. And if the AI buildout has another gear left, that number could look small in hindsight.</p>",
+    "videos": [],
+    "meta": {
+      "author": "The Signal Editorial Team",
+      "estimatedReadTime": "6 minutes",
+      "editorialTags": [
+        "AI",
+        "Semiconductors",
+        "Market Milestone"
+      ],
+      "seoKeywords": [
+        "Micron trillion market cap",
+        "MU stock",
+        "HBM memory AI",
+        "Micron HBM4",
+        "AI semiconductor stocks 2026",
+        "Micron Technology market cap",
+        "HBM3E",
+        "SK Hynix trillion"
+      ],
+      "relatedTickers": [
+        "NVDA",
+        "SK HX",
+        "AMD",
+        "AVGO"
+      ],
+      "keyMetrics": {
+        "currentPrice": "$922",
+        "high52Week": "$1,089.29",
+        "low52Week": "$103.38",
+        "oneYearReturn": "~745%",
+        "yearToDateReturn": "~122%",
+        "marketCap": "~$1 trillion",
+        "trailingRevenue": "~$23.86B",
+        "analystTargetHigh": "$1,625 (UBS)",
+        "nextEarnings": "June 24, 2026"
+      },
+      "leadType": "product",
+      "reasoning": "Micron crossing the $1 trillion market cap threshold is a watershed moment for both the memory industry and the broader AI trade \u2014 signaling that AI infrastructure demand has transformed commodity components into strategic assets. The 48-day doubling of market cap and 745% one-year return make this one of the most extraordinary semiconductor stories in a generation, with HBM4 and upcoming earnings offering immediate catalysts.",
+      "sourceHint": "Primary sources: Reuters (Nvidia nudge article), WSJ (48-day doubling), Forbes (trillion-dollar run), Yahoo Finance (stock data), CNBC (HBM4 at COMPUTEX 2026), StockTitan (revenue data)."
+    }
+  },
+  {
     "slug": "crowdstrike-q1-fy2027-earnings-stock-split",
     "title": "$CRWD Just Crushed Earnings, Raised Guidance, and Announced a 4-for-1 Stock Split. The Stock Tanked 9%. Welcome to the Market's Cruelest Joke.",
     "subtitle": "CrowdStrike delivered a flawless quarter with 26% revenue growth and a shareholder-friendly stock split. Wall Street yawned, then hit the sell button. Here's why the smart money might be getting this one dead wrong.",
@@ -330,6 +418,625 @@
       "reasoning": "SpaceX IPO terms revealed June 3, 2026: $135/share fixed-price, all-primary offering targeting $75 billion raise at $1.75 trillion valuation \u2014 the largest IPO in history, nearly 3x Saudi Aramco's 2019 record. Roadshow begins June 4, Nasdaq listing (SPCX) expected June 12. Elon Musk's 42% stake worth ~$735B. Reuters exclusive broke the story at 00:26 GMT; confirmed by WSJ, Barron's, and Bloomberg.",
       "sourceHint": "Reuters exclusive (00:26 GMT June 3), WSJ (21:30 GMT), Barron's (21:36 GMT), Bloomberg (13:42 GMT)"
     }
+  },
+  {
+    "slug": "nvidia-vera-rubin-arizona-fab-2026",
+    "title": "Jensen Drops the Hammer at Computex 2026 \u2014 NVIDIA's Vera Rubin Platform and Arizona Fab Redraw the AI Map",
+    "subtitle": "NVIDIA CEO Jensen Huang used his Computex 2026 keynote to confirm Vera Rubin is ramping into full production \u2014 delivering 10x agent throughput over Gr",
+    "summary": "NVIDIA CEO Jensen Huang used his Computex 2026 keynote to confirm Vera Rubin is ramping into full production \u2014 delivering 10x agent throughput over Grace Blackwell \u2014 and announced a joint TSMC partner",
+    "ticker": "NVDA",
+    "sector": "ai",
+    "sentiment": "bullish",
+    "date": "2026-06-02",
+    "image": {
+      "src": "/img/articles/nvidia-vera-rubin-arizona-fab-2026.jpg",
+      "caption": "Jensen Drops the Hammer at Computex 2026 \u2014 NVIDIA's Vera Rubin Platform and Arizona Fab Redraw the AI Map"
+    },
+    "tags": [
+      "NVDA"
+    ],
+    "editorialTags": [],
+    "seoKeywords": [
+      "NVDA",
+      "ai"
+    ],
+    "links": [],
+    "meta": {
+      "estimatedReadTime": "2 min read"
+    },
+    "bodyHtml": "<p>NVIDIA CEO Jensen Huang used his Computex 2026 keynote to confirm Vera Rubin is ramping into full production \u2014 delivering 10x agent throughput over Grace Blackwell \u2014 and announced a joint TSMC partner</p>"
+  },
+  {
+    "slug": "palo-alto-networks-nato-cyber-shield-2026",
+    "title": "Palo Alto Networks Is NATO's New Cyber Shield \u2014 And the Stock Just Hit an All-Time High",
+    "subtitle": "Palo Alto Networks was selected by NATO for a formal cybersecurity partnership alongside Microsoft and ESET, sending the stock to an all-time high abo",
+    "summary": "Palo Alto Networks was selected by NATO for a formal cybersecurity partnership alongside Microsoft and ESET, sending the stock to an all-time high above $300 and positioning the company as the allianc",
+    "ticker": "PANW",
+    "sector": "cyber",
+    "sentiment": "bullish",
+    "date": "2026-06-02",
+    "image": {
+      "src": "/img/articles/palo-alto-networks-nato-cyber-shield-2026.jpg",
+      "caption": "Palo Alto Networks Is NATO's New Cyber Shield \u2014 And the Stock Just Hit an All-Time High"
+    },
+    "tags": [
+      "PANW"
+    ],
+    "editorialTags": [],
+    "seoKeywords": [
+      "PANW",
+      "cyber"
+    ],
+    "links": [],
+    "meta": {
+      "estimatedReadTime": "2 min read"
+    },
+    "bodyHtml": "<p>Palo Alto Networks was selected by NATO for a formal cybersecurity partnership alongside Microsoft and ESET, sending the stock to an all-time high above $300 and positioning the company as the allianc</p>"
+  },
+  {
+    "slug": "pentagon-anthropic-hegseth-ai-military-palantir",
+    "title": "Pentagon Anthropic Hegseth Ai Military Palantir",
+    "subtitle": "",
+    "summary": "",
+    "ticker": "NVDA",
+    "sector": "ai",
+    "sentiment": "neutral",
+    "date": "2026-06-02",
+    "image": {
+      "src": "/img/articles/pentagon-anthropic-hegseth-ai-military-palantir.jpg",
+      "caption": "Pentagon Anthropic Hegseth Ai Military Palantir"
+    },
+    "tags": [],
+    "editorialTags": [],
+    "seoKeywords": [
+      "NVDA",
+      "ai"
+    ],
+    "links": [],
+    "meta": {
+      "estimatedReadTime": "2 min read"
+    },
+    "bodyHtml": "<p></p>"
+  },
+  {
+    "slug": "anthropic-ipo-filing-2026",
+    "title": "The $965 Billion AI Giant Is Going Public \u2014 Anthropic Files for Landmark IPO",
+    "subtitle": "Anthropic confidentially filed its IPO prospectus with the SEC on June 1, 2026, prepping Wall Street for what could be the largest technology IPO in h",
+    "summary": "Anthropic confidentially filed its IPO prospectus with the SEC on June 1, 2026, prepping Wall Street for what could be the largest technology IPO in history. The company, valued at roughly $965 billio",
+    "ticker": "GOOGL",
+    "sector": "mega-cap",
+    "sentiment": "bullish",
+    "date": "2026-06-02",
+    "image": {
+      "src": "/img/articles/anthropic-ipo-filing-2026.jpg",
+      "caption": "The $965 Billion AI Giant Is Going Public \u2014 Anthropic Files for Landmark IPO"
+    },
+    "tags": [
+      "GOOGL"
+    ],
+    "editorialTags": [],
+    "seoKeywords": [
+      "GOOGL",
+      "mega-cap"
+    ],
+    "links": [],
+    "meta": {
+      "estimatedReadTime": "2 min read"
+    },
+    "bodyHtml": "<p>Anthropic confidentially filed its IPO prospectus with the SEC on June 1, 2026, prepping Wall Street for what could be the largest technology IPO in history. The company, valued at roughly $965 billio</p>"
+  },
+  {
+    "slug": "may-jobs-report-preview-2026",
+    "title": "May Jobs Report Preview: The One Number That Could Decide the Market's Next Move",
+    "subtitle": "The May jobs report, due Friday June 5, is the most consequential macro catalyst of the month. With the S&P 500 at record highs, the Nasdaq up 8% in M",
+    "summary": "The May jobs report, due Friday June 5, is the most consequential macro catalyst of the month. With the S&P 500 at record highs, the Nasdaq up 8% in May, and oil suffering its worst monthly drop since",
+    "ticker": "SPY",
+    "sector": "mega-cap",
+    "sentiment": "neutral",
+    "date": "2026-06-01",
+    "image": {
+      "src": "/img/articles/may-jobs-report-preview-2026.jpg",
+      "caption": "May Jobs Report Preview: The One Number That Could Decide the Market's Next Move"
+    },
+    "tags": [
+      "SPY"
+    ],
+    "editorialTags": [],
+    "seoKeywords": [
+      "SPY",
+      "mega-cap"
+    ],
+    "links": [],
+    "meta": {
+      "estimatedReadTime": "2 min read"
+    },
+    "bodyHtml": "<p>The May jobs report, due Friday June 5, is the most consequential macro catalyst of the month. With the S&P 500 at record highs, the Nasdaq up 8% in May, and oil suffering its worst monthly drop since</p>"
+  },
+  {
+    "slug": "shld-defense-etf-crushing-market-2026",
+    "title": "The Defense ETF That Quietly Tripled While You Were Staring at AI Stocks",
+    "subtitle": "SHLD, the Global X Defense Tech ETF, stacked over 170% since mid-2023 by owning the companies actually building the hardware and software of modern wa",
+    "summary": "SHLD, the Global X Defense Tech ETF, stacked over 170% since mid-2023 by owning the companies actually building the hardware and software of modern warfare \u2014 Lockheed, RTX, Rheinmetall, Palantir, Hanw",
+    "ticker": "SHLD",
+    "sector": "defense",
+    "sentiment": "bullish",
+    "date": "2026-06-01",
+    "image": {
+      "src": "/img/articles/shld-defense-etf-crushing-market-2026.jpg",
+      "caption": "The Defense ETF That Quietly Tripled While You Were Staring at AI Stocks"
+    },
+    "tags": [
+      "SHLD"
+    ],
+    "editorialTags": [],
+    "seoKeywords": [
+      "SHLD",
+      "defense"
+    ],
+    "links": [],
+    "meta": {
+      "estimatedReadTime": "2 min read"
+    },
+    "bodyHtml": "<p>SHLD, the Global X Defense Tech ETF, stacked over 170% since mid-2023 by owning the companies actually building the hardware and software of modern warfare \u2014 Lockheed, RTX, Rheinmetall, Palantir, Hanw</p>"
+  },
+  {
+    "slug": "onds-autonomous-drones-defense-2026",
+    "title": "Ondas Inc. Just Became a Defense Powerhouse \u2014 $1B Raised, Revenue Up 605%, and It's Still Flying Under the Radar",
+    "subtitle": "Ondas Inc. (formerly Ondas Holdings) completed a stunning transformation over the past year \u2014 raising $1B in equity, acquiring five defense tech compa",
+    "summary": "Ondas Inc. (formerly Ondas Holdings) completed a stunning transformation over the past year \u2014 raising $1B in equity, acquiring five defense tech companies, landing a multi-year Pentagon contract, and ",
+    "ticker": "ONDS",
+    "sector": "defense",
+    "sentiment": "bullish",
+    "date": "2026-06-01",
+    "image": {
+      "src": "/img/articles/onds-autonomous-drones-defense-2026.jpg",
+      "caption": "Ondas Inc. Just Became a Defense Powerhouse \u2014 $1B Raised, Revenue Up 605%, and It's Still Flying Under the Radar"
+    },
+    "tags": [
+      "ONDS"
+    ],
+    "editorialTags": [],
+    "seoKeywords": [
+      "ONDS",
+      "defense"
+    ],
+    "links": [],
+    "meta": {
+      "estimatedReadTime": "2 min read"
+    },
+    "bodyHtml": "<p>Ondas Inc. (formerly Ondas Holdings) completed a stunning transformation over the past year \u2014 raising $1B in equity, acquiring five defense tech companies, landing a multi-year Pentagon contract, and </p>"
+  },
+  {
+    "slug": "amzn-new-glenn-explosion-kuiper-2026",
+    "title": "Blue Origin's New Glenn Explodes at Cape Canaveral \u2014 What the $2.8 Trillion Elephant in the Room Means for AMZN's Satellite Ambitions",
+    "subtitle": "Blue Origin's New Glenn rocket exploded at 9 p.m. EDT Thursday during a static fire test at Cape Canaveral Space Force Station, destroying the vehicle",
+    "summary": "Blue Origin's New Glenn rocket exploded at 9 p.m. EDT Thursday during a static fire test at Cape Canaveral Space Force Station, destroying the vehicle Blue Origin was preparing to launch Amazon's Proj",
+    "ticker": "AMZN",
+    "sector": "mega-cap",
+    "sentiment": "bearish",
+    "date": "2026-05-31",
+    "image": {
+      "src": "/img/articles/amzn-new-glenn-explosion-kuiper-2026.jpg",
+      "caption": "Blue Origin's New Glenn Explodes at Cape Canaveral \u2014 What the $2.8 Trillion Elephant in the Room Means for AMZN's Satellite Ambitions"
+    },
+    "tags": [
+      "AMZN"
+    ],
+    "editorialTags": [],
+    "seoKeywords": [
+      "AMZN",
+      "mega-cap"
+    ],
+    "links": [],
+    "meta": {
+      "estimatedReadTime": "2 min read"
+    },
+    "bodyHtml": "<p>Blue Origin's New Glenn rocket exploded at 9 p.m. EDT Thursday during a static fire test at Cape Canaveral Space Force Station, destroying the vehicle Blue Origin was preparing to launch Amazon's Proj</p>"
+  },
+  {
+    "slug": "if-i-could-hold-one-stock-for-5-years-id-pick-google",
+    "title": "If I Could Hold One Stock for the Next 5 Years, I'd Pick Google \u2014 Here's Why",
+    "subtitle": "At 22x forward earnings with $110B+ in cash, Google is the most undervalued mega-cap in the Mag 7 by a staggering margin. Cloud is accelerating past a",
+    "summary": "At 22x forward earnings with $110B+ in cash, Google is the most undervalued mega-cap in the Mag 7 by a staggering margin. Cloud is accelerating past a $45B run rate, Waymo is a real business with real",
+    "ticker": "GOOGL",
+    "sector": "mega-cap",
+    "sentiment": "bullish",
+    "date": "2026-05-31",
+    "image": {
+      "src": "/img/articles/if-i-could-hold-one-stock-for-5-years-id-pick-google.jpg",
+      "caption": "If I Could Hold One Stock for the Next 5 Years, I'd Pick Google \u2014 Here's Why"
+    },
+    "tags": [
+      "GOOGL"
+    ],
+    "editorialTags": [],
+    "seoKeywords": [
+      "GOOGL",
+      "mega-cap"
+    ],
+    "links": [],
+    "meta": {
+      "estimatedReadTime": "2 min read"
+    },
+    "bodyHtml": "<p>At 22x forward earnings with $110B+ in cash, Google is the most undervalued mega-cap in the Mag 7 by a staggering margin. Cloud is accelerating past a $45B run rate, Waymo is a real business with real</p>"
+  },
+  {
+    "slug": "nvidia-windows-pc-chip-2026",
+    "title": "Nvidia Is Finally Coming for Your Windows PC \u2014 N1X Arm Chip Set to Debut at Computex Next Week",
+    "subtitle": "Nvidia is entering the Windows PC CPU market with its N1X Arm-based processor, set to be unveiled at Computex 2026 next week. Axios and Reuters both r",
+    "summary": "Nvidia is entering the Windows PC CPU market with its N1X Arm-based processor, set to be unveiled at Computex 2026 next week. Axios and Reuters both reported May 30 that the first Windows PC powered b",
+    "ticker": "NVDA",
+    "sector": "ai",
+    "sentiment": "bullish",
+    "date": "2026-05-30",
+    "image": {
+      "src": "/img/articles/nvidia-windows-pc-chip-2026.jpg",
+      "caption": "Nvidia Is Finally Coming for Your Windows PC \u2014 N1X Arm Chip Set to Debut at Computex Next Week"
+    },
+    "tags": [
+      "NVDA"
+    ],
+    "editorialTags": [],
+    "seoKeywords": [
+      "NVDA",
+      "ai"
+    ],
+    "links": [],
+    "meta": {
+      "estimatedReadTime": "2 min read"
+    },
+    "bodyHtml": "<p>Nvidia is entering the Windows PC CPU market with its N1X Arm-based processor, set to be unveiled at Computex 2026 next week. Axios and Reuters both reported May 30 that the first Windows PC powered b</p>"
+  },
+  {
+    "slug": "bigbear-ai-defense-contracts-panama-2026",
+    "title": "BigBear.ai Stock Surges 20% as $60M Defense Contracts and Panama AI Deal Reshape the Narrative",
+    "subtitle": "BigBear.ai (NYSE: BBAI) shares surged 20% this week after the company reported Q1 earnings that beat revenue estimates, grew its contract backlog to $",
+    "summary": "BigBear.ai (NYSE: BBAI) shares surged 20% this week after the company reported Q1 earnings that beat revenue estimates, grew its contract backlog to $282 million, and announced a landmark AI-powered c",
+    "ticker": "BBAI",
+    "sector": "defense",
+    "sentiment": "bullish",
+    "date": "2026-05-30",
+    "image": {
+      "src": "/img/articles/bigbear-ai-defense-contracts-panama-2026.jpg",
+      "caption": "BigBear.ai Stock Surges 20% as $60M Defense Contracts and Panama AI Deal Reshape the Narrative"
+    },
+    "tags": [
+      "BBAI"
+    ],
+    "editorialTags": [],
+    "seoKeywords": [
+      "BBAI",
+      "defense"
+    ],
+    "links": [],
+    "meta": {
+      "estimatedReadTime": "2 min read"
+    },
+    "bodyHtml": "<p>BigBear.ai (NYSE: BBAI) shares surged 20% this week after the company reported Q1 earnings that beat revenue estimates, grew its contract backlog to $282 million, and announced a landmark AI-powered c</p>"
+  },
+  {
+    "slug": "redwire-golden-dome-shield-contract",
+    "title": "$RDW Just Exploded 26% \u2014 Redwire Got the Keys to the $151B Golden Dome",
+    "subtitle": "Redwire ($RDW) surged ~26% to $25.90 after being selected for the Missile Defense Agency's $151B SHIELD IDIQ contract \u2014 a cornerstone of Trump's Golde",
+    "summary": "Redwire ($RDW) surged ~26% to $25.90 after being selected for the Missile Defense Agency's $151B SHIELD IDIQ contract \u2014 a cornerstone of Trump's Golden Dome initiative. The space infrastructure builde",
+    "ticker": "RDW",
+    "sector": "space",
+    "sentiment": "bullish",
+    "date": "2026-05-29",
+    "image": {
+      "src": "/img/articles/redwire-golden-dome-shield-contract.jpg",
+      "caption": "$RDW Just Exploded 26% \u2014 Redwire Got the Keys to the $151B Golden Dome"
+    },
+    "tags": [
+      "RDW"
+    ],
+    "editorialTags": [],
+    "seoKeywords": [
+      "RDW",
+      "space"
+    ],
+    "links": [],
+    "meta": {
+      "estimatedReadTime": "2 min read"
+    },
+    "bodyHtml": "<p>Redwire ($RDW) surged ~26% to $25.90 after being selected for the Missile Defense Agency's $151B SHIELD IDIQ contract \u2014 a cornerstone of Trump's Golden Dome initiative. The space infrastructure builde</p>"
+  },
+  {
+    "slug": "apple-ath-2026",
+    "title": "AAPL at $312: Tim Cook Never Hyped AI \u2014 And That's Why Apple Stock Just Hit an All-Time High",
+    "subtitle": "Apple hit $312.51 \u2014 a new all-time high with a $4.59T market cap. No AI transformation story, no chatbot launch, no rebranding. Just 16.6% revenue gro",
+    "summary": "Apple hit $312.51 \u2014 a new all-time high with a $4.59T market cap. No AI transformation story, no chatbot launch, no rebranding. Just 16.6% revenue growth, 141% ROE, and the most capital-efficient busi",
+    "ticker": "AAPL",
+    "sector": "mega-cap",
+    "sentiment": "bullish",
+    "date": "2026-05-29",
+    "image": {
+      "src": "/img/articles/apple-ath-2026.jpg",
+      "caption": "AAPL at $312: Tim Cook Never Hyped AI \u2014 And That's Why Apple Stock Just Hit an All-Time High"
+    },
+    "tags": [
+      "AAPL"
+    ],
+    "editorialTags": [],
+    "seoKeywords": [
+      "AAPL",
+      "mega-cap"
+    ],
+    "links": [],
+    "meta": {
+      "estimatedReadTime": "2 min read"
+    },
+    "bodyHtml": "<p>Apple hit $312.51 \u2014 a new all-time high with a $4.59T market cap. No AI transformation story, no chatbot launch, no rebranding. Just 16.6% revenue growth, 141% ROE, and the most capital-efficient busi</p>"
+  },
+  {
+    "slug": "smci-dell-ai-server-wave-2026",
+    "title": "$SMCI Rallies 11% as Dell's Blowout Earnings Validate the AI Server Thesis",
+    "subtitle": "$SMCI jumped ~11.6% on Friday as Dell's blockbuster earnings confirmed that AI server demand is accelerating, not slowing. Dell raised guidance, repor",
+    "summary": "$SMCI jumped ~11.6% on Friday as Dell's blockbuster earnings confirmed that AI server demand is accelerating, not slowing. Dell raised guidance, reported 39.5% revenue growth, and flagged a massive AI",
+    "ticker": "SMCI",
+    "sector": "ai",
+    "sentiment": "bullish",
+    "date": "2026-05-29",
+    "image": {
+      "src": "/img/articles/smci-dell-ai-server-wave-2026.jpg",
+      "caption": "$SMCI Rallies 11% as Dell's Blowout Earnings Validate the AI Server Thesis"
+    },
+    "tags": [
+      "SMCI"
+    ],
+    "editorialTags": [],
+    "seoKeywords": [
+      "SMCI",
+      "ai"
+    ],
+    "links": [],
+    "meta": {
+      "estimatedReadTime": "2 min read"
+    },
+    "bodyHtml": "<p>$SMCI jumped ~11.6% on Friday as Dell's blockbuster earnings confirmed that AI server demand is accelerating, not slowing. Dell raised guidance, reported 39.5% revenue growth, and flagged a massive AI</p>"
+  },
+  {
+    "slug": "palantir-surges-ai-factory-dell-partnership",
+    "title": "Palantir Surges 10% as Dell's Blowout Earnings Validate AI Factory Partnership",
+    "subtitle": "Palantir jumped 10% on May 29 after Dell's massive Q1 earnings beat validated the AI spending cycle. With US commercial revenue crossing 100% growth, ",
+    "summary": "Palantir jumped 10% on May 29 after Dell's massive Q1 earnings beat validated the AI spending cycle. With US commercial revenue crossing 100% growth, Palantir's AI Factory partnership with Dell is eme",
+    "ticker": "PLTR",
+    "sector": "defense",
+    "sentiment": "bullish",
+    "date": "2026-05-29",
+    "image": {
+      "src": "/img/articles/palantir-surges-ai-factory-dell-partnership.jpg",
+      "caption": "Palantir Surges 10% as Dell's Blowout Earnings Validate AI Factory Partnership"
+    },
+    "tags": [
+      "PLTR"
+    ],
+    "editorialTags": [],
+    "seoKeywords": [
+      "PLTR",
+      "defense"
+    ],
+    "links": [],
+    "meta": {
+      "estimatedReadTime": "2 min read"
+    },
+    "bodyHtml": "<p>Palantir jumped 10% on May 29 after Dell's massive Q1 earnings beat validated the AI spending cycle. With US commercial revenue crossing 100% growth, Palantir's AI Factory partnership with Dell is eme</p>"
+  },
+  {
+    "slug": "google-pentagon-classified-ai-deal",
+    "title": "Google Just Signed a Classified AI Deal With the Pentagon \u2014 $GOOGL Is Picking Sides in the $7 Trillion Defense AI Revolution",
+    "subtitle": "The Pentagon signed classified AI agreements with Google, Nvidia, Microsoft, Amazon, OpenAI, and others \u2014 explicitly excluding Anthropic. Google's Gem",
+    "summary": "The Pentagon signed classified AI agreements with Google, Nvidia, Microsoft, Amazon, OpenAI, and others \u2014 explicitly excluding Anthropic. Google's Gemini AI heads to classified military networks. 600+",
+    "ticker": "GOOGL",
+    "sector": "mega-cap",
+    "sentiment": "bullish",
+    "date": "2026-05-29",
+    "image": {
+      "src": "/img/articles/google-pentagon-classified-ai-deal.jpg",
+      "caption": "Google Just Signed a Classified AI Deal With the Pentagon \u2014 $GOOGL Is Picking Sides in the $7 Trillion Defense AI Revolution"
+    },
+    "tags": [
+      "GOOGL"
+    ],
+    "editorialTags": [],
+    "seoKeywords": [
+      "GOOGL",
+      "mega-cap"
+    ],
+    "links": [],
+    "meta": {
+      "estimatedReadTime": "2 min read"
+    },
+    "bodyHtml": "<p>The Pentagon signed classified AI agreements with Google, Nvidia, Microsoft, Amazon, OpenAI, and others \u2014 explicitly excluding Anthropic. Google's Gemini AI heads to classified military networks. 600+</p>"
+  },
+  {
+    "slug": "tesla-spacex-merger-chatter-2026",
+    "title": "SpaceX-Tesla Merger Buzz Hits a Fever Pitch \u2014 $TSLA Could Be the Vehicle for the Biggest Deal in History",
+    "subtitle": "Multiple major outlets are reporting Elon Musk is considering merging SpaceX with Tesla ahead of the rocket company's anticipated Nasdaq IPO. With $TS",
+    "summary": "Multiple major outlets are reporting Elon Musk is considering merging SpaceX with Tesla ahead of the rocket company's anticipated Nasdaq IPO. With $TSLA at $442 and SpaceX valued well north of $1 tril",
+    "ticker": "TSLA",
+    "sector": "mega-cap",
+    "sentiment": "bullish",
+    "date": "2026-05-29",
+    "image": {
+      "src": "/img/articles/tesla-spacex-merger-chatter-2026.jpg",
+      "caption": "SpaceX-Tesla Merger Buzz Hits a Fever Pitch \u2014 $TSLA Could Be the Vehicle for the Biggest Deal in History"
+    },
+    "tags": [
+      "TSLA"
+    ],
+    "editorialTags": [],
+    "seoKeywords": [
+      "TSLA",
+      "mega-cap"
+    ],
+    "links": [],
+    "meta": {
+      "estimatedReadTime": "2 min read"
+    },
+    "bodyHtml": "<p>Multiple major outlets are reporting Elon Musk is considering merging SpaceX with Tesla ahead of the rocket company's anticipated Nasdaq IPO. With $TSLA at $442 and SpaceX valued well north of $1 tril</p>"
+  },
+  {
+    "slug": "arm-first-chip-pivot-2026",
+    "title": "ARM Just Did Something It Hasn't Done in 35 Years \u2014 and the Stock Is Exploding",
+    "subtitle": "Arm Holdings ($ARM) is making its own chips for the first time in 35 years \u2014 a seismic pivot that sent the stock surging 15% to $349.42 intraday. The ",
+    "summary": "Arm Holdings ($ARM) is making its own chips for the first time in 35 years \u2014 a seismic pivot that sent the stock surging 15% to $349.42 intraday. The new AGI CPU, with Meta as its initial customer, ta",
+    "ticker": "ARM",
+    "sector": "ai",
+    "sentiment": "bullish",
+    "date": "2026-05-29",
+    "image": {
+      "src": "/img/articles/arm-first-chip-pivot-2026.jpg",
+      "caption": "ARM Just Did Something It Hasn't Done in 35 Years \u2014 and the Stock Is Exploding"
+    },
+    "tags": [
+      "ARM"
+    ],
+    "editorialTags": [],
+    "seoKeywords": [
+      "ARM",
+      "ai"
+    ],
+    "links": [],
+    "meta": {
+      "estimatedReadTime": "2 min read"
+    },
+    "bodyHtml": "<p>Arm Holdings ($ARM) is making its own chips for the first time in 35 years \u2014 a seismic pivot that sent the stock surging 15% to $349.42 intraday. The new AGI CPU, with Meta as its initial customer, ta</p>"
+  },
+  {
+    "slug": "astera-labs-ai-connectivity-2026",
+    "title": "$ALAB Up 311% from 52-Week Low: The AI Connectivity Company Powering Every Data Center",
+    "subtitle": "Astera Labs hit $349 \u2014 up 17% in five days and 311% from 52-week low. With 93.4% revenue growth, 144% earnings growth, and new AI data center hardware",
+    "summary": "Astera Labs hit $349 \u2014 up 17% in five days and 311% from 52-week low. With 93.4% revenue growth, 144% earnings growth, and new AI data center hardware debuting at Computex, ALAB is the connectivity ba",
+    "ticker": "ALAB",
+    "sector": "ai",
+    "sentiment": "bullish",
+    "date": "2026-05-29",
+    "image": {
+      "src": "/img/articles/astera-labs-ai-connectivity-2026.jpg",
+      "caption": "$ALAB Up 311% from 52-Week Low: The AI Connectivity Company Powering Every Data Center"
+    },
+    "tags": [
+      "ALAB"
+    ],
+    "editorialTags": [],
+    "seoKeywords": [
+      "ALAB",
+      "ai"
+    ],
+    "links": [],
+    "meta": {
+      "estimatedReadTime": "2 min read"
+    },
+    "bodyHtml": "<p>Astera Labs hit $349 \u2014 up 17% in five days and 311% from 52-week low. With 93.4% revenue growth, 144% earnings growth, and new AI data center hardware debuting at Computex, ALAB is the connectivity ba</p>"
+  },
+  {
+    "slug": "palantir-q1-earnings-miss-2026",
+    "title": "Palantir Grew Revenue 85% and Raised Guidance \u2014 So Why Is PLTR Down 26% YTD?",
+    "subtitle": "Palantir reported Q1 2026 with 85% YoY revenue growth to an estimated $1.4B+, ARR crossed $6.5B, and full-year guidance was raised to 71%. Adjusted op",
+    "summary": "Palantir reported Q1 2026 with 85% YoY revenue growth to an estimated $1.4B+, ARR crossed $6.5B, and full-year guidance was raised to 71%. Adjusted operating margins hit 60%. Yet PLTR is down 19.4% ye",
+    "ticker": "PLTR",
+    "sector": "defense",
+    "sentiment": "bullish",
+    "date": "2026-05-28",
+    "image": {
+      "src": "/img/articles/palantir-q1-earnings-miss-2026.jpg",
+      "caption": "Palantir Grew Revenue 85% and Raised Guidance \u2014 So Why Is PLTR Down 26% YTD?"
+    },
+    "tags": [
+      "PLTR"
+    ],
+    "editorialTags": [],
+    "seoKeywords": [
+      "PLTR",
+      "defense"
+    ],
+    "links": [],
+    "meta": {
+      "estimatedReadTime": "2 min read"
+    },
+    "bodyHtml": "<p>Palantir reported Q1 2026 with 85% YoY revenue growth to an estimated $1.4B+, ARR crossed $6.5B, and full-year guidance was raised to 71%. Adjusted operating margins hit 60%. Yet PLTR is down 19.4% ye</p>"
+  },
+  {
+    "slug": "iran-threatens-tech-defense-2026",
+    "title": "Iran Just Threatened U.S. Tech Giants \u2014 Defense Stocks Are the Only Safe Haven",
+    "subtitle": "Iran's IRGC issued a formal warning that American tech companies \u2014 including Nvidia, Apple, and cloud infrastructure providers \u2014 could become legitima",
+    "summary": "Iran's IRGC issued a formal warning that American tech companies \u2014 including Nvidia, Apple, and cloud infrastructure providers \u2014 could become legitimate targets as the US-Iran conflict escalates. Defe",
+    "ticker": "RTX",
+    "sector": "defense",
+    "sentiment": "bullish",
+    "date": "2026-05-28",
+    "image": {
+      "src": "/img/articles/iran-threatens-tech-defense-2026.jpg",
+      "caption": "Iran Just Threatened U.S. Tech Giants \u2014 Defense Stocks Are the Only Safe Haven"
+    },
+    "tags": [
+      "RTX"
+    ],
+    "editorialTags": [],
+    "seoKeywords": [
+      "RTX",
+      "defense"
+    ],
+    "links": [],
+    "meta": {
+      "estimatedReadTime": "2 min read"
+    },
+    "bodyHtml": "<p>Iran's IRGC issued a formal warning that American tech companies \u2014 including Nvidia, Apple, and cloud infrastructure providers \u2014 could become legitimate targets as the US-Iran conflict escalates. Defe</p>"
+  },
+  {
+    "slug": "tsm-blueprint",
+    "title": "The Blueprint: Why Nobody Moves in AI Without TSM",
+    "subtitle": "TSM is the quiet monopoly behind every major tech company \u2014 NVIDIA, Apple, AMD, Broadcom, Qualcomm all depend on it. Over 90% of the world's advanced ",
+    "summary": "TSM is the quiet monopoly behind every major tech company \u2014 NVIDIA, Apple, AMD, Broadcom, Qualcomm all depend on it. Over 90% of the world's advanced semiconductors come from TSM's foundries. The geop",
+    "ticker": "TSM",
+    "sector": "ai",
+    "sentiment": "bullish",
+    "date": "2026-05-28",
+    "image": {
+      "src": "/img/articles/tsm-blueprint.jpg",
+      "caption": "The Blueprint: Why Nobody Moves in AI Without TSM"
+    },
+    "tags": [
+      "TSM"
+    ],
+    "editorialTags": [],
+    "seoKeywords": [
+      "TSM",
+      "ai"
+    ],
+    "links": [],
+    "meta": {
+      "estimatedReadTime": "2 min read"
+    },
+    "bodyHtml": "<p>TSM is the quiet monopoly behind every major tech company \u2014 NVIDIA, Apple, AMD, Broadcom, Qualcomm all depend on it. Over 90% of the world's advanced semiconductors come from TSM's foundries. The geop</p>"
+  },
+  {
+    "slug": "golden-dome-space-force-2026",
+    "title": "Space Force Just Dropped $3.2 Billion on Golden Dome \u2014 The Biggest Missile Defense Play Since Star Wars",
+    "subtitle": "The Space Force selected 12 contractors for the Golden Dome program \u2014 a $3.2B space-based missile interceptor initiative. Lockheed Martin, RTX, L3Harr",
+    "summary": "The Space Force selected 12 contractors for the Golden Dome program \u2014 a $3.2B space-based missile interceptor initiative. Lockheed Martin, RTX, L3Harris, and Northrop Grumman lead the pack. This is th",
+    "ticker": "LMT",
+    "sector": "defense",
+    "sentiment": "bullish",
+    "date": "2026-05-28",
+    "image": {
+      "src": "/img/articles/golden-dome-space-force-2026.jpg",
+      "caption": "Space Force Just Dropped $3.2 Billion on Golden Dome \u2014 The Biggest Missile Defense Play Since Star Wars"
+    },
+    "tags": [
+      "LMT"
+    ],
+    "editorialTags": [],
+    "seoKeywords": [
+      "LMT",
+      "defense"
+    ],
+    "links": [],
+    "meta": {
+      "estimatedReadTime": "2 min read"
+    },
+    "bodyHtml": "<p>The Space Force selected 12 contractors for the Golden Dome program \u2014 a $3.2B space-based missile interceptor initiative. Lockheed Martin, RTX, L3Harris, and Northrop Grumman lead the pack. This is th</p>"
   },
   {
     "slug": "anthropic-mythos-threat-analysis",
@@ -3089,6 +3796,33 @@
       }
     ],
     "bodyHtml": "<p>Let's get the uncomfortable truth out first: <strong>IREN started as a Bitcoin miner.</strong> Not an AI company. Not a cloud provider. A mining operation running ASICs in Texas, crypto cycles and all.</p>\n\n<p>But here's what the skeptics missed: IREN never needed to die to become something bigger. It evolved.</p>\n\n<p>The IREN of today \u2014 ticker <strong>$IREN</strong>, formerly Iris Energy \u2014 just secured a <strong>$3.4 billion AI cloud contract with NVIDIA</strong>. Not a letter of intent. Not a pilot program. A signed, five-year deal to provide GPU cloud services using NVIDIA's H100 and B200 hardware. The same hardware that CoreWeave ($CRWV) and Nebius ($NBIS) are building their entire businesses around.</p>\n\n<p>And management just dropped the number that changes everything: <strong>$3.7 billion in annual recurring revenue (ARR) by year-end 2026.</strong></p>\n\n<p>Let that sink in. A company doing $757 million in trailing revenue is telling Wall Street it will 5x that in 12 months. If they hit that number, IREN goes from a $20 billion market cap to something far larger \u2014 at a forward price-to-sales ratio of 5.4x, compared to CoreWeave's 8.2x.</p>\n\n<h2>The $3.4B NVIDIA Deal: Real or Hype?</h2>\n\n<p>The bear case writes itself. IREN is a Bitcoin miner slapping \"AI\" on a PowerPoint deck. Its free cash flow is <strong>$2.3 billion negative</strong>. Debt-to-equity sits at <strong>148%</strong>. This is a company that burned through cash mining a coin that just dropped 2.5% to $75,500.</p>\n\n<p>But here's where the bulls have a real argument: <strong>NVIDIA doesn't do vanity deals.</strong></p>\n\n<p>NVIDIA's AI infrastructure arm \u2014 the same group that placed $40 billion in equity bets across CoreWeave, Nebius, and other AI cloud players in 2026 \u2014 doesn't sign $3.4 billion agreements with mining companies that can't deliver. NVIDIA vetted IREN's infrastructure, power contracts, and execution capability before putting its name on this deal.</p>\n\n<blockquote>\"The demand for AI compute is structurally underbuilt. Our partnerships with NVIDIA reflect our conviction that this cycle has years, not quarters, left to run.\"<footer>\u2014 IREN Management, Q1 2026 Earnings Call</footer></blockquote>\n\n<p>IREN's competitive advantage is the same one that made CoreWeave: <strong>access to cheap power.</strong> Bitcoin miners already own the fixed-cost power infrastructure. IREN repurposed its Texas mining facilities for GPU clusters \u2014 140,000 NVIDIA GPUs are planned by end of 2026. The power was already contracted. The facilities were already built. The pivot cost is marginal compared to building from scratch.</p>\n\n<h2>The Numbers That Matter</h2>\n\n<div class=\"stats-card\">\n<table>\n  <tr><td class=\"stat-label\">Market Cap</td><td class=\"stat-value\">$20.3B</td></tr>\n  <tr><td class=\"stat-label\">Enterprise Value</td><td class=\"stat-value\">$22.5B</td></tr>\n  <tr><td class=\"stat-label\">Revenue (TTM)</td><td class=\"stat-value\">$757M</td></tr>\n  <tr><td class=\"stat-label\">ARR Target (YE 2026)</td><td class=\"stat-value positive\">$3.7B</td></tr>\n  <tr><td class=\"stat-label\">52-Wk Range</td><td class=\"stat-value\">$8.28 - $76.67</td></tr>\n  <tr><td class=\"stat-label\">YTD Return</td><td class=\"stat-value positive\">+586%</td></tr>\n  <tr><td class=\"stat-label\">NVIDIA Contract</td><td class=\"stat-value positive\">$3.4B</td></tr>\n  <tr><td class=\"stat-label\">P/E (TTM)</td><td class=\"stat-value\">73.8x</td></tr>\n  <tr><td class=\"stat-label\">Cash on Hand</td><td class=\"stat-value\">$2.2B</td></tr>\n  <tr><td class=\"stat-label\">Debt/Equity</td><td class=\"stat-value negative\">148%</td></tr>\n  <tr><td class=\"stat-label\">Free Cash Flow</td><td class=\"stat-value negative\">-$2.3B</td></tr>\n</table>\n</div>\n\n<!-- VIDEO 0 -->\n\n<h2>The Controversy Nobody Is Talking About</h2>\n\n<p>IREN occupies a unique space in the market: <strong>it's simultaneously the most undervalued and the most overvalued AI infrastructure stock on the board.</strong></p>\n\n<p><strong>Undervalued if:</strong> You believe the $3.7B ARR target. At $20B market cap on $3.7B forward revenue, you're paying 5.4x sales for a company growing 5x year-over-year. CoreWeave trades at 8.2x revenue with similar growth. If IREN hits its numbers and re-rates to 8x, that's a $30B market cap \u2014 50% upside from here.</p>\n\n<p><strong>Overvalued if:</strong> You look at trailing numbers. $757M revenue against a $22.5B enterprise value is 29.7x EV/Revenue. Burning $2.3 billion in cash. Debt at 148% of equity. Bitcoin at $75K and dropping. If the crypto correlation drags IREN down or the AI cloud contract execution slips, this stock could get cut in half before anyone asks questions.</p>\n\n<h2>The Catalyst Path</h2>\n\n<ul>\n  <li><strong>Q2 2026 Earnings</strong> (August) \u2014 First full quarter with NVIDIA deal revenue hitting the P&amp;L. If IREN shows meaningful AI cloud revenue ramp, the miner narrative dies.</li>\n  <li><strong>140K GPU Target</strong> (YE 2026) \u2014 Each GPU deployed is a proof point that the pivot is real, not a press release.</li>\n  <li><strong>Bitcoin Stabilization</strong> \u2014 IREN still has mining revenue. If BTC recovers, it provides a cushion for the AI transformation. If BTC drops below $60K, the dual-revenue thesis gets squeezed.</li>\n  <li><strong>Analyst Coverage Expansion</strong> \u2014 Currently underfollowed relative to CoreWeave and Nebius. More analysts means more institutional flows.</li>\n</ul>\n\n<h2>Bottom Line</h2>\n\n<p>IREN is the most divisive stock in AI infrastructure. The bulls see a CoreWeave-in-2024 moment \u2014 a misunderstood company with real contracts and a massive TAM. The bears see a mining stock that caught a lucky bid from NVIDIA and will torch investors when the crypto cycle turns.</p>\n\n<p><strong>The truth is somewhere in between \u2014 and that's exactly where the money is made.</strong> The stock went from $8.28 to $76.67 in 52 weeks for a reason. The NVIDIA deal is real. The ARR target is aggressive but not delusional. The debt and cash burn are real risks. At 5.4x forward revenue with a signed $3.4B anchor contract, IREN deserves a hard look \u2014 just keep one eye on Bitcoin's price chart while you do it.</p>\n\n<p><em>Disclosure: The Signal does not hold positions in any stocks mentioned. This article is for informational purposes only and does not constitute investment advice. Past performance does not guarantee future results.</em></p>"
+  },
+  {
+    "slug": "spacex-starship-100-dollar-per-kg",
+    "title": "Starship at 12 Flights: What SpaceX Has Actually Proven (and What's Still Hype)",
+    "subtitle": "SpaceX's Starship has completed 12 test flights as of May 2026 \u2014 but zero commercial payload missions. The aspirational $100/kg target is still ahead.",
+    "summary": "SpaceX's Starship has completed 12 test flights as of May 2026 \u2014 but zero commercial payload missions. The aspirational $100/kg target is still ahead. Starlink V3 deployment on Starship hasn't begun. ",
+    "ticker": "NVDA",
+    "sector": "ai",
+    "sentiment": "bullish",
+    "date": "2026-05-23",
+    "image": {
+      "src": "/img/articles/spacex-starship-100-dollar-per-kg.jpg",
+      "caption": "Starship at 12 Flights: What SpaceX Has Actually Proven (and What's Still Hype)"
+    },
+    "tags": [
+      "NVDA"
+    ],
+    "editorialTags": [],
+    "seoKeywords": [
+      "NVDA",
+      "ai"
+    ],
+    "links": [],
+    "meta": {
+      "estimatedReadTime": "2 min read"
+    },
+    "bodyHtml": "<p>SpaceX's Starship has completed 12 test flights as of May 2026 \u2014 but zero commercial payload missions. The aspirational $100/kg target is still ahead. Starlink V3 deployment on Starship hasn't begun. </p>"
   },
   {
     "slug": "trump-ai-eo-cancel",
