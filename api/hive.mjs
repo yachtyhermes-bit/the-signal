@@ -126,6 +126,10 @@ async function readData() {
     if (response.ok) {
       const text = await response.text();
       const parsed = JSON.parse(text);
+      // Ensure all required keys exist (GitHub file may be incomplete)
+      if (!parsed.portfolios) parsed.portfolios = {};
+      if (!parsed.priceCache) parsed.priceCache = {};
+      if (!parsed.accounts) parsed.accounts = {};
       // Write to /tmp for warm invocations later
       try {
         await fs.writeFile(HIVE_PATH, JSON.stringify(parsed, null, 2), 'utf8');
@@ -783,6 +787,6 @@ export default async function handler(req, res) {
 
   } catch (err) {
     console.error('Hive error:', err);
-    return res.status(500).json({ error: 'Something went wrong' });
+    return res.status(500).json({ error: 'Something went wrong', detail: err.message, stack: err.stack ? err.stack.split('\n').slice(0, 3).join(' | ') : undefined });
   }
 }
