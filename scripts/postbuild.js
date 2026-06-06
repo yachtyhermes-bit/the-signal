@@ -8,9 +8,10 @@ const ROOT = path.join(__dirname, '..');
 const DIST = path.join(ROOT, 'dist');
 const BACKUP = path.join(ROOT, '_backup_base');
 
-// ─── 1. Restore homepage, CSS, JS, images, favicon from backup ───
+// ─── 1. Restore CSS, JS, images, favicon from backup ───
+// NOTE: index.html is NOT restored from backup — build.js generates the authoritative homepage.
+// Restoring from backup was dropping newly published articles from the live site.
 const RESTORE = [
-  'index.html',
   'favicon.ico',
 ];
 
