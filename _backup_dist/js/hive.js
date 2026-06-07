@@ -177,26 +177,34 @@
   }
 
   function renderPortfolio(data, container) {
+    if (data.error) {
+      container.innerHTML = '<div class=\"hive-error\">' + data.error + '</div>';
+      return;
+    }
     var holdings = data.holdings || {};
+    var cash = (typeof data.cash === 'number') ? data.cash : 0;
+    var totalHoldingsValue = (typeof data.totalHoldingsValue === 'number') ? data.totalHoldingsValue : 0;
+    var totalValue = (typeof data.totalValue === 'number') ? data.totalValue : 0;
+    var ret = (typeof data.return === 'number') ? data.return : 0;
     var holdingKeys = Object.keys(holdings);
     var hasHoldings = holdingKeys.length > 0;
 
     var html = '<div class="hive-portfolio-summary">' +
       '<div class="hive-summary-card">' +
       '<div class="hive-summary-label">Cash Balance</div>' +
-      '<div class="hive-summary-value">$' + data.cash.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}) + '</div>' +
+      '<div class="hive-summary-value">$' + cash.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}) + '</div>' +
       '</div>' +
       '<div class="hive-summary-card">' +
       '<div class="hive-summary-label">Holdings Value</div>' +
-      '<div class="hive-summary-value">$' + (data.totalHoldingsValue || 0).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}) + '</div>' +
+      '<div class="hive-summary-value">$' + totalHoldingsValue.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}) + '</div>' +
       '</div>' +
       '<div class="hive-summary-card hive-summary-total">' +
       '<div class="hive-summary-label">Total Portfolio</div>' +
-      '<div class="hive-summary-value">$' + (data.totalValue || 0).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}) + '</div>' +
+      '<div class="hive-summary-value">$' + totalValue.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}) + '</div>' +
       '</div>' +
-      '<div class="hive-summary-card ' + (data.return >= 0 ? 'hive-positive' : 'hive-negative') + '">' +
+      '<div class="hive-summary-card ' + (ret >= 0 ? 'hive-positive' : 'hive-negative') + '">' +
       '<div class="hive-summary-label">Return</div>' +
-      '<div class="hive-summary-value">' + (data.return >= 0 ? '+' : '') + data.return + '%</div>' +
+      '<div class="hive-summary-value">' + (ret >= 0 ? '+' : '') + ret + '%</div>' +
       '</div>' +
       '</div>';
 

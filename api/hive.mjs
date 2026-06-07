@@ -806,6 +806,6 @@ export default async function handler(req, res) {
 
   } catch (err) {
     console.error('Hive error:', err);
-    return res.status(500).json({ error: 'Something went wrong' });
+    return res.status(500).json({ error: 'Something went wrong', detail: err.message || String(err) });
   }
 }
