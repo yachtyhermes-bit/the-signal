@@ -30,6 +30,15 @@ fs.cpSync(SRC, DST, { recursive: true });
 const htmlBytes = fs.statSync(path.join(DST, 'index.html')).size;
 console.log(`  ✅ ${htmlBytes} bytes homepage → dist/`);
 
+// ─── 1.5. Copy article images ───
+const imgDir = path.join(ROOT, 'public', 'img');
+const distImgDir = path.join(DST, 'img');
+if (fs.existsSync(imgDir)) {
+  fs.cpSync(imgDir, distImgDir, { recursive: true });
+  const imgCount = countFiles(distImgDir);
+  console.log(`  ✅ ${imgCount} image files → dist/img/`);
+}
+
 // ─── 2. Generate article pages ───
 const articleTemplate = fs.existsSync(ARTICLE_TEMPLATE) 
   ? fs.readFileSync(ARTICLE_TEMPLATE, 'utf8') 
