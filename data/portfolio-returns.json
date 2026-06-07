@@ -1,15 +1,15 @@
 {
   "name": "The Signal Portfolio",
   "inception": "2024-06-01",
-  "lastUpdated": "2026-06-05T22:04:04.651Z",
+  "lastUpdated": "2026-06-06T22:03:59.297Z",
   "periods": {
     "sinceInception": {
       "label": "Since Inception",
-      "portfolioReturn": 241.28,
+      "portfolioReturn": 241.29,
       "spyReturn": 39.74,
       "qqqReturn": 55.6,
-      "vsSPY": 201.54,
-      "vsQQQ": 185.68
+      "vsSPY": 201.55,
+      "vsQQQ": 185.69
     },
     "ytd": {
       "label": "YTD",
@@ -162,7 +162,7 @@
     {
       "ticker": "RNMBY",
       "weight": 1,
-      "return": 138
+      "return": 138.39
     },
     {
       "ticker": "CRWV",
