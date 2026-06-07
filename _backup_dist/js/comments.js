@@ -157,6 +157,7 @@
 
   function renderAuthSection() {
     var html = '<div class="comment-form-area" id="commentFormArea">';
+    html += '<div class="comment-signin-title">Drop your thesis below.</div>';
 
     if (currentUser) {
       // Signed in — show comment form
@@ -176,9 +177,8 @@
     } else {
       // Not signed in — show auth options
       html += '<div class="comment-signin-prompt">';
-      html += '<p class="comment-signin-title">Sign in to comment</p>';
+      html += '<p class="comment-auth-subtitle">Join the conversation</p>';
       html += '<button class="comment-google-btn" id="commentGoogleBtn"><span class="comment-google-icon">G</span> Sign in with Google</button>';
-      html += '<div class="comment-auth-divider"><span>or</span></div>';
       html += '<button class="comment-hive-btn" id="commentHiveBtn">🐝 Sign in with The Hive</button>';
       html += '</div>';
     }
