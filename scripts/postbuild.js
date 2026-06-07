@@ -12,7 +12,6 @@ const BACKUP = path.join(ROOT, '_backup_base');
 // NOTE: index.html is NOT restored from backup — build.js generates the authoritative homepage.
 // Restoring from backup was dropping newly published articles from the live site.
 const RESTORE = [
-  'index.html',
   'favicon.ico',
 ];
 
