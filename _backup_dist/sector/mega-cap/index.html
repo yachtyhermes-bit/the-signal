@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08080e">
+    <link rel="canonical" href="https://readthesignal.net/sector/mega-cap">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <meta name="robots" content="max-image-preview:large">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Oxanium:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css?v=15">
+  <link rel="stylesheet" href="/css/pulse-badge.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-98KDVDFBCW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-98KDVDFBCW');
+  </script>
+  <script src="/js/prices.js" defer></script>
+  <script src="/js/search.js" defer></script>
+  <script src="/js/auth.js?v=2" defer></script>
+  <script src="/js/pulse.js" defer></script>
+  <script src="/js/theme.js?v=2" defer></script>
+  <script src="/js/comments.js" defer></script>
+  <script src="/js/share.js" defer></script>
+  <script src="/js/hive.js?v=3" defer></script>
+  <script src="/js/carousel.js" defer></script>
+  <title>Mega-Cap Stocks — The Signal</title>
+  <meta name="description" content="Latest analysis of mega-cap stocks including AAPL, MSFT, GOOGL, AMZN, META.">
+  <meta property="og:title" content="Mega-Cap Stocks — The Signal">
+  <meta property="og:description" content="Latest analysis of mega-cap stocks including AAPL, MSFT, GOOGL, AMZN, META.">
+  
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "The Signal",
+      "url": "https://readthesignal.net",
+      "logo": {"@type":"ImageObject","url":"https://readthesignal.net/img/logo-hex.jpg","width":600,"height":60},
+      "description": "Market intelligence for AI, defense, space, and cybersecurity stocks."
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "The Signal",
+      "url": "https://readthesignal.net",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://readthesignal.net/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo"><img src="/img/logo-hex.jpg" alt="The Signal" class="logo-img"><span class="logo-text"><span class="logo-the">THE</span> <strong>SIGNAL</strong></span></a>
+      <div class="nav-actions">
+        <button class="nav-btn search-btn" id="searchToggle" aria-label="Search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <div class="auth-container" id="authContainer">
+            <button class="nav-btn auth-btn" id="authToggle" aria-label="Sign In">
+              <div class="auth-btn-avatar" id="authBtnAvatar">
+                <span class="auth-btn-initial" id="authBtnInitial"></span>
+                <img class="auth-btn-img" id="authBtnImg" src="" alt="" style="display:none">
+              </div>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="auth-btn-icon" id="authBtnIcon">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              <span class="auth-label" id="authLabel">Sign In</span>
+            </button>
+            <div class="auth-dropdown" id="authDropdown">
+              <!-- Signed-in Profile -->
+              <div class="auth-profile" id="authProfile" style="display:none">
+                <div class="auth-profile-header">
+                  <div class="auth-profile-avatar" id="authProfileAvatar">
+                    <img id="authProfileImg" src="" alt="" style="display:none">
+                    <span class="auth-profile-initial" id="authProfileInitial"></span>
+                  </div>
+                  <div class="auth-profile-info">
+                    <span class="auth-profile-name" id="authProfileName"></span>
+                    <span class="auth-profile-username" id="authProfileUsername"></span>
+                  </div>
+                  <div class="auth-profile-badge">HIVE</div>
+                </div>
+                <div class="auth-profile-stats" id="authProfileStats">
+                  <div class="auth-stat">
+                    <span class="auth-stat-label">Portfolio</span>
+                    <span class="auth-stat-value" id="authStatValue">-</span>
+                  </div>
+                  <div class="auth-stat">
+                    <span class="auth-stat-label">Return</span>
+                    <span class="auth-stat-value" id="authStatReturn">-</span>
+                  </div>
+                </div>
+                <div class="auth-drop-divider"></div>
+                <div class="auth-profile-nav">
+                  <a href="/sector/ai" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
+                  <a href="/sector/cyber" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
+                  <a href="/sector/defense" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
+                  <a href="/sector/space" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
+                  <a href="/sector/mega-cap" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
+                  <a href="/sector/quantum" class="auth-nav-item"><span class="auth-nav-icon">🔬</span> Quantum</a>
+                  <div class="auth-nav-section-header">FEATURES</div>
+                  <a href="/hive" class="auth-nav-item"><span class="auth-nav-icon">🐝</span> Hive</a>
+                  <a href="/signal-vs-the-street" class="auth-nav-item"><span class="auth-nav-icon">📈</span> Signal vs. Street</a>
+                </div>
+                <div class="auth-drop-divider"></div>
+                <div class="auth-profile-footer">
+                  <a href="/hive" class="auth-footer-link" onclick="navigateToHiveLeaderboard(event)">Leaderboard</a>
+                  <a href="/account/settings" class="auth-footer-link">Settings</a>
+                  <button class="auth-signout-btn" id="authSignOut">Sign Out</button>
+                </div>
+              </div>
+              <!-- Guest View -->
+              <div class="auth-guest" id="authGuest">
+                <div class="auth-guest-brand">
+                  <span class="auth-guest-title">Welcome to <strong>The Signal</strong></span>
+                  <span class="auth-guest-sub">Join the hive to track your portfolio</span>
+                </div>
+                <button class="auth-option auth-option-primary" onclick="showHiveJoinModal(&#39;login&#39;)">
+                  <span class="auth-option-icon">🔑</span> Sign In
+                </button>
+                <button class="auth-option" onclick="showHiveJoinModal(&#39;register&#39;)">
+                  <span class="auth-option-icon">✨</span> Create Account
+                </button>
+                <div class="auth-drop-divider"></div>
+                <div class="auth-profile-nav">
+                  <a href="/sector/ai" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
+                  <a href="/sector/cyber" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
+                  <a href="/sector/defense" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
+                  <a href="/sector/space" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
+                  <a href="/sector/mega-cap" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
+                  <a href="/sector/quantum" class="auth-nav-item"><span class="auth-nav-icon">🔬</span> Quantum</a>
+                  <div class="auth-nav-section-header">FEATURES</div>
+                  <a href="/hive" class="auth-nav-item"><span class="auth-nav-icon">🐝</span> Hive</a>
+                  <a href="/signal-vs-the-street" class="auth-nav-item"><span class="auth-nav-icon">📈</span> Signal vs. Street</a>
+                </div>
+              </div>
+          </div>
+        </div>
+        <button class="nav-btn hamburger-btn" id="hamburgerToggle" aria-label="Menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      
+      </div>
+    </div>
+  </div>
+  </nav>
+
+        <!-- Kratos-Inspired Drawer Menu -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <div class="drawer" id="drawer">
+    <div class="drawer-header">
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
+      <a href="/" class="drawer-logo">
+        <img src="/img/logo-hex.jpg" alt="The Signal" class="drawer-logo-img">
+        <span class="drawer-logo-text">SIGNAL</span>
+      </a>
+    </div>
+    <div class="drawer-body">
+      <div class="drawer-section-label">SECTORS</div>
+      <a href="/sector/ai" class="drawer-link">AI</a>
+      <a href="/sector/cyber" class="drawer-link">Cyber</a>
+      <a href="/sector/defense" class="drawer-link">Defense</a>
+      <a href="/sector/space" class="drawer-link">Space</a>
+      <a href="/sector/mega-cap" class="drawer-link">Mega-Cap</a>
+      <a href="/sector/quantum" class="drawer-link">Quantum</a>
+      <hr class="drawer-divider">
+      <div class="drawer-section-label">FEATURES</div>
+      <a href="/hive" class="drawer-link drawer-link-hive">Hive</a>
+      <a href="/signal-vs-the-street" class="drawer-link drawer-link-svs">Signal vs. Street</a>
+    </div>
+  </div>Search Overlay -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-backdrop" id="searchBackdrop"></div>
+    <div class="search-modal">
+      <div class="search-header">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search articles by title, ticker, sector, or tag…" autofocus>
+        <button class="search-close" id="searchClose" aria-label="Close search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+      <div class="search-empty" id="searchEmpty">Start typing to search articles…</div>
+    </div>
+  </div>
+
+  <script id="articles-data" type="application/json">[]</script>
+  <main class="main"><section class="sector-page">
+    <div class="sector-header">
+      <h1 class="sector-title">Mega-Cap</h1>
+      <div class="sector-tickers">
+        <a href="/ticker/AAPL" class="mini-ticker">AAPL</a>
+        <a href="/ticker/MSFT" class="mini-ticker">MSFT</a>
+        <a href="/ticker/GOOGL" class="mini-ticker">GOOGL</a>
+        <a href="/ticker/AMZN" class="mini-ticker">AMZN</a>
+        <a href="/ticker/META" class="mini-ticker">META</a>
+        <a href="/ticker/TSLA" class="mini-ticker">TSLA</a>
+      </div>
+    </div>
+    <div class="sector-prices">
+      <a href="/ticker/AAPL" class="mini-price-card">
+      <span class="mini-symbol">AAPL</span>
+      <span class="mini-change">↗</span>
+    </a>
+      <a href="/ticker/MSFT" class="mini-price-card">
+      <span class="mini-symbol">MSFT</span>
+      <span class="mini-change">↗</span>
+    </a>
+      <a href="/ticker/GOOGL" class="mini-price-card">
+      <span class="mini-symbol">GOOGL</span>
+      <span class="mini-change">↗</span>
+    </a>
+      <a href="/ticker/AMZN" class="mini-price-card">
+      <span class="mini-symbol">AMZN</span>
+      <span class="mini-change">↗</span>
+    </a>
+      <a href="/ticker/META" class="mini-price-card">
+      <span class="mini-symbol">META</span>
+      <span class="mini-change">↗</span>
+    </a>
+      <a href="/ticker/TSLA" class="mini-price-card">
+      <span class="mini-symbol">TSLA</span>
+      <span class="mini-change">↗</span>
+    </a>
+    </div>
+    <div class="article-grid">
+      <a href="/article/may-jobs-report-preview-2026" class="article-card">
+    <div class="card-image"><img src="/img/articles/_default.jpg" alt="May Jobs Report Preview: The One Number That Could Decide the Market&#39;s Next Move" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge neutral">SPY</span>
+      
+      <span class="sentiment-label neutral">– Neutral</span>
+    </div>
+    <h3 class="card-title">May Jobs Report Preview: The One Number That Could Decide the Market&#39;s Next Move</h3>
+    <p class="card-summary">The May jobs report, due Friday June 5, is the most consequential macro catalyst of the month. With the S&amp;P 500 at record highs, the Nasdaq up 8% in May, and oil suffering its worst monthly drop since...</p>
+    <div class="card-meta">
+      <span>Jun 1, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/amzn-new-glenn-explosion-kuiper-2026" class="article-card">
+    <div class="card-image"><img src="/img/articles/amzn-new-glenn-explosion-kuiper-2026.jpg" alt="Blue Origin&#39;s New Glenn Explodes at Cape Canaveral — What the $2.8 Trillion Elephant in the Room Means for AMZN&#39;s Satellite Ambitions" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bearish">AMZN</span>
+      <span class="price-chip down">$262.42 <span>-3.04%</span></span>
+      <span class="sentiment-label bearish">▼ Bearish</span>
+    </div>
+    <h3 class="card-title">Blue Origin&#39;s New Glenn Explodes at Cape Canaveral — What the $2.8 Trillion Elephant in the Room Means for AMZN&#39;s Satellite Ambitions</h3>
+    <p class="card-summary">Blue Origin&#39;s New Glenn rocket exploded at 9 p.m. EDT Thursday during a static fire test at Cape Canaveral Space Force Station, destroying the vehicle Blue Origin was preparing to launch Amazon&#39;s Proj...</p>
+    <div class="card-meta">
+      <span>May 31, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/if-i-could-hold-one-stock-for-5-years-id-pick-google" class="article-card">
+    <div class="card-image"><img src="/img/articles/if-i-could-hold-one-stock-for-5-years-id-pick-google.jpg" alt="If I Could Hold One Stock for the Next 5 Years, I&#39;d Pick Google — Here&#39;s Why" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">GOOGL</span>
+      <span class="price-chip down">$377.33 <span>-0.79%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">If I Could Hold One Stock for the Next 5 Years, I&#39;d Pick Google — Here&#39;s Why</h3>
+    <p class="card-summary">At 22x forward earnings with $110B+ in cash, Google is the most undervalued mega-cap in the Mag 7 by a staggering margin. Cloud is accelerating past a $45B run rate, Waymo is a real business with real...</p>
+    <div class="card-meta">
+      <span>May 31, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/google-pentagon-classified-ai-deal" class="article-card">
+    <div class="card-image"><img src="/img/articles/google-pentagon-classified-ai-deal.jpg" alt="Google Just Signed a Classified AI Deal With the Pentagon — $GOOGL Is Picking Sides in the $7 Trillion Defense AI Revolution" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">GOOGL</span>
+      <span class="price-chip down">$377.33 <span>-0.79%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Google Just Signed a Classified AI Deal With the Pentagon — $GOOGL Is Picking Sides in the $7 Trillion Defense AI Revolution</h3>
+    <p class="card-summary">The Pentagon signed classified AI agreements with Google, Nvidia, Microsoft, Amazon, OpenAI, and others — explicitly excluding Anthropic. Google&#39;s Gemini AI heads to classified military networks. 600+...</p>
+    <div class="card-meta">
+      <span>May 29, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/tesla-spacex-merger-chatter-2026" class="article-card">
+    <div class="card-image"><img src="/img/articles/tesla-spacex-merger-chatter-2026.jpg" alt="SpaceX-Tesla Merger Buzz Hits a Fever Pitch — $TSLA Could Be the Vehicle for the Biggest Deal in History" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">TSLA</span>
+      <span class="price-chip down">$420.19 <span>-3.58%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">SpaceX-Tesla Merger Buzz Hits a Fever Pitch — $TSLA Could Be the Vehicle for the Biggest Deal in History</h3>
+    <p class="card-summary">Multiple major outlets are reporting Elon Musk is considering merging SpaceX with Tesla ahead of the rocket company&#39;s anticipated Nasdaq IPO. With $TSLA at $442 and SpaceX valued well north of $1 tril...</p>
+    <div class="card-meta">
+      <span>May 29, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/apple-ath-2026" class="article-card">
+    <div class="card-image"><img src="/img/articles/apple-ath-2026.jpg" alt="AAPL at $312: Tim Cook Never Hyped AI — And That&#39;s Why Apple Stock Just Hit an All-Time High" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">AAPL</span>
+      <span class="price-chip down">$307.88 <span>-1.34%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">AAPL at $312: Tim Cook Never Hyped AI — And That&#39;s Why Apple Stock Just Hit an All-Time High</h3>
+    <p class="card-summary">Apple hit $312.51 — a new all-time high with a $4.59T market cap. No AI transformation story, no chatbot launch, no rebranding. Just 16.6% revenue growth, 141% ROE, and the most capital-efficient busi...</p>
+    <div class="card-meta">
+      <span>May 29, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/google-ai-price-war-2026" class="article-card">
+    <div class="card-image"><img src="/img/articles/google-ai-price-war-2026.jpg" alt="Google Just Launched a $1 Billion AI Price War — Here&#39;s What It Means for $GOOGL" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">GOOGL</span>
+      <span class="price-chip down">$377.33 <span>-0.79%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Google Just Launched a $1 Billion AI Price War — Here&#39;s What It Means for $GOOGL</h3>
+    <p class="card-summary">Google launched a sweeping AI pricing overhaul, cutting Gemini API costs by up to 80% and giving away $1B in cloud credits — a move that crushes margins for competitors while cementing Google&#39;s AI inf...</p>
+    <div class="card-meta">
+      <span>May 26, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/oracle-cloud-ai-earnings-2026" class="article-card">
+    <div class="card-image"><img src="/img/articles/oracle-cloud-ai-earnings-2026.jpg" alt="Oracle Beat Earnings Again — The Sleeping Giant of AI Cloud Is Wide Awake" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">ORCL</span>
+      <span class="price-chip up">$249.15 <span>+10.35%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Oracle Beat Earnings Again — The Sleeping Giant of AI Cloud Is Wide Awake</h3>
+    <p class="card-summary">Oracle ($ORCL) delivered an earnings beat that underscores its emergence as a serious AI cloud contender. With $64.1B in annual revenue growing at 21.7%, a stunning 57.6% return on equity, and a $552B...</p>
+    <div class="card-meta">
+      <span>May 25, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/salesforce-earnings-buyback-2026" class="article-card">
+    <div class="card-image"><img src="/img/articles/salesforce-earnings-buyback-2026.jpg" alt="$CRM at 12x Earnings: The Market Is Pricing Salesforce Like a Has-Been. The $50 Billion Buyback Says Otherwise." loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">CRM</span>
+      
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">$CRM at 12x Earnings: The Market Is Pricing Salesforce Like a Has-Been. The $50 Billion Buyback Says Otherwise.</h3>
+    <p class="card-summary">$CRM crushed Q1 earnings and announced a historic $50 billion buyback, but the stock remains down 30% YTD at 12x forward earnings. With $16.4B in free cash flow, 12.1% revenue growth, and an AI transf...</p>
+    <div class="card-meta">
+      <span>May 25, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/amzn-ai-cloud-logistics-2026" class="article-card">
+    <div class="card-image"><img src="/img/articles/amzn-ai-cloud-logistics-2026.jpg" alt="$AMZN at $2.86 Trillion: Why AWS AI Growth Is About to Price In Before You Do" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">AMZN</span>
+      <span class="price-chip down">$262.42 <span>-3.04%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">$AMZN at $2.86 Trillion: Why AWS AI Growth Is About to Price In Before You Do</h3>
+    <p class="card-summary">Amazon ($AMZN) is sitting at $266.32, up 17.6% YTD and less than 5% below its all-time high — yet 62 analysts still say Buy with a $312.63 average target. Q1 2026 delivered $181.5B in revenue and $30....</p>
+    <div class="card-meta">
+      <span>May 25, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/ai-inversion-white-collar-blue-collar" class="article-card">
+    <div class="card-image"><img src="/img/articles/ai-inversion-treemap.jpg" alt="The Great AI Inversion: White-Collar Wipeout &amp; The Blue-Collar Boom" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge neutral">META</span>
+      <span class="price-chip down">$607.56 <span>-3.94%</span></span>
+      <span class="sentiment-label neutral">– Neutral</span>
+    </div>
+    <h3 class="card-title">The Great AI Inversion: White-Collar Wipeout &amp; The Blue-Collar Boom</h3>
+    <p class="card-summary">Andrej Karpathy&#39;s viral job risk map scored 342 US occupations by AI exposure — and the results flip the college-to-corporate pipeline on its head. Coders, lawyers, and accountants are in the red zone...</p>
+    <div class="card-meta">
+      <span>May 25, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/tesla-cybertruck-robotaxi-2026" class="article-card">
+    <div class="card-image"><img src="/img/articles/tesla-cybertruck-robotaxi-2026.jpg" alt="Tesla Is a $1.6T Data Company Hiding Inside an Automaker" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">TSLA</span>
+      <span class="price-chip down">$420.19 <span>-3.58%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Tesla Is a $1.6T Data Company Hiding Inside an Automaker</h3>
+    <p class="card-summary">Tesla (TSLA) sits at $426.01 with a $1.6 trillion market cap while Wall Street debates Robotaxi timelines. The contrarian truth: Tesla&#39;s real moat isn&#39;t autonomous driving — it&#39;s 6 million+ vehicles o...</p>
+    <div class="card-meta">
+      <span>May 23, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/ackman-microsoft-ai-bet" class="article-card">
+    <div class="card-image"><img src="/img/articles/ackman-microsoft-ai-bet.jpg" alt="Ackman Dumps Alphabet, Loads Up on Microsoft in $2.1B AI Bet" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">MSFT</span>
+      <span class="price-chip up">$460.77 <span>+2.34%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Ackman Dumps Alphabet, Loads Up on Microsoft in $2.1B AI Bet</h3>
+    <p class="card-summary">Bill Ackman&#39;s Pershing Square Capital built a $2.1 billion stake in Microsoft during Q1 2026, buying the dip as AI fears dragged mega-cap tech stocks lower. He funded the purchase by selling his Alpha...</p>
+    <div class="card-meta">
+      <span>May 23, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/apple-undervalued-mega-cap-2026" class="article-card">
+    <div class="card-image"><img src="/img/articles/apple-undervalued-mega-cap-2026.jpg" alt="Apple Is the Most Boring Mega-Cap in 2026. That&#39;s Exactly Why It&#39;ll Win." loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">AAPL</span>
+      <span class="price-chip down">$307.88 <span>-1.34%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Apple Is the Most Boring Mega-Cap in 2026. That&#39;s Exactly Why It&#39;ll Win.</h3>
+    <p class="card-summary">Apple (AAPL) has been the quiet kid in class while Microsoft, Google, Amazon, and Meta dominate headlines with AI capex splurges. But Apple&#39;s on-device AI strategy — Apple Intelligence rolling out acr...</p>
+    <div class="card-meta">
+      <span>May 23, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/alphabet-5-trillion-milestone" class="article-card">
+    <div class="card-image"><img src="/img/articles/alphabet-5-trillion-milestone.jpg" alt="Google Just Hit $4.64 Trillion. Wall Street Still Isn&#39;t Listening." loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">GOOGL</span>
+      <span class="price-chip down">$377.33 <span>-0.79%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Google Just Hit $4.64 Trillion. Wall Street Still Isn&#39;t Listening.</h3>
+    <p class="card-summary">Alphabet (GOOGL) shattered the $4.64 trillion market cap barrier following Google I/O 2026&#39;s sweeping AI announcements. While the stock briefly dipped on sell-the-news noise, Bank of America doubled d...</p>
+    <div class="card-meta">
+      <span>May 22, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/meta-rayban-display-launch-2026" class="article-card">
+    <div class="card-image"><img src="/img/articles/meta-rayban-display-launch-2026.jpg" alt="Meta&#39;s Smart Glasses Are Here — And They&#39;re Already Too Popular" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">META</span>
+      <span class="price-chip down">$607.56 <span>-3.94%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Meta&#39;s Smart Glasses Are Here — And They&#39;re Already Too Popular</h3>
+    <p class="card-summary">Meta&#39;s $800 Ray-Ban Display smart glasses with built-in display are flying off shelves so fast the company had to delay international launch. Apple hasn&#39;t shipped. Google is still pre-announcing. Meta...</p>
+    <div class="card-meta">
+      <span>May 22, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/meta-layoffs-8000-ai" class="article-card">
+    <div class="card-image"><img src="/img/articles/meta-zuckerberg-layoffs.png" alt="Zuckerberg Fires 8,000 in Brutal AI Restructuring — &#39;Success Isn&#39;t a Given&#39;" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bearish">META</span>
+      <span class="price-chip down">$607.56 <span>-3.94%</span></span>
+      <span class="sentiment-label bearish">▼ Bearish</span>
+    </div>
+    <h3 class="card-title">Zuckerberg Fires 8,000 in Brutal AI Restructuring — &#39;Success Isn&#39;t a Given&#39;</h3>
+    <p class="card-summary">Meta has begun laying off 8,000 employees — 10% of its workforce — in the company&#39;s most aggressive restructuring yet. CEO Mark Zuckerberg told remaining staff &#39;success isn&#39;t a given&#39; as Meta pivots e...</p>
+    <div class="card-meta">
+      <span>May 22, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/amazon-q1-2026-aws-reacceleration" class="article-card">
+    <div class="card-image"><img src="/img/articles/amazon-q1-2026-aws-reacceleration.jpg" alt="AWS Reacceleration Fuels Amazon&#39;s Q1 Earnings Beat as EPS More Than Doubles" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">AMZN</span>
+      <span class="price-chip down">$262.42 <span>-3.04%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">AWS Reacceleration Fuels Amazon&#39;s Q1 Earnings Beat as EPS More Than Doubles</h3>
+    <p class="card-summary">Amazon delivered a powerful Q1 2026 earnings beat, with EPS of $2.78 hammering the $1.65 consensus on 68.5% surprise. Revenue grew 16.6% year-over-year to $181.5 billion, while net income more than do...</p>
+    <div class="card-meta">
+      <span>May 22, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/meta-ai-budget-blowout" class="article-card">
+    <div class="card-image"><img src="/img/articles/meta-ai-budget-blowout.jpg" alt="Meta Just Dropped a $145B AI Bombshell — The Market Panicked. That&#39;s Your Signal." loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">META</span>
+      <span class="price-chip down">$607.56 <span>-3.94%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Meta Just Dropped a $145B AI Bombshell — The Market Panicked. That&#39;s Your Signal.</h3>
+    <p class="card-summary">Meta stunned investors by raising its 2026 total AI spending forecast to $125B-$145B — nearly double prior estimates. The stock dropped 9% despite a stellar Q1 with 33% revenue growth. But this capex ...</p>
+    <div class="card-meta">
+      <span>May 22, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/meta-ai-capex-deep-dive" class="article-card">
+    <div class="card-image"><img src="/img/articles/meta-server-racks.jpg" alt="Meta Is Spending $65B on AI in 2026 — Smart Bet or Billionaire&#39;s Gamble?" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">META</span>
+      <span class="price-chip down">$607.56 <span>-3.94%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Meta Is Spending $65B on AI in 2026 — Smart Bet or Billionaire&#39;s Gamble?</h3>
+    <p class="card-summary">Meta&#39;s $65B AI capex plan has investors divided. With Llama 4 open-source AI gaining traction, Advantage+ ad revenue accelerating, and the metaverse pivot fading into the background, the bull case is ...</p>
+    <div class="card-meta">
+      <span>May 21, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/bill-gates-selling-microsoft" class="article-card">
+    <div class="card-image"><img src="/img/articles/microsoft-surface.jpg" alt="Bill Gates Has Sold $20B+ of Microsoft Stock. Should You Follow?" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">MSFT</span>
+      <span class="price-chip up">$460.77 <span>+2.34%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Bill Gates Has Sold $20B+ of Microsoft Stock. Should You Follow?</h3>
+    <p class="card-summary">Bill Gates has sold billions in Microsoft stock over the past five years, leading some retail investors to question their positions. But a deeper look reveals the sales are about diversification and p...</p>
+    <div class="card-meta">
+      <span>May 20, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+    </div>
+  </section>  </main>
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand"><img src="/img/logo-hex.jpg" alt="The Signal" class="footer-logo"> THE <strong>SIGNAL</strong></div>
+      <div class="footer-tag">The Signal Editorial Team · readthesignal.net</div>
+      <div class="footer-copy">© 2026 The Signal — Market Intelligence. Data from public sources.</div>
+    </div>
+  <script src="/js/prices.js" defer></script>
+  <script src="/js/search.js" defer></script>
+  <script src="/js/auth.js?v=2" defer></script>
+  <script src="/js/pulse.js" defer></script>
+  <script src="/js/theme.js?v=2" defer></script>
+  <script src="/js/comments.js" defer></script>
+  <script src="/js/share.js" defer></script>
+  <script src="/js/hive.js?v=3" defer></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function(){
+    var btn = document.getElementById('hamburgerToggle');
+    var drawer = document.getElementById('drawer');
+    var overlay = document.getElementById('drawerOverlay');
+    var closeBtn = document.getElementById('drawerClose');
+    function openDrawer() {
+      drawer.classList.add('open');
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDrawer() {
+      drawer.classList.remove('open');
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    if (btn && drawer && overlay) {
+      btn.addEventListener('click', function(){ openDrawer(); });
+      overlay.addEventListener('click', function(){ closeDrawer(); });
+      if (closeBtn) closeBtn.addEventListener('click', function(){ closeDrawer(); });
+      // Close on Escape key
+      document.addEventListener('keydown', function(e){
+        if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
+      });
+      // Close on link click inside drawer
+      drawer.querySelectorAll('a').forEach(function(a){
+        a.addEventListener('click', function(){ closeDrawer(); });
+      });
+    }
+  });
+  </script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function(){
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('reveal'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.sc-card, .detail-card-link, .sc-table-container, .newsletter-inner').forEach(function(el){ observer.observe(el); });
+  });
+  </script>
+</html>

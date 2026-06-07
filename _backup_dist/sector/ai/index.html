@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08080e">
+    <link rel="canonical" href="https://readthesignal.net/sector/ai">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <meta name="robots" content="max-image-preview:large">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Oxanium:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css?v=15">
+  <link rel="stylesheet" href="/css/pulse-badge.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-98KDVDFBCW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-98KDVDFBCW');
+  </script>
+  <script src="/js/prices.js" defer></script>
+  <script src="/js/search.js" defer></script>
+  <script src="/js/auth.js?v=2" defer></script>
+  <script src="/js/pulse.js" defer></script>
+  <script src="/js/theme.js?v=2" defer></script>
+  <script src="/js/comments.js" defer></script>
+  <script src="/js/share.js" defer></script>
+  <script src="/js/hive.js?v=3" defer></script>
+  <script src="/js/carousel.js" defer></script>
+  <title>AI Stocks — The Signal</title>
+  <meta name="description" content="Latest analysis of ai stocks including NVDA, AMD, AVGO, MRVL, TSM.">
+  <meta property="og:title" content="AI Stocks — The Signal">
+  <meta property="og:description" content="Latest analysis of ai stocks including NVDA, AMD, AVGO, MRVL, TSM.">
+  
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "The Signal",
+      "url": "https://readthesignal.net",
+      "logo": {"@type":"ImageObject","url":"https://readthesignal.net/img/logo-hex.jpg","width":600,"height":60},
+      "description": "Market intelligence for AI, defense, space, and cybersecurity stocks."
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "The Signal",
+      "url": "https://readthesignal.net",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://readthesignal.net/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo"><img src="/img/logo-hex.jpg" alt="The Signal" class="logo-img"><span class="logo-text"><span class="logo-the">THE</span> <strong>SIGNAL</strong></span></a>
+      <div class="nav-actions">
+        <button class="nav-btn search-btn" id="searchToggle" aria-label="Search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <div class="auth-container" id="authContainer">
+            <button class="nav-btn auth-btn" id="authToggle" aria-label="Sign In">
+              <div class="auth-btn-avatar" id="authBtnAvatar">
+                <span class="auth-btn-initial" id="authBtnInitial"></span>
+                <img class="auth-btn-img" id="authBtnImg" src="" alt="" style="display:none">
+              </div>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="auth-btn-icon" id="authBtnIcon">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              <span class="auth-label" id="authLabel">Sign In</span>
+            </button>
+            <div class="auth-dropdown" id="authDropdown">
+              <!-- Signed-in Profile -->
+              <div class="auth-profile" id="authProfile" style="display:none">
+                <div class="auth-profile-header">
+                  <div class="auth-profile-avatar" id="authProfileAvatar">
+                    <img id="authProfileImg" src="" alt="" style="display:none">
+                    <span class="auth-profile-initial" id="authProfileInitial"></span>
+                  </div>
+                  <div class="auth-profile-info">
+                    <span class="auth-profile-name" id="authProfileName"></span>
+                    <span class="auth-profile-username" id="authProfileUsername"></span>
+                  </div>
+                  <div class="auth-profile-badge">HIVE</div>
+                </div>
+                <div class="auth-profile-stats" id="authProfileStats">
+                  <div class="auth-stat">
+                    <span class="auth-stat-label">Portfolio</span>
+                    <span class="auth-stat-value" id="authStatValue">-</span>
+                  </div>
+                  <div class="auth-stat">
+                    <span class="auth-stat-label">Return</span>
+                    <span class="auth-stat-value" id="authStatReturn">-</span>
+                  </div>
+                </div>
+                <div class="auth-drop-divider"></div>
+                <div class="auth-profile-nav">
+                  <a href="/sector/ai" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
+                  <a href="/sector/cyber" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
+                  <a href="/sector/defense" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
+                  <a href="/sector/space" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
+                  <a href="/sector/mega-cap" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
+                  <a href="/sector/quantum" class="auth-nav-item"><span class="auth-nav-icon">🔬</span> Quantum</a>
+                  <div class="auth-nav-section-header">FEATURES</div>
+                  <a href="/hive" class="auth-nav-item"><span class="auth-nav-icon">🐝</span> Hive</a>
+                  <a href="/signal-vs-the-street" class="auth-nav-item"><span class="auth-nav-icon">📈</span> Signal vs. Street</a>
+                </div>
+                <div class="auth-drop-divider"></div>
+                <div class="auth-profile-footer">
+                  <a href="/hive" class="auth-footer-link" onclick="navigateToHiveLeaderboard(event)">Leaderboard</a>
+                  <a href="/account/settings" class="auth-footer-link">Settings</a>
+                  <button class="auth-signout-btn" id="authSignOut">Sign Out</button>
+                </div>
+              </div>
+              <!-- Guest View -->
+              <div class="auth-guest" id="authGuest">
+                <div class="auth-guest-brand">
+                  <span class="auth-guest-title">Welcome to <strong>The Signal</strong></span>
+                  <span class="auth-guest-sub">Join the hive to track your portfolio</span>
+                </div>
+                <button class="auth-option auth-option-primary" onclick="showHiveJoinModal(&#39;login&#39;)">
+                  <span class="auth-option-icon">🔑</span> Sign In
+                </button>
+                <button class="auth-option" onclick="showHiveJoinModal(&#39;register&#39;)">
+                  <span class="auth-option-icon">✨</span> Create Account
+                </button>
+                <div class="auth-drop-divider"></div>
+                <div class="auth-profile-nav">
+                  <a href="/sector/ai" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
+                  <a href="/sector/cyber" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
+                  <a href="/sector/defense" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
+                  <a href="/sector/space" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
+                  <a href="/sector/mega-cap" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
+                  <a href="/sector/quantum" class="auth-nav-item"><span class="auth-nav-icon">🔬</span> Quantum</a>
+                  <div class="auth-nav-section-header">FEATURES</div>
+                  <a href="/hive" class="auth-nav-item"><span class="auth-nav-icon">🐝</span> Hive</a>
+                  <a href="/signal-vs-the-street" class="auth-nav-item"><span class="auth-nav-icon">📈</span> Signal vs. Street</a>
+                </div>
+              </div>
+          </div>
+        </div>
+        <button class="nav-btn hamburger-btn" id="hamburgerToggle" aria-label="Menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      
+      </div>
+    </div>
+  </div>
+  </nav>
+
+        <!-- Kratos-Inspired Drawer Menu -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <div class="drawer" id="drawer">
+    <div class="drawer-header">
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
+      <a href="/" class="drawer-logo">
+        <img src="/img/logo-hex.jpg" alt="The Signal" class="drawer-logo-img">
+        <span class="drawer-logo-text">SIGNAL</span>
+      </a>
+    </div>
+    <div class="drawer-body">
+      <div class="drawer-section-label">SECTORS</div>
+      <a href="/sector/ai" class="drawer-link">AI</a>
+      <a href="/sector/cyber" class="drawer-link">Cyber</a>
+      <a href="/sector/defense" class="drawer-link">Defense</a>
+      <a href="/sector/space" class="drawer-link">Space</a>
+      <a href="/sector/mega-cap" class="drawer-link">Mega-Cap</a>
+      <a href="/sector/quantum" class="drawer-link">Quantum</a>
+      <hr class="drawer-divider">
+      <div class="drawer-section-label">FEATURES</div>
+      <a href="/hive" class="drawer-link drawer-link-hive">Hive</a>
+      <a href="/signal-vs-the-street" class="drawer-link drawer-link-svs">Signal vs. Street</a>
+    </div>
+  </div>Search Overlay -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-backdrop" id="searchBackdrop"></div>
+    <div class="search-modal">
+      <div class="search-header">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search articles by title, ticker, sector, or tag…" autofocus>
+        <button class="search-close" id="searchClose" aria-label="Close search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+      <div class="search-empty" id="searchEmpty">Start typing to search articles…</div>
+    </div>
+  </div>
+
+  <script id="articles-data" type="application/json">[]</script>
+  <main class="main"><section class="sector-page">
+    <div class="sector-header">
+      <h1 class="sector-title">AI</h1>
+      <div class="sector-tickers">
+        <a href="/ticker/NVDA" class="mini-ticker">NVDA</a>
+        <a href="/ticker/AMD" class="mini-ticker">AMD</a>
+        <a href="/ticker/AVGO" class="mini-ticker">AVGO</a>
+        <a href="/ticker/MRVL" class="mini-ticker">MRVL</a>
+        <a href="/ticker/TSM" class="mini-ticker">TSM</a>
+        <a href="/ticker/ASML" class="mini-ticker">ASML</a>
+        <a href="/ticker/MU" class="mini-ticker">MU</a>
+        <a href="/ticker/CBRS" class="mini-ticker">CBRS</a>
+        <a href="/ticker/CRWV" class="mini-ticker">CRWV</a>
+        <a href="/ticker/NBIS" class="mini-ticker">NBIS</a>
+        <a href="/ticker/SMCI" class="mini-ticker">SMCI</a>
+      </div>
+    </div>
+    <div class="sector-prices">
+      <a href="/ticker/NVDA" class="mini-price-card">
+      <span class="mini-symbol">NVDA</span>
+      <span class="mini-change">↗</span>
+    </a>
+      <a href="/ticker/AMD" class="mini-price-card">
+      <span class="mini-symbol">AMD</span>
+      <span class="mini-change">↗</span>
+    </a>
+      <a href="/ticker/AVGO" class="mini-price-card">
+      <span class="mini-symbol">AVGO</span>
+      <span class="mini-change">↗</span>
+    </a>
+      <a href="/ticker/MRVL" class="mini-price-card">
+      <span class="mini-symbol">MRVL</span>
+      <span class="mini-change">↗</span>
+    </a>
+      <a href="/ticker/TSM" class="mini-price-card">
+      <span class="mini-symbol">TSM</span>
+      <span class="mini-change">↗</span>
+    </a>
+      <a href="/ticker/ASML" class="mini-price-card">
+      <span class="mini-symbol">ASML</span>
+      <span class="mini-change">↗</span>
+    </a>
+      <a href="/ticker/MU" class="mini-price-card">
+      <span class="mini-symbol">MU</span>
+      <span class="mini-change">↗</span>
+    </a>
+      <a href="/ticker/CBRS" class="mini-price-card">
+      <span class="mini-symbol">CBRS</span>
+      <span class="mini-change">↗</span>
+    </a>
+      <a href="/ticker/CRWV" class="mini-price-card">
+      <span class="mini-symbol">CRWV</span>
+      <span class="mini-change">↗</span>
+    </a>
+      <a href="/ticker/NBIS" class="mini-price-card">
+      <span class="mini-symbol">NBIS</span>
+      <span class="mini-change">↗</span>
+    </a>
+      <a href="/ticker/SMCI" class="mini-price-card">
+      <span class="mini-symbol">SMCI</span>
+      <span class="mini-change">↗</span>
+    </a>
+    </div>
+    <div class="article-grid">
+      <a href="/article/nvidia-vera-rubin-arizona-fab-2026" class="article-card">
+    <div class="card-image"><img src="/img/articles/nvidia-vera-rubin-arizona-fab-2026.jpg" alt="Jensen Drops the Hammer at Computex 2026 — NVIDIA&#39;s Vera Rubin Platform and Arizona Fab Redraw the AI Map" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">NVDA</span>
+      <span class="price-chip up">$224.55 <span>+6.35%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Jensen Drops the Hammer at Computex 2026 — NVIDIA&#39;s Vera Rubin Platform and Arizona Fab Redraw the AI Map</h3>
+    <p class="card-summary">NVIDIA CEO Jensen Huang used his Computex 2026 keynote to confirm Vera Rubin is ramping into full production — delivering 10x agent throughput over Grace Blackwell — and announced a joint TSMC partner...</p>
+    <div class="card-meta">
+      <span>Jun 2, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/anthropic-ipo-filing-2026" class="article-card">
+    <div class="card-image"><img src="/img/articles/anthropic-ipo-filing-2026.jpg" alt="The $965 Billion AI Giant Is Going Public — Anthropic Files for Landmark IPO" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">GOOGL</span>
+      <span class="price-chip down">$377.33 <span>-0.79%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">The $965 Billion AI Giant Is Going Public — Anthropic Files for Landmark IPO</h3>
+    <p class="card-summary">Anthropic confidentially filed its IPO prospectus with the SEC on June 1, 2026, prepping Wall Street for what could be the largest technology IPO in history. The company, valued at roughly $965 billio...</p>
+    <div class="card-meta">
+      <span>Jun 2, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/bigbear-ai-defense-contracts-panama-2026" class="article-card">
+    <div class="card-image"><img src="/img/articles/bigbear-ai-defense-contracts-panama-2026.jpg" alt="BigBear.ai Stock Surges 20% as $60M Defense Contracts and Panama AI Deal Reshape the Narrative" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">BBAI</span>
+      
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">BigBear.ai Stock Surges 20% as $60M Defense Contracts and Panama AI Deal Reshape the Narrative</h3>
+    <p class="card-summary">BigBear.ai (NYSE: BBAI) shares surged 20% this week after the company reported Q1 earnings that beat revenue estimates, grew its contract backlog to $282 million, and announced a landmark AI-powered c...</p>
+    <div class="card-meta">
+      <span>May 30, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/nvidia-windows-pc-chip-2026" class="article-card">
+    <div class="card-image"><img src="/img/articles/nvidia-windows-pc-chip-2026.jpg" alt="Nvidia Is Finally Coming for Your Windows PC — N1X Arm Chip Set to Debut at Computex Next Week" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">NVDA</span>
+      <span class="price-chip up">$224.55 <span>+6.35%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Nvidia Is Finally Coming for Your Windows PC — N1X Arm Chip Set to Debut at Computex Next Week</h3>
+    <p class="card-summary">Nvidia is entering the Windows PC CPU market with its N1X Arm-based processor, set to be unveiled at Computex 2026 next week. Axios and Reuters both reported May 30 that the first Windows PC powered b...</p>
+    <div class="card-meta">
+      <span>May 30, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/smci-dell-ai-server-wave-2026" class="article-card">
+    <div class="card-image"><img src="/img/articles/smci-dell-ai-server-wave-2026.jpg" alt="$SMCI Rallies 11% as Dell&#39;s Blowout Earnings Validate the AI Server Thesis" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">SMCI</span>
+      <span class="price-chip up">$47.80 <span>+3.71%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">$SMCI Rallies 11% as Dell&#39;s Blowout Earnings Validate the AI Server Thesis</h3>
+    <p class="card-summary">$SMCI jumped ~11.6% on Friday as Dell&#39;s blockbuster earnings confirmed that AI server demand is accelerating, not slowing. Dell raised guidance, reported 39.5% revenue growth, and flagged a massive AI...</p>
+    <div class="card-meta">
+      <span>May 29, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/palantir-surges-ai-factory-dell-partnership" class="article-card">
+    <div class="card-image"><img src="/img/articles/palantir-surges-ai-factory-dell-partnership.jpg" alt="Palantir Surges 10% as Dell&#39;s Blowout Earnings Validate AI Factory Partnership" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">PLTR</span>
+      <span class="price-chip up">$162.45 <span>+3.78%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Palantir Surges 10% as Dell&#39;s Blowout Earnings Validate AI Factory Partnership</h3>
+    <p class="card-summary">Palantir jumped 10% on May 29 after Dell&#39;s massive Q1 earnings beat validated the AI spending cycle. With US commercial revenue crossing 100% growth, Palantir&#39;s AI Factory partnership with Dell is eme...</p>
+    <div class="card-meta">
+      <span>May 29, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/arm-first-chip-pivot-2026" class="article-card">
+    <div class="card-image"><img src="/img/articles/arm-first-ai-chip.jpg" alt="ARM Just Did Something It Hasn&#39;t Done in 35 Years — and the Stock Is Exploding" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">ARM</span>
+      
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">ARM Just Did Something It Hasn&#39;t Done in 35 Years — and the Stock Is Exploding</h3>
+    <p class="card-summary">Arm Holdings ($ARM) is making its own chips for the first time in 35 years — a seismic pivot that sent the stock surging 15% to $349.42 intraday. The new AGI CPU, with Meta as its initial customer, ta...</p>
+    <div class="card-meta">
+      <span>May 29, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/astera-labs-ai-connectivity-2026" class="article-card">
+    <div class="card-image"><img src="/img/articles/astera-labs-ai-connectivity-2026.jpg" alt="$ALAB Up 311% from 52-Week Low: The AI Connectivity Company Powering Every Data Center" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">ALAB</span>
+      
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">$ALAB Up 311% from 52-Week Low: The AI Connectivity Company Powering Every Data Center</h3>
+    <p class="card-summary">Astera Labs hit $349 — up 17% in five days and 311% from 52-week low. With 93.4% revenue growth, 144% earnings growth, and new AI data center hardware debuting at Computex, ALAB is the connectivity ba...</p>
+    <div class="card-meta">
+      <span>May 29, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/tsm-blueprint" class="article-card">
+    <div class="card-image"><img src="/img/articles/tsm-blueprint-wafers.jpg" alt="The Blueprint: Why Nobody Moves in AI Without TSM" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">TSM</span>
+      <span class="price-chip up">$442.65 <span>+5.78%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">The Blueprint: Why Nobody Moves in AI Without TSM</h3>
+    <p class="card-summary">TSM is the quiet monopoly behind every major tech company — NVIDIA, Apple, AMD, Broadcom, Qualcomm all depend on it. Over 90% of the world&#39;s advanced semiconductors come from TSM&#39;s foundries. The geop...</p>
+    <div class="card-meta">
+      <span>May 28, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/nebius-q1-earnings-ai-cloud-2026" class="article-card">
+    <div class="card-image"><img src="/img/articles/nebius-q1-earnings-ai-cloud-2026.jpg" alt="Nebius Just Dropped Q1 Earnings — Europe&#39;s AI Cloud Dark Horse Is Scaling Fast" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">NBIS</span>
+      <span class="price-chip up">$273.40 <span>+18.31%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Nebius Just Dropped Q1 Earnings — Europe&#39;s AI Cloud Dark Horse Is Scaling Fast</h3>
+    <p class="card-summary">Nebius Group ($NBIS) reported explosive Q1 2026 earnings, with revenue surging as its European AI cloud platform captures demand from cost-conscious enterprises fleeing US hyperscaler pricing.</p>
+    <div class="card-meta">
+      <span>May 26, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/arm-holdings-ai-chip-architecture" class="article-card">
+    <div class="card-image"><img src="/img/articles/arm-chip-architecture.jpg" alt="Arm Holdings Is the Hidden Architecture Powering the AI Revolution — and It&#39;s Just Getting Started" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">ARM</span>
+      
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Arm Holdings Is the Hidden Architecture Powering the AI Revolution — and It&#39;s Just Getting Started</h3>
+    <p class="card-summary">Arm Holdings ($ARM) is the architectural backbone of the AI revolution — its chip designs power virtually every mobile processor, most cloud data center CPUs, and a growing share of AI accelerators. W...</p>
+    <div class="card-meta">
+      <span>May 26, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/qualcomm-edge-ai-awakening" class="article-card">
+    <div class="card-image"><img src="/img/articles/qualcomm-edge-ai-awakening.jpg" alt="Qualcomm Just Popped 11.6% as Wall Street Finally Wakes Up to the Edge AI Revolution" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">QCOM</span>
+      <span class="price-chip down">$229.99 <span>-8.38%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Qualcomm Just Popped 11.6% as Wall Street Finally Wakes Up to the Edge AI Revolution</h3>
+    <p class="card-summary">Qualcomm surged 11.6% to $238.16 as the market finally recognized the company&#39;s position as the leading edge AI chip platform for smartphones, PCs, and cars. With quarterly earnings growth of +162%, $...</p>
+    <div class="card-meta">
+      <span>May 24, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/tower-semiconductor-ai-chip-deals" class="article-card">
+    <div class="card-image"><img src="/img/articles/tower-semiconductor-ai-chip-deals.jpg" alt="Tower Semiconductor Just Signed $1.3 Billion in AI Chip Deals — This Tiny Foundry Is Becoming a Silicon Photonics Powerhouse" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">TSEM</span>
+      
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Tower Semiconductor Just Signed $1.3 Billion in AI Chip Deals — This Tiny Foundry Is Becoming a Silicon Photonics Powerhouse</h3>
+    <p class="card-summary">Tower Semiconductor ($TSEM) signed $1.3 billion in silicon photonics contracts for AI data center optical interconnects, raised its revenue forecast, and nearly doubled operating profit in Q1 2026. Th...</p>
+    <div class="card-meta">
+      <span>May 24, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/smci-q3-earnings-surge-ai-value" class="article-card">
+    <div class="card-image"><img src="/img/articles/smci-q3-earnings-surge-ai-value.jpg" alt="Super Micro Just Doubled Revenue — And Trades at 11x Earnings. The Market Is Priced for a Slowdown That Isn&#39;t Coming." loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">SMCI</span>
+      <span class="price-chip up">$47.80 <span>+3.71%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Super Micro Just Doubled Revenue — And Trades at 11x Earnings. The Market Is Priced for a Slowdown That Isn&#39;t Coming.</h3>
+    <p class="card-summary">Super Micro Computer ($SMCI) jumped ~20% after Q3 FY2026 earnings showed revenue doubling to $33.7B with 122% YoY growth and quarterly earnings surging 344%. The AI server builder trades at just 11x f...</p>
+    <div class="card-meta">
+      <span>May 24, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/amd-meta-chips-deal-100b" class="article-card">
+    <div class="card-image"><img src="/img/articles/amd-meta-chips-deal-100b.jpg" alt="AMD Just Locked Down a $100 Billion AI Deal With Meta — And Wall Street Is Still Underpricing It" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">AMD</span>
+      <span class="price-chip down">$513.52 <span>-0.50%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">AMD Just Locked Down a $100 Billion AI Deal With Meta — And Wall Street Is Still Underpricing It</h3>
+    <p class="card-summary">AMD signed a second mega AI chip supply deal with Meta Platforms worth north of $100 billion, structured as chips-for-stock. AMD shares jumped roughly 8% as Meta diversifies away from sole NVIDIA depe...</p>
+    <div class="card-meta">
+      <span>May 24, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/broadcom-google-anthropic-expanded-deal" class="article-card">
+    <div class="card-image"><img src="/img/articles/broadcom-google-anthropic-expanded-deal.jpg" alt="Broadcom Just Locked In $200 Billion in AI Compute Deals — And It&#39;s Still the Cheapest Way to Play the Boom" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">AVGO</span>
+      <span class="price-chip up">$460.80 <span>+3.14%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Broadcom Just Locked In $200 Billion in AI Compute Deals — And It&#39;s Still the Cheapest Way to Play the Boom</h3>
+    <p class="card-summary">Broadcom expanded its custom AI chip (ASIC) partnerships with Google and Anthropic in a deal spanning multiple gigawatts of compute capacity. Anthropic committed over $200 billion to Google Cloud and ...</p>
+    <div class="card-meta">
+      <span>May 24, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/intel-tesla-14a-terafab-deal" class="article-card">
+    <div class="card-image"><img src="/img/articles/intel-tesla-14a-terafab-deal.jpg" alt="Intel&#39;s Comeback Is Real — Tesla Just Bet $20 Billion on Its 14A Chips" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">INTC</span>
+      <span class="price-chip down">$109.98 <span>-4.10%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Intel&#39;s Comeback Is Real — Tesla Just Bet $20 Billion on Its 14A Chips</h3>
+    <p class="card-summary">Intel won Tesla as the first major customer for its cutting-edge 14A chip manufacturing process. Tesla will use Intel 14A technology for Elon Musk&#39;s massive Terafab AI chip project in Austin, Texas — ...</p>
+    <div class="card-meta">
+      <span>May 24, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/broadcom-wall-street-top-pick-2026" class="article-card">
+    <div class="card-image"><img src="/img/articles/broadcom-wall-street-top-pick-2026.jpg" alt="Broadcom Just Hit a 52-Week High. Wall Street Says It&#39;s Still Cheap." loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">AVGO</span>
+      <span class="price-chip up">$460.80 <span>+3.14%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Broadcom Just Hit a 52-Week High. Wall Street Says It&#39;s Still Cheap.</h3>
+    <p class="card-summary">Broadcom surged to a 52-week high of $442.36 as Wall Street analysts race to raise targets. Citi named it the top semiconductor pick for 2026. Wells Fargo lifted its target to $545, citing AI semicond...</p>
+    <div class="card-meta">
+      <span>May 23, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/micron-hbm-ai-chip-2026" class="article-card">
+    <div class="card-image"><img src="/img/articles/micron-hbm-ai-chip-2026.jpg" alt="Micron at 7.3x Forward PE: The Insanely Cheap AI Stock Analysts Still Don&#39;t Get" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">MU</span>
+      <span class="price-chip up">$1036.95 <span>+6.79%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Micron at 7.3x Forward PE: The Insanely Cheap AI Stock Analysts Still Don&#39;t Get</h3>
+    <p class="card-summary">Micron (MU) is crushing it: $58.1B revenue growing 196% YoY, 67.6% operating margins, and a forward PE of just 7.3x — absurdly cheap for any AI infrastructure company. While analysts slap a $613 targe...</p>
+    <div class="card-meta">
+      <span>May 23, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/iren-nvidia-deal-ai-cloud-controversy" class="article-card">
+    <div class="card-image"><img src="/img/articles/iren-datacenter.jpg" alt="IREN Went From Bitcoin Miner to $3.4B NVIDIA Partner — Wall Street Is Just Waking Up" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">IREN</span>
+      <span class="price-chip up">$66.39 <span>+4.49%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">IREN Went From Bitcoin Miner to $3.4B NVIDIA Partner — Wall Street Is Just Waking Up</h3>
+    <p class="card-summary">IREN (IREN) — formerly Iris Energy — was written off as another Bitcoin miner riding a volatile coin. Then it signed a $3.4B AI cloud contract with NVIDIA. Now management forecasts $3.7 billion in ann...</p>
+    <div class="card-meta">
+      <span>May 23, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/amd-quietly-crushing-nvidia-2026" class="article-card">
+    <div class="card-image"><img src="/img/articles/amd-quietly-crushing-nvidia-2026.jpg" alt="AMD Is Quietly Crushing Nvidia In 2026 — Up 118% While Everyone Watched NVDA" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">AMD</span>
+      <span class="price-chip down">$513.52 <span>-0.50%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">AMD Is Quietly Crushing Nvidia In 2026 — Up 118% While Everyone Watched NVDA</h3>
+    <p class="card-summary">AMD stock is up 118% year-to-date, quietly outperforming Nvidia by a wide margin. Q1 2026 earnings were a blowout — revenue hit $10.3B (37.8% YoY growth), adjusted EPS of $1.37 beat estimates by 5.8%,...</p>
+    <div class="card-meta">
+      <span>May 22, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/nvidia-post-earnings-analysis-2026" class="article-card">
+    <div class="card-image"><img src="/img/articles/nvidia-post-earnings-analysis-2026.jpg" alt="Nvidia Just Dropped a $58.3 Billion Profit — And the AI Supercycle Is Barely Started" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">NVDA</span>
+      <span class="price-chip up">$224.55 <span>+6.35%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Nvidia Just Dropped a $58.3 Billion Profit — And the AI Supercycle Is Barely Started</h3>
+    <p class="card-summary">Nvidia reported Q1 FY2027 earnings that blew past every estimate — $81.6B in revenue, $58.3B in net income, and data center revenue surging 92% YoY to $75.2B. The Blackwell ramp is ahead of schedule, ...</p>
+    <div class="card-meta">
+      <span>May 22, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/trump-ai-eo-cancel" class="article-card">
+    <div class="card-image"><img src="/img/articles/trump-ai-eo-cancel.jpg" alt="Trump Torpedoes AI Executive Order — And Markets Are Loving It" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">NVDA</span>
+      <span class="price-chip up">$224.55 <span>+6.35%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Trump Torpedoes AI Executive Order — And Markets Are Loving It</h3>
+    <p class="card-summary">President Trump abruptly canceled the signing of an executive order that would have given the federal government sweeping oversight of advanced AI models. He cited concerns about overregulation and th...</p>
+    <div class="card-meta">
+      <span>May 22, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/broadcom-custom-ai-asic-dominance-2026" class="article-card">
+    <div class="card-image"><img src="/img/articles/broadcom-custom-ai-asic-dominance-2026.jpg" alt="Nvidia Gets the Headlines. Broadcom Gets the Checks." loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">AVGO</span>
+      <span class="price-chip up">$460.80 <span>+3.14%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Nvidia Gets the Headlines. Broadcom Gets the Checks.</h3>
+    <p class="card-summary">Broadcom is quietly becoming the most important AI chip company you&#39;re not watching. With a $1.96T market cap and $68.3B in TTM revenue, custom ASIC revenue has doubled as Google, Meta, and Amazon tap...</p>
+    <div class="card-meta">
+      <span>May 22, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/nvidia-80b-buyback-signal" class="article-card">
+    <div class="card-image"><img src="/img/articles/nvidia-80b-buyback-signal.jpg" alt="Nvidia&#39;s $80B Buyback Is the Loudest Whisper in the Market — Are You Listening?" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">NVDA</span>
+      <span class="price-chip up">$224.55 <span>+6.35%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Nvidia&#39;s $80B Buyback Is the Loudest Whisper in the Market — Are You Listening?</h3>
+    <p class="card-summary">Nvidia smashed Q1 estimates with $81.6B in record revenue and Data Center up 92% YoY, then authorized an $80B stock buyback — the largest capital return program in tech history. The stock barely moved...</p>
+    <div class="card-meta">
+      <span>May 22, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/nebius-group-growth-2026" class="article-card">
+    <div class="card-image"><img src="/img/articles/nebius-group-growth-2026.jpg" alt="Europe&#39;s AI Infrastructure Giant: Nebius Is Building the GPU Empire You Haven&#39;t Noticed" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">NBIS</span>
+      <span class="price-chip up">$273.40 <span>+18.31%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Europe&#39;s AI Infrastructure Giant: Nebius Is Building the GPU Empire You Haven&#39;t Noticed</h3>
+    <p class="card-summary">Nebius Group (NBIS) raised $700M from Accel and Nvidia in March 2026, launched a 20,000-H100 Paris cloud region, and locked in a multi-year deal with a major US hyperscaler estimated at $150M+ ARR. Re...</p>
+    <div class="card-meta">
+      <span>May 22, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/marvell-ai-silicon-sleeper" class="article-card">
+    <div class="card-image"><img src="/img/articles/marvell-ai-chip.jpg" alt="Marvell Is the AI Semiconductor Giant Wall Street Is Ignoring" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">MRVL</span>
+      <span class="price-chip up">$222.46 <span>+8.52%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Marvell Is the AI Semiconductor Giant Wall Street Is Ignoring</h3>
+    <p class="card-summary">Marvell hit $189 after a 263% run from its 52-week low, posting $8.2B revenue and a 32.6% profit margin. With custom AI silicon exploding and optical interconnect demand surging, MRVL is the most unde...</p>
+    <div class="card-meta">
+      <span>May 21, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/coreweave-ai-cloud-dark-horse" class="article-card">
+    <div class="card-image"><img src="/img/articles/coreweave-hero.jpg" alt="CoreWeave Is the AI Cloud Dark Horse Nobody&#39;s Talking About" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">CRWV</span>
+      <span class="price-chip up">$127.30 <span>+16.22%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">CoreWeave Is the AI Cloud Dark Horse Nobody&#39;s Talking About</h3>
+    <p class="card-summary">CoreWeave (CRWV) runs $6.2B in annual revenue as the premier GPU-as-a-service cloud for AI workloads. Up 50% YTD with a $138 analyst target, this is the infrastructure bet that captures AI compute dem...</p>
+    <div class="card-meta">
+      <span>May 21, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/karpathy-anthropic" class="article-card">
+    <div class="card-image"><img src="/img/articles/karpathy-hero.jpg" alt="Andrej Karpathy Joins Anthropic: Why This Changes the AI Landscape" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish"></span>
+      
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Andrej Karpathy Joins Anthropic: Why This Changes the AI Landscape</h3>
+    <p class="card-summary">Andrej Karpathy — OpenAI co-founder, former Tesla AI director, and one of the most recognizable AI researchers in the world — has joined Anthropic to lead pretraining research. The move reshapes the c...</p>
+    <div class="card-meta">
+      <span>May 21, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/broadcom-ai-networking-dominance" class="article-card">
+    <div class="card-image"><img src="/img/articles/broadcom-jericho4-chip.jpg" alt="Broadcom&#39;s AI Networking Dominance: Tomahawk, Custom ASICs, and the VMware Pivot" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">AVGO</span>
+      <span class="price-chip up">$460.80 <span>+3.14%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Broadcom&#39;s AI Networking Dominance: Tomahawk, Custom ASICs, and the VMware Pivot</h3>
+    <p class="card-summary">Broadcom&#39;s Tomahawk 5 switches connect Nvidia GPUs in every major hyperscaler cluster. Custom ASIC deals with Google, Meta, and Apple add $10B+ in AI revenue. VMware is pivoting to subscription, and t...</p>
+    <div class="card-meta">
+      <span>May 21, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/amd-vs-nvidia-ai-2026" class="article-card">
+    <div class="card-image"><img src="/img/articles/amd-vs-nvidia.jpg" alt="AMD vs Nvidia in AI: Is 2026 Finally AMD&#39;s Year to Compete?" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">AMD</span>
+      <span class="price-chip down">$513.52 <span>-0.50%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">AMD vs Nvidia in AI: Is 2026 Finally AMD&#39;s Year to Compete?</h3>
+    <p class="card-summary">AMD&#39;s Instinct MI350 is winning real hyperscaler deployments, and MI400 is on track for 2027. But Nvidia&#39;s Blackwell ramp and CUDA ecosystem remain formidable. We analyze whether AMD can capture 20%+ ...</p>
+    <div class="card-meta">
+      <span>May 21, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/palantir-aip-government-ai" class="article-card">
+    <div class="card-image"><img src="/img/articles/palantir-data.jpg" alt="Palantir&#39;s AIP Is the Government AI Engine — Here&#39;s the Bull Case for $PLTR" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">PLTR</span>
+      <span class="price-chip up">$162.45 <span>+3.78%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Palantir&#39;s AIP Is the Government AI Engine — Here&#39;s the Bull Case for $PLTR</h3>
+    <p class="card-summary">Palantir&#39;s AIP platform is driving a new wave of government and commercial AI adoption, with FY2025 revenue of $4.48B (+56% YoY), Q1 2026 revenue of $1.63B accelerating to 85% growth, and a market cap...</p>
+    <div class="card-meta">
+      <span>May 20, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/nvidia-blackwell-ramp-2026" class="article-card">
+    <div class="card-image"><img src="/img/articles/nvidia-vera-rubin-chip.jpg" alt="Nvidia&#39;s Blackwell Ramp: Inside the $100B AI Infrastructure Super-Cycle" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">NVDA</span>
+      <span class="price-chip up">$224.55 <span>+6.35%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Nvidia&#39;s Blackwell Ramp: Inside the $100B AI Infrastructure Super-Cycle</h3>
+    <p class="card-summary">Nvidia&#39;s Blackwell B200 is shipping in volume, hyperscaler orders are accelerating, and data center revenue is tracking toward $100B+. But with AMD&#39;s MI350 on the horizon and custom ASICs gaining trac...</p>
+    <div class="card-meta">
+      <span>May 20, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/google-io-2026-takeaways" class="article-card">
+    <div class="card-image"><img src="/img/articles/google-io-2026.jpg" alt="Google I/O 2026: 5 Takeaways That Reshape the AI Landscape" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">GOOGL</span>
+      <span class="price-chip down">$377.33 <span>-0.79%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Google I/O 2026: 5 Takeaways That Reshape the AI Landscape</h3>
+    <p class="card-summary">Google I/O 2026 was a declaration that the AI wars have entered their platform phase. Gemini 3.0 closes the gap with GPT-5, AI Search monetizes at 15-20% higher CPMs, and TPU v6 gives Google a structu...</p>
+    <div class="card-meta">
+      <span>May 20, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/cerebras-ipo-nvidia-threat-analysis" class="article-card">
+    <div class="card-image"><img src="/img/articles/cerebras-hero-chip.jpg" alt="Cerebras Landed 2026&#39;s Biggest IPO. Here&#39;s Why Nvidia Isn&#39;t Losing Sleep." loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge neutral">CBRS</span>
+      <span class="price-chip down">$218.01 <span>-8.01%</span></span>
+      <span class="sentiment-label neutral">– Neutral</span>
+    </div>
+    <h3 class="card-title">Cerebras Landed 2026&#39;s Biggest IPO. Here&#39;s Why Nvidia Isn&#39;t Losing Sleep.</h3>
+    <p class="card-summary">Cerebras Systems debuted on Nasdaq with a $26.6B valuation and surged 68% on its first day. The company&#39;s wafer-scale chips excel at AI inference but face a narrowing window as Nvidia&#39;s Blackwell arch...</p>
+    <div class="card-meta">
+      <span>May 20, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+    </div>
+  </section>  </main>
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand"><img src="/img/logo-hex.jpg" alt="The Signal" class="footer-logo"> THE <strong>SIGNAL</strong></div>
+      <div class="footer-tag">The Signal Editorial Team · readthesignal.net</div>
+      <div class="footer-copy">© 2026 The Signal — Market Intelligence. Data from public sources.</div>
+    </div>
+  <script src="/js/prices.js" defer></script>
+  <script src="/js/search.js" defer></script>
+  <script src="/js/auth.js?v=2" defer></script>
+  <script src="/js/pulse.js" defer></script>
+  <script src="/js/theme.js?v=2" defer></script>
+  <script src="/js/comments.js" defer></script>
+  <script src="/js/share.js" defer></script>
+  <script src="/js/hive.js?v=3" defer></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function(){
+    var btn = document.getElementById('hamburgerToggle');
+    var drawer = document.getElementById('drawer');
+    var overlay = document.getElementById('drawerOverlay');
+    var closeBtn = document.getElementById('drawerClose');
+    function openDrawer() {
+      drawer.classList.add('open');
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDrawer() {
+      drawer.classList.remove('open');
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    if (btn && drawer && overlay) {
+      btn.addEventListener('click', function(){ openDrawer(); });
+      overlay.addEventListener('click', function(){ closeDrawer(); });
+      if (closeBtn) closeBtn.addEventListener('click', function(){ closeDrawer(); });
+      // Close on Escape key
+      document.addEventListener('keydown', function(e){
+        if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
+      });
+      // Close on link click inside drawer
+      drawer.querySelectorAll('a').forEach(function(a){
+        a.addEventListener('click', function(){ closeDrawer(); });
+      });
+    }
+  });
+  </script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function(){
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('reveal'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.sc-card, .detail-card-link, .sc-table-container, .newsletter-inner').forEach(function(el){ observer.observe(el); });
+  });
+  </script>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account Settings — The Signal</title>
+  <meta name="description" content="Manage your The Signal account settings, display name, and preferences.">
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css?v=12">
+  <script src="/js/auth.js?v=2" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <style>
+    .settings-page {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .settings-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 30px;
+      margin-bottom: 20px;
+    }
+    .settings-card h2 {
+      font-size: 18px;
+      font-weight: 700;
+      margin: 0 0 6px;
+      color: var(--text-primary);
+    }
+    .settings-card p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin: 0 0 20px;
+      line-height: 1.5;
+    }
+    .settings-field {
+      margin-bottom: 16px;
+    }
+    .settings-field label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+    .settings-field input {
+      width: 100%;
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text-primary);
+      font-size: 14px;
+      font-family: inherit;
+      outline: none;
+      box-sizing: border-box;
+    }
+    .settings-field input:focus {
+      border-color: #3b82f6;
+    }
+    .settings-btn {
+      padding: 10px 24px;
+      border-radius: 8px;
+      border: none;
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      transition: opacity 0.2s;
+      font-family: inherit;
+    }
+    .settings-btn:hover {
+      opacity: 0.9;
+    }
+    .settings-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    .settings-message {
+      font-size: 13px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      margin-top: 12px;
+      display: none;
+    }
+    .settings-message.success {
+      display: block;
+      background: rgba(34,197,94,0.1);
+      border: 1px solid rgba(34,197,94,0.2);
+      color: #22c55e;
+    }
+    .settings-message.error {
+      display: block;
+      background: rgba(239,68,68,0.1);
+      border: 1px solid rgba(239,68,68,0.2);
+      color: #ef4444;
+    }
+    .settings-nav {
+      margin-bottom: 20px;
+    }
+    .settings-nav a {
+      color: var(--text-muted);
+      font-size: 13px;
+      text-decoration: none;
+    }
+    .settings-nav a:hover {
+      color: var(--text-primary);
+    }
+    .settings-nav .sep {
+      color: var(--border);
+      margin: 0 8px;
+    }
+    .settings-danger {
+      border-color: rgba(239,68,68,0.2);
+    }
+    .settings-danger-btn {
+      background: #ef4444;
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo"><img src="/img/logo-hex.jpg" alt="The Signal" class="logo-img"><span class="logo-text"><span class="logo-the">THE</span> <strong>SIGNAL</strong></span></a>
+      <div class="nav-actions">
+        <div class="auth-container" id="authContainer">
+          <button class="nav-btn auth-btn" id="authToggle" aria-label="Sign In">
+            <div class="auth-btn-avatar" id="authBtnAvatar">
+              <span class="auth-btn-initial" id="authBtnInitial"></span>
+              <img class="auth-btn-img" id="authBtnImg" src="" alt="" style="display:none">
+            </div>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="auth-btn-icon" id="authBtnIcon">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span class="auth-label" id="authLabel">Sign In</span>
+          </button>
+          <div class="auth-dropdown" id="authDropdown">
+            <div class="auth-profile" id="authProfile" style="display:none">
+              <div class="auth-profile-header">
+                <div class="auth-profile-avatar" id="authProfileAvatar">
+                  <img id="authProfileImg" src="" alt="" style="display:none">
+                  <span class="auth-profile-initial" id="authProfileInitial"></span>
+                </div>
+                <div class="auth-profile-info">
+                  <span class="auth-profile-name" id="authProfileName"></span>
+                  <span class="auth-profile-username" id="authProfileUsername"></span>
+                </div>
+                <div class="auth-profile-badge">HIVE</div>
+              </div>
+              <div class="auth-profile-stats" id="authProfileStats">
+                <div class="auth-stat">
+                  <span class="auth-stat-label">Portfolio</span>
+                  <span class="auth-stat-value" id="authStatValue">-</span>
+                </div>
+                <div class="auth-stat">
+                  <span class="auth-stat-label">Return</span>
+                  <span class="auth-stat-value" id="authStatReturn">-</span>
+                </div>
+              </div>
+              <div class="auth-drop-divider"></div>
+              <div class="auth-profile-nav">
+                <a href="/sector/ai" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
+                <a href="/sector/cyber" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
+                <a href="/sector/defense" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
+                <a href="/sector/space" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
+                <a href="/sector/mega-cap" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
+                <a href="/sector/quantum" class="auth-nav-item"><span class="auth-nav-icon">🔬</span> Quantum</a>
+                <div class="auth-nav-section-header">FEATURES</div>
+                <a href="/hive" class="auth-nav-item"><span class="auth-nav-icon">🐝</span> Hive</a>
+                <a href="/signal-vs-the-street" class="auth-nav-item"><span class="auth-nav-icon">📈</span> Signal vs. Street</a>
+              </div>
+              <div class="auth-drop-divider"></div>
+              <div class="auth-profile-footer">
+                <a href="/hive" class="auth-footer-link" onclick="navigateToHiveLeaderboard(event)">Leaderboard</a>
+                <a href="/account/settings" class="auth-footer-link">Settings</a>
+                <button class="auth-signout-btn" id="authSignOut">Sign Out</button>
+              </div>
+            </div>
+            <div class="auth-guest" id="authGuest">
+              <div class="auth-guest-brand">
+                <span class="auth-guest-title">Welcome to <strong>The Signal</strong></span>
+                <span class="auth-guest-sub">Join the hive to track your portfolio</span>
+              </div>
+              <button class="auth-option auth-option-primary" onclick="showHiveJoinModal('login')">
+                <span class="auth-option-icon">🔑</span> Sign In
+              </button>
+              <button class="auth-option" onclick="showHiveJoinModal('register')">
+                <span class="auth-option-icon">✨</span> Create Account
+              </button>
+              <div class="auth-drop-divider"></div>
+              <div class="auth-profile-nav">
+                <a href="/sector/ai" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
+                <a href="/sector/cyber" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
+                <a href="/sector/defense" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
+                <a href="/sector/space" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
+                <a href="/sector/mega-cap" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
+                <a href="/sector/quantum" class="auth-nav-item"><span class="auth-nav-icon">🔬</span> Quantum</a>
+                <div class="auth-nav-section-header">FEATURES</div>
+                <a href="/hive" class="auth-nav-item"><span class="auth-nav-icon">🐝</span> Hive</a>
+                <a href="/signal-vs-the-street" class="auth-nav-item"><span class="auth-nav-icon">📈</span> Signal vs. Street</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main">
+    <div class="settings-page">
+      <div class="settings-nav">
+        <a href="/">Home</a>
+        <span class="sep">/</span>
+        <span>Account Settings</span>
+      </div>
+
+      <div class="settings-card" id="settingsProfile">
+        <h2>Profile</h2>
+        <p>Update your display name and how you appear across The Signal.</p>
+        <div class="settings-field">
+          <label for="settingsDisplayName">Display Name</label>
+          <input type="text" id="settingsDisplayName" placeholder="Your display name" maxlength="30">
+        </div>
+        <div class="settings-field">
+          <label for="settingsUsername">Username</label>
+          <input type="text" id="settingsUsername" placeholder="username" disabled style="opacity:0.6">
+        </div>
+        <button class="settings-btn" id="settingsSaveBtn" onclick="saveSettings()">Save Changes</button>
+        <div class="settings-message" id="settingsMessage"></div>
+      </div>
+
+      <div class="settings-card settings-danger">
+        <h2>Sign Out</h2>
+        <p>Sign out of your account on this device.</p>
+        <button class="settings-btn settings-danger-btn" onclick="handleSignOut()">Sign Out</button>
+      </div>
+    </div>
+
+    <script>
+      function loadSettings() {
+        var user = null;
+        try { user = JSON.parse(localStorage.getItem('hive_user')); } catch(e) {}
+        var el = document.getElementById('settingsDisplayName');
+        var usernameEl = document.getElementById('settingsUsername');
+        if (el && user) el.value = user.displayName || '';
+        if (usernameEl && user) usernameEl.value = user.username || '';
+      }
+
+      function saveSettings() {
+        var btn = document.getElementById('settingsSaveBtn');
+        var msg = document.getElementById('settingsMessage');
+        var displayName = document.getElementById('settingsDisplayName').value.trim();
+        btn.disabled = true;
+        msg.className = 'settings-message';
+
+        var user = null;
+        try { user = JSON.parse(localStorage.getItem('hive_user')); } catch(e) {}
+        var token = null;
+        try { token = localStorage.getItem('hive_token'); } catch(e) {}
+
+        if (!user || !token) {
+          msg.className = 'settings-message error';
+          msg.textContent = 'You must be signed in to update settings.';
+          btn.disabled = false;
+          return;
+        }
+
+        fetch('/api/hive?action=update-profile&displayName=' + encodeURIComponent(displayName) + '&token=' + encodeURIComponent(token))
+          .then(function(r) { return r.json(); })
+          .then(function(data) {
+            if (data.success) {
+              user.displayName = displayName;
+              try { localStorage.setItem('hive_user', JSON.stringify(user)); } catch(e) {}
+              msg.className = 'settings-message success';
+              msg.textContent = 'Settings saved!';
+            } else {
+              msg.className = 'settings-message error';
+              msg.textContent = data.error || 'Failed to save.';
+            }
+          })
+          .catch(function() {
+            msg.className = 'settings-message error';
+            msg.textContent = 'Network error. Try again.';
+          })
+          .finally(function() { btn.disabled = false; });
+      }
+
+      function handleSignOut() {
+        try {
+          localStorage.removeItem('hive_user');
+          localStorage.removeItem('hive_token');
+          localStorage.removeItem('hive_portfolio');
+        } catch(e) {}
+        window.location.href = '/';
+      }
+
+      document.addEventListener('DOMContentLoaded', loadSettings);
+    </script>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand"><img src="/img/logo-hex.jpg" alt="The Signal" class="footer-logo"> THE <strong>SIGNAL</strong></div>
+      <div class="footer-tag">The Signal Editorial Team · readthesignal.net</div>
+      <div class="footer-copy">© 2026 The Signal — Market Intelligence. Data from public sources.</div>
+    </div>
+  </footer>
+  <script src="/js/auth.js?v=2" defer></script>
+  <script src="/js/theme.js" defer></script>
+</body>
+</html>

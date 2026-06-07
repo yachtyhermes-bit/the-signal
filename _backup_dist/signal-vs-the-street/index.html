@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08080e">
+  <title>Signal vs. The Street — The Signal</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <meta name="robots" content="max-image-preview:large">
+
+  <!-- ════════════════════════════════════════════════
+       AeroVironment-Inspired Font Stack
+       ════════════════════════════════════════════════ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Michroma&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/main.css?v=15">
+  <script src="/js/auth.js?v=2" defer></script>
+  <script src="/js/theme.js?v=2" defer></script>
+
+  <style>
+    /* ════════════════════════════════════════════════════════════
+       RESET & BASE
+       ════════════════════════════════════════════════════════════ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #161718;
+      color: #b9b9ba;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+
+    /* ════════════════════════════════════════════════════════════
+       COLOR SYSTEM (AV Tailwind Theme Translation)
+       ════════════════════════════════════════════════════════════ */
+    :root {
+      --color-black: #000;
+      --color-blue-500: #0680ff;
+      --color-grayscale-50: #fff;
+      --color-grayscale-200: #f3f3f3;
+      --color-grayscale-500: #b9b9ba;
+      --color-grayscale-800: #454546;
+      --color-grayscale-950: #161718;
+      --color-halo: #0680ff;
+      --color-stealth: #161718;
+      --color-stealth-30: #b9b9ba;
+      --color-stealth-80: #454546;
+      --color-optic: #fff;
+      --color-white: #fff;
+      --gradient-1: linear-gradient(270deg, hsla(0,0%,9%,.5), hsla(0,0%,9%,.3));
+      --gradient-2: linear-gradient(180deg, rgba(22,23,24,0) 50%, var(--color-grayscale-950) 100%);
+      --container-max: 82.5rem;      /* 1320px */
+      --container-pad: 3.75rem;       /* 60px desktop */
+      --container-pad-mobile: 0.9375rem; /* 15px mobile */
+      --header-height: 59px;
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       CONTAINER & GRID
+       ════════════════════════════════════════════════════════════ */
+    .container {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding-left: var(--container-pad);
+      padding-right: var(--container-pad);
+    }
+
+    .grid-12 {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 1.5rem;
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       DECORATIVE T-MARK BORDERS (AV Signature Style)
+       ════════════════════════════════════════════════════════════ */
+    .section-border {
+      position: relative;
+      padding-top: 2.5rem;
+      margin-top: 3rem;
+    }
+    .section-border::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: var(--color-stealth-80);
+    }
+    /* Top-left T-mark */
+    .section-border::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 16px;
+      height: 1px;
+      background: var(--color-stealth-80);
+      box-shadow: 0 -6px 0 0 var(--color-stealth-80);
+    }
+    .section-border .tm-bracket {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 16px;
+      height: 1px;
+      background: var(--color-stealth-80);
+    }
+    .section-border .tm-bracket::before {
+      content: '';
+      position: absolute;
+      top: -6px;
+      right: 0;
+      width: 1px;
+      height: 6px;
+      background: var(--color-stealth-80);
+    }
+    .section-border .tm-bracket-left {
+      display: none; /* ::after handles left */
+    }
+
+    /* Enhanced T-marks wrapping full section */
+    .section-wrap {
+      position: relative;
+      margin-bottom: 5rem;
+    }
+    .section-wrap .border-top {
+      position: relative;
+      height: 1px;
+      background: var(--color-stealth-80);
+      margin-bottom: 2.5rem;
+    }
+    .section-wrap .border-top::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 16px;
+      height: 1px;
+      background: var(--color-stealth-80);
+      box-shadow: 0 -6px 0 0 var(--color-stealth-80);
+    }
+    .section-wrap .border-top .corner-right {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 16px;
+      height: 1px;
+      background: var(--color-stealth-80);
+    }
+    .section-wrap .border-top .corner-right::before {
+      content: '';
+      position: absolute;
+      top: -6px;
+      right: 0;
+      width: 1px;
+      height: 6px;
+      background: var(--color-stealth-80);
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       HERO SECTION
+       ════════════════════════════════════════════════════════════ */
+    .hero {
+      position: relative;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      background:
+        var(--gradient-2),
+        var(--gradient-1),
+        url('/img/hero-chart-bg.jpg') center 30% / cover no-repeat;
+    }
+    /* Dark overlay for browsers that miss the gradients */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(22,23,24,0.35);
+      z-index: 1;
+    }
+    .hero > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-inner {
+      max-width: 72rem;
+      padding: 7rem var(--container-pad) 5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100dvh;
+    }
+
+    /* Category tag – AV underscore prefix style */
+    .hero-category {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--color-optic);
+      margin-bottom: 2rem;
+      opacity: 0.8;
+    }
+
+    .hero-title {
+      font-family: 'Michroma', sans-serif;
+      font-size: clamp(2.8rem, 8vw, 6.5rem);
+      line-height: 1.1;
+      color: var(--color-optic);
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+    }
+    .hero-title .highlight {
+      color: var(--color-blue-500);
+    }
+
+    .hero-sub {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+      font-weight: 400;
+      color: var(--color-grayscale-500);
+      max-width: 60rem;
+      line-height: 1.8;
+      margin-bottom: 3rem;
+      letter-spacing: 0.01em;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--color-optic);
+      border: 1px solid var(--color-stealth-80);
+      padding: 12px 32px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .hero-cta:hover {
+      border-color: var(--color-blue-500);
+      background: rgba(6,128,255,0.08);
+    }
+
+    /* Hero return box at bottom */
+    .hero-return-box {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(22,23,24,0.5);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      padding: 0.85rem 2rem;
+      color: var(--color-stealth-80);
+    }
+    .hero-return-box .return-label {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.55rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--color-optic);
+      opacity: 0.7;
+    }
+    .hero-return-box .return-value {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #00c853;
+      letter-spacing: -0.02em;
+    }
+    .hero-return-box .return-benchmark {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.65rem;
+      color: var(--color-optic);
+      opacity: 0.6;
+      text-align: left;
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       SECTION TITLES
+       ════════════════════════════════════════════════════════════ */
+    .section-label {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--color-stealth-80);
+      margin-bottom: 0.75rem;
+    }
+    .section-heading {
+      font-family: 'Michroma', sans-serif;
+      font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+      color: var(--color-optic);
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+    }
+    .section-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      color: var(--color-grayscale-500);
+      max-width: 48rem;
+      line-height: 1.8;
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       SCOREBOARD SECTION
+       ════════════════════════════════════════════════════════════ */
+    .scoreboard-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .score-card {
+      border: 1px solid var(--color-stealth-80);
+      padding: 2rem 1.5rem;
+      position: relative;
+      background: rgba(22,23,24,0.6);
+      transition: border-color 0.3s ease;
+    }
+    .score-card:hover {
+      border-color: var(--color-stealth-30);
+    }
+    .score-period {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--color-stealth-80);
+      margin-bottom: 1rem;
+    }
+    .score-values {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .score-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+    }
+    .score-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--color-grayscale-500);
+    }
+    .score-number {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+    .score-number.positive { color: #00c853; }
+    .score-number.negative { color: #ff1744; }
+    .score-number.signal { color: var(--color-blue-500); }
+    .score-number.benchmark { color: var(--color-grayscale-500); }
+
+    /* ════════════════════════════════════════════════════════════
+       HOLDINGS TABLE
+       ════════════════════════════════════════════════════════════ */
+    .holdings-table-wrap {
+      margin-top: 2rem;
+      overflow-x: auto;
+      border: 1px solid var(--color-stealth-80);
+    }
+    .holdings-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: 'Inter', sans-serif;
+    }
+    .holdings-table thead th {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--color-stealth-80);
+      text-align: left;
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--color-stealth-80);
+      background: rgba(22,23,24,0.8);
+    }
+    .holdings-table tbody td {
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid rgba(69,69,70,0.3);
+      font-size: 0.85rem;
+      color: var(--color-grayscale-500);
+    }
+    .holdings-table tbody tr:hover td {
+      background: rgba(6,128,255,0.04);
+    }
+    .holdings-table .ticker {
+      font-family: 'Roboto Mono', monospace;
+      font-weight: 600;
+      color: var(--color-optic);
+      font-size: 0.9rem;
+    }
+    .holdings-table .weight {
+      font-family: 'Roboto Mono', monospace;
+      color: var(--color-grayscale-500);
+    }
+    .holdings-table .return-pos {
+      font-family: 'Roboto Mono', monospace;
+      color: #00c853;
+      font-weight: 500;
+    }
+    .holdings-table .return-neg {
+      font-family: 'Roboto Mono', monospace;
+      color: #ff1744;
+      font-weight: 500;
+    }
+
+    /* Locked/blur overlay for hidden holdings */
+    .holdings-locked {
+      position: relative;
+      overflow: hidden;
+      max-height: 260px;
+    }
+    .holdings-locked::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100px;
+      background: linear-gradient(transparent, var(--color-grayscale-950));
+      pointer-events: none;
+    }
+    .holdings-locked .blur-row td {
+      filter: blur(4px);
+      user-select: none;
+    }
+    .holdings-lock-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 1.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--color-blue-500);
+      border: 1px solid var(--color-stealth-80);
+      margin-top: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .holdings-lock-cta:hover {
+      border-color: var(--color-blue-500);
+      background: rgba(6,128,255,0.06);
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       SCROLL REVEAL ANIMATIONS (AV Style)
+       ════════════════════════════════════════════════════════════ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(1.5em);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-delay-5 { transition-delay: 0.5s; }
+    .reveal-delay-6 { transition-delay: 0.6s; }
+
+    /* ════════════════════════════════════════════════════════════
+       RESPONSIVE
+       ════════════════════════════════════════════════════════════ */
+    @media (max-width: 1024px) {
+      .grid-12 { gap: 1rem; }
+    }
+
+    @media (max-width: 768px) {
+      :root {
+        --container-pad: var(--container-pad-mobile);
+        --header-height: 52px;
+      }
+
+      .hero-title {
+        font-size: clamp(2rem, 10vw, 3.5rem);
+      }
+      .hero-sub {
+        font-size: 1rem;
+        line-height: 1.7;
+      }
+      .hero-inner {
+        padding: 6rem var(--container-pad-mobile) 4rem;
+      }
+
+      .scoreboard-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      .score-card {
+        padding: 1.5rem 1rem;
+      }
+      .score-number {
+        font-size: 1.15rem;
+      }
+
+      .holdings-table thead th,
+      .holdings-table tbody td {
+        padding: 0.75rem 0.85rem;
+        font-size: 0.75rem;
+      }
+      .holdings-table .ticker {
+        font-size: 0.8rem;
+      }
+
+      .section-heading {
+        font-size: 1.3rem;
+      }
+      .hero-return-box {
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 0.7rem 1.25rem;
+        width: 100%;
+      }
+      .hero-return-box .return-value {
+        font-size: 1.2rem;
+      }
+      .hero-return-box .return-benchmark {
+        font-size: 0.55rem;
+      }
+      .hero-return-box div[style*="border-left"] {
+        border-left: none !important;
+        padding-left: 0 !important;
+        padding-top: 0.5rem;
+        border-top: 1px solid rgba(69,69,70,0.4);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-title {
+        font-size: 1.4rem;
+      }
+      .hero-category {
+        font-size: 0.6rem;
+        letter-spacing: 2px;
+      }
+      .hero-cta {
+        font-size: 0.65rem;
+        padding: 10px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ════════════════════════════════════════════════
+       SITE NAVIGATION — Standard Signal Nav
+       ════════════════════════════════════════════════ -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo"><img src="/img/logo-hex.jpg" alt="The Signal" class="logo-img"><span class="logo-text"><span class="logo-the">THE</span> <strong>SIGNAL</strong></span></a>
+      <div class="nav-actions">
+        <button class="nav-btn search-btn" id="searchToggle" aria-label="Search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+        <div class="auth-container" id="authContainer">
+          <button class="nav-btn auth-btn" id="authToggle" aria-label="Sign In">
+            <div class="auth-btn-avatar" id="authBtnAvatar">
+              <span class="auth-btn-initial" id="authBtnInitial"></span>
+              <img class="auth-btn-img" id="authBtnImg" src="" alt="" style="display:none">
+            </div>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="auth-btn-icon" id="authBtnIcon"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span class="auth-label" id="authLabel">Sign In</span>
+          </button>
+          <div class="auth-dropdown" id="authDropdown">
+            <!-- Signed-in Profile -->
+            <div class="auth-profile" id="authProfile" style="display:none">
+              <div class="auth-profile-header">
+                <div class="auth-profile-avatar"><img id="authProfileImg" src="" alt="" style="display:none"><span class="auth-profile-initial" id="authProfileInitial"></span></div>
+                <div class="auth-profile-info"><span class="auth-profile-name" id="authProfileName"></span><span class="auth-profile-username" id="authProfileUsername"></span></div>
+              </div>
+              <div class="auth-profile-stats">
+                <div class="auth-stat"><span class="auth-stat-label">Portfolio</span><span class="auth-stat-value" id="authStatValue">—</span></div>
+                <div class="auth-stat"><span class="auth-stat-label">Return</span><span class="auth-stat-value" id="authStatReturn">—</span></div>
+              </div>
+              <div class="auth-profile-links">
+                <a href="/hive" class="auth-profile-link">🐝 My Hive</a>
+                <a href="/hive" class="auth-profile-link" onclick="navigateToHiveLeaderboard(event)">🏆 Leaderboard</a>
+                <a href="/account/settings" class="auth-profile-link">⚙️ Settings</a>
+              </div>
+              <button class="auth-profile-signout" id="authSignOut">Sign Out</button>
+            </div>
+            <!-- Guest -->
+            <div class="auth-guest" id="authGuest">
+              <button class="auth-option" onclick="showHiveJoinModal('login')" style="display:flex"><span class="auth-option-icon">🔑</span> Sign In</button>
+              <button class="auth-option" onclick="showHiveJoinModal('register')" style="display:flex"><span class="auth-option-icon">✨</span> Create Account</button>
+            </div>
+          </div>
+        </div>
+        <button class="nav-btn hamburger-btn" id="hamburgerToggle" aria-label="Menu">
+          <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ════════════════════════════════════════════════
+       KRATOS-INSPIRED DRAWER MENU
+       ════════════════════════════════════════════════ -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <div class="drawer" id="drawer">
+    <div class="drawer-header">
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">&#x2715;</button>
+      <a href="/" class="drawer-logo">
+        <img src="/img/logo-hex.jpg" alt="The Signal" class="drawer-logo-img">
+        <span class="drawer-logo-text">SIGNAL</span>
+      </a>
+    </div>
+    <div class="drawer-body">
+      <div class="drawer-section-label">SECTORS</div>
+      <a href="/sector/ai" class="drawer-link"><span class="drawer-arrow">&rsaquo;</span> AI</a>
+      <a href="/sector/cyber" class="drawer-link"><span class="drawer-arrow">&rsaquo;</span> Cyber</a>
+      <a href="/sector/defense" class="drawer-link"><span class="drawer-arrow">&rsaquo;</span> Defense</a>
+      <a href="/sector/space" class="drawer-link"><span class="drawer-arrow">&rsaquo;</span> Space</a>
+      <a href="/sector/mega-cap" class="drawer-link"><span class="drawer-arrow">&rsaquo;</span> Mega-Cap</a>
+      <a href="/sector/quantum" class="drawer-link"><span class="drawer-arrow">&rsaquo;</span> Quantum</a>
+      <hr class="drawer-divider">
+      <div class="drawer-section-label">FEATURES</div>
+      <a href="/hive" class="drawer-link drawer-link-hive"><span class="drawer-arrow drawer-arrow-hive">&rsaquo;</span> Hive</a>
+      <a href="/signal-vs-the-street" class="drawer-link drawer-link-svs"><span class="drawer-arrow drawer-arrow-svs">&rsaquo;</span> Signal vs. Street</a>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════
+       SEARCH OVERLAY
+       ════════════════════════════════════════════════ -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-backdrop" id="searchBackdrop"></div>
+    <div class="search-modal">
+      <div class="search-header">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search articles by title, ticker, sector, or tag…" autofocus>
+        <button class="search-close" id="searchClose" aria-label="Close search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+      <div class="search-empty" id="searchEmpty">Start typing to search articles…</div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════
+       MAIN CONTENT
+       ════════════════════════════════════════════════ -->
+  <main class="main" style="padding-top:0;background:#161718;">
+
+    <!-- ════════════════════════════════════════════════
+         HERO — Full viewport, background image with overlays
+         ════════════════════════════════════════════════ -->
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="hero-category reveal">_Live Portfolio</p>
+
+        <h1 class="hero-title reveal reveal-delay-1">
+          Signal<br>
+          <span class="highlight">vs.</span> The Street
+        </h1>
+
+        <p class="hero-sub reveal reveal-delay-2">
+          Quality first. Strong balance sheets. Proven competitive moats.
+          Companies generating real free cash flow at reasonable valuations.
+          We pair fundamental conviction with technical timing — entries
+          informed by chart structure, exits guided by risk discipline.
+          No hype. No FOMO. Just signal.
+        </p>
+
+        <div style="flex:1; min-height:2rem;"></div>
+
+        <!-- Return box at bottom of hero -->
+        <div class="hero-return-box reveal reveal-delay-3" id="heroReturnBox">
+          <div>
+            <p class="return-label">Total Return Since Inception</p>
+            <p class="return-value" id="heroReturnValue">+257.0%</p>
+          </div>
+          <div style="border-left:1px solid rgba(69,69,70,0.4); padding-left:1.5rem;">
+            <p class="return-label">vs. S&amp;P 500</p>
+            <p class="return-benchmark" id="heroBenchmarkValue">+43.3% &mdash; Alpha: <strong id="heroAlphaValue" style="color:#00c853;">+257.0%</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════
+         SCOREBOARD — 3-period comparison cards
+         ════════════════════════════════════════════════ -->
+    <section class="container" style="padding-top: 5rem; padding-bottom: 3rem;">
+      <div class="section-wrap">
+        <div class="border-top"><div class="corner-right"></div></div>
+
+        <div>
+          <p class="section-label reveal">Performance</p>
+          <h2 class="section-heading reveal reveal-delay-1">Scoreboard</h2>
+          <p class="section-desc reveal reveal-delay-2">
+            Signal portfolio total returns vs. the S&amp;P 500 across key time
+            horizons. All returns are time-weighted, net of fees.
+          </p>
+        </div>
+
+        <div class="scoreboard-grid">
+          <!-- Card 1: Since Inception -->
+          <div class="score-card reveal reveal-delay-3">
+            <p class="score-period">Since Inception (Jun 2024)</p>
+            <div class="score-values">
+              <div class="score-row">
+                <span class="score-label">Signal</span>
+                <span class="score-number signal">+300.3%</span>
+              </div>
+              <div class="score-row">
+                <span class="score-label">S&amp;P 500</span>
+                <span class="score-number benchmark">+43.3%</span>
+              </div>
+              <div class="score-row" style="border-top:1px solid rgba(69,69,70,0.4); padding-top:0.75rem; margin-top:0.25rem;">
+                <span class="score-label">Alpha</span>
+                <span class="score-number positive">+257.0%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Year-to-Date -->
+          <div class="score-card reveal reveal-delay-4">
+            <p class="score-period">Year-to-Date (2026)</p>
+            <div class="score-values">
+              <div class="score-row">
+                <span class="score-label">Signal</span>
+                <span class="score-number signal">+38.3%</span>
+              </div>
+              <div class="score-row">
+                <span class="score-label">S&amp;P 500</span>
+                <span class="score-number benchmark">+10.7%</span>
+              </div>
+              <div class="score-row" style="border-top:1px solid rgba(69,69,70,0.4); padding-top:0.75rem; margin-top:0.25rem;">
+                <span class="score-label">Alpha</span>
+                <span class="score-number positive">+27.5%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: 1-Year -->
+          <div class="score-card reveal reveal-delay-5">
+            <p class="score-period">Trailing 12 Months</p>
+            <div class="score-values">
+              <div class="score-row">
+                <span class="score-label">Signal</span>
+                <span class="score-number signal">+81.5%</span>
+              </div>
+              <div class="score-row">
+                <span class="score-label">S&amp;P 500</span>
+                <span class="score-number benchmark">+28.4%</span>
+              </div>
+              <div class="score-row" style="border-top:1px solid rgba(69,69,70,0.4); padding-top:0.75rem; margin-top:0.25rem;">
+                <span class="score-label">Alpha</span>
+                <span class="score-number positive">+27.5%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════
+         HOLDINGS — Top 5 visible, rest locked
+         ════════════════════════════════════════════════ -->
+    <section class="container" style="padding-bottom: 4rem;">
+      <div class="section-wrap">
+        <div class="border-top"><div class="corner-right"></div></div>
+
+        <div>
+          <p class="section-label reveal">Portfolio</p>
+          <h2 class="section-heading reveal reveal-delay-1">Top Holdings</h2>
+          <p class="section-desc reveal reveal-delay-2">
+            Our highest-conviction positions. Full portfolio details and
+            real-time weightings are available to subscribers.
+          </p>
+        </div>
+
+        <div class="holdings-table-wrap reveal reveal-delay-3">
+          <table class="holdings-table">
+            <thead>
+              <tr>
+                <th>Ticker</th>
+                <th>Name</th>
+                <th>Weight</th>
+                <th>Return</th>
+              </tr>
+            </thead>
+            <tbody>
+                          <tr>
+              <td class="ticker">NBIS</td>
+              <td>Nebius Group</td>
+              <td class="weight">7.5%</td>
+              <td class="return-pos">+289.4%</td>
+            </tr>
+                          <tr>
+              <td class="ticker">AMD</td>
+              <td>Advanced Micro Devices</td>
+              <td class="weight">7.2%</td>
+              <td class="return-pos">+215.6%</td>
+            </tr>
+                          <tr>
+              <td class="ticker">NVDA</td>
+              <td>NVIDIA Corporation</td>
+              <td class="weight">6.6%</td>
+              <td class="return-pos">+83.6%</td>
+            </tr>
+                          <tr>
+              <td class="ticker">GOOG</td>
+              <td>Alphabet Inc.</td>
+              <td class="weight">6.0%</td>
+              <td class="return-pos">+115.8%</td>
+            </tr>
+                          <tr>
+              <td class="ticker">AMZN</td>
+              <td>Amazon.com, Inc.</td>
+              <td class="weight">5.6%</td>
+              <td class="return-pos">+51.8%</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Locked / blurred holdings preview -->
+        <div class="holdings-locked reveal reveal-delay-4">
+          <table class="holdings-table">
+            <tbody>
+                          <tr class="blur-row">
+              <td class="ticker">RKLB</td>
+              <td>Rocket Lab USA</td>
+              <td class="weight">5.5%</td>
+              <td class="return-pos">+3,213.6%</td>
+            </tr>
+                          <tr class="blur-row">
+              <td class="ticker">META</td>
+              <td>Meta Platforms</td>
+              <td class="weight">5.2%</td>
+              <td class="return-pos">+32.5%</td>
+            </tr>
+                          <tr class="blur-row">
+              <td class="ticker">SMH</td>
+              <td>VanEck Semiconductor ETF</td>
+              <td class="weight">4.7%</td>
+              <td class="return-pos">+146.0%</td>
+            </tr>
+                          <tr class="blur-row">
+              <td class="ticker">TSM</td>
+              <td>Taiwan Semiconductor</td>
+              <td class="weight">4.7%</td>
+              <td class="return-pos">+170.1%</td>
+            </tr>
+                          <tr class="blur-row">
+              <td class="ticker">SOFI</td>
+              <td>SoFi Technologies</td>
+              <td class="weight">4.3%</td>
+              <td class="return-neg">+169.1%</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="holdings-lock-cta reveal reveal-delay-5">
+          <span>Unlock Full Portfolio — Subscribe</span>
+          <span style="font-size:1.2em;">→</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════
+         METHODOLOGY SECTION
+         ════════════════════════════════════════════════ -->
+    <section class="container" style="padding-bottom: 3rem;">
+      <div class="section-wrap">
+        <div class="border-top"><div class="corner-right"></div></div>
+
+        <div class="grid-12">
+          <div class="reveal" style="grid-column: span 6;">
+            <p class="section-label">Methodology</p>
+            <h2 class="section-heading">How We Invest</h2>
+            <p class="section-desc" style="margin-bottom:1.5rem;">
+              Every position in the Signal portfolio is a high-conviction,
+              long-term bet on a business we'd own for 5&ndash;10 years. We start
+              with quality &mdash; strong balance sheets, proven competitive
+              moats, and companies generating real free cash flow at
+              reasonable valuations. Then we wait for the chart to give us
+              a favorable entry. No chasing. No FOMO. Just signal.
+            </p>
+          </div>
+
+          <div class="reveal reveal-delay-2" style="grid-column: span 6;">
+            <p class="section-label">Discipline</p>
+            <h2 class="section-heading">Conviction Over Timing</h2>
+            <p class="section-desc" style="margin-bottom:1.5rem;">
+              We don&rsquo;t use stop losses. Volatility is the price of
+              admission, not a reason to exit. Risk is managed through
+              position sizing and selectivity &mdash; we&rsquo;d rather own 25
+              companies we deeply understand than 100 we barely know.
+              No single position breaks 10%, ensuring no one bet
+              takes down the portfolio. We buy thesis, not tickers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ════════════════════════════════════════════════
+       FOOTER — Standard Signal Footer
+       ════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand"><img src="/img/logo-hex.jpg" alt="The Signal" class="footer-logo"> THE <strong>SIGNAL</strong></div>
+      <div class="footer-tag">The Signal Editorial Team · readthesignal.net</div>
+      <div class="footer-copy">&copy; 2026 The Signal — Market Intelligence. Data from public sources.</div>
+    </div>
+  </footer>
+
+  <script src="/js/search.js" defer></script>
+  <script src="/js/pulse.js" defer></script>
+
+  <!-- ════════════════════════════════════════════════
+       DRAWER JAVASCRIPT
+       ════════════════════════════════════════════════ -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function(){
+    var btn = document.getElementById('hamburgerToggle');
+    var drawer = document.getElementById('drawer');
+    var overlay = document.getElementById('drawerOverlay');
+    var closeBtn = document.getElementById('drawerClose');
+    function openDrawer() {
+      drawer.classList.add('open');
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDrawer() {
+      drawer.classList.remove('open');
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    if (btn && drawer && overlay) {
+      btn.addEventListener('click', function(){ openDrawer(); });
+      overlay.addEventListener('click', function(){ closeDrawer(); });
+      if (closeBtn) closeBtn.addEventListener('click', function(){ closeDrawer(); });
+      document.addEventListener('keydown', function(e){
+        if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
+      });
+      drawer.querySelectorAll('a').forEach(function(a){
+        a.addEventListener('click', function(){ closeDrawer(); });
+      });
+    }
+  });
+  </script>
+
+  <!-- ════════════════════════════════════════════════
+       SCROLL REVEAL + DYNAMIC PORTFOLIO DATA
+       ════════════════════════════════════════════════ -->
+  <script>
+    (function() {
+      'use strict';
+
+      const revealElements = document.querySelectorAll('.reveal');
+
+      if (!revealElements.length) return;
+
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      revealElements.forEach(function(el) {
+        observer.observe(el);
+      });
+    })();
+
+    // ===== DYNAMIC PORTFOLIO DATA =====
+    fetch('/api/portfolio-returns.json').then(function(r){return r.json()}).then(function(d){
+      // Update hero return box
+      var si = d.periods.sinceInception;
+      if (si) {
+        var heroVal = document.getElementById('heroReturnValue');
+        var heroBmk = document.getElementById('heroBenchmarkValue');
+        var heroAlpha = document.getElementById('heroAlphaValue');
+        if (heroVal) heroVal.textContent = (si.portfolioReturn >= 0 ? '+' : '') + si.portfolioReturn.toFixed(1) + '%';
+        if (heroAlpha) heroAlpha.textContent = (si.vsSPY >= 0 ? '+' : '') + si.vsSPY.toFixed(1) + '%';
+        if (heroBmk) heroBmk.innerHTML = (si.spyReturn >= 0 ? '+' : '') + si.spyReturn.toFixed(1) + '% &mdash; Alpha: <strong id="heroAlphaValue" style="color:#00c853;">' + (si.vsSPY >= 0 ? '+' : '') + si.vsSPY.toFixed(1) + '%</strong>';
+      }
+
+      // Update scoreboard with dynamic data
+      var periods = d.periods || {};
+      var scoreLabels = {
+        sinceInception: { period: 'Since Inception (Jun 2024)', delay: 3 },
+        ytd: { period: 'Year-to-Date (2026)', delay: 4 },
+        oneYear: { period: 'Trailing 12 Months', delay: 5 }
+      };
+      var cards = document.querySelectorAll('.score-card');
+      var keys = ['sinceInception', 'ytd', 'oneYear'];
+      cards.forEach(function(card, idx) {
+        var key = keys[idx];
+        if (!key) return;
+        var p = periods[key];
+        if (!p) return;
+        var rows = card.querySelectorAll('.score-row');
+        if (rows.length >= 3) {
+          // Signal row
+          var signalVal = rows[0].querySelector('.score-number');
+          if (signalVal) signalVal.textContent = (p.portfolioReturn >= 0 ? '+' : '') + p.portfolioReturn.toFixed(1) + '%';
+          // SPY row
+          var spyVal = rows[1].querySelector('.score-number');
+          if (spyVal) spyVal.textContent = (p.spyReturn >= 0 ? '+' : '') + p.spyReturn.toFixed(1) + '%';
+          // Alpha row
+          var alphaVal = rows[2].querySelector('.score-number');
+          if (alphaVal) alphaVal.textContent = (p.vsSPY >= 0 ? '+' : '') + p.vsSPY.toFixed(1) + '%';
+        }
+      });
+    }).catch(function(){});
+  </script>
+
+</body>
+</html>

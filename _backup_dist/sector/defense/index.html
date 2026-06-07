@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08080e">
+    <link rel="canonical" href="https://readthesignal.net/sector/defense">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <meta name="robots" content="max-image-preview:large">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Oxanium:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css?v=15">
+  <link rel="stylesheet" href="/css/pulse-badge.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-98KDVDFBCW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-98KDVDFBCW');
+  </script>
+  <script src="/js/prices.js" defer></script>
+  <script src="/js/search.js" defer></script>
+  <script src="/js/auth.js?v=2" defer></script>
+  <script src="/js/pulse.js" defer></script>
+  <script src="/js/theme.js?v=2" defer></script>
+  <script src="/js/comments.js" defer></script>
+  <script src="/js/share.js" defer></script>
+  <script src="/js/hive.js?v=3" defer></script>
+  <script src="/js/carousel.js" defer></script>
+  <title>Defense Stocks — The Signal</title>
+  <meta name="description" content="Latest analysis of defense stocks including LMT, RTX, NOC, GD, LHX.">
+  <meta property="og:title" content="Defense Stocks — The Signal">
+  <meta property="og:description" content="Latest analysis of defense stocks including LMT, RTX, NOC, GD, LHX.">
+  
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "The Signal",
+      "url": "https://readthesignal.net",
+      "logo": {"@type":"ImageObject","url":"https://readthesignal.net/img/logo-hex.jpg","width":600,"height":60},
+      "description": "Market intelligence for AI, defense, space, and cybersecurity stocks."
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "The Signal",
+      "url": "https://readthesignal.net",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://readthesignal.net/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo"><img src="/img/logo-hex.jpg" alt="The Signal" class="logo-img"><span class="logo-text"><span class="logo-the">THE</span> <strong>SIGNAL</strong></span></a>
+      <div class="nav-actions">
+        <button class="nav-btn search-btn" id="searchToggle" aria-label="Search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <div class="auth-container" id="authContainer">
+            <button class="nav-btn auth-btn" id="authToggle" aria-label="Sign In">
+              <div class="auth-btn-avatar" id="authBtnAvatar">
+                <span class="auth-btn-initial" id="authBtnInitial"></span>
+                <img class="auth-btn-img" id="authBtnImg" src="" alt="" style="display:none">
+              </div>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="auth-btn-icon" id="authBtnIcon">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              <span class="auth-label" id="authLabel">Sign In</span>
+            </button>
+            <div class="auth-dropdown" id="authDropdown">
+              <!-- Signed-in Profile -->
+              <div class="auth-profile" id="authProfile" style="display:none">
+                <div class="auth-profile-header">
+                  <div class="auth-profile-avatar" id="authProfileAvatar">
+                    <img id="authProfileImg" src="" alt="" style="display:none">
+                    <span class="auth-profile-initial" id="authProfileInitial"></span>
+                  </div>
+                  <div class="auth-profile-info">
+                    <span class="auth-profile-name" id="authProfileName"></span>
+                    <span class="auth-profile-username" id="authProfileUsername"></span>
+                  </div>
+                  <div class="auth-profile-badge">HIVE</div>
+                </div>
+                <div class="auth-profile-stats" id="authProfileStats">
+                  <div class="auth-stat">
+                    <span class="auth-stat-label">Portfolio</span>
+                    <span class="auth-stat-value" id="authStatValue">-</span>
+                  </div>
+                  <div class="auth-stat">
+                    <span class="auth-stat-label">Return</span>
+                    <span class="auth-stat-value" id="authStatReturn">-</span>
+                  </div>
+                </div>
+                <div class="auth-drop-divider"></div>
+                <div class="auth-profile-nav">
+                  <a href="/sector/ai" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
+                  <a href="/sector/cyber" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
+                  <a href="/sector/defense" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
+                  <a href="/sector/space" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
+                  <a href="/sector/mega-cap" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
+                  <a href="/sector/quantum" class="auth-nav-item"><span class="auth-nav-icon">🔬</span> Quantum</a>
+                  <div class="auth-nav-section-header">FEATURES</div>
+                  <a href="/hive" class="auth-nav-item"><span class="auth-nav-icon">🐝</span> Hive</a>
+                  <a href="/signal-vs-the-street" class="auth-nav-item"><span class="auth-nav-icon">📈</span> Signal vs. Street</a>
+                </div>
+                <div class="auth-drop-divider"></div>
+                <div class="auth-profile-footer">
+                  <a href="/hive" class="auth-footer-link" onclick="navigateToHiveLeaderboard(event)">Leaderboard</a>
+                  <a href="/account/settings" class="auth-footer-link">Settings</a>
+                  <button class="auth-signout-btn" id="authSignOut">Sign Out</button>
+                </div>
+              </div>
+              <!-- Guest View -->
+              <div class="auth-guest" id="authGuest">
+                <div class="auth-guest-brand">
+                  <span class="auth-guest-title">Welcome to <strong>The Signal</strong></span>
+                  <span class="auth-guest-sub">Join the hive to track your portfolio</span>
+                </div>
+                <button class="auth-option auth-option-primary" onclick="showHiveJoinModal(&#39;login&#39;)">
+                  <span class="auth-option-icon">🔑</span> Sign In
+                </button>
+                <button class="auth-option" onclick="showHiveJoinModal(&#39;register&#39;)">
+                  <span class="auth-option-icon">✨</span> Create Account
+                </button>
+                <div class="auth-drop-divider"></div>
+                <div class="auth-profile-nav">
+                  <a href="/sector/ai" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
+                  <a href="/sector/cyber" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
+                  <a href="/sector/defense" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
+                  <a href="/sector/space" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
+                  <a href="/sector/mega-cap" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
+                  <a href="/sector/quantum" class="auth-nav-item"><span class="auth-nav-icon">🔬</span> Quantum</a>
+                  <div class="auth-nav-section-header">FEATURES</div>
+                  <a href="/hive" class="auth-nav-item"><span class="auth-nav-icon">🐝</span> Hive</a>
+                  <a href="/signal-vs-the-street" class="auth-nav-item"><span class="auth-nav-icon">📈</span> Signal vs. Street</a>
+                </div>
+              </div>
+          </div>
+        </div>
+        <button class="nav-btn hamburger-btn" id="hamburgerToggle" aria-label="Menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      
+      </div>
+    </div>
+  </div>
+  </nav>
+
+        <!-- Kratos-Inspired Drawer Menu -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <div class="drawer" id="drawer">
+    <div class="drawer-header">
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
+      <a href="/" class="drawer-logo">
+        <img src="/img/logo-hex.jpg" alt="The Signal" class="drawer-logo-img">
+        <span class="drawer-logo-text">SIGNAL</span>
+      </a>
+    </div>
+    <div class="drawer-body">
+      <div class="drawer-section-label">SECTORS</div>
+      <a href="/sector/ai" class="drawer-link">AI</a>
+      <a href="/sector/cyber" class="drawer-link">Cyber</a>
+      <a href="/sector/defense" class="drawer-link">Defense</a>
+      <a href="/sector/space" class="drawer-link">Space</a>
+      <a href="/sector/mega-cap" class="drawer-link">Mega-Cap</a>
+      <a href="/sector/quantum" class="drawer-link">Quantum</a>
+      <hr class="drawer-divider">
+      <div class="drawer-section-label">FEATURES</div>
+      <a href="/hive" class="drawer-link drawer-link-hive">Hive</a>
+      <a href="/signal-vs-the-street" class="drawer-link drawer-link-svs">Signal vs. Street</a>
+    </div>
+  </div>Search Overlay -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-backdrop" id="searchBackdrop"></div>
+    <div class="search-modal">
+      <div class="search-header">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search articles by title, ticker, sector, or tag…" autofocus>
+        <button class="search-close" id="searchClose" aria-label="Close search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+      <div class="search-empty" id="searchEmpty">Start typing to search articles…</div>
+    </div>
+  </div>
+
+  <script id="articles-data" type="application/json">[]</script>
+  <main class="main"><section class="sector-page">
+    <div class="sector-header">
+      <h1 class="sector-title">Defense</h1>
+      <div class="sector-tickers">
+        <a href="/ticker/LMT" class="mini-ticker">LMT</a>
+        <a href="/ticker/RTX" class="mini-ticker">RTX</a>
+        <a href="/ticker/NOC" class="mini-ticker">NOC</a>
+        <a href="/ticker/GD" class="mini-ticker">GD</a>
+        <a href="/ticker/LHX" class="mini-ticker">LHX</a>
+        <a href="/ticker/KTOS" class="mini-ticker">KTOS</a>
+        <a href="/ticker/AVAV" class="mini-ticker">AVAV</a>
+        <a href="/ticker/PL" class="mini-ticker">PL</a>
+        <a href="/ticker/AXON" class="mini-ticker">AXON</a>
+        <a href="/ticker/GE" class="mini-ticker">GE</a>
+      </div>
+    </div>
+    <div class="sector-prices">
+      <a href="/ticker/LMT" class="mini-price-card">
+      <span class="mini-symbol">LMT</span>
+      <span class="mini-change">↗</span>
+    </a>
+      <a href="/ticker/RTX" class="mini-price-card">
+      <span class="mini-symbol">RTX</span>
+      <span class="mini-change">↗</span>
+    </a>
+      <a href="/ticker/NOC" class="mini-price-card">
+      <span class="mini-symbol">NOC</span>
+      <span class="mini-change">↗</span>
+    </a>
+      <a href="/ticker/GD" class="mini-price-card">
+      <span class="mini-symbol">GD</span>
+      <span class="mini-change">↗</span>
+    </a>
+      <a href="/ticker/LHX" class="mini-price-card">
+      <span class="mini-symbol">LHX</span>
+      <span class="mini-change">↗</span>
+    </a>
+      <a href="/ticker/KTOS" class="mini-price-card">
+      <span class="mini-symbol">KTOS</span>
+      <span class="mini-change">↗</span>
+    </a>
+      <a href="/ticker/AVAV" class="mini-price-card">
+      <span class="mini-symbol">AVAV</span>
+      <span class="mini-change">↗</span>
+    </a>
+      <a href="/ticker/PL" class="mini-price-card">
+      <span class="mini-symbol">PL</span>
+      <span class="mini-change">↗</span>
+    </a>
+      <a href="/ticker/AXON" class="mini-price-card">
+      <span class="mini-symbol">AXON</span>
+      <span class="mini-change">↗</span>
+    </a>
+      <a href="/ticker/GE" class="mini-price-card">
+      <span class="mini-symbol">GE</span>
+      <span class="mini-change">↗</span>
+    </a>
+    </div>
+    <div class="article-grid">
+      <a href="/article/onds-autonomous-drones-defense-2026" class="article-card">
+    <div class="card-image"><img src="/img/articles/onds-autonomous-drones.jpg" alt="Ondas Inc. Just Became a Defense Powerhouse — $1B Raised, Revenue Up 605%, and It&#39;s Still Flying Under the Radar" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">ONDS</span>
+      <span class="price-chip up">$13.84 <span>+4.65%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Ondas Inc. Just Became a Defense Powerhouse — $1B Raised, Revenue Up 605%, and It&#39;s Still Flying Under the Radar</h3>
+    <p class="card-summary">Ondas Inc. (formerly Ondas Holdings) completed a stunning transformation over the past year — raising $1B in equity, acquiring five defense tech companies, landing a multi-year Pentagon contract, and ...</p>
+    <div class="card-meta">
+      <span>Jun 1, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/shld-defense-etf-crushing-market-2026" class="article-card">
+    <div class="card-image"><img src="/img/articles/shld-defense-etf-crushing-market-2026.jpg" alt="The Defense ETF That Quietly Tripled While You Were Staring at AI Stocks" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">SHLD</span>
+      
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">The Defense ETF That Quietly Tripled While You Were Staring at AI Stocks</h3>
+    <p class="card-summary">SHLD, the Global X Defense Tech ETF, stacked over 170% since mid-2023 by owning the companies actually building the hardware and software of modern warfare — Lockheed, RTX, Rheinmetall, Palantir, Hanw...</p>
+    <div class="card-meta">
+      <span>Jun 1, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/golden-dome-space-force-2026" class="article-card">
+    <div class="card-image"><img src="/img/articles/golden-dome-space-force-2026.jpg" alt="Space Force Just Dropped $3.2 Billion on Golden Dome — The Biggest Missile Defense Play Since Star Wars" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">LMT</span>
+      <span class="price-chip down">$520.72 <span>-1.83%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Space Force Just Dropped $3.2 Billion on Golden Dome — The Biggest Missile Defense Play Since Star Wars</h3>
+    <p class="card-summary">The Space Force selected 12 contractors for the Golden Dome program — a $3.2B space-based missile interceptor initiative. Lockheed Martin, RTX, L3Harris, and Northrop Grumman lead the pack. This is th...</p>
+    <div class="card-meta">
+      <span>May 28, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/iran-threatens-tech-defense-2026" class="article-card">
+    <div class="card-image"><img src="/img/articles/iran-threatens-tech-defense-2026.jpg" alt="Iran Just Threatened U.S. Tech Giants — Defense Stocks Are the Only Safe Haven" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">RTX</span>
+      <span class="price-chip down">$176.13 <span>-1.96%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Iran Just Threatened U.S. Tech Giants — Defense Stocks Are the Only Safe Haven</h3>
+    <p class="card-summary">Iran&#39;s IRGC issued a formal warning that American tech companies — including Nvidia, Apple, and cloud infrastructure providers — could become legitimate targets as the US-Iran conflict escalates. Defe...</p>
+    <div class="card-meta">
+      <span>May 28, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/palantir-q1-earnings-miss-2026" class="article-card">
+    <div class="card-image"><img src="/img/articles/palantir-q1-earnings-miss-2026.jpg" alt="Palantir Grew Revenue 85% and Raised Guidance — So Why Is PLTR Down 26% YTD?" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">PLTR</span>
+      <span class="price-chip up">$162.45 <span>+3.78%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Palantir Grew Revenue 85% and Raised Guidance — So Why Is PLTR Down 26% YTD?</h3>
+    <p class="card-summary">Palantir reported Q1 2026 with 85% YoY revenue growth to an estimated $1.4B+, ARR crossed $6.5B, and full-year guidance was raised to 71%. Adjusted operating margins hit 60%. Yet PLTR is down 19.4% ye...</p>
+    <div class="card-meta">
+      <span>May 28, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/gd-defense-contracts-earnings" class="article-card">
+    <div class="card-image"><img src="/img/articles/gd-defense-contracts-2026.jpg" alt="General Dynamics Just Dropped a Monster Earnings Beat — And Defense Spending Is About to Go Nuclear" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">GD</span>
+      <span class="price-chip down">$341.35 <span>-1.58%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">General Dynamics Just Dropped a Monster Earnings Beat — And Defense Spending Is About to Go Nuclear</h3>
+    <p class="card-summary">General Dynamics ($GD) is firing on all cylinders — Q1 2026 earnings smashed estimates by 11%, Gulfstream is shipping record business jets, the Virginia-class sub program just got a multi-billion doll...</p>
+    <div class="card-meta">
+      <span>May 26, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/kratos-defense-drones-valkyrie-2026" class="article-card">
+    <div class="card-image"><img src="/img/articles/kratos-defense-drones-valkyrie-2026.jpg" alt="Kratos Is Quietly Building the Pentagon&#39;s Drone Army — $KTOS Is the Purest Defense AI Play" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">KTOS</span>
+      <span class="price-chip up">$64.49 <span>+0.56%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Kratos Is Quietly Building the Pentagon&#39;s Drone Army — $KTOS Is the Purest Defense AI Play</h3>
+    <p class="card-summary">Kratos Defense ($KTOS) is emerging as the Pentagon&#39;s go-to supplier for jet-powered drones and autonomous combat aircraft, with the BQM-177A target drone and Valkyrie loyal wingman programs driving a ...</p>
+    <div class="card-meta">
+      <span>May 26, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/palantir-pentagon-intel-contract-battle-2026" class="article-card">
+    <div class="card-image"><img src="/img/articles/palantir-pentagon-intel-contract-battle-2026.jpg" alt="Palantir vs The Pentagon: America&#39;s AI Darling Just Bit the Hand That Feeds It" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">PLTR</span>
+      <span class="price-chip up">$162.45 <span>+3.78%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Palantir vs The Pentagon: America&#39;s AI Darling Just Bit the Hand That Feeds It</h3>
+    <p class="card-summary">Axios reports Palantir is battling the Pentagon&#39;s DIA over a major intelligence contract, alleging wasteful procurement practices. The government&#39;s most-embedded AI supplier is publicly challenging th...</p>
+    <div class="card-meta">
+      <span>May 25, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/rheinmetall-defense-europe-2026" class="article-card">
+    <div class="card-image"><img src="/img/articles/rheinmetall-defense-europe-2026.jpg" alt="Rheinmetall Is the Centerpiece of Europe&#39;s Rearmament — And It&#39;s Still Early" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">RNMBY</span>
+      
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Rheinmetall Is the Centerpiece of Europe&#39;s Rearmament — And It&#39;s Still Early</h3>
+    <p class="card-summary">Rheinmetall AG (OTCPK: RNMBY) is the single best-positioned company in the European defense rearmament cycle. $10.07B in revenue growing 28.8% YoY, $1.05B net income, and a forward P/E of just 22.5x. ...</p>
+    <div class="card-meta">
+      <span>May 23, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/axon-q1-earnings-contrarian" class="article-card">
+    <div class="card-image"><img src="/img/articles/axon-q1-earnings-contrarian.jpg" alt="Axon Just Dropped a 34% Revenue Beat and the Market Punched It. That&#39;s Your Signal." loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">AXON</span>
+      <span class="price-chip up">$482.96 <span>+7.63%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Axon Just Dropped a 34% Revenue Beat and the Market Punched It. That&#39;s Your Signal.</h3>
+    <p class="card-summary">Axon Enterprise (AXON) reported a massive Q1 2026 earnings beat — $807M in revenue, 34% YoY growth, raised full-year outlook, and a Zacks upgrade to Strong Buy. But the stock is down ~30% YTD as defen...</p>
+    <div class="card-meta">
+      <span>May 23, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/ge-aerospace-sleeping-giant" class="article-card">
+    <div class="card-image"><img src="/img/articles/ge-aerospace-sleeping-giant.jpg" alt="GE Aerospace Is the Sleeping Giant Nobody&#39;s Watching — Up 35% With Room to Run" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">GE</span>
+      <span class="price-chip up">$326.29 <span>+0.78%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">GE Aerospace Is the Sleeping Giant Nobody&#39;s Watching — Up 35% With Room to Run</h3>
+    <p class="card-summary">GE Aerospace (GE) is up 35.7% in the last year but down 18% from its highs — and Barron&#39;s just called it &#39;unfairly punished.&#39; With a $40B engine backlog, a new Air Force contract for the GE426 adaptiv...</p>
+    <div class="card-meta">
+      <span>May 22, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/rtx-defense-buy-opportunity" class="article-card">
+    <div class="card-image"><img src="/img/articles/rtx-defense.jpg" alt="RTX Just Dipped 18% From Its Highs. Here&#39;s Why That&#39;s Your Entry Point." loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">RTX</span>
+      <span class="price-chip down">$176.13 <span>-1.96%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">RTX Just Dipped 18% From Its Highs. Here&#39;s Why That&#39;s Your Entry Point.</h3>
+    <p class="card-summary">RTX dropped 18% from its $214 high despite posting $90B revenue, $7.2B FCF, and a growing dividend. At 25x forward earnings with a 28% analyst upside and defense budgets only expanding, this is the ki...</p>
+    <div class="card-meta">
+      <span>May 21, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+      <a href="/article/axon-enterprise-ai-monopoly" class="article-card">
+    <div class="card-image"><img src="/img/articles/axon-ai-software.jpg" alt="Why AXON is the Ultimate Unkillable Portfolio Diversifier" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge bullish">AXON</span>
+      <span class="price-chip up">$482.96 <span>+7.63%</span></span>
+      <span class="sentiment-label bullish">▲ Bullish</span>
+    </div>
+    <h3 class="card-title">Why AXON is the Ultimate Unkillable Portfolio Diversifier</h3>
+    <p class="card-summary">Axon Enterprise (AXON) crossed $1.5B in ARR with 125% NRR and AI revenue exploding 700% YoY. At $386 — nearly 50% off highs — this defense-style AI monopoly is the ultimate asymmetric portfolio hedge.</p>
+    <div class="card-meta">
+      <span>May 21, 2026</span>
+      <span>1 min read</span>
+    </div>
+    </div>
+  </a>
+    </div>
+  </section>  </main>
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand"><img src="/img/logo-hex.jpg" alt="The Signal" class="footer-logo"> THE <strong>SIGNAL</strong></div>
+      <div class="footer-tag">The Signal Editorial Team · readthesignal.net</div>
+      <div class="footer-copy">© 2026 The Signal — Market Intelligence. Data from public sources.</div>
+    </div>
+  <script src="/js/prices.js" defer></script>
+  <script src="/js/search.js" defer></script>
+  <script src="/js/auth.js?v=2" defer></script>
+  <script src="/js/pulse.js" defer></script>
+  <script src="/js/theme.js?v=2" defer></script>
+  <script src="/js/comments.js" defer></script>
+  <script src="/js/share.js" defer></script>
+  <script src="/js/hive.js?v=3" defer></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function(){
+    var btn = document.getElementById('hamburgerToggle');
+    var drawer = document.getElementById('drawer');
+    var overlay = document.getElementById('drawerOverlay');
+    var closeBtn = document.getElementById('drawerClose');
+    function openDrawer() {
+      drawer.classList.add('open');
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDrawer() {
+      drawer.classList.remove('open');
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    if (btn && drawer && overlay) {
+      btn.addEventListener('click', function(){ openDrawer(); });
+      overlay.addEventListener('click', function(){ closeDrawer(); });
+      if (closeBtn) closeBtn.addEventListener('click', function(){ closeDrawer(); });
+      // Close on Escape key
+      document.addEventListener('keydown', function(e){
+        if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
+      });
+      // Close on link click inside drawer
+      drawer.querySelectorAll('a').forEach(function(a){
+        a.addEventListener('click', function(){ closeDrawer(); });
+      });
+    }
+  });
+  </script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function(){
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('reveal'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.sc-card, .detail-card-link, .sc-table-container, .newsletter-inner').forEach(function(el){ observer.observe(el); });
+  });
+  </script>
+</html>
