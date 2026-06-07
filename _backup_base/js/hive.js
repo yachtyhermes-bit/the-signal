@@ -2,7 +2,7 @@
 (function() {
   'use strict';
 
-  const API_BASE = '/api/hive';
+  const API_BASE = '/api/hive/';
 
   // === Coverage Universe with company info ===
   var STOCKS = [
@@ -377,7 +377,7 @@
       return;
     }
     var action = getTradeAction();
-    fetch('/api/prices?ticker=' + ticker)
+    fetch('/api/prices/?ticker=' + ticker)
       .then(function(r) { return r.json(); })
       .then(function(data) {
         var price = data.price || 0;
