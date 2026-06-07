@@ -148,7 +148,10 @@ async function readData() {
 
 // Normalize holdings format: convert {ticker: {shares, price, value}} → {ticker: share_count}
 function normalizeData(data) {
-  if (!data.portfolios) return;
+  // Ensure required keys always exist
+  if (!data.portfolios) data.portfolios = {};
+  if (!data.priceCache) data.priceCache = {};
+  if (!data.accounts) data.accounts = {};
   for (const uid of Object.keys(data.portfolios)) {
     const p = data.portfolios[uid];
     const h = p.holdings;
