@@ -1354,6 +1354,16 @@
       "uid": "usr_a5c30f0cf35d04c8"
     }
   ],
-  "portfolios": {},
+  "portfolios": {
+    "usr_ee2913dcbfd9625a": {
+      "uid": "usr_ee2913dcbfd9625a",
+      "displayName": "Charlie9",
+      "photoURL": null,
+      "cash": 100000,
+      "holdings": {},
+      "trades": [],
+      "createdAt": "2026-06-07T08:55:59.369Z"
+    }
+  },
   "priceCache": {}
 }
