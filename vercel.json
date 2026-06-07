@@ -8,10 +8,9 @@
   ],
   "routes": [
     { "handle": "filesystem" },
-    { "src": "/article/([^/]+)/?$", "dest": "/article/$1.html" },
     { "src": "/api/(.*)", "dest": "/api/$1" },
     { "src": "/images/(.*)", "dest": "/img/$1" },
-    { "src": "/(.*)", "status": 404, "dest": "/404.html" }
+    { "src": "/(.*)", "dest": "/index.html" }
   ],
   "headers": [
     {

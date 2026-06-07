@@ -2,8 +2,8 @@
 //
 // ARCHITECTURE:
 //   _backup_dist/ = FROZEN assets from known-good deployment (dpl_Cj8826, Jun 2)
-//     → index.html (807KB), hive/, signal-vs-the-street/, sector/*, account/, css/, js/
-//   Article pages = GENERATED from articles/posts/*.json + templates
+//     → index.html (807KB SPA), hive/, signal-vs-the-street/, sector/*, account/, css/, js/
+//   Article pages = SPA client-side routing (served from index.html via Vercel SPA fallback)
 //   API functions = COPIED from api/ directory
 //
 // TO UPDATE THE SITE:
@@ -39,38 +39,12 @@ if (fs.existsSync(imgDir)) {
   console.log(`  ✅ ${imgCount} image files → dist/img/`);
 }
 
-// ─── 2. Generate article pages ───
-const articleTemplate = fs.existsSync(ARTICLE_TEMPLATE) 
-  ? fs.readFileSync(ARTICLE_TEMPLATE, 'utf8') 
-  : null;
-
+// ─── 2. Article pages are handled by SPA client-side routing — no static generation needed
 const postsDir = path.join(ROOT, 'articles', 'posts');
-if (fs.existsSync(postsDir)) {
-  const posts = fs.readdirSync(postsDir).filter(f => f.endsWith('.json'));
-  console.log(`📝 Generating ${posts.length} article pages...`);
-  
-  for (const file of posts) {
-    const article = JSON.parse(fs.readFileSync(path.join(postsDir, file), 'utf8'));
-    const slug = article.slug || file.replace('.json', '');
-    
-    if (articleTemplate) {
-      // Use template
-      let html = articleTemplate
-        .replace(/{{TITLE}}/g, article.title || '')
-        .replace(/{{BODY}}/g, article.bodyHtml || '')
-        .replace(/{{TICKER}}/g, article.ticker || '')
-        .replace(/{{DATE}}/g, article.date || '')
-        .replace(/{{SENTIMENT}}/g, article.sentiment || '')
-        .replace(/{{SLUG}}/g, slug)
-        .replace(/{{IMAGE}}/g, (article.image && article.image.src) || '');
-      
-      const outDir = path.join(DST, 'article', slug);
-      fs.mkdirSync(outDir, { recursive: true });
-      fs.writeFileSync(path.join(outDir, 'index.html'), html);
-    }
-  }
-  console.log(`  ✅ ${posts.length} articles generated`);
-}
+const posts = fs.existsSync(postsDir)
+  ? fs.readdirSync(postsDir).filter(f => f.endsWith('.json'))
+  : [];
+console.log(`📝 ${posts.length} article JSONs available (served via SPA routing)`);
 
 // ─── 3. Copy API serverless functions ───
 const apiDir = path.join(ROOT, 'api');
