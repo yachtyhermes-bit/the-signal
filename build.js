@@ -32,6 +32,14 @@ fs.cpSync(SRC, DST, { recursive: true });
 const htmlBytes = fs.statSync(path.join(DST, 'index.html')).size;
 console.log(`  ✅ ${htmlBytes} bytes homepage → dist/`);
 
+// GUARD: Abort if homepage is suspiciously small (< 800KB = stripped-down build)
+if (htmlBytes < 800000) {
+  console.error(`⛔ FATAL: index.html is ${htmlBytes} bytes — expected ~807,000+.`);
+  console.error('   The frozen homepage may be corrupted or the old code generator ran.');
+  console.error('   Recovery: npx vercel promote the-signal-nphmhgo0f-beachsquadlas-projects.vercel.app');
+  process.exit(1);
+}
+
 // ─── 1.5. Copy article images ───
 const imgDir = path.join(ROOT, 'public', 'img');
 const distImgDir = path.join(DST, 'img');
