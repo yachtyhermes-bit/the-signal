@@ -1,16 +1,11 @@
 // build.js — HYBRID (June 7, 2026)
 //
 // ARCHITECTURE:
-//   _backup_dist/ = FROZEN assets from known-good deployment (dpl_Cj8826, Jun 2)
-//     → index.html (807KB), hive/, signal-vs-the-street/, sector/*, account/, css/, js/
+//   _backup_dist/ = FROZEN core pages from known-good deployment (dpl_Cj8826)
+//   _backup_dist/index.html = homepage with full article data embedded in <script id="articles-data">
 //   articles/template.html = article page template
-//   articles/posts/*.json = article data → generates dist/article/<slug>/index.html
+//   articles/posts/*.json = fallback for articles not in homepage data
 //   API functions = COPIED from api/ directory
-//
-// TO UPDATE THE SITE:
-//   Homepage/design → edit files in _backup_dist/
-//   New articles → add JSON to articles/posts/ + img to public/img/articles/
-//   CSS/JS → edit _backup_dist/css/ or _backup_dist/js/
 
 const fs = require('fs');
 const path = require('path');
@@ -46,20 +41,24 @@ if (fs.existsSync(imgDir)) {
   console.log(`  ✅ ${imgCount} image files → dist/img/`);
 }
 
-// ─── 2. Generate article pages ───
+// ─── 2. Load article data ───
+// Priority 1: Full article data embedded in homepage <script id="articles-data">
+// Priority 2: Individual JSON files in articles/posts/ (fallback)
+const articles = loadArticles();
+console.log(`📝 Generating ${articles.length} article pages...`);
+
+// ─── 3. Generate article pages ───
 const template = fs.existsSync(ARTICLE_TEMPLATE)
   ? fs.readFileSync(ARTICLE_TEMPLATE, 'utf8')
   : null;
 
-if (template && fs.existsSync(POSTS_DIR)) {
-  const posts = fs.readdirSync(POSTS_DIR).filter(f => f.endsWith('.json'));
-  console.log(`📝 Generating ${posts.length} article pages...`);
+if (!template) {
+  console.log('⚠️  No template found at articles/template.html — skipping article generation');
+} else {
   let generated = 0;
-
-  for (const file of posts) {
+  for (const article of articles) {
     try {
-      const article = JSON.parse(fs.readFileSync(path.join(POSTS_DIR, file), 'utf8'));
-      const slug = article.slug || file.replace('.json', '');
+      const slug = article.slug;
       if (!slug) continue;
 
       const date = article.date ? article.date.slice(0, 10) : '';
@@ -90,13 +89,12 @@ if (template && fs.existsSync(POSTS_DIR)) {
           '</ul></div>';
       }
 
-      // Body: fix article body HTML links (they use /ticker/XXX paths)
+      // Body: use full bodyHtml from homepage data (or fallback from JSON)
       let bodyHtml = article.bodyHtml || '';
-      // Convert /ticker/XXX links to proper <a> tags
-      bodyHtml = bodyHtml.replace(/<a href='\/ticker\/([^']+)'>([^<]*)<\/a>/g, '<a href="/ticker/$1">$2</a>');
-
-      // Remove escaped quotes from double-escaped JSON
-      bodyHtml = bodyHtml.replace(/\\"/g, '"').replace(/\\n/g, '\n');
+      // Fix double-escaped quotes from embedded JSON
+      bodyHtml = bodyHtml.replace(/\\"/g, '"');
+      // Fix escaped newlines
+      bodyHtml = bodyHtml.replace(/\\n/g, '\n');
 
       let html = template
         .replace(/{{TITLE}}/g, article.title || '')
@@ -116,7 +114,6 @@ if (template && fs.existsSync(POSTS_DIR)) {
         .replace(/{{BODY}}/g, bodyHtml)
         .replace(/{{TAGS_HTML}}/g, tagsHtml)
         .replace(/{{LINKS_HTML}}/g, linksHtml)
-        // Replace remaining unused placeholders
         .replace(/\{\{[A-Z_]+\}\}/g, '');
 
       const outDir = path.join(DST, 'article', slug);
@@ -124,15 +121,13 @@ if (template && fs.existsSync(POSTS_DIR)) {
       fs.writeFileSync(path.join(outDir, 'index.html'), html);
       generated++;
     } catch (e) {
-      console.error(`  ⚠️  Error generating ${file}: ${e.message}`);
+      console.error(`  ⚠️  Error generating ${article.slug || '?'}: ${e.message}`);
     }
   }
   console.log(`  ✅ ${generated} articles generated`);
-} else if (!template) {
-  console.log('⚠️  No template found at articles/template.html — skipping article generation');
 }
 
-// ─── 3. Copy API serverless functions ───
+// ─── 4. Copy API serverless functions ───
 const apiDir = path.join(ROOT, 'api');
 const distApiDir = path.join(DST, 'api');
 if (fs.existsSync(apiDir)) {
@@ -147,6 +142,55 @@ if (fs.existsSync(apiDir)) {
 // ─── Summary ───
 const totalFiles = countFiles(DST);
 console.log(`✅ Build complete — ${totalFiles} files in dist/`);
+
+// ─── Article loader ───
+function loadArticles() {
+  const articlesMap = new Map();
+
+  // Priority 1: Extract full article data from homepage <script id="articles-data">
+  try {
+    const html = fs.readFileSync(path.join(SRC, 'index.html'), 'utf8');
+    const marker = '<script id="articles-data" type="application/json">';
+    const startIdx = html.indexOf(marker);
+    if (startIdx !== -1) {
+      const jsonStart = startIdx + marker.length;
+      const jsonEnd = html.indexOf('</script>', jsonStart);
+      if (jsonEnd !== -1) {
+        const json = html.substring(jsonStart, jsonEnd);
+        const homepageArticles = JSON.parse(json);
+        console.log(`  📄 ${homepageArticles.length} articles from homepage data (full content)`);
+        for (const a of homepageArticles) {
+          if (a.slug) articlesMap.set(a.slug, a);
+        }
+      }
+    }
+  } catch (e) {
+    console.log(`  ⚠️  Could not extract homepage articles: ${e.message}`);
+  }
+
+  // Priority 2: Fall back to individual JSON files for articles not in homepage
+  if (fs.existsSync(POSTS_DIR)) {
+    const jsonFiles = fs.readdirSync(POSTS_DIR).filter(f => f.endsWith('.json'));
+    let fromFiles = 0;
+    for (const file of jsonFiles) {
+      try {
+        const article = JSON.parse(fs.readFileSync(path.join(POSTS_DIR, file), 'utf8'));
+        const slug = article.slug || file.replace('.json', '');
+        if (!articlesMap.has(slug)) {
+          articlesMap.set(slug, article);
+          fromFiles++;
+        }
+      } catch (e) {
+        // skip malformed
+      }
+    }
+    if (fromFiles > 0) {
+      console.log(`  📄 ${fromFiles} additional articles from JSON files (fallback)`);
+    }
+  }
+
+  return Array.from(articlesMap.values());
+}
 
 // ─── Helpers ───
 function countFiles(dir) {
