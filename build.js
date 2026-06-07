@@ -64,9 +64,9 @@ if (fs.existsSync(postsDir)) {
         .replace(/{{SLUG}}/g, slug)
         .replace(/{{IMAGE}}/g, (article.image && article.image.src) || '');
       
-      const outDir = path.join(DST, 'article');
+      const outDir = path.join(DST, 'article', slug);
       fs.mkdirSync(outDir, { recursive: true });
-      fs.writeFileSync(path.join(outDir, `${slug}.html`), html);
+      fs.writeFileSync(path.join(outDir, 'index.html'), html);
     }
   }
   console.log(`  ✅ ${posts.length} articles generated`);
