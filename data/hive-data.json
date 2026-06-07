@@ -231,20 +231,9 @@
       "photoURL": null,
       "cash": 97749.14,
       "holdings": {
-        "RKLB": {
-          "shares": 6,
-          "price": 110.08,
-          "value": 660.48
-        },
-        "UBER": {
-          "shares": 19,
-          "price": 0,
-          "value": 0
-        }
+        "RKLB": 6,
+        "UBER": 19
       },
-      "totalHoldingsValue": 660.48,
-      "totalValue": 98409.62,
-      "return": -1.59,
       "trades": [
         {
           "ticker": "RKLB",
@@ -269,25 +258,10 @@
       "photoURL": null,
       "cash": 97190.4,
       "holdings": {
-        "QBTS": {
-          "shares": 17,
-          "price": 23.85,
-          "value": 405.45
-        },
-        "TSM": {
-          "shares": 4,
-          "price": 415.17,
-          "value": 1660.68
-        },
-        "HOOD": {
-          "shares": 7,
-          "price": 0,
-          "value": 0
-        }
+        "QBTS": 17,
+        "TSM": 4,
+        "HOOD": 7
       },
-      "totalHoldingsValue": 2066.13,
-      "totalValue": 99256.53,
-      "return": -0.74,
       "trades": [
         {
           "ticker": "QBTS",
@@ -319,25 +293,10 @@
       "photoURL": null,
       "cash": 96371.22,
       "holdings": {
-        "META": {
-          "shares": 1,
-          "price": 593,
-          "value": 593
-        },
-        "CHKP": {
-          "shares": 13,
-          "price": 135.82,
-          "value": 1765.66
-        },
-        "PLTR": {
-          "shares": 9,
-          "price": 135.53,
-          "value": 1219.77
-        }
+        "META": 1,
+        "CHKP": 13,
+        "PLTR": 9
       },
-      "totalHoldingsValue": 3578.43,
-      "totalValue": 99949.65,
-      "return": -0.05,
       "trades": [
         {
           "ticker": "META",
@@ -369,20 +328,9 @@
       "photoURL": null,
       "cash": 97296.81,
       "holdings": {
-        "SOFI": {
-          "shares": 70,
-          "price": 0,
-          "value": 0
-        },
-        "CRWV": {
-          "shares": 14,
-          "price": 100.39,
-          "value": 1405.46
-        }
+        "SOFI": 70,
+        "CRWV": 14
       },
-      "totalHoldingsValue": 1405.46,
-      "totalValue": 98702.27,
-      "return": -1.3,
       "trades": [
         {
           "ticker": "SOFI",
@@ -414,25 +362,10 @@
       "photoURL": null,
       "cash": 96414.2,
       "holdings": {
-        "PLTR": {
-          "shares": 8,
-          "price": 135.53,
-          "value": 1084.24
-        },
-        "GOOGL": {
-          "shares": 4,
-          "price": 368.53,
-          "value": 1474.12
-        },
-        "TSLA": {
-          "shares": 2,
-          "price": 391,
-          "value": 782
-        }
+        "PLTR": 8,
+        "GOOGL": 4,
+        "TSLA": 2
       },
-      "totalHoldingsValue": 3340.36,
-      "totalValue": 99754.56,
-      "return": -0.25,
       "trades": [
         {
           "ticker": "PLTR",
@@ -464,25 +397,10 @@
       "photoURL": null,
       "cash": 96326.68,
       "holdings": {
-        "MRVL": {
-          "shares": 7,
-          "price": 263.47,
-          "value": 1844.29
-        },
-        "NFLX": {
-          "shares": 13,
-          "price": 82.18,
-          "value": 1068.34
-        },
-        "AMZN": {
-          "shares": 4,
-          "price": 246.03,
-          "value": 984.12
-        }
+        "MRVL": 7,
+        "NFLX": 13,
+        "AMZN": 4
       },
-      "totalHoldingsValue": 3896.75,
-      "totalValue": 100223.43,
-      "return": 0.22,
       "trades": [
         {
           "ticker": "MRVL",
@@ -514,25 +432,10 @@
       "photoURL": null,
       "cash": 96738.91,
       "holdings": {
-        "IONQ": {
-          "shares": 11,
-          "price": 56.78,
-          "value": 624.58
-        },
-        "CRWD": {
-          "shares": 2,
-          "price": 671.02,
-          "value": 1342.04
-        },
-        "IREN": {
-          "shares": 18,
-          "price": 54.35,
-          "value": 978.3
-        }
+        "IONQ": 11,
+        "CRWD": 2,
+        "IREN": 18
       },
-      "totalHoldingsValue": 2944.92,
-      "totalValue": 99683.83,
-      "return": -0.32,
       "trades": [
         {
           "ticker": "IONQ",
@@ -564,15 +467,8 @@
       "photoURL": null,
       "cash": 98843.2,
       "holdings": {
-        "UBER": {
-          "shares": 16,
-          "price": 0,
-          "value": 0
-        }
+        "UBER": 16
       },
-      "totalHoldingsValue": 0,
-      "totalValue": 98843.2,
-      "return": -1.16,
       "trades": [
         {
           "ticker": "UBER",
@@ -590,15 +486,8 @@
       "photoURL": null,
       "cash": 98597.39,
       "holdings": {
-        "SPCE": {
-          "shares": 311,
-          "price": 0,
-          "value": 0
-        }
+        "SPCE": 311
       },
-      "totalHoldingsValue": 0,
-      "totalValue": 98597.39,
-      "return": -1.4,
       "trades": [
         {
           "ticker": "SPCE",
@@ -616,25 +505,10 @@
       "photoURL": null,
       "cash": 97458.58,
       "holdings": {
-        "WDAY": {
-          "shares": 6,
-          "price": 0,
-          "value": 0
-        },
-        "VRT": {
-          "shares": 5,
-          "price": 0,
-          "value": 0
-        },
-        "ANET": {
-          "shares": 1,
-          "price": 0,
-          "value": 0
-        }
+        "WDAY": 6,
+        "VRT": 5,
+        "ANET": 1
       },
-      "totalHoldingsValue": 0,
-      "totalValue": 97458.58,
-      "return": -2.54,
       "trades": [
         {
           "ticker": "WDAY",
@@ -666,25 +540,10 @@
       "photoURL": null,
       "cash": 96237.8,
       "holdings": {
-        "GE": {
-          "shares": 5,
-          "price": 328,
-          "value": 1640
-        },
-        "TSM": {
-          "shares": 4,
-          "price": 415.17,
-          "value": 1660.68
-        },
-        "TSLA": {
-          "shares": 1,
-          "price": 391,
-          "value": 391
-        }
+        "GE": 5,
+        "TSM": 4,
+        "TSLA": 1
       },
-      "totalHoldingsValue": 3691.68,
-      "totalValue": 99929.48,
-      "return": -0.07,
       "trades": [
         {
           "ticker": "GE",
@@ -716,15 +575,8 @@
       "photoURL": null,
       "cash": 98018.79,
       "holdings": {
-        "TENB": {
-          "shares": 77,
-          "price": 27.85,
-          "value": 2144.45
-        }
+        "TENB": 77
       },
-      "totalHoldingsValue": 2144.45,
-      "totalValue": 100163.24,
-      "return": 0.16,
       "trades": [
         {
           "ticker": "TENB",
@@ -742,15 +594,8 @@
       "photoURL": null,
       "cash": 98392.8,
       "holdings": {
-        "DDOG": {
-          "shares": 7,
-          "price": 0,
-          "value": 0
-        }
+        "DDOG": 7
       },
-      "totalHoldingsValue": 0,
-      "totalValue": 98392.8,
-      "return": -1.61,
       "trades": [
         {
           "ticker": "DDOG",
@@ -768,20 +613,9 @@
       "photoURL": null,
       "cash": 97167.66,
       "holdings": {
-        "QUBT": {
-          "shares": 136,
-          "price": 9.95,
-          "value": 1353.88
-        },
-        "LUNR": {
-          "shares": 26,
-          "price": 29.36,
-          "value": 763.36
-        }
+        "QUBT": 136,
+        "LUNR": 26
       },
-      "totalHoldingsValue": 2117.24,
-      "totalValue": 99284.9,
-      "return": -0.72,
       "trades": [
         {
           "ticker": "QUBT",
@@ -806,20 +640,9 @@
       "photoURL": null,
       "cash": 98973.78,
       "holdings": {
-        "TENB": {
-          "shares": 18,
-          "price": 27.85,
-          "value": 501.3
-        },
-        "NOC": {
-          "shares": 1,
-          "price": 544.4,
-          "value": 544.4
-        }
+        "TENB": 18,
+        "NOC": 1
       },
-      "totalHoldingsValue": 1045.7,
-      "totalValue": 100019.48,
-      "return": 0.02,
       "trades": [
         {
           "ticker": "TENB",
@@ -844,25 +667,10 @@
       "photoURL": null,
       "cash": 96342.2,
       "holdings": {
-        "QBTS": {
-          "shares": 17,
-          "price": 23.85,
-          "value": 405.45
-        },
-        "CBRS": {
-          "shares": 6,
-          "price": 201.01,
-          "value": 1206.06
-        },
-        "UBER": {
-          "shares": 24,
-          "price": 0,
-          "value": 0
-        }
+        "QBTS": 17,
+        "CBRS": 6,
+        "UBER": 24
       },
-      "totalHoldingsValue": 1611.51,
-      "totalValue": 97953.71,
-      "return": -2.05,
       "trades": [
         {
           "ticker": "QBTS",
@@ -894,15 +702,8 @@
       "photoURL": null,
       "cash": 99625.14,
       "holdings": {
-        "INTC": {
-          "shares": 3,
-          "price": 99.17,
-          "value": 297.51
-        }
+        "INTC": 3
       },
-      "totalHoldingsValue": 297.51,
-      "totalValue": 99922.65,
-      "return": -0.08,
       "trades": [
         {
           "ticker": "INTC",
@@ -927,20 +728,9 @@
       "photoURL": null,
       "cash": 97334.99,
       "holdings": {
-        "AVAV": {
-          "shares": 5,
-          "price": 185.92,
-          "value": 929.6
-        },
-        "CHKP": {
-          "shares": 12,
-          "price": 135.82,
-          "value": 1629.84
-        }
+        "AVAV": 5,
+        "CHKP": 12
       },
-      "totalHoldingsValue": 2559.44,
-      "totalValue": 99894.43,
-      "return": -0.11,
       "trades": [
         {
           "ticker": "AVAV",
@@ -965,15 +755,8 @@
       "photoURL": null,
       "cash": 98409.35,
       "holdings": {
-        "LHX": {
-          "shares": 5,
-          "price": 307.83,
-          "value": 1539.15
-        }
+        "LHX": 5
       },
-      "totalHoldingsValue": 1539.15,
-      "totalValue": 99948.5,
-      "return": -0.05,
       "trades": [
         {
           "ticker": "LHX",
@@ -991,20 +774,9 @@
       "photoURL": null,
       "cash": 99022.76,
       "holdings": {
-        "COIN": {
-          "shares": 2,
-          "price": 0,
-          "value": 0
-        },
-        "LHX": {
-          "shares": 2,
-          "price": 307.83,
-          "value": 615.66
-        }
+        "COIN": 2,
+        "LHX": 2
       },
-      "totalHoldingsValue": 615.66,
-      "totalValue": 99638.42,
-      "return": -0.36,
       "trades": [
         {
           "ticker": "COIN",
@@ -1029,25 +801,10 @@
       "photoURL": null,
       "cash": 96427.29,
       "holdings": {
-        "AVGO": {
-          "shares": 2,
-          "price": 385.73,
-          "value": 771.46
-        },
-        "VRT": {
-          "shares": 5,
-          "price": 0,
-          "value": 0
-        },
-        "IONQ": {
-          "shares": 16,
-          "price": 56.78,
-          "value": 908.48
-        }
+        "AVGO": 2,
+        "VRT": 5,
+        "IONQ": 16
       },
-      "totalHoldingsValue": 1679.94,
-      "totalValue": 98107.23,
-      "return": -1.89,
       "trades": [
         {
           "ticker": "AVGO",
@@ -1079,25 +836,10 @@
       "photoURL": null,
       "cash": 96709.5,
       "holdings": {
-        "CRWD": {
-          "shares": 1,
-          "price": 671.02,
-          "value": 671.02
-        },
-        "IONQ": {
-          "shares": 23,
-          "price": 56.78,
-          "value": 1305.94
-        },
-        "PL": {
-          "shares": 20,
-          "price": 32.22,
-          "value": 644.4
-        }
+        "CRWD": 1,
+        "IONQ": 23,
+        "PL": 20
       },
-      "totalHoldingsValue": 2621.36,
-      "totalValue": 99330.86,
-      "return": -0.67,
       "trades": [
         {
           "ticker": "CRWD",
@@ -1129,25 +871,10 @@
       "photoURL": null,
       "cash": 98047.8,
       "holdings": {
-        "PANW": {
-          "shares": 2,
-          "price": 272.05,
-          "value": 544.1
-        },
-        "IONQ": {
-          "shares": 8,
-          "price": 56.78,
-          "value": 454.24
-        },
-        "QUBT": {
-          "shares": 71,
-          "price": 9.95,
-          "value": 706.8
-        }
+        "PANW": 2,
+        "IONQ": 8,
+        "QUBT": 71
       },
-      "totalHoldingsValue": 1705.14,
-      "totalValue": 99752.94,
-      "return": -0.25,
       "trades": [
         {
           "ticker": "PANW",
@@ -1179,25 +906,10 @@
       "photoURL": null,
       "cash": 96173.45,
       "holdings": {
-        "CRWD": {
-          "shares": 1,
-          "price": 671.02,
-          "value": 671.02
-        },
-        "KTOS": {
-          "shares": 29,
-          "price": 58.52,
-          "value": 1697.08
-        },
-        "SOFI": {
-          "shares": 73,
-          "price": 0,
-          "value": 0
-        }
+        "CRWD": 1,
+        "KTOS": 29,
+        "SOFI": 73
       },
-      "totalHoldingsValue": 2368.1,
-      "totalValue": 98541.55,
-      "return": -1.46,
       "trades": [
         {
           "ticker": "CRWD",
@@ -1229,25 +941,10 @@
       "photoURL": null,
       "cash": 95425.44,
       "holdings": {
-        "MSFT": {
-          "shares": 3,
-          "price": 416.67,
-          "value": 1250.01
-        },
-        "NOC": {
-          "shares": 3,
-          "price": 544.4,
-          "value": 1633.2
-        },
-        "BA": {
-          "shares": 7,
-          "price": 0,
-          "value": 0
-        }
+        "MSFT": 3,
+        "NOC": 3,
+        "BA": 7
       },
-      "totalHoldingsValue": 2883.21,
-      "totalValue": 98308.65,
-      "return": -1.69,
       "trades": [
         {
           "ticker": "MSFT",
@@ -1279,80 +976,21 @@
       "photoURL": null,
       "cash": 22.2,
       "holdings": {
-        "NVDA": {
-          "shares": 50,
-          "price": 205.1,
-          "value": 10255.0
-        },
-        "CRWV": {
-          "shares": 70,
-          "price": 100.39,
-          "value": 7027.3
-        },
-        "META": {
-          "shares": 12,
-          "price": 593,
-          "value": 7116
-        },
-        "AMZN": {
-          "shares": 28,
-          "price": 246.03,
-          "value": 6888.84
-        },
-        "KTOS": {
-          "shares": 92,
-          "price": 58.52,
-          "value": 5383.84
-        },
-        "RBRK": {
-          "shares": 85,
-          "price": 73.41,
-          "value": 6239.85
-        },
-        "RTX": {
-          "shares": 49,
-          "price": 180.99,
-          "value": 8868.51
-        },
-        "RDW": {
-          "shares": 276,
-          "price": 18.45,
-          "value": 5092.2
-        },
-        "AXON": {
-          "shares": 19,
-          "price": 486.12,
-          "value": 9236.28
-        },
-        "TSLA": {
-          "shares": 16,
-          "price": 391,
-          "value": 6256
-        },
-        "AVGO": {
-          "shares": 22,
-          "price": 385.73,
-          "value": 8486.06
-        },
-        "PLTR": {
-          "shares": 53,
-          "price": 135.53,
-          "value": 7183.09
-        },
-        "NFLX": {
-          "shares": 60,
-          "price": 82.18,
-          "value": 4930.8
-        },
-        "GE": {
-          "shares": 19,
-          "price": 328,
-          "value": 6232
-        }
+        "NVDA": 50,
+        "CRWV": 70,
+        "META": 12,
+        "AMZN": 28,
+        "KTOS": 92,
+        "RBRK": 85,
+        "RTX": 49,
+        "RDW": 276,
+        "AXON": 19,
+        "TSLA": 16,
+        "AVGO": 22,
+        "PLTR": 53,
+        "NFLX": 60,
+        "GE": 19
       },
-      "totalHoldingsValue": 99195.77,
-      "totalValue": 99217.97,
-      "return": -0.78,
       "trades": [
         {
           "ticker": "NVDA",
@@ -1678,45 +1316,14 @@
       "photoURL": null,
       "cash": 48.81,
       "holdings": {
-        "NVDA": {
-          "shares": 150,
-          "price": 205.1,
-          "value": 30765.0
-        },
-        "AVGO": {
-          "shares": 50,
-          "price": 385.73,
-          "value": 19286.5
-        },
-        "PLTR": {
-          "shares": 100,
-          "price": 135.53,
-          "value": 13553.0
-        },
-        "AMD": {
-          "shares": 30,
-          "price": 466.38,
-          "value": 13991.4
-        },
-        "CRWD": {
-          "shares": 15,
-          "price": 671.02,
-          "value": 10065.3
-        },
-        "GOOGL": {
-          "shares": 20,
-          "price": 368.53,
-          "value": 7370.6
-        },
-        "MSFT": {
-          "shares": 3,
-          "price": 416.67,
-          "value": 1250.01
-        }
+        "NVDA": 150,
+        "AVGO": 50,
+        "PLTR": 100,
+        "AMD": 30,
+        "CRWD": 15,
+        "GOOGL": 20,
+        "MSFT": 3
       },
-      "totalHoldingsValue": 96281.81,
-      "totalValue": 96330.62,
-      "return": -3.67,
       "trades": [
         {
           "ticker": "NVDA",
@@ -1776,40 +1383,13 @@
       "photoURL": null,
       "cash": 11343.8,
       "holdings": {
-        "RKLB": {
-          "shares": 200,
-          "price": 110.08,
-          "value": 22016.0
-        },
-        "RDW": {
-          "shares": 400,
-          "price": 18.45,
-          "value": 7380.0
-        },
-        "LUNR": {
-          "shares": 200,
-          "price": 29.36,
-          "value": 5872.0
-        },
-        "ASTS": {
-          "shares": 100,
-          "price": 93.6,
-          "value": 9360.0
-        },
-        "LMT": {
-          "shares": 40,
-          "price": 523.76,
-          "value": 20950.4
-        },
-        "PLTR": {
-          "shares": 60,
-          "price": 135.53,
-          "value": 8131.8
-        }
+        "RKLB": 200,
+        "RDW": 400,
+        "LUNR": 200,
+        "ASTS": 100,
+        "LMT": 40,
+        "PLTR": 60
       },
-      "totalHoldingsValue": 73710.2,
-      "totalValue": 85054.0,
-      "return": -14.95,
       "trades": [
         {
           "ticker": "RKLB",
@@ -1862,45 +1442,14 @@
       "photoURL": null,
       "cash": 16092.1,
       "holdings": {
-        "PANW": {
-          "shares": 70,
-          "price": 272.05,
-          "value": 19043.5
-        },
-        "CRWD": {
-          "shares": 30,
-          "price": 671.02,
-          "value": 20130.6
-        },
-        "FTNT": {
-          "shares": 100,
-          "price": 144.68,
-          "value": 14468.0
-        },
-        "ZS": {
-          "shares": 70,
-          "price": 130.78,
-          "value": 9154.6
-        },
-        "S": {
-          "shares": 400,
-          "price": 15.95,
-          "value": 6380.0
-        },
-        "PLTR": {
-          "shares": 50,
-          "price": 135.53,
-          "value": 6776.5
-        },
-        "AXON": {
-          "shares": 30,
-          "price": 486.12,
-          "value": 14583.6
-        }
+        "PANW": 70,
+        "CRWD": 30,
+        "FTNT": 100,
+        "ZS": 70,
+        "S": 400,
+        "PLTR": 50,
+        "AXON": 30
       },
-      "totalHoldingsValue": 90536.8,
-      "totalValue": 106628.9,
-      "return": 6.63,
       "trades": [
         {
           "ticker": "PANW",
@@ -1960,85 +1509,22 @@
       "photoURL": null,
       "cash": 19.3,
       "holdings": {
-        "NVDA": {
-          "shares": 45,
-          "price": 205.1,
-          "value": 9229.5
-        },
-        "AVGO": {
-          "shares": 25,
-          "price": 385.73,
-          "value": 9643.25
-        },
-        "GD": {
-          "shares": 20,
-          "price": 346.44,
-          "value": 6928.8
-        },
-        "PL": {
-          "shares": 105,
-          "price": 32.22,
-          "value": 3383.1
-        },
-        "RDW": {
-          "shares": 171,
-          "price": 18.45,
-          "value": 3154.95
-        },
-        "MSFT": {
-          "shares": 19,
-          "price": 416.67,
-          "value": 7916.73
-        },
-        "AMZN": {
-          "shares": 28,
-          "price": 246.03,
-          "value": 6888.84
-        },
-        "AXON": {
-          "shares": 13,
-          "price": 486.12,
-          "value": 6319.56
-        },
-        "PLTR": {
-          "shares": 50,
-          "price": 135.53,
-          "value": 6776.5
-        },
-        "TSM": {
-          "shares": 13,
-          "price": 415.17,
-          "value": 5397.21
-        },
-        "CRWV": {
-          "shares": 65,
-          "price": 100.39,
-          "value": 6525.35
-        },
-        "AVAV": {
-          "shares": 25,
-          "price": 185.92,
-          "value": 4648.0
-        },
-        "LUNR": {
-          "shares": 105,
-          "price": 29.36,
-          "value": 3082.8
-        },
-        "IREN": {
-          "shares": 85,
-          "price": 54.35,
-          "value": 4619.75
-        },
-        "META": {
-          "shares": 10,
-          "price": 593,
-          "value": 5930
-        }
+        "NVDA": 45,
+        "AVGO": 25,
+        "GD": 20,
+        "PL": 105,
+        "RDW": 171,
+        "MSFT": 19,
+        "AMZN": 28,
+        "AXON": 13,
+        "PLTR": 50,
+        "TSM": 13,
+        "CRWV": 65,
+        "AVAV": 25,
+        "LUNR": 105,
+        "IREN": 85,
+        "META": 10
       },
-      "totalHoldingsValue": 90444.34,
-      "totalValue": 90463.64,
-      "return": -9.54,
       "trades": [
         {
           "ticker": "NVDA",
