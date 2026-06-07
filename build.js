@@ -114,6 +114,7 @@ if (!template) {
         .replace(/{{BODY}}/g, bodyHtml)
         .replace(/{{TAGS_HTML}}/g, tagsHtml)
         .replace(/{{LINKS_HTML}}/g, linksHtml)
+        .replace(/{{RELATED_ARTICLES}}/g, pickRelated(articles, slug, 4))
         .replace(/\{\{[A-Z_]+\}\}/g, '');
 
       const outDir = path.join(DST, 'article', slug);
@@ -193,6 +194,27 @@ function loadArticles() {
 }
 
 // ─── Helpers ───
+function pickRelated(allArticles, currentSlug, count) {
+  const others = allArticles.filter(a => a.slug !== currentSlug);
+  // Shuffle and pick
+  const shuffled = others.sort(() => 0.5 - Math.random());
+  const picked = shuffled.slice(0, count);
+  return picked.map(a => {
+    const img = (a.image && a.image.src) || '/img/articles/_default.jpg';
+    const sentiment = a.sentiment || 'neutral';
+    const sentimentLabel = sentiment === 'bullish' ? '▲ Bullish' : sentiment === 'bearish' ? '▼ Bearish' : '– Neutral';
+    const readTime = (a.meta && a.meta.estimatedReadTime) || '1 min read';
+    return `<a href="/article/${a.slug}" class="article-card">
+    <div class="card-image"><img src="${img}" alt="${escapeAttr(a.title || '')}" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+      <div class="card-header"><span class="ticker-badge ${sentiment}">${escapeHtml(a.ticker || '')}</span><span class="sentiment-label ${sentiment}">${sentimentLabel}</span></div>
+      <h3>${escapeHtml(a.title || '')}</h3>
+      <p>${escapeHtml(a.summary || '').substring(0, 160)}</p>
+      <div class="card-meta"><span>${formatDate((a.date || '').slice(0, 10))}</span><span>${readTime}</span></div>
+    </div></a>`;
+  }).join('\n');
+}
+
 function countFiles(dir) {
   let count = 0;
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {

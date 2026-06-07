@@ -169,7 +169,7 @@
 
     <!-- Comments -->
     <section class="comments-section" style="max-width:720px;margin:0 auto;padding:0 24px 48px">
-      <div id="comments-root"></div>
+      <div id="comments-root" data-slug="{{SLUG}}"></div>
     </section>
 
     <div class="section-divider"></div>
@@ -177,9 +177,7 @@
     <!-- Related Articles -->
     <section class="feed-continued" style="padding-top:0">
       <div class="article-grid" id="relatedArticles">
-        <a href="/" class="article-card" style="display:flex;align-items:center;justify-content:center;min-height:100px;text-align:center">
-          <div class="card-body"><h3>← Back to Homepage</h3><p>Browse all articles, market data, and community insights</p></div>
-        </a>
+        {{RELATED_ARTICLES}}
       </div>
     </section>
 
