@@ -1,11 +1,13 @@
-// build.js — HYBRID (June 7, 2026)
+// build.js — JSON-DRIVEN (June 7, 2026)
 //
 // ARCHITECTURE:
-//   _backup_dist/ = FROZEN core pages from known-good deployment (dpl_Cj8826)
-//   _backup_dist/index.html = homepage with full article data embedded in <script id="articles-data">
-//   articles/template.html = article page template
-//   articles/posts/*.json = fallback for articles not in homepage data
-//   API functions = COPIED from api/ directory
+//   _backup_dist/ = FROZEN design-only pages (~48KB index.html with placeholders)
+//   articles/posts/*.json = SINGLE SOURCE OF TRUTH for all article data
+//   build.js reads JSON → generates articles-data blob + article cards → injects into placeholders
+//
+// Content pipeline agents ONLY write articles/posts/*.json — never touch _backup_dist/index.html.
+// Design agents ONLY edit _backup_dist/index.html — never touch article JSON files.
+// No more overwrite conflicts.
 
 const fs = require('fs');
 const path = require('path');
@@ -29,39 +31,86 @@ if (!fs.existsSync(SRC)) {
 }
 fs.rmSync(DST, { recursive: true, force: true });
 fs.cpSync(SRC, DST, { recursive: true });
-const htmlBytes = fs.statSync(path.join(DST, 'index.html')).size;
-console.log(`  ✅ ${htmlBytes} bytes homepage → dist/`);
 
-// GUARD: Abort if homepage is suspiciously small (< 800KB = stripped-down build)
-if (htmlBytes < 800000) {
-  console.error(`⛔ FATAL: index.html is ${htmlBytes} bytes — expected ~807,000+.`);
-  console.error('   The frozen homepage may be corrupted or the old code generator ran.');
-  console.error('   Recovery: npx vercel promote the-signal-nphmhgo0f-beachsquadlas-projects.vercel.app');
+// GUARD: Abort if homepage is suspiciously small (< 50KB = stripped design)
+const htmlSize = fs.statSync(path.join(DST, 'index.html')).size;
+if (htmlSize < 45000) {
+  console.error(`⛔ FATAL: index.html is ${htmlSize} bytes — expected ~48,000+.`);
+  console.error('   The frozen design may be corrupted.');
   process.exit(1);
 }
+console.log(`  ✅ ${htmlSize} bytes design → dist/`);
 
 // ─── 1.5. Copy article images ───
 const imgDir = path.join(ROOT, 'public', 'img');
 const distImgDir = path.join(DST, 'img');
 if (fs.existsSync(imgDir)) {
   fs.cpSync(imgDir, distImgDir, { recursive: true });
-  const imgCount = countFiles(distImgDir);
-  console.log(`  ✅ ${imgCount} image files → dist/img/`);
+  console.log(`  ✅ ${countFiles(distImgDir)} image files → dist/img/`);
 }
 
-// ─── 2. Load article data ───
-// Priority 1: Full article data embedded in homepage <script id="articles-data">
-// Priority 2: Individual JSON files in articles/posts/ (fallback)
+// ─── 2. Load all articles from JSON files (SINGLE SOURCE OF TRUTH) ───
 const articles = loadArticles();
-console.log(`📝 Generating ${articles.length} article pages...`);
+console.log(`📝 ${articles.length} articles loaded from articles/posts/*.json`);
 
-// ─── 3. Generate article pages ───
+// ─── 3. Generate articles-data JSON blob ───
+const articlesJson = JSON.stringify(articles);
+console.log(`  📄 articles-data: ${articlesJson.length} bytes`);
+
+// ─── 4. Sort and split into grids ───
+articles.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+
+const featured = articles.slice(0, 5);
+const continued1 = articles.slice(5, 18);
+const continued2 = articles.slice(18);
+
+console.log(`  📰 Featured: ${featured.length}, Continued 1: ${continued1.length}, Continued 2: ${continued2.length}`);
+
+// ─── 5. Generate card HTML ───
+const featuredHtml = featured.map((a, i) => i === 0
+  ? featuredCard(a)
+  : articleCard(a)
+).join('\n');
+
+const continued1Html = continued1.map(a => articleCard(a)).join('\n');
+const continued2Html = continued2.map(a => articleCard(a)).join('\n');
+
+// ─── 6. Inject into placeholders ───
+let indexHtml = fs.readFileSync(path.join(DST, 'index.html'), 'utf8');
+
+indexHtml = indexHtml.replace('<!-- ARTICLES_DATA_JSON -->',
+  `<script id="articles-data" type="application/json">${articlesJson}</script>`);
+
+indexHtml = indexHtml.replace('<!-- FEATURED_GRID -->',
+  `<section class="feed">\n  <div class="article-grid">\n${featuredHtml}\n  </div>\n</section>`);
+
+// Replace both CONTINUED_GRID placeholders
+const continuedBlock1 = `<section class="feed feed-continued">\n  <div class="article-grid">\n${continued1Html}\n  </div>\n</section>`;
+const continuedBlock2 = `<section class="feed feed-continued">\n  <div class="article-grid">\n${continued2Html}\n  </div>\n</section>`;
+
+indexHtml = indexHtml.replace('<!-- CONTINUED_GRID -->', continuedBlock1);
+indexHtml = indexHtml.replace('<!-- CONTINUED_GRID -->', continuedBlock2);
+
+fs.writeFileSync(path.join(DST, 'index.html'), indexHtml);
+
+const finalSize = fs.statSync(path.join(DST, 'index.html')).size;
+console.log(`  ✅ Homepage built: ${finalSize} bytes`);
+
+// GUARD: Abort if homepage is suspiciously small (< 750KB = missing article content)
+if (finalSize < 750000) {
+  console.error(`⛔ FATAL: Built index.html is ${finalSize} bytes — expected ~800,000+.`);
+  console.error('   Article generation may have failed. Check articles/posts/*.json.');
+  console.error('   Recovery: npx vercel promote the-signal-nphmhgo0f-beachsquadlas-projects.vercel.app');
+  process.exit(1);
+}
+
+// ─── 7. Generate article pages ───
 const template = fs.existsSync(ARTICLE_TEMPLATE)
   ? fs.readFileSync(ARTICLE_TEMPLATE, 'utf8')
   : null;
 
 if (!template) {
-  console.log('⚠️  No template found at articles/template.html — skipping article generation');
+  console.log('⚠️  No template found at articles/template.html — skipping article pages');
 } else {
   let generated = 0;
   for (const article of articles) {
@@ -81,14 +130,12 @@ if (!template) {
       const subtitle = article.subtitle ? `<p class="article-subtitle">${article.subtitle}</p>` : '';
       const imageHtml = `<div class="article-image"><img src="${imageSrc}" alt="${escapeHtml(imageCaption)}" width="1200" height="675"></div>`;
 
-      // Tags
       let tagsHtml = '';
       const tags = article.tags || [];
       if (tags.length > 0) {
         tagsHtml = '<div class="article-tags">' + tags.map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('') + '</div>';
       }
 
-      // Source links
       let linksHtml = '';
       const links = article.links || [];
       if (links.length > 0) {
@@ -97,11 +144,8 @@ if (!template) {
           '</ul></div>';
       }
 
-      // Body: use full bodyHtml from homepage data (or fallback from JSON)
       let bodyHtml = article.bodyHtml || '';
-      // Fix double-escaped quotes from embedded JSON
       bodyHtml = bodyHtml.replace(/\\"/g, '"');
-      // Fix escaped newlines
       bodyHtml = bodyHtml.replace(/\\n/g, '\n');
 
       let html = template
@@ -133,10 +177,10 @@ if (!template) {
       console.error(`  ⚠️  Error generating ${article.slug || '?'}: ${e.message}`);
     }
   }
-  console.log(`  ✅ ${generated} articles generated`);
+  console.log(`  ✅ ${generated} article pages generated`);
 }
 
-// ─── 4. Copy API serverless functions ───
+// ─── 8. Copy API serverless functions ───
 const apiDir = path.join(ROOT, 'api');
 const distApiDir = path.join(DST, 'api');
 if (fs.existsSync(apiDir)) {
@@ -152,59 +196,76 @@ if (fs.existsSync(apiDir)) {
 const totalFiles = countFiles(DST);
 console.log(`✅ Build complete — ${totalFiles} files in dist/`);
 
-// ─── Article loader ───
+// ─── Article loader: JSON files = SINGLE SOURCE OF TRUTH ───
 function loadArticles() {
-  const articlesMap = new Map();
-
-  // Priority 1: Extract full article data from homepage <script id="articles-data">
-  try {
-    const html = fs.readFileSync(path.join(SRC, 'index.html'), 'utf8');
-    const marker = '<script id="articles-data" type="application/json">';
-    const startIdx = html.indexOf(marker);
-    if (startIdx !== -1) {
-      const jsonStart = startIdx + marker.length;
-      const jsonEnd = html.indexOf('</script>', jsonStart);
-      if (jsonEnd !== -1) {
-        const json = html.substring(jsonStart, jsonEnd);
-        const homepageArticles = JSON.parse(json);
-        console.log(`  📄 ${homepageArticles.length} articles from homepage data (full content)`);
-        for (const a of homepageArticles) {
-          if (a.slug) articlesMap.set(a.slug, a);
-        }
-      }
-    }
-  } catch (e) {
-    console.log(`  ⚠️  Could not extract homepage articles: ${e.message}`);
+  const articles = [];
+  if (!fs.existsSync(POSTS_DIR)) {
+    console.error('ERROR: articles/posts/ directory not found!');
+    process.exit(1);
   }
 
-  // Priority 2: Fall back to individual JSON files for articles not in homepage
-  if (fs.existsSync(POSTS_DIR)) {
-    const jsonFiles = fs.readdirSync(POSTS_DIR).filter(f => f.endsWith('.json'));
-    let fromFiles = 0;
-    for (const file of jsonFiles) {
-      try {
-        const article = JSON.parse(fs.readFileSync(path.join(POSTS_DIR, file), 'utf8'));
-        const slug = article.slug || file.replace('.json', '');
-        if (!articlesMap.has(slug)) {
-          articlesMap.set(slug, article);
-          fromFiles++;
-        }
-      } catch (e) {
-        // skip malformed
+  const jsonFiles = fs.readdirSync(POSTS_DIR).filter(f => f.endsWith('.json'));
+  for (const file of jsonFiles) {
+    try {
+      const article = JSON.parse(fs.readFileSync(path.join(POSTS_DIR, file), 'utf8'));
+      if (article.slug && article.title && article.bodyHtml) {
+        articles.push(article);
+      } else {
+        console.log(`  ⚠️  Skipping ${file}: missing slug/title/bodyHtml`);
       }
-    }
-    if (fromFiles > 0) {
-      console.log(`  📄 ${fromFiles} additional articles from JSON files (fallback)`);
+    } catch (e) {
+      console.log(`  ⚠️  Skipping ${file}: ${e.message}`);
     }
   }
+  return articles;
+}
 
-  return Array.from(articlesMap.values());
+// ─── Card generators ───
+function featuredCard(a) {
+  const img = (a.image && a.image.src) || '/img/articles/_default.jpg';
+  const sentiment = a.sentiment || 'neutral';
+  const sentimentLabel = sentiment === 'bullish' ? '▲ Bullish' : sentiment === 'bearish' ? '▼ Bearish' : '– Neutral';
+  const readTime = (a.meta && a.meta.estimatedReadTime) || '1 min read';
+  const dateStr = formatDate((a.date || '').slice(0, 10));
+
+  return `<a href="/article/${a.slug}" class="article-card featured-card">
+    <div class="card-image"><img src="${img}" alt="${escapeAttr(a.title || '')}" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge ${sentiment}">${escapeHtml(a.ticker || '')}</span>
+      <span class="sentiment-label ${sentiment}">${sentimentLabel}</span>
+    </div>
+    <h3 class="card-title">${escapeHtml(a.title || '')}</h3>
+    <p class="card-summary">${escapeHtml((a.summary || '').substring(0, 280))}${(a.summary || '').length > 280 ? '...' : ''}</p>
+    <div class="card-meta"><span>${dateStr}</span><span>${readTime}</span></div>
+    </div></a>`;
+}
+
+function articleCard(a) {
+  const img = (a.image && a.image.src) || '/img/articles/_default.jpg';
+  const sentiment = a.sentiment || 'neutral';
+  const sentimentLabel = sentiment === 'bullish' ? '▲ Bullish' : sentiment === 'bearish' ? '▼ Bearish' : '– Neutral';
+  const readTime = (a.meta && a.meta.estimatedReadTime) || '1 min read';
+  const dateStr = formatDate((a.date || '').slice(0, 10));
+  const summary = (a.summary || '').substring(0, 160);
+  const ellipsis = (a.summary || '').length > 160 ? '...' : '';
+
+  return `<a href="/article/${a.slug}" class="article-card">
+    <div class="card-image"><img src="${img}" alt="${escapeAttr(a.title || '')}" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-body">
+    <div class="card-top">
+      <span class="ticker-badge ${sentiment}">${escapeHtml(a.ticker || '')}</span>
+      <span class="sentiment-label ${sentiment}">${sentimentLabel}</span>
+    </div>
+    <h3 class="card-title">${escapeHtml(a.title || '')}</h3>
+    <p class="card-summary">${escapeHtml(summary)}${ellipsis}</p>
+    <div class="card-meta"><span>${dateStr}</span><span>${readTime}</span></div>
+    </div></a>`;
 }
 
 // ─── Helpers ───
 function pickRelated(allArticles, currentSlug, count) {
   const others = allArticles.filter(a => a.slug !== currentSlug);
-  // Shuffle and pick
   const shuffled = others.sort(() => 0.5 - Math.random());
   const picked = shuffled.slice(0, count);
   return picked.map(a => {
@@ -217,7 +278,7 @@ function pickRelated(allArticles, currentSlug, count) {
     <div class="card-body">
       <div class="card-header"><span class="ticker-badge ${sentiment}">${escapeHtml(a.ticker || '')}</span><span class="sentiment-label ${sentiment}">${sentimentLabel}</span></div>
       <h3>${escapeHtml(a.title || '')}</h3>
-      <p>${escapeHtml(a.summary || '').substring(0, 160)}</p>
+      <p>${escapeHtml((a.summary || '').substring(0, 160))}</p>
       <div class="card-meta"><span>${formatDate((a.date || '').slice(0, 10))}</span><span>${readTime}</span></div>
     </div></a>`;
   }).join('\n');
