@@ -433,32 +433,62 @@
   }
 
   // ─── Init ───
-  function init() {
-    // Initialize Firebase
+  function initFirebaseSDK(callback) {
+    // Dynamically load Firebase SDK if not already available
     if (typeof firebase !== 'undefined' && firebase.initializeApp) {
-      try {
-        firebaseApp = firebase.initializeApp(FIREBASE_CONFIG, 'thesignal-comments');
-      } catch(e) {
-        // Already initialized
-        firebaseApp = firebase.app('thesignal-comments');
+      callback();
+      return;
+    }
+
+    var loaded = 0;
+    function onLoad() {
+      loaded++;
+      if (loaded === 2) callback();
+    }
+
+    var appScript = document.createElement('script');
+    appScript.src = 'https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js';
+    appScript.onload = onLoad;
+    appScript.onerror = function() { onLoad(); };
+    document.head.appendChild(appScript);
+
+    var authScript = document.createElement('script');
+    authScript.src = 'https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js';
+    authScript.onload = onLoad;
+    authScript.onerror = function() { onLoad(); };
+    document.head.appendChild(authScript);
+  }
+
+  function init() {
+    initFirebaseSDK(function() {
+      // Initialize Firebase
+      if (typeof firebase !== 'undefined' && firebase.initializeApp) {
+        try {
+          firebaseApp = firebase.initializeApp(FIREBASE_CONFIG, 'thesignal-comments');
+        } catch(e) {
+          // Already initialized
+          try { firebaseApp = firebase.app('thesignal-comments'); } catch(e2) { firebaseApp = null; }
+        }
+
+        if (firebaseApp && firebase.auth) {
+          // Listen for auth state changes
+          firebase.auth(firebaseApp).onAuthStateChanged(function(user) {
+            firebaseUser = user;
+            resolveCurrentUser(user, function() {
+              if (document.getElementById('commentsContainer')) {
+                loadComments();
+              }
+            });
+          });
+          return;
+        }
       }
 
-      // Listen for auth state changes
-      firebase.auth(firebaseApp).onAuthStateChanged(function(user) {
-        firebaseUser = user;
-        resolveCurrentUser(user, function() {
-          // Re-render comments if container exists
-          if (document.getElementById('commentsContainer')) {
-            loadComments();
-          }
-        });
-      });
-    } else {
       // No Firebase — just use Hive auth
       resolveCurrentUser(null, function() {
         loadComments();
       });
-    }
+    });
 
     // Listen for Hive auth changes (cross-tab)
     window.addEventListener('storage', function(e) {
