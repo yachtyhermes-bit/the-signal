@@ -173,29 +173,16 @@
 
     <!-- Comments -->
     <section class="comments-section" style="max-width:720px;margin:0 auto;padding:0 24px 48px">
-      <div id="comments-root" data-slug="{{SLUG}}"></div>
+      <div id="commentsContainer" data-slug="{{SLUG}}"></div>
     </section>
 
     <div class="section-divider"></div>
 
     <!-- Related Articles -->
     <section class="feed-continued" style="padding-top:0">
-      <div class="article-grid" id="relatedArticles">
+      <h3 style="font-family:'Anton',Impact,sans-serif;font-size:20px;color:var(--text-primary);margin:0 24px 20px;letter-spacing:1px">More From The Signal</h3>
+      <div class="article-grid article-grid-compact" id="relatedArticles">
         {{RELATED_ARTICLES}}
-      </div>
-    </section>
-
-    <!-- Newsletter -->
-    <section class="newsletter-section">
-      <div class="newsletter-inner">
-        <div class="newsletter-badge">📬 SIGNAL INBOX</div>
-        <h2 class="newsletter-title">Get the <span class="newsletter-gradient">Signals</span> to your inbox!</h2>
-        <p class="newsletter-desc">Market-moving intelligence, before the crowd.</p>
-        <form class="newsletter-form" id="newsletterForm">
-          <input type="email" class="newsletter-input" placeholder="Enter your email" required>
-          <button type="submit" class="newsletter-btn">Subscribe</button>
-        </form>
-        <div class="newsletter-status" id="newsletterStatus"></div>
       </div>
     </section>
   </main>
