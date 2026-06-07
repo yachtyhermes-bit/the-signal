@@ -270,18 +270,10 @@ function pickRelated(allArticles, currentSlug, count) {
   const picked = shuffled.slice(0, count);
   return picked.map(a => {
     const img = (a.image && a.image.src) || '/img/articles/_default.jpg';
-    const sentiment = a.sentiment || 'neutral';
-    const sentimentLabel = sentiment === 'bullish' ? '▲ Bullish' : sentiment === 'bearish' ? '▼ Bearish' : '– Neutral';
-    const readTime = (a.meta && a.meta.estimatedReadTime) || '1 min read';
     return `<a href="/article/${a.slug}" class="related-card">
-      <div class="related-img"><img src="${img}" alt="${escapeAttr(a.title || '')}" loading="lazy" width="1200" height="675"></div>
-      <div class="related-body">
-        <div class="related-top">
-          <span class="ticker-badge ${sentiment}">${escapeHtml(a.ticker || '')}</span>
-          <span class="sentiment-label ${sentiment}">${sentimentLabel}</span>
-        </div>
-        <span class="related-title">${escapeHtml(a.title || '')}</span>
-        <span class="related-meta">${formatDate((a.date || '').slice(0, 10))} · ${readTime}</span>
+      <div class="card-image"><img src="${img}" alt="${escapeAttr(a.title || '')}" loading="lazy" decoding="async" width="1200" height="675"></div>
+      <div class="card-body">
+        <h3 class="card-title">${escapeHtml(a.title || '')}</h3>
       </div>
     </a>`;
   }).join('\n');
