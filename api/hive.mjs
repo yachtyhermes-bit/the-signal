@@ -1,6 +1,8 @@
 // The Hive API — Vercel serverless function
 // Simulated trading & portfolio leaderboard for The Signal
 // Supports username/password auth with stateless signed tokens
+// DATA_VERSION: 2 (30-trader leaderboard restored Jun 7)
+// DATA_VERSION: 3 (holdings format fix)
 // GET  /api/hive?uid=XXX       → user portfolio
 // POST /api/hive               → submit trade { uid, ticker, action, shares }
 // GET  /api/hive?leaderboard=weekly|monthly|alltime → top 50
@@ -114,6 +116,7 @@ async function readData() {
   try {
     const data = await fs.readFile(HIVE_PATH, 'utf8');
     const parsed = JSON.parse(data);
+    normalizeData(parsed);
     memoryCache = parsed;
     memoryCacheTime = Date.now();
     return JSON.parse(JSON.stringify(parsed));
@@ -126,6 +129,7 @@ async function readData() {
     if (response.ok) {
       const text = await response.text();
       const parsed = JSON.parse(text);
+      normalizeData(parsed);
       // Write to /tmp for warm invocations later
       try {
         await fs.writeFile(HIVE_PATH, JSON.stringify(parsed, null, 2), 'utf8');
@@ -140,6 +144,25 @@ async function readData() {
   memoryCache = defaults;
   memoryCacheTime = Date.now();
   return JSON.parse(JSON.stringify(defaults));
+}
+
+// Normalize holdings format: convert {ticker: {shares, price, value}} → {ticker: share_count}
+function normalizeData(data) {
+  if (!data.portfolios) return;
+  for (const uid of Object.keys(data.portfolios)) {
+    const p = data.portfolios[uid];
+    const h = p.holdings;
+    if (!h) continue;
+    // Check if holdings are in old nested format
+    const keys = Object.keys(h);
+    if (keys.length > 0 && typeof h[keys[0]] === 'object' && h[keys[0]] !== null && 'shares' in h[keys[0]]) {
+      const flat = {};
+      for (const [ticker, obj] of Object.entries(h)) {
+        flat[ticker] = obj.shares || 0;
+      }
+      p.holdings = flat;
+    }
+  }
 }
 
 async function writeData(data) {
