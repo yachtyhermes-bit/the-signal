@@ -802,7 +802,6 @@
     "createdAt": "2026-06-08T16:19:51.123Z",
     "likes": [
       "usr_a1",
-      "usr_b2",
       "usr_e5"
     ]
   },
@@ -981,7 +980,10 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-08T19:01:37.532Z",
-    "likes": []
+    "likes": [
+      "user_a1",
+      "usr_c3"
+    ]
   },
   {
     "id": "mq5kuik0_jrpbin",
