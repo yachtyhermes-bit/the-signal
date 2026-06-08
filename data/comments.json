@@ -718,7 +718,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-08T16:19:41.022Z"
+    "createdAt": "2026-06-08T16:19:41.022Z",
+    "likes": [
+      "usr_a1"
+    ]
   },
   {
     "id": "mq5f2aes_4wklgf",
@@ -889,5 +892,25 @@
     "uid": null,
     "parentId": "mq5f2gur_em86h5",
     "createdAt": "2026-06-08T16:20:32.875Z"
+  },
+  {
+    "id": "mq5f3egg_mqy79e",
+    "article": "micron-trillion-dollar-hbm-2026",
+    "text": "dont fomo into mu at $922. the time to buy was $103. now its a different risk profile entirely",
+    "author": "RN_Geo",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mq5f2kr7_bjonw3",
+    "createdAt": "2026-06-08T16:20:34.672Z"
+  },
+  {
+    "id": "mq5f3fok_ch5hp0",
+    "article": "micron-trillion-dollar-hbm-2026",
+    "text": "my entire robinhood account is mu calls and i cant feel my face",
+    "author": "yolo_my_401k",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mq5f2lzq_kv1py7",
+    "createdAt": "2026-06-08T16:20:36.260Z"
   }
 ]
