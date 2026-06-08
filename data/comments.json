@@ -979,7 +979,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-08T19:01:37.532Z"
+    "createdAt": "2026-06-08T19:01:37.532Z",
+    "likes": [
+      "usr_c3"
+    ]
   },
   {
     "id": "mq5kuik0_jrpbin",
@@ -1150,5 +1153,15 @@
     "uid": null,
     "parentId": "mq5kujyn_jehmnf",
     "createdAt": "2026-06-08T19:02:05.068Z"
+  },
+  {
+    "id": "mq5kv3wd_jwzntf",
+    "article": "micron-trillion-dollar-hbm-2026",
+    "text": "samsung is catching up fast tho. their HBM3E yields supposedly improved a lot this quarter. micron wont have this margin party forever",
+    "author": "user_d4",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mq5kujst_hstizm",
+    "createdAt": "2026-06-08T19:02:05.437Z"
   }
 ]
