@@ -731,10 +731,9 @@
     "parentId": null,
     "createdAt": "2026-06-08T16:19:42.772Z",
     "likes": [
-      "usr_b2",
-      "usr_c3",
       "swarm-a6po",
-      "swarm-qz5f"
+      "swarm-qz5f",
+      "usr_c3"
     ]
   },
   {
@@ -775,7 +774,8 @@
     "createdAt": "2026-06-08T16:19:47.704Z",
     "likes": [
       "usr_b2",
-      "usr_c3"
+      "usr_c3",
+      "usr_a1"
     ]
   },
   {
@@ -1012,7 +1012,8 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-08T19:01:37.988Z"
+    "createdAt": "2026-06-08T19:01:37.988Z",
+    "likes": []
   },
   {
     "id": "mq5kuivd_eapdcu",
