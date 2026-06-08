@@ -465,7 +465,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": "mq53qi44_zt3r0a",
-    "createdAt": "2026-06-08T11:02:46.907Z"
+    "createdAt": "2026-06-08T11:02:46.907Z",
+    "likes": [
+      "usr_c1"
+    ]
   },
   {
     "id": "mq53qpuf_tuhbpg",
@@ -536,5 +539,45 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-08T11:03:12.364Z"
+  },
+  {
+    "id": "mq53r9h4_har2ca",
+    "article": "crowdstrike-q1-fy2027-earnings-stock-split",
+    "text": "unusual put flow earlier today on crwd. someone knew or someone just got very lucky",
+    "author": "option_flow_watcher",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-08T11:03:12.568Z"
+  },
+  {
+    "id": "mq53r9ou_gq2264",
+    "article": "crowdstrike-q1-fy2027-earnings-stock-split",
+    "text": "sell the news went absolutely nuclear. eating my sadness burrito and not looking at pnl",
+    "author": "tacotuesdaytrader",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-08T11:03:12.846Z"
+  },
+  {
+    "id": "mq53rql9_4lm9bo",
+    "article": "crowdstrike-q1-fy2027-earnings-stock-split",
+    "text": "first time huh. i opened my app saw -9% and just closed it. check back in 2027",
+    "author": "help_me_pls77",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mq53r9bg_oaxjil",
+    "createdAt": "2026-06-08T11:03:34.749Z"
+  },
+  {
+    "id": "mq53rqrl_ua9vsa",
+    "article": "crowdstrike-q1-fy2027-earnings-stock-split",
+    "text": "market makers printing money on retail panic. beat plus raised guidance plus split plus dump equals the perfect crime",
+    "author": "FEMA_Camp_Survivor",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mq53r9ou_gq2264",
+    "createdAt": "2026-06-08T11:03:34.977Z"
   }
 ]
