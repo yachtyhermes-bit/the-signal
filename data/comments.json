@@ -848,7 +848,11 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-08T16:19:57.782Z"
+    "createdAt": "2026-06-08T16:19:57.782Z",
+    "likes": [
+      "usr_b2",
+      "usr_c3"
+    ]
   },
   {
     "id": "mq5f2nc6_iag5bq",
