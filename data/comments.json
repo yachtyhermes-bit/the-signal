@@ -292,7 +292,8 @@
     "createdAt": "2026-06-08T08:55:57.231Z",
     "likes": [
       "usr_liker_d4",
-      "usr_g2"
+      "usr_g2",
+      "usr_h2"
     ]
   },
   {
@@ -336,7 +337,8 @@
       "usr_liker_d4",
       "usr_liker_b2",
       "usr_liker_c3",
-      "swarm-p75a"
+      "swarm-p75a",
+      "usr_e2"
     ]
   },
   {
@@ -519,7 +521,11 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-08T11:02:55.586Z"
+    "createdAt": "2026-06-08T11:02:55.586Z",
+    "likes": [
+      "usr_f2",
+      "usr_e2"
+    ]
   },
   {
     "id": "mq53qwj8_pniz9n",
