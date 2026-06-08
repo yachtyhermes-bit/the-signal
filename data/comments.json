@@ -196,7 +196,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": "mq4z7knh_t0acrq",
-    "createdAt": "2026-06-08T08:55:56.278Z"
+    "createdAt": "2026-06-08T08:55:56.278Z",
+    "likes": [
+      "usr_liker_c3"
+    ]
   },
   {
     "id": "mq4z7ldl_8f81vk",
@@ -248,7 +251,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-08T08:55:56.773Z"
+    "createdAt": "2026-06-08T08:55:56.773Z",
+    "likes": [
+      "usr_liker_d4"
+    ]
   },
   {
     "id": "mq4z7m0f_rggql8",
@@ -301,7 +307,8 @@
     "createdAt": "2026-06-08T08:55:57.611Z",
     "likes": [
       "usr_liker_d4",
-      "usr_liker_b2"
+      "usr_liker_b2",
+      "usr_liker_c3"
     ]
   },
   {
