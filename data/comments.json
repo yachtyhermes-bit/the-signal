@@ -801,8 +801,8 @@
     "parentId": null,
     "createdAt": "2026-06-08T16:19:51.123Z",
     "likes": [
-      "usr_a1",
-      "usr_e5"
+      "usr_e5",
+      "usr_b2"
     ]
   },
   {
@@ -939,7 +939,8 @@
     "photoURL": null,
     "uid": null,
     "parentId": "mq5f2gur_em86h5",
-    "createdAt": "2026-06-08T16:20:32.875Z"
+    "createdAt": "2026-06-08T16:20:32.875Z",
+    "likes": []
   },
   {
     "id": "mq5f3egg_mqy79e",
@@ -1093,7 +1094,11 @@
     "photoURL": null,
     "uid": null,
     "parentId": "mq5ku6rq_ghxnlh",
-    "createdAt": "2026-06-08T19:02:03.465Z"
+    "createdAt": "2026-06-08T19:02:03.465Z",
+    "likes": [
+      "usr_e5",
+      "usr_d4"
+    ]
   },
   {
     "id": "mq5kv2kf_tep0an",
