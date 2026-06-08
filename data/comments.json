@@ -719,5 +719,25 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-08T16:19:41.022Z"
+  },
+  {
+    "id": "mq5f2aes_4wklgf",
+    "article": "nvidia-apple-deal-ai-selloff-catalyst",
+    "text": "everyone was screaming custom chips would kill nvidia. then apple with literally unlimited cash and the best silicon team alive just rented blackwell. bear thesis just got deleted",
+    "author": "whohebe123",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-08T16:19:42.772Z"
+  },
+  {
+    "id": "mq5f2bry_8mgfe2",
+    "article": "nvidia-apple-deal-ai-selloff-catalyst",
+    "text": "the thesis is actually simpler than people think. gpu compute isnt a feature its a platform. you cant just build your own when the software moat is 20 years deep. cuda is the real moat not the silicon",
+    "author": "thesis_driven_dan",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-08T16:19:44.542Z"
   }
 ]
