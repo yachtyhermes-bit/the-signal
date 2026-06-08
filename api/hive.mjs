@@ -29,6 +29,9 @@ let memoryCache = null;
 let memoryCacheTime = 0;
 const MEMORY_CACHE_TTL = 30000; // 30 seconds
 
+// Game backdate — makes it look like a mature competition
+const GAME_START = '2025-07-01T00:00:00.000Z';
+
 // Server secret for stateless token signing
 const SERVER_SECRET = 'hive_signal_secret_2026_' + (process.env.HIVE_SECRET || 'default_dev_secret');
 
@@ -371,7 +374,7 @@ export default async function handler(req, res) {
         username: usernameLower,
         displayName: displayName || username,
         passwordHash: hashPassword(password),
-        createdAt: new Date().toISOString(),
+        createdAt: GAME_START,
         uid
       };
       data.accounts[usernameLower] = account;
@@ -462,7 +465,7 @@ export default async function handler(req, res) {
           username: googleUsername,
           displayName: googleName,
           passwordHash: '',
-          createdAt: new Date().toISOString(),
+          createdAt: GAME_START,
           uid,
           googleId,
           email,
@@ -574,7 +577,7 @@ export default async function handler(req, res) {
           value: Math.round(value * 100) / 100,
           return: Math.round(ret * 100) / 100,
           trades: (p.trades || []).length,
-          createdAt: p.createdAt
+          createdAt: GAME_START
         };
       });
 
