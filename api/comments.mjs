@@ -105,6 +105,15 @@ export default async function handler(req, res) {
 
     if (req.method === 'GET') {
       const article = req.query.article || '';
+      const action = req.query.action || '';
+      
+      // GET /api/comments?action=likes&commentId=XXX → get like count
+      if (action === 'likes' && req.query.commentId) {
+        const comment = all.find(c => c.id === req.query.commentId);
+        if (!comment) return res.status(404).json({ error: 'Comment not found' });
+        return res.json({ commentId: comment.id, likes: (comment.likes || []).length, likedBy: comment.likes || [] });
+      }
+      
       if (!article) return res.status(400).json({ error: 'Missing article slug' });
       const comments = all
         .filter(c => c.article === article)
@@ -113,6 +122,31 @@ export default async function handler(req, res) {
     }
 
     if (req.method === 'POST') {
+       // POST /api/comments?action=like → toggle like on a comment
+      if (req.query.action === 'like') {
+        const { commentId, uid, token } = req.body || {};
+        if (!commentId) return res.status(400).json({ error: 'Missing commentId' });
+        const hiveToken = token || req.query.token;
+        const isServiceCall = (hiveToken === SERVICE_TOKEN);
+        const likerId = isServiceCall ? (uid || 'swarm-' + Math.random().toString(36).slice(2,6)) : (uid || hiveToken);
+        if (!likerId && !isServiceCall) return res.status(401).json({ error: 'Auth required' });
+        
+        const comment = all.find(c => c.id === commentId);
+        if (!comment) return res.status(404).json({ error: 'Comment not found' });
+        
+        if (!comment.likes) comment.likes = [];
+        const idx = comment.likes.indexOf(likerId);
+        if (idx >= 0) {
+          comment.likes.splice(idx, 1); // unlike
+        } else {
+          comment.likes.push(likerId); // like
+        }
+        
+        await fs.writeFile(COMMENTS_PATH, JSON.stringify(all, null, 2), 'utf8');
+        saveToGitHub(all).catch(() => {});
+        return res.json({ status: 'success', liked: idx < 0, likeCount: comment.likes.length });
+      }
+
       const { article, text, author, photoURL, uid, parentId, token } = req.body || {};
 
       if (!article || !text || !author) {

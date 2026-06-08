@@ -131,6 +131,16 @@
   }
 
   // ─── Render ───
+  function avatarColor(username) {
+    var hash = 0;
+    for (var i = 0; i < username.length; i++) {
+      hash = username.charCodeAt(i) + ((hash << 5) - hash);
+      hash = hash & hash;
+    }
+    var h = Math.abs(hash) % 360;
+    return 'hsl(' + h + ', 55%, 45%)';
+  }
+
   function render(comments) {
     var roots = buildTree(comments);
     var totalCount = countAll(roots);
@@ -197,11 +207,8 @@
 
     var html = '';
     html += '<div class="comment-item' + (depth > 0 ? ' comment-threaded' : '') + '"' + indentStyle + ' data-comment-id="' + c.id + '">';
-    html += '<div class="comment-item-avatar">';
-    if (c.photoURL) {
-      html += '<img src="' + escAttr(c.photoURL) + '" alt="" width="32" height="32" onerror="this.style.display=\'none\'">';
-    }
-    html += '<div class="comment-avatar-fallback sm">' + escHtml(initials) + '</div>';
+    html += '<div class="comment-item-avatar" style="background:' + avatarColor(c.author) + '">';
+    html += '<span class="comment-avatar-letter">' + escHtml(initials) + '</span>';
     html += '</div>';
     html += '<div class="comment-item-body">';
     html += '<div class="comment-item-header">';
@@ -212,11 +219,13 @@
     }
     html += '</div>';
     html += '<div class="comment-item-text">' + linkify(escHtml(c.text)) + '</div>';
+    html += '<div class="comment-item-actions">';
+    var likes = (c.likes || []).length;
+    html += '<button class="comment-like-btn" data-id="' + c.id + '">🔥 <span class="comment-like-count">' + (likes > 0 ? likes : '') + '</span></button>';
     if (currentUser) {
-      html += '<div class="comment-item-actions">';
       html += '<button class="comment-reply-btn" data-parent="' + c.id + '">Reply</button>';
-      html += '</div>';
     }
+    html += '</div>';
     // Inline reply form (hidden initially)
     html += '<div class="comment-reply-form" id="replyForm-' + c.id + '" style="display:none">';
     html += '<textarea class="comment-textarea comment-reply-textarea" placeholder="Write a reply…" maxlength="2000" rows="2"></textarea>';
@@ -281,6 +290,25 @@
         }
       });
     }
+
+    // ─── Like buttons ───
+    document.querySelectorAll('.comment-like-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var commentId = btn.getAttribute('data-id');
+        fetch(API_BASE + '?action=like', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ commentId: commentId, token: 'hive-comment-blast-2026' })
+        })
+        .then(function(r) { return r.json(); })
+        .then(function(d) {
+          if (d.status === 'success') {
+            loadComments(); // refresh to show new count
+          }
+        })
+        .catch(function() {});
+      });
+    });
 
     // ─── Top-level submit ───
     var textarea = document.getElementById('commentTextarea');
