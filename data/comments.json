@@ -230,7 +230,8 @@
     "likes": [
       "usr_liker_c3",
       "usr_liker_e5",
-      "usr_liker_a1"
+      "usr_liker_a1",
+      "usr_a1"
     ]
   },
   {
@@ -467,7 +468,9 @@
     "parentId": "mq53qi44_zt3r0a",
     "createdAt": "2026-06-08T11:02:46.907Z",
     "likes": [
-      "usr_c1"
+      "usr_c1",
+      "usr_b1",
+      "usr_a1"
     ]
   },
   {
@@ -478,7 +481,11 @@
     "photoURL": null,
     "uid": null,
     "parentId": "mq53qiaq_7zmdfc",
-    "createdAt": "2026-06-08T11:02:47.127Z"
+    "createdAt": "2026-06-08T11:02:47.127Z",
+    "likes": [
+      "usr_b1",
+      "usr_d1"
+    ]
   },
   {
     "id": "mq53qw70_nlmxov",
