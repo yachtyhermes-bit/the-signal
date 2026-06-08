@@ -749,7 +749,6 @@
     "parentId": null,
     "createdAt": "2026-06-08T16:19:44.542Z",
     "likes": [
-      "usr_d4",
       "swarm-ik2h"
     ]
   },
@@ -929,7 +928,11 @@
     "photoURL": null,
     "uid": null,
     "parentId": "mq5f2i7b_bzzmx3",
-    "createdAt": "2026-06-08T16:20:31.173Z"
+    "createdAt": "2026-06-08T16:20:31.173Z",
+    "likes": [
+      "usr_d4",
+      "usr_a1"
+    ]
   },
   {
     "id": "mq5f3d2j_8tiyvl",
@@ -1128,7 +1131,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": "mq5kuivd_eapdcu",
-    "createdAt": "2026-06-08T19:02:04.053Z"
+    "createdAt": "2026-06-08T19:02:04.053Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mq5kv30c_kxpetn",
