@@ -1090,5 +1090,35 @@
     "uid": null,
     "parentId": "mq5ku6rq_ghxnlh",
     "createdAt": "2026-06-08T19:02:03.465Z"
+  },
+  {
+    "id": "mq5kv2kf_tep0an",
+    "article": "openai-revenue-miss-june-2026",
+    "text": "yeah and with moores law basically dead those inference costs arent coming down anytime soon",
+    "author": "user_e5",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mq5kuik0_jrpbin",
+    "createdAt": "2026-06-08T19:02:03.711Z"
+  },
+  {
+    "id": "mq5kv2tx_s5vdbp",
+    "article": "nvidia-apple-deal-ai-selloff-catalyst",
+    "text": "nvidia makes gpus everyone uses for ai. if apple builds their own chips they dont need nvidia anymore. fewer customers = stock go down",
+    "author": "user_b2",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mq5kuivd_eapdcu",
+    "createdAt": "2026-06-08T19:02:04.053Z"
+  },
+  {
+    "id": "mq5kv30c_kxpetn",
+    "article": "nvidia-apple-deal-ai-selloff-catalyst",
+    "text": "also the timing with export controls is rough. double whammy and the options market isnt pricing the tail risk right",
+    "author": "user_c3",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mq5kuj1o_p11x8u",
+    "createdAt": "2026-06-08T19:02:04.284Z"
   }
 ]
