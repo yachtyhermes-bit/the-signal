@@ -960,5 +960,35 @@
     "uid": null,
     "parentId": "mq5f2lzq_kv1py7",
     "createdAt": "2026-06-08T16:20:36.260Z"
+  },
+  {
+    "id": "mq5ku6rq_ghxnlh",
+    "article": "openai-revenue-miss-june-2026",
+    "text": "wait so openai is losing money? i thought they were like the biggest ai company",
+    "author": "user_a1",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-08T19:01:22.503Z"
+  },
+  {
+    "id": "mq5kuid8_yzei2r",
+    "article": "openai-revenue-miss-june-2026",
+    "text": "damn thats wild. valuation at 300B and they cant even hit revenue targets. softbank bout to be sweating",
+    "author": "user_b2",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-08T19:01:37.532Z"
+  },
+  {
+    "id": "mq5kuik0_jrpbin",
+    "article": "openai-revenue-miss-june-2026",
+    "text": "rev miss means compute costs eating margins faster than revenue growth. their inference cost scaling is brutal rn, not surprised at all",
+    "author": "user_c3",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-08T19:01:37.776Z"
   }
 ]
