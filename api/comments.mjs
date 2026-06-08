@@ -9,6 +9,9 @@ const COMMENTS_PATH = '/tmp/comments.json';
 const HIVE_SECRET = 'hive_signal_secret_2026_' + (process.env.HIVE_SECRET || 'default_dev_secret');
 const HIVE_API = 'https://readthesignal.net/api/hive';
 
+// Service token for AI comment blasts — bypasses auth
+const SERVICE_TOKEN = process.env.COMMENT_SERVICE_TOKEN || 'hive-comment-blast-2026';
+
 function verifyHiveToken(token) {
   if (!token || typeof token !== 'string') return null;
   if (!token.startsWith('tok_')) return null;
@@ -60,9 +63,10 @@ export default async function handler(req, res) {
 
       // Verify authentication
       const hiveToken = token || req.query.token;
-      const hiveUsername = hiveToken ? verifyHiveToken(hiveToken) : null;
+      const isServiceCall = (hiveToken === SERVICE_TOKEN);
+      const hiveUsername = (!isServiceCall && hiveToken) ? verifyHiveToken(hiveToken) : null;
 
-      if (!hiveUsername && !uid) {
+      if (!isServiceCall && !hiveUsername && !uid) {
         return res.status(401).json({ error: 'Authentication required. Sign in with Google or The Hive to comment.' });
       }
 
