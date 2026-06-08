@@ -12,6 +12,58 @@ const HIVE_API = 'https://readthesignal.net/api/hive';
 // Service token for AI comment blasts — bypasses auth
 const SERVICE_TOKEN = process.env.COMMENT_SERVICE_TOKEN || 'hive-comment-blast-2026';
 
+// GitHub persistence — prevent data loss on Vercel cold starts
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN || '';
+const GITHUB_OWNER = 'yachtyhermes-bit';
+const GITHUB_REPO = 'the-signal';
+const GITHUB_PATH = 'data/comments.json';
+const GITHUB_BRANCH = 'main';
+
+async function loadFromGitHub() {
+  if (!GITHUB_TOKEN) return [];
+  try {
+    const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${GITHUB_PATH}?ref=${GITHUB_BRANCH}`;
+    const resp = await fetch(url, {
+      headers: { 'Authorization': `token ${GITHUB_TOKEN}` },
+      signal: AbortSignal.timeout(5000)
+    });
+    if (!resp.ok) return [];
+    const fileInfo = await resp.json();
+    const content = Buffer.from(fileInfo.content, 'base64').toString('utf8');
+    return JSON.parse(content);
+  } catch { return []; }
+}
+
+async function saveToGitHub(all) {
+  if (!GITHUB_TOKEN) return;
+  try {
+    const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${GITHUB_PATH}`;
+    const content = Buffer.from(JSON.stringify(all, null, 2)).toString('base64');
+    
+    let sha = null;
+    try {
+      const getResp = await fetch(url, {
+        headers: { 'Authorization': `token ${GITHUB_TOKEN}` },
+        signal: AbortSignal.timeout(5000)
+      });
+      if (getResp.ok) {
+        const fileInfo = await getResp.json();
+        sha = fileInfo.sha;
+      }
+    } catch {}
+    
+    const body = { message: 'Update comments', content, branch: GITHUB_BRANCH };
+    if (sha) body.sha = sha;
+    
+    await fetch(url, {
+      method: 'PUT',
+      headers: { 'Authorization': `token ${GITHUB_TOKEN}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+      signal: AbortSignal.timeout(10000)
+    });
+  } catch (err) { console.error('GitHub comments save failed:', err.message); }
+}
+
 function verifyHiveToken(token) {
   if (!token || typeof token !== 'string') return null;
   if (!token.startsWith('tok_')) return null;
@@ -38,12 +90,18 @@ export default async function handler(req, res) {
   try {
     const fs = await import('fs/promises');
 
-    // Read all comments
+    // Read all comments — try /tmp first, fall back to GitHub
     let all = [];
     try {
       const data = await fs.readFile(COMMENTS_PATH, 'utf8');
       all = JSON.parse(data);
-    } catch { all = []; }
+    } catch {
+      // /tmp empty (cold start) — load from GitHub
+      all = await loadFromGitHub();
+      if (all.length > 0) {
+        try { await fs.writeFile(COMMENTS_PATH, JSON.stringify(all, null, 2), 'utf8'); } catch {}
+      }
+    }
 
     if (req.method === 'GET') {
       const article = req.query.article || '';
@@ -111,6 +169,7 @@ export default async function handler(req, res) {
 
       all.push(comment);
       await fs.writeFile(COMMENTS_PATH, JSON.stringify(all, null, 2), 'utf8');
+      saveToGitHub(all).catch(() => {}); // fire-and-forget persist
 
       return res.json({ status: 'success', comment });
     }
