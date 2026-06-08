@@ -156,7 +156,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-08T08:55:55.597Z"
+    "createdAt": "2026-06-08T08:55:55.597Z",
+    "likes": [
+      "usr_liker_a1"
+    ]
   },
   {
     "id": "mq4z7l2x_trgv31",
@@ -373,6 +376,11 @@
     "photoURL": null,
     "uid": null,
     "parentId": "mq4z7mlf_4fwklq",
-    "createdAt": "2026-06-08T08:55:58.785Z"
+    "createdAt": "2026-06-08T08:55:58.785Z",
+    "likes": [
+      "usr_liker_c3",
+      "usr_liker_a1",
+      "usr_liker_b2"
+    ]
   }
 ]
