@@ -773,7 +773,8 @@
     "parentId": null,
     "createdAt": "2026-06-08T16:19:47.704Z",
     "likes": [
-      "usr_b2"
+      "usr_b2",
+      "usr_c3"
     ]
   },
   {
@@ -874,7 +875,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": "mq5f2e7s_e12qo3",
-    "createdAt": "2026-06-08T16:20:27.604Z"
+    "createdAt": "2026-06-08T16:20:27.604Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mq5f3acn_yut1du",
