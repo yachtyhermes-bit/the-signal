@@ -1471,7 +1471,8 @@
     "parentId": null,
     "createdAt": "2026-06-09T16:05:55.980Z",
     "likes": [
-      "usr_a1"
+      "usr_a1",
+      "usr_b2"
     ]
   },
   {
@@ -1482,7 +1483,11 @@
     "photoURL": null,
     "uid": "whohebe123",
     "parentId": null,
-    "createdAt": "2026-06-09T16:05:56.208Z"
+    "createdAt": "2026-06-09T16:05:56.208Z",
+    "likes": [
+      "usr_c3",
+      "usr_a1"
+    ]
   },
   {
     "id": "mq6u0fh6_49pt49",
@@ -1502,7 +1507,11 @@
     "photoURL": null,
     "uid": "crypto_refugee_88",
     "parentId": "mq6u0fao_b5dnhq",
-    "createdAt": "2026-06-09T16:06:14.988Z"
+    "createdAt": "2026-06-09T16:06:14.988Z",
+    "likes": [
+      "usr_b2",
+      "usr_c3"
+    ]
   },
   {
     "id": "mq6u0txa_a6aagr",
@@ -1522,7 +1531,10 @@
     "photoURL": null,
     "uid": "sharp315",
     "parentId": null,
-    "createdAt": "2026-06-09T16:06:15.389Z"
+    "createdAt": "2026-06-09T16:06:15.389Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mq6u0ubu_30sxfo",
