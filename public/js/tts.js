@@ -36,26 +36,32 @@
     const meta = document.querySelector('.article-meta');
     if (!meta) return;
 
+    // Wrap in a visible highlight bar below the meta line
+    const bar = document.createElement('div');
+    bar.className = 'tts-bar';
+    bar.style.cssText = 'display:flex;align-items:center;gap:12px;margin:16px 0 12px;padding:10px 18px;background:var(--bg-card,#1a1a2e);border:1px solid var(--border,#333);border-radius:10px;';
+
+    const iconSpan = document.createElement('span');
+    iconSpan.innerHTML = '🔊';
+    iconSpan.style.cssText = 'font-size:18px;';
+
+    const label = document.createElement('span');
+    label.textContent = 'Listen to this article';
+    label.style.cssText = 'font-family:Inter,sans-serif;font-size:13px;font-weight:500;color:var(--text-secondary,#aaa);flex:1;';
+
     const btn = document.createElement('button');
     btn.id = 'ttsListenBtn';
-    btn.className = 'tts-listen-btn';
-    btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg> Listen`;
+    btn.style.cssText = 'display:flex;align-items:center;gap:6px;background:var(--accent,#6366f1);color:#fff;border:none;border-radius:20px;padding:8px 18px;font-family:Inter,sans-serif;font-size:13px;font-weight:600;cursor:pointer;transition:all 0.2s;';
+    btn.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg> Play`;
     btn.setAttribute('aria-label', 'Listen to article');
-    btn.title = 'Read this article aloud';
+    btn.title = 'Read this article aloud — Web Speech';
 
-    btn.addEventListener('click', () => {
-      if (speaking && !paused) {
-        pause();
-      } else if (paused) {
-        resume();
-      } else {
-        startReading();
-      }
-    });
+    bar.appendChild(iconSpan);
+    bar.appendChild(label);
+    bar.appendChild(btn);
 
-    // Insert after the meta line
-    meta.appendChild(document.createTextNode(' · '));
-    meta.appendChild(btn);
+    // Insert right after the article-meta div
+    meta.insertAdjacentElement('afterend', bar);
   }
 
   // ─── Inject floating controller ───
@@ -89,6 +95,20 @@
     document.getElementById('ttsPlayBtn').addEventListener('click', resume);
     document.getElementById('ttsPauseBtn').addEventListener('click', pause);
     document.getElementById('ttsStopBtn').addEventListener('click', stop);
+
+    // Wire listen button click
+    const lb = document.getElementById('ttsListenBtn');
+    if (lb) {
+      lb.addEventListener('click', () => {
+        if (speaking && !paused) {
+          pause();
+        } else if (paused) {
+          resume();
+        } else {
+          startReading();
+        }
+      });
+    }
     document.getElementById('ttsSpeedBtn').addEventListener('click', () => {
       const speeds = [0.75, 1.0, 1.25, 1.5, 1.75, 2.0];
       const idx = speeds.indexOf(rate);
@@ -122,15 +142,17 @@
   function updateListenBtn() {
     const btn = document.getElementById('ttsListenBtn');
     if (!btn) return;
+    // Keep the SVG icon, swap the text label
+    const label = btn.querySelector('span') || (() => { const s = document.createElement('span'); btn.appendChild(s); return s; })();
     if (speaking && !paused) {
-      btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg> Pause`;
-      btn.classList.add('tts-active-btn');
+      btn.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg> Pause`;
+      btn.style.background = '#ef4444';
     } else if (paused) {
-      btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg> Resume`;
-      btn.classList.add('tts-active-btn');
+      btn.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg> Resume`;
+      btn.style.background = '#f59e0b';
     } else {
-      btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg> Listen`;
-      btn.classList.remove('tts-active-btn');
+      btn.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg> Play`;
+      btn.style.background = 'var(--accent,#6366f1)';
     }
   }
 
