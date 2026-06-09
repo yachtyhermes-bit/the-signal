@@ -137,7 +137,7 @@
       if (pauseBtn) pauseBtn.style.display = '';
 
       try {
-        const url = `/api/tts?voice=en-US-JennyNeural&rate=%2B5%25&text=${encodeURIComponent(chunks[i])}`;
+        const url = `/api/tts/?voice=en-US-JennyNeural&rate=%2B0%25&text=${encodeURIComponent(chunks[i])}`;
         audio = new Audio(url);
         audio.playbackRate = rate;
         document.getElementById('ttsLabel').textContent = `${i + 1} / ${chunks.length}`;
