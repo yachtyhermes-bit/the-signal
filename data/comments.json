@@ -1709,7 +1709,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-09T19:01:37.982Z"
+    "createdAt": "2026-06-09T19:01:37.982Z",
+    "likes": [
+      "usr_a1"
+    ]
   },
   {
     "id": "mq70adjj_cxqzf4",
@@ -1740,5 +1743,15 @@
     "uid": null,
     "parentId": "mq70addp_dycfpt",
     "createdAt": "2026-06-09T19:01:47.933Z"
+  },
+  {
+    "id": "mq70al8c_6jnoz7",
+    "article": "rdw-vs-lunr-picks-shovels-moonshots-2026",
+    "text": "so rdw is the safer play then? only got like $150 to throw at this and dont wanna get wrecked",
+    "author": "first_time_caller99",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mq70adjj_cxqzf4",
+    "createdAt": "2026-06-09T19:01:48.156Z"
   }
 ]
