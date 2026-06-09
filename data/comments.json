@@ -1533,7 +1533,8 @@
     "parentId": null,
     "createdAt": "2026-06-09T16:06:15.389Z",
     "likes": [
-      "usr_d4"
+      "usr_d4",
+      "usr_e5"
     ]
   },
   {
@@ -1554,7 +1555,11 @@
     "photoURL": null,
     "uid": "macro_dad_energy",
     "parentId": null,
-    "createdAt": "2026-06-09T16:06:15.880Z"
+    "createdAt": "2026-06-09T16:06:15.880Z",
+    "likes": [
+      "usr_a1",
+      "usr_d4"
+    ]
   },
   {
     "id": "mq6u0und_fmolnn",
@@ -1624,7 +1629,10 @@
     "photoURL": null,
     "uid": "tacotuesdaytrader",
     "parentId": "mq6u0u3h_nbbw2j",
-    "createdAt": "2026-06-09T16:06:34.854Z"
+    "createdAt": "2026-06-09T16:06:34.854Z",
+    "likes": [
+      "usr_e5"
+    ]
   },
   {
     "id": "mq6u19ba_6qmt32",
