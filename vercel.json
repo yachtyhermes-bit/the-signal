@@ -1,16 +1,11 @@
 {
-  "buildCommand": "node build.js",
+  "buildCommand": "node build.js && pip3 install edge-tts --target=dist/api/_python_deps --break-system-packages -q 2>/dev/null && echo 'edge-tts installed to dist/api/_python_deps'",
   "outputDirectory": "dist",
   "trailingSlash": true,
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api/$1" },
     { "source": "/images/(.*)", "destination": "/img/$1" }
   ],
-  "functions": {
-    "api/tts/index.py": {
-      "runtime": "@vercel/python"
-    }
-  },
   "routes": [
     { "handle": "filesystem" },
     { "src": "/api/(.*)", "dest": "/api/$1" },
