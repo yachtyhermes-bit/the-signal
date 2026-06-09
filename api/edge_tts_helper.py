@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-# edge_tts_helper.py — called by /api/tts.mjs
-# Reads text from stdin, writes MP3 to stdout
+"""Edge TTS helper — reads text from stdin, writes MP3 to stdout."""
 import sys, asyncio, edge_tts
 
 async def main():
