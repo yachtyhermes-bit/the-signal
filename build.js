@@ -28,7 +28,7 @@ const SECTORS = {
   space: 'Space', 'mega-cap': 'Mega-Cap', quantum: 'Quantum'
 };
 
-const HOMEPAGE_LIMIT = 30;
+const HOMEPAGE_LIMIT = 36;
 
 // ─── 1. Copy frozen assets ───
 console.log('📦 Copying frozen assets from _backup_dist/...');
@@ -73,9 +73,9 @@ const sectorArticles = articles.slice(HOMEPAGE_LIMIT);
 // Homepage splits
 const featuredArticle = homepage.slice(0, 1);   // 1 featured
 const grid1 = homepage.slice(1, 5);              // 4 articles
-const grid2 = homepage.slice(5, 11);             // 6 articles
-const grid3 = homepage.slice(11, 19);            // 8 articles
-const grid4 = homepage.slice(19, 30);            // 11 articles
+const grid2 = homepage.slice(5, 12);             // 7 articles
+const grid3 = homepage.slice(12, 21);            // 9 articles
+const grid4 = homepage.slice(21, 36);            // 15 articles
 
 console.log(`  📰 Homepage: ${homepage.length} total (1 featured + ${grid1.length} + ${grid2.length} + ${grid3.length} + ${grid4.length})`);
 console.log(`  📂 Sector pages: ${sectorArticles.length} articles`);
@@ -113,8 +113,8 @@ fs.writeFileSync(path.join(DST, 'index.html'), indexHtml);
 const finalSize = fs.statSync(path.join(DST, 'index.html')).size;
 console.log(`  ✅ Homepage built: ${finalSize} bytes`);
 
-// GUARD: Abort if homepage is suspiciously small (< 300KB with 30 articles)
-if (finalSize < 300000) {
+// GUARD: Abort if homepage is suspiciously small (< 350KB with 36 articles)
+if (finalSize < 350000) {
   console.error(`⛔ FATAL: Built index.html is ${finalSize} bytes — expected ~400,000+.`);
   console.error('   Article generation may have failed. Check articles/posts/*.json.');
   console.error('   Recovery: npx vercel promote the-signal-nphmhgo0f-beachsquadlas-projects.vercel.app');
