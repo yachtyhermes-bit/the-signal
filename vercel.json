@@ -1,5 +1,5 @@
 {
-  "buildCommand": "node build.js",
+  "buildCommand": "pip3 install -r requirements.txt --break-system-packages -q 2>/dev/null; node build.js",
   "outputDirectory": "dist",
   "trailingSlash": true,
   "rewrites": [

@@ -241,9 +241,19 @@ if (fs.existsSync(apiDir)) {
   fs.mkdirSync(distApiDir, { recursive: true });
   const apiFiles = fs.readdirSync(apiDir);
   for (const f of apiFiles) {
-    fs.copyFileSync(path.join(apiDir, f), path.join(distApiDir, f));
+    const srcPath = path.join(apiDir, f);
+    if (fs.statSync(srcPath).isFile()) {
+      fs.copyFileSync(srcPath, path.join(distApiDir, f));
+    }
   }
   console.log(`  ✅ ${apiFiles.length} API functions copied`);
+}
+
+// Also copy requirements.txt to dist/ for Vercel Python dependencies
+const reqSrc = path.join(ROOT, 'requirements.txt');
+if (fs.existsSync(reqSrc)) {
+  fs.copyFileSync(reqSrc, path.join(DST, 'requirements.txt'));
+  console.log('  ✅ requirements.txt copied for Python deps');
 }
 
 // ─── Summary ───
