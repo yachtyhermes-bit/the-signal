@@ -1350,7 +1350,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-09T11:01:57.256Z"
+    "createdAt": "2026-06-09T11:01:57.256Z",
+    "likes": [
+      "usr_a1"
+    ]
   },
   {
     "id": "mq6j5ie5_1idpr4",
@@ -1381,5 +1384,15 @@
     "uid": null,
     "parentId": "mq6j5i14_x8wec8",
     "createdAt": "2026-06-09T11:01:58.766Z"
+  },
+  {
+    "id": "mq6j5jj6_2zjc2l",
+    "article": "solidion-space-battery-june-2026",
+    "text": "something doesnt add up. they dropped a press release and volume went 5500x. follow the incentives",
+    "author": "Minimum-Criticism763",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mq6j5iuq_vfrqdv",
+    "createdAt": "2026-06-09T11:01:59.202Z"
   }
 ]
