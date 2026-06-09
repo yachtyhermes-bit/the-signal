@@ -1,5 +1,6 @@
-// /api/tts.mjs — Vercel serverless — proxies text → Edge TTS Jenny voice
-// Free, no API key, no rate limits
+// /api/tts.mjs — Vercel serverless — Google Translate TTS proxy
+// Free, no API key, no rate limits, works from Vercel
+// Splits long text into chunks, concatenates MP3 frames
 
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -11,52 +12,42 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'Text required, max 5000 chars' });
   }
 
-  const voice = req.query.voice || 'en-US-JennyNeural';
-  const rate = req.query.rate || '+0%';
-
-  const ssml = `<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis"
-    xmlns:mstts="http://www.w3.org/2001/mstts" xml:lang="en-US">
-    <voice name="${escapeXml(voice)}">
-      <prosody rate="${escapeXml(rate)}" pitch="+0Hz">
-        ${escapeXml(text)}
-      </prosody>
-    </voice>
-  </speak>`;
+  // Split into Google TTS-friendly chunks (≤ 200 chars, split at word boundaries)
+  const chunks = splitText(text, 190);
 
   try {
-    const response = await fetch(
-      'https://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4',
-      {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/ssml+xml',
-          'X-Microsoft-OutputFormat': 'audio-24khz-48kbitrate-mono-mp3',
-          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0',
-          'Accept': '*/*',
-          'Origin': 'chrome-extension://jdkknkkbebbapilgoeccciglkfbmbnfm',
-        },
-        body: ssml,
+    const audioBuffers = [];
+    for (const chunk of chunks) {
+      const url = `https://translate.google.com/translate_tts?ie=UTF-8&tl=en&client=tw-ob&q=${encodeURIComponent(chunk)}`;
+      const response = await fetch(url, {
+        headers: { 'User-Agent': 'Mozilla/5.0 (compatible; VercelBot/1.0)' }
+      });
+      if (!response.ok) {
+        return res.status(502).json({ error: `Google TTS chunk failed: ${response.status}` });
       }
-    );
-
-    const status = response.status;
-    const contentType = response.headers.get('content-type') || '';
-
-    if (contentType.includes('audio')) {
-      const audio = await response.arrayBuffer();
-      res.setHeader('Content-Type', 'audio/mpeg');
-      res.setHeader('Cache-Control', 'public, max-age=86400');
-      return res.send(Buffer.from(audio));
+      const buf = Buffer.from(await response.arrayBuffer());
+      audioBuffers.push(buf);
     }
 
-    // Edge returned error
-    const errBody = await response.text();
-    return res.status(502).json({ error: 'Edge TTS returned non-audio', status, contentType, body: errBody.substring(0, 200) });
+    const total = Buffer.concat(audioBuffers);
+    res.setHeader('Content-Type', 'audio/mpeg');
+    res.setHeader('Cache-Control', 'public, max-age=86400');
+    res.setHeader('Content-Length', total.length);
+    return res.send(total);
   } catch (e) {
     return res.status(500).json({ error: e.message });
   }
 }
 
-function escapeXml(s) {
-  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;');
+function splitText(text, maxLen) {
+  const chunks = [];
+  let remaining = text.trim();
+  while (remaining.length > maxLen) {
+    let splitAt = remaining.lastIndexOf(' ', maxLen);
+    if (splitAt <= 0) splitAt = maxLen; // hard split if no space
+    chunks.push(remaining.substring(0, splitAt).trim());
+    remaining = remaining.substring(splitAt).trim();
+  }
+  if (remaining) chunks.push(remaining);
+  return chunks;
 }
