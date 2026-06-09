@@ -1569,7 +1569,10 @@
     "photoURL": null,
     "uid": "yolo_my_401k",
     "parentId": null,
-    "createdAt": "2026-06-09T16:06:16.105Z"
+    "createdAt": "2026-06-09T16:06:16.105Z",
+    "likes": [
+      "usr_c3"
+    ]
   },
   {
     "id": "mq6u0ut7_jngze1",
@@ -1631,7 +1634,8 @@
     "parentId": "mq6u0u3h_nbbw2j",
     "createdAt": "2026-06-09T16:06:34.854Z",
     "likes": [
-      "usr_e5"
+      "usr_e5",
+      "usr_b2"
     ]
   },
   {
