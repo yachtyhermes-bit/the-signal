@@ -1,29 +1,7 @@
-// /api/tts.mjs — Vercel serverless — Edge TTS Jenny voice
-// Installs edge-tts at runtime, then shells out to Python helper.
-// Falls back to Google Translate on failure.
-import { execSync } from 'child_process';
-import { writeFileSync, readFileSync, existsSync, unlinkSync } from 'fs';
-import { join } from 'path';
-import { tmpdir } from 'os';
+// /api/tts.mjs — Vercel serverless — Edge TTS Jenny via edge-tts
+// edge-tts installed at build time (requirements.txt). Falls back to Google Translate.
 
-let edgeTtsReady = false;
-function ensureEdgeTts() {
-  if (edgeTtsReady) return true;
-  try {
-    execSync('python3 -c "import edge_tts"', { timeout: 3000, stdio: 'pipe' });
-    edgeTtsReady = true;
-    return true;
-  } catch (e) {
-    try {
-      execSync('pip3 install edge-tts --break-system-packages -q 2>/dev/null', { timeout: 25000, stdio: 'pipe' });
-      edgeTtsReady = true;
-      return true;
-    } catch (e2) {
-      console.warn('edge-tts install failed:', e2.message?.substring(0, 80));
-      return false;
-    }
-  }
-}
+import { execSync } from 'child_process';
 
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -35,30 +13,29 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'Text required, max 5000 chars' });
   }
 
-  // Try Edge TTS Jenny via helper script
-  if (ensureEdgeTts()) {
-    const tmpPath = join(tmpdir(), `tts_${Date.now()}.txt`);
-    try {
-      writeFileSync(tmpPath, text);
-      const helperPath = join(process.cwd(), 'api', 'edge_tts_helper.py');
-      if (existsSync(helperPath)) {
-        const cmd = `cat "${tmpPath}" | python3 "${helperPath}" en-US-JennyNeural`;
-        const audio = execSync(cmd, {
-          maxBuffer: 2 * 1024 * 1024,
-          timeout: 18000,
-          env: { ...process.env, PYTHONUNBUFFERED: '1' }
-        });
-        unlinkSync(tmpPath);
-        if (audio && audio.length > 500) {
-          res.setHeader('Content-Type', 'audio/mpeg');
-          res.setHeader('Cache-Control', 'public, max-age=86400');
-          return res.send(audio);
-        }
-      }
-    } catch (e) {
-      try { unlinkSync(tmpPath); } catch (_) {}
-      console.warn('Edge TTS helper failed:', e.message?.substring(0, 80));
+  // Edge TTS Jenny via Python (edge-tts installed at build)
+  try {
+    const pyScript = `import asyncio,edge_tts,sys
+async def gen():
+    tts=edge_tts.Communicate(sys.stdin.read(),'en-US-JennyNeural')
+    async for c in tts.stream():
+        if c['type']=='audio':
+            sys.stdout.buffer.write(c['data'])
+asyncio.run(gen())`;
+
+    const audio = execSync(`python3 -c '${pyScript}'`, {
+      input: text,
+      maxBuffer: 2 * 1024 * 1024,
+      timeout: 12000
+    });
+
+    if (audio && audio.length > 500) {
+      res.setHeader('Content-Type', 'audio/mpeg');
+      res.setHeader('Cache-Control', 'public, max-age=86400');
+      return res.send(audio);
     }
+  } catch (e) {
+    console.warn('Edge TTS failed, falling back to Google:', e.message?.substring(0, 80));
   }
 
   // Fallback: Google Translate TTS
