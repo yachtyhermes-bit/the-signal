@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08080e">
+  <link rel="canonical" href="https://readthesignal.net/sector/{{SECTOR}}/">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <meta name="robots" content="max-image-preview:large">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Oxanium:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css?v=15">
+  <link rel="stylesheet" href="/css/pulse-badge.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-98KDVDFBCW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-98KDVDFBCW');
+  </script>
+  <script src="/js/prices.js" defer></script>
+  <script src="/js/search.js" defer></script>
+  <script src="/js/auth.js?v=2" defer></script>
+  <script src="/js/theme.js?v=2" defer></script>
+  <title>{{SECTOR_NAME}} — The Signal</title>
+  <meta name="description" content="The Signal's {{SECTOR_NAME}} coverage — sharp analysis on {{SECTOR_NAME}} stocks, earnings, and market-moving catalysts.">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo"><img src="/img/logo-hex.jpg" alt="The Signal" class="logo-img"><span class="logo-text"><span class="logo-the">THE</span> <strong>SIGNAL</strong></span></a>
+      <div class="nav-actions">
+        <button class="nav-btn search-btn" id="searchToggle" aria-label="Search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <a href="/" class="nav-btn" style="text-decoration:none;display:flex;align-items:center;gap:4px;font-size:13px;font-weight:600;padding:8px 14px;">
+          ← Home
+        </a>
+      </div>
+    </div>
+  </nav>
+  <main class="main">
+    <section class="sector-hero">
+      <div class="sector-hero-inner">
+        <h1 class="sector-hero-title">{{SECTOR_NAME}}</h1>
+        <p class="sector-hero-desc">The Signal's coverage of {{SECTOR_NAME}} stocks — sharp analysis on earnings, contracts, and market-moving catalysts.</p>
+      </div>
+    </section>
+    <section class="feed">
+      <div class="article-grid">
+        {{ARTICLE_CARDS}}
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand"><img src="/img/logo-hex.jpg" alt="The Signal" class="footer-logo"> THE <strong>SIGNAL</strong></div>
+      <div class="footer-tag">The Signal Editorial Team · readthesignal.net</div>
+      <div class="footer-copy">© 2026 The Signal — Market Intelligence. Data from public sources.</div>
+    </div>
+  </footer>
+  <script src="/js/search.js" defer></script>
+  <script src="/js/theme.js?v=2" defer></script>
+</body>
+</html>

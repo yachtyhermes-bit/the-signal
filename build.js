@@ -1,13 +1,17 @@
-// build.js — JSON-DRIVEN (June 7, 2026)
+// build.js — JSON-DRIVEN with proper homepage layout (June 9, 2026)
 //
 // ARCHITECTURE:
-//   _backup_dist/ = FROZEN design-only pages (~48KB index.html with placeholders)
+//   _backup_dist/ = FROZEN design-only pages (~50KB index.html with placeholders)
 //   articles/posts/*.json = SINGLE SOURCE OF TRUTH for all article data
+//   articles/sector-template.html = sector page template
 //   build.js reads JSON → generates articles-data blob + article cards → injects into placeholders
+//
+// HOMEPAGE LAYOUT (30 articles):
+//   Hero → Featured Article (1) → Ask Pulse → GRID_1 (4) → Scorecards → GRID_2 (6)
+//   → Signal Highlights → Community Trading (Hive) → GRID_3 (8) → Newsletter → GRID_4 (11)
 //
 // Content pipeline agents ONLY write articles/posts/*.json — never touch _backup_dist/index.html.
 // Design agents ONLY edit _backup_dist/index.html — never touch article JSON files.
-// No more overwrite conflicts.
 
 const fs = require('fs');
 const path = require('path');
@@ -16,12 +20,15 @@ const ROOT = path.join(__dirname);
 const SRC = path.join(ROOT, '_backup_dist');
 const DST = path.join(ROOT, 'dist');
 const ARTICLE_TEMPLATE = path.join(ROOT, 'articles', 'template.html');
+const SECTOR_TEMPLATE = path.join(ROOT, 'articles', 'sector-template.html');
 const POSTS_DIR = path.join(ROOT, 'articles', 'posts');
 
 const SECTORS = {
   ai: 'AI', cyber: 'Cyber', defense: 'Defense',
   space: 'Space', 'mega-cap': 'Mega-Cap', quantum: 'Quantum'
 };
+
+const HOMEPAGE_LIMIT = 30;
 
 // ─── 1. Copy frozen assets ───
 console.log('📦 Copying frozen assets from _backup_dist/...');
@@ -32,7 +39,7 @@ if (!fs.existsSync(SRC)) {
 fs.rmSync(DST, { recursive: true, force: true });
 fs.cpSync(SRC, DST, { recursive: true });
 
-// GUARD: Abort if homepage is suspiciously small (< 50KB = stripped design)
+// GUARD: Abort if homepage is suspiciously small (< 45KB = stripped design)
 const htmlSize = fs.statSync(path.join(DST, 'index.html')).size;
 if (htmlSize < 45000) {
   console.error(`⛔ FATAL: index.html is ${htmlSize} bytes — expected ~48,000+.`);
@@ -49,7 +56,7 @@ if (fs.existsSync(imgDir)) {
   console.log(`  ✅ ${countFiles(distImgDir)} image files → dist/img/`);
 }
 
-// ─── 2. Load all articles from JSON files (SINGLE SOURCE OF TRUTH) ───
+// ─── 2. Load all articles from JSON files ───
 const articles = loadArticles();
 console.log(`📝 ${articles.length} articles loaded from articles/posts/*.json`);
 
@@ -57,23 +64,28 @@ console.log(`📝 ${articles.length} articles loaded from articles/posts/*.json`
 const articlesJson = JSON.stringify(articles);
 console.log(`  📄 articles-data: ${articlesJson.length} bytes`);
 
-// ─── 4. Sort and split into grids ───
+// ─── 4. Sort by date desc, split homepage vs sector ───
 articles.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
 
-const featured = articles.slice(0, 5);
-const continued1 = articles.slice(5, 18);
-const continued2 = articles.slice(18);
+const homepage = articles.slice(0, HOMEPAGE_LIMIT);
+const sectorArticles = articles.slice(HOMEPAGE_LIMIT);
 
-console.log(`  📰 Featured: ${featured.length}, Continued 1: ${continued1.length}, Continued 2: ${continued2.length}`);
+// Homepage splits
+const featuredArticle = homepage.slice(0, 1);   // 1 featured
+const grid1 = homepage.slice(1, 5);              // 4 articles
+const grid2 = homepage.slice(5, 11);             // 6 articles
+const grid3 = homepage.slice(11, 19);            // 8 articles
+const grid4 = homepage.slice(19, 30);            // 11 articles
+
+console.log(`  📰 Homepage: ${homepage.length} total (1 featured + ${grid1.length} + ${grid2.length} + ${grid3.length} + ${grid4.length})`);
+console.log(`  📂 Sector pages: ${sectorArticles.length} articles`);
 
 // ─── 5. Generate card HTML ───
-const featuredHtml = featured.map((a, i) => i === 0
-  ? featuredCard(a)
-  : articleCard(a)
-).join('\n');
-
-const continued1Html = continued1.map(a => articleCard(a)).join('\n');
-const continued2Html = continued2.map(a => articleCard(a)).join('\n');
+const featuredHtml = featuredArticle.map(a => featuredCard(a)).join('\n');
+const grid1Html = grid1.map(a => articleCard(a)).join('\n');
+const grid2Html = grid2.map(a => articleCard(a)).join('\n');
+const grid3Html = grid3.map(a => articleCard(a)).join('\n');
+const grid4Html = grid4.map(a => articleCard(a)).join('\n');
 
 // ─── 6. Inject into placeholders ───
 let indexHtml = fs.readFileSync(path.join(DST, 'index.html'), 'utf8');
@@ -81,24 +93,29 @@ let indexHtml = fs.readFileSync(path.join(DST, 'index.html'), 'utf8');
 indexHtml = indexHtml.replace('<!-- ARTICLES_DATA_JSON -->',
   `<script id="articles-data" type="application/json">${articlesJson}</script>`);
 
-indexHtml = indexHtml.replace('<!-- FEATURED_GRID -->',
+indexHtml = indexHtml.replace('<!-- FEATURED_ARTICLE -->',
   `<section class="feed">\n  <div class="article-grid">\n${featuredHtml}\n  </div>\n</section>`);
 
-// Replace both CONTINUED_GRID placeholders
-const continuedBlock1 = `<section class="feed feed-continued">\n  <div class="article-grid">\n${continued1Html}\n  </div>\n</section>`;
-const continuedBlock2 = `<section class="feed feed-continued">\n  <div class="article-grid">\n${continued2Html}\n  </div>\n</section>`;
+indexHtml = indexHtml.replace('<!-- GRID_1 -->',
+  `<section class="feed feed-continued">\n  <div class="article-grid">\n${grid1Html}\n  </div>\n</section>`);
 
-indexHtml = indexHtml.replace('<!-- CONTINUED_GRID -->', continuedBlock1);
-indexHtml = indexHtml.replace('<!-- CONTINUED_GRID -->', continuedBlock2);
+indexHtml = indexHtml.replace('<!-- GRID_2 -->',
+  `<section class="feed feed-continued">\n  <div class="article-grid">\n${grid2Html}\n  </div>\n</section>`);
+
+indexHtml = indexHtml.replace('<!-- GRID_3 -->',
+  `<section class="feed feed-continued">\n  <div class="article-grid">\n${grid3Html}\n  </div>\n</section>`);
+
+indexHtml = indexHtml.replace('<!-- GRID_4 -->',
+  `<section class="feed feed-continued">\n  <div class="article-grid">\n${grid4Html}\n  </div>\n</section>`);
 
 fs.writeFileSync(path.join(DST, 'index.html'), indexHtml);
 
 const finalSize = fs.statSync(path.join(DST, 'index.html')).size;
 console.log(`  ✅ Homepage built: ${finalSize} bytes`);
 
-// GUARD: Abort if homepage is suspiciously small (< 750KB = missing article content)
-if (finalSize < 750000) {
-  console.error(`⛔ FATAL: Built index.html is ${finalSize} bytes — expected ~800,000+.`);
+// GUARD: Abort if homepage is suspiciously small (< 300KB with 30 articles)
+if (finalSize < 300000) {
+  console.error(`⛔ FATAL: Built index.html is ${finalSize} bytes — expected ~400,000+.`);
   console.error('   Article generation may have failed. Check articles/posts/*.json.');
   console.error('   Recovery: npx vercel promote the-signal-nphmhgo0f-beachsquadlas-projects.vercel.app');
   process.exit(1);
@@ -180,7 +197,44 @@ if (!template) {
   console.log(`  ✅ ${generated} article pages generated`);
 }
 
-// ─── 8. Copy API serverless functions ───
+// ─── 8. Generate sector pages ───
+const sectorTemplate = fs.existsSync(SECTOR_TEMPLATE)
+  ? fs.readFileSync(SECTOR_TEMPLATE, 'utf8')
+  : null;
+
+if (!sectorTemplate) {
+  console.log('⚠️  No sector template — skipping sector pages');
+} else {
+  // Group articles by sector (only for articles NOT on homepage)
+  const bySector = {};
+  for (const a of sectorArticles) {
+    const s = a.sector || 'other';
+    if (!bySector[s]) bySector[s] = [];
+    bySector[s].push(a);
+  }
+  // Also check if homepage articles need sector duplicates — no, they don't.
+  // Sector pages only show deep archive articles.
+
+  let sectorCount = 0;
+  for (const [sector, arts] of Object.entries(bySector)) {
+    const sectorName = SECTORS[sector] || sector.toUpperCase();
+    const cards = arts.map(a => articleCard(a)).join('\n');
+    
+    let html = sectorTemplate
+      .replace(/{{SECTOR}}/g, sector)
+      .replace(/{{SECTOR_NAME}}/g, sectorName)
+      .replace('{{ARTICLE_CARDS}}', cards);
+    
+    const outDir = path.join(DST, 'sector', sector);
+    fs.mkdirSync(outDir, { recursive: true });
+    fs.writeFileSync(path.join(outDir, 'index.html'), html);
+    sectorCount++;
+    console.log(`  📂 /sector/${sector}/ — ${arts.length} articles`);
+  }
+  console.log(`  ✅ ${sectorCount} sector pages generated`);
+}
+
+// ─── 9. Copy API serverless functions ───
 const apiDir = path.join(ROOT, 'api');
 const distApiDir = path.join(DST, 'api');
 if (fs.existsSync(apiDir)) {
@@ -196,7 +250,7 @@ if (fs.existsSync(apiDir)) {
 const totalFiles = countFiles(DST);
 console.log(`✅ Build complete — ${totalFiles} files in dist/`);
 
-// ─── Article loader: JSON files = SINGLE SOURCE OF TRUTH ───
+// ─── Article loader ───
 function loadArticles() {
   const articles = [];
   if (!fs.existsSync(POSTS_DIR)) {
@@ -229,7 +283,7 @@ function featuredCard(a) {
   const dateStr = formatDate((a.date || '').slice(0, 10));
 
   return `<a href="/article/${a.slug}" class="article-card featured-card">
-    <div class="card-image"><img src="${img}" alt="${escapeAttr(a.title || '')}" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-image"><img src="${img}" alt="${escapeAttr(a.title || '')}" loading="eager" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
       <span class="ticker-badge ${sentiment}">${escapeHtml(a.ticker || '')}</span>
