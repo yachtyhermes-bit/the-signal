@@ -146,24 +146,39 @@
     const voices = speechSynthesis.getVoices();
     if (voices.length === 0) return null;
 
-    // Prefer modern English voices in this order
+    // Prefer modern natural-sounding English voices
     const prefs = [
+      // Chrome's best — Google Wavenet voices (native-sounding)
+      'Google UK English Female',
+      'Google UK English Male', 
       'Google US English',
+      // Microsoft Edge natural voices
+      'Microsoft Michelle',
+      'Microsoft Guy',
+      'Microsoft Aria',
+      'Microsoft Jenny',
       'Microsoft David',
       'Microsoft Zira',
+      // macOS Samantha/Alex are very natural
       'Samantha',
       'Alex',
       'Karen',
+      'Moira',
       'Daniel',
     ];
 
     for (const pref of prefs) {
       const v = voices.find(v => v.name.includes(pref) && v.lang.startsWith('en'));
-      if (v) return v;
+      if (v) {
+        console.log('TTS voice selected:', v.name, v.lang);
+        return v;
+      }
     }
 
     // Fallback to any English voice
-    return voices.find(v => v.lang.startsWith('en')) || voices[0];
+    const fallback = voices.find(v => v.lang.startsWith('en')) || voices[0];
+    if (fallback) console.log('TTS fallback voice:', fallback.name, fallback.lang);
+    return fallback;
   }
 
   // ─── Load voices with retry ───
@@ -234,19 +249,25 @@
   }
 
   // ─── Read a single paragraph ───
+  let lastCancelTime = 0;
   function readParagraph(idx) {
-    if (idx >= paragraphs.length) {
+    if (idx >= paragraphs.length || !speaking) {
       stop();
       return;
     }
+    if (paused) return;
 
     currentParaIdx = idx;
     highlightParagraph(idx);
     updateProgress();
     updateControllerButtons();
 
-    // Cancel any pending speech first (iOS fix)
-    speechSynthesis.cancel();
+    // Only cancel previous if it's stuck (not within 200ms of last cancel — avoid cascade)
+    const now = Date.now();
+    if (now - lastCancelTime > 200) {
+      try { speechSynthesis.cancel(); } catch(e) {}
+      lastCancelTime = now;
+    }
 
     const text = paragraphs[idx].text;
     utterance = new SpeechSynthesisUtterance(text);
@@ -258,36 +279,24 @@
       utterance.voice = selectedVoice;
     }
 
+    let ended = false;
     utterance.onend = function () {
-      readParagraph(idx + 1);
-    };
-
-    utterance.onerror = function (e) {
-      if (e.error !== 'interrupted' && e.error !== 'canceled') {
-        console.warn('TTS error:', e.error);
-        // Try to continue to next paragraph on unknown errors
-        setTimeout(() => readParagraph(idx + 1), 300);
+      if (ended) return;
+      ended = true;
+      if (speaking && !paused) {
+        readParagraph(idx + 1);
       }
     };
 
-    // Chrome bug workaround: sometimes speech stops after ~15s of inactivity
-    // Keep a heartbeat
-    const heartbeat = setInterval(() => {
-      if (!speaking || paused) { clearInterval(heartbeat); return; }
-      speechSynthesis.pause();
-      speechSynthesis.resume();
-    }, 10000);
-
-    utterance.onend = function () {
-      clearInterval(heartbeat);
-      readParagraph(idx + 1);
-    };
-
     utterance.onerror = function (e) {
-      clearInterval(heartbeat);
-      if (e.error !== 'interrupted' && e.error !== 'canceled') {
-        console.warn('TTS error:', e.error);
-        setTimeout(() => readParagraph(idx + 1), 300);
+      if (ended) return;
+      ended = true;
+      // 'interrupted' and 'canceled' are expected on stop/pause — ignore
+      if (e.error === 'interrupted' || e.error === 'canceled') return;
+      console.warn('TTS error:', e.error);
+      // Try next paragraph on unknown errors
+      if (speaking && !paused) {
+        setTimeout(() => readParagraph(idx + 1), 500);
       }
     };
 
