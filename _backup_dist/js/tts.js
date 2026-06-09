@@ -1,85 +1,61 @@
-// tts.js — Text-to-Speech using Microsoft Edge Cloud Jenny voice via /api/tts
-// Free, no API key, high-quality voice
+// tts.js — Text-to-speech for article pages
+// Fetches audio via Google Translate TTS proxy (/api/tts/)
+// Free, no API key required
 
 (function() {
-  'use strict';
+  const articleBody = document.querySelector('.article-body');
+  if (!articleBody) return;
 
-  const body = document.querySelector('.article-body');
-  if (!body) return;
-
-  // ─── State ───
-  let audio = null;
   let playing = false;
-  let currentParagraphs = [];
+  let audio = null;
   let currentChunkIdx = -1;
-  let totalChunks = 0;
   let rate = 1.0;
 
-  // ─── Collect paragraphs ───
-  function collectParagraphs() {
-    const els = body.querySelectorAll('p, h2, h3, li');
-    currentParagraphs = [];
-    els.forEach(el => {
-      const text = el.textContent.trim();
-      if (text.length > 10) currentParagraphs.push({ el, text });
-    });
+  // ─── Collect paragraph texts ───
+  function getParagraphs() {
+    const els = articleBody.querySelectorAll('p, h2, h3, li');
+    return Array.from(els)
+      .map(el => el.textContent.trim())
+      .filter(t => t.length > 20);
   }
 
-  // ─── Split into chunks for API ───
-  function buildChunks() {
-    collectParagraphs();
+  // ─── Split paragraphs into API-friendly chunks ───
+  function buildChunks(paragraphs, maxLen = 500) {
     const chunks = [];
     let chunk = '';
-    const maxLen = 4800;
-    for (const p of currentParagraphs) {
-      if (chunk.length + p.text.length + 2 > maxLen && chunk) {
+    for (const p of paragraphs) {
+      if (chunk.length + p.length + 2 > maxLen && chunk) {
         chunks.push(chunk.trim());
         chunk = '';
       }
-      chunk += (chunk ? ' ' : '') + p.text;
+      chunk += (chunk ? ' ' : '') + p;
     }
     if (chunk.trim()) chunks.push(chunk.trim());
     return chunks;
   }
 
-  // ─── Inject Listen bar ───
+  // ─── Inject sleek Listen pill button ───
   function injectButton() {
     const meta = document.querySelector('.article-meta');
-    if (!meta) return;
-    if (document.querySelector('.tts-bar')) return;
+    if (!meta || document.querySelector('.tts-bar')) return;
 
     const bar = document.createElement('div');
     bar.className = 'tts-bar';
-    bar.style.cssText = 'display:flex;align-items:center;gap:12px;margin:16px 0 12px;padding:10px 18px;background:var(--bg-card,#1a1a2e);border:1px solid var(--border,#333);border-radius:10px;cursor:pointer;';
-
-    const icon = document.createElement('span');
-    icon.textContent = '🔊';
-    icon.style.cssText = 'font-size:18px;';
-
-    const label = document.createElement('span');
-    label.textContent = 'Listen — Jenny voice (free Edge TTS)';
-    label.style.cssText = 'font-family:Inter,sans-serif;font-size:13px;font-weight:500;color:var(--text-secondary,#aaa);flex:1;';
+    bar.style.cssText = 'display:flex;align-items:center;margin:18px 0 14px;';
 
     const btn = document.createElement('button');
     btn.id = 'ttsListenBtn';
-    btn.style.cssText = 'display:flex;align-items:center;gap:6px;background:var(--accent,#6366f1);color:#fff;border:none;border-radius:20px;padding:8px 18px;font-family:Inter,sans-serif;font-size:13px;font-weight:600;cursor:pointer;transition:all 0.2s;';
-    btn.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg> Play`;
+    btn.innerHTML = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span style="margin-left:7px">Listen</span>`;
+    btn.style.cssText = 'display:inline-flex;align-items:center;background:linear-gradient(135deg,#6366f1,#4f46e5);color:#fff;border:none;border-radius:24px;padding:10px 20px;font-family:Inter,sans-serif;font-size:14px;font-weight:600;cursor:pointer;transition:all 0.2s;box-shadow:0 2px 12px rgba(99,102,241,0.25);letter-spacing:-0.01em;';
     btn.setAttribute('aria-label', 'Listen to article');
-
-    bar.appendChild(icon);
-    bar.appendChild(label);
-    bar.appendChild(btn);
-
-    bar.addEventListener('click', (e) => {
-      if (e.target === btn || btn.contains(e.target)) {
-        if (playing) { stopAudio(); }
-        else { startPlayback(); }
-      } else {
-        if (playing) { stopAudio(); }
-        else { startPlayback(); }
-      }
+    btn.addEventListener('mouseenter', () => { btn.style.boxShadow = '0 4px 20px rgba(99,102,241,0.4)'; btn.style.transform = 'translateY(-1px)'; });
+    btn.addEventListener('mouseleave', () => { btn.style.boxShadow = '0 2px 12px rgba(99,102,241,0.25)'; btn.style.transform = 'none'; });
+    btn.addEventListener('click', () => {
+      if (playing) { stopAudio(); }
+      else { startPlayback(); }
     });
 
+    bar.appendChild(btn);
     meta.insertAdjacentElement('afterend', bar);
   }
 
@@ -90,7 +66,7 @@
     ctrl.id = 'ttsController';
     ctrl.className = 'tts-controller';
     ctrl.innerHTML = `<div class="tts-ctrl-inner">
-      <button class="tts-ctrl-btn tts-ctrl-play" id="ttsPlayBtn" aria-label="Play/Pause">▶</button>
+      <button class="tts-ctrl-btn tts-ctrl-play" id="ttsPlayBtn" aria-label="Play">▶</button>
       <button class="tts-ctrl-btn tts-ctrl-pause" id="ttsPauseBtn" aria-label="Pause" style="display:none">⏸</button>
       <div class="tts-ctrl-progress"><div class="tts-ctrl-bar" id="ttsProgressBar"></div></div>
       <span class="tts-ctrl-label" id="ttsLabel"></span>
@@ -111,130 +87,92 @@
     });
   }
 
-  // ─── Playback ───
-  async function startPlayback() {
-    const chunks = buildChunks();
-    if (!chunks.length) return;
-    totalChunks = chunks.length;
-    currentChunkIdx = 0;
-    playing = true;
-    injectController();
-    showController();
-    updateBtn('loading');
-    document.getElementById('ttsLabel').textContent = 'Loading…';
-    await playChunks(chunks);
-  }
-
-  async function playChunks(chunks) {
-    for (let i = 0; i < chunks.length && playing; i++) {
-      currentChunkIdx = i;
-      updateProgress();
-      updateBtn('playing');
-      
-      const playBtn = document.getElementById('ttsPlayBtn');
-      const pauseBtn = document.getElementById('ttsPauseBtn');
-      if (playBtn) playBtn.style.display = 'none';
-      if (pauseBtn) pauseBtn.style.display = '';
-
-      try {
-        const url = `/api/tts/?voice=en-US-JennyNeural&rate=%2B0%25&text=${encodeURIComponent(chunks[i])}`;
-        audio = new Audio(url);
-        audio.playbackRate = rate;
-        document.getElementById('ttsLabel').textContent = `${i + 1} / ${chunks.length}`;
-
-        await new Promise((resolve, reject) => {
-          audio.onended = () => resolve();
-          audio.onerror = () => reject(new Error('Audio load error'));
-          audio.play().catch(reject);
-        });
-
-        // Highlight current chunk's paragraphs
-        highlightChunkParagraphs(i, chunks, currentParagraphs);
-
-      } catch (e) {
-        console.warn('TTS chunk failed:', e.message);
-        if (playBtn) playBtn.style.display = '';
-        if (pauseBtn) pauseBtn.style.display = 'none';
-      }
-    }
-    stopAudio();
-  }
-
-  function highlightChunkParagraphs(chunkIdx, chunks, paragraphs) {
-    if (!paragraphs.length) return;
-    // Remove all highlights
-    body.querySelectorAll('.tts-highlight').forEach(el => el.classList.remove('tts-highlight'));
-    // Find paragraphs that are in this chunk
-    let textPos = 0;
-    const chunkText = chunks[chunkIdx];
-    for (const p of paragraphs) {
-      const start = textPos;
-      textPos += p.text.length;
-      // If paragraph starts within this chunk, highlight it
-      if (start >= chunkText.length) break; // past this chunk — but chunk boundaries don't align
-      // Simple: highlight all paragraphs that were in collected order
-    }
-    // Simpler approach: highlight by index proportion
-    const perChunk = Math.ceil(paragraphs.length / chunks.length);
-    const start = chunkIdx * perChunk;
-    const end = Math.min(start + perChunk, paragraphs.length);
-    for (let i = start; i < end; i++) {
-      paragraphs[i].el.classList.add('tts-highlight');
-      if (i === start) paragraphs[i].el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-  }
-
-  function updateProgress() {
-    if (!totalChunks) return;
-    const pct = ((currentChunkIdx + 1) / totalChunks) * 100;
-    const bar = document.getElementById('ttsProgressBar');
-    if (bar) bar.style.width = pct + '%';
-  }
-
+  // ─── Update button state ───
   function updateBtn(state) {
     const btn = document.getElementById('ttsListenBtn');
     if (!btn) return;
     if (state === 'playing') {
-      btn.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg> Pause`;
-      btn.style.background = '#ef4444';
+      btn.innerHTML = `<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg><span style="margin-left:7px">Pause</span>`;
+      btn.style.background = 'linear-gradient(135deg,#ef4444,#dc2626)';
     } else if (state === 'loading') {
-      btn.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/></svg> Loading…`;
-      btn.style.background = '#f59e0b';
+      btn.innerHTML = `<span style="margin-left:7px">Loading…</span>`;
+      btn.style.background = 'linear-gradient(135deg,#6366f1,#4f46e5)';
     } else {
-      btn.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg> Play`;
-      btn.style.background = 'var(--accent,#6366f1)';
+      btn.innerHTML = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg><span style="margin-left:7px">Listen</span>`;
+      btn.style.background = 'linear-gradient(135deg,#6366f1,#4f46e5)';
     }
   }
 
-  function showController() {
-    const ctrl = document.getElementById('ttsController');
-    if (ctrl) ctrl.classList.add('visible');
-    document.body.classList.add('tts-active');
+  function updateProgress() {
+    const chunks = buildChunks(getParagraphs());
+    const bar = document.getElementById('ttsProgressBar');
+    const label = document.getElementById('ttsLabel');
+    if (bar) bar.style.width = chunks.length ? ((currentChunkIdx + 1) / chunks.length * 100) + '%' : '0%';
+    if (label) label.textContent = `${currentChunkIdx + 1} / ${chunks.length}`;
   }
 
-  function hideController() {
-    const ctrl = document.getElementById('ttsController');
-    if (ctrl) ctrl.classList.remove('visible');
-    document.body.classList.remove('tts-active');
+  // ─── Playback ───
+  async function startPlayback() {
+    if (playing) return;
+    playing = true;
+    injectController();
+    document.getElementById('ttsController').classList.add('visible');
+    document.body.classList.add('tts-active');
+
+    const paragraphs = getParagraphs();
+    const chunks = buildChunks(paragraphs);
+    updateBtn('loading');
+
+    try {
+      for (let i = 0; i < chunks.length && playing; i++) {
+        currentChunkIdx = i;
+        updateProgress();
+        updateBtn('playing');
+
+        const playBtn = document.getElementById('ttsPlayBtn');
+        const pauseBtn = document.getElementById('ttsPauseBtn');
+        if (playBtn) playBtn.style.display = '';
+        if (pauseBtn) pauseBtn.style.display = 'none';
+
+        audio = new Audio(`/api/tts/?text=${encodeURIComponent(chunks[i])}`);
+        audio.playbackRate = rate;
+        document.getElementById('ttsLabel').textContent = `${i + 1} / ${chunks.length}`;
+
+        try {
+          await new Promise((resolve, reject) => {
+            audio.onended = resolve;
+            audio.onerror = () => reject(new Error('Audio load failed'));
+            audio.play().catch(reject);
+          });
+        } catch (e) {
+          // Continue to next chunk on error
+          console.warn('TTS chunk failed:', e.message);
+        }
+      }
+    } finally {
+      stopAudio();
+    }
   }
 
   function stopAudio() {
     playing = false;
-    if (audio) { audio.pause(); audio = null; }
+    if (audio) {
+      audio.pause();
+      audio.src = '';
+      audio = null;
+    }
     updateBtn('stopped');
-    hideController();
-    body.querySelectorAll('.tts-highlight').forEach(el => el.classList.remove('tts-highlight'));
-    const playBtn = document.getElementById('ttsPlayBtn');
-    const pauseBtn = document.getElementById('ttsPauseBtn');
-    if (playBtn) playBtn.style.display = '';
-    if (pauseBtn) pauseBtn.style.display = 'none';
+    const ctrl = document.getElementById('ttsController');
+    if (ctrl) {
+      ctrl.classList.remove('visible');
+      setTimeout(() => ctrl.remove(), 400);
+    }
+    document.body.classList.remove('tts-active');
+    currentChunkIdx = -1;
   }
 
   // ─── Init ───
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => { injectButton(); injectController(); });
-  } else {
+  document.addEventListener('DOMContentLoaded', () => {
     injectButton();
-    injectController();
-  }
+  });
 })();
