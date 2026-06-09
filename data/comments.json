@@ -1469,7 +1469,10 @@
     "photoURL": null,
     "uid": "noob_investor42",
     "parentId": null,
-    "createdAt": "2026-06-09T16:05:55.980Z"
+    "createdAt": "2026-06-09T16:05:55.980Z",
+    "likes": [
+      "usr_a1"
+    ]
   },
   {
     "id": "mq6u0fao_b5dnhq",
@@ -1620,5 +1623,45 @@
     "uid": "this_time_is_different",
     "parentId": "mq6u0ubu_30sxfo",
     "createdAt": "2026-06-09T16:06:35.110Z"
+  },
+  {
+    "id": "mq6u19go_1ac2v2",
+    "article": "solidion-space-battery-june-2026",
+    "text": "still holding spacs from 2021. this stock owes me money and i havent even bought it",
+    "author": "still_holding_2021",
+    "photoURL": null,
+    "uid": "still_holding_2021",
+    "parentId": "mq6u0ut7_jngze1",
+    "createdAt": "2026-06-09T16:06:35.304Z"
+  },
+  {
+    "id": "mq6u19lf_qh93pt",
+    "article": "solidion-space-battery-june-2026",
+    "text": "of course it dropped 19% the day i found out about it. my timing is legendary",
+    "author": "bought_at_the_top",
+    "photoURL": null,
+    "uid": "bought_at_the_top",
+    "parentId": "mq6u0und_fmolnn",
+    "createdAt": "2026-06-09T16:06:35.475Z"
+  },
+  {
+    "id": "mq6u19ql_bhhvsr",
+    "article": "intel-cpu-renaissance-june-2026",
+    "text": "too expensive for me at 110. ill wait for a pullback",
+    "author": "Shdwrptr",
+    "photoURL": null,
+    "uid": "Shdwrptr",
+    "parentId": "mq6u0v8q_p2ovch",
+    "createdAt": "2026-06-09T16:06:35.661Z"
+  },
+  {
+    "id": "mq6u19vc_0dk87l",
+    "article": "intel-cpu-renaissance-june-2026",
+    "text": "fcf positive since q3 and margins expanding. balance sheet looks clean for once",
+    "author": "data_dependent_1",
+    "photoURL": null,
+    "uid": "data_dependent_1",
+    "parentId": "mq6u0v3h_0sp4n0",
+    "createdAt": "2026-06-09T16:06:35.832Z"
   }
 ]
