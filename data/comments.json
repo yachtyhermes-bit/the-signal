@@ -1608,7 +1608,10 @@
     "photoURL": null,
     "uid": "RN_Geo",
     "parentId": null,
-    "createdAt": "2026-06-09T16:06:16.685Z"
+    "createdAt": "2026-06-09T16:06:16.685Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mq6u0v8q_p2ovch",
@@ -1662,7 +1665,11 @@
     "photoURL": null,
     "uid": "still_holding_2021",
     "parentId": "mq6u0ut7_jngze1",
-    "createdAt": "2026-06-09T16:06:35.304Z"
+    "createdAt": "2026-06-09T16:06:35.304Z",
+    "likes": [
+      "usr_c3",
+      "usr_b2"
+    ]
   },
   {
     "id": "mq6u19lf_qh93pt",
