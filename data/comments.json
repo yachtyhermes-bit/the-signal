@@ -1352,7 +1352,8 @@
     "parentId": null,
     "createdAt": "2026-06-09T11:01:57.256Z",
     "likes": [
-      "usr_a1"
+      "usr_a1",
+      "usr_b2"
     ]
   },
   {
@@ -1373,7 +1374,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-09T11:01:58.322Z"
+    "createdAt": "2026-06-09T11:01:58.322Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mq6j5j72_mxtmtk",
@@ -1393,6 +1397,9 @@
     "photoURL": null,
     "uid": null,
     "parentId": "mq6j5iuq_vfrqdv",
-    "createdAt": "2026-06-09T11:01:59.202Z"
+    "createdAt": "2026-06-09T11:01:59.202Z",
+    "likes": [
+      "usr_a1"
+    ]
   }
 ]
