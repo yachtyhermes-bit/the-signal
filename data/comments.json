@@ -1410,7 +1410,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-09T11:02:01.359Z"
+    "createdAt": "2026-06-09T11:02:01.359Z",
+    "likes": [
+      "usr_c3"
+    ]
   },
   {
     "id": "mq6j5lk5_kiumbs",
@@ -1453,6 +1456,9 @@
     "photoURL": null,
     "uid": null,
     "parentId": "mq6j5ly2_fxnhh2",
-    "createdAt": "2026-06-09T11:02:03.304Z"
+    "createdAt": "2026-06-09T11:02:03.304Z",
+    "likes": [
+      "usr_b2"
+    ]
   }
 ]
