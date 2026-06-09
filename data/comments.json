@@ -1298,7 +1298,11 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-09T11:01:53.143Z"
+    "createdAt": "2026-06-09T11:01:53.143Z",
+    "likes": [
+      "usr_e5",
+      "usr_a1"
+    ]
   },
   {
     "id": "mq6j5f77_wh8xza",
@@ -1337,5 +1341,15 @@
       "usr_a1",
       "usr_b2"
     ]
+  },
+  {
+    "id": "mq6j5i14_x8wec8",
+    "article": "solidion-space-battery-june-2026",
+    "text": "bought at $31 on friday lol. learning the hard way. my portfolio is a mess",
+    "author": "noob_investor42",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-09T11:01:57.256Z"
   }
 ]
