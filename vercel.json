@@ -1,5 +1,5 @@
 {
-  "buildCommand": "node build.js && pip3 install edge-tts --target=dist/api/_python_deps --break-system-packages -q 2>/dev/null && echo 'edge-tts installed to dist/api/_python_deps'",
+  "buildCommand": "node build.js && pip3 install edge-tts --target=dist/api/pydeps --break-system-packages -q 2>/dev/null && echo 'edge-tts installed'",
   "outputDirectory": "dist",
   "trailingSlash": true,
   "rewrites": [

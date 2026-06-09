@@ -15,7 +15,7 @@ export default async function handler(req, res) {
   }
 
   // Edge TTS Jenny via Python + local deps
-  const depsDir = join(process.cwd(), 'api', '_python_deps');
+  const depsDir = join(process.cwd(), 'api', 'pydeps');
   if (existsSync(depsDir)) {
     try {
       const pyCode = `import sys;sys.path.insert(0,'${depsDir}')
