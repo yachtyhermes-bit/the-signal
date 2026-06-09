@@ -1308,7 +1308,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-09T11:01:53.587Z"
+    "createdAt": "2026-06-09T11:01:53.587Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mq6j5fl4_ncqpta",
@@ -1330,7 +1333,9 @@
     "parentId": "mq6j5f77_wh8xza",
     "createdAt": "2026-06-09T11:01:54.525Z",
     "likes": [
-      "usr_e5"
+      "usr_e5",
+      "usr_a1",
+      "usr_b2"
     ]
   }
 ]
