@@ -1420,7 +1420,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-09T11:02:01.829Z"
+    "createdAt": "2026-06-09T11:02:01.829Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mq6j5ly2_fxnhh2",
@@ -1431,5 +1434,25 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-09T11:02:02.330Z"
+  },
+  {
+    "id": "mq6j5mbn_s3ivsz",
+    "article": "intel-cpu-renaissance-june-2026",
+    "text": "balance sheet looks clean. margins are expanding though. pe is actually reasonable here for the turnaround",
+    "author": "data_dependent_1",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mq6j5l73_4i4rws",
+    "createdAt": "2026-06-09T11:02:02.819Z"
+  },
+  {
+    "id": "mq6j5mp4_ysixi5",
+    "article": "intel-cpu-renaissance-june-2026",
+    "text": "if it was cheaper id buy. too expensive for me at $110. ill wait",
+    "author": "Shdwrptr",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mq6j5ly2_fxnhh2",
+    "createdAt": "2026-06-09T11:02:03.304Z"
   }
 ]
