@@ -1,0 +1,7 @@
+name = "signal-audio-cdn"
+main = "worker.js"
+compatibility_date = "2026-06-09"
+
+[[r2_buckets]]
+binding = "AUDIO_BUCKET"
+bucket_name = "the-signal-audio"
