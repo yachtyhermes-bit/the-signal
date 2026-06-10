@@ -1830,7 +1830,10 @@
     "photoURL": null,
     "uid": "bought_at_the_top",
     "parentId": null,
-    "createdAt": "2026-06-10T11:06:41.158Z"
+    "createdAt": "2026-06-10T11:06:41.158Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mq7yrg3r_zhbhpe",
@@ -1861,5 +1864,15 @@
     "uid": "crypto_refugee_88",
     "parentId": "mq7yrfra_wq6rv0",
     "createdAt": "2026-06-10T11:06:42.500Z"
+  },
+  {
+    "id": "mq7yrh4h_wjw02u",
+    "article": "solidion-pump-dump-crash-june-2026",
+    "text": "am i reading this right. $35 valuation on a company with zero revenue and a patent application. the math aint mathing. someone explain this to me like im 5",
+    "author": "CarrotAwesome",
+    "photoURL": null,
+    "uid": "CarrotAwesome",
+    "parentId": "mq7yrg3r_zhbhpe",
+    "createdAt": "2026-06-10T11:06:42.929Z"
   }
 ]
