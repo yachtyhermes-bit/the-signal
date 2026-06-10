@@ -222,6 +222,16 @@
       "passwordHash": "62ceb318c1b1501cabdfa63dddd5446393c89bb38d4eb3d143bd57ab5b096270",
       "createdAt": "2025-07-08T12:12:57.000Z",
       "uid": "usr_b7f62bd39a065227"
+    },
+    "google_116426781731088838491": {
+      "username": "google_116426781731088838491",
+      "displayName": "beachside.studiosla",
+      "passwordHash": "",
+      "createdAt": "2025-07-01T00:00:00.000Z",
+      "uid": "usr_ad1e7655a3088e5f",
+      "googleId": "116426781731088838491",
+      "email": "beachside.studiosla@gmail.com",
+      "photoURL": null
     }
   },
   "trades": [
@@ -2777,6 +2787,15 @@
         }
       ],
       "createdAt": "2025-11-28T17:58:31.000Z"
+    },
+    "usr_ad1e7655a3088e5f": {
+      "uid": "usr_ad1e7655a3088e5f",
+      "displayName": "beachside.studiosla",
+      "photoURL": null,
+      "cash": 100000,
+      "holdings": {},
+      "trades": [],
+      "createdAt": "2026-06-10T01:13:25.953Z"
     }
   },
   "priceCache": {
