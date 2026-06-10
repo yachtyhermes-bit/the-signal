@@ -1832,7 +1832,9 @@
     "parentId": null,
     "createdAt": "2026-06-10T11:06:41.158Z",
     "likes": [
-      "usr_d4"
+      "usr_d4",
+      "usr_b2",
+      "usr_a1"
     ]
   },
   {
@@ -1853,7 +1855,11 @@
     "photoURL": null,
     "uid": "this_time_is_different",
     "parentId": null,
-    "createdAt": "2026-06-10T11:06:42.060Z"
+    "createdAt": "2026-06-10T11:06:42.060Z",
+    "likes": [
+      "usr_b2",
+      "usr_a1"
+    ]
   },
   {
     "id": "mq7yrgsk_7cz0e7",
