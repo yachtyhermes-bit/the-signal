@@ -1775,8 +1775,7 @@
     "createdAt": "2026-06-10T11:06:36.660Z",
     "likes": [
       "usr_b2",
-      "usr_e5",
-      "usr_a1"
+      "usr_e5"
     ]
   },
   {
@@ -2107,5 +2106,15 @@
     "uid": "paycheck2paycheck",
     "parentId": "mq89n7c1_3bjgdk",
     "createdAt": "2026-06-10T16:11:19.814Z"
+  },
+  {
+    "id": "mq89n7zp_ezho8h",
+    "article": "chat-etf-ai-buy-dip-june-2026",
+    "text": "unusual call activity today on MU and NVDA. someone bought a lot of calls expiring next month. gamma could push this up",
+    "author": "option_flow_watcher",
+    "photoURL": null,
+    "uid": "option_flow_watcher",
+    "parentId": "mq89n6o8_h289sp",
+    "createdAt": "2026-06-10T16:11:20.245Z"
   }
 ]
