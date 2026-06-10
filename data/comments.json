@@ -1875,7 +1875,12 @@
     "photoURL": null,
     "uid": "crypto_refugee_88",
     "parentId": "mq7yrfra_wq6rv0",
-    "createdAt": "2026-06-10T11:06:42.500Z"
+    "createdAt": "2026-06-10T11:06:42.500Z",
+    "likes": [
+      "usr_d4",
+      "usr_b2",
+      "usr_f6"
+    ]
   },
   {
     "id": "mq7yrh4h_wjw02u",
@@ -2201,5 +2206,15 @@
     "uid": "just_lurking_69",
     "parentId": "mq89ncqp_krheiy",
     "createdAt": "2026-06-10T16:11:27.729Z"
+  },
+  {
+    "id": "mq89nhdx_vcerhc",
+    "article": "defense-stocks-iran-surge-june-2026",
+    "text": "check the s-1 filing. anduril at $20b valuation makes LMT and RTX look cheap by comparison. the lockup period means they cant sell until. this detail matters",
+    "author": "turned_into_a_newt",
+    "photoURL": null,
+    "uid": "turned_into_a_newt",
+    "parentId": null,
+    "createdAt": "2026-06-10T16:11:32.421Z"
   }
 ]
