@@ -2215,7 +2215,10 @@
     "photoURL": null,
     "uid": "turned_into_a_newt",
     "parentId": null,
-    "createdAt": "2026-06-10T16:11:32.421Z"
+    "createdAt": "2026-06-10T16:11:32.421Z",
+    "likes": [
+      "usr_a1"
+    ]
   },
   {
     "id": "mq89nhpy_zz310m",
@@ -2225,7 +2228,10 @@
     "photoURL": null,
     "uid": "whohebe123",
     "parentId": null,
-    "createdAt": "2026-06-10T16:11:32.854Z"
+    "createdAt": "2026-06-10T16:11:32.854Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mq89ni1z_0vbn7t",
@@ -2235,7 +2241,11 @@
     "photoURL": null,
     "uid": "ragnaroksunset",
     "parentId": null,
-    "createdAt": "2026-06-10T16:11:33.287Z"
+    "createdAt": "2026-06-10T16:11:33.287Z",
+    "likes": [
+      "usr_c3",
+      "usr_e5"
+    ]
   },
   {
     "id": "mq89nidr_sqt5ga",
