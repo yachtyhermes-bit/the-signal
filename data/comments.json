@@ -1952,7 +1952,7 @@
     "createdAt": "2026-06-10T11:06:50.421Z",
     "likes": [
       "usr_a1",
-      "usr_f6"
+      "usr_c3"
     ]
   },
   {
@@ -2067,5 +2067,15 @@
     "uid": "still_holding_2021",
     "parentId": "mq89n1bn_z4n87o",
     "createdAt": "2026-06-10T16:11:12.997Z"
+  },
+  {
+    "id": "mq89n6o8_h289sp",
+    "article": "chat-etf-ai-buy-dip-june-2026",
+    "text": "i work in this industry and the hbm demand is real. we use nvidia gpus at work and the memory bottleneck is the #1 constraint. CHAT is the standard now",
+    "author": "work_from_zoom",
+    "photoURL": null,
+    "uid": "work_from_zoom",
+    "parentId": null,
+    "createdAt": "2026-06-10T16:11:18.536Z"
   }
 ]
