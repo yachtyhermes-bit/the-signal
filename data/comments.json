@@ -1909,7 +1909,10 @@
     "photoURL": null,
     "uid": "RN_Geo",
     "parentId": null,
-    "createdAt": "2026-06-10T11:06:46.786Z"
+    "createdAt": "2026-06-10T11:06:46.786Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mq7yrkg4_cjc8e9",
@@ -1932,6 +1935,20 @@
     "photoURL": null,
     "uid": "Latter-Possibility",
     "parentId": "mq7yrk3m_z83pva",
-    "createdAt": "2026-06-10T11:06:47.665Z"
+    "createdAt": "2026-06-10T11:06:47.665Z",
+    "likes": [
+      "usr_c3",
+      "usr_e5"
+    ]
+  },
+  {
+    "id": "mq7yrmwl_uacl2p",
+    "article": "closing-bell-june-10-2026",
+    "text": "so basically every stock i own is red today. SMCI down 7.6% for raising money??? MSTR getting obliterated?? my portfolio is a mess rn",
+    "author": "noob_investor42",
+    "photoURL": null,
+    "uid": "noob_investor42",
+    "parentId": null,
+    "createdAt": "2026-06-10T11:06:50.421Z"
   }
 ]
