@@ -1997,7 +1997,10 @@
     "photoURL": null,
     "uid": "this_time_is_different",
     "parentId": "mq7yrn8l_rbn20g",
-    "createdAt": "2026-06-10T11:06:52.144Z"
+    "createdAt": "2026-06-10T11:06:52.144Z",
+    "likes": [
+      "usr_a1"
+    ]
   },
   {
     "id": "mq89n0yp_qiptdl",
@@ -2038,5 +2041,15 @@
     "uid": "Minimum-Criticism763",
     "parentId": "mq89n0yp_qiptdl",
     "createdAt": "2026-06-10T16:11:12.542Z"
+  },
+  {
+    "id": "mq89n2ed_2o30xd",
+    "article": "closing-bell-june-10-2026",
+    "text": "smci at these levels reminds me of my 2021 bags. average down they said. one day this pays off. im not crying",
+    "author": "still_holding_2021",
+    "photoURL": null,
+    "uid": "still_holding_2021",
+    "parentId": "mq89n1bn_z4n87o",
+    "createdAt": "2026-06-10T16:11:12.997Z"
   }
 ]
