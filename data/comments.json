@@ -2330,7 +2330,6 @@
     "likes": [
       "usr_d4",
       "usr_f6",
-      "usr_c3",
       "usr_a1"
     ]
   },
@@ -2552,7 +2551,9 @@
     "parentId": null,
     "createdAt": "2026-06-11T16:09:17.224Z",
     "likes": [
-      "usr_d4"
+      "usr_d4",
+      "usr_c3",
+      "usr_b2"
     ]
   },
   {
@@ -2565,7 +2566,8 @@
     "parentId": null,
     "createdAt": "2026-06-11T16:09:17.389Z",
     "likes": [
-      "usr_d4"
+      "usr_d4",
+      "usr_c3"
     ]
   },
   {
