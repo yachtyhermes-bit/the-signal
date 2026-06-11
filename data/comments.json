@@ -2403,7 +2403,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-11T16:09:13.069Z"
+    "createdAt": "2026-06-11T16:09:13.069Z",
+    "likes": [
+      "usr_e5"
+    ]
   },
   {
     "id": "mq9p0cpq_qe2bhw",
@@ -2413,7 +2416,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-11T16:09:13.310Z"
+    "createdAt": "2026-06-11T16:09:13.310Z",
+    "likes": [
+      "usr_c3"
+    ]
   },
   {
     "id": "mq9p0cvr_kylp6y",
@@ -2423,7 +2429,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-11T16:09:13.527Z"
+    "createdAt": "2026-06-11T16:09:13.527Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mq9p0d15_dotm8h",
@@ -2433,7 +2442,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": "mq9p0cj1_ypvsjd",
-    "createdAt": "2026-06-11T16:09:13.721Z"
+    "createdAt": "2026-06-11T16:09:13.721Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mq9p0d62_rrwu8l",
@@ -2443,6 +2455,19 @@
     "photoURL": null,
     "uid": null,
     "parentId": "mq9p0cpq_qe2bhw",
-    "createdAt": "2026-06-11T16:09:13.898Z"
+    "createdAt": "2026-06-11T16:09:13.898Z",
+    "likes": [
+      "usr_d4"
+    ]
+  },
+  {
+    "id": "mq9p0ec7_sk9wqv",
+    "article": "trump-iran-oil-seizure-june-2026",
+    "text": "premarket looking spicy. saw crude hit 92 overnight. energy names gonna rip at open. anyone else up",
+    "author": "night_shift_trader",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-11T16:09:15.415Z"
   }
 ]
