@@ -2359,7 +2359,10 @@
     "photoURL": null,
     "uid": "this_time_is_different",
     "parentId": null,
-    "createdAt": "2026-06-11T11:05:43.960Z"
+    "createdAt": "2026-06-11T11:05:43.960Z",
+    "likes": [
+      "usr_a1"
+    ]
   },
   {
     "id": "mq9e62m7_e3bngn",
@@ -2370,9 +2373,7 @@
     "uid": "FEMA_Camp_Survivor",
     "parentId": "mq9e61ym_dpjq1z",
     "createdAt": "2026-06-11T11:05:44.383Z",
-    "likes": [
-      "usr_e5"
-    ]
+    "likes": []
   },
   {
     "id": "mq9e62yf_t1sk19",
@@ -2589,5 +2590,15 @@
     "uid": null,
     "parentId": "mq9p0gsz_w2wqp7",
     "createdAt": "2026-06-11T16:09:18.944Z"
+  },
+  {
+    "id": "mq9p0h86_2nbt10",
+    "article": "closing-bell-june-11-2026",
+    "text": "regular people always get wrecked. smci fraud was obvious for years, sec did nothing, now retail holding 28% bags while institutions were out last month.",
+    "author": "FEMA_Camp_Survivor",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mq9e62ag_g5gu1r",
+    "createdAt": "2026-06-11T16:09:19.158Z"
   }
 ]
