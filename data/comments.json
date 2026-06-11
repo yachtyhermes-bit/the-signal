@@ -2787,7 +2787,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": "mq9vb07b_tyxg2x",
-    "createdAt": "2026-06-11T19:05:29.013Z"
+    "createdAt": "2026-06-11T19:05:29.013Z",
+    "likes": [
+      "usr_a1"
+    ]
   },
   {
     "id": "mq9vb1e3_0o7tff",
@@ -2798,5 +2801,25 @@
     "uid": null,
     "parentId": "mq9vazt3_x97kw0",
     "createdAt": "2026-06-11T19:05:29.547Z"
+  },
+  {
+    "id": "mq9vb5ql_3rhfrj",
+    "article": "closing-bell-june-11-2026",
+    "text": "cpi 4.2% rate cuts dead semis in freefall. ive seen this movie before. nothing ever changes",
+    "author": "this_time_is_different",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-11T19:05:35.181Z"
+  },
+  {
+    "id": "mq9vb63t_az9gtv",
+    "article": "closing-bell-june-11-2026",
+    "text": "smci -28% in one day and oracle record quarter at -10%. retail always the exit liquidity. same story different ticker",
+    "author": "SheriffBartholomew",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-11T19:05:35.657Z"
   }
 ]
