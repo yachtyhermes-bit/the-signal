@@ -2505,7 +2505,11 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-11T16:09:15.787Z"
+    "createdAt": "2026-06-11T16:09:15.787Z",
+    "likes": [
+      "usr_c3",
+      "usr_b2"
+    ]
   },
   {
     "id": "mq9p0err_3u98r8",
@@ -2530,7 +2534,8 @@
     "parentId": "mq9p0ehf_tqof0i",
     "createdAt": "2026-06-11T16:09:16.152Z",
     "likes": [
-      "usr_e5"
+      "usr_e5",
+      "usr_c3"
     ]
   },
   {
