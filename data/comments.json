@@ -2493,7 +2493,8 @@
     "parentId": null,
     "createdAt": "2026-06-11T16:09:15.603Z",
     "likes": [
-      "usr_b2"
+      "usr_b2",
+      "usr_d4"
     ]
   },
   {
@@ -2708,5 +2709,15 @@
     "uid": null,
     "parentId": "mq9vau1r_42f71g",
     "createdAt": "2026-06-11T19:05:21.628Z"
+  },
+  {
+    "id": "mq9vavov_vfj0gi",
+    "article": "trump-iran-oil-seizure-june-2026",
+    "text": "idk what backwardation means but if oil keeps ripping im all in on XOM calls. this is my rent money jk",
+    "author": "yolo_my_401k",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mq9vauvy_r7mo4v",
+    "createdAt": "2026-06-11T19:05:22.159Z"
   }
 ]
