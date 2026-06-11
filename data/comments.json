@@ -2709,7 +2709,8 @@
     "parentId": null,
     "createdAt": "2026-06-11T19:05:21.118Z",
     "likes": [
-      "usr_c3"
+      "usr_c3",
+      "usr_a1"
     ]
   },
   {
@@ -2720,7 +2721,11 @@
     "photoURL": null,
     "uid": null,
     "parentId": "mq9vau1r_42f71g",
-    "createdAt": "2026-06-11T19:05:21.628Z"
+    "createdAt": "2026-06-11T19:05:21.628Z",
+    "likes": [
+      "usr_e5",
+      "usr_b2"
+    ]
   },
   {
     "id": "mq9vavov_vfj0gi",
