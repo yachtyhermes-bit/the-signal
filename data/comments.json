@@ -2327,7 +2327,8 @@
     "likes": [
       "usr_d4",
       "usr_f6",
-      "usr_c3"
+      "usr_c3",
+      "usr_a1"
     ]
   },
   {
@@ -2531,7 +2532,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-11T16:09:17.224Z"
+    "createdAt": "2026-06-11T16:09:17.224Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mq9p0fv1_u0nhff",
@@ -2541,7 +2545,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-11T16:09:17.389Z"
+    "createdAt": "2026-06-11T16:09:17.389Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mq9p0fzv_mf1dyk",
@@ -2552,5 +2559,35 @@
     "uid": null,
     "parentId": "mq9p0fqg_7viqzf",
     "createdAt": "2026-06-11T16:09:17.563Z"
+  },
+  {
+    "id": "mq9p0gsz_w2wqp7",
+    "article": "closing-bell-june-11-2026",
+    "text": "smci down 28% in ONE day and oracle tanks after a record quarter?? my heart cant take this. talk me off the ledge",
+    "author": "help_me_pls77",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-11T16:09:18.611Z"
+  },
+  {
+    "id": "mq9p0gxg_uj77gi",
+    "article": "closing-bell-june-11-2026",
+    "text": "actually this is healthy. smci was a fraud waiting to implode since the hindenburg report. cpi forcing the fed to stay vigilant. corrections flush out the garbage.",
+    "author": "Latter-Possibility",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-11T16:09:18.772Z"
+  },
+  {
+    "id": "mq9p0h28_nj6o2p",
+    "article": "closing-bell-june-11-2026",
+    "text": "depends on your timeline. spacex ipo at 135 tomorrow is the only thing that matters. everything else is noise for 48 hours.",
+    "author": "sharp315",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mq9p0gsz_w2wqp7",
+    "createdAt": "2026-06-11T16:09:18.944Z"
   }
 ]
