@@ -2367,7 +2367,8 @@
     "parentId": null,
     "createdAt": "2026-06-11T11:05:43.960Z",
     "likes": [
-      "usr_a1"
+      "usr_a1",
+      "usr_d4"
     ]
   },
   {
@@ -2389,7 +2390,11 @@
     "photoURL": null,
     "uid": "westcoastcouch",
     "parentId": "mq9e61mr_klzssq",
-    "createdAt": "2026-06-11T11:05:44.823Z"
+    "createdAt": "2026-06-11T11:05:44.823Z",
+    "likes": [
+      "usr_b2",
+      "usr_f6"
+    ]
   },
   {
     "id": "mq9oyhxi_ifmyzt",
