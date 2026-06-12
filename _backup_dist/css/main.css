@@ -173,6 +173,7 @@ main {
   gap: 0;
   animation: tickerScroll 60s linear infinite;
   white-space: nowrap;
+  will-change: transform;
 }
 .ticker-track:hover { animation-play-state: paused; }
 @keyframes tickerScroll {
@@ -1239,7 +1240,70 @@ main {
   color: #1a1a2e;
 }
 
-/* === PULSE AI RESEARCH AGENT === */
+/* === FEATURED + PULSE SIDE-BY-SIDE ROW === */
+.featured-pulse-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin: 0 0 24px;
+  position: relative;
+  z-index: 1;
+}
+.featured-pulse-feat {
+  min-width: 0;
+}
+.featured-pulse-feat .featured-hero {
+  width: 100%;
+  margin: 0;
+}
+.featured-pulse-feat .featured-card {
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+.featured-pulse-aside {
+  min-width: 0;
+}
+.featured-pulse-aside .pulse-section {
+  margin: 0;
+  padding: 20px 20px 0;
+  max-width: none;
+  border-top: none;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.featured-pulse-aside .pulse-section::before {
+  display: none;
+}
+.featured-pulse-aside .pulse-header {
+  margin-bottom: 12px;
+}
+.featured-pulse-aside .pulse-title {
+  font-size: 18px;
+}
+.featured-pulse-aside .pulse-desc {
+  font-size: 12px;
+  line-height: 1.5;
+}
+.featured-pulse-aside .pulse-chat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.featured-pulse-aside .pulse-messages {
+  max-height: 200px;
+  flex: 1;
+}
+.featured-pulse-aside .pulse-bubble {
+  font-size: 12.5px;
+  padding: 8px 12px;
+}
+.featured-pulse-aside .pulse-input {
+  font-size: 12.5px;
+}
+.featured-pulse-aside .pulse-input-area {
+  padding: 8px 12px;
+}
 .pulse-section {
   max-width: 720px;
   margin: 0 auto 48px;
@@ -2629,7 +2693,6 @@ body.pulse-modal-open {
 .sc-card.reveal {
   opacity: 1;
   transform: translateY(0);
-  animation: glowPulse 3s ease-in-out infinite;
 }
 @keyframes glowPulse {
   0%, 100% { box-shadow: 0 0 30px rgba(59,130,246,0.3), 0 0 60px rgba(59,130,246,0.1); }
@@ -2912,7 +2975,6 @@ body.pulse-modal-open {
   background: linear-gradient(to right, #3b82f6, #60a5fa);
 }
 .detail-card-link.reveal .detail-card-accent {
-  animation: accentGlow 2.5s ease-in-out infinite;
 }
 @keyframes accentGlow {
   0%, 100% { opacity: 1; }
@@ -5606,3 +5668,343 @@ body.pulse-modal-open {
 [data-theme="light"] .comment-replies { border-left-color: rgba(0,0,0,0.06); }
 [data-theme="light"] .comment-item-author { color: #111; }
 [data-theme="light"] .comment-item-text { color: #333; }
+/* Desktop optimizations — append to _backup_dist/css/main.css */
+
+/* === HERO — Bigger on desktop === */
+@media (min-width: 1024px) {
+  .hero {
+    padding: 100px 40px 64px;
+  }
+  .hero-content {
+    max-width: 860px;
+  }
+  .hero-title {
+    font-size: 56px;
+    line-height: 1.1;
+    letter-spacing: -1px;
+  }
+  .hero-sub {
+    font-size: 18px;
+    max-width: 640px;
+  }
+  .hero-desc {
+    font-size: 15px;
+    max-width: 620px;
+  }
+}
+
+/* === FEATURED — More prominent on desktop === */
+@media (min-width: 1024px) {
+  .featured-card {
+    grid-template-columns: 1fr 1fr;
+    min-height: 340px;
+  }
+  .featured-content {
+    padding: 36px 40px;
+  }
+  .featured-title {
+    font-size: 26px;
+  }
+  .featured-summary {
+    font-size: 15px;
+  }
+}
+
+/* === ARTICLE GRID — 3 columns on large desktop, 2 on medium === */
+@media (min-width: 1280px) {
+  .article-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .article-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* === CARD — Consistent sizing === */
+.article-card {
+  min-height: 380px;
+}
+
+/* === FEED — Better spacing === */
+@media (min-width: 1024px) {
+  .feed {
+    padding: 0 40px 80px;
+  }
+  .feed-header {
+    margin-bottom: 28px;
+  }
+}
+
+/* === FOCUS BAR — Wider on desktop === */
+@media (min-width: 1024px) {
+  .focus-bar {
+    max-width: 720px;
+    padding: 16px 32px;
+    margin-bottom: 48px;
+  }
+  .focus-item {
+    font-size: 13px;
+  }
+}
+
+/* === TICKER TAPE — Taller on desktop === */
+@media (min-width: 1024px) {
+  .ticker-tape {
+    height: 34px;
+  }
+  .ticker-item {
+    font-size: 12px;
+    padding: 0 20px;
+  }
+}
+
+/* === NAV — More breathing room on desktop === */
+@media (min-width: 1024px) {
+  .nav-inner {
+    padding: 0 40px;
+    height: 60px;
+  }
+  .nav-links {
+    gap: 4px;
+  }
+  .nav-link {
+    padding: 6px 14px;
+    font-size: 12px;
+  }
+}
+
+/* === SECTIONS — Better section spacing on desktop === */
+@media (min-width: 1024px) {
+  section.feed-section {
+    margin-bottom: 48px;
+  }
+  .feed-section-header {
+    margin-bottom: 20px;
+  }
+  .section-title {
+    font-size: 16px;
+  }
+}
+
+/* === SIGNAL HIGHLIGHTS — Better card sizing === */
+@media (min-width: 1024px) {
+  .highlight-card {
+    min-width: 220px;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   DESKTOP LAYOUT (≥1280px) — wide-screen polish
+   ═══════════════════════════════════════════ */
+@media (min-width: 1280px) {
+  /* ── Nav & global containers ── */
+  .nav-inner        { max-width: 1440px; padding: 0 40px; }
+  .feed             { max-width: 1440px; padding: 0 40px 80px; }
+  .footer-inner     { max-width: 1440px; padding: 0 40px; }
+  .ticker-page      { max-width: 1440px; }
+  .sector-page      { max-width: 1440px; }
+
+  /* ── HERO: full viewport, video scoped to hero only ── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 48px 80px;
+  }
+  /* Keep video absolute (not fixed) so it stays inside hero section */
+  .hero-video-bg video {
+    opacity: 0.55;
+  }
+  .hero-content     { max-width: 960px; }
+  .hero-title       { font-size: 64px; letter-spacing: -1px; }
+  .hero-sub         { font-size: 19px; max-width: 720px; }
+  .hero-desc        { font-size: 15px; max-width: 720px; }
+
+  /* Focus bar: wider */
+  .focus-bar        { max-width: 960px; }
+
+  /* Theme toggle positioned absolute */
+  .hero-theme-toggle { position: relative; z-index: 2; }
+
+  /* ── FEATURED + PULSE: side-by-side 65/35 split ── */
+  .featured-pulse-row {
+    grid-template-columns: 1fr 400px;
+    gap: 20px;
+    max-width: 1440px;
+    margin: 0 auto 32px;
+    padding: 0 40px;
+    align-items: stretch;
+  }
+  /* Reset the 100vw hack — inside grid, just fill cell */
+  .featured-pulse-feat .featured-hero {
+    width: 100%;
+    left: auto;
+    right: auto;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .featured-pulse-feat .featured-card {
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+  }
+  /* Pulse aside: compact card style */
+  .featured-pulse-aside .pulse-section {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+  }
+  /* Adjust pulse when standalone (mobile only — reset at desktop) */
+  .pulse-section:not(.featured-pulse-aside .pulse-section) {
+    max-width: 960px;
+  }
+
+  /* ── FEATURED HERO: full-viewport edge-to-edge hero banner (standalone, not in side-by-side) ── */
+  .featured-hero {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-bottom: 48px;
+    padding: 0;
+  }
+  .featured-hero .featured-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 560px;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    margin: 0;
+  }
+  /* Override card-body padding — one clean padding source */
+  .featured-hero .featured-card .card-body {
+    padding: 60px 64px;
+    justify-content: center;
+    gap: 4px;
+  }
+  .featured-hero .featured-card .card-title {
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+  .featured-hero .featured-card .card-summary {
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    flex: none;
+    margin-bottom: 20px;
+  }
+  /* Full-height image — no border-bottom, position relative for overlay */
+  .featured-hero .featured-card .card-image {
+    height: 100%;
+    min-height: 560px;
+    border-bottom: none;
+    position: relative;
+  }
+  .featured-hero .featured-card .card-image img {
+    height: 100%;
+  }
+  /* Subtle gradient overlay — image → content side */
+  .featured-hero .featured-card .card-image::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(90deg, var(--bg-card) 0%, transparent 18%);
+    pointer-events: none;
+  }
+  /* Card meta — cleaner spacing */
+  .featured-hero .featured-card .card-meta {
+    margin-top: auto;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+  }
+  .featured-hero .featured-card .card-top {
+    margin-bottom: 14px;
+  }
+  /* Override the article-grid wrapper inside featured-hero */
+  .featured-hero .article-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  /* ── ARTICLE GRID: fixed 4 columns for clean even rows ── */
+  .article-grid     { grid-template-columns: repeat(4, 1fr); gap: 20px; }
+
+  /* ── CARDS ── */
+  .card-image       { height: 190px; }
+  .card-body        { padding: 24px; }
+  .card-title       { font-size: 17px; }
+  .card-summary     { font-size: 14px; }
+
+  /* ── PULSE ── */
+  .pulse-section    { max-width: 960px; }
+
+  /* ── SCORECARD / HIGHLIGHTS / NEWSLETTER ── */
+  .scorecard-section      { max-width: 1440px; padding: 0 40px; }
+  .section-divider        { max-width: 1440px; }
+  .detail-stocks-section  { max-width: 1440px; padding: 0 40px; }
+  .detail-stocks-grid     { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+  .newsletter-section     { max-width: 1440px; padding: 0 40px; }
+
+  /* ── HIVE HOME ── */
+  .hive-home-inner  { max-width: 1200px; }
+
+  /* ── ARTICLE PAGES: desktop reading layout ── */
+  .article-page     { max-width: 900px; padding: 48px 40px 80px; }
+  .article-title    { font-size: 40px; }
+  .article-body     { font-size: 17px; line-height: 1.9; }
+  .article-body h2  { font-size: 26px; }
+  .article-image    { margin: 0 -40px 32px; border-radius: 0; max-height: 520px; overflow: hidden; }
+  .article-image img { width: 100%; height: 100%; object-fit: cover; }
+
+  /* Comments: wider + centered */
+  .comments-section { max-width: 900px !important; }
+  .related-articles { max-width: 1440px; padding: 32px 40px 0; }
+
+  /* Related articles grid */
+  .related-grid     { grid-template-columns: repeat(4, 1fr); }
+
+  /* ── TICKER TAPE ── */
+  .ticker-tape      { height: 38px; }
+  .ticker-item      { font-size: 12px; padding: 0 22px; }
+}
+
+/* Extra-wide screens (≥1600px) */
+@media (min-width: 1600px) {
+  .nav-inner        { max-width: 1600px; }
+  .feed             { max-width: 1600px; }
+  .scorecard-section     { max-width: 1600px; }
+  .detail-stocks-section { max-width: 1600px; }
+  .newsletter-section    { max-width: 1600px; }
+  .section-divider       { max-width: 1600px; }
+  .footer-inner     { max-width: 1600px; }
+  .ticker-page      { max-width: 1600px; }
+  .sector-page      { max-width: 1600px; }
+  .featured-pulse-row { max-width: 1600px; grid-template-columns: 1fr 440px; }
+  .article-page     { max-width: 1000px; }
+  .comments-section { max-width: 1000px !important; }
+  .related-articles { max-width: 1600px; }
+
+  .hero-content     { max-width: 1100px; }
+  .hero-title       { font-size: 76px; }
+  .hero-sub         { font-size: 20px; max-width: 800px; }
+
+  .featured-hero .featured-card          { min-height: 640px; }
+  .featured-hero .featured-card .card-image { min-height: 640px; }
+  .featured-hero .featured-card .card-title { font-size: 42px; }
+  .featured-hero .featured-card .card-body  { padding: 72px 80px; }
+  .featured-hero .featured-card .card-summary { font-size: 18px; }
+
+  .article-grid     { grid-template-columns: repeat(4, 1fr); gap: 24px; }
+  .related-grid     { grid-template-columns: repeat(5, 1fr); }
+}

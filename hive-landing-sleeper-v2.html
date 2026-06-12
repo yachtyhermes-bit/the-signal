@@ -995,6 +995,19 @@
 
     // Load initial leaderboard on page load
     document.addEventListener('DOMContentLoaded', () => loadLeaderboard('monthly'));
+
+    // Auto-pause hero video when scrolled past (performance)
+    (function() {
+      var v = document.querySelector('.hero-video');
+      if (!v) return;
+      function cv() {
+        var r = v.getBoundingClientRect();
+        (r.bottom > 0 && r.top < window.innerHeight) ? v.play().catch(function(){}) : v.pause();
+      }
+      var t = false;
+      window.addEventListener('scroll', function() { if(!t) { window.requestAnimationFrame(function(){cv();t=false;}); t=true; }}, {passive:true});
+      cv();
+    })();
   </script>
 </body>
 </html>

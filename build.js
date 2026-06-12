@@ -28,7 +28,7 @@ const SECTORS = {
   space: 'Space', 'mega-cap': 'Mega-Cap', quantum: 'Quantum'
 };
 
-const HOMEPAGE_LIMIT = 36;
+const HOMEPAGE_LIMIT = 40;
 
 // ─── 1. Copy frozen assets ───
 console.log('📦 Copying frozen assets from _backup_dist/...');
@@ -72,10 +72,10 @@ const sectorArticles = articles.slice(HOMEPAGE_LIMIT);
 
 // Homepage splits
 const featuredArticle = homepage.slice(0, 1);   // 1 featured
-const grid1 = homepage.slice(1, 5);              // 4 articles
-const grid2 = homepage.slice(5, 12);             // 7 articles
-const grid3 = homepage.slice(12, 21);            // 9 articles
-const grid4 = homepage.slice(21, 36);            // 15 articles
+const grid1 = homepage.slice(1, 9);              // 8 articles
+const grid2 = homepage.slice(9, 16);             // 7 articles
+const grid3 = homepage.slice(16, 25);            // 9 articles
+const grid4 = homepage.slice(25, 40);            // 15 articles
 
 console.log(`  📰 Homepage: ${homepage.length} total (1 featured + ${grid1.length} + ${grid2.length} + ${grid3.length} + ${grid4.length})`);
 console.log(`  📂 Sector pages: ${sectorArticles.length} articles`);
@@ -94,7 +94,7 @@ indexHtml = indexHtml.replace('<!-- ARTICLES_DATA_JSON -->',
   `<script id="articles-data" type="application/json">${articlesJson}</script>`);
 
 indexHtml = indexHtml.replace('<!-- FEATURED_ARTICLE -->',
-  `<section class="feed">\n  <div class="article-grid">\n${featuredHtml}\n  </div>\n</section>`);
+  `<section class="featured-hero">\n  <div class="article-grid">\n${featuredHtml}\n  </div>\n</section>`);
 
 indexHtml = indexHtml.replace('<!-- GRID_1 -->',
   `<section class="feed feed-continued">\n  <div class="article-grid">\n${grid1Html}\n  </div>\n</section>`);
@@ -113,7 +113,7 @@ fs.writeFileSync(path.join(DST, 'index.html'), indexHtml);
 const finalSize = fs.statSync(path.join(DST, 'index.html')).size;
 console.log(`  ✅ Homepage built: ${finalSize} bytes`);
 
-// GUARD: Abort if homepage is suspiciously small (< 350KB with 36 articles)
+// GUARD: Abort if homepage is suspiciously small (< 350KB with 40 articles)
 if (finalSize < 350000) {
   console.error(`⛔ FATAL: Built index.html is ${finalSize} bytes — expected ~400,000+.`);
   console.error('   Article generation may have failed. Check articles/posts/*.json.');
@@ -184,6 +184,8 @@ if (!template) {
         .replace(/{{TAGS_HTML}}/g, tagsHtml)
         .replace(/{{LINKS_HTML}}/g, linksHtml)
         .replace(/{{RELATED_ARTICLES}}/g, pickRelated(articles, slug, 4))
+        .replace('<!-- ARTICLES_DATA_JSON -->',
+          `<script id="articles-data" type="application/json">${articlesJson}</script>`)
         .replace(/\{\{[A-Z_]+\}\}/g, '');
 
       const outDir = path.join(DST, 'article', slug);

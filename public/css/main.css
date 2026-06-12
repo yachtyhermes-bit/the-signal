@@ -4127,3 +4127,84 @@ body.pulse-modal-open {
   color: #dc2626;
 }
 
+/* ═══════════════════════════════════════════
+   DESKTOP LAYOUT (≥1280px) — wide-screen polish
+   ═══════════════════════════════════════════ */
+@media (min-width: 1280px) {
+  /* Nav & global containers: 1200 → 1440 */
+  .nav-inner        { max-width: 1440px; padding: 0 40px; }
+  .feed             { max-width: 1440px; padding: 0 40px 80px; }
+  .footer-inner     { max-width: 1440px; padding: 0 40px; }
+  .ticker-page      { max-width: 1440px; }
+  .sector-page      { max-width: 1440px; }
+
+  /* Hero: broader, bigger type */
+  .hero             { padding: 100px 40px 60px; }
+  .hero-content     { max-width: 900px; }
+  .hero-title       { font-size: 64px; letter-spacing: -1px; }
+  .hero-sub         { font-size: 18px; max-width: 700px; }
+  .hero-desc        { font-size: 15px; max-width: 700px; }
+
+  /* Focus bar: wider */
+  .focus-bar        { max-width: 800px; }
+
+  /* Article grid: 4 columns at 1440px */
+  .article-grid     { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+
+  /* Featured card: balanced image/text split */
+  .featured-card    { gap: 0; }
+  .featured-content  { padding: 36px; }
+  .featured-title    { font-size: 26px; }
+  .featured-summary  { font-size: 15px; }
+  .featured-image    { min-height: 260px; }
+
+  /* Cards: taller images, more padding */
+  .card-image       { height: 180px; }
+  .card-body        { padding: 24px; }
+  .card-title       { font-size: 17px; }
+  .card-summary     { font-size: 14px; }
+
+  /* Pulse AI section */
+  .pulse-section    { max-width: 860px; }
+
+  /* Scorecard, Highlights, Newsletter: 1280 → 1440 */
+  .scorecard-section      { max-width: 1440px; padding: 0 40px; }
+  .section-divider        { max-width: 1440px; }
+  .detail-stocks-section  { max-width: 1440px; padding: 0 40px; }
+  .detail-stocks-grid     { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+  .newsletter-section     { max-width: 1440px; padding: 0 40px; }
+
+  /* Hive home: 960 → 1200 */
+  .hive-home-inner  { max-width: 1200px; }
+
+  /* Article pages: slightly wider */
+  .article-page     { max-width: 800px; }
+
+  /* Related articles: 4 columns on desktop */
+  .related-grid     { grid-template-columns: repeat(4, 1fr); }
+
+  /* Ticker tape: taller on desktop */
+  .ticker-tape      { height: 38px; }
+  .ticker-item      { font-size: 12px; padding: 0 22px; }
+}
+
+/* Extra-wide screens (≥1600px) — push to 1600 */
+@media (min-width: 1600px) {
+  .nav-inner        { max-width: 1600px; }
+  .feed             { max-width: 1600px; }
+  .scorecard-section     { max-width: 1600px; }
+  .detail-stocks-section { max-width: 1600px; }
+  .newsletter-section    { max-width: 1600px; }
+  .section-divider       { max-width: 1600px; }
+  .footer-inner     { max-width: 1600px; }
+  .ticker-page      { max-width: 1600px; }
+  .sector-page      { max-width: 1600px; }
+
+  .hero             { padding: 120px 48px 72px; }
+  .hero-content     { max-width: 1000px; }
+  .hero-title       { font-size: 72px; }
+
+  /* 5 columns at 1600px */
+  .article-grid     { grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 24px; }
+}
+
