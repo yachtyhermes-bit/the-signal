@@ -1,0 +1,158 @@
+[
+  {
+    "ticker": "KTOS",
+    "name": "Kratos Defense & Security",
+    "currentPrice": 57.75,
+    "changePercent": -1.75,
+    "changeDirection": "down",
+    "fairValue": {
+      "status": "Undervalued",
+      "price": 112.2,
+      "upside": "+94.3%"
+    },
+    "earnings": {
+      "revTtm": "$1.42B",
+      "revGrowth": "+22.6%",
+      "netIncome": "$29.40M",
+      "peRatio": "339.7x",
+      "psRatio": "7.7x"
+    },
+    "analyst": {
+      "consensus": "Strong Buy",
+      "target": 112.2,
+      "buys": 15,
+      "holds": 5,
+      "sells": 0
+    }
+  },
+  {
+    "ticker": "CRWV",
+    "name": "CoreWeave Inc.",
+    "currentPrice": 100.55,
+    "changePercent": 5.02,
+    "changeDirection": "up",
+    "fairValue": {
+      "status": "Undervalued",
+      "price": 140.18,
+      "upside": "+39.4%"
+    },
+    "earnings": {
+      "revTtm": "$6.23B",
+      "revGrowth": "+111.6%",
+      "netIncome": "$-1.59B",
+      "peRatio": "N/A",
+      "psRatio": "8.8x"
+    },
+    "analyst": {
+      "consensus": "Buy",
+      "target": 140.18,
+      "buys": 15,
+      "holds": 16,
+      "sells": 0
+    }
+  },
+  {
+    "ticker": "AXON",
+    "name": "Axon Enterprise Inc.",
+    "currentPrice": 441.73,
+    "changePercent": -1.0,
+    "changeDirection": "down",
+    "fairValue": {
+      "status": "Undervalued",
+      "price": 662.04,
+      "upside": "+49.9%"
+    },
+    "earnings": {
+      "revTtm": "$2.98B",
+      "revGrowth": "+33.7%",
+      "netIncome": "$205.99M",
+      "peRatio": "178.8x",
+      "psRatio": "11.9x"
+    },
+    "analyst": {
+      "consensus": "Strong Buy",
+      "target": 662.04,
+      "buys": 12,
+      "holds": 8,
+      "sells": 0
+    }
+  },
+  {
+    "ticker": "MSFT",
+    "name": "Microsoft Corporation",
+    "currentPrice": 390.74,
+    "changePercent": 0.1,
+    "changeDirection": "up",
+    "fairValue": {
+      "status": "Undervalued",
+      "price": 561.39,
+      "upside": "+43.7%"
+    },
+    "earnings": {
+      "revTtm": "$318.27B",
+      "revGrowth": "+18.3%",
+      "netIncome": "$125.22B",
+      "peRatio": "23.3x",
+      "psRatio": "9.1x"
+    },
+    "analyst": {
+      "consensus": "Strong Buy",
+      "target": 561.39,
+      "buys": 36,
+      "holds": 4,
+      "sells": 0
+    }
+  },
+  {
+    "ticker": "SOFI",
+    "name": "SoFi Technologies Inc.",
+    "currentPrice": 16.58,
+    "changePercent": -0.54,
+    "changeDirection": "down",
+    "fairValue": {
+      "status": "Undervalued",
+      "price": 21.0,
+      "upside": "+26.7%"
+    },
+    "earnings": {
+      "revTtm": "$3.91B",
+      "revGrowth": "+42.5%",
+      "netIncome": "$576.93M",
+      "peRatio": "36.8x",
+      "psRatio": "5.4x"
+    },
+    "analyst": {
+      "consensus": "Buy",
+      "target": 21.0,
+      "buys": 11,
+      "holds": 7,
+      "sells": 0
+    }
+  },
+  {
+    "ticker": "ZS",
+    "name": "Zscaler Inc.",
+    "currentPrice": 129.52,
+    "changePercent": 2.7,
+    "changeDirection": "up",
+    "fairValue": {
+      "status": "Undervalued",
+      "price": 193.05,
+      "upside": "+49.1%"
+    },
+    "earnings": {
+      "revTtm": "$3.17B",
+      "revGrowth": "+25.4%",
+      "netIncome": "$-77.39M",
+      "peRatio": "N/A",
+      "psRatio": "6.6x"
+    },
+    "analyst": {
+      "consensus": "Strong Buy",
+      "target": 193.05,
+      "buys": 24,
+      "holds": 6,
+      "sells": 0
+    }
+  }
+]

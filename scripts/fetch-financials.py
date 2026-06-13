@@ -501,6 +501,26 @@ def main():
     except Exception as e:
         print(f"  ✗ Quarterly financials fetch failed: {e}")
 
+    # --- Quarterly balance sheet data ---
+    try:
+        q_bs = ticker.quarterly_balance_sheet
+        if q_bs is not None and not q_bs.empty:
+            bs_total_assets = []
+            bs_total_liabilities = []
+            for col in list(q_bs.columns[:8]):
+                period_label = f"{col.year}/Q{col.quarter}" if hasattr(col, 'quarter') else str(col)
+                ta_raw = q_bs.loc['Total Assets', col] if 'Total Assets' in q_bs.index else None
+                tl_raw = q_bs.loc['Total Liabilities Net Minority Interest', col] if 'Total Liabilities Net Minority Interest' in q_bs.index else None
+                if tl_raw is None:
+                    tl_raw = q_bs.loc['Total Liabilities', col] if 'Total Liabilities' in q_bs.index else None
+                bs_total_assets.append({"period": period_label, "actual": round(float(ta_raw), 2) if ta_raw is not None else None})
+                bs_total_liabilities.append({"period": period_label, "actual": round(float(tl_raw), 2) if tl_raw is not None else None})
+            quarterly_financials["totalAssets"] = bs_total_assets
+            quarterly_financials["totalLiabilities"] = bs_total_liabilities
+            print(f"  ✓ Balance sheet: {len(bs_total_assets)} quarters of assets/liabilities")
+    except Exception as e:
+        print(f"  ✗ Quarterly balance sheet fetch failed: {e}")
+
     # --- Add future revenue estimates ---
     try:
         rev_est = ticker.revenue_estimate

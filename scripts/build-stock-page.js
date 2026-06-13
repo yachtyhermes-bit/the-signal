@@ -59,6 +59,7 @@ function buildStockPage(symbol) {
       eps: qf.eps || [],
       ebit: qf.ebit || [],
     },
+    annual: fin.annualFinancials || {},
     earnings: earn,
   });
 
@@ -121,7 +122,7 @@ function buildStockPage(symbol) {
 
     <!-- ═══════════ TABS ═══════════ -->
     <nav class="stock-tabs">
-      <button class="stock-tab active" data-tab="overview">Overview</button>
+      <button class="stock-tab active" data-tab="overview">Summary</button>
       <button class="stock-tab" data-tab="financials">Financials</button>
       <button class="stock-tab" data-tab="earnings">Earnings</button>
     </nav>
@@ -223,48 +224,68 @@ function buildStockPage(symbol) {
 
     <!-- ═══════════ FINANCIALS TAB ═══════════ -->
     <div id="tab-financials" class="stock-tab-panel">
+      <!-- ══ INCOME STATEMENT ══ -->
       <section class="fin-section">
         <div class="fin-header">
           <span class="fin-title">Income Statement</span>
           <div class="fin-toggle-group">
-            <button class="fin-toggle-btn active" data-mode="quarterly">Quarterly</button>
-            <button class="fin-toggle-btn" data-mode="annual">Annual</button>
+            <button class="fin-toggle-btn" data-mode="quarterly">Quarterly</button>
+            <button class="fin-toggle-btn active" data-mode="annual">Annual</button>
           </div>
         </div>
-        <div id="finChart" class="fin-chart"></div>
+        <div class="fin-chart-container">
+          <div class="fin-chart-area">
+            <div class="fin-chart-grid" id="finChartGrid"></div>
+            <div class="fin-chart-bars" id="finChartBars"></div>
+          </div>
+          <div class="fin-chart-yaxis" id="finChartYAxis"></div>
+        </div>
+        <div class="fin-chart-xaxis" id="finChartXAxis"></div>
         <div class="fin-legend">
-          <div class="fin-legend-item"><span class="fin-legend-dot" style="background:var(--blue)"></span> Total Revenues</div>
-          <div class="fin-legend-item"><span class="fin-legend-dot" style="background:rgba(156,163,175,0.6)"></span> Net Income</div>
+          <div class="fin-legend-item"><span class="fin-legend-dot" style="background:#4b8ae5"></span> Total Revenues</div>
+          <div class="fin-legend-item"><span class="fin-legend-dot" style="background:#8d939c"></span> Net Income</div>
         </div>
-        <div class="fin-period-scroll" id="finPeriods">
-          ${(qf.revenue || []).slice(0, 8).reverse().map(p => `<span class="fin-period-chip">${p.period}</span>`).join('')}
-        </div>
-        <!-- Financial data table -->
+      </section>
+      <section class="fin-section">
         <div class="fin-table-wrap">
-          <table class="fin-data-table">
-            <thead>
-              <tr>
-                <th>Period Ending</th>
-                ${(qf.revenue || []).slice(0, 5).reverse().map(p => `<th>${p.period.replace('/', ' ')}</th>`).join('')}
-              </tr>
-            </thead>
+          <table class="fin-data-table" id="finDataTable">
+            <thead><tr><th>Period Ending:</th></tr></thead>
             <tbody>
-              <tr class="fin-data-row">
-                <td class="fin-data-label">Total Revenue</td>
-                ${(qf.revenue || []).slice(0, 5).reverse().map(p => `<td>${fmtB(p.actual)}</td>`).join('')}
-              </tr>
-              <tr class="fin-data-row">
-                <td class="fin-data-label">Operating Income</td>
-                ${(qf.ebit || []).slice(0, 5).reverse().map(p => `<td>${fmtB(p.actual)}</td>`).join('')}
-              </tr>
-              <tr class="fin-data-row">
-                <td class="fin-data-label">Net Income</td>
-                ${(qf.netIncome || []).slice(0, 5).reverse().map(p => `<td>${fmtB(p.actual)}</td>`).join('')}
-              </tr>
-              <tr class="fin-data-row">
-                <td class="fin-data-label">EPS</td>
-                ${(qf.eps || []).slice(0, 5).reverse().map(p => `<td>$${p.actual?.toFixed(2) || '—'}</td>`).join('')}
-              </tr>
+              <tr class="fin-data-row"><td class="fin-data-label">Total Revenues</td></tr>
+              <tr class="fin-data-row"><td class="fin-data-label">Gross Profit</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <!-- ══ BALANCE SHEET ══ -->
+      <section class="fin-section">
+        <div class="fin-header">
+          <span class="fin-title">Balance Sheet</span>
+          <div class="fin-toggle-group">
+            <button class="fin-toggle-btn-bs" data-mode="quarterly">Quarterly</button>
+            <button class="fin-toggle-btn-bs active" data-mode="annual">Annual</button>
+          </div>
+        </div>
+        <div class="fin-chart-container">
+          <div class="fin-chart-area">
+            <div class="fin-chart-grid" id="finBsGrid"></div>
+            <div class="fin-chart-bars" id="finBsBars"></div>
+          </div>
+          <div class="fin-chart-yaxis" id="finBsYAxis"></div>
+        </div>
+        <div class="fin-chart-xaxis" id="finBsXAxis"></div>
+        <div class="fin-legend">
+          <div class="fin-legend-item"><span class="fin-legend-dot" style="background:#4b8ae5"></span> Total Assets</div>
+          <div class="fin-legend-item"><span class="fin-legend-dot" style="background:#8d939c"></span> Total Liabilities</div>
+        </div>
+      </section>
+      <section class="fin-section">
+        <div class="fin-table-wrap">
+          <table class="fin-data-table" id="finBsTable">
+            <thead><tr><th>Period Ending:</th></tr></thead>
+            <tbody>
+              <tr class="fin-data-row"><td class="fin-data-label">Total Assets</td></tr>
+              <tr class="fin-data-row"><td class="fin-data-label">Total Liabilities</td></tr>
             </tbody>
           </table>
         </div>
@@ -275,17 +296,43 @@ function buildStockPage(symbol) {
     <div id="tab-earnings" class="stock-tab-panel">
       ${earn.length ? `
       <div class="earn-summary">
-        <div class="earn-summary-title">Recent Earnings</div>
+        <div class="earn-summary-title">Earnings & Revenue Forecast</div>
         <p class="earn-summary-text">${esc(company.name || symbol)} reported earnings results for the periods shown below. ${earn.filter(e => e.epsActual && e.epsEstimate).length} of the last ${earn.length} quarters have reported results.</p>
       </div>
       <div class="earn-cards">
-        ${earn.filter(e => e.epsActual != null).slice(0, 8).map(e => {
+        ${(() => {
+          // Revenue forecast cards from quarterly estimates
+          const revQ = (qf.revenue || []).filter(r => r.estimated && !r.actual).slice(0, 2).reverse();
+          const epsQ = (qf.eps || []).filter(r => r.estimated && !r.actual).slice(0, 2).reverse();
+          return revQ.map((r, i) => {
+            const epsEst = epsQ.find(e => e.period === r.period);
+            return `<div class="earn-card earn-card-forecast">
+              <div class="earn-card-header">
+                <span class="earn-card-period">${r.period} (Est)</span>
+                <span class="earn-card-badge forecast">Forecast</span>
+              </div>
+              <div class="earn-card-row">
+                <span class="earn-card-label">Revenue Est</span>
+                <span class="earn-card-value">${fmtB(r.estimated)}</span>
+              </div>
+              ${epsEst ? `<div class="earn-card-row">
+                <span class="earn-card-label">EPS Est</span>
+                <span class="earn-card-value">$${epsEst.estimated?.toFixed(2) || '—'}</span>
+              </div>` : ''}
+            </div>`;
+          }).join('');
+        })()}
+        ${earn.filter(e => e.epsActual != null).slice(0, 6).map(e => {
           const beat = e.epsActual > (e.epsEstimate || 0) ? 'beat' : (e.epsActual < (e.epsEstimate || 0) ? 'miss' : '');
           const surprise = e.epsEstimate ? ((e.epsActual - e.epsEstimate) / Math.abs(e.epsEstimate) * 100) : null;
           return `<div class="earn-card">
             <div class="earn-card-header">
               <span class="earn-card-period">${e.date?.slice(0,7) || '—'}</span>
               ${beat ? `<span class="earn-card-badge ${beat}">${beat === 'beat' ? '✓ Beat' : '✗ Miss'}</span>` : ''}
+            </div>
+            <div class="earn-card-row">
+              <span class="earn-card-label">Revenue</span>
+              <span class="earn-card-value">${e.revenueActual ? fmtB(e.revenueActual) : '—'}</span>
             </div>
             <div class="earn-card-row">
               <span class="earn-card-label">EPS Actual</span>
@@ -298,10 +345,6 @@ function buildStockPage(symbol) {
             ${surprise != null ? `<div class="earn-card-row">
               <span class="earn-card-label">Surprise</span>
               <span class="earn-card-value earn-card-surprise ${surprise >= 0 ? 'positive' : 'negative'}">${surprise >= 0 ? '+' : ''}${surprise.toFixed(1)}%</span>
-            </div>` : ''}
-            ${e.revenueActual ? `<div class="earn-card-row">
-              <span class="earn-card-label">Revenue</span>
-              <span class="earn-card-value">${fmtB(e.revenueActual)}</span>
             </div>` : ''}
           </div>`;
         }).join('')}

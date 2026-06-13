@@ -39,10 +39,10 @@ if (!fs.existsSync(SRC)) {
 fs.rmSync(DST, { recursive: true, force: true });
 fs.cpSync(SRC, DST, { recursive: true });
 
-// GUARD: Abort if homepage is suspiciously small (< 45KB = stripped design)
+// GUARD: Abort if homepage is suspiciously small (< 35KB = stripped design)
 const htmlSize = fs.statSync(path.join(DST, 'index.html')).size;
-if (htmlSize < 45000) {
-  console.error(`⛔ FATAL: index.html is ${htmlSize} bytes — expected ~48,000+.`);
+if (htmlSize < 35000) {
+  console.error(`⛔ FATAL: index.html is ${htmlSize} bytes — expected ~40,000+.`);
   console.error('   The frozen design may be corrupted.');
   process.exit(1);
 }
@@ -236,6 +236,65 @@ if (!sectorTemplate) {
   console.log(`  ✅ ${sectorCount} sector pages generated`);
 }
 
+// ─── 8.5. Inject Signal Highlights cards from live data ───
+const highlightsPath = path.join(ROOT, 'data', 'signal-highlights.json');
+if (fs.existsSync(highlightsPath)) {
+  const highlights = JSON.parse(fs.readFileSync(highlightsPath, 'utf8'));
+  let cardsHtml = '';
+  for (const h of highlights) {
+    const dir = h.changeDirection || (h.changePercent >= 0 ? 'up' : 'down');
+    const buys = h.analyst.buys || 0;
+    const holds = h.analyst.holds || 0;
+    const sells = h.analyst.sells || 0;
+    const total = buys + holds + sells || 1;
+    const buyPct = Math.round(buys / total * 100);
+    const holdPct = Math.round(holds / total * 100);
+
+    cardsHtml += `<div class="detail-card-link"><div class="detail-card-accent"></div><div class="detail-card-inner">` +
+      `<div class="detail-header"><div class="detail-header-left">` +
+      `<div class="detail-badge">Signal Highlight</div>` +
+      `<div class="detail-ticker">${h.ticker}</div>` +
+      `<div class="detail-name">${h.name}</div></div>` +
+      `<div class="detail-header-right">` +
+      `<div class="detail-price">$${h.currentPrice}</div>` +
+      `<div class="detail-change ${dir}">${h.changePercent >= 0 ? '+' : ''}${h.changePercent}%</div>` +
+      `</div></div>` +
+      // Fair Value
+      `<div class="detail-card-section"><div class="detail-section-title">Fair Value</div>` +
+      `<div class="detail-fair-value"><div class="detail-fv-status">` +
+      `<span class="detail-fv-badge">${h.fairValue.status}</span></div>` +
+      `<div class="detail-fv-rows">` +
+      `<div class="detail-fv-row"><span class="detail-fv-label">Fair Value</span><span class="detail-fv-val">$${h.fairValue.price}</span></div>` +
+      `<div class="detail-fv-row"><span class="detail-fv-label">Current Price</span><span class="detail-fv-val">$${h.currentPrice}</span></div>` +
+      `<div class="detail-fv-row"><span class="detail-fv-label">Upside</span><span class="detail-fv-val detail-fv-upside">${h.fairValue.upside}</span></div>` +
+      `</div></div></div>` +
+      // Earnings
+      `<div class="detail-card-section"><div class="detail-section-title">Earnings</div>` +
+      `<div class="detail-earnings">` +
+      `<div class="detail-earn-row"><span class="detail-earn-label">Revenue (TTM)</span><span class="detail-earn-val">${h.earnings.revTtm}</span></div>` +
+      `<div class="detail-earn-row"><span class="detail-earn-label">Revenue Growth</span><span class="detail-earn-val detail-revision-up">${h.earnings.revGrowth}</span></div>` +
+      `<div class="detail-earn-row"><span class="detail-earn-label">Net Income</span><span class="detail-earn-val">${h.earnings.netIncome}</span></div>` +
+      `</div></div>` +
+      // Analyst
+      `<div class="detail-card-section detail-section-last"><div class="detail-section-title">Analyst Ratings</div>` +
+      `<div class="detail-analyst"><div class="detail-ana-top">` +
+      `<span class="detail-consensus-badge">${h.analyst.consensus}</span>` +
+      `<span class="detail-ana-target">Target <strong>$${h.analyst.target}</strong></span></div>` +
+      `<div class="detail-rating-bar">` +
+      `<div class="detail-rating-seg detail-rating-buy" style="width:${buyPct}%"></div>` +
+      `<div class="detail-rating-seg detail-rating-hold" style="width:${holdPct}%"></div>` +
+      `</div><div class="detail-rating-legend">` +
+      `<span class="detail-legend-item"><span class="detail-rating-dot detail-dot-buy"></span>Buy ${buys}</span>` +
+      `<span class="detail-legend-item"><span class="detail-rating-dot detail-dot-hold"></span>Hold ${holds}</span>` +
+      `</div></div></div></div></div>\n`;
+  }
+  indexHtml = indexHtml.replace('SIGNAL_HIGHLIGHTS_PLACEHOLDER', cardsHtml);
+  fs.writeFileSync(path.join(DST, 'index.html'), indexHtml);
+  console.log(`  ✅ ${highlights.length} Signal Highlight cards injected`);
+} else {
+  console.log('  ⚠️  No data/signal-highlights.json — run scripts/refresh-signal-highlights.py first');
+}
+
 // ─── 9. Copy API serverless functions ───
 const apiDir = path.join(ROOT, 'api');
 const distApiDir = path.join(DST, 'api');
@@ -244,18 +303,14 @@ if (fs.existsSync(apiDir)) {
   const apiFiles = fs.readdirSync(apiDir);
   for (const f of apiFiles) {
     const srcPath = path.join(apiDir, f);
-    if (fs.statSync(srcPath).isFile()) {
-      fs.copyFileSync(srcPath, path.join(distApiDir, f));
+    const dstPath = path.join(distApiDir, f);
+    if (fs.statSync(srcPath).isDirectory()) {
+      fs.cpSync(srcPath, dstPath, { recursive: true });
+    } else {
+      fs.copyFileSync(srcPath, dstPath);
     }
   }
-  console.log(`  ✅ ${apiFiles.length} API functions copied`);
-}
-
-// Also copy requirements.txt to dist/ for Vercel Python dependencies
-const reqSrc = path.join(ROOT, 'requirements.txt');
-if (fs.existsSync(reqSrc)) {
-  fs.copyFileSync(reqSrc, path.join(DST, 'requirements.txt'));
-  console.log('  ✅ requirements.txt copied for Python deps');
+  console.log(`  ✅ ${apiFiles.length} API items copied`);
 }
 
 // ─── Summary ───

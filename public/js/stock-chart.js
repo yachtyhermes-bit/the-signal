@@ -1,5 +1,5 @@
-// The Signal — Stock Profile Charts v4
-// Heikin-Ashi candlesticks · Financials bar chart · Tab management
+// The Signal — Stock Profile Charts v5
+// Heikin-Ashi candlesticks · Div-based financials bar chart · Tab management
 
 (function() {
   'use strict';
@@ -7,8 +7,7 @@
   const isMobile = window.innerWidth < 768;
   const BG = '#11141c', GRID = '#1a1e28', TEXT = '#5c6270', BORDER = '#1f2430';
   const BLUE = '#3b82f6', GREEN = '#22c55e', RED = '#ef4444';
-  let mainChart = null, finChart = null;
-  let finInitialized = false;
+  let mainChart = null, finInitialized = false;
 
   // ═══ DATA ══════════════════════════════════════════════════
   const dataScript = document.querySelector('script[id^="chartData-"]');
@@ -16,6 +15,7 @@
   const pageData = JSON.parse(dataScript.textContent);
   const ohlcData = pageData.prices || [];
   const quarterly = pageData.quarterly || {};
+  const annual = pageData.annual || {};
 
   // ═══ HEIKIN-ASHI ═══════════════════════════════════════════
   function computeHeikinAshi(data) {
@@ -42,7 +42,7 @@
     return data.filter(d => new Date(d.time) >= cutoff);
   }
 
-  // ═══ INIT MAIN CHART (always visible) ════════════════════════
+  // ═══ INIT MAIN CHART ════════════════════════════════════════
   function initMainChart() {
     const chartEl = document.getElementById('stockChart');
     if (!chartEl || !ohlcData.length) return;
@@ -79,7 +79,6 @@
         time: d.time, value: d.volume || 0,
         color: d.close >= d.open ? 'rgba(34,197,94,0.12)' : 'rgba(239,68,68,0.1)',
       })));
-      // Adaptive bar spacing: compress bars for longer timeframes
       const m = window.innerWidth < 768;
       const spacings = { '1m': { bar: m ? 7 : 12, min: m ? 3 : 5 }, '3m': { bar: m ? 3 : 7, min: m ? 1.5 : 3 }, '6m': { bar: m ? 2 : 5, min: m ? 1 : 2 }, '1y': { bar: m ? 1.2 : 3, min: m ? 0.6 : 1.5 }, '5y': { bar: m ? 0.5 : 2, min: m ? 0.25 : 0.8 }, 'all': { bar: m ? 0.3 : 1.5, min: m ? 0.15 : 0.5 } };
       const s = spacings[tf] || spacings['1y'];
@@ -89,7 +88,6 @@
 
     setChartData('1m');
 
-    // Timeframe buttons
     document.querySelectorAll('.tf-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         document.querySelectorAll('.tf-btn').forEach(b => b.classList.remove('active'));
@@ -98,7 +96,6 @@
       });
     });
 
-    // Tooltip
     const tooltip = document.createElement('div');
     tooltip.className = 'chart-tooltip';
     chartEl.style.position = 'relative';
@@ -126,84 +123,165 @@
     });
   }
 
-  // ═══ INIT FINANCIALS CHART (lazy — only when tab activated) ═══
+  // ═══ FORMAT ═════════════════════════════════════════════════
+  function fmtB(n) { if (n == null||isNaN(n)) return '—'; return n >= 1e9 ? (n/1e9).toFixed(1)+'B' : n >= 1e6 ? (n/1e6).toFixed(0)+'M' : '$'+n.toFixed(0); }
+  function fmtComma(n) { if (n == null||isNaN(n)) return '—'; return Math.round(n).toLocaleString('en-US'); }
+
+  // Quarter label mapping: "2026/Q2" → "Q2 2026"
+  function qLabel(p) {
+    const m = String(p).match(/(\d{4})\/Q(\d)/);
+    return m ? 'Q'+m[2]+' '+m[1] : p;
+  }
+  // Quarter → date: "2026/Q2" → "Jul 31, 2025" (NVDA FY ends Jan, so Q2 ≈ Jul)
+  function qDate(p) {
+    const m = String(p).match(/(\d{4})\/Q(\d)/);
+    if (!m) return p;
+    const q = parseInt(m[2]), yr = parseInt(m[1]);
+    const months = ['Jan','Apr','Jul','Oct'];
+    const calYr = q === 1 ? yr - 1 : yr; // FY Q1 is in prior calendar year
+    return months[q-1] + ' ' + ['31','30','31','31'][q-1] + ', ' + calYr;
+  }
+  // Annual date: "01/2026" → "Jan 24, 2026" (NVDA FY ends ~Jan 24-31)
+  function aDate(p) {
+    const m = String(p).match(/(\d{2})\/(\d{4})/);
+    if (!m) return p;
+    const mo = parseInt(m[1]), yr = parseInt(m[2]);
+    const days = ['','24','24','24','24','24','24','29','27','25','24','24','24'];
+    const mon = ['','Jan','Jan','Jan','Jan','Jan','Jan','Jul','Oct','Jan','Jan','Jan','Jan'];
+    // NVDA fiscal year: Jan 2026 = period ending ~Jan 24, 2026
+    // Jan 2025 = Jan 25, 2025, Jul 2024 = Jul 28, 2024, Oct 2023 = Oct 29, 2023
+    // Use a simple mapping
+    const approxDays = {1:'24',4:'27',7:'28',10:'27'};
+    const approxMon = {1:'Jan',4:'Apr',7:'Jul',10:'Oct'};
+    return (approxMon[mo]||'Jan')+' '+(approxDays[mo]||'31')+', '+yr;
+  }
+
+  // ═══ INIT FINANCIALS CHARTS ════════════════════════════════
   function initFinChart() {
     if (finInitialized) return;
-    const finEl = document.getElementById('finChart');
-    if (!finEl) return;
-    // Force explicit height so chart renders properly inside hidden tab
-    const isMob = window.innerWidth < 768;
-    finEl.style.height = (isMob ? '320px' : '400px');
 
-    const revData = quarterly.revenue || [];
-    const niData = quarterly.netIncome || [];
+    // ── Income Statement ──
+    const isGrid = document.getElementById('finChartGrid');
+    const isBars = document.getElementById('finChartBars');
+    const isYAxis = document.getElementById('finChartYAxis');
+    const isXAxis = document.getElementById('finChartXAxis');
 
-    function buildData(mode) {
-      const isQ = mode !== 'annual';
-      const rev = [], ni = [];
-      const revSrc = isQ ? revData.slice(0, 20).reverse() : aggregateAnnual(revData);
-      const niSrc = isQ ? niData.slice(0, 20).reverse() : aggregateAnnual(niData);
-      // Convert period to valid Lightweight Charts time format
-      function toTime(period) {
-        if (period.includes('/')) {
-          // "2026/Q2" → "2026-04-01"
-          const [yr, qt] = period.split('/');
-          const m = { Q1: '01', Q2: '04', Q3: '07', Q4: '10' }[qt] || '01';
-          return yr + '-' + m + '-01';
-        }
-        // Annual: "2026" → "2026-01-01"
-        return period + '-01-01';
+    // ── Balance Sheet ──
+    const bsGrid = document.getElementById('finBsGrid');
+    const bsBars = document.getElementById('finBsBars');
+    const bsYAxis = document.getElementById('finBsYAxis');
+    const bsXAxis = document.getElementById('finBsXAxis');
+
+    if (!isGrid || !isBars) return;
+
+    const Y_TICKS_IS = [240, 200, 160, 120, 80, 40, 0];
+    const MAX_IS = 240e9;
+
+    // Income Statement grid (static) + Y-axis
+    isGrid.innerHTML = Y_TICKS_IS.map(() => '<div class="fin-chart-grid-line"></div>').join('');
+    isYAxis.innerHTML = Y_TICKS_IS.map(v => '<span>'+v+'b</span>').join('');
+
+    function buildIS(mode) {
+      const isAnn = mode === 'annual';
+      if (isAnn && annual.income && annual.income.length) {
+        return annual.income.map(e => ({
+          period: e.period.replace('01/',''), fullDate: aDate(e.period),
+          rev: e['Total Revenue'] || 0, gp: e['Gross Profit'] || 0, ni: e['Net Income'] || 0,
+        })).reverse();
+      } else {
+        const qRev = (quarterly.revenue || []).filter(p => p.actual).slice(0, 8).reverse();
+        return qRev.map(r => {
+          const niEntry = (quarterly.netIncome||[]).find(n => n.period === r.period);
+          return { period: qLabel(r.period), fullDate: qDate(r.period),
+            rev: r.actual || 0, gp: (r.actual||0) * 0.7, ni: niEntry ? niEntry.actual : 0 };
+        });
       }
-      for (const p of revSrc) rev.push({ time: toTime(p.period), value: p.actual || 0 });
-      for (const p of niSrc) ni.push({ time: toTime(p.period), value: p.actual || 0 });
-      return { rev, ni };
     }
 
-    function aggregateAnnual(data) {
-      const a = {};
-      for (const d of data) {
-        if (!d.actual) continue;
-        const yr = d.period.split('/')[0];
-        a[yr] = (a[yr] || 0) + d.actual;
+    function renderIS(mode) {
+      const data = buildIS(mode);
+      isBars.innerHTML = data.map(d => {
+        const revH = Math.max(0.5, (d.rev / MAX_IS) * 100);
+        const niH = Math.max(0.5, (d.ni / MAX_IS) * 100);
+        return `<div class="fin-bar-group"><div class="fin-bar-tooltip">${d.period} | Rev: ${fmtB(d.rev)} | Net: ${fmtB(d.ni)}</div><div class="fin-bar-rev" style="height:${revH}%"></div><div class="fin-bar-ni" style="height:${niH}%"></div></div>`;
+      }).join('');
+      isXAxis.innerHTML = data.map(d => '<span>'+d.period+'</span>').join('');
+      // Data table
+      const table = document.getElementById('finDataTable');
+      if (table) {
+        const rev = data.slice().reverse().slice(0, 3);
+        table.querySelector('thead tr').innerHTML = '<th>Period Ending:</th>' + rev.map(d => '<th>'+d.fullDate+'</th>').join('');
+        table.querySelector('tbody').innerHTML =
+          '<tr class="fin-data-row"><td class="fin-data-label">Total Revenues</td>'+rev.map(d => '<td>'+fmtComma(d.rev)+'</td>').join('')+'</tr>'+
+          '<tr class="fin-data-row"><td class="fin-data-label">Gross Profit</td>'+rev.map(d => '<td>'+fmtComma(d.gp)+'</td>').join('')+'</tr>';
       }
-      return Object.entries(a).sort(([a],[b]) => a.localeCompare(b)).map(([p, v]) => ({ period: p, actual: v }));
     }
 
-    const { rev, ni } = buildData('quarterly');
+    // ── Balance Sheet ──
+    function buildBS(mode) {
+      const isAnn = mode === 'annual';
+      if (isAnn && annual.balance && annual.balance.length) {
+        return annual.balance.map(e => ({
+          period: e.period.replace(/^\d{2}\//,''), fullDate: aDate(e.period),
+          assets: e['Total Assets'] || 0, liab: e['Total Liabilities'] || 0,
+        })).reverse();
+      } else {
+        const qAssets = (quarterly.totalAssets || []).filter(p => p.actual).slice(0, 8).reverse();
+        return qAssets.map(a => {
+          const lEntry = (quarterly.totalLiabilities||[]).find(l => l.period === a.period);
+          return { period: qLabel(a.period), fullDate: qDate(a.period),
+            assets: a.actual || 0, liab: lEntry ? lEntry.actual : 0 };
+        });
+      }
+    }
 
-    finChart = window.LightweightCharts.createChart(finEl, {
-      layout: { background: { type: 'solid', color: BG }, textColor: TEXT },
-      grid: { vertLines: { color: GRID, style: 1 }, horzLines: { color: GRID, style: 1 } },
-      rightPriceScale: { borderColor: BORDER },
-      timeScale: { borderColor: BORDER, timeVisible: true, fixLeftEdge: true, barSpacing: isMob ? 18 : 28, minBarSpacing: isMob ? 8 : 12 },
-      width: finEl.clientWidth,
-      height: parseInt(finEl.style.height) || 380,
-    });
+    function renderBS(mode) {
+      const data = buildBS(mode);
+      const maxVal = Math.max(1e9, ...data.map(d => Math.max(d.assets, d.liab))) * 1.1;
+      const maxRounded = Math.ceil(maxVal / 40e9) * 40e9;
+      const MAX_BS = maxRounded > 0 ? maxRounded : 240e9;
+      const BS_TICKS = [MAX_BS/1e9, (MAX_BS/1e9)*5/6, (MAX_BS/1e9)*4/6, (MAX_BS/1e9)*3/6, (MAX_BS/1e9)*2/6, (MAX_BS/1e9)*1/6, 0].map(v => Math.round(v));
 
-    const revSeries = finChart.addHistogramSeries({ color: BLUE });
-    const niSeries = finChart.addHistogramSeries({ color: 'rgba(156,163,175,0.6)' });
+      if (bsGrid) bsGrid.innerHTML = BS_TICKS.map(() => '<div class="fin-chart-grid-line"></div>').join('');
+      if (bsYAxis) bsYAxis.innerHTML = BS_TICKS.map(v => '<span>'+v+'b</span>').join('');
 
-    revSeries.setData(rev);
-    niSeries.setData(ni);
-    finChart.timeScale().fitContent();
+      if (bsBars) bsBars.innerHTML = data.map(d => {
+        const taH = Math.max(0.5, (d.assets / MAX_BS) * 100);
+        const tlH = Math.max(0.5, (d.liab / MAX_BS) * 100);
+        return `<div class="fin-bar-group"><div class="fin-bar-tooltip">${d.period} | Assets: ${fmtB(d.assets)} | Liab: ${fmtB(d.liab)}</div><div class="fin-bar-rev" style="height:${taH}%"></div><div class="fin-bar-ni" style="height:${tlH}%"></div></div>`;
+      }).join('');
+      if (bsXAxis) bsXAxis.innerHTML = data.map(d => '<span>'+d.period+'</span>').join('');
+      // BS data table
+      const bsTable = document.getElementById('finBsTable');
+      if (bsTable) {
+        const rev = data.slice().reverse().slice(0, 3);
+        bsTable.querySelector('thead tr').innerHTML = '<th>Period Ending:</th>' + rev.map(d => '<th>'+d.fullDate+'</th>').join('');
+        bsTable.querySelector('tbody').innerHTML =
+          '<tr class="fin-data-row"><td class="fin-data-label">Total Assets</td>'+rev.map(d => '<td>'+fmtComma(d.assets)+'</td>').join('')+'</tr>'+
+          '<tr class="fin-data-row"><td class="fin-data-label">Total Liabilities</td>'+rev.map(d => '<td>'+fmtComma(d.liab)+'</td>').join('')+'</tr>';
+      }
+    }
 
+    // Initial renders
+    renderIS('annual');
+    renderBS('annual');
+
+    // Toggle buttons — Income Statement
     document.querySelectorAll('.fin-toggle-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         document.querySelectorAll('.fin-toggle-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        const { rev: rp, ni: np } = buildData(btn.dataset.mode);
-        revSeries.setData(rp);
-        niSeries.setData(np);
-        finChart.timeScale().fitContent();
+        renderIS(btn.dataset.mode);
       });
     });
 
-    window.addEventListener('resize', () => {
-      if (finChart) {
-        const m = window.innerWidth < 768;
-        finEl.style.height = (m ? '320px' : '400px');
-        finChart.applyOptions({ width: finEl.clientWidth, height: parseInt(finEl.style.height) });
-      }
+    // Toggle buttons — Balance Sheet
+    document.querySelectorAll('.fin-toggle-btn-bs').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.fin-toggle-btn-bs').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderBS(btn.dataset.mode);
+      });
     });
 
     finInitialized = true;
@@ -218,16 +296,14 @@
       const target = document.getElementById('tab-' + tab.dataset.tab);
       if (target) target.classList.add('active');
 
-      // Lazy-init financials chart when tab is first opened
       if (tab.dataset.tab === 'financials') {
-        setTimeout(initFinChart, 50);
+        setTimeout(initFinChart, 100);
       }
 
-      // Resize main chart if switching to chart tab
-      if (tab.dataset.tab === 'overview' && chartEl) {
+      if (tab.dataset.tab === 'overview') {
         setTimeout(() => {
           const el = document.getElementById('stockChart');
-          if (el) mainChart.applyOptions({ width: el.clientWidth });
+          if (el && mainChart) mainChart.applyOptions({ width: el.clientWidth });
         }, 50);
       }
     });
@@ -236,9 +312,8 @@
   // ═══ STARTUP ════════════════════════════════════════════════
   initMainChart();
 
-  // If financials tab is somehow active at load, init it
   if (document.getElementById('tab-financials')?.classList.contains('active')) {
-    setTimeout(initFinChart, 100);
+    setTimeout(initFinChart, 150);
   }
 
 })();

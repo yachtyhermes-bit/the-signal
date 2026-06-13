@@ -6,3 +6,8 @@ dist/
 *.log
 .vercel
 .credentials/
+.env*
+.dev.vars
+.wrangler/
+v2/
+*.research.md
