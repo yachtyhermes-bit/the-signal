@@ -325,25 +325,35 @@ function buildStockPage(symbol) {
         ${earn.filter(e => e.epsActual != null).slice(0, 6).map(e => {
           const beat = e.epsActual > (e.epsEstimate || 0) ? 'beat' : (e.epsActual < (e.epsEstimate || 0) ? 'miss' : '');
           const surprise = e.epsEstimate ? ((e.epsActual - e.epsEstimate) / Math.abs(e.epsEstimate) * 100) : null;
+          const revBeat = (e.revenueActual && e.revenueEstimate) ? (e.revenueActual > e.revenueEstimate ? 'beat' : 'miss') : '';
+          const revSurprise = (e.revenueActual && e.revenueEstimate) ? ((e.revenueActual - e.revenueEstimate) / Math.abs(e.revenueEstimate) * 100) : null;
           return `<div class="earn-card">
             <div class="earn-card-header">
               <span class="earn-card-period">${e.date?.slice(0,7) || '—'}</span>
               ${beat ? `<span class="earn-card-badge ${beat}">${beat === 'beat' ? '✓ Beat' : '✗ Miss'}</span>` : ''}
             </div>
             <div class="earn-card-row">
-              <span class="earn-card-label">Revenue</span>
+              <span class="earn-card-label">Revenue Actual</span>
               <span class="earn-card-value">${e.revenueActual ? fmtB(e.revenueActual) : '—'}</span>
             </div>
+            ${e.revenueEstimate ? `<div class="earn-card-row">
+              <span class="earn-card-label">Revenue Forecast</span>
+              <span class="earn-card-value">${fmtB(e.revenueEstimate)}</span>
+            </div>
+            ${revSurprise != null ? `<div class="earn-card-row">
+              <span class="earn-card-label">Rev Surprise</span>
+              <span class="earn-card-value earn-card-surprise ${revSurprise >= 0 ? 'positive' : 'negative'}">${revSurprise >= 0 ? '+' : ''}${revSurprise.toFixed(1)}%</span>
+            </div>` : ''}` : ''}
             <div class="earn-card-row">
               <span class="earn-card-label">EPS Actual</span>
               <span class="earn-card-value">$${e.epsActual?.toFixed(2) || '—'}</span>
             </div>
             <div class="earn-card-row">
-              <span class="earn-card-label">EPS Estimate</span>
+              <span class="earn-card-label">EPS Forecast</span>
               <span class="earn-card-value">$${e.epsEstimate?.toFixed(2) || '—'}</span>
             </div>
             ${surprise != null ? `<div class="earn-card-row">
-              <span class="earn-card-label">Surprise</span>
+              <span class="earn-card-label">EPS Surprise</span>
               <span class="earn-card-value earn-card-surprise ${surprise >= 0 ? 'positive' : 'negative'}">${surprise >= 0 ? '+' : ''}${surprise.toFixed(1)}%</span>
             </div>` : ''}
           </div>`;

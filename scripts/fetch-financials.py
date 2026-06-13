@@ -745,6 +745,20 @@ def main():
     print(f"\n✅ Written to {out_path}")
     print(f"   Stats fields: {len(stats)}")
     print(f"   Chart points: {len(chart_data)}")
+    # ── FMP enrichment (free tier, auto-called after each fetch) ──
+    try:
+        from scripts.fetch_fmp import enrich_ticker_data
+        import json as _json
+        _sym_list = list(result.keys()) if isinstance(result, dict) else [result.get('symbol','NVDA')]
+        for sym in _sym_list:
+            if sym in result and isinstance(result[sym], dict):
+                print(f"\n📊 FMP enrichment: {sym}")
+                result[sym] = enrich_ticker_data(sym, result[sym])
+        print("✅ FMP enrichment complete")
+    except ImportError:
+        pass
+    except Exception as e:
+        print(f"⚠️  FMP enrichment skipped: {e}")
 
 
 if __name__ == "__main__":
