@@ -1639,7 +1639,7 @@
       "ticker": "AVAV",
       "action": "sell",
       "shares": 4,
-      "price": 92.0,
+      "price": 92,
       "date": "2026-04-09T10:21:15Z",
       "uid": "usr_ee2913dcbfd9625a"
     },
@@ -1703,7 +1703,7 @@
       "ticker": "ASTS",
       "action": "buy",
       "shares": 50,
-      "price": 74.0,
+      "price": 74,
       "date": "2025-12-07T19:11:37Z",
       "uid": "usr_353412010c5a7312"
     },
@@ -2079,7 +2079,7 @@
       "ticker": "PANW",
       "action": "buy",
       "shares": 50,
-      "price": 166.0,
+      "price": 166,
       "date": "2026-02-09T19:11:39Z",
       "uid": "usr_07ed77036457c48f"
     },
@@ -2407,7 +2407,7 @@
       "ticker": "META",
       "action": "sell",
       "shares": 25,
-      "price": 210.0,
+      "price": 210,
       "date": "2026-02-27T22:53:30Z",
       "uid": "usr_a5c30f0cf35d04c8"
     },
@@ -3231,7 +3231,7 @@
       "ticker": "QUBT",
       "action": "buy",
       "shares": 50,
-      "price": 11.0,
+      "price": 11,
       "date": "2025-12-02T00:00:00Z",
       "uid": "usr_bb3634a037315b83"
     },
@@ -3335,7 +3335,7 @@
       "ticker": "IONQ",
       "action": "buy",
       "shares": 50,
-      "price": 46.0,
+      "price": 46,
       "date": "2025-12-26T00:00:00Z",
       "uid": "usr_bb3634a037315b83"
     },
@@ -5503,7 +5503,7 @@
       "ticker": "CHKP",
       "action": "buy",
       "shares": 18,
-      "price": 190.0,
+      "price": 190,
       "date": "2026-01-11T00:00:00Z",
       "uid": "usr_779ec87afc2e8d0b"
     },
@@ -5975,7 +5975,7 @@
       "ticker": "CRWV",
       "action": "sell",
       "shares": 10,
-      "price": 27.0,
+      "price": 27,
       "date": "2025-12-05T00:00:00Z",
       "uid": "usr_9edfb43eca35a4a2"
     },
@@ -7263,7 +7263,7 @@
       "ticker": "ZS",
       "action": "buy",
       "shares": 12,
-      "price": 171.0,
+      "price": 171,
       "date": "2026-02-11T19:11:39Z",
       "uid": "usr_07ed77036457c48f"
     },
@@ -10823,7 +10823,7 @@
       "ticker": "AMZN",
       "action": "buy",
       "shares": 22,
-      "price": 254.0,
+      "price": 254,
       "date": "2025-11-03T00:00:00Z",
       "uid": "usr_ad1e7655a3088e5f"
     },
@@ -10839,7 +10839,7 @@
       "ticker": "GOOGL",
       "action": "buy",
       "shares": 12,
-      "price": 277.0,
+      "price": 277,
       "date": "2025-11-04T00:00:00Z",
       "uid": "usr_ad1e7655a3088e5f"
     },
@@ -10991,7 +10991,7 @@
       "ticker": "PANW",
       "action": "sell",
       "shares": 4,
-      "price": 91.0,
+      "price": 91,
       "date": "2026-02-17T00:00:00Z",
       "uid": "usr_ee2913dcbfd9625a"
     },
@@ -11479,7 +11479,7 @@
       "ticker": "RDW",
       "action": "buy",
       "shares": 45,
-      "price": 8.0,
+      "price": 8,
       "date": "2025-12-19T00:00:00Z",
       "uid": "usr_bd7e95db529f90ac"
     },
@@ -11487,7 +11487,7 @@
       "ticker": "PLTR",
       "action": "sell",
       "shares": 4,
-      "price": 7.0,
+      "price": 7,
       "date": "2025-12-29T00:00:00Z",
       "uid": "usr_bd7e95db529f90ac"
     },
@@ -12079,7 +12079,7 @@
       "ticker": "GD",
       "action": "sell",
       "shares": 1,
-      "price": 214.0,
+      "price": 214,
       "date": "2026-05-28T00:00:00Z",
       "uid": "usr_a5c30f0cf35d04c8"
     },
@@ -13135,7 +13135,7 @@
       "ticker": "NVDA",
       "action": "buy",
       "shares": 41,
-      "price": 214.0,
+      "price": 214,
       "date": "2026-05-28T00:00:00Z",
       "uid": "usr_bb3634a037315b83"
     },
@@ -13327,7 +13327,7 @@
       "ticker": "CRWD",
       "action": "sell",
       "shares": 5,
-      "price": 156.0,
+      "price": 156,
       "date": "2026-03-17T00:00:00Z",
       "uid": "usr_63a5f948290cbc43"
     },
@@ -13495,7 +13495,7 @@
       "ticker": "MSFT",
       "action": "sell",
       "shares": 11,
-      "price": 83.0,
+      "price": 83,
       "date": "2025-12-19T00:00:00Z",
       "uid": "usr_cf8b38bc10316048"
     },
@@ -14327,7 +14327,7 @@
       "ticker": "HOOD",
       "action": "sell",
       "shares": 2,
-      "price": 386.0,
+      "price": 386,
       "date": "2026-05-22T00:00:00Z",
       "uid": "usr_2403c9113f45afe1"
     },
@@ -14703,7 +14703,7 @@
       "ticker": "GE",
       "action": "sell",
       "shares": 9,
-      "price": 303.0,
+      "price": 303,
       "date": "2026-06-10T00:00:00Z",
       "uid": "usr_f5c5d8724fe99417"
     },
@@ -15255,7 +15255,7 @@
       "ticker": "INTC",
       "action": "sell",
       "shares": 11,
-      "price": 81.0,
+      "price": 81,
       "date": "2026-04-20T00:00:00Z",
       "uid": "usr_31dbadba8ecb839e"
     },
@@ -15447,7 +15447,7 @@
       "ticker": "AVAV",
       "action": "buy",
       "shares": 11,
-      "price": 158.0,
+      "price": 158,
       "date": "2026-05-15T00:00:00Z",
       "uid": "usr_779ec87afc2e8d0b"
     },
@@ -17911,7 +17911,7 @@
           "ticker": "PANW",
           "action": "sell",
           "shares": 4,
-          "price": 91.0,
+          "price": 91,
           "date": "2026-02-17T00:00:00Z",
           "uid": "usr_ee2913dcbfd9625a"
         },
@@ -18095,7 +18095,7 @@
           "ticker": "AVAV",
           "action": "sell",
           "shares": 4,
-          "price": 92.0,
+          "price": 92,
           "date": "2026-04-09T10:21:15Z",
           "uid": "usr_ee2913dcbfd9625a"
         },
@@ -19019,7 +19019,7 @@
           "ticker": "RDW",
           "action": "buy",
           "shares": 45,
-          "price": 8.0,
+          "price": 8,
           "date": "2025-12-19T00:00:00Z",
           "uid": "usr_bd7e95db529f90ac"
         },
@@ -19043,7 +19043,7 @@
           "ticker": "PLTR",
           "action": "sell",
           "shares": 4,
-          "price": 7.0,
+          "price": 7,
           "date": "2025-12-29T00:00:00Z",
           "uid": "usr_bd7e95db529f90ac"
         },
@@ -20407,7 +20407,7 @@
           "ticker": "META",
           "action": "sell",
           "shares": 25,
-          "price": 210.0,
+          "price": 210,
           "date": "2026-02-27T22:53:30Z",
           "uid": "usr_a5c30f0cf35d04c8"
         },
@@ -20487,7 +20487,7 @@
           "ticker": "GD",
           "action": "sell",
           "shares": 1,
-          "price": 214.0,
+          "price": 214,
           "date": "2026-05-28T00:00:00Z",
           "uid": "usr_a5c30f0cf35d04c8"
         },
@@ -22472,7 +22472,7 @@
           "ticker": "QUBT",
           "action": "buy",
           "shares": 50,
-          "price": 11.0,
+          "price": 11,
           "date": "2025-12-02T00:00:00Z",
           "uid": "usr_bb3634a037315b83"
         },
@@ -22656,7 +22656,7 @@
           "ticker": "IONQ",
           "action": "buy",
           "shares": 50,
-          "price": 46.0,
+          "price": 46,
           "date": "2025-12-26T00:00:00Z",
           "uid": "usr_bb3634a037315b83"
         },
@@ -23056,7 +23056,7 @@
           "ticker": "NVDA",
           "action": "buy",
           "shares": 41,
-          "price": 214.0,
+          "price": 214,
           "date": "2026-05-28T00:00:00Z",
           "uid": "usr_bb3634a037315b83"
         },
@@ -23091,7 +23091,7 @@
       "uid": "usr_63a5f948290cbc43",
       "displayName": "DiamondHands",
       "photoURL": null,
-      "cash": 32446.0,
+      "cash": 32446,
       "holdings": {
         "TENB": 167,
         "CHKP": 45,
@@ -23605,7 +23605,7 @@
           "ticker": "CRWD",
           "action": "sell",
           "shares": 5,
-          "price": 156.0,
+          "price": 156,
           "date": "2026-03-17T00:00:00Z",
           "uid": "usr_63a5f948290cbc43"
         },
@@ -26221,7 +26221,7 @@
           "ticker": "HOOD",
           "action": "sell",
           "shares": 2,
-          "price": 386.0,
+          "price": 386,
           "date": "2026-05-22T00:00:00Z",
           "uid": "usr_2403c9113f45afe1"
         },
@@ -27216,7 +27216,7 @@
           "ticker": "GE",
           "action": "sell",
           "shares": 9,
-          "price": 303.0,
+          "price": 303,
           "date": "2026-06-10T00:00:00Z",
           "uid": "usr_f5c5d8724fe99417"
         },
@@ -28719,7 +28719,7 @@
           "ticker": "INTC",
           "action": "sell",
           "shares": 11,
-          "price": 81.0,
+          "price": 81,
           "date": "2026-04-20T00:00:00Z",
           "uid": "usr_31dbadba8ecb839e"
         },
@@ -29154,7 +29154,7 @@
           "ticker": "CHKP",
           "action": "buy",
           "shares": 18,
-          "price": 190.0,
+          "price": 190,
           "date": "2026-01-11T00:00:00Z",
           "uid": "usr_779ec87afc2e8d0b"
         },
@@ -29290,7 +29290,7 @@
           "ticker": "AVAV",
           "action": "buy",
           "shares": 11,
-          "price": 158.0,
+          "price": 158,
           "date": "2026-05-15T00:00:00Z",
           "uid": "usr_779ec87afc2e8d0b"
         },
@@ -30846,7 +30846,7 @@
           "ticker": "CRWV",
           "action": "sell",
           "shares": 10,
-          "price": 27.0,
+          "price": 27,
           "date": "2025-12-05T00:00:00Z",
           "uid": "usr_9edfb43eca35a4a2"
         },
@@ -33253,7 +33253,7 @@
           "ticker": "AMZN",
           "action": "buy",
           "shares": 22,
-          "price": 254.0,
+          "price": 254,
           "date": "2025-11-03T00:00:00Z",
           "uid": "usr_ad1e7655a3088e5f"
         },
@@ -33269,7 +33269,7 @@
           "ticker": "GOOGL",
           "action": "buy",
           "shares": 12,
-          "price": 277.0,
+          "price": 277,
           "date": "2025-11-04T00:00:00Z",
           "uid": "usr_ad1e7655a3088e5f"
         },
