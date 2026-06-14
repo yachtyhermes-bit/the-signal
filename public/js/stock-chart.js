@@ -5,8 +5,12 @@
   'use strict';
 
   const isMobile = window.innerWidth < 768;
-  const BG = '#11141c', GRID = '#1a1e28', TEXT = '#5c6270', BORDER = '#1f2430';
-  const BLUE = '#3b82f6', GREEN = '#22c55e', RED = '#ef4444';
+  const isLight = document.documentElement.classList.contains('light');
+  const BG = isLight ? '#ffffff' : '#11141c';
+  const GRID = isLight ? '#e5e5e5' : '#1a1e28';
+  const TEXT = isLight ? '#4b5563' : '#5c6270';
+  const BORDER = isLight ? '#d1d5db' : '#1f2430';
+  const BLUE = '#3b82f6', GREEN = isLight ? '#16a34a' : '#22c55e', RED = isLight ? '#dc2626' : '#ef4444';
   let mainChart = null, finInitialized = false;
 
   // ═══ DATA ══════════════════════════════════════════════════
@@ -67,7 +71,7 @@
     });
 
     const volumeSeries = mainChart.addHistogramSeries({
-      color: 'rgba(107,114,128,0.15)', priceFormat: { type: 'volume' }, priceScaleId: 'volume', lastValueVisible: false,
+      color: isLight ? 'rgba(107,114,128,0.2)' : 'rgba(107,114,128,0.15)', priceFormat: { type: 'volume' }, priceScaleId: 'volume', lastValueVisible: false,
     });
     mainChart.priceScale('volume').applyOptions({ scaleMargins: { top: 0.82, bottom: 0 } });
 
@@ -315,5 +319,18 @@
   if (document.getElementById('tab-financials')?.classList.contains('active')) {
     setTimeout(initFinChart, 150);
   }
+
+  // ═══ THEME UPDATE ═══════════════════════════════════════════
+  window._updateChartTheme = function() {
+    if (mainChart) {
+      const light = document.documentElement.classList.contains('light');
+      mainChart.applyOptions({
+        layout: { background: { type: 'solid', color: light ? '#ffffff' : '#11141c' }, textColor: light ? '#4b5563' : '#5c6270' },
+        grid: { vertLines: { color: light ? '#e5e5e5' : '#1a1e28' }, horzLines: { color: light ? '#e5e5e5' : '#1a1e28' } },
+        rightPriceScale: { borderColor: light ? '#d1d5db' : '#1f2430' },
+        timeScale: { borderColor: light ? '#d1d5db' : '#1f2430' },
+      });
+    }
+  };
 
 })();

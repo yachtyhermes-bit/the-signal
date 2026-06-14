@@ -25,7 +25,7 @@ const POSTS_DIR = path.join(ROOT, 'articles', 'posts');
 
 const SECTORS = {
   ai: 'AI', cyber: 'Cyber', defense: 'Defense',
-  space: 'Space', 'mega-cap': 'Mega-Cap', quantum: 'Quantum'
+  space: 'Space', 'mega-cap': 'Mega-Cap', quantum: 'Quantum', semiconductors: 'Semiconductors'
 };
 
 const HOMEPAGE_LIMIT = 40;
@@ -164,6 +164,8 @@ if (!template) {
       let bodyHtml = article.bodyHtml || '';
       bodyHtml = bodyHtml.replace(/\\"/g, '"');
       bodyHtml = bodyHtml.replace(/\\n/g, '\n');
+      // Rewrite /ticker/SYMBOL links to stock pages (single + double quotes)
+      bodyHtml = bodyHtml.replace(/href=['"]\/ticker\/([A-Z]+)['"]/g, 'href="https://signal-stock-pi.vercel.app/stock/$1/"');
 
       let html = template
         .replace(/{{TITLE}}/g, article.title || '')
@@ -250,7 +252,7 @@ if (fs.existsSync(highlightsPath)) {
     const buyPct = Math.round(buys / total * 100);
     const holdPct = Math.round(holds / total * 100);
 
-    cardsHtml += `<div class="detail-card-link"><div class="detail-card-accent"></div><div class="detail-card-inner">` +
+    cardsHtml += `<a href="https://signal-stock-pi.vercel.app/stock/${h.ticker}/" class="detail-card-link"><div class="detail-card-accent"></div><div class="detail-card-inner">` +
       `<div class="detail-header"><div class="detail-header-left">` +
       `<div class="detail-badge">Signal Highlight</div>` +
       `<div class="detail-ticker">${h.ticker}</div>` +
@@ -286,7 +288,7 @@ if (fs.existsSync(highlightsPath)) {
       `</div><div class="detail-rating-legend">` +
       `<span class="detail-legend-item"><span class="detail-rating-dot detail-dot-buy"></span>Buy ${buys}</span>` +
       `<span class="detail-legend-item"><span class="detail-rating-dot detail-dot-hold"></span>Hold ${holds}</span>` +
-      `</div></div></div></div></div>\n`;
+      `</div></div></div></div></a>\\n`;
   }
   indexHtml = indexHtml.replace('SIGNAL_HIGHLIGHTS_PLACEHOLDER', cardsHtml);
   fs.writeFileSync(path.join(DST, 'index.html'), indexHtml);

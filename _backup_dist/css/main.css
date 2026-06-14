@@ -2075,6 +2075,19 @@ main {
 .drawer-link-svs:hover::after {
   color: #8b5cf6;
 }
+.drawer-link-scorecard {
+  color: #1a1a2e;
+}
+.drawer-link-scorecard::after {
+  content: '›';
+  color: #10b981;
+}
+.drawer-link-scorecard:hover {
+  color: #10b981;
+}
+.drawer-link-scorecard:hover::after {
+  color: #10b981;
+}
 
 /* Light Theme Override */
 [data-theme="light"] .drawer {

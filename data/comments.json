@@ -3359,6 +3359,7 @@
     "likes": []
   },
   {
+<<<<<<< Updated upstream
     "id": "mqckhwcp_0p83ki",
     "article": "test",
     "text": "test-comment",
@@ -3369,124 +3370,222 @@
     "createdAt": "2026-06-13T16:26:12.361Z"
   },
   {
+=======
+>>>>>>> Stashed changes
     "id": "mqcki2cw_n73kwp",
     "article": "amd-mi400-ai-accelerator-june-2026",
     "text": "amd at $834B and i sold at $40 in 2019. gonna go stare at a wall for a bit. gpu rev passing cpu for the first time is actually wild tho",
     "author": "first_time_caller99",
+<<<<<<< Updated upstream
     "photoURL": null,
     "uid": "first_time_caller99",
     "parentId": null,
     "createdAt": "2026-06-13T16:26:20.144Z"
+=======
+    "uid": "first_time_caller99",
+    "createdAt": "2026-06-13T16:26:20.144Z",
+    "likes": [],
+    "photoURL": null,
+    "parentId": null
+>>>>>>> Stashed changes
   },
   {
     "id": "mqcki2j4_tbj56s",
     "article": "amd-mi400-ai-accelerator-june-2026",
     "text": "the real number: forward PE of 39 on 37.8% rev growth. DC rev at $5.8B in Q1. GPU passed CPU for first time. this isnt 2019 amd anymore. the MI400 ramp is the catalyst",
     "author": "data_dependent_1",
+<<<<<<< Updated upstream
     "photoURL": null,
     "uid": "data_dependent_1",
     "parentId": null,
     "createdAt": "2026-06-13T16:26:20.368Z"
+=======
+    "uid": "data_dependent_1",
+    "createdAt": "2026-06-13T16:26:20.368Z",
+    "likes": [],
+    "photoURL": null,
+    "parentId": null
+>>>>>>> Stashed changes
   },
   {
     "id": "mqcki2yb_ae7i1e",
     "article": "amd-mi400-ai-accelerator-june-2026",
     "text": "trailing PE 169 forward PE 39. that gap is doing heavy lifting. $834B on $37B TTM rev is rich. great company but too expensive for me rn",
     "author": "Shdwrptr",
+<<<<<<< Updated upstream
     "photoURL": null,
     "uid": "Shdwrptr",
     "parentId": null,
     "createdAt": "2026-06-13T16:26:20.915Z"
+=======
+    "uid": "Shdwrptr",
+    "createdAt": "2026-06-13T16:26:20.915Z",
+    "likes": [],
+    "photoURL": null,
+    "parentId": null
+>>>>>>> Stashed changes
   },
   {
     "id": "mqcki35o_kgifsc",
     "article": "axon-ai-policing-moat-2026",
     "text": "axon cratered 50% from 885 to 441 while Q1 revenue accelerated to 34%. this is exactly where i buy and it drops another 20%. someone talk me out of it",
     "author": "fomo_king_420",
+<<<<<<< Updated upstream
     "photoURL": null,
     "uid": "fomo_king_420",
     "parentId": null,
     "createdAt": "2026-06-13T16:26:21.180Z"
+=======
+    "uid": "fomo_king_420",
+    "createdAt": "2026-06-13T16:26:21.180Z",
+    "likes": [],
+    "photoURL": null,
+    "parentId": null
+>>>>>>> Stashed changes
   },
   {
     "id": "mqcki3bq_dp2nhg",
     "article": "axon-ai-policing-moat-2026",
     "text": "17k agencies locked into evidence.com with 80% body cam share. switching costs are the real moat. govt-grade SaaS annuity. 5yr hold minimum",
     "author": "thesis_driven_dan",
+<<<<<<< Updated upstream
     "photoURL": null,
     "uid": "thesis_driven_dan",
     "parentId": null,
     "createdAt": "2026-06-13T16:26:21.398Z"
+=======
+    "uid": "thesis_driven_dan",
+    "createdAt": "2026-06-13T16:26:21.398Z",
+    "likes": [],
+    "photoURL": null,
+    "parentId": null
+>>>>>>> Stashed changes
   },
   {
     "id": "mqcki3ie_9561ox",
     "article": "axon-ai-policing-moat-2026",
     "text": "analyst target $662 is +50% upside from $441. these targets have been wrong before. but 34% growth with govt contracts aint vaporware. retail always last to notice these",
     "author": "SheriffBartholomew",
+<<<<<<< Updated upstream
     "photoURL": null,
     "uid": "SheriffBartholomew",
     "parentId": null,
     "createdAt": "2026-06-13T16:26:21.638Z"
+=======
+    "uid": "SheriffBartholomew",
+    "createdAt": "2026-06-13T16:26:21.638Z",
+    "likes": [],
+    "photoURL": null,
+    "parentId": null
+>>>>>>> Stashed changes
   },
   {
     "id": "mqcki3qn_vykxsg",
     "article": "arm-first-chip-pivot-2026",
     "text": "arm said fine ill do it myself after 35 years. first chip ever. meta as launch customer. genius move or they just alienated every licensee. all in lmao",
     "author": "whats_a_stop_loss",
+<<<<<<< Updated upstream
     "photoURL": null,
     "uid": "whats_a_stop_loss",
     "parentId": null,
     "createdAt": "2026-06-13T16:26:21.935Z"
+=======
+    "uid": "whats_a_stop_loss",
+    "createdAt": "2026-06-13T16:26:21.935Z",
+    "likes": [],
+    "photoURL": null,
+    "parentId": null
+>>>>>>> Stashed changes
   },
   {
     "id": "mqcki3v7_u7igjf",
     "article": "arm-first-chip-pivot-2026",
     "text": "35 years licensing then vertical integration. competing with apple nvidia qualcomm is a delicate maneuver. but $15B rev target from AGI CPU says this isnt a side project. watching closely",
     "author": "RN_Geo",
+<<<<<<< Updated upstream
     "photoURL": null,
     "uid": "RN_Geo",
     "parentId": null,
     "createdAt": "2026-06-13T16:26:22.099Z"
+=======
+    "uid": "RN_Geo",
+    "createdAt": "2026-06-13T16:26:22.099Z",
+    "likes": [],
+    "photoURL": null,
+    "parentId": null
+>>>>>>> Stashed changes
   },
   {
     "id": "mqcki435_aqebpc",
     "article": "arm-first-chip-pivot-2026",
     "text": "$358B market cap on $4.92B rev and a chip that hasnt shipped. math aint mathing. but 147% in 12 months so the market disagrees with me hard. what do i know",
     "author": "CarrotAwesome",
+<<<<<<< Updated upstream
     "photoURL": null,
     "uid": "CarrotAwesome",
     "parentId": null,
     "createdAt": "2026-06-13T16:26:22.385Z"
+=======
+    "uid": "CarrotAwesome",
+    "createdAt": "2026-06-13T16:26:22.385Z",
+    "likes": [],
+    "photoURL": null,
+    "parentId": null
+>>>>>>> Stashed changes
   },
   {
     "id": "mqcki47n_dh6ccl",
     "article": "nvidia-vera-rubin-arizona-fab-2026",
     "text": "nvda at 224 on vera rubin news. 10x throughput over grace blackwell. dedicated 3nm fab in arizona with TSMC. overnight session was cooking. sleep is for the weak",
     "author": "night_shift_trader",
+<<<<<<< Updated upstream
     "photoURL": null,
     "uid": "night_shift_trader",
     "parentId": null,
     "createdAt": "2026-06-13T16:26:22.547Z"
+=======
+    "uid": "night_shift_trader",
+    "createdAt": "2026-06-13T16:26:22.547Z",
+    "likes": [],
+    "photoURL": null,
+    "parentId": null
+>>>>>>> Stashed changes
   },
   {
     "id": "mqcki4by_ejx5ir",
     "article": "nvidia-vera-rubin-arizona-fab-2026",
     "text": "10x agent throughput kills the architecture cadence fear. dedicated arizona 3nm fab kills the supply chain bear thesis. vera rubin in production now. two birds one computex keynote",
     "author": "thesis_driven_dan",
+<<<<<<< Updated upstream
     "photoURL": null,
     "uid": "thesis_driven_dan",
     "parentId": null,
     "createdAt": "2026-06-13T16:26:22.702Z"
+=======
+    "uid": "thesis_driven_dan",
+    "createdAt": "2026-06-13T16:26:22.702Z",
+    "likes": [],
+    "photoURL": null,
+    "parentId": null
+>>>>>>> Stashed changes
   },
   {
     "id": "mqcki4mj_b68pv1",
     "article": "nvidia-vera-rubin-arizona-fab-2026",
     "text": "bought nvda at the literal top every cycle. averaged down though. vera rubin sounds cool but so did grace blackwell and look what happened. still holding",
     "author": "bought_at_the_top",
+<<<<<<< Updated upstream
     "photoURL": null,
     "uid": "bought_at_the_top",
     "parentId": null,
     "createdAt": "2026-06-13T16:26:23.083Z"
+=======
+    "uid": "bought_at_the_top",
+    "createdAt": "2026-06-13T16:26:23.083Z",
+    "likes": [],
+    "photoURL": null,
+    "parentId": null
+>>>>>>> Stashed changes
   },
   {
     "id": "mqckisn3_fhxtlz",
@@ -3499,713 +3598,322 @@
     "createdAt": "2026-06-13T16:26:54.207Z"
   },
   {
+<<<<<<< Updated upstream
     "id": "mqcq3n0a_7mpm2z",
+=======
+    "id": "mqckist1_po6303",
+    "article": "amd-mi400-ai-accelerator-june-2026",
+    "text": "bro it literally pulled back from 600s to 511. bofa target is 560. if this isnt the dip what is lmao",
+    "author": "first_time_caller99",
+    "photoURL": null,
+    "uid": "first_time_caller99",
+    "parentId": "mqcki2yb_ae7i1e",
+    "createdAt": "2026-06-13T16:26:54.421Z"
+  },
+  {
+    "id": "mqckisxn_beebli",
+    "article": "nvidia-vera-rubin-arizona-fab-2026",
+    "text": "grace blackwell bagholder here too brother. but nvidia always comes back. 10x throughput and an arizona fab aint nothing. diamond hands",
+    "author": "whats_a_stop_loss",
+    "photoURL": null,
+    "uid": "whats_a_stop_loss",
+    "parentId": "mqcki4mj_b68pv1",
+    "createdAt": "2026-06-13T16:26:54.587Z"
+  },
+  {
+    "id": "b4frdd_lkyqbm",
+>>>>>>> Stashed changes
     "article": "applied-aerospace-defense-ipo-2026",
     "text": "650 million dollar ipo and it dips 5 percent day one. defense is supposed to be the safe trade. did i miss something or is the market just asleep",
     "author": "noob_investor42",
     "photoURL": null,
     "uid": "noob_investor42",
     "parentId": null,
+<<<<<<< Updated upstream
     "createdAt": "2026-06-13T19:03:04.763Z"
   },
   {
     "id": "mqcq3nh2_gocj67",
+=======
+    "createdAt": "2026-06-13T19:02:55.680719Z",
+    "likes": []
+  },
+  {
+    "id": "ss8h4u_4h813s",
+>>>>>>> Stashed changes
     "article": "applied-aerospace-defense-ipo-2026",
     "text": "25 percent revenue growth is respectable but against lockheed at 120 billion plus market cap this is a rounding error. the primes eat first. always have",
     "author": "RN_Geo",
     "photoURL": null,
     "uid": "RN_Geo",
     "parentId": null,
+<<<<<<< Updated upstream
     "createdAt": "2026-06-13T19:03:05.366Z"
   },
   {
     "id": "mqcq3nym_wklhy6",
+=======
+    "createdAt": "2026-06-13T19:02:55.680719Z",
+    "likes": []
+  },
+  {
+    "id": "ho11p4_iith2x",
+>>>>>>> Stashed changes
     "article": "applied-aerospace-defense-ipo-2026",
     "text": "another defense ipo where retail gets the leftover shares after institutions already priced it. the 5 percent dip tells you the smart money wanted cheaper. pass",
     "author": "SheriffBartholomew",
     "photoURL": null,
     "uid": "SheriffBartholomew",
+<<<<<<< Updated upstream
     "parentId": null,
     "createdAt": "2026-06-13T19:03:05.998Z"
   },
   {
     "id": "mqcq3o7h_5jqcan",
+=======
+    "parentId": "ss8h4u_4h813s",
+    "createdAt": "2026-06-13T19:02:55.680719Z",
+    "likes": []
+  },
+  {
+    "id": "i6vwgn_8d1toe",
+>>>>>>> Stashed changes
     "article": "rubrik-crushes-earnings-dip-2026",
     "text": "39 percent revenue growth and 1.57 billion arr and the stock drops. management raised guidance too. this is exactly the kind of disconnect you buy into not run from",
     "author": "thesis_driven_dan",
     "photoURL": null,
     "uid": "thesis_driven_dan",
     "parentId": null,
+<<<<<<< Updated upstream
     "createdAt": "2026-06-13T19:03:06.317Z"
   },
   {
     "id": "mqcq3om6_e19z3s",
+=======
+    "createdAt": "2026-06-13T19:02:55.680719Z",
+    "likes": []
+  },
+  {
+    "id": "xx9uva_k6bsd4",
+>>>>>>> Stashed changes
     "article": "rubrik-crushes-earnings-dip-2026",
     "text": "bro the stock is at 73 and was at 103. that is a 29 percent haircut. my portfolio cannot survive another data security stock doing a crowdstrike impression",
     "author": "fomo_king_420",
     "photoURL": null,
     "uid": "fomo_king_420",
+<<<<<<< Updated upstream
     "parentId": null,
     "createdAt": "2026-06-13T19:03:06.846Z"
   },
   {
     "id": "mqcq3p1s_mjbxiw",
+=======
+    "parentId": "i6vwgn_8d1toe",
+    "createdAt": "2026-06-13T19:02:55.680719Z",
+    "likes": []
+  },
+  {
+    "id": "ur9cgz_2mgfov",
+>>>>>>> Stashed changes
     "article": "rubrik-crushes-earnings-dip-2026",
     "text": "the subscription revenue growing even faster than the 39 percent headline number is the signal. land and expand working. cyber budgets arent getting cut",
     "author": "data_dependent_1",
     "photoURL": null,
     "uid": "data_dependent_1",
     "parentId": null,
+<<<<<<< Updated upstream
     "createdAt": "2026-06-13T19:03:07.408Z"
   },
   {
     "id": "mqcq3p8l_862f1h",
+=======
+    "createdAt": "2026-06-13T19:02:55.680719Z",
+    "likes": []
+  },
+  {
+    "id": "s76ztp_knlf96",
+>>>>>>> Stashed changes
     "article": "rubrik-crushes-earnings-dip-2026",
     "text": "raised guidance and still sold off 4 percent. market is drunk. loading up",
     "author": "whats_a_stop_loss",
     "photoURL": null,
     "uid": "whats_a_stop_loss",
+<<<<<<< Updated upstream
     "parentId": null,
     "createdAt": "2026-06-13T19:03:07.653Z"
   },
   {
     "id": "mqcq3pom_x7eq20",
+=======
+    "parentId": "ur9cgz_2mgfov",
+    "createdAt": "2026-06-13T19:02:55.680719Z",
+    "likes": []
+  },
+  {
+    "id": "sfb2ok_thambg",
+>>>>>>> Stashed changes
     "article": "dow-record-chip-rout-rotation-2026",
     "text": "dow hits 51561 and chips get obliterated. avgo down 12 percent mu down 7. this rotation is real. been moving into healthcare and financials for weeks",
     "author": "macro_dad_energy",
     "photoURL": null,
     "uid": "macro_dad_energy",
     "parentId": null,
+<<<<<<< Updated upstream
     "createdAt": "2026-06-13T19:03:08.230Z"
   },
   {
     "id": "mqcq3pup_qedb9n",
+=======
+    "createdAt": "2026-06-13T19:02:55.680719Z",
+    "likes": []
+  },
+  {
+    "id": "j3ekrl_to6r19",
+>>>>>>> Stashed changes
     "article": "dow-record-chip-rout-rotation-2026",
     "text": "the canary in the coal mine quote about ai margins is the scariest thing ive read all week. if broadcom cant pass costs through nobody can",
     "author": "Shdwrptr",
     "photoURL": null,
     "uid": "Shdwrptr",
     "parentId": null,
+<<<<<<< Updated upstream
     "createdAt": "2026-06-13T19:03:08.449Z"
   },
   {
     "id": "mqcq3q3z_x733my",
+=======
+    "createdAt": "2026-06-13T19:02:55.680719Z",
+    "likes": []
+  },
+  {
+    "id": "zgkljc_w8zvrd",
+>>>>>>> Stashed changes
     "article": "dow-record-chip-rout-rotation-2026",
     "text": "dow up 875 points and nasdaq red. havent seen a divergence this clean since 2022. the boring stocks are having their moment",
     "author": "night_shift_trader",
     "photoURL": null,
     "uid": "night_shift_trader",
+<<<<<<< Updated upstream
     "parentId": null,
     "createdAt": "2026-06-13T19:03:08.783Z"
   },
   {
     "id": "mqcq3qai_xcv0h8",
+=======
+    "parentId": "sfb2ok_thambg",
+    "createdAt": "2026-06-13T19:02:55.680719Z",
+    "likes": []
+  },
+  {
+    "id": "xkm3ik_fjy1k3",
+>>>>>>> Stashed changes
     "article": "avgo-earnings-ai-reality-check-2026",
     "text": "the stock ran from 241 to 495 in under a year. of course the selloff was violent. when you price in perfection a beat isnt enough you need a blowout",
     "author": "sharp315",
     "photoURL": null,
     "uid": "sharp315",
     "parentId": null,
+<<<<<<< Updated upstream
     "createdAt": "2026-06-13T19:03:09.018Z"
   },
   {
     "id": "mqcq3qhf_coqtwp",
+=======
+    "createdAt": "2026-06-13T19:02:55.680719Z",
+    "likes": []
+  },
+  {
+    "id": "ayi73b_bly5a3",
+>>>>>>> Stashed changes
     "article": "avgo-earnings-ai-reality-check-2026",
     "text": "300 billion dollars of market cap erased in one session because the ai chip forecast was conservative. this is not a company in trouble this is a market that lost its mind",
     "author": "bought_at_the_top",
     "photoURL": null,
     "uid": "bought_at_the_top",
     "parentId": null,
+<<<<<<< Updated upstream
     "createdAt": "2026-06-13T19:03:09.267Z"
   },
   {
     "id": "mqcq3qqq_2287n9",
+=======
+    "createdAt": "2026-06-13T19:02:55.680719Z",
+    "likes": []
+  },
+  {
+    "id": "4jq1q2_by55wy",
+>>>>>>> Stashed changes
     "article": "avgo-earnings-ai-reality-check-2026",
     "text": "68 billion ttm revenue and 22x forward pe and people are panic selling. this is why retail gets crushed. institutions shake out the weak hands then buy the dip",
     "author": "data_dependent_1",
     "photoURL": null,
     "uid": "data_dependent_1",
+<<<<<<< Updated upstream
     "parentId": null,
     "createdAt": "2026-06-13T19:03:09.602Z"
   },
   {
     "id": "mqcq3qx5_6yh37e",
+=======
+    "parentId": "ayi73b_bly5a3",
+    "createdAt": "2026-06-13T19:02:55.680719Z",
+    "likes": []
+  },
+  {
+    "id": "9t3air_7s7brt",
+>>>>>>> Stashed changes
     "article": "avgo-earnings-ai-reality-check-2026",
     "text": "regular people always get wrecked on these selloffs. the algos dump first. by the time you see the headline its too late. hold and wait or youll regret it",
     "author": "FEMA_Camp_Survivor",
     "photoURL": null,
     "uid": "FEMA_Camp_Survivor",
+<<<<<<< Updated upstream
     "parentId": null,
     "createdAt": "2026-06-13T19:03:09.833Z"
   },
   {
     "id": "mqcq3r2d_2gpnic",
+=======
+    "parentId": "xkm3ik_fjy1k3",
+    "createdAt": "2026-06-13T19:02:55.680719Z",
+    "likes": []
+  },
+  {
+    "id": "quxffa_mzrjy0",
+>>>>>>> Stashed changes
     "article": "spacex-75b-ipo-record-2026",
     "text": "75 billion dollar ipo at 135 a share. nearly triple the saudi aramco record. and its all primary so the company gets every dollar. this is actually insane",
     "author": "whats_a_stop_loss",
     "photoURL": null,
     "uid": "whats_a_stop_loss",
     "parentId": null,
+<<<<<<< Updated upstream
     "createdAt": "2026-06-13T19:03:10.021Z"
+=======
+    "createdAt": "2026-06-13T19:02:55.680719Z",
+    "likes": []
   },
   {
-    "id": "mqdohv7l_g0oisk",
-    "article": "crowdstrike-ai-cyber-arms-race-2026",
-    "text": "the outage that was supposed to kill them built an AI moat instead?? 88k customers and 97% retention is insane. but at 109x forward PE my hands are shaking just looking at it",
-    "author": "fomo_king_420",
-    "photoURL": null,
-    "uid": "fomo_king_420",
-    "parentId": null,
-    "createdAt": "2026-06-14T11:05:55.521Z"
-  },
-  {
-    "id": "mqdohvcp_190xk5",
-    "article": "crowdstrike-ai-cyber-arms-race-2026",
-    "text": "$5.25B ARR growing 24% with 115% net retention. $1.69B Falcon Flex ARR up 120% YoY. 48% of customers on 6+ modules. the data moat is real. the multiple is aggressive but the numbers back the thesis",
-    "author": "data_dependent_1",
-    "photoURL": null,
-    "uid": "data_dependent_1",
-    "parentId": null,
-    "createdAt": "2026-06-14T11:05:55.705Z"
-  },
-  {
-    "id": "mqdohvhp_730am0",
-    "article": "crowdstrike-ai-cyber-arms-race-2026",
-    "text": "of course they're calling it an 'AI moat' now. every company that survived 2024 is suddenly AI-native. 97% gross retention is impressive but 109x forward PE for a cyber company is institutional hopium",
-    "author": "SheriffBartholomew",
-    "photoURL": null,
-    "uid": "SheriffBartholomew",
-    "parentId": null,
-    "createdAt": "2026-06-14T11:05:55.885Z"
-  },
-  {
-    "id": "mqdohvm6_9p3ozp",
-    "article": "crowdstrike-ai-cyber-arms-race-2026",
-    "text": "tbf they were AI-native before it was cool. charlotte AI agentworks launched in march. the PE is spicy but name another cyber co with these retention numbers",
-    "author": "first_time_caller99",
-    "photoURL": null,
-    "uid": "first_time_caller99",
-    "parentId": null,
-    "createdAt": "2026-06-14T11:05:56.046Z"
-  },
-  {
-    "id": "mqdohvtl_nytddh",
-    "article": "spacex-starship-100-dollar-per-kg",
-    "text": "12 flights total, 7 successes, 5 failures, zero commercial payloads. the booster catch tech is genuinely impressive but the $100/kg target is aspirational at best. block 4 needs to deliver",
+    "id": "3djp8n_xe7g1s",
+    "article": "spacex-75b-ipo-record-2026",
+    "text": "fixed price structure on a 75 billion ipo skipping the bookbuilding process entirely. that is either supreme confidence or the demand is already locked in. either way retail gets the same price as institutions",
     "author": "turned_into_a_newt",
     "photoURL": null,
     "uid": "turned_into_a_newt",
     "parentId": null,
-    "createdAt": "2026-06-14T11:05:56.314Z"
+    "createdAt": "2026-06-13T19:02:55.680719Z",
+    "likes": []
   },
   {
-    "id": "mqdohvxs_9zfe47",
-    "article": "spacex-starship-100-dollar-per-kg",
-    "text": "7 for 12 and still the most advanced rocket on earth. the fact that they're catching boosters with chopsticks is absolutely unhinged. i'm not betting against elon on this one",
-    "author": "whats_a_stop_loss",
-    "photoURL": null,
-    "uid": "whats_a_stop_loss",
-    "parentId": null,
-    "createdAt": "2026-06-14T11:05:56.464Z"
-  },
-  {
-    "id": "mqdohw1r_ovmsn7",
-    "article": "spacex-starship-100-dollar-per-kg",
-    "text": "so they've done 12 test flights with zero commercial payloads and we're supposed to believe $100/kg is happening? the booster catch is cool but where are the starlink v3 launches they promised",
-    "author": "CarrotAwesome",
-    "photoURL": null,
-    "uid": "CarrotAwesome",
-    "parentId": null,
-    "createdAt": "2026-06-14T11:05:56.607Z"
-  },
-  {
-    "id": "mqdohw5e_brc0xf",
-    "article": "spacex-starship-100-dollar-per-kg",
-    "text": "the test cadence acceleration is the real story. block 1 to block 4 in 2 years. if they maintain this iteration speed starlink v3 deployment by late 2026 is within reach. spacex runs on different physics than the rest of aerospace",
-    "author": "thesis_driven_dan",
-    "photoURL": null,
-    "uid": "thesis_driven_dan",
-    "parentId": null,
-    "createdAt": "2026-06-14T11:05:56.738Z"
-  },
-  {
-    "id": "mqdohw9b_fdauor",
-    "article": "tesla-spacex-merger-chatter-2026",
-    "text": "TSLA at 442 and if elon actually merges spacex into it we're talking about a 3 trillion dollar company overnight. my entire 401k is in this and i am not okay",
-    "author": "yolo_my_401k",
-    "photoURL": null,
-    "uid": "yolo_my_401k",
-    "parentId": null,
-    "createdAt": "2026-06-14T11:05:56.879Z"
-  },
-  {
-    "id": "mqdohwdb_qpnwsl",
-    "article": "tesla-spacex-merger-chatter-2026",
-    "text": "$1.66T market cap for tesla and spacex is valued at $1-2T. even with the 19M shares tesla already owns this math is absurd. merger premium built in before a single filing. too rich for me",
-    "author": "Shdwrptr",
-    "photoURL": null,
-    "uid": "Shdwrptr",
-    "parentId": null,
-    "createdAt": "2026-06-14T11:05:57.023Z"
-  },
-  {
-    "id": "mqdohwjh_eww9ji",
-    "article": "tesla-spacex-merger-chatter-2026",
-    "text": "the S-1 listing elon musk himself as a risk factor is the most honest thing to come out of silicon valley in a decade. respect the candor. but merging the two before an IPO smells like complexity arbitrage",
-    "author": "RN_Geo",
-    "photoURL": null,
-    "uid": "RN_Geo",
-    "parentId": null,
-    "createdAt": "2026-06-14T11:05:57.245Z"
-  },
-  {
-    "id": "mqdohwq5_acokhf",
-    "article": "tesla-spacex-merger-chatter-2026",
-    "text": "bro if this merger rumor fizzles and the premium evaporates you're gonna be the poster child for loss porn. diversify please i am begging you",
-    "author": "fomo_king_420",
-    "photoURL": null,
-    "uid": "fomo_king_420",
-    "parentId": null,
-    "createdAt": "2026-06-14T11:05:57.485Z"
-  },
-  {
-    "id": "mqdohwuk_46wef8",
-    "article": "tsm-blueprint",
-    "text": "90% of the world's advanced semiconductors from one island. taiwan strait tensions are the single biggest geopolitical risk in your portfolio. nobody talks about it until it's too late",
-    "author": "RN_Geo",
-    "photoURL": null,
-    "uid": "RN_Geo",
-    "parentId": null,
-    "createdAt": "2026-06-14T11:05:57.644Z"
-  },
-  {
-    "id": "mqdohwy3_p4wcan",
-    "article": "tsm-blueprint",
-    "text": "the real monopoly nobody can break. intel spent billions trying and failed. TSM is the only foundry that can print 3nm chips at scale. pricing power is absolute",
-    "author": "macro_dad_energy",
-    "photoURL": null,
-    "uid": "macro_dad_energy",
-    "parentId": null,
-    "createdAt": "2026-06-14T11:05:57.771Z"
-  },
-  {
-    "id": "mqdohx1u_d24bdl",
-    "article": "tsm-blueprint",
-    "text": "one earthquake in the wrong place and the entire global tech supply chain goes dark. regular people have no idea how fragile this is. diversify into defense stocks",
-    "author": "FEMA_Camp_Survivor",
-    "photoURL": null,
-    "uid": "FEMA_Camp_Survivor",
-    "parentId": null,
-    "createdAt": "2026-06-14T11:05:57.906Z"
-  },
-  {
-    "id": "mqdohx5g_tt9997",
-    "article": "tsm-blueprint",
-    "text": "wait so every chip from nvidia apple amd broadcom qualcomm all come from the same factory in taiwan?? that seems... like a problem? should i be worried about my ETF",
-    "author": "noob_investor42",
-    "photoURL": null,
-    "uid": "noob_investor42",
-    "parentId": null,
-    "createdAt": "2026-06-14T11:05:58.036Z"
-  },
-  {
-    "id": "mqdohxby_x2cnuk",
-    "article": "smci-dell-ai-server-wave-2026",
-    "text": "SMCI at 46 and dell at 420 both riding the same AI wave but SMCI has 0.82x price to sales. i've been buying the dip for 6 months. please let this be the one that works",
-    "author": "bought_at_the_top",
-    "photoURL": null,
-    "uid": "bought_at_the_top",
-    "parentId": null,
-    "createdAt": "2026-06-14T11:05:58.270Z"
-  },
-  {
-    "id": "mqdohxfo_s49ugo",
-    "article": "smci-dell-ai-server-wave-2026",
-    "text": "SMCI rev up 122% YoY to $33.7B, earnings growth +344%, forward PE 14.3x vs Dell's 18x. both riding the same AI server wave. the valuation disconnect is the widest i've seen in enterprise tech",
+    "id": "7iupoh_gcx421",
+    "article": "spacex-75b-ipo-record-2026",
+    "text": "10 million starlink subs generating 11 billion in revenue and people still think this is a science project. the s-1 numbers are out there. read them",
     "author": "data_dependent_1",
     "photoURL": null,
     "uid": "data_dependent_1",
-    "parentId": null,
-    "createdAt": "2026-06-14T11:05:58.404Z"
-  },
-  {
-    "id": "mqdzu5ys_pi738r",
-    "article": "ionq-record-earnings-quantum-2026",
-    "text": "test comment please ignore",
-    "author": "test_user_42",
-    "photoURL": null,
-    "uid": "test-uid-42",
-    "parentId": null,
-    "createdAt": "2026-06-14T16:23:25.108Z"
-  },
-  {
-    "id": "mqdzucl8_1tqzrl",
-    "article": "ionq-record-earnings-quantum-2026",
-    "text": "$64.7M Q1 revenue, 755% YoY growth. $470M backlog. IONQ at $23.8B market cap. 13 analysts Strong Buy, avg target $67.64. Numbers are impressive but quantum's commercial TAM is still the real debate here.",
-    "author": "data_dependent_1",
-    "photoURL": null,
-    "uid": "uid-data-ionq-001",
-    "parentId": null,
-    "createdAt": "2026-06-14T16:23:33.692Z"
-  },
-  {
-    "id": "mqdzucru_rhpusm",
-    "article": "ionq-record-earnings-quantum-2026",
-    "text": "$23.8B market cap for $64.7M in quarterly revenue. That's a ~92x annualized P/S. I'll wait.",
-    "author": "Shdwrptr",
-    "photoURL": null,
-    "uid": "uid-shdw-ionq-001",
-    "parentId": null,
-    "createdAt": "2026-06-14T16:23:33.931Z"
-  },
-  {
-    "id": "mqdzucwa_g8vzam",
-    "article": "ionq-record-earnings-quantum-2026",
-    "text": "755% revenue growth and they sold their first 256-qubit chip. idk what a qubit even is but take my money lmao",
-    "author": "whats_a_stop_loss",
-    "photoURL": null,
-    "uid": "uid-wsl-ionq-001",
-    "parentId": null,
-    "createdAt": "2026-06-14T16:23:34.090Z"
-  },
-  {
-    "id": "mqdzud0v_gbx6qh",
-    "article": "ionq-record-earnings-quantum-2026",
-    "text": "quantum revenue always hits in bursts. one big contract drops and suddenly it's \"755% growth.\" show me four quarters in a row before calling it an NVIDIA moment",
-    "author": "CarrotAwesome",
-    "photoURL": null,
-    "uid": "uid-carr-ionq-001",
-    "parentId": null,
-    "createdAt": "2026-06-14T16:23:34.255Z"
-  },
-  {
-    "id": "mqdzud5t_9zd3xz",
-    "article": "bigbear-ai-defense-contracts-panama-2026",
-    "text": "Panama Dry Canal cargo screening is an interesting geopolitical moat play. Supply chain chokepoint + AI. But $282M backlog is still small cap territory and BBAI has disappointed before. Show me execution.",
-    "author": "RN_Geo",
-    "photoURL": null,
-    "uid": "uid-rngeo-bbai-001",
-    "parentId": null,
-    "createdAt": "2026-06-14T16:23:34.433Z"
-  },
-  {
-    "id": "mqdzudaf_r7zogy",
-    "article": "bigbear-ai-defense-contracts-panama-2026",
-    "text": "BBAI ran from $4.20 to $5.04 in a week and I found out from this article. classic me. buying monday morning no matter what happens",
-    "author": "fomo_king_420",
-    "photoURL": null,
-    "uid": "uid-fomo-bbai-001",
-    "parentId": null,
-    "createdAt": "2026-06-14T16:23:34.599Z"
-  },
-  {
-    "id": "mqdzudei_laib1f",
-    "article": "bigbear-ai-defense-contracts-panama-2026",
-    "text": "52-week high was $9.39. careful. these small cap defense AI plays burn retail constantly. ask me how i know",
-    "author": "bought_at_the_top",
-    "photoURL": null,
-    "uid": "uid-batt-bbai-001",
-    "parentId": null,
-    "createdAt": "2026-06-14T16:23:34.746Z"
-  },
-  {
-    "id": "mqdzudig_p2hr6f",
-    "article": "microsoft-ai-copilot-azure",
-    "text": "$318B TTM revenue. $125B in profit. 39% margins. Azure re-accelerated to 40% growth. 23x P/E — cheaper than the S&P 500. Microsoft is either the buy of the decade at $391 or something is structurally broken.",
-    "author": "macro_dad_energy",
-    "photoURL": null,
-    "uid": "uid-macro-msft-001",
-    "parentId": null,
-    "createdAt": "2026-06-14T16:23:34.888Z"
-  },
-  {
-    "id": "mqdzudmj_v8izcl",
-    "article": "microsoft-ai-copilot-azure",
-    "text": "$190B CapEx in FY2026. 20M Copilot seats. $37B AI run rate growing 123% YoY. They're not spending like a company that thinks growth is slowing. Check back in 2030, this will look obvious.",
-    "author": "CCWaterBug",
-    "photoURL": null,
-    "uid": "uid-ccwb-msft-001",
-    "parentId": null,
-    "createdAt": "2026-06-14T16:23:35.035Z"
-  },
-  {
-    "id": "mqdzudra_geyy23",
-    "article": "microsoft-ai-copilot-azure",
-    "text": "i bought at $460 and now we're at $391. do i just close the app for 6 months? someone tell me this turns around",
-    "author": "help_me_pls77",
-    "photoURL": null,
-    "uid": "uid-help-msft-001",
-    "parentId": null,
-    "createdAt": "2026-06-14T16:23:35.206Z"
-  },
-  {
-    "id": "mqdzudvb_atf8m0",
-    "article": "microsoft-ai-copilot-azure",
-    "text": "a company printing $125 billion in profit with 20M enterprise Copilot seats and the algos are selling it like a busted IPO. institutions are vacuuming this up while your phone pings you about the \"crash\"",
-    "author": "SheriffBartholomew",
-    "photoURL": null,
-    "uid": "uid-sher-msft-001",
-    "parentId": null,
-    "createdAt": "2026-06-14T16:23:35.351Z"
-  },
-  {
-    "id": "mqdzudzp_nbxp2x",
-    "article": "meta-ai-budget-blowout",
-    "text": "$145B AI spend and the stock dropped 9%. Meta grew revenue 33% and has $70B+ in cash. The real fear isn't the spend — it's that Zuck burns half of it on a metaverse sequel dressed up as AI infrastructure.",
-    "author": "Latrodectus1990",
-    "photoURL": null,
-    "uid": "uid-latr-meta-001",
-    "parentId": null,
-    "createdAt": "2026-06-14T16:23:35.509Z"
-  },
-  {
-    "id": "mqdzue3q_9srte4",
-    "article": "meta-ai-budget-blowout",
-    "text": "same pattern as AMZN with AWS capex in 2014. market punishes the spending then rewards the moat 3 years later. history doesn't repeat but it rhymes. holding.",
-    "author": "sharp315",
-    "photoURL": null,
-    "uid": "uid-sharp-meta-001",
-    "parentId": null,
-    "createdAt": "2026-06-14T16:23:35.654Z"
-  },
-  {
-    "id": "mqdzue7u_qfy3k6",
-    "article": "meta-ai-budget-blowout",
-    "text": "3.5 million GPUs by end of 2026. that's not a tech company that's a sovereign compute power. my 401k allocation is embarrassing and i refuse to look at it",
-    "author": "yolo_my_401k",
-    "photoURL": null,
-    "uid": "uid-yolo-meta-001",
-    "parentId": null,
-    "createdAt": "2026-06-14T16:23:35.802Z"
-  },
-  {
-    "id": "mqdzueck_n79l06",
-    "article": "intel-tesla-14a-terafab-deal",
-    "text": "Intel 14A landing Tesla AND SpaceX for the $20B+ Terafab project is real. But note: forward P/E at 77.83. Analyst target mean $87.86 vs $119.84 current. The Street still has INTC priced like a value trap.",
-    "author": "turned_into_a_newt",
-    "photoURL": null,
-    "uid": "uid-newt-intc-001",
-    "parentId": null,
-    "createdAt": "2026-06-14T16:23:35.972Z"
-  },
-  {
-    "id": "mqe5mdrc_e3k6pw",
-    "article": "iridium-satellite-iot-defense-june-2026",
-    "text": "66 crosslinked LEO birds, $738.5M DoD contract, and full Aireon ownership for space-based air traffic surveillance. SpaceX gets the headlines but IRDM owns the constellation the Pentagon actually relies on when comms go dark. That's the real moat.",
-    "author": "RN_Geo",
-    "photoURL": null,
-    "uid": "0qcwq679",
-    "parentId": null,
-    "createdAt": "2026-06-14T19:05:19.656Z"
-  },
-  {
-    "id": "mqe5me3u_heau76",
-    "article": "iridium-satellite-iot-defense-june-2026",
-    "text": "$875.8M TTM revenue, 71.6% gross margins, $253M free cash flow, and a $0.60/share dividend. 1.9% revenue growth isnt exciting but the Aireon buy gives them a space-based air traffic monopoly nobody can replicate. Forward PE of 34.2x means you're paying for growth that hasnt shown up yet.",
-    "author": "data_dependent_1",
-    "photoURL": null,
-    "uid": "mt9ybeif",
-    "parentId": null,
-    "createdAt": "2026-06-14T19:05:20.106Z"
-  },
-  {
-    "id": "mqe5me9u_ot3mlv",
-    "article": "nvidia-windows-pc-chip-2026",
-    "text": "nvda making windows pc chips now?? jensen said TAM expansion and he wasnt kidding. INTC in absolute shambles rn",
-    "author": "whats_a_stop_loss",
-    "photoURL": null,
-    "uid": "pf8upz7c",
-    "parentId": null,
-    "createdAt": "2026-06-14T19:05:20.322Z"
-  },
-  {
-    "id": "mqe5mekx_9wj428",
-    "article": "nvidia-windows-pc-chip-2026",
-    "text": "CUDA on a laptop is the whole story. Every dev running local LLMs or image gen picks this over x86. INTC at $114 and AMD at $516 are pricing in PC dominance that might not last. NVDA entering at $211 is platform expansion that compounds for a decade.",
-    "author": "thesis_driven_dan",
-    "photoURL": null,
-    "uid": "7m1jh9vx",
-    "parentId": null,
-    "createdAt": "2026-06-14T19:05:20.721Z"
-  },
-  {
-    "id": "mqe5meq7_cw94y5",
-    "article": "iran-threatens-tech-defense-2026",
-    "text": "The IRGC demonstrated strike capability with 300+ drones and missiles at Israel in one salvo. Middle East cloud data centers and subsea cables are soft targets. This isn't posturing — it's a real operational threat vector. RTX, LMT, and NOC gapping up is the market pricing in sustained elevated defense spend.",
-    "author": "RN_Geo",
-    "photoURL": null,
-    "uid": "mwqtm1s5",
-    "parentId": null,
-    "createdAt": "2026-06-14T19:05:20.911Z"
-  },
-  {
-    "id": "mqe5mf0a_6izvqp",
-    "article": "iran-threatens-tech-defense-2026",
-    "text": "iran threatening to hit us data centers and the market response is buying defense stocks. nobody learned anything from the last 20 years. regular people always get wrecked when this stuff escalates.",
-    "author": "FEMA_Camp_Survivor",
-    "photoURL": null,
-    "uid": "jpgvz9gd",
-    "parentId": null,
-    "createdAt": "2026-06-14T19:05:21.274Z"
-  },
-  {
-    "id": "mqe5mf5q_c7pxku",
-    "article": "google-pentagon-classified-ai-deal",
-    "text": "Anthropic locked out of Pentagon AI because they wouldn't play ball on military applications. Google learned from Project Maven 2018 — you don't walk away from defense contracts. Gemini on SIPRNet and JWICS is a multi-decade moat. At 26x forward PE and $160.2B net income, this isn't priced in yet.",
-    "author": "thesis_driven_dan",
-    "photoURL": null,
-    "uid": "vumtem1x",
-    "parentId": null,
-    "createdAt": "2026-06-14T19:05:21.470Z"
-  },
-  {
-    "id": "mqe5mfdw_qjosid",
-    "article": "google-pentagon-classified-ai-deal",
-    "text": "bought googl at 400 and been watching it bleed. this pentagon deal was supposed to be the catalyst. still waiting lmao",
-    "author": "bought_at_the_top",
-    "photoURL": null,
-    "uid": "gnat9h4d",
-    "parentId": null,
-    "createdAt": "2026-06-14T19:05:21.764Z"
-  },
-  {
-    "id": "mqe5mfnf_x9xzo9",
-    "article": "if-i-could-hold-one-stock-for-5-years-id-pick-google",
-    "text": "22x forward earnings, $110B net cash, cloud growing 63% YoY. the market is pricing google like it's dying when it's actually accelerating. check back in 2030.",
-    "author": "CCWaterBug",
-    "photoURL": null,
-    "uid": "4j0na8j7",
-    "parentId": null,
-    "createdAt": "2026-06-14T19:05:22.107Z"
-  },
-  {
-    "id": "mqe5mfy5_sjn0um",
-    "article": "if-i-could-hold-one-stock-for-5-years-id-pick-google",
-    "text": "third google-is-undervalued article this month. institutions loading up while retail buys mag 7 etfs. the trade is getting crowded and nobody wants to admit it.",
-    "author": "SheriffBartholomew",
-    "photoURL": null,
-    "uid": "f0u1mvxo",
-    "parentId": null,
-    "createdAt": "2026-06-14T19:05:22.493Z"
-  },
-  {
-    "id": "mqe5mlx8_pdgljn",
-    "article": "iridium-satellite-iot-defense-june-2026",
-    "text": "test reply check",
-    "author": "test_bot_42",
-    "photoURL": null,
-    "uid": "test12345",
-    "parentId": null,
-    "createdAt": "2026-06-14T19:05:30.236Z"
-  },
-  {
-    "id": "mqe5nph4_9qfd2p",
-    "article": "iridium-satellite-iot-defense-june-2026",
-    "text": "66 crosslinked LEO birds, $738.5M DoD contract, and full Aireon ownership for space-based air traffic surveillance. SpaceX gets the headlines but IRDM owns the constellation the Pentagon actually relies on when comms go dark. That's the real moat.",
-    "author": "RN_Geo",
-    "photoURL": null,
-    "uid": "axngcp9l",
-    "parentId": null,
-    "createdAt": "2026-06-14T19:06:21.496Z"
-  },
-  {
-    "id": "mqe5npnb_p63bba",
-    "article": "iridium-satellite-iot-defense-june-2026",
-    "text": "$875.8M TTM revenue, 71.6% gross margins, $253M free cash flow, and a $0.60/share dividend. 1.9% revenue growth isnt exciting but the Aireon buy gives them a space-based air traffic monopoly nobody can replicate. Forward PE of 34.2x means you're paying for growth that hasnt shown up yet.",
-    "author": "data_dependent_1",
-    "photoURL": null,
-    "uid": "30rkolyk",
-    "parentId": null,
-    "createdAt": "2026-06-14T19:06:21.719Z"
-  },
-  {
-    "id": "mqe5npsc_6zzgvz",
-    "article": "nvidia-windows-pc-chip-2026",
-    "text": "nvda making windows pc chips now?? jensen said TAM expansion and he wasnt kidding. INTC in absolute shambles rn",
-    "author": "whats_a_stop_loss",
-    "photoURL": null,
-    "uid": "agfw69hh",
-    "parentId": null,
-    "createdAt": "2026-06-14T19:06:21.900Z"
-  },
-  {
-    "id": "mqe5npx3_t6nbf6",
-    "article": "nvidia-windows-pc-chip-2026",
-    "text": "CUDA on a laptop is the whole story. Every dev running local LLMs or image gen picks this over x86. INTC at $114 and AMD at $516 are pricing in PC dominance that might not last. NVDA entering at $211 is platform expansion that compounds for a decade.",
-    "author": "thesis_driven_dan",
-    "photoURL": null,
-    "uid": "j0n6wi1o",
-    "parentId": null,
-    "createdAt": "2026-06-14T19:06:22.071Z"
-  },
-  {
-    "id": "mqe5nq8f_avjta3",
-    "article": "iran-threatens-tech-defense-2026",
-    "text": "The IRGC demonstrated strike capability with 300+ drones and missiles at Israel in one salvo. Middle East cloud data centers and subsea cables are soft targets. This isn't posturing — it's a real operational threat vector. RTX, LMT, and NOC gapping up is the market pricing in sustained elevated defense spend.",
-    "author": "RN_Geo",
-    "photoURL": null,
-    "uid": "5zs5ljzb",
-    "parentId": null,
-    "createdAt": "2026-06-14T19:06:22.479Z"
-  },
-  {
-    "id": "mqe5nqdy_1wzvke",
-    "article": "iran-threatens-tech-defense-2026",
-    "text": "iran threatening to hit us data centers and the market response is buying defense stocks. nobody learned anything from the last 20 years. regular people always get wrecked when this stuff escalates.",
-    "author": "FEMA_Camp_Survivor",
-    "photoURL": null,
-    "uid": "m97ajq7b",
-    "parentId": null,
-    "createdAt": "2026-06-14T19:06:22.678Z"
-  },
-  {
-    "id": "mqe5nqii_2x9pca",
-    "article": "google-pentagon-classified-ai-deal",
-    "text": "Anthropic locked out of Pentagon AI because they wouldn't play ball on military applications. Google learned from Project Maven 2018 — you don't walk away from defense contracts. Gemini on SIPRNet and JWICS is a multi-decade moat. At 26x forward PE and $160.2B net income, this isn't priced in yet.",
-    "author": "thesis_driven_dan",
-    "photoURL": null,
-    "uid": "84sty8mp",
-    "parentId": null,
-    "createdAt": "2026-06-14T19:06:22.842Z"
-  },
-  {
-    "id": "mqe5nqoc_ywav5b",
-    "article": "google-pentagon-classified-ai-deal",
-    "text": "bought googl at 400 and been watching it bleed. this pentagon deal was supposed to be the catalyst. still waiting lmao",
-    "author": "bought_at_the_top",
-    "photoURL": null,
-    "uid": "p42zrls4",
-    "parentId": null,
-    "createdAt": "2026-06-14T19:06:23.052Z"
-  },
-  {
-    "id": "mqe5nqtp_bg84b5",
-    "article": "if-i-could-hold-one-stock-for-5-years-id-pick-google",
-    "text": "22x forward earnings, $110B net cash, cloud growing 63% YoY. the market is pricing google like it's dying when it's actually accelerating. check back in 2030.",
-    "author": "CCWaterBug",
-    "photoURL": null,
-    "uid": "qmzxv6y0",
-    "parentId": null,
-    "createdAt": "2026-06-14T19:06:23.245Z"
-  },
-  {
-    "id": "mqe5nqya_3czilj",
-    "article": "if-i-could-hold-one-stock-for-5-years-id-pick-google",
-    "text": "third google-is-undervalued article this month. institutions loading up while retail buys mag 7 etfs. the trade is getting crowded and nobody wants to admit it.",
-    "author": "SheriffBartholomew",
-    "photoURL": null,
-    "uid": "xj8np66w",
-    "parentId": null,
-    "createdAt": "2026-06-14T19:06:23.410Z"
-  },
-  {
-    "id": "mqe5nr2y_55tti9",
-    "article": "iridium-satellite-iot-defense-june-2026",
-    "text": "bro its already up 168% YTD and i just found out about it. classic me catching a runner at the top pray for my bags",
-    "author": "fomo_king_420",
-    "photoURL": null,
-    "uid": "teo9g9oq",
-    "parentId": "mqe5nph4_9qfd2p",
-    "createdAt": "2026-06-14T19:06:23.578Z"
+    "parentId": "3djp8n_xe7g1s",
+    "createdAt": "2026-06-13T19:02:55.680719Z",
+    "likes": []
+>>>>>>> Stashed changes
   }
 ]

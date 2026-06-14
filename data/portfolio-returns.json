@@ -1,23 +1,23 @@
 {
   "name": "The Signal Portfolio",
   "inception": "2024-06-01",
-  "lastUpdated": "2026-06-12T22:00:56.157Z",
+  "lastUpdated": "2026-06-13T22:01:27.578Z",
   "periods": {
     "sinceInception": {
       "label": "Since Inception",
-      "portfolioReturn": 218.83,
+      "portfolioReturn": 233.83,
       "spyReturn": 40.54,
       "qqqReturn": 59.19,
-      "vsSPY": 178.29,
-      "vsQQQ": 159.64
+      "vsSPY": 193.29,
+      "vsQQQ": 174.64
     },
     "ytd": {
       "label": "YTD",
-      "portfolioReturn": 20.24,
+      "portfolioReturn": 29.33,
       "spyReturn": 8.57,
       "qqqReturn": 17.65,
-      "vsSPY": 11.67,
-      "vsQQQ": 2.59
+      "vsSPY": 20.76,
+      "vsQQQ": 11.68
     },
     "oneYear": {
       "label": "1 Year",
@@ -37,7 +37,7 @@
     {
       "ticker": "AMD",
       "weight": 7.2,
-      "return": null
+      "return": 212.79
     },
     {
       "ticker": "NVDA",
@@ -162,7 +162,7 @@
     {
       "ticker": "RNMBY",
       "weight": 1,
-      "return": 139.92
+      "return": 139.87
     },
     {
       "ticker": "CRWV",

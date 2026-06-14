@@ -61,8 +61,9 @@ asyncio.run(g())`;
 async function fetchFromR2(slug) {
   if (!CF_ACCOUNT_ID || !CF_API_TOKEN) return null;
   try {
+    const key = `v2/${slug}.mp3`;
     const r = await fetch(
-      `https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/r2/buckets/${BUCKET}/objects/v2/${slug}.mp3`,
+      `https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/r2/buckets/${BUCKET}/objects/${encodeURIComponent(key)}`,
       { headers: { 'Authorization': `Bearer ${CF_API_TOKEN}` } }
     );
     if (!r.ok) return null;
@@ -73,8 +74,9 @@ async function fetchFromR2(slug) {
 async function uploadToR2(slug, audio) {
   if (!CF_ACCOUNT_ID || !CF_API_TOKEN) return;
   try {
+    const key = `v2/${slug}.mp3`;
     await fetch(
-      `https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/r2/buckets/${BUCKET}/objects/v2/${slug}.mp3`,
+      `https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/r2/buckets/${BUCKET}/objects/${encodeURIComponent(key)}`,
       {
         method: 'PUT',
         headers: {
@@ -114,13 +116,13 @@ export default async function handler(req, res) {
     if (jennyAudio) {
       uploadToR2(slug, jennyAudio); // fire-and-forget cache
       res.setHeader('Content-Type', 'audio/mpeg');
-      res.setHeader('Cache-Control', 'public, max-age=86400');
+      res.setHeader('Cache-Control', 'public, max-age=3600');
       res.setHeader('X-TTS-Backend', 'edge-tts-jenny');
       return res.send(jennyAudio);
     }
   }
 
-  // Fallback: Google Translate
+  // Fallback: Google Translate — do NOT cache (R2 may get backfilled)
   try {
     const chunks = splitText(text, 190);
     const bufs = [];
@@ -132,7 +134,7 @@ export default async function handler(req, res) {
     }
     const total = Buffer.concat(bufs);
     res.setHeader('Content-Type', 'audio/mpeg');
-    res.setHeader('Cache-Control', 'public, max-age=86400');
+    res.setHeader('Cache-Control', 'no-cache');
     res.setHeader('X-TTS-Backend', 'google-translate');
     return res.send(total);
   } catch (e2) {
