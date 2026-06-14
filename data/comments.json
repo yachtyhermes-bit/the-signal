@@ -3827,5 +3827,35 @@
     "uid": "data_dependent_1",
     "parentId": null,
     "createdAt": "2026-06-14T11:05:58.404Z"
+  },
+  {
+    "id": "mqdzu5ys_pi738r",
+    "article": "ionq-record-earnings-quantum-2026",
+    "text": "test comment please ignore",
+    "author": "test_user_42",
+    "photoURL": null,
+    "uid": "test-uid-42",
+    "parentId": null,
+    "createdAt": "2026-06-14T16:23:25.108Z"
+  },
+  {
+    "id": "mqdzucl8_1tqzrl",
+    "article": "ionq-record-earnings-quantum-2026",
+    "text": "$64.7M Q1 revenue, 755% YoY growth. $470M backlog. IONQ at $23.8B market cap. 13 analysts Strong Buy, avg target $67.64. Numbers are impressive but quantum's commercial TAM is still the real debate here.",
+    "author": "data_dependent_1",
+    "photoURL": null,
+    "uid": "uid-data-ionq-001",
+    "parentId": null,
+    "createdAt": "2026-06-14T16:23:33.692Z"
+  },
+  {
+    "id": "mqdzucru_rhpusm",
+    "article": "ionq-record-earnings-quantum-2026",
+    "text": "$23.8B market cap for $64.7M in quarterly revenue. That's a ~92x annualized P/S. I'll wait.",
+    "author": "Shdwrptr",
+    "photoURL": null,
+    "uid": "uid-shdw-ionq-001",
+    "parentId": null,
+    "createdAt": "2026-06-14T16:23:33.931Z"
   }
 ]
