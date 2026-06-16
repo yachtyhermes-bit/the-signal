@@ -448,5 +448,25 @@
     "uid": "usr_noob_42",
     "parentId": null,
     "createdAt": "2026-06-15T19:02:16.025Z"
+  },
+  {
+    "id": "mqgjami3_uf0206",
+    "article": "nvidia-computex-2026-vera-rubin",
+    "text": "test",
+    "author": "test_user",
+    "photoURL": null,
+    "uid": "test_user",
+    "parentId": null,
+    "createdAt": "2026-06-16T11:03:38.091Z"
+  },
+  {
+    "id": "mqgjc2lh_ukvjhj",
+    "article": "nvidia-computex-2026-vera-rubin",
+    "text": "jensen saying moore's law is dead and huang's law is alive while showing that compute-per-watt doubling chart. idk what half the specs mean but the man has a leather jacket and absolute conviction. buying more nvda monday",
+    "author": "first_time_caller99",
+    "photoURL": null,
+    "uid": "first_time_caller99",
+    "parentId": null,
+    "createdAt": "2026-06-16T11:04:45.605Z"
   }
 ]
