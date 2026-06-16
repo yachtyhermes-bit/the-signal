@@ -128,8 +128,10 @@
   }
 
   // ═══ FORMAT ═════════════════════════════════════════════════
-  function fmtB(n) { if (n == null||isNaN(n)) return '—'; return n >= 1e9 ? (n/1e9).toFixed(1)+'B' : n >= 1e6 ? (n/1e6).toFixed(0)+'M' : '$'+n.toFixed(0); }
+  function fmtB(n) { if (n == null||isNaN(n)) return '—'; const sign = n < 0 ? '-' : ''; const abs = Math.abs(n); return sign + (abs >= 1e9 ? (abs/1e9).toFixed(1)+'B' : abs >= 1e6 ? (abs/1e6).toFixed(0)+'M' : '$'+abs.toFixed(0)); }
   function fmtComma(n) { if (n == null||isNaN(n)) return '—'; return Math.round(n).toLocaleString('en-US'); }
+  function getSnapUnit(val) { if (val >= 100e9) return 20e9; if (val >= 10e9) return 5e9; if (val >= 1e9) return 1e9; if (val >= 100e6) return 100e6; if (val >= 10e6) return 10e6; return 1e6; }
+  function fmtTick(n) { if (n === 0) return '0'; if (n >= 1e12) return parseFloat((n/1e12).toFixed(1))+'T'; if (n >= 1e9) return parseFloat((n/1e9).toFixed(1))+'B'; if (n >= 1e6) return parseFloat((n/1e6).toFixed(0))+'M'; return parseFloat((n/1e3).toFixed(0))+'K'; }
 
   // Quarter label mapping: "2026/Q2" → "Q2 2026"
   function qLabel(p) {
@@ -178,13 +180,7 @@
 
     if (!isGrid || !isBars) return;
 
-    const Y_TICKS_IS = [240, 200, 160, 120, 80, 40, 0];
-    const MAX_IS = 240e9;
-
-    // Income Statement grid (static) + Y-axis
-    isGrid.innerHTML = Y_TICKS_IS.map(() => '<div class="fin-chart-grid-line"></div>').join('');
-    isYAxis.innerHTML = Y_TICKS_IS.map(v => '<span>'+v+'b</span>').join('');
-
+    // ── Income Statement ──
     function buildIS(mode) {
       const isAnn = mode === 'annual';
       if (isAnn && annual.income && annual.income.length) {
@@ -204,6 +200,17 @@
 
     function renderIS(mode) {
       const data = buildIS(mode);
+
+      // Dynamic Y-axis scale from actual data
+      const maxVal = Math.max(1e6, ...data.map(d => Math.max(d.rev, d.gp, d.ni || 0))) * 1.1;
+      const snap = getSnapUnit(maxVal);
+      const MAX_IS = Math.ceil(maxVal / snap) * snap;
+      const Y_TICKS_IS = [MAX_IS, MAX_IS*5/6, MAX_IS*4/6, MAX_IS*3/6, MAX_IS*2/6, MAX_IS*1/6, 0];
+
+      // Update grid and Y-axis
+      isGrid.innerHTML = Y_TICKS_IS.map(() => '<div class="fin-chart-grid-line"></div>').join('');
+      isYAxis.innerHTML = Y_TICKS_IS.map(v => '<span>'+fmtTick(v)+'</span>').join('');
+
       isBars.innerHTML = data.map(d => {
         const revH = Math.max(0.5, (d.rev / MAX_IS) * 100);
         const niH = Math.max(0.5, (d.ni / MAX_IS) * 100);
@@ -241,13 +248,15 @@
 
     function renderBS(mode) {
       const data = buildBS(mode);
+
+      // Dynamic Y-axis scale from actual data
       const maxVal = Math.max(1e9, ...data.map(d => Math.max(d.assets, d.liab))) * 1.1;
-      const maxRounded = Math.ceil(maxVal / 40e9) * 40e9;
-      const MAX_BS = maxRounded > 0 ? maxRounded : 240e9;
-      const BS_TICKS = [MAX_BS/1e9, (MAX_BS/1e9)*5/6, (MAX_BS/1e9)*4/6, (MAX_BS/1e9)*3/6, (MAX_BS/1e9)*2/6, (MAX_BS/1e9)*1/6, 0].map(v => Math.round(v));
+      const snap = getSnapUnit(maxVal);
+      const MAX_BS = Math.ceil(maxVal / snap) * snap;
+      const BS_TICKS = [MAX_BS, MAX_BS*5/6, MAX_BS*4/6, MAX_BS*3/6, MAX_BS*2/6, MAX_BS*1/6, 0];
 
       if (bsGrid) bsGrid.innerHTML = BS_TICKS.map(() => '<div class="fin-chart-grid-line"></div>').join('');
-      if (bsYAxis) bsYAxis.innerHTML = BS_TICKS.map(v => '<span>'+v+'b</span>').join('');
+      if (bsYAxis) bsYAxis.innerHTML = BS_TICKS.map(v => '<span>'+fmtTick(v)+'</span>').join('');
 
       if (bsBars) bsBars.innerHTML = data.map(d => {
         const taH = Math.max(0.5, (d.assets / MAX_BS) * 100);

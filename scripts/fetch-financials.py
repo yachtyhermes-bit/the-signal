@@ -505,15 +505,15 @@ def main():
                 ebit_raw = q_income.loc['EBIT', col] if 'EBIT' in q_income.index else None
                 quarterly_financials["revenue"].append({
                     "period": period_label,
-                    "actual": round(float(rev_raw), 2) if rev_raw is not None else None
+                    "actual": round(float(rev_raw), 2) if rev_raw is not None and safe_float(rev_raw) == safe_float(rev_raw) else None
                 })
                 quarterly_financials["netIncome"].append({
                     "period": period_label,
-                    "actual": round(float(ni_raw), 2) if ni_raw is not None else None
+                    "actual": round(float(ni_raw), 2) if ni_raw is not None and safe_float(ni_raw) == safe_float(ni_raw) else None
                 })
                 quarterly_financials["ebit"].append({
                     "period": period_label,
-                    "actual": round(float(ebit_raw), 2) if ebit_raw is not None else None
+                    "actual": round(float(ebit_raw), 2) if ebit_raw is not None and safe_float(ebit_raw) == safe_float(ebit_raw) else None
                 })
         # EPS from earnings data
         for ed in earnings_data:
@@ -902,6 +902,11 @@ def main():
     print(f"   Total tickers in file: {len(existing)}")
     # ── FMP enrichment (free tier, auto-called after each fetch) ──
     try:
+        # Ensure project root is in sys.path so 'scripts.fetch_fmp' can be resolved
+        import os as _os
+        _project_root = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))
+        if _project_root not in sys.path:
+            sys.path.insert(0, _project_root)
         from scripts.fetch_fmp import enrich_ticker_data
         import json as _json
         print(f"\n📊 FMP enrichment: {ticker_symbol}")

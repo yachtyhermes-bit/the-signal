@@ -56,6 +56,30 @@ if (fs.existsSync(imgDir)) {
   console.log(`  ✅ ${countFiles(distImgDir)} image files → dist/img/`);
 }
 
+// ─── 1.6. Build stock pages ───
+console.log('📊 Building stock pages...');
+try {
+  require('./scripts/build-stock-page.js');
+  // Copy stock pages into dist/stocks/ for readthesignal.net hosting
+  const stockSrc = path.join(DST, 'stock', 'stock');
+  const stockDst = path.join(DST, 'stocks');
+  if (fs.existsSync(stockSrc)) {
+    fs.cpSync(stockSrc, stockDst, { recursive: true });
+    console.log('  ✅ Stock pages copied to dist/stocks/');
+  }
+  // Copy stock CSS/JS
+  const stockCssSrc = path.join(DST, 'stock', 'css');
+  const stockCssDst = path.join(DST, 'css');
+  if (fs.existsSync(stockCssSrc)) fs.cpSync(stockCssSrc, stockCssDst, { recursive: true });
+  const stockJsSrc = path.join(DST, 'stock', 'js');
+  const stockJsDst = path.join(DST, 'js');
+  if (fs.existsSync(stockJsSrc)) fs.cpSync(stockJsSrc, stockJsDst, { recursive: true });
+  // Build stocks index page
+  require('./scripts/build-stocks-index.js');
+} catch (e) {
+  console.error('  ⚠️  Stock pages build failed:', e.message);
+}
+
 // ─── 2. Load all articles from JSON files ───
 const articles = loadArticles();
 console.log(`📝 ${articles.length} articles loaded from articles/posts/*.json`);
@@ -238,7 +262,32 @@ if (!sectorTemplate) {
   console.log(`  ✅ ${sectorCount} sector pages generated`);
 }
 
-// ─── 8.5. Inject Signal Highlights cards from live data ───
+// ─── 8.5. Inject Trending Stocks list from live prices ───
+const pricesPath2 = path.join(ROOT, 'data', 'prices.json');
+const prices = fs.existsSync(pricesPath2) ? JSON.parse(fs.readFileSync(pricesPath2, 'utf8')) : {};
+const trendingTickers = ['NVDA', 'AVGO', 'TSLA', 'SPACEX', 'AMZN', 'PLTR'];
+let trendingHtml = '';
+for (const sym of trendingTickers) {
+  const p = prices[sym] || {};
+  const priceVal = p.price != null ? p.price : null;
+  const chgPct = p.changePercent != null ? p.changePercent : null;
+  const priceStr = priceVal != null ? '$' + priceVal.toFixed(2) : '—';
+  const chgStr = chgPct != null ? (chgPct >= 0 ? '+' : '') + chgPct.toFixed(2) + '%' : '—';
+  const dirClass = chgPct != null ? (chgPct >= 0 ? 'up' : 'down') : '';
+  trendingHtml += `<a href="/stocks/${sym}/" class="trending-row">
+    <div class="trending-row-left">
+      <span class="trending-row-ticker">${sym}</span>
+      <span class="trending-row-name">${p.name || sym}</span>
+    </div>
+    <div class="trending-row-right">
+      <span class="trending-row-price">${priceStr}</span>
+      <span class="trending-row-change ${dirClass}">${chgStr}</span>
+    </div>
+  </a>`;
+}
+indexHtml = indexHtml.replace('TRENDING_STOCKS_PLACEHOLDER', trendingHtml);
+
+// ─── 8.6. Inject Signal Highlights cards from live data ───
 const highlightsPath = path.join(ROOT, 'data', 'signal-highlights.json');
 if (fs.existsSync(highlightsPath)) {
   const highlights = JSON.parse(fs.readFileSync(highlightsPath, 'utf8'));
@@ -252,7 +301,7 @@ if (fs.existsSync(highlightsPath)) {
     const buyPct = Math.round(buys / total * 100);
     const holdPct = Math.round(holds / total * 100);
 
-    cardsHtml += `<a href="https://signal-stock-pi.vercel.app/stock/${h.ticker}/" class="detail-card-link"><div class="detail-card-accent"></div><div class="detail-card-inner">` +
+    cardsHtml += `<a href="/stocks/${h.ticker}/" class="detail-card-link"><div class="detail-card-accent"></div><div class="detail-card-inner">` +
       `<div class="detail-header"><div class="detail-header-left">` +
       `<div class="detail-badge">Signal Highlight</div>` +
       `<div class="detail-ticker">${h.ticker}</div>` +
@@ -288,7 +337,7 @@ if (fs.existsSync(highlightsPath)) {
       `</div><div class="detail-rating-legend">` +
       `<span class="detail-legend-item"><span class="detail-rating-dot detail-dot-buy"></span>Buy ${buys}</span>` +
       `<span class="detail-legend-item"><span class="detail-rating-dot detail-dot-hold"></span>Hold ${holds}</span>` +
-      `</div></div></div></div></a>\\n`;
+      `</div></div></div></div></a>`;
   }
   indexHtml = indexHtml.replace('SIGNAL_HIGHLIGHTS_PLACEHOLDER', cardsHtml);
   fs.writeFileSync(path.join(DST, 'index.html'), indexHtml);

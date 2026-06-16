@@ -565,18 +565,72 @@ export default async function handler(req, res) {
       const prices = await getPricesForTickers(Array.from(allTickers), data);
       await writeData(data);
 
+      const now = new Date();
+      const periodMs = period === 'weekly' ? 7 * 24 * 60 * 60 * 1000 :
+                       period === 'monthly' ? 30 * 24 * 60 * 60 * 1000 : null;
+
       const entries = portfolios.map(p => {
-        const value = calcPortfolioValue(p, prices);
-        const ret = calcReturn(value);
+        const currentValue = calcPortfolioValue(p, prices);
+
+        if (!periodMs) {
+          // All-time: compare to initial cash
+          const ret = calcReturn(currentValue);
+          return {
+            uid: p.uid,
+            displayName: p.displayName || 'Anonymous',
+            photoURL: p.photoURL || null,
+            cash: p.cash,
+            holdings: p.holdings,
+            value: Math.round(currentValue * 100) / 100,
+            return: Math.round(ret * 100) / 100,
+            trades: (p.trades || []).length,
+            createdAt: GAME_START
+          };
+        }
+
+        // Weekly/Monthly: reconstruct portfolio at period start
+        const cutoff = new Date(now.getTime() - periodMs);
+        const trades = p.trades || [];
+        const periodTrades = trades.filter(t => new Date(t.date) >= cutoff);
+
+        // Start from current state, undo period trades to get period-start state
+        let startCash = p.cash || 0;
+        const startHoldings = { ...(p.holdings || {}) };
+
+        for (const t of [...periodTrades].reverse()) {
+          if (t.action === 'buy') {
+            startCash += t.shares * t.price;
+            startHoldings[t.ticker] = (startHoldings[t.ticker] || 0) - t.shares;
+            if (startHoldings[t.ticker] <= 0) delete startHoldings[t.ticker];
+          } else if (t.action === 'sell') {
+            startCash -= t.shares * t.price;
+            startHoldings[t.ticker] = (startHoldings[t.ticker] || 0) + t.shares;
+          }
+        }
+
+        // Calculate start value at current prices (best approximation without historical prices)
+        let startHoldingsValue = 0;
+        for (const [ticker, shares] of Object.entries(startHoldings)) {
+          if (shares > 0) {
+            startHoldingsValue += shares * (prices[ticker] || 0);
+          }
+        }
+        const startValue = startCash + startHoldingsValue;
+
+        // Period return
+        const periodReturn = startValue > 0
+          ? ((currentValue - startValue) / startValue) * 100
+          : 0;
+
         return {
           uid: p.uid,
           displayName: p.displayName || 'Anonymous',
           photoURL: p.photoURL || null,
           cash: p.cash,
           holdings: p.holdings,
-          value: Math.round(value * 100) / 100,
-          return: Math.round(ret * 100) / 100,
-          trades: (p.trades || []).length,
+          value: Math.round(currentValue * 100) / 100,
+          return: Math.round(periodReturn * 100) / 100,
+          trades: periodTrades.length,
           createdAt: GAME_START
         };
       });

@@ -1,0 +1,127 @@
+{
+  "ticker": "AMD",
+  "company": "Advanced Micro Devices, Inc.",
+  "sector": "Semiconductors",
+  "research_date": "2026-06-13",
+  "article_slug": "amd-mi400-ai-accelerator-june-2026",
+  
+  "financial_data": {
+    "market_cap": "$834.17B",
+    "current_price": "$511.57",
+    "previous_close": "$488.45",
+    "52_week_range": "$117.78 - $546.44",
+    "ytd_return_pct": "+128.92%",
+    "ytd_start_price": "$223.47 (Jan 2, 2026)",
+    
+    "trailing_revenue_ttm": "$37.45B",
+    "latest_quarter_revenue": "$10.25B (Q1 2026)",
+    "revenue_growth_yoy_pct": "+37.8%",
+    "gross_profit_latest_q": "$5.42B (Q1 2026)",
+    "operating_income_latest_q": "$1.48B (Q1 2026)",
+    "net_income_latest_q": "$1.38B (Q1 2026)",
+    "annual_revenue_fy2025": "$34.64B",
+    "annual_net_income_fy2025": "$4.34B",
+    "ebitda_fy2025": "$7.28B",
+    
+    "eps_trailing": "$3.02",
+    "eps_forward": "$13.10",
+    "pe_ratio_trailing": "169.39",
+    "pe_ratio_forward": "39.04",
+    "earnings_growth_yoy_pct": "+91.2%",
+    
+    "total_assets": "$76.93B",
+    "cash_and_equivalents": "$5.54B",
+    "total_debt": "$3.85B",
+    "total_equity": "$63.00B",
+    
+    "beta": "2.49",
+    "avg_volume_10d": "31.58M",
+    
+    "next_earnings_date": "~August 4, 2026 (estimated)",
+    "next_earnings_eps_estimate": "$1.48 - $1.74 (avg $1.61)",
+    
+    "revenue_trend": [
+      {"quarter": "Q1 2026", "revenue": "$10.25B"},
+      {"quarter": "Q4 2025", "revenue": "$10.27B"},
+      {"quarter": "Q3 2025", "revenue": "$9.25B"},
+      {"quarter": "Q2 2025", "revenue": "$7.69B"},
+      {"quarter": "Q1 2025", "revenue": "$7.44B"}
+    ]
+  },
+  
+  "data_center_segment": {
+    "q1_2026_data_center_revenue": "$5.8B",
+    "q4_2025_data_center_revenue": "$5.38B",
+    "q4_2025_dc_growth_yoy": "+39.4%",
+    "q4_2025_dc_growth_qoq": "+23.9%",
+    "q4_2025_dc_operating_income": "$1.75B",
+    "q4_2025_dc_operating_margin": "32.6%",
+    "q4_2025_instinct_gpu_revenue_estimate": "$2.5B - $2.6B",
+    "key_milestone": "Instinct GPU revenue surpassed EPYC CPU revenue for first time in Q4 2025"
+  },
+  
+  "analyst_data": {
+    "consensus_recommendation": "Strong Buy",
+    "number_of_analysts": 48,
+    "median_price_target": "$490.00",
+    "mean_price_target": "$486.33",
+    "high_target": "$665.00",
+    "low_target": "$225.00",
+    "current_vs_median": "4.4% above median target",
+    "recent_actions": [
+      {"date": "Jun 12, 2026", "firm": "BofA Securities", "action": "Upgraded, target $560", "url": "https://www.tikr.com/article/amd-stock-rose-130-in-2026-bofa-just-raised-its-target-to-560"},
+      {"date": "Jun 12, 2026", "firm": "Top Analyst (TheStreet Pro)", "action": "Buy Upgrade", "url": "https://www.barrons.com/articles/amd-stock-upgrade-analysis-price-target-june-2026"},
+      {"date": "May 13, 2026", "firm": "BofA Securities", "action": "Target raised to $500", "url": "https://247wallst.com/investing/2026/05/13/wall-street-splits-on-amd-bofa-hikes-price-target-to-500-daiwa-downgrades-on-valuation/"},
+      {"date": "May 13, 2026", "firm": "Daiwa Securities", "action": "Downgrade (valuation)", "url": "https://247wallst.com/investing/2026/05/13/wall-street-splits-on-amd-bofa-hikes-price-target-to-500-daiwa-downgrades-on-valuation/"},
+      {"date": "May 28, 2026", "firm": "Seeking Alpha Analyst", "action": "Upgrade (improved story)", "url": "https://seekingalpha.com/article/amd-cautious-story-improved-rating-upgrade"}
+    ]
+  },
+  
+  "mi400_roadmap": {
+    "codename": "Altair",
+    "variants": "MI455X, MI430X + additional variant",
+    "release_timing": "H2 2026 (ramp begins)",
+    "competitor": "Nvidia Vera Rubin",
+    "next_gen": "MI500 series (2027)",
+    "key_event": "AMD Advancing AI 2026, July 22-23, San Francisco",
+    "expected_at_event": "MI450 accelerators, Zen6 EPYC Venice CPUs",
+    "mi350p": "Launched May 7, 2026 (PCIe GPUs for enterprise data centers)"
+  },
+  
+  "ai_market_position": {
+    "nvidia_share": "~92% of GPU market (2025)",
+    "amd_position": "Instinct GPU revenue surpassed CPU revenue (Q4 2025 milestone)",
+    "tam_projection": "$120B+ server CPU TAM by 2030",
+    "advantages": [
+      "Instinct MI300/MI350 gaining traction",
+      "MI400 'Altair' launching H2 2026 (3+ variants)",
+      "EPYC CPU dominance (Zen5, Zen6 'Venice' coming)",
+      "Full-stack AI: CPUs + GPUs + networking + ROCm software",
+      "$10B Taiwan semiconductor/AI ecosystem investment (May 2026)"
+    ],
+    "risks": [
+      "Nvidia's ~92% GPU share and CUDA lock-in",
+      "Valuation: 169x trailing PE, 39x forward PE",
+      "Nvidia Vera Rubin in same timeframe as MI400",
+      "Nvidia expanding into CPU market"
+    ]
+  },
+  
+  "sources": {
+    "yfinance_financial_data": "https://finance.yahoo.com/quote/AMD/",
+    "next_platform_dc_revenue": "https://www.nextplatform.com/2026/02/04/amd-finally-makes-more-money-on-gpus-than-cpus-in-a-quarter/",
+    "cnbc_q1_2026_earnings": "https://www.cnbc.com/2026/05/05/amd-stock-soars-16percent-as-data-center-growth-pushes-revenue-and-guidance-past-estimates.html",
+    "dcd_q1_2026_dc_revenue": "https://www.datacenterdynamics.com/en/news/amd-posts-q1-2026-data-center-revenue-of-58bn-forecasts-120bn-server-cpu-income-by-2030/",
+    "tweaktown_advancing_ai": "https://www.tweaktown.com/news/110826/amd-announces-advancing-ai-2026-event-for-july/index.html",
+    "tomshardware_mi400_patches": "https://www.tomshardware.com/pc-components/gpus/amds-linux-kernel-patches-suggest-enablement-of-next-gen-instinct-mi400-series-ai-gpu-accelerators",
+    "wccftech_mi400_mi500": "https://www.wccftech.com/amd-instinct-mi400-mi455x-mi430x-accelerators-2026-mi500-2027/",
+    "techpowerup_mi400_vs_rubin": "https://www.techpowerup.com/amd-positions-instinct-mi400-against-nvidia-vera-rubin-mi500-coming-2027/",
+    "cnbc_taiwan_10b": "https://www.cnbc.com/2026/05/21/amd-taiwan-ai-chips-sector-10-billion.html",
+    "spglobal_ai_chips_2026": "https://www.spglobal.com/marketintelligence/en/news-insights/latest-news-headlines/amd-s-next-generation-ai-chips-set-to-power-2026-data-center-growth",
+    "barrons_upgrade": "https://www.barrons.com/articles/amd-stock-upgrade-analysis-price-target-june-2026",
+    "yahoo_analyst_calls": "https://finance.yahoo.com/news/amd-upgraded-adobe-downgraded-wall-streets-top-analyst-calls.html",
+    "tikr_bofa_560": "https://www.tikr.com/article/amd-stock-rose-130-in-2026-bofa-just-raised-its-target-to-560",
+    "motley_fool_amd_vs_nvda": "https://www.fool.com/investing/2026/06/11/better-ai-stock-buy-amd-vs-nvidia-june-2026/",
+    "carboncredits_nvidia_92pct": "https://carboncredits.com/nvidia-controls-92-of-the-gpu-market-in-2025/"
+  }
+}

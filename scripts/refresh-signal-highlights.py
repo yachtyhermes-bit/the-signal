@@ -14,7 +14,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(ROOT, 'data')
 os.makedirs(DATA_DIR, exist_ok=True)
 
-TICKERS = ['KTOS', 'CRWV', 'AXON', 'MSFT', 'SOFI', 'ZS']
+TICKERS = ['KTOS', 'CRWV', 'AXON', 'MSFT', 'SOFI', 'ZS', 'NVDA', 'AVGO']
 
 # Stable metadata (names, fair value methodology, analyst breakdowns)
 META = {
@@ -24,6 +24,8 @@ META = {
     'MSFT': {'name': 'Microsoft Corporation', 'analystConsensus': 'Strong Buy', 'analystBuys': 36, 'analystHolds': 4, 'analystSells': 0},
     'SOFI': {'name': 'SoFi Technologies Inc.', 'analystConsensus': 'Buy', 'analystBuys': 11, 'analystHolds': 7, 'analystSells': 0},
     'ZS':   {'name': 'Zscaler Inc.', 'analystConsensus': 'Strong Buy', 'analystBuys': 24, 'analystHolds': 6, 'analystSells': 0},
+    'NVDA': {'name': 'NVIDIA Corporation', 'analystConsensus': 'Strong Buy', 'analystBuys': 49, 'analystHolds': 2, 'analystSells': 1},
+    'AVGO': {'name': 'Broadcom Inc.', 'analystConsensus': 'Strong Buy', 'analystBuys': 28, 'analystHolds': 3, 'analystSells': 0},
 }
 
 LAST_KNOWN = {

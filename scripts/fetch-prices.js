@@ -18,8 +18,15 @@ const TICKERS = [
   // Mega-cap Tech
   'AAPL', 'MSFT', 'GOOGL', 'AMZN', 'META', 'TSLA', 'NFLX',
   // The Signal coverage
-  'AXON', 'CRWV'
+  'AXON', 'CRWV', 'SOFI',
+  // Special tickers (mapped to different keys)
+  'SPCX'   // stored as SPACEX
 ];
+
+// Ticker mapping: Yahoo ticker → internal key
+const TICKER_MAP = {
+  'SPCX': 'SPACEX'
+};
 
 // Company names & websites for reference
 const COMPANY_INFO = {
@@ -65,6 +72,7 @@ const COMPANY_INFO = {
   'PL': { name: 'Planet Labs', url: 'https://www.planet.com/' },
   'AXON': { name: 'Axon Enterprise', url: 'https://www.axon.com/' },
   'CRWV': { name: 'CoreWeave Inc.', url: 'https://www.coreweave.com/' },
+  'SOFI': { name: 'SoFi Technologies, Inc.', url: 'https://www.sofi.com/' },
   'INTC': { name: 'Intel Corporation', url: 'https://www.intel.com/' },
   'IREN': { name: 'Iris Energy', url: 'https://www.irisenergy.co/' },
   'LRCX': { name: 'Lam Research Corp.', url: 'https://www.lamresearch.com/' },
@@ -116,7 +124,12 @@ function fetchQuote(ticker) {
 }
 
 async function main() {
-  const prices = {};
+  // Read existing prices to preserve manually-set data for tickers not on Yahoo
+  const pricesPath = path.join(__dirname, '..', 'data', 'prices.json');
+  let prices = {};
+  if (fs.existsSync(pricesPath)) {
+    try { prices = JSON.parse(fs.readFileSync(pricesPath, 'utf8')); } catch (_) {}
+  }
   // Fetch in batches to avoid rate limiting
   const batchSize = 5;
   for (let i = 0; i < TICKERS.length; i += batchSize) {
@@ -124,13 +137,15 @@ async function main() {
     const results = await Promise.allSettled(batch.map(fetchQuote));
     for (const r of results) {
       if (r.status === 'fulfilled' && r.value) {
-        prices[r.value.ticker] = r.value;
+        const key = TICKER_MAP[r.value.ticker] || r.value.ticker;
+        r.value.ticker = key;
+        prices[key] = r.value;
       }
     }
     // Small delay between batches
     if (i + batchSize < TICKERS.length) await new Promise(r => setTimeout(r, 1000));
   }
-  fs.writeFileSync(path.join(__dirname, '..', 'data', 'prices.json'), JSON.stringify(prices, null, 2));
+  fs.writeFileSync(pricesPath, JSON.stringify(prices, null, 2));
   console.log(`✅ Fetched prices for ${Object.keys(prices).length}/${TICKERS.length} tickers`);
 }
 

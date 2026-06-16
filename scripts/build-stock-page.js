@@ -72,7 +72,7 @@ function buildStockPage(symbol) {
   const price = pricesRaw[symbol];
   const priceNow = price?.price ?? null;
   const changePct = price?.changePercent ?? null;
-  const isPrivate = company.isPrivate || (price && price.isPrivate) || (!priceNow && !changePct && symbol === 'SPACEX');
+  const isPrivate = company.isPrivate || (price && price.isPrivate);
 
   const recKey = (fin.analyst?.recommendationKey || 'neutral').toLowerCase().replace(/_/g, '-');
   const targetMean = val(stats, 'targetMeanPrice');
@@ -86,7 +86,9 @@ function buildStockPage(symbol) {
     for (const file of articleFiles) {
       try {
         const a = JSON.parse(fs.readFileSync(path.join(ARTICLES, file), 'utf8'));
-        if (a.ticker && a.ticker.toUpperCase() === symbol.toUpperCase()) {
+        const tickerMatch = (a.ticker && a.ticker.toUpperCase() === symbol.toUpperCase()) ||
+                            (a.slug && a.slug.toLowerCase().includes(symbol.toLowerCase()));
+        if (tickerMatch) {
           relatedArticles.push({
             slug: a.slug,
             title: a.title,
@@ -160,20 +162,51 @@ function buildStockPage(symbol) {
   <!-- ── NAV ── -->
   <nav class="stock-nav">
     <div class="stock-nav-inner">
-      <div class="stock-nav-left">
-        <a href="/" class="stock-nav-back">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-          The Signal
-        </a>
-        <span class="stock-nav-ticker"><span>$${esc(symbol)}</span> · ${esc(company.sector || '')}</span>
-      </div>
+      <a href="/stocks/" class="stock-nav-stocks">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        Stocks
+      </a>
+      <a href="/" class="stock-nav-logo">
+        <span class="logo-text"><span class="logo-the">THE</span> <strong>SIGNAL</strong></span>
+      </a>
       <div class="stock-nav-right">
         <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
           <span class="theme-icon">☀️</span>
         </button>
+        <button class="hamburger-btn" aria-label="Menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
       </div>
     </div>
   </nav>
+
+  <!-- ── DRAWER MENU ── -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <div class="drawer" id="drawer">
+    <div class="drawer-header">
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
+      <a href="/" class="drawer-logo">
+        <span class="drawer-logo-text">SIGNAL</span>
+      </a>
+    </div>
+    <div class="drawer-body">
+      <div class="drawer-section-label">SECTORS</div>
+      <a href="/sector/ai" class="drawer-link">AI</a>
+      <a href="/sector/cyber" class="drawer-link">Cyber</a>
+      <a href="/sector/defense" class="drawer-link">Defense</a>
+      <a href="/sector/space" class="drawer-link">Space</a>
+      <a href="/sector/mega-cap" class="drawer-link">Mega-Cap</a>
+      <a href="/sector/quantum" class="drawer-link">Quantum</a>
+      <hr class="drawer-divider">
+      <div class="drawer-section-label">FEATURES</div>
+      <a href="/hive" class="drawer-link">Hive</a>
+      <a href="/signal-vs-the-street" class="drawer-link">Signal vs. Street</a>
+      <a href="/stocks/" class="drawer-link">📈 Stock Pages</a>
+      <a href="/#scorecard" class="drawer-link">📊 Signal Scorecard</a>
+    </div>
+  </div>
 
   <main class="stock-page-main">
 
@@ -573,10 +606,39 @@ function toggleTheme() {
   if (window._updateChartTheme) window._updateChartTheme();
 }
   </script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function(){
+    var btn = document.querySelector('.hamburger-btn');
+    var drawer = document.getElementById('drawer');
+    var overlay = document.getElementById('drawerOverlay');
+    var closeBtn = document.getElementById('drawerClose');
+    function openDrawer() {
+      if(drawer){drawer.classList.add('open');}
+      if(overlay){overlay.classList.add('open');}
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDrawer() {
+      if(drawer){drawer.classList.remove('open');}
+      if(overlay){overlay.classList.remove('open');}
+      document.body.style.overflow = '';
+    }
+    if (btn && drawer && overlay) {
+      btn.addEventListener('click', function(){ openDrawer(); });
+      overlay.addEventListener('click', function(){ closeDrawer(); });
+      if (closeBtn) closeBtn.addEventListener('click', function(){ closeDrawer(); });
+      document.addEventListener('keydown', function(e){
+        if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
+      });
+      drawer.querySelectorAll('a').forEach(function(a){
+        a.addEventListener('click', function(){ closeDrawer(); });
+      });
+    }
+  });
+  </script>
 </body>
 </html>`;
 
-  const dir = path.join(DIST, 'stock', 'stock', symbol);
+  const dir = path.join(DIST, 'stocks', symbol);
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, 'index.html'), html);
   return true;

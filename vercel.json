@@ -1,5 +1,5 @@
 {
-  "buildCommand": "node build.js",
+  "buildCommand": "echo 'Skipping build — deployed from local dist/'",
   "outputDirectory": "dist",
   "trailingSlash": true,
   "rewrites": [

@@ -37,12 +37,77 @@
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
         </button>
-        <a href="/" class="nav-btn" style="text-decoration:none;display:flex;align-items:center;gap:4px;font-size:13px;font-weight:600;padding:8px 14px;">
-          ← Home
-        </a>
+        <button class="nav-btn auth-btn" id="authToggle" aria-label="Account">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M4 20c0-4 4-7 8-7s8 3 8 7"></path>
+          </svg>
+        </button>
+        <div class="auth-dropdown" id="authDropdown">
+          <div class="auth-guest" id="authGuest">
+            <div class="auth-guest-brand">
+              <span class="auth-guest-title">Welcome to <strong>The Signal</strong></span>
+              <p class="auth-guest-desc">Sign in to access Signal Scorecard, comment, and track your portfolio.</p>
+              <button class="auth-google-btn" id="authGoogleBtn">
+                <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+                Sign In with Google
+              </button>
+            </div>
+          </div>
+          <div class="auth-signed-in" id="authSignedIn" style="display:none">
+            <div class="auth-nav-section">
+              <div class="auth-nav-section-header">SECTORS</div>
+              <a href="/sector/ai" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
+              <a href="/sector/cyber" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
+              <a href="/sector/defense" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
+              <a href="/sector/space" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
+              <a href="/sector/mega-cap" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
+              <a href="/sector/quantum" class="auth-nav-item"><span class="auth-nav-icon">🔬</span> Quantum</a>
+            </div>
+            <div class="auth-drop-divider"></div>
+            <div class="auth-nav-section">
+              <div class="auth-nav-section-header">FEATURES</div>
+              <a href="/hive" class="auth-nav-item"><span class="auth-nav-icon">🐝</span> Hive</a>
+              <a href="/signal-vs-the-street" class="auth-nav-item"><span class="auth-nav-icon">📈</span> Signal vs. Street</a>
+              <a href="/stocks/" class="auth-nav-item"><span class="auth-nav-icon">📉</span> Stock Pages</a>
+            </div>
+            <div class="auth-drop-divider"></div>
+            <div class="auth-profile-footer">
+              <a href="/hive" class="auth-footer-link">Leaderboard</a>
+              <a href="/account/settings" class="auth-footer-link">Settings</a>
+              <button class="auth-signout-btn" id="authSignOut">Sign Out</button>
+            </div>
+          </div>
+        </div>
+        <button class="nav-btn hamburger-btn" id="hamburgerToggle" aria-label="Menu">
+          <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+        </button>
       </div>
     </div>
   </nav>
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <div class="drawer" id="drawer">
+    <div class="drawer-header">
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
+      <a href="/" class="drawer-logo"><img src="/img/logo-hex.jpg" alt="The Signal" class="logo-img"><span class="logo-text"><span class="logo-the">THE</span> <strong>SIGNAL</strong></span></a>
+    </div>
+    <div class="drawer-section">
+      <div class="drawer-section-label">SECTORS</div>
+      <a href="/sector/ai" class="drawer-link">📡 AI</a>
+      <a href="/sector/cyber" class="drawer-link">🛡️ Cyber</a>
+      <a href="/sector/defense" class="drawer-link">⚔️ Defense</a>
+      <a href="/sector/space" class="drawer-link">🚀 Space</a>
+      <a href="/sector/mega-cap" class="drawer-link">🏢 Mega-Cap</a>
+      <a href="/sector/quantum" class="drawer-link">🔬 Quantum</a>
+    </div>
+    <div class="drawer-divider"></div>
+    <div class="drawer-section">
+      <div class="drawer-section-label">FEATURES</div>
+      <a href="/hive" class="drawer-link drawer-link-hive">Hive</a>
+      <a href="/signal-vs-the-street" class="drawer-link drawer-link-svs">Signal vs. Street</a>
+      <a href="/stocks/" class="drawer-link drawer-link-stocks">📈 Stock Pages</a>
+    </div>
+  </div>
   <main class="main">
     <section class="sector-hero">
       <div class="sector-hero-inner">
@@ -63,7 +128,12 @@
       <div class="footer-copy">© 2026 The Signal — Market Intelligence. Data from public sources.</div>
     </div>
   </footer>
-  <script src="/js/search.js" defer></script>
-  <script src="/js/theme.js?v=2" defer></script>
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-backdrop" id="searchBackdrop"></div>
+    <div class="search-modal">
+      <div class="search-bar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><input type="text" id="searchInput" placeholder="Search articles..."></div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
 </body>
 </html>
