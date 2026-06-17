@@ -1015,7 +1015,8 @@
     "parentId": null,
     "createdAt": "2026-06-17T11:06:23.815Z",
     "likes": [
-      "usr_e5"
+      "usr_e5",
+      "usr_c3"
     ]
   },
   {
@@ -1026,6 +1027,29 @@
     "photoURL": null,
     "uid": null,
     "parentId": "mqhyu0ng_u81bvo",
-    "createdAt": "2026-06-17T11:06:24.317Z"
+    "createdAt": "2026-06-17T11:06:24.317Z",
+    "likes": [
+      "usr_f6"
+    ]
+  },
+  {
+    "id": "mqhyu432_wo93rg",
+    "article": "apple-siri-nvidia-google-wwdc-2026",
+    "text": "apple spent a decade refusing to touch nvidia gpus and now siri runs on google gemini AND blackwell B200. the 'encrypted computing' privacy angle is a marketing bandaid on a strategic surrender",
+    "author": "SheriffBartholomew",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-17T11:06:27.758Z"
+  },
+  {
+    "id": "mqhyu4ib_cmp4u4",
+    "article": "apple-siri-nvidia-google-wwdc-2026",
+    "text": "the richest company on earth just admitted they can't build AI chips. siri running on google gemini and nvidia blackwell. absolutely wild. tim cook really said 'if you can't beat em, pay em'",
+    "author": "first_time_caller99",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-17T11:06:28.307Z"
   }
 ]
