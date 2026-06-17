@@ -939,7 +939,8 @@
     "parentId": null,
     "createdAt": "2026-06-17T11:06:16.228Z",
     "likes": [
-      "usr_d4"
+      "usr_d4",
+      "usr_e5"
     ]
   },
   {
@@ -950,7 +951,11 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-17T11:06:16.886Z"
+    "createdAt": "2026-06-17T11:06:16.886Z",
+    "likes": [
+      "usr_a1",
+      "usr_c3"
+    ]
   },
   {
     "id": "mqhytw98_qu82ha",
