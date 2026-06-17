@@ -26,7 +26,7 @@ const POSTS_DIR = path.join(ROOT, 'articles', 'posts');
 const SECTORS = {
   ai: 'AI', cyber: 'Cyber', defense: 'Defense',
   space: 'Space', 'mega-cap': 'Mega-Cap', quantum: 'Quantum',
-  etfs: 'ETFs', semiconductors: 'Semiconductors'
+  etfs: 'ETFs', 'ai-power': 'AI Power', semiconductors: 'Semiconductors'
 };
 
 const HOMEPAGE_LIMIT = 40;
@@ -259,6 +259,21 @@ if (!sectorTemplate) {
     fs.writeFileSync(path.join(outDir, 'index.html'), html);
     sectorCount++;
     console.log(`  📂 /sector/${sector}/ — ${arts.length} articles`);
+  }
+
+  // Also create empty sector pages for any defined sector with no articles
+  for (const [sector, sectorName] of Object.entries(SECTORS)) {
+    if (bySector[sector]) continue; // already built
+    let html = sectorTemplate
+      .replace(/{{SECTOR}}/g, sector)
+      .replace(/{{SECTOR_NAME}}/g, sectorName)
+      .replace('{{ARTICLE_CARDS}}', '<p class="sector-empty">Articles coming soon.</p>');
+    
+    const outDir = path.join(DST, 'sector', sector);
+    fs.mkdirSync(outDir, { recursive: true });
+    fs.writeFileSync(path.join(outDir, 'index.html'), html);
+    sectorCount++;
+    console.log(`  📂 /sector/${sector}/ — 0 articles (empty page)`);
   }
   console.log(`  ✅ ${sectorCount} sector pages generated`);
 }
