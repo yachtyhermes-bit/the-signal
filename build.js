@@ -25,7 +25,8 @@ const POSTS_DIR = path.join(ROOT, 'articles', 'posts');
 
 const SECTORS = {
   ai: 'AI', cyber: 'Cyber', defense: 'Defense',
-  space: 'Space', 'mega-cap': 'Mega-Cap', quantum: 'Quantum', semiconductors: 'Semiconductors'
+  space: 'Space', 'mega-cap': 'Mega-Cap', quantum: 'Quantum',
+  etfs: 'ETFs', semiconductors: 'Semiconductors'
 };
 
 const HOMEPAGE_LIMIT = 40;
