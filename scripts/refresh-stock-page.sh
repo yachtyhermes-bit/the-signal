@@ -9,6 +9,10 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
+# SAFETY: reset design-only files to committed state before building
+# Prevents uncommitted CSS/JS/template changes from poisoning the deploy
+git checkout -- _backup_dist/ public/css/ public/js/ 2>/dev/null || true
+
 LOG="scripts/refresh-stock-page.log"
 TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
 echo "=== $TIMESTAMP ===" | tee -a "$LOG"
