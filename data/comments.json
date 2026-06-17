@@ -965,7 +965,11 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-17T11:06:17.612Z"
+    "createdAt": "2026-06-17T11:06:17.612Z",
+    "likes": [
+      "usr_f6",
+      "usr_b2"
+    ]
   },
   {
     "id": "mqhytwvv_keeulr",
@@ -976,5 +980,15 @@
     "uid": null,
     "parentId": "mqhytw98_qu82ha",
     "createdAt": "2026-06-17T11:06:18.427Z"
+  },
+  {
+    "id": "mqhyu08c_2w529s",
+    "article": "aipo-ai-power-infra-dip-buy-june-2026",
+    "text": "AIPO holds Quanta, Eaton, GE Vernova, Constellation. Grid infrastructure for AI data centers. Hyperscalers committing hundreds of billions to builds that need power. Chips get headlines but the grid is the real bottleneck.",
+    "author": "data_dependent_1",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-17T11:06:22.764Z"
   }
 ]
