@@ -937,7 +937,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-17T11:06:16.228Z"
+    "createdAt": "2026-06-17T11:06:16.228Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mqhytvp2_ckptui",
@@ -958,5 +961,15 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-17T11:06:17.612Z"
+  },
+  {
+    "id": "mqhytwvv_keeulr",
+    "article": "broadcom-ai-infrastructure-moat-june-2026",
+    "text": "forward PE under 20 with custom ASIC lock-in at every hyperscaler. VMware gives them the software layer too. this is a 5-year hold. the earnings selloff was an expectations reset not a thesis break",
+    "author": "thesis_driven_dan",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mqhytw98_qu82ha",
+    "createdAt": "2026-06-17T11:06:18.427Z"
   }
 ]
