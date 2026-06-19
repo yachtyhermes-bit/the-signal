@@ -2620,7 +2620,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-19T16:22:12.272Z"
+    "createdAt": "2026-06-19T16:22:12.272Z",
+    "likes": [
+      "usr_c3"
+    ]
   },
   {
     "id": "mql4zv9y_n2vm9u",
@@ -2630,7 +2633,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-19T16:22:12.502Z"
+    "createdAt": "2026-06-19T16:22:12.502Z",
+    "likes": [
+      "usr_a1"
+    ]
   },
   {
     "id": "mql4zvhd_pf3p4i",
@@ -2640,7 +2646,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-19T16:22:12.769Z"
+    "createdAt": "2026-06-19T16:22:12.769Z",
+    "likes": [
+      "usr_e5"
+    ]
   },
   {
     "id": "mql4zvqi_ucva8e",
@@ -2661,5 +2670,15 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-19T16:22:13.431Z"
+  },
+  {
+    "id": "mql4zx19_8f4bez",
+    "article": "servicenow-ai-agent-enterprise-moat-2026",
+    "text": "is this a good time to buy servicenow? my first stock ever was pltr and that didnt go great lol. this seems like a real business though. learning as i go",
+    "author": "first_time_caller99",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-19T16:22:14.781Z"
   }
 ]
