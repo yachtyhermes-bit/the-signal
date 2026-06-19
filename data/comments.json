@@ -2224,7 +2224,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-19T11:04:27.492Z"
+    "createdAt": "2026-06-19T11:04:27.492Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mqktn8sy_0qnzn9",
@@ -2234,7 +2237,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-19T11:04:27.730Z"
+    "createdAt": "2026-06-19T11:04:27.730Z",
+    "likes": [
+      "usr_a1"
+    ]
   },
   {
     "id": "mqktn8zk_iye7yx",
@@ -2245,5 +2251,15 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-19T11:04:27.968Z"
+  },
+  {
+    "id": "mqktn95v_5i7tgu",
+    "article": "amd-mi400-ai-accelerator-june-2026",
+    "text": "should have bought last year. kicking myself rn. too late to get in??",
+    "author": "fomo_king_420",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mqktn8mc_zffv4o",
+    "createdAt": "2026-06-19T11:04:28.195Z"
   }
 ]
