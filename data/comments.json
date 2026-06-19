@@ -1462,7 +1462,10 @@
     "photoURL": null,
     "uid": "data_dependent_1",
     "parentId": null,
-    "createdAt": "2026-06-17T19:08:53.000Z"
+    "createdAt": "2026-06-17T19:08:53.000Z",
+    "likes": [
+      "usr_a1"
+    ]
   },
   {
     "id": "mqi9545e0f854",
@@ -1474,7 +1477,8 @@
     "parentId": null,
     "createdAt": "2026-06-17T19:08:53.000Z",
     "likes": [
-      "usr_a1"
+      "usr_a1",
+      "usr_e5"
     ]
   },
   {
