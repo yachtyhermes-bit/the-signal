@@ -342,4 +342,37 @@
     }
   };
 
+  // ═══ LIVE PRICE UPDATER ════════════════════════════════════
+  (function() {
+    var INTERVAL = 300000;
+    function fmt(n) {
+      if (n == null || isNaN(n)) return '---';
+      return n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
+    }
+    function update(prices) {
+      document.querySelectorAll('[data-price]').forEach(function(el) {
+        var sym = el.getAttribute('data-price');
+        var d = prices[sym];
+        if (d && d.price != null) el.textContent = '$' + fmt(d.price);
+      });
+      document.querySelectorAll('[data-change]').forEach(function(el) {
+        var sym = el.getAttribute('data-change');
+        var d = prices[sym];
+        if (d && d.changePercent != null) {
+          var pct = d.changePercent;
+          el.textContent = (pct >= 0 ? '▲ ' : '▼ ') + Math.abs(pct).toFixed(2) + '%';
+          el.className = el.className.replace(/positive|negative/g,'').trim() + ' ' + (pct >= 0 ? 'positive' : 'negative');
+        }
+      });
+    }
+    function refresh() {
+      fetch('/api/prices/')
+        .then(function(r) { return r.json(); })
+        .then(function(data) { update(data.prices || data); })
+        .catch(function(){});
+    }
+    refresh();
+    setInterval(refresh, INTERVAL);
+  })();
+
 })();
