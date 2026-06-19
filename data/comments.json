@@ -2480,7 +2480,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-19T11:04:43.766Z"
+    "createdAt": "2026-06-19T11:04:43.766Z",
+    "likes": [
+      "usr_e5"
+    ]
   },
   {
     "id": "mqktnlbs_2sgpv2",
@@ -2500,7 +2503,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-19T11:04:44.157Z"
+    "createdAt": "2026-06-19T11:04:44.157Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mqktnloc_1qb849",
@@ -2521,5 +2527,15 @@
     "uid": null,
     "parentId": "mqktnlbs_2sgpv2",
     "createdAt": "2026-06-19T11:04:44.660Z"
+  },
+  {
+    "id": "mqktnmhi_8hkyb5",
+    "article": "aipo-ai-power-infra-dip-buy-june-2026",
+    "text": "wait so instead of nvidia at 200x pe i can buy power companies with actual cash flow and contracts?? this is like discovering eth in 2017 before everyone piled in",
+    "author": "crypto_refugee_88",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-19T11:04:45.462Z"
   }
 ]
