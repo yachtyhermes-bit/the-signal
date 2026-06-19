@@ -23,6 +23,7 @@
   <script src="/js/search.js" defer></script>
   <script src="/js/auth.js?v=2" defer></script>
   <script src="/js/theme.js?v=2" defer></script>
+  <!-- ARTICLES_DATA_JSON -->
   <title>{{SECTOR_NAME}} — The Signal</title>
   <meta name="description" content="The Signal's {{SECTOR_NAME}} coverage — sharp analysis on {{SECTOR_NAME}} stocks, earnings, and market-moving catalysts.">
 </head>
@@ -88,11 +89,12 @@
                   <a href="/signal-vs-the-street" class="auth-nav-item"><span class="auth-nav-icon">📈</span> Signal vs. Street</a>
                   <a href="/stocks/" class="auth-nav-item"><span class="auth-nav-icon">📉</span> Stock Pages</a>
                   <a href="/#scorecard" class="auth-nav-item"><span class="auth-nav-icon">📊</span> Signal Scorecard</a>
+                  <a href="/pricing" class="auth-nav-item"><span class="auth-nav-icon">💎</span> Signal Premium</a>
                 </div>
                 <div class="auth-drop-divider"></div>
                 <div class="auth-profile-footer">
+                  <a href="/account/settings" class="auth-footer-link">✏️ Edit Profile</a>
                   <a href="/hive" class="auth-footer-link" onclick="navigateToHiveLeaderboard(event)">Leaderboard</a>
-                  <a href="/account/settings" class="auth-footer-link">Settings</a>
                   <button class="auth-signout-btn" id="authSignOut">Sign Out</button>
                 </div>
               </div>
@@ -123,6 +125,7 @@
                   <a href="/signal-vs-the-street" class="auth-nav-item"><span class="auth-nav-icon">📈</span> Signal vs. Street</a>
                   <a href="/stocks/" class="auth-nav-item"><span class="auth-nav-icon">📉</span> Stock Pages</a>
                   <a href="/#scorecard" class="auth-nav-item"><span class="auth-nav-icon">📊</span> Signal Scorecard</a>
+                  <a href="/pricing" class="auth-nav-item"><span class="auth-nav-icon">💎</span> Signal Premium</a>
                 </div>
               </div>
           </div>
@@ -135,21 +138,6 @@
       </div>
     </div>
   </nav>
-  <div class="focus-bar">
-    <a href="/sector/ai" class="focus-item focus-ai">AI</a>
-    <span class="focus-divider">·</span>
-    <a href="/sector/cyber" class="focus-item focus-cyber">Cyber</a>
-    <span class="focus-divider">·</span>
-    <a href="/sector/defense" class="focus-item focus-defense">Defense</a>
-    <span class="focus-divider">·</span>
-    <a href="/sector/space" class="focus-item focus-space">Space</a>
-    <span class="focus-divider">·</span>
-    <a href="/sector/mega-cap" class="focus-item focus-mega">Mega-Cap</a>
-    <span class="focus-divider">·</span>
-    <a href="/sector/ai-power" class="focus-item focus-ai-power">AI Power ⚡</a>
-    <span class="focus-divider">·</span>
-    <a href="/sector/etfs" class="focus-item focus-etfs">ETFs</a>
-  </div>
   <div class="drawer-overlay" id="drawerOverlay"></div>
   <div class="drawer" id="drawer">
     <div class="drawer-header">
@@ -179,7 +167,21 @@
     </div>
   </div>
   <main class="main">
-    {{TICKER_TAPE}}
+    <div class="focus-bar">
+    <a href="/sector/ai" class="focus-item focus-ai">AI</a>
+    <span class="focus-divider">·</span>
+    <a href="/sector/cyber" class="focus-item focus-cyber">Cyber</a>
+    <span class="focus-divider">·</span>
+    <a href="/sector/defense" class="focus-item focus-defense">Defense</a>
+    <span class="focus-divider">·</span>
+    <a href="/sector/space" class="focus-item focus-space">Space</a>
+    <span class="focus-divider">·</span>
+    <a href="/sector/mega-cap" class="focus-item focus-mega">Mega-Cap</a>
+    <span class="focus-divider">·</span>
+    <a href="/sector/ai-power" class="focus-item focus-ai-power">AI Power ⚡</a>
+    <span class="focus-divider">·</span>
+    <a href="/sector/etfs" class="focus-item focus-etfs">ETFs</a>
+  </div>
     <section class="sector-hero">
       <div class="sector-hero-inner">
         <h1 class="sector-hero-title">{{SECTOR_NAME}}</h1>
@@ -202,8 +204,14 @@
   <div class="search-overlay" id="searchOverlay">
     <div class="search-backdrop" id="searchBackdrop"></div>
     <div class="search-modal">
-      <div class="search-bar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><input type="text" id="searchInput" placeholder="Search articles..."></div>
+      <div class="search-header">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search articles by title, ticker, sector, or tag…" autofocus>
+        <button class="search-close" id="searchClose" aria-label="Close search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
       <div class="search-results" id="searchResults"></div>
+      <div class="search-empty" id="searchEmpty">Start typing to search articles…</div>
     </div>
   </div>
   <script>

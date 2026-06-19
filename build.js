@@ -231,25 +231,6 @@ const sectorTemplate = fs.existsSync(SECTOR_TEMPLATE)
   ? fs.readFileSync(SECTOR_TEMPLATE, 'utf8')
   : null;
 
-// Generate ticker tape HTML for sector pages
-const pricesPathTT = path.join(ROOT, 'data', 'prices.json');
-const pricesTT = fs.existsSync(pricesPathTT) ? JSON.parse(fs.readFileSync(pricesPathTT, 'utf8')) : {};
-const tickerSymbols = ['NVDA', 'PLTR', 'AVGO', 'AMD', 'GOOGL', 'META', 'MSFT', 'AMZN', 'TSLA', 'MU'];
-let tickerTapeHtml = '';
-if (Object.keys(pricesTT).length) {
-  const items = tickerSymbols.map(sym => {
-    const p = pricesTT[sym];
-    const price = p && p.price != null ? '$' + p.price.toFixed(2) : '---';
-    const chg = p && p.changePercent != null ? p.changePercent : 0;
-    const chgStr = (chg >= 0 ? '+' : '') + chg.toFixed(2) + '%';
-    const cls = chg >= 0 ? 'up' : 'down';
-    return `<span class="ticker-item"><span class="ticker-sym">${sym}</span><span class="ticker-prc">${price}</span><span class="ticker-chg ${cls}">${chgStr}</span></span>`;
-  });
-  // Duplicate for seamless scrolling
-  const allItems = items.concat(items).join('');
-  tickerTapeHtml = `<div class="ticker-tape"><div class="ticker-track">${allItems}</div></div>`;
-}
-
 if (!sectorTemplate) {
   console.log('⚠️  No sector template — skipping sector pages');
 } else {
@@ -269,8 +250,9 @@ if (!sectorTemplate) {
     let html = sectorTemplate
       .replace(/{{SECTOR}}/g, sector)
       .replace(/{{SECTOR_NAME}}/g, sectorName)
-      .replace('{{TICKER_TAPE}}', tickerTapeHtml)
-      .replace('{{ARTICLE_CARDS}}', cards);
+      .replace('{{ARTICLE_CARDS}}', cards)
+      .replace('<!-- ARTICLES_DATA_JSON -->',
+        `<script id="articles-data" type="application/json">${articlesJson}</script>`);
     
     const outDir = path.join(DST, 'sector', sector);
     fs.mkdirSync(outDir, { recursive: true });
@@ -285,8 +267,9 @@ if (!sectorTemplate) {
     let html = sectorTemplate
       .replace(/{{SECTOR}}/g, sector)
       .replace(/{{SECTOR_NAME}}/g, sectorName)
-      .replace('{{TICKER_TAPE}}', tickerTapeHtml)
-      .replace('{{ARTICLE_CARDS}}', '<p class="sector-empty">Articles coming soon.</p>');
+      .replace('{{ARTICLE_CARDS}}', '<p class="sector-empty">Articles coming soon.</p>')
+      .replace('<!-- ARTICLES_DATA_JSON -->',
+        `<script id="articles-data" type="application/json">${articlesJson}</script>`);
     
     const outDir = path.join(DST, 'sector', sector);
     fs.mkdirSync(outDir, { recursive: true });

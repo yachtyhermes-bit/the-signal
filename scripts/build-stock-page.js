@@ -155,10 +155,7 @@ function buildStockPage(symbol) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>${esc(symbol)} — The Signal</title>
   <link rel="stylesheet" href="/css/stock-card.css">
-  <link rel="stylesheet" href="/css/main.css?v=15">
   <script src="https://cdn.jsdelivr.net/npm/lightweight-charts@4.1.3/dist/lightweight-charts.standalone.production.js"></script>
-  <script src="/js/search.js" defer></script>
-  <script src="/js/auth.js?v=2" defer></script>
 </head>
 <body class="stock-page">
 
@@ -173,20 +170,10 @@ function buildStockPage(symbol) {
         <span class="logo-text"><span class="logo-the">THE</span> <strong>SIGNAL</strong></span>
       </a>
       <div class="stock-nav-right">
-        <button class="nav-btn search-btn" id="searchToggle" aria-label="Search" style="margin-right:6px">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-          </svg>
-        </button>
-        <button class="nav-btn auth-btn" id="authToggle" aria-label="Account" style="margin-right:6px">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 4-7 8-7s8 3 8 7"></path>
-          </svg>
-        </button>
         <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
           <span class="theme-icon">☀️</span>
         </button>
-        <button class="hamburger-btn" id="hamburgerToggle" aria-label="Menu">
+        <button class="hamburger-btn" aria-label="Menu">
           <span class="hamburger-line"></span>
           <span class="hamburger-line"></span>
           <span class="hamburger-line"></span>
@@ -194,59 +181,6 @@ function buildStockPage(symbol) {
       </div>
     </div>
   </nav>
-
-  <!-- ── AUTH DROPDOWN ── -->
-  <div class="auth-dropdown" id="authDropdown">
-    <div class="auth-guest" id="authGuest">
-      <div class="auth-guest-brand">
-        <span class="auth-guest-title">Welcome to <strong>The Signal</strong></span>
-        <span class="auth-guest-sub">Join the hive to track your portfolio</span>
-      </div>
-      <button class="auth-option auth-option-primary" onclick="showHiveJoinModal('login')">
-        <span class="auth-option-icon">🔑</span> Sign In
-      </button>
-      <button class="auth-option" onclick="showHiveJoinModal('register')">
-        <span class="auth-option-icon">✨</span> Create Account
-      </button>
-      <div class="auth-drop-divider"></div>
-      <div class="auth-profile-nav">
-        <a href="/sector/ai" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
-        <a href="/sector/cyber" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
-        <a href="/sector/defense" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
-        <a href="/sector/space" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
-        <a href="/sector/mega-cap" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
-        <a href="/sector/quantum" class="auth-nav-item"><span class="auth-nav-icon">🔬</span> Quantum</a>
-        <div class="auth-nav-section-header">FEATURES</div>
-        <a href="/hive" class="auth-nav-item"><span class="auth-nav-icon">🐝</span> Hive</a>
-        <a href="/signal-vs-the-street" class="auth-nav-item"><span class="auth-nav-icon">📈</span> Signal vs. Street</a>
-        <a href="/stocks/" class="auth-nav-item"><span class="auth-nav-icon">📉</span> Stock Pages</a>
-      </div>
-    </div>
-    <div class="auth-signed-in" id="authSignedIn" style="display:none">
-      <div class="auth-nav-section">
-        <div class="auth-nav-section-header">SECTORS</div>
-        <a href="/sector/ai" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
-        <a href="/sector/cyber" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
-        <a href="/sector/defense" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
-        <a href="/sector/space" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
-        <a href="/sector/mega-cap" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
-        <a href="/sector/quantum" class="auth-nav-item"><span class="auth-nav-icon">🔬</span> Quantum</a>
-      </div>
-      <div class="auth-drop-divider"></div>
-      <div class="auth-nav-section">
-        <div class="auth-nav-section-header">FEATURES</div>
-        <a href="/hive" class="auth-nav-item"><span class="auth-nav-icon">🐝</span> Hive</a>
-        <a href="/signal-vs-the-street" class="auth-nav-item"><span class="auth-nav-icon">📈</span> Signal vs. Street</a>
-        <a href="/stocks/" class="auth-nav-item"><span class="auth-nav-icon">📉</span> Stock Pages</a>
-      </div>
-      <div class="auth-drop-divider"></div>
-      <div class="auth-profile-footer">
-        <a href="/hive" class="auth-footer-link">Leaderboard</a>
-        <a href="/account/settings" class="auth-footer-link">Settings</a>
-        <button class="auth-signout-btn" id="authSignOut">Sign Out</button>
-      </div>
-    </div>
-  </div>
 
   <!-- ── DRAWER MENU ── -->
   <div class="drawer-overlay" id="drawerOverlay"></div>
@@ -274,21 +208,6 @@ function buildStockPage(symbol) {
       <a href="/stocks/" class="drawer-link">📈 Stock Pages</a>
       <a href="/#scorecard" class="drawer-link">📊 Signal Scorecard</a>
       <a href="/pricing" class="drawer-link">💎 Signal Premium</a>
-    </div>
-  </div>
-
-  <!-- ── SEARCH OVERLAY ── -->
-  <div class="search-overlay" id="searchOverlay">
-    <div class="search-backdrop" id="searchBackdrop"></div>
-    <div class="search-modal">
-      <div class="search-header">
-        <input type="text" class="search-input" id="searchInput" placeholder="Search articles by title, ticker, sector, or tag…" autofocus>
-        <button class="search-close" id="searchClose" aria-label="Close search">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-        </button>
-      </div>
-      <div class="search-results" id="searchResults"></div>
-      <div class="search-empty" id="searchEmpty">Start typing to search articles…</div>
     </div>
   </div>
 

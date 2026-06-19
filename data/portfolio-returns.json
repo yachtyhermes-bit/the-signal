@@ -1,23 +1,23 @@
 {
   "name": "The Signal Portfolio",
   "inception": "2024-06-01",
-  "lastUpdated": "2026-06-18T22:00:49.337Z",
+  "lastUpdated": "2026-06-19T00:43:57.431Z",
   "periods": {
     "sinceInception": {
       "label": "Since Inception",
-      "portfolioReturn": 247.98,
+      "portfolioReturn": 245.56,
       "spyReturn": 41.48,
       "qqqReturn": 63.45,
-      "vsSPY": 206.5,
-      "vsQQQ": 184.53
+      "vsSPY": 204.08,
+      "vsQQQ": 182.11
     },
     "ytd": {
       "label": "YTD",
-      "portfolioReturn": 38.3,
+      "portfolioReturn": 37.92,
       "spyReturn": 9.31,
       "qqqReturn": 20.8,
-      "vsSPY": 28.99,
-      "vsQQQ": 17.5
+      "vsSPY": 28.61,
+      "vsQQQ": 17.12
     },
     "oneYear": {
       "label": "1 Year",
@@ -162,7 +162,7 @@
     {
       "ticker": "RNMBY",
       "weight": 1,
-      "return": 133.26
+      "return": 132.24
     },
     {
       "ticker": "CRWV",
@@ -198,6 +198,16 @@
       "ticker": "AXP",
       "weight": 0.5,
       "return": 42.69
+    },
+    {
+      "ticker": "SPCX",
+      "weight": 0.5,
+      "return": null
+    },
+    {
+      "ticker": "ONDAS",
+      "weight": 0.5,
+      "return": null
     }
   ]
 }
