@@ -1856,7 +1856,10 @@
     "photoURL": null,
     "uid": "night_shift_trader",
     "parentId": null,
-    "createdAt": "2026-06-18T16:19:08.000Z"
+    "createdAt": "2026-06-18T16:19:08.000Z",
+    "likes": [
+      "usr_e5"
+    ]
   },
   {
     "id": "28fe20de675c_d06253",
@@ -2894,7 +2897,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-19T16:22:26.712Z"
+    "createdAt": "2026-06-19T16:22:26.712Z",
+    "likes": [
+      "usr_e5"
+    ]
   },
   {
     "id": "mql506fg_ljudi1",
@@ -2904,7 +2910,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-19T16:22:26.956Z"
+    "createdAt": "2026-06-19T16:22:26.956Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mql506wj_u9oiez",
@@ -2924,7 +2933,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-19T16:22:27.802Z"
+    "createdAt": "2026-06-19T16:22:27.802Z",
+    "likes": [
+      "usr_c3"
+    ]
   },
   {
     "id": "mql50792_3wd7gw",
@@ -2945,5 +2957,15 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-19T16:22:28.407Z"
+  },
+  {
+    "id": "mql50d8l_mgrk2u",
+    "article": "goldman-sachs-ai-capex-warning-june-2026",
+    "text": "should have sold my oracle calls before close. my portfolio just got smoked in after hours and i didnt even know that was a thing 💀",
+    "author": "fomo_king_420",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-19T16:22:35.781Z"
   }
 ]
