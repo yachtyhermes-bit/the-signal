@@ -2745,7 +2745,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-19T16:22:17.541Z"
+    "createdAt": "2026-06-19T16:22:17.541Z",
+    "likes": [
+      "usr_a1"
+    ]
   },
   {
     "id": "mql4zzd9_wf7d31",
@@ -2766,5 +2769,25 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-19T16:22:18.022Z"
+  },
+  {
+    "id": "mql4zzrk_31bonn",
+    "article": "sofi-the-fintech-that-quietly-figured-out-profits",
+    "text": "whatever happens happens. im not checking til august. this is my fun money and market does what it does",
+    "author": "westcoastcouch",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-19T16:22:18.320Z"
+  },
+  {
+    "id": "mql4zzz9_zmhfpu",
+    "article": "sofi-the-fintech-that-quietly-figured-out-profits",
+    "text": "wait sofi actually makes money and has real users?? after getting rugged in crypto this feels like discovering a cheat code. at least it wont rug and stocks are so slow",
+    "author": "crypto_refugee_88",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-19T16:22:18.597Z"
   }
 ]
