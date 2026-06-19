@@ -2454,7 +2454,8 @@
     "parentId": null,
     "createdAt": "2026-06-19T11:04:40.953Z",
     "likes": [
-      "usr_b2"
+      "usr_b2",
+      "usr_a1"
     ]
   },
   {
@@ -2467,7 +2468,8 @@
     "parentId": null,
     "createdAt": "2026-06-19T11:04:41.139Z",
     "likes": [
-      "usr_d4"
+      "usr_d4",
+      "usr_b2"
     ]
   },
   {
@@ -2491,7 +2493,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": "mqktnj09_xnhrvl",
-    "createdAt": "2026-06-19T11:04:41.596Z"
+    "createdAt": "2026-06-19T11:04:41.596Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mqktnjmu_satuda",
