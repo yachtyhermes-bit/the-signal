@@ -629,7 +629,10 @@
     "photoURL": null,
     "uid": "bought_at_the_top",
     "parentId": "mqfq8e1p_pp1p1p",
-    "createdAt": "2026-06-16T11:02:02.000Z"
+    "createdAt": "2026-06-16T11:02:02.000Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mqfq8e3r_rr3r3r",
@@ -639,7 +642,10 @@
     "photoURL": null,
     "uid": "help_me_pls77",
     "parentId": null,
-    "createdAt": "2026-06-16T11:02:02.000Z"
+    "createdAt": "2026-06-16T11:02:02.000Z",
+    "likes": [
+      "usr_c3"
+    ]
   },
   {
     "id": "mqfq8e4s_ss4s4s",
@@ -2365,5 +2371,25 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-19T11:04:32.662Z"
+  },
+  {
+    "id": "mqktncr5_puades",
+    "article": "axon-ai-policing-moat-2026",
+    "text": "too expensive for me. pass. ill wait for it to actually prove the ai stuff works at scale",
+    "author": "Shdwrptr",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-19T11:04:32.849Z"
+  },
+  {
+    "id": "mqktncws_cstiri",
+    "article": "axon-ai-policing-moat-2026",
+    "text": "is this a good time to buy?? my first stock ever and i dont want to mess this up. only down a little on my other positions",
+    "author": "first_time_caller99",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mqktncfq_etf16e",
+    "createdAt": "2026-06-19T11:04:33.052Z"
   }
 ]
