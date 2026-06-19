@@ -599,7 +599,10 @@
     "photoURL": null,
     "uid": "RN_Geo",
     "parentId": null,
-    "createdAt": "2026-06-16T11:02:02.000Z"
+    "createdAt": "2026-06-16T11:02:02.000Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mqfq8d2n_nn2n2n",
@@ -3042,5 +3045,35 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-19T16:22:40.919Z"
+  },
+  {
+    "id": "mql50hea_26owqh",
+    "article": "trump-iran-oil-seizure-june-2026",
+    "text": "the curve is in massive backwardation. spot 92 but 6 month futures barely moved. smart money pricing this as temporary headline risk not actual supply disruption.",
+    "author": "contango_cowboy",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-19T16:22:41.170Z"
+  },
+  {
+    "id": "mql50hmy_lc0vgu",
+    "article": "trump-iran-oil-seizure-june-2026",
+    "text": "if this hits i can pay tuition. all in on xom calls at open. yolo 🚀",
+    "author": "yolo_my_401k",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mql50h0b_0onxdx",
+    "createdAt": "2026-06-19T16:22:41.482Z"
+  },
+  {
+    "id": "mql50hv7_w4llqd",
+    "article": "trump-iran-oil-seizure-june-2026",
+    "text": "with everyone fading the energy move itll probably rip higher. fading the crowd on this one.",
+    "author": "whohebe123",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mql50h7b_j3cjy3",
+    "createdAt": "2026-06-19T16:22:41.779Z"
   }
 ]
