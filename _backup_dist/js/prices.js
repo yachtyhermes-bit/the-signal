@@ -36,6 +36,25 @@
     }
   }
 
+  // Update stock cards + trending rows (data-price / data-change attributes)
+  function updateCardPrices(prices) {
+    document.querySelectorAll('[data-price]').forEach(function(el) {
+      var sym = el.getAttribute('data-price');
+      var p = prices[sym];
+      if (p && p.price != null) el.textContent = '$' + formatNum(p.price);
+    });
+    document.querySelectorAll('[data-change]').forEach(function(el) {
+      var sym = el.getAttribute('data-change');
+      var p = prices[sym];
+      if (p && p.changePercent != null) {
+        var chg = (p.changePercent >= 0 ? '+' : '') + p.changePercent.toFixed(2) + '%';
+        el.textContent = chg;
+        var cls = el.className.replace(/positive|negative|up|down/g,'').trim();
+        el.className = cls + ' ' + (p.changePercent >= 0 ? 'up' : 'down');
+      }
+    });
+  }
+
   async function fetchPrices() {
     try {
       const res = await fetch('/api/prices/');
@@ -52,6 +71,7 @@
     const data = await fetchPrices();
     if (!data) return;
     updateTickerTape(data);
+    updateCardPrices(data);
   }
 
   // Initial fetch after page loads

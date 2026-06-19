@@ -62,14 +62,14 @@ const stockListData = symbols.map(sym => {
 
 // Build stock cards HTML — slim row layout
 const cardsHtml = stockListData.map(s => {
-  return `<a href="/stocks/${esc(s.sym)}/" class="stocks-card">
+  return `<a href="/stocks/${esc(s.sym)}/" class="stocks-card" data-ticker="${esc(s.sym)}">
     <div class="stocks-card-left">
       <span class="stocks-card-ticker">$${esc(s.sym)}</span>
       <span class="stocks-card-name">${esc(s.name)}</span>
     </div>
     <div class="stocks-card-right">
-      <span class="stocks-card-price">${esc(s.price)}</span>
-      <span class="stocks-card-change ${s.changeClass}">${esc(s.change)}</span>
+      <span class="stocks-card-price" data-price="${esc(s.sym)}">${esc(s.price)}</span>
+      <span class="stocks-card-change ${s.changeClass}" data-change="${esc(s.sym)}">${esc(s.change)}</span>
     </div>
   </a>`;
 }).join('\n');
@@ -235,6 +235,37 @@ const html = `<!DOCTYPE html>
       });
     }
   });
+  </script>
+  <script>
+  // Live price updater — fetches from Vercel proxy every 5 min
+  (function() {
+    var INTERVAL = 300000;
+    function formatNum(n) {
+      if (n == null || isNaN(n)) return '---';
+      return n.toLocaleString('en-US', {minimumFractionDigits:2,maximumFractionDigits:2});
+    }
+    function updatePrices(prices) {
+      document.querySelectorAll('[data-price]').forEach(function(el) {
+        var sym = el.getAttribute('data-price');
+        var p = prices[sym];
+        if (p && p.price != null) el.textContent = '$' + formatNum(p.price);
+      });
+      document.querySelectorAll('[data-change]').forEach(function(el) {
+        var sym = el.getAttribute('data-change');
+        var p = prices[sym];
+        if (p && p.changePercent != null) {
+          var chg = (p.changePercent >= 0 ? '+' : '') + p.changePercent.toFixed(2) + '%';
+          el.textContent = chg;
+          el.className = el.className.replace(/positive|negative/g,'').trim() + ' ' + (p.changePercent >= 0 ? 'positive' : 'negative');
+        }
+      });
+    }
+    function fetchPrices() {
+      fetch('/api/prices/').then(function(r){return r.json()}).then(updatePrices).catch(function(){});
+    }
+    fetchPrices();
+    setInterval(fetchPrices, INTERVAL);
+  })();
   </script>
 </body>
 </html>`;

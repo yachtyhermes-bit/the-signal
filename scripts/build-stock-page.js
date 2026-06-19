@@ -228,11 +228,11 @@ function buildStockPage(symbol) {
           </div>
         </div>
         <div class="stock-hero-right">
-          <div class="stock-price-display">${isPrivate ? 'Private' : (priceNow ? '$' + priceNow.toFixed(2) : '—')}</div>
-          ${!isPrivate && changePct != null ? `<div class="stock-change-display ${changePct >= 0 ? 'positive' : 'negative'}">
+          <div class="stock-price-display" data-price="${symbol}">${isPrivate ? 'Private' : (priceNow ? '$' + priceNow.toFixed(2) : '—')}</div>
+          ${!isPrivate && changePct != null ? `<div class="stock-change-display ${changePct >= 0 ? 'positive' : 'negative'}" data-change="${symbol}">
             ${changePct >= 0 ? '▲' : '▼'} ${Math.abs(changePct).toFixed(2)}%
           </div>` : ''}
-          ${isPrivate ? '<div class="stock-change-display" style="color:var(--signal-gold)">Not Publicly Traded</div>' : ''}
+          ${isPrivate ? '<div class="stock-change-display" style="color:var(--signal-gold)" data-change="${symbol}">Not Publicly Traded</div>' : ''}
         </div>
       </div>
       <div class="stock-hero-stats">
@@ -637,6 +637,10 @@ function toggleTheme() {
       });
     }
   });
+  </script>
+  <script>
+  // Live price updater for stock header
+  (function(){var I=300000;function f(n){if(n==null||isNaN(n))return'---';return n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})}function u(p){document.querySelectorAll('[data-price]').forEach(function(e){var s=e.getAttribute('data-price');var d=p[s];if(d&&d.price!=null)e.textContent='$'+f(d.price)});document.querySelectorAll('[data-change]').forEach(function(e){var s=e.getAttribute('data-change');var d=p[s];if(d&&d.changePercent!=null){var c=(d.changePercent>=0?'+':'')+d.changePercent.toFixed(2)+'%';e.textContent=(d.changePercent>=0?'▲ ':'▼ ')+Math.abs(d.changePercent).toFixed(2)+'%';var cl=e.className.replace(/positive|negative/g,'').trim();e.className=cl+' '+(d.changePercent>=0?'positive':'negative')}})})function r(){fetch('/api/prices/').then(function(r){return r.json()}).then(u).catch(function(){})}r();setInterval(r,I)})();
   </script>
 </body>
 </html>`;

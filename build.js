@@ -292,14 +292,14 @@ for (const sym of trendingTickers) {
   const priceStr = priceVal != null ? '$' + priceVal.toFixed(2) : '—';
   const chgStr = chgPct != null ? (chgPct >= 0 ? '+' : '') + chgPct.toFixed(2) + '%' : '—';
   const dirClass = chgPct != null ? (chgPct >= 0 ? 'up' : 'down') : '';
-  trendingHtml += `<a href="/stocks/${sym}/" class="trending-row">
+  trendingHtml += `<a href="/stocks/${sym}/" class="trending-row" data-ticker="${sym}">
     <div class="trending-row-left">
       <span class="trending-row-ticker">${sym}</span>
       <span class="trending-row-name">${p.name || sym}</span>
     </div>
     <div class="trending-row-right">
-      <span class="trending-row-price">${priceStr}</span>
-      <span class="trending-row-change ${dirClass}">${chgStr}</span>
+      <span class="trending-row-price" data-price="${sym}">${priceStr}</span>
+      <span class="trending-row-change ${dirClass}" data-change="${sym}">${chgStr}</span>
     </div>
   </a>`;
 }

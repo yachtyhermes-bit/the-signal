@@ -9327,7 +9327,8 @@
         "totalAssets": 41182000000.0,
         "totalLiabilities": 19081000000.0
       }
-    ]
+    ],
+    "fmpCalls": 0
   },
   "SPACEX": {
     "company": {
@@ -9338,12 +9339,137 @@
       "description": "Space Exploration Technologies Corp. provides satellite-based broadband services in the United States, Ireland, Canada, and internationally. The company's Connectivity segment operates a high-speed, low-latency broadband network powered by various Starlink satellites in low-earth orbit, delivering connectivity to various consumer, enterprise, and government customers through its Starlink offering. Its Space segment designs, manufactures, and launches reusable rockets to provide access to space. It offers launch services for the deployment of payloads to intended orbits for commercial and government customers utilizing Falcon 9 and Falcon Heavy; and launch and development for the development of spacecraft and the provision of launch and mission services for government agency space programs utilizing Falcon 9, Falcon Heavy, Starship, and Dragon. The company's AI segment operates a vertically integrated AI platform spanning a frontier LLM Grok; AI solutions for consumer and enterprise customers; X, a real-time information, entertainment, and free speech platform; and AI computational infrastructure. The company was founded in 2002 and is based in Starbase, Texas.",
       "website": "https://www.spacex.com",
       "city": "Starbase",
-      "state": "TX",
-      "isPrivate": true
+      "state": "TX"
     },
-    "stats": {},
-    "returns": {},
-    "analystTarget": {},
+    "stats": {
+      "marketCap": {
+        "raw": 2437224595456.0,
+        "fmt": "$2.4T"
+      },
+      "forwardPE": {
+        "raw": -2055.56,
+        "fmt": "-2055.56"
+      },
+      "epsTrailing": {
+        "raw": -0.67,
+        "fmt": "$-0.67"
+      },
+      "epsForward": {
+        "raw": -0.09,
+        "fmt": "$-0.09"
+      },
+      "avgVolume": {
+        "raw": 288722200.0,
+        "fmt": "288.7M"
+      },
+      "fiftyTwoWeekLow": {
+        "raw": 149.34,
+        "fmt": "$149.34"
+      },
+      "fiftyTwoWeekHigh": {
+        "raw": 225.64,
+        "fmt": "$225.64"
+      },
+      "fiftyDayAverage": {
+        "raw": 188.33,
+        "fmt": "$188.33"
+      },
+      "twoHundredDayAverage": {
+        "raw": 188.33,
+        "fmt": "$188.33"
+      },
+      "targetMeanPrice": {
+        "raw": 187.8,
+        "fmt": "$187.80"
+      },
+      "recommendationKey": "buy",
+      "totalRevenue": {
+        "raw": 19300999168.0,
+        "fmt": "$19.3B"
+      },
+      "revenueGrowth": {
+        "raw": 0.154,
+        "fmt": "15.4%"
+      },
+      "netIncome": {
+        "raw": -9356000256.0,
+        "fmt": "$-9.4B"
+      },
+      "grossProfitMargin": {
+        "raw": 0.488,
+        "fmt": "48.8%"
+      },
+      "netProfitMargin": {
+        "raw": -0.485,
+        "fmt": "-48.5%"
+      },
+      "totalDebt": {
+        "raw": 30602999808.0,
+        "fmt": "$30.6B"
+      },
+      "totalCash": {
+        "raw": 23675000832.0,
+        "fmt": "$23.7B"
+      },
+      "ebitda": {
+        "raw": 3950000128.0,
+        "fmt": "$4.0B"
+      },
+      "grossProfit": {
+        "raw": 9424000000.0,
+        "fmt": "$9.4B"
+      },
+      "grossProfitGrowth": {
+        "raw": 0.532,
+        "fmt": "53.2%"
+      },
+      "priceToSales": {
+        "raw": 126.3,
+        "fmt": "126.3x"
+      },
+      "enterpriseValue": {
+        "raw": 1183962365952.0,
+        "fmt": "$1.2T"
+      },
+      "grossMargins": {
+        "raw": 0.488,
+        "fmt": "48.8%"
+      },
+      "operatingMargins": {
+        "raw": -0.416,
+        "fmt": "-41.6%"
+      },
+      "profitMargins": {
+        "raw": -0.45,
+        "fmt": "-45.0%"
+      }
+    },
+    "returns": {
+      "oneYear": {
+        "raw": null,
+        "fmt": "nan%"
+      },
+      "fiveYear": null,
+      "tenYear": null,
+      "ytd": {
+        "raw": null,
+        "fmt": "nan%"
+      }
+    },
+    "analystTarget": {
+      "high": {
+        "raw": 310.0,
+        "fmt": "$310.00"
+      },
+      "low": {
+        "raw": 62.0,
+        "fmt": "$62.00"
+      },
+      "mean": {
+        "raw": 187.8,
+        "fmt": "$187.80"
+      }
+    },
     "analyst": {
       "recommendationKey": "buy",
       "targetMeanPrice": {
@@ -9402,7 +9528,59 @@
         "close": null
       }
     ],
-    "quarterlyFinancials": {},
+    "quarterlyFinancials": {
+      "revenue": [
+        {
+          "period": "2026/Q1",
+          "actual": 4694000000.0
+        },
+        {
+          "period": "2025/Q1",
+          "actual": 4067000000.0
+        },
+        {
+          "period": "2026/Q2",
+          "estimated": 6318500000.0
+        },
+        {
+          "period": "2026/Q3",
+          "estimated": 9923666670.0
+        }
+      ],
+      "netIncome": [
+        {
+          "period": "2026/Q1",
+          "actual": -4276000000.0
+        },
+        {
+          "period": "2025/Q1",
+          "actual": -528000000.0
+        }
+      ],
+      "eps": [],
+      "ebit": [
+        {
+          "period": "2026/Q1",
+          "actual": -3606000000.0
+        },
+        {
+          "period": "2025/Q1",
+          "actual": -67000000.0
+        }
+      ],
+      "totalAssets": [
+        {
+          "period": "2026/Q1",
+          "actual": 102094000000.0
+        }
+      ],
+      "totalLiabilities": [
+        {
+          "period": "2026/Q1",
+          "actual": 60512000000.0
+        }
+      ]
+    },
     "consensus": {
       "strongBuy": 1,
       "buy": 5,
@@ -9419,7 +9597,26 @@
     },
     "aiAnalysis": "Based on our analysis, Space Exploration Technologies Corp. demonstrates buy fundamentals. with revenue reaching $19.3B and growing at 15.4% year-over-year. Our fair value estimate of $187.80 suggests +1.5% upside from current levels of $185.00. The company maintains a competitive position in Industrials, supported by its market presence and financial performance.",
     "lastUpdated": "2026-06-19",
-    "fmpIncome": [],
+    "fmpIncome": [
+      {
+        "date": "2025-12-31",
+        "revenue": 18674000000.0,
+        "grossProfit": 9223000000.0,
+        "netIncome": -4937000000.0
+      },
+      {
+        "date": "2024-12-31",
+        "revenue": 14015000000.0,
+        "grossProfit": 6019000000.0,
+        "netIncome": 791000000.0
+      },
+      {
+        "date": "2023-12-31",
+        "revenue": 10387000000.0,
+        "grossProfit": 4277000000.0,
+        "netIncome": -4628000000.0
+      }
+    ],
     "fmpBalance": [
       {
         "date": "2025-12-31",
@@ -9431,8 +9628,7 @@
         "totalAssets": 57062000000.0,
         "totalLiabilities": 31258000000.0
       }
-    ],
-    "annualFinancials": {}
+    ]
   },
   "AMZN": {
     "company": {
@@ -18760,7 +18956,8 @@
         "totalAssets": 462675000000.0,
         "totalLiabilities": 316632000000.0
       }
-    ]
+    ],
+    "fmpCalls": 0
   },
   "TSLA": {
     "company": {
@@ -28110,7 +28307,8 @@
         "totalAssets": 82338000000.0,
         "totalLiabilities": 36440000000.0
       }
-    ]
+    ],
+    "fmpCalls": 0
   },
   "PLTR": {
     "company": {
@@ -37438,7 +37636,8 @@
         "totalAssets": 3461239000.0,
         "totalLiabilities": 818802000.0
       }
-    ]
+    ],
+    "fmpCalls": 0
   },
   "RKLB": {
     "company": {
@@ -46742,7 +46941,8 @@
         "totalAssets": 989123000.0,
         "totalLiabilities": 315917000.0
       }
-    ]
+    ],
+    "fmpCalls": 0
   },
   "KTOS": {
     "company": {
@@ -56045,7 +56245,8 @@
         "totalAssets": 1551500000.0,
         "totalLiabilities": 604000000.0
       }
-    ]
+    ],
+    "fmpCalls": 0
   },
   "CRWV": {
     "company": {
@@ -58674,7 +58875,8 @@
         "totalAssets": 4976975000.0,
         "totalLiabilities": 5573566000.0
       }
-    ]
+    ],
+    "fmpCalls": 0
   },
   "AXON": {
     "company": {
@@ -67953,7 +68155,8 @@
         "totalAssets": 2851894000.0,
         "totalLiabilities": 1583403000.0
       }
-    ]
+    ],
+    "fmpCalls": 0
   },
   "MSFT": {
     "company": {
@@ -77236,7 +77439,8 @@
         "totalAssets": 364840000000.0,
         "totalLiabilities": 198298000000.0
       }
-    ]
+    ],
+    "fmpCalls": 0
   },
   "SOFI": {
     "company": {
@@ -86524,7 +86728,8 @@
         "totalAssets": 19007675000.0,
         "totalLiabilities": 13479199000.0
       }
-    ]
+    ],
+    "fmpCalls": 0
   },
   "ZS": {
     "company": {
@@ -95807,7 +96012,8 @@
         "totalAssets": 2832665000.0,
         "totalLiabilities": 2259365000.0
       }
-    ]
+    ],
+    "fmpCalls": 0
   },
   "AVGO": {
     "company": {
@@ -105114,7 +105320,8 @@
         "totalAssets": 73249000000.0,
         "totalLiabilities": 50540000000.0
       }
-    ]
+    ],
+    "fmpCalls": 0
   },
   "GOOGL": {
     "company": {
@@ -114409,6 +114616,10 @@
         "totalAssets": 365264000000.0,
         "totalLiabilities": 109120000000.0
       }
-    ]
+    ],
+    "fmpCalls": 0
+  },
+  "SPCX": {
+    "fmpCalls": 0
   }
 }
