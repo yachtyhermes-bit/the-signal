@@ -1099,7 +1099,8 @@
     "parentId": null,
     "createdAt": "2026-06-17T11:06:22.764Z",
     "likes": [
-      "usr_a1"
+      "usr_a1",
+      "usr_d4"
     ]
   },
   {
@@ -1111,9 +1112,7 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-17T11:06:23.308Z",
-    "likes": [
-      "usr_b2"
-    ]
+    "likes": []
   },
   {
     "id": "mqhyu11j_o788dw",
@@ -1123,7 +1122,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-17T11:06:23.815Z"
+    "createdAt": "2026-06-17T11:06:23.815Z",
+    "likes": [
+      "usr_a1"
+    ]
   },
   {
     "id": "mqhyu1fh_9mt3l6",
@@ -1134,9 +1136,7 @@
     "uid": null,
     "parentId": "mqhyu0ng_u81bvo",
     "createdAt": "2026-06-17T11:06:24.317Z",
-    "likes": [
-      "usr_a1"
-    ]
+    "likes": []
   },
   {
     "id": "mqhyu432_wo93rg",
@@ -2587,7 +2587,8 @@
     "parentId": null,
     "createdAt": "2026-06-19T11:04:45.462Z",
     "likes": [
-      "usr_a1"
+      "usr_a1",
+      "usr_d4"
     ]
   },
   {
@@ -2599,9 +2600,7 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-19T11:04:45.697Z",
-    "likes": [
-      "usr_a1"
-    ]
+    "likes": []
   },
   {
     "id": "mqktnmsw_agnrem",
@@ -3114,5 +3113,15 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-19T16:22:44.404Z"
+  },
+  {
+    "id": "mql50k3i_osf8a4",
+    "article": "aipo-ai-power-infra-dip-buy-june-2026",
+    "text": "good companies good product. eaton is booked out til 2029 on data center orders. buying some for the kids college fund 🍺",
+    "author": "grillmaster_finance",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mql50jq2_6zuy79",
+    "createdAt": "2026-06-19T16:22:44.670Z"
   }
 ]
