@@ -199,14 +199,14 @@ function buildStockPage(symbol) {
       <a href="/sector/space" class="drawer-link">Space</a>
       <a href="/sector/mega-cap" class="drawer-link">Mega-Cap</a>
       <a href="/sector/quantum" class="drawer-link">Quantum</a>
-      <a href="/sector/ai-power" class="drawer-link">AI Power</a>
+      <a href="/sector/ai-power" class="drawer-link">AI Power ⚡</a>
       <a href="/sector/etfs" class="drawer-link">ETFs</a>
       <hr class="drawer-divider">
       <div class="drawer-section-label">FEATURES</div>
-      <a href="/hive" class="drawer-link">Hive</a>
-      <a href="/signal-vs-the-street" class="drawer-link">Signal vs. Street</a>
       <a href="/stocks/" class="drawer-link">📈 Stock Pages</a>
       <a href="/#scorecard" class="drawer-link">📊 Signal Scorecard</a>
+      <a href="/hive" class="drawer-link">🐝 Hive</a>
+      <a href="/signal-vs-the-street" class="drawer-link">⚡ Signal vs. Street</a>
       <a href="/pricing" class="drawer-link">💎 Signal Premium</a>
     </div>
   </div>
