@@ -17,7 +17,7 @@
   const dataScript = document.querySelector('script[id^="chartData-"]');
   if (!dataScript) return;
   const pageData = JSON.parse(dataScript.textContent);
-  const ohlcData = pageData.prices || [];
+  const ohlcData = (pageData.prices || []).filter(d => d.open != null && d.high != null && d.low != null && d.close != null);
   const quarterly = pageData.quarterly || {};
   const annual = pageData.annual || {};
 
