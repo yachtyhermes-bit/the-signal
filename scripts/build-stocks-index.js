@@ -261,7 +261,7 @@ const html = `<!DOCTYPE html>
       });
     }
     function fetchPrices() {
-      fetch('/api/prices/').then(function(r){return r.json()}).then(updatePrices).catch(function(){});
+      fetch('/api/prices/').then(function(r){return r.json()}).then(function(d){updatePrices(d.prices||d)}).catch(function(){});
     }
     fetchPrices();
     setInterval(fetchPrices, INTERVAL);
