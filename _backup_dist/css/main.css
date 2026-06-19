@@ -301,6 +301,8 @@ main {
 .focus-item.focus-defense { color: #fbbf24; }
 .focus-item.focus-space { color: #a78bfa; }
 .focus-item.focus-mega { color: #f87171; }
+.focus-item.focus-ai-power { color: #facc15; }
+.focus-item.focus-etfs { color: #c084fc; }
 .focus-divider { color: var(--text-muted); font-size: 14px; }
 
 /* === FEED === */
