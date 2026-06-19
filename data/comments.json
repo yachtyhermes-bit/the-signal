@@ -550,9 +550,7 @@
     "uid": "macro_dad_energy",
     "parentId": null,
     "createdAt": "2026-06-16T11:02:02.000Z",
-    "likes": [
-      "usr_a1"
-    ]
+    "likes": []
   },
   {
     "id": "mqfq8c2j_jj2j2j",
@@ -2967,5 +2965,45 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-19T16:22:35.781Z"
+  },
+  {
+    "id": "mql50dei_qqorr0",
+    "article": "goldman-sachs-ai-capex-warning-june-2026",
+    "text": "retail always the exit liquidity. goldman drops this $920b capex note 12 hours after oracle tanks. their desk already positioned. same story different ticker.",
+    "author": "SheriffBartholomew",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-19T16:22:35.994Z"
+  },
+  {
+    "id": "mql50dka_iy1eop",
+    "article": "goldman-sachs-ai-capex-warning-june-2026",
+    "text": "everyone fixating on the $920b number. the real story is rates. if the fed isnt cutting this year none of these capex plans get funded at these yields.",
+    "author": "macro_dad_energy",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-19T16:22:36.202Z"
+  },
+  {
+    "id": "mql50dr4_1fz70l",
+    "article": "goldman-sachs-ai-capex-warning-june-2026",
+    "text": "bought oracle this morning lol. learning the hard way i guess. at least we can be bagholders together 🤝",
+    "author": "noob_investor42",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mql50d8l_mgrk2u",
+    "createdAt": "2026-06-19T16:22:36.448Z"
+  },
+  {
+    "id": "mql50dyj_napd6v",
+    "article": "goldman-sachs-ai-capex-warning-june-2026",
+    "text": "the goldman note was dated 2 days ago but released today after hours. check the fine print. someone knew exactly what they were doing.",
+    "author": "turned_into_a_newt",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mql50dei_qqorr0",
+    "createdAt": "2026-06-19T16:22:36.715Z"
   }
 ]
