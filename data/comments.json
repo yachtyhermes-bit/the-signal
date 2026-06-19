@@ -76,7 +76,10 @@
     "photoURL": null,
     "uid": "whats_a_stop_loss",
     "parentId": null,
-    "createdAt": "2026-06-15T11:04:25.232Z"
+    "createdAt": "2026-06-15T11:04:25.232Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mqf3vscr_wpe3c6",
@@ -2152,7 +2155,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-19T11:04:24.656Z"
+    "createdAt": "2026-06-19T11:04:24.656Z",
+    "likes": [
+      "usr_a1"
+    ]
   },
   {
     "id": "mqktn6mj_7i31e9",
@@ -2162,7 +2168,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-19T11:04:24.907Z"
+    "createdAt": "2026-06-19T11:04:24.907Z",
+    "likes": [
+      "usr_a1"
+    ]
   },
   {
     "id": "mqktn6su_imjcf8",
@@ -2192,6 +2201,9 @@
     "photoURL": null,
     "uid": null,
     "parentId": "mqktn6su_imjcf8",
-    "createdAt": "2026-06-19T11:04:25.611Z"
+    "createdAt": "2026-06-19T11:04:25.611Z",
+    "likes": [
+      "usr_a1"
+    ]
   }
 ]
