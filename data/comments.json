@@ -1843,7 +1843,10 @@
     "photoURL": null,
     "uid": "Shdwrptr",
     "parentId": null,
-    "createdAt": "2026-06-18T16:19:08.000Z"
+    "createdAt": "2026-06-18T16:19:08.000Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "0e6a58f5a222_11dbae",
@@ -2922,5 +2925,25 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-19T16:22:27.802Z"
+  },
+  {
+    "id": "mql50792_3wd7gw",
+    "article": "amd-mi400-ai-chip-underdog-2026",
+    "text": "been holding amd since 2021 and finally in the green. one day this pays off even bigger. im not crying youre crying",
+    "author": "still_holding_2021",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-19T16:22:28.022Z"
+  },
+  {
+    "id": "mql507jr_xl7fla",
+    "article": "amd-mi400-ai-chip-underdog-2026",
+    "text": "stop loss?? never heard of her. yolo. this is either genius or stupid but with lisa su at the helm i like my odds",
+    "author": "whats_a_stop_loss",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-19T16:22:28.407Z"
   }
 ]
