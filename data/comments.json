@@ -2829,7 +2829,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-19T16:22:21.156Z"
+    "createdAt": "2026-06-19T16:22:21.156Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mql50296_ms62am",
@@ -2839,7 +2842,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-19T16:22:21.546Z"
+    "createdAt": "2026-06-19T16:22:21.546Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mql502hf_pl39lf",
@@ -2849,7 +2855,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-19T16:22:21.843Z"
+    "createdAt": "2026-06-19T16:22:21.843Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mql502q2_tfhtnd",
@@ -2869,6 +2878,49 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-19T16:22:22.612Z"
+    "createdAt": "2026-06-19T16:22:22.612Z",
+    "likes": [
+      "usr_e5"
+    ]
+  },
+  {
+    "id": "mql5068o_otwuca",
+    "article": "amd-mi400-ai-chip-underdog-2026",
+    "text": "all in on amd. if this hits i can pay off my loans. this is my rent money jk but seriously lisa su is building something special here",
+    "author": "yolo_my_401k",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-19T16:22:26.712Z"
+  },
+  {
+    "id": "mql506fg_ljudi1",
+    "article": "amd-mi400-ai-chip-underdog-2026",
+    "text": "the curve is telling us something. amd chips are in every hyperscaler now and nobodys pricing in the mi400 ramp. yeehaw the calls are cheap and spot demand is surging",
+    "author": "contango_cowboy",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-19T16:22:26.956Z"
+  },
+  {
+    "id": "mql506wj_u9oiez",
+    "article": "amd-mi400-ai-chip-underdog-2026",
+    "text": "just doing my weekly buy into amd. set it and forget it. not checking til friday. boring but it works",
+    "author": "paycheck2paycheck",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-19T16:22:27.571Z"
+  },
+  {
+    "id": "mql5072y_q4cz58",
+    "article": "amd-mi400-ai-chip-underdog-2026",
+    "text": "playing the long game on amd. 2030 for me maybe longer. check back in 5 years when the ai chip duopoly is fully priced in",
+    "author": "CCWaterBug",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-19T16:22:27.802Z"
   }
 ]
