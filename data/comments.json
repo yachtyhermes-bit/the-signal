@@ -1090,7 +1090,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-17T11:06:22.764Z"
+    "createdAt": "2026-06-17T11:06:22.764Z",
+    "likes": [
+      "usr_a1"
+    ]
   },
   {
     "id": "mqhyu0ng_u81bvo",
@@ -2537,5 +2540,25 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-19T11:04:45.462Z"
+  },
+  {
+    "id": "mqktnmo1_dcrhua",
+    "article": "aipo-ai-power-infra-dip-buy-june-2026",
+    "text": "margins expanding fast on these names. constellation signed 3 new hyperscaler deals just this quarter. fcf positive and growing. pe is actually reasonable here.",
+    "author": "data_dependent_1",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-19T11:04:45.697Z"
+  },
+  {
+    "id": "mqktnmsw_agnrem",
+    "article": "aipo-ai-power-infra-dip-buy-june-2026",
+    "text": "good companies good product. eaton is booked out til 2029 on data center orders. buying some for the kids college fund 🍺",
+    "author": "grillmaster_finance",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mqktnmhi_8hkyb5",
+    "createdAt": "2026-06-19T11:04:45.872Z"
   }
 ]
