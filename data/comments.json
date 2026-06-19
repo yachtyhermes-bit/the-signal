@@ -2120,7 +2120,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-19T11:04:20.745Z"
+    "createdAt": "2026-06-19T11:04:20.745Z",
+    "likes": [
+      "usr_a1"
+    ]
   },
   {
     "id": "mqktn3lv_wd06k7",
@@ -2130,6 +2133,19 @@
     "photoURL": null,
     "uid": null,
     "parentId": "mqktn37u_ects5b",
-    "createdAt": "2026-06-19T11:04:20.995Z"
+    "createdAt": "2026-06-19T11:04:20.995Z",
+    "likes": [
+      "usr_a1"
+    ]
+  },
+  {
+    "id": "mqktn6fk_tw51bp",
+    "article": "microsoft-ai-copilot-azure",
+    "text": "this is a buying opportunity tbh. the business is accelerating everywhere and the stock is getting treated like a value trap. corrections are normal",
+    "author": "Latter-Possibility",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-19T11:04:24.656Z"
   }
 ]
