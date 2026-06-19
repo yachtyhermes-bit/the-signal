@@ -231,18 +231,35 @@ const sectorTemplate = fs.existsSync(SECTOR_TEMPLATE)
   ? fs.readFileSync(SECTOR_TEMPLATE, 'utf8')
   : null;
 
+// Generate ticker tape HTML for sector pages
+const pricesPathTT = path.join(ROOT, 'data', 'prices.json');
+const pricesTT = fs.existsSync(pricesPathTT) ? JSON.parse(fs.readFileSync(pricesPathTT, 'utf8')) : {};
+const tickerSymbols = ['NVDA', 'PLTR', 'AVGO', 'AMD', 'GOOGL', 'META', 'MSFT', 'AMZN', 'TSLA', 'MU'];
+let tickerTapeHtml = '';
+if (Object.keys(pricesTT).length) {
+  const items = tickerSymbols.map(sym => {
+    const p = pricesTT[sym];
+    const price = p && p.price != null ? '$' + p.price.toFixed(2) : '---';
+    const chg = p && p.changePercent != null ? p.changePercent : 0;
+    const chgStr = (chg >= 0 ? '+' : '') + chg.toFixed(2) + '%';
+    const cls = chg >= 0 ? 'up' : 'down';
+    return `<span class="ticker-item"><span class="ticker-sym">${sym}</span><span class="ticker-prc">${price}</span><span class="ticker-chg ${cls}">${chgStr}</span></span>`;
+  });
+  // Duplicate for seamless scrolling
+  const allItems = items.concat(items).join('');
+  tickerTapeHtml = `<div class="ticker-tape"><div class="ticker-track">${allItems}</div></div>`;
+}
+
 if (!sectorTemplate) {
   console.log('⚠️  No sector template — skipping sector pages');
 } else {
-  // Group articles by sector (only for articles NOT on homepage)
+  // Group articles by sector (ALL articles — homepage AND archive)
   const bySector = {};
-  for (const a of sectorArticles) {
+  for (const a of articles) {
     const s = a.sector || 'other';
     if (!bySector[s]) bySector[s] = [];
     bySector[s].push(a);
   }
-  // Also check if homepage articles need sector duplicates — no, they don't.
-  // Sector pages only show deep archive articles.
 
   let sectorCount = 0;
   for (const [sector, arts] of Object.entries(bySector)) {
@@ -252,6 +269,7 @@ if (!sectorTemplate) {
     let html = sectorTemplate
       .replace(/{{SECTOR}}/g, sector)
       .replace(/{{SECTOR_NAME}}/g, sectorName)
+      .replace('{{TICKER_TAPE}}', tickerTapeHtml)
       .replace('{{ARTICLE_CARDS}}', cards);
     
     const outDir = path.join(DST, 'sector', sector);
@@ -267,6 +285,7 @@ if (!sectorTemplate) {
     let html = sectorTemplate
       .replace(/{{SECTOR}}/g, sector)
       .replace(/{{SECTOR_NAME}}/g, sectorName)
+      .replace('{{TICKER_TAPE}}', tickerTapeHtml)
       .replace('{{ARTICLE_CARDS}}', '<p class="sector-empty">Articles coming soon.</p>');
     
     const outDir = path.join(DST, 'sector', sector);

@@ -113,6 +113,7 @@
     </div>
   </div>
   <main class="main">
+    {{TICKER_TAPE}}
     <section class="sector-hero">
       <div class="sector-hero-inner">
         <h1 class="sector-hero-title">{{SECTOR_NAME}}</h1>
@@ -139,5 +140,34 @@
       <div class="search-results" id="searchResults"></div>
     </div>
   </div>
+  <script>
+  document.addEventListener('DOMContentLoaded', function(){
+    var btn = document.getElementById('hamburgerToggle');
+    var drawer = document.getElementById('drawer');
+    var overlay = document.getElementById('drawerOverlay');
+    var closeBtn = document.getElementById('drawerClose');
+    function openDrawer() {
+      drawer.classList.add('open');
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDrawer() {
+      drawer.classList.remove('open');
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    if (btn && drawer && overlay) {
+      btn.addEventListener('click', function(){ openDrawer(); });
+      overlay.addEventListener('click', function(){ closeDrawer(); });
+      if (closeBtn) closeBtn.addEventListener('click', function(){ closeDrawer(); });
+      document.addEventListener('keydown', function(e){
+        if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
+      });
+      drawer.querySelectorAll('a').forEach(function(a){
+        a.addEventListener('click', function(){ closeDrawer(); });
+      });
+    }
+  });
+  </script>
 </body>
 </html>
