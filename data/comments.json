@@ -3201,7 +3201,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-19T19:05:50.968Z"
+    "createdAt": "2026-06-19T19:05:50.968Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mqlaubil_nkq8py",
@@ -3221,6 +3224,59 @@
     "photoURL": null,
     "uid": null,
     "parentId": "mqlauar3_ukf388",
-    "createdAt": "2026-06-19T19:05:51.943Z"
+    "createdAt": "2026-06-19T19:05:51.943Z",
+    "likes": [
+      "usr_e5"
+    ]
+  },
+  {
+    "id": "mqlaudif_sb6b5p",
+    "article": "ai-inversion-white-collar-blue-collar",
+    "text": "ive been saying this for months. the coding bootcamp pipeline is about to get obliterated. junior devs and paralegals are the coal miners of this decade.",
+    "author": "Latrodectus1990",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-19T19:05:53.895Z"
+  },
+  {
+    "id": "mqlaudrc_hvt1fv",
+    "article": "ai-inversion-white-collar-blue-collar",
+    "text": "actually this is healthy. every industrial revolution displaced workers and then created entirely new categories. the operator economy is the next frontier and nobody sees it yet.",
+    "author": "Latter-Possibility",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-19T19:05:54.216Z"
+  },
+  {
+    "id": "mqlaue01_9259q9",
+    "article": "ai-inversion-white-collar-blue-collar",
+    "text": "electrician was always the play. playing the long game. check back in a few years when a journeyman electrician makes more than a mid level engineer.",
+    "author": "CCWaterBug",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-19T19:05:54.529Z"
+  },
+  {
+    "id": "mqlaue6e_mg1k9k",
+    "article": "ai-inversion-white-collar-blue-collar",
+    "text": "wait so the same ai that i thought would make everyone rich is gonna take the high paying jobs?? this is like getting rugged in slow motion. at least it wont rug overnight though.",
+    "author": "crypto_refugee_88",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-19T19:05:54.758Z"
+  },
+  {
+    "id": "mqlauehf_61h5a6",
+    "article": "ai-inversion-white-collar-blue-collar",
+    "text": "bought meta at the top lol. learning the hard way. but if ai is replacing white collar workers shouldnt the company selling the ai be printing money??",
+    "author": "noob_investor42",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mqlaue01_9259q9",
+    "createdAt": "2026-06-19T19:05:55.155Z"
   }
 ]
