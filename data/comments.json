@@ -3102,7 +3102,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-19T16:22:44.186Z"
+    "createdAt": "2026-06-19T16:22:44.186Z",
+    "likes": [
+      "usr_a1"
+    ]
   },
   {
     "id": "mql50jw4_i526v4",
@@ -3112,7 +3115,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-19T16:22:44.404Z"
+    "createdAt": "2026-06-19T16:22:44.404Z",
+    "likes": [
+      "usr_c3"
+    ]
   },
   {
     "id": "mql50k3i_osf8a4",
@@ -3122,6 +3128,19 @@
     "photoURL": null,
     "uid": null,
     "parentId": "mql50jq2_6zuy79",
-    "createdAt": "2026-06-19T16:22:44.670Z"
+    "createdAt": "2026-06-19T16:22:44.670Z",
+    "likes": [
+      "usr_b2"
+    ]
+  },
+  {
+    "id": "mql50mee_herb7j",
+    "article": "closing-bell-june-11-2026",
+    "text": "smci down 28% in ONE day and oracle tanks after a record quarter?? my heart cant take this. talk me off the ledge",
+    "author": "help_me_pls77",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-19T16:22:47.654Z"
   }
 ]
