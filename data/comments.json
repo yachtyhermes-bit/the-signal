@@ -2250,7 +2250,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-19T11:04:27.968Z"
+    "createdAt": "2026-06-19T11:04:27.968Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mqktn95v_5i7tgu",
@@ -2260,6 +2263,29 @@
     "photoURL": null,
     "uid": null,
     "parentId": "mqktn8mc_zffv4o",
-    "createdAt": "2026-06-19T11:04:28.195Z"
+    "createdAt": "2026-06-19T11:04:28.195Z",
+    "likes": [
+      "usr_c3"
+    ]
+  },
+  {
+    "id": "mqktna9b_25nv9b",
+    "article": "servicenow-enterprise-ai-agents-2026",
+    "text": "depends on your timeline. if youre holding years not months this dip is a gift. enterprise ai agents embedded in the fortune five hundred is a real moat",
+    "author": "Sharp315",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-19T11:04:29.615Z"
+  },
+  {
+    "id": "mqktnaf6_n07uc7",
+    "article": "servicenow-enterprise-ai-agents-2026",
+    "text": "i dont really get what they do but everyone says its important. learning the hard way i guess. my portfolio is a mess",
+    "author": "noob_investor42",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-19T11:04:29.826Z"
   }
 ]
