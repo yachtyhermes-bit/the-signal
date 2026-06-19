@@ -50,7 +50,10 @@
     "photoURL": null,
     "uid": "data_dependent_1",
     "parentId": null,
-    "createdAt": "2026-06-15T11:04:24.867Z"
+    "createdAt": "2026-06-15T11:04:24.867Z",
+    "likes": [
+      "usr_a1"
+    ]
   },
   {
     "id": "mqf3vs2b_ktgd4k",
@@ -60,7 +63,10 @@
     "photoURL": null,
     "uid": "bought_at_the_top",
     "parentId": null,
-    "createdAt": "2026-06-15T11:04:25.043Z"
+    "createdAt": "2026-06-15T11:04:25.043Z",
+    "likes": [
+      "usr_c3"
+    ]
   },
   {
     "id": "mqf3vs7k_yah9vr",
@@ -2177,5 +2183,15 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-19T11:04:25.380Z"
+  },
+  {
+    "id": "mqktn763_qdd8uc",
+    "article": "microsoft-ai-copilot-azure",
+    "text": "copilot is everywhere now. every team i know is deploying it. the enterprise contracts are real. my company just signed an expansion deal",
+    "author": "work_from_zoom",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mqktn6su_imjcf8",
+    "createdAt": "2026-06-19T11:04:25.611Z"
   }
 ]
