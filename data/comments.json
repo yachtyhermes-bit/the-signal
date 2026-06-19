@@ -1794,7 +1794,10 @@
     "photoURL": null,
     "uid": "first_time_caller99",
     "parentId": null,
-    "createdAt": "2026-06-18T16:19:08.000Z"
+    "createdAt": "2026-06-18T16:19:08.000Z",
+    "likes": [
+      "usr_a1"
+    ]
   },
   {
     "id": "9331621e0cb4_bac008",
@@ -1804,7 +1807,10 @@
     "photoURL": null,
     "uid": "SheriffBartholomew",
     "parentId": null,
-    "createdAt": "2026-06-18T16:19:08.000Z"
+    "createdAt": "2026-06-18T16:19:08.000Z",
+    "likes": [
+      "usr_a1"
+    ]
   },
   {
     "id": "f91287bcb3e7_000ebc",
@@ -1814,7 +1820,10 @@
     "photoURL": null,
     "uid": "whats_a_stop_loss",
     "parentId": null,
-    "createdAt": "2026-06-18T16:19:08.000Z"
+    "createdAt": "2026-06-18T16:19:08.000Z",
+    "likes": [
+      "usr_c3"
+    ]
   },
   {
     "id": "429562ef3ee5_447725",
@@ -2807,7 +2816,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-19T16:22:20.714Z"
+    "createdAt": "2026-06-19T16:22:20.714Z",
+    "likes": [
+      "usr_a1"
+    ]
   },
   {
     "id": "mql501yc_3pl3k5",
