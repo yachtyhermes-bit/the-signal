@@ -185,7 +185,7 @@
       const isAnn = mode === 'annual';
       if (isAnn && annual.income && annual.income.length) {
         return annual.income.map(e => ({
-          period: e.period.replace('01/',''), fullDate: aDate(e.period),
+          period: e.period.replace(/^\d{2}\//,''), fullDate: aDate(e.period),
           rev: e['Total Revenue'] || 0, gp: e['Gross Profit'] || 0, ni: e['Net Income'] || 0,
         })).reverse();
       } else {

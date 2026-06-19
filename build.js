@@ -283,7 +283,7 @@ if (!sectorTemplate) {
 // ─── 8.5. Inject Trending Stocks list from live prices ───
 const pricesPath2 = path.join(ROOT, 'data', 'prices.json');
 const prices = fs.existsSync(pricesPath2) ? JSON.parse(fs.readFileSync(pricesPath2, 'utf8')) : {};
-const trendingTickers = ['NVDA', 'AVGO', 'TSLA', 'SPACEX', 'AMZN', 'PLTR'];
+const trendingTickers = ['NVDA', 'AVGO', 'TSLA', 'MSFT', 'AMZN', 'PLTR'];
 let trendingHtml = '';
 for (const sym of trendingTickers) {
   const p = prices[sym] || {};
