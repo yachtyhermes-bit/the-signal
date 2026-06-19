@@ -1349,7 +1349,10 @@
     "photoURL": null,
     "uid": "fomo_king_420",
     "parentId": null,
-    "createdAt": "2026-06-17T16:33:00.000Z"
+    "createdAt": "2026-06-17T16:33:00.000Z",
+    "likes": [
+      "usr_e5"
+    ]
   },
   {
     "id": "mqhz8d3p_qq5r6s",
@@ -2287,5 +2290,35 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-19T11:04:29.826Z"
+  },
+  {
+    "id": "mqktnakd_9ml6ee",
+    "article": "servicenow-enterprise-ai-agents-2026",
+    "text": "something doesnt add up. stock gets cut in half while the business keeps growing double digits. follow the incentives. whos selling and why",
+    "author": "Minimum-Criticism763",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-19T11:04:30.013Z"
+  },
+  {
+    "id": "mqktnare_uyq6vi",
+    "article": "servicenow-enterprise-ai-agents-2026",
+    "text": "whatever happens happens. im not checking til june. this is my fun money anyway",
+    "author": "westcoastcouch",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-19T11:04:30.266Z"
+  },
+  {
+    "id": "mqktnay2_ohnhz9",
+    "article": "servicenow-enterprise-ai-agents-2026",
+    "text": "playing the long game on this one. workflow automation isnt going anywhere and being embedded in every big company is the kind of moat you cant build overnight. check back in a few years",
+    "author": "CCWaterBug",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mqktnakd_9ml6ee",
+    "createdAt": "2026-06-19T11:04:30.506Z"
   }
 ]
