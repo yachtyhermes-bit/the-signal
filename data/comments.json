@@ -1100,7 +1100,8 @@
     "createdAt": "2026-06-17T11:06:22.764Z",
     "likes": [
       "usr_a1",
-      "usr_d4"
+      "usr_d4",
+      "usr_b2"
     ]
   },
   {
@@ -1112,7 +1113,9 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-17T11:06:23.308Z",
-    "likes": []
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mqhyu11j_o788dw",
@@ -3304,5 +3307,35 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-19T19:05:57.656Z"
+  },
+  {
+    "id": "mqlauglg_te33dg",
+    "article": "aipo-ai-power-infra-dip-buy-june-2026",
+    "text": "power companies are boring til theyre not. stop loss?? never heard of her. this is either genius or stupid going all in on the grid theme.",
+    "author": "whats_a_stop_loss",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-19T19:05:57.892Z"
+  },
+  {
+    "id": "mqlaugs0_6ytiqz",
+    "article": "aipo-ai-power-infra-dip-buy-june-2026",
+    "text": "bought some for their college fund. boring etfs are my thing. just buying what i understand and everyone needs electricity to run ai chips.",
+    "author": "mom_of_3_trading",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-19T19:05:58.128Z"
+  },
+  {
+    "id": "mqlaugze_tmmg5i",
+    "article": "aipo-ai-power-infra-dip-buy-june-2026",
+    "text": "depends on your timeline. the power infra theme is real but etfs always dilute your best holdings. not financial advice but id rather pick the top names directly.",
+    "author": "sharp315",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mqlauglg_te33dg",
+    "createdAt": "2026-06-19T19:05:58.394Z"
   }
 ]
