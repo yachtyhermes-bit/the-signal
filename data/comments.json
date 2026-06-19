@@ -561,9 +561,7 @@
     "uid": "Shdwrptr",
     "parentId": null,
     "createdAt": "2026-06-16T11:02:02.000Z",
-    "likes": [
-      "usr_b2"
-    ]
+    "likes": []
   },
   {
     "id": "mqfq8c3k_kk3k3k",
@@ -575,7 +573,8 @@
     "parentId": null,
     "createdAt": "2026-06-16T11:02:02.000Z",
     "likes": [
-      "usr_d4"
+      "usr_d4",
+      "usr_e5"
     ]
   },
   {
@@ -588,7 +587,8 @@
     "parentId": "mqfq8c1i_ii1i1i",
     "createdAt": "2026-06-16T11:02:02.000Z",
     "likes": [
-      "usr_d4"
+      "usr_d4",
+      "usr_a1"
     ]
   },
   {
