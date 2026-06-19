@@ -1781,7 +1781,10 @@
     "photoURL": null,
     "uid": "RN_Geo",
     "parentId": null,
-    "createdAt": "2026-06-18T16:19:08.000Z"
+    "createdAt": "2026-06-18T16:19:08.000Z",
+    "likes": [
+      "usr_c3"
+    ]
   },
   {
     "id": "3ea0a0260d42_f97b9f",
@@ -2835,5 +2838,25 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-19T16:22:21.843Z"
+  },
+  {
+    "id": "mql502q2_tfhtnd",
+    "article": "palantir-aip-defense-contracts-2026",
+    "text": "good company good product. my father in law is a contractor and says everyone uses palantir now. bought some for the kids college fund",
+    "author": "grillmaster_finance",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-19T16:22:22.154Z"
+  },
+  {
+    "id": "mql5032s_1fhdjf",
+    "article": "palantir-aip-defense-contracts-2026",
+    "text": "not at this valuation. if it was cheaper id buy but too pricey for me rn. pass",
+    "author": "Shdwrptr",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-19T16:22:22.612Z"
   }
 ]
