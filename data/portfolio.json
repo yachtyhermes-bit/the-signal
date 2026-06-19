@@ -36,6 +36,8 @@
     {"ticker": "RDW", "weight": 0.8},
     {"ticker": "LUNR", "weight": 0.7},
     {"ticker": "MISL", "weight": 0.7},
-    {"ticker": "AXP", "weight": 0.5}
+    {"ticker": "AXP", "weight": 0.5},
+    {"ticker": "SPCX", "weight": 0.5},
+    {"ticker": "ONDAS", "weight": 0.5}
   ]
 }
