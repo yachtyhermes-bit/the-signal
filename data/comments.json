@@ -3558,7 +3558,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-20T11:07:17.141Z"
+    "createdAt": "2026-06-20T11:07:17.141Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mqm96qe7_brjiv5",
@@ -3581,7 +3584,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-20T11:07:17.642Z"
+    "createdAt": "2026-06-20T11:07:17.642Z",
+    "likes": [
+      "usr_c3"
+    ]
   },
   {
     "id": "mqm96qqj_2k3jjs",
@@ -3603,7 +3609,8 @@
     "parentId": null,
     "createdAt": "2026-06-20T11:07:18.111Z",
     "likes": [
-      "usr_a1"
+      "usr_a1",
+      "usr_d4"
     ]
   },
   {
@@ -3629,7 +3636,8 @@
     "parentId": "mqm96qqj_2k3jjs",
     "createdAt": "2026-06-20T11:07:18.554Z",
     "likes": [
-      "usr_c3"
+      "usr_c3",
+      "usr_a1"
     ]
   },
   {
@@ -4406,7 +4414,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-20T19:19:03.540Z"
+    "createdAt": "2026-06-20T19:19:03.540Z",
+    "likes": [
+      "usr_e5"
+    ]
   },
   {
     "id": "mqmqr5n0_7n8m5z",
@@ -4416,7 +4427,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-20T19:19:03.756Z"
+    "createdAt": "2026-06-20T19:19:03.756Z",
+    "likes": [
+      "usr_a1"
+    ]
   },
   {
     "id": "mqmqr5sg_i13jl3",
@@ -4457,5 +4471,65 @@
     "uid": null,
     "parentId": "mqmqr5n0_7n8m5z",
     "createdAt": "2026-06-20T19:19:04.638Z"
+  },
+  {
+    "id": "mqmqr7ya_y6dmfk",
+    "article": "sofi-the-fintech-that-quietly-figured-out-profits",
+    "text": "member growth is compounding and theyre actually printing gaap profits now. the platform has banking lending and investing all in one app. playing the long game here. check back when the market realizes the super app thesis.",
+    "author": "CCWaterBug",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-20T19:19:06.754Z"
+  },
+  {
+    "id": "mqmqr848_adqbes",
+    "article": "sofi-the-fintech-that-quietly-figured-out-profits",
+    "text": "the fintech lending space scares me when the macro is uncertain. sofi has good fundamentals but consumer credit cycles are brutal and im not sure the market has priced in a slowdown correctly. staying in cash for now.",
+    "author": "RN_Geo",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-20T19:19:06.968Z"
+  },
+  {
+    "id": "mqmqr8a2_r36my7",
+    "article": "sofi-the-fintech-that-quietly-figured-out-profits",
+    "text": "kicking myself rn. i was watching sofi at the lows and didnt buy and now its ripping. should have bought last week. next time i swear im not hesitating.",
+    "author": "fomo_king_420",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-20T19:19:07.178Z"
+  },
+  {
+    "id": "mqmqr8gp_1wfkc0",
+    "article": "sofi-the-fintech-that-quietly-figured-out-profits",
+    "text": "everyone is looking at sofi in isolation but rates are the real story here. if the fed cuts fintech lending spreads explode and sofi is the best positioned pure play. this is bigger than one company — its a macro rotation trade. $SOFI",
+    "author": "macro_dad_energy",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-20T19:19:07.417Z"
+  },
+  {
+    "id": "mqmqr8ol_xk2uwt",
+    "article": "sofi-the-fintech-that-quietly-figured-out-profits",
+    "text": "youre welcome for the dip again guys. bought sofi near the high earlier this year and of course it dropped right after. bagholder reporting in. at least the fundamental story keeps getting better while my portfolio disagrees.",
+    "author": "bought_at_the_top",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-20T19:19:07.701Z"
+  },
+  {
+    "id": "mqmqr8tz_9lia63",
+    "article": "sofi-the-fintech-that-quietly-figured-out-profits",
+    "text": "finally made an account to ask — is sofi actually profitable or is that accounting magic? been watching this ticker for a while. what do you guys think about the valuation here.",
+    "author": "noob_investor42",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mqmqr7ya_y6dmfk",
+    "createdAt": "2026-06-20T19:19:07.895Z"
   }
 ]
