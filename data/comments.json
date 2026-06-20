@@ -282,7 +282,10 @@
     "photoURL": null,
     "uid": "noob_investor42",
     "parentId": null,
-    "createdAt": "2026-06-15T16:17:41.646Z"
+    "createdAt": "2026-06-15T16:17:41.646Z",
+    "likes": [
+      "usr_e5"
+    ]
   },
   {
     "id": "mqff2nrz_9vx5f3",
@@ -292,7 +295,10 @@
     "photoURL": null,
     "uid": "CCWaterBug",
     "parentId": null,
-    "createdAt": "2026-06-15T16:17:41.855Z"
+    "createdAt": "2026-06-15T16:17:41.855Z",
+    "likes": [
+      "usr_a1"
+    ]
   },
   {
     "id": "mqff2o04_mu2w3m",
@@ -3978,7 +3984,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-20T16:27:34.420Z"
+    "createdAt": "2026-06-20T16:27:34.420Z",
+    "likes": [
+      "usr_e5"
+    ]
   },
   {
     "id": "mqmkmmhh_si1bte",
@@ -3988,7 +3997,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-20T16:27:34.613Z"
+    "createdAt": "2026-06-20T16:27:34.613Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mqmkmmo4_doafre",
@@ -3998,6 +4010,45 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-20T16:27:34.852Z"
+    "createdAt": "2026-06-20T16:27:34.852Z",
+    "likes": [
+      "usr_c3"
+    ]
+  },
+  {
+    "id": "mqmkmmth_9rv1b9",
+    "article": "netflix-ad-tier-growth-2026",
+    "text": "ok im holding but my heart cant take this. bought at the top earlier this year and now im down. but the ad thing sounds real right. talk me off the ledge guys.",
+    "author": "help_me_pls77",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-20T16:27:35.045Z",
+    "likes": [
+      "usr_a1"
+    ]
+  },
+  {
+    "id": "mqmkmmzw_g7d8ld",
+    "article": "netflix-ad-tier-growth-2026",
+    "text": "depends on your timeline. if you think ads are a real revenue stream and content spend compounds the moat, current prices look attractive. not financial advice but i added to my position.",
+    "author": "sharp315",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mqmkmm5x_kkmns8",
+    "createdAt": "2026-06-20T16:27:35.276Z",
+    "likes": [
+      "usr_d4"
+    ]
+  },
+  {
+    "id": "mqmkmoil_75e3fu",
+    "article": "spmo-momentum-etf-core-portfolio",
+    "text": "been holding spmo for a while now. playing the long game. the auto-rebalance into whatever sector is ripping means i dont have to think about it. check back whenever semiconductors peak.",
+    "author": "CCWaterBug",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-20T16:27:37.245Z"
   }
 ]
