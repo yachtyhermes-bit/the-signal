@@ -7,7 +7,10 @@
     "photoURL": null,
     "uid": "data_dependent_1",
     "parentId": null,
-    "createdAt": "2026-06-15T11:04:24.031Z"
+    "createdAt": "2026-06-15T11:04:24.031Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mqf3vrgu_je8pmi",
@@ -17,7 +20,10 @@
     "photoURL": null,
     "uid": "RN_Geo",
     "parentId": null,
-    "createdAt": "2026-06-15T11:04:24.270Z"
+    "createdAt": "2026-06-15T11:04:24.270Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mqf3vrmx_pskwj5",
@@ -40,7 +46,10 @@
     "photoURL": null,
     "uid": "Shdwrptr",
     "parentId": null,
-    "createdAt": "2026-06-15T11:04:24.680Z"
+    "createdAt": "2026-06-15T11:04:24.680Z",
+    "likes": [
+      "usr_e5"
+    ]
   },
   {
     "id": "mqf3vrxf_fdjiq8",
@@ -2202,7 +2211,8 @@
     "parentId": null,
     "createdAt": "2026-06-19T11:04:19.910Z",
     "likes": [
-      "usr_e5"
+      "usr_e5",
+      "usr_b2"
     ]
   },
   {
@@ -2240,9 +2250,7 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-19T11:04:20.745Z",
-    "likes": [
-      "usr_a1"
-    ]
+    "likes": []
   },
   {
     "id": "mqktn3lv_wd06k7",
@@ -4193,5 +4201,45 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-20T16:27:42.510Z"
+  },
+  {
+    "id": "mqmkmsqn_v19b9n",
+    "article": "iridium-satellite-iot-defense-june-2026",
+    "text": "still holding irdm since way before the rip. been averaging down for years and it finally paid off. one day this stock gets real coverage and the market wakes up to the satellite monopoly.",
+    "author": "still_holding_2021",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-20T16:27:42.719Z"
+  },
+  {
+    "id": "mqmkmswc_le6rhp",
+    "article": "iridium-satellite-iot-defense-june-2026",
+    "text": "everyone is missing the macro angle here. defense budgets are expanding globally and iridium is the only global satellite network that works everywhere. geopolitics is the tailwind nobody is pricing in.",
+    "author": "macro_dad_energy",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-20T16:27:42.924Z"
+  },
+  {
+    "id": "mqmkmt1n_zfu1o1",
+    "article": "iridium-satellite-iot-defense-june-2026",
+    "text": "youre welcome for the dip guys. i literally bought irdm the day before the pullback. my timing is legendary as always. bagholder reporting in but at least they pay a dividend.",
+    "author": "bought_at_the_top",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-20T16:27:43.115Z"
+  },
+  {
+    "id": "mqmkmt73_1fw8xz",
+    "article": "iridium-satellite-iot-defense-june-2026",
+    "text": "night shift checking in. irdm premarket looking strong. watching the defense sector flow into the open. quiet in here tonight but this one has room to run imo.",
+    "author": "night_shift_trader",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mqmkmswc_le6rhp",
+    "createdAt": "2026-06-20T16:27:43.311Z"
   }
 ]
