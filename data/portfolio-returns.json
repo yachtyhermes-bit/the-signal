@@ -1,23 +1,23 @@
 {
   "name": "The Signal Portfolio",
   "inception": "2024-06-01",
-  "lastUpdated": "2026-06-19T00:43:57.431Z",
+  "lastUpdated": "2026-06-19T22:04:19.060Z",
   "periods": {
     "sinceInception": {
       "label": "Since Inception",
-      "portfolioReturn": 245.56,
+      "portfolioReturn": 245.59,
       "spyReturn": 41.48,
       "qqqReturn": 63.45,
-      "vsSPY": 204.08,
-      "vsQQQ": 182.11
+      "vsSPY": 204.11,
+      "vsQQQ": 182.14
     },
     "ytd": {
       "label": "YTD",
-      "portfolioReturn": 37.92,
+      "portfolioReturn": 37.94,
       "spyReturn": 9.31,
       "qqqReturn": 20.8,
-      "vsSPY": 28.61,
-      "vsQQQ": 17.12
+      "vsSPY": 28.63,
+      "vsQQQ": 17.14
     },
     "oneYear": {
       "label": "1 Year",
@@ -192,7 +192,7 @@
     {
       "ticker": "MISL",
       "weight": 0.7,
-      "return": 62.35
+      "return": 65.54
     },
     {
       "ticker": "AXP",
