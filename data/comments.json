@@ -2798,7 +2798,8 @@
     "parentId": null,
     "createdAt": "2026-06-19T16:22:15.873Z",
     "likes": [
-      "usr_a1"
+      "usr_a1",
+      "usr_b2"
     ]
   },
   {
@@ -2821,7 +2822,8 @@
     "parentId": null,
     "createdAt": "2026-06-19T16:22:16.576Z",
     "likes": [
-      "usr_e5"
+      "usr_e5",
+      "usr_a1"
     ]
   },
   {
