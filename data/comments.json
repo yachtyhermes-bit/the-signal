@@ -4257,7 +4257,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-20T19:18:58.017Z"
+    "createdAt": "2026-06-20T19:18:58.017Z",
+    "likes": [
+      "usr_e5"
+    ]
   },
   {
     "id": "mqmqr1h4_em318o",
@@ -4267,7 +4270,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-20T19:18:58.360Z"
+    "createdAt": "2026-06-20T19:18:58.360Z",
+    "likes": [
+      "usr_a1"
+    ]
   },
   {
     "id": "mqmqr1pc_0q08p6",
@@ -4287,7 +4293,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-20T19:18:58.904Z"
+    "createdAt": "2026-06-20T19:18:58.904Z",
+    "likes": [
+      "usr_c3"
+    ]
   },
   {
     "id": "mqmqr22a_ogi5l6",
@@ -4298,5 +4307,78 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-20T19:18:59.122Z"
+  },
+  {
+    "id": "mqmqr29c_9epv38",
+    "article": "broadcom-ai-networking-quiet-dominance",
+    "text": "depends on your timeline. if you think asic custom chips are the long term ai compute winner avgo is the purest play. not financial advice but hock tan doesnt miss.",
+    "author": "sharp315",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mqmqr1pc_0q08p6",
+    "createdAt": "2026-06-20T19:18:59.376Z",
+    "likes": [
+      "usr_d4"
+    ]
+  },
+  {
+    "id": "mqmqr39g_0ijr3j",
+    "article": "crowdstrike-post-outage-comeback-2026",
+    "text": "retention stayed near perfect after the worst outage in cybersecurity history. that tells you everything about the switching costs in endpoint security. competitors had their moment and couldnt make anyone leave.",
+    "author": "data_dependent_1",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-20T19:19:00.676Z"
+  },
+  {
+    "id": "mqmqr3ev_nqbfd1",
+    "article": "crowdstrike-post-outage-comeback-2026",
+    "text": "that outage was the best stress test the business could have asked for. proved the moat is real when customers refuse to leave even after a literal disaster. actually this is healthy for the long term.",
+    "author": "Latter-Possibility",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-20T19:19:00.871Z"
+  },
+  {
+    "id": "mqmqr3kz_o99d9w",
+    "article": "crowdstrike-post-outage-comeback-2026",
+    "text": "crowdstrike is a great product at a wild valuation. the stock already priced in the comeback story and then some. retail always the exit liquidity when the recovery narrative gets played out by wall street.",
+    "author": "SheriffBartholomew",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-20T19:19:01.091Z"
+  },
+  {
+    "id": "mqmqr3ro_khdcr3",
+    "article": "crowdstrike-post-outage-comeback-2026",
+    "text": "crwd keeps showing up on my feed after that blue screen thing last year. is the stock safe to buy now or did i miss the recovery boat. learning as i go.",
+    "author": "first_time_caller99",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-20T19:19:01.332Z"
+  },
+  {
+    "id": "mqmqr3yb_06yums",
+    "article": "crowdstrike-post-outage-comeback-2026",
+    "text": "deep otm calls on crwd been active this week. someone is either hedging a big position or knows something about an upcoming catalyst. worth watching into earnings.",
+    "author": "option_flow_watcher",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-20T19:19:01.571Z"
+  },
+  {
+    "id": "mqmqr45u_bnhjj0",
+    "article": "crowdstrike-post-outage-comeback-2026",
+    "text": "whatever happens happens. crwd is my biggest position and im not checking til next quarter. market does what it does.",
+    "author": "westcoastcouch",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mqmqr39g_0ijr3j",
+    "createdAt": "2026-06-20T19:19:01.842Z"
   }
 ]
