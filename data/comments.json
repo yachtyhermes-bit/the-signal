@@ -2970,7 +2970,8 @@
     "parentId": null,
     "createdAt": "2026-06-19T16:22:27.802Z",
     "likes": [
-      "usr_c3"
+      "usr_c3",
+      "usr_a1"
     ]
   },
   {
@@ -2981,7 +2982,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-19T16:22:28.022Z"
+    "createdAt": "2026-06-19T16:22:28.022Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mql507jr_xl7fla",
@@ -2991,7 +2995,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-19T16:22:28.407Z"
+    "createdAt": "2026-06-19T16:22:28.407Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mql50d8l_mgrk2u",
@@ -3739,7 +3746,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-20T11:07:26.298Z"
+    "createdAt": "2026-06-20T11:07:26.298Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mqm96xep_9om3ba",
@@ -3749,7 +3759,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-20T11:07:26.497Z"
+    "createdAt": "2026-06-20T11:07:26.497Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mqm96xjq_wmsv64",
@@ -3769,7 +3782,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-20T11:07:26.897Z"
+    "createdAt": "2026-06-20T11:07:26.897Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mqm96xuq_1z2irq",
@@ -3779,7 +3795,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-20T11:07:27.074Z"
+    "createdAt": "2026-06-20T11:07:27.074Z",
+    "likes": [
+      "usr_a1"
+    ]
   },
   {
     "id": "mqm96y0l_yihko1",
@@ -3789,6 +3808,49 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-20T11:07:27.285Z"
+    "createdAt": "2026-06-20T11:07:27.285Z",
+    "likes": [
+      "usr_e5"
+    ]
+  },
+  {
+    "id": "mqm9700w_ms9tvw",
+    "article": "tsmc-advanced-chip-monopoly-2026",
+    "text": "ive seen this movie before. the monopoly thesis is compelling until geopolitics hits. taiwan strait risk is the elephant in every room that nobody wants to talk about. famous last words.",
+    "author": "this_time_is_different",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-20T11:07:29.888Z"
+  },
+  {
+    "id": "mqm9705p_9tfunc",
+    "article": "tsmc-advanced-chip-monopoly-2026",
+    "text": "no rush to buy tsmc here after the run up. playing it safe this year. valuation is reasonable but the geopolitical tail risk is real and i cant quantify it.",
+    "author": "RN_Geo",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-20T11:07:30.061Z"
+  },
+  {
+    "id": "mqm970bh_9v2fxt",
+    "article": "tsmc-advanced-chip-monopoly-2026",
+    "text": "premarket looking good. night shift checking in from the warehouse. tsmc seems like the only game in town for advanced chips. hard to bet against that.",
+    "author": "night_shift_trader",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-20T11:07:30.269Z"
+  },
+  {
+    "id": "mqm970gp_x2yeu3",
+    "article": "tsmc-advanced-chip-monopoly-2026",
+    "text": "just doing my weekly buy. set it and forget it. been adding tsm every paycheck for the last year and not stopping. boring but it works.",
+    "author": "paycheck2paycheck",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-20T11:07:30.457Z"
   }
 ]
