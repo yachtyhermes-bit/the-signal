@@ -1667,7 +1667,10 @@
     "photoURL": null,
     "uid": "RN_Geo",
     "parentId": null,
-    "createdAt": "2026-06-18T11:04:12.266Z"
+    "createdAt": "2026-06-18T11:04:12.266Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mqje72pq_mudb7x",
@@ -3852,5 +3855,35 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-20T11:07:30.457Z"
+  },
+  {
+    "id": "mqm970ll_3e69br",
+    "article": "tsmc-advanced-chip-monopoly-2026",
+    "text": "pass at this valuation. too expensive for me even if the moat is real. ill wait for a pullback.",
+    "author": "Shdwrptr",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-20T11:07:30.633Z"
+  },
+  {
+    "id": "mqm970q7_stm9kd",
+    "article": "tsmc-advanced-chip-monopoly-2026",
+    "text": "stop loss?? never heard of her. all in on the semiconductor etf proxy play. this is either genius or stupid betting on a country instead of a company.",
+    "author": "whats_a_stop_loss",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-20T11:07:30.799Z"
+  },
+  {
+    "id": "mqm970v2_vz1vkh",
+    "article": "tsmc-advanced-chip-monopoly-2026",
+    "text": "should i be worried about taiwan stuff with my tsmc shares?? my heart cant take another geopolitical crisis. talk me off the ledge.",
+    "author": "help_me_pls77",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mqm9700w_ms9tvw",
+    "createdAt": "2026-06-20T11:07:30.974Z"
   }
 ]
