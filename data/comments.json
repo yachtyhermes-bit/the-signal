@@ -4514,7 +4514,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-20T19:19:07.178Z"
+    "createdAt": "2026-06-20T19:19:07.178Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mqmqr8gp_1wfkc0",
@@ -4524,7 +4527,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-20T19:19:07.417Z"
+    "createdAt": "2026-06-20T19:19:07.417Z",
+    "likes": [
+      "usr_c3"
+    ]
   },
   {
     "id": "mqmqr8ol_xk2uwt",
@@ -4534,7 +4540,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-20T19:19:07.701Z"
+    "createdAt": "2026-06-20T19:19:07.701Z",
+    "likes": [
+      "usr_c3"
+    ]
   },
   {
     "id": "mqmqr8tz_9lia63",
@@ -4544,6 +4553,49 @@
     "photoURL": null,
     "uid": null,
     "parentId": "mqmqr7ya_y6dmfk",
-    "createdAt": "2026-06-20T19:19:07.895Z"
+    "createdAt": "2026-06-20T19:19:07.895Z",
+    "likes": [
+      "usr_d4"
+    ]
+  },
+  {
+    "id": "mqmqray9_okwuay",
+    "article": "palantir-aip-defense-contracts-2026",
+    "text": "watching. pltr at these levels is interesting but the multiple still makes me hesitate. defense contracts arent growth theyre annuities.",
+    "author": "ragnaroksunset",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-20T19:19:10.641Z"
+  },
+  {
+    "id": "mqmqrb4o_0f7f7k",
+    "article": "palantir-aip-defense-contracts-2026",
+    "text": "palantir has the government in a headlock and that contract revenue is basically guaranteed money. but the valuation assumes they capture every dollar of defense tech spending for the next decade. regular people getting excited about government software contracts is peak market cycle behavior.",
+    "author": "FEMA_Camp_Survivor",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-20T19:19:10.872Z"
+  },
+  {
+    "id": "mqmqrbbg_cslk9h",
+    "article": "palantir-aip-defense-contracts-2026",
+    "text": "bought pltr near the top and now im down a lot. my heart cant take this. the contracts sound amazing but my portfolio is bleeding. talk me off the ledge guys. ok im holding.",
+    "author": "help_me_pls77",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-20T19:19:11.116Z"
+  },
+  {
+    "id": "mqmqrbhn_7ht39r",
+    "article": "palantir-aip-defense-contracts-2026",
+    "text": "looking at palantir through a different lens. the government contract backlog is like a futures curve that keeps rolling higher. each new deal is another delivery in the forward strip. the defense budget curve is steepening and pltr is the front month.",
+    "author": "contango_cowboy",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-20T19:19:11.339Z"
   }
 ]
