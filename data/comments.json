@@ -229,7 +229,10 @@
     "photoURL": null,
     "uid": "fomo_king_420",
     "parentId": null,
-    "createdAt": "2026-06-15T16:17:40.277Z"
+    "createdAt": "2026-06-15T16:17:40.277Z",
+    "likes": [
+      "usr_e5"
+    ]
   },
   {
     "id": "mqff2mqd_gd0blg",
@@ -3906,7 +3909,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-20T16:27:31.897Z"
+    "createdAt": "2026-06-20T16:27:31.897Z",
+    "likes": [
+      "usr_c3"
+    ]
   },
   {
     "id": "mqmkmklt_urp8ck",
@@ -3926,7 +3932,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-20T16:27:32.493Z"
+    "createdAt": "2026-06-20T16:27:32.493Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mqmkml0h_2sptxr",
@@ -3937,5 +3946,58 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-20T16:27:32.705Z"
+  },
+  {
+    "id": "mqmkml62_fagm92",
+    "article": "palo-alto-networks-platformization-2026",
+    "text": "bought a few shares last week and it immediately dipped lol. learning the hard way as usual. is panw still a buy at these levels or did i mess up",
+    "author": "noob_investor42",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mqmkmke1_wwzwn5",
+    "createdAt": "2026-06-20T16:27:32.906Z",
+    "likes": [
+      "usr_b2"
+    ]
+  },
+  {
+    "id": "mqmkmm5x_kkmns8",
+    "article": "netflix-ad-tier-growth-2026",
+    "text": "ok but seriously though. stock down huge while ad revenue goes vertical and subs keep growing. someone explain this to me like im five. is the market pricing in something im not seeing.",
+    "author": "CarrotAwesome",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-20T16:27:34.197Z"
+  },
+  {
+    "id": "mqmkmmc4_htt4nf",
+    "article": "netflix-ad-tier-growth-2026",
+    "text": "everyone is sleeping on the nflx ad business. wall street has no idea how to value a streaming platform that also has a high margin ad operation scaling this fast. this is just the beginning.",
+    "author": "Latrodectus1990",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-20T16:27:34.420Z"
+  },
+  {
+    "id": "mqmkmmhh_si1bte",
+    "article": "netflix-ad-tier-growth-2026",
+    "text": "im staying in cash for now. nflx at these levels is tempting but the macro picture with inflation staying hot makes me want to wait. no rush to buy here.",
+    "author": "RN_Geo",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-20T16:27:34.613Z"
+  },
+  {
+    "id": "mqmkmmo4_doafre",
+    "article": "netflix-ad-tier-growth-2026",
+    "text": "my whole family uses netflix every single night. good company good product. bought some more on this dip. sipping a beer watching the ticker recover eventually.",
+    "author": "grillmaster_finance",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-20T16:27:34.852Z"
   }
 ]
