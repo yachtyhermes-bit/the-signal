@@ -1839,7 +1839,8 @@
     "createdAt": "2026-06-18T16:19:08.000Z",
     "likes": [
       "usr_c3",
-      "usr_e5"
+      "usr_e5",
+      "usr_b2"
     ]
   },
   {
@@ -1851,9 +1852,7 @@
     "uid": "first_time_caller99",
     "parentId": null,
     "createdAt": "2026-06-18T16:19:08.000Z",
-    "likes": [
-      "usr_a1"
-    ]
+    "likes": []
   },
   {
     "id": "9331621e0cb4_bac008",
@@ -1879,7 +1878,8 @@
     "createdAt": "2026-06-18T16:19:08.000Z",
     "likes": [
       "usr_c3",
-      "usr_e5"
+      "usr_e5",
+      "usr_a1"
     ]
   },
   {
@@ -2900,8 +2900,7 @@
     "parentId": null,
     "createdAt": "2026-06-19T16:22:20.714Z",
     "likes": [
-      "usr_a1",
-      "usr_d4"
+      "usr_a1"
     ]
   },
   {
@@ -2914,7 +2913,8 @@
     "parentId": null,
     "createdAt": "2026-06-19T16:22:21.156Z",
     "likes": [
-      "usr_b2"
+      "usr_b2",
+      "usr_c3"
     ]
   },
   {
@@ -3734,7 +3734,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-20T11:07:23.008Z"
+    "createdAt": "2026-06-20T11:07:23.008Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mqm96uwb_uno9u9",
@@ -4597,5 +4600,25 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-20T19:19:11.339Z"
+  },
+  {
+    "id": "mqmqrbne_7trh4o",
+    "article": "palantir-aip-defense-contracts-2026",
+    "text": "pltrs government contracts are sticky but the commercial side is what matters for the long term multiple. if aip adoption keeps accelerating the current price looks attractive down here. depends on your timeline.",
+    "author": "sharp315",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-20T19:19:11.546Z"
+  },
+  {
+    "id": "mqmqrbtd_rb2pc7",
+    "article": "palantir-aip-defense-contracts-2026",
+    "text": "i toss a coin on pltr. or next week who knows. the contracts are undeniable but the pe ratio makes me nervous. check back in a few years.",
+    "author": "CCWaterBug",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mqmqrb4o_0f7f7k",
+    "createdAt": "2026-06-20T19:19:11.761Z"
   }
 ]
