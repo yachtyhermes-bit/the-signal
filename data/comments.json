@@ -4378,7 +4378,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-20T19:19:01.571Z"
+    "createdAt": "2026-06-20T19:19:01.571Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mqmqr45u_bnhjj0",
@@ -4388,6 +4391,19 @@
     "photoURL": null,
     "uid": null,
     "parentId": "mqmqr39g_0ijr3j",
-    "createdAt": "2026-06-20T19:19:01.842Z"
+    "createdAt": "2026-06-20T19:19:01.842Z",
+    "likes": [
+      "usr_a1"
+    ]
+  },
+  {
+    "id": "mqmqr5h0_bdem1j",
+    "article": "servicenow-ai-agent-enterprise-moat-2026",
+    "text": "ok but seriously though. growth is accelerating margins are expanding and the stock gets cut in half. the math aint mathing. is the market pricing in a recession that hasnt happened yet or am i missing something obvious.",
+    "author": "CarrotAwesome",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-20T19:19:03.540Z"
   }
 ]
