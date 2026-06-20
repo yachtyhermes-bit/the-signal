@@ -3640,7 +3640,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-20T11:07:20.627Z"
+    "createdAt": "2026-06-20T11:07:20.627Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mqm96t0q_gipv54",
@@ -3650,6 +3653,29 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-20T11:07:20.810Z"
+    "createdAt": "2026-06-20T11:07:20.810Z",
+    "likes": [
+      "usr_c3"
+    ]
+  },
+  {
+    "id": "mqm96ups_gzo8l8",
+    "article": "palantir-aip-defense-contracts-2026",
+    "text": "palantir is the pentagon's brain now. love it or hate it theyre embedded in every major defense decision. the market wants to hate the valuation but the revenue is catching up fast.",
+    "author": "FEMA_Camp_Survivor",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-20T11:07:23.008Z"
+  },
+  {
+    "id": "mqm96uwb_uno9u9",
+    "article": "palantir-aip-defense-contracts-2026",
+    "text": "unusual call activity on pltr this week despite the downtrend. someone is positioning for a move. gamma could push this up if we break resistance.",
+    "author": "option_flow_watcher",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-20T11:07:23.243Z"
   }
 ]
