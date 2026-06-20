@@ -99,7 +99,10 @@
     "photoURL": null,
     "uid": "SheriffBartholomew",
     "parentId": null,
-    "createdAt": "2026-06-15T11:04:25.624Z"
+    "createdAt": "2026-06-15T11:04:25.624Z",
+    "likes": [
+      "usr_a1"
+    ]
   },
   {
     "id": "mqf3vsnt_zuxc3g",
@@ -129,7 +132,10 @@
     "photoURL": null,
     "uid": "first_time_caller99",
     "parentId": null,
-    "createdAt": "2026-06-15T11:04:26.174Z"
+    "createdAt": "2026-06-15T11:04:26.174Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mqf3vt2h_dkfe8q",
@@ -4111,5 +4117,81 @@
     "likes": [
       "usr_d4"
     ]
+  },
+  {
+    "id": "mqmkmqrf_2tkum1",
+    "article": "crowdstrike-ai-cyber-arms-race-2026",
+    "text": "check the flex ARR growth. that consumption model is the key detail everyone glosses over. customers commit a pool of spend and draw down across modules — that locks them in way harder than annual contracts.",
+    "author": "turned_into_a_newt",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-20T16:27:40.155Z"
+  },
+  {
+    "id": "mqmkmqzv_bmqalv",
+    "article": "crowdstrike-ai-cyber-arms-race-2026",
+    "text": "actually the outage was the best thing that could have happened. proved nobody could steal their customers. when the worst possible event happens and retention stays that high, the moat is real.",
+    "author": "Latter-Possibility",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-20T16:27:40.459Z",
+    "likes": [
+      "usr_a1"
+    ]
+  },
+  {
+    "id": "mqmkmr61_0wcfqb",
+    "article": "crowdstrike-ai-cyber-arms-race-2026",
+    "text": "unusual call activity on crwd this week. someone is positioning for a move up. flow looks bullish despite the high multiple.",
+    "author": "option_flow_watcher",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-20T16:27:40.681Z",
+    "likes": [
+      "usr_b2"
+    ]
+  },
+  {
+    "id": "mqmkmrbe_p3unkc",
+    "article": "crowdstrike-ai-cyber-arms-race-2026",
+    "text": "crowdstrike at this valuation is pure hopium. the ai narrative is carrying a stock that already went vertical post outage. wall street wins again selling the story while retail chases the high pe.",
+    "author": "FEMA_Camp_Survivor",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-20T16:27:40.874Z"
+  },
+  {
+    "id": "mqmkmrh2_ipq58s",
+    "article": "crowdstrike-ai-cyber-arms-race-2026",
+    "text": "just started trading a few weeks ago. crowdstrike sounds cool but the stock is expensive isnt it? is this a good time to buy or should i wait for a dip like last time",
+    "author": "first_time_caller99",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mqmkmqrf_2tkum1",
+    "createdAt": "2026-06-20T16:27:41.078Z"
+  },
+  {
+    "id": "mqmkmsfd_9kphk5",
+    "article": "iridium-satellite-iot-defense-june-2026",
+    "text": "watching. iridium has been on my radar since the aireon acquisition closed. the air traffic surveillance piece is something nobody else can replicate.",
+    "author": "ragnaroksunset",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-20T16:27:42.313Z"
+  },
+  {
+    "id": "mqmkmsku_60watu",
+    "article": "iridium-satellite-iot-defense-june-2026",
+    "text": "quick play while i eat lunch. bought some irdm after that oppenheimer upgrade. the pentagon contracts alone make this interesting even if the space hype is overdone right now.",
+    "author": "tacotuesdaytrader",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-20T16:27:42.510Z"
   }
 ]
