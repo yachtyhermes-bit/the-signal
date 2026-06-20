@@ -2835,7 +2835,9 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-19T16:22:17.541Z",
-    "likes": []
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mql4zzd9_wf7d31",
@@ -2856,7 +2858,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-19T16:22:18.022Z"
+    "createdAt": "2026-06-19T16:22:18.022Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mql4zzrk_31bonn",
@@ -2881,7 +2886,8 @@
     "parentId": null,
     "createdAt": "2026-06-19T16:22:18.597Z",
     "likes": [
-      "usr_e5"
+      "usr_e5",
+      "usr_d4"
     ]
   },
   {
