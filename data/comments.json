@@ -287,7 +287,10 @@
     "photoURL": null,
     "uid": "bought_at_the_top",
     "parentId": null,
-    "createdAt": "2026-06-15T16:17:40.921Z"
+    "createdAt": "2026-06-15T16:17:40.921Z",
+    "likes": [
+      "usr_a1"
+    ]
   },
   {
     "id": "mqff2ngy_cfsvep",
@@ -5357,5 +5360,25 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-21T19:08:58.780Z"
+  },
+  {
+    "id": "mqo5u1n1_tpj4d2",
+    "article": "netflix-ad-tier-growth-2026",
+    "text": "netflix is getting punished because the market is rotating out of anything that requires ad revenue growth. but the ad platform is real — they built a full ad server from scratch and the inventory is premium. wall street wins again by selling the stock right when the monetization is about to kick in.",
+    "author": "FEMA_Camp_Survivor",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-21T19:08:58.957Z"
+  },
+  {
+    "id": "mqo5u1rn_m1t1q4",
+    "article": "netflix-ad-tier-growth-2026",
+    "text": "still holding nflx from the 2021 highs. averaged down the whole way. the ad tier is finally making the business model make sense. one day the market remembers they own the best content library in streaming.",
+    "author": "still_holding_2021",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mqo5u12w_fak5v9",
+    "createdAt": "2026-06-21T19:08:59.123Z"
   }
 ]
