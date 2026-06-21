@@ -4807,7 +4807,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-21T16:20:38.720Z"
+    "createdAt": "2026-06-21T16:20:38.720Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mqnztke9_j5tw4a",
@@ -4818,5 +4821,18 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-21T16:20:38.913Z"
+  },
+  {
+    "id": "mqnztkiy_id0xqc",
+    "article": "rigetti-quantum-computing-roadmap-2026",
+    "text": "whatever happens happens. threw a small position in rgti because quantum is a fun bet. not checking til next decade. market does what it does.",
+    "author": "westcoastcouch",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mqnztjy9_ioz5w7",
+    "createdAt": "2026-06-21T16:20:39.082Z",
+    "likes": [
+      "usr_e5"
+    ]
   }
 ]
