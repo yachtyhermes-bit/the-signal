@@ -254,9 +254,7 @@
     "uid": "fomo_king_420",
     "parentId": null,
     "createdAt": "2026-06-15T16:17:40.277Z",
-    "likes": [
-      "usr_e5"
-    ]
+    "likes": []
   },
   {
     "id": "mqff2mqd_gd0blg",
@@ -276,7 +274,10 @@
     "photoURL": null,
     "uid": "night_shift_trader",
     "parentId": null,
-    "createdAt": "2026-06-15T16:17:40.723Z"
+    "createdAt": "2026-06-15T16:17:40.723Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mqff2n21_g47xxv",
@@ -528,7 +529,10 @@
     "photoURL": null,
     "uid": "bought_at_the_top",
     "parentId": null,
-    "createdAt": "2026-06-16T11:02:02.000Z"
+    "createdAt": "2026-06-16T11:02:02.000Z",
+    "likes": [
+      "usr_c3"
+    ]
   },
   {
     "id": "mqfq8a4d_dd4d4d",
@@ -538,7 +542,10 @@
     "photoURL": null,
     "uid": "CarrotAwesome",
     "parentId": null,
-    "createdAt": "2026-06-16T11:02:02.000Z"
+    "createdAt": "2026-06-16T11:02:02.000Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mqfq8b1e_ee1e1e",
@@ -3997,7 +4004,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-20T16:27:32.177Z"
+    "createdAt": "2026-06-20T16:27:32.177Z",
+    "likes": [
+      "usr_a1"
+    ]
   },
   {
     "id": "mqmkmkul_d5atx8",
@@ -4020,7 +4030,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-20T16:27:32.705Z"
+    "createdAt": "2026-06-20T16:27:32.705Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mqmkml62_fagm92",
@@ -4032,7 +4045,8 @@
     "parentId": "mqmkmke1_wwzwn5",
     "createdAt": "2026-06-20T16:27:32.906Z",
     "likes": [
-      "usr_b2"
+      "usr_b2",
+      "usr_e5"
     ]
   },
   {
@@ -5181,7 +5195,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-21T19:08:53.297Z"
+    "createdAt": "2026-06-21T19:08:53.297Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mqo5txep_m0h35f",
@@ -5201,7 +5218,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-21T19:08:53.671Z"
+    "createdAt": "2026-06-21T19:08:53.671Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mqo5txp7_l0amf0",
@@ -5221,7 +5241,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-21T19:08:54.016Z"
+    "createdAt": "2026-06-21T19:08:54.016Z",
+    "likes": [
+      "usr_c3"
+    ]
   },
   {
     "id": "mqo5txyg_kojs46",
@@ -5231,6 +5254,68 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-21T19:08:54.184Z"
+    "createdAt": "2026-06-21T19:08:54.184Z",
+    "likes": [
+      "usr_e5"
+    ]
+  },
+  {
+    "id": "mqo5tz1u_rcwom0",
+    "article": "palo-alto-networks-platformization-2026",
+    "text": "we just signed a panw platform deal at my company. they bundle strata firewall, prisma cloud, and cortex xdr into one contract. the switching cost is insane once youre in. the idira identity acquisition fills the last gap in their stack. my company is all in on palo alto. $PANW",
+    "author": "work_from_zoom",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-21T19:08:55.602Z"
+  },
+  {
+    "id": "mqo5tz71_dhrdns",
+    "article": "palo-alto-networks-platformization-2026",
+    "text": "platform consolidation sounds great for palo alto margins but the customer lock in is the real story. once you go full palo alto stack its almost impossible to leave. follow the incentives — nikesh arora is building a tollbooth, not a security product. something doesnt add up about the pace of platform adoption though.",
+    "author": "Minimum-Criticism763",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-21T19:08:55.789Z",
+    "likes": [
+      "usr_c3"
+    ]
+  },
+  {
+    "id": "mqo5tzbm_iy0aqd",
+    "article": "palo-alto-networks-platformization-2026",
+    "text": "bought panw after the dip last month and its been working. the platform thesis makes sense to me even if i dont fully understand all the products. should i add more or is this fully valued. my heart cant take another drawdown. ok im holding.",
+    "author": "help_me_pls77",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-21T19:08:55.954Z",
+    "likes": [
+      "usr_d4"
+    ]
+  },
+  {
+    "id": "mqo5tzgi_xh5gnb",
+    "article": "palo-alto-networks-platformization-2026",
+    "text": "panw is the best positioned in cyber right now because they have the full stack. crowdstrike has endpoint, msft has identity, but nobody else owns firewall + cloud + endpoint + identity under one roof. the platform premium is justified. depends on your timeline though — this is a multiyear thesis.",
+    "author": "sharp315",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-21T19:08:56.130Z"
+  },
+  {
+    "id": "mqo5tzln_zhejqf",
+    "article": "palo-alto-networks-platformization-2026",
+    "text": "my thesis is simple. cybersecurity spending is accelerating, CISOs want fewer vendors, and palo alto has the broadest platform. the bull case rests on three things: continued share gains in firewall refresh cycle, prisma cloud becoming the standard for cloud security, and idira making them relevant in identity. if this plays out the revenue compounding is enormous.",
+    "author": "thesis_driven_dan",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-21T19:08:56.315Z",
+    "likes": [
+      "usr_d4"
+    ]
   }
 ]
