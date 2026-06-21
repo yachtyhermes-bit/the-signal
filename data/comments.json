@@ -4410,7 +4410,8 @@
     "parentId": null,
     "createdAt": "2026-06-20T19:19:01.332Z",
     "likes": [
-      "usr_c3"
+      "usr_c3",
+      "usr_d4"
     ]
   },
   {
@@ -4423,7 +4424,8 @@
     "parentId": null,
     "createdAt": "2026-06-20T19:19:01.571Z",
     "likes": [
-      "usr_d4"
+      "usr_d4",
+      "usr_b2"
     ]
   },
   {
@@ -4436,7 +4438,8 @@
     "parentId": "mqmqr39g_0ijr3j",
     "createdAt": "2026-06-20T19:19:01.842Z",
     "likes": [
-      "usr_a1"
+      "usr_a1",
+      "usr_b2"
     ]
   },
   {
@@ -4950,7 +4953,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-21T16:20:43.024Z"
+    "createdAt": "2026-06-21T16:20:43.024Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mqnztnpf_vj956t",
