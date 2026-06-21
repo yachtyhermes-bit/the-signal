@@ -5155,7 +5155,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-21T19:08:51.273Z"
+    "createdAt": "2026-06-21T19:08:51.273Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mqo5tvv2_ismt3b",
@@ -5165,6 +5168,29 @@
     "photoURL": null,
     "uid": null,
     "parentId": "mqo5tv9z_qoebay",
-    "createdAt": "2026-06-21T19:08:51.470Z"
+    "createdAt": "2026-06-21T19:08:51.470Z",
+    "likes": [
+      "usr_c3"
+    ]
+  },
+  {
+    "id": "mqo5tx9t_t2k364",
+    "article": "nvidia-computex-2026-vera-rubin",
+    "text": "the vera rubin platform is a generational leap in inference throughput. the arizona fab is the real story though — domestic supply chain for ai silicon changes the risk profile dramatically. nvda is the only company doing both the architecture and the manufacturing pipeline. $NVDA",
+    "author": "data_dependent_1",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-21T19:08:53.297Z"
+  },
+  {
+    "id": "mqo5txep_m0h35f",
+    "article": "nvidia-computex-2026-vera-rubin",
+    "text": "bought nvda at the top before computex thinking the keynote would pump it. of course it sold off. my timing is legendary. still holding though because jensen always delivers eventually. learning the hard way.",
+    "author": "noob_investor42",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-21T19:08:53.473Z"
   }
 ]
