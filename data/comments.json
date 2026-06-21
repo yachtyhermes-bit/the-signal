@@ -204,7 +204,10 @@
     "photoURL": null,
     "uid": "data_dependent_1",
     "parentId": null,
-    "createdAt": "2026-06-15T16:17:39.331Z"
+    "createdAt": "2026-06-15T16:17:39.331Z",
+    "likes": [
+      "usr_e5"
+    ]
   },
   {
     "id": "mqff2m1x_o9jac5",
@@ -214,7 +217,10 @@
     "photoURL": null,
     "uid": "whats_a_stop_loss",
     "parentId": null,
-    "createdAt": "2026-06-15T16:17:39.621Z"
+    "createdAt": "2026-06-15T16:17:39.621Z",
+    "likes": [
+      "usr_c3"
+    ]
   },
   {
     "id": "mqff2m7s_is6c1m",
@@ -363,7 +369,10 @@
     "photoURL": null,
     "uid": "usr_sheriff_b77",
     "parentId": null,
-    "createdAt": "2026-06-15T19:02:13.157Z"
+    "createdAt": "2026-06-15T19:02:13.157Z",
+    "likes": [
+      "usr_e5"
+    ]
   },
   {
     "id": "mqfky8sw_pvfuof",
@@ -383,7 +392,10 @@
     "photoURL": null,
     "uid": "usr_fema_doom",
     "parentId": null,
-    "createdAt": "2026-06-15T19:02:13.739Z"
+    "createdAt": "2026-06-15T19:02:13.739Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mqfky95u_wjqz54",
@@ -5032,6 +5044,115 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-21T19:08:48.312Z"
+    "createdAt": "2026-06-21T19:08:48.312Z",
+    "likes": [
+      "usr_a1"
+    ]
+  },
+  {
+    "id": "mqo5ttm9_gqyqc0",
+    "article": "google-gemini-military-pivot-2026",
+    "text": "with all the controversy around this everyone is too negative on GOOGL. fading the crowd here. the government cloud business is a huge moat and AWS is the only real competitor. people are sleeping on how big this contract actually is.",
+    "author": "whohebe123",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-21T19:08:48.561Z"
+  },
+  {
+    "id": "mqo5ttst_x50vw8",
+    "article": "google-gemini-military-pivot-2026",
+    "text": "i work at google and the internal reaction to the military pivot is pretty mixed. a lot of people are quitting. but the enterprise contracts are real and the pentagon is not going back to legacy vendors now that gemini is deployed. the classified work is the highest margin revenue google cloud has ever seen. $GOOGL",
+    "author": "work_from_zoom",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-21T19:08:48.797Z"
+  },
+  {
+    "id": "mqo5ttyz_gqsrb8",
+    "article": "google-gemini-military-pivot-2026",
+    "text": "google is now the pentagons AI backbone and nobody is talking about what that actually means. over six hundred employees walked over project maven back in the day and now theyre doing it at scale. wall street loves the defense revenue but the brain drain will eventually show up in product quality. same story different ticker.",
+    "author": "SheriffBartholomew",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-21T19:08:49.019Z",
+    "likes": [
+      "usr_a1"
+    ]
+  },
+  {
+    "id": "mqo5tu4h_vbjf7h",
+    "article": "google-gemini-military-pivot-2026",
+    "text": "my first time seeing GOOGL at these levels. is this a good time to buy or am i catching a falling knife. the military contract sounds huge but i dont understand the IL6/IL7 thing. learning as i go.",
+    "author": "first_time_caller99",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-21T19:08:49.217Z",
+    "likes": [
+      "usr_e5"
+    ]
+  },
+  {
+    "id": "mqo5tv4n_74uid1",
+    "article": "rocket-lab-space-systems-cash-cow-2026",
+    "text": "everyone obsesses over electron and neutron launches but the space systems division is where the actual revenue is. components, satellites, spacecraft buses — thats the compounding story. check the q1 breakdown: space systems is pulling away from launch revenue. this detail matters for the valuation thesis.",
+    "author": "turned_into_a_newt",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-21T19:08:50.519Z"
+  },
+  {
+    "id": "mqo5tv9z_qoebay",
+    "article": "rocket-lab-space-systems-cash-cow-2026",
+    "text": "rklb isnt a launch company anymore and wall street is still pricing it like one. space systems is the real business and it has way higher margins and recurring revenue. neutron is just the cherry on top. playing the long game on this one. check back when the market figures it out $RKLB",
+    "author": "CCWaterBug",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-21T19:08:50.711Z"
+  },
+  {
+    "id": "mqo5tvev_4n6v4f",
+    "article": "rocket-lab-space-systems-cash-cow-2026",
+    "text": "bought rklb at the spac merger price and held through all the volatility. you're welcome for the liquidity. finally seeing the space systems revenue ramp feels like vindication. bagholder no more.",
+    "author": "bought_at_the_top",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-21T19:08:50.887Z"
+  },
+  {
+    "id": "mqo5tvjv_2dba7q",
+    "article": "rocket-lab-space-systems-cash-cow-2026",
+    "text": "ok so rocket lab makes more money from satellite components than from actual rockets? the math aint mathing with the valuation then. either the launch business is undervalued or space systems is. someone explain this to me like im five.",
+    "author": "CarrotAwesome",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-21T19:08:51.067Z"
+  },
+  {
+    "id": "mqo5tvpl_nbldkn",
+    "article": "rocket-lab-space-systems-cash-cow-2026",
+    "text": "beck is building a vertically integrated space company while everyone else is still burning cash on launch hype. space systems at this scale with these margins is the kind of business that compounds quietly. but wall street will ignore it until neutron flies successfully. regular people always miss the build phase.",
+    "author": "FEMA_Camp_Survivor",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-21T19:08:51.273Z"
+  },
+  {
+    "id": "mqo5tvv2_ismt3b",
+    "article": "rocket-lab-space-systems-cash-cow-2026",
+    "text": "premarket checking in. rklb has been quietly printing on space systems for months. night shift sees things the day traders miss. $RKLB",
+    "author": "night_shift_trader",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mqo5tv9z_qoebay",
+    "createdAt": "2026-06-21T19:08:51.470Z"
   }
 ]
