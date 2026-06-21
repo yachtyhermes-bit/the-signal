@@ -4718,7 +4718,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-21T16:20:36.200Z"
+    "createdAt": "2026-06-21T16:20:36.200Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mqnztig4_ajbip9",
@@ -4728,7 +4731,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-21T16:20:36.388Z"
+    "createdAt": "2026-06-21T16:20:36.388Z",
+    "likes": [
+      "usr_e5"
+    ]
   },
   {
     "id": "mqnztil7_zfns1m",
@@ -4748,7 +4754,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-21T16:20:36.755Z"
+    "createdAt": "2026-06-21T16:20:36.755Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mqnztiv4_hzahoc",
@@ -4759,5 +4768,15 @@
     "uid": null,
     "parentId": "mqnztil7_zfns1m",
     "createdAt": "2026-06-21T16:20:36.928Z"
+  },
+  {
+    "id": "mqnztjtb_35vyjs",
+    "article": "rigetti-quantum-computing-roadmap-2026",
+    "text": "quantum is a decade out for real commercial use but someone has to build the infrastructure now. rigetti has cash, government contracts, and a working system on aws and azure. playing the long game. check back when quantum actually matters.",
+    "author": "CCWaterBug",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-21T16:20:38.159Z"
   }
 ]
