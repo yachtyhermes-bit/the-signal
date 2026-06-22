@@ -546,7 +546,10 @@
     "photoURL": null,
     "uid": "night_shift_trader",
     "parentId": "mqfq8a1a_aa1a1a",
-    "createdAt": "2026-06-16T11:02:02.000Z"
+    "createdAt": "2026-06-16T11:02:02.000Z",
+    "likes": [
+      "usr_c3"
+    ]
   },
   {
     "id": "mqfq8a3c_cc3c3c",
@@ -557,9 +560,7 @@
     "uid": "bought_at_the_top",
     "parentId": null,
     "createdAt": "2026-06-16T11:02:02.000Z",
-    "likes": [
-      "usr_c3"
-    ]
+    "likes": []
   },
   {
     "id": "mqfq8a4d_dd4d4d",
@@ -571,7 +572,8 @@
     "parentId": null,
     "createdAt": "2026-06-16T11:02:02.000Z",
     "likes": [
-      "usr_d4"
+      "usr_d4",
+      "usr_c3"
     ]
   },
   {
@@ -5267,7 +5269,8 @@
     "parentId": null,
     "createdAt": "2026-06-21T19:08:53.473Z",
     "likes": [
-      "usr_d4"
+      "usr_d4",
+      "usr_e5"
     ]
   },
   {
@@ -5280,7 +5283,8 @@
     "parentId": null,
     "createdAt": "2026-06-21T19:08:53.671Z",
     "likes": [
-      "usr_b2"
+      "usr_b2",
+      "usr_c3"
     ]
   },
   {
@@ -5293,7 +5297,8 @@
     "parentId": null,
     "createdAt": "2026-06-21T19:08:53.851Z",
     "likes": [
-      "usr_a1"
+      "usr_a1",
+      "usr_b2"
     ]
   },
   {
@@ -5320,7 +5325,8 @@
     "parentId": null,
     "createdAt": "2026-06-21T19:08:54.184Z",
     "likes": [
-      "usr_e5"
+      "usr_e5",
+      "usr_c3"
     ]
   },
   {
@@ -5707,7 +5713,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-22T11:07:45.404Z"
+    "createdAt": "2026-06-22T11:07:45.404Z",
+    "likes": [
+      "usr_e5"
+    ]
   },
   {
     "id": "mqp431hq_ooukc7",
@@ -5717,7 +5726,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-22T11:07:45.614Z"
+    "createdAt": "2026-06-22T11:07:45.614Z",
+    "likes": [
+      "usr_e5"
+    ]
   },
   {
     "id": "mqp431ph_awnddv",
@@ -5737,7 +5749,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-22T11:07:46.117Z"
+    "createdAt": "2026-06-22T11:07:46.117Z",
+    "likes": [
+      "usr_e5"
+    ]
   },
   {
     "id": "mqp4321w_s9n920",
