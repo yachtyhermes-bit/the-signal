@@ -1000,7 +1000,8 @@
     "parentId": null,
     "createdAt": "2026-06-16T18:03:00.000Z",
     "likes": [
-      "usr_c3"
+      "usr_c3",
+      "usr_d4"
     ]
   },
   {
@@ -1011,7 +1012,10 @@
     "photoURL": null,
     "uid": "sharp315",
     "parentId": "mqh0jzh4_jxlrej",
-    "createdAt": "2026-06-16T18:04:00.000Z"
+    "createdAt": "2026-06-16T18:04:00.000Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mqh0k10j_otfbvx",
@@ -1036,7 +1040,8 @@
     "parentId": null,
     "createdAt": "2026-06-16T18:06:00.000Z",
     "likes": [
-      "usr_b2"
+      "usr_b2",
+      "usr_c3"
     ]
   },
   {
@@ -5574,7 +5579,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-22T11:07:42.568Z"
+    "createdAt": "2026-06-22T11:07:42.568Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mqp42zac_enl1sq",
@@ -5899,7 +5907,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-22T16:19:21.372Z"
+    "createdAt": "2026-06-22T16:19:21.372Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mqpf7ren_32bs3i",
@@ -5919,7 +5930,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-22T16:19:21.821Z"
+    "createdAt": "2026-06-22T16:19:21.821Z",
+    "likes": [
+      "usr_e5"
+    ]
   },
   {
     "id": "mqpf7rta_ezb10e",
@@ -5930,5 +5944,55 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-22T16:19:22.126Z"
+  },
+  {
+    "id": "mqpf7tub_zafs5n",
+    "article": "broadcom-ai-asic-dominance",
+    "text": "avgo selling off on a record quarter tells you everything about the macro environment. the company is firing on all cylinders but rates and inflation fear are the real story here. the fed put is not back on the menu yet. $AVGO",
+    "author": "macro_dad_energy",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-22T16:19:24.755Z"
+  },
+  {
+    "id": "mqpf7u0j_8n7kfu",
+    "article": "broadcom-ai-asic-dominance",
+    "text": "bought avgo last week and it immediately dropped. just my luck. everyone says the quarter was amazing though and the ai semi business is exploding. bought the top lol.",
+    "author": "noob_investor42",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-22T16:19:24.979Z"
+  },
+  {
+    "id": "mqpf7u6x_bzzys2",
+    "article": "broadcom-ai-asic-dominance",
+    "text": "avgo. the selloff on this kind of quarter is interesting. watching.",
+    "author": "ragnaroksunset",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-22T16:19:25.209Z"
+  },
+  {
+    "id": "mqpf7udf_da015e",
+    "article": "broadcom-ai-asic-dominance",
+    "text": "record quarter with ai semi revenue surging and the stock gets destroyed. wall street always finds a reason to punish even the best companies. regular people always get wrecked on these reactionary drops.",
+    "author": "FEMA_Camp_Survivor",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-22T16:19:25.443Z"
+  },
+  {
+    "id": "mqpf7ukh_40bw6u",
+    "article": "broadcom-ai-asic-dominance",
+    "text": "avgo beat and the stock gets punished. same story different ticker. retail always the exit liquidity when institutions decide semis are too crowded.",
+    "author": "SheriffBartholomew",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-22T16:19:25.697Z"
   }
 ]
