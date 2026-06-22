@@ -973,7 +973,10 @@
     "photoURL": null,
     "uid": "Shdwrptr",
     "parentId": "mqh0jlxa_ah44rl",
-    "createdAt": "2026-06-16T18:02:00.000Z"
+    "createdAt": "2026-06-16T18:02:00.000Z",
+    "likes": [
+      "usr_e5"
+    ]
   },
   {
     "id": "mqh0jzh4_jxlrej",
@@ -5711,5 +5714,15 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-22T11:07:46.931Z"
+  },
+  {
+    "id": "mqp432n0_jxkfku",
+    "article": "nvidia-computex-2026-vera-rubin",
+    "text": "nvidia is the best tech company on earth. the stock is also priced like it. im staying in cash for now and waiting for the ai capex panic to shake out more weak hands before adding. no rush to buy here.",
+    "author": "RN_Geo",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-22T11:07:47.100Z"
   }
 ]
