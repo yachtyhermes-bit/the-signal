@@ -1398,7 +1398,10 @@
     "photoURL": null,
     "uid": "Shdwrptr",
     "parentId": "mqhz8b1f_gg5h6i",
-    "createdAt": "2026-06-17T16:25:00.000Z"
+    "createdAt": "2026-06-17T16:25:00.000Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mqhz8b3h_ii7j8k",
@@ -1418,7 +1421,10 @@
     "photoURL": null,
     "uid": "whats_a_stop_loss",
     "parentId": "mqhz8b2g_hh6i7j",
-    "createdAt": "2026-06-17T16:27:00.000Z"
+    "createdAt": "2026-06-17T16:27:00.000Z",
+    "likes": [
+      "usr_c3"
+    ]
   },
   {
     "id": "mqhz8c1j_kk9l0m",
@@ -5813,5 +5819,91 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-22T16:19:18.576Z"
+  },
+  {
+    "id": "mqpf7p9g_tlbbol",
+    "article": "arm-ai-server-architecture-2026",
+    "text": "ok but arm is a licensing company not a chip company. if any of the hyperscalers decide to build their own arm cores the royalty stream dries up fast. the math aint mathing for the current valuation.",
+    "author": "CarrotAwesome",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-22T16:19:18.821Z",
+    "likes": [
+      "usr_c3"
+    ]
+  },
+  {
+    "id": "mqpf7pgz_olpc3h",
+    "article": "arm-ai-server-architecture-2026",
+    "text": "everyone loves arm now after the ipo hype cycle. fading the crowd here. the licensing model means they capture a tiny fraction of the value they create. the hyperscalers will squeeze them over time.",
+    "author": "whohebe123",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-22T16:19:19.091Z",
+    "likes": [
+      "usr_d4"
+    ]
+  },
+  {
+    "id": "mqpf7pqw_va8vld",
+    "article": "arm-ai-server-architecture-2026",
+    "text": "arm in the data center is a decade long story. they went from zero to everywhere in servers and it is still early days. playing the long game. check back when every ai server runs on arm.",
+    "author": "CCWaterBug",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-22T16:19:19.448Z"
+  },
+  {
+    "id": "mqpf7py7_4tj5x6",
+    "article": "arm-ai-server-architecture-2026",
+    "text": "so arm doesnt actually make chips they just design the blueprints and collect royalties? and every ai server uses them? trying to understand the business model. learning as i go.",
+    "author": "first_time_caller99",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-22T16:19:19.711Z"
+  },
+  {
+    "id": "mqpf7r27_jz9cng",
+    "article": "kratos-valkyrie-drone-army-2026",
+    "text": "ktos dropping while revenue keeps growing tells me the market has already priced in a drone buildout that hasnt materialized yet. watch what happens when the next pentagon budget gets cut. generational bagholders incoming.",
+    "author": "Latrodectus1990",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-22T16:19:21.151Z"
+  },
+  {
+    "id": "mqpf7r8c_qv61r2",
+    "article": "kratos-valkyrie-drone-army-2026",
+    "text": "the valkyrie program is real but drone swarms are still a concept not a production program. kratos has backlog sure but execution risk on defense contracts is always higher than people expect. solid company long term but be patient.",
+    "author": "sharp315",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-22T16:19:21.372Z"
+  },
+  {
+    "id": "mqpf7ren_32bs3i",
+    "article": "kratos-valkyrie-drone-army-2026",
+    "text": "down on this one and i keep buying the dip and it keeps dipping. the business looks good on paper but my portfolio disagrees. is this normal for defense stocks. talk me off the ledge.",
+    "author": "help_me_pls77",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-22T16:19:21.599Z"
+  },
+  {
+    "id": "mqpf7rkt_1ha8m1",
+    "article": "kratos-valkyrie-drone-army-2026",
+    "text": "my thesis is simple. kratos is the only pure play on the drone warfare shift and the pentagon is committed to loitering munitions and autonomous systems. the backlog converts at steady state if execution holds. three things need to happen — valkyrie goes production, margins stabilize, and the market re-rates defense growth.",
+    "author": "thesis_driven_dan",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-22T16:19:21.821Z"
   }
 ]
