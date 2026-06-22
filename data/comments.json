@@ -6241,7 +6241,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-22T19:09:53.167Z"
+    "createdAt": "2026-06-22T19:09:53.167Z",
+    "likes": [
+      "usr_e5"
+    ]
   },
   {
     "id": "mqplb2c5_4wjn33",
@@ -6251,7 +6254,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-22T19:09:53.429Z"
+    "createdAt": "2026-06-22T19:09:53.429Z",
+    "likes": [
+      "usr_e5"
+    ]
   },
   {
     "id": "mqplb2i3_he2tg3",
@@ -6261,7 +6267,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-22T19:09:53.643Z"
+    "createdAt": "2026-06-22T19:09:53.643Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mqplb2op_px0ylv",
@@ -6271,6 +6280,19 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-22T19:09:53.881Z"
+    "createdAt": "2026-06-22T19:09:53.881Z",
+    "likes": [
+      "usr_d4"
+    ]
+  },
+  {
+    "id": "mqplb3ur_am2e6m",
+    "article": "cloudflare-edge-ai-zero-trust-2026",
+    "text": "cloudflare laid off a big chunk of the workforce to chase agentic ai and the stock got hammered. the workers platform growth is real but the margin compression from running ai inference is structural not temporary. the ceo is betting the whole company on a narrative flip and wall street will turn on a dime.",
+    "author": "FEMA_Camp_Survivor",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-22T19:09:55.395Z"
   }
 ]
