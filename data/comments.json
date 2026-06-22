@@ -972,7 +972,10 @@
     "photoURL": null,
     "uid": "whats_a_stop_loss",
     "parentId": null,
-    "createdAt": "2026-06-16T18:01:00.000Z"
+    "createdAt": "2026-06-16T18:01:00.000Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mqh0paoo_na6npu",
@@ -5479,7 +5482,8 @@
     "parentId": null,
     "createdAt": "2026-06-22T11:07:40.393Z",
     "likes": [
-      "usr_a1"
+      "usr_a1",
+      "usr_b2"
     ]
   },
   {
@@ -5905,5 +5909,15 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-22T16:19:21.821Z"
+  },
+  {
+    "id": "mqpf7rta_ezb10e",
+    "article": "kratos-valkyrie-drone-army-2026",
+    "text": "ktos options have been picking up volume lately. decent call flow for a beaten down defense name. someone might know something about a valkyrie production decision coming.",
+    "author": "option_flow_watcher",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-22T16:19:22.126Z"
   }
 ]
