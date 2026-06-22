@@ -5803,5 +5803,15 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-22T11:07:47.100Z"
+  },
+  {
+    "id": "mqpf7p2n_au16lx",
+    "article": "arm-ai-server-architecture-2026",
+    "text": "i work at a hyperscaler and arm is in literally every new server we deploy. the efficiency advantage over x86 for ai inference workloads is massive. this is the standard now. $ARM",
+    "author": "work_from_zoom",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-22T16:19:18.576Z"
   }
 ]
