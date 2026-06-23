@@ -236,11 +236,11 @@ function buildStockPage(symbol) {
         </div>
       </div>
       <div class="stock-hero-stats">
-        <div class="hero-stat"><span class="hero-stat-label">Market Cap</span><span class="hero-stat-value">${val(stats, 'marketCap')}</span></div>
-        <div class="hero-stat"><span class="hero-stat-label">P/E (TTM)</span><span class="hero-stat-value">${val(stats, 'trailingPE')}</span></div>
-        <div class="hero-stat"><span class="hero-stat-label">52W Range</span><span class="hero-stat-value">${val(stats, 'fiftyTwoWeekLow')} – ${val(stats, 'fiftyTwoWeekHigh')}</span></div>
-        <div class="hero-stat"><span class="hero-stat-label">Volume</span><span class="hero-stat-value">${val(stats, 'avgVolume')}</span></div>
-        <div class="hero-stat"><span class="hero-stat-label">Beta</span><span class="hero-stat-value">${val(stats, 'beta')}</span></div>
+        <div class="hero-stat"><span class="hero-stat-label">Market Cap</span><span class="hero-stat-value">${isPrivate ? '—' : val(stats, 'marketCap')}</span></div>
+        <div class="hero-stat"><span class="hero-stat-label">P/E (TTM)</span><span class="hero-stat-value">${isPrivate ? '—' : val(stats, 'trailingPE')}</span></div>
+        <div class="hero-stat"><span class="hero-stat-label">52W Range</span><span class="hero-stat-value">${isPrivate ? '—' : val(stats, 'fiftyTwoWeekLow') + ' – ' + val(stats, 'fiftyTwoWeekHigh')}</span></div>
+        <div class="hero-stat"><span class="hero-stat-label">Volume</span><span class="hero-stat-value">${isPrivate ? '—' : val(stats, 'avgVolume')}</span></div>
+        <div class="hero-stat"><span class="hero-stat-label">Beta</span><span class="hero-stat-value">${isPrivate ? '—' : val(stats, 'beta')}</span></div>
       </div>
     </section>
 

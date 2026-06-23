@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1280">
+<title>The Signal — Market Intelligence for AI, Defense, Space & Cyber</title>
+<style>
+/* ===== RESET & BASE ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:#0d1117;color:#e6edf3;line-height:1.5;min-width:1200px}
+
+/* ===== COLORS ===== */
+:root{
+  --bg-primary:#0d1117;
+  --bg-secondary:#11141c;
+  --bg-card:#151a24;
+  --bg-hover:#1c2330;
+  --bg-header:#0a0c11;
+  --bg-ticker:#0f1219;
+  --border:#1f2937;
+  --text-primary:#e6edf3;
+  --text-secondary:#8b949e;
+  --text-muted:#6b7280;
+  --accent-gold:#d4a017;
+  --accent-gold-light:#eab308;
+  --green:#22c55e;
+  --red:#ef4444;
+  --blue:#3b82f6;
+  --purple:#8b5cf6;
+  --signal-gradient:linear-gradient(135deg,#3b82f6,#8b5cf6,#d946ef);
+  --section-header:#161b26;
+  --shadow:0 1px 3px rgba(0,0,0,.4);
+}
+
+/* ===== UTILITY ===== */
+.container{max-width:1400px;margin:0 auto;padding:0 20px}
+.flex{display:flex}
+.flex-between{display:flex;justify-content:space-between;align-items:center}
+.grid{display:grid}
+.green{color:var(--green)}
+.red{color:var(--red)}
+.gold{color:var(--accent-gold)}
+.muted{color:var(--text-muted)}
+.small{font-size:.8125rem}
+.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+a{color:var(--text-primary);text-decoration:none}
+a:hover{color:var(--accent-gold-light)}
+
+/* ===== TOP UTILITY BAR ===== */
+.utility-bar{
+  background:var(--bg-header);
+  border-bottom:1px solid var(--border);
+  padding:4px 0;
+  font-size:.75rem;
+  color:var(--text-secondary);
+}
+.utility-bar .container{display:flex;justify-content:space-between;align-items:center}
+.utility-bar .network-links{display:flex;gap:16px;align-items:center}
+.utility-bar .network-links a{color:var(--text-secondary);font-size:.7rem;letter-spacing:.3px;text-transform:uppercase}
+.utility-bar .network-links a:hover{color:var(--accent-gold-light)}
+.utility-bar .network-links .active{color:var(--accent-gold);font-weight:600}
+.utility-bar .user-links{display:flex;gap:12px;align-items:center}
+.utility-bar .user-links a{color:var(--text-secondary);font-size:.7rem}
+.utility-bar .user-links a:hover{color:var(--text-primary)}
+
+/* ===== MAIN HEADER ===== */
+.main-header{
+  background:var(--bg-secondary);
+  border-bottom:1px solid var(--border);
+  position:sticky;top:0;z-index:100;
+}
+.main-header .container{display:flex;align-items:center;height:56px;gap:0}
+.header-logo{display:flex;align-items:center;gap:8px;padding-right:28px;border-right:1px solid var(--border);margin-right:20px}
+.header-logo .logo-text{font-size:1.25rem;font-weight:800;letter-spacing:-.5px;background:var(--signal-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.header-logo .logo-sub{font-size:.6rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-top:-2px}
+.header-nav{display:flex;align-items:center;gap:2px;flex:1}
+.header-nav a{
+  padding:6px 14px;font-size:.8125rem;font-weight:500;color:var(--text-secondary);
+  border-radius:6px;transition:all .15s;white-space:nowrap;
+}
+.header-nav a:hover{background:var(--bg-hover);color:var(--text-primary)}
+.header-nav a.nav-premium{color:var(--accent-gold);font-weight:600}
+.header-nav a.nav-premium:hover{background:rgba(212,160,23,.1)}
+.header-actions{display:flex;align-items:center;gap:8px;margin-left:auto}
+.header-actions .search-btn{
+  background:none;border:1px solid var(--border);border-radius:8px;padding:6px 16px;
+  color:var(--text-muted);font-size:.8125rem;cursor:pointer;transition:all .15s;
+}
+.header-actions .search-btn:hover{background:var(--bg-hover);color:var(--text-primary);border-color:var(--text-muted)}
+.header-actions .btn-signin{
+  background:transparent;border:1px solid var(--border);border-radius:8px;padding:6px 18px;
+  color:var(--text-primary);font-size:.8125rem;font-weight:500;cursor:pointer;transition:all .15s;
+}
+.header-actions .btn-signin:hover{background:var(--bg-hover)}
+.header-actions .btn-subscribe{
+  background:var(--accent-gold);border:none;border-radius:8px;padding:6px 18px;
+  color:#000;font-size:.8125rem;font-weight:600;cursor:pointer;transition:all .15s;
+}
+.header-actions .btn-subscribe:hover{background:var(--accent-gold-light)}
+
+/* ===== TICKER BAR ===== */
+.ticker-bar{
+  background:var(--bg-ticker);
+  border-bottom:1px solid var(--border);
+  overflow:hidden;height:36px;
+}
+.ticker-bar .container{display:flex;align-items:center;height:100%}
+.ticker-label{
+  font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;
+  color:var(--accent-gold);padding-right:12px;border-right:1px solid var(--border);
+  white-space:nowrap;margin-right:12px;
+}
+.ticker-scroll{
+  display:flex;align-items:center;gap:24px;overflow:hidden;flex:1;
+  white-space:nowrap;animation:tickerScroll 60s linear infinite;
+}
+.ticker-scroll:hover{animation-play-state:paused}
+@keyframes tickerScroll{
+  0%{transform:translateX(0)}
+  100%{transform:translateX(-50%)}
+}
+.ticker-item{display:flex;align-items:center;gap:6px;font-size:.75rem;cursor:pointer;padding:2px 6px;border-radius:4px;transition:background .15s}
+.ticker-item:hover{background:var(--bg-hover)}
+.ticker-item .symbol{font-weight:600;color:var(--text-primary)}
+.ticker-item .price{color:var(--text-secondary);font-family:'SF Mono',Consolas,monospace}
+.ticker-item .change{font-weight:500;font-family:'SF Mono',Consolas,monospace}
+.ticker-premium-btn{
+  background:rgba(212,160,23,.12);border:1px solid rgba(212,160,23,.3);border-radius:6px;
+  padding:4px 14px;color:var(--accent-gold);font-size:.7rem;font-weight:600;
+  cursor:pointer;white-space:nowrap;transition:all .15s;
+}
+.ticker-premium-btn:hover{background:rgba(212,160,23,.2)}
+
+/* ===== MARKETS BAR (TODAY'S MARKETS) ===== */
+.markets-bar{
+  background:var(--bg-card);border-bottom:1px solid var(--border);padding:10px 0;
+}
+.markets-bar .container{display:flex;align-items:center;gap:20px}
+.markets-section-label{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);white-space:nowrap}
+.markets-tabs{display:flex;gap:2px;border:1px solid var(--border);border-radius:6px;overflow:hidden}
+.markets-tabs button{background:none;border:none;padding:4px 12px;color:var(--text-secondary);font-size:.7rem;font-weight:500;cursor:pointer;transition:all .1s}
+.markets-tabs button.active{background:var(--accent-gold);color:#000;font-weight:600}
+.markets-tabs button:not(.active):hover{background:var(--bg-hover);color:var(--text-primary)}
+.markets-data{display:flex;gap:20px;flex:1}
+.market-item{display:flex;align-items:center;gap:10px;padding:0 10px;border-right:1px solid var(--border);cursor:pointer;transition:background .15s;border-radius:4px}
+.market-item:last-child{border-right:none}
+.market-item:hover{background:var(--bg-hover)}
+.market-item .mkt-name{font-size:.75rem;font-weight:600;color:var(--text-primary);white-space:nowrap}
+.market-item .mkt-price{font-size:.75rem;color:var(--text-secondary);font-family:'SF Mono',Consolas,monospace;white-space:nowrap}
+.market-item .mkt-change{font-size:.75rem;font-weight:500;font-family:'SF Mono',Consolas,monospace;white-space:nowrap}
+.mkt-mini-chart{width:60px;height:24px;position:relative}
+
+/* ===== HERO / FEATURED ===== */
+.hero-section{padding:24px 0 16px}
+.hero-section .container{display:grid;grid-template-columns:1fr 320px;gap:24px}
+.hero-main{position:relative;border-radius:12px;overflow:hidden;background:var(--bg-card);border:1px solid var(--border);min-height:380px}
+.hero-image{width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:.2}
+.hero-gradient{position:absolute;bottom:0;left:0;right:0;height:70%;background:linear-gradient(transparent,var(--bg-card))}
+.hero-content{position:relative;z-index:1;padding:32px;display:flex;flex-direction:column;justify-content:flex-end;min-height:380px}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(212,160,23,.15);border:1px solid rgba(212,160,23,.3);border-radius:4px;padding:3px 10px;margin-bottom:12px;width:fit-content}
+.hero-badge span{font-size:.7rem;font-weight:600;color:var(--accent-gold);text-transform:uppercase;letter-spacing:.5px}
+.hero-badge .signal-bull{color:var(--green);font-size:.6rem}
+.hero-title{font-size:1.65rem;font-weight:800;line-height:1.25;margin-bottom:8px;color:var(--text-primary)}
+.hero-title a{color:var(--text-primary);background:var(--signal-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-title a:hover{-webkit-text-fill-color:var(--accent-gold-light)}
+.hero-desc{font-size:.9rem;color:var(--text-secondary);margin-bottom:12px;max-width:700px}
+.hero-meta{font-size:.75rem;color:var(--text-muted);display:flex;align-items:center;gap:12px}
+.hero-meta .hero-ticker{color:var(--accent-gold);font-weight:600}
+
+/* Hero sidebar */
+.hero-sidebar{display:flex;flex-direction:column;gap:12px}
+.trending-box{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px}
+.trending-box h3{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+.trending-list{list-style:none}
+.trending-list li{padding:7px 0;border-bottom:1px solid rgba(31,41,55,.5)}
+.trending-list li:last-child{border-bottom:none}
+.trending-list a{font-size:.8125rem;color:var(--text-secondary);line-height:1.3;display:block}
+.trending-list a:hover{color:var(--accent-gold-light)}
+.trending-list .trending-rank{color:var(--text-muted);font-size:.65rem;font-weight:700;margin-right:6px}
+.scorecard-mini{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px}
+.scorecard-mini h3{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+.scorecard-mini .score-item{display:flex;justify-content:space-between;align-items:center;padding:6px 0;font-size:.8125rem}
+.scorecard-mini .score-item .sc-ticker{font-weight:600;color:var(--text-primary)}
+.scorecard-mini .score-item .sc-score{font-weight:600;font-size:.75rem}
+.scorecard-mini .score-item .sc-action{color:var(--green);font-weight:600;font-size:.7rem}
+
+/* ===== SUB-HERO ARTICLES ===== */
+.sub-hero{padding:0 0 20px}
+.sub-hero .container{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+.sub-hero-card{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:all .2s;cursor:pointer}
+.sub-hero-card:hover{border-color:var(--accent-gold);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.4)}
+.sub-hero-card .sh-img{height:140px;background:var(--bg-hover);position:relative;overflow:hidden}
+.sub-hero-card .sh-img .sh-cat{position:absolute;top:8px;left:8px;background:rgba(0,0,0,.7);padding:2px 8px;border-radius:4px;font-size:.65rem;font-weight:600;color:var(--accent-gold);text-transform:uppercase}
+.sub-hero-card .sh-body{padding:14px}
+.sub-hero-card .sh-body h4{font-size:.9rem;font-weight:700;margin-bottom:6px;line-height:1.3}
+.sub-hero-card .sh-body p{font-size:.78rem;color:var(--text-secondary);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.sub-hero-card .sh-meta{display:flex;justify-content:space-between;align-items:center;padding:8px 14px 12px;font-size:.7rem;color:var(--text-muted)}
+.sub-hero-card .sh-meta .sh-ticker{color:var(--accent-gold);font-weight:600}
+
+/* ===== SECTION HEADER ===== */
+.section-header{display:flex;justify-content:space-between;align-items:center;padding:16px 0 8px;border-bottom:1px solid var(--border);margin-bottom:16px}
+.section-header h2{font-size:1.1rem;font-weight:700;color:var(--text-primary);display:flex;align-items:center;gap:8px}
+.section-header h2 .section-icon{font-size:1rem}
+.section-header .see-all{font-size:.78rem;color:var(--text-muted);font-weight:500;transition:color .15s}
+.section-header .see-all:hover{color:var(--accent-gold)}
+
+/* ===== SECTION GRID (4-col) ===== */
+.section-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:24px}
+.section-grid .grid-card{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:all .2s;cursor:pointer}
+.section-grid .grid-card:hover{border-color:var(--text-muted);transform:translateY(-1px);box-shadow:0 4px 16px rgba(0,0,0,.3)}
+.section-grid .grid-card .gc-img{height:120px;background:var(--bg-hover);position:relative;overflow:hidden}
+.section-grid .grid-card .gc-img .gc-cat{position:absolute;top:6px;left:6px;background:rgba(0,0,0,.7);padding:1px 7px;border-radius:3px;font-size:.6rem;font-weight:600;text-transform:uppercase}
+.section-grid .grid-card .gc-body{padding:12px}
+.section-grid .grid-card .gc-body h4{font-size:.82rem;font-weight:700;margin-bottom:4px;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.section-grid .grid-card .gc-body p{font-size:.72rem;color:var(--text-secondary);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.section-grid .grid-card .gc-meta{display:flex;justify-content:space-between;padding:6px 12px 10px;font-size:.65rem;color:var(--text-muted)}
+.section-grid .grid-card .gc-meta .gc-ticker{font-weight:600}
+.cat-ai .gc-cat{color:#3b82f6}
+.cat-cyber .gc-cat{color:#22c55e}
+.cat-defense .gc-cat{color:#d946ef}
+.cat-space .gc-cat{color:#eab308}
+.cat-megacap .gc-cat{color:#f97316}
+.cat-etf .gc-cat{color:#8b5cf6}
+
+/* ===== MAIN CONTENT + SIDEBAR LAYOUT ===== */
+.two-col{display:grid;grid-template-columns:1fr 300px;gap:24px;margin-bottom:32px}
+.main-column{min-width:0}
+.main-column .wide-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px}
+.main-column .wide-card{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:all .2s;cursor:pointer;display:flex;flex-direction:column}
+.main-column .wide-card:hover{border-color:var(--text-muted);box-shadow:0 4px 16px rgba(0,0,0,.3)}
+.main-column .wide-card .wc-img{height:160px;background:var(--bg-hover)}
+.main-column .wide-card .wc-body{padding:16px;flex:1}
+.main-column .wide-card .wc-body .wc-cat{font-size:.65rem;font-weight:600;text-transform:uppercase;color:var(--accent-gold);margin-bottom:6px}
+.main-column .wide-card .wc-body h3{font-size:1rem;font-weight:700;margin-bottom:6px;line-height:1.3}
+.main-column .wide-card .wc-body p{font-size:.78rem;color:var(--text-secondary);margin-bottom:8px}
+.main-column .wide-card .wc-meta{font-size:.68rem;color:var(--text-muted);display:flex;gap:12px}
+.main-column .wide-card .wc-meta .wc-ticker{color:var(--accent-gold);font-weight:600}
+
+/* ===== SIDEBAR ===== */
+.sidebar{display:flex;flex-direction:column;gap:16px}
+.sidebar-box{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px}
+.sidebar-box h3{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+.sidebar-box .sb-item{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid rgba(31,41,55,.5);font-size:.8125rem}
+.sidebar-box .sb-item:last-child{border-bottom:none}
+.sidebar-box .sb-item .sb-name{font-weight:500;color:var(--text-primary)}
+.sidebar-box .sb-item .sb-val{font-family:'SF Mono',Consolas,monospace;font-weight:500}
+.sidebar-premium{
+  background:linear-gradient(135deg,rgba(212,160,23,.08),rgba(212,160,23,.02));
+  border-color:rgba(212,160,23,.25);padding:20px 16px;text-align:center;border-radius:10px;
+}
+.sidebar-premium h3{color:var(--accent-gold);border-bottom-color:rgba(212,160,23,.2)}
+.sidebar-premium .premium-btn{background:var(--accent-gold);border:none;padding:8px 24px;border-radius:8px;color:#000;font-weight:700;font-size:.85rem;cursor:pointer;margin-top:10px;transition:all .15s}
+.sidebar-premium .premium-btn:hover{background:var(--accent-gold-light);transform:scale(1.03)}
+.sidebar-list-item{padding:8px 0;border-bottom:1px solid rgba(31,41,55,.4)}
+.sidebar-list-item:last-child{border-bottom:none}
+.sidebar-list-item a{font-size:.8125rem;color:var(--text-secondary);line-height:1.3;display:block}
+.sidebar-list-item a:hover{color:var(--accent-gold-light)}
+.sidebar-list-item .sl-rank{color:var(--text-muted);font-size:.65rem;font-weight:700;margin-right:4px}
+
+/* News list in sidebar */
+.sidebar-news-item{padding:8px 0;border-bottom:1px solid rgba(31,41,55,.4)}
+.sidebar-news-item:last-child{border-bottom:none}
+.sidebar-news-item a{font-size:.78rem;color:var(--text-secondary);line-height:1.3;display:block}
+.sidebar-news-item a:hover{color:var(--text-primary)}
+.sidebar-news-item .sn-time{font-size:.6rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:2px}
+
+/* Scorecard sidebar */
+.score-row{display:flex;justify-content:space-between;padding:5px 0;font-size:.75rem;border-bottom:1px solid rgba(31,41,55,.3)}
+.score-row:last-child{border-bottom:none}
+.score-row .sc-tck{font-weight:600;color:var(--text-primary)}
+.score-row .sc-num{font-weight:600;font-family:'SF Mono',Consolas,monospace}
+
+/* ===== MARKET MOVERS TABLE ===== */
+.movers-section{margin-bottom:32px}
+.movers-section .container{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:20px}
+.movers-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.movers-header h2{font-size:1rem;font-weight:700}
+.movers-header .movers-link{font-size:.78rem;color:var(--text-muted)}
+.movers-header .movers-link:hover{color:var(--accent-gold)}
+.movers-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.movers-table{width:100%;border-collapse:collapse}
+.movers-table th{text-align:left;padding:6px 10px;font-size:.68rem;text-transform:uppercase;letter-spacing:.5px;color:var(--text-muted);border-bottom:1px solid var(--border);font-weight:600}
+.movers-table td{padding:7px 10px;font-size:.78rem;border-bottom:1px solid rgba(31,41,55,.4)}
+.movers-table tr:last-child td{border-bottom:none}
+.movers-table tr:hover td{background:var(--bg-hover)}
+.movers-table .mt-symbol{font-weight:600;color:var(--text-primary)}
+.movers-table .mt-name{color:var(--text-secondary);font-size:.72rem}
+.movers-table .mt-price{font-family:'SF Mono',Consolas,monospace;font-weight:500}
+
+/* ===== SIGNAL HIGHLIGHTS CAROUSEL ===== */
+.highlights-section{margin-bottom:32px}
+.highlights-section .container{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:20px}
+.highlights-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.highlights-header h2{font-size:1rem;font-weight:700;display:flex;align-items:center;gap:8px}
+.highlights-header .hl-nav{display:flex;gap:4px}
+.highlights-header .hl-nav button{background:var(--bg-hover);border:none;width:28px;height:28px;border-radius:6px;color:var(--text-secondary);cursor:pointer;font-size:.8rem;transition:all .15s}
+.highlights-header .hl-nav button:hover{background:var(--border);color:var(--text-primary)}
+.hl-carousel{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.hl-card{background:var(--bg-secondary);border:1px solid var(--border);border-radius:8px;padding:14px;transition:all .2s;cursor:pointer}
+.hl-card:hover{border-color:var(--accent-gold)}
+.hl-card .hl-ticker-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.hl-card .hl-ticker-row .hl-ticker{font-weight:700;font-size:.9rem}
+.hl-card .hl-ticker-row .hl-action{font-size:.65rem;font-weight:600;background:rgba(34,197,94,.1);color:var(--green);padding:2px 8px;border-radius:4px}
+.hl-card .hl-price-row{display:flex;justify-content:space-between;font-size:.75rem;margin-bottom:4px}
+.hl-card .hl-price-row .hl-label{color:var(--text-muted)}
+.hl-card .hl-price-row .hl-value{font-family:'SF Mono',Consolas,monospace;font-weight:500}
+.hl-card .hl-bar{margin-top:8px;height:4px;background:var(--bg-hover);border-radius:2px;overflow:hidden}
+.hl-card .hl-bar .hl-fill{height:100%;border-radius:2px}
+.hl-card .hl-bar .hl-fill.bull{background:var(--green)}
+.hl-card .hl-bar .hl-fill.bear{background:var(--red)}
+.hl-card .hl-bar-labels{display:flex;justify-content:space-between;font-size:.6rem;color:var(--text-muted);margin-top:2px}
+
+/* ===== NEWSLETTER ===== */
+.newsletter{padding:28px 0;margin-bottom:24px}
+.newsletter .container{background:linear-gradient(135deg,rgba(59,130,246,.05),rgba(139,92,246,.05));border:1px solid var(--border);border-radius:12px;padding:28px 32px;display:flex;justify-content:space-between;align-items:center}
+.newsletter h2{font-size:1.15rem;font-weight:700}
+.newsletter h2 span{background:var(--signal-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.newsletter p{color:var(--text-secondary);font-size:.82rem;margin-top:4px}
+.newsletter-form{display:flex;gap:8px}
+.newsletter-form input{background:var(--bg-secondary);border:1px solid var(--border);border-radius:8px;padding:8px 16px;color:var(--text-primary);font-size:.85rem;width:260px;outline:none}
+.newsletter-form input:focus{border-color:var(--blue)}
+.newsletter-form button{background:var(--signal-gradient);border:none;border-radius:8px;padding:8px 20px;color:#fff;font-weight:600;font-size:.85rem;cursor:pointer;transition:all .15s}
+.newsletter-form button:hover{opacity:.9;transform:scale(1.02)}
+
+/* ===== FOOTER ===== */
+footer{background:var(--bg-secondary);border-top:1px solid var(--border);padding:36px 0 0}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:32px}
+.footer-brand .footer-logo{font-size:1.2rem;font-weight:800;background:var(--signal-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px}
+.footer-brand p{font-size:.78rem;color:var(--text-secondary);line-height:1.6;max-width:320px}
+.footer-col h4{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);margin-bottom:12px}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:6px}
+.footer-col ul li a{font-size:.78rem;color:var(--text-secondary);transition:color .15s}
+.footer-col ul li a:hover{color:var(--accent-gold-light)}
+.footer-bottom{border-top:1px solid var(--border);padding:16px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.footer-bottom .fb-left{font-size:.72rem;color:var(--text-muted)}
+.footer-bottom .fb-right{display:flex;gap:16px;align-items:center}
+.footer-bottom .fb-right a{font-size:.72rem;color:var(--text-muted)}
+.footer-bottom .fb-right a:hover{color:var(--accent-gold-light)}
+.footer-bottom .fb-right .social-icon{width:24px;height:24px;border-radius:4px;background:var(--bg-hover);display:flex;align-items:center;justify-content:center;font-size:.7rem;color:var(--text-secondary);transition:all .15s}
+.footer-bottom .fb-right .social-icon:hover{background:var(--accent-gold);color:#000}
+.disclaimer{font-size:.65rem;color:var(--text-muted);padding:12px 0 20px;line-height:1.5}
+
+/* ===== SCROLLABLE SECTION NAV ===== */
+.section-nav{display:flex;gap:4px;padding:8px 0;overflow-x:auto;border-bottom:1px solid var(--border);margin-bottom:16px}
+.section-nav a{padding:5px 14px;font-size:.72rem;font-weight:500;color:var(--text-secondary);border-radius:20px;white-space:nowrap;transition:all .15s;border:1px solid transparent}
+.section-nav a:hover{background:var(--bg-hover);color:var(--text-primary)}
+.section-nav a.active{background:rgba(212,160,23,.12);border-color:rgba(212,160,23,.3);color:var(--accent-gold)}
+
+/* ===== DIVIDER ===== */
+.divider{border:none;border-top:1px solid var(--border);margin:8px 0}
+</style>
+</head>
+<body>
+
+<!-- ===== UTILITY BAR ===== -->
+<div class="utility-bar">
+  <div class="container">
+    <div class="network-links">
+      <a href="#">WSJ</a>
+      <a href="#">Barron's</a>
+      <a href="#" class="active">MarketWatch</a>
+      <a href="#">IBD</a>
+    </div>
+    <div class="user-links">
+      <a href="#">Subscribe</a>
+      <a href="#">Sign In</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MAIN HEADER ===== -->
+<header class="main-header">
+  <div class="container">
+    <div class="header-logo">
+      <div>
+        <div class="logo-text">THE SIGNAL</div>
+        <div class="logo-sub">Market Intelligence</div>
+      </div>
+    </div>
+    <nav class="header-nav">
+      <a href="#">AI</a>
+      <a href="#">Cyber</a>
+      <a href="#">Defense</a>
+      <a href="#">Space</a>
+      <a href="#">Mega-Cap</a>
+      <a href="#">Quantum</a>
+      <a href="#">AI Power ⚡</a>
+      <a href="#">ETFs</a>
+      <a href="#">📈 Stocks</a>
+      <a href="#">📊 Scorecard</a>
+      <a href="#" class="nav-premium">💎 Premium</a>
+    </nav>
+    <div class="header-actions">
+      <button class="search-btn">🔍 Search</button>
+      <button class="btn-signin">Sign In</button>
+      <button class="btn-subscribe">Subscribe</button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== SECTION NAV ===== -->
+<div class="container">
+  <nav class="section-nav">
+    <a href="#" class="active">Home</a>
+    <a href="#">Latest</a>
+    <a href="#">AI</a>
+    <a href="#">Cyber</a>
+    <a href="#">Defense</a>
+    <a href="#">Space</a>
+    <a href="#">Mega-Cap</a>
+    <a href="#">Quantum</a>
+    <a href="#">AI Power</a>
+    <a href="#">ETFs</a>
+    <a href="#">Stock Pages</a>
+    <a href="#">Signal Scorecard</a>
+    <a href="#">Hive</a>
+    <a href="#">Signal vs. Street</a>
+  </nav>
+</div>
+
+<!-- ===== TICKER BAR ===== -->
+<div class="ticker-bar">
+  <div class="container">
+    <span class="ticker-label">Trending Tickers</span>
+    <div class="ticker-scroll">
+      <!-- First set -->
+      <div class="ticker-item"><span class="symbol">NVDA</span><span class="price">$224.55</span><span class="change green">+6.35%</span></div>
+      <div class="ticker-item"><span class="symbol">PLTR</span><span class="price">$162.45</span><span class="change green">+3.78%</span></div>
+      <div class="ticker-item"><span class="symbol">AVGO</span><span class="price">$460.80</span><span class="change green">+3.14%</span></div>
+      <div class="ticker-item"><span class="symbol">AMD</span><span class="price">$513.52</span><span class="change red">-0.50%</span></div>
+      <div class="ticker-item"><span class="symbol">GOOGL</span><span class="price">$377.33</span><span class="change red">-0.79%</span></div>
+      <div class="ticker-item"><span class="symbol">META</span><span class="price">$607.56</span><span class="change red">-3.94%</span></div>
+      <div class="ticker-item"><span class="symbol">MSFT</span><span class="price">$460.77</span><span class="change green">+2.34%</span></div>
+      <div class="ticker-item"><span class="symbol">AMZN</span><span class="price">$262.42</span><span class="change red">-3.04%</span></div>
+      <div class="ticker-item"><span class="symbol">TSLA</span><span class="price">$420.19</span><span class="change red">-3.58%</span></div>
+      <div class="ticker-item"><span class="symbol">MU</span><span class="price">$1036.95</span><span class="change green">+6.79%</span></div>
+      <div class="ticker-item"><span class="symbol">SPCX</span><span class="price">$187.42</span><span class="change green">+2.12%</span></div>
+      <!-- Duplicate for seamless scroll -->
+      <div class="ticker-item"><span class="symbol">NVDA</span><span class="price">$224.55</span><span class="change green">+6.35%</span></div>
+      <div class="ticker-item"><span class="symbol">PLTR</span><span class="price">$162.45</span><span class="change green">+3.78%</span></div>
+      <div class="ticker-item"><span class="symbol">AVGO</span><span class="price">$460.80</span><span class="change green">+3.14%</span></div>
+      <div class="ticker-item"><span class="symbol">AMD</span><span class="price">$513.52</span><span class="change red">-0.50%</span></div>
+      <div class="ticker-item"><span class="symbol">GOOGL</span><span class="price">$377.33</span><span class="change red">-0.79%</span></div>
+      <div class="ticker-item"><span class="symbol">META</span><span class="price">$607.56</span><span class="change red">-3.94%</span></div>
+      <div class="ticker-item"><span class="symbol">MSFT</span><span class="price">$460.77</span><span class="change green">+2.34%</span></div>
+      <div class="ticker-item"><span class="symbol">AMZN</span><span class="price">$262.42</span><span class="change red">-3.04%</span></div>
+      <div class="ticker-item"><span class="symbol">TSLA</span><span class="price">$420.19</span><span class="change red">-3.58%</span></div>
+      <div class="ticker-item"><span class="symbol">MU</span><span class="price">$1036.95</span><span class="change green">+6.79%</span></div>
+      <div class="ticker-item"><span class="symbol">SPCX</span><span class="price">$187.42</span><span class="change green">+2.12%</span></div>
+    </div>
+    <button class="ticker-premium-btn">🔒 Access Premium Tools</button>
+  </div>
+</div>
+
+<!-- ===== TODAY'S MARKETS BAR ===== -->
+<div class="markets-bar">
+  <div class="container">
+    <span class="markets-section-label">Today's Markets</span>
+    <div class="markets-tabs">
+      <button class="active">US</button>
+      <button>Europe</button>
+      <button>Asia</button>
+      <button>FX</button>
+      <button>Rates</button>
+      <button>Futures</button>
+      <button>Crypto</button>
+    </div>
+    <div class="markets-data">
+      <div class="market-item">
+        <span class="mkt-name">DOW</span>
+        <span class="mkt-price">43,840.91</span>
+        <span class="mkt-change green">+601.41</span>
+      </div>
+      <div class="market-item">
+        <span class="mkt-name">S&P 500</span>
+        <span class="mkt-price">5,954.50</span>
+        <span class="mkt-change green">+92.93</span>
+      </div>
+      <div class="market-item">
+        <span class="mkt-name">NASDAQ</span>
+        <span class="mkt-price">18,847.28</span>
+        <span class="mkt-change green">+302.86</span>
+      </div>
+      <div class="market-item">
+        <span class="mkt-name">VIX</span>
+        <span class="mkt-price">19.63</span>
+        <span class="mkt-change red">-1.50</span>
+      </div>
+      <div class="market-item">
+        <span class="mkt-name">GOLD</span>
+        <span class="mkt-price">2,867.30</span>
+        <span class="mkt-change red">-28.60</span>
+      </div>
+      <div class="market-item">
+        <span class="mkt-name">OIL</span>
+        <span class="mkt-price">69.95</span>
+        <span class="mkt-change red">-0.40</span>
+      </div>
+      <div class="market-item">
+        <span class="mkt-name">BTC</span>
+        <span class="mkt-price">87,432</span>
+        <span class="mkt-change green">+2.14%</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== HERO SECTION ===== -->
+<section class="hero-section">
+  <div class="container">
+    <div class="hero-main">
+      <div class="hero-gradient"></div>
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="signal-bull">▲</span>
+          <span>Signal Deep Dive</span>
+        </div>
+        <h1 class="hero-title"><a href="#">The SpaceX Lockup Calendar: When To Buy $SPCX</a></h1>
+        <p class="hero-desc">SpaceX's record-shattering IPO saw the stock surge past $225 before settling back. But with under 5% float and a complex 16-date lockup structure releasing shares through June 2027, the real opportunity is in understanding the calendar.</p>
+        <div class="hero-meta">
+          <span class="hero-ticker">$SPCX</span>
+          <span>▲ Bullish</span>
+          <span>Jun 22, 2026</span>
+          <span>4 min read</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-sidebar">
+      <div class="trending-box">
+        <h3>🔥 Trending Now</h3>
+        <ul class="trending-list">
+          <li><span class="trending-rank">1.</span><a href="#">S&P 500 enters correction territory as AI rout deepens</a></li>
+          <li><span class="trending-rank">2.</span><a href="#">Marvell joins S&P 500, Jensen Huang says it's a trillion-dollar company</a></li>
+          <li><span class="trending-rank">3.</span><a href="#">Bitcoin miners pivot to AI cloud — HIVE stock surges 20%</a></li>
+          <li><span class="trending-rank">4.</span><a href="#">Don't Overlook Midstream Energy, says Barron's</a></li>
+          <li><span class="trending-rank">5.</span><a href="#">Vertiv proves it owns the AI cooling lane — $15B backlog</a></li>
+        </ul>
+      </div>
+      <div class="scorecard-mini">
+        <h3>📊 Signal Scorecard</h3>
+        <div class="score-item">
+          <span class="sc-ticker">NVDA</span>
+          <span class="sc-score">92</span>
+          <span class="sc-action">▲ Bullish</span>
+        </div>
+        <div class="score-item">
+          <span class="sc-ticker">PLTR</span>
+          <span class="sc-score">88</span>
+          <span class="sc-action">▲ Bullish</span>
+        </div>
+        <div class="score-item">
+          <span class="sc-ticker">AVGO</span>
+          <span class="sc-score">85</span>
+          <span class="sc-action">▲ Bullish</span>
+        </div>
+        <div class="score-item">
+          <span class="sc-ticker">META</span>
+          <span class="sc-score">72</span>
+          <span class="sc-action">◆ Neutral</span>
+        </div>
+        <div class="score-item">
+          <span class="sc-ticker">AMD</span>
+          <span class="sc-score">65</span>
+          <span class="sc-action">◆ Neutral</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SUB-HERO CARDS ===== -->
+<section class="sub-hero">
+  <div class="container">
+    <div class="sub-hero-card">
+      <div class="sh-img" style="background:linear-gradient(135deg,#1a1a3e,#2a1a4e)">
+        <span class="sh-cat">AI</span>
+      </div>
+      <div class="sh-body">
+        <h4>Marvell Crashed the S&P 500 Today. Jensen Huang Says It's a Trillion-Dollar Company.</h4>
+        <p>Marvell just joined the S&P 500. Its stock tripled in 2026. Here's why custom ASICs and a $2B Nvidia...</p>
+      </div>
+      <div class="sh-meta">
+        <span class="sh-ticker">$MRVL ▲</span>
+        <span>5 min read</span>
+      </div>
+    </div>
+    <div class="sub-hero-card">
+      <div class="sh-img" style="background:linear-gradient(135deg,#1a3a1a,#0a2a1a)">
+        <span class="sh-cat">CYBER</span>
+      </div>
+      <div class="sh-body">
+        <h4>The Bitcoin Miner That Became a Dark Horse AI Cloud Provider</h4>
+        <p>HIVE Digital stock surged 20% after unveiling a $220M GPU cloud contract with Bell Canada and Cohere.</p>
+      </div>
+      <div class="sh-meta">
+        <span class="sh-ticker">$HIVE ▲</span>
+        <span>5 min read</span>
+      </div>
+    </div>
+    <div class="sub-hero-card">
+      <div class="sh-img" style="background:linear-gradient(135deg,#2a1a1a,#3a0a0a)">
+        <span class="sh-cat">DEFENSE</span>
+      </div>
+      <div class="sh-body">
+        <h4>MDA Space: The Arms Dealer of the Orbital Economy</h4>
+        <p>MDA Space posted Q1 2026 revenue of $464.1M (+32.2% YoY) with a fortress $3.7B backlog.</p>
+      </div>
+      <div class="sh-meta">
+        <span class="sh-ticker">$MDA ▲</span>
+        <span>6 min read</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MARKET MOVERS ===== -->
+<section class="movers-section">
+  <div class="container">
+    <div class="movers-header">
+      <h2>📈 S&P 500 Movers</h2>
+      <a href="#" class="movers-link">Visit Market Data Center →</a>
+    </div>
+    <div class="movers-grid">
+      <div>
+        <h3 style="font-size:.8rem;color:var(--green);font-weight:600;margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px">▲ Leaders</h3>
+        <table class="movers-table">
+          <tr><th>Symbol</th><th>Name</th><th>Price</th><th>Chg</th><th>% Chg</th></tr>
+          <tr><td class="mt-symbol">NVDA</td><td class="mt-name">NVIDIA Corp</td><td class="mt-price">$224.55</td><td class="green">+$13.42</td><td class="green">+6.35%</td></tr>
+          <tr><td class="mt-symbol">MU</td><td class="mt-name">Micron Technology</td><td class="mt-price">$1,036.95</td><td class="green">+$65.95</td><td class="green">+6.79%</td></tr>
+          <tr><td class="mt-symbol">PLTR</td><td class="mt-name">Palantir Technologies</td><td class="mt-price">$162.45</td><td class="green">+$5.92</td><td class="green">+3.78%</td></tr>
+          <tr><td class="mt-symbol">AVGO</td><td class="mt-name">Broadcom Inc</td><td class="mt-price">$460.80</td><td class="green">+$14.02</td><td class="green">+3.14%</td></tr>
+          <tr><td class="mt-symbol">MSFT</td><td class="mt-name">Microsoft Corp</td><td class="mt-price">$460.77</td><td class="green">+$10.54</td><td class="green">+2.34%</td></tr>
+        </table>
+      </div>
+      <div>
+        <h3 style="font-size:.8rem;color:var(--red);font-weight:600;margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px">▼ Laggards</h3>
+        <table class="movers-table">
+          <tr><th>Symbol</th><th>Name</th><th>Price</th><th>Chg</th><th>% Chg</th></tr>
+          <tr><td class="mt-symbol">META</td><td class="mt-name">Meta Platforms</td><td class="mt-price">$607.56</td><td class="red">-$24.86</td><td class="red">-3.94%</td></tr>
+          <tr><td class="mt-symbol">TSLA</td><td class="mt-name">Tesla Inc</td><td class="mt-price">$420.19</td><td class="red">-$15.60</td><td class="red">-3.58%</td></tr>
+          <tr><td class="mt-symbol">AMZN</td><td class="mt-name">Amazon.com Inc</td><td class="mt-price">$262.42</td><td class="red">-$8.23</td><td class="red">-3.04%</td></tr>
+          <tr><td class="mt-symbol">GOOGL</td><td class="mt-name">Alphabet Inc</td><td class="mt-price">$377.33</td><td class="red">-$3.00</td><td class="red">-0.79%</td></tr>
+          <tr><td class="mt-symbol">AMD</td><td class="mt-name">Advanced Micro Devices</td><td class="mt-price">$513.52</td><td class="red">-$2.58</td><td class="red">-0.50%</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION: AI ===== -->
+<div class="container">
+  <div class="section-header">
+    <h2><span class="section-icon">🤖</span> AI</h2>
+    <a href="#" class="see-all">See All AI →</a>
+  </div>
+</div>
+<div class="container">
+  <div class="section-grid">
+    <div class="grid-card cat-ai">
+      <div class="gc-img" style="background:linear-gradient(135deg,#1a1a3e,#0d0d2a)"><span class="gc-cat">AI</span></div>
+      <div class="gc-body">
+        <h4>Half the AI Data Center Budget Goes to Cooling. Vertiv Just Proved It Owns the Lane.</h4>
+        <p>Vertiv's $15B backlog, Nvidia Vera Rubin lock-in, and 50% EPS growth make VRT the overlooked AI infrastructure king.</p>
+      </div>
+      <div class="gc-meta"><span class="gc-ticker gold">$VRT ▲</span><span>1 min read</span></div>
+    </div>
+    <div class="grid-card cat-ai">
+      <div class="gc-img" style="background:linear-gradient(135deg,#1a2a3e,#0d1a2a)"><span class="gc-cat">AI</span></div>
+      <div class="gc-body">
+        <h4>IREN Was a Bitcoin Miner. Then It Built Something Wall Street Couldn't Ignore.</h4>
+        <p>IREN started as a Bitcoin miner. Wall Street dismissed them as a commodity play. Now they're an AI infrastructure play.</p>
+      </div>
+      <div class="gc-meta"><span class="gc-ticker gold">$IREN ▲</span><span>4 min read</span></div>
+    </div>
+    <div class="grid-card cat-ai">
+      <div class="gc-img" style="background:linear-gradient(135deg,#2a1a3e,#1a0d2a)"><span class="gc-cat">AI</span></div>
+      <div class="gc-body">
+        <h4>Nvidia's Vera Rubin Superchip: What Investors Need to Know</h4>
+        <p>The next-gen architecture promises 3x performance gains and could drive the next wave of data center spending.</p>
+      </div>
+      <div class="gc-meta"><span class="gc-ticker gold">$NVDA ▲</span><span>3 min read</span></div>
+    </div>
+    <div class="grid-card cat-ai">
+      <div class="gc-img" style="background:linear-gradient(135deg,#1a3a2a,#0d2a1a)"><span class="gc-cat">AI</span></div>
+      <div class="gc-body">
+        <h4>Why Custom ASICs Are the Next Trillion-Dollar Opportunity in AI</h4>
+        <p>As hyperscalers move away from GPUs, custom silicon companies like Marvell and Broadcom stand to benefit enormously.</p>
+      </div>
+      <div class="gc-meta"><span class="gc-ticker gold">$MRVL ▲</span><span>5 min read</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== TWO-COL LAYOUT: MAIN + SIDEBAR ===== -->
+<div class="container two-col">
+  <div class="main-column">
+    
+    <!-- Cyber Section -->
+    <div class="section-header">
+      <h2><span class="section-icon">🛡️</span> Cyber</h2>
+      <a href="#" class="see-all">See All Cyber →</a>
+    </div>
+    <div class="wide-grid">
+      <div class="wide-card">
+        <div class="wc-img" style="background:linear-gradient(135deg,#1a3a1a,#0d2a0d)"></div>
+        <div class="wc-body">
+          <div class="wc-cat">Cyber</div>
+          <h3>CrowdStrike's Next Frontier: AI-Native Security for the Enterprise</h3>
+          <p>With Falcon platform revenue growing 35% YoY and a new AI security suite launching, CrowdStrike is positioned for its next growth phase.</p>
+          <div class="wc-meta"><span class="wc-ticker">$CRWD ▲</span><span>4 min read</span><span>Jun 21, 2026</span></div>
+        </div>
+      </div>
+      <div class="wide-card">
+        <div class="wc-img" style="background:linear-gradient(135deg,#2a1a2a,#1a0d1a)"></div>
+        <div class="wc-body">
+          <div class="wc-cat">Cyber</div>
+          <h3>Zero-Day Exploits Are Up 200%. Here's Who Benefits.</h3>
+          <p>The surge in nation-state cyber attacks is driving unprecedented demand for threat intelligence and endpoint detection.</p>
+          <div class="wc-meta"><span class="wc-ticker">$ZS ▲</span><span>3 min read</span><span>Jun 20, 2026</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Defense Section -->
+    <div class="section-header">
+      <h2><span class="section-icon">⚔️</span> Defense</h2>
+      <a href="#" class="see-all">See All Defense →</a>
+    </div>
+    <div class="wide-grid">
+      <div class="wide-card">
+        <div class="wc-img" style="background:linear-gradient(135deg,#2a1a1a,#1a0d0d)"></div>
+        <div class="wc-body">
+          <div class="wc-cat">Defense</div>
+          <h3>The Hypersonic Arms Race: Defense Stocks Poised for Breakout</h3>
+          <p>With $12B in new contract awards this quarter, the hypersonic weapons market is reaching an inflection point.</p>
+          <div class="wc-meta"><span class="wc-ticker">$RTX ▲</span><span>5 min read</span><span>Jun 20, 2026</span></div>
+        </div>
+      </div>
+      <div class="wide-card">
+        <div class="wc-img" style="background:linear-gradient(135deg,#1a1a2a,#0d0d1a)"></div>
+        <div class="wc-body">
+          <div class="wc-cat">Defense</div>
+          <h3>Palantir's Defense AI Contracts Are Hitting Escape Velocity</h3>
+          <p>AIP adoption across DoD has accelerated, with contract value up 80% QoQ. Here's what it means for the stock.</p>
+          <div class="wc-meta"><span class="wc-ticker">$PLTR ▲</span><span>4 min read</span><span>Jun 19, 2026</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Space Section -->
+    <div class="section-header">
+      <h2><span class="section-icon">🚀</span> Space</h2>
+      <a href="#" class="see-all">See All Space →</a>
+    </div>
+    <div class="wide-grid">
+      <div class="wide-card">
+        <div class="wc-img" style="background:linear-gradient(135deg,#1a2a3a,#0d1a2a)"></div>
+        <div class="wc-body">
+          <div class="wc-cat">Space</div>
+          <h3>SpaceX IPO Lockup Explained: 16 Key Dates Through 2027</h3>
+          <p>The most detailed lockup calendar analysis available. When shares unlock and how to position around each event.</p>
+          <div class="wc-meta"><span class="wc-ticker">$SPCX ▲</span><span>6 min read</span><span>Jun 22, 2026</span></div>
+        </div>
+      </div>
+      <div class="wide-card">
+        <div class="wc-img" style="background:linear-gradient(135deg,#2a2a1a,#1a1a0d)"></div>
+        <div class="wc-body">
+          <div class="wc-cat">Space</div>
+          <h3>Space-Based Broadband: The Next Frontier for Satellite Internet</h3>
+          <p>With 5,000+ Starlink satellites in orbit and global revenue exceeding $8B, the space economy is no longer speculative.</p>
+          <div class="wc-meta"><span class="wc-ticker">$ASTS ▲</span><span>3 min read</span><span>Jun 19, 2026</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar">
+    <!-- Watchlist -->
+    <div class="sidebar-box">
+      <h3>📋 My Watchlist</h3>
+      <div class="sb-item"><span class="sb-name">NVDA</span><span class="sb-val green">$224.55</span></div>
+      <div class="sb-item"><span class="sb-name">PLTR</span><span class="sb-val green">$162.45</span></div>
+      <div class="sb-item"><span class="sb-name">AVGO</span><span class="sb-val green">$460.80</span></div>
+      <div class="sb-item"><span class="sb-name">AMD</span><span class="sb-val red">$513.52</span></div>
+      <div class="sb-item"><span class="sb-name">META</span><span class="sb-val red">$607.56</span></div>
+      <div class="sb-item"><span class="sb-name">MSFT</span><span class="sb-val green">$460.77</span></div>
+    </div>
+
+    <!-- Premium upsell -->
+    <div class="sidebar-box sidebar-premium">
+      <h3>💎 Signal Premium</h3>
+      <p style="font-size:.78rem;color:var(--text-secondary);line-height:1.5;margin:8px 0">
+        Get access to exclusive deep-dives, real-time Signal Scorecards, fair value targets, and AI-powered stock analysis.
+      </p>
+      <button class="premium-btn">Try Premium Free →</button>
+    </div>
+
+    <!-- Latest News -->
+    <div class="sidebar-box">
+      <h3>📰 Latest News</h3>
+      <div class="sidebar-news-item">
+        <div class="sn-time">Jun 22, 4:23 PM ET</div>
+        <a href="#">Zelensky says Ukraine still 'ready' for minerals deal with U.S.</a>
+      </div>
+      <div class="sidebar-news-item">
+        <div class="sn-time">Jun 22, 3:45 PM ET</div>
+        <a href="#">Trump's 'World War III' warning to Zelensky rattled stocks</a>
+      </div>
+      <div class="sidebar-news-item">
+        <div class="sn-time">Jun 22, 2:30 PM ET</div>
+        <a href="#">Why this consumer-confidence measure should concern stock bulls</a>
+      </div>
+      <div class="sidebar-news-item">
+        <div class="sn-time">Jun 22, 1:15 PM ET</div>
+        <a href="#">Super Micro is back in compliance. Is that enough to make its stock a buy?</a>
+      </div>
+      <div class="sidebar-news-item">
+        <div class="sn-time">Jun 22, 12:00 PM ET</div>
+        <a href="#">Social Security staff cuts: Put money aside now, former director says</a>
+      </div>
+    </div>
+
+    <!-- Signal Scorecard -->
+    <div class="sidebar-box">
+      <h3>📊 Signal Scorecard</h3>
+      <div class="score-row"><span class="sc-tck">NVDA</span><span class="green">▲ 92</span></div>
+      <div class="score-row"><span class="sc-tck">PLTR</span><span class="green">▲ 88</span></div>
+      <div class="score-row"><span class="sc-tck">AVGO</span><span class="green">▲ 85</span></div>
+      <div class="score-row"><span class="sc-tck">VRT</span><span class="green">▲ 81</span></div>
+      <div class="score-row"><span class="sc-tck">SPCX</span><span class="green">▲ 79</span></div>
+      <div class="score-row"><span class="sc-tck">META</span><span class="gold">◆ 72</span></div>
+      <div class="score-row"><span class="sc-tck">AMD</span><span class="gold">◆ 65</span></div>
+      <div class="score-row"><span class="sc-tck">TSLA</span><span class="red">▼ 48</span></div>
+    </div>
+  </aside>
+</div>
+
+<!-- ===== MEGA-CAP SECTION ===== -->
+<div class="container">
+  <div class="section-header">
+    <h2><span class="section-icon">🏢</span> Mega-Cap</h2>
+    <a href="#" class="see-all">See All Mega-Cap →</a>
+  </div>
+</div>
+<div class="container">
+  <div class="section-grid">
+    <div class="grid-card cat-megacap">
+      <div class="gc-img" style="background:linear-gradient(135deg,#1a2a3a,#0d1a2a)"><span class="gc-cat">MEGA-CAP</span></div>
+      <div class="gc-body">
+        <h4>Microsoft's $80B AI Bet: Azure Growth and the Path to $5T</h4>
+        <p>With Azure AI revenue growing 120% YoY, Microsoft's capital expenditure cycle is just getting started.</p>
+      </div>
+      <div class="gc-meta"><span class="gc-ticker gold">$MSFT ▲</span><span>6 min read</span></div>
+    </div>
+    <div class="grid-card cat-megacap">
+      <div class="gc-img" style="background:linear-gradient(135deg,#2a1a2a,#1a0d1a)"><span class="gc-cat">MEGA-CAP</span></div>
+      <div class="gc-body">
+        <h4>Amazon's AI Strategy: More Than Just AWS</h4>
+        <p>From AI chips to robotics to Alexa+, Amazon's AI moat extends far beyond cloud computing.</p>
+      </div>
+      <div class="gc-meta"><span class="gc-ticker gold">$AMZN ▼</span><span>4 min read</span></div>
+    </div>
+    <div class="grid-card cat-megacap">
+      <div class="gc-img" style="background:linear-gradient(135deg,#1a1a3e,#0d0d2a)"><span class="gc-cat">MEGA-CAP</span></div>
+      <div class="gc-body">
+        <h4>Apple's AI Catch-Up: Can Tim Cook Win the Late-Mover Game?</h4>
+        <p>Apple Intelligence is finally here, but is the iPhone maker too late to the AI party?</p>
+      </div>
+      <div class="gc-meta"><span class="gc-ticker gold">$AAPL ◆</span><span>5 min read</span></div>
+    </div>
+    <div class="grid-card cat-megacap">
+      <div class="gc-img" style="background:linear-gradient(135deg,#2a2a1a,#1a1a0d)"><span class="gc-cat">MEGA-CAP</span></div>
+      <div class="gc-body">
+        <h4>Google's Quantum Leap: Will Willow Change the Cloud Game?</h4>
+        <p>Google's new quantum chip Willow could revolutionize everything from drug discovery to financial modeling.</p>
+      </div>
+      <div class="gc-meta"><span class="gc-ticker gold">$GOOGL ▼</span><span>4 min read</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SIGNAL HIGHLIGHTS ===== -->
+<section class="highlights-section">
+  <div class="container">
+    <div class="highlights-header">
+      <h2>⚡ Signal Highlights</h2>
+      <div class="hl-nav">
+        <button>‹</button>
+        <button>›</button>
+      </div>
+    </div>
+    <div class="hl-carousel">
+      <div class="hl-card">
+        <div class="hl-ticker-row">
+          <span class="hl-ticker">AXON</span>
+          <span class="hl-action">▲ Strong Buy</span>
+        </div>
+        <div class="hl-price-row"><span class="hl-label">Fair Value</span><span class="hl-value green">$542.30</span></div>
+        <div class="hl-price-row"><span class="hl-label">Current Price</span><span class="hl-value">$423.15</span></div>
+        <div class="hl-price-row"><span class="hl-label">Upside</span><span class="hl-value green">+28.2%</span></div>
+        <div class="hl-bar"><div class="hl-fill bull" style="width:78%"></div></div>
+        <div class="hl-bar-labels"><span>Analyst Consensus</span><span>$520</span></div>
+      </div>
+      <div class="hl-card">
+        <div class="hl-ticker-row">
+          <span class="hl-ticker">MSFT</span>
+          <span class="hl-action">▲ Strong Buy</span>
+        </div>
+        <div class="hl-price-row"><span class="hl-label">Fair Value</span><span class="hl-value green">$520.00</span></div>
+        <div class="hl-price-row"><span class="hl-label">Current Price</span><span class="hl-value">$460.77</span></div>
+        <div class="hl-price-row"><span class="hl-label">Upside</span><span class="hl-value green">+12.9%</span></div>
+        <div class="hl-bar"><div class="hl-fill bull" style="width:89%"></div></div>
+        <div class="hl-bar-labels"><span>Analyst Consensus</span><span>$495</span></div>
+      </div>
+      <div class="hl-card">
+        <div class="hl-ticker-row">
+          <span class="hl-ticker">SOFI</span>
+          <span class="hl-action">▲ Buy</span>
+        </div>
+        <div class="hl-price-row"><span class="hl-label">Fair Value</span><span class="hl-value green">$18.40</span></div>
+        <div class="hl-price-row"><span class="hl-label">Current Price</span><span class="hl-value">$14.82</span></div>
+        <div class="hl-price-row"><span class="hl-label">Upside</span><span class="hl-value green">+24.2%</span></div>
+        <div class="hl-bar"><div class="hl-fill bull" style="width:81%"></div></div>
+        <div class="hl-bar-labels"><span>Analyst Consensus</span><span>$17.50</span></div>
+      </div>
+      <div class="hl-card">
+        <div class="hl-ticker-row">
+          <span class="hl-ticker">ZS</span>
+          <span class="hl-action">▲ Buy</span>
+        </div>
+        <div class="hl-price-row"><span class="hl-label">Fair Value</span><span class="hl-value green">$265.00</span></div>
+        <div class="hl-price-row"><span class="hl-label">Current Price</span><span class="hl-value">$218.30</span></div>
+        <div class="hl-price-row"><span class="hl-label">Upside</span><span class="hl-value green">+21.4%</span></div>
+        <div class="hl-bar"><div class="hl-fill bull" style="width:82%"></div></div>
+        <div class="hl-bar-labels"><span>Analyst Consensus</span><span>$245</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NEWSLETTER ===== -->
+<section class="newsletter">
+  <div class="container">
+    <div>
+      <h2>Get the <span>Signal</span> in your inbox</h2>
+      <p>Deeply-researched intelligence on AI, defense, space &amp; cyber. No spam.</p>
+    </div>
+    <div class="newsletter-form">
+      <input type="email" placeholder="your@email.com">
+      <button>Subscribe</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">THE SIGNAL</div>
+        <p>Market intelligence from a tech perspective. Deep-dive analysis on AI, defense, space, cyber, and the mega-cap tech plays that connect them all.</p>
+        <p style="margin-top:12px;font-size:.72rem;color:var(--text-muted)">Powered by proprietary AI engines and expert analysis.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Sections</h4>
+        <ul>
+          <li><a href="#">AI</a></li>
+          <li><a href="#">Cyber</a></li>
+          <li><a href="#">Defense</a></li>
+          <li><a href="#">Space</a></li>
+          <li><a href="#">Mega-Cap</a></li>
+          <li><a href="#">Quantum</a></li>
+          <li><a href="#">AI Power ⚡</a></li>
+          <li><a href="#">ETFs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Features</h4>
+        <ul>
+          <li><a href="#">📈 Stock Pages</a></li>
+          <li><a href="#">📊 Signal Scorecard</a></li>
+          <li><a href="#">🐝 Hive</a></li>
+          <li><a href="#">⚡ Signal vs. Street</a></li>
+          <li><a href="#">💎 Premium</a></li>
+          <li><a href="#">Ask Pulse AI</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Cookie Notice</a></li>
+          <li><a href="#">Accessibility</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="fb-left">© 2026 The Signal. All rights reserved. A Digital Defense Team publication.</div>
+      <div class="fb-right">
+        <a href="#">Privacy Notice</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Cookie Notice</a>
+        <div class="social-icon">𝕏</div>
+        <div class="social-icon">in</div>
+        <div class="social-icon">f</div>
+      </div>
+    </div>
+    <div class="disclaimer">
+      Disclaimer: Market data and analysis provided for informational purposes only and does not constitute investment advice. Past performance is not indicative of future results. Data providers and real-time quote information may be delayed. See full terms for details.
+    </div>
+  </div>
+</footer>
+
+<!-- ===== TABS INTERACTION ===== -->
+<script>
+(function() {
+  // Markets tab switching
+  document.querySelectorAll('.markets-tabs button').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.markets-tabs button').forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+
+  // Section nav active switching
+  document.querySelectorAll('.section-nav a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelectorAll('.section-nav a').forEach(l => l.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+
+  // Ticker bar hover pause (CSS handles this but let's add a data update simulation)
+  console.log('The Signal — MarketWatch-style desktop layout loaded');
+})();
+</script>
+</body>
+</html>

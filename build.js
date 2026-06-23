@@ -57,6 +57,14 @@ if (fs.existsSync(imgDir)) {
   console.log(`  ✅ ${countFiles(distImgDir)} image files → dist/img/`);
 }
 
+// ─── 1.5.5. Copy article audio ───
+const audioDir = path.join(ROOT, 'public', 'audio');
+const distAudioDir = path.join(DST, 'audio');
+if (fs.existsSync(audioDir)) {
+  fs.cpSync(audioDir, distAudioDir, { recursive: true });
+  console.log(`  ✅ ${countFiles(distAudioDir)} audio files → dist/audio/`);
+}
+
 // ─── 1.6. Build stock pages ───
 console.log('📊 Building stock pages...');
 try {

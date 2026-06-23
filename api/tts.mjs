@@ -1,12 +1,12 @@
-// /api/tts.mjs — Vercel serverless — Edge TTS Jenny ← R2 cache
-// Generates Jenny audio via edge-tts (Python), caches in R2
+// /api/tts.mjs — Vercel serverless — Edge TTS Andrew ← R2 cache
+// Generates Andrew audio via edge-tts (Python), caches in R2
 import { execSync, spawnSync } from 'child_process';
 import fs from 'fs';
 
 const CF_ACCOUNT_ID = process.env.CF_ACCOUNT_ID;
 const CF_API_TOKEN = process.env.CF_API_TOKEN;
 const BUCKET = 'the-signal-audio';
-const VOICE = 'en-US-JennyNeural';
+const VOICE = 'en-US-AndrewNeural';
 const TMP = '/tmp';
 
 let edgeTTSInstalled = false;
@@ -48,8 +48,8 @@ asyncio.run(g())`;
   try {
     const audio = execSync(`python3 -c '${pyCode}'`, {
       input: text,
-      maxBuffer: 2 * 1024 * 1024,
-      timeout: 15000
+      maxBuffer: 10 * 1024 * 1024,
+      timeout: 120000
     });
     return audio?.length > 500 ? audio : null;
   } catch (e) {

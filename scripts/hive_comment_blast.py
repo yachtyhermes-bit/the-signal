@@ -65,69 +65,64 @@ def get_all_comment_ids(article_slug):
 # ═══════════════════════════════════════════════════════════════
 
 PLANS = [
-    # ── 1. Ackman Microsoft AI Bet (MSFT) ──
+    # ── 1. ARM — Ghost in Every AI Server (ARM) ──
     {
-        "article": "ackman-microsoft-ai-bet",
+        "article": "arm-ai-server-architecture-2026",
         "comments": [
             # ROOTS
-            ("whohebe123", "everyone piling into msft cause ackman tweeted a 13f. fading the crowd on this one. he established this position weeks ago and now retail is the exit strategy.", None),
-            ("SheriffBartholomew", "classic wall street playbook. billionaire announces position after its already built. retail piles in at the peak. were all about to get shafted.", None),
-            ("thesis_driven_dan", "my thesis is simple. enterprise software is the stickiest business on earth. companies dont switch off m365 for a cheaper alternative. the bull case rests on azure ai workloads compounding for years.", None),
-            ("work_from_zoom", "i work in this industry and azure enterprise contracts have been accelerating. we just signed a multi year deal across our division. the ai copilot integration is the standard now.", None),
-            # REPLIES
-            ("first_time_caller99", "opened my robinhood account last month. is this a good time to buy msft?? only down a little from what ackman paid right", "{ROOT_0}"),
+            ("work_from_zoom", "i work at a hyperscaler and arm is in literally every new server we deploy. the efficiency advantage over x86 for ai inference workloads is massive. this is the standard now. $ARM", None),
+            ("CarrotAwesome", "ok but arm is a licensing company not a chip company. if any of the hyperscalers decide to build their own arm cores the royalty stream dries up fast. the math aint mathing for the current valuation.", None),
+            ("whohebe123", "everyone loves arm now after the ipo hype cycle. fading the crowd here. the licensing model means they capture a tiny fraction of the value they create. the hyperscalers will squeeze them over time.", None),
+            ("CCWaterBug", "arm in the data center is a decade long story. they went from zero to everywhere in servers and it is still early days. playing the long game. check back when every ai server runs on arm.", None),
+            ("first_time_caller99", "so arm doesnt actually make chips they just design the blueprints and collect royalties? and every ai server uses them? trying to understand the business model. learning as i go.", None),
         ],
     },
-    # ── 2. AI Inversion: White-Collar Wipeout (META) ──
+    # ── 2. KTOS — Valkyrie Drone Army (KTOS) ──
     {
-        "article": "ai-inversion-white-collar-blue-collar",
+        "article": "kratos-valkyrie-drone-army-2026",
         "comments": [
             # ROOTS
-            ("Latrodectus1990", "ive been saying this for months. the coding bootcamp pipeline is about to get obliterated. junior devs and paralegals are the coal miners of this decade.", None),
-            ("Latter-Possibility", "actually this is healthy. every industrial revolution displaced workers and then created entirely new categories. the operator economy is the next frontier and nobody sees it yet.", None),
-            ("CCWaterBug", "electrician was always the play. playing the long game. check back in a few years when a journeyman electrician makes more than a mid level engineer.", None),
-            ("crypto_refugee_88", "wait so the same ai that i thought would make everyone rich is gonna take the high paying jobs?? this is like getting rugged in slow motion. at least it wont rug overnight though.", None),
-            # REPLY
-            ("noob_investor42", "bought meta at the top lol. learning the hard way. but if ai is replacing white collar workers shouldnt the company selling the ai be printing money??", "{ROOT_2}"),
+            ("Latrodectus1990", "ktos dropping while revenue keeps growing tells me the market has already priced in a drone buildout that hasnt materialized yet. watch what happens when the next pentagon budget gets cut. generational bagholders incoming.", None),
+            ("sharp315", "the valkyrie program is real but drone swarms are still a concept not a production program. kratos has backlog sure but execution risk on defense contracts is always higher than people expect. solid company long term but be patient.", None),
+            ("help_me_pls77", "down on this one and i keep buying the dip and it keeps dipping. the business looks good on paper but my portfolio disagrees. is this normal for defense stocks. talk me off the ledge.", None),
+            ("thesis_driven_dan", "my thesis is simple. kratos is the only pure play on the drone warfare shift and the pentagon is committed to loitering munitions and autonomous systems. the backlog converts at steady state if execution holds. three things need to happen — valkyrie goes production, margins stabilize, and the market re-rates defense growth.", None),
+            ("option_flow_watcher", "ktos options have been picking up volume lately. decent call flow for a beaten down defense name. someone might know something about a valkyrie production decision coming.", None),
         ],
     },
-    # ── 3. AIPO AI Power Infra ETF ──
+    # ── 3. Broadcom — $22B Quarter Sold Off (AVGO) ──
     {
-        "article": "aipo-ai-power-infra-dip-buy-june-2026",
+        "article": "broadcom-ai-asic-dominance",
         "comments": [
             # ROOTS
-            ("turned_into_a_newt", "check the constituent list. constellation energy and ge vernova are buried in here alongside broadcom. this is infrastructure arbitrage hidden in an etf wrapper.", None),
-            ("contango_cowboy", "the curve is telling us something. forward power prices in pjm and ercot have been climbing for months while everyone was staring at nvidia. this etf is pricing in what the futures market already knows.", None),
-            ("whats_a_stop_loss", "power companies are boring til theyre not. stop loss?? never heard of her. this is either genius or stupid going all in on the grid theme.", None),
-            ("mom_of_3_trading", "bought some for their college fund. boring etfs are my thing. just buying what i understand and everyone needs electricity to run ai chips.", None),
-            # REPLY
-            ("sharp315", "depends on your timeline. the power infra theme is real but etfs always dilute your best holdings. not financial advice but id rather pick the top names directly.", "{ROOT_2}"),
+            ("macro_dad_energy", "avgo selling off on a record quarter tells you everything about the macro environment. the company is firing on all cylinders but rates and inflation fear are the real story here. the fed put is not back on the menu yet. $AVGO", None),
+            ("noob_investor42", "bought avgo last week and it immediately dropped. just my luck. everyone says the quarter was amazing though and the ai semi business is exploding. bought the top lol.", None),
+            ("ragnaroksunset", "avgo. the selloff on this kind of quarter is interesting. watching.", None),
+            ("FEMA_Camp_Survivor", "record quarter with ai semi revenue surging and the stock gets destroyed. wall street always finds a reason to punish even the best companies. regular people always get wrecked on these reactionary drops.", None),
+            ("SheriffBartholomew", "avgo beat and the stock gets punished. same story different ticker. retail always the exit liquidity when institutions decide semis are too crowded.", None),
         ],
     },
-    # ── 4. Alphabet $4.64 Trillion Milestone (GOOGL) ──
+    # ── 4. Google — Quiet Military Pivot (GOOGL) ──
     {
-        "article": "alphabet-5-trillion-milestone",
+        "article": "google-gemini-military-pivot-2026",
         "comments": [
             # ROOTS
-            ("Minimum-Criticism763", "something doesnt add up. google hitting multi trillion valuations while search revenue growth is decelerating. insiders are selling fyi. follow the incentives.", None),
-            ("FEMA_Camp_Survivor", "american capitalism has become a joke. google monopoly prints money while regulators posture then do nothing. the system is designed this way.", None),
-            ("data_dependent_1", "youtube revenue breaking records is the underrated story here. actual revenue diversification is happening across search cloud and subscriptions. balance sheet remains pristine.", None),
-            ("grillmaster_finance", "good company good product. i use google maps and youtube practically every day. sipping a beer watching this ticker.", None),
-            # REPLY
-            ("fomo_king_420", "should have added more google shares last quarter. kicking myself rn. i always build positions after the run up.", "{ROOT_1}"),
+            ("turned_into_a_newt", "the read team contract structure is the detail everyone is glossing over. moving gemini into classified il6 and il7 military networks is a whole different security posture than standard google cloud. the lockup periods on those contracts are multi year. $GOOGL", None),
+            ("grillmaster_finance", "google getting deeper into defense contracts is a big deal. they have been way behind aws and azure in government cloud for years. finally catching up. bought some for the kids college fund.", None),
+            ("Minimum-Criticism763", "follow the incentives. google has been trying to win pentagon business forever and employees have pushed back hard every time. something doesnt add up if they are going this deep now. the ceo is betting big on military revenue and insiders are watching.", None),
+            ("Latter-Possibility", "the market is sleeping on goog moving into tier one defense ai. this opens up a whole new revenue stream that nobody has in their models. actually this is healthy for the long term thesis.", None),
+            ("whats_a_stop_loss", "google with top secret military ai contracts is a massive catalyst. they have the best ai talent and the infrastructure to beat aws in government cloud. what could go wrong. update: everything could go wrong but im buying anyway.", None),
         ],
     },
-    # ── 5. Amazon Q1 2026 AWS Reacceleration (AMZN) ──
+    # ── 5. Rocket Lab — Invisible Rocket Company (RKLB) ──
     {
-        "article": "amazon-q1-2026-aws-reacceleration",
+        "article": "rocket-lab-space-systems-cash-cow-2026",
         "comments": [
             # ROOTS
-            ("CarrotAwesome", "ok but seriously though. eps nearly tripling is great but aws growth is the only thing that actually matters here. without cloud acceleration this is just a retail company with an expensive tech division.", None),
-            ("macro_dad_energy", "rates are the real story here. every basis point the fed cuts makes the dcf on these cloud businesses look better. everyone is missing the macro tailwind for amzn.", None),
-            ("just_lurking_69", "been watching this thread for a while. what do you guys think about amzn at these levels after that shocker earnings beat? is now a bad time to start a position", None),
-            ("westcoastcouch", "whatever happens happens. amzn will be bigger in the future than it is today. im not checking my positions til next month anyway.", None),
-            # REPLY
-            ("paycheck2paycheck", "just doing my weekly buy. set it and forget it. been adding amzn every paycheck since the split and not stopping now.", "{ROOT_2}"),
+            ("data_dependent_1", "the space systems division is where the actual revenue lives and the growth rate there is impressive. balance sheet looks solid for a company at this stage. this isnt a narrative stock — the backlog is real and converting. $RKLB", None),
+            ("RN_Geo", "rklb is interesting but the market is paying for growth like it is a software company. space systems revenue is real but the margins are structurally lower than launch once neutron scales. im staying cautious. no rush to buy here.", None),
+            ("night_shift_trader", "rklb premarket has been looking interesting lately. space systems revenue is the part everyone overlooks while obsessing over electron launches. night shift checking in.", None),
+            ("westcoastcouch", "threw a small position in rklb for the space systems story. launch is exciting but the real business is the satellites and components. not checking til neutron flies. whatever happens happens.", None),
+            ("still_holding_2021", "been holding rklb since before it went public via spac. averaged down through the whole space bear market. one day neutron launches, the space systems margins expand, and everyone wakes up. this stock owes me money.", None),
         ],
     },
 ]

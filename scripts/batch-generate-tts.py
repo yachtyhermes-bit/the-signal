@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Batch generate Jenny TTS for all articles and upload to R2 via wrangler.
+"""Batch generate Andrew TTS for all articles and upload to R2 via wrangler.
 Generates all MP3s first, then uploads with proper delays."""
 import asyncio, edge_tts, json, os, subprocess, sys, time, glob
 from pathlib import Path
@@ -7,7 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 POSTS_DIR = ROOT / 'articles' / 'posts'
 TMP_DIR = '/tmp/signal-tts'
-VOICE = 'en-US-JennyNeural'
+VOICE = 'en-US-AndrewNeural'
 MAX_CHARS = 5000
 
 os.makedirs(TMP_DIR, exist_ok=True)
@@ -15,7 +15,7 @@ os.makedirs(TMP_DIR, exist_ok=True)
 # ─── Phase 1: Generate all MP3s ───
 async def gen_all():
     json_files = sorted(POSTS_DIR.glob('*.json'))
-    print(f"🎙️  Generating Jenny TTS for {len(json_files)} articles...")
+    print(f"🎙️  Generating Andrew TTS for {len(json_files)} articles...")
     
     gen_ok = 0
     gen_skip = 0

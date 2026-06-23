@@ -18,8 +18,8 @@ TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
 echo "=== $TIMESTAMP ===" | tee -a "$LOG"
 
 # All tickers to process (all public — yfinance/fetch-fmp for all)
-PUBLIC_TICKERS="NVDA TSLA PLTR RKLB AMZN KTOS CRWV AXON MSFT SOFI ZS AVGO GOOGL SPCX"
-ALL_TICKERS="NVDA TSLA PLTR RKLB AMZN KTOS CRWV AXON MSFT SOFI ZS AVGO GOOGL SPCX"
+PUBLIC_TICKERS="NVDA TSLA PLTR RKLB AMZN KTOS CRWV AXON MSFT SOFI ZS AVGO GOOGL SPCX MU MRVL"
+ALL_TICKERS="NVDA TSLA PLTR RKLB AMZN KTOS CRWV AXON MSFT SOFI ZS AVGO GOOGL SPCX MU MRVL"
 
 PRICE_ONLY=false
 NO_FMP=false
@@ -56,6 +56,58 @@ if 'SPCX' in d:
     echo "  Enriching with FMP data for all public tickers..." | tee -a "$LOG"
     python3 scripts/fetch-fmp.py $PUBLIC_TICKERS >> "$LOG" 2>&1 || echo "  ⚠️  FMP enrichment failed (continuing)" | tee -a "$LOG"
   fi
+
+  # ── Step 3b: Merge SPACEX data back into SPCX ──
+  # Pipeline: fetch-financials SPCX → rename to SPACEX → FMP creates new SPCX entry
+  # This destroys SPCX's chartData. Merge SPACEX data back into SPCX.
+  python3 -c "
+import json
+with open('data/financials.json') as f: d = json.load(f)
+if 'SPCX' in d and 'SPACEX' in d:
+    spcx = d['SPCX']
+    spacex = d['SPACEX']
+    # Copy chartData if SPCX is missing it
+    if not spcx.get('chartData') and spacex.get('chartData'):
+        spcx['chartData'] = spacex['chartData']
+        print(f'  ✓ Copied {len(spacex[\"chartData\"])} chartData points from SPACEX → SPCX')
+    # Copy earnings
+    if not spcx.get('earnings') and spacex.get('earnings'):
+        spcx['earnings'] = spacex['earnings']
+        print(f'  ✓ Copied earnings from SPACEX → SPCX')
+    # Copy quarterlyFinancials
+    if not spcx.get('quarterlyFinancials') and spacex.get('quarterlyFinancials'):
+        spcx['quarterlyFinancials'] = spacex['quarterlyFinancials']
+        print(f'  ✓ Copied quarterlyFinancials from SPACEX → SPCX')
+    # Copy annualFinancials
+    if not spcx.get('annualFinancials') and spacex.get('annualFinancials'):
+        spcx['annualFinancials'] = spacex['annualFinancials']
+        print(f'  ✓ Copied annualFinancials from SPACEX → SPCX')
+    # Copy analyst data
+    if not spcx.get('analyst') and spacex.get('analyst'):
+        spcx['analyst'] = spacex['analyst']
+        print(f'  ✓ Copied analyst data from SPACEX → SPCX')
+    # Copy consensus
+    if not spcx.get('consensus') and spacex.get('consensus'):
+        spcx['consensus'] = spacex['consensus']
+        print(f'  ✓ Copied consensus from SPACEX → SPCX')
+    # Copy returns
+    if not spcx.get('returns') and spacex.get('returns'):
+        spcx['returns'] = spacex['returns']
+        print(f'  ✓ Copied returns from SPACEX → SPCX')
+    d['SPCX'] = spcx
+    with open('data/financials.json', 'w') as f: json.dump(d, f, indent=2)
+    print('  ✅ Merged SPACEX → SPCX in financials.json')
+elif 'SPACEX' not in d and 'SPCX' in d:
+    # No SPACEX, copy SPCX to SPACEX for other consumers
+    d['SPACEX'] = d['SPCX']
+    with open('data/financials.json', 'w') as f: json.dump(d, f, indent=2)
+    print('  ✓ Created SPACEX from SPCX')
+elif 'SPACEX' in d and 'SPCX' not in d:
+    # No SPCX, copy SPACEX to SPCX
+    d['SPCX'] = d['SPACEX']
+    with open('data/financials.json', 'w') as f: json.dump(d, f, indent=2)
+    print('  ✓ Created SPCX from SPACEX')
+" >> "$LOG" 2>&1 || true
 fi
 
 # ── Step: Morningstar Moat Assessment (weekly — Sundays only) ──

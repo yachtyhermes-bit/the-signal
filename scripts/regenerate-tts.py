@@ -6,11 +6,11 @@ from pathlib import Path
 from tempfile import NamedTemporaryFile
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-CF_ACCOUNT_ID = os.environ.get("CF_ACCOUNT_ID", "")
-CF_API_TOKEN = os.environ.get("CF_API_TOKEN", "")
+CF_ACCOUNT_ID = os.environ.get("CLOUDFLARE_ACCOUNT_ID", "")
+CF_API_TOKEN = os.environ.get("CLOUDFLARE_API_TOKEN", "")
 BUCKET = "the-signal-audio"
 OBJECT_PREFIX = "v2/"
-VOICE = "en-US-JennyNeural"
+VOICE = "en-US-AndrewNeural"
 
 slug = sys.argv[1] if len(sys.argv) > 1 else sys.exit("Usage: python3 scripts/regenerate-tts.py <slug>")
 article_path = PROJECT_ROOT / "articles" / "posts" / f"{slug}.json"

@@ -8,7 +8,7 @@ Usage: source .dev.vars && python3 scripts/prebuild-tts.py
 import os, sys, json, subprocess, asyncio, glob, time
 from html.parser import HTMLParser
 
-VOICE = 'en-US-JennyNeural'
+VOICE = 'en-US-AndrewNeural'
 BUCKET = 'the-signal-audio'
 ARTICLES_GLOB = 'articles/posts/*.json'
 R2_PREFIX = 'v2'

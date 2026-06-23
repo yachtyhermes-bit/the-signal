@@ -7,6 +7,8 @@ const path = require('path');
 const TICKERS = [
   // AI & Semis
   'NVDA', 'AMD', 'AVGO', 'MRVL', 'TSM', 'ASML', 'MU', 'CBRS', 'INTC', 'IREN', 'LRCX', 'AMAT', 'QCOM', 'SMCI',
+  // AI Infrastructure
+  'VRT',
   // Cybersecurity
   'CRWD', 'PANW', 'FTNT', 'ZS', 'S', 'CHKP', 'CYBR', 'TENB',
   // AI Software
@@ -63,6 +65,7 @@ const COMPANY_INFO = {
   'NOW': { name: 'ServiceNow Inc.', url: 'https://www.servicenow.com/' },
   'NET': { name: 'Cloudflare Inc.', url: 'https://www.cloudflare.com/' },
   'AI': { name: 'C3.ai Inc.', url: 'https://c3.ai/' },
+  'VRT': { name: 'Vertiv Holdings', url: 'https://www.vertiv.com/' },
   'GD': { name: 'General Dynamics', url: 'https://www.gd.com/' },
   'LHX': { name: 'L3Harris Technologies', url: 'https://www.l3harris.com/' },
   'KTOS': { name: 'Kratos Defense & Security', url: 'https://www.kratosdefense.com/' },
