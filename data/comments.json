@@ -1359,7 +1359,10 @@
     "photoURL": null,
     "uid": "data_dependent_1",
     "parentId": null,
-    "createdAt": "2026-06-17T16:20:00.000Z"
+    "createdAt": "2026-06-17T16:20:00.000Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mqhz8a2c_dd2e3f",
@@ -1369,7 +1372,10 @@
     "photoURL": null,
     "uid": "SheriffBartholomew",
     "parentId": null,
-    "createdAt": "2026-06-17T16:21:00.000Z"
+    "createdAt": "2026-06-17T16:21:00.000Z",
+    "likes": [
+      "usr_c3"
+    ]
   },
   {
     "id": "mqhz8a3d_ee3f4g",
@@ -6521,5 +6527,15 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-23T11:05:44.186Z"
+  },
+  {
+    "id": "mqqjgane_syewfa",
+    "article": "meta-ai-bet-paying-off-2026",
+    "text": "meta at this valuation with that ad business is tempting but i cannot get comfortable with the capex trajectory. the ai infrastructure spend is a bet the company type move. im staying in cash and watching from the sidelines.",
+    "author": "RN_Geo",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-23T11:05:44.426Z"
   }
 ]
