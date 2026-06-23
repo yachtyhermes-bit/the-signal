@@ -6154,7 +6154,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-22T19:09:49.647Z"
+    "createdAt": "2026-06-22T19:09:49.647Z",
+    "likes": [
+      "usr_e5"
+    ]
   },
   {
     "id": "mqplazmj_ksz79u",
@@ -7005,5 +7008,15 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-23T16:21:12.855Z"
+  },
+  {
+    "id": "mqquq0as_nqo7mz",
+    "article": "iren-short-squeeze-ai-cloud-june-2026",
+    "text": "been through the crypto winter with iren when they were just a bitcoin miner. watched the stock bleed for years. now everyone suddenly loves them for ai compute. averaging down was painful but this might finally pay off.",
+    "author": "still_holding_2021",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-23T16:21:13.348Z"
   }
 ]
