@@ -6826,7 +6826,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-23T16:21:05.233Z"
+    "createdAt": "2026-06-23T16:21:05.233Z",
+    "likes": [
+      "usr_a1"
+    ]
   },
   {
     "id": "mqqupu7h_qhyt5r",
@@ -6867,5 +6870,35 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-23T16:21:06.429Z"
+  },
+  {
+    "id": "mqqupvr0_j1w6ug",
+    "article": "marvell-custom-ai-silicon-hyperscaler-2026",
+    "text": "i work in the semiconductor space and marvells custom asic business is the real deal. the hyperscalers are all building their own chips and marvell is the design partner for a lot of them. the enterprise contracts are multi year and the revenue is sticky. $MRVL",
+    "author": "work_from_zoom",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-23T16:21:07.452Z"
+  },
+  {
+    "id": "mqqupvz7_bo9xq4",
+    "article": "marvell-custom-ai-silicon-hyperscaler-2026",
+    "text": "ok so marvell tripled this year and now jensen is calling it a trillion dollar company. someone explain this to me like im five — what does marvell actually do that broadcom cant also do. the math aint mathing for that kind of hype.",
+    "author": "CarrotAwesome",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-23T16:21:07.747Z"
+  },
+  {
+    "id": "mqqupwdv_caessc",
+    "article": "marvell-custom-ai-silicon-hyperscaler-2026",
+    "text": "bought marvell right before the s and p addition and thought i was a genius. then it dipped. still up overall but of course my entry was the exact worst time. you are welcome for the dip guys.",
+    "author": "bought_at_the_top",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-23T16:21:08.275Z"
   }
 ]
