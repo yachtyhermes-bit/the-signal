@@ -6767,7 +6767,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-23T16:21:02.262Z"
+    "createdAt": "2026-06-23T16:21:02.262Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mqqupryi_h0hjga",
@@ -6778,5 +6781,35 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-23T16:21:02.538Z"
+  },
+  {
+    "id": "mqqups9x_w55bo5",
+    "article": "micron-hbm-ai-memory-dominance",
+    "text": "micron was written off as a commodity memory play for years because of the boom bust cycle. the pivot to being an ai essential supplier changed the whole business profile. solid position long term if hbm demand keeps growing.",
+    "author": "sharp315",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-23T16:21:02.949Z"
+  },
+  {
+    "id": "mqqupslg_o8x90j",
+    "article": "micron-hbm-ai-memory-dominance",
+    "text": "my first stock ever. micron sounds good because every ai thing needs memory right. is this a good time to buy. learning as i go.",
+    "author": "first_time_caller99",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-23T16:21:03.364Z"
+  },
+  {
+    "id": "mqqupsv3_95ahcb",
+    "article": "micron-hbm-ai-memory-dominance",
+    "text": "micron had an insane run and everyone is pricing in perfection at this point. the hbm moat is real but the stock already reflects years of growth. fading the crowd here — the easy money was already made.",
+    "author": "whohebe123",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-23T16:21:03.711Z"
   }
 ]
