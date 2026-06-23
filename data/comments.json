@@ -6780,7 +6780,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-23T16:21:02.538Z"
+    "createdAt": "2026-06-23T16:21:02.538Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mqqups9x_w55bo5",
@@ -6790,7 +6793,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-23T16:21:02.949Z"
+    "createdAt": "2026-06-23T16:21:02.949Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mqqupslg_o8x90j",
@@ -6811,5 +6817,15 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-23T16:21:03.711Z"
+  },
+  {
+    "id": "mqqupu1d_eaubv7",
+    "article": "spacex-lockup-timing-strategy-2026",
+    "text": "my thesis is simple. the lockup calendar creates predictable supply overhang for the next year and each unlock window is the catalyst for re-entry. the real bull case rests on spacex revenue ramping through starlink and starship operations. if those deliver, lockup sellers get absorbed fast. $SPCX",
+    "author": "thesis_driven_dan",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-23T16:21:05.233Z"
   }
 ]
