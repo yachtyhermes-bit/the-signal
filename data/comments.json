@@ -6662,7 +6662,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-23T11:05:49.607Z"
+    "createdAt": "2026-06-23T11:05:49.607Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mqqjgeum_6ve53o",
@@ -6682,7 +6685,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-23T11:05:50.062Z"
+    "createdAt": "2026-06-23T11:05:50.062Z",
+    "likes": [
+      "usr_a1"
+    ]
   },
   {
     "id": "mqqjgf5r_bzqhux",
@@ -6693,5 +6699,35 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-23T11:05:50.271Z"
+  },
+  {
+    "id": "mqqjgh3t_sknruh",
+    "article": "kratos-valkyrie-drone-army-2026",
+    "text": "kratos getting sold off on macro while the backlog hits new highs and valkyrie goes operational with the marines. the disconnect here is enormous. corrections are normal and this one created an opportunity. $KTOS",
+    "author": "Latter-Possibility",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-23T11:05:52.793Z"
+  },
+  {
+    "id": "mqqjgh9s_1r4f6k",
+    "article": "kratos-valkyrie-drone-army-2026",
+    "text": "ktos. backlog growing revenue growing stock getting crushed. ope.",
+    "author": "ragnaroksunset",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-23T11:05:53.008Z"
+  },
+  {
+    "id": "mqqjghf9_x4y4lm",
+    "article": "kratos-valkyrie-drone-army-2026",
+    "text": "bought kratos near the highs and have been watching it bleed since. at least the business looks good on paper. you are welcome for the dip guys. my timing is legendary.",
+    "author": "bought_at_the_top",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-23T11:05:53.205Z"
   }
 ]
