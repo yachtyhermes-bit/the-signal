@@ -7116,7 +7116,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-23T19:06:11.221Z"
+    "createdAt": "2026-06-23T19:06:11.221Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mqr0m5qc_inz57i",
@@ -7127,5 +7130,45 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-23T19:06:11.460Z"
+  },
+  {
+    "id": "mqr0m6zu_iilhlg",
+    "article": "marvell-custom-ai-silicon-hyperscaler-2026",
+    "text": "marvell is a great business riding the custom silicon wave but the stock has already rerated dramatically. preferred buying earlier when the thesis was less obvious. international exposure matters too and the tariff backdrop adds uncertainty. playing it safe this year.",
+    "author": "RN_Geo",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-23T19:06:13.098Z"
+  },
+  {
+    "id": "mqr0m7ap_ywiwhx",
+    "article": "marvell-custom-ai-silicon-hyperscaler-2026",
+    "text": "bought marvell because jensen huang said it would be the next trillion dollar company. dont really understand what they do but the ceo sounds smart. my portfolio is a mess but this one feels different. learning the hard way.",
+    "author": "noob_investor42",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-23T19:06:13.489Z"
+  },
+  {
+    "id": "mqr0m7jj_foi2kb",
+    "article": "marvell-custom-ai-silicon-hyperscaler-2026",
+    "text": "marvell gets called the next trillion dollar chip company and wall street runs with it. meanwhile the custom asic market is going to get absolutely flooded with competition over the next few years. retail always gets wrecked buying the narrative at the peak.",
+    "author": "FEMA_Camp_Survivor",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-23T19:06:13.807Z"
+  },
+  {
+    "id": "mqr0m7x6_3gxibr",
+    "article": "marvell-custom-ai-silicon-hyperscaler-2026",
+    "text": "marvell. custom silicon for hyperscalers. nvidia stamp of approval. watching.",
+    "author": "ragnaroksunset",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-23T19:06:14.298Z"
   }
 ]
