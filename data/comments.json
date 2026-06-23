@@ -7157,7 +7157,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-23T19:06:13.489Z"
+    "createdAt": "2026-06-23T19:06:13.489Z",
+    "likes": [
+      "usr_c3"
+    ]
   },
   {
     "id": "mqr0m7jj_foi2kb",
@@ -7167,7 +7170,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-23T19:06:13.807Z"
+    "createdAt": "2026-06-23T19:06:13.807Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mqr0m7x6_3gxibr",
@@ -7178,5 +7184,15 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-23T19:06:14.298Z"
+  },
+  {
+    "id": "mqr0ma29_nksggp",
+    "article": "hive-digital-ai-infrastructure-pivot-2026",
+    "text": "quick play on hive after the bell canada contract dropped. the university research partnership angle is interesting because real validation from academic institutions carries weight. back to work see yall.",
+    "author": "tacotuesdaytrader",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-23T19:06:17.073Z"
   }
 ]
