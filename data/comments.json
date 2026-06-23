@@ -1395,7 +1395,10 @@
     "photoURL": null,
     "uid": "fomo_king_420",
     "parentId": "mqhz8a1b_cc1d1e",
-    "createdAt": "2026-06-17T16:23:00.000Z"
+    "createdAt": "2026-06-17T16:23:00.000Z",
+    "likes": [
+      "usr_c3"
+    ]
   },
   {
     "id": "mqhz8b1f_gg5h6i",
@@ -6486,7 +6489,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-23T11:05:43.270Z"
+    "createdAt": "2026-06-23T11:05:43.270Z",
+    "likes": [
+      "usr_a1"
+    ]
   },
   {
     "id": "mqqjg9xd_vgyvel",
@@ -6536,6 +6542,19 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-23T11:05:44.426Z"
+    "createdAt": "2026-06-23T11:05:44.426Z",
+    "likes": [
+      "usr_a1"
+    ]
+  },
+  {
+    "id": "mqqjgbwi_myx73z",
+    "article": "zscaler-zero-trust-cloud-security-2026",
+    "text": "zs rpo at over six billion and growing faster than revenue tells you demand is actually accelerating. the backlog is converting and gross margins are healthy. balance sheet is clean with no debt. the selloff is pure sentiment. $ZS",
+    "author": "data_dependent_1",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-23T11:05:46.050Z"
   }
 ]
