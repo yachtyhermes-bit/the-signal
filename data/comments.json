@@ -6844,7 +6844,8 @@
     "parentId": null,
     "createdAt": "2026-06-23T16:21:05.233Z",
     "likes": [
-      "usr_a1"
+      "usr_a1",
+      "usr_d4"
     ]
   },
   {
@@ -6875,7 +6876,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-23T16:21:06.011Z"
+    "createdAt": "2026-06-23T16:21:06.011Z",
+    "likes": [
+      "usr_e5"
+    ]
   },
   {
     "id": "mqqupuyl_6nr6m7",
@@ -6885,7 +6889,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-23T16:21:06.429Z"
+    "createdAt": "2026-06-23T16:21:06.429Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mqqupvr0_j1w6ug",
@@ -7110,5 +7117,15 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-23T19:06:11.221Z"
+  },
+  {
+    "id": "mqr0m5qc_inz57i",
+    "article": "spacex-lockup-timing-strategy-2026",
+    "text": "the lockup schedule looks like a futures curve in backwardation — the near term unlocks are priced in but the back end of the calendar still has fat premium. the curve is telling us something about where the real buying opportunity sits.",
+    "author": "contango_cowboy",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-23T19:06:11.460Z"
   }
 ]
