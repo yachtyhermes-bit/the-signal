@@ -6968,7 +6968,8 @@
     "parentId": null,
     "createdAt": "2026-06-23T16:21:10.007Z",
     "likes": [
-      "usr_d4"
+      "usr_d4",
+      "usr_c3"
     ]
   },
   {
@@ -7213,7 +7214,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-23T19:06:17.660Z"
+    "createdAt": "2026-06-23T19:06:17.660Z",
+    "likes": [
+      "usr_a1"
+    ]
   },
   {
     "id": "mqr0mate_jsmdek",
@@ -7224,5 +7228,15 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-23T19:06:18.050Z"
+  },
+  {
+    "id": "mqr0mc3h_y5s5g0",
+    "article": "iren-short-squeeze-ai-cloud-june-2026",
+    "text": "iren was a miner and now its an ai stock. this is like when eth merged and everyone pretended proof of stake changed everything. at least it wont rug but the pivot feels forced. stocks are so slow compared to what im used to.",
+    "author": "crypto_refugee_88",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-23T19:06:19.709Z"
   }
 ]
