@@ -6935,7 +6935,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-23T16:21:10.007Z"
+    "createdAt": "2026-06-23T16:21:10.007Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mqqupxyd_7s1jgb",
@@ -6945,7 +6948,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-23T16:21:10.309Z"
+    "createdAt": "2026-06-23T16:21:10.309Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mqqupy95_b3m6hh",
@@ -6956,5 +6962,15 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-23T16:21:10.697Z"
+  },
+  {
+    "id": "mqqupyi1_wrrwto",
+    "article": "hive-digital-ai-infrastructure-pivot-2026",
+    "text": "the bitcoin miner to ai cloud pipeline is getting crowded and hive is a middle tier player at best. other operators have way more power capacity and better partnership terms. generational bagholders incoming for the latecomers to this trade.",
+    "author": "Latrodectus1990",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-23T16:21:11.017Z"
   }
 ]
