@@ -8112,7 +8112,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-24T19:12:32.164Z"
+    "createdAt": "2026-06-24T19:12:32.164Z",
+    "likes": [
+      "usr_c3"
+    ]
   },
   {
     "id": "mqsga6eb_3qxrvl",
@@ -8152,7 +8155,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-24T19:12:33.296Z"
+    "createdAt": "2026-06-24T19:12:33.296Z",
+    "likes": [
+      "usr_e5"
+    ]
   },
   {
     "id": "mqsga786_9ffwt4",
@@ -8162,6 +8168,29 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-24T19:12:33.558Z"
+    "createdAt": "2026-06-24T19:12:33.558Z",
+    "likes": [
+      "usr_e5"
+    ]
+  },
+  {
+    "id": "mqsga91u_604cmp",
+    "article": "googl-ai-everything-strategy-2026",
+    "text": "cloud revenue growing over sixty percent with a half trillion dollar backlog. market sold off on talent noise while the actual business is screaming.",
+    "author": "data_dependent_1",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-24T19:12:35.922Z"
+  },
+  {
+    "id": "mqsga9do_ddlxfa",
+    "article": "googl-ai-everything-strategy-2026",
+    "text": "kicking myself for not buying after the crash. two people quit and the whole market panicked. feels like the window is closing on this dip.",
+    "author": "fomo_king_420",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-24T19:12:36.348Z"
   }
 ]
