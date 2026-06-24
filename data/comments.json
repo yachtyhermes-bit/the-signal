@@ -7839,7 +7839,8 @@
     "createdAt": "2026-06-24T16:25:33.122Z",
     "likes": [
       "usr_c3",
-      "usr_b2"
+      "usr_b2",
+      "usr_a1"
     ]
   },
   {
@@ -7852,7 +7853,8 @@
     "parentId": null,
     "createdAt": "2026-06-24T16:25:33.365Z",
     "likes": [
-      "usr_e5"
+      "usr_e5",
+      "usr_d4"
     ]
   },
   {
@@ -8237,6 +8239,49 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-24T19:12:37.641Z"
+    "createdAt": "2026-06-24T19:12:37.641Z",
+    "likes": [
+      "usr_b2"
+    ]
+  },
+  {
+    "id": "mqsgacuy_jlpzrd",
+    "article": "micron-hbm-ai-memory-dominance",
+    "text": "micron overtaking samsung in hbm was the inflection nobody noticed. this isnt a cyclical memory play anymore. this is ai infrastructure monopoly behavior.",
+    "author": "Latrodectus1990",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-24T19:12:40.858Z"
+  },
+  {
+    "id": "mqsgad19_1xgrsi",
+    "article": "micron-hbm-ai-memory-dominance",
+    "text": "forward earnings in the single digits on a company growing nearly triple digits. the market is pricing this like old micron. structural story now. holding for years.",
+    "author": "CCWaterBug",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-24T19:12:41.085Z"
+  },
+  {
+    "id": "mqsgad9z_apzndd",
+    "article": "micron-hbm-ai-memory-dominance",
+    "text": "supply sold out through next year and customers already booking twenty seven capacity. premarket looking solid as always. might add more on the next dip.",
+    "author": "night_shift_trader",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-24T19:12:41.399Z"
+  },
+  {
+    "id": "mqsgadgt_js14ct",
+    "article": "micron-hbm-ai-memory-dominance",
+    "text": "bought some MU a while back because i figured ai needs memory. didnt expect it to do this well. funding the whole summer BBQ fund off these gains.",
+    "author": "grillmaster_finance",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-24T19:12:41.645Z"
   }
 ]
