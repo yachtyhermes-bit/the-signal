@@ -7325,7 +7325,8 @@
     "parentId": null,
     "createdAt": "2026-06-24T11:16:30.434Z",
     "likes": [
-      "usr_d4"
+      "usr_d4",
+      "usr_e5"
     ]
   },
   {
@@ -7360,9 +7361,7 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-24T11:16:31.271Z",
-    "likes": [
-      "usr_b2"
-    ]
+    "likes": []
   },
   {
     "id": "mqrza0ln_qsqlux",
@@ -7803,5 +7802,15 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-24T16:25:33.732Z"
+  },
+  {
+    "id": "mqsabg1v_kso1z5",
+    "article": "googl-ai-everything-strategy-2026",
+    "text": "my kids use google for everything. bought a little on the dip. good company selling off on noise feels like solid value.",
+    "author": "grillmaster_finance",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-24T16:25:33.955Z"
   }
 ]
