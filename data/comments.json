@@ -7984,7 +7984,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-24T16:25:42.379Z"
+    "createdAt": "2026-06-24T16:25:42.379Z",
+    "likes": [
+      "usr_a1"
+    ]
   },
   {
     "id": "mqsabmro_262qok",
@@ -7996,8 +7999,7 @@
     "parentId": null,
     "createdAt": "2026-06-24T16:25:42.660Z",
     "likes": [
-      "usr_a1",
-      "usr_c3"
+      "usr_a1"
     ]
   },
   {
@@ -8036,8 +8038,7 @@
     "parentId": null,
     "createdAt": "2026-06-24T16:25:44.000Z",
     "likes": [
-      "usr_b2",
-      "usr_c3"
+      "usr_b2"
     ]
   },
   {
