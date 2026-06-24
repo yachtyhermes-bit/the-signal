@@ -7338,7 +7338,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-24T11:16:31.271Z"
+    "createdAt": "2026-06-24T11:16:31.271Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mqrza0ln_qsqlux",
@@ -7348,6 +7351,39 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-24T11:16:31.499Z"
+    "createdAt": "2026-06-24T11:16:31.499Z",
+    "likes": [
+      "usr_b2"
+    ]
+  },
+  {
+    "id": "mqrza1pq_7eoiln",
+    "article": "micron-hbm-ai-memory-dominance",
+    "text": "the market still prices MU like a cyclical DRAM vendor not the AI bottleneck it actually is. this sector is going to get obliterated on the short side when the street finally re-rates it.",
+    "author": "Latrodectus1990",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-24T11:16:32.942Z"
+  },
+  {
+    "id": "mqrza1x6_olxvu1",
+    "article": "micron-hbm-ai-memory-dominance",
+    "text": "HBM is the only game in town for AI memory and MU has the volume and the tech to own the lane. playing the long game here.",
+    "author": "CCWaterBug",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-24T11:16:33.210Z"
+  },
+  {
+    "id": "mqrza23z_o4x860",
+    "article": "micron-hbm-ai-memory-dominance",
+    "text": "revenue growth accelerating and margins expanding but the narrative still lags the fundamentals. same thing happened with NVDA before the street finally got it.",
+    "author": "data_dependent_1",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-24T11:16:33.455Z"
   }
 ]
