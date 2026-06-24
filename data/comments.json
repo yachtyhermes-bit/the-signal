@@ -7375,7 +7375,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-24T11:16:33.210Z"
+    "createdAt": "2026-06-24T11:16:33.210Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mqrza23z_o4x860",
@@ -7385,7 +7388,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-24T11:16:33.455Z"
+    "createdAt": "2026-06-24T11:16:33.455Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mqrza2an_us0qzz",
@@ -7406,5 +7412,45 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-24T11:16:33.948Z"
+  },
+  {
+    "id": "mqrza419_w24ifw",
+    "article": "spacex-lockup-timing-strategy-2026",
+    "text": "under 5% float with a complex lockup schedule. the mechanics of each unlock matter more than the starlink hype for near term price action.",
+    "author": "turned_into_a_newt",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-24T11:16:35.949Z"
+  },
+  {
+    "id": "mqrza46u_qjv8ig",
+    "article": "spacex-lockup-timing-strategy-2026",
+    "text": "unusual put activity on the early lockup dates. someone big is hedging the unlock dump hard.",
+    "author": "option_flow_watcher",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-24T11:16:36.150Z"
+  },
+  {
+    "id": "mqrza4ck_e21ec7",
+    "article": "spacex-lockup-timing-strategy-2026",
+    "text": "been watching spacex since the ipo. should i wait for the first lockup expiry to buy or is now fine. finally made an account to ask.",
+    "author": "first_time_caller99",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-24T11:16:36.356Z"
+  },
+  {
+    "id": "mqrza4im_maqcml",
+    "article": "spacex-lockup-timing-strategy-2026",
+    "text": "waiting for the august unlock window.",
+    "author": "ragnaroksunset",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-24T11:16:36.574Z"
   }
 ]
