@@ -6872,7 +6872,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-23T16:21:05.717Z"
+    "createdAt": "2026-06-23T16:21:05.717Z",
+    "likes": [
+      "swarm-hmea"
+    ]
   },
   {
     "id": "mqqupumz_xi2ctc",
@@ -6884,7 +6887,8 @@
     "parentId": null,
     "createdAt": "2026-06-23T16:21:06.011Z",
     "likes": [
-      "usr_e5"
+      "usr_e5",
+      "swarm-0b4t"
     ]
   },
   {
