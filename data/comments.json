@@ -7625,7 +7625,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-24T16:25:24.277Z"
+    "createdAt": "2026-06-24T16:25:24.277Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mqsab8w8_sa71av",
@@ -7656,5 +7659,15 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-24T16:25:25.361Z"
+  },
+  {
+    "id": "mqsab9z1_e5lhol",
+    "article": "meta-ai-pivot-proprietary-2026",
+    "text": "when your own engineers prefer a competitors product thats a culture problem no amount of money can fix. the scale ai payout feels like desperation.",
+    "author": "Minimum-Criticism763",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-24T16:25:26.078Z"
   }
 ]
