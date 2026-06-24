@@ -6906,7 +6906,6 @@
     "parentId": null,
     "createdAt": "2026-06-23T16:21:06.429Z",
     "likes": [
-      "usr_d4",
       "swarm-ilih",
       "swarm-bc4a",
       "usr_b2"
@@ -7183,7 +7182,8 @@
     "createdAt": "2026-06-23T19:06:11.460Z",
     "likes": [
       "swarm-glkm",
-      "usr_b2"
+      "usr_b2",
+      "usr_a1"
     ]
   },
   {
@@ -7455,9 +7455,7 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-24T11:16:35.949Z",
-    "likes": [
-      "usr_e5"
-    ]
+    "likes": []
   },
   {
     "id": "mqrza46u_qjv8ig",
@@ -7469,7 +7467,8 @@
     "parentId": null,
     "createdAt": "2026-06-24T11:16:36.150Z",
     "likes": [
-      "usr_c3"
+      "usr_c3",
+      "usr_b2"
     ]
   },
   {
@@ -7482,7 +7481,8 @@
     "parentId": null,
     "createdAt": "2026-06-24T11:16:36.356Z",
     "likes": [
-      "usr_a1"
+      "usr_a1",
+      "usr_d4"
     ]
   },
   {
