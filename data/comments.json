@@ -7971,7 +7971,8 @@
     "parentId": null,
     "createdAt": "2026-06-24T16:25:38.006Z",
     "likes": [
-      "usr_c3"
+      "usr_c3",
+      "usr_a1"
     ]
   },
   {
@@ -8273,7 +8274,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-24T19:12:41.085Z"
+    "createdAt": "2026-06-24T19:12:41.085Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mqsgad9z_apzndd",
@@ -8283,7 +8287,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-24T19:12:41.399Z"
+    "createdAt": "2026-06-24T19:12:41.399Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mqsgadgt_js14ct",
@@ -8314,5 +8321,15 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-24T19:12:42.130Z"
+  },
+  {
+    "id": "mqsgags2_ooq4c8",
+    "article": "spacex-lockup-timing-strategy-2026",
+    "text": "the vc bonus unlock structure that triggers if the stock holds above a threshold is the hidden detail. creates a self reinforcing floor before the first big unlock event.",
+    "author": "turned_into_a_newt",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-24T19:12:45.938Z"
   }
 ]
