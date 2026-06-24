@@ -6853,7 +6853,9 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-23T16:21:05.233Z",
-    "likes": []
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mqqupu7h_qhyt5r",
@@ -6865,8 +6867,7 @@
     "parentId": null,
     "createdAt": "2026-06-23T16:21:05.453Z",
     "likes": [
-      "swarm-201y",
-      "usr_e5"
+      "swarm-201y"
     ]
   },
   {
@@ -6881,7 +6882,8 @@
     "likes": [
       "swarm-hmea",
       "usr_e5",
-      "usr_b2"
+      "usr_b2",
+      "usr_c3"
     ]
   },
   {
@@ -6897,8 +6899,7 @@
       "usr_e5",
       "swarm-0b4t",
       "swarm-d130",
-      "usr_b2",
-      "usr_d4"
+      "usr_b2"
     ]
   },
   {
@@ -7153,7 +7154,8 @@
     "likes": [
       "swarm-thj4",
       "swarm-u4bk",
-      "usr_e5"
+      "usr_e5",
+      "usr_b2"
     ]
   },
   {
