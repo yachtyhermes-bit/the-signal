@@ -6990,7 +6990,8 @@
     "createdAt": "2026-06-23T16:21:10.007Z",
     "likes": [
       "usr_d4",
-      "usr_c3"
+      "usr_c3",
+      "usr_a1"
     ]
   },
   {
@@ -7014,7 +7015,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-23T16:21:10.697Z"
+    "createdAt": "2026-06-23T16:21:10.697Z",
+    "likes": [
+      "usr_e5"
+    ]
   },
   {
     "id": "mqqupyi1_wrrwto",
@@ -7025,9 +7029,7 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-23T16:21:11.017Z",
-    "likes": [
-      "usr_a1"
-    ]
+    "likes": []
   },
   {
     "id": "mqqupzeo_u85h9r",
@@ -7597,5 +7599,15 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-24T11:16:43.557Z"
+  },
+  {
+    "id": "mqrzaa2i_8xm3xf",
+    "article": "hive-digital-ai-infrastructure-pivot-2026",
+    "text": "if the bell deal leads to more government contracts this could be massive. small position for now.",
+    "author": "yolo_my_401k",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-24T11:16:43.770Z"
   }
 ]
