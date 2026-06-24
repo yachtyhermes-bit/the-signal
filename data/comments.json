@@ -6784,9 +6784,7 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-23T16:21:02.262Z",
-    "likes": [
-      "usr_e5"
-    ]
+    "likes": []
   },
   {
     "id": "mqqupryi_h0hjga",
@@ -6798,7 +6796,8 @@
     "parentId": null,
     "createdAt": "2026-06-23T16:21:02.538Z",
     "likes": [
-      "usr_e5"
+      "usr_e5",
+      "usr_d4"
     ]
   },
   {
@@ -8266,7 +8265,8 @@
     "parentId": null,
     "createdAt": "2026-06-24T19:12:37.641Z",
     "likes": [
-      "usr_b2"
+      "usr_b2",
+      "usr_e5"
     ]
   },
   {
