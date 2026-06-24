@@ -6785,7 +6785,6 @@
     "parentId": null,
     "createdAt": "2026-06-23T16:21:02.262Z",
     "likes": [
-      "usr_d4",
       "usr_e5"
     ]
   },
@@ -6813,7 +6812,8 @@
     "createdAt": "2026-06-23T16:21:02.949Z",
     "likes": [
       "usr_d4",
-      "usr_c3"
+      "usr_c3",
+      "usr_a1"
     ]
   },
   {
@@ -8283,5 +8283,25 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-24T19:12:41.645Z"
+  },
+  {
+    "id": "mqsgadme_knmf1e",
+    "article": "micron-hbm-ai-memory-dominance",
+    "text": "just doing my weekly buy. hbm demand is structural not cyclical. boring predictable growth is exactly what i want in the portfolio.",
+    "author": "paycheck2paycheck",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-24T19:12:41.846Z"
+  },
+  {
+    "id": "mqsgadua_fmxic9",
+    "article": "micron-hbm-ai-memory-dominance",
+    "text": "finally a stock that moves like i remember from crypto. triple digit gains in a year feels familiar. holding because the supply is locked in and hyperscalers cant get enough.",
+    "author": "crypto_refugee_88",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-24T19:12:42.130Z"
   }
 ]
