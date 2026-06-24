@@ -8070,7 +8070,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-24T19:12:28.689Z"
+    "createdAt": "2026-06-24T19:12:28.689Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mqsga3qu_jz6bcu",
@@ -8080,7 +8083,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-24T19:12:29.046Z"
+    "createdAt": "2026-06-24T19:12:29.046Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mqsga3y4_8drgib",
@@ -8090,6 +8096,29 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-24T19:12:29.308Z"
+    "createdAt": "2026-06-24T19:12:29.308Z",
+    "likes": [
+      "usr_c3"
+    ]
+  },
+  {
+    "id": "mqsga65g_1v72d7",
+    "article": "palantir-commercial-ai-revenue-inflection-2026",
+    "text": "my company uses palantir for supply chain and its honestly the only enterprise software that actually delivers. the expansion cycle is real across the org.",
+    "author": "work_from_zoom",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-24T19:12:32.164Z"
+  },
+  {
+    "id": "mqsga6eb_3qxrvl",
+    "article": "palantir-commercial-ai-revenue-inflection-2026",
+    "text": "so the stock is down a ton while revenue doubled and margins went to the moon. the market is basically saying none of it matters. someone make it make sense.",
+    "author": "CarrotAwesome",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-24T19:12:32.483Z"
   }
 ]
