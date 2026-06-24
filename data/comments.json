@@ -7687,7 +7687,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-24T16:25:28.482Z"
+    "createdAt": "2026-06-24T16:25:28.482Z",
+    "likes": [
+      "usr_e5"
+    ]
   },
   {
     "id": "mqsabc0c_db8bjf",
@@ -7697,7 +7700,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-24T16:25:28.716Z"
+    "createdAt": "2026-06-24T16:25:28.716Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mqsabc5z_tkkvg7",
@@ -7718,5 +7724,25 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-24T16:25:29.366Z"
+  },
+  {
+    "id": "mqsabcya_7dl58q",
+    "article": "palantir-commercial-ai-revenue-inflection-2026",
+    "text": "govcon ai company with a massive pe. the commercial narrative is already priced like its won. retail gonna be exit liquidity when the rotation comes.",
+    "author": "SheriffBartholomew",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-24T16:25:29.938Z"
+  },
+  {
+    "id": "mqsabd6i_d937ws",
+    "article": "palantir-commercial-ai-revenue-inflection-2026",
+    "text": "if the us gov keeps buying and commercial keeps accelerating this is a generational compounder. small position now but adding.",
+    "author": "yolo_my_401k",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-24T16:25:30.234Z"
   }
 ]
