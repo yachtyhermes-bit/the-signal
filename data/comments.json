@@ -7638,7 +7638,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-24T16:25:24.680Z"
+    "createdAt": "2026-06-24T16:25:24.680Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mqsab958_gkvdxt",
@@ -7648,7 +7651,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-24T16:25:25.004Z"
+    "createdAt": "2026-06-24T16:25:25.004Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mqsab9f5_w7gnot",
@@ -7668,6 +7674,9 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-24T16:25:26.078Z"
+    "createdAt": "2026-06-24T16:25:26.078Z",
+    "likes": [
+      "usr_a1"
+    ]
   }
 ]
