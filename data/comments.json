@@ -6848,9 +6848,7 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-23T16:21:05.233Z",
-    "likes": [
-      "usr_a1"
-    ]
+    "likes": []
   },
   {
     "id": "mqqupu7h_qhyt5r",
@@ -6877,7 +6875,8 @@
     "createdAt": "2026-06-23T16:21:05.717Z",
     "likes": [
       "swarm-hmea",
-      "usr_e5"
+      "usr_e5",
+      "usr_b2"
     ]
   },
   {
@@ -6893,7 +6892,8 @@
       "usr_e5",
       "swarm-0b4t",
       "swarm-d130",
-      "usr_b2"
+      "usr_b2",
+      "usr_d4"
     ]
   },
   {
