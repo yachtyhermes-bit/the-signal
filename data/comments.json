@@ -6786,7 +6786,8 @@
     "createdAt": "2026-06-23T16:21:02.262Z",
     "likes": [
       "usr_d4",
-      "usr_e5"
+      "usr_e5",
+      "usr_b2"
     ]
   },
   {
@@ -6811,7 +6812,8 @@
     "createdAt": "2026-06-23T16:21:02.949Z",
     "likes": [
       "usr_d4",
-      "usr_e5"
+      "usr_e5",
+      "usr_c3"
     ]
   },
   {
@@ -6833,9 +6835,7 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-23T16:21:03.711Z",
-    "likes": [
-      "usr_b2"
-    ]
+    "likes": []
   },
   {
     "id": "mqqupu1d_eaubv7",
@@ -7078,7 +7078,8 @@
     "parentId": null,
     "createdAt": "2026-06-23T19:06:07.544Z",
     "likes": [
-      "usr_d4"
+      "usr_d4",
+      "usr_e5"
     ]
   },
   {
@@ -7385,5 +7386,25 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-24T11:16:33.455Z"
+  },
+  {
+    "id": "mqrza2an_us0qzz",
+    "article": "micron-hbm-ai-memory-dominance",
+    "text": "bought MU right before the drop naturally. but everyone keeps saying HBM demand is structural so i guess im holding. learning the hard way.",
+    "author": "noob_investor42",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-24T11:16:33.695Z"
+  },
+  {
+    "id": "mqrza2ho_5j93bj",
+    "article": "micron-hbm-ai-memory-dominance",
+    "text": "everyone is too bearish on memory semis right now. fading the crowd on MU feels right. the AI memory cycle has real legs.",
+    "author": "whohebe123",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-24T11:16:33.948Z"
   }
 ]
