@@ -7788,7 +7788,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-24T16:25:33.122Z"
+    "createdAt": "2026-06-24T16:25:33.122Z",
+    "likes": [
+      "usr_c3"
+    ]
   },
   {
     "id": "mqsabflh_3vu71l",
@@ -7798,7 +7801,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-24T16:25:33.365Z"
+    "createdAt": "2026-06-24T16:25:33.365Z",
+    "likes": [
+      "usr_e5"
+    ]
   },
   {
     "id": "mqsabfvo_nywysk",
@@ -7819,5 +7825,25 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-24T16:25:33.955Z"
+  },
+  {
+    "id": "mqsabi4z_xy3jbz",
+    "article": "micron-hbm-ai-memory-dominance",
+    "text": "micron overtaking samsung in hbm was the inflection point. at single digit forward earnings the street is still pricing this as a cyclical.",
+    "author": "turned_into_a_newt",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-24T16:25:36.659Z"
+  },
+  {
+    "id": "mqsabica_qzjo3y",
+    "article": "micron-hbm-ai-memory-dominance",
+    "text": "basically the only pure play on ai memory that trades on us exchanges. the hbm demand is structural not cyclical. grabbing some on the lunch break.",
+    "author": "tacotuesdaytrader",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-24T16:25:36.922Z"
   }
 ]
