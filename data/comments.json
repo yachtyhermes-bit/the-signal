@@ -8650,7 +8650,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-25T11:11:50.857Z"
+    "createdAt": "2026-06-25T11:11:50.857Z",
+    "likes": [
+      "usr_e5"
+    ]
   },
   {
     "id": "mqtejuwt_t4iajk",
@@ -8661,5 +8664,45 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-25T11:11:51.101Z"
+  },
+  {
+    "id": "mqtejy6b_ey7fu0",
+    "article": "micron-hbm-ai-memory-dominance",
+    "text": "the market still prices micron like its a cyclical commodity story. forward earnings are dirt cheap on a company with this kind of growth trajectory. playing the long game here. check back in a few years.",
+    "author": "CCWaterBug",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-25T11:11:55.331Z"
+  },
+  {
+    "id": "mqtejyce_7z7r5j",
+    "article": "micron-hbm-ai-memory-dominance",
+    "text": "just started learning about stocks and picked micron because i read AI needs fancy memory chips. its been going up a lot so is now a bad time to buy or should i wait for a dip",
+    "author": "first_time_caller99",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-25T11:11:55.550Z"
+  },
+  {
+    "id": "mqtejyim_74eb9b",
+    "article": "micron-hbm-ai-memory-dominance",
+    "text": "bought MU without really understanding what HBM even means. learning as i go but the chart looks strong. diamond hands i guess because i have no idea what im doing.",
+    "author": "noob_investor42",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-25T11:11:55.774Z"
+  },
+  {
+    "id": "mqtejyon_nlceuh",
+    "article": "micron-hbm-ai-memory-dominance",
+    "text": "my thesis is simple. hyperscalers cannot build AI capacity without high bandwidth memory. micron has supply locked up and customers booking capacity years ahead. valuation doesnt matter if the moat widens.",
+    "author": "thesis_driven_dan",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-25T11:11:55.991Z"
   }
 ]
