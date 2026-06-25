@@ -8924,7 +8924,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-25T16:28:44.580Z"
+    "createdAt": "2026-06-25T16:28:44.580Z",
+    "likes": [
+      "usr_e5"
+    ]
   },
   {
     "id": "mqtpve8i_f8zxke",
@@ -8955,5 +8958,25 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-25T16:28:46.276Z"
+  },
+  {
+    "id": "mqtpvfjc_glinin",
+    "article": "crowdstrike-falcon-ai-security-moat-2026",
+    "text": "my first stock ever and i picked crowdstrike because i heard they stop hackers. is now a good time with the split happening or should i wait. learning as i go. the concept makes sense to my non finance brain.",
+    "author": "first_time_caller99",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-25T16:28:46.824Z"
+  },
+  {
+    "id": "mqtpvfze_qirtau",
+    "article": "crowdstrike-falcon-ai-security-moat-2026",
+    "text": "yep",
+    "author": "ragnaroksunset",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-25T16:28:47.402Z"
   }
 ]
