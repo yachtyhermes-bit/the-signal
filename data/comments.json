@@ -8872,7 +8872,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-25T16:28:40.875Z"
+    "createdAt": "2026-06-25T16:28:40.875Z",
+    "likes": [
+      "usr_c3"
+    ]
   },
   {
     "id": "mqtpvbe0_0daque",
@@ -8882,7 +8885,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-25T16:28:41.448Z"
+    "createdAt": "2026-06-25T16:28:41.448Z",
+    "likes": [
+      "usr_e5"
+    ]
   },
   {
     "id": "mqtpvbya_sgp1uj",
@@ -8893,5 +8899,15 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-25T16:28:42.178Z"
+  },
+  {
+    "id": "mqtpvccz_jgefuj",
+    "article": "amd-mi400-ai-chip-comeback",
+    "text": "amds market cap is finally reflecting what theyve been building for years. data center is now the main character and the trajectory is clear. playing the long game here. check back in a few years and this looks cheap.",
+    "author": "CCWaterBug",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-25T16:28:42.707Z"
   }
 ]
