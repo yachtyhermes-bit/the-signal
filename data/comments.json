@@ -7701,7 +7701,8 @@
     "parentId": null,
     "createdAt": "2026-06-24T16:25:25.004Z",
     "likes": [
-      "usr_d4"
+      "usr_d4",
+      "usr_c3"
     ]
   },
   {
@@ -8072,7 +8073,9 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-24T19:12:27.561Z",
-    "likes": []
+    "likes": [
+      "usr_c3"
+    ]
   },
   {
     "id": "mqsga2zj_5uldua",
@@ -8084,7 +8087,6 @@
     "parentId": null,
     "createdAt": "2026-06-24T19:12:28.063Z",
     "likes": [
-      "usr_b2",
       "usr_a1"
     ]
   },
@@ -8098,8 +8100,7 @@
     "parentId": null,
     "createdAt": "2026-06-24T19:12:28.403Z",
     "likes": [
-      "usr_a1",
-      "usr_d4"
+      "usr_a1"
     ]
   },
   {
