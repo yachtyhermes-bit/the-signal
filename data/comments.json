@@ -8937,7 +8937,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-25T16:28:45.138Z"
+    "createdAt": "2026-06-25T16:28:45.138Z",
+    "likes": [
+      "usr_e5"
+    ]
   },
   {
     "id": "mqtpveo9_d3ngkb",
@@ -8957,7 +8960,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-25T16:28:46.276Z"
+    "createdAt": "2026-06-25T16:28:46.276Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mqtpvfjc_glinin",
@@ -8978,5 +8984,45 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-25T16:28:47.402Z"
+  },
+  {
+    "id": "mqtpvh3d_fcbzhp",
+    "article": "meta-ai-pivot-proprietary-2026",
+    "text": "bought meta for the llama narrative and paid some absurd amount. now they killed open source. my timing is legendary. you are welcome for the dip guys. bagholder reporting in. this is fine. everything is fine.",
+    "author": "bought_at_the_top",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-25T16:28:48.841Z"
+  },
+  {
+    "id": "mqtpvhik_f9sslt",
+    "article": "meta-ai-pivot-proprietary-2026",
+    "text": "the open source community just got used and discarded. meta cultivated goodwill for years then pulled the rug the second results got soft. american capitalism has become a joke. regular people always get wrecked when wall street demands returns.",
+    "author": "FEMA_Camp_Survivor",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-25T16:28:49.388Z"
+  },
+  {
+    "id": "mqtpvhxd_t4ukw7",
+    "article": "meta-ai-pivot-proprietary-2026",
+    "text": "so they spent years being the open source heroes and now theyre paying some random founder an absurd amount to build closed models. ok but seriously though someone explain the strategic vision here because it looks like panic.",
+    "author": "CarrotAwesome",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-25T16:28:49.921Z"
+  },
+  {
+    "id": "mqtpvic7_jgi0rv",
+    "article": "meta-ai-pivot-proprietary-2026",
+    "text": "this is literally every defi project that promised decentralization then went permissioned. spent years building community trust then rug pulled. at least meta has actual revenue unlike most of the crypto junk i used to hold. stocks are so slow though",
+    "author": "crypto_refugee_88",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-25T16:28:50.455Z"
   }
 ]
