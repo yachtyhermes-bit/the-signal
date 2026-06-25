@@ -7672,7 +7672,9 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-24T16:25:24.277Z",
-    "likes": []
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mqsab8w8_sa71av",
@@ -9024,5 +9026,25 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-25T16:28:50.455Z"
+  },
+  {
+    "id": "mqtpviqf_xv4e60",
+    "article": "meta-ai-pivot-proprietary-2026",
+    "text": "zuck spent years telling developers open source was the future of ai. famous last words. ive seen this movie before with every tech company that pivots the second monetization gets real. nothing ever changes on planet zuck.",
+    "author": "this_time_is_different",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-25T16:28:50.967Z"
+  },
+  {
+    "id": "mqtpvj54_i8mj7d",
+    "article": "meta-ai-pivot-proprietary-2026",
+    "text": "meta is still a cash machine. dont care about the open source drama. they have instagram and whatsapp printing money. whatever happens happens with their ai strategy. not checking til next quarter.",
+    "author": "westcoastcouch",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-25T16:28:51.496Z"
   }
 ]
