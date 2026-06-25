@@ -7540,7 +7540,6 @@
     "parentId": null,
     "createdAt": "2026-06-24T11:16:36.795Z",
     "likes": [
-      "usr_e5",
       "usr_a1",
       "usr_d4",
       "usr_b2"
@@ -7992,7 +7991,8 @@
     "parentId": null,
     "createdAt": "2026-06-24T16:25:42.379Z",
     "likes": [
-      "usr_a1"
+      "usr_a1",
+      "usr_e5"
     ]
   },
   {
@@ -8045,7 +8045,6 @@
     "parentId": null,
     "createdAt": "2026-06-24T16:25:44.000Z",
     "likes": [
-      "usr_b2",
       "usr_a1"
     ]
   },
@@ -8060,7 +8059,8 @@
     "createdAt": "2026-06-24T16:25:44.275Z",
     "likes": [
       "usr_d4",
-      "usr_b2"
+      "usr_b2",
+      "usr_a1"
     ]
   },
   {
