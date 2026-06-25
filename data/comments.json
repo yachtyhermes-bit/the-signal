@@ -7741,7 +7741,6 @@
     "createdAt": "2026-06-24T16:25:28.482Z",
     "likes": [
       "usr_e5",
-      "usr_b2",
       "usr_a1"
     ]
   },
@@ -7754,7 +7753,9 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-24T16:25:28.716Z",
-    "likes": []
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mqsabc5z_tkkvg7",
@@ -7767,8 +7768,7 @@
     "createdAt": "2026-06-24T16:25:28.919Z",
     "likes": [
       "usr_c3",
-      "usr_b2",
-      "usr_a1"
+      "usr_b2"
     ]
   },
   {
@@ -9466,5 +9466,15 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-25T19:06:31.253Z"
+  },
+  {
+    "id": "mqtviaof_nsomef",
+    "article": "palantir-commercial-ai-revenue-inflection-2026",
+    "text": "palantir down again. what could go wrong if i double down? this is either genius or stupid. update from last quarter: it was genius because i averaged down and now im green. but this time? who knows. yolo.",
+    "author": "whats_a_stop_loss",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-25T19:06:31.695Z"
   }
 ]
