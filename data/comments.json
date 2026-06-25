@@ -8492,7 +8492,8 @@
     "parentId": null,
     "createdAt": "2026-06-25T11:11:39.238Z",
     "likes": [
-      "usr_d4"
+      "usr_d4",
+      "usr_b2"
     ]
   },
   {
@@ -8505,7 +8506,6 @@
     "parentId": null,
     "createdAt": "2026-06-25T11:11:39.654Z",
     "likes": [
-      "usr_b2",
       "usr_d4",
       "usr_c3"
     ]
@@ -8519,7 +8519,9 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-25T11:11:39.993Z",
-    "likes": []
+    "likes": [
+      "usr_c3"
+    ]
   },
   {
     "id": "mqtejmkq_kwwyf7",
@@ -9015,7 +9017,8 @@
     "parentId": null,
     "createdAt": "2026-06-25T16:28:48.841Z",
     "likes": [
-      "usr_b2"
+      "usr_b2",
+      "usr_c3"
     ]
   },
   {
