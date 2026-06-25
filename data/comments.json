@@ -8541,7 +8541,8 @@
     "createdAt": "2026-06-25T11:11:40.551Z",
     "likes": [
       "usr_b2",
-      "usr_d4"
+      "usr_d4",
+      "usr_a1"
     ]
   },
   {
@@ -8992,7 +8993,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-25T16:28:48.841Z"
+    "createdAt": "2026-06-25T16:28:48.841Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mqtpvhik_f9sslt",
@@ -9002,7 +9006,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-25T16:28:49.388Z"
+    "createdAt": "2026-06-25T16:28:49.388Z",
+    "likes": [
+      "usr_e5"
+    ]
   },
   {
     "id": "mqtpvhxd_t4ukw7",
@@ -9032,7 +9039,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-25T16:28:50.967Z"
+    "createdAt": "2026-06-25T16:28:50.967Z",
+    "likes": [
+      "usr_c3"
+    ]
   },
   {
     "id": "mqtpvj54_i8mj7d",
@@ -9043,5 +9053,15 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-25T16:28:51.496Z"
+  },
+  {
+    "id": "mqtpvmoc_91dp20",
+    "article": "palantir-commercial-ai-revenue-inflection-2026",
+    "text": "commercial revenue acceleration is the headline nobody is talking about. the us commercial segment growing faster than most saas companies entire revenue base. margins are expanding while they reinvest. balance sheet looks clean. pe is actually reasonable here on a growth-adjusted basis.",
+    "author": "data_dependent_1",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-25T16:28:56.076Z"
   }
 ]
