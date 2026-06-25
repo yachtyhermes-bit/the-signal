@@ -8620,9 +8620,7 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-25T11:11:46.013Z",
-    "likes": [
-      "usr_d4"
-    ]
+    "likes": []
   },
   {
     "id": "mqtejtze_ysqnf5",
@@ -9068,7 +9066,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-25T16:28:56.076Z"
+    "createdAt": "2026-06-25T16:28:56.076Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mqtpvn5j_wqxl40",
@@ -9108,7 +9109,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-25T16:28:58.337Z"
+    "createdAt": "2026-06-25T16:28:58.337Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mqtpvou1_43bvay",
@@ -9119,5 +9123,15 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-25T16:28:58.873Z"
+  },
+  {
+    "id": "mqtpvrxa_iepwke",
+    "article": "googl-ai-everything-strategy-2026",
+    "text": "everyone is hyperventilating about talent leaving but google has the deepest bench in tech. losing a couple rockstars to anthropic is noise. the real story is cloud backlog growth and the fed environment supporting mega cap valuations. rates are the real story here.",
+    "author": "macro_dad_energy",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-25T16:29:02.878Z"
   }
 ]
