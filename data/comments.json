@@ -9117,7 +9117,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-25T16:28:57.217Z"
+    "createdAt": "2026-06-25T16:28:57.217Z",
+    "likes": [
+      "usr_c3"
+    ]
   },
   {
     "id": "mqtpvnz8_hgy65n",
@@ -9127,7 +9130,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-25T16:28:57.764Z"
+    "createdAt": "2026-06-25T16:28:57.764Z",
+    "likes": [
+      "usr_c3"
+    ]
   },
   {
     "id": "mqtpvof5_veyplp",
@@ -9139,7 +9145,8 @@
     "parentId": null,
     "createdAt": "2026-06-25T16:28:58.337Z",
     "likes": [
-      "usr_b2"
+      "usr_b2",
+      "usr_c3"
     ]
   },
   {
@@ -9437,7 +9444,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-25T19:06:30.447Z"
+    "createdAt": "2026-06-25T19:06:30.447Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mqtvi9we_6uxroc",
@@ -9478,5 +9488,15 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-25T19:06:31.695Z"
+  },
+  {
+    "id": "mqtvifr2_qqy870",
+    "article": "googl-ai-everything-strategy-2026",
+    "text": "so they lost a nobel laureate and a gemini co-lead in the same week and the stock dropped a quarter trillion in a day. ok but seriously though google still has the best ai infrastructure on earth and the cloud backlog is massive. the math aint mathing on the panic sell.",
+    "author": "CarrotAwesome",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-25T19:06:38.270Z"
   }
 ]
