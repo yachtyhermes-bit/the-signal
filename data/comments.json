@@ -7893,7 +7893,6 @@
     "likes": [
       "usr_c3",
       "usr_b2",
-      "usr_e5",
       "usr_d4"
     ]
   },
@@ -8234,7 +8233,9 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-24T19:12:35.922Z",
-    "likes": []
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mqsga9do_ddlxfa",
@@ -8246,8 +8247,7 @@
     "parentId": null,
     "createdAt": "2026-06-24T19:12:36.348Z",
     "likes": [
-      "usr_a1",
-      "usr_c3"
+      "usr_a1"
     ]
   },
   {
@@ -8273,8 +8273,7 @@
     "parentId": null,
     "createdAt": "2026-06-24T19:12:37.042Z",
     "likes": [
-      "usr_a1",
-      "usr_d4"
+      "usr_a1"
     ]
   },
   {
@@ -8288,7 +8287,8 @@
     "createdAt": "2026-06-24T19:12:37.287Z",
     "likes": [
       "usr_a1",
-      "usr_c3"
+      "usr_c3",
+      "usr_e5"
     ]
   },
   {
