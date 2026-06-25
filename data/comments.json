@@ -6826,7 +6826,6 @@
     "parentId": null,
     "createdAt": "2026-06-23T16:21:03.364Z",
     "likes": [
-      "usr_e5",
       "usr_c3"
     ]
   },
@@ -6842,7 +6841,8 @@
     "likes": [
       "usr_d4",
       "usr_b2",
-      "usr_a1"
+      "usr_a1",
+      "usr_c3"
     ]
   },
   {
@@ -7094,7 +7094,6 @@
     "parentId": null,
     "createdAt": "2026-06-23T19:06:07.544Z",
     "likes": [
-      "usr_d4",
       "usr_e5",
       "usr_c3"
     ]
@@ -7136,7 +7135,8 @@
     "parentId": null,
     "createdAt": "2026-06-23T19:06:08.486Z",
     "likes": [
-      "usr_c3"
+      "usr_c3",
+      "usr_b2"
     ]
   },
   {
