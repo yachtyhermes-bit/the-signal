@@ -6881,8 +6881,7 @@
     "likes": [
       "swarm-hmea",
       "usr_e5",
-      "usr_b2",
-      "usr_c3"
+      "usr_b2"
     ]
   },
   {
@@ -6895,7 +6894,6 @@
     "parentId": null,
     "createdAt": "2026-06-23T16:21:06.011Z",
     "likes": [
-      "usr_e5",
       "swarm-0b4t",
       "swarm-d130",
       "usr_b2",
@@ -6913,7 +6911,8 @@
     "createdAt": "2026-06-23T16:21:06.429Z",
     "likes": [
       "swarm-ilih",
-      "swarm-bc4a"
+      "swarm-bc4a",
+      "usr_d4"
     ]
   },
   {
@@ -7152,7 +7151,6 @@
       "swarm-thj4",
       "swarm-u4bk",
       "usr_e5",
-      "usr_b2",
       "usr_a1"
     ]
   },
@@ -8801,5 +8799,15 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-25T11:12:03.052Z"
+  },
+  {
+    "id": "mqtek4ex_3q7pat",
+    "article": "spacex-lockup-timing-strategy-2026",
+    "text": "seeing some unusual call activity building into the first unlock dates. someone is positioning for this to hold up. max pain suggests support well above current levels. gamma could pin this higher.",
+    "author": "option_flow_watcher",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-25T11:12:03.417Z"
   }
 ]
