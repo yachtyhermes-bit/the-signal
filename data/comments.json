@@ -7713,9 +7713,7 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-24T16:25:25.361Z",
-    "likes": [
-      "usr_d4"
-    ]
+    "likes": []
   },
   {
     "id": "mqsab9z1_e5lhol",
@@ -8067,7 +8065,9 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-24T19:12:27.561Z",
-    "likes": []
+    "likes": [
+      "usr_e5"
+    ]
   },
   {
     "id": "mqsga2zj_5uldua",
@@ -8079,7 +8079,8 @@
     "parentId": null,
     "createdAt": "2026-06-24T19:12:28.063Z",
     "likes": [
-      "usr_b2"
+      "usr_b2",
+      "usr_a1"
     ]
   },
   {
@@ -8091,7 +8092,9 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-24T19:12:28.403Z",
-    "likes": []
+    "likes": [
+      "usr_a1"
+    ]
   },
   {
     "id": "mqsga3gx_n4d4bv",
