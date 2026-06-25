@@ -7672,7 +7672,6 @@
     "parentId": null,
     "createdAt": "2026-06-24T16:25:24.277Z",
     "likes": [
-      "usr_a1",
       "usr_c3"
     ]
   },
@@ -7687,7 +7686,8 @@
     "createdAt": "2026-06-24T16:25:24.680Z",
     "likes": [
       "usr_b2",
-      "usr_a1"
+      "usr_a1",
+      "usr_e5"
     ]
   },
   {
@@ -7700,7 +7700,8 @@
     "parentId": null,
     "createdAt": "2026-06-24T16:25:25.004Z",
     "likes": [
-      "usr_b2"
+      "usr_b2",
+      "usr_d4"
     ]
   },
   {
