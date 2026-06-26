@@ -9923,7 +9923,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-26T11:04:34.914Z"
+    "createdAt": "2026-06-26T11:04:34.914Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mqutqd66_6j8wyc",
@@ -9933,7 +9936,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-26T11:04:35.118Z"
+    "createdAt": "2026-06-26T11:04:35.118Z",
+    "likes": [
+      "usr_a1"
+    ]
   },
   {
     "id": "mqutqdbt_28inob",
@@ -9943,6 +9949,19 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-26T11:04:35.321Z"
+    "createdAt": "2026-06-26T11:04:35.321Z",
+    "likes": [
+      "usr_d4"
+    ]
+  },
+  {
+    "id": "mqutqhhd_23755m",
+    "article": "rtx-defense-spending-surge-2026",
+    "text": "the defense supercycle is the biggest macro story nobody on wsb is talking about. nato spending targets, the pentagon budget blowing past a trillion, and rtx sitting on a backlog that goes out years. rates getting cut just makes this even better for capex heavy industrials. everyone is looking at ai while the real money is in missiles.",
+    "author": "macro_dad_energy",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-26T11:04:40.705Z"
   }
 ]
