@@ -3,11 +3,22 @@
 import { execSync, spawnSync } from 'child_process';
 import fs from 'fs';
 
-const CF_ACCOUNT_ID = process.env.CF_ACCOUNT_ID;
-const CF_API_TOKEN = process.env.CF_API_TOKEN;
+// Env var resolution: prefer non-empty values. Handles Vercel env where
+// CF_ACCOUNT_ID may be set to "" (empty string) masking the real CLOUDFLARE_ACCOUNT_ID.
+function envVal(...keys) {
+  for (const k of keys) {
+    const v = process.env[k];
+    if (v && v.trim()) return v.trim();
+  }
+  return '';
+}
+const CF_ACCOUNT_ID = envVal('CF_ACCOUNT_ID', 'CLOUDFLARE_ACCOUNT_ID');
+const CF_API_TOKEN = envVal('CF_API_TOKEN', 'CLOUDFLARE_API_TOKEN');
 const BUCKET = 'the-signal-audio';
 const VOICE = 'en-US-AndrewNeural';
 const TMP = '/tmp';
+// R2 key prefixes to try — supports both new (v2/) and legacy (root) uploads
+const R2_PREFIXES = ['v2/', ''];
 
 let edgeTTSInstalled = false;
 
@@ -60,15 +71,20 @@ asyncio.run(g())`;
 
 async function fetchFromR2(slug) {
   if (!CF_ACCOUNT_ID || !CF_API_TOKEN) return null;
-  try {
-    const key = `v2/${slug}.mp3`;
-    const r = await fetch(
-      `https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/r2/buckets/${BUCKET}/objects/${encodeURIComponent(key)}`,
-      { headers: { 'Authorization': `Bearer ${CF_API_TOKEN}` } }
-    );
-    if (!r.ok) return null;
-    return Buffer.from(await r.arrayBuffer());
-  } catch { return null; }
+  // Try all known key prefixes (v2/ for new uploads, root for legacy)
+  for (const prefix of R2_PREFIXES) {
+    try {
+      const key = `${prefix}${slug}.mp3`;
+      const r = await fetch(
+        `https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/r2/buckets/${BUCKET}/objects/${encodeURIComponent(key)}`,
+        { headers: { 'Authorization': `Bearer ${CF_API_TOKEN}` } }
+      );
+      if (r.ok) {
+        return Buffer.from(await r.arrayBuffer());
+      }
+    } catch { /* try next prefix */ }
+  }
+  return null;
 }
 
 async function uploadToR2(slug, audio) {

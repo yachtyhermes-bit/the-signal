@@ -33,8 +33,18 @@ async def gen_all():
             continue
         
         title = article.get('title', '')
-        summary = article.get('summary', '')
-        text = f"{title}. {summary}"
+        # Use full bodyHtml instead of just summary
+        body_html = article.get('bodyHtml', '')
+        if body_html:
+            import re
+            text = re.sub(r'<[^>]+>', ' ', body_html)
+            text = text.replace('&amp;', '&').replace('&lt;', '<').replace('&gt;', '>')
+            text = text.replace('&quot;', '"').replace('&#39;', "'").replace('&nbsp;', ' ')
+            text = re.sub(r'\s+', ' ', text).strip()
+            text = f"{title}. {text}"
+        else:
+            summary = article.get('summary', '')
+            text = f"{title}. {summary}"
         if len(text) < 50:
             continue
         

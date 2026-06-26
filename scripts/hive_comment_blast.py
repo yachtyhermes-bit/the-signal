@@ -113,16 +113,16 @@ PLANS = [
             ("whats_a_stop_loss", "palantir down again. what could go wrong if i double down? this is either genius or stupid. update from last quarter: it was genius because i averaged down and now im green. but this time? who knows. yolo.", None),
         ],
     },
-    # ── 5. GOOGL — Alphabet Talent Bleed Reality Check ──
+    # ── 5. RTX — Defense Spending Surge, Quarter-Trillion Market Cap ──
     {
-        "article": "googl-ai-everything-strategy-2026",
+        "article": "rtx-defense-spending-surge-2026",
         "comments": [
-            ("CarrotAwesome", "so they lost a nobel laureate and a gemini co-lead in the same week and the stock dropped a quarter trillion in a day. ok but seriously though google still has the best ai infrastructure on earth and the cloud backlog is massive. the math aint mathing on the panic sell.", None),
-            ("still_holding_2021", "still holding googl since way before the split. ive seen this movie before. talent leaves, stock drops, then they figure it out and rip higher. the search moat and cloud pipeline are too strong. one day this position pays off and i sell covered calls until then.", None),
-            ("night_shift_trader", "premarket was a bloodbath on the jumper news but the selling looks exhausted now. volume is drying up and the bid support feels like institutions are catching the knife. quiet in here tonight but that usually means the panic is over.", None),
-            ("tacotuesdaytrader", "quick buy on googl while i eat my lunch. the berkshire backing gives this a massive floor and the cloud numbers are ridiculous. people are overreacting to the talent news. back to work see yall. taking the family out if this bounces.", None),
-            ("fomo_king_420", "watched google drop all day yesterday and didnt buy. now im kicking myself because its already bouncing. too late to get in?? should have bought the panic. next time i swear i will actually click the button.", None),
-            ("paycheck2paycheck", "just bought another batch of googl with this weeks paycheck. talent leaves, business stays. cloud is growing like crazy and search prints money. boring and steady is exactly what i want in my taxable. set it and forget it.", None),
+            ("macro_dad_energy", "the defense supercycle is the biggest macro story nobody on wsb is talking about. nato spending targets, the pentagon budget blowing past a trillion, and rtx sitting on a backlog that goes out years. rates getting cut just makes this even better for capex heavy industrials. everyone is looking at ai while the real money is in missiles.", None),
+            ("noob_investor42", "bought rtx because my dad said defense stocks are safe. the backlog thing sounds crazy big though. is that really guaranteed money or can they cancel. my portfolio is a mess but this one feels solid lol.", None),
+            ("data_dependent_1", "the backlog growth is the real story here. defense backlog up almost a fifth year over year and theyre actually building capacity ahead of demand. balance sheet looks solid and the commercial aviation recovery gives them revenue diversity that lmt and noc dont have. forward multiple is reasonable for this kind of visibility.", None),
+            ("SheriffBartholomew", "rtx has been flat all year while the fundamentals scream buy. typical wall street pricing in last decades news while the world moves on. retail always late to the rotation. defense is printing money and the stock is treading water. that gap closes and when it does the big boys already loaded up.", None),
+            ("grillmaster_finance", "my brother in law works on the patriot systems and says they cant build them fast enough. governments are calling asking to move up delivery dates. bought some rtx for the kids college fund. good company good product. sipping a beer watching the ticker.", None),
+            ("option_flow_watcher", "unusual call activity on rtx all week. big block trades on the weekly expiry. someone knows something about a contract announcement. flow has been accumulating quietly. max pain is way below current price which usually means the smart money is positioning for a move up.", None),
         ],
     },
 ]
