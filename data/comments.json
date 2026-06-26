@@ -9854,7 +9854,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-26T11:04:28.344Z"
+    "createdAt": "2026-06-26T11:04:28.344Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mqutq83z_pcstay",
@@ -9865,5 +9868,25 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-26T11:04:28.559Z"
+  },
+  {
+    "id": "mqutqchy_oxgaqk",
+    "article": "palantir-commercial-ai-revenue-inflection-2026",
+    "text": "i just started investing and palantir keeps dropping even though the revenue is going up. is this normal. should i buy the dip or is something wrong with the company. learning as i go and this one confuses me the most.",
+    "author": "first_time_caller99",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-26T11:04:34.246Z"
+  },
+  {
+    "id": "mqutqcp4_67op00",
+    "article": "palantir-commercial-ai-revenue-inflection-2026",
+    "text": "the disconnect between the growth and the stock price is actually a gift for patient buyers. commercial adoption is accelerating and government contracts are as sticky as it gets. the europe headline noise is temporary. buying opportunity tbh.",
+    "author": "Latter-Possibility",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-26T11:04:34.504Z"
   }
 ]
