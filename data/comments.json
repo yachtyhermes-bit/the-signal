@@ -9708,7 +9708,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-26T11:04:17.643Z"
+    "createdAt": "2026-06-26T11:04:17.643Z",
+    "likes": [
+      "usr_e5"
+    ]
   },
   {
     "id": "mqutpzxf_9zqjqv",
@@ -9720,7 +9723,8 @@
     "parentId": null,
     "createdAt": "2026-06-26T11:04:17.955Z",
     "likes": [
-      "usr_b2"
+      "usr_b2",
+      "usr_d4"
     ]
   },
   {
@@ -9734,7 +9738,8 @@
     "createdAt": "2026-06-26T11:04:18.196Z",
     "likes": [
       "usr_a1",
-      "usr_b2"
+      "usr_b2",
+      "usr_d4"
     ]
   },
   {
@@ -10588,5 +10593,15 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-26T19:02:43.480Z"
+  },
+  {
+    "id": "mqvatu24_tz4o1i",
+    "article": "axon-public-safety-ai-moat-2026",
+    "text": "i know a few cops and they all say axon body cams are basically mandatory now but the real lock in is evidence.com. once a department stores all their footage there theyre never leaving. the ai transcription and auto redaction stuff is what gets chiefs to sign the upgrade contracts. the dip feels like people forgot the switching costs exist.",
+    "author": "work_from_zoom",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-26T19:03:10.444Z"
   }
 ]
