@@ -10104,7 +10104,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-26T16:31:13.868Z"
+    "createdAt": "2026-06-26T16:31:13.868Z",
+    "likes": [
+      "usr_a1"
+    ]
   },
   {
     "id": "mqv5efu3_uqw4xj",
@@ -10114,6 +10117,29 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-26T16:31:14.091Z"
+    "createdAt": "2026-06-26T16:31:14.091Z",
+    "likes": [
+      "usr_a1"
+    ]
+  },
+  {
+    "id": "mqv5eg06_6vjlum",
+    "article": "cerebras-wafer-scale-ai-chip-challenger-2026",
+    "text": "the selloff creates an opportunity for people who can look past the next quarter. the underlying partnerships are the strongest in the custom silicon space and training demand for alternative architectures is only going to grow. corrections are normal after big ipos. this is the healthy shakeout before the real move.",
+    "author": "Latter-Possibility",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-26T16:31:14.310Z"
+  },
+  {
+    "id": "mqv5eg6y_qvf8kr",
+    "article": "cerebras-wafer-scale-ai-chip-challenger-2026",
+    "text": "im not buying yet but im watching closely. the cesium deal and the aws integration are real milestones that take time to show in the financials. check back in a couple quarters when the transition starts maturing. playing the long game on this one.",
+    "author": "CCWaterBug",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-26T16:31:14.554Z"
   }
 ]
