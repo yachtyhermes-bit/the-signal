@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Signal — Responsive Demo (Mobile + Desktop)</title>
+<style>
+/* ═══════════════════════════════════════════════════════════
+   THE SIGNAL — RESPONSIVE DEMO
+   This file demonstrates how the EXACT same HTML markup
+   can look like readthesignal.net on mobile (narrow) and
+   like a MarketWatch-style financial site on desktop (wide).
+   
+   The MAGIC: mobile styles are the DEFAULT (no media query).
+   Desktop styles only activate @media (min-width: 1024px).
+   This means mobile visitors see the exact same thing they
+   do now on readthesignal.net.
+   ═══════════════════════════════════════════════════════════ */
+
+:root {
+  --bg: #0a0e14;
+  --bg-card: #11141c;
+  --bg-elevated: #161b24;
+  --text: #e5e7eb;
+  --text-muted: #8b95a5;
+  --gold: #f0b90b;
+  --gold-dim: rgba(240,185,11,0.15);
+  --blue: #3b82f6;
+  --green: #22c55e;
+  --red: #ef4444;
+  --border: #1f2430;
+  --border-light: #2a3040;
+  --radius: 10px;
+  --radius-sm: 6px;
+  --font: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+/* ═══════════ MOBILE LAYOUT (DEFAULT — matches readthesignal.net) ═══════════ */
+
+/* Utility bar — hidden on mobile */
+.utility-bar { display: none; }
+
+/* Header */
+.site-header {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 16px;
+}
+.header-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  max-width: 100%;
+}
+.logo {
+  font-weight: 800; font-size: 1.1rem; letter-spacing: -0.5px;
+  background: linear-gradient(135deg, var(--gold), #f59e0b);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.header-actions { display: flex; gap: 10px; }
+.header-actions button {
+  background: none; border: none; color: var(--text-muted);
+  font-size: 0.85rem; cursor: pointer; padding: 4px 8px;
+}
+
+/* Section nav — hidden on mobile */
+.section-nav { display: none; }
+
+/* Market data bar — simplified on mobile */
+.market-bar {
+  display: flex; overflow-x: auto; gap: 20px;
+  padding: 10px 16px; background: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.market-bar::-webkit-scrollbar { display: none; }
+.market-item {
+  display: flex; flex-direction: column; align-items: center;
+  white-space: nowrap; flex-shrink: 0;
+}
+.market-item .sym { font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; }
+.market-item .price { font-family: var(--font-mono); font-size: 0.8rem; font-weight: 600; }
+.market-item .change { font-size: 0.7rem; }
+.market-item .up { color: var(--green); }
+.market-item .down { color: var(--red); }
+
+/* Main layout — single column on mobile */
+.page-layout {
+  max-width: 100%;
+  padding: 0;
+}
+.main-content { 
+  display: flex; flex-direction: column;
+}
+.sidebar { display: none; }
+
+/* Hero */
+.hero-card {
+  margin: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+}
+.hero-card:hover { border-color: var(--border-light); }
+.hero-img {
+  width: 100%; height: 200px; object-fit: cover;
+  background: linear-gradient(135deg, #1a1e28, #0d1117);
+}
+.hero-body { padding: 16px; }
+.hero-label { 
+  display: inline-block; background: var(--gold-dim); color: var(--gold);
+  font-size: 0.65rem; font-weight: 700; text-transform: uppercase;
+  padding: 3px 8px; border-radius: 4px; margin-bottom: 8px; letter-spacing: 0.5px;
+}
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 0.7rem; color: var(--text-muted); margin-bottom: 6px;
+}
+.hero-tag .ticker { font-family: var(--font-mono); font-weight: 700; color: var(--text); }
+.hero-tag .sentiment { color: var(--green); font-weight: 600; }
+.hero-title { font-size: 1.15rem; font-weight: 700; line-height: 1.3; margin-bottom: 6px; }
+.hero-desc { font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.hero-meta { font-size: 0.7rem; color: var(--text-muted); margin-top: 10px; }
+
+/* Article grid — single column on mobile */
+.article-grid {
+  display: flex; flex-direction: column;
+  padding: 0 16px; gap: 12px;
+}
+.article-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden; cursor: pointer;
+}
+.article-card:hover { border-color: var(--border-light); }
+.article-card-img {
+  width: 100%; height: 160px; object-fit: cover;
+  background: linear-gradient(135deg, #1a1e28, #11141c);
+}
+.article-card-body { padding: 14px; }
+.article-card-cat {
+  font-size: 0.65rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.5px; margin-bottom: 6px;
+}
+.article-card-cat.ai { color: var(--blue); }
+.article-card-cat.cyber { color: #a855f7; }
+.article-card-cat.defense { color: #f97316; }
+.article-card-cat.space { color: #06b6d4; }
+.article-card-cat.megacap { color: var(--gold); }
+.article-card-title { font-size: 0.95rem; font-weight: 700; line-height: 1.3; margin-bottom: 4px; }
+.article-card-desc { font-size: 0.78rem; color: var(--text-muted); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.article-card-meta { font-size: 0.68rem; color: var(--text-muted); margin-top: 8px; display: flex; gap: 8px; }
+
+/* Section headers */
+.section-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 16px 10px;
+}
+.section-title { font-size: 1rem; font-weight: 700; }
+.section-link { font-size: 0.75rem; color: var(--gold); font-weight: 600; }
+
+/* Market movers — compact table on mobile */
+.movers-section {
+  margin: 0 16px; background: var(--bg-card);
+  border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 16px; overflow-x: auto;
+}
+.movers-title { font-size: 0.9rem; font-weight: 700; margin-bottom: 10px; }
+.movers-subtitle { font-size: 0.72rem; font-weight: 700; color: var(--text-muted); margin-bottom: 6px; text-transform: uppercase; }
+.movers-table { width: 100%; border-collapse: collapse; font-size: 0.75rem; }
+.movers-table th {
+  text-align: left; font-weight: 600; color: var(--text-muted);
+  font-size: 0.68rem; text-transform: uppercase; padding: 6px 8px;
+  border-bottom: 1px solid var(--border);
+}
+.movers-table td {
+  padding: 7px 8px; border-bottom: 1px solid rgba(31,36,48,0.5);
+  font-family: var(--font-mono); font-size: 0.73rem;
+}
+.movers-table .name { font-family: var(--font); font-size: 0.7rem; color: var(--text-muted); }
+.movers-table .up { color: var(--green); }
+.movers-table .down { color: var(--red); }
+.movers-link { display: block; text-align: right; font-size: 0.72rem; color: var(--gold); margin-top: 10px; }
+
+/* Highlights */
+.highlights-grid {
+  display: flex; overflow-x: auto; gap: 12px;
+  padding: 0 16px; -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.highlights-grid::-webkit-scrollbar { display: none; }
+.highlight-card {
+  flex: 0 0 240px; background: var(--bg-card);
+  border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 14px;
+}
+.highlight-ticker { font-family: var(--font-mono); font-weight: 800; font-size: 0.9rem; }
+.highlight-rating { font-size: 0.7rem; font-weight: 700; margin-bottom: 8px; }
+.highlight-rating.strong-buy { color: var(--green); }
+.highlight-rating.buy { color: #86efac; }
+.highlight-stat { display: flex; justify-content: space-between; font-size: 0.7rem; margin-bottom: 3px; }
+.highlight-stat .label { color: var(--text-muted); }
+.highlight-stat .value { font-weight: 600; }
+
+/* Newsletter */
+.newsletter {
+  margin: 24px 16px; padding: 24px; background: var(--bg-elevated);
+  border: 1px solid var(--border); border-radius: var(--radius); text-align: center;
+}
+.newsletter h2 { font-size: 1rem; margin-bottom: 4px; }
+.newsletter p { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 14px; }
+.newsletter-form { display: flex; gap: 8px; max-width: 400px; margin: 0 auto; }
+.newsletter-form input {
+  flex: 1; padding: 10px 14px; background: var(--bg);
+  border: 1px solid var(--border); border-radius: var(--radius-sm);
+  color: var(--text); font-size: 0.85rem;
+}
+.newsletter-form button {
+  padding: 10px 20px; background: var(--gold); color: #000;
+  border: none; border-radius: var(--radius-sm); font-weight: 700;
+  font-size: 0.85rem; cursor: pointer;
+}
+
+/* Footer — stacked on mobile */
+.site-footer {
+  background: var(--bg-card); border-top: 1px solid var(--border);
+  padding: 32px 16px; margin-top: 32px;
+}
+.footer-grid {
+  display: flex; flex-direction: column; gap: 24px;
+}
+.footer-brand .logo { font-size: 1.3rem; margin-bottom: 8px; }
+.footer-brand p { font-size: 0.78rem; color: var(--text-muted); line-height: 1.5; }
+.footer-col h4 { font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; letter-spacing: 0.5px; }
+.footer-col a { display: block; font-size: 0.78rem; color: var(--text); padding: 3px 0; }
+.footer-col a:hover { color: var(--gold); }
+.footer-bottom {
+  margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border);
+  font-size: 0.68rem; color: var(--text-muted);
+}
+.footer-bottom p { margin-bottom: 4px; }
+
+/* ═══════════ TWEAKS BAR ═══════════ */
+.tweaks-bar {
+  position: fixed; bottom: 16px; right: 16px; z-index: 999;
+  background: var(--bg-elevated); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 8px 12px;
+  display: flex; align-items: center; gap: 10px;
+  font-size: 0.75rem;
+}
+.tweaks-bar label { color: var(--text-muted); font-weight: 600; }
+.tweaks-bar select {
+  background: var(--bg); color: var(--text); border: 1px solid var(--border);
+  border-radius: 4px; padding: 4px 8px; font-size: 0.75rem; cursor: pointer;
+}
+.tweaks-badge {
+  background: var(--gold-dim); color: var(--gold);
+  padding: 2px 8px; border-radius: 4px; font-size: 0.65rem; font-weight: 700;
+}
+.tweaks-badge.desktop { display: none; }
+
+/* ═══════════════════════════════════════════════════════════
+   DESKTOP LAYOUT
+   Everything below only activates at ≥1024px.
+   Nothing above is touched — mobile stays exactly the same.
+   ═══════════════════════════════════════════════════════════ */
+
+@media (min-width: 1024px) {
+
+  .tweaks-badge.mobile { display: none; }
+  .tweaks-badge.desktop { display: inline; }
+
+  /* Show utility bar */
+  .utility-bar {
+    display: flex; align-items: center; justify-content: space-between;
+    background: #05080c; padding: 6px 24px; font-size: 0.68rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .utility-bar .network-links { display: flex; gap: 16px; }
+  .utility-bar .network-links a { color: var(--text-muted); font-weight: 600; letter-spacing: 0.5px; }
+  .utility-bar .network-links a:hover { color: var(--text); }
+  .utility-bar .user-links { display: flex; gap: 16px; }
+  .utility-bar .user-links a { color: var(--text-muted); font-size: 0.7rem; }
+  .utility-bar .user-links a.subscribe { color: var(--gold); font-weight: 600; }
+
+  /* Wider header */
+  .site-header { padding: 14px 24px; }
+  .header-inner { max-width: 1400px; margin: 0 auto; }
+  .logo { font-size: 1.3rem; }
+  .header-nav {
+    display: flex; gap: 20px; align-items: center;
+  }
+  .header-nav a {
+    font-size: 0.78rem; font-weight: 600; color: var(--text-muted);
+    transition: color 0.15s;
+  }
+  .header-nav a:hover { color: var(--text); }
+
+  /* Show section nav */
+  .section-nav {
+    display: flex; align-items: center; gap: 4px;
+    background: var(--bg-card); border-bottom: 1px solid var(--border);
+    padding: 0 24px; overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .section-nav::-webkit-scrollbar { display: none; }
+  .section-nav a {
+    padding: 10px 14px; font-size: 0.73rem; font-weight: 600;
+    color: var(--text-muted); white-space: nowrap; border-bottom: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .section-nav a:hover, .section-nav a.active {
+    color: var(--text); border-bottom-color: var(--gold);
+  }
+  .section-nav a.premium-link { color: var(--gold); }
+
+  /* Market bar — wider, tabbed */
+  .market-bar {
+    justify-content: center; gap: 32px;
+    padding: 12px 24px;
+  }
+  .market-tabs {
+    display: flex; justify-content: center; gap: 2px;
+    background: var(--bg-card); padding: 8px 24px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .market-tab {
+    padding: 8px 16px; font-size: 0.7rem; font-weight: 700;
+    color: var(--text-muted); cursor: pointer; border-bottom: 2px solid transparent;
+    text-transform: uppercase; letter-spacing: 0.5px;
+    background: none; border-top: none; border-left: none; border-right: none;
+  }
+  .market-tab.active { color: var(--text); border-bottom-color: var(--gold); }
+  .market-tab:hover { color: var(--text); }
+  .premium-pill {
+    margin-left: auto;
+    background: var(--gold-dim); color: var(--gold);
+    padding: 6px 14px; border-radius: 20px; font-size: 0.68rem;
+    font-weight: 700; cursor: pointer; border: none;
+  }
+
+  /* Page layout — two columns */
+  .page-layout {
+    max-width: 1400px; margin: 0 auto;
+    display: flex; gap: 24px; padding: 24px;
+  }
+  .main-content { flex: 1; min-width: 0; }
+  .sidebar {
+    display: block; width: 320px; flex-shrink: 0;
+    display: flex; flex-direction: column; gap: 20px;
+  }
+
+  /* Hero — larger */
+  .hero-card { margin: 0 0 24px 0; display: flex; flex-direction: row; }
+  .hero-img { width: 480px; height: 340px; flex-shrink: 0; }
+  .hero-body { padding: 24px; display: flex; flex-direction: column; justify-content: center; }
+  .hero-title { font-size: 1.5rem; }
+  .hero-desc { font-size: 0.88rem; -webkit-line-clamp: 4; }
+
+  /* Article grid — 3 columns */
+  .article-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    padding: 0; gap: 16px; margin-bottom: 24px;
+  }
+  .article-card-img { height: 140px; }
+
+  /* Section layout */
+  .section-header { padding: 24px 0 12px; }
+  .section-title { font-size: 1.1rem; }
+
+  /* Movers section */
+  .movers-section { margin: 0 0 24px 0; }
+  .movers-columns { display: flex; gap: 24px; }
+  .movers-col { flex: 1; }
+
+  /* Highlights — horizontal scroll cards */
+  .highlights-grid { padding: 0; margin-bottom: 24px; }
+  .highlight-card { flex: 0 0 220px; }
+
+  /* Category grids */
+  .category-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 16px; margin-bottom: 24px;
+  }
+
+  /* Newsletter */
+  .newsletter { margin: 24px 0; }
+
+  /* Footer — grid */
+  .footer-grid {
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px;
+  }
+
+  /* Sidebar widgets */
+  .sidebar-widget {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 16px;
+  }
+  .sidebar-widget h3 {
+    font-size: 0.8rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.5px; margin-bottom: 12px; padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .sidebar-widget h3 .icon { margin-right: 6px; }
+
+  .trending-list { list-style: none; counter-reset: trending; }
+  .trending-list li {
+    counter-increment: trending; padding: 8px 0; border-bottom: 1px solid rgba(31,36,48,0.5);
+    display: flex; gap: 10px;
+  }
+  .trending-list li::before {
+    content: counter(trending); color: var(--gold); font-weight: 800;
+    font-size: 1rem; min-width: 20px; line-height: 1.4;
+  }
+  .trending-list a { font-size: 0.78rem; font-weight: 600; line-height: 1.4; }
+  .trending-list a:hover { color: var(--gold); }
+
+  .scorecard-table { width: 100%; border-collapse: collapse; font-size: 0.73rem; }
+  .scorecard-table td { padding: 6px 4px; border-bottom: 1px solid rgba(31,36,48,0.3); }
+  .scorecard-table .sym { font-family: var(--font-mono); font-weight: 700; }
+  .scorecard-table .score { font-family: var(--font-mono); color: var(--gold); font-weight: 700; text-align: right; }
+  .scorecard-table .sentiment { font-size: 0.65rem; text-align: right; }
+
+  .watchlist-table { width: 100%; border-collapse: collapse; font-size: 0.75rem; }
+  .watchlist-table td { padding: 5px 4px; border-bottom: 1px solid rgba(31,36,48,0.3); }
+  .watchlist-table .sym { font-family: var(--font-mono); font-weight: 700; }
+  .watchlist-table .wl-price { font-family: var(--font-mono); text-align: right; }
+
+  .premium-cta {
+    background: linear-gradient(135deg, rgba(240,185,11,0.1), rgba(240,185,11,0.05));
+    border: 1px solid rgba(240,185,11,0.2);
+    padding: 20px; border-radius: var(--radius); text-align: center;
+  }
+  .premium-cta h3 { border-bottom: none; color: var(--gold); margin-bottom: 8px; }
+  .premium-cta p { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 14px; line-height: 1.5; }
+  .premium-cta button {
+    width: 100%; padding: 10px; background: var(--gold); color: #000;
+    border: none; border-radius: var(--radius-sm); font-weight: 700;
+    font-size: 0.8rem; cursor: pointer;
+  }
+  .premium-cta button:hover { opacity: 0.9; }
+
+  .news-list { list-style: none; }
+  .news-list li { padding: 8px 0; border-bottom: 1px solid rgba(31,36,48,0.3); }
+  .news-list a { font-size: 0.75rem; font-weight: 600; line-height: 1.4; display: block; }
+  .news-list a:hover { color: var(--gold); }
+  .news-list .time { font-size: 0.65rem; color: var(--text-muted); display: block; margin-bottom: 2px; }
+}
+
+/* ═══════════ LARGER DESKTOP ═══════════ */
+@media (min-width: 1300px) {
+  .article-grid { grid-template-columns: repeat(4, 1fr); }
+  .hero-img { width: 560px; height: 380px; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ═══════════ UTILITY BAR (desktop only) ═══════════ -->
+<div class="utility-bar">
+  <div class="network-links">
+    <a href="#">THE SIGNAL</a>
+    <a href="#" style="opacity:0.4">WSJ</a>
+    <a href="#" style="opacity:0.4">BARRON'S</a>
+    <a href="#" style="opacity:0.4">MARKETWATCH</a>
+    <a href="#" style="opacity:0.4">IBD</a>
+  </div>
+  <div class="user-links">
+    <a href="#">🔍 Search</a>
+    <a href="#">Sign In</a>
+    <a href="#" class="subscribe">Subscribe</a>
+  </div>
+</div>
+
+<!-- ═══════════ HEADER ═══════════ -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#" class="logo">THE SIGNAL</a>
+    <nav class="header-nav" style="display:none">
+      <a href="#">AI</a><a href="#">Cyber</a><a href="#">Defense</a>
+      <a href="#">Space</a><a href="#">Mega-Cap</a><a href="#">Quantum</a>
+      <a href="#">AI Power</a><a href="#">ETFs</a><a href="#">Stocks</a>
+      <a href="#" style="color:var(--gold)">Premium</a>
+    </nav>
+    <div class="header-actions">
+      <button>🔍</button><button>Sign In</button>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════ SECTION NAV (desktop only) ═══════════ -->
+<div class="section-nav">
+  <a href="#" class="active">Home</a>
+  <a href="#">Latest</a>
+  <a href="#">AI</a><a href="#">Cyber</a><a href="#">Defense</a>
+  <a href="#">Space</a><a href="#">Mega-Cap</a><a href="#">Quantum</a>
+  <a href="#">AI Power</a><a href="#">ETFs</a>
+  <!-- <a href="#">Stock Pages</a><a href="#">Scorecard</a><a href="#">Hive</a> -->
+  <button class="premium-pill">🔒 Premium Tools</button>
+</div>
+
+<!-- ═══════════ MARKET DATA BAR ═══════════ -->
+<div class="market-tabs" style="display:none">
+  <button class="market-tab active">US</button>
+  <button class="market-tab">Europe</button>
+  <button class="market-tab">Asia</button>
+  <button class="market-tab">FX</button>
+  <button class="market-tab">Rates</button>
+  <button class="market-tab">Futures</button>
+  <button class="market-tab">Crypto</button>
+</div>
+<div class="market-bar">
+  <div class="market-item"><span class="sym">NVDA</span><span class="price">$224.55</span><span class="change up">+6.35%</span></div>
+  <div class="market-item"><span class="sym">PLTR</span><span class="price">$162.45</span><span class="change up">+3.78%</span></div>
+  <div class="market-item"><span class="sym">AVGO</span><span class="price">$460.80</span><span class="change up">+3.14%</span></div>
+  <div class="market-item"><span class="sym">AMD</span><span class="price">$513.52</span><span class="change down">-0.50%</span></div>
+  <div class="market-item"><span class="sym">GOOGL</span><span class="price">$377.33</span><span class="change down">-0.79%</span></div>
+  <div class="market-item"><span class="sym">META</span><span class="price">$607.56</span><span class="change down">-3.94%</span></div>
+  <div class="market-item"><span class="sym">DOW</span><span class="price">42,831</span><span class="change up">+0.32%</span></div>
+  <div class="market-item"><span class="sym">S&P 500</span><span class="price">6,268</span><span class="change up">+0.45%</span></div>
+  <div class="market-item"><span class="sym">NASDAQ</span><span class="price">21,890</span><span class="change up">+0.51%</span></div>
+  <div class="market-item"><span class="sym">BTC</span><span class="price">$104,200</span><span class="change up">+1.2%</span></div>
+</div>
+
+<!-- ═══════════ PAGE LAYOUT ═══════════ -->
+<div class="page-layout">
+
+  <!-- ── MAIN CONTENT ── -->
+  <main class="main-content">
+
+    <!-- Hero -->
+    <article class="hero-card">
+      <div class="hero-img" style="background:linear-gradient(135deg,#0d1b2a,#1b2838,#0d1117);display:flex;align-items:center;justify-content:center;font-size:3rem;">🚀</div>
+      <div class="hero-body">
+        <span class="hero-label">SIGNAL DEEP DIVE</span>
+        <div class="hero-tag"><span class="ticker">$SPCX</span><span class="sentiment">▲ Bullish</span></div>
+        <h1 class="hero-title">The SpaceX Lockup Calendar: When To Buy $SPCX</h1>
+        <p class="hero-desc">SpaceX's record-shattering IPO saw the stock surge past $225 before settling back. But with under 5% float and a complex 16-date lockup structure releasing shares through June 2027, the real opportunity is in understanding the calendar.</p>
+        <div class="hero-meta">Jun 22, 2026 · 4 min read</div>
+      </div>
+    </article>
+
+    <!-- Sub-hero grid -->
+    <div class="article-grid">
+      <article class="article-card">
+        <div class="article-card-img" style="background:linear-gradient(135deg,#1a1025,#251a35)"></div>
+        <div class="article-card-body">
+          <div class="article-card-cat cyber">Cyber</div>
+          <h3 class="article-card-title">Marvell Crashed the S&P 500 Today</h3>
+          <p class="article-card-desc">Marvell just joined the S&P 500. Its stock tripled in 2026. Jensen Huang called it the next trillion-dollar chipmaker.</p>
+          <div class="article-card-meta"><span>$MRVL</span><span>5 min</span></div>
+        </div>
+      </article>
+      <article class="article-card">
+        <div class="article-card-img" style="background:linear-gradient(135deg,#1a2510,#25351a)"></div>
+        <div class="article-card-body">
+          <div class="article-card-cat ai">AI</div>
+          <h3 class="article-card-title">The Bitcoin Miner That Became an AI Cloud Provider</h3>
+          <p class="article-card-desc">HIVE Digital Technologies stock surged 20% after unveiling a $220M GPU cloud contract.</p>
+          <div class="article-card-meta"><span>$HIVE</span><span>5 min</span></div>
+        </div>
+      </article>
+      <article class="article-card">
+        <div class="article-card-img" style="background:linear-gradient(135deg,#251a10,#35251a)"></div>
+        <div class="article-card-body">
+          <div class="article-card-cat defense">Defense</div>
+          <h3 class="article-card-title">MDA Space: The Arms Dealer of the Orbital Economy</h3>
+          <p class="article-card-desc">MDA Space posted Q1 2026 revenue of $464.1M with a fortress $3.7B backlog.</p>
+          <div class="article-card-meta"><span>$MDA</span><span>6 min</span></div>
+        </div>
+      </article>
+    </div>
+
+    <!-- S&P 500 Movers -->
+    <section class="movers-section">
+      <div class="movers-title">📈 S&P 500 Movers</div>
+      <div class="movers-columns">
+        <div class="movers-col">
+          <div class="movers-subtitle">▲ Leaders</div>
+          <table class="movers-table">
+            <tr><th>SYM</th><th>NAME</th><th>PRICE</th><th>CHG</th><th>%</th></tr>
+            <tr><td>NVDA</td><td class="name">NVIDIA Corp</td><td>$224.55</td><td class="up">+$13.42</td><td class="up">+6.35%</td></tr>
+            <tr><td>MU</td><td class="name">Micron Technology</td><td>$1,036.95</td><td class="up">+$65.95</td><td class="up">+6.79%</td></tr>
+            <tr><td>PLTR</td><td class="name">Palantir Technologies</td><td>$162.45</td><td class="up">+$5.92</td><td class="up">+3.78%</td></tr>
+            <tr><td>AVGO</td><td class="name">Broadcom Inc</td><td>$460.80</td><td class="up">+$14.02</td><td class="up">+3.14%</td></tr>
+            <tr><td>MSFT</td><td class="name">Microsoft Corp</td><td>$460.77</td><td class="up">+$10.54</td><td class="up">+2.34%</td></tr>
+          </table>
+        </div>
+        <div class="movers-col">
+          <div class="movers-subtitle">▼ Laggards</div>
+          <table class="movers-table">
+            <tr><th>SYM</th><th>NAME</th><th>PRICE</th><th>CHG</th><th>%</th></tr>
+            <tr><td>META</td><td class="name">Meta Platforms</td><td>$607.56</td><td class="down">-$24.86</td><td class="down">-3.94%</td></tr>
+            <tr><td>TSLA</td><td class="name">Tesla Inc</td><td>$420.19</td><td class="down">-$15.60</td><td class="down">-3.58%</td></tr>
+            <tr><td>AMZN</td><td class="name">Amazon.com Inc</td><td>$262.42</td><td class="down">-$8.23</td><td class="down">-3.04%</td></tr>
+            <tr><td>GOOGL</td><td class="name">Alphabet Inc</td><td>$377.33</td><td class="down">-$3.00</td><td class="down">-0.79%</td></tr>
+            <tr><td>AMD</td><td class="name">Adv. Micro Devices</td><td>$513.52</td><td class="down">-$2.58</td><td class="down">-0.50%</td></tr>
+          </table>
+        </div>
+      </div>
+      <a href="#" class="movers-link">Visit Market Data Center →</a>
+    </section>
+
+    <!-- AI Section -->
+    <div class="section-header"><h2 class="section-title">🤖 AI</h2><a href="#" class="section-link">See All AI →</a></div>
+    <div class="article-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))">
+      <article class="article-card">
+        <div class="article-card-img" style="background:linear-gradient(135deg,#0a1a2a,#1a2a3a)"></div>
+        <div class="article-card-body">
+          <div class="article-card-cat ai">AI</div>
+          <h3 class="article-card-title">Half the AI Data Center Budget Goes to Cooling</h3>
+          <p class="article-card-desc">Vertiv's $15B backlog and Nvidia Vera Rubin lock-in.</p>
+          <div class="article-card-meta"><span>$VRT</span><span>1 min</span></div>
+        </div>
+      </article>
+      <article class="article-card">
+        <div class="article-card-img" style="background:linear-gradient(135deg,#1a0a2a,#2a1a3a)"></div>
+        <div class="article-card-body">
+          <div class="article-card-cat ai">AI</div>
+          <h3 class="article-card-title">IREN Was a Bitcoin Miner. Then It Built Something Wall Street Couldn't Ignore</h3>
+          <p class="article-card-desc">From mining rigs to AI data centers.</p>
+          <div class="article-card-meta"><span>$IREN</span><span>4 min</span></div>
+        </div>
+      </article>
+      <article class="article-card">
+        <div class="article-card-img" style="background:linear-gradient(135deg,#0a2a1a,#1a3a2a)"></div>
+        <div class="article-card-body">
+          <div class="article-card-cat ai">AI</div>
+          <h3 class="article-card-title">Nvidia's Vera Rubin Superchip: What Investors Need to Know</h3>
+          <p class="article-card-desc">Next-gen architecture roadmap analysis.</p>
+          <div class="article-card-meta"><span>$NVDA</span><span>3 min</span></div>
+        </div>
+      </article>
+      <article class="article-card">
+        <div class="article-card-img" style="background:linear-gradient(135deg,#2a1a0a,#3a2a1a)"></div>
+        <div class="article-card-body">
+          <div class="article-card-cat ai">AI</div>
+          <h3 class="article-card-title">Why Custom ASICs Are the Next Trillion-Dollar Opportunity</h3>
+          <p class="article-card-desc">Broadcom and Marvell lead the custom chip race.</p>
+          <div class="article-card-meta"><span>$AVGO</span><span>4 min</span></div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Defense Section -->
+    <div class="section-header"><h2 class="section-title">⚔️ Defense</h2><a href="#" class="section-link">See All Defense →</a></div>
+    <div class="article-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))">
+      <article class="article-card">
+        <div class="article-card-img" style="background:linear-gradient(135deg,#2a1a0a,#3a2a1a)"></div>
+        <div class="article-card-body">
+          <div class="article-card-cat defense">Defense</div>
+          <h3 class="article-card-title">The Hypersonic Arms Race: Defense Stocks Poised for Breakout</h3>
+          <p class="article-card-desc">Raytheon and Lockheed compete for next-gen contracts.</p>
+          <div class="article-card-meta"><span>$RTX</span><span>5 min</span></div>
+        </div>
+      </article>
+      <article class="article-card">
+        <div class="article-card-img" style="background:linear-gradient(135deg,#1a2a0a,#2a3a1a)"></div>
+        <div class="article-card-body">
+          <div class="article-card-cat defense">Defense</div>
+          <h3 class="article-card-title">Palantir's Defense AI Contracts Are Hitting Escape Velocity</h3>
+          <p class="article-card-desc">$2.4B in new DoD contracts signals platform dominance.</p>
+          <div class="article-card-meta"><span>$PLTR</span><span>3 min</span></div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Signal Highlights -->
+    <div class="section-header"><h2 class="section-title">⚡ Signal Highlights</h2></div>
+    <div class="highlights-grid">
+      <div class="highlight-card">
+        <div class="highlight-ticker">AXON</div>
+        <div class="highlight-rating strong-buy">Strong Buy</div>
+        <div class="highlight-stat"><span class="label">Fair Value</span><span class="value">$788.50</span></div>
+        <div class="highlight-stat"><span class="label">Current</span><span class="value">$612.33</span></div>
+        <div class="highlight-stat"><span class="label">Upside</span><span class="value" style="color:var(--green)">+28.8%</span></div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-ticker">MSFT</div>
+        <div class="highlight-rating strong-buy">Strong Buy</div>
+        <div class="highlight-stat"><span class="label">Fair Value</span><span class="value">$568.00</span></div>
+        <div class="highlight-stat"><span class="label">Current</span><span class="value">$460.77</span></div>
+        <div class="highlight-stat"><span class="label">Upside</span><span class="value" style="color:var(--green)">+23.3%</span></div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-ticker">SOFI</div>
+        <div class="highlight-rating buy">Buy</div>
+        <div class="highlight-stat"><span class="label">Fair Value</span><span class="value">$24.80</span></div>
+        <div class="highlight-stat"><span class="label">Current</span><span class="value">$18.92</span></div>
+        <div class="highlight-stat"><span class="label">Upside</span><span class="value" style="color:var(--green)">+31.1%</span></div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-ticker">ZS</div>
+        <div class="highlight-rating buy">Buy</div>
+        <div class="highlight-stat"><span class="label">Fair Value</span><span class="value">$268.00</span></div>
+        <div class="highlight-stat"><span class="label">Current</span><span class="value">$209.45</span></div>
+        <div class="highlight-stat"><span class="label">Upside</span><span class="value" style="color:var(--green)">+28.0%</span></div>
+      </div>
+    </div>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+      <h2>Get the Signal in your inbox</h2>
+      <p>Market intelligence before the market moves.</p>
+      <form class="newsletter-form" onsubmit="return false">
+        <input type="email" placeholder="your@email.com">
+        <button>Subscribe</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ── SIDEBAR (desktop only) ── -->
+  <aside class="sidebar">
+
+    <!-- Trending Now -->
+    <div class="sidebar-widget">
+      <h3><span class="icon">🔥</span>Trending Now</h3>
+      <ol class="trending-list">
+        <li><a href="#">S&P 500 enters correction territory as AI rout deepens</a></li>
+        <li><a href="#">Marvell joins S&P 500, Jensen Huang says it's a trillion-dollar company</a></li>
+        <li><a href="#">Bitcoin miners pivot to AI cloud — HIVE stock surges 20%</a></li>
+        <li><a href="#">Don't Overlook Midstream Energy, says Barron's</a></li>
+        <li><a href="#">Vertiv proves it owns the AI cooling lane — $15B backlog</a></li>
+      </ol>
+    </div>
+
+    <!-- Signal Scorecard -->
+    <div class="sidebar-widget">
+      <h3><span class="icon">📊</span>Signal Scorecard</h3>
+      <table class="scorecard-table">
+        <tr><td class="sym">NVDA</td><td class="score">92</td><td class="sentiment" style="color:var(--green)">Bullish</td></tr>
+        <tr><td class="sym">PLTR</td><td class="score">88</td><td class="sentiment" style="color:var(--green)">Bullish</td></tr>
+        <tr><td class="sym">AVGO</td><td class="score">85</td><td class="sentiment" style="color:var(--green)">Bullish</td></tr>
+        <tr><td class="sym">META</td><td class="score">72</td><td class="sentiment" style="color:var(--gold)">Neutral</td></tr>
+        <tr><td class="sym">AMD</td><td class="score">68</td><td class="sentiment" style="color:var(--gold)">Neutral</td></tr>
+        <tr><td class="sym">VRT</td><td class="score">90</td><td class="sentiment" style="color:var(--green)">Bullish</td></tr>
+        <tr><td class="sym">SPCX</td><td class="score">81</td><td class="sentiment" style="color:var(--green)">Bullish</td></tr>
+        <tr><td class="sym">TSLA</td><td class="score">55</td><td class="sentiment" style="color:var(--red)">Bearish</td></tr>
+      </table>
+    </div>
+
+    <!-- Watchlist -->
+    <div class="sidebar-widget">
+      <h3><span class="icon">📋</span>My Watchlist</h3>
+      <table class="watchlist-table">
+        <tr><td class="sym">NVDA</td><td class="wl-price">$224.55</td></tr>
+        <tr><td class="sym">PLTR</td><td class="wl-price">$162.45</td></tr>
+        <tr><td class="sym">AVGO</td><td class="wl-price">$460.80</td></tr>
+        <tr><td class="sym">AMD</td><td class="wl-price">$513.52</td></tr>
+        <tr><td class="sym">META</td><td class="wl-price">$607.56</td></tr>
+        <tr><td class="sym">MSFT</td><td class="wl-price">$460.77</td></tr>
+      </table>
+    </div>
+
+    <!-- Premium CTA -->
+    <div class="premium-cta">
+      <h3>💎 Signal Premium</h3>
+      <p>Get exclusive deep-dives, real-time Signal Scorecards, fair value targets, and AI-powered stock analysis.</p>
+      <button>Try Premium Free →</button>
+    </div>
+
+    <!-- Latest News -->
+    <div class="sidebar-widget">
+      <h3><span class="icon">📰</span>Latest News</h3>
+      <ul class="news-list">
+        <li><span class="time">2:45 PM</span><a href="#">Zelensky says Ukraine still ready for minerals deal with U.S.</a></li>
+        <li><span class="time">2:30 PM</span><a href="#">Trump's 'World War III' warning to Zelensky rattled stocks</a></li>
+        <li><span class="time">2:15 PM</span><a href="#">Why this consumer-confidence measure should concern stock bulls</a></li>
+        <li><span class="time">1:50 PM</span><a href="#">Super Micro is back in compliance. Is that enough to make its stock a buy?</a></li>
+        <li><span class="time">1:30 PM</span><a href="#">Social Security staff cuts: Put money aside now, former director says</a></li>
+      </ul>
+    </div>
+
+  </aside>
+</div>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="site-footer">
+  <div style="max-width:1400px;margin:0 auto">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">THE SIGNAL</div>
+        <p>Market intelligence from a tech perspective. Deep-dive analysis on AI, defense, space, cyber, and the mega-cap tech plays that connect them all. Powered by proprietary AI engines and expert analysis.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Sections</h4>
+        <a href="#">AI</a><a href="#">Cyber</a><a href="#">Defense</a><a href="#">Space</a>
+        <a href="#">Mega-Cap</a><a href="#">Quantum</a><a href="#">AI Power</a><a href="#">ETFs</a>
+      </div>
+      <div class="footer-col">
+        <h4>Features</h4>
+        <a href="#">Stock Pages</a><a href="#">Signal Scorecard</a><a href="#">Hive</a>
+        <a href="#">Signal vs. Street</a><a href="#">Premium</a><a href="#">Ask Pulse AI</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#">About</a><a href="#">Contact</a><a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a><a href="#">Cookie Notice</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 The Signal. All rights reserved.</p>
+      <p>Disclaimer: Market data and analysis provided for informational purposes only and does not constitute investment advice. Past performance is not indicative of future results.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════ TWEAKS BAR ═══════════ -->
+<div class="tweaks-bar">
+  <span class="tweaks-badge mobile">📱 Mobile View</span>
+  <span class="tweaks-badge desktop">🖥 Desktop View</span>
+  <label>Resize your browser to see the layout change at 1024px</label>
+</div>
+
+<!-- Inline nav display fix for desktop -->
+<script>
+// Show header nav on desktop
+(function() {
+  var mq = window.matchMedia('(min-width: 1024px)');
+  var nav = document.querySelector('.header-nav');
+  var tabs = document.querySelector('.market-tabs');
+  function update() {
+    if (mq.matches) { nav.style.display = 'flex'; tabs.style.display = 'flex'; }
+    else { nav.style.display = 'none'; tabs.style.display = 'none'; }
+  }
+  mq.addEventListener('change', update);
+  update();
+})();
+</script>
+
+</body>
+</html>

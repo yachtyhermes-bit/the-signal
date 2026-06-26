@@ -22,6 +22,7 @@ const DST = path.join(ROOT, 'dist');
 const ARTICLE_TEMPLATE = path.join(ROOT, 'articles', 'template.html');
 const SECTOR_TEMPLATE = path.join(ROOT, 'articles', 'sector-template.html');
 const POSTS_DIR = path.join(ROOT, 'articles', 'posts');
+const BUILD_TS = Date.now(); // cache-busting timestamp for images
 
 const SECTORS = {
   ai: 'AI', cyber: 'Cyber', defense: 'Defense',
@@ -170,7 +171,7 @@ if (!template) {
 
       const date = article.date ? article.date.slice(0, 10) : '';
       const readTime = (article.meta && article.meta.estimatedReadTime) || '1 min read';
-      const imageSrc = (article.image && article.image.src) || '/img/articles/_default.jpg';
+      const imageSrc = ((article.image && article.image.src) || '/img/articles/_default.jpg') + '?v=' + BUILD_TS;
       const imageCaption = (article.image && article.image.caption) || article.title || '';
       const sector = article.sector || 'ai';
       const sectorName = SECTORS[sector] || sector.toUpperCase();
@@ -420,7 +421,7 @@ function loadArticles() {
 
 // ─── Card generators ───
 function featuredCard(a) {
-  const img = (a.image && a.image.src) || '/img/articles/_default.jpg';
+  const img = ((a.image && a.image.src) || '/img/articles/_default.jpg') + '?v=' + BUILD_TS;
   const sentiment = a.sentiment || 'neutral';
   const sentimentLabel = sentiment === 'bullish' ? '▲ Bullish' : sentiment === 'bearish' ? '▼ Bearish' : '– Neutral';
   const readTime = (a.meta && a.meta.estimatedReadTime) || '1 min read';
@@ -440,7 +441,7 @@ function featuredCard(a) {
 }
 
 function articleCard(a) {
-  const img = (a.image && a.image.src) || '/img/articles/_default.jpg';
+  const img = ((a.image && a.image.src) || '/img/articles/_default.jpg') + '?v=' + BUILD_TS;
   const sentiment = a.sentiment || 'neutral';
   const sentimentLabel = sentiment === 'bullish' ? '▲ Bullish' : sentiment === 'bearish' ? '▼ Bearish' : '– Neutral';
   const readTime = (a.meta && a.meta.estimatedReadTime) || '1 min read';
@@ -467,7 +468,7 @@ function pickRelated(allArticles, currentSlug, count) {
   const shuffled = others.sort(() => 0.5 - Math.random());
   const picked = shuffled.slice(0, count);
   return picked.map(a => {
-    const img = (a.image && a.image.src) || '/img/articles/_default.jpg';
+    const img = ((a.image && a.image.src) || '/img/articles/_default.jpg') + '?v=' + BUILD_TS;
     return `<a href="/article/${a.slug}" class="related-card">
       <div class="card-image"><img src="${img}" alt="${escapeAttr(a.title || '')}" loading="lazy" decoding="async" width="1200" height="675"></div>
       <div class="card-body">

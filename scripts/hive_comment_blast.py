@@ -65,64 +65,64 @@ def get_all_comment_ids(article_slug):
 # ═══════════════════════════════════════════════════════════════
 
 PLANS = [
-    # ── 1. ARM — Ghost in Every AI Server (ARM) ──
+    # ── 1. AMD — MI400 AI Chip Comeback ──
     {
-        "article": "arm-ai-server-architecture-2026",
+        "article": "amd-mi400-ai-chip-comeback",
         "comments": [
-            # ROOTS
-            ("work_from_zoom", "i work at a hyperscaler and arm is in literally every new server we deploy. the efficiency advantage over x86 for ai inference workloads is massive. this is the standard now. $ARM", None),
-            ("CarrotAwesome", "ok but arm is a licensing company not a chip company. if any of the hyperscalers decide to build their own arm cores the royalty stream dries up fast. the math aint mathing for the current valuation.", None),
-            ("whohebe123", "everyone loves arm now after the ipo hype cycle. fading the crowd here. the licensing model means they capture a tiny fraction of the value they create. the hyperscalers will squeeze them over time.", None),
-            ("CCWaterBug", "arm in the data center is a decade long story. they went from zero to everywhere in servers and it is still early days. playing the long game. check back when every ai server runs on arm.", None),
-            ("first_time_caller99", "so arm doesnt actually make chips they just design the blueprints and collect royalties? and every ai server uses them? trying to understand the business model. learning as i go.", None),
+            ("FEMA_Camp_Survivor", "lisa su is doing what every underdog ceo dreams of. nvidias moat is real but hyperscalers hate being locked in. amd just needs to be good enough at a better price and the market share flows. retail gets front run again when the rotation happens.", None),
+            ("sharp315", "the mi400 architecture sounds legit but amd always promises and nvidia always delivers. im watching but not buying yet. cdna needs to actually ship and benchmark before i believe.", None),
+            ("Latrodectus1990", "everybody sleeping on amd right now. the second source narrative is the strongest its ever been and the data center ramp is real. this is going to be one of those stocks people look back at and say i should have bought when nobody cared. watch what happens when mi400 benchmarks drop.", None),
+            ("work_from_zoom", "we run some amd instances at work for specific inference workloads and they work fine. nobody talks about it but the ecosystem is maturing fast. cuda is still the standard but rocm is catching up quicker than people admit.", None),
+            ("noob_investor42", "bought amd because someone on reddit said its the ai chip underdog. no idea what cdna means but the charts look like its finding a bottom. learning as i go lol.", None),
+            ("CCWaterBug", "the market is pricing amd like its still the old amd that couldnt execute. the new amd under lisa su has a totally different track record. playing the long game here. check back when mi400 is actually in production.", None),
         ],
     },
-    # ── 2. KTOS — Valkyrie Drone Army (KTOS) ──
+    # ── 2. CRWD — CrowdStrike Lazarus Trade ──
     {
-        "article": "kratos-valkyrie-drone-army-2026",
+        "article": "crowdstrike-falcon-ai-security-moat-2026",
         "comments": [
-            # ROOTS
-            ("Latrodectus1990", "ktos dropping while revenue keeps growing tells me the market has already priced in a drone buildout that hasnt materialized yet. watch what happens when the next pentagon budget gets cut. generational bagholders incoming.", None),
-            ("sharp315", "the valkyrie program is real but drone swarms are still a concept not a production program. kratos has backlog sure but execution risk on defense contracts is always higher than people expect. solid company long term but be patient.", None),
-            ("help_me_pls77", "down on this one and i keep buying the dip and it keeps dipping. the business looks good on paper but my portfolio disagrees. is this normal for defense stocks. talk me off the ledge.", None),
-            ("thesis_driven_dan", "my thesis is simple. kratos is the only pure play on the drone warfare shift and the pentagon is committed to loitering munitions and autonomous systems. the backlog converts at steady state if execution holds. three things need to happen — valkyrie goes production, margins stabilize, and the market re-rates defense growth.", None),
-            ("option_flow_watcher", "ktos options have been picking up volume lately. decent call flow for a beaten down defense name. someone might know something about a valkyrie production decision coming.", None),
+            ("whohebe123", "everyone thought crowdstrike was dead after that outage. i was bearish too. but they came back stronger and that charlotte ai product sounds like the real moat. fading the negativity here feels right. the split is just icing.", None),
+            ("data_dependent_1", "renewal rates holding strong through the worst crisis in company history tells you everything. customers actually stayed. the charlotte automation play is widening margins too. balance sheet is clean and the ai security tailwind is just getting started.", None),
+            ("bought_at_the_top", "bought crwd right before the outage. of course i did. my timing is legendary. but i held and somehow im back in the green. bagholder who accidentally diamond handed into a winner. you are welcome for the dip.", None),
+            ("thesis_driven_dan", "my thesis is simple. cybersecurity is a non-discretionary spend that compounds with ai threats. crowdstrike has the installed base and the automation layer. the split brings in retail demand. valuation doesnt matter if the recurring revenue keeps compounding.", None),
+            ("RN_Geo", "crowdstrike is a great company but at this valuation after the bounce im staying in cash for now. too much good news already priced in. id wait for a pullback after the split euphoria fades.", None),
+            ("option_flow_watcher", "call volume has been building steadily into the split announcement. max pain moved up significantly. someone is accumulating ahead of the july date. flow looks bullish through the split event horizon.", None),
         ],
     },
-    # ── 3. Broadcom — $22B Quarter Sold Off (AVGO) ──
+    # ── 3. META — Meta Killed Open-Source AI ──
     {
-        "article": "broadcom-ai-asic-dominance",
+        "article": "meta-ai-pivot-proprietary-2026",
         "comments": [
-            # ROOTS
-            ("macro_dad_energy", "avgo selling off on a record quarter tells you everything about the macro environment. the company is firing on all cylinders but rates and inflation fear are the real story here. the fed put is not back on the menu yet. $AVGO", None),
-            ("noob_investor42", "bought avgo last week and it immediately dropped. just my luck. everyone says the quarter was amazing though and the ai semi business is exploding. bought the top lol.", None),
-            ("ragnaroksunset", "avgo. the selloff on this kind of quarter is interesting. watching.", None),
-            ("FEMA_Camp_Survivor", "record quarter with ai semi revenue surging and the stock gets destroyed. wall street always finds a reason to punish even the best companies. regular people always get wrecked on these reactionary drops.", None),
-            ("SheriffBartholomew", "avgo beat and the stock gets punished. same story different ticker. retail always the exit liquidity when institutions decide semis are too crowded.", None),
+            ("Minimum-Criticism763", "the llama open source strategy was always about collecting free developer feedback and data. now that they have what they need theyre locking it down. something doesnt add up with the alexandr wang deal either. follow the incentives. insiders are trimming for a reason.", None),
+            ("grillmaster_finance", "my daughter uses facebook and my son uses instagram. the family still spends time there. bought some meta for the kids college fund. zuck makes weird decisions but the ad business is a cash machine. good company good product.", None),
+            ("macro_dad_energy", "everyone is missing the big picture on meta. the ad business prints money and the wearables pipeline is a real catalyst nobody is pricing in. the ai pivot drama is noise. rates are supportive and the buyback is massive. meta will be fine.", None),
+            ("turned_into_a_newt", "the llama flop was worse than people realize internally. look at the talent migration out of the ai org. paying that much for muse spark suggests internal models were way behind. the s-1 for the debt issuance tells a different story than zucks public messaging.", None),
+            ("westcoastcouch", "meta up, meta down, whatever. i bought some shares a while back and im not checking. the ad revenue is real and thats enough for me. market does what it does. see yall next quarter.", None),
+            ("ragnaroksunset", "yikes", None),
         ],
     },
-    # ── 4. Google — Quiet Military Pivot (GOOGL) ──
+    # ── 4. PLTR — Palantir Growing Fast, Market Ignores ──
     {
-        "article": "google-gemini-military-pivot-2026",
+        "article": "palantir-commercial-ai-revenue-inflection-2026",
         "comments": [
-            # ROOTS
-            ("turned_into_a_newt", "the read team contract structure is the detail everyone is glossing over. moving gemini into classified il6 and il7 military networks is a whole different security posture than standard google cloud. the lockup periods on those contracts are multi year. $GOOGL", None),
-            ("grillmaster_finance", "google getting deeper into defense contracts is a big deal. they have been way behind aws and azure in government cloud for years. finally catching up. bought some for the kids college fund.", None),
-            ("Minimum-Criticism763", "follow the incentives. google has been trying to win pentagon business forever and employees have pushed back hard every time. something doesnt add up if they are going this deep now. the ceo is betting big on military revenue and insiders are watching.", None),
-            ("Latter-Possibility", "the market is sleeping on goog moving into tier one defense ai. this opens up a whole new revenue stream that nobody has in their models. actually this is healthy for the long term thesis.", None),
-            ("whats_a_stop_loss", "google with top secret military ai contracts is a massive catalyst. they have the best ai talent and the infrastructure to beat aws in government cloud. what could go wrong. update: everything could go wrong but im buying anyway.", None),
+            ("first_time_caller99", "i just started investing and palantir keeps dropping even though the revenue is going up. is this normal. should i buy the dip or is something wrong with the company. learning as i go and this one confuses me the most.", None),
+            ("Latter-Possibility", "the disconnect between the growth and the stock price is actually a gift for patient buyers. commercial adoption is accelerating and government contracts are as sticky as it gets. the europe headline noise is temporary. buying opportunity tbh.", None),
+            ("SheriffBartholomew", "this is classic wall street. company crushes earnings, grows faster than anyone, and the stock gets punished. retail always the exit liquidity for the big boys. palantir is the most obvious long term winner that nobody can hold because of the volatility.", None),
+            ("contango_cowboy", "the vix is telling us something about the broader risk off mood thats dragging every growth stock down with it. palantir is getting caught in the macro washout. when the curve normalizes this thing rips. yeehaw the setup is actually improving here.", None),
+            ("mom_of_3_trading", "i buy palantir for my kids future because they use aip at school and their teachers say its amazing. boring stock picks are my thing. just buying what i understand and dca during carpool line.", None),
+            ("whats_a_stop_loss", "palantir down again. what could go wrong if i double down? this is either genius or stupid. update from last quarter: it was genius because i averaged down and now im green. but this time? who knows. yolo.", None),
         ],
     },
-    # ── 5. Rocket Lab — Invisible Rocket Company (RKLB) ──
+    # ── 5. GOOGL — Alphabet Talent Bleed Reality Check ──
     {
-        "article": "rocket-lab-space-systems-cash-cow-2026",
+        "article": "googl-ai-everything-strategy-2026",
         "comments": [
-            # ROOTS
-            ("data_dependent_1", "the space systems division is where the actual revenue lives and the growth rate there is impressive. balance sheet looks solid for a company at this stage. this isnt a narrative stock — the backlog is real and converting. $RKLB", None),
-            ("RN_Geo", "rklb is interesting but the market is paying for growth like it is a software company. space systems revenue is real but the margins are structurally lower than launch once neutron scales. im staying cautious. no rush to buy here.", None),
-            ("night_shift_trader", "rklb premarket has been looking interesting lately. space systems revenue is the part everyone overlooks while obsessing over electron launches. night shift checking in.", None),
-            ("westcoastcouch", "threw a small position in rklb for the space systems story. launch is exciting but the real business is the satellites and components. not checking til neutron flies. whatever happens happens.", None),
-            ("still_holding_2021", "been holding rklb since before it went public via spac. averaged down through the whole space bear market. one day neutron launches, the space systems margins expand, and everyone wakes up. this stock owes me money.", None),
+            ("CarrotAwesome", "so they lost a nobel laureate and a gemini co-lead in the same week and the stock dropped a quarter trillion in a day. ok but seriously though google still has the best ai infrastructure on earth and the cloud backlog is massive. the math aint mathing on the panic sell.", None),
+            ("still_holding_2021", "still holding googl since way before the split. ive seen this movie before. talent leaves, stock drops, then they figure it out and rip higher. the search moat and cloud pipeline are too strong. one day this position pays off and i sell covered calls until then.", None),
+            ("night_shift_trader", "premarket was a bloodbath on the jumper news but the selling looks exhausted now. volume is drying up and the bid support feels like institutions are catching the knife. quiet in here tonight but that usually means the panic is over.", None),
+            ("tacotuesdaytrader", "quick buy on googl while i eat my lunch. the berkshire backing gives this a massive floor and the cloud numbers are ridiculous. people are overreacting to the talent news. back to work see yall. taking the family out if this bounces.", None),
+            ("fomo_king_420", "watched google drop all day yesterday and didnt buy. now im kicking myself because its already bouncing. too late to get in?? should have bought the panic. next time i swear i will actually click the button.", None),
+            ("paycheck2paycheck", "just bought another batch of googl with this weeks paycheck. talent leaves, business stays. cloud is growing like crazy and search prints money. boring and steady is exactly what i want in my taxable. set it and forget it.", None),
         ],
     },
 ]

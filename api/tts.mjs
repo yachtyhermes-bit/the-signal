@@ -101,7 +101,7 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'Text required, max 5000 chars' });
   }
 
-  // If slug provided: try R2 cache, generate + cache if missing
+  // If slug provided: try R2 cache → local static fallback → generate + cache
   if (slug) {
     const cached = await fetchFromR2(slug);
     if (cached) {
@@ -110,6 +110,44 @@ export default async function handler(req, res) {
       res.setHeader('X-TTS-Backend', 'r2-jenny');
       return res.send(cached);
     }
+
+    // Fallback: pre-generated MP3 from local public/audio/ directory
+    try {
+      const fs = await import('fs');
+      const possiblePaths = [
+        `/var/task/audio/${slug}.mp3`,       // Vercel Lambda
+        `/var/runtime/audio/${slug}.mp3`,
+        `${process.cwd()}/audio/${slug}.mp3`,
+        `${process.cwd()}/public/audio/${slug}.mp3`,
+      ];
+      for (const localPath of possiblePaths) {
+        if (fs.existsSync(localPath)) {
+          const audio = fs.readFileSync(localPath);
+          if (audio && audio.length > 500) {
+            res.setHeader('Content-Type', 'audio/mpeg');
+            res.setHeader('Cache-Control', 'public, max-age=86400');
+            res.setHeader('X-TTS-Backend', 'static-andrew');
+            return res.send(audio);
+          }
+        }
+      }
+    } catch {}
+
+    // Fallback 2: fetch from public URL (static audio CDN)
+    try {
+      const host = req.headers['x-forwarded-host'] || req.headers.host || 'readthesignal.net';
+      const audioUrl = `https://${host}/audio/${slug}.mp3`;
+      const r = await fetch(audioUrl);
+      if (r.ok) {
+        const audio = Buffer.from(await r.arrayBuffer());
+        if (audio && audio.length > 500) {
+          res.setHeader('Content-Type', 'audio/mpeg');
+          res.setHeader('Cache-Control', 'public, max-age=86400');
+          res.setHeader('X-TTS-Backend', 'static-url-andrew');
+          return res.send(audio);
+        }
+      }
+    } catch {}
 
     // Generate Jenny audio
     const jennyAudio = genEdgeTTS(text);
