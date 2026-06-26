@@ -9962,7 +9962,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-26T11:04:40.705Z"
+    "createdAt": "2026-06-26T11:04:40.705Z",
+    "likes": [
+      "usr_e5"
+    ]
   },
   {
     "id": "mqutqhok_6h82qw",
@@ -9972,7 +9975,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-26T11:04:40.964Z"
+    "createdAt": "2026-06-26T11:04:40.964Z",
+    "likes": [
+      "usr_e5"
+    ]
   },
   {
     "id": "mqutqhvc_0h2pdx",
@@ -10003,5 +10009,15 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-26T11:04:41.633Z"
+  },
+  {
+    "id": "mqutqidx_pczs0c",
+    "article": "rtx-defense-spending-surge-2026",
+    "text": "unusual call activity on rtx all week. big block trades on the weekly expiry. someone knows something about a contract announcement. flow has been accumulating quietly. max pain is way below current price which usually means the smart money is positioning for a move up.",
+    "author": "option_flow_watcher",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-26T11:04:41.877Z"
   }
 ]
