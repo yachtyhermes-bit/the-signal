@@ -10189,7 +10189,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-26T16:31:16.613Z"
+    "createdAt": "2026-06-26T16:31:16.613Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mqv5ehzb_0g5tdt",
@@ -10199,7 +10202,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-26T16:31:16.871Z"
+    "createdAt": "2026-06-26T16:31:16.871Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mqv5ei67_8pv3sp",
@@ -10210,5 +10216,45 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-26T16:31:17.119Z"
+  },
+  {
+    "id": "mqv5ejqk_7wq9lp",
+    "article": "amd-mi400-ai-chip-comeback",
+    "text": "my thesis is simple. hyperscalers hate single supplier dependency. nvidia has the moat today but amd just needs to be a credible second source. the mi400 is the first architecture that actually threatens the status quo. if they execute on the benchmarks and the big cloud providers dual source, the revenue ramp follows. valuation doesnt matter if the market share story plays out.",
+    "author": "thesis_driven_dan",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-26T16:31:19.148Z"
+  },
+  {
+    "id": "mqv5ejwv_cawl9s",
+    "article": "amd-mi400-ai-chip-comeback",
+    "text": "amd has been the 'nvidia killer' for like three years now and nvidia keeps growing. the architecture looks good on paper but the software ecosystem is still catching up. hyperscalers talk about dual sourcing but they keep ordering more h100s. something doesnt add up. follow the actual order flow, not the press releases.",
+    "author": "Minimum-Criticism763",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-26T16:31:19.375Z"
+  },
+  {
+    "id": "mqv5ek2x_ksll1o",
+    "article": "amd-mi400-ai-chip-comeback",
+    "text": "all in on amd with my tuition money that i didnt use because i dropped out. if mi400 is real im retired. if not i work at mcdonalds. win win. $AMD to the moon or whatever. yolo.",
+    "author": "yolo_my_401k",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-26T16:31:19.593Z"
+  },
+  {
+    "id": "mqv5ek8q_ifyj6m",
+    "article": "amd-mi400-ai-chip-comeback",
+    "text": "watching",
+    "author": "ragnaroksunset",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-26T16:31:19.802Z"
   }
 ]
