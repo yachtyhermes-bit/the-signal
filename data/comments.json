@@ -9740,7 +9740,8 @@
     "parentId": null,
     "createdAt": "2026-06-26T11:04:18.475Z",
     "likes": [
-      "usr_c3"
+      "usr_c3",
+      "usr_d4"
     ]
   },
   {
@@ -10236,7 +10237,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-26T16:31:19.148Z"
+    "createdAt": "2026-06-26T16:31:19.148Z",
+    "likes": [
+      "usr_e5"
+    ]
   },
   {
     "id": "mqv5ejwv_cawl9s",
@@ -10256,7 +10260,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-26T16:31:19.593Z"
+    "createdAt": "2026-06-26T16:31:19.593Z",
+    "likes": [
+      "usr_c3"
+    ]
   },
   {
     "id": "mqv5ek8q_ifyj6m",
@@ -10277,5 +10284,15 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-26T16:31:20.008Z"
+  },
+  {
+    "id": "mqv5emm4_ksk5zr",
+    "article": "crowdstrike-falcon-ai-security-moat-2026",
+    "text": "crowdstrike surviving the outage and coming back stronger is impressive but the stock already bounced a ton. retail always chases the comeback story after the smart money already loaded up. the split brings in the fomo buyers. same story different ticker. wall street wins again.",
+    "author": "SheriffBartholomew",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-26T16:31:22.876Z"
   }
 ]
