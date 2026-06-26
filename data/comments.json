@@ -10503,7 +10503,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-26T19:02:23.904Z"
+    "createdAt": "2026-06-26T19:02:23.904Z",
+    "likes": [
+      "usr_e5"
+    ]
   },
   {
     "id": "mqvasuq6_k3uuxb",
@@ -10513,7 +10516,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-26T19:02:24.654Z"
+    "createdAt": "2026-06-26T19:02:24.654Z",
+    "likes": [
+      "usr_d4"
+    ]
   },
   {
     "id": "mqvasvym_9ucqf6",
@@ -10523,6 +10529,19 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-26T19:02:26.254Z"
+    "createdAt": "2026-06-26T19:02:26.254Z",
+    "likes": [
+      "usr_d4"
+    ]
+  },
+  {
+    "id": "mqvat5ku_h1pt85",
+    "article": "amd-mi400-ai-chip-comeback",
+    "text": "amd fans have been saying 'next year is the year' since 2022 and nvidia keeps printing money. the mi400 benchmarks look competitive on paper but the software stack is still catching up. follow the actual hyperscaler purchase orders not the conference demos. something doesnt add up when every cloud provider says they want competition but keep signing nvidia mega-deals.",
+    "author": "Minimum-Criticism763",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-26T19:02:38.718Z"
   }
 ]
