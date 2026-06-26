@@ -8940,7 +8940,6 @@
     "createdAt": "2026-06-25T16:28:42.178Z",
     "likes": [
       "usr_b2",
-      "usr_a1",
       "usr_c3"
     ]
   },
@@ -8954,7 +8953,6 @@
     "parentId": null,
     "createdAt": "2026-06-25T16:28:42.707Z",
     "likes": [
-      "usr_c3",
       "usr_b2"
     ]
   },
@@ -9292,7 +9290,8 @@
     "createdAt": "2026-06-25T19:06:15.668Z",
     "likes": [
       "usr_c3",
-      "usr_d4"
+      "usr_d4",
+      "usr_a1"
     ]
   },
   {
@@ -9334,7 +9333,8 @@
     "createdAt": "2026-06-25T19:06:16.705Z",
     "likes": [
       "usr_e5",
-      "usr_b2"
+      "usr_b2",
+      "usr_c3"
     ]
   },
   {
@@ -9362,7 +9362,8 @@
     "createdAt": "2026-06-25T19:06:17.392Z",
     "likes": [
       "usr_b2",
-      "usr_e5"
+      "usr_e5",
+      "usr_d4"
     ]
   },
   {
