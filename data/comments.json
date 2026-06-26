@@ -10087,7 +10087,8 @@
     "parentId": null,
     "createdAt": "2026-06-26T16:31:12.026Z",
     "likes": [
-      "usr_b2"
+      "usr_b2",
+      "usr_e5"
     ]
   },
   {
@@ -10098,7 +10099,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-26T16:31:12.316Z"
+    "createdAt": "2026-06-26T16:31:12.316Z",
+    "likes": [
+      "usr_c3"
+    ]
   },
   {
     "id": "mqv5eepg_1lgova",
@@ -10391,6 +10395,9 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-26T19:02:10.948Z"
+    "createdAt": "2026-06-26T19:02:10.948Z",
+    "likes": [
+      "usr_d4"
+    ]
   }
 ]
