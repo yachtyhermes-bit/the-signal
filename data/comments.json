@@ -10173,7 +10173,8 @@
     "parentId": null,
     "createdAt": "2026-06-26T16:31:14.554Z",
     "likes": [
-      "usr_e5"
+      "usr_e5",
+      "usr_a1"
     ]
   },
   {
@@ -10408,7 +10409,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-26T19:02:16.479Z"
+    "createdAt": "2026-06-26T19:02:16.479Z",
+    "likes": [
+      "usr_b2"
+    ]
   },
   {
     "id": "mqvasoo2_1fjbr2",
@@ -10418,7 +10422,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-26T19:02:16.802Z"
+    "createdAt": "2026-06-26T19:02:16.802Z",
+    "likes": [
+      "usr_a1"
+    ]
   },
   {
     "id": "mqvasply_d4dew7",
@@ -10439,5 +10446,18 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-26T19:02:19.951Z"
+  },
+  {
+    "id": "mqvasrec_q9ual3",
+    "article": "cerebras-wafer-scale-ai-chip-challenger-2026",
+    "text": "i tossed some money at cbrs on the ipo dip. not checking it again until q3 earnings when the business model transition should start showing in the margins. or thursday who knows. playing the long game on the ai silicon story.",
+    "author": "CCWaterBug",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-26T19:02:20.340Z",
+    "likes": [
+      "usr_a1"
+    ]
   }
 ]
