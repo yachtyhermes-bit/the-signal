@@ -9686,8 +9686,7 @@
     "parentId": null,
     "createdAt": "2026-06-26T11:04:16.842Z",
     "likes": [
-      "usr_d4",
-      "usr_a1"
+      "usr_d4"
     ]
   },
   {
@@ -9698,7 +9697,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-26T11:04:17.354Z"
+    "createdAt": "2026-06-26T11:04:17.354Z",
+    "likes": [
+      "usr_a1"
+    ]
   },
   {
     "id": "mqutpzor_qku9vy",
@@ -9710,7 +9712,8 @@
     "parentId": null,
     "createdAt": "2026-06-26T11:04:17.643Z",
     "likes": [
-      "usr_e5"
+      "usr_e5",
+      "usr_a1"
     ]
   },
   {
@@ -9723,7 +9726,6 @@
     "parentId": null,
     "createdAt": "2026-06-26T11:04:17.955Z",
     "likes": [
-      "usr_b2",
       "usr_d4"
     ]
   },
@@ -9738,7 +9740,6 @@
     "createdAt": "2026-06-26T11:04:18.196Z",
     "likes": [
       "usr_a1",
-      "usr_b2",
       "usr_d4"
     ]
   },
