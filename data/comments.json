@@ -8912,7 +8912,9 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-25T16:28:40.875Z",
-    "likes": []
+    "likes": [
+      "usr_a1"
+    ]
   },
   {
     "id": "mqtpvbe0_0daque",
@@ -8939,7 +8941,8 @@
     "createdAt": "2026-06-25T16:28:42.178Z",
     "likes": [
       "usr_b2",
-      "usr_a1"
+      "usr_a1",
+      "usr_c3"
     ]
   },
   {
