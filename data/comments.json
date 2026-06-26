@@ -9339,7 +9339,8 @@
     "parentId": null,
     "createdAt": "2026-06-25T19:06:17.392Z",
     "likes": [
-      "usr_b2"
+      "usr_b2",
+      "usr_e5"
     ]
   },
   {
@@ -9692,7 +9693,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-26T11:04:18.196Z"
+    "createdAt": "2026-06-26T11:04:18.196Z",
+    "likes": [
+      "usr_a1"
+    ]
   },
   {
     "id": "mqutq0bv_5n989j",
@@ -9702,6 +9706,29 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-26T11:04:18.475Z"
+    "createdAt": "2026-06-26T11:04:18.475Z",
+    "likes": [
+      "usr_c3"
+    ]
+  },
+  {
+    "id": "mqutq2gq_l52mwi",
+    "article": "crowdstrike-falcon-ai-security-moat-2026",
+    "text": "everyone thought crowdstrike was dead after that outage. i was bearish too. but they came back stronger and that charlotte ai product sounds like the real moat. fading the negativity here feels right. the split is just icing.",
+    "author": "whohebe123",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-26T11:04:21.242Z"
+  },
+  {
+    "id": "mqutq2mo_gkaarm",
+    "article": "crowdstrike-falcon-ai-security-moat-2026",
+    "text": "renewal rates holding strong through the worst crisis in company history tells you everything. customers actually stayed. the charlotte automation play is widening margins too. balance sheet is clean and the ai security tailwind is just getting started.",
+    "author": "data_dependent_1",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-26T11:04:21.456Z"
   }
 ]
