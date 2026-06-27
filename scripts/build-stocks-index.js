@@ -270,6 +270,65 @@ const html = `<!DOCTYPE html>
     setInterval(fetchPrices, INTERVAL);
   })();
   </script>
+
+  <!-- ── FOOTER ── -->
+  <style>
+    .stock-footer{border-top:1px solid var(--border);padding:48px 24px 32px;margin-top:48px}
+    .stock-footer-inner{max-width:1200px;margin:0 auto}
+    .stock-footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:32px}
+    .stock-footer-brand-col{}
+    .stock-footer-brand{display:flex;align-items:center;gap:8px;font-size:15px;letter-spacing:1px;color:var(--text-secondary);font-family:'Anton','Impact',sans-serif;margin-bottom:12px}
+    .stock-footer-brand strong{background:var(--accent-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-family:'Anton','Impact',sans-serif}
+    .stock-footer-logo{width:28px;height:28px;border-radius:4px;object-fit:contain}
+    .stock-footer-brand-col p{color:var(--text-muted);font-size:13px;line-height:1.6;margin:0 0 16px}
+    .stock-footer-social a{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--bg-elevated);color:var(--text-secondary);text-decoration:none;font-size:14px;transition:all .2s}
+    .stock-footer-social a:hover{background:var(--blue);color:#fff}
+    .stock-footer-col h4{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:var(--text-muted);margin:0 0 12px;font-weight:600}
+    .stock-footer-col a{display:block;color:var(--text-secondary);text-decoration:none;font-size:13px;padding:4px 0;transition:color .2s}
+    .stock-footer-col a:hover{color:var(--blue)}
+    .stock-footer-bottom{border-top:1px solid var(--border);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+    .stock-footer-tag{color:var(--text-muted);font-size:12px}
+    .stock-footer-copy{color:var(--text-muted);font-size:11px}
+    @media(max-width:768px){.stock-footer-grid{grid-template-columns:1fr 1fr;gap:24px}.stock-footer-brand-col{grid-column:span 2}}
+    @media(max-width:480px){.stock-footer-grid{grid-template-columns:1fr}.stock-footer-brand-col{grid-column:span 1}}
+  </style>
+  <footer class="stock-footer">
+    <div class="stock-footer-inner">
+      <div class="stock-footer-grid">
+        <div class="stock-footer-brand-col">
+          <div class="stock-footer-brand"><img src="/img/logo-hex.jpg" alt="The Signal" class="stock-footer-logo"> THE <strong>SIGNAL</strong></div>
+          <p>Market intelligence for AI, defense, space, and cybersecurity stocks. Data-driven analysis that moves before the headlines.</p>
+          <div class="stock-footer-social">
+            <a href="https://x.com/ReadTheSignal21" target="_blank" rel="noopener" aria-label="X / Twitter">𝕏</a>
+          </div>
+        </div>
+        <div class="stock-footer-col">
+          <h4>Sectors</h4>
+          <a href="/sector/ai">AI</a>
+          <a href="/sector/defense">Defense</a>
+          <a href="/sector/cyber">Cyber</a>
+          <a href="/sector/space">Space</a>
+          <a href="/sector/mega-cap">Mega-Cap</a>
+          <a href="/sector/ai-power">AI Power</a>
+        </div>
+        <div class="stock-footer-col">
+          <h4>Features</h4>
+          <a href="/stocks/">Stock Pages</a>
+          <a href="/about/">About</a>
+        </div>
+        <div class="stock-footer-col">
+          <h4>More</h4>
+          <a href="/about/">Contact Us</a>
+          <a href="/">Home</a>
+        </div>
+      </div>
+      <div class="stock-footer-bottom">
+        <div class="stock-footer-tag">The Signal Editorial Team · readthesignal.net</div>
+        <div class="stock-footer-copy">© 2026 The Signal — Market Intelligence. Data from public sources. Not investment advice.</div>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>`;
 

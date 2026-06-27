@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08080e">
+  <link rel="canonical" href="https://readthesignal.net/about/">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <meta name="robots" content="max-image-preview:large">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css?v=16">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-98KDVDFBCW"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-98KDVDFBCW');</script>
+  <script src="/js/prices.js" defer></script>
+  <script src="/js/search.js" defer></script>
+  <script src="/js/auth.js?v=2" defer></script>
+  <script src="/js/theme.js?v=2" defer></script>
+  <title>About — The Signal</title>
+  <meta name="description" content="About The Signal — market intelligence for AI, defense, space, and cybersecurity stocks. Contact our editorial team.">
+  <meta property="og:title" content="About — The Signal">
+  <meta property="og:description" content="Market intelligence for AI, defense, space, and cybersecurity stocks.">
+  <meta property="og:image" content="https://readthesignal.net/img/logo-hex.jpg">
+  <meta property="og:url" content="https://readthesignal.net/about/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About — The Signal">
+  <meta name="twitter:description" content="Market intelligence for AI, defense, space, and cybersecurity stocks.">
+  <style>
+    .about-page { max-width: 720px; margin: 0 auto; padding: 48px 24px 64px; }
+    .about-page h1 { font-family: 'Anton', 'Impact', sans-serif; font-size: 36px; letter-spacing: 1px; margin-bottom: 8px; color: var(--text-primary); }
+    .about-page .about-subtitle { color: var(--accent); font-size: 14px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 32px; }
+    .about-page h2 { font-family: 'Anton', 'Impact', sans-serif; font-size: 22px; letter-spacing: 1px; margin: 40px 0 12px; color: var(--text-primary); }
+    .about-page p { color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px; font-size: 15px; }
+    .about-page .mission-banner { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 24px; margin: 24px 0; border-left: 3px solid var(--accent); }
+    .about-page .mission-banner p { margin-bottom: 0; font-style: italic; }
+    .about-page .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px; margin: 24px 0; }
+    .about-page .stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 20px; text-align: center; }
+    .about-page .stat-card .stat-num { font-family: 'JetBrains Mono', monospace; font-size: 28px; font-weight: 700; color: var(--accent); }
+    .about-page .stat-card .stat-label { font-size: 12px; color: var(--text-muted); margin-top: 4px; text-transform: uppercase; letter-spacing: 1px; }
+    .about-page .sectors-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .about-page .sectors-list .sector-tag { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 6px 14px; font-size: 13px; color: var(--text-secondary); }
+    .about-page .divider { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+    /* Contact form */
+    .contact-form { display: flex; flex-direction: column; gap: 16px; margin-top: 20px; }
+    .contact-form label { font-size: 13px; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px; }
+    .contact-form input,
+    .contact-form textarea { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 12px 14px; font-size: 14px; color: var(--text-primary); font-family: 'Inter', sans-serif; transition: border-color 0.2s; }
+    .contact-form input:focus,
+    .contact-form textarea:focus { outline: none; border-color: var(--accent); }
+    .contact-form textarea { min-height: 140px; resize: vertical; }
+    .contact-form .submit-btn { background: var(--accent); color: #fff; border: none; border-radius: 6px; padding: 14px 24px; font-size: 15px; font-weight: 600; cursor: pointer; transition: opacity 0.2s; width: fit-content; }
+    .contact-form .submit-btn:hover { opacity: 0.85; }
+    .contact-form .submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+    .contact-form .form-status { font-size: 14px; padding: 10px 14px; border-radius: 6px; display: none; }
+    .contact-form .form-status.success { display: block; background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.3); color: #22c55e; }
+    .contact-form .form-status.error { display: block; background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.3); color: #ef4444; }
+    .contact-form .form-hint { font-size: 12px; color: var(--text-muted); margin-top: -8px; }
+    @media (max-width: 600px) { .about-page { padding: 24px 16px 48px; } .about-page h1 { font-size: 28px; } }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo"><img src="/img/logo-hex.jpg" alt="The Signal" class="logo-img"><span class="logo-text"><span class="logo-the">THE</span> <strong>SIGNAL</strong></span></a>
+      <div class="nav-actions">
+        <button class="nav-btn search-btn" id="searchToggle" aria-label="Search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+        <div class="auth-container" id="authContainer">
+          <button class="nav-btn auth-btn" id="authToggle" aria-label="Sign In">
+            <div class="auth-btn-avatar" id="authBtnAvatar">
+              <span class="auth-btn-initial" id="authBtnInitial"></span>
+              <img class="auth-btn-img" id="authBtnImg" src="" alt="" style="display:none">
+            </div>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="auth-btn-icon" id="authBtnIcon"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <span class="auth-label" id="authLabel">Sign In</span>
+          </button>
+          <div class="auth-dropdown" id="authDropdown">
+            <div class="auth-profile" id="authProfile" style="display:none">
+              <div class="auth-profile-header">
+                <div class="auth-profile-avatar" id="authProfileAvatar">
+                  <img id="authProfileImg" src="" alt="" style="display:none">
+                  <span class="auth-profile-initial" id="authProfileInitial"></span>
+                </div>
+                <div class="auth-profile-info">
+                  <span class="auth-profile-name" id="authProfileName"></span>
+                  <span class="auth-profile-username" id="authProfileUsername"></span>
+                </div>
+                <div class="auth-profile-badge">HIVE</div>
+              </div>
+              <div class="auth-profile-stats" id="authProfileStats">
+                <div class="auth-stat"><span class="auth-stat-label">Portfolio</span><span class="auth-stat-value" id="authStatValue">-</span></div>
+                <div class="auth-stat"><span class="auth-stat-label">Return</span><span class="auth-stat-value" id="authStatReturn">-</span></div>
+              </div>
+              <div class="auth-drop-divider"></div>
+              <div class="auth-profile-nav">
+                <a href="/sector/ai" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
+                <a href="/sector/cyber" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
+                <a href="/sector/defense" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
+                <a href="/sector/space" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
+                <a href="/mega-cap" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
+                <div class="auth-nav-section-header">FEATURES</div>
+                <a href="/stocks/" class="auth-nav-item">📈 Stock Pages</a>
+                <a href="/about/" class="auth-nav-item">📋 About</a>
+              </div>
+              <div class="auth-drop-divider"></div>
+              <div class="auth-profile-footer">
+                <a href="/about/" class="auth-footer-link">Contact Us</a>
+                <button class="auth-signout-btn" id="authSignOut">Sign Out</button>
+              </div>
+            </div>
+            <div class="auth-guest" id="authGuest">
+              <div class="auth-guest-brand"><span class="auth-guest-title">Welcome to <strong>The Signal</strong></span><span class="auth-guest-sub">Market intelligence that moves before the headlines.</span></div>
+              <button class="auth-option auth-option-primary" onclick="showHiveJoinModal('login')"><span class="auth-option-icon">🔑</span> Sign In</button>
+              <button class="auth-option" onclick="showHiveJoinModal('register')"><span class="auth-option-icon">✨</span> Create Account</button>
+              <div class="auth-drop-divider"></div>
+              <div class="auth-profile-nav">
+                <a href="/sector/ai" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
+                <a href="/sector/cyber" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
+                <a href="/sector/defense" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
+                <a href="/sector/space" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
+                <a href="/mega-cap" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
+                <div class="auth-nav-section-header">FEATURES</div>
+                <a href="/stocks/" class="auth-nav-item">📈 Stock Pages</a>
+                <a href="/about/" class="auth-nav-item">📋 About</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="nav-btn hamburger-btn" id="hamburgerToggle" aria-label="Menu"><span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span></button>
+        <button class="nav-btn theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle theme" style="display:flex;align-items:center;gap:4px;background:none;border:1px solid var(--border);border-radius:6px;padding:6px 8px;cursor:pointer;color:var(--text-secondary);font-size:12px">
+          <svg class="theme-icon-sun" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <svg class="theme-icon-moon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- DRAWER -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <div class="drawer" id="drawer">
+    <div class="drawer-header">
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
+      <a href="/" class="drawer-logo"><img src="/img/logo-hex.jpg" alt="The Signal" class="drawer-logo-img"><span class="drawer-logo-text">SIGNAL</span></a>
+    </div>
+    <div class="drawer-body">
+      <div class="drawer-section-label">SECTORS</div>
+      <a href="/sector/ai" class="drawer-link">AI</a>
+      <a href="/sector/cyber" class="drawer-link">Cyber</a>
+      <a href="/sector/defense" class="drawer-link">Defense</a>
+      <a href="/sector/space" class="drawer-link">Space</a>
+      <a href="/sector/mega-cap" class="drawer-link">Mega-Cap</a>
+      <a href="/sector/quantum" class="drawer-link">Quantum</a>
+      <a href="/sector/ai-power" class="drawer-link">AI Power</a>
+      <a href="/sector/etfs" class="drawer-link">ETFs</a>
+      <hr class="drawer-divider">
+      <div class="drawer-section-label">FEATURES</div>
+      <a href="/stocks/" class="drawer-link drawer-link-stocks">📈 Stock Pages</a>
+      <a href="/about/" class="drawer-link">📋 About</a>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div class="about-page">
+      <div class="about-subtitle">About The Signal</div>
+      <h1>Market Intelligence That Moves Before the Headlines</h1>
+
+      <div class="mission-banner">
+        <p>"The Signal cuts through the noise to deliver sharp, data-driven analysis on the stocks that define the next decade — AI, defense, space, cybersecurity, and the mega-cap companies powering them all."</p>
+      </div>
+
+      <h2>What We Cover</h2>
+      <p>The Signal follows the intersection of technology, defense, and markets. We focus on sectors where structural tailwinds, government spending, and technological inflection points create asymmetric opportunities — the kinds of moves that compound before the mainstream catches on.</p>
+      <div class="sectors-list">
+        <span class="sector-tag">Artificial Intelligence</span>
+        <span class="sector-tag">Defense &amp; Aerospace</span>
+        <span class="sector-tag">Cybersecurity</span>
+        <span class="sector-tag">Space</span>
+        <span class="sector-tag">Semiconductors</span>
+        <span class="sector-tag">Quantum Computing</span>
+        <span class="sector-tag">Mega-Cap Tech</span>
+        <span class="sector-tag">Energy &amp; AI Power</span>
+        <span class="sector-tag">ETFs &amp; Thematic</span>
+      </div>
+
+      <h2>Our Approach</h2>
+      <p>Every article starts with the data — earnings reports, contract filings, macroeconomic indicators, and competitive positioning. We strip out the fluff and ask one question: <em>what does this mean for the stock?</em></p>
+      <p>We don't trade on rumor. We don't chase hype. Every analysis is grounded in verifiable numbers from public filings, verified against live market data before publication. When we say a company grew revenue 63.8% YoY, we've checked that number against the 10-K.</p>
+      <p>Our articles are written by a team of analysts who combine domain expertise with systematic research — covering everything from nuclear reactor restarts to semiconductor fabrication roadmaps to defense procurement cycles.</p>
+
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-num">160+</div>
+          <div class="stat-label">Articles Published</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">9</div>
+          <div class="stat-label">Sectors Covered</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">$10T+</div>
+          <div class="stat-label">Combined Coverage Market Cap</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">Daily</div>
+          <div class="stat-label">New Analysis</div>
+        </div>
+      </div>
+
+      <h2>For the Record</h2>
+      <p>The Signal is an independent publication. Our analysis represents the views of our editorial team and is for informational purposes only — not investment advice. We may hold positions in securities we cover. Past performance is not indicative of future results. Always conduct your own research before making investment decisions.</p>
+
+      <hr class="divider">
+
+      <h2>Contact the Editorial Team</h2>
+      <p>Have a tip, a correction, or a stock we should cover? Drop us a message below. We read every submission.</p>
+
+      <form class="contact-form" id="contactForm">
+        <div id="formStatus" class="form-status"></div>
+
+        <div>
+          <label for="contactName">Name</label>
+          <input type="text" id="contactName" name="name" placeholder="Your name" required>
+        </div>
+
+        <div>
+          <label for="contactEmail">Email</label>
+          <input type="email" id="contactEmail" name="email" placeholder="your@email.com" required>
+          <div class="form-hint">So we can reply to you</div>
+        </div>
+
+        <div>
+          <label for="contactMessage">Message</label>
+          <textarea id="contactMessage" name="message" placeholder="What's on your mind? A stock tip, a correction, feedback, a company you want us to cover..." required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn" id="contactSubmit">Send Message</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <div class="footer-brand"><img src="/img/logo-hex.jpg" alt="The Signal" class="footer-logo"> THE <strong>SIGNAL</strong></div>
+          <p>Market intelligence for AI, defense, space, and cybersecurity stocks. Data-driven analysis that moves before the headlines.</p>
+          <div class="footer-social">
+            <a href="https://x.com/ReadTheSignal21" target="_blank" rel="noopener" aria-label="X / Twitter">𝕏</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Sectors</h4>
+          <a href="/sector/ai">AI</a>
+          <a href="/sector/defense">Defense</a>
+          <a href="/sector/cyber">Cyber</a>
+          <a href="/sector/space">Space</a>
+          <a href="/sector/mega-cap">Mega-Cap</a>
+          <a href="/sector/ai-power">AI Power</a>
+        </div>
+        <div class="footer-col">
+          <h4>Features</h4>
+          <a href="/stocks/">Stock Pages</a>
+          <a href="/about/">About</a>
+        </div>
+        <div class="footer-col">
+          <h4>More</h4>
+          <a href="/about/">Contact Us</a>
+          <a href="/">Home</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-tag">The Signal Editorial Team · readthesignal.net</div>
+        <div class="footer-copy">© 2026 The Signal — Market Intelligence. Data from public sources. Not investment advice.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  // Hamburger drawer
+  document.addEventListener('DOMContentLoaded', function(){
+    var btn = document.getElementById('hamburgerToggle');
+    var drawer = document.getElementById('drawer');
+    var overlay = document.getElementById('drawerOverlay');
+    var closeBtn = document.getElementById('drawerClose');
+    function openDrawer(){ drawer.classList.add('open'); overlay.classList.add('open'); document.body.style.overflow='hidden'; }
+    function closeDrawer(){ drawer.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow=''; }
+    if(btn&&drawer&&overlay){ btn.addEventListener('click',openDrawer); overlay.addEventListener('click',closeDrawer); if(closeBtn)closeBtn.addEventListener('click',closeDrawer);
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&drawer.classList.contains('open'))closeDrawer(); });
+    drawer.querySelectorAll('a').forEach(function(a){ a.addEventListener('click',closeDrawer); }); }
+
+    // Contact form handler
+    var form = document.getElementById('contactForm');
+    var status = document.getElementById('formStatus');
+    var submitBtn = document.getElementById('contactSubmit');
+    if(form) {
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+        status.className = 'form-status';
+        status.textContent = '';
+        status.style.display = 'none';
+
+        try {
+          var res = await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              name: document.getElementById('contactName').value.trim(),
+              email: document.getElementById('contactEmail').value.trim(),
+              message: document.getElementById('contactMessage').value.trim()
+            })
+          });
+          var data = await res.json();
+          if (data.success) {
+            status.className = 'form-status success';
+            status.textContent = data.message || 'Message sent! We\'ll get back to you soon.';
+            status.style.display = 'block';
+            form.reset();
+          } else {
+            status.className = 'form-status error';
+            status.textContent = data.error || 'Something went wrong. Please try again.';
+            status.style.display = 'block';
+          }
+        } catch(err) {
+          status.className = 'form-status error';
+          status.textContent = 'Network error. Please check your connection and try again.';
+          status.style.display = 'block';
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send Message';
+        }
+      });
+    }
+  });
+  </script>
+</body>
+</html>

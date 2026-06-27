@@ -5,13 +5,15 @@
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api/$1" },
     { "source": "/images/(.*)", "destination": "/img/$1" },
-    { "source": "/stock/(.*)", "destination": "/stocks/$1" }
+    { "source": "/stock/(.*)", "destination": "/stocks/$1" },
+    { "source": "/about", "destination": "/about/" }
   ],
   "routes": [
     { "handle": "filesystem" },
     { "src": "/api/(.*)", "dest": "/api/$1" },
     { "src": "/images/(.*)", "dest": "/img/$1" },
     { "src": "/stock/(.*)", "dest": "/stocks/$1" },
+    { "src": "/about(/.*)?", "dest": "/about/index.html" },
     { "src": "/(.*)", "dest": "/index.html" }
   ],
   "headers": [

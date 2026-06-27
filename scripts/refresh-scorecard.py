@@ -14,12 +14,12 @@ os.makedirs(DATA_DIR, exist_ok=True)
 
 # Company metadata
 COMPANIES = {
-    'AXON': {'name': 'Axon Enterprise', 'sector': 'Defense Tech', 'logo': 'https://logo.clearbit.com/axon.com'},
-    'META': {'name': 'Meta Platforms', 'sector': 'Social Media', 'logo': 'https://logo.clearbit.com/meta.com'},
-    'PLTR': {'name': 'Palantir Technologies', 'sector': 'AI Software', 'logo': 'https://logo.clearbit.com/palantir.com'},
-    'RTX': {'name': 'RTX Corporation', 'sector': 'Defense', 'logo': 'https://logo.clearbit.com/rtx.com'},
-    'NFLX': {'name': 'Netflix Inc.', 'sector': 'Entertainment', 'logo': 'https://logo.clearbit.com/netflix.com'},
-    'RBRK': {'name': 'Rubrik Inc.', 'sector': 'Cybersecurity', 'logo': 'https://logo.clearbit.com/rubrik.com'},
+    'AXON': {'name': 'Axon Enterprise', 'sector': 'Defense Tech', 'logo': ''},
+    'META': {'name': 'Meta Platforms', 'sector': 'Social Media', 'logo': ''},
+    'PLTR': {'name': 'Palantir Technologies', 'sector': 'AI Software', 'logo': ''},
+    'RTX': {'name': 'RTX Corporation', 'sector': 'Defense', 'logo': ''},
+    'NFLX': {'name': 'Netflix Inc.', 'sector': 'Entertainment', 'logo': ''},
+    'RBRK': {'name': 'Rubrik Inc.', 'sector': 'Cybersecurity', 'logo': ''},
 }
 
 def fmt_billions(v):

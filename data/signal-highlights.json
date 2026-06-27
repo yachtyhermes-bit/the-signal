@@ -2,20 +2,20 @@
   {
     "ticker": "KTOS",
     "name": "Kratos Defense & Security",
-    "currentPrice": 48.35,
-    "changePercent": 4.38,
+    "currentPrice": 47.21,
+    "changePercent": 1.92,
     "changeDirection": "up",
     "fairValue": {
       "status": "Undervalued",
       "price": 112.2,
-      "upside": "+132.1%"
+      "upside": "+137.7%"
     },
     "earnings": {
       "revTtm": "$1.42B",
       "revGrowth": "+22.6%",
       "netIncome": "$29.40M",
-      "peRatio": "284.4x",
-      "psRatio": "6.4x"
+      "peRatio": "277.7x",
+      "psRatio": "6.3x"
     },
     "analyst": {
       "consensus": "Strong Buy",
@@ -28,20 +28,20 @@
   {
     "ticker": "CRWV",
     "name": "CoreWeave Inc.",
-    "currentPrice": 95.0,
-    "changePercent": -3.81,
+    "currentPrice": 96.58,
+    "changePercent": -2.21,
     "changeDirection": "down",
     "fairValue": {
       "status": "Undervalued",
       "price": 143.41,
-      "upside": "+51.0%"
+      "upside": "+48.5%"
     },
     "earnings": {
       "revTtm": "$6.23B",
       "revGrowth": "+111.6%",
       "netIncome": "$-1.59B",
       "peRatio": "N/A",
-      "psRatio": "8.3x"
+      "psRatio": "8.5x"
     },
     "analyst": {
       "consensus": "Buy",
@@ -54,20 +54,20 @@
   {
     "ticker": "AXON",
     "name": "Axon Enterprise Inc.",
-    "currentPrice": 460.45,
-    "changePercent": 3.53,
+    "currentPrice": 464.83,
+    "changePercent": 4.52,
     "changeDirection": "up",
     "fairValue": {
       "status": "Undervalued",
       "price": 662.04,
-      "upside": "+43.8%"
+      "upside": "+42.4%"
     },
     "earnings": {
       "revTtm": "$2.98B",
       "revGrowth": "+33.7%",
       "netIncome": "$205.99M",
-      "peRatio": "184.9x",
-      "psRatio": "12.4x"
+      "peRatio": "186.7x",
+      "psRatio": "12.6x"
     },
     "analyst": {
       "consensus": "Strong Buy",
@@ -80,20 +80,20 @@
   {
     "ticker": "MSFT",
     "name": "Microsoft Corporation",
-    "currentPrice": 367.31,
-    "changePercent": 4.1,
+    "currentPrice": 372.97,
+    "changePercent": 5.71,
     "changeDirection": "up",
     "fairValue": {
       "status": "Undervalued",
       "price": 561.11,
-      "upside": "+52.8%"
+      "upside": "+50.4%"
     },
     "earnings": {
       "revTtm": "$318.27B",
       "revGrowth": "+18.3%",
       "netIncome": "$125.22B",
-      "peRatio": "21.9x",
-      "psRatio": "8.6x"
+      "peRatio": "22.2x",
+      "psRatio": "8.7x"
     },
     "analyst": {
       "consensus": "Strong Buy",
@@ -106,20 +106,20 @@
   {
     "ticker": "SOFI",
     "name": "SoFi Technologies Inc.",
-    "currentPrice": 17.44,
-    "changePercent": 0.81,
+    "currentPrice": 17.88,
+    "changePercent": 3.35,
     "changeDirection": "up",
     "fairValue": {
       "status": "Undervalued",
       "price": 20.9,
-      "upside": "+19.8%"
+      "upside": "+16.9%"
     },
     "earnings": {
       "revTtm": "$3.91B",
       "revGrowth": "+42.5%",
       "netIncome": "$576.93M",
-      "peRatio": "38.8x",
-      "psRatio": "5.7x"
+      "peRatio": "39.7x",
+      "psRatio": "5.9x"
     },
     "analyst": {
       "consensus": "Buy",
@@ -132,20 +132,20 @@
   {
     "ticker": "ZS",
     "name": "Zscaler Inc.",
-    "currentPrice": 129.04,
-    "changePercent": 4.23,
+    "currentPrice": 132.26,
+    "changePercent": 6.83,
     "changeDirection": "up",
     "fairValue": {
       "status": "Undervalued",
       "price": 192.74,
-      "upside": "+49.4%"
+      "upside": "+45.7%"
     },
     "earnings": {
       "revTtm": "$3.17B",
       "revGrowth": "+25.4%",
       "netIncome": "$-77.39M",
       "peRatio": "N/A",
-      "psRatio": "6.6x"
+      "psRatio": "6.7x"
     },
     "analyst": {
       "consensus": "Strong Buy",
@@ -158,20 +158,20 @@
   {
     "ticker": "NVDA",
     "name": "NVIDIA Corporation",
-    "currentPrice": 193.38,
-    "changePercent": -1.21,
+    "currentPrice": 192.53,
+    "changePercent": -1.64,
     "changeDirection": "down",
     "fairValue": {
       "status": "Undervalued",
       "price": 298.93,
-      "upside": "+54.6%"
+      "upside": "+55.3%"
     },
     "earnings": {
       "revTtm": "$253.49B",
       "revGrowth": "+85.2%",
       "netIncome": "$159.61B",
-      "peRatio": "29.6x",
-      "psRatio": "18.5x"
+      "peRatio": "29.4x",
+      "psRatio": "18.4x"
     },
     "analyst": {
       "consensus": "Strong Buy",
@@ -184,20 +184,20 @@
   {
     "ticker": "AVGO",
     "name": "Broadcom Inc.",
-    "currentPrice": 367.76,
-    "changePercent": -2.94,
+    "currentPrice": 365.02,
+    "changePercent": -3.67,
     "changeDirection": "down",
     "fairValue": {
       "status": "Undervalued",
       "price": 523.73,
-      "upside": "+42.4%"
+      "upside": "+43.5%"
     },
     "earnings": {
       "revTtm": "$75.46B",
       "revGrowth": "+47.9%",
       "netIncome": "$29.32B",
-      "peRatio": "61.1x",
-      "psRatio": "23.2x"
+      "peRatio": "60.6x",
+      "psRatio": "23.0x"
     },
     "analyst": {
       "consensus": "Strong Buy",
