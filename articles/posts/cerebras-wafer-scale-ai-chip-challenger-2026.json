@@ -7,7 +7,10 @@
   "title": "Cerebras Stock Got Halved. The CEO Says Everyone Missed The Point.",
   "subtitle": "This is the largest AI chip ever built. The market just handed you a discount.",
   "summary": "Cerebras Systems dumped 46% from its IPO price after a margin 'miss' that the CEO calls a misunderstood business model transition. With WSE-3's 125 petaflops, $20B+ in OpenAI and AWS partnerships, and analysts pricing in 80% upside, the selloff might be the year's best entry point.",
-  "image": "/img/articles/cerebras-wafer-scale-ai-chip-challenger-2026.jpg",
+  "image": {
+    "src": "/img/articles/cerebras-wafer-scale-ai-chip-challenger-2026.jpg",
+    "caption": "Cerebras Wafer Scale Engine — the largest AI chip ever built, a full silicon wafer with 4 trillion transistors."
+  },
   "tags": ["cbrs", "cerebras", "ai chips", "wafer-scale", "semiconductors", "ai infrastructure", "nvidia competitor", "deep learning"],
   "links": [
     {"label": "Cerebras Official →", "url": "https://cerebras.ai"},
@@ -15,9 +18,11 @@
   ],
   "videos": [
     {
-      "url": "https://www.youtube.com/watch?v=tlvfZulPYaw",
+      "id": "tlvfZulPYaw",
       "title": "Cerebras CS-3 wafer-scale million-core AI chip, 25kW WSE-3, 125 PFLOPS inference engine",
-      "channel": "Charbax"
+      "source": "Charbax",
+      "url": "https://www.youtube.com/watch?v=tlvfZulPYaw",
+      "position": "after_2nd_h2"
     }
   ],
   "price": 166.52,
