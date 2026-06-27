@@ -37,9 +37,11 @@
   ],
   "videos": [
     {
-      "url": "https://www.youtube.com/watch?v=8a1OtY56Iv0",
+      "id": "8a1OtY56Iv0",
       "title": "Why RTX Is Crushing Lockheed And Northrop!",
-      "channel": "Michael Smith"
+      "source": "Michael Smith",
+      "url": "https://www.youtube.com/watch?v=8a1OtY56Iv0",
+      "position": "after_2nd_h2"
     }
   ],
   "price": 186.85,

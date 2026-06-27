@@ -34,9 +34,11 @@
   "summary": "AMD just went from also-ran to credible threat. Revenue up 37.8%, data center is the new main character, and the MI400 could flip the script on Nvidia. Here's what Lisa Su is cooking.",
   "videos": [
     {
-      "url": "https://www.youtube.com/watch?v=rYVPDQfRcL0",
+      "id": "rYVPDQfRcL0",
       "title": "AMD Reveals MI300X AI Chip (Watch It Here)",
-      "channel": "CNET Highlights"
+      "source": "CNET Highlights",
+      "url": "https://www.youtube.com/watch?v=rYVPDQfRcL0",
+      "position": "after_2nd_h2"
     }
   ]
 }
