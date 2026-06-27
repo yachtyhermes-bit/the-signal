@@ -9327,7 +9327,8 @@
         "totalAssets": 41182000000.0,
         "totalLiabilities": 19081000000.0
       }
-    ]
+    ],
+    "fmpCalls": 0
   },
   "SPACEX": {
     "company": {
@@ -18990,7 +18991,8 @@
         "totalAssets": 462675000000.0,
         "totalLiabilities": 316632000000.0
       }
-    ]
+    ],
+    "fmpCalls": 0
   },
   "TSLA": {
     "company": {
@@ -28340,7 +28342,8 @@
         "totalAssets": 82338000000.0,
         "totalLiabilities": 36440000000.0
       }
-    ]
+    ],
+    "fmpCalls": 0
   },
   "PLTR": {
     "company": {
@@ -37668,7 +37671,8 @@
         "totalAssets": 3461239000.0,
         "totalLiabilities": 818802000.0
       }
-    ]
+    ],
+    "fmpCalls": 0
   },
   "RKLB": {
     "company": {
@@ -46972,7 +46976,8 @@
         "totalAssets": 989123000.0,
         "totalLiabilities": 315917000.0
       }
-    ]
+    ],
+    "fmpCalls": 0
   },
   "KTOS": {
     "company": {
@@ -56275,7 +56280,8 @@
         "totalAssets": 1551500000.0,
         "totalLiabilities": 604000000.0
       }
-    ]
+    ],
+    "fmpCalls": 0
   },
   "CRWV": {
     "company": {
@@ -58939,7 +58945,8 @@
         "totalAssets": 4976975000.0,
         "totalLiabilities": 5573566000.0
       }
-    ]
+    ],
+    "fmpCalls": 0
   },
   "AXON": {
     "company": {
@@ -68218,7 +68225,8 @@
         "totalAssets": 2851894000.0,
         "totalLiabilities": 1583403000.0
       }
-    ]
+    ],
+    "fmpCalls": 0
   },
   "MSFT": {
     "company": {
@@ -77501,7 +77509,8 @@
         "totalAssets": 364840000000.0,
         "totalLiabilities": 198298000000.0
       }
-    ]
+    ],
+    "fmpCalls": 0
   },
   "SOFI": {
     "company": {
@@ -86789,7 +86798,8 @@
         "totalAssets": 19007675000.0,
         "totalLiabilities": 13479199000.0
       }
-    ]
+    ],
+    "fmpCalls": 0
   },
   "ZS": {
     "company": {
@@ -96072,7 +96082,8 @@
         "totalAssets": 2832665000.0,
         "totalLiabilities": 2259365000.0
       }
-    ]
+    ],
+    "fmpCalls": 0
   },
   "AVGO": {
     "company": {
@@ -105379,7 +105390,8 @@
         "totalAssets": 73249000000.0,
         "totalLiabilities": 50540000000.0
       }
-    ]
+    ],
+    "fmpCalls": 0
   },
   "GOOGL": {
     "company": {
@@ -114674,7 +114686,8 @@
         "totalAssets": 365264000000.0,
         "totalLiabilities": 109120000000.0
       }
-    ]
+    ],
+    "fmpCalls": 0
   },
   "MU": {
     "company": {
@@ -123957,7 +123970,8 @@
         "totalAssets": 66283000000.0,
         "totalLiabilities": 16376000000.0
       }
-    ]
+    ],
+    "fmpCalls": 0
   },
   "MRVL": {
     "company": {
@@ -133252,6 +133266,174 @@
         "totalAssets": 22522100000.0,
         "totalLiabilities": 6884900000.0
       }
-    ]
+    ],
+    "fmpCalls": 0
+  },
+  "SPCX": {
+    "fmpCalls": 0,
+    "chartData": [
+      {
+        "time": "2026-06-12",
+        "open": 150.0,
+        "high": 176.52,
+        "low": 149.34,
+        "close": 160.95
+      },
+      {
+        "time": "2026-06-15",
+        "open": 171.74,
+        "high": 193.0,
+        "low": 168.35,
+        "close": 192.5
+      },
+      {
+        "time": "2026-06-16",
+        "open": 200.51,
+        "high": 225.64,
+        "low": 199.98,
+        "close": 211.39
+      },
+      {
+        "time": "2026-06-17",
+        "open": 209.84,
+        "high": 213.8,
+        "low": 187.01,
+        "close": 191.82
+      },
+      {
+        "time": "2026-06-18",
+        "open": 188.39,
+        "high": 190.0,
+        "low": 172.11,
+        "close": 185.0
+      },
+      {
+        "time": "2026-06-22",
+        "open": 176.04,
+        "high": 176.75,
+        "low": 154.0,
+        "close": 154.6
+      },
+      {
+        "time": "2026-06-23",
+        "open": 151.06,
+        "high": 165.5,
+        "low": 147.11,
+        "close": 156.11
+      },
+      {
+        "time": "2026-06-24",
+        "open": 154.2,
+        "high": 159.86,
+        "low": 150.72,
+        "close": 154.54
+      },
+      {
+        "time": "2026-06-25",
+        "open": 156.63,
+        "high": 160.65,
+        "low": 150.0,
+        "close": 153.0
+      },
+      {
+        "time": "2026-06-26",
+        "open": null,
+        "high": null,
+        "low": null,
+        "close": null
+      }
+    ],
+    "quarterlyFinancials": {
+      "revenue": [
+        {
+          "period": "2026/Q1",
+          "actual": 4694000000.0
+        },
+        {
+          "period": "2025/Q1",
+          "actual": 4067000000.0
+        },
+        {
+          "period": "2026/Q2",
+          "estimated": 6726000000.0
+        },
+        {
+          "period": "2026/Q3",
+          "estimated": 10685250000.0
+        }
+      ],
+      "netIncome": [
+        {
+          "period": "2026/Q1",
+          "actual": -4276000000.0
+        },
+        {
+          "period": "2025/Q1",
+          "actual": -528000000.0
+        }
+      ],
+      "eps": [],
+      "ebit": [
+        {
+          "period": "2026/Q1",
+          "actual": -3606000000.0
+        },
+        {
+          "period": "2025/Q1",
+          "actual": -67000000.0
+        }
+      ],
+      "totalAssets": [
+        {
+          "period": "2026/Q1",
+          "actual": 102094000000.0
+        }
+      ],
+      "totalLiabilities": [
+        {
+          "period": "2026/Q1",
+          "actual": 60512000000.0
+        }
+      ]
+    },
+    "analyst": {
+      "recommendationKey": "buy",
+      "targetMeanPrice": {
+        "raw": 187.8,
+        "fmt": "$187.80"
+      },
+      "targetHighPrice": {
+        "raw": 310.0,
+        "fmt": "$310.00"
+      },
+      "targetLowPrice": {
+        "raw": 62.0,
+        "fmt": "$62.00"
+      },
+      "numberOfAnalystOpinions": 5,
+      "currentPrice": {
+        "raw": 153.23,
+        "fmt": "$153.23"
+      }
+    },
+    "consensus": {
+      "strongBuy": 1,
+      "buy": 5,
+      "hold": 2,
+      "sell": 1,
+      "strongSell": 0
+    },
+    "returns": {
+      "oneYear": {
+        "raw": null,
+        "fmt": "nan%"
+      },
+      "fiveYear": null,
+      "tenYear": null,
+      "ytd": {
+        "raw": null,
+        "fmt": "nan%"
+      }
+    }
   }
 }
