@@ -48,11 +48,15 @@ const stockListData = symbols.map(sym => {
   const moatBadge = moatRating === 'Wide' ? '🛡️ Wide Moat' : (moatRating === 'Narrow' ? '🛡️ Narrow Moat' : '');
 
   if (isPrivate) {
-    return { sym, name, price: 'Private', change: '—', changeClass: '', isPrivate: true, moatRating, moatClass, moatBadge };
+    return { sym, name, price: 'Private Company', change: 'No Public Data', changeClass: 'private', isPrivate: true, moatRating, moatClass, moatBadge };
   }
 
   const priceVal = price && price.price != null ? price.price : null;
   const changePct = price && price.changePercent != null ? price.changePercent : null;
+  if (priceVal == null && changePct == null) {
+    // No data available — treat like private/no-data rather than showing broken dashes
+    return { sym, name, price: 'Private Company', change: 'No Public Data', changeClass: 'private', isPrivate: true, moatRating, moatClass, moatBadge };
+  }
   const priceStr = priceVal != null ? '$' + priceVal.toFixed(2) : '—';
   const changeStr = changePct != null ? (changePct >= 0 ? '+' : '') + changePct.toFixed(2) + '%' : '—';
   const changeClass = changePct != null ? (changePct >= 0 ? 'positive' : 'negative') : '';
@@ -147,6 +151,7 @@ const html = `<!DOCTYPE html>
       <div class="stocks-index-hero-inner">
         <h1 class="stocks-index-title">Stocks</h1>
         <p class="stocks-index-subtitle">Tracked companies on The Signal — real-time prices, moat ratings, and deep analysis.</p>
+        <p class="stocks-last-updated">Prices updated: <span id="lastUpdatedTime"></span></p>
       </div>
     </section>
 
@@ -174,6 +179,15 @@ const html = `<!DOCTYPE html>
         document.documentElement.classList.add('light');
         var icon = document.querySelector('.theme-icon');
         if (icon) icon.textContent = '🌙';
+      }
+    })();
+
+    // Last updated timestamp
+    (function() {
+      var el = document.getElementById('lastUpdatedTime');
+      if (el) {
+        var now = new Date();
+        el.textContent = now.toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit' });
       }
     })();
 
@@ -250,11 +264,13 @@ const html = `<!DOCTYPE html>
     function updatePrices(prices) {
       document.querySelectorAll('[data-price]').forEach(function(el) {
         var sym = el.getAttribute('data-price');
+        if (el.closest('.stocks-card') && el.closest('.stocks-card').querySelector('.private')) return;
         var p = prices[sym];
         if (p && p.price != null) el.textContent = '$' + formatNum(p.price);
       });
       document.querySelectorAll('[data-change]').forEach(function(el) {
         var sym = el.getAttribute('data-change');
+        if (el.classList.contains('private')) return;
         var p = prices[sym];
         if (p && p.changePercent != null) {
           var chg = (p.changePercent >= 0 ? '+' : '') + p.changePercent.toFixed(2) + '%';
@@ -262,6 +278,12 @@ const html = `<!DOCTYPE html>
           el.className = el.className.replace(/positive|negative/g,'').trim() + ' ' + (p.changePercent >= 0 ? 'positive' : 'negative');
         }
       });
+      // Update "Last updated" timestamp
+      var el = document.getElementById('lastUpdatedTime');
+      if (el) {
+        var now = new Date();
+        el.textContent = now.toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit' });
+      }
     }
     function fetchPrices() {
       fetch('/api/prices/').then(function(r){return r.json()}).then(function(d){updatePrices(d.prices||d)}).catch(function(){});
@@ -273,6 +295,9 @@ const html = `<!DOCTYPE html>
 
   <!-- ── FOOTER ── -->
   <style>
+    .stocks-last-updated{font-size:13px;color:var(--text-muted);margin-top:8px;letter-spacing:0.3px}
+    .stocks-card-change.private{color:var(--text-muted);font-style:italic;font-size:12px}
+    .stocks-card-price{white-space:nowrap}
     .stock-footer{border-top:1px solid var(--border);padding:48px 24px 32px;margin-top:48px}
     .stock-footer-inner{max-width:1200px;margin:0 auto}
     .stock-footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:32px}

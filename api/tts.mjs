@@ -15,7 +15,9 @@ function envVal(...keys) {
 const CF_ACCOUNT_ID = envVal('CF_ACCOUNT_ID', 'CLOUDFLARE_ACCOUNT_ID');
 const CF_API_TOKEN = envVal('CF_API_TOKEN', 'CLOUDFLARE_API_TOKEN');
 const BUCKET = 'the-signal-audio';
-const VOICE = 'en-US-AndrewNeural';
+const PRIMARY_VOICE = 'en-US-AndrewNeural';
+const FALLBACK_VOICES = ['en-US-JennyNeural', 'en-US-GuyNeural', 'en-GB-SoniaNeural'];
+const MAX_TTS_RETRIES = 3;
 const TMP = '/tmp';
 // R2 key prefixes to try — supports both new (v2/) and legacy (root) uploads
 const R2_PREFIXES = ['v2/', ''];
@@ -47,26 +49,47 @@ function ensureEdgeTTS() {
   }
 }
 
-function genEdgeTTS(text) {
+function genEdgeTTS(text, voice) {
   ensureEdgeTTS();
   const pyCode = `import sys;sys.path.insert(0,'${TMP}/edge_tts_deps')
 import asyncio,edge_tts
 async def g():
-    tts=edge_tts.Communicate(sys.stdin.read()[:5000],'${VOICE}')
+    tts=edge_tts.Communicate(sys.stdin.read()[:5000],'${voice || PRIMARY_VOICE}')
     async for c in tts.stream():
         if c['type']=='audio':sys.stdout.buffer.write(c['data'])
 asyncio.run(g())`;
-  try {
-    const audio = execSync(`python3 -c '${pyCode}'`, {
-      input: text,
-      maxBuffer: 10 * 1024 * 1024,
-      timeout: 120000
-    });
-    return audio?.length > 500 ? audio : null;
-  } catch (e) {
-    console.error('Edge TTS gen error:', e.message?.substring(0, 100));
-    return null;
+  for (let attempt = 1; attempt <= MAX_TTS_RETRIES; attempt++) {
+    try {
+      const audio = execSync(`python3 -c '${pyCode}'`, {
+        input: text,
+        maxBuffer: 10 * 1024 * 1024,
+        timeout: 120000
+      });
+      if (audio?.length > 500) return audio;
+      console.error(`Edge TTS too small (${audio?.length || 0} bytes), attempt ${attempt}/${MAX_TTS_RETRIES}`);
+    } catch (e) {
+      console.error(`Edge TTS attempt ${attempt}/${MAX_TTS_RETRIES} (${voice || PRIMARY_VOICE}):`, e.message?.substring(0, 100));
+    }
+    if (attempt < MAX_TTS_RETRIES) {
+      const wait = Math.pow(2, attempt) * 1000;
+      const start = Date.now();
+      while (Date.now() - start < wait) { /* busy-spin — execSync in sh */ }
+    }
   }
+  return null;
+}
+
+async function genTTSWithFallback(text) {
+  const voices = [PRIMARY_VOICE, ...FALLBACK_VOICES];
+  for (const voice of voices) {
+    const audio = genEdgeTTS(text, voice);
+    if (audio) {
+      return audio;
+    }
+    console.error(`Voice ${voice} exhausted all retries, trying next voice`);
+  }
+  console.error('All TTS voices exhausted');
+  return null;
 }
 
 async function fetchFromR2(slug) {
@@ -150,50 +173,51 @@ export default async function handler(req, res) {
     } catch {}
 
     // Fallback 2: fetch from public URL (static audio CDN)
+    // Verify Content-Type is actually audio to avoid serving HTML error pages
     try {
       const host = req.headers['x-forwarded-host'] || req.headers.host || 'readthesignal.net';
       const audioUrl = `https://${host}/audio/${slug}.mp3`;
       const r = await fetch(audioUrl);
       if (r.ok) {
-        const audio = Buffer.from(await r.arrayBuffer());
-        if (audio && audio.length > 500) {
-          res.setHeader('Content-Type', 'audio/mpeg');
-          res.setHeader('Cache-Control', 'public, max-age=86400');
-          res.setHeader('X-TTS-Backend', 'static-url-andrew');
-          return res.send(audio);
+        const ct = (r.headers.get('content-type') || '').toLowerCase();
+        // Only accept if it's genuinely an audio file (audio/mpeg, audio/*, or octet-stream for binary)
+        const isValidAudio = ct.includes('audio/') || ct.includes('octet-stream');
+        if (isValidAudio) {
+          const audio = Buffer.from(await r.arrayBuffer());
+          // Also verify MP3 magic bytes (0xFF 0xFB or ID3 tag) to be sure
+          const hasMP3Header = audio.length >= 3 && (
+            (audio[0] === 0xFF && (audio[1] & 0xE0) === 0xE0) ||  // MPEG sync word
+            (audio[0] === 0x49 && audio[1] === 0x44 && audio[2] === 0x33)  // ID3 tag
+          );
+          if (audio && audio.length > 500 && hasMP3Header) {
+            res.setHeader('Content-Type', 'audio/mpeg');
+            res.setHeader('Cache-Control', 'public, max-age=86400');
+            res.setHeader('X-TTS-Backend', 'static-url-andrew');
+            return res.send(audio);
+          }
         }
       }
     } catch {}
 
-    // Generate Jenny audio
-    const jennyAudio = genEdgeTTS(text);
+    // Generate Andrew audio with retry + fallback voices
+    const jennyAudio = await genTTSWithFallback(text);
     if (jennyAudio) {
       uploadToR2(slug, jennyAudio); // fire-and-forget cache
       res.setHeader('Content-Type', 'audio/mpeg');
       res.setHeader('Cache-Control', 'public, max-age=3600');
-      res.setHeader('X-TTS-Backend', 'edge-tts-jenny');
+      res.setHeader('X-TTS-Backend', 'edge-tts-with-fallback');
       return res.send(jennyAudio);
     }
   }
 
-  // Fallback: Google Translate — do NOT cache (R2 may get backfilled)
-  try {
-    const chunks = splitText(text, 190);
-    const bufs = [];
-    for (const chunk of chunks) {
-      const url = `https://translate.google.com/translate_tts?ie=UTF-8&tl=en&client=tw-ob&q=${encodeURIComponent(chunk)}`;
-      const r = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
-      if (!r.ok) throw new Error(`status ${r.status}`);
-      bufs.push(Buffer.from(await r.arrayBuffer()));
-    }
-    const total = Buffer.concat(bufs);
-    res.setHeader('Content-Type', 'audio/mpeg');
-    res.setHeader('Cache-Control', 'no-cache');
-    res.setHeader('X-TTS-Backend', 'google-translate');
-    return res.send(total);
-  } catch (e2) {
-    return res.status(500).json({ error: e2.message });
-  }
+  // No audio available — return 404 instead of robotic Google TTS fallback
+  // Users will see "Audio not available" in the player rather than hearing
+  // the low-quality Google Translate voice.
+  return res.status(404).json({
+    error: 'Audio not available for this article yet',
+    slug: slug,
+    hint: 'Audio generation may be pending. Try again later.'
+  });
 }
 
 function splitText(text, maxLen) {

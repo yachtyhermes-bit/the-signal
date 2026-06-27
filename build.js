@@ -66,6 +66,29 @@ if (fs.existsSync(audioDir)) {
   console.log(`  ✅ ${countFiles(distAudioDir)} audio files → dist/audio/`);
 }
 
+// ─── 1.5.6. Check for missing TTS audio ───
+(function checkMissingAudio() {
+  if (!fs.existsSync(POSTS_DIR)) return;
+  const jsonFiles = fs.readdirSync(POSTS_DIR).filter(f => f.endsWith('.json'));
+  const missing = [];
+  for (const file of jsonFiles) {
+    try {
+      const article = JSON.parse(fs.readFileSync(path.join(POSTS_DIR, file), 'utf8'));
+      if (!article.slug) continue;
+      const mp3Path = path.join(ROOT, 'public', 'audio', `${article.slug}.mp3`);
+      if (!fs.existsSync(mp3Path)) {
+        missing.push(article.slug);
+      }
+    } catch {}
+  }
+  if (missing.length > 0) {
+    console.log(`  ⚠️  ${missing.length} articles missing TTS audio. Generate with:`);
+    for (const slug of missing) {
+      console.log(`     python3 scripts/regenerate-tts.py ${slug}`);
+    }
+  }
+})();
+
 // ─── 1.6. Build stock pages ───
 console.log('📊 Building stock pages...');
 try {
@@ -251,10 +274,16 @@ if (!sectorTemplate) {
     bySector[s].push(a);
   }
 
+  const SECTOR_PAGE_SIZE = 12;
   let sectorCount = 0;
   for (const [sector, arts] of Object.entries(bySector)) {
     const sectorName = SECTORS[sector] || sector.toUpperCase();
-    const cards = arts.map(a => articleCard(a)).join('\n');
+    const visible = arts.slice(0, SECTOR_PAGE_SIZE).map(a => articleCard(a)).join('\n');
+    const hidden = arts.slice(SECTOR_PAGE_SIZE).map(a => articleCard(a).replace('class="article-card"', 'class="article-card sector-hidden"')).join('\n');
+    const loadMoreBtn = arts.length > SECTOR_PAGE_SIZE
+      ? `\n<button class="sector-load-more" id="sectorLoadMore" onclick="showMoreSector()"><span class="sector-load-more-text">Load More Articles</span><span class="sector-load-more-count">${arts.length - SECTOR_PAGE_SIZE} remaining</span></button>`
+      : '';
+    const cards = visible + '\n' + hidden + loadMoreBtn;
     
     let html = sectorTemplate
       .replace(/{{SECTOR}}/g, sector)
