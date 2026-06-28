@@ -319,13 +319,13 @@ def main():
     earnings_growth = safe_float(g("earningsGrowth"))
 
     # --- Build the data structure ---
-    company_name = g("longName") or g("shortName") or "NVIDIA Corporation"
-    sector = g("sector") or "Technology"
-    industry = g("industry") or "Semiconductors"
+    company_name = g("longName") or g("shortName") or ticker_symbol
+    sector = g("sector") or None
+    industry = g("industry") or None
     employees = g("fullTimeEmployees")
-    website = g("website") or "https://www.nvidia.com"
-    city = g("city") or "Santa Clara"
-    state = g("state") or "CA"
+    website = g("website") or None
+    city = g("city") or None
+    state = g("state") or None
 
     if not description:
         description = g("longBusinessSummary") or ""

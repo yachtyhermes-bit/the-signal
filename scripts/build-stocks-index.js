@@ -87,7 +87,7 @@ const html = `<!DOCTYPE html>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Stocks — The Signal</title>
-  <meta name="description" content="Track all stocks covered by The Signal. Real-time prices, moat ratings, and deep analysis on NVDA, TSLA, AMZN, PLTR, SPACEX, RKLB and more.">
+  <meta name="description" content="Track all stocks covered by The Signal. Real-time prices, moat ratings, and deep analysis on NVDA, TSLA, AMZN, PLTR, SPCX, RKLB and more.">
   <link rel="stylesheet" href="/css/stock-card.css">
   <link rel="canonical" href="https://readthesignal.net/stocks/">
 </head>

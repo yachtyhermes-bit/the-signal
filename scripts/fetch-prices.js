@@ -21,14 +21,13 @@ const TICKERS = [
   'AAPL', 'MSFT', 'GOOGL', 'AMZN', 'META', 'TSLA', 'NFLX',
   // The Signal coverage
   'AXON', 'CRWV', 'SOFI',
-  // Special tickers (mapped to different keys)
-  'SPCX'   // stored as SPACEX
+  // Special tickers
+  'SPCX', 'ANET'
 ];
 
 // Ticker mapping: Yahoo ticker → internal key
-const TICKER_MAP = {
-  'SPCX': 'SPACEX'
-};
+// (No longer remapping SPCX → SPACEX; using native SPCX key)
+const TICKER_MAP = {};
 
 // Company names & websites for reference
 const COMPANY_INFO = {
@@ -82,7 +81,9 @@ const COMPANY_INFO = {
   'AMAT': { name: 'Applied Materials Inc.', url: 'https://www.appliedmaterials.com/' },
   'NFLX': { name: 'Netflix Inc.', url: 'https://www.netflix.com/' },
   'QCOM': { name: 'Qualcomm Inc.', url: 'https://www.qualcomm.com/' },
-  'SMCI': { name: 'Super Micro Computer Inc.', url: 'https://www.supermicro.com/' }
+  'SMCI': { name: 'Super Micro Computer Inc.', url: 'https://www.supermicro.com/' },
+  'ANET': { name: 'Arista Networks Inc.', url: 'https://www.arista.com/' },
+  'SPCX': { name: 'SpaceX Inc.', url: 'https://www.spacex.com/' }
 };
 
 // Fetch from Yahoo Finance v8 API

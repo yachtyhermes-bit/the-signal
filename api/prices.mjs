@@ -3,12 +3,13 @@
 // .mjs for ESM on Vercel
 
 const TICKERS = [
-  'NVDA','AMD','AVGO','MRVL','TSM','ASML','MU','CBRS','CRWV','NBIS','INTC','IREN','LRCX','AMAT','QCOM','SMCI',
+  'NVDA','AMD','AVGO','MRVL','TSM','ASML','MU','CBRS','CRWV','NBIS','INTC','IREN','LRCX','AMAT','QCOM','SMCI','ANET',
   'CRWD','PANW','FTNT','ZS','S','CHKP','CYBR','TENB','RBRK',
   'LMT','RTX','NOC','GD','LHX','KTOS','AVAV','PL','AXON','GE','PLTR',
   'RKLB','RDW','LUNR','ASTS',
   'AAPL','MSFT','GOOGL','AMZN','META','TSLA','NFLX',
-  'IONQ','QBTS','QUBT','RGTI'
+  'IONQ','QBTS','QUBT','RGTI',
+  'SOFI','SPCX'
 ];
 
 async function fetchQuote(ticker) {
