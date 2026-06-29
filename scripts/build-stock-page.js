@@ -107,8 +107,13 @@ function buildStockPage(symbol) {
   relatedArticles = relatedArticles.slice(0, 12);
 
   // Package ALL data for the client-side chart JS
+  // ── Sync last chart close to live price so chart always matches display price ──
+  const chartData = fin.chartData || [];
+  if (chartData.length > 0 && priceNow != null) {
+    chartData[chartData.length - 1].close = priceNow;
+  }
   const embeddedData = JSON.stringify({
-    prices: fin.chartData || [],
+    prices: chartData,
     quarterly: {
       revenue: qf.revenue || [],
       netIncome: qf.netIncome || [],
@@ -590,7 +595,7 @@ function buildStockPage(symbol) {
   </main>
 
   <script id="chartData-${symbol}" type="application/json">${embeddedData}</script>
-  <script src="/js/stock-chart.js?v=5"></script>
+  <script src="/js/stock-chart.js?v=8"></script>
   <script>
 (function() {
   const saved = localStorage.getItem('stock-theme');
