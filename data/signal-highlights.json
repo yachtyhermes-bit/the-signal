@@ -106,13 +106,13 @@
   {
     "ticker": "SOFI",
     "name": "SoFi Technologies Inc.",
-    "currentPrice": 17.88,
-    "changePercent": 3.35,
+    "currentPrice": 17.85,
+    "changePercent": 3.0,
     "changeDirection": "up",
     "fairValue": {
       "status": "Undervalued",
       "price": 20.9,
-      "upside": "+16.9%"
+      "upside": "+17.1%"
     },
     "earnings": {
       "revTtm": "$3.91B",

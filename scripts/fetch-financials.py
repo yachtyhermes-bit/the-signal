@@ -242,7 +242,7 @@ def main():
     chart_data = []
     try:
         # Fetch 5y daily data for bar chart (OHLC format)
-        hist_chart = ticker.history(period="5y", interval="1d")
+        hist_chart = ticker.history(period="10y", interval="1d")
         for idx, row in hist_chart.iterrows():
             date_str = idx.strftime("%Y-%m-%d")
             chart_data.append({
