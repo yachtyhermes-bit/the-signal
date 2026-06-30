@@ -32,6 +32,228 @@ const SECTORS = {
 
 const HOMEPAGE_LIMIT = 40;
 
+// ─── Rocket Lab Navigation Block ───
+const ROCKET_NAV = `  <!-- DESKTOP TOP NAV -->
+  <nav class="topnav" id="topnav">
+    <div class="topnav-inner">
+      <a href="/" class="topnav-logo">
+        <span class="the">THE</span>
+        <span class="signal">SIGNAL</span>
+      </a>
+      <div class="topnav-items">
+        <div class="topnav-item has-dropdown" id="sectorsDropdown">
+          <button class="topnav-link" onclick="toggleDropdown(event)">SECTORS <span class="chevron">&#8250;</span></button>
+          <div class="topnav-dropdown">
+            <a href="/sector/ai">AI</a>
+            <a href="/sector/cyber">CYBER</a>
+            <a href="/sector/defense">DEFENSE</a>
+            <a href="/sector/space">SPACE</a>
+            <a href="/sector/mega-cap">MEGA-CAP</a>
+            <a href="/sector/quantum">QUANTUM</a>
+            <a href="/sector/ai-power">AI POWER</a>
+            <a href="/sector/etfs">ETFS</a>
+          </div>
+        </div>
+        <div class="topnav-item"><a href="/stocks/" class="topnav-link">STOCK PAGES</a></div>
+        <div class="topnav-item"><a href="/#scorecard" class="topnav-link">SCORECARD</a></div>
+        <div class="topnav-item"><a href="/hive" class="topnav-link">HIVE</a></div>
+        <div class="topnav-item"><a href="/signal-vs-the-street" class="topnav-link">VS. STREET</a></div>
+        <div class="topnav-item"><a href="/pricing" class="topnav-link">PREMIUM</a></div>
+        <a href="/pricing" class="topnav-cta">GET PREMIUM ACCESS</a>
+      </div>
+      <div class="topnav-actions">
+        <button class="topnav-search-btn" id="searchToggle" aria-label="Search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+        <div class="auth-container" id="authContainer">
+          <button class="topnav-nav-btn" id="authToggle" aria-label="Sign In">
+            <div class="auth-btn-avatar" id="authBtnAvatar">
+              <span class="auth-btn-initial" id="authBtnInitial"></span>
+              <img class="auth-btn-img" id="authBtnImg" src="" alt="" style="display:none">
+            </div>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="auth-btn-icon" id="authBtnIcon">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span class="auth-label" id="authLabel">Sign In</span>
+          </button>
+          <div class="auth-dropdown" id="authDropdown">
+            <div class="auth-profile" id="authProfile" style="display:none">
+              <div class="auth-profile-header">
+                <div class="auth-profile-avatar" id="authProfileAvatar">
+                  <img id="authProfileImg" src="" alt="" style="display:none">
+                  <span class="auth-profile-initial" id="authProfileInitial"></span>
+                </div>
+                <div class="auth-profile-info">
+                  <span class="auth-profile-name" id="authProfileName"></span>
+                  <span class="auth-profile-username" id="authProfileUsername"></span>
+                </div>
+                <div class="auth-profile-badge">HIVE</div>
+              </div>
+              <div class="auth-profile-stats" id="authProfileStats">
+                <div class="auth-stat"><span class="auth-stat-label">Portfolio</span><span class="auth-stat-value" id="authStatValue">-</span></div>
+                <div class="auth-stat"><span class="auth-stat-label">Return</span><span class="auth-stat-value" id="authStatReturn">-</span></div>
+              </div>
+              <div class="auth-drop-divider"></div>
+              <div class="auth-profile-nav">
+                <a href="/sector/ai" class="auth-nav-item">AI</a>
+                <a href="/sector/cyber" class="auth-nav-item">Cyber</a>
+                <a href="/sector/defense" class="auth-nav-item">Defense</a>
+                <a href="/sector/space" class="auth-nav-item">Space</a>
+                <a href="/sector/mega-cap" class="auth-nav-item">Mega-Cap</a>
+                <a href="/sector/quantum" class="auth-nav-item">Quantum</a>
+                <a href="/sector/ai-power" class="auth-nav-item">AI Power</a>
+                <a href="/sector/etfs" class="auth-nav-item">ETFs</a>
+              </div>
+              <div class="auth-drop-divider"></div>
+              <div class="auth-profile-footer">
+                <a href="/hive" class="auth-footer-link" onclick="navigateToHiveLeaderboard(event)">Leaderboard</a>
+                <a href="/account/settings" class="auth-footer-link">Settings</a>
+                <button class="auth-signout-btn" id="authSignOut">Sign Out</button>
+              </div>
+            </div>
+            <div class="auth-guest" id="authGuest">
+              <div class="auth-guest-brand">
+                <span class="auth-guest-title">Welcome to <strong>The Signal</strong></span>
+                <span class="auth-guest-sub">Join the hive to track your portfolio</span>
+              </div>
+              <button class="auth-option auth-option-primary" onclick="showHiveJoinModal('login')">Sign In</button>
+              <button class="auth-option" onclick="showHiveJoinModal('register')">Create Account</button>
+            </div>
+          </div>
+        </div>
+        <button class="topnav-hamburger" onclick="openDrawer()" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <!-- MOBILE TOP BAR -->
+  <div class="mobile-topbar">
+    <button class="mobile-hamburger" onclick="openDrawer()" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="/" class="topnav-logo">
+      <span class="the">THE</span>
+      <span class="signal">SIGNAL</span>
+    </a>
+    <div class="mobile-actions">
+      <button class="topnav-search-btn mobile-search-trigger" aria-label="Search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      </button>
+      <div class="auth-container" id="mobileAuthContainer">
+        <button class="topnav-nav-btn" id="mobileAuthToggle" aria-label="Sign In">
+          <div class="auth-btn-avatar" id="mobileAuthBtnAvatar">
+            <span class="auth-btn-initial" id="mobileAuthBtnInitial"></span>
+            <img class="auth-btn-img" id="mobileAuthBtnImg" src="" alt="" style="display:none">
+          </div>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="auth-btn-icon" id="mobileAuthBtnIcon">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <span class="auth-label" id="mobileAuthLabel">Sign In</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- ROCKET LAB DRAWER -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <div class="drawer" id="drawer">
+    <div class="drawer-header">
+      <a href="/" class="drawer-logo">
+        <span class="the">THE</span>
+        <span class="signal">SIGNAL</span>
+      </a>
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">&#10005;</button>
+    </div>
+    <div class="drawer-body" id="drawerBody">
+      <div class="drawer-main" id="drawerMain">
+        <div class="drawer-section-label">SECTORS</div>
+        <a href="javascript:void(0)" class="drawer-link drawer-link-has-sub" onclick="openSubDrawer()">SECTORS</a>
+        <a href="/stocks/" class="drawer-link">STOCK PAGES</a>
+        <a href="/#scorecard" class="drawer-link">SIGNAL SCORECARD</a>
+        <a href="/hive" class="drawer-link">HIVE</a>
+        <a href="/signal-vs-the-street" class="drawer-link">SIGNAL VS. STREET</a>
+        <a href="/pricing" class="drawer-link">SIGNAL PREMIUM</a>
+        <a href="/pricing" class="drawer-cta">GET PREMIUM ACCESS</a>
+      </div>
+      <div class="drawer-sub" id="drawerSub">
+        <div class="sub-header" onclick="closeSubDrawer()">
+          <span class="sub-back">&#8249;</span>
+          <span class="sub-title">SECTORS</span>
+        </div>
+        <a href="/sector/ai" class="drawer-link">AI</a>
+        <a href="/sector/cyber" class="drawer-link">CYBER</a>
+        <a href="/sector/defense" class="drawer-link">DEFENSE</a>
+        <a href="/sector/space" class="drawer-link">SPACE</a>
+        <a href="/sector/mega-cap" class="drawer-link">MEGA-CAP</a>
+        <a href="/sector/quantum" class="drawer-link">QUANTUM</a>
+        <a href="/sector/ai-power" class="drawer-link">AI POWER</a>
+        <a href="/sector/etfs" class="drawer-link">ETFS</a>
+      </div>
+    </div>
+  </div>`;
+
+// ─── Inject Rocket Lab Nav into generated HTML ───
+function injectRocketNav(html) {
+  // 1. Add Barlow Condensed to Google Fonts URL if not already present
+  if (!html.includes('Barlow+Condensed')) {
+    html = html.replace(
+      /fonts\.googleapis\.com\/css2\?[^"']+/g,
+      (match) => match + '&family=Barlow+Condensed:wght@400;500;600;700'
+    );
+  }
+
+  // 2. Add nav.js script before </head> if not already present
+  if (!html.includes('/js/nav.js')) {
+    html = html.replace('</head>', '  <script src="/js/nav.js" defer></script>\n</head>');
+  }
+
+  // 3. Set body class for new-nav-active
+  if (!html.includes('new-nav-active')) {
+    html = html.replace(/<body([^>]*)>/, '<body class="new-nav-active">');
+  }
+
+  // 4. Replace old nav+drawer with Rocket Lab nav
+  // Find the start of old nav block
+  let navStart = html.indexOf('<!-- NAV -->');
+  if (navStart === -1) navStart = html.indexOf('<nav class="nav"');
+  if (navStart === -1) navStart = html.indexOf('<nav class="topnav"');
+  
+  if (navStart !== -1) {
+    // Find the end of the old nav+drawer block — whichever comes first:
+    // These are markers that appear AFTER the drawer content
+    const afterNav = navStart + 20;
+    const endMarkers = [
+      '<div class="search-overlay"',
+      '<!-- SEARCH OVERLAY -->',
+      '<main',
+      '<div class="focus-bar'
+    ];
+    let navEnd = -1;
+    for (const marker of endMarkers) {
+      const idx = html.indexOf(marker, afterNav);
+      if (idx !== -1 && (navEnd === -1 || idx < navEnd)) {
+        navEnd = idx;
+      }
+    }
+    
+    if (navEnd !== -1) {
+      html = html.substring(0, navStart) + ROCKET_NAV + '\n\n  ' + html.substring(navEnd);
+    }
+  }
+
+  // 5. Remove old inline DOMContentLoaded drawer scripts (hamburger-based)
+  // These are the scripts that manually wire up hamburgerToggle + drawer
+  html = html.replace(/\s*<script>\s*document\.addEventListener\('DOMContentLoaded',\s*function\(\)\{[\s\S]*?hamburgerToggle[\s\S]*?\}\);\s*<\/script>/g, '');
+  // Also handle scripts with 'DOMContentLoaded' that reference drawer logic
+  html = html.replace(/\s*<script>\s*\/\/ ── Sector[^<]*<\/script>/g, '');
+  // Handle the sector template's drawer script
+  html = html.replace(/\s*<script>\s*document\.addEventListener\('DOMContentLoaded',\s*function\(\)\{[\s\S]*?drawerSectorsBtn[\s\S]*?\}\);\s*<\/script>/g, '');
+
+  return html;
+}
+
 // ─── 1. Copy frozen assets ───
 console.log('📦 Copying frozen assets from _backup_dist/...');
 if (!fs.existsSync(SRC)) {
@@ -165,6 +387,9 @@ indexHtml = indexHtml.replace('<!-- GRID_3 -->',
 indexHtml = indexHtml.replace('<!-- GRID_4 -->',
   `<section class="feed feed-continued">\n  <div class="article-grid">\n${grid4Html}\n  </div>\n</section>`);
 
+// Inject Rocket Lab navigation into homepage
+indexHtml = injectRocketNav(indexHtml);
+
 fs.writeFileSync(path.join(DST, 'index.html'), indexHtml);
 
 const finalSize = fs.statSync(path.join(DST, 'index.html')).size;
@@ -247,6 +472,9 @@ if (!template) {
           `<script id="articles-data" type="application/json">${articlesJson}</script>`)
         .replace(/\{\{[A-Z_]+\}\}/g, '');
 
+      // Inject Rocket Lab navigation
+      html = injectRocketNav(html);
+
       const outDir = path.join(DST, 'article', slug);
       fs.mkdirSync(outDir, { recursive: true });
       fs.writeFileSync(path.join(outDir, 'index.html'), html);
@@ -292,6 +520,9 @@ if (!sectorTemplate) {
       .replace('<!-- ARTICLES_DATA_JSON -->',
         `<script id="articles-data" type="application/json">${articlesJson}</script>`);
     
+    // Inject Rocket Lab navigation
+    html = injectRocketNav(html);
+    
     const outDir = path.join(DST, 'sector', sector);
     fs.mkdirSync(outDir, { recursive: true });
     fs.writeFileSync(path.join(outDir, 'index.html'), html);
@@ -309,9 +540,12 @@ if (!sectorTemplate) {
       .replace('<!-- ARTICLES_DATA_JSON -->',
         `<script id="articles-data" type="application/json">${articlesJson}</script>`);
     
+    // Inject Rocket Lab navigation
+    html = injectRocketNav(html);
+    
     const outDir = path.join(DST, 'sector', sector);
     fs.mkdirSync(outDir, { recursive: true });
-    fs.writeFileSync(path.join(outDir, 'index.html'), html);
+    fs.writeFileSync(outDir + '/index.html', html);
     sectorCount++;
     console.log(`  📂 /sector/${sector}/ — 0 articles (empty page)`);
   }

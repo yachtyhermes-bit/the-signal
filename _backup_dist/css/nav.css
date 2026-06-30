@@ -1,0 +1,530 @@
+/* ============================================================
+   SIGNAL NAV — Rocket Lab-style Drawer System
+   Desktop: horizontal nav with SECTORS dropdown
+   Mobile: full-screen overlay drawer with sub-drawer for sectors
+   ============================================================ */
+
+/* ---- Drawer Overlay ---- */
+.rl-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 900;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+.rl-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ---- Drawer Panel ---- */
+.rl-drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 420px;
+  background: #000;
+  z-index: 1000;
+  transform: translateX(-100%);
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.rl-drawer.open {
+  transform: translateX(0);
+}
+
+/* ---- Drawer Header ---- */
+.rl-drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 28px;
+  border-bottom: 1px solid rgba(229, 229, 229, 0.15);
+  min-height: 80px;
+}
+.rl-drawer-logo {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+.rl-drawer-logo .rl-the {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  line-height: 1.1;
+}
+.rl-drawer-logo .rl-signal {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 20px;
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
+.rl-drawer-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3b82f6;
+  font-size: 24px;
+  font-weight: 300;
+  transition: opacity 0.15s ease;
+  padding: 0;
+  line-height: 1;
+}
+.rl-drawer-close:hover {
+  opacity: 0.6;
+}
+
+/* ---- Drawer Content (Main + Sub) ---- */
+.rl-drawer-body {
+  flex: 1;
+  overflow-y: auto;
+  position: relative;
+}
+.rl-drawer-main,
+.rl-drawer-sub {
+  position: absolute;
+  inset: 0;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  overflow-y: auto;
+}
+.rl-drawer-main {
+  transform: translateX(0);
+}
+.rl-drawer-sub {
+  transform: translateX(100%);
+}
+.rl-drawer-main.hidden {
+  transform: translateX(-100%);
+}
+.rl-drawer-sub.active {
+  transform: translateX(0);
+}
+
+/* ---- Menu Items ---- */
+.rl-menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 28px;
+  border-bottom: 1px solid rgba(229, 229, 229, 0.15);
+  cursor: pointer;
+  text-decoration: none;
+  color: #e5e5e5;
+  transition: opacity 0.15s ease;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+.rl-menu-item:hover {
+  opacity: 0.6;
+}
+.rl-menu-item-text {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+}
+.rl-menu-item-chevron {
+  font-size: 20px;
+  font-weight: 300;
+  color: #e5e5e5;
+  opacity: 0.7;
+  line-height: 1;
+}
+
+/* ---- Sub-drawer Header ---- */
+.rl-sub-header {
+  display: flex;
+  align-items: center;
+  padding: 22px 28px;
+  border-bottom: 1px solid rgba(229, 229, 229, 0.15);
+  cursor: pointer;
+  text-decoration: none;
+  color: #e5e5e5;
+  transition: opacity 0.15s ease;
+}
+.rl-sub-header:hover {
+  opacity: 0.6;
+}
+.rl-sub-back {
+  font-size: 20px;
+  font-weight: 300;
+  margin-right: 12px;
+  opacity: 0.7;
+  line-height: 1;
+}
+.rl-sub-title {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+/* ---- CTA Button in Drawer ---- */
+.rl-drawer-cta {
+  margin: 24px 28px;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: #3b82f6;
+  border: 1px solid #3b82f6;
+  padding: 16px 24px;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+.rl-drawer-cta:hover {
+  background: #3b82f6;
+  color: #e5e5e5;
+  opacity: 1;
+}
+
+/* ============================================================
+   Desktop Navigation
+   ============================================================ */
+.rl-topnav {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #000;
+  border-bottom: 1px solid rgba(229, 229, 229, 0.15);
+  height: 64px;
+}
+.rl-topnav-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 32px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.rl-topnav-left {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.rl-topnav-logo {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #e5e5e5;
+}
+.rl-topnav-logo .rl-the {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  line-height: 1.1;
+}
+.rl-topnav-logo .rl-signal {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 22px;
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
+.rl-topnav-items {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: 40px;
+}
+.rl-topnav-item {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.rl-topnav-link {
+  color: #e5e5e5;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  padding: 0 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.15s ease;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+.rl-topnav-link:hover {
+  opacity: 0.6;
+}
+.rl-topnav-link .rl-chevron {
+  font-size: 16px;
+  margin-left: 6px;
+  font-weight: 300;
+}
+/* Desktop dropdown for SECTORS */
+.rl-topnav-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #000;
+  border: 1px solid rgba(229, 229, 229, 0.15);
+  border-top: none;
+  min-width: 220px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  z-index: 200;
+}
+.rl-topnav-item.has-dropdown:hover .rl-topnav-dropdown,
+.rl-topnav-item.has-dropdown.open .rl-topnav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.rl-topnav-dropdown a {
+  display: block;
+  color: #e5e5e5;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  padding: 14px 24px;
+  border-bottom: 1px solid rgba(229, 229, 229, 0.15);
+  transition: opacity 0.15s ease;
+}
+.rl-topnav-dropdown a:last-child {
+  border-bottom: none;
+}
+.rl-topnav-dropdown a:hover {
+  opacity: 0.6;
+}
+/* Desktop CTA */
+.rl-topnav-cta {
+  color: #3b82f6;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  border: 1px solid #3b82f6;
+  padding: 8px 16px;
+  margin-left: 16px;
+  transition: background 0.15s ease, color 0.15s ease;
+  cursor: pointer;
+}
+.rl-topnav-cta:hover {
+  background: #3b82f6;
+  color: #e5e5e5;
+}
+
+/* Desktop nav actions (search + auth) */
+.rl-topnav-actions {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 4px;
+}
+
+/* Auth container in new nav */
+.rl-topnav-actions .auth-container {
+  position: relative;
+}
+.rl-topnav-actions .nav-btn {
+  background: none;
+  border: 1px solid rgba(229, 229, 229, 0.2);
+  cursor: pointer;
+  color: #e5e5e5;
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+  border-radius: 6px;
+  gap: 6px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.rl-topnav-actions .nav-btn:hover {
+  border-color: rgba(229, 229, 229, 0.4);
+}
+
+/* General nav button style */
+.rl-nav-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #e5e5e5;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.15s ease;
+}
+.rl-nav-btn:hover {
+  opacity: 0.6;
+}
+
+/* Desktop hamburger */
+.rl-topnav-hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  margin-left: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.rl-topnav-hamburger span {
+  display: block;
+  width: 20px;
+  height: 1.5px;
+  background: #e5e5e5;
+  transition: transform 0.2s ease;
+}
+.rl-topnav-hamburger:hover span {
+  transform: scaleX(0.7);
+  transform-origin: left;
+}
+
+/* ============================================================
+   Mobile Top Bar
+   ============================================================ */
+.rl-mobile-topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #000;
+  border-bottom: 1px solid rgba(229, 229, 229, 0.15);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.rl-mobile-hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.rl-mobile-hamburger span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: #e5e5e5;
+}
+.rl-mobile-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ============================================================
+   Responsive Breakpoints
+   ============================================================ */
+@media (min-width: 901px) {
+  .rl-mobile-topbar {
+    display: none !important;
+  }
+  .rl-topnav {
+    display: block;
+  }
+  .rl-drawer {
+    max-width: 440px;
+  }
+}
+
+@media (max-width: 900px) {
+  .rl-topnav {
+    display: none !important;
+  }
+  .rl-mobile-topbar {
+    display: flex;
+  }
+}
+
+/* Hide old nav/drawer when new system is present */
+body:has(.rl-drawer) > .nav,
+body:has(.rl-drawer) > nav.nav {
+  display: none !important;
+}
+body:has(.rl-drawer) .drawer-overlay:not(.rl-overlay),
+body:has(.rl-drawer) .drawer:not(.rl-drawer) {
+  display: none !important;
+}
+
+/* Fallback for browsers without :has() */
+@supports not selector(:has(*)) {
+  .rl-nav-active > .nav,
+  .rl-nav-active > nav.nav {
+    display: none !important;
+  }
+}
+
+/* Auth dropdown styling in new nav context */
+.rl-topnav-actions .auth-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  min-width: 300px;
+  background: #0a0a14;
+  border: 1px solid rgba(229, 229, 229, 0.1);
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  z-index: 2000;
+  padding: 12px 0;
+  display: none;
+}
+.rl-topnav-actions .auth-dropdown.open {
+  display: block;
+}
