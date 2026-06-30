@@ -2188,5 +2188,35 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-06-30T11:08:48.418Z"
+  },
+  {
+    "id": "mr0jn8ha_x6wbdr",
+    "article": "apple-siri-nvidia-google-wwdc-2026",
+    "text": "so apple is using google for siri now? thats kind of embarrassing right?? should i be worried about my aapl shares",
+    "author": "help_me_pls77",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-30T11:08:49.966Z"
+  },
+  {
+    "id": "mr0jn9ok_iwso4d",
+    "article": "apple-siri-nvidia-google-wwdc-2026",
+    "text": "the irony of apple outsourcing ai to google is next level. but 2.2 billion devices running gemini is a distribution moat google could only dream of",
+    "author": "turned_into_a_newt",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-06-30T11:08:51.524Z"
+  },
+  {
+    "id": "mr0jndbs_4syivi",
+    "article": "apple-siri-nvidia-google-wwdc-2026",
+    "text": "apple has over 2 billion active devices. the partnership is a win for both sides honestly",
+    "author": "quiet_observer",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mr0jn8ha_x6wbdr",
+    "createdAt": "2026-06-30T11:08:56.248Z"
   }
 ]
