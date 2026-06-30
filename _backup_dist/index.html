@@ -9,9 +9,10 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
   <meta name="robots" content="max-image-preview:large">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Oxanium:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Oxanium:wght@400;500;600;700&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/main.css?v=16">
   <link rel="stylesheet" href="/css/pulse-badge.css">
+  <link rel="stylesheet" href="/css/nav.css">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-98KDVDFBCW"></script>
   <script>
@@ -29,6 +30,7 @@
   <script src="/js/share.js" defer></script>
   <script src="/js/hive.js?v=3" defer></script>
   <script src="/js/carousel.js" defer></script>
+  <script src="/js/nav.js" defer></script>
   <title>The Signal — Market Intelligence for AI, Defense, Space &amp; Cyber</title>
   <meta name="description" content="The Signal delivers sharp analysis on AI, defense, space, and cybersecurity stocks. Earnings deep-dives, contract analysis, and market-moving insights.">
   <meta property="og:title" content="The Signal — Market Intelligence for AI, Defense, Space &amp; Cyber">
@@ -179,33 +181,41 @@
   </div>
   </nav>
 
-        <!-- Kratos-Inspired Drawer Menu -->
+        <!-- Rocket Lab-Style Drawer -->
   <div class="drawer-overlay" id="drawerOverlay"></div>
   <div class="drawer" id="drawer">
     <div class="drawer-header">
-      <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
       <a href="/" class="drawer-logo">
-        <img src="/img/logo-hex.jpg" alt="The Signal" class="drawer-logo-img">
-        <span class="drawer-logo-text">SIGNAL</span>
+        <span class="the">THE</span>
+        <span class="signal">SIGNAL</span>
       </a>
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">&#10005;</button>
     </div>
-    <div class="drawer-body">
-      <div class="drawer-section-label">SECTORS</div>
-      <a href="/sector/ai" class="drawer-link">AI</a>
-      <a href="/sector/cyber" class="drawer-link">Cyber</a>
-      <a href="/sector/defense" class="drawer-link">Defense</a>
-      <a href="/sector/space" class="drawer-link">Space</a>
-      <a href="/sector/mega-cap" class="drawer-link">Mega-Cap</a>
-      <a href="/sector/quantum" class="drawer-link">Quantum</a>
-      <a href="/sector/ai-power" class="drawer-link">AI Power ⚡</a>
-      <a href="/sector/etfs" class="drawer-link">ETFs</a>
-      <hr class="drawer-divider">
-      <div class="drawer-section-label">FEATURES</div>
-      <a href="/stocks/" class="drawer-link drawer-link-stocks">📈 Stock Pages</a>
-      <a href="/#scorecard" class="drawer-link drawer-link-scorecard">📊 Signal Scorecard</a>
-      <a href="/hive" class="drawer-link drawer-link-hive">🐝 Hive</a>
-      <a href="/signal-vs-the-street" class="drawer-link drawer-link-svs">⚡ Signal vs. Street</a>
-      <a href="/pricing" class="drawer-link drawer-link-pricing">💎 Signal Premium</a>
+    <div class="drawer-body" id="drawerBody">
+      <div class="drawer-main" id="drawerMain">
+        <div class="drawer-section-label">SECTORS</div>
+        <a href="javascript:void(0)" class="drawer-link" onclick="openSubDrawer()">SECTORS</a>
+        <a href="/stocks/" class="drawer-link">STOCK PAGES</a>
+        <a href="/#scorecard" class="drawer-link">SIGNAL SCORECARD</a>
+        <a href="/hive" class="drawer-link">HIVE</a>
+        <a href="/signal-vs-the-street" class="drawer-link">SIGNAL VS. STREET</a>
+        <a href="/pricing" class="drawer-link">SIGNAL PREMIUM</a>
+        <a href="/pricing" class="drawer-cta">GET PREMIUM ACCESS</a>
+      </div>
+      <div class="drawer-sub" id="drawerSub">
+        <div class="sub-header" onclick="closeSubDrawer()">
+          <span class="sub-back">&#8249;</span>
+          <span class="sub-title">SECTORS</span>
+        </div>
+        <a href="/sector/ai" class="drawer-link">AI</a>
+        <a href="/sector/cyber" class="drawer-link">CYBER</a>
+        <a href="/sector/defense" class="drawer-link">DEFENSE</a>
+        <a href="/sector/space" class="drawer-link">SPACE</a>
+        <a href="/sector/mega-cap" class="drawer-link">MEGA-CAP</a>
+        <a href="/sector/quantum" class="drawer-link">QUANTUM</a>
+        <a href="/sector/ai-power" class="drawer-link">AI POWER</a>
+        <a href="/sector/etfs" class="drawer-link">ETFS</a>
+      </div>
     </div>
   </div><!-- Search Overlay -->
   <div class="search-overlay" id="searchOverlay">

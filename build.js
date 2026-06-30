@@ -32,131 +32,9 @@ const SECTORS = {
 
 const HOMEPAGE_LIMIT = 40;
 
-// ─── Rocket Lab Navigation Block ───
-const ROCKET_NAV = `  <!-- DESKTOP TOP NAV -->
-  <nav class="topnav" id="topnav">
-    <div class="topnav-inner">
-      <a href="/" class="topnav-logo">
-        <span class="the">THE</span>
-        <span class="signal">SIGNAL</span>
-      </a>
-      <div class="topnav-items">
-        <div class="topnav-item has-dropdown" id="sectorsDropdown">
-          <button class="topnav-link" onclick="toggleDropdown(event)">SECTORS <span class="chevron">&#8250;</span></button>
-          <div class="topnav-dropdown">
-            <a href="/sector/ai">AI</a>
-            <a href="/sector/cyber">CYBER</a>
-            <a href="/sector/defense">DEFENSE</a>
-            <a href="/sector/space">SPACE</a>
-            <a href="/sector/mega-cap">MEGA-CAP</a>
-            <a href="/sector/quantum">QUANTUM</a>
-            <a href="/sector/ai-power">AI POWER</a>
-            <a href="/sector/etfs">ETFS</a>
-          </div>
-        </div>
-        <div class="topnav-item"><a href="/stocks/" class="topnav-link">STOCK PAGES</a></div>
-        <div class="topnav-item"><a href="/#scorecard" class="topnav-link">SCORECARD</a></div>
-        <div class="topnav-item"><a href="/hive" class="topnav-link">HIVE</a></div>
-        <div class="topnav-item"><a href="/signal-vs-the-street" class="topnav-link">VS. STREET</a></div>
-        <div class="topnav-item"><a href="/pricing" class="topnav-link">PREMIUM</a></div>
-        <a href="/pricing" class="topnav-cta">GET PREMIUM ACCESS</a>
-      </div>
-      <div class="topnav-actions">
-        <button class="topnav-search-btn" id="searchToggle" aria-label="Search">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-        </button>
-        <div class="auth-container" id="authContainer">
-          <button class="topnav-nav-btn" id="authToggle" aria-label="Sign In">
-            <div class="auth-btn-avatar" id="authBtnAvatar">
-              <span class="auth-btn-initial" id="authBtnInitial"></span>
-              <img class="auth-btn-img" id="authBtnImg" src="" alt="" style="display:none">
-            </div>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="auth-btn-icon" id="authBtnIcon">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-              <circle cx="12" cy="7" r="4"></circle>
-            </svg>
-            <span class="auth-label" id="authLabel">Sign In</span>
-          </button>
-          <div class="auth-dropdown" id="authDropdown">
-            <div class="auth-profile" id="authProfile" style="display:none">
-              <div class="auth-profile-header">
-                <div class="auth-profile-avatar" id="authProfileAvatar">
-                  <img id="authProfileImg" src="" alt="" style="display:none">
-                  <span class="auth-profile-initial" id="authProfileInitial"></span>
-                </div>
-                <div class="auth-profile-info">
-                  <span class="auth-profile-name" id="authProfileName"></span>
-                  <span class="auth-profile-username" id="authProfileUsername"></span>
-                </div>
-                <div class="auth-profile-badge">HIVE</div>
-              </div>
-              <div class="auth-profile-stats" id="authProfileStats">
-                <div class="auth-stat"><span class="auth-stat-label">Portfolio</span><span class="auth-stat-value" id="authStatValue">-</span></div>
-                <div class="auth-stat"><span class="auth-stat-label">Return</span><span class="auth-stat-value" id="authStatReturn">-</span></div>
-              </div>
-              <div class="auth-drop-divider"></div>
-              <div class="auth-profile-nav">
-                <a href="/sector/ai" class="auth-nav-item">AI</a>
-                <a href="/sector/cyber" class="auth-nav-item">Cyber</a>
-                <a href="/sector/defense" class="auth-nav-item">Defense</a>
-                <a href="/sector/space" class="auth-nav-item">Space</a>
-                <a href="/sector/mega-cap" class="auth-nav-item">Mega-Cap</a>
-                <a href="/sector/quantum" class="auth-nav-item">Quantum</a>
-                <a href="/sector/ai-power" class="auth-nav-item">AI Power</a>
-                <a href="/sector/etfs" class="auth-nav-item">ETFs</a>
-              </div>
-              <div class="auth-drop-divider"></div>
-              <div class="auth-profile-footer">
-                <a href="/hive" class="auth-footer-link" onclick="navigateToHiveLeaderboard(event)">Leaderboard</a>
-                <a href="/account/settings" class="auth-footer-link">Settings</a>
-                <button class="auth-signout-btn" id="authSignOut">Sign Out</button>
-              </div>
-            </div>
-            <div class="auth-guest" id="authGuest">
-              <div class="auth-guest-brand">
-                <span class="auth-guest-title">Welcome to <strong>The Signal</strong></span>
-                <span class="auth-guest-sub">Join the hive to track your portfolio</span>
-              </div>
-              <button class="auth-option auth-option-primary" onclick="showHiveJoinModal('login')">Sign In</button>
-              <button class="auth-option" onclick="showHiveJoinModal('register')">Create Account</button>
-            </div>
-          </div>
-        </div>
-        <button class="topnav-hamburger" onclick="openDrawer()" aria-label="Open menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-  </nav>
-  <!-- MOBILE TOP BAR -->
-  <div class="mobile-topbar">
-    <button class="mobile-hamburger" onclick="openDrawer()" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
-    <a href="/" class="topnav-logo">
-      <span class="the">THE</span>
-      <span class="signal">SIGNAL</span>
-    </a>
-    <div class="mobile-actions">
-      <button class="topnav-search-btn mobile-search-trigger" aria-label="Search">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-      </button>
-      <div class="auth-container" id="mobileAuthContainer">
-        <button class="topnav-nav-btn" id="mobileAuthToggle" aria-label="Sign In">
-          <div class="auth-btn-avatar" id="mobileAuthBtnAvatar">
-            <span class="auth-btn-initial" id="mobileAuthBtnInitial"></span>
-            <img class="auth-btn-img" id="mobileAuthBtnImg" src="" alt="" style="display:none">
-          </div>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="auth-btn-icon" id="mobileAuthBtnIcon">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-            <circle cx="12" cy="7" r="4"></circle>
-          </svg>
-          <span class="auth-label" id="mobileAuthLabel">Sign In</span>
-        </button>
-      </div>
-    </div>
-  </div>
-  <!-- ROCKET LAB DRAWER -->
+// ─── Rocket Lab Drawer-Only Navigation Block ───
+// Only the drawer — original Signal nav bar stays unchanged
+const ROCKET_DRAWER = `  <!-- Rocket Lab-Style Drawer -->
   <div class="drawer-overlay" id="drawerOverlay"></div>
   <div class="drawer" id="drawer">
     <div class="drawer-header">
@@ -169,7 +47,7 @@ const ROCKET_NAV = `  <!-- DESKTOP TOP NAV -->
     <div class="drawer-body" id="drawerBody">
       <div class="drawer-main" id="drawerMain">
         <div class="drawer-section-label">SECTORS</div>
-        <a href="javascript:void(0)" class="drawer-link drawer-link-has-sub" onclick="openSubDrawer()">SECTORS</a>
+        <a href="javascript:void(0)" class="drawer-link" onclick="openSubDrawer()">SECTORS</a>
         <a href="/stocks/" class="drawer-link">STOCK PAGES</a>
         <a href="/#scorecard" class="drawer-link">SIGNAL SCORECARD</a>
         <a href="/hive" class="drawer-link">HIVE</a>
@@ -194,7 +72,7 @@ const ROCKET_NAV = `  <!-- DESKTOP TOP NAV -->
     </div>
   </div>`;
 
-// ─── Inject Rocket Lab Nav into generated HTML ───
+// ─── Inject Rocket Lab Drawer into generated HTML (keeps original nav bar) ───
 function injectRocketNav(html) {
   // 1. Add Barlow Condensed to Google Fonts URL if not already present
   if (!html.includes('Barlow+Condensed')) {
@@ -204,47 +82,57 @@ function injectRocketNav(html) {
     );
   }
 
-  // 2. Add nav.js script before </head> if not already present
+  // 2. Add nav.css stylesheet before </head> if not already present
+  if (!html.includes('/css/nav.css')) {
+    html = html.replace('</head>', '  <link rel="stylesheet" href="/css/nav.css">\n</head>');
+  }
+
+  // 2b. Add nav.js script before </head> if not already present
   if (!html.includes('/js/nav.js')) {
     html = html.replace('</head>', '  <script src="/js/nav.js" defer></script>\n</head>');
   }
 
-  // 3. Set body class for new-nav-active
-  if (!html.includes('new-nav-active')) {
-    html = html.replace(/<body([^>]*)>/, '<body class="new-nav-active">');
+  // 3. Replace old drawer with Rocket Lab drawer
+  // Find the drawer section: starts with <!-- DRAWER --> or <div class="drawer-overlay"
+  let drawerStart = html.indexOf('<!-- DRAWER -->');
+  if (drawerStart === -1) {
+    drawerStart = html.indexOf('<div class="drawer-overlay"');
+  }
+  // Also handle Kratos-Inspired comment variant
+  if (drawerStart === -1) {
+    drawerStart = html.indexOf('<!-- Kratos');
+    if (drawerStart !== -1) {
+      // Go back to the line start
+      while (drawerStart > 0 && html[drawerStart - 1] !== '\n') drawerStart--;
+    }
+  }
+  // Also check for Rocket Lab-Style Drawer (already injected on re-builds)
+  if (drawerStart === -1) {
+    drawerStart = html.indexOf('<!-- Rocket Lab-Style Drawer -->');
   }
 
-  // 4. Replace old nav+drawer with Rocket Lab nav
-  // Find the start of old nav block
-  let navStart = html.indexOf('<!-- NAV -->');
-  if (navStart === -1) navStart = html.indexOf('<nav class="nav"');
-  if (navStart === -1) navStart = html.indexOf('<nav class="topnav"');
-  
-  if (navStart !== -1) {
-    // Find the end of the old nav+drawer block — whichever comes first:
-    // These are markers that appear AFTER the drawer content
-    const afterNav = navStart + 20;
+  if (drawerStart !== -1) {
+    // Find the end of drawer: search overlay marker or main content
+    const afterStart = drawerStart + 20;
     const endMarkers = [
-      '<div class="search-overlay"',
       '<!-- SEARCH OVERLAY -->',
-      '<main',
-      '<div class="focus-bar'
+      '<div class="search-overlay"',
+      '<!-- Search Overlay -->'
     ];
-    let navEnd = -1;
+    let drawerEnd = -1;
     for (const marker of endMarkers) {
-      const idx = html.indexOf(marker, afterNav);
-      if (idx !== -1 && (navEnd === -1 || idx < navEnd)) {
-        navEnd = idx;
+      const idx = html.indexOf(marker, afterStart);
+      if (idx !== -1 && (drawerEnd === -1 || idx < drawerEnd)) {
+        drawerEnd = idx;
       }
     }
-    
-    if (navEnd !== -1) {
-      html = html.substring(0, navStart) + ROCKET_NAV + '\n\n  ' + html.substring(navEnd);
+
+    if (drawerEnd !== -1) {
+      html = html.substring(0, drawerStart) + ROCKET_DRAWER + '\n\n  ' + html.substring(drawerEnd);
     }
   }
 
-  // 5. Remove old inline DOMContentLoaded drawer scripts (hamburger-based)
-  // These are the scripts that manually wire up hamburgerToggle + drawer
+  // 4. Remove old inline DOMContentLoaded drawer scripts (hamburger-based)
   html = html.replace(/\s*<script>\s*document\.addEventListener\('DOMContentLoaded',\s*function\(\)\{[\s\S]*?hamburgerToggle[\s\S]*?\}\);\s*<\/script>/g, '');
   // Also handle scripts with 'DOMContentLoaded' that reference drawer logic
   html = html.replace(/\s*<script>\s*\/\/ ── Sector[^<]*<\/script>/g, '');

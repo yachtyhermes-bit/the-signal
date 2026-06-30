@@ -9,9 +9,10 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
   <meta name="robots" content="max-image-preview:large">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Oxanium:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Oxanium:wght@400;500;600;700&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/main.css?v=18">
   <link rel="stylesheet" href="/css/pulse-badge.css">
+  <link rel="stylesheet" href="/css/nav.css">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-98KDVDFBCW"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -138,54 +139,39 @@
       </div>
     </div>
   </nav>
+  <!-- Rocket Lab-Style Drawer -->
   <div class="drawer-overlay" id="drawerOverlay"></div>
   <div class="drawer" id="drawer">
     <div class="drawer-header">
       <a href="/" class="drawer-logo">
-        <span class="drawer-logo-text">THE SIGNAL</span>
+        <img src="/img/logo-hex.jpg" alt="The Signal" class="drawer-logo-img">
+        <span class="drawer-logo-text">SIGNAL</span>
       </a>
-      <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">&#10005;</button>
     </div>
-    <div class="drawer-body">
-      <button class="drawer-link" id="drawerSectorsBtn">Sectors</button>
-      <hr class="drawer-divider">
-      <a href="/stocks/" class="drawer-link">Stock Pages</a>
-      <hr class="drawer-divider">
-      <a href="/#scorecard" class="drawer-link">Signal Scorecard</a>
-      <hr class="drawer-divider">
-      <a href="/hive" class="drawer-link">Hive</a>
-      <hr class="drawer-divider">
-      <a href="/signal-vs-the-street" class="drawer-link">Signal vs. Street</a>
-      <hr class="drawer-divider">
-      <a href="/pricing" class="drawer-link">Signal Premium</a>
-      <a href="/pricing" class="drawer-cta">Get Premium Access</a>
-
-      <!-- Sectors Sub-Drawer -->
-      <div class="drawer-sub" id="drawerSectorsSub">
-        <div class="drawer-sub-header">
-          <button class="drawer-back" id="drawerSectorsBack">
-            <span class="drawer-back-arrow">‹</span> Sectors
-          </button>
-          <button class="drawer-sub-close" id="drawerSubClose" aria-label="Close menu">✕</button>
+    <div class="drawer-body" id="drawerBody">
+      <div class="drawer-main" id="drawerMain">
+        <a href="javascript:void(0)" class="drawer-link" onclick="openSubDrawer()">SECTORS</a>
+        <a href="/stocks/" class="drawer-link">STOCK PAGES</a>
+        <a href="/#scorecard" class="drawer-link">SIGNAL SCORECARD</a>
+        <a href="/hive" class="drawer-link">HIVE</a>
+        <a href="/signal-vs-the-street" class="drawer-link">SIGNAL VS. STREET</a>
+        <a href="/pricing" class="drawer-link">SIGNAL PREMIUM</a>
+        <a href="/pricing" class="drawer-cta">GET PREMIUM ACCESS</a>
+      </div>
+      <div class="drawer-sub" id="drawerSub">
+        <div class="sub-header" onclick="closeSubDrawer()">
+          <span class="sub-back">&#8249;</span>
+          <span class="sub-title">SECTORS</span>
         </div>
-        <div class="drawer-sub-body">
-          <div class="drawer-sub-title">All Sectors</div>
-          <a href="/sector/ai" class="drawer-link">AI</a>
-          <hr class="drawer-divider">
-          <a href="/sector/cyber" class="drawer-link">Cyber</a>
-          <hr class="drawer-divider">
-          <a href="/sector/defense" class="drawer-link">Defense</a>
-          <hr class="drawer-divider">
-          <a href="/sector/space" class="drawer-link">Space</a>
-          <hr class="drawer-divider">
-          <a href="/sector/mega-cap" class="drawer-link">Mega-Cap</a>
-          <hr class="drawer-divider">
-          <a href="/sector/quantum" class="drawer-link">Quantum</a>
-          <hr class="drawer-divider">
-          <a href="/sector/ai-power" class="drawer-link">AI Power</a>
-          <hr class="drawer-divider">
-          <a href="/sector/etfs" class="drawer-link">ETFs</a>
-        </div>
+        <a href="/sector/ai" class="drawer-link">AI</a>
+        <a href="/sector/cyber" class="drawer-link">CYBER</a>
+        <a href="/sector/defense" class="drawer-link">DEFENSE</a>
+        <a href="/sector/space" class="drawer-link">SPACE</a>
+        <a href="/sector/mega-cap" class="drawer-link">MEGA-CAP</a>
+        <a href="/sector/quantum" class="drawer-link">QUANTUM</a>
+        <a href="/sector/ai-power" class="drawer-link">AI POWER</a>
+        <a href="/sector/etfs" class="drawer-link">ETFS</a>
       </div>
     </div>
   </div>
@@ -327,51 +313,6 @@
     }
   }
   </script>
-  <script>
-  document.addEventListener('DOMContentLoaded', function(){
-    var btn = document.getElementById('hamburgerToggle');
-    var drawer = document.getElementById('drawer');
-    var overlay = document.getElementById('drawerOverlay');
-    var closeBtn = document.getElementById('drawerClose');
-    var sectorsBtn = document.getElementById('drawerSectorsBtn');
-    var sectorsSub = document.getElementById('drawerSectorsSub');
-    var sectorsBack = document.getElementById('drawerSectorsBack');
-    var subCloseBtn = document.getElementById('drawerSubClose');
-
-    function openDrawer() {
-      drawer.classList.add('open');
-      overlay.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeDrawer() {
-      drawer.classList.remove('open');
-      overlay.classList.remove('open');
-      sectorsSub.classList.remove('open');
-      document.body.style.overflow = '';
-    }
-    function openSectorsSub() {
-      sectorsSub.classList.add('open');
-    }
-    function closeSectorsSub() {
-      sectorsSub.classList.remove('open');
-    }
-
-    if (btn && drawer && overlay) {
-      btn.addEventListener('click', function(){ openDrawer(); });
-      overlay.addEventListener('click', function(){ closeDrawer(); });
-      if (closeBtn) closeBtn.addEventListener('click', function(){ closeDrawer(); });
-      if (sectorsBtn) sectorsBtn.addEventListener('click', function(){ openSectorsSub(); });
-      if (sectorsBack) sectorsBack.addEventListener('click', function(){ closeSectorsSub(); });
-      if (subCloseBtn) subCloseBtn.addEventListener('click', function(){ closeDrawer(); });
-
-      document.addEventListener('keydown', function(e){
-        if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
-      });
-      drawer.querySelectorAll('a').forEach(function(a){
-        a.addEventListener('click', function(){ closeDrawer(); });
-      });
-    }
-  });
-  </script>
+  <script src="/js/nav.js" defer></script>
 </body>
 </html>
