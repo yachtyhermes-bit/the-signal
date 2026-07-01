@@ -1853,7 +1853,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-29T19:13:09.518Z"
+    "createdAt": "2026-06-29T19:13:09.518Z",
+    "likes": [
+      "swarm-w293"
+    ]
   },
   {
     "id": "mqzli9mw_csnscq",
@@ -1885,7 +1888,8 @@
     "parentId": "mqzli8b2_g1qqki",
     "createdAt": "2026-06-29T19:13:14.663Z",
     "likes": [
-      "swarm-3myl"
+      "swarm-3myl",
+      "swarm-ly2q"
     ]
   },
   {
