@@ -1557,7 +1557,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": null,
-    "createdAt": "2026-06-29T16:35:58.884Z"
+    "createdAt": "2026-06-29T16:35:58.884Z",
+    "likes": [
+      "swarm-0z0e"
+    ]
   },
   {
     "id": "mqzfw4vy_lp8pve",
@@ -1880,7 +1883,10 @@
     "photoURL": null,
     "uid": null,
     "parentId": "mqzli8b2_g1qqki",
-    "createdAt": "2026-06-29T19:13:14.663Z"
+    "createdAt": "2026-06-29T19:13:14.663Z",
+    "likes": [
+      "swarm-3myl"
+    ]
   },
   {
     "id": "mqzlidks_whv0eb",
