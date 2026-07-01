@@ -1,8 +1,6 @@
 // Pulse AI — serverless function for The Signal
-// Two-tier system:
-//   Free (unlimited): Gemini free + article library only — no cost
-//   Premium (5/IP/day): Serper web search + Gemini paid — real-time data
-// .mjs for ESM on Vercel
+// Answers any question using Gemini's knowledge + article library as context.
+// Premium tier: Serper web search for real-time data (5/day/IP).
 
 import fs from 'fs';
 import path from 'path';
@@ -118,7 +116,7 @@ function loadArticles() {
   for (const f of fs.readdirSync(dir).filter(f => f.endsWith('.json'))) {
     try {
       const a = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
-      articles.push({ title: a.title, slug: a.slug, ticker: a.ticker, sector: a.sector, date: a.date, summary: a.summary || '' });
+      articles.push({ title: a.title, slug: a.slug, ticker: a.ticker, sector: a.sector, date: a.date || '', summary: a.summary || '' });
     } catch(e) {}
   }
   return articles;
@@ -148,26 +146,29 @@ export default async function handler(req, res) {
 
     const articles = loadArticles();
     const articleContext = articles.sort((a,b) => new Date(b.date)-new Date(a.date))
-      .map(a => `[${a.ticker}] ${a.title} (${a.sector}, ${a.date.slice(0,10)})\n${a.summary}`)
+      .filter(a => a.title && a.date)
+      .map(a => `[${a.ticker}] ${a.title} (${a.sector}, ${(a.date||'').slice(0,10)})\n${a.summary}`)
       .join('\n---\n');
 
-    // STEP 1: Try FREE tier (article library only, no web search)
-    const freePrompt = `You are Pulse, AI assistant for The Signal (covers AI, defense, space, cyber stocks: NVDA, AMD, AVGO, PLTR, RKLB, RDW, LMT, RTX, GOOGL, META, MSFT, AMZN, TSLA, CRWV, MRVL, CRWD, AXON, AAPL).
+    // STEP 1: Answer using Gemini's knowledge + article context
+    const freePrompt = `You are Pulse, the AI assistant on The Signal (readthesignal.net) — a market intelligence site covering AI, defense, space, cybersecurity, and mega-cap stocks.
 
-TONE: Direct, punchy, data-driven. Use **bold** for key numbers. Keep answers under 250 words.
+TONE: Direct, punchy, conversational. Use **bold** for key numbers. Keep answers under 250 words. Be helpful about ANY topic — you're not limited to stocks.
 
 RULES:
-- Answer ONLY from the article library below.
-- If the user is asking about stocks NOT in your library, politely say you can only answer about covered stocks.
-- If the user asks for CURRENT data (live prices, latest earnings, today's news), you DON'T have that info — respond with "NEEDS_SEARCH:" followed by your best answer from articles.
-- If you CAN answer from the articles, just give the answer.
+- Answer the user's question directly using your knowledge. You can talk about anything.
+- If the question relates to stocks, companies, or markets, reference relevant Signal articles below as sources when applicable.
+- If you don't know something, say so honestly.
+- NEVER fabricate stock prices, earnings data, or financial figures — if you're unsure, say "check live data" instead of guessing.
 
-The Signal articles:\n${articleContext.slice(0, 15000)}`;
+The Signal's recent articles (for context, use when relevant):
+${articleContext.slice(0, 15000)}`;
 
     const freePayload = {
       systemInstruction: { parts: [{ text: freePrompt }] },
       contents: [{ role: 'user', parts: [{ text: question }] }],
-      generationConfig: { temperature: 0.3, maxOutputTokens: 1024 }
+      generationConfig: { temperature: 0.3, maxOutputTokens: 1024 },
+      tools: [{ googleSearch: {} }]
     };
 
     let freeData, freeAnswer = '';
@@ -177,20 +178,19 @@ The Signal articles:\n${articleContext.slice(0, 15000)}`;
         freeAnswer = freeData.candidates[0].content.parts.map(p => p.text || '').join('');
       }
     } catch (e) {
-      // Free Gemini failed — try paid anyway
       freeAnswer = '';
     }
 
-    // If free answer doesn't need search, return it
-    if (freeAnswer && !freeAnswer.startsWith('NEEDS_SEARCH:')) {
+    // Return free answer if we got one
+    if (freeAnswer) {
       const sources = [];
       for (const a of articles) {
-        if (freeAnswer.includes(a.ticker) && !sources.find(s => s.ticker === a.ticker)) {
+        if (freeAnswer.toLowerCase().includes(a.ticker?.toLowerCase()) && !sources.find(s => s.ticker === a.ticker)) {
           sources.push({ title: a.title, slug: a.slug, ticker: a.ticker });
           if (sources.length >= 3) break;
         }
       }
-      const result = { answer: freeAnswer, sources, tier: 'free' };
+      const result = { answer: freeAnswer, sources, tier: sources.length ? 'free' : 'free' };
       cacheSet(cacheKey, result);
       return res.status(200).json(result);
     }
