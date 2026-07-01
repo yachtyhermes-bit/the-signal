@@ -89,7 +89,9 @@ const html = `<!DOCTYPE html>
   <title>Stocks — The Signal</title>
   <meta name="description" content="Track all stocks covered by The Signal. Real-time prices, moat ratings, and deep analysis on NVDA, TSLA, AMZN, PLTR, SPCX, RKLB and more.">
   <link rel="stylesheet" href="/css/stock-card.css">
+  <link rel="stylesheet" href="/css/nav.css">
   <link rel="canonical" href="https://readthesignal.net/stocks/">
+  <script src="/js/nav.js" defer></script>
 </head>
 <body class="stock-page">
 
@@ -107,7 +109,7 @@ const html = `<!DOCTYPE html>
         <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
           <span class="theme-icon">☀️</span>
         </button>
-        <button class="hamburger-btn" aria-label="Menu">
+        <button class="nav-btn hamburger-btn" id="hamburgerToggle" aria-label="Menu">
           <span class="hamburger-line"></span>
           <span class="hamburger-line"></span>
           <span class="hamburger-line"></span>
@@ -116,32 +118,41 @@ const html = `<!DOCTYPE html>
     </div>
   </nav>
 
-  <!-- ── DRAWER MENU ── -->
+  <!-- Rocket Lab-Style Drawer -->
   <div class="drawer-overlay" id="drawerOverlay"></div>
   <div class="drawer" id="drawer">
     <div class="drawer-header">
-      <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
       <a href="/" class="drawer-logo">
-        <span class="drawer-logo-text">SIGNAL</span>
+        <span class="the">THE</span>
+        <span class="signal">SIGNAL</span>
       </a>
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">&#10005;</button>
     </div>
-    <div class="drawer-body">
-      <div class="drawer-section-label">SECTORS</div>
-      <a href="/sector/ai" class="drawer-link">AI</a>
-      <a href="/sector/cyber" class="drawer-link">Cyber</a>
-      <a href="/sector/defense" class="drawer-link">Defense</a>
-      <a href="/sector/space" class="drawer-link">Space</a>
-      <a href="/sector/mega-cap" class="drawer-link">Mega-Cap</a>
-      <a href="/sector/quantum" class="drawer-link">Quantum</a>
-      <a href="/sector/ai-power" class="drawer-link">AI Power ⚡</a>
-      <a href="/sector/etfs" class="drawer-link">ETFs</a>
-      <hr class="drawer-divider">
-      <div class="drawer-section-label">FEATURES</div>
-      <a href="/stocks/" class="drawer-link">📈 Stock Pages</a>
-      <a href="/#scorecard" class="drawer-link">📊 Signal Scorecard</a>
-      <a href="/hive" class="drawer-link">🐝 Hive</a>
-      <a href="/signal-vs-the-street" class="drawer-link">⚡ Signal vs. Street</a>
-      <a href="/pricing" class="drawer-link">💎 Signal Premium</a>
+    <div class="drawer-body" id="drawerBody">
+      <div class="drawer-main" id="drawerMain">
+        <div class="drawer-section-label">SECTORS</div>
+        <a href="javascript:void(0)" class="drawer-link" onclick="openSubDrawer()">SECTORS</a>
+        <a href="/stocks/" class="drawer-link">STOCK PAGES</a>
+        <a href="/#scorecard" class="drawer-link">SIGNAL SCORECARD</a>
+        <a href="/hive" class="drawer-link">HIVE</a>
+        <a href="/signal-vs-the-street" class="drawer-link">SIGNAL VS. STREET</a>
+        <a href="/pricing" class="drawer-link">SIGNAL PREMIUM</a>
+        <a href="/pricing" class="drawer-cta">GET PREMIUM ACCESS</a>
+      </div>
+      <div class="drawer-sub" id="drawerSub">
+        <div class="sub-header" onclick="closeSubDrawer()">
+          <span class="sub-back">&#8249;</span>
+          <span class="sub-title">SECTORS</span>
+        </div>
+        <a href="/sector/ai" class="drawer-link">AI</a>
+        <a href="/sector/cyber" class="drawer-link">CYBER</a>
+        <a href="/sector/defense" class="drawer-link">DEFENSE</a>
+        <a href="/sector/space" class="drawer-link">SPACE</a>
+        <a href="/sector/mega-cap" class="drawer-link">MEGA-CAP</a>
+        <a href="/sector/quantum" class="drawer-link">QUANTUM</a>
+        <a href="/sector/ai-power" class="drawer-link">AI POWER</a>
+        <a href="/sector/etfs" class="drawer-link">ETFS</a>
+      </div>
     </div>
   </div>
 

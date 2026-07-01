@@ -4,14 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#08080e">
-  <link rel="canonical" href="https://readthesignal.net/signal-vs-the-street">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
-  <meta name="robots" content="max-image-preview:large">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Oxanium:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/main.css?v=15">
-  <link rel="stylesheet" href="/css/pulse-badge.css">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-98KDVDFBCW"></script>
   <script>
@@ -21,66 +17,29 @@
     gtag('config', 'G-98KDVDFBCW');
   </script>
   <script src="/js/prices.js" defer></script>
-  <script src="/js/search.js" defer></script>
-  <script src="/js/auth.js?v=2" defer></script>
-  <script src="/js/pulse.js" defer></script>
-  <script src="/js/theme.js?v=2" defer></script>
-  <script src="/js/comments.js" defer></script>
-  <script src="/js/share.js" defer></script>
-  <script src="/js/hive.js?v=3" defer></script>
-  <script src="/js/carousel.js" defer></script>
-  <title>Signal vs. The Street — Analyst Consensus vs. Signal Sentiment — The Signal</title>
-  <meta name="description" content="Compare The Signal's sentiment ratings against Wall Street analyst consensus for AI, defense, space, cyber, mega-cap, and quantum stocks.">
-  <meta property="og:title" content="Signal vs. The Street — Analyst Consensus vs. Signal Sentiment">
-  <meta property="og:description" content="Compare The Signal's sentiment ratings against Wall Street analyst consensus for AI, defense, space, cyber, mega-cap, and quantum stocks.">
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "The Signal",
-      "url": "https://readthesignal.net",
-      "logo": {"@type":"ImageObject","url":"https://readthesignal.net/img/logo-hex.jpg","width":600,"height":60},
-      "description": "Market intelligence for AI, defense, space, and cybersecurity stocks."
-    }
-  </script>
+  <script src="/js/theme.js" defer></script>
+  <title>Signal vs. The Street — The Signal</title>
   <style>
-    .svs-container { max-width: 1100px; margin: 0 auto; padding: 40px 20px 60px; }
-    .svs-hero { text-align: center; margin-bottom: 40px; }
-    .svs-hero h1 { font-family: 'Anton', Impact, sans-serif; font-size: 2.4rem; color: var(--text); margin: 0 0 8px; }
-    .svs-hero p { color: var(--text-muted); font-size: 1.05rem; max-width: 600px; margin: 0 auto; }
-    .svs-legend { display: flex; gap: 20px; justify-content: center; margin-bottom: 30px; flex-wrap: wrap; }
-    .svs-legend-item { display: flex; align-items: center; gap: 6px; font-size: 0.85rem; color: var(--text-muted); }
-    .svs-dot { width: 10px; height: 10px; border-radius: 50%; }
-    .svs-dot-signal { background: var(--blue, #3b82f6); }
-    .svs-dot-street { background: var(--green, #22c55e); }
-    .svs-dot-neutral { background: var(--text-muted, #888); }
-    .svs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
-    .svs-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; transition: transform 0.15s, border-color 0.15s; }
-    .svs-card:hover { border-color: var(--blue); transform: translateY(-2px); }
-    .svs-card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
-    .svs-ticker { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 1.1rem; color: var(--text); }
-    .svs-price { font-family: 'JetBrains Mono', monospace; font-size: 1.05rem; font-weight: 600; }
-    .svs-price.up { color: var(--green); }
-    .svs-price.down { color: var(--red); }
-    .svs-name { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 14px; }
-    .svs-row { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; border-bottom: 1px solid var(--border-subtle, rgba(255,255,255,0.04)); }
-    .svs-row:last-child { border-bottom: none; }
-    .svs-label { font-size: 0.8rem; color: var(--text-muted); }
-    .svs-value { font-size: 0.85rem; font-weight: 600; }
-    .svs-bull { color: var(--green); }
-    .svs-bear { color: var(--red); }
-    .svs-neut { color: var(--text-muted); }
-    .svs-section-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin: 30px 0 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
-    .svs-loading { text-align: center; padding: 60px 20px; color: var(--text-muted); }
-    .svs-spinner { width: 32px; height: 32px; border: 3px solid var(--border); border-top-color: var(--blue); border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 12px; }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    @media (max-width: 640px) {
-      .svs-hero h1 { font-size: 1.8rem; }
-      .svs-grid { grid-template-columns: 1fr; }
-    }
+    .svs-page { max-width:1000px; margin:0 auto; padding:40px 24px; }
+    .svs-title { font-family:'Anton',sans-serif; font-size:3rem; margin-bottom:8px; background:linear-gradient(135deg,#60a5fa,#a78bfa); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .svs-subtitle { color:var(--text-secondary); font-size:1.1rem; margin-bottom:40px; max-width:600px; }
+    .svs-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; margin-bottom:40px; }
+    .svs-card { background:var(--bg-card); border:1px solid var(--border); border-radius:12px; padding:24px; }
+    .svs-card-label { font-size:11px; text-transform:uppercase; letter-spacing:1px; color:var(--text-muted); margin-bottom:8px; }
+    .svs-card-return { font-family:'JetBrains Mono',monospace; font-size:2rem; font-weight:700; color:var(--green); }
+    .svs-card-vs { font-size:13px; margin-top:8px; color:var(--text-secondary); }
+    .svs-card-vs span { font-family:'JetBrains Mono',monospace; }
+    .svs-holdings { margin-top:40px; }
+    .svs-holdings-title { font-size:1.4rem; font-weight:700; margin-bottom:16px; }
+    .svs-table { width:100%; border-collapse:collapse; }
+    .svs-table th { text-align:left; padding:10px 12px; font-size:11px; text-transform:uppercase; letter-spacing:1px; color:var(--text-muted); border-bottom:1px solid var(--border); }
+    .svs-table td { padding:10px 12px; border-bottom:1px solid rgba(255,255,255,0.04); font-family:'JetBrains Mono',monospace; font-size:13px; }
+    .svs-positive { color:var(--green); }
+    .svs-negative { color:var(--red); }
+    .svs-footer { margin-top:32px; padding-top:16px; border-top:1px solid var(--border); color:var(--text-muted); font-size:12px; }
   </style>
 </head>
-<body>
+<body class="dark">
   <nav class="nav">
     <div class="nav-inner">
       <a href="/" class="logo"><img src="/img/logo-hex.jpg" alt="The Signal" class="logo-img"><span class="logo-text"><span class="logo-the">THE</span> <strong>SIGNAL</strong></span></a>
@@ -91,73 +50,24 @@
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
         </button>
-        <div class="auth-container" id="authContainer">
-          <button class="nav-btn auth-btn" id="authToggle" aria-label="Sign In">
-            <div class="auth-btn-avatar" id="authBtnAvatar"><span class="auth-btn-initial" id="authBtnInitial"></span><img class="auth-btn-img" id="authBtnImg" src="" alt="" style="display:none"></div>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="auth-btn-icon" id="authBtnIcon">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-              <circle cx="12" cy="7" r="4"></circle>
-            </svg>
-            <span class="auth-label" id="authLabel">Sign In</span>
-          </button>
-          <div class="auth-dropdown" id="authDropdown">
-            <div class="auth-profile" id="authProfile" style="display:none">
-              <div class="auth-profile-header">
-                <div class="auth-profile-avatar" id="authProfileAvatar"><img id="authProfileImg" src="" alt="" style="display:none"><span class="auth-profile-initial" id="authProfileInitial"></span></div>
-                <div class="auth-profile-info"><span class="auth-profile-name" id="authProfileName"></span><span class="auth-profile-username" id="authProfileUsername"></span></div>
-                <div class="auth-profile-badge">HIVE</div>
-              </div>
-              <div class="auth-profile-stats"><div class="auth-stat"><span class="auth-stat-label">Portfolio</span><span class="auth-stat-value" id="authStatValue">-</span></div><div class="auth-stat"><span class="auth-stat-label">Return</span><span class="auth-stat-value" id="authStatReturn">-</span></div></div>
-              <div class="auth-drop-divider"></div>
-              <div class="auth-profile-nav">
-                <a href="/sector/ai" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
-                <a href="/sector/cyber" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
-                <a href="/sector/defense" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
-                <a href="/sector/space" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
-                <a href="/sector/mega-cap" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
-                <a href="/sector/quantum" class="auth-nav-item"><span class="auth-nav-icon">🔬</span> Quantum</a>
-                <div class="auth-nav-section-header">FEATURES</div>
-                <a href="/hive" class="auth-nav-item"><span class="auth-nav-icon">🐝</span> Hive</a>
-                <a href="/signal-vs-the-street" class="auth-nav-item"><span class="auth-nav-icon">📈</span> Signal vs. Street</a>
-              </div>
-              <div class="auth-drop-divider"></div>
-              <div class="auth-profile-footer">
-                <a href="/hive" class="auth-footer-link" onclick="navigateToHiveLeaderboard(event)">Leaderboard</a>
-                <a href="/account/settings" class="auth-footer-link">Settings</a>
-                <button class="auth-signout-btn" id="authSignOut">Sign Out</button>
-              </div>
-            </div>
-            <div class="auth-guest" id="authGuest">
-              <div class="auth-guest-brand"><span class="auth-guest-title">Welcome to <strong>The Signal</strong></span><span class="auth-guest-sub">Join the hive to track your portfolio</span></div>
-              <button class="auth-option auth-option-primary" onclick="showHiveJoinModal('login')"><span class="auth-option-icon">🔑</span> Sign In</button>
-              <button class="auth-option" onclick="showHiveJoinModal('register')"><span class="auth-option-icon">✨</span> Create Account</button>
-              <div class="auth-drop-divider"></div>
-              <div class="auth-profile-nav">
-                <a href="/sector/ai" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
-                <a href="/sector/cyber" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
-                <a href="/sector/defense" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
-                <a href="/sector/space" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
-                <a href="/sector/mega-cap" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
-                <a href="/sector/quantum" class="auth-nav-item"><span class="auth-nav-icon">🔬</span> Quantum</a>
-                <div class="auth-nav-section-header">FEATURES</div>
-                <a href="/hive" class="auth-nav-item"><span class="auth-nav-icon">🐝</span> Hive</a>
-                <a href="/signal-vs-the-street" class="auth-nav-item"><span class="auth-nav-icon">📈</span> Signal vs. Street</a>
-              </div>
-            </div>
-          </div>
-        </div>
         <button class="nav-btn hamburger-btn" id="hamburgerToggle" aria-label="Menu">
-          <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
         </button>
       </div>
     </div>
   </nav>
 
+  <!-- Kratos-Inspired Drawer Menu -->
   <div class="drawer-overlay" id="drawerOverlay"></div>
   <div class="drawer" id="drawer">
     <div class="drawer-header">
       <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
-      <a href="/" class="drawer-logo"><img src="/img/logo-hex.jpg" alt="The Signal" class="drawer-logo-img"><span class="drawer-logo-text">SIGNAL</span></a>
+      <a href="/" class="drawer-logo">
+        <img src="/img/logo-hex.jpg" alt="The Signal" class="drawer-logo-img">
+        <span class="drawer-logo-text">SIGNAL</span>
+      </a>
     </div>
     <div class="drawer-body">
       <div class="drawer-section-label">SECTORS</div>
@@ -167,217 +77,75 @@
       <a href="/sector/space" class="drawer-link">Space</a>
       <a href="/sector/mega-cap" class="drawer-link">Mega-Cap</a>
       <a href="/sector/quantum" class="drawer-link">Quantum</a>
-      <a href="/sector/ai-power" class="drawer-link">AI Power ⚡</a>
-      <a href="/sector/etfs" class="drawer-link">ETFs</a>
       <hr class="drawer-divider">
       <div class="drawer-section-label">FEATURES</div>
-      <a href="/stocks/" class="drawer-link drawer-link-stocks">📈 Stock Pages</a>
-      <a href="/#scorecard" class="drawer-link drawer-link-scorecard">📊 Signal Scorecard</a>
-      <a href="/hive" class="drawer-link drawer-link-hive">🐝 Hive</a>
-      <a href="/signal-vs-the-street" class="drawer-link drawer-link-svs">⚡ Signal vs. Street</a>
-      <a href="/pricing" class="drawer-link drawer-link-pricing">💎 Signal Premium</a>
+      <a href="/hive" class="drawer-link drawer-link-hive">Hive</a>
+      <a href="/signal-vs-the-street" class="drawer-link drawer-link-svs">Signal vs. Street</a>
     </div>
   </div>
 
-  <div class="search-overlay" id="searchOverlay">
-    <div class="search-backdrop" id="searchBackdrop"></div>
-    <div class="search-modal">
-      <div class="search-header">
-        <input type="text" class="search-input" id="searchInput" placeholder="Search articles by title, ticker, sector, or tag…" autofocus>
-        <button class="search-close" id="searchClose" aria-label="Close search">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
+  <main>
+    <div class="svs-page">
+      <h1 class="svs-title">Signal vs. The Street</h1>
+      <p class="svs-subtitle">Our live portfolio performance. Track every position, every return, measured against the S&P 500 and Nasdaq.</p>
+      <div class="svs-grid" id="svsCards"></div>
+      <div class="svs-holdings">
+        <h2 class="svs-holdings-title">Holdings</h2>
+        <table class="svs-table" id="svsTable"><thead><tr><th>Ticker</th><th>Weight</th><th>Return</th></tr></thead><tbody></tbody></table>
       </div>
-      <div class="search-results" id="searchResults"></div>
-      <div class="search-empty" id="searchEmpty">Start typing to search articles…</div>
-    </div>
-  </div>
-
-  <main class="main">
-    <div class="svs-container">
-      <div class="svs-hero">
-        <h1>Signal vs. The Street</h1>
-        <p>Compare The Signal's sentiment ratings against Wall Street analyst consensus. See where our community disagrees with the suits.</p>
-      </div>
-      <div class="svs-legend">
-        <div class="svs-legend-item"><span class="svs-dot svs-dot-signal"></span> Signal Sentiment</div>
-        <div class="svs-legend-item"><span class="svs-dot svs-dot-street"></span> Wall Street Consensus</div>
-      </div>
-      <div id="svsContent">
-        <div class="svs-loading">
-          <div class="svs-spinner"></div>
-          <span>Loading stock comparisons…</span>
-        </div>
-      </div>
+      <div class="svs-footer" id="svsFooter"></div>
     </div>
   </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-brand"><img src="/img/logo-hex.jpg" alt="The Signal" class="footer-logo"> THE <strong>SIGNAL</strong></div>
-      <div class="footer-tag">The Signal Editorial Team · readthesignal.net</div>
-      <div class="footer-copy">© 2026 The Signal — Market Intelligence. Data from public sources.</div>
-    </div>
-  </footer>
-
   <script>
-    // Hamburger drawer
-    document.addEventListener('DOMContentLoaded', function(){
-      var btn = document.getElementById('hamburgerToggle');
-      var drawer = document.getElementById('drawer');
-      var overlay = document.getElementById('drawerOverlay');
-      var closeBtn = document.getElementById('drawerClose');
-      function openDrawer() { drawer.classList.add('open'); overlay.classList.add('open'); document.body.style.overflow = 'hidden'; }
-      function closeDrawer() { drawer.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow = ''; }
-      if (btn && drawer && overlay) {
-        btn.addEventListener('click', openDrawer);
-        overlay.addEventListener('click', closeDrawer);
-        if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
-        document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer(); });
-        drawer.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeDrawer); });
-      }
+  fetch('/data/portfolio-returns.json').then(r=>r.json()).then(d=>{
+    var cards='';
+    for(var k in d.periods){
+      var p=d.periods[k];
+      cards+='<div class="svs-card"><div class="svs-card-label">'+p.label+'</div><div class="svs-card-return">+'+p.portfolioReturn.toFixed(1)+'%</div><div class="svs-card-vs">vs SPY <span>+'+p.spyReturn.toFixed(1)+'%</span> ('+(p.vsSPY>=0?'▲':'▼')+' '+Math.abs(p.vsSPY).toFixed(1)+'%)</div><div class="svs-card-vs">vs QQQ <span>+'+p.qqqReturn.toFixed(1)+'%</span> ('+(p.vsQQQ>=0?'▲':'▼')+' '+Math.abs(p.vsQQQ).toFixed(1)+'%)</div></div>';
+    }
+    document.getElementById('svsCards').innerHTML=cards;
+    var rows='';
+    (d.holdings||[]).forEach(function(h){
+      var ret=h.return!==null?'+'+h.return.toFixed(1)+'%':'—';
+      var cls=h.return>0?'svs-positive':h.return<0?'svs-negative':'';
+      rows+='<tr><td>'+h.ticker+'</td><td>'+h.weight.toFixed(1)+'%</td><td class="'+cls+'">'+ret+'</td></tr>';
     });
+    document.querySelector('#svsTable tbody').innerHTML=rows;
+    document.getElementById('svsFooter').innerHTML='Data as of '+new Date(d.lastUpdated).toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'})+'. Past performance does not guarantee future results.';
+  }).catch(function(){
+    document.getElementById('svsCards').innerHTML='<p style="color:var(--text-muted)">Portfolio data loading...</p>';
+  });
   </script>
-
   <script>
-    // Signal vs. The Street data loader
-    (function() {
-      var COVERAGE = [
-        {ticker:'NVDA',name:'NVIDIA Corp.',sector:'AI'},
-        {ticker:'AMD',name:'Advanced Micro Devices',sector:'AI'},
-        {ticker:'AVGO',name:'Broadcom Inc.',sector:'AI'},
-        {ticker:'TSM',name:'Taiwan Semiconductor',sector:'AI'},
-        {ticker:'MRVL',name:'Marvell Technology',sector:'AI'},
-        {ticker:'SMCI',name:'Super Micro Computer',sector:'AI'},
-        {ticker:'CRWD',name:'CrowdStrike Holdings',sector:'Cyber'},
-        {ticker:'PANW',name:'Palo Alto Networks',sector:'Cyber'},
-        {ticker:'PLTR',name:'Palantir Technologies',sector:'Defense'},
-        {ticker:'LMT',name:'Lockheed Martin',sector:'Defense'},
-        {ticker:'RTX',name:'RTX Corporation',sector:'Defense'},
-        {ticker:'RKLB',name:'Rocket Lab USA',sector:'Space'},
-        {ticker:'RDW',name:'Redwire Corporation',sector:'Space'},
-        {ticker:'AAPL',name:'Apple Inc.',sector:'Mega-Cap'},
-        {ticker:'MSFT',name:'Microsoft Corp.',sector:'Mega-Cap'},
-        {ticker:'GOOGL',name:'Alphabet Inc.',sector:'Mega-Cap'},
-        {ticker:'AMZN',name:'Amazon.com Inc.',sector:'Mega-Cap'},
-        {ticker:'META',name:'Meta Platforms',sector:'Mega-Cap'},
-        {ticker:'TSLA',name:'Tesla Inc.',sector:'Mega-Cap'},
-        {ticker:'IONQ',name:'IonQ Inc.',sector:'Quantum'},
-        {ticker:'GE',name:'GE Aerospace',sector:'Defense'},
-        {ticker:'AXON',name:'Axon Enterprise',sector:'Defense'},
-        {ticker:'CRWV',name:'CoreWeave Inc.',sector:'AI'},
-        {ticker:'NBIS',name:'Nebius Group',sector:'AI'}
-      ];
-
-      var SIGNAL_SENTIMENTS = {
-        'NVDA':'bullish','AMD':'bullish','AVGO':'bullish','TSM':'bullish','MRVL':'bullish','SMCI':'bullish',
-        'CRWD':'neutral','PANW':'bullish',
-        'PLTR':'bullish','LMT':'bullish','RTX':'bullish','GE':'bullish','AXON':'bullish',
-        'RKLB':'bullish','RDW':'bullish',
-        'AAPL':'bullish','MSFT':'bullish','GOOGL':'bullish','AMZN':'bullish','META':'bullish','TSLA':'bearish',
-        'IONQ':'bullish','CRWV':'bullish','NBIS':'bullish'
-      };
-
-      var STREET_CONSENSUS = {
-        'NVDA':'bullish','AMD':'neutral','AVGO':'bullish','TSM':'bullish','MRVL':'bullish','SMCI':'bullish',
-        'CRWD':'bullish','PANW':'bullish',
-        'PLTR':'neutral','LMT':'neutral','RTX':'bullish','GE':'bullish','AXON':'bullish',
-        'RKLB':'bullish','RDW':'bullish',
-        'AAPL':'bullish','MSFT':'bullish','GOOGL':'bullish','AMZN':'bullish','META':'bullish','TSLA':'neutral',
-        'IONQ':'neutral','CRWV':'bullish','NBIS':'bullish'
-      };
-
-      var SECTORS = ['AI','Cyber','Defense','Space','Mega-Cap','Quantum'];
-
-      function getSentimentClass(s) {
-        if (s === 'bullish') return 'svs-bull';
-        if (s === 'bearish') return 'svs-bear';
-        return 'svs-neut';
-      }
-
-      function getSentimentIcon(s) {
-        if (s === 'bullish') return '▲';
-        if (s === 'bearish') return '▼';
-        return '—';
-      }
-
-      function formatPrice(p) {
-        if (!p && p !== 0) return '—';
-        return '$' + Number(p).toLocaleString(undefined, {minimumFractionDigits:2,maximumFractionDigits:2});
-      }
-
-      function loadPrices() {
-        var container = document.getElementById('svsContent');
-        var tickers = COVERAGE.map(function(s) { return s.ticker; });
-        var prices = {};
-
-        var promises = tickers.map(function(t) {
-          return fetch('/api/prices?ticker=' + t)
-            .then(function(r) { return r.json(); })
-            .then(function(d) { if (d.price) prices[t] = d; })
-            .catch(function(){});
-        });
-
-        Promise.all(promises).then(function() {
-          renderGrid(prices);
-        }).catch(function() {
-          container.innerHTML = '<div class="svs-loading"><p style="color:var(--text-muted)">Unable to load price data. Please try again later.</p></div>';
-        });
-      }
-
-      function renderGrid(prices) {
-        var container = document.getElementById('svsContent');
-        var html = '';
-        var seenSectors = {};
-
-        for (var s = 0; s < SECTORS.length; s++) {
-          var sector = SECTORS[s];
-          var sectorStocks = COVERAGE.filter(function(st) { return st.sector === sector; });
-          if (sectorStocks.length === 0) continue;
-
-          html += '<div class="svs-section-label">' + sector + '</div>';
-          html += '<div class="svs-grid">';
-
-          for (var i = 0; i < sectorStocks.length; i++) {
-            var st = sectorStocks[i];
-            var priceData = prices[st.ticker];
-            var price = priceData ? priceData.price : null;
-            var change = priceData ? priceData.changePercent : null;
-            var priceClass = change >= 0 ? 'up' : 'down';
-            var signalSent = SIGNAL_SENTIMENTS[st.ticker] || 'neutral';
-            var streetSent = STREET_CONSENSUS[st.ticker] || 'neutral';
-            var agree = signalSent === streetSent;
-
-            html += '<div class="svs-card">' +
-              '<div class="svs-card-header">' +
-                '<span class="svs-ticker">' + st.ticker + '</span>' +
-                '<span class="svs-price ' + priceClass + '">' + formatPrice(price) + '</span>' +
-              '</div>' +
-              '<div class="svs-name">' + st.name + '</div>' +
-              '<div class="svs-row">' +
-                '<span class="svs-label">📡 Signal</span>' +
-                '<span class="svs-value ' + getSentimentClass(signalSent) + '">' + getSentimentIcon(signalSent) + ' ' + signalSent.charAt(0).toUpperCase() + signalSent.slice(1) + '</span>' +
-              '</div>' +
-              '<div class="svs-row">' +
-                '<span class="svs-label">🏦 Wall St</span>' +
-                '<span class="svs-value ' + getSentimentClass(streetSent) + '">' + getSentimentIcon(streetSent) + ' ' + streetSent.charAt(0).toUpperCase() + streetSent.slice(1) + '</span>' +
-              '</div>' +
-              '<div class="svs-row" style="padding-top:8px">' +
-                '<span class="svs-label">Verdict</span>' +
-                '<span class="svs-value ' + (agree ? 'svs-bull' : 'svs-neut') + '">' + (agree ? '✓ Agree' : '⟷ Mixed') + '</span>' +
-              '</div>' +
-              '</div>';
-          }
-          html += '</div>';
-        }
-
-        container.innerHTML = html;
-      }
-
-      loadPrices();
-    })();
+  document.addEventListener('DOMContentLoaded', function(){
+    var btn = document.getElementById('hamburgerToggle');
+    var drawer = document.getElementById('drawer');
+    var overlay = document.getElementById('drawerOverlay');
+    var closeBtn = document.getElementById('drawerClose');
+    function openDrawer() {
+      drawer.classList.add('open');
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDrawer() {
+      drawer.classList.remove('open');
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    if (btn && drawer && overlay) {
+      btn.addEventListener('click', function(){ openDrawer(); });
+      overlay.addEventListener('click', function(){ closeDrawer(); });
+      if (closeBtn) closeBtn.addEventListener('click', function(){ closeDrawer(); });
+      // Close on Escape key
+      document.addEventListener('keydown', function(e){
+        if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
+      });
+      // Close on link click inside drawer
+      drawer.querySelectorAll('a').forEach(function(a){
+        a.addEventListener('click', function(){ closeDrawer(); });
+      });
+    }
+  });
   </script>
 </body>
 </html>

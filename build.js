@@ -92,44 +92,11 @@ function injectRocketNav(html) {
     html = html.replace('</head>', '  <script src="/js/nav.js" defer></script>\n</head>');
   }
 
-  // 3. Replace old drawer with Rocket Lab drawer
-  // Find the drawer section: starts with <!-- DRAWER --> or <div class="drawer-overlay"
-  let drawerStart = html.indexOf('<!-- DRAWER -->');
-  if (drawerStart === -1) {
-    drawerStart = html.indexOf('<div class="drawer-overlay"');
-  }
-  // Also handle Kratos-Inspired comment variant
-  if (drawerStart === -1) {
-    drawerStart = html.indexOf('<!-- Kratos');
-    if (drawerStart !== -1) {
-      // Go back to the line start
-      while (drawerStart > 0 && html[drawerStart - 1] !== '\n') drawerStart--;
-    }
-  }
-  // Also check for Rocket Lab-Style Drawer (already injected on re-builds)
-  if (drawerStart === -1) {
-    drawerStart = html.indexOf('<!-- Rocket Lab-Style Drawer -->');
-  }
-
-  if (drawerStart !== -1) {
-    // Find the end of drawer: search overlay marker or main content
-    const afterStart = drawerStart + 20;
-    const endMarkers = [
-      '<!-- SEARCH OVERLAY -->',
-      '<div class="search-overlay"',
-      '<!-- Search Overlay -->'
-    ];
-    let drawerEnd = -1;
-    for (const marker of endMarkers) {
-      const idx = html.indexOf(marker, afterStart);
-      if (idx !== -1 && (drawerEnd === -1 || idx < drawerEnd)) {
-        drawerEnd = idx;
-      }
-    }
-
-    if (drawerEnd !== -1) {
-      html = html.substring(0, drawerStart) + ROCKET_DRAWER + '\n\n  ' + html.substring(drawerEnd);
-    }
+  // 3. Replace DRAWER placeholder with Rocket Lab drawer
+  const drawerPlaceholder = '<!-- DRAWER -->';
+  const drawerIdx = html.indexOf(drawerPlaceholder);
+  if (drawerIdx !== -1) {
+    html = html.replace(drawerPlaceholder, ROCKET_DRAWER);
   }
 
   // 4. Remove old inline DOMContentLoaded drawer scripts (hamburger-based)
