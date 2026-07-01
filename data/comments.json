@@ -2884,5 +2884,25 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-07-01T19:14:18.478Z"
+  },
+  {
+    "id": "mr2gfg6w_k8s8be",
+    "article": "rigetti-quantum-computing-roadmap-2026",
+    "text": "ive watched quantum stocks get pumped on promises every few years. the hardware keeps improving but commercial usefulness keeps moving out. classic story in this space",
+    "author": "this_time_is_different",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-07-01T19:14:20.216Z"
+  },
+  {
+    "id": "mr2gfs0n_wz4xsg",
+    "article": "rigetti-quantum-computing-roadmap-2026",
+    "text": "the hardware improvements are accelerating faster than most people think. last year nobody expected qubit counts this high this soon. the graph is going up way faster than before",
+    "author": "hype_man",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mr2gfdi5_bulcvm",
+    "createdAt": "2026-07-01T19:14:35.543Z"
   }
 ]
