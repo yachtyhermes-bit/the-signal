@@ -3014,5 +3014,35 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-07-02T16:42:42.493Z"
+  },
+  {
+    "id": "mr3qgcay_6br92g",
+    "article": "nvidia-cuda-ai-moat-2026",
+    "text": "bought NVDA at the peak a few months ago and im still up somehow. even my bad timing cant kill this thing",
+    "author": "bought_at_the_top",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-07-02T16:42:44.170Z"
+  },
+  {
+    "id": "mr3qgdj1_f912tq",
+    "article": "nvidia-cuda-ai-moat-2026",
+    "text": "the 4 million developer figure is what matters most. nobody rebuilds their entire ml stack for a slightly cheaper alternative. the switching costs here are massive",
+    "author": "data_dependent_1",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-07-02T16:42:45.757Z"
+  },
+  {
+    "id": "mr3qghsm_gk9k7x",
+    "article": "nvidia-cuda-ai-moat-2026",
+    "text": "NVDA is the only stock where buying the top still works out eventually. CUDA lock-in just keeps getting deeper",
+    "author": "hype_man",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mr3qgcay_6br92g",
+    "createdAt": "2026-07-02T16:42:51.286Z"
   }
 ]
