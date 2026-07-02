@@ -11,3 +11,9 @@ data/*
 dist/
 node_modules/
 v2/
+
+.venv/
+public_bak/
+dist_bloated/
+public/video/
+public/signal_video/

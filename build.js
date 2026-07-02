@@ -323,8 +323,7 @@ if (!template) {
         .replace(/{{TAGS_HTML}}/g, tagsHtml)
         .replace(/{{LINKS_HTML}}/g, linksHtml)
         .replace(/{{RELATED_ARTICLES}}/g, pickRelated(articles, slug, 4))
-        .replace('<!-- ARTICLES_DATA_JSON -->',
-          `<script id="articles-data" type="application/json">${articlesJson}</script>`)
+        .replace('<!-- ARTICLES_DATA_JSON -->', '')
         .replace(/\{\{[A-Z_]+\}\}/g, '');
 
       // Inject Rocket Lab navigation
