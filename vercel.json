@@ -10,6 +10,7 @@
   ],
   "routes": [
     { "handle": "filesystem" },
+    { "src": "/img/(.*)", "dest": "/img/$1" },
     { "src": "/api/(.*)", "dest": "/api/$1" },
     { "src": "/images/(.*)", "dest": "/img/$1" },
     { "src": "/stock/(.*)", "dest": "/stocks/$1" },
