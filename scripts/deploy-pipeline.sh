@@ -140,10 +140,13 @@ echo ''
 echo '🔨 Phase 2: Build'
 node build.js && echo '  ✅ Build success' || { echo '  ❌ Build failed'; exit 1; }
 
-# Phase 3: Deploy
+# Phase 3: Deploy (strip large assets, deploy, restore, alias)
 echo ''
 echo '🚀 Phase 3: Deploy'
-vercel --prod --token "$(cat /home/chino/.vercel/token 2>/dev/null)" && echo '  ✅ Deployed to https://readthesignal.net' || { echo '  ❌ Deploy failed'; exit 1; }
+cd /home/chino/thesignal
+source scripts/deploy-helper.sh
+signal_deploy "readthesignal.net" || { echo '  ❌ Deploy failed'; exit 1; }
+echo '  ✅ Deployed to https://readthesignal.net'
 
 # Phase 4: Replace placeholder images with real ones
 echo ''

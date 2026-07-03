@@ -1,0 +1,52 @@
+{
+  "slug": "marvell-ai-custom-chips-data-center-2026",
+  "ticker": "MRVL",
+  "company": "Marvell Technology",
+  "sector": "ai",
+  "sentiment": "bullish",
+  "date": "2026-07-03T15:00:00.000Z",
+  "title": "Marvell's Custom AI Chips Power Every Hyperscaler \u2014 Yet the Stock Just Dropped 25% from Its High",
+  "subtitle": "From $61 to $329 and back to $245 \u2014 MRVL's rollercoaster hides a simple story about who actually builds AI infrastructure.",
+  "summary": "MRVL makes the custom AI silicon and interconnect chips running inside every major hyperscaler's data center, yet the stock has pulled back 25% from its all-time high. With revenue growing 27.6% year-over-year and analysts overwhelmingly bullish, is this the pullback of a lifetime or a warning sign?",
+  "image": {
+    "src": "/img/articles/marvell-ai-custom-chips-data-center-2026.jpg",
+    "caption": "A Marvell semiconductor chip on a circuit board, representing the company's growing footprint in custom AI silicon for hyperscale data centers."
+  },
+  "bodyHtml": "<p>Jim Cramer said it on Mad Money yesterday: if Jensen Huang is right about AI infrastructure spending, Marvell has a lot more upside. That's not a small if. But it's worth asking \u2014 who's actually building the guts of every hyperscale data center on earth? The answer isn't NVIDIA. It's Marvell.</p><p>Here's the number that should make you sit up: MRVL trades at $245 today, down 25% from its 52-week high of $329. Over the past month alone, the stock shed another 18.7%. The broader semiconductor rotation has battered names across the board. But underneath that pullback, Marvell's business is quietly doing something remarkable \u2014 revenue accelerated four straight quarters, from $2.006 billion to $2.075B to $2.219B to $2.418B. That's not deceleration. That's a company hitting its stride.</p><p>What Marvell actually does is easy to misunderstand. They don't make the flashy GPU everyone associates with AI. They make two things that are arguably more important: custom AI chips \u2014 ASICs designed specifically for each hyperscaler's unique workloads \u2014 and the interconnect silicon that ties every GPU cluster together. Switches, digital signal processors, optical modules. Every AI data center system in the world uses Marvell's interconnect technology. That's not marketing fluff from their YouTube channel \u2014 it's the literal architecture of scale.</p><!-- VIDEO 0 --><p>Think about it this way. Amazon builds Trainium chips. Microsoft builds Maia. Google builds TPUs. None of those companies designs every component in-house. They go to Marvell for custom ASIC design, and they go to Marvell again for the networking fabric that makes thousands of GPUs act as one system. It's a double barrel of revenue from the same customer relationship. Broadcom is the only other name playing at this level in custom silicon, and even they don't have Marvell's interconnect dominance.</p><p>The financials back the story. Trailing twelve-month revenue hit $8.72 billion, up 27.6% year-over-year. Two years ago, Marvell was doing roughly $5.5 billion. Revenue has essentially doubled while the market barely noticed until the stock ran from $61 to $329. Gross margins are expanding \u2014 51.5% TTM with the most recent quarter at 52.1%. Operating margin sits at 14.5%. Free cash flow generated $2.27 billion. These aren't the numbers of a company running on hype. They're the numbers of a company with genuine pricing power in a market that's growing faster than almost anyone predicted.</p><p>Yet here we are, 25% off the highs, and the valuation debate rages. The trailing P/E of 84x looks absurd until you remember that net income includes legacy business drag \u2014 data center revenue is growing 60%+ and will eventually re-rate the whole multiple structure. Forward P/E of 39.7x on accelerating growth? That's cheaper than it looks. The stock's YTD return of 174.7% shows the market is starting to connect the dots, even after the pullback.</p><p>Wall Street is broadly convinced. Forty-one analysts cover MRVL, and 86% rate it Buy or Strong Buy. The mean price target of $249 sits barely above today's price, but the high target of $385 implies another 57% upside \u2014 essentially a return to the highs with room to run. Next earnings comes August 27, with consensus expecting $2.70 billion in revenue and $0.93 in EPS. If Marvell delivers the kind of beat-and-raise we've seen from hyperscaler supply chain names this cycle, that 39x forward multiple starts looking like a gift.</p><p>The bear case isn't dead. A beta of 2.20 means this stock amplifies every market move \u2014 up and down. If AI capex slows even modestly, hyperscalers could push out custom chip timelines. And Broadcom isn't sleeping; they're competing aggressively for the same ASIC design wins. But here's the thing about interconnect: it's not a winner-take-all market, it's a winner-take-most market, and Marvell already has most of it.</p><p>The pullback from $329 to $245 resets the narrative. It's not a growth stock that ran too far \u2014 it's a business that doubled its revenue, expanded its margins, and locked in the three largest cloud companies as permanent customers. At 39x forward earnings with 27% revenue growth, MRVL looks like one of the better risk-reward setups in semiconductor AI infrastructure right now. The question isn't whether Marvell belongs in the AI conversation. It's whether the market's temporary amnesia has created a rare entry point.</p><p class=\"disclosure\"><em>Disclosure: The Signal holds no position in MRVL. Positions may change. This is not financial advice.</em></p>",
+  "links": [
+    {
+      "url": "https://www.marvell.com/",
+      "label": "Marvell Technology Official Site"
+    },
+    {
+      "url": "https://finance.yahoo.com/quote/MRVL/",
+      "label": "MRVL on Yahoo Finance"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=4bU7D2Pa9C0",
+      "label": "Marvell Interconnect Technology Explained"
+    }
+  ],
+  "videos": [
+    {
+      "id": "4bU7D2Pa9C0",
+      "title": "Every AI Data Center System in the World Uses Marvell Interconnect Technology",
+      "source": "Marvell Technology",
+      "url": "https://www.youtube.com/watch?v=4bU7D2Pa9C0",
+      "position": "after_2nd_h2"
+    }
+  ],
+  "tags": [
+    "MRVL",
+    "Marvell",
+    "AI",
+    "data-center",
+    "semiconductors",
+    "custom-silicon",
+    "ASIC",
+    "networking",
+    "hyperscalers",
+    "stock-analysis"
+  ],
+  "price": 245.29
+}

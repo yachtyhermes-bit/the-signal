@@ -1,31 +1,31 @@
 {
   "name": "The Signal Portfolio",
   "inception": "2024-06-01",
-  "lastUpdated": "2026-06-30T22:06:57.593Z",
+  "lastUpdated": "2026-07-02T22:03:50.893Z",
   "periods": {
     "sinceInception": {
       "label": "Since Inception",
-      "portfolioReturn": 237.39,
-      "spyReturn": 41.49,
-      "qqqReturn": 62.51,
-      "vsSPY": 195.9,
-      "vsQQQ": 174.88
+      "portfolioReturn": 234.31,
+      "spyReturn": 41.11,
+      "qqqReturn": 57.26,
+      "vsSPY": 193.2,
+      "vsQQQ": 177.05
     },
     "ytd": {
       "label": "YTD",
-      "portfolioReturn": 37.36,
-      "spyReturn": 9.31,
-      "qqqReturn": 20.11,
-      "vsSPY": 28.05,
-      "vsQQQ": 17.25
+      "portfolioReturn": 29.41,
+      "spyReturn": 9.02,
+      "qqqReturn": 16.23,
+      "vsSPY": 20.39,
+      "vsQQQ": 13.18
     },
     "oneYear": {
       "label": "1 Year",
       "portfolioReturn": 81.49,
-      "spyReturn": 26.7,
-      "qqqReturn": 41.86,
-      "vsSPY": 54.79,
-      "vsQQQ": 39.63
+      "spyReturn": 26.36,
+      "qqqReturn": 37.27,
+      "vsSPY": 55.13,
+      "vsQQQ": 44.22
     }
   },
   "holdings": [
@@ -37,117 +37,117 @@
     {
       "ticker": "AMD",
       "weight": 7.2,
-      "return": 255.19
+      "return": 216.61
     },
     {
       "ticker": "NVDA",
       "weight": 6.6,
-      "return": 73.99
+      "return": 69.42
     },
     {
       "ticker": "GOOG",
       "weight": 6,
-      "return": 102.57
+      "return": 104.21
     },
     {
       "ticker": "AMZN",
       "weight": 5.6,
-      "return": 33.64
+      "return": 36.07
     },
     {
       "ticker": "RKLB",
       "weight": 5.5,
-      "return": 2247.58
+      "return": 2220.09
     },
     {
       "ticker": "META",
       "weight": 5.2,
-      "return": 17.97
+      "return": 22.08
     },
     {
       "ticker": "SMH",
       "weight": 4.7,
-      "return": 169.38
+      "return": 143.26
     },
     {
       "ticker": "TSM",
       "weight": 4.7,
-      "return": 208.21
+      "return": 180.19
     },
     {
       "ticker": "SOFI",
       "weight": 4.3,
-      "return": 164.84
+      "return": 169.42
     },
     {
       "ticker": "GE",
       "weight": 3.7,
-      "return": 131.47
+      "return": 133.82
     },
     {
       "ticker": "AVGO",
       "weight": 3.6,
-      "return": 185.76
+      "return": 172.68
     },
     {
       "ticker": "CRWD",
       "weight": 3.5,
-      "return": 147.22
+      "return": 151.36
     },
     {
       "ticker": "RTX",
       "weight": 3.2,
-      "return": 76.71
+      "return": 85.57
     },
     {
       "ticker": "PLTR",
       "weight": 3,
-      "return": 447.23
+      "return": 506.47
     },
     {
       "ticker": "SPMO",
       "weight": 3,
-      "return": 97.14
+      "return": 84.07
     },
     {
       "ticker": "HOOD",
       "weight": 2.8,
-      "return": 371.24
+      "return": 429.75
     },
     {
       "ticker": "MSFT",
       "weight": 2.7,
-      "return": -9.79
+      "return": -5.57
     },
     {
       "ticker": "CHAT",
       "weight": 2.5,
-      "return": 183.08
+      "return": 154.7
     },
     {
       "ticker": "AXON",
       "weight": 2.1,
-      "return": 101.27
+      "return": 114.35
     },
     {
       "ticker": "RBRK",
       "weight": 1.8,
-      "return": 160.56
+      "return": 171.47
     },
     {
       "ticker": "QQQM",
       "weight": 1.8,
-      "return": 62.46
+      "return": 57.34
     },
     {
       "ticker": "NFLX",
       "weight": 1.4,
-      "return": 12.66
+      "return": 22.52
     },
     {
       "ticker": "SHLD",
       "weight": 1.2,
-      "return": 75.21
+      "return": 87.68
     },
     {
       "ticker": "TEM",
@@ -157,12 +157,12 @@
     {
       "ticker": "AAPL",
       "weight": 1.1,
-      "return": 49.13
+      "return": 59.06
     },
     {
       "ticker": "RNMBY",
       "weight": 1,
-      "return": 97.13
+      "return": 118.34
     },
     {
       "ticker": "CRWV",
@@ -177,27 +177,27 @@
     {
       "ticker": "KTOS",
       "weight": 0.8,
-      "return": 129.03
+      "return": 154.25
     },
     {
       "ticker": "RDW",
       "weight": 0.8,
-      "return": 142.66
+      "return": 124.4
     },
     {
       "ticker": "LUNR",
       "weight": 0.7,
-      "return": 333
+      "return": 296.36
     },
     {
       "ticker": "MISL",
       "weight": 0.7,
-      "return": 60.15
+      "return": 63.93
     },
     {
       "ticker": "AXP",
       "weight": 0.5,
-      "return": 42.79
+      "return": 48.58
     },
     {
       "ticker": "SPCX",

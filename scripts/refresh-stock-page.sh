@@ -83,12 +83,8 @@ echo "  🌐 Stock pages ready at dist/stocks/" | tee -a "$LOG"
 # ── Step: Deploy if requested ──
 if $DEPLOY; then
   echo "Deploying to Vercel..." | tee -a "$LOG"
-  VERCEL_ARGS="--prod --yes"
-  if [ -f "$HOME/.vercel/token" ]; then
-    VERCEL_ARGS="$VERCEL_ARGS --token $(cat $HOME/.vercel/token)"
-  fi
-  npx vercel $VERCEL_ARGS >> "$LOG" 2>&1 || {
-    echo "  ❌ Vercel deploy FAILED" | tee -a "$LOG"
+  cd /home/chino/thesignal && . scripts/deploy-helper.sh && signal_deploy "readthesignal.net" 2>&1 | tee -a "$LOG" || {
+    echo "  ❌ Deploy FAILED" | tee -a "$LOG"
     exit 1
   }
   echo "  ✅ Deployed to Vercel" | tee -a "$LOG"

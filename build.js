@@ -27,10 +27,13 @@ const BUILD_TS = Date.now(); // cache-busting timestamp for images
 const SECTORS = {
   ai: 'AI', cyber: 'Cyber', defense: 'Defense',
   space: 'Space', 'mega-cap': 'Mega-Cap', quantum: 'Quantum',
-  etfs: 'ETFs', 'ai-power': 'AI Power', semiconductors: 'Semiconductors'
+  etfs: 'ETFs', 'ai-power': 'AI Power', fintech: 'FinTech', semiconductors: 'Semiconductors'
 };
 
 const HOMEPAGE_LIMIT = 40;
+
+// R2 image CDN base — all /img/ paths in HTML get rewritten to absolute R2 URLs
+const R2_IMG_BASE = 'https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev';
 
 // ─── Rocket Lab Drawer-Only Navigation Block ───
 // Only the drawer — original Signal nav bar stays unchanged
@@ -67,6 +70,7 @@ const ROCKET_DRAWER = `  <!-- Rocket Lab-Style Drawer -->
         <a href="/sector/mega-cap" class="drawer-link">MEGA-CAP</a>
         <a href="/sector/quantum" class="drawer-link">QUANTUM</a>
         <a href="/sector/ai-power" class="drawer-link">AI POWER</a>
+        <a href="/sector/fintech" class="drawer-link">FINTECH</a>
         <a href="/sector/etfs" class="drawer-link">ETFS</a>
       </div>
     </div>
@@ -127,12 +131,28 @@ if (htmlSize < 35000) {
 }
 console.log(`  ✅ ${htmlSize} bytes design → dist/`);
 
-// ─── 1.5. Copy article images ───
+// ─── 1.5. Copy article images (root-level only — article images served from R2) ───
+// Article images under img/articles/ are served directly from R2 CDN.
+// We skip copying them to dist/ (and remove if present from _backup_dist/) to keep deployment small.
 const imgDir = path.join(ROOT, 'public', 'img');
 const distImgDir = path.join(DST, 'img');
 if (fs.existsSync(imgDir)) {
-  fs.cpSync(imgDir, distImgDir, { recursive: true });
-  console.log(`  ✅ ${countFiles(distImgDir)} image files → dist/img/`);
+  // Copy only root-level img files (skip articles/ subdirectory — served from R2)
+  fs.mkdirSync(distImgDir, { recursive: true });
+  const entries = fs.readdirSync(imgDir, { withFileTypes: true });
+  let copied = 0;
+  for (const entry of entries) {
+    if (entry.isDirectory()) continue; // skip articles/ subdir
+    fs.copyFileSync(path.join(imgDir, entry.name), path.join(distImgDir, entry.name));
+    copied++;
+  }
+  console.log(`  ✅ ${copied} root image files → dist/img/ (articles/ served from R2)`);
+}
+// Remove dist/img/articles/ if it was copied from _backup_dist/ (served from R2 instead)
+const distArticlesImg = path.join(DST, 'img', 'articles');
+if (fs.existsSync(distArticlesImg)) {
+  fs.rmSync(distArticlesImg, { recursive: true, force: true });
+  console.log('  🗑  Removed dist/img/articles/ (served from R2 CDN)');
 }
 
 // ─── 1.5.5. Copy article audio ───
@@ -507,6 +527,35 @@ if (fs.existsSync(apiDir)) {
   }
   console.log(`  ✅ ${apiFiles.length} API items copied`);
 }
+
+// ─── 10. Rewrite all /img/ paths in HTML to absolute R2 URLs ───
+// This ensures img/articles/* images are served from R2 CDN, bypassing
+// Vercel's SPA catch-all routing that would otherwise 404 subdirectory images.
+console.log('🔄 Rewriting image paths to R2 CDN...');
+(function rewriteImagePaths() {
+  function walkHtml(dir) {
+    const entries = fs.readdirSync(dir, { withFileTypes: true });
+    for (const entry of entries) {
+      const full = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        walkHtml(full);
+      } else if (entry.name.endsWith('.html')) {
+        let content = fs.readFileSync(full, 'utf8');
+        // Replace "/img/ with R2 absolute URL — catches both HTML attributes (src="/img/)
+        // and JSON strings inside <script id="articles-data"> blocks
+        // 1) Local "/img/" paths (HTML src="/img/..." and JSON strings)
+        let rewritten = content.replace(/"\/img\//g, '"' + R2_IMG_BASE + '/img/');
+        // 2) Absolute readthesignal.net URLs (stock page news cards, etc.)
+        rewritten = rewritten.replace(/https?:\/\/readthesignal\.net\/img\//gi, R2_IMG_BASE + '/img/');
+        if (rewritten !== content) {
+          fs.writeFileSync(full, rewritten);
+        }
+      }
+    }
+  }
+  walkHtml(DST);
+  console.log('  ✅ All /img/ paths rewritten to R2 CDN (local + absolute URLs)');
+})();
 
 // ─── Summary ───
 const totalFiles = countFiles(DST);
