@@ -5,10 +5,17 @@
 import fs from 'fs';
 import path from 'path';
 
-const GEMINI_KEY = process.env.GEMINI_API_KEY || '';
-const SERPER_KEY = process.env.SERPER_API_KEY || '';
-const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_KEY}`;
+const GEMINI_MODEL = 'gemini-2.0-flash';
 const SERPER_URL = 'https://google.serper.dev/search';
+
+function getGeminiURL() {
+  const key = process.env.GEMINI_API_KEY || '';
+  return `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${key}`;
+}
+
+function getSerperKey() {
+  return process.env.SERPER_API_KEY || '';
+}
 
 const PREMIUM_LIMIT = 5;
 
@@ -73,10 +80,11 @@ function cacheSet(key, data) {
 // // /// /
 
 async function searchWeb(query) {
+  const serperKey = getSerperKey();
   try {
     const res = await fetch(SERPER_URL, {
       method: 'POST',
-      headers: { 'X-API-KEY': SERPER_KEY, 'Content-Type': 'application/json' },
+      headers: { 'X-API-KEY': serperKey, 'Content-Type': 'application/json' },
       body: JSON.stringify({ q: query })
     });
     if (!res.ok) return null;
@@ -95,7 +103,8 @@ async function searchWeb(query) {
 }
 
 async function callGemini(payload) {
-  const res = await fetch(GEMINI_URL, {
+  const geminiUrl = getGeminiURL();
+  const res = await fetch(geminiUrl, {
     method: 'POST', headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload)
   });
@@ -255,11 +264,12 @@ The Signal articles:\n${articleContext.slice(0, 12000)}`;
 
   } catch (error) {
     const isRate = error.message === 'RATE_LIMITED';
-    console.error('Pulse error:', isRate ? 'RATE_LIMITED' : error.message);
+    const errMsg = error.message || String(error);
+    console.error('Pulse error:', isRate ? 'RATE_LIMITED' : errMsg);
     return res.status(200).json({
       answer: isRate
         ? "Rate limited. Give me a moment and try again."
-        : "I hit a processing issue. Try rephrasing.",
+        : `I hit a processing issue. (${errMsg.slice(0, 80)})`,
       sources: [],
       tier: 'error'
     });

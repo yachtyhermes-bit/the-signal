@@ -1,138 +1,91 @@
 #!/usr/bin/env python3
-"""Generate Andrew TTS for specific articles, then upload to R2."""
-import asyncio, edge_tts, json, os, re, subprocess, sys, time
-from pathlib import Path
+"""Generate Andrew TTS for specific missing slugs and upload to R2."""
+import asyncio, edge_tts, json, os, subprocess, re, urllib.request
 
-ROOT = Path(__file__).resolve().parent.parent
-POSTS_DIR = ROOT / 'articles' / 'posts'
-TMP_DIR = '/tmp/signal-tts'
 VOICE = 'en-US-AndrewNeural'
 MAX_CHARS = 5000
+TMP = '/tmp/signal-tts'
+os.makedirs(TMP, exist_ok=True)
 
-os.makedirs(TMP_DIR, exist_ok=True)
+# Read token from .dev.vars
+token = ''
+account_id = 'a0b3e792abdcd46a7614dc201ff2170f'
+bucket = 'the-signal-audio'
 
-# Latest 5 slugs (by mtime)
-LATEST = [
-    'sofi-fintech-bank-charter-galileo-2026',
-    'crowdstrike-ai-security-platform-2026',
-    'coreweave-leveraged-ai-infrastructure-bull-bear-2026',
-    'amazon-aws-ai-kuiper-dark-horse-2026',
-    'alphabet-ai-cloud-waymo-undervalued-2026',
+with open('/home/chino/thesignal/.dev.vars') as f:
+    for line in f:
+        if 'CLOUDFLARE_API_TOKEN' in line:
+            raw = line.strip().split('=', 1)[1].strip()
+            token = raw.strip("'\"").strip()
+            break
+
+if not token:
+    print("ERROR: No CLOUDFLARE_API_TOKEN found")
+    exit(1)
+
+SLUGS = [
+    'microsoft-azure-ai-copilot-enterprise-2026',
+    'marvell-ai-custom-chips-data-center-2026',
 ]
 
 async def gen_one(slug):
-    jf = POSTS_DIR / f'{slug}.json'
-    if not jf.exists():
-        print(f"  ⚠️  No JSON for {slug}")
-        return None
-
-    with open(jf) as f:
-        article = json.load(f)
-
-    out_path = os.path.join(TMP_DIR, f'{slug}.mp3')
-    if os.path.exists(out_path) and os.path.getsize(out_path) > 500:
-        print(f"  ⏭️  Already cached: {slug}")
-        return out_path
-
-    title = article.get('title', '')
-    body_html = article.get('bodyHtml', '')
-    if body_html:
-        text = re.sub(r'<[^>]+>', ' ', body_html)
-        for e, r in [('&amp;','&'),('&lt;','<'),('&gt;','>'),('&quot;','"'),('&#39;',"'"),('&nbsp;',' ')]:
-            text = text.replace(e, r)
-        text = re.sub(r'\s+', ' ', text).strip()
-        text = f"{title}. {text}"
-    else:
-        summary = article.get('summary', '')
-        text = f"{title}. {summary}"
-
-    if len(text) < 50:
-        print(f"  ⚠️  Text too short: {slug}")
-        return None
-
-    try:
-        communicate = edge_tts.Communicate(text[:MAX_CHARS], VOICE)
-        with open(out_path, 'wb') as fout:
-            async for chunk in communicate.stream():
-                if chunk['type'] == 'audio':
-                    fout.write(chunk['data'])
-        if os.path.getsize(out_path) > 500:
-            print(f"  ✅ Generated: {slug} ({os.path.getsize(out_path)} bytes)")
-            return out_path
-        else:
-            os.unlink(out_path)
-            print(f"  ⚠️  Too small: {slug}")
-            return None
-    except Exception as e:
-        print(f"  ❌ Error {slug}: {e}")
-        return None
-
-def upload_one(filepath):
-    slug = os.path.splitext(os.path.basename(filepath))[0]
-    env = {**os.environ}
-    try:
-        r = subprocess.run([
-            'npx', 'wrangler', 'r2', 'object', 'put',
-            f'the-signal-audio/v2/{slug}.mp3',
-            '--file', filepath, '--remote'
-        ], capture_output=True, text=True, timeout=45,
-           cwd=str(ROOT), env=env)
-        if r.returncode == 0:
-            print(f"  📤 Uploaded: {slug}")
-            return True
-        else:
-            print(f"  ❌ Upload failed [{slug}]: {r.stderr[:120]}")
-            return False
-    except subprocess.TimeoutExpired:
-        print(f"  ⏰ Timeout: {slug}")
+    jf = f'/home/chino/thesignal/articles/posts/{slug}.json'
+    if not os.path.exists(jf):
+        print(f'  SKIP {slug}: article JSON not found')
         return False
+    with open(jf) as f:
+        a = json.load(f)
+    title = a.get('title', '')
+    body = a.get('bodyHtml', '')
+    text = re.sub(r'<[^>]+>', ' ', body)
+    text = f'{title}. {text}'[:MAX_CHARS]
+    
+    out = os.path.join(TMP, f'{slug}.mp3')
+    comm = edge_tts.Communicate(text, VOICE)
+    with open(out, 'wb') as fo:
+        async for chunk in comm.stream():
+            if chunk['type'] == 'audio':
+                fo.write(chunk['data'])
+    sz = os.path.getsize(out)
+    
+    if sz < 500:
+        print(f'  FAIL {slug}: too small ({sz} bytes)')
+        return False
+    
+    # Upload using urllib (no token in command string)
+    key = f'v2/{slug}.mp3'
+    url = f'https://api.cloudflare.com/client/v4/accounts/{account_id}/r2/buckets/{bucket}/objects/{key}'
+    
+    with open(out, 'rb') as fo:
+        data = fo.read()
+    
+    req = urllib.request.Request(url, data=data, method='PUT')
+    req.add_header('Authorization', f'Bearer {token}')
+    req.add_header('Content-Type', 'audio/mpeg')
+    
+    try:
+        with urllib.request.urlopen(req, timeout=60) as resp:
+            status = resp.status
     except Exception as e:
-        print(f"  ❌ Error {slug}: {e}")
+        print(f'  UPLOAD FAIL {slug}: {e}')
+        os.unlink(out)
+        return False
+    
+    os.unlink(out)
+    if status == 200:
+        print(f'  OK {slug}: {sz} bytes → R2')
+        return True
+    else:
+        print(f'  UPLOAD FAIL {slug}: HTTP {status}')
         return False
 
 async def main():
-    print("🎙️  Checking latest 5 articles for Andrew TTS...\n")
-
-    results = {}
-    for slug in LATEST:
-        fp = await gen_one(slug)
-        results[slug] = fp
-        await asyncio.sleep(0.2)
-
-    print("\n── Upload phase ──")
-    generated = []
-    skipped = []
-    for slug in LATEST:
-        fp = results[slug]
-        if fp:
-            # Check if already in cache (wasn't freshly generated)
-            jf = POSTS_DIR / f'{slug}.json'
-            with open(jf) as f:
-                article = json.load(f)
-            gen_time = os.path.getmtime(fp)
-            json_time = os.path.getmtime(jf)
-            is_fresh = gen_time >= json_time - 60  # generated after the json was last touched
-            # Actually, better: if file existed before we ran, it's a skip
-            # We already printed "Already cached" vs "Generated" above
-            # Let's just upload all that exist and report
-            ok = upload_one(fp)
-            if ok:
-                generated.append(slug)
-            else:
-                # still count as attempted
-                generated.append(f"{slug} (upload failed)")
-        else:
-            skipped.append(slug)
-        time.sleep(1.5)
-
-    print("\n═══════════════════════════════════════")
-    print(f"✅ Generated & uploaded: {len([s for s in generated if '(upload failed)' not in s])}")
-    for s in generated:
-        print(f"   • {s}")
-    print(f"⏭️  Skipped (no content to generate): {len(skipped)}")
-    for s in skipped:
-        print(f"   • {s}")
-    print("═══════════════════════════════════════")
+    ok = 0
+    for slug in SLUGS:
+        print(f'Generating {slug}...')
+        if await gen_one(slug):
+            ok += 1
+    print(f'\nDone: {ok}/{len(SLUGS)} uploaded')
 
 if __name__ == '__main__':
     asyncio.run(main())
