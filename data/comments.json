@@ -3244,5 +3244,35 @@
     "uid": null,
     "parentId": null,
     "createdAt": "2026-07-04T16:37:07.511Z"
+  },
+  {
+    "id": "mr6l4v3x_cz2c49",
+    "article": "amd-mi400-datacenter-gpu-comeback-2026",
+    "text": "the real question is who actually deploys these at scale. paper benchmarks vs real world workloads are totally different animals. would love to see actual inference numbers",
+    "author": "data_dependent_1",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-07-04T16:37:09.117Z"
+  },
+  {
+    "id": "mr6l4wd1_dozwu9",
+    "article": "amd-mi400-datacenter-gpu-comeback-2026",
+    "text": "bought AMD calls this morning. what could go wrong lol. at least someone is finally challenging the monopoly",
+    "author": "whats_a_stop_loss",
+    "photoURL": null,
+    "uid": null,
+    "parentId": null,
+    "createdAt": "2026-07-04T16:37:10.741Z"
+  },
+  {
+    "id": "mr6l50gl_6oa4fu",
+    "article": "amd-mi400-datacenter-gpu-comeback-2026",
+    "text": "if the benchmarks hold up and developers actually start building on ROCm then yeah this could be real competition. big if though",
+    "author": "hype_man",
+    "photoURL": null,
+    "uid": null,
+    "parentId": "mr6l4tvb_7205og",
+    "createdAt": "2026-07-04T16:37:16.053Z"
   }
 ]
