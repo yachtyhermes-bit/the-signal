@@ -5,7 +5,7 @@
 import fs from 'fs';
 import path from 'path';
 
-const GEMINI_MODEL = 'gemini-2.0-flash';
+const GEMINI_MODEL = 'gemini-2.5-flash';
 const SERPER_URL = 'https://google.serper.dev/search';
 
 function getGeminiURL() {
