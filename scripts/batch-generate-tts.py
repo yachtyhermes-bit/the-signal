@@ -90,7 +90,7 @@ def upload_all(mp3_files):
             r = subprocess.run([
                 'npx', 'wrangler', 'r2', 'object', 'put',
                 f'the-signal-audio/v2/{slug}.mp3',
-                '--file', filepath, '--remote'
+                '--file', filepath, '-y', '--remote'
             ], capture_output=True, text=True, timeout=45,
                cwd=str(ROOT), env=env)
             
