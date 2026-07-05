@@ -1,76 +1,39 @@
 {
-  "slug": "zscaler-zero-trust-cloud-security-2026",
-  "title": "Zscaler Got Cut in Half While the Business Accelerated \u2014 This Isn't Broken, It's a Structural Buy",
-  "subtitle": "$6B in contracted backlog. 80% gross margins. 25% revenue growth accelerating. 45% of the Fortune 500 locked into an architecture PANW and CRWD can't bolt on. The market's pricing a fire sale that isn't happening.",
-  "summary": "Zscaler is down 42% YTD despite accelerating revenue growth, $6B+ in contracted backlog, and a zero-trust architecture with no real substitute. This is a structural buying opportunity hiding in plain sight.",
+  "title": "Zscaler: The Zero Trust Titan Caught in the Growth Deceleration Trap",
   "ticker": "ZS",
-  "sector": "cyber",
+  "slug": "zscaler-zero-trust-cloud-security-2026",
+  "sector": "cybersecurity",
   "sentiment": "bullish",
-  "date": "2026-06-17T12:00:00.000Z",
+  "date": "2026-07-05T10:00:00.000Z",
+  "price": 147.33,
+  "summary": "Zscaler (ZS) delivered a Q3 FY2026 earnings beat but saw its stock crash 31% after guiding 16-17% ARR growth for FY2027. Despite $890M in free cash flow, a zero trust product that is winning Fortune 500 deals, and a consensus analyst target of $192.58, the market is pricing in a growth reset that has the stock down 53% in a year — making this a high-conviction value-versus-growth debate.",
   "image": {
     "src": "/img/articles/zscaler-zero-trust-cloud-security-2026.jpg",
-    "caption": "Macro close-up of a glowing fiber optic network node with blue light \u2014 symbolizing Zscaler's Zero Trust cloud security architecture."
+    "caption": "Zscaler Zero Trust Exchange security operations dashboard."
   },
-  "tags": [
-    "Zscaler",
-    "ZS",
-    "Zero Trust",
-    "Cybersecurity",
-    "Cloud Security",
-    "SSE",
-    "SASE",
-    "Network Security"
+  "videos": [
+    {
+      "id": "qN3j0huZpwQ",
+      "title": "Zscaler CEO Jay Chaudhry: 'For every employee, there will be 50 to 100 AI agents'",
+      "source": "CNBC Television",
+      "url": "https://www.youtube.com/watch?v=qN3j0huZpwQ",
+      "position": "after_2nd_h2"
+    }
   ],
   "links": [
     {
-      "label": "Zscaler Investor Relations \u2192",
+      "label": "Zscaler Investor Relations",
       "url": "https://ir.zscaler.com/"
     },
     {
-      "label": "ZS on Yahoo Finance \u2192",
-      "url": "https://finance.yahoo.com/quote/ZS/"
-    }
-  ],
-  "videos": [
+      "label": "Zscaler Q3 FY2026 Earnings (CNBC)",
+      "url": "https://www.cnbc.com/2026/05/27/zscaler-zs-earnings-q3-2026.html"
+    },
     {
-      "url": "https://www.youtube.com/watch?v=36jk2IBJA6Q",
-      "title": "Zscaler CEO discusses federal spending on cloud security, benefits of 'zero trust' framework",
-      "channel": "CNBC Television"
+      "label": "Aston Martin Aramco F1 Partnership",
+      "url": "https://www.astonmartinf1.com/en-GB/news/announcement/aston-martin-aramco-and-zscaler-redefine-speed-and-security"
     }
   ],
-  "bodyHtml": "<p>Down 42%. That's what <a href=\"/ticker/ZS\">$ZS</a> has done to shareholders in 2026 while the business underneath accelerated to <strong>25% revenue growth</strong>. If that doesn't make you stop scrolling, nothing will.</p><p><strong>$220 per share to $127.</strong> Twenty billion in market cap erased. The narrative's been merciless: Palo Alto's eating their SASE lunch. Microsoft's bundling security into E5. Net retention's slipping. GAAP profitability's MIA. And the stock just kept falling.</p><p>But here's the thing nobody's pricing in: this isn't a broken business. It's a structural mispricing on a company whose architecture can't be replicated with a firewall bolt-on.</p><p>Let's walk through what actually happened while the stock halved.</p><p>Revenue's been a freight train. <strong>FY2022: $1.09B. FY2023: $1.62B. FY2024: $2.17B. FY2025: $2.67B.</strong> Now guiding <strong>$3.31\u2013$3.32B</strong> for FY2026 \u2014 that's four straight years of 24%+ growth with zero deceleration. Q3 just printed <strong>$850.5M at +25.4% YoY</strong>. This thing's accelerating, not stalling.</p><p>The contracted backlog tells the real story. <strong>RPO hit $6.05 billion, up 31% year-over-year.</strong> Enterprises don't sign nine-figure zero-trust transformation deals unless they're dead serious. That's committed revenue, already sold, not pipeline fiction.</p><p><strong>Gross margins at 80% non-GAAP.</strong> Free cash flow of <strong>$582 million</strong> in the first half alone \u2014 a <strong>36% margin</strong>. The business prints cash. <strong>$1.67 billion in net cash</strong> sitting on the balance sheet. Zero solvency risk. Zero.</p><p>And what do you get for that money? <strong>160+ data centers</strong> inspecting <strong>500 billion+ daily transactions</strong>. <strong>100% security effectiveness</strong> rating from CyberRatings.org \u2014 not 99.8%, not \"best in class.\" One hundred percent. <strong>Gartner SSE Leader four years running.</strong> <strong>45% of the Fortune 500</strong> routing their traffic through Zscaler's cloud. Less than <strong>3% penetration</strong> of a <strong>$104 billion</strong> serviceable addressable market. You seeing the runway?</p><div class=\"video-section\">\n  <div class=\"video-section-title\">\u25b6 Watch: Zscaler CEO on Zero Trust</div>\n  <div class=\"video-embed\">\n    <iframe src=\"https://www.youtube.com/embed/36jk2IBJA6Q\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen loading=\"lazy\"></iframe>\n  </div>\n  <div class=\"video-info\">\n    <div class=\"video-info-title\">Zscaler CEO discusses federal spending on cloud security, benefits of 'zero trust' framework \u2014 CNBC Television</div>\n  </div>\n</div><p>Now the competitive question, because it's the one killing the stock. Can <a href=\"/ticker/PANW\">$PANW</a> kill Zscaler?</p><p>PANW's SASE business is real \u2014 <strong>$1.3 billion in ARR growing 35%</strong>. They bundle it with NGFW, and that bundle's appealing to CIOs who want one throat to choke. But here's the architecture problem nobody talks about: PANW's SASE is built on top of a firewall lineage. Zscaler was born cloud-native, zero-trust-native. You can't refactor a NGFW into a zero-trust exchange. The architecture <em>is</em> the moat.</p><p><a href=\"/ticker/CRWD\">$CRWD</a>? Not even a direct competitor. They <em>partner</em> with Zscaler for a reason \u2014 endpoint protection and secure access are adjacent, not overlapping. Microsoft's E5 bundling is annoying, sure, but nobody's running mission-critical zero-trust on the same vendor that can't secure its own Exchange servers.</p><p>The real risks are real: net retention declining from <strong>125% to ~114%</strong>, meaning customers are scrutinizing every dollar. Stock-based compensation at <strong>$405 million annually</strong> keeps GAAP profitability out of reach. And yes, PANW's platform has momentum. But name a single enterprise that ripped out Zscaler to go all-in on PANW SASE. I'll wait.</p><p>Here's what you're actually buying at $127: a <strong>$20.6 billion</strong> company doing <strong>$3.3 billion</strong> in revenue growing 24% with <strong>80% gross margins</strong>, <strong>$6 billion in contracted backlog</strong>, and a zero-trust architecture that the largest enterprises on earth are adopting. <strong>Forty-five analysts</strong> say Buy with a <strong>mean target of $193</strong> \u2014 that's <strong>52% upside</strong> from here.</p><p>The market's pricing this like a melting ice cube. It's not. It's a generational buying opportunity in the one cybersecurity model built for a world without perimeters. Bet against zero-trust architecture at your own peril.</p><em>\u2014 The Signal</em>",
-  "meta": {
-    "author": "The Signal Editorial Team",
-    "estimatedReadTime": "4 min read",
-    "editorialTags": [
-      "Zscaler",
-      "ZS",
-      "Zero Trust",
-      "Cybersecurity",
-      "Cloud Security",
-      "SSE",
-      "SASE",
-      "Network Security"
-    ],
-    "seoKeywords": "Zscaler, ZS stock, zero trust security, cloud security, SSE, SASE, cybersecurity stocks 2026, ZS analyst target, Zscaler stock analysis, network security investing",
-    "relatedTickers": [
-      "ZS",
-      "PANW",
-      "CRWD",
-      "MSFT"
-    ],
-    "keyMetrics": {
-      "price": "$127.23",
-      "marketCap": "$20.57B",
-      "ytdReturn": "-42.32%",
-      "fy2026RevenueGuidance": "$3.31-3.32B (+24%)",
-      "q3FY2026Revenue": "$850.5M (+25.4% YoY)",
-      "grossMargin": "80% (non-GAAP)",
-      "fcfH1FY2026": "$582M (36% margin)",
-      "rpo": "$6.05B (+31% YoY)",
-      "netCash": "$1.67B",
-      "fortune500Penetration": "45%",
-      "analystConsensus": "Buy (45 analysts, target $193)"
-    }
-  }
+  "tags": ["ZS", "Zscaler", "cybersecurity", "zero trust", "cloud security", "AI security", "FCF", "growth stock"],
+  "bodyHtml": "<p>Let's talk about Zscaler, because the story here doesn't make sense unless you zoom all the way out — and even then, it still kinda hurts.</p><p>On May 27, Zscaler dropped its Q3 FY2026 earnings. By every near-term measure, it was a beat. Revenue of $850.5M, clearing the $835M estimate. Non-GAAP EPS of $1.08, above the $1.01 consensus. The machine is running. And the market responded by torching 31% of the company's value in a single session — the worst single-day collapse in Zscaler's history as a public company.</p><p>That's the kind of move that makes you check whether the CEO resigned mid-call or the SEC showed up at headquarters. Neither happened. What happened was guidance: Zscaler told the street it expects FY2027 ARR growth of 16-17%. For a stock still priced for 25%-plus expansion, that number landed like a grenade in the boardroom.</p><p>So the question everybody's asking: is this a temporary reset — or the new baseline?</p><!-- VIDEO 1 --><p>Let's start with the good stuff, because there is plenty of it. Zscaler's Zero Trust Exchange is still one of the most formidable products in enterprise cybersecurity. 45% of the Fortune 500 are customers. That's a near-monopoly on the top end of the market. Data Security, one of Zscaler's newer growth engines, crossed $500M in annual recurring revenue and is growing north of 30% year-over-year. On June 25, the company announced a global cybersecurity partnership with the Aston Martin Aramco Formula One team — the kind of brand-anchor deal that signals enterprise trust at the highest level. And Project Glasswing, Zscaler's collaboration with Anthropic on AI security, positions the company exactly where the puck is going.</p><p>Now the uncomfortable part. Zscaler is guiding for 16-17% ARR growth in FY2027, down from the 25%+ clip it was running. Sales leadership departures were disclosed alongside the earnings report, which never helps the narrative. The stock is down 53.2% over the past twelve months, currently trading at $147.33 — less than half the 52-week high of $336.99. At the low of $114.63, it was genuinely getting crushed. The forward P/E sits at 32x. That's not expensive for a high-quality software business, but it's not cheap either — especially when growth is decelerating into the mid-teens.</p><p>Here's where the math gets interesting, and where the bullish case starts to build. Zscaler generated $890.3 million in free cash flow over the trailing twelve months. That's a free cash flow margin of roughly 28% — elite by any standard. The company has $3.54 billion in cash on the balance sheet. The GAAP net income loss of $77.4M is almost entirely explained by $661M in annual stock-based compensation. Strip that out, and the underlying cash generation is monstrous. At a market cap of $23.82B, Zscaler trades at roughly 7.5x trailing sales and an FCF yield approaching 3.7%. For a company still growing revenue at 25.4% year-over-year on a TTM basis, those multiples start to look attractive.</p><p>Wall Street is not unified on this name, but the consensus leans bullish. 44 analysts cover the stock with a consensus Buy rating and a mean price target of $192.58, implying about 30.7% upside from current levels. The high target sits at $250; the low is $145, meaning even the most bearish analyst is only about 1.5% below today's price.</p><p>The bear case is straightforward: if 16-17% growth is the new normal, this is a mid-teens grower trading at 32x forward earnings — not a steal, especially if macro headwinds push growth lower. The $661M in stock comp is a real dilutive cost. And sales leadership turnover at a moment of deceleration raises execution risk that's hard to model.</p><p>The bull case is equally simple: a zero-trust platform with 45% of the Fortune 500 locked in, $500M in data security ARR growing 30%+, $890M in FCF, and a balance sheet with more cash than debt. The growth reset from 25% to 16% might be a one-time guide-down, not a permanent re-rating. If FY2028 ARR re-accelerates — and the AI security tailwind from Project Glasswing suggests it could — then buying at $147 will look like the trade of the year.</p><p>Zscaler at $147 is a bet on whether the market overreacted to a growth guide-down or correctly priced a mature company. The numbers say there's still a lot of fight left in this dog. Whether that's enough to win back the growth crowd — that's what the next two quarters will decide.</p><p class=\"disclosure\"><em>Disclosure: The Signal holds no position in ZS. Positions may change. This is not financial advice.</em></p>"
 }
