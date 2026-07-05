@@ -22,26 +22,21 @@ const GITHUB_PATH = 'data/comments.json';
 const GITHUB_BRANCH = 'main';
 
 async function loadFromGitHub() {
-  const token = getGithubToken();
-  if (!token) return { comments: [], error: 'No GITHUB_TOKEN' };
+  // Use raw.githubusercontent.com — no auth needed for public repos,
+  // avoids GITHUB_TOKEN requirement and GitHub API rate limits on cold starts
   try {
-    const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${GITHUB_PATH}?ref=${GITHUB_BRANCH}`;
+    const url = `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/${GITHUB_BRANCH}/${GITHUB_PATH}`;
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 5000);
-    const resp = await fetch(url, {
-      headers: { 'Authorization': `token ${token}` },
-      signal: controller.signal
-    });
+    const resp = await fetch(url, { signal: controller.signal });
     clearTimeout(timeout);
     if (!resp.ok) {
       const errText = await resp.text().catch(() => '');
-      return { comments: [], error: `GitHub ${resp.status}: ${errText.slice(0, 200)}` };
+      return { comments: [], error: `GitHub raw ${resp.status}: ${errText.slice(0, 200)}` };
     }
-    const fileInfo = await resp.json();
-    const rawContent = fileInfo.content || '';
-    const content = Buffer.from(rawContent, 'base64').toString('utf8');
+    const content = await resp.text();
     const parsed = JSON.parse(content);
-    return { comments: parsed, error: null, _ghDebug: `ok size=${fileInfo.size} contentLen=${rawContent.length} parsedCount=${Array.isArray(parsed) ? parsed.length : 'not-array'}` };
+    return { comments: parsed, error: null, _ghDebug: `raw ok size=${content.length} parsedCount=${Array.isArray(parsed) ? parsed.length : 'not-array'}` };
   } catch (e) {
     return { comments: [], error: `GitHub fetch failed: ${e.message || e}` };
   }
@@ -110,30 +105,24 @@ export default async function handler(req, res) {
   try {
     const fs = await import('fs/promises');
 
-    // Read all comments — try /tmp first, fall back to GitHub
-    let all = [];
-    let loadError = null;
-    let ghResult = null;
-    try {
-      const data = await fs.readFile(COMMENTS_PATH, 'utf8');
-      all = JSON.parse(data);
-    } catch {
-      // /tmp empty (cold start) — load from GitHub
-      ghResult = await loadFromGitHub();
-      all = ghResult.comments || [];
-      loadError = ghResult.error || (all.length === 0 ? 'GitHub returned empty' : null);
+    // Always load from GitHub on GET — /tmp cache is unreliable across cold starts
+    // POST still writes to /tmp + syncs to GitHub for persistence
+    if (req.method === 'GET') {
+      const ghResult = await loadFromGitHub();
+      const all = ghResult.comments || [];
+      const loadError = ghResult.error;
+
+      // Warm /tmp cache for subsequent reads within same instance
       if (all.length > 0) {
         try { await fs.writeFile(COMMENTS_PATH, JSON.stringify(all, null, 2), 'utf8'); } catch {}
       }
-    }
 
-    if (req.method === 'GET') {
       const article = req.query.article || '';
       const action = req.query.action || '';
       
       // Debug: return full data if ?debug=1
       if (req.query.debug === '1') {
-        return res.json({ allCount: all.length, loadError, sampleSlugs: all.slice(0, 3).map(c => c.article), _ghDebug: ghResult?._ghDebug });
+        return res.json({ allCount: all.length, loadError, sampleSlugs: all.slice(0, 3).map(c => c.article), _ghDebug: ghResult._ghDebug });
       }
       
       // GET /api/comments?action=likes&commentId=XXX → get like count
@@ -148,6 +137,16 @@ export default async function handler(req, res) {
         .filter(c => c.article === article)
         .sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
       return res.json({ comments });
+    }
+
+    // For POST (writes), load from /tmp cache or GitHub, then append
+    let all = [];
+    try {
+      const data = await fs.readFile(COMMENTS_PATH, 'utf8');
+      all = JSON.parse(data);
+    } catch {
+      const ghResult = await loadFromGitHub();
+      all = ghResult.comments || [];
     }
 
     if (req.method === 'POST') {
