@@ -5,12 +5,11 @@
 import fs from 'fs';
 import path from 'path';
 
-const GEMINI_MODEL = 'gemini-2.5-flash';
+const GEMINI_MODEL = 'gemini-3.1-flash-lite';
 const SERPER_URL = 'https://google.serper.dev/search';
 
 function getGeminiURL() {
-  const key = process.env.GEMINI_API_KEY || '';
-  return `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${key}`;
+  return `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`;
 }
 
 function getSerperKey() {
@@ -104,8 +103,13 @@ async function searchWeb(query) {
 
 async function callGemini(payload) {
   const geminiUrl = getGeminiURL();
+  const key = process.env.GEMINI_API_KEY || '';
   const res = await fetch(geminiUrl, {
-    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'x-goog-api-key': key
+    },
     body: JSON.stringify(payload)
   });
   if (!res.ok) {

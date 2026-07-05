@@ -2,6 +2,7 @@
 """Batch generate Andrew TTS for all articles and upload to R2 via wrangler.
 Generates all MP3s first, then uploads with proper delays."""
 import asyncio, edge_tts, json, os, subprocess, sys, time, glob
+import urllib.request, urllib.error
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -69,41 +70,45 @@ async def gen_all():
     print(f"  ✅ {gen_ok} generated, {gen_skip} already cached")
     return glob.glob(f'{TMP_DIR}/*.mp3')
 
-# ─── Phase 2: Upload all to R2 ───
+# ─── Phase 2: Upload all to R2 via Cloudflare API ───
 def upload_all(mp3_files):
     total = len(mp3_files)
-    print(f"\n📤 Uploading {total} files to R2...")
+    print(f"\n📤 Uploading {total} files to R2 directly via Cloudflare API...")
+    
+    token = os.environ.get('CLOUDFLARE_API_TOKEN', '')
+    acct = os.environ.get('CLOUDFLARE_ACCOUNT_ID', '')
+    if not token or not acct:
+        print("  ❌ CLOUDFLARE_API_TOKEN or CLOUDFLARE_ACCOUNT_ID not set")
+        return
     
     ok = 0
     fail = 0
+    bucket = 'the-signal-audio'
     
     for i, filepath in enumerate(mp3_files):
         slug = os.path.splitext(os.path.basename(filepath))[0]
+        key = f'v2/{slug}.mp3'
         
         try:
-            env = {**os.environ}
-            # Ensure wrangler can auth — some subshells lose the token
-            if not env.get('CLOUDFLARE_API_TOKEN'):
-                env['CLOUDFLARE_API_TOKEN'] = os.environ.get('CLOUDFLARE_API_TOKEN', '')
-            if not env.get('CLOUDFLARE_ACCOUNT_ID'):
-                env['CLOUDFLARE_ACCOUNT_ID'] = os.environ.get('CLOUDFLARE_ACCOUNT_ID', '')
-            r = subprocess.run([
-                'npx', 'wrangler', 'r2', 'object', 'put',
-                f'the-signal-audio/v2/{slug}.mp3',
-                '--file', filepath, '-y', '--remote'
-            ], capture_output=True, text=True, timeout=45,
-               cwd=str(ROOT), env=env)
+            with open(filepath, 'rb') as f:
+                data = f.read()
             
-            if r.returncode == 0:
+            url = f'https://api.cloudflare.com/client/v4/accounts/{acct}/r2/buckets/{bucket}/objects/{key}'
+            req = urllib.request.Request(url, data=data, method='PUT')
+            req.add_header('Authorization', f'Bearer {token}')
+            req.add_header('Content-Type', 'audio/mpeg')
+            
+            resp = urllib.request.urlopen(req, timeout=45)
+            if resp.status == 200:
                 ok += 1
-                # Clean up individual file after upload
                 os.unlink(filepath)
             else:
                 fail += 1
-                print(f"  ❌ Upload failed [{slug}]: exit={r.returncode} err={r.stderr[:80]}")
-        except subprocess.TimeoutExpired:
+                print(f"  ❌ Upload failed [{slug}]: HTTP {resp.status} {resp.read()[:100]}")
+        except urllib.error.HTTPError as e:
             fail += 1
-            print(f"  ⏰ Timeout: {slug}")
+            body = e.read()[:150]
+            print(f"  ❌ HTTP {e.code} [{slug}]: {body}")
         except Exception as e:
             fail += 1
             print(f"  ❌ Error {slug}: {e}")
@@ -111,7 +116,7 @@ def upload_all(mp3_files):
         if (i + 1) % 25 == 0:
             print(f"  📤 {ok}/{i+1} uploaded...")
         
-        time.sleep(1.2)
+        time.sleep(0.5)
     
     print(f"\n📊 Done: {ok} uploaded, {fail} failed, {total - ok - fail} skipped")
     
