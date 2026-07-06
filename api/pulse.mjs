@@ -5,11 +5,16 @@
 import fs from 'fs';
 import path from 'path';
 
-const GEMINI_MODEL = 'gemini-3.1-flash-lite';
+const GEMINI_MODEL = 'google/gemini-2.5-flash';
+const OPENROUTER_URL = 'https://openrouter.ai/api/v1/chat/completions';
 const SERPER_URL = 'https://google.serper.dev/search';
 
-function getGeminiURL() {
-  return `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`;
+function getOpenRouterKey() {
+  return process.env.OPENROUTER_API_KEY || '';
+}
+
+function getOpenRouterURL() {
+  return OPENROUTER_URL;
 }
 
 function getSerperKey() {
@@ -101,14 +106,23 @@ async function searchWeb(query) {
   } catch (e) { return null; }
 }
 
-async function callGemini(payload) {
-  const geminiUrl = getGeminiURL();
-  const key = process.env.GEMINI_API_KEY || '';
-  const res = await fetch(geminiUrl, {
+async function callOpenRouter(messages, opts = {}) {
+  const key = getOpenRouterKey();
+  if (!key) throw new Error('403: No OPENROUTER_API_KEY configured');
+  const model = opts.model || GEMINI_MODEL;
+  const payload = {
+    model,
+    messages,
+    temperature: opts.temperature ?? 0.3,
+    max_tokens: opts.maxTokens ?? 1024
+  };
+  const res = await fetch(getOpenRouterURL(), {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'x-goog-api-key': key
+      'Authorization': `Bearer ${key}`,
+      'HTTP-Referer': 'https://readthesignal.net',
+      'X-Title': 'The Signal Pulse'
     },
     body: JSON.stringify(payload)
   });
@@ -117,7 +131,9 @@ async function callGemini(payload) {
     if (res.status === 429) throw new Error('RATE_LIMITED');
     throw new Error(`${res.status}: ${err.slice(0,200)}`);
   }
-  return res.json();
+  const data = await res.json();
+  const text = data.choices?.[0]?.message?.content || '';
+  return text;
 }
 
 // // /// /
@@ -176,20 +192,15 @@ RULES:
 
 The Signal's recent articles (for context, use when relevant):
 ${articleContext.slice(0, 15000)}`;
+    // STEP 1: Answer using OpenRouter with article context
+    const freeMessages = [
+      { role: 'system', content: freePrompt },
+      { role: 'user', content: question }
+    ];
 
-    const freePayload = {
-      systemInstruction: { parts: [{ text: freePrompt }] },
-      contents: [{ role: 'user', parts: [{ text: question }] }],
-      generationConfig: { temperature: 0.3, maxOutputTokens: 1024 },
-      tools: [{ googleSearch: {} }]
-    };
-
-    let freeData, freeAnswer = '';
+    let freeAnswer = '';
     try {
-      freeData = await callGemini(freePayload);
-      if (freeData.candidates?.[0]?.content?.parts) {
-        freeAnswer = freeData.candidates[0].content.parts.map(p => p.text || '').join('');
-      }
+      freeAnswer = await callOpenRouter(freeMessages);
     } catch (e) {
       freeAnswer = '';
     }
@@ -203,7 +214,7 @@ ${articleContext.slice(0, 15000)}`;
           if (sources.length >= 3) break;
         }
       }
-      const result = { answer: freeAnswer, sources, tier: sources.length ? 'free' : 'free' };
+      const result = { answer: freeAnswer, sources, tier: 'free' };
       cacheSet(cacheKey, result);
       return res.status(200).json(result);
     }
@@ -242,16 +253,16 @@ ${webSection}
 
 The Signal articles:\n${articleContext.slice(0, 12000)}`;
 
-    const premiumPayload = {
-      systemInstruction: { parts: [{ text: premiumPrompt }] },
-      contents: [{ role: 'user', parts: [{ text: question }] }],
-      generationConfig: { temperature: 0.3, maxOutputTokens: 2048 }
-    };
+    const premiumMessages = [
+      { role: 'system', content: premiumPrompt },
+      { role: 'user', content: question }
+    ];
 
-    const data = await callGemini(premiumPayload);
     let answer = '';
-    if (data.candidates?.[0]?.content?.parts) {
-      answer = data.candidates[0].content.parts.map(p => p.text || '').join('');
+    try {
+      answer = await callOpenRouter(premiumMessages, { maxTokens: 2048, temperature: 0.3 });
+    } catch (e) {
+      answer = '';
     }
 
     const sources = [];

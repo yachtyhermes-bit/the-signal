@@ -1,0 +1,520 @@
+{
+  "meta": {
+    "ticker": "CRWD",
+    "company": "CrowdStrike Holdings, Inc.",
+    "exchange": "NasdaqGS",
+    "sector": "Technology",
+    "industry": "Software - Infrastructure",
+    "headquarters": "Austin, Texas, USA",
+    "employees": 11157,
+    "website": "https://www.crowdstrike.com",
+    "research_date": "2026-07-06",
+    "data_as_of": "2026-07-02 (market close pre-split adjustment) / 2026-07-06 (research)",
+    "fiscal_year_end": "January 31"
+  },
+
+  "stock_metrics": {
+    "current_price": {
+      "value": 193.98,
+      "currency": "USD",
+      "as_of": "2026-07-02 close (post 4-for-1 split)",
+      "source": "yfinance Ticker('CRWD').info.regularMarketPrice / previousClose"
+    },
+    "52_week_high": {
+      "value": 199.53,
+      "date": "2026-07-02 (post-split)",
+      "source": "yfinance Ticker('CRWD').info.fiftyTwoWeekHigh"
+    },
+    "52_week_low": {
+      "value": 85.68,
+      "date": "2026-02-23",
+      "source": "yfinance Ticker('CRWD').info.fiftyTwoWeekLow"
+    },
+    "52_week_range": "85.68 - 199.53",
+    "ytd_stock_return": {
+      "value": "71.07%",
+      "period": "Jan 2, 2026 ($113.39) to Jul 2, 2026 ($193.98)",
+      "source": "yfinance historical data Jan 2, 2026 open ($118.50) to Jul 2 close ($193.98); verified calculation from raw OHLCV data"
+    },
+    "ytd_stock_return_alt_source": {
+      "value": "65.53%",
+      "source": "MarketBeat (https://www.marketbeat.com/stocks/NASDAQ/CRWD/chart)",
+      "note": "Difference due to measurement start date — MarketBeat may measure from different reference date"
+    },
+    "ytd_stock_return_alt_source_2": {
+      "value": "~71.1%",
+      "source": "Simply Wall St (https://simplywall.st/stocks/us/software/nasdaq-crwd/crowdstrike-holdings)",
+      "note": "Matches yfinance calculation"
+    },
+    "previous_close": {
+      "value": 193.185,
+      "date": "2026-07-01 (pre-split adjusted via 4:1 split)",
+      "source": "yfinance regularMarketPreviousClose"
+    },
+    "post_market_price": {
+      "value": 194.82,
+      "source": "yfinance postMarketPrice"
+    },
+    "market_cap": {
+      "value": 197521932288,
+      "formatted": "$197.5 billion",
+      "source": "yfinance Ticker('CRWD').info.marketCap"
+    },
+    "market_cap_alt_source": {
+      "value": "$173.85 billion",
+      "as_of": "June 17, 2026",
+      "source": "CompaniesMarketCap (https://companiesmarketcap.com/crowdstrike/marketcap)",
+      "note": "Different measurement date explains variance"
+    },
+    "enterprise_value": {
+      "value": 193831927808,
+      "formatted": "$193.8 billion",
+      "source": "yfinance Ticker('CRWD').info.enterpriseValue"
+    },
+    "beta": {
+      "value": 1.237,
+      "source": "yfinance beta"
+    }
+  },
+
+  "valuation_ratios": {
+    "pe_ratio_trailing": {
+      "value": "N/A (negative earnings)",
+      "trailing_eps": -0.04,
+      "note": "GAAP trailing EPS was -$0.04. TTM GAAP net loss of ~$30.5M. No meaningful trailing P/E.",
+      "source_yfinance": "yfinance epsTrailingTwelveMonths = -0.04"
+    },
+    "forward_pe_yfinance": {
+      "value": 124.21,
+      "forward_eps_used": 1.5617,
+      "source": "yfinance forwardPE / forwardEps",
+      "note": "yfinance forwardEps ($1.56) appears unreliable/not matching company guidance"
+    },
+    "forward_pe_gurufocus": {
+      "value": 39.35,
+      "as_of": "2026-07-05",
+      "source": "GuruFocus (https://www.gurufocus.com/term/forward-pe-ratio/CRWD)",
+      "note": "Consistent with company FY27 non-GAAP EPS guidance of $4.78-$4.90: $193.98 / ~$4.84 ≈ 40.1x"
+    },
+    "forward_pe_calculated": {
+      "value": "~40.1x",
+      "method": "$193.98 / midpoint of FY27 non-GAAP EPS guidance ($4.84)",
+      "source": "CrowdStrike FY26 earnings (https://ir.crowdstrike.com/news-releases/news-release-details/crowdstrike-reports-fourth-quarter-and-fiscal-year-2026)"
+    },
+    "price_to_sales_ttm": {
+      "value": 38.77,
+      "source": "yfinance priceToSalesTrailing12Months"
+    },
+    "enterprise_to_revenue": {
+      "value": 38.05,
+      "source": "yfinance enterpriseToRevenue"
+    },
+    "enterprise_to_ebitda": {
+      "value": 3267.62,
+      "source": "yfinance enterpriseToEbitda",
+      "note": "Elevated due to low GAAP EBITDA ($59.3M)"
+    },
+    "price_to_book": {
+      "value": 42.62,
+      "source": "yfinance priceToBook"
+    },
+    "peg_ratio": {
+      "value": 6.31,
+      "source": "yfinance pegRatio / trailingPegRatio"
+    }
+  },
+
+  "financials": {
+    "revenue_ttm": {
+      "value": 5094199808,
+      "formatted": "$5.09 billion",
+      "period": "Trailing 12 months (Q2 FY26 through Q1 FY27)",
+      "breakdown": {
+        "Q2_FY26_Jul_2025": 1168952000,
+        "Q3_FY26_Oct_2025": 1234244000,
+        "Q4_FY26_Jan_2026": 1305375000,
+        "Q1_FY27_Apr_2026": 1385629000
+      },
+      "source": "yfinance totalRevenue; quarterly income statement from yfinance"
+    },
+    "revenue_fy2026": {
+      "value": 4810000000,
+      "formatted": "$4.81 billion",
+      "period": "Fiscal year ended January 31, 2026",
+      "source": "CrowdStrike FY26 earnings (https://ir.crowdstrike.com/news-releases/news-release-details/crowdstrike-reports-fourth-quarter-and-fiscal-year-2026)"
+    },
+    "revenue_fy2025": {
+      "value": 3950000000,
+      "formatted": "$3.95 billion",
+      "period": "Fiscal year ended January 31, 2025",
+      "source": "CrowdStrike FY25 earnings / Monexa (https://www.monexa.ai/blog/crowdstrike-crwd-fy2025-results-and-cash-flow-stre-CRWD-2025-09-08)"
+    },
+    "revenue_latest_quarter": {
+      "value": 1385629000,
+      "formatted": "$1.39 billion",
+      "period": "Q1 FY2027 (ended April 30, 2026)",
+      "source": "CrowdStrike IR (https://ir.crowdstrike.com/news-releases/news-release-details/crowdstrike-reports-first-quarter-fiscal-year-2027-financial)"
+    },
+    "revenue_growth_rate_yoy": {
+      "value": "26%",
+      "period": "Q1 FY27 vs Q1 FY26 ($1.39B vs $1.10B)",
+      "source": "CrowdStrike IR Q1 FY27 earnings"
+    },
+    "revenue_growth_fy2026": {
+      "value": "22%",
+      "period": "FY26 vs FY25 ($4.81B vs $3.95B)",
+      "source": "CrowdStrike FY26 earnings"
+    },
+    "revenue_growth_fy2025": {
+      "value": "29.15%",
+      "period": "FY25 vs FY24 ($3.95B vs $3.06B)",
+      "source": "Monexa / SEC filings (https://www.monexa.ai/blog/crowdstrike-crwd-fy2025-results-and-cash-flow-stre-CRWD-2025-09-08)"
+    },
+    "subscription_revenue_pct": {
+      "value": "95%",
+      "note": "Subscription revenue accounted for ~95% of total revenue",
+      "source": "SEC 10-Q (https://www.publicnow.com/view/A3A10DA0FB24A57AEE2FA129B7BA42B25F609577)"
+    },
+    "gross_margin_gaap": {
+      "value": "75.1%",
+      "source": "yfinance grossMargins = 0.75136"
+    },
+    "gross_margin_subscription_non_gaap": {
+      "value": "81%",
+      "period": "Q1 FY27",
+      "source": "CrowdStrike IR Q1 FY27 (https://ir.crowdstrike.com/news-releases/news-release-details/crowdstrike-reports-first-quarter-fiscal-year-2027-financial)"
+    },
+    "operating_margin_gaap": {
+      "value": "-2.2%",
+      "source": "yfinance operatingMargins = -0.02208"
+    },
+    "operating_margin_non_gaap": {
+      "value": "24%",
+      "period": "Q1 FY27",
+      "note": "Non-GAAP income from operations $325.7M / revenue $1.39B = 23.5%",
+      "source": "CrowdStrike IR Q1 FY27; StockTitan 8-K filing"
+    },
+    "net_income_ttm": {
+      "value": -30464000,
+      "formatted": "-$30.5 million (GAAP, attributable)",
+      "period": "Trailing 12 months",
+      "breakdown_quarterly": {
+        "Q2_FY26": -77675000,
+        "Q3_FY26": -33997000,
+        "Q4_FY26": 59377000,
+        "Q1_FY27": 27774000
+      },
+      "source": "yfinance netIncomeToCommon; quarterly income statement"
+    },
+    "net_income_latest_quarter": {
+      "value": 27740000,
+      "formatted": "$27.8 million (GAAP, attributable)",
+      "period": "Q1 FY27 (Apr 30, 2026)",
+      "note": "Swinged from -$104.3M loss in Q1 FY26",
+      "source": "CrowdStrike IR Q1 FY27"
+    },
+    "net_income_non_gaap_latest_quarter": {
+      "value": 283400000,
+      "formatted": "$283.4 million",
+      "period": "Q1 FY27",
+      "source": "CrowdStrike IR Q1 FY27"
+    },
+    "net_income_non_gaap_fy2026": {
+      "value": 956600000,
+      "formatted": "$956.6 million",
+      "source": "CrowdStrike FY26 earnings"
+    },
+    "free_cash_flow_ttm": {
+      "value": 1431700000,
+      "formatted": "~$1.43 billion",
+      "period": "TTM (Q2 FY26 through Q1 FY27)",
+      "breakdown": {
+        "Q2_FY26_Jul_2025": 285046000,
+        "Q3_FY26_Oct_2025": 297376000,
+        "Q4_FY26_Jan_2026": 378149000,
+        "Q1_FY27_Apr_2026": 470742000
+      },
+      "source": "yfinance quarterly cash flow data"
+    },
+    "free_cash_flow_fy2026": {
+      "value": 1240000000,
+      "formatted": "$1.24 billion",
+      "source": "CrowdStrike FY26 earnings (https://ir.crowdstrike.com/news-releases/news-release-details/crowdstrike-reports-fourth-quarter-and-fiscal-year-2026)"
+    },
+    "free_cash_flow_fy2025": {
+      "value": 1070000000,
+      "formatted": "$1.07 billion",
+      "source": "Monexa / SEC filings"
+    },
+    "free_cash_flow_record_quarter": {
+      "value": 468500000,
+      "formatted": "$468.5 million (record)",
+      "period": "Q1 FY27",
+      "source": "CrowdStrike IR Q1 FY27"
+    },
+    "operating_cash_flow_ttm": {
+      "value": 1819179008,
+      "formatted": "~$1.82 billion",
+      "source": "yfinance operatingCashflow"
+    },
+    "operating_cash_flow_record_quarter": {
+      "value": 590900000,
+      "formatted": "$590.9 million (record)",
+      "period": "Q1 FY27",
+      "source": "CrowdStrike IR Q1 FY27"
+    }
+  },
+
+  "arr_and_growth": {
+    "ending_arr": {
+      "value": 5510000000,
+      "formatted": "$5.51 billion",
+      "as_of": "April 30, 2026 (Q1 FY27)",
+      "yoy_growth": "24%",
+      "source": "CrowdStrike IR Q1 FY27 (https://ir.crowdstrike.com/news-releases/news-release-details/crowdstrike-reports-first-quarter-fiscal-year-2027-financial)"
+    },
+    "net_new_arr_q1_fy27": {
+      "value": 255800000,
+      "formatted": "$255.8 million",
+      "yoy_growth": "32%",
+      "note": "Record net new ARR",
+      "source": "CrowdStrike IR Q1 FY27"
+    },
+    "net_new_arr_q4_fy26": {
+      "value": 331000000,
+      "formatted": "$331 million (record)",
+      "yoy_growth": "47%",
+      "source": "CrowdStrike FY26 earnings (https://ir.crowdstrike.com/news-releases/news-release-details/crowdstrike-reports-fourth-quarter-and-fiscal-year-2026)"
+    },
+    "net_new_arr_fy2026": {
+      "value": 1010000000,
+      "formatted": "$1.01 billion",
+      "note": "First year exceeding $1B in net new ARR",
+      "source": "CrowdStrike FY26 earnings"
+    },
+    "fy27_arr_guidance": {
+      "value": "$6,465.8M - $6,516.4M",
+      "source": "CrowdStrike FY26 earnings (SEC filing https://www.sec.gov/Archives/edgar/data/1535527/000153552726000007/crwd-20260303xex991.htm)"
+    }
+  },
+
+  "customer_metrics": {
+    "total_subscription_customers": {
+      "value": "N/A (not disclosed in recent reports)",
+      "last_known": ">23,000 as of Q4 FY2023 (Jan 2023)",
+      "source": "Cybersecurity Dive (https://www.cybersecuritydive.com/news/crowdstrike-customers-consolidate/644568)",
+      "note": "CrowdStrike has not published a total customer count in recent earnings releases. They now focus on ARR, module adoption rates, and Falcon Flex adoption."
+    },
+    "module_adoption_6_plus": {
+      "value": "51%",
+      "as_of": "April 30, 2026",
+      "note": "Percent of subscription customers with 6 or more cloud module subscriptions",
+      "source": "CrowdStrike IR Q1 FY27"
+    },
+    "module_adoption_7_plus": {
+      "value": "35%",
+      "as_of": "April 30, 2026",
+      "source": "CrowdStrike IR Q1 FY27"
+    },
+    "module_adoption_8_plus": {
+      "value": "25%",
+      "as_of": "April 30, 2026",
+      "source": "CrowdStrike IR Q1 FY27"
+    },
+    "falcon_flex_arr": {
+      "value": 1690000000,
+      "formatted": "$1.69 billion",
+      "yoy_growth": "120%",
+      "as_of": "Q4 FY26",
+      "source": "CrowdStrike FY26 earnings"
+    }
+  },
+
+  "balance_sheet": {
+    "cash_and_equivalents": {
+      "value": 4552800768,
+      "formatted": "$4.55 billion",
+      "as_of": "April 30, 2026",
+      "source": "yfinance totalCash"
+    },
+    "total_debt": {
+      "value": 821342976,
+      "formatted": "$821 million",
+      "source": "yfinance totalDebt"
+    },
+    "net_cash": {
+      "value": 3731457792,
+      "formatted": "~$3.73 billion (net cash position)",
+      "source": "Calculated: totalCash - totalDebt"
+    },
+    "total_equity": {
+      "value": 4633877000,
+      "formatted": "~$4.63 billion",
+      "as_of": "April 30, 2026",
+      "source": "yfinance quarterly balance sheet (common stock equity)"
+    },
+    "current_ratio": {
+      "value": 1.531,
+      "source": "yfinance currentRatio"
+    },
+    "debt_to_equity": {
+      "value": "17.6%",
+      "source": "yfinance debtToEquity"
+    }
+  },
+
+  "analyst_coverage": {
+    "number_of_analysts": 50,
+    "recommendation_mean": 1.67925,
+    "average_analyst_rating": "1.7 - Buy",
+    "recommendation_key": "buy",
+    "target_mean_price": {
+      "value": 179.69,
+      "post_split": true,
+      "source": "yfinance targetMeanPrice (post 4:1 split)"
+    },
+    "target_high_price": {
+      "value": 223.0,
+      "post_split": true,
+      "source": "yfinance targetHighPrice"
+    },
+    "target_low_price": {
+      "value": 103.25,
+      "post_split": true,
+      "source": "yfinance targetLowPrice"
+    },
+    "target_median_price": {
+      "value": 187.5,
+      "source": "yfinance targetMedianPrice"
+    },
+    "note": "Pre-split target prices averaged ~$690-$800. Post-split (4:1) divide by 4 for comparable. Wells Fargo raised target to $900 pre-split = $225 post-split."
+  },
+
+  "products_and_competition": {
+    "key_products": [
+      "Falcon platform (cloud-native EDR/XDR)",
+      "Falcon Complete (MDR - Managed Detection & Response)",
+      "Charlotte AI (AI security assistant)",
+      "Falcon Next-Gen SIEM",
+      "Falcon Identity Protection (incl. Continuous Identity for AI Agents)",
+      "Falcon Cloud Security (CNAPP)",
+      "Falcon AIDR (AI Detection & Response)",
+      "Falcon Data Security",
+      "Falcon OverWatch (managed threat hunting)",
+      "Falcon Flex (consumption-based subscription model)",
+      "Charlotte AI AgentWorks (no-code security agent builder)"
+    ],
+    "primary_competitors": [
+      {
+        "name": "Microsoft (Defender for Endpoint / Defender XDR)",
+        "market_cap": "~$3T+",
+        "strength": "Bundled with M365 E5; low incremental cost for Windows-heavy fleets",
+        "source": "https://guptadeepak.com/tools/alternatives-to-crowdstrike"
+      },
+      {
+        "name": "Palo Alto Networks (Cortex XDR / XSIAM)",
+        "market_cap": "~$120B+",
+        "strength": "Unified endpoint+network security; broad ecosystem",
+        "source": "https://www.paloaltonetworks.com/cyberpedia/crowdstrike-competitors-and-alternatives"
+      },
+      {
+        "name": "SentinelOne (Singularity XDR)",
+        "market_cap": "~$6B",
+        "strength": "Autonomous AI-driven endpoint protection; strong remediation/rollback",
+        "source": "https://www.decryptiondigest.com/blog/best-xdr-platforms-2026"
+      },
+      {
+        "name": "Zscaler",
+        "market_cap": "~$24B",
+        "strength": "Cloud security / zero trust network access"
+      },
+      {
+        "name": "CyberArk",
+        "market_cap": "~$21B",
+        "strength": "Identity security and privileged access management"
+      }
+    ],
+    "competitive_positioning_notes": [
+      "CrowdStrike named Leader in Gartner Magic Quadrant for Endpoint Protection for 7th consecutive year (https://ir.crowdstrike.com)",
+      "Named Customers' Choice in Gartner Peer Insights for EPP (6x), SIEM, and MDR in 2026 (https://ir.crowdstrike.com)",
+      "Only cybersecurity company selected as launch partner in both Anthropic's Project Glasswing and OpenAI's TAC programs (Project QuiltWorks) (https://ir.crowdstrike.com/news-releases/news-release-details/crowdstrike-reports-first-quarter-fiscal-year-2027-financial)",
+      "MITRE ATT&CK Evaluations 2025: 100% detection, 100% protection, zero false positives (https://ir.crowdstrike.com)",
+      "Forrester TEI study: 273% ROI for customers replacing legacy endpoint security (https://ir.crowdstrike.com)",
+      "Primary differentiator: AI-native, cloud-native Falcon platform with 25+ cloud modules, strong threat intelligence (over 350T events processed daily)"
+    ]
+  },
+
+  "recent_news_last_7_days": {
+    "note": "News from June 29, 2026 to July 6, 2026",
+    "items": [
+      {
+        "date": "2026-07-02",
+        "title": "CrowdStrike Completes 4-for-1 Stock Split",
+        "summary": "CrowdStrike executed a 4-for-1 stock split effective July 2, 2026. Share price adjusted from ~$773 to ~$193. Stock reached a new split-adjusted 52-week high of $199.53 on the same day.",
+        "sources": [
+          "https://site.financialmodelingprep.com/market-news/crowdstrike-crwd-stock-split-explained",
+          "https://phemex.com/blogs/crowdstrike-stock-split-july-2026",
+          "https://www.investors.com/news/technology/crowdstrike-stock-split-cybersecurity-2026-momentum"
+        ]
+      },
+      {
+        "date": "2026-07-01",
+        "title": "CEO George Kurtz Sells 2,500 Shares Under 10b5-1 Plan",
+        "summary": "CEO George Kurtz reported open-market sales of 2,500 shares of Class A common stock on July 1, 2026 across 18 transactions. Sales prices ranged from $766.27 to $784.51 per share (pre-split). After sales, Kurtz directly holds 2,075,821 shares.",
+        "sources": [
+          "https://www.stocktitan.net/sec-filings/CRWD/form-4-crowd-strike-holdings-inc-insider-trading-activity-bdf2aeb742a5.html"
+        ]
+      },
+      {
+        "date": "2026-06-30",
+        "title": "Wells Fargo Raises CRWD Price Target to $900 (Pre-Split)",
+        "summary": "Wells Fargo lifted its price target on CrowdStrike to $900 (pre-split, equivalent to $225 post-split), reflecting strong momentum from AI security push and Q1 FY27 beat.",
+        "sources": [
+          "https://phemex.com/blogs/crowdstrike-stock-split-july-2026"
+        ]
+      },
+      {
+        "date": "2026-07-03",
+        "title": "CRWD Up 7.9% Since Last Earnings Report (Zacks)",
+        "summary": "Zacks reported CRWD shares up 7.9% since the Q1 FY27 earnings report on June 3, 2026. Non-GAAP EPS of $1.10 beat the Zacks Consensus Estimate by 2.8%.",
+        "sources": [
+          "https://www.zacks.com/stock/news/2947883/why-is-crowdstrike-crwd-up-79-since-last-earnings-report"
+        ]
+      }
+    ]
+  },
+
+  "guidance": {
+    "q2_fy27_revenue_guidance": "$1,360M - $1,364M",
+    "fy27_revenue_guidance": "$5,867.6M - $5,927.6M",
+    "fy27_non_gaap_eps_guidance": "$4.78 - $4.90",
+    "fy27_arr_guidance": "$6,465.8M - $6,516.4M",
+    "fy27_net_new_arr_growth_guidance": "27.7% at midpoint (raised by ~520 bps after Q1 FY27)",
+    "source": "CrowdStrike IR Q1 FY27 / FY26 earnings / SEC filing (https://www.sec.gov/Archives/edgar/data/1535527/000153552726000007/crwd-20260303xex991.htm)"
+  },
+
+  "data_sources": {
+    "yfinance_raw_data": "Ticker('CRWD').info, Ticker('CRWD').quarterly_income_stmt, Ticker('CRWD').quarterly_cashflow, Ticker('CRWD').history(start='2026-01-02')",
+    "primary_official_sources": [
+      "https://ir.crowdstrike.com/news-releases/news-release-details/crowdstrike-reports-first-quarter-fiscal-year-2027-financial",
+      "https://ir.crowdstrike.com/news-releases/news-release-details/crowdstrike-reports-fourth-quarter-and-fiscal-year-2026",
+      "https://ir.crowdstrike.com/news-releases/news-release-details/crowdstrike-reports-second-quarter-fiscal-year-2025-financial",
+      "https://ir.crowdstrike.com/news-releases/news-release-details/crowdstrike-reports-fourth-quarter-and-fiscal-year-2025",
+      "https://www.sec.gov/Archives/edgar/data/1535527/000153552726000007/crwd-20260303xex991.htm"
+    ],
+    "supplementary_sources": [
+      "https://companiesmarketcap.com/crowdstrike/marketcap",
+      "https://www.marketbeat.com/stocks/NASDAQ/CRWD/chart",
+      "https://www.macrotrends.net/stocks/charts/CRWD/crowdstrike/free-cash-flow",
+      "https://www.gurufocus.com/term/forward-pe-ratio/CRWD",
+      "https://www.monexa.ai/blog/crowdstrike-crwd-fy2025-results-and-cash-flow-stre-CRWD-2025-09-08",
+      "https://www.cybersecuritydive.com/news/crowdstrike-customers-consolidate/644568",
+      "https://www.decryptiondigest.com/blog/best-xdr-platforms-2026",
+      "https://guptadeepak.com/tools/alternatives-to-crowdstrike",
+      "https://tickeron.com/blogs/crowdstrike-crwd-delivers-solid-fiscal-q1-2027-results-with-26-revenue-growth-13905",
+      "https://site.financialmodelingprep.com/market-news/crowdstrike-crwd-stock-split-explained",
+      "https://phemex.com/blogs/crowdstrike-stock-split-july-2026",
+      "https://www.zacks.com/stock/news/2947883/why-is-crowdstrike-crwd-up-79-since-last-earnings-report"
+    ]
+  }
+}
