@@ -11,6 +11,7 @@
     { "handle": "filesystem" },
     { "src": "/api/(.*)", "dest": "/api/$1" },
     { "src": "/stock/(.*)", "dest": "/stocks/$1" },
+    { "src": "/data/(.*)", "dest": "/data/$1" },
     { "src": "/about(/.*)?", "dest": "/about/index.html" },
     { "src": "/(.*)", "dest": "/index.html" }
   ],

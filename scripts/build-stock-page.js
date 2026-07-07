@@ -160,6 +160,7 @@ function buildStockPage(symbol) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>${esc(symbol)} — The Signal</title>
   <link rel="stylesheet" href="/css/stock-card.css">
+  <link rel="stylesheet" href="/css/nav.css">
   <script src="https://cdn.jsdelivr.net/npm/lightweight-charts@4.1.3/dist/lightweight-charts.standalone.production.js"></script>
 </head>
 <body class="stock-page">
@@ -178,7 +179,7 @@ function buildStockPage(symbol) {
         <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
           <span class="theme-icon">☀️</span>
         </button>
-        <button class="hamburger-btn" aria-label="Menu">
+        <button class="nav-btn hamburger-btn" id="hamburgerToggle" aria-label="Menu">
           <span class="hamburger-line"></span>
           <span class="hamburger-line"></span>
           <span class="hamburger-line"></span>
@@ -187,32 +188,41 @@ function buildStockPage(symbol) {
     </div>
   </nav>
 
-  <!-- ── DRAWER MENU ── -->
+  <!-- Rocket Lab-Style Drawer -->
   <div class="drawer-overlay" id="drawerOverlay"></div>
   <div class="drawer" id="drawer">
     <div class="drawer-header">
-      <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
       <a href="/" class="drawer-logo">
-        <span class="drawer-logo-text">SIGNAL</span>
+        <span class="the">THE</span>
+        <span class="signal">SIGNAL</span>
       </a>
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">&#10005;</button>
     </div>
-    <div class="drawer-body">
-      <div class="drawer-section-label">SECTORS</div>
-      <a href="/sector/ai" class="drawer-link">AI</a>
-      <a href="/sector/cyber" class="drawer-link">Cyber</a>
-      <a href="/sector/defense" class="drawer-link">Defense</a>
-      <a href="/sector/space" class="drawer-link">Space</a>
-      <a href="/sector/mega-cap" class="drawer-link">Mega-Cap</a>
-      <a href="/sector/quantum" class="drawer-link">Quantum</a>
-      <a href="/sector/ai-power" class="drawer-link">AI Power ⚡</a>
-      <a href="/sector/etfs" class="drawer-link">ETFs</a>
-      <hr class="drawer-divider">
-      <div class="drawer-section-label">FEATURES</div>
-      <a href="/stocks/" class="drawer-link">📈 Stock Pages</a>
-      <a href="/#scorecard" class="drawer-link">📊 Signal Scorecard</a>
-      <a href="/hive" class="drawer-link">🐝 Hive</a>
-      <a href="/signal-vs-the-street" class="drawer-link">⚡ Signal vs. Street</a>
-      <a href="/pricing" class="drawer-link">💎 Signal Premium</a>
+    <div class="drawer-body" id="drawerBody">
+      <div class="drawer-main" id="drawerMain">
+        <div class="drawer-section-label">SECTORS</div>
+        <a href="javascript:void(0)" class="drawer-link" onclick="openSubDrawer()">SECTORS</a>
+        <a href="/stocks/" class="drawer-link">STOCK PAGES</a>
+        <a href="/#scorecard" class="drawer-link">SIGNAL SCORECARD</a>
+        <a href="/hive" class="drawer-link">HIVE</a>
+        <a href="/signal-vs-the-street" class="drawer-link">SIGNAL VS. STREET</a>
+        <a href="/pricing" class="drawer-link">SIGNAL PREMIUM</a>
+        <a href="/pricing" class="drawer-cta">GET PREMIUM ACCESS</a>
+      </div>
+      <div class="drawer-sub" id="drawerSub">
+        <div class="sub-header" onclick="closeSubDrawer()">
+          <span class="sub-back">&#8249;</span>
+          <span class="sub-title">SECTORS</span>
+        </div>
+        <a href="/sector/ai" class="drawer-link">AI</a>
+        <a href="/sector/cyber" class="drawer-link">CYBER</a>
+        <a href="/sector/defense" class="drawer-link">DEFENSE</a>
+        <a href="/sector/space" class="drawer-link">SPACE</a>
+        <a href="/sector/mega-cap" class="drawer-link">MEGA-CAP</a>
+        <a href="/sector/quantum" class="drawer-link">QUANTUM</a>
+        <a href="/sector/ai-power" class="drawer-link">AI POWER</a>
+        <a href="/sector/etfs" class="drawer-link">ETFS</a>
+      </div>
     </div>
   </div>
 
@@ -595,7 +605,7 @@ function buildStockPage(symbol) {
   </main>
 
   <script id="chartData-${symbol}" type="application/json">${embeddedData}</script>
-  <script src="/js/stock-chart.js?v=8"></script>
+  <script src="/js/stock-chart.js?v=9"></script>
   <script>
 (function() {
   const saved = localStorage.getItem('stock-theme');
@@ -629,7 +639,23 @@ function toggleTheme() {
       if(drawer){drawer.classList.remove('open');}
       if(overlay){overlay.classList.remove('open');}
       document.body.style.overflow = '';
+      var main = document.getElementById('drawerMain');
+      var sub = document.getElementById('drawerSub');
+      if (main) main.classList.remove('hidden');
+      if (sub) sub.classList.remove('active');
     }
+    window.openSubDrawer = function() {
+      var main = document.getElementById('drawerMain');
+      var sub = document.getElementById('drawerSub');
+      if (main) main.classList.add('hidden');
+      if (sub) sub.classList.add('active');
+    };
+    window.closeSubDrawer = function() {
+      var main = document.getElementById('drawerMain');
+      var sub = document.getElementById('drawerSub');
+      if (main) main.classList.remove('hidden');
+      if (sub) sub.classList.remove('active');
+    };
     if (btn && drawer && overlay) {
       btn.addEventListener('click', function(){ openDrawer(); });
       overlay.addEventListener('click', function(){ closeDrawer(); });
@@ -683,6 +709,7 @@ const distCss = path.join(DIST, 'css'), distJs = path.join(DIST, 'js');
 fs.mkdirSync(distCss, { recursive: true });
 fs.mkdirSync(distJs, { recursive: true });
 fs.copyFileSync(path.join(PUBLIC,'css','stock-card.css'), path.join(distCss,'stock-card.css'));
+fs.copyFileSync(path.join(PUBLIC,'css','nav.css'), path.join(distCss,'nav.css'));
 fs.copyFileSync(path.join(PUBLIC,'js','stock-chart.js'), path.join(distJs,'stock-chart.js'));
 
 // Also copy to stock project deploy root (signal-stock-pi Vercel project)
@@ -691,6 +718,7 @@ const stockDistJs = path.join(DIST, 'stock', 'js');
 fs.mkdirSync(stockDistCss, { recursive: true });
 fs.mkdirSync(stockDistJs, { recursive: true });
 fs.copyFileSync(path.join(PUBLIC,'css','stock-card.css'), path.join(stockDistCss,'stock-card.css'));
+fs.copyFileSync(path.join(PUBLIC,'css','nav.css'), path.join(stockDistCss,'nav.css'));
 fs.copyFileSync(path.join(PUBLIC,'js','stock-chart.js'), path.join(stockDistJs,'stock-chart.js'));
 
 console.log(`🏗  Building stock pages for ${symbols.length} ticker(s)...`);
