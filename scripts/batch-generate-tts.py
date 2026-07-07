@@ -8,6 +8,21 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 POSTS_DIR = ROOT / "articles" / "posts"
+# Fallback: read credentials from .dev.vars if env vars not set
+DEV_VARS = ROOT / ".dev.vars"
+if DEV_VARS.exists():
+    for _line in DEV_VARS.read_text().splitlines():
+        _line = _line.strip()
+        if "=" in _line and not _line.startswith("#"):
+            _k, _v = _line.split("=", 1)
+            _k = _k.strip()
+            _v = _v.strip().strip(chr(34)).strip(chr(39))
+            if _k == "CLOUDFLARE_API_TOKEN" and not os.environ.get("CLOUDFLARE_API_TOKEN", ""):
+                os.environ["CLOUDFLARE_API_TOKEN"] = _v
+            if _k == "CLOUDFLARE_ACCOUNT_ID" and not os.environ.get("CLOUDFLARE_ACCOUNT_ID", ""):
+                os.environ["CLOUDFLARE_ACCOUNT_ID"] = _v
+
+
 TMP_DIR = "/tmp/signal-tts"
 VOICE = "en-US-AndrewNeural"
 MAX_CHARS = 5000
