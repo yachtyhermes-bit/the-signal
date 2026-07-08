@@ -113,6 +113,90 @@ function injectRocketNav(html) {
   return html;
 }
 
+// ─── Monthly Stock Picks Builder ───
+const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+function buildMonthlyPicks() {
+  const picksDir = path.join(ROOT, 'articles', 'monthly-picks');
+  if (!fs.existsSync(picksDir)) return '';
+
+  const files = fs.readdirSync(picksDir)
+    .filter(f => f.endsWith('.json'))
+    .sort()
+    .reverse();
+
+  if (files.length === 0) return '';
+
+  const latest = JSON.parse(fs.readFileSync(path.join(picksDir, files[0]), 'utf8'));
+
+  if (!latest.picks || latest.picks.length === 0) return '';
+
+  // Build video HTML
+  const videoHtml = `
+    <div class="monthly-picks-video-wrapper">
+      <iframe src="${latest.youtubeEmbed}" title="${escapeAttr(latest.youtubeTitle || latest.title)}"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen loading="lazy"></iframe>
+    </div>
+    <div class="monthly-picks-video-caption">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+      Watch the full breakdown
+    </div>`;
+
+  // Build pick cards HTML
+  let picksHtml = '';
+  for (let i = 0; i < latest.picks.length; i++) {
+    const p = latest.picks[i];
+    const sentimentLabel = p.sentiment === 'bullish' ? '▲ Bullish' : p.sentiment === 'bearish' ? '▼ Bearish' : '– Neutral';
+    const targetHtml = p.priceTarget
+      ? `<span class="monthly-pick-target"><span class="target-label">Target</span> ${p.priceTarget}</span>`
+      : '';
+    const currentHtml = p.currentPrice
+      ? `<span class="monthly-pick-current"><span class="target-label">Current</span> ${p.currentPrice}</span>`
+      : '';
+
+    picksHtml += `
+      <div class="monthly-pick-card">
+        <div class="monthly-pick-rank">${i + 1}</div>
+        <div class="monthly-pick-body">
+          <div class="monthly-pick-top">
+            <span class="monthly-pick-ticker">${escapeHtml(p.ticker)}</span>
+            <span class="monthly-pick-sentiment ${p.sentiment}">${sentimentLabel}</span>
+          </div>
+          <div class="monthly-pick-name">${escapeHtml(p.name)}</div>
+          <p class="monthly-pick-reason">${escapeHtml(p.reason)}</p>
+          <div class="monthly-pick-targets">${targetHtml}${currentHtml}</div>
+        </div>
+      </div>`;
+  }
+
+  const monthDisplay = MONTHS_SHORT[latest.month - 1] + ' ' + latest.year;
+
+  return `
+    <section class="monthly-picks-section">
+      <div class="monthly-picks-bg"></div>
+      <div class="monthly-picks-inner">
+        <div class="monthly-picks-header">
+          <div class="monthly-picks-badge">
+            <span class="monthly-picks-badge-dot"></span>
+            Monthly Picks
+          </div>
+          <h2 class="monthly-picks-title">Our <span class="monthly-picks-gradient">Top Picks</span> for <span class="monthly-picks-month">${monthDisplay}</span></h2>
+          <p class="monthly-picks-desc">${escapeHtml(latest.description || '6 curated stocks hand-picked by The Signal editorial team — video analysis included.')}</p>
+        </div>
+        <div class="monthly-picks-layout">
+          <div class="monthly-picks-video">
+            ${videoHtml}
+          </div>
+          <div class="monthly-picks-grid">
+            ${picksHtml}
+          </div>
+        </div>
+        ${files.length > 1 ? '<div class="monthly-picks-footer"><a href="/monthly-picks/" class="monthly-picks-archive-link">View Past Months →</a></div>' : ''}
+      </div>
+    </section>`;
+}
+
 // ─── 1. Copy frozen assets ───
 console.log('📦 Copying frozen assets from _backup_dist/...');
 if (!fs.existsSync(SRC)) {
@@ -504,6 +588,16 @@ if (fs.existsSync(highlightsPath)) {
       `</div></div></div></div></a>`;
   }
   indexHtml = indexHtml.replace('SIGNAL_HIGHLIGHTS_PLACEHOLDER', cardsHtml);
+
+  // ─── 8.7. Inject Monthly Stock Picks ───
+  const monthlyPicksHtml = buildMonthlyPicks();
+  if (monthlyPicksHtml) {
+    indexHtml = indexHtml.replace('<!-- MONTHLY_PICKS -->', monthlyPicksHtml);
+    console.log('  ✅ Monthly Stock Picks section injected');
+  } else {
+    console.log('  ⚠️  No monthly picks data found — skipping');
+  }
+
   fs.writeFileSync(path.join(DST, 'index.html'), indexHtml);
   console.log(`  ✅ ${highlights.length} Signal Highlight cards injected`);
 } else {

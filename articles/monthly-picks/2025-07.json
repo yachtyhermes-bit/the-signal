@@ -1,0 +1,67 @@
+{
+  "year": 2025,
+  "month": 7,
+  "published": "2025-07-01",
+  "title": "July 2025 Stock Picks",
+  "subtitle": "Our top 6 picks for the month ahead",
+  "youtubeUrl": "https://youtu.be/ojgfFCSsWKg",
+  "youtubeEmbed": "https://www.youtube.com/embed/ojgfFCSsWKg",
+  "youtubeTitle": "July 2025 Monthly Stock Picks | The Signal",
+  "description": "This month we're bullish on AI infrastructure, defense contracts, and space expansion. Here are our 6 top stock picks for July 2025.",
+  "picks": [
+    {
+      "ticker": "PLTR",
+      "name": "Palantir Technologies",
+      "reason": "AIP platform gaining enterprise traction with 40%+ revenue growth and expanding government contracts.",
+      "sector": "ai",
+      "sentiment": "bullish",
+      "priceTarget": "$195",
+      "currentPrice": "$162.45"
+    },
+    {
+      "ticker": "RKLB",
+      "name": "Rocket Lab USA",
+      "reason": "Neutron launch vehicle on track for 2026 debut and expanding space systems revenue.",
+      "sector": "space",
+      "sentiment": "bullish",
+      "priceTarget": "$45",
+      "currentPrice": "$32.80"
+    },
+    {
+      "ticker": "AVGO",
+      "name": "Broadcom Inc.",
+      "reason": "VMware integration driving margin expansion and AI networking chip demand surging.",
+      "sector": "ai",
+      "sentiment": "bullish",
+      "priceTarget": "$520",
+      "currentPrice": "$460.80"
+    },
+    {
+      "ticker": "AXON",
+      "name": "Axon Enterprise",
+      "reason": "Recurring cloud revenue growing 50%+ and expanding TASER adoption internationally.",
+      "sector": "defense",
+      "sentiment": "bullish",
+      "priceTarget": "$850",
+      "currentPrice": "$720.50"
+    },
+    {
+      "ticker": "KTOS",
+      "name": "Kratos Defense & Security",
+      "reason": "Drone systems and hypersonic test vehicles seeing increased DoD contract flow.",
+      "sector": "defense",
+      "sentiment": "bullish",
+      "priceTarget": "$40",
+      "currentPrice": "$28.15"
+    },
+    {
+      "ticker": "SOFI",
+      "name": "SoFi Technologies",
+      "reason": "Path to GAAP profitability clear with member growth accelerating and lending margins expanding.",
+      "sector": "fintech",
+      "sentiment": "bullish",
+      "priceTarget": "$22",
+      "currentPrice": "$16.90"
+    }
+  ]
+}
