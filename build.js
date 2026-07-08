@@ -129,70 +129,99 @@ function buildMonthlyPicks() {
 
   const latest = JSON.parse(fs.readFileSync(path.join(picksDir, files[0]), 'utf8'));
 
-  if (!latest.picks || latest.picks.length === 0) return '';
-
-  // Build video HTML
-  const videoHtml = `
-    <div class="monthly-picks-video-wrapper">
-      <iframe src="${latest.youtubeEmbed}" title="${escapeAttr(latest.youtubeTitle || latest.title)}"
-        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen loading="lazy"></iframe>
-    </div>
-    <div class="monthly-picks-video-caption">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-      Watch the full breakdown
-    </div>`;
-
-  // Build pick cards HTML
-  let picksHtml = '';
-  for (let i = 0; i < latest.picks.length; i++) {
-    const p = latest.picks[i];
-    const sentimentLabel = p.sentiment === 'bullish' ? '▲ Bullish' : p.sentiment === 'bearish' ? '▼ Bearish' : '– Neutral';
-    const targetHtml = p.priceTarget
-      ? `<span class="monthly-pick-target"><span class="target-label">Target</span> ${p.priceTarget}</span>`
-      : '';
-    const currentHtml = p.currentPrice
-      ? `<span class="monthly-pick-current"><span class="target-label">Current</span> ${p.currentPrice}</span>`
-      : '';
-
-    picksHtml += `
-      <div class="monthly-pick-card">
-        <div class="monthly-pick-rank">${i + 1}</div>
-        <div class="monthly-pick-body">
-          <div class="monthly-pick-top">
-            <span class="monthly-pick-ticker">${escapeHtml(p.ticker)}</span>
-            <span class="monthly-pick-sentiment ${p.sentiment}">${sentimentLabel}</span>
-          </div>
-          <div class="monthly-pick-name">${escapeHtml(p.name)}</div>
-          <p class="monthly-pick-reason">${escapeHtml(p.reason)}</p>
-          <div class="monthly-pick-targets">${targetHtml}${currentHtml}</div>
-        </div>
-      </div>`;
-  }
+  if (!latest.youtubeEmbed) return '';
 
   const monthDisplay = MONTHS_SHORT[latest.month - 1] + ' ' + latest.year;
 
+  // Build stock pick cards
+  const picksCards = (latest.picks || []).slice(0, 6).map(p => {
+    const sentClass = p.sentiment === 'bearish' ? 'sentiment-bearish' : 'sentiment-bullish';
+    const sentIcon = p.sentiment === 'bearish' ? '▼' : '▲';
+    const sectorIcon = {
+      ai: '🤖', space: '🚀', defense: '🛡️', 'mega-cap': '🏢',
+      fintech: '💳', cyber: '🔒', quantum: '🔬', 'ai-power': '⚡', etfs: '📊'
+    }[p.sector] || '📈';
+    const priceDiff = p.priceTarget ? ((parseFloat(p.priceTarget.replace(/[^0-9.]/g, '')) - parseFloat(p.currentPrice.replace(/[^0-9.]/g, ''))) / parseFloat(p.currentPrice.replace(/[^0-9.]/g, '')) * 100).toFixed(1) : null;
+
+    return `<div class="monthly-pick-card">
+      <div class="monthly-pick-card-top">
+        <span class="monthly-pick-sector-icon">${sectorIcon}</span>
+        <div class="monthly-pick-card-info">
+          <span class="monthly-pick-card-ticker ${p.sentiment}">${escapeHtml(p.ticker)}</span>
+          <span class="monthly-pick-card-name">${escapeHtml(p.name)}</span>
+        </div>
+        <span class="monthly-pick-card-sentiment ${sentClass}">${sentIcon}</span>
+      </div>
+      <p class="monthly-pick-card-reason">${escapeHtml(p.reason)}</p>
+      <div class="monthly-pick-card-prices">
+        <span class="monthly-pick-card-price-label">Target</span>
+        <span class="monthly-pick-card-price-val">${escapeHtml(p.priceTarget)}</span>
+        <span class="monthly-pick-card-price-label">Current</span>
+        <span class="monthly-pick-card-price-val">${escapeHtml(p.currentPrice)}</span>
+        ${priceDiff !== null ? `<span class="monthly-pick-card-upside ${parseFloat(priceDiff) >= 0 ? 'up' : 'down'}">${parseFloat(priceDiff) >= 0 ? '+' : ''}${priceDiff}%</span>` : ''}
+      </div>
+    </div>`;
+  }).join('\n          ');
+
+  const archiveLink = files.length > 1
+    ? '<div class="monthly-picks-footer"><a href="/monthly-picks/" class="monthly-picks-archive-link">View Past Months →</a></div>'
+    : '';
+
+  // MOBILE LAYOUT: compact banner with video + mini stock badge
+  // DESKTOP LAYOUT: 2-column with video left, stock cards right (2x3 grid)
   return `
     <section class="monthly-picks-section">
       <div class="monthly-picks-bg"></div>
       <div class="monthly-picks-inner">
+        <!-- Header (shared) -->
         <div class="monthly-picks-header">
           <div class="monthly-picks-badge">
             <span class="monthly-picks-badge-dot"></span>
             Monthly Picks
           </div>
           <h2 class="monthly-picks-title">Our <span class="monthly-picks-gradient">Top Picks</span> for <span class="monthly-picks-month">${monthDisplay}</span></h2>
-          <p class="monthly-picks-desc">${escapeHtml(latest.description || '6 curated stocks hand-picked by The Signal editorial team — video analysis included.')}</p>
+          <p class="monthly-picks-desc">${escapeHtml(latest.description || 'Watch our monthly stock picks video — full breakdown with analysis.')}</p>
         </div>
-        <div class="monthly-picks-layout">
-          <div class="monthly-picks-video">
-            ${videoHtml}
+
+        <!-- MOBILE (<768px): Compact banner layout -->
+        <div class="monthly-picks-mobile">
+          <div class="monthly-picks-mobile-video">
+            <div class="monthly-picks-video-wrapper">
+              <iframe src="${latest.youtubeEmbed}" title="${escapeAttr(latest.youtubeTitle || latest.title)}"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen loading="lazy"></iframe>
+            </div>
           </div>
-          <div class="monthly-picks-grid">
-            ${picksHtml}
+          <div class="monthly-picks-mobile-picks">
+            <div class="monthly-picks-mobile-picks-inner">
+              ${(latest.picks || []).slice(0, 6).map(p =>
+                `<span class="monthly-picks-mobile-ticker ${p.sentiment}">${escapeHtml(p.ticker)} <span class="monthly-picks-mobile-target">${escapeHtml(p.priceTarget)}</span></span>`
+              ).join('\n              ')}
+            </div>
           </div>
         </div>
-        ${files.length > 1 ? '<div class="monthly-picks-footer"><a href="/monthly-picks/" class="monthly-picks-archive-link">View Past Months →</a></div>' : ''}
+
+        <!-- DESKTOP (≥768px): 2-column layout -->
+        <div class="monthly-picks-desktop">
+          <div class="monthly-picks-desktop-left">
+            <div class="monthly-picks-video-wrapper">
+              <iframe src="${latest.youtubeEmbed}" title="${escapeAttr(latest.youtubeTitle || latest.title)}"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="monthly-picks-video-caption">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              Watch the full breakdown
+            </div>
+          </div>
+          <div class="monthly-picks-desktop-right">
+            <div class="monthly-picks-cards-grid">
+              ${picksCards}
+            </div>
+          </div>
+        </div>
+
+        ${archiveLink}
       </div>
     </section>`;
 }
