@@ -118,6 +118,54 @@ a:hover { color: var(--gold); }
 .main-nav { display: flex; gap: 18px; font-size: 13px; font-weight: 500; }
 .main-nav a { color: var(--text-secondary); font-family: var(--font-body); }
 .main-nav a:hover { color: var(--gold); }
+
+/* Nav dropdown */
+.nav-item { position: relative; display: inline-flex; align-items: center; }
+.nav-item > a { color: var(--text-secondary); font-family: var(--font-body); text-decoration: none; font-size: 13px; font-weight: 500; }
+.nav-item > a:hover { color: var(--gold); }
+.nav-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 12px;
+  background: #0f0f20;
+  border: 1px solid #181830;
+  border-radius: 12px;
+  padding: 12px;
+  min-width: 520px;
+  z-index: 200;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+}
+.nav-item:hover .nav-dropdown { display: block; }
+.nav-dropdown-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+.nav-dropdown-item {
+  display: block;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: background 0.15s;
+  font-family: var(--font-body);
+}
+.nav-dropdown-item:hover { background: rgba(255,255,255,0.05); }
+.nav-dropdown-item.ai { color: #60a5fa; }
+.nav-dropdown-item.cyber { color: #4ade80; }
+.nav-dropdown-item.defense { color: #fbbf24; }
+.nav-dropdown-item.space { color: #a78bfa; }
+.nav-dropdown-item.mega { color: #f87171; }
+.nav-dropdown-item.quantum { color: #60a5fa; }
+.nav-dropdown-item.ai-power { color: #facc15; }
+.nav-dropdown-item.etfs { color: #c084fc; }
+.nav-dropdown-item.fintech { color: #06b6d4; }
+
 .header-actions { margin-left: auto; display: flex; gap: 8px; align-items: center; }
 .header-actions button {
   padding: 7px 16px;
@@ -305,7 +353,7 @@ a:hover { color: var(--gold); }
   background-clip: text;
 }
 .hero-sub {
-  color: var(--text-secondary);
+  color: #ccd4f4;
   font-size: 17px;
   font-weight: 400;
   line-height: 1.6;
@@ -314,7 +362,7 @@ a:hover { color: var(--gold); }
   font-family: var(--font-body);
 }
 .hero-desc {
-  color: var(--text-muted);
+  color: #9494b8;
   font-size: 14px;
   line-height: 1.6;
   max-width: 560px;
@@ -360,6 +408,7 @@ a:hover { color: var(--gold); }
 .focus-item.focus-mega { color: #f87171; }
 .focus-item.focus-ai-power { color: #facc15; }
 .focus-item.focus-etfs { color: #c084fc; }
+.focus-item.focus-fintech { color: #06b6d4; }
 .focus-divider { color: var(--text-muted); font-size: 14px; user-select: none; }
 .focus-pulse-orb {
   width: 8px; height: 8px;
@@ -389,6 +438,8 @@ a:hover { color: var(--gold); }
 .focus-ai-power .focus-pulse-orb::after { background: rgba(250,204,21,0.3); }
 .focus-etfs .focus-pulse-orb { background: #c084fc; }
 .focus-etfs .focus-pulse-orb::after { background: rgba(192,132,252,0.3); }
+.focus-fintech .focus-pulse-orb { background: #06b6d4; }
+.focus-fintech .focus-pulse-orb::after { background: rgba(6,182,212,0.3); }
 @keyframes pulseOrb {
   0%, 100% { transform: scale(1); opacity: 0.6; }
   50% { transform: scale(1.6); opacity: 0; }
@@ -775,12 +826,28 @@ a:hover { color: var(--gold); }
     <span class="logo-text"><span class="logo-the">THE</span> <strong>SIGNAL</strong></span>
   </a>
   <nav class="main-nav">
-    <a href="#">AI</a><a href="#">Cyber</a><a href="#">Defense</a><a href="#">Space</a>
-    <a href="#">Mega-Cap</a><a href="#">Quantum</a><a href="#">AI Power ⚡</a>
-    <a href="#">ETFs</a><a href="#">Stocks</a><a href="#">Scorecard</a><a href="#">Premium</a>
+    <div class="nav-item">
+      <a href="#">Sectors</a>
+      <div class="nav-dropdown">
+        <div class="nav-dropdown-grid">
+          <a href="#" class="nav-dropdown-item ai">AI</a>
+          <a href="#" class="nav-dropdown-item cyber">Cyber</a>
+          <a href="#" class="nav-dropdown-item defense">Defense</a>
+          <a href="#" class="nav-dropdown-item space">Space</a>
+          <a href="#" class="nav-dropdown-item mega">Mega-Cap</a>
+          <a href="#" class="nav-dropdown-item quantum">Quantum</a>
+          <a href="#" class="nav-dropdown-item ai-power">AI Power</a>
+          <a href="#" class="nav-dropdown-item etfs">ETFs</a>
+          <a href="#" class="nav-dropdown-item fintech">FinTech</a>
+        </div>
+      </div>
+    </div>
+    <a href="#">Stocks</a>
+    <a href="#">Scorecard</a>
+    <a href="#">Premium</a>
   </nav>
   <div class="header-actions">
-    <button class="btn-search">🔍 Search</button>
+    <button class="btn-search">Search</button>
     <button class="btn-outline">Sign In</button>
     <button class="btn-filled">Subscribe</button>
   </div>
@@ -844,9 +911,11 @@ a:hover { color: var(--gold); }
   <span class="focus-divider">·</span>
   <a href="#" class="focus-item focus-mega"><span class="focus-pulse-orb"></span>MEGA-CAP</a>
   <span class="focus-divider">·</span>
-  <a href="#" class="focus-item focus-ai-power"><span class="focus-pulse-orb"></span>AI POWER ⚡</a>
+  <a href="#" class="focus-item focus-ai-power"><span class="focus-pulse-orb"></span>AI POWER</a>
   <span class="focus-divider">·</span>
   <a href="#" class="focus-item focus-etfs"><span class="focus-pulse-orb"></span>ETFS</a>
+  <span class="focus-divider">·</span>
+  <a href="#" class="focus-item focus-fintech"><span class="focus-pulse-orb"></span>FINTECH</a>
 </div>
 
 <!-- Main Content -->
@@ -861,10 +930,10 @@ a:hover { color: var(--gold); }
         <img class="card-img" style="height:220px;"
              src="https://readthesignal.net/img/articles/spacex-lockup-timing-strategy-2026.jpg"
              alt="SpaceX Lockup Calendar" loading="eager">
-        <div style="display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;padding:3px 8px;border-radius:3px;background:rgba(245,158,11,0.12);color:var(--gold);margin-bottom:8px;font-family:var(--font-body);text-transform:uppercase;">▲ SIGNAL DEEP DIVE <span style="color:var(--green);margin-left:6px;font-family:var(--font-mono);">BULLISH</span></div>
+        <div style="display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;padding:3px 8px;border-radius:3px;background:rgba(245,158,11,0.12);color:var(--gold);margin-bottom:8px;font-family:var(--font-body);text-transform:uppercase;">SIGNAL DEEP DIVE <span style="color:var(--green);margin-left:6px;font-family:var(--font-mono);">BULLISH</span></div>
         <h2 style="font-family:var(--font-heading);font-size:24px;font-weight:800;line-height:1.2;margin-bottom:8px;color:#fff;letter-spacing:-0.3px;">The SpaceX Lockup Calendar: When To Buy $SPCX</h2>
         <p style="color:var(--text-secondary);font-size:14px;line-height:1.65;margin-bottom:10px;font-family:var(--font-body);">SpaceX's record-shattering IPO saw the stock surge past $225 before settling back. But with under 5% float and a complex 16-date lockup structure releasing shares through June 2027, the real opportunity is in understanding the calendar.</p>
-        <div style="font-size:11px;color:var(--text-muted);font-family:var(--font-mono);"><span style="color:var(--gold);font-weight:700;">$SPCX</span> ▲ Bullish · Jun 22, 2026 · 4 min read</div>
+        <div style="font-size:11px;color:var(--text-muted);font-family:var(--font-mono);"><span style="color:var(--gold);font-weight:700;">$SPCX</span> · Bullish · Jun 22, 2026 · 4 min read</div>
       </div>
 
       <!-- Sub-Hero Cards with images -->
@@ -900,7 +969,7 @@ a:hover { color: var(--gold); }
 
       <!-- AI Section with images -->
       <div class="category-section">
-        <div class="cat-header"><h3>🤖 AI</h3><a href="#" class="cat-see-all">See All AI →</a></div>
+        <div class="cat-header"><h3>AI</h3><a href="#" class="cat-see-all">See All AI →</a></div>
         <div class="category-grid">
           <a href="#" class="cat-article">
             <img class="card-img-sm"
@@ -908,7 +977,7 @@ a:hover { color: var(--gold); }
                  alt="Vertiv AI Data Center Cooling" loading="lazy">
             <h4>Half the AI Data Center Budget Goes to Cooling. Vertiv Just Proved It Owns the Lane.</h4>
             <div class="cat-desc">$15B backlog, Nvidia Vera Rubin lock-in, 50% EPS growth.</div>
-            <div class="cat-meta">$VRT · ▲ Bullish · 1 min</div>
+            <div class="cat-meta">$VRT · Bullish · 1 min</div>
           </a>
           <a href="#" class="cat-article">
             <img class="card-img-sm"
@@ -916,24 +985,24 @@ a:hover { color: var(--gold); }
                  alt="IREN AI Cloud" loading="lazy">
             <h4>IREN Was a Bitcoin Miner. Then It Built Something Wall Street Couldn't Ignore.</h4>
             <div class="cat-desc">From crypto cycle survivor to AI infrastructure play.</div>
-            <div class="cat-meta">$IREN · ▲ Bullish · 4 min</div>
+            <div class="cat-meta">$IREN · Bullish · 4 min</div>
           </a>
           <a href="#" class="cat-article">
             <h4>Nvidia's Vera Rubin Superchip: What Investors Need to Know</h4>
             <div class="cat-desc">The next-gen architecture that changes the AI hardware game.</div>
-            <div class="cat-meta">$NVDA · ▲ Bullish · 3 min</div>
+            <div class="cat-meta">$NVDA · Bullish · 3 min</div>
           </a>
           <a href="#" class="cat-article">
             <h4>Why Custom ASICs Are the Next Trillion-Dollar Opportunity in AI</h4>
             <div class="cat-desc">Broadcom, Marvell and the custom silicon wave.</div>
-            <div class="cat-meta">$AVGO · ▲ Bullish · 4 min</div>
+            <div class="cat-meta">$AVGO · Bullish · 4 min</div>
           </a>
         </div>
       </div>
 
       <!-- Cyber Section -->
       <div class="category-section">
-        <div class="cat-header"><h3>🛡️ Cyber</h3><a href="#" class="cat-see-all">See All Cyber →</a></div>
+        <div class="cat-header"><h3>Cyber</h3><a href="#" class="cat-see-all">See All Cyber →</a></div>
         <div class="category-grid">
           <a href="#" class="cat-article">
             <img class="card-img-sm"
@@ -941,19 +1010,19 @@ a:hover { color: var(--gold); }
                  alt="Cloudflare Edge AI" loading="lazy">
             <h4>CrowdStrike's Next Frontier: AI-Native Security for the Enterprise</h4>
             <div class="cat-desc">Charlotte AI and Falcon platform expansion.</div>
-            <div class="cat-meta">$CRWD · ▲ Bullish · 4 min</div>
+            <div class="cat-meta">$CRWD · Bullish · 4 min</div>
           </a>
           <a href="#" class="cat-article">
             <h4>Zero-Day Exploits Are Up 200%. Here's Who Benefits.</h4>
             <div class="cat-desc">The cybersecurity spending boom isn't slowing down.</div>
-            <div class="cat-meta">$PANW · ▲ Bullish · 3 min</div>
+            <div class="cat-meta">$PANW · Bullish · 3 min</div>
           </a>
         </div>
       </div>
 
       <!-- Defense Section -->
       <div class="category-section">
-        <div class="cat-header"><h3>⚔️ Defense</h3><a href="#" class="cat-see-all">See All Defense →</a></div>
+        <div class="cat-header"><h3>Defense</h3><a href="#" class="cat-see-all">See All Defense →</a></div>
         <div class="category-grid">
           <a href="#" class="cat-article">
             <img class="card-img-sm"
@@ -961,19 +1030,19 @@ a:hover { color: var(--gold); }
                  alt="Lockheed Martin F-35" loading="lazy">
             <h4>The Hypersonic Arms Race: Defense Stocks Poised for Breakout</h4>
             <div class="cat-desc">Next-gen weapons systems driving a new procurement cycle.</div>
-            <div class="cat-meta">$RTX · ▲ Bullish · 5 min</div>
+            <div class="cat-meta">$RTX · Bullish · 5 min</div>
           </a>
           <a href="#" class="cat-article">
             <h4>Palantir's Defense AI Contracts Are Hitting Escape Velocity</h4>
             <div class="cat-desc">$2B+ in new government AI contracts reshaping the pipeline.</div>
-            <div class="cat-meta">$PLTR · ▲ Bullish · 4 min</div>
+            <div class="cat-meta">$PLTR · Bullish · 4 min</div>
           </a>
         </div>
       </div>
 
       <!-- Space Section -->
       <div class="category-section">
-        <div class="cat-header"><h3>🚀 Space</h3><a href="#" class="cat-see-all">See All Space →</a></div>
+        <div class="cat-header"><h3>Space</h3><a href="#" class="cat-see-all">See All Space →</a></div>
         <div class="category-grid">
           <a href="#" class="cat-article">
             <h4>SpaceX IPO Lockup Explained: 16 Key Dates Through 2027</h4>
@@ -983,14 +1052,14 @@ a:hover { color: var(--gold); }
           <a href="#" class="cat-article">
             <h4>Space-Based Broadband: The Next Frontier for Satellite Internet</h4>
             <div class="cat-desc">Starlink, AST SpaceMobile and the orbital connectivity race.</div>
-            <div class="cat-meta">$ASTS · ▲ Bullish · 5 min</div>
+            <div class="cat-meta">$ASTS · Bullish · 5 min</div>
           </a>
         </div>
       </div>
 
       <!-- Mega-Cap Section -->
       <div class="category-section">
-        <div class="cat-header"><h3>🏢 Mega-Cap</h3><a href="#" class="cat-see-all">See All Mega-Cap →</a></div>
+        <div class="cat-header"><h3>Mega-Cap</h3><a href="#" class="cat-see-all">See All Mega-Cap →</a></div>
         <div class="category-grid">
           <a href="#" class="cat-article">
             <h4>Microsoft's $80B AI Bet: Azure Growth and the Path to $5T</h4>
@@ -1016,7 +1085,7 @@ a:hover { color: var(--gold); }
       </div>
 
       <!-- Signal Highlights -->
-      <h2 class="section-heading">⚡ Signal Highlights</h2>
+      <h2 class="section-heading">Signal Highlights</h2>
       <div class="highlights-row">
         <div class="highlight-card">
           <div class="hl-sym">AXON</div>
@@ -1051,7 +1120,7 @@ a:hover { color: var(--gold); }
       <!-- Hive Section -->
       <div class="hive-section">
         <div class="hive-header">
-          <h3>🐝 The Hive</h3><span>Where the community beats the market</span>
+          <h3>The Hive</h3><span>Where the community beats the market</span>
         </div>
         <div class="hive-comments">
           <div class="hive-comment">
@@ -1084,7 +1153,7 @@ a:hover { color: var(--gold); }
     <!-- ===== RIGHT SIDEBAR ===== -->
     <div class="sidebar">
       <div class="sidebar-section">
-        <h3>🔥 TRENDING NOW</h3>
+        <h3>TRENDING NOW</h3>
         <a href="#" class="trending-item"><span class="num">1</span>S&amp;P 500 enters correction territory as AI rout deepens</a>
         <a href="#" class="trending-item"><span class="num">2</span>Marvell joins S&amp;P 500, Jensen Huang says it's a trillion-dollar company</a>
         <a href="#" class="trending-item"><span class="num">3</span>Bitcoin miners pivot to AI cloud — HIVE stock surges 20%</a>
@@ -1093,7 +1162,7 @@ a:hover { color: var(--gold); }
       </div>
 
       <div class="sidebar-section">
-        <h3>📊 SIGNAL SCORECARD</h3>
+        <h3>SIGNAL SCORECARD</h3>
         <div class="score-row"><span class="score-sym">NVDA</span><span class="score-val">94</span><span class="score-sentiment bullish">BULLISH</span></div>
         <div class="score-row"><span class="score-sym">PLTR</span><span class="score-val">88</span><span class="score-sentiment bullish">BULLISH</span></div>
         <div class="score-row"><span class="score-sym">AVGO</span><span class="score-val">85</span><span class="score-sentiment bullish">BULLISH</span></div>
@@ -1118,13 +1187,13 @@ a:hover { color: var(--gold); }
     <div>
       <h4>SECTIONS</h4>
       <a href="#">AI</a><br><a href="#">Cyber</a><br><a href="#">Defense</a><br><a href="#">Space</a><br>
-      <a href="#">Mega-Cap</a><br><a href="#">Quantum</a><br><a href="#">AI Power</a><br><a href="#">ETFs</a>
+      <a href="#">Mega-Cap</a><br><a href="#">Quantum</a><br><a href="#">AI Power</a><br><a href="#">ETFs</a><br><a href="#">FinTech</a>
     </div>
     <div>
       <h4>FEATURES</h4>
-      <a href="#">📈 Stock Pages</a><br><a href="#">📊 Signal Scorecard</a><br>
-      <a href="#">🐝 Hive</a><br><a href="#">⚡ Signal vs. Street</a><br>
-      <a href="#">💎 Premium</a>
+      <a href="#">Stock Pages</a><br><a href="#">Signal Scorecard</a><br>
+      <a href="#">Hive</a><br><a href="#">Signal vs. Street</a><br>
+      <a href="#">Premium</a>
     </div>
     <div>
       <h4>COMPANY</h4>

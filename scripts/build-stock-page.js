@@ -605,7 +605,7 @@ function buildStockPage(symbol) {
   </main>
 
   <script id="chartData-${symbol}" type="application/json">${embeddedData}</script>
-  <script src="/js/stock-chart.js?v=9"></script>
+  <script src="/js/stock-chart.js?v=11"></script>
   <script>
 (function() {
   const saved = localStorage.getItem('stock-theme');
