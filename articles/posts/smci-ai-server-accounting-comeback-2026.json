@@ -28,8 +28,8 @@
       "url": "https://finance.yahoo.com/quote/SMCI"
     },
     {
-      "label": "SMCI Investor Relations",
-      "url": "https://www.supermicro.com/en/about/investor-relations"
+      "label": "SMCI SEC Filings",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=SMCI&owner=exclude&count=40"
     }
   ],
   "videos": [
