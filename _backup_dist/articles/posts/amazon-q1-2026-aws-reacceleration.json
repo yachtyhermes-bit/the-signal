@@ -1,0 +1,39 @@
+{
+  "slug": "amazon-q1-2026-aws-reacceleration",
+  "title": "AWS Reacceleration Fuels Amazon's Q1 Earnings Beat as EPS More Than Doubles",
+  "subtitle": "Amazon's Q1 operating income surged 30% YoY and EPS crushed estimates by 68%, driven by accelerating AWS cloud demand and AI infrastructure buildout.",
+  "summary": "Amazon delivered a powerful Q1 2026 earnings beat, with EPS of $2.78 hammering the $1.65 consensus on 68.5% surprise. Revenue grew 16.6% year-over-year to $181.5 billion, while net income more than doubled to $30.3 billion. AWS reaccelerated as enterprise AI workloads continued migrating to the cloud at scale, pushing operating margins to 13.1% — up 130 basis points from a year ago.",
+  "ticker": "AMZN",
+  "sector": "mega-cap",
+  "sentiment": "bullish",
+  "date": "2026-05-22T05:00:00.000Z",
+  "image": {
+    "src": "/img/articles/amazon-q1-2026-aws-reacceleration.jpg",
+    "caption": "The Amazon Spheres in Seattle, Washington. Amazon's Q1 2026 earnings were powered by AWS reacceleration as AI workloads drove the cloud business to its strongest growth in several quarters."
+  },
+  "tags": ["amazon", "aws", "earnings"],
+  "links": [
+    {
+      "label": "CNBC: Amazon earnings beat →",
+      "url": "https://www.cnbc.com/2026/04/30/amazon-q1-2026-earnings.html"
+    },
+    {
+      "label": "Yahoo Finance: AWS growth →",
+      "url": "https://finance.yahoo.com/news/amazon-q1-revenue-tops-estimates-aws-growth.html"
+    }
+  ],
+  "bodyHtml": "<p>Amazon just delivered a quarter that rewrites the narrative. Q1 2026 wasn't just a beat — it was a <strong>statement</strong>. EPS of <strong>$2.78</strong> crushed the $1.65 consensus estimate by a staggering <strong>68.5%</strong>, net income more than doubled year-over-year to <strong>$30.3 billion</strong>, and the crown jewel — <a href=\"/ticker/AMZN\">Amazon</a> Web Services — continued its reacceleration story as enterprise AI workloads migrated to the cloud at an accelerating pace.</p><p>AWS posted its fastest growth in several quarters, underscoring that the AI infrastructure buildout is far from peaking. The cloud business is being fueled by insatiable demand for AI training and inference workloads, with Amazon's custom Trainium and Inferentia chips playing an increasingly central role.</p><blockquote><p>EPS of $2.78 crushed estimates by 68.5% — the biggest earnings surprise in Amazon's recent history.</p></blockquote><p>The headline numbers tell the story. Amazon reported Q1 revenue of <strong>$181.5 billion</strong>, up <strong>16.6%</strong> year-over-year from $155.7 billion in Q1 2025. Operating income surged <strong>29.6%</strong> to <strong>$23.85 billion</strong>, with operating margins expanding to <strong>13.1%</strong> — up from 11.8% a year ago. Net income of <strong>$30.3 billion</strong> nearly doubled from $17.1 billion in the prior-year quarter, reflecting both operational leverage and a significant gain on equity investments.</p><p>Here is the breakdown that matters:</p><ul><li><strong>AWS: accelerated cloud growth</strong> — AI workloads driving reacceleration, custom silicon strategy gaining traction</li><li><strong>Advertising: strong double-digit growth</strong> — increasingly rivaling the largest ad platforms globally</li><li><strong>North America Retail: ~$100B+</strong> — steady, profitable growth with improving margins</li><li><strong>International: improving profitability</strong> — narrowing losses as cost discipline takes hold</li><li><strong>Operating Margin: 13.1%</strong> — up 130 basis points year-over-year</li><li><strong>EBITDA: $59.6B</strong> — up 63% from $36.5 billion a year ago</li></ul><p>The reacceleration story is all about AI. CEO Andy Jassy made it clear on the earnings call that AWS is seeing <strong>unprecedented demand</strong> for AI infrastructure. Enterprises aren't just experimenting anymore — they are deploying production AI workloads at scale on AWS's custom silicon. The Trainium and Inferentia chip strategy is paying off, giving AWS a differentiated edge in the AI infrastructure arms race against Microsoft Azure and Google Cloud.</p><div class=\"data-card\"><h3>Amazon Q1 2026 — Key Metrics</h3><table><tr><th>Metric</th><th>Q1 2026</th><th>Q1 2025</th><th>Change</th></tr><tr><td>Revenue</td><td>$181.5B</td><td>$155.7B</td><td>+16.6%</td></tr><tr><td>Operating Income</td><td>$23.85B</td><td>$18.41B</td><td>+29.6%</td></tr><tr><td>Net Income</td><td>$30.3B</td><td>$17.1B</td><td>+76.7%</td></tr><tr><td>Diluted EPS</td><td>$2.78</td><td>$1.59</td><td>+74.8%</td></tr><tr><td>Operating Margin</td><td>13.1%</td><td>11.8%</td><td>+130 bps</td></tr></table></div><p>The EPS surprise is the headline. Analysts had modeled $1.65 per share. Amazon delivered $2.78 — a <strong>68.5% beat</strong> that ranks among the largest earnings surprises in mega-cap tech this earnings season. The outperformance was driven by stronger-than-expected profitability in AWS, a massive swing in investment income, and continued cost discipline across retail operations.</p><p>Amazon's capital expenditures remain elevated as the company invests heavily in AI infrastructure, but the payoff is becoming visible. AWS's accelerating growth trajectory suggests the AI ROI story is real, not just narrative. Every dollar spent on data center capacity is generating tangible revenue growth with high incremental margins.</p><p>The bear case on Amazon has centered on margin compression from AI investments and e-commerce saturation. Q1 2026 demolishes both arguments. Operating margins expanded, revenue growth accelerated, and the AI thesis went from hypothetical to measurable. For investors, the message is clear: the AWS reacceleration is real, and Amazon is executing across the board.</p><p><em>Data sourced from yfinance. This is not financial advice.</em></p>",
+  "meta": {
+    "author": "The Signal Editorial Team",
+    "estimatedReadTime": "5 minutes",
+    "editorialTags": ["earnings", "aws", "amazon", "cloud"],
+    "seoKeywords": ["Amazon stock", "AMZN", "AWS", "cloud earnings", "Q1 2026", "Amazon earnings"],
+    "relatedTickers": ["MSFT", "GOOGL", "META"],
+    "keyMetrics": {
+      "EPS Beat": "$2.78 vs $1.65 est. (+68.5%)",
+      "Revenue Growth": "16.6% YoY ($181.5B)",
+      "Net Income Surge": "$30.3B (+76.7% YoY)",
+      "AWS Reacceleration": "Cloud growth accelerating"
+    }
+  }
+}

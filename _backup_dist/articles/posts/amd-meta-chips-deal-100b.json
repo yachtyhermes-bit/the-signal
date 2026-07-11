@@ -1,0 +1,73 @@
+{
+  "slug": "amd-meta-chips-deal-100b",
+  "title": "AMD Just Locked Down a $100 Billion AI Deal With Meta — And Wall Street Is Still Underpricing It",
+  "subtitle": "AMD just signed its second mega AI chip supply deal in under a year — this time with Meta, worth over $100 billion in a chips-for-stock structure. While the market obsesses over NVIDIA, AMD is quietly locking up the hyperscalers.",
+  "summary": "AMD signed a second mega AI chip supply deal with Meta Platforms worth north of $100 billion, structured as chips-for-stock. AMD shares jumped roughly 8% as Meta diversifies away from sole NVIDIA dependency. With two hyperscaler mega-deals in twelve months, AMD is transforming from perennial runner-up into a legitimate AI chip co-leader.",
+  "ticker": "AMD",
+  "sector": "ai",
+  "sentiment": "bullish",
+  "date": "2026-05-24T07:00:00.000Z",
+  "image": {
+    "src": "/img/articles/amd-meta-chips-deal-100b.jpg",
+    "caption": "AMD headquarters at 2485 Augustine Drive in Santa Clara, California — the chipmaker just secured its second mega AI chip supply deal worth over $100 billion with Meta Platforms"
+  },
+  "tags": [
+    "AMD",
+    "Meta",
+    "AI Chips",
+    "NVIDIA Competition",
+    "Semiconductor",
+    "Hyperscaler",
+    "Data Center AI",
+    "Lisa Su"
+  ],
+  "links": [
+    {
+      "label": "NYT: AMD Signs Chips-for-Stock Deal With Meta →",
+      "url": "https://www.nytimes.com/2026/05/23/technology/amd-meta-ai-chips-deal.html"
+    },
+    {
+      "label": "WSJ: Meta and AMD Agree to AI Chips Deal Worth More Than $100 Billion →",
+      "url": "https://www.wsj.com/articles/meta-and-amd-agree-to-ai-chips-deal-worth-more-than-100-billion-2026"
+    },
+    {
+      "label": "AMD (AMD) on Yahoo Finance →",
+      "url": "https://finance.yahoo.com/quote/AMD/"
+    }
+  ],
+  "videos": [
+    {
+      "url": "https://www.youtube.com/watch?v=9EVpoQBzao4",
+      "source": "Forbes",
+      "title": "Meta Announces Major AI Chips Deal With AMD—Months After Chipmaker's Similar Move With OpenAI"
+    }
+  ],
+  "bodyHtml": "<p>Here is the headline the NVIDIA hype machine does not want you to see: AMD just signed a second mega AI chip supply deal in less than a year — this one with Meta Platforms, worth north of $100 billion. And unlike a standard procurement contract, this one is structured as chips-for-stock, meaning AMD receives equity in Meta as partial compensation.</p><!-- VIDEO 0 --><p>Meta shares surged on the announcement. AMD shares jumped roughly 8%. But the real story is not a single day's pop — it is the seismic shift in the AI chip landscape that this deal confirms. Meta is making a calculated bet: diversifying away from sole dependency on NVIDIA, which has commanded an estimated 80% of the AI training chip market.</p><p>The deal locks in multi-year, multi-billion dollar shipments of AMD's MI300-series AI accelerators to power Meta's expanding AI infrastructure — including training and inference workloads for its large language models, recommendation systems, and the metaverse push Mark Zuckerberg has been doubling down on.</p><p>This is AMD's second blockbuster hyperscaler win in twelve months. The first — a similar multi-year, multi-billion dollar AI chip supply deal — was reported earlier this year. Taken together, these two deals represent hundreds of billions of dollars in committed AI chip revenue over the next several years. For a company with total annual revenue of $37.45 billion, the implications are staggering.</p><p>The chips-for-stock structure is the most interesting detail. By taking Meta stock as partial payment, AMD aligns its interests directly with Meta's AI ambitions. It is a vote of confidence — AMD is not just selling chips, it is betting on Meta's ability to turn those chips into revenue. This structure also reduces Meta's upfront cash outlay, making the massive commitment more palatable for its balance sheet.</p><p>AMD CEO Dr. Lisa Su has been steadily executing a master plan: catch NVIDIA through superior architecture, aggressive pricing, and strategic partnerships that lock in demand for years. The Meta deal is the biggest validation yet that this strategy is working. With two hyperscale customers now committed, AMD's AI revenue trajectory has fundamentally changed. The question is no longer whether AMD can compete with NVIDIA in AI chips — it is how quickly it can scale production to meet surging demand.</p>",
+  "meta": {
+    "author": "The Signal Editorial Team",
+    "estimatedReadTime": "5 minutes",
+    "editorialTags": [
+      "breaking-news",
+      "sector-analysis",
+      "deal-coverage"
+    ],
+    "seoKeywords": "AMD Meta AI chip deal, AMD stock, AMD MI300, Lisa Su, Meta AI infrastructure, AMD vs NVIDIA, AI semiconductor, chips-for-stock, hyperscaler AI spending, AMD earnings",
+    "relatedTickers": [
+      "NVDA",
+      "META",
+      "MRVL",
+      "AVGO",
+      "INTC"
+    ],
+    "keyMetrics": {
+      "price": 467.51,
+      "marketCap": "762B",
+      "forwardPE": 36.07,
+      "priceChangePercent": 8,
+      "analystRating": "1.49 (Strong Buy)",
+      "analystTarget": 472.17,
+      "revenue": "37.45B",
+      "totalAnalysts": 48
+    }
+  }
+}

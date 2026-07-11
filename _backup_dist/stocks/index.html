@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en" class="stock-page">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Stocks — The Signal</title>
+  <meta name="description" content="Track all stocks covered by The Signal. Real-time prices, moat ratings, and deep analysis on NVDA, TSLA, AMZN, PLTR, SPCX, RKLB and more.">
+  <link rel="stylesheet" href="/css/stock-card.css">
+  <link rel="stylesheet" href="/css/nav.css">
+  <link rel="canonical" href="https://readthesignal.net/stocks/">
+  <script src="/js/nav.js" defer></script>
+</head>
+<body class="stock-page">
+
+  <!-- ── NAV ── -->
+  <nav class="stock-nav">
+    <div class="stock-nav-inner">
+      <a href="/" class="stock-nav-stocks">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        The Signal
+      </a>
+      <a href="/" class="stock-nav-logo">
+        <span class="logo-text"><span class="logo-the">THE</span> <strong>SIGNAL</strong></span>
+      </a>
+      <div class="stock-nav-right">
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+          <span class="theme-icon">☀️</span>
+        </button>
+        <button class="nav-btn hamburger-btn" id="hamburgerToggle" aria-label="Menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Rocket Lab-Style Drawer -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <div class="drawer" id="drawer">
+    <div class="drawer-header">
+      <a href="/" class="drawer-logo">
+        <span class="the">THE</span>
+        <span class="signal">SIGNAL</span>
+      </a>
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">&#10005;</button>
+    </div>
+    <div class="drawer-body" id="drawerBody">
+      <div class="drawer-main" id="drawerMain">
+        <div class="drawer-section-label">SECTORS</div>
+        <a href="javascript:void(0)" class="drawer-link" onclick="openSubDrawer()">SECTORS</a>
+        <a href="/stocks/" class="drawer-link">STOCK PAGES</a>
+        <a href="/#scorecard" class="drawer-link">SIGNAL SCORECARD</a>
+        <a href="/hive" class="drawer-link">HIVE</a>
+        <a href="/signal-vs-the-street" class="drawer-link">SIGNAL VS. STREET</a>
+        <a href="/pricing" class="drawer-link">SIGNAL PREMIUM</a>
+        <a href="/pricing" class="drawer-cta">GET PREMIUM ACCESS</a>
+      </div>
+      <div class="drawer-sub" id="drawerSub">
+        <div class="sub-header" onclick="closeSubDrawer()">
+          <span class="sub-back">&#8249;</span>
+          <span class="sub-title">SECTORS</span>
+        </div>
+        <a href="/sector/ai" class="drawer-link">AI</a>
+        <a href="/sector/cyber" class="drawer-link">CYBER</a>
+        <a href="/sector/defense" class="drawer-link">DEFENSE</a>
+        <a href="/sector/space" class="drawer-link">SPACE</a>
+        <a href="/sector/mega-cap" class="drawer-link">MEGA-CAP</a>
+        <a href="/sector/quantum" class="drawer-link">QUANTUM</a>
+        <a href="/sector/ai-power" class="drawer-link">AI POWER</a>
+        <a href="/sector/etfs" class="drawer-link">ETFS</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="stock-page-main stocks-index-main">
+    <!-- ── HERO ── -->
+    <section class="stocks-index-hero">
+      <div class="stocks-index-hero-inner">
+        <h1 class="stocks-index-title">Stocks</h1>
+        <p class="stocks-index-subtitle">Tracked companies on The Signal — real-time prices, moat ratings, and deep analysis.</p>
+        <p class="stocks-last-updated">Prices updated: <span id="lastUpdatedTime"></span></p>
+      </div>
+    </section>
+
+    <!-- ── SEARCH ── -->
+    <div class="stocks-search-wrapper">
+      <div class="stocks-search-container">
+        <svg class="stocks-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" class="stocks-search-input" placeholder="Search by ticker or company..." id="stocksSearch" autocomplete="off">
+      </div>
+      <div class="stocks-count" id="stocksCount">20 stocks</div>
+    </div>
+
+    <!-- ── STOCK CARDS GRID ── -->
+    <div class="stocks-grid" id="stocksGrid">
+      <a href="/stocks/NVDA/" class="stocks-card" data-ticker="NVDA">
+    <div class="stocks-card-left">
+      <span class="stocks-card-ticker">$NVDA</span>
+      <span class="stocks-card-name">NVIDIA Corporation</span>
+    </div>
+    <div class="stocks-card-right">
+      <span class="stocks-card-price" data-price="NVDA">$210.96</span>
+      <span class="stocks-card-change positive" data-change="NVDA">+4.03%</span>
+    </div>
+  </a>
+<a href="/stocks/AMZN/" class="stocks-card" data-ticker="AMZN">
+    <div class="stocks-card-left">
+      <span class="stocks-card-ticker">$AMZN</span>
+      <span class="stocks-card-name">Amazon.com, Inc.</span>
+    </div>
+    <div class="stocks-card-right">
+      <span class="stocks-card-price" data-price="AMZN">$245.34</span>
+      <span class="stocks-card-change negative" data-change="AMZN">-0.69%</span>
+    </div>
+  </a>
+<a href="/stocks/TSLA/" class="stocks-card" data-ticker="TSLA">
+    <div class="stocks-card-left">
+      <span class="stocks-card-ticker">$TSLA</span>
+      <span class="stocks-card-name">Tesla, Inc.</span>
+    </div>
+    <div class="stocks-card-right">
+      <span class="stocks-card-price" data-price="TSLA">$407.76</span>
+      <span class="stocks-card-change positive" data-change="TSLA">+0.30%</span>
+    </div>
+  </a>
+<a href="/stocks/PLTR/" class="stocks-card" data-ticker="PLTR">
+    <div class="stocks-card-left">
+      <span class="stocks-card-ticker">$PLTR</span>
+      <span class="stocks-card-name">Palantir Technologies Inc.</span>
+    </div>
+    <div class="stocks-card-right">
+      <span class="stocks-card-price" data-price="PLTR">$126.79</span>
+      <span class="stocks-card-change negative" data-change="PLTR">-1.74%</span>
+    </div>
+  </a>
+<a href="/stocks/RKLB/" class="stocks-card" data-ticker="RKLB">
+    <div class="stocks-card-left">
+      <span class="stocks-card-ticker">$RKLB</span>
+      <span class="stocks-card-name">Rocket Lab Corporation</span>
+    </div>
+    <div class="stocks-card-right">
+      <span class="stocks-card-price" data-price="RKLB">$81.04</span>
+      <span class="stocks-card-change negative" data-change="RKLB">-1.83%</span>
+    </div>
+  </a>
+<a href="/stocks/KTOS/" class="stocks-card" data-ticker="KTOS">
+    <div class="stocks-card-left">
+      <span class="stocks-card-ticker">$KTOS</span>
+      <span class="stocks-card-name">Kratos Defense &amp; Security Solutions, Inc.</span>
+    </div>
+    <div class="stocks-card-right">
+      <span class="stocks-card-price" data-price="KTOS">$48.19</span>
+      <span class="stocks-card-change negative" data-change="KTOS">-1.35%</span>
+    </div>
+  </a>
+<a href="/stocks/CRWV/" class="stocks-card" data-ticker="CRWV">
+    <div class="stocks-card-left">
+      <span class="stocks-card-ticker">$CRWV</span>
+      <span class="stocks-card-name">CoreWeave, Inc.</span>
+    </div>
+    <div class="stocks-card-right">
+      <span class="stocks-card-price" data-price="CRWV">$88.88</span>
+      <span class="stocks-card-change negative" data-change="CRWV">-0.91%</span>
+    </div>
+  </a>
+<a href="/stocks/AXON/" class="stocks-card" data-ticker="AXON">
+    <div class="stocks-card-left">
+      <span class="stocks-card-ticker">$AXON</span>
+      <span class="stocks-card-name">Axon Enterprise, Inc.</span>
+    </div>
+    <div class="stocks-card-right">
+      <span class="stocks-card-price" data-price="AXON">$565.80</span>
+      <span class="stocks-card-change negative" data-change="AXON">-2.78%</span>
+    </div>
+  </a>
+<a href="/stocks/MSFT/" class="stocks-card" data-ticker="MSFT">
+    <div class="stocks-card-left">
+      <span class="stocks-card-ticker">$MSFT</span>
+      <span class="stocks-card-name">Microsoft Corporation</span>
+    </div>
+    <div class="stocks-card-right">
+      <span class="stocks-card-price" data-price="MSFT">$385.10</span>
+      <span class="stocks-card-change positive" data-change="MSFT">+0.19%</span>
+    </div>
+  </a>
+<a href="/stocks/SOFI/" class="stocks-card" data-ticker="SOFI">
+    <div class="stocks-card-left">
+      <span class="stocks-card-ticker">$SOFI</span>
+      <span class="stocks-card-name">SoFi Technologies, Inc.</span>
+    </div>
+    <div class="stocks-card-right">
+      <span class="stocks-card-price" data-price="SOFI">$18.78</span>
+      <span class="stocks-card-change positive" data-change="SOFI">+0.86%</span>
+    </div>
+  </a>
+<a href="/stocks/ZS/" class="stocks-card" data-ticker="ZS">
+    <div class="stocks-card-left">
+      <span class="stocks-card-ticker">$ZS</span>
+      <span class="stocks-card-name">Zscaler, Inc.</span>
+    </div>
+    <div class="stocks-card-right">
+      <span class="stocks-card-price" data-price="ZS">$139.27</span>
+      <span class="stocks-card-change negative" data-change="ZS">-5.34%</span>
+    </div>
+  </a>
+<a href="/stocks/AVGO/" class="stocks-card" data-ticker="AVGO">
+    <div class="stocks-card-left">
+      <span class="stocks-card-ticker">$AVGO</span>
+      <span class="stocks-card-name">Broadcom Inc.</span>
+    </div>
+    <div class="stocks-card-right">
+      <span class="stocks-card-price" data-price="AVGO">$399.97</span>
+      <span class="stocks-card-change negative" data-change="AVGO">-0.28%</span>
+    </div>
+  </a>
+<a href="/stocks/GOOGL/" class="stocks-card" data-ticker="GOOGL">
+    <div class="stocks-card-left">
+      <span class="stocks-card-ticker">$GOOGL</span>
+      <span class="stocks-card-name">Alphabet Inc.</span>
+    </div>
+    <div class="stocks-card-right">
+      <span class="stocks-card-price" data-price="GOOGL">$357.18</span>
+      <span class="stocks-card-change negative" data-change="GOOGL">-0.48%</span>
+    </div>
+  </a>
+<a href="/stocks/MU/" class="stocks-card" data-ticker="MU">
+    <div class="stocks-card-left">
+      <span class="stocks-card-ticker">$MU</span>
+      <span class="stocks-card-name">Micron Technology, Inc.</span>
+    </div>
+    <div class="stocks-card-right">
+      <span class="stocks-card-price" data-price="MU">$979.30</span>
+      <span class="stocks-card-change negative" data-change="MU">-1.24%</span>
+    </div>
+  </a>
+<a href="/stocks/MRVL/" class="stocks-card" data-ticker="MRVL">
+    <div class="stocks-card-left">
+      <span class="stocks-card-ticker">$MRVL</span>
+      <span class="stocks-card-name">Marvell Technology, Inc.</span>
+    </div>
+    <div class="stocks-card-right">
+      <span class="stocks-card-price" data-price="MRVL">$235.81</span>
+      <span class="stocks-card-change negative" data-change="MRVL">-3.07%</span>
+    </div>
+  </a>
+<a href="/stocks/ANET/" class="stocks-card" data-ticker="ANET">
+    <div class="stocks-card-left">
+      <span class="stocks-card-ticker">$ANET</span>
+      <span class="stocks-card-name">Arista Networks, Inc.</span>
+    </div>
+    <div class="stocks-card-right">
+      <span class="stocks-card-price" data-price="ANET">$186.96</span>
+      <span class="stocks-card-change positive" data-change="ANET">+1.23%</span>
+    </div>
+  </a>
+<a href="/stocks/AMD/" class="stocks-card" data-ticker="AMD">
+    <div class="stocks-card-left">
+      <span class="stocks-card-ticker">$AMD</span>
+      <span class="stocks-card-name">Advanced Micro Devices, Inc.</span>
+    </div>
+    <div class="stocks-card-right">
+      <span class="stocks-card-price" data-price="AMD">$557.89</span>
+      <span class="stocks-card-change positive" data-change="AMD">+2.04%</span>
+    </div>
+  </a>
+<a href="/stocks/AMAT/" class="stocks-card" data-ticker="AMAT">
+    <div class="stocks-card-left">
+      <span class="stocks-card-ticker">$AMAT</span>
+      <span class="stocks-card-name">Applied Materials, Inc.</span>
+    </div>
+    <div class="stocks-card-right">
+      <span class="stocks-card-price" data-price="AMAT">$602.50</span>
+      <span class="stocks-card-change positive" data-change="AMAT">+2.35%</span>
+    </div>
+  </a>
+<a href="/stocks/SPCX/" class="stocks-card" data-ticker="SPCX">
+    <div class="stocks-card-left">
+      <span class="stocks-card-ticker">$SPCX</span>
+      <span class="stocks-card-name">Space Exploration Technologies Corp.</span>
+    </div>
+    <div class="stocks-card-right">
+      <span class="stocks-card-price" data-price="SPCX">$145.30</span>
+      <span class="stocks-card-change negative" data-change="SPCX">-4.51%</span>
+    </div>
+  </a>
+<a href="/stocks/COIN/" class="stocks-card" data-ticker="COIN">
+    <div class="stocks-card-left">
+      <span class="stocks-card-ticker">$COIN</span>
+      <span class="stocks-card-name">Coinbase Global, Inc.</span>
+    </div>
+    <div class="stocks-card-right">
+      <span class="stocks-card-price" data-price="COIN">Private Company</span>
+      <span class="stocks-card-change private" data-change="COIN">No Public Data</span>
+    </div>
+  </a>
+    </div>
+  </main>
+
+  <script>
+    const stockList = [{"sym":"NVDA","name":"NVIDIA Corporation","price":"$210.96","change":"+4.03%","changeClass":"positive","isPrivate":false,"moatRating":"Wide","moatClass":"wide","moatBadge":"🛡️ Wide Moat"},{"sym":"AMZN","name":"Amazon.com, Inc.","price":"$245.34","change":"-0.69%","changeClass":"negative","isPrivate":false,"moatRating":"Wide","moatClass":"wide","moatBadge":"🛡️ Wide Moat"},{"sym":"TSLA","name":"Tesla, Inc.","price":"$407.76","change":"+0.30%","changeClass":"positive","isPrivate":false,"moatRating":"Wide","moatClass":"wide","moatBadge":"🛡️ Wide Moat"},{"sym":"PLTR","name":"Palantir Technologies Inc.","price":"$126.79","change":"-1.74%","changeClass":"negative","isPrivate":false,"moatRating":"Wide","moatClass":"wide","moatBadge":"🛡️ Wide Moat"},{"sym":"RKLB","name":"Rocket Lab Corporation","price":"$81.04","change":"-1.83%","changeClass":"negative","isPrivate":false,"moatRating":"Narrow","moatClass":"narrow","moatBadge":"🛡️ Narrow Moat"},{"sym":"KTOS","name":"Kratos Defense & Security Solutions, Inc.","price":"$48.19","change":"-1.35%","changeClass":"negative","isPrivate":false,"moatRating":"Narrow","moatClass":"narrow","moatBadge":"🛡️ Narrow Moat"},{"sym":"CRWV","name":"CoreWeave, Inc.","price":"$88.88","change":"-0.91%","changeClass":"negative","isPrivate":false,"moatRating":"Wide","moatClass":"wide","moatBadge":"🛡️ Wide Moat"},{"sym":"AXON","name":"Axon Enterprise, Inc.","price":"$565.80","change":"-2.78%","changeClass":"negative","isPrivate":false,"moatRating":"Wide","moatClass":"wide","moatBadge":"🛡️ Wide Moat"},{"sym":"MSFT","name":"Microsoft Corporation","price":"$385.10","change":"+0.19%","changeClass":"positive","isPrivate":false,"moatRating":"Wide","moatClass":"wide","moatBadge":"🛡️ Wide Moat"},{"sym":"SOFI","name":"SoFi Technologies, Inc.","price":"$18.78","change":"+0.86%","changeClass":"positive","isPrivate":false,"moatRating":"Wide","moatClass":"wide","moatBadge":"🛡️ Wide Moat"},{"sym":"ZS","name":"Zscaler, Inc.","price":"$139.27","change":"-5.34%","changeClass":"negative","isPrivate":false,"moatRating":"Wide","moatClass":"wide","moatBadge":"🛡️ Wide Moat"},{"sym":"AVGO","name":"Broadcom Inc.","price":"$399.97","change":"-0.28%","changeClass":"negative","isPrivate":false,"moatRating":"Wide","moatClass":"wide","moatBadge":"🛡️ Wide Moat"},{"sym":"GOOGL","name":"Alphabet Inc.","price":"$357.18","change":"-0.48%","changeClass":"negative","isPrivate":false,"moatRating":"Wide","moatClass":"wide","moatBadge":"🛡️ Wide Moat"},{"sym":"MU","name":"Micron Technology, Inc.","price":"$979.30","change":"-1.24%","changeClass":"negative","isPrivate":false,"moatRating":"Wide","moatClass":"wide","moatBadge":"🛡️ Wide Moat"},{"sym":"MRVL","name":"Marvell Technology, Inc.","price":"$235.81","change":"-3.07%","changeClass":"negative","isPrivate":false,"moatRating":"Narrow","moatClass":"narrow","moatBadge":"🛡️ Narrow Moat"},{"sym":"ANET","name":"Arista Networks, Inc.","price":"$186.96","change":"+1.23%","changeClass":"positive","isPrivate":false,"moatRating":"Wide","moatClass":"wide","moatBadge":"🛡️ Wide Moat"},{"sym":"AMD","name":"Advanced Micro Devices, Inc.","price":"$557.89","change":"+2.04%","changeClass":"positive","isPrivate":false,"moatRating":"Narrow","moatClass":"narrow","moatBadge":"🛡️ Narrow Moat"},{"sym":"AMAT","name":"Applied Materials, Inc.","price":"$602.50","change":"+2.35%","changeClass":"positive","isPrivate":false,"moatRating":"Narrow","moatClass":"narrow","moatBadge":"🛡️ Narrow Moat"},{"sym":"SPCX","name":"Space Exploration Technologies Corp.","price":"$145.30","change":"-4.51%","changeClass":"negative","isPrivate":false,"moatRating":"Narrow","moatClass":"narrow","moatBadge":"🛡️ Narrow Moat"},{"sym":"COIN","name":"Coinbase Global, Inc.","price":"Private Company","change":"No Public Data","changeClass":"private","isPrivate":true,"moatRating":"None","moatClass":"none","moatBadge":""}];
+
+    (function() {
+      const saved = localStorage.getItem('stock-theme');
+      if (saved === 'light') {
+        document.documentElement.classList.add('light');
+        var icon = document.querySelector('.theme-icon');
+        if (icon) icon.textContent = '🌙';
+      }
+    })();
+
+    // Last updated timestamp
+    (function() {
+      var el = document.getElementById('lastUpdatedTime');
+      if (el) {
+        var now = new Date();
+        el.textContent = now.toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit' });
+      }
+    })();
+
+    function toggleTheme() {
+      const html = document.documentElement;
+      html.classList.toggle('light');
+      localStorage.setItem('stock-theme', html.classList.contains('light') ? 'light' : 'dark');
+      var icon = document.querySelector('.theme-icon');
+      if (icon) icon.textContent = html.classList.contains('light') ? '🌙' : '☀️';
+    }
+
+    // Search filtering
+    const searchInput = document.getElementById('stocksSearch');
+    const stocksGrid = document.getElementById('stocksGrid');
+    const stocksCount = document.getElementById('stocksCount');
+    const allCards = Array.from(stocksGrid.querySelectorAll('.stocks-card'));
+
+    searchInput.addEventListener('input', function() {
+      const query = this.value.toLowerCase().trim();
+      let visible = 0;
+
+      allCards.forEach((card, i) => {
+        const stock = stockList[i];
+        if (!stock) return;
+        const ticker = stock.sym.toLowerCase();
+        const name = stock.name.toLowerCase();
+        const match = !query || ticker.includes(query) || name.includes(query);
+        card.style.display = match ? '' : 'none';
+        if (match) visible++;
+      });
+
+      stocksCount.textContent = visible === allCards.length
+        ? '20 stocks'
+        : visible + ' of 20 stocks';
+    });
+  </script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function(){
+    var btn = document.querySelector('.hamburger-btn');
+    var drawer = document.getElementById('drawer');
+    var overlay = document.getElementById('drawerOverlay');
+    var closeBtn = document.getElementById('drawerClose');
+    function openDrawer() {
+      if(drawer){drawer.classList.add('open');}
+      if(overlay){overlay.classList.add('open');}
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDrawer() {
+      if(drawer){drawer.classList.remove('open');}
+      if(overlay){overlay.classList.remove('open');}
+      document.body.style.overflow = '';
+    }
+    if (btn && drawer && overlay) {
+      btn.addEventListener('click', function(){ openDrawer(); });
+      overlay.addEventListener('click', function(){ closeDrawer(); });
+      if (closeBtn) closeBtn.addEventListener('click', function(){ closeDrawer(); });
+      document.addEventListener('keydown', function(e){
+        if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
+      });
+      drawer.querySelectorAll('a').forEach(function(a){
+        a.addEventListener('click', function(){ closeDrawer(); });
+      });
+    }
+  });
+  </script>
+  <script>
+  // Live price updater — fetches from Vercel proxy every 5 min
+  (function() {
+    var INTERVAL = 300000;
+    function formatNum(n) {
+      if (n == null || isNaN(n)) return '---';
+      return n.toLocaleString('en-US', {minimumFractionDigits:2,maximumFractionDigits:2});
+    }
+    function updatePrices(prices) {
+      document.querySelectorAll('[data-price]').forEach(function(el) {
+        var sym = el.getAttribute('data-price');
+        if (el.closest('.stocks-card') && el.closest('.stocks-card').querySelector('.private')) return;
+        var p = prices[sym];
+        if (p && p.price != null) el.textContent = '$' + formatNum(p.price);
+      });
+      document.querySelectorAll('[data-change]').forEach(function(el) {
+        var sym = el.getAttribute('data-change');
+        if (el.classList.contains('private')) return;
+        var p = prices[sym];
+        if (p && p.changePercent != null) {
+          var chg = (p.changePercent >= 0 ? '+' : '') + p.changePercent.toFixed(2) + '%';
+          el.textContent = chg;
+          el.className = el.className.replace(/positive|negative/g,'').trim() + ' ' + (p.changePercent >= 0 ? 'positive' : 'negative');
+        }
+      });
+      // Update "Last updated" timestamp
+      var el = document.getElementById('lastUpdatedTime');
+      if (el) {
+        var now = new Date();
+        el.textContent = now.toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit' });
+      }
+    }
+    function fetchPrices() {
+      fetch('/api/prices/').then(function(r){return r.json()}).then(function(d){updatePrices(d.prices||d)}).catch(function(){});
+    }
+    fetchPrices();
+    setInterval(fetchPrices, INTERVAL);
+  })();
+  </script>
+
+  <!-- ── FOOTER ── -->
+  <style>
+    .stocks-last-updated{font-size:13px;color:var(--text-muted);margin-top:8px;letter-spacing:0.3px}
+    .stocks-card-change.private{color:var(--text-muted);font-style:italic;font-size:12px}
+    .stocks-card-price{white-space:nowrap}
+    .stock-footer{border-top:1px solid var(--border);padding:48px 24px 32px;margin-top:48px}
+    .stock-footer-inner{max-width:1200px;margin:0 auto}
+    .stock-footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:32px}
+    .stock-footer-brand-col{}
+    .stock-footer-brand{display:flex;align-items:center;gap:8px;font-size:15px;letter-spacing:1px;color:var(--text-secondary);font-family:'Anton','Impact',sans-serif;margin-bottom:12px}
+    .stock-footer-brand strong{background:var(--accent-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-family:'Anton','Impact',sans-serif}
+    .stock-footer-logo{width:28px;height:28px;border-radius:4px;object-fit:contain}
+    .stock-footer-brand-col p{color:var(--text-muted);font-size:13px;line-height:1.6;margin:0 0 16px}
+    .stock-footer-social a{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--bg-elevated);color:var(--text-secondary);text-decoration:none;font-size:14px;transition:all .2s}
+    .stock-footer-social a:hover{background:var(--blue);color:#fff}
+    .stock-footer-col h4{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:var(--text-muted);margin:0 0 12px;font-weight:600}
+    .stock-footer-col a{display:block;color:var(--text-secondary);text-decoration:none;font-size:13px;padding:4px 0;transition:color .2s}
+    .stock-footer-col a:hover{color:var(--blue)}
+    .stock-footer-bottom{border-top:1px solid var(--border);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+    .stock-footer-tag{color:var(--text-muted);font-size:12px}
+    .stock-footer-copy{color:var(--text-muted);font-size:11px}
+    @media(max-width:768px){.stock-footer-grid{grid-template-columns:1fr 1fr;gap:24px}.stock-footer-brand-col{grid-column:span 2}}
+    @media(max-width:480px){.stock-footer-grid{grid-template-columns:1fr}.stock-footer-brand-col{grid-column:span 1}}
+  </style>
+  <footer class="stock-footer">
+    <div class="stock-footer-inner">
+      <div class="stock-footer-grid">
+        <div class="stock-footer-brand-col">
+          <div class="stock-footer-brand"><img src="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/logo-hex.jpg" alt="The Signal" class="stock-footer-logo"> THE <strong>SIGNAL</strong></div>
+          <p>Market intelligence for AI, defense, space, and cybersecurity stocks. Data-driven analysis that moves before the headlines.</p>
+          <div class="stock-footer-social">
+            <a href="https://x.com/ReadTheSignal21" target="_blank" rel="noopener" aria-label="X / Twitter">𝕏</a>
+          </div>
+        </div>
+        <div class="stock-footer-col">
+          <h4>Sectors</h4>
+          <a href="/sector/ai">AI</a>
+          <a href="/sector/defense">Defense</a>
+          <a href="/sector/cyber">Cyber</a>
+          <a href="/sector/space">Space</a>
+          <a href="/sector/mega-cap">Mega-Cap</a>
+          <a href="/sector/ai-power">AI Power</a>
+        </div>
+        <div class="stock-footer-col">
+          <h4>Features</h4>
+          <a href="/stocks/">Stock Pages</a>
+          <a href="/about/">About</a>
+        </div>
+        <div class="stock-footer-col">
+          <h4>More</h4>
+          <a href="/about/">Contact Us</a>
+          <a href="/">Home</a>
+        </div>
+      </div>
+      <div class="stock-footer-bottom">
+        <div class="stock-footer-tag">The Signal Editorial Team · readthesignal.net</div>
+        <div class="stock-footer-copy">© 2026 The Signal — Market Intelligence. Data from public sources. Not investment advice.</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

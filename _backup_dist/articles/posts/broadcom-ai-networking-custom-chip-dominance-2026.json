@@ -1,0 +1,46 @@
+{
+  "slug": "broadcom-ai-networking-custom-chip-dominance-2026",
+  "ticker": "AVGO",
+  "sector": "ai",
+  "sentiment": "bullish",
+  "date": "2026-06-29",
+  "title": "OpenAI Just Picked Broadcom. The Street Priced It Like Nothing Happened.",
+  "subtitle": "The second AI chip company just landed three mega-customers at a forward P/E of 18.8x — while everyone's still staring at NVIDIA.",
+  "summary": "Broadcom (AVGO) is down 26% from its high despite landing OpenAI's custom chip deal and a $10B mystery customer. At 18.8x forward earnings on 48% revenue growth, the market's mispricing the #2 AI silicon shop.",
+  "image": {
+    "src": "/img/articles/broadcom-ai-networking-custom-chip-dominance-2026.jpg",
+    "caption": "Broadcom AI networking chip — custom silicon driving hyperscaler infrastructure."
+  },
+  "tags": [
+    "AVGO",
+    "Broadcom",
+    "AI",
+    "semiconductors",
+    "custom chips",
+    "XPU",
+    "OpenAI",
+    "AI infrastructure",
+    "networking"
+  ],
+  "links": [
+    {
+      "label": "Broadcom Investor Relations",
+      "url": "https://investors.broadcom.com/"
+    },
+    {
+      "label": "Yahoo Finance — AVGO",
+      "url": "https://finance.yahoo.com/quote/AVGO/"
+    }
+  ],
+  "videos": [
+    {
+      "id": "mpSB5l7Qqhw",
+      "title": "GPUs Are Nothing Without Them | Training A.I Models | What is BROADCOM & NETWORKING CHIPS",
+      "source": "Rishabh IRL",
+      "url": "https://www.youtube.com/watch?v=mpSB5l7Qqhw",
+      "position": "after_2nd_h2"
+    }
+  ],
+  "price": 363.7,
+  "bodyHtml": "<p>GPUs get all the headlines. But the company actually printing money inside every AI data center just got ignored for the first time in a year. Broadcom's stock is down 26% from its $495 high. On the same week OpenAI walks up to their door with a custom chip deal called Jalapeño. That's not a stumble. That's a gift.</p><p>Let that sink in. OpenAI — the company that literally defines what people mean when they say \"AI\" — just picked Broadcom as its custom silicon partner. A <a href=\"https://investors.broadcom.com/\">disclosed fourth mystery customer</a> dropped a $10 billion order last fall that nobody on Wall Street could name. Google built its TPUs with Broadcom. And the stock is sitting at $363 acting like none of this matters.</p><p>It does matter. More than the market wants to admit right now.</p><table class=\"stats-grid\"><thead><tr><th>Metric</th><th>Value</th></tr></thead><tbody><tr><td>Market Cap</td><td>$1.73 Trillion</td></tr><tr><td>TTM Revenue (YoY)</td><td>$75.5B (+48%)</td></tr><tr><td>Gross Margin</td><td>76.3%</td></tr><tr><td>Forward P/E</td><td>18.8x</td></tr><tr><td>Free Cash Flow</td><td>$27.2B</td></tr><tr><td>Analyst Consensus</td><td>Strong Buy (96%)</td></tr></tbody></table><p>Here's the part that doesn't fit the narrative. Broadcom is compounding revenue at 48% a year. Its gross margins are 76%. Its free cash flow sits at $27 billion. And you can buy all of that for 18.8x next year's earnings. NVIDIA trades at forward multiples that would make your accountant cry. Broadcom is basically free by comparison, growing faster than most \"growth\" names on the Nasdaq, and generating cash like a utility.</p><p>The business runs on three engines now. Custom XPUs are the big one — those are the Application-Specific Integrated Circuits hyperscalers use to train and run AI models. Google needs them. OpenAI needs them. Some mystery fourth customer wrote a ten-figure check for them. Broadcom doesn't compete with NVIDIA on general GPUs. They compete on the chips you build when you realize a general-purpose chip costs too much to run at scale.</p><p>Then there's VMware. Yes, that VMware. The software business nobody expected Broadcom to make exciting is growing at 43%. Every enterprise moving to the cloud needs virtualization. Broadcom owns the layer beneath the hypervisor. It's boring, sticky, and recurring. Exactly the kind of cash flow that funds the silicon bets.</p><p>And the third engine? Networking chips. The switches and routers that connect thousands of GPUs inside a data center. You can have all the NVIDIA H200s you want. Without Broadcom's Memory Fabric Express switches, those GPUs sit in isolation talking to nothing. Every AI cluster on earth needs Broadcom silicon to make the GPUs talk to each other. That's not a feature. That's the plumbing.</p><iframe width=\"100%\" height=\"315\" src=\"https://www.youtube.com/embed/mpSB5l7Qqhw\" title=\"GPUs Are Nothing Without Them\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe><p>The bear case is simple: Google builds more of its own chips. And sure, that headline spooked the stock. But here's what the headline misses. Broadcom is already working on OpenAI's chip. They're building a mystery customer's chip. Even if Google builds in-house, Broadcom just replaces that volume with two other hyperscalers who need the same service. The custom silicon market is growing faster than any single customer can absorb. Broadcom IS the custom silicon shop.</p><p>Forty-five analysts covering this name. Ninety-six percent say buy or strong buy. Mean price target sits at $524 — that's 44% upside from where the stock trades today. A billionaire just rotated out of NVIDIA into <a href=\"https://finance.yahoo.com/quote/AVGO/\">Broadcom</a>, scooping up 196,000 shares. When the smart money moves while the stock is down, pay attention.</p><p>FY2026 revenue consensus sits at $106 billion. FY2027? Analysts expect $172 billion. That's a 62% jump in a single year, from a company already doing $75 billion in sales. The PEG ratio — price relative to growth — sits at 0.66. Anything under 1.0 is textbook value. Broadcom is a 0.66. At its size.</p><p>This isn't a turnaround story. It's not a recovery trade. Broadcom is printing money right now on every dollar of revenue and the market is pricing it like it's a dying semiconductor company from 2019. The disconnect between the stock price and what the business is actually doing is the thesis.</p><p>AI isn't just about GPUs anymore. The second derivative trade — the chips that connect GPUs, the custom silicon that replaces them, the software that runs them — is where the next leg of the move happens. Broadcom sits at the center of all three. The stock is down because one headline about Google spooked retail. The fundamentals say something else entirely. The market has a short memory. The $27 billion in free cash flow doesn't.</p><p class=\"disclosure\"><em>Disclosure: The Signal holds no position in AVGO. Positions may change. This is not financial advice.</em></p>"
+}

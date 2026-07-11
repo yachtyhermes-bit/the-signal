@@ -1,0 +1,59 @@
+{
+  "slug": "oracle-ai-cloud-capex-bet-2026",
+  "title": "Oracle's $900B Peak Collapsed to $408B \u2014 While Its Cloud Revenue Exploded 93%",
+  "subtitle": "Oracle is simultaneously the most hated and most loved stock on Wall Street. Its cloud IaaS is growing at 93%, its backlog hit $638B, and its P/E collapsed to 13x. But there's $130B in debt and negative free cash flow. Let's break it down.",
+  "summary": "Oracle's stock lost 55% of its value since hitting $900B in September 2025 \u2014 yet cloud IaaS revenue just grew 93% in Q4. The tension between a genius AI infrastructure bet and a terrifying balance sheet defines the most misunderstood stock in tech right now.",
+  "ticker": "ORCL",
+  "sector": "mega-cap",
+  "sentiment": "bullish",
+  "date": "2026-07-10",
+  "price": 144,
+  "image": {
+    "src": "/img/articles/oracle-ai-cloud-capex-bet-2026.jpg",
+    "caption": "Oracle (ORCL) \u2013 AI Cloud Bet vs Balance Sheet Reality"
+  },
+  "tags": [
+    "ORCL",
+    "oracle",
+    "cloud infrastructure",
+    "ai",
+    "oci",
+    "stargate",
+    "database",
+    "tech stocks",
+    "earnings"
+  ],
+  "editorialTags": [],
+  "seoKeywords": [
+    "ORCL",
+    "Oracle stock",
+    "Oracle cloud infrastructure",
+    "OCI growth",
+    "Stargate project",
+    "AI infrastructure",
+    "Oracle debt"
+  ],
+  "links": [
+    {
+      "label": "CNBC \u2014 Oracle stock ends worst week since 2001 as investors dwell on finances",
+      "url": "https://www.cnbc.com/2026/06/26/oracle-stock-ends-worst-week-since-2001-as-investors-dwell-on-finances.html"
+    },
+    {
+      "label": "Bloomberg \u2014 Oracle Warns Its Splurge on AI Data Centers May Not Pay Off",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-07-01/oracle-warns-ai-data-center-splurge-may-not-pay-off"
+    },
+    {
+      "label": "CNBC \u2014 Oracle Q4 earnings report 2026",
+      "url": "https://www.cnbc.com/2026/06/10/oracle-orcl-q4-earnings-report-2026.html"
+    }
+  ],
+  "video": {
+    "youtubeId": "uHQ3HH1XIPs",
+    "title": "Oracle's AI Bet and the Market Crash \u2014 Bloomberg Money Minute",
+    "channel": "Bloomberg Podcasts"
+  },
+  "meta": {
+    "estimatedReadTime": "4 min read"
+  },
+  "bodyHtml": "<p>Let's start with the headline number, because it's the kind of number that makes you check if your screen is broken. Oracle's market cap peaked at $900 billion in September 2025. Today it sits at $408 billion. That's a 55% wipeout \u2014 roughly half a trillion dollars evaporated in under a year. The stock touched a 52-week low of $134.57 in late June, its worst stretch since the dot-com bust of 2001. If you bought the top, you are not having a good time.</p><p>Now here's the part that makes this story weird. While the stock was getting dismantled, Oracle's cloud infrastructure business \u2014 the thing that supposedly justified that $900 billion valuation \u2014 grew 93% in the fiscal fourth quarter. Cloud IaaS revenue hit $5.8 billion in a single quarter. Full-year cloud infrastructure landed at $18.1 billion, up 77%. The company's remaining performance obligations \u2014 contracted future revenue already signed \u2014 exploded to $638 billion, a 363% increase from $138 billion a year ago. That is not a typo.</p><!-- VIDEO 0 --><p>So what is going on here? Is Oracle a screaming buy at 13 times forward earnings with a PEG ratio of 0.79, or is it a value trap wrapped in Blackwell GPUs and backed by $130 billion in debt? The answer, as with most interesting things in markets, is yes.</p><p>The bull case is real. OCI is the fastest-growing major cloud on the planet, even from a tiny base \u2014 roughly 1.3% market share versus AWS's 29%. The growth is AI-driven, and Oracle is uniquely positioned. They built OCI Zettascale10, the largest AI supercomputer in the cloud, deployed at the Stargate project in Abilene, Texas \u2014 75% complete with OpenAI as anchor tenant. They partnered with both NVIDIA and AMD, positioning as the only cloud that works with both chipmakers without competing with either. Oracle doesn't make its own AI chips. That means chip companies trust Oracle with their latest hardware because they don't see them as a rival.</p><p>Then there's the multicloud database play \u2014 the most underrated strategic move in enterprise tech right now. Oracle's database now runs inside AWS, Azure, and Google Cloud, letting customers keep Oracle's data layer while using whichever infrastructure they prefer. That business grew 404% in Q4, the fastest-growing product in company history. Enterprises love the database but don't want to move everything onto Oracle's cloud. So Oracle brought the database to them.</p><p>FY2027 guidance backs the optimism \u2014 $90 billion in revenue, non-GAAP EPS of $8.05, Q1 growth of 27 to 29 percent. Analysts are overwhelmingly bullish: 71% rate Oracle a Buy, the highest percentage in 15 years, with a mean price target between $252 and $272. Guggenheim goes all the way to $400. At $144, that's anywhere from 75 to 180 percent upside. A stock at 13x forward earnings with a 0.79 PEG and a core growth segment accelerating at 93% makes the valuation math hard to ignore.</p><p>But. The bear case is also real, and it's written all over the balance sheet. Oracle ended FY2026 with roughly $130 billion in total debt and a debt-to-equity ratio of 389%. Capital expenditures hit $55.7 billion \u2014 83% of total revenue, an almost unprecedented level of reinvestment. Free cash flow cratered from positive $11.5 billion to negative $23.7 billion, a swing of over $35 billion in a single year. Oracle plans to spend roughly $70 billion more in net capex this year and raise another $40 billion through debt and equity. Operating cash flow is a record $32 billion, but it's being swallowed whole by the infrastructure buildout.</p><p>The concentration risk is sobering. BofA estimates over 50% of Oracle's $638 billion RPO comes from a single customer: OpenAI. If OpenAI stumbles \u2014 and there are real questions about its path to profitability and an IPO that keeps getting delayed \u2014 that backlog could evaporate. Microsoft owns 27% of OpenAI and is building its own AI infrastructure on Azure. If that relationship shifts, Oracle is left holding billions in GPU capacity nobody else needs at that scale.</p><p>What makes Oracle fascinating right now is that both narratives are true simultaneously. The stock is pricing in disaster \u2014 55% off its highs, 13x earnings, 0.79 PEG \u2014 while the cloud business executes at a level that would make any other tech stock double. The question isn't whether the AI bet is real. The $638 billion RPO and 93% IaaS growth confirm that it is. The question is whether the balance sheet can survive the buildout long enough for revenue to catch up. Larry Ellison, the 81-year-old founder, is betting the whole company on yes. At these prices, the market is betting against him. Someone is going to be very wrong.</p><p class=\"disclosure\"><em>Disclosure: The Signal holds no position in ORCL. Positions may change. This is not financial advice.</em></p>"
+}

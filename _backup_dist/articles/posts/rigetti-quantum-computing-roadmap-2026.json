@@ -1,0 +1,46 @@
+{
+  "slug": "rigetti-quantum-computing-roadmap-2026",
+  "title": "Rigetti Drops 108 Qubits: The Quantum Roadmap Wall Street Is Sleeping On",
+  "subtitle": "$569M cash, zero debt, three government deals, and a clear path to 1,000+ qubits \u2014 yet $RGTI is still down YTD",
+  "summary": "Rigetti's 108-qubit Cepheus system is live on AWS, Azure, and qBraid. With $569M in cash, three government deals, and a roadmap targeting quantum advantage by 2029, $RGTI looks underappreciated.",
+  "ticker": "RGTI",
+  "sector": "quantum",
+  "sentiment": "bullish",
+  "date": "2026-06-20T16:00:00.000Z",
+  "image": {
+    "src": "/img/articles/rigetti-quantum-computing-roadmap-2026.jpg",
+    "caption": "Professional macro photograph. Extreme close-up of a quantum processor chip with superconducting circuits, gold-plated traces on sapphire substrate, intricate wiring patterns. Dramatic blue/purple lighting."
+  },
+  "tags": [
+    "Rigetti",
+    "Quantum Computing",
+    "RGTI",
+    "Superconducting Qubits",
+    "CHIPS Act",
+    "Cepheus",
+    "Quantum Hardware",
+    "Deep Tech"
+  ],
+  "links": [
+    {
+      "url": "https://investors.rigetti.com/",
+      "label": "Rigetti Investor Relations"
+    },
+    {
+      "url": "https://finance.yahoo.com/quote/RGTI/",
+      "label": "RGTI on Yahoo Finance"
+    },
+    {
+      "url": "https://www.rigetti.com/",
+      "label": "Rigetti Computing"
+    }
+  ],
+  "bodyHtml": "<p>One hundred and eight superconducting qubits just went generally available \u2014 and the market barely blinked. Rigetti Computing (<a href=\"/ticker/RGTI\">$RGTI</a>) launched Cepheus-1-108Q in April 2026, now live across Amazon Braket, Microsoft Azure, and qBraid. That same month, the U.S. Department of Commerce signed a <strong>$100 million CHIPS Act letter of intent</strong>. An <strong>$8.4 million order</strong> from India's C-DAC for an on-premises 108-qubit system followed. The UK committed another <strong>$100 million</strong> for a 1,000+ qubit system within 3-4 years. The receipts are stacking up \u2014 and <a href=\"/ticker/RGTI\">$RGTI</a> is still <strong>down 9.49% YTD</strong> at $21.36 with a $7.1 billion market cap.</p><h2>The Roadmap Is Moving Faster Than the Narrative</h2><p>Rigetti's trajectory is laid out with unusual specificity: <strong>150+ qubits by end of 2026</strong>, scaling to <strong>1,000+ qubits by end of 2027</strong>, with quantum advantage targeted around <strong>2029</strong>. The 108-qubit system runs on a <strong>12-chiplet modular architecture</strong> \u2014 the industry's largest \u2014 with 2-qubit gate fidelity at <strong>99.1% in 60 nanoseconds</strong>. A prototype hit <strong>99.9% fidelity at just 28ns</strong>, pushing error rates where useful computation becomes real. Revenue confirms the acceleration: Q1 2026 printed <strong>$4.4 million</strong>, up <strong>198.9% year-over-year</strong> from $7.1 million for all of FY2025. One quarter already beat half of last year's entire haul.</p><div class=\"video-section\"><div class=\"video-section-title\">\u25b6 Rigetti CEO on Quantum Advantage Timeline</div><div class=\"video-embed\"><iframe src=\"https://www.youtube.com/embed/T4ZnQFtoACc\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen loading=\"lazy\"></iframe></div><div class=\"video-info\"><div class=\"video-info-title\">Rigetti Computing CEO: We are about 3-4 years away from demonstrating quantum advantage \u2014 CNBC Television</div></div></div><h2>The Balance Sheet Is the Real Moat</h2><p>Where cash burn is the norm and dilution is a quarterly ritual, Rigetti's balance sheet is a fortress: <strong>$569 million in cash</strong> with <strong>zero debt</strong>. The $100 million CHIPS Act LOI further de-risks the capital picture. While competitors race to raise at dilutive terms, Rigetti is fully-funded through its most critical scaling years. A $7.1 billion market cap against half a billion in cash puts enterprise value at roughly $6.5 billion \u2014 not cheap, but defensible for a company targeting a market projected to exceed $100 billion by the mid-2030s.</p><h2>The Risk/Reward Calculus</h2><p>Let's not sugarcoat it: <strong>18.77% of the float is short</strong>. Bears aren't irrational \u2014 quantum computing remains pre-revenue. $4.4 million quarterly doesn't move the needle on a $7 billion valuation. Nobody's proven this works at scale yet. A stumble on the 150-qubit milestone or a fidelity regression would gut the stock. But the short thesis has to contend with stacked catalysts: GA product on three cloud platforms, government contracts with real dollars, a modular architecture that scales, and fidelities trending right. Twelve analysts carry a consensus <strong>Buy with a mean target of $29.24</strong> \u2014 roughly 37% upside from $21.36.</p><blockquote>The 108-qubit milestone is impressive, but the 12-chiplet modular architecture is the real story \u2014 it's the platform that gets Rigetti to 1,000+ qubits without reinventing the wheel.</blockquote><h2>Bottom Line</h2><p><a href=\"/ticker/RGTI\">$RGTI</a> isn't for the faint of heart. Eighteen percent short interest means every positive catalyst is a squeeze trigger and every miss is carnage. But the setup is increasingly asymmetric: a half-billion-dollar cash fortress, zero debt, live hardware on three cloud platforms, and a government-backed roadmap \u2014 trading at a YTD loss while AI compute mints trillion-dollar valuations. If quantum follows AI's trajectory from curiosity to critical infrastructure, <strong>$21.36</strong> will look like a gift. The 2029 quantum advantage target is three years out. The market prices things six months at a time. That gap is the opportunity.</p><em>\u2014 The Signal</em><small>This article is for informational purposes only and does not constitute financial advice. The Signal may hold positions in securities mentioned.</small>",
+  "videos": [
+    {
+      "url": "https://www.youtube.com/watch?v=T4ZnQFtoACc",
+      "title": "Rigetti Computing CEO: We are about 3-4 years away from demonstrating quantum advantage",
+      "channel": "CNBC Television"
+    }
+  ]
+}

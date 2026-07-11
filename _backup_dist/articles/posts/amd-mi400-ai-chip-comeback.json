@@ -1,0 +1,44 @@
+{
+  "slug": "amd-mi400-ai-chip-comeback",
+  "title": "AMD's $839 Billion Bet: MI400 and the AI Chip Comeback Nobody Saw Coming",
+  "ticker": "AMD",
+  "sector": "ai",
+  "sentiment": "bullish",
+  "date": "2026-06-25T10:00:00.000Z",
+  "price": 532.57,
+  "subtitle": "AMD's data center revenue hit $10.27B in a single quarter, the MI400 is its shot at Nvidia's throne, and the market cap just crossed $868B. Here's the math that matters.",
+  "image": {
+    "src": "/img/articles/amd-mi400-ai-chip-comeback.jpg",
+    "caption": "AMD Instinct MI300X AI accelerator chip on a dark circuit board with cinematic blue and red lighting"
+  },
+  "tags": [
+    "AMD",
+    "AI Chips",
+    "MI400",
+    "Data Center",
+    "Semiconductors",
+    "MI300X",
+    "Nvidia"
+  ],
+  "links": [
+    {
+      "label": "AMD Official \u2192",
+      "url": "https://www.amd.com/"
+    },
+    {
+      "label": "AMD on Yahoo Finance \u2192",
+      "url": "https://finance.yahoo.com/quote/AMD/"
+    }
+  ],
+  "bodyHtml": "<p>Lisa Su just telegraphed the plan. And it's bigger than most people realize.</p><p>Two years ago, <a href=\"/ticker/AMD\">$AMD</a> was the alternative. The 'good enough' chip. The one you bought when <a href=\"/ticker/NVDA\">$NVDA</a> was sold out or too expensive. Today, that narrative isn't just dying \u2014 it's getting buried under <strong>$10.27 billion</strong> in quarterly revenue and a data center business that's growing faster than almost anything in Silicon Valley.</p><p>The MI400 is coming. CDNA 4 architecture. Rumored 2026 launch. And it's the kind of chip that could reshape who owns the AI training stack for the next five years.</p><h2>The Numbers Tell the Real Story</h2><!-- VIDEO 0 --><p>Let's cut through the noise. Here's where <a href=\"/ticker/AMD\">$AMD</a> actually sits right now:</p><div class=\"stats-card\"><table><thead><tr><th>Metric</th><th>Value</th></tr></thead><tbody><tr><td>Market Cap</td><td><strong>$839.5B</strong></td></tr><tr><td>Revenue (TTM)</td><td><strong>$37.45B</strong> (+37.8%)</td></tr><tr><td>Net Income</td><td><strong>$4.93B</strong></td></tr><tr><td>Gross Margin</td><td><strong>53.1%</strong></td></tr><tr><td>Forward P/E</td><td><strong>39.1x</strong></td></tr><tr><td>FCF</td><td><strong>$7.17B</strong></td></tr><tr><td>Current Price</td><td><strong>~$515</strong></td></tr></tbody></table></div><p>Quarterly revenue has gone parabolic: <strong>$7.69B</strong> in Q2 '25, then <strong>$9.25B</strong>, then <strong>$10.27B</strong>, holding at <strong>$10.25B</strong> in Q1 '26. That's not a fluke. That's a structural shift.</p><p>The MI300X alone is running at over <strong>$5 billion</strong> in annualized data center revenue. Think about that. One chip family generating more revenue than entire semiconductor companies.</p><h2>The MI400 Thesis: Why This Changes Everything</h2><div class=\"video-section\"><div class=\"video-section-title\">\u25b6 AMD Reveals MI300X AI Chip (Watch It Here)</div><div class=\"video-embed\"><iframe src=\"https://www.youtube.com/embed/rYVPDQfRcL0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen loading=\"lazy\"></iframe></div><div class=\"video-info\"><div class=\"video-info-title\">CNET Highlights \u2014 The Signal</div></div></div><p>Here's the part the bears are ignoring. The MI400 isn't just an incremental refresh. It's CDNA 4 \u2014 a complete architectural rethink built for the era when AI training clusters are measured in tens of thousands of GPUs.</p><p>The addressable market for AI accelerators is projected to hit <strong>$400 billion+</strong> by 2027. That's not a niche. That's a generational opportunity. And right now, <a href=\"/ticker/NVDA\">$NVDA</a> owns roughly 80% of it. The question isn't whether there's room for a second player. The question is whether <a href=\"/ticker/AMD\">$AMD</a> can actually take share.</p><p>The answer, based on every data point we have, is yes.</p><h2>Competitive Positioning: The Underrated Moat</h2><p>Nvidia charges premium pricing on everything. That works when you're the only game in town. But hyperscalers \u2014 Microsoft, Meta, Google, Amazon \u2014 are actively diversifying their silicon supply chains. They don't want one vendor holding the keys.</p><p>AMD is positioning the MI400 at lower price points with competitive performance. That's not a race to the bottom. That's a share-gain playbook. Every dollar saved on compute is a dollar hyperscalers can redeploy into more capacity.</p><blockquote>The trailing P/E of 171 looks terrifying until you realize it's inflated by acquisition amortization. The forward P/E of 39.1x on 37.8% revenue growth? That's actually reasonable for a company in this growth phase.</blockquote><h2>The Bottom Line</h2><p><a href=\"/ticker/AMD\">$AMD</a> trades at <strong>22.4x sales</strong> with a beta of <strong>2.49</strong>. This stock moves fast. It punishes the weak-handed and rewards conviction.</p><p>Data center is now the majority of AMD's revenue. The MI300X proved they can ship at scale. The MI400 is about to prove they can compete at the frontier. The TAM is massive, the margins are expanding (53.1% gross), and free cash flow sits at <strong>$7.17 billion</strong>.</p><p>AMD isn't the underdog anymore. They're the credible second source in the most important technology cycle of the decade. If the MI400 delivers even 80% of what the roadmap suggests, this stock has fundamentally different math than the market is pricing today.</p><p>The comeback isn't coming. It's here.</p><p><em>\u2014 The Signal</em></p>",
+  "summary": "AMD just went from also-ran to credible threat. Revenue up 37.8%, data center is the new main character, and the MI400 could flip the script on Nvidia. Here's what Lisa Su is cooking.",
+  "videos": [
+    {
+      "id": "rYVPDQfRcL0",
+      "title": "AMD Reveals MI300X AI Chip (Watch It Here)",
+      "source": "CNET Highlights",
+      "url": "https://www.youtube.com/watch?v=rYVPDQfRcL0",
+      "position": "after_2nd_h2"
+    }
+  ]
+}
