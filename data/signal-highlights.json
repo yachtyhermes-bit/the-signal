@@ -2,24 +2,24 @@
   {
     "ticker": "KTOS",
     "name": "Kratos Defense & Security",
-    "currentPrice": 48.19,
-    "changePercent": -1.35,
+    "currentPrice": 54.21,
+    "changePercent": -3.47,
     "changeDirection": "down",
     "fairValue": {
       "status": "Undervalued",
-      "price": 109.86,
-      "upside": "+128.0%"
+      "price": 112.2,
+      "upside": "+107.0%"
     },
     "earnings": {
       "revTtm": "$1.42B",
       "revGrowth": "+22.6%",
       "netIncome": "$29.40M",
-      "peRatio": "283.5x",
-      "psRatio": "6.4x"
+      "peRatio": "318.9x",
+      "psRatio": "7.2x"
     },
     "analyst": {
       "consensus": "Strong Buy",
-      "target": 109.86,
+      "target": 112.2,
       "buys": 15,
       "holds": 5,
       "sells": 0
@@ -28,24 +28,24 @@
   {
     "ticker": "CRWV",
     "name": "CoreWeave Inc.",
-    "currentPrice": 88.88,
-    "changePercent": -0.91,
-    "changeDirection": "down",
+    "currentPrice": 117.95,
+    "changePercent": 2.38,
+    "changeDirection": "up",
     "fairValue": {
       "status": "Undervalued",
-      "price": 142.29,
-      "upside": "+60.1%"
+      "price": 140.18,
+      "upside": "+18.8%"
     },
     "earnings": {
       "revTtm": "$6.23B",
       "revGrowth": "+111.6%",
       "netIncome": "$-1.59B",
       "peRatio": "N/A",
-      "psRatio": "7.8x"
+      "psRatio": "10.3x"
     },
     "analyst": {
       "consensus": "Buy",
-      "target": 142.29,
+      "target": 140.18,
       "buys": 15,
       "holds": 16,
       "sells": 0
@@ -54,24 +54,24 @@
   {
     "ticker": "AXON",
     "name": "Axon Enterprise Inc.",
-    "currentPrice": 565.8,
-    "changePercent": -2.78,
-    "changeDirection": "down",
+    "currentPrice": 423.4,
+    "changePercent": 0.09,
+    "changeDirection": "up",
     "fairValue": {
       "status": "Undervalued",
-      "price": 670.37,
-      "upside": "+18.5%"
+      "price": 662.04,
+      "upside": "+56.4%"
     },
     "earnings": {
       "revTtm": "$2.98B",
       "revGrowth": "+33.7%",
       "netIncome": "$205.99M",
-      "peRatio": "227.2x",
-      "psRatio": "15.3x"
+      "peRatio": "170.7x",
+      "psRatio": "11.4x"
     },
     "analyst": {
       "consensus": "Strong Buy",
-      "target": 670.37,
+      "target": 662.04,
       "buys": 12,
       "holds": 8,
       "sells": 0
@@ -80,24 +80,24 @@
   {
     "ticker": "MSFT",
     "name": "Microsoft Corporation",
-    "currentPrice": 385.1,
-    "changePercent": 0.19,
+    "currentPrice": 379.4,
+    "changePercent": 0.13,
     "changeDirection": "up",
     "fairValue": {
       "status": "Undervalued",
-      "price": 559.93,
-      "upside": "+45.4%"
+      "price": 561.39,
+      "upside": "+48.0%"
     },
     "earnings": {
       "revTtm": "$318.27B",
       "revGrowth": "+18.3%",
       "netIncome": "$125.22B",
-      "peRatio": "22.9x",
-      "psRatio": "9.0x"
+      "peRatio": "22.6x",
+      "psRatio": "8.9x"
     },
     "analyst": {
       "consensus": "Strong Buy",
-      "target": 559.93,
+      "target": 561.39,
       "buys": 36,
       "holds": 4,
       "sells": 0
@@ -106,24 +106,24 @@
   {
     "ticker": "SOFI",
     "name": "SoFi Technologies Inc.",
-    "currentPrice": 18.78,
-    "changePercent": 0.86,
+    "currentPrice": 17.91,
+    "changePercent": 2.81,
     "changeDirection": "up",
     "fairValue": {
       "status": "Undervalued",
-      "price": 21.1,
-      "upside": "+12.4%"
+      "price": 20.9,
+      "upside": "+16.7%"
     },
     "earnings": {
       "revTtm": "$3.91B",
       "revGrowth": "+42.5%",
       "netIncome": "$576.93M",
-      "peRatio": "41.7x",
-      "psRatio": "6.2x"
+      "peRatio": "39.8x",
+      "psRatio": "5.9x"
     },
     "analyst": {
       "consensus": "Buy",
-      "target": 21.1,
+      "target": 20.9,
       "buys": 11,
       "holds": 7,
       "sells": 0
@@ -132,24 +132,24 @@
   {
     "ticker": "ZS",
     "name": "Zscaler Inc.",
-    "currentPrice": 139.27,
-    "changePercent": -5.34,
-    "changeDirection": "down",
+    "currentPrice": 124.85,
+    "changePercent": 0.38,
+    "changeDirection": "up",
     "fairValue": {
       "status": "Undervalued",
-      "price": 192.58,
-      "upside": "+38.3%"
+      "price": 193.05,
+      "upside": "+54.6%"
     },
     "earnings": {
       "revTtm": "$3.17B",
       "revGrowth": "+25.4%",
       "netIncome": "$-77.39M",
       "peRatio": "N/A",
-      "psRatio": "7.1x"
+      "psRatio": "6.4x"
     },
     "analyst": {
       "consensus": "Strong Buy",
-      "target": 192.58,
+      "target": 193.05,
       "buys": 24,
       "holds": 6,
       "sells": 0
@@ -158,24 +158,24 @@
   {
     "ticker": "NVDA",
     "name": "NVIDIA Corporation",
-    "currentPrice": 210.96,
-    "changePercent": 4.03,
+    "currentPrice": 210.69,
+    "changePercent": 2.95,
     "changeDirection": "up",
     "fairValue": {
       "status": "Undervalued",
-      "price": 301.62,
-      "upside": "+43.0%"
+      "price": 298.93,
+      "upside": "+41.9%"
     },
     "earnings": {
       "revTtm": "$253.49B",
       "revGrowth": "+85.2%",
       "netIncome": "$159.61B",
       "peRatio": "32.3x",
-      "psRatio": "20.2x"
+      "psRatio": "20.1x"
     },
     "analyst": {
       "consensus": "Strong Buy",
-      "target": 301.62,
+      "target": 298.93,
       "buys": 49,
       "holds": 2,
       "sells": 1
@@ -184,24 +184,24 @@
   {
     "ticker": "AVGO",
     "name": "Broadcom Inc.",
-    "currentPrice": 399.97,
-    "changePercent": -0.28,
-    "changeDirection": "down",
+    "currentPrice": 411.35,
+    "changePercent": 4.7,
+    "changeDirection": "up",
     "fairValue": {
       "status": "Undervalued",
-      "price": 523.73,
-      "upside": "+30.9%"
+      "price": 522.06,
+      "upside": "+26.9%"
     },
     "earnings": {
       "revTtm": "$75.46B",
       "revGrowth": "+47.9%",
       "netIncome": "$29.32B",
-      "peRatio": "66.7x",
-      "psRatio": "25.2x"
+      "peRatio": "68.2x",
+      "psRatio": "25.9x"
     },
     "analyst": {
       "consensus": "Strong Buy",
-      "target": 523.73,
+      "target": 522.06,
       "buys": 28,
       "holds": 3,
       "sells": 0
