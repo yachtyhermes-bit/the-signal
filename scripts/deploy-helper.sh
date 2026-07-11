@@ -50,6 +50,10 @@ signal_deploy() {
   cp -r dist /tmp/signal-dist
   cd /tmp/signal-dist
 
+  # Ensure we deploy to the correct Vercel project (not auto-created signal-dist)
+  rm -rf .vercel
+  npx vercel link --project the-signal --yes > /dev/null 2>&1
+
   echo "  [DEPLOY] Vercel prod..."
   local OUT=$(npx vercel --prod --yes 2>&1)
   echo "$OUT" | tail -5

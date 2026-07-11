@@ -104,6 +104,9 @@
                 <a href="/sector/space" class="auth-nav-item">Space</a>
                 <a href="/sector/mega-cap" class="auth-nav-item">Mega-Cap</a>
                 <a href="/sector/quantum" class="auth-nav-item">Quantum</a>
+                <a href="/sector/ai-power" class="auth-nav-item">AI Power</a>
+                <a href="/sector/fintech" class="auth-nav-item">FinTech</a>
+                <a href="/sector/etfs" class="auth-nav-item">ETFs</a>
                 <div class="auth-nav-section-header">FEATURES</div>
                 <a href="/hive" class="auth-nav-item">Hive</a>
                 <a href="/signal-vs-the-street" class="auth-nav-item">Signal vs. Street</a>
@@ -136,6 +139,9 @@
                 <a href="/sector/space" class="auth-nav-item">Space</a>
                 <a href="/sector/mega-cap" class="auth-nav-item">Mega-Cap</a>
                 <a href="/sector/quantum" class="auth-nav-item">Quantum</a>
+                <a href="/sector/ai-power" class="auth-nav-item">AI Power</a>
+                <a href="/sector/fintech" class="auth-nav-item">FinTech</a>
+                <a href="/sector/etfs" class="auth-nav-item">ETFs</a>
                 <div class="auth-nav-section-header">FEATURES</div>
                 <a href="/hive" class="auth-nav-item">Hive</a>
                 <a href="/signal-vs-the-street" class="auth-nav-item">Signal vs. Street</a>
@@ -187,6 +193,7 @@
         <a href="/sector/mega-cap" class="drawer-link">MEGA-CAP</a>
         <a href="/sector/quantum" class="drawer-link">QUANTUM</a>
         <a href="/sector/ai-power" class="drawer-link">AI POWER</a>
+        <a href="/sector/fintech" class="drawer-link">FINTECH</a>
         <a href="/sector/etfs" class="drawer-link">ETFS</a>
       </div>
     </div>
@@ -215,8 +222,7 @@
           <a href="/">Home</a> <span>/</span> <a href="/sector/{{SECTOR}}">{{SECTOR_UC}}</a> <span>/</span> <span>{{TICKER}}</span>
         </div>
         <div class="article-ticker-bar">
-          <span class="ticker-badge large {{SENTIMENT}}">{{TICKER}}</span>
-          {{SENTIMENT_BADGE}}
+          <span class="ticker-badge">{{TICKER}}</span>
         </div>
         <h1 class="article-title">{{TITLE}}</h1>
         {{SUBTITLE_HTML}}
@@ -258,6 +264,21 @@
         <p>— <strong>The Signal Editorial Team</strong></p>
         <p class="signoff-disclosure">This article is for informational purposes only and does not constitute investment advice. The Signal may hold positions in securities mentioned. Past performance is not indicative of future results. Always conduct your own research before making investment decisions.</p>
       </div>
+
+      <!-- ⚡ Ask Pulse — opens Pulse overlay with article context -->
+      <div class="pulse-divider"
+           data-article-title="{{TITLE}}"
+           data-article-slug="{{SLUG}}"
+           onclick="window.pulseOpenPanel ? pulseOpenPanel({title:'{{TITLE}}',slug:'{{SLUG}}'}) : (window.togglePulseOverlay ? togglePulseOverlay({title:'{{TITLE}}',slug:'{{SLUG}}'}) : null)">
+        <span></span>
+        <span class="pulse-divider-label">
+          <img src="/img/logo-hex.jpg" alt="Pulse" class="pulse-hex-thumb">
+          <span class="pulse-gradient">Ask Pulse</span>
+        </span>
+        <span></span>
+      </div>
+      <p class="pulse-divider-sub">Ask questions about this article with AI-powered research &amp; live web search</p>
+
     </div>
 
     <!-- Comments -->
@@ -294,7 +315,10 @@
           <a href="/sector/cyber">Cyber</a>
           <a href="/sector/space">Space</a>
           <a href="/sector/mega-cap">Mega-Cap</a>
+          <a href="/sector/quantum">Quantum</a>
           <a href="/sector/ai-power">AI Power</a>
+          <a href="/sector/fintech">FinTech</a>
+          <a href="/sector/etfs">ETFs</a>
         </div>
         <div class="footer-col">
           <h4>Features</h4>

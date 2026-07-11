@@ -27,10 +27,7 @@
       <% articles.forEach(function(a) { %>
         <a href="/article/<%= a.slug %>" class="article-card">
           <div class="card-top">
-            <span class="ticker-badge <%= a.sentiment || 'neutral' %>"><%= a.ticker %></span>
-            <span class="sentiment-label <%= a.sentiment || 'neutral' %>">
-              <%= a.sentiment === 'bullish' ? '▲ Bullish' : a.sentiment === 'bearish' ? '▼ Bearish' : '– Neutral' %>
-            </span>
+            <span class="ticker-badge"><%= a.ticker %></span>
           </div>
           <h3 class="card-title"><%= a.title %></h3>
           <p class="card-summary"><%= a.summary.length > 200 ? a.summary.slice(0, 200) + '…' : a.summary %></p>

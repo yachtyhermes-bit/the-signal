@@ -47,6 +47,9 @@ template = """<!DOCTYPE html>
 <a href="/sector/space" class="nav-link">Space</a>
 <a href="/sector/mega-cap" class="nav-link">Mega-Cap</a>
 <a href="/sector/quantum" class="nav-link">Quantum</a>
+<a href="/sector/ai-power" class="nav-link">AI Power</a>
+<a href="/sector/fintech" class="nav-link">FinTech</a>
+<a href="/sector/etfs" class="nav-link">ETFs</a>
 <a href="/hive" class="nav-link">Hive</a>
 </div>
 <div class="nav-actions">
@@ -62,12 +65,14 @@ template = """<!DOCTYPE html>
 <a href="/sector/space" class="mobile-nav-link">Space</a>
 <a href="/sector/mega-cap" class="mobile-nav-link">Mega-Cap</a>
 <a href="/sector/quantum" class="mobile-nav-link">Quantum</a>
+<a href="/sector/ai-power" class="mobile-nav-link">AI Power</a>
+<a href="/sector/fintech" class="mobile-nav-link">FinTech</a>
+<a href="/sector/etfs" class="mobile-nav-link">ETFs</a>
 <a href="/hive" class="mobile-nav-link">Hive</a>
 </div></div>
 <main class="main"><article class="article-page">
 <div class="article-breadcrumb"><a href="/">Home</a> / <a href="/sector/{sector}">{sector_label}</a> / {ticker}</div>
 <div class="article-ticker">{ticker}</div>
-<div class="article-sentiment">{sentiment_label}</div>
 <h1 class="article-title">{title}</h1>
 <p class="article-subtitle">{subtitle}</p>
 <div class="article-meta"><span class="article-date">{date}</span><span class="article-author">The Signal</span></div>
@@ -120,14 +125,9 @@ for a in articles:
     links_html += '</ul>'
     
     # Sector label
-    sector_map = {'ai': 'AI', 'cyber': 'Cyber', 'defense': 'Defense', 'space': 'Space', 'mega-cap': 'Mega-Cap', 'quantum': 'Quantum'}
+    sector_map = {'ai': 'AI', 'cyber': 'Cyber', 'defense': 'Defense', 'space': 'Space', 'mega-cap': 'Mega-Cap', 'quantum': 'Quantum', 'ai-power': 'AI Power', 'fintech': 'FinTech', 'etfs': 'ETFs', 'semiconductors': 'Semiconductors'}
     sector_label = sector_map.get(a.get('sector', ''), a.get('sector', ''))
-    
-    # Sentiment
-    sentiment = a.get('sentiment', 'neutral')
-    sentiment_map = {'bullish': '▲ Bullish', 'bearish': '▼ Bearish', 'neutral': '– Neutral'}
-    sentiment_label = sentiment_map.get(sentiment, sentiment)
-    
+
     # Date
     date_str = a.get('date', '')
     if date_str:
@@ -148,7 +148,6 @@ for a in articles:
         sector=a.get('sector', ''),
         sector_label=sector_label,
         ticker=a.get('ticker', ''),
-        sentiment_label=sentiment_label,
         date=date_str,
         image_html=image_html,
         body=body,

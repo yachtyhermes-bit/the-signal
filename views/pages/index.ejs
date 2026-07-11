@@ -49,6 +49,14 @@
     <a href="/sector/space" class="focus-item focus-space">Space</a>
     <span class="focus-divider">|</span>
     <a href="/sector/mega-cap" class="focus-item focus-mega">Mega-Cap</a>
+    <span class="focus-divider">|</span>
+    <a href="/sector/quantum" class="focus-item focus-quantum">Quantum</a>
+    <span class="focus-divider">|</span>
+    <a href="/sector/ai-power" class="focus-item focus-ai-power">AI Power</a>
+    <span class="focus-divider">|</span>
+    <a href="/sector/fintech" class="focus-item focus-fintech">FinTech</a>
+    <span class="focus-divider">|</span>
+    <a href="/sector/etfs" class="focus-item focus-etfs">ETFs</a>
   </div>
 
   <section class="feed">
@@ -70,10 +78,7 @@
         <div class="featured-content">
           <div class="featured-label">Featured Story</div>
           <div class="featured-ticker">
-            <span class="ticker-badge <%= featured.sentiment || 'neutral' %>"><%= featured.ticker %></span>
-            <span class="sentiment-label <%= featured.sentiment || 'neutral' %>">
-              <%= featured.sentiment === 'bullish' ? '▲ Bullish' : featured.sentiment === 'bearish' ? '▼ Bearish' : '– Neutral' %>
-            </span>
+            <span class="ticker-badge"><%= featured.ticker %></span>
           </div>
           <h3 class="featured-title"><%= featured.title %></h3>
           <p class="featured-summary"><%= featured.summary %></p>
@@ -129,10 +134,7 @@
             <% } %>
             <div class="card-body">
             <div class="card-top">
-              <span class="ticker-badge <%= a.sentiment || 'neutral' %>"><%= a.ticker %></span>
-              <span class="sentiment-label <%= a.sentiment || 'neutral' %>">
-                <%= a.sentiment === 'bullish' ? '▲ Bullish' : a.sentiment === 'bearish' ? '▼ Bearish' : '– Neutral' %>
-              </span>
+              <span class="ticker-badge"><%= a.ticker %></span>
             </div>
             <h3 class="card-title"><%= a.title %></h3>
             <p class="card-summary"><%= a.summary.length > 200 ? a.summary.slice(0, 200) + '…' : a.summary %></p>
@@ -161,10 +163,7 @@
           <% } %>
           <div class="card-body">
           <div class="card-top">
-            <span class="ticker-badge <%= a.sentiment || 'neutral' %>"><%= a.ticker %></span>
-            <span class="sentiment-label <%= a.sentiment || 'neutral' %>">
-              <%= a.sentiment === 'bullish' ? '▲ Bullish' : a.sentiment === 'bearish' ? '▼ Bearish' : '– Neutral' %>
-            </span>
+            <span class="ticker-badge"><%= a.ticker %></span>
           </div>
           <h3 class="card-title"><%= a.title %></h3>
           <p class="card-summary"><%= a.summary.length > 200 ? a.summary.slice(0, 200) + '…' : a.summary %></p>

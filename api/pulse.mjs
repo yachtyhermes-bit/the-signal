@@ -1,67 +1,22 @@
-// Pulse AI — serverless function for The Signal
-// Answers any question using Gemini's knowledge + article library as context.
-// Premium tier: Serper web search for real-time data (5/day/IP).
+// Pulse AI — Vercel serverless function for The Signal
+// Uses Google Gemini API directly with Google Search Grounding
+// for live web search answers on EVERY question — no tiers, no quotas.
+// Article index is inlined at build time by build.js (compact format).
 
-import fs from 'fs';
-import path from 'path';
+// ARTICLES_PLACEHOLDER — build.js replaces this with inline data
+const articles = [];
 
-const GEMINI_MODEL = 'google/gemini-2.5-flash';
-const OPENROUTER_URL = 'https://openrouter.ai/api/v1/chat/completions';
-const SERPER_URL = 'https://google.serper.dev/search';
+// ─── Config ───
+const GEMINI_MODEL = 'gemini-2.5-flash';
+const GEMINI_BASE = 'https://generativelanguage.googleapis.com/v1beta';
 
-function getOpenRouterKey() {
-  return process.env.OPENROUTER_API_KEY || '';
-}
-
-function getOpenRouterURL() {
-  return OPENROUTER_URL;
-}
-
-function getSerperKey() {
-  return process.env.SERPER_API_KEY || '';
-}
-
-const PREMIUM_LIMIT = 5;
-
-// Module-level caches — persist across warm Vercel invocations
+const CACHE_TTL = 30 * 60 * 1000;
+const CACHE_MAX = 100;
 const answerCache = new Map();
-const quotaMap = new Map(); // IP -> { count, date }
-
-function getDateStr() { return new Date().toISOString().slice(0, 10); }
-
-function getClientIP(req) {
-  return req.headers['x-forwarded-for']?.split(',')[0]?.trim()
-    || req.headers['x-real-ip']
-    || req.connection?.remoteAddress
-    || 'unknown';
-}
-
-function checkQuota(ip) {
-  const today = getDateStr();
-  const entry = quotaMap.get(ip);
-  if (!entry || entry.date !== today) {
-    quotaMap.set(ip, { count: 0, date: today });
-    return { remaining: PREMIUM_LIMIT, used: 0 };
-  }
-  return { remaining: PREMIUM_LIMIT - entry.count, used: entry.count };
-}
-
-function useQuota(ip) {
-  const today = getDateStr();
-  const entry = quotaMap.get(ip) || { count: 0, date: today };
-  entry.count++;
-  quotaMap.set(ip, entry);
-  return PREMIUM_LIMIT - entry.count;
-}
-
-// // /// /
 
 function getCacheKey(q) {
   return q.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s+/g, ' ').trim();
 }
-
-const CACHE_TTL = 30 * 60 * 1000;
-const CACHE_MAX = 100;
 
 function cacheGet(key) {
   const entry = answerCache.get(key);
@@ -81,212 +36,132 @@ function cacheSet(key, data) {
   answerCache.set(key, { ...data, ts: Date.now() });
 }
 
-// // /// /
-
-async function searchWeb(query) {
-  const serperKey = getSerperKey();
-  try {
-    const res = await fetch(SERPER_URL, {
-      method: 'POST',
-      headers: { 'X-API-KEY': serperKey, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ q: query })
-    });
-    if (!res.ok) return null;
-    const data = await res.json();
-    let results = [];
-    if (data.knowledgeGraph)
-      results.push(`[KG] ${data.knowledgeGraph.title}: ${data.knowledgeGraph.description}${data.knowledgeGraph.attributes ? '\n' + Object.entries(data.knowledgeGraph.attributes).map(([k,v]) => `${k}: ${v}`).join('\n') : ''}`);
-    if (data.organic)
-      for (const r of data.organic.slice(0, 5)) results.push(`[${r.title}](${r.link})\n${r.snippet}`);
-    if (data.answerBox)
-      results.unshift(`[Answer] ${data.answerBox.title}: ${data.answerBox.snippet}`);
-    if (data.topStories)
-      for (const s of data.topStories.slice(0, 3)) results.push(`[News] ${s.title} - ${s.source}${s.date ? ' ('+s.date+')' : ''}`);
-    return results.length ? results.join('\n\n') : null;
-  } catch (e) { return null; }
+// ─── Find sources from answer ───
+function findSources(answer) {
+  const answerLower = answer.toLowerCase();
+  const sources = [];
+  for (const a of articles) {
+    if (
+      (a.t && answerLower.includes(a.t.toLowerCase())) ||
+      (a.u && answerLower.includes(a.u.toLowerCase().slice(0, 30)))
+    ) {
+      if (!sources.find(s => s.t === a.t)) {
+        sources.push({ title: a.u, slug: a.s, ticker: a.t });
+        if (sources.length >= 4) break;
+      }
+    }
+  }
+  return sources;
 }
 
-async function callOpenRouter(messages, opts = {}) {
-  const key = getOpenRouterKey();
-  if (!key) throw new Error('403: No OPENROUTER_API_KEY configured');
-  const model = opts.model || GEMINI_MODEL;
+// ─── Build article context from index ───
+function buildArticleContext() {
+  const sectors = {};
+  for (const a of articles) {
+    const sector = a.c || 'other';
+    if (!sectors[sector]) sectors[sector] = [];
+    sectors[sector].push(a);
+  }
+  let ctx = '';
+  for (const [sector, arts] of Object.entries(sectors)) {
+    ctx += `\n[${sector.toUpperCase()}]\n`;
+    for (const a of arts.slice(0, 12)) {
+      ctx += `  [${a.t}] ${a.u} (${a.d})\n`;
+    }
+  }
+  return ctx.slice(0, 6000);
+}
+
+// ─── Gemini API call ───
+async function callGemini(systemPrompt, userQuestion) {
+  const key = process.env.GEMINI_API_KEY || '';
+  if (!key) throw new Error('403: No GEMINI_API_KEY configured.');
+
+  const url = `${GEMINI_BASE}/models/${GEMINI_MODEL}:generateContent?key=${key}`;
+
   const payload = {
-    model,
-    messages,
-    temperature: opts.temperature ?? 0.3,
-    max_tokens: opts.maxTokens ?? 1024
+    systemInstruction: { parts: [{ text: systemPrompt }] },
+    contents: [{ role: 'user', parts: [{ text: userQuestion }] }],
+    tools: [{ googleSearch: {} }],
+    generationConfig: { temperature: 0.3, maxOutputTokens: 2048 }
   };
-  const res = await fetch(getOpenRouterURL(), {
+
+  const res = await fetch(url, {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${key}`,
-      'HTTP-Referer': 'https://readthesignal.net',
-      'X-Title': 'The Signal Pulse'
-    },
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload)
   });
+
   if (!res.ok) {
     const err = await res.text();
     if (res.status === 429) throw new Error('RATE_LIMITED');
-    throw new Error(`${res.status}: ${err.slice(0,200)}`);
+    throw new Error(`${res.status}: ${err.slice(0, 200)}`);
   }
+
   const data = await res.json();
-  const text = data.choices?.[0]?.message?.content || '';
-  return text;
+  const text = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
+  const searched = data.candidates?.[0]?.groundingMetadata?.webSearchQueries?.length > 0;
+  return { text, searched };
 }
 
-// // /// /
-
-function loadArticles() {
-  const dir = path.join(process.cwd(), 'articles', 'posts');
-  const articles = [];
-  if (!fs.existsSync(dir)) return articles;
-  for (const f of fs.readdirSync(dir).filter(f => f.endsWith('.json'))) {
-    try {
-      const a = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
-      articles.push({ title: a.title, slug: a.slug, ticker: a.ticker, sector: a.sector, date: a.date || '', summary: a.summary || '' });
-    } catch(e) {}
-  }
-  return articles;
-}
-
-// // /// /
-
+// ─── Handler ───
 export default async function handler(req, res) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   if (req.method === 'OPTIONS') return res.status(200).end();
-
-  const ip = getClientIP(req);
-  console.log(`Pulse from ${ip}: "${req.body?.question?.slice(0,60)}..."`);
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
   try {
-    const { question } = req.body;
-    if (!question || question.trim().length < 3)
-      return res.status(400).json({ error: 'Ask a meaningful question.' });
+    const { question, articleContext: requestContext } = req.body;
+    if (!question || question.trim().length < 3) {
+      return res.status(200).json({ answer: 'Ask me anything about markets or stocks.', sources: [], searched: false });
+    }
 
     const cacheKey = getCacheKey(question);
     const cached = cacheGet(cacheKey);
     if (cached) return res.status(200).json(cached);
 
-    const articles = loadArticles();
-    const articleContext = articles.sort((a,b) => new Date(b.date)-new Date(a.date))
-      .filter(a => a.title && a.date)
-      .map(a => `[${a.ticker}] ${a.title} (${a.sector}, ${(a.date||'').slice(0,10)})\n${a.summary}`)
-      .join('\n---\n');
+    const articleContext = buildArticleContext();
+    const articleCount = articles.length;
 
-    // STEP 1: Answer using Gemini's knowledge + article context
-    const freePrompt = `You are Pulse, the AI assistant on The Signal (readthesignal.net) — a market intelligence site covering AI, defense, space, cybersecurity, and mega-cap stocks.
+    const systemPrompt = `You are Pulse, AI on The Signal (readthesignal.net) — market intelligence.
 
-TONE: Direct, punchy, conversational. Use **bold** for key numbers. Keep answers under 250 words. Be helpful about ANY topic — you're not limited to stocks.
+TONE: Direct, punchy. Bold key numbers. Under 300 words.
+
+CAPABILITIES:
+1. Google Search — live web search for prices, earnings, news.
+2. Article Library — Signal articles below. Use EXACT titles when referencing.
 
 RULES:
-- Answer the user's question directly using your knowledge. You can talk about anything.
-- If the question relates to stocks, companies, or markets, reference relevant Signal articles below as sources when applicable.
-- If you don't know something, say so honestly.
-- NEVER fabricate stock prices, earnings data, or financial figures — if you're unsure, say "check live data" instead of guessing.
+- Search the web for current data. If you do, end with "(via web)".
+- Reference Signal articles by EXACT title from the list below.
+- Our library has ${articleCount} articles. NEVER say we don't cover something without checking the list.
+- NEVER make up article titles or stock prices.
+${requestContext && requestContext.title ? `\nCURRENT ARTICLE CONTEXT:\nThis question is being asked from the article page for "${requestContext.title}".\nSlug: ${requestContext.slug}\nBody preview: ${(requestContext.bodyPreview || '').slice(0, 800)}\nUse this context to ground your answer in what the article covers.` : ''}
 
-The Signal's recent articles (for context, use when relevant):
-${articleContext.slice(0, 15000)}`;
-    // STEP 1: Answer using OpenRouter with article context
-    const freeMessages = [
-      { role: 'system', content: freePrompt },
-      { role: 'user', content: question }
-    ];
+Covered: NVDA, AMD, AVGO, MRVL, PLTR, CRWD, RKLB, RDW, LMT, RTX, GOOGL, META, MSFT, AMZN, TSLA, AAPL, PANW, and more.
 
-    let freeAnswer = '';
-    try {
-      freeAnswer = await callOpenRouter(freeMessages);
-    } catch (e) {
-      freeAnswer = '';
+Article library (${articleCount} articles):
+${articleContext}`;
+
+    const { text: answer, searched } = await callGemini(systemPrompt, question);
+
+    if (!answer) {
+      return res.status(200).json({ answer: "Couldn't find a good answer. Try rephrasing.", sources: [], searched: false });
     }
 
-    // Return free answer if we got one
-    if (freeAnswer) {
-      const sources = [];
-      for (const a of articles) {
-        if (freeAnswer.toLowerCase().includes(a.ticker?.toLowerCase()) && !sources.find(s => s.ticker === a.ticker)) {
-          sources.push({ title: a.title, slug: a.slug, ticker: a.ticker });
-          if (sources.length >= 3) break;
-        }
-      }
-      const result = { answer: freeAnswer, sources, tier: 'free' };
-      cacheSet(cacheKey, result);
-      return res.status(200).json(result);
-    }
-
-    // STEP 2: Needs premium (web search). Check quota.
-    const { remaining, used } = checkQuota(ip);
-
-    if (remaining <= 0) {
-      const covered = ['NVDA','AMD','AVGO','PLTR','RKLB','RDW','LMT','RTX','GOOGL','META','MSFT','AMZN','TSLA','CRWV','MRVL','CRWD','AXON'];
-      return res.status(200).json({
-        answer: `You've used all 5 premium web searches today. Premium gives me access to live prices, earnings, and news.\n\n**Free questions I can answer right now:**\nAsk me about any of our covered stocks: ${covered.slice(0,5).join(', ')} and more.\n\n*Your quota resets tomorrow.*`,
-        sources: [],
-        tier: 'free',
-        quota: { remaining: 0, used: PREMIUM_LIMIT }
-      });
-    }
-
-    // Use quota
-    const newRemaining = useQuota(ip);
-
-    // Fire Serper search
-    const webResults = await searchWeb(question);
-
-    const webSection = webResults
-      ? `Web Search Results (live data):\n${webResults}`
-      : 'Web search returned no results. Rely on the article library and your training data.';
-
-    const premiumPrompt = `You are Pulse, AI research assistant for The Signal (AI, defense, space, cyber stocks).
-
-TONE: Direct, punchy, data-driven. Use **bold** for key numbers. Keep answers under 300 words.
-
-You have LIVE WEB SEARCH RESULTS below. Use them for real-time data (prices, earnings, news).
-Also reference The Signal's article library when relevant.
-
-${webSection}
-
-The Signal articles:\n${articleContext.slice(0, 12000)}`;
-
-    const premiumMessages = [
-      { role: 'system', content: premiumPrompt },
-      { role: 'user', content: question }
-    ];
-
-    let answer = '';
-    try {
-      answer = await callOpenRouter(premiumMessages, { maxTokens: 2048, temperature: 0.3 });
-    } catch (e) {
-      answer = '';
-    }
-
-    const sources = [];
-    for (const a of articles) {
-      if (answer.includes(a.ticker) && !sources.find(s => s.ticker === a.ticker)) {
-        sources.push({ title: a.title, slug: a.slug, ticker: a.ticker });
-        if (sources.length >= 3) break;
-      }
-    }
-
-    const result = { answer, sources, tier: 'premium', quota: { remaining: newRemaining, used: used + 1 } };
+    const sources = findSources(answer);
+    const result = { answer, sources, searched };
     cacheSet(cacheKey, result);
     return res.status(200).json(result);
 
   } catch (error) {
-    const isRate = error.message === 'RATE_LIMITED';
     const errMsg = error.message || String(error);
-    console.error('Pulse error:', isRate ? 'RATE_LIMITED' : errMsg);
-    return res.status(200).json({
-      answer: isRate
-        ? "Rate limited. Give me a moment and try again."
-        : `I hit a processing issue. (${errMsg.slice(0, 80)})`,
-      sources: [],
-      tier: 'error'
-    });
+    console.error('Pulse error:', errMsg);
+    if (error.message === 'RATE_LIMITED') {
+      return res.status(200).json({ answer: 'Rate limited. Try again in a minute.', sources: [], searched: false });
+    }
+    return res.status(200).json({ answer: `Issue: ${errMsg.slice(0, 100)}`, sources: [], searched: false });
   }
 }
