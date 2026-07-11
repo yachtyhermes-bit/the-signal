@@ -1,8 +1,12 @@
-// Pulse AI Research Agent — Floating Chat Bubble + Homepage Inline Section
+// Pulse AI Research Agent — Floating Chat Bubble + Slide-in Overlay
 (function() {
   'use strict';
 
-  let pulseActive = false;
+  let overlayEl = null;
+  let backdropEl = null;
+  let overlayMessages = null;
+  let isOpen = false;
+  let currentArticleContext = null;
 
   function init() {
     // Inline Pulse section (homepage) — init separately from floating bubble
@@ -10,6 +14,8 @@
     if (pulseSection) {
       initInlinePulse(pulseSection);
     }
+    // Create the shared slide-in overlay
+    createOverlay();
     // Floating bubble — always on, every page
     initFloatingBubble();
   }
@@ -34,10 +40,150 @@
     });
   }
 
+  // ============== SHARED OVERLAY (right-sliding panel) ==============
+  function createOverlay() {
+    // Backdrop
+    backdropEl = document.createElement('div');
+    backdropEl.className = 'pulse-overlay-bg';
+    backdropEl.addEventListener('click', closeOverlay);
+    document.body.appendChild(backdropEl);
+
+    // Panel
+    overlayEl = document.createElement('div');
+    overlayEl.className = 'pulse-overlay';
+    overlayEl.innerHTML =
+      '<div class="pulse-overlay-header">' +
+        '<div class="brand">' +
+          '<div class="logo-mark"><img src="/img/logo-hex.jpg" alt="Pulse" style="width:22px;height:22px;border-radius:4px"></div>' +
+          '<div><div class="brand-text">Ask <span class="pulse-gradient">Pulse</span></div><div class="sub">AI research &amp; live web search</div></div>' +
+        '</div>' +
+        '<button class="close-btn" id="overlayClose" aria-label="Close">&times;</button>' +
+      '</div>' +
+      '<div class="pulse-context-banner" id="contextBanner" style="display:none">' +
+        '<span>&#x1F4C4;</span>' +
+        '<span>Context:</span>' +
+        '<span class="badge" id="contextBadge">Article</span>' +
+      '</div>' +
+      '<div class="pulse-overlay-messages" id="overlayMessages">' +
+        '<div class="message assistant">' +
+          '<div class="avatar"><img src="/img/logo-hex.jpg" alt="P" style="width:16px;height:16px"></div>' +
+          '<div class="bubble">Hey, I\'m <strong>Pulse</strong>. Ask me about earnings, stock moves, contracts, or anything in our coverage. I search the web for real-time data.</div>' +
+        '</div>' +
+      '</div>' +
+      '<div class="suggestion-chips" id="suggestionChips">' +
+        '<span class="suggestion-chip" data-q="What are today&#39;s biggest movers?">&#x1F4C8; Biggest movers today</span>' +
+        '<span class="suggestion-chip" data-q="Recent earnings beats?">&#x1F4CA; Recent earnings beats</span>' +
+        '<span class="suggestion-chip" data-q="Top defense contracts this week">&#x1F6E1;&#xFE0F; Defense contracts this week</span>' +
+      '</div>' +
+      '<div class="pulse-overlay-input">' +
+        '<div class="input-wrap">' +
+          '<input type="text" placeholder="Ask Pulse anything\u2026" id="overlayInput">' +
+          '<button class="icon-btn mic" id="overlayMic" title="Voice input">&#x1F3A4;</button>' +
+        '</div>' +
+        '<button class="btn-send" id="overlaySend" title="Send">' +
+          '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>' +
+        '</button>' +
+      '</div>';
+
+    document.body.appendChild(overlayEl);
+
+    overlayMessages = overlayEl.querySelector('#overlayMessages');
+
+    // Wire up events
+    overlayEl.querySelector('#overlayClose').addEventListener('click', closeOverlay);
+
+    const input = overlayEl.querySelector('#overlayInput');
+    const sendBtn = overlayEl.querySelector('#overlaySend');
+
+    sendBtn.addEventListener('click', function() {
+      overlaySend(input.value);
+      input.value = '';
+    });
+
+    input.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        overlaySend(input.value);
+        input.value = '';
+      }
+    });
+
+    // Suggestion chips
+    overlayEl.querySelectorAll('.suggestion-chip').forEach(function(chip) {
+      chip.addEventListener('click', function() {
+        input.value = chip.getAttribute('data-q') || chip.textContent;
+        overlaySend(input.value);
+        input.value = '';
+      });
+    });
+
+    // Mic button (visual toggle only — native SpeechRecognition is experimental)
+    overlayEl.querySelector('#overlayMic').addEventListener('click', function() {
+      this.classList.toggle('active');
+    });
+
+    // Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && isOpen) closeOverlay();
+    });
+
+    // Keyboard shortcut
+    document.addEventListener('keydown', function(e) {
+      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
+        e.preventDefault();
+        toggleOverlay();
+      }
+    });
+  }
+
+  function openOverlay(context) {
+    if (!overlayEl || !backdropEl) return;
+    currentArticleContext = context || null;
+
+    // Show/hide context banner
+    var banner = overlayEl.querySelector('#contextBanner');
+    var badge = overlayEl.querySelector('#contextBadge');
+    if (context && context.title) {
+      banner.style.display = 'flex';
+      badge.textContent = context.title.slice(0, 50) + (context.title.length > 50 ? '\u2026' : '');
+    } else {
+      banner.style.display = 'none';
+    }
+
+    overlayEl.classList.add('open');
+    backdropEl.classList.add('visible');
+    isOpen = true;
+    document.body.classList.add('pulse-modal-open');
+
+    // Focus input
+    var input = overlayEl.querySelector('#overlayInput');
+    if (input) setTimeout(function() { input.focus(); }, 400);
+
+    // Scroll messages to bottom
+    if (overlayMessages) setTimeout(function() {
+      overlayMessages.scrollTop = overlayMessages.scrollHeight;
+    }, 100);
+  }
+
+  function closeOverlay() {
+    if (!overlayEl || !backdropEl) return;
+    overlayEl.classList.remove('open');
+    backdropEl.classList.remove('visible');
+    isOpen = false;
+    document.body.classList.remove('pulse-modal-open');
+  }
+
+  function toggleOverlay(context) {
+    if (isOpen) {
+      closeOverlay();
+    } else {
+      openOverlay(context);
+    }
+  }
+
   // ============== FLOATING BUBBLE ==============
   function initFloatingBubble() {
-    // Create bubble element
-    const bubble = document.createElement('div');
+    var bubble = document.createElement('div');
     bubble.className = 'pulse-float-bubble';
     bubble.setAttribute('aria-label', 'Ask Pulse AI');
     bubble.setAttribute('role', 'button');
@@ -45,105 +191,22 @@
     bubble.innerHTML = '<img src="/img/logo-hex.jpg" alt="Pulse" class="pulse-float-icon">';
     document.body.appendChild(bubble);
 
-    // Create modal overlay
-    const overlay = document.createElement('div');
-    overlay.className = 'pulse-float-overlay';
-    overlay.innerHTML = `
-      <div class="pulse-float-modal">
-        <div class="pulse-float-header">
-          <img src="/img/logo-hex.jpg" alt="Pulse" class="pulse-float-avatar">
-          <div class="pulse-float-header-text">
-            <div class="pulse-float-name">Ask <span class="pulse-gradient">Pulse</span></div>
-            <div class="pulse-float-sub">Free daily queries: <span id="pulseQuotaBadge" class="pulse-quota-badge">5 premium</span></div>
-          </div>
-          <button class="pulse-float-close" aria-label="Close">&times;</button>
-        </div>
-        <div class="pulse-float-messages" id="pulseFloatMessages">
-          <div class="pulse-message pulse-message-bot">
-            <img src="/img/logo-hex.jpg" alt="Pulse" class="pulse-message-avatar">
-            <div class="pulse-bubble">Hey, I'm <strong>Pulse</strong>. Find me on any page — ask about earnings, stock moves, contracts, or anything in our coverage universe. I search the web for real-time data.</div>
-          </div>
-        </div>
-        <div class="pulse-float-input-area">
-          <input type="text" class="pulse-input pulse-float-input" id="pulseFloatInput" placeholder="e.g. What were Nvidia's latest earnings?">
-          <button class="pulse-send pulse-float-send" id="pulseFloatSend" aria-label="Send">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="22" y1="2" x2="11" y2="13"></line>
-              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-            </svg>
-          </button>
-        </div>
-      </div>
-    `;
-    document.body.appendChild(overlay);
-
-    // Toggle modal on bubble click
-    let modalOpen = false;
     bubble.addEventListener('click', function() {
-      modalOpen = !modalOpen;
-      overlay.classList.toggle('pulse-float-open', modalOpen);
-      document.body.classList.toggle('pulse-modal-open', modalOpen);
-      if (modalOpen) {
-        const input = overlay.querySelector('.pulse-float-input');
-        if (input) setTimeout(function() { input.focus(); }, 300);
-      }
+      toggleOverlay(currentArticleContext);
     });
 
-    // Close button
-    const closeBtn = overlay.querySelector('.pulse-float-close');
-    if (closeBtn) {
-      closeBtn.addEventListener('click', function() {
-        modalOpen = false;
-        overlay.classList.remove('pulse-float-open');
-        document.body.classList.remove('pulse-modal-open');
-      });
-    }
-
-    // Close on backdrop click
-    overlay.addEventListener('click', function(e) {
-      if (e.target === overlay) {
-        modalOpen = false;
-        overlay.classList.remove('pulse-float-open');
-        document.body.classList.remove('pulse-modal-open');
-      }
+    // Hide bubble when overlay is open
+    var obs = new MutationObserver(function() {
+      bubble.style.display = isOpen ? 'none' : '';
     });
-
-    // Send / Enter for float modal
-    const floatInput = overlay.querySelector('.pulse-float-input');
-    const floatSend = overlay.querySelector('.pulse-float-send');
-    const floatMessages = overlay.querySelector('.pulse-float-messages');
-
-    if (floatSend && floatInput) {
-      floatSend.addEventListener('click', function() {
-        askPulse(floatInput.value, floatMessages);
-        floatInput.value = '';
-      });
-      floatInput.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter' && !e.shiftKey) {
-          e.preventDefault();
-          askPulse(floatInput.value, floatMessages);
-          floatInput.value = '';
-        }
-      });
-    }
-
-    // Keyboard shortcut: Ctrl+Shift+P to toggle
-    document.addEventListener('keydown', function(e) {
-      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
-        e.preventDefault();
-        bubble.click();
-      }
-    });
+    if (overlayEl) obs.observe(overlayEl, { attributes: true, attributeFilter: ['class'] });
 
     // Hide bubble on scroll near inline Pulse (to avoid overlap)
     if (document.querySelector('.pulse-section')) {
-      let hideTimer = null;
       window.addEventListener('scroll', function() {
-        const ps = document.querySelector('.pulse-section');
-        if (!ps || modalOpen) return;
-        const rect = ps.getBoundingClientRect();
-        const viewportH = window.innerHeight;
-        // Pulse section is visible — hide bubble
+        if (!document.querySelector('.pulse-section') || isOpen) return;
+        var rect = document.querySelector('.pulse-section').getBoundingClientRect();
+        var viewportH = window.innerHeight;
         if (rect.top < viewportH - 100 && rect.bottom > 100) {
           bubble.classList.add('pulse-float-hidden');
         } else {
@@ -153,43 +216,136 @@
     }
   }
 
-  // ============== API CALL ==============
+  // ============== PUBLIC API (for article pulse-divider) ==============
+  window.pulseOpenPanel = function(context) {
+    openOverlay(context);
+  };
+
+  window.togglePulseOverlay = function(context) {
+    toggleOverlay(context);
+  };
+
+  // ============== OVERLAY SEND ==============
+  function overlaySend(question) {
+    if (!question || !question.trim()) return;
+    if (!overlayMessages) return;
+
+    var input = overlayEl.querySelector('#overlayInput');
+    var sendBtn = overlayEl.querySelector('#overlaySend');
+
+    if (input) input.disabled = true;
+    if (sendBtn) sendBtn.disabled = true;
+
+    // Add user message
+    addOverlayMessage(question, true);
+
+    // Show loading
+    var loadingDiv = document.createElement('div');
+    loadingDiv.className = 'message assistant';
+    loadingDiv.innerHTML = '<div class="avatar"><img src="/img/logo-hex.jpg" alt="P" style="width:16px;height:16px"></div><div class="bubble"><span class="typing-indicator"><span></span><span></span><span></span></span></div>';
+    overlayMessages.appendChild(loadingDiv);
+    overlayMessages.scrollTop = overlayMessages.scrollHeight;
+
+    // Build body with optional article context
+    var body = { question: question };
+    if (currentArticleContext) {
+      body.context = currentArticleContext;
+    }
+
+    fetch('/api/pulse/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body)
+    })
+    .then(function(res) { return res.json(); })
+    .then(function(data) {
+      loadingDiv.remove();
+      if (data.answer) {
+        addOverlayMessage(data.answer, false);
+        // Update quota badge
+        var badge = document.querySelector('.pulse-float-sub #pulseQuotaBadge');
+        if (!badge) badge = document.getElementById('pulseQuotaBadge');
+        if (badge && data.quota) {
+          badge.textContent = data.quota.remaining + ' premium';
+          badge.className = 'pulse-quota-badge ' + (data.quota.remaining > 0 ? 'has' : 'empty');
+        }
+        if (badge && data.tier === 'free' && !data.quota) {
+          badge.textContent = 'free';
+          badge.className = 'pulse-quota-badge free';
+        }
+        // Sources
+        if (data.sources && data.sources.length > 0) {
+          var sourcesDiv = document.createElement('div');
+          sourcesDiv.className = 'pulse-sources';
+          var sourcesHtml = '<div class="pulse-sources-title">Sources:</div>';
+          for (var si = 0; si < data.sources.length; si++) {
+            sourcesHtml += '<a href="/article/' + data.sources[si].slug + '" class="pulse-source-link">' +
+              escapeHtml(data.sources[si].ticker) + ' &mdash; ' + escapeHtml(data.sources[si].title.slice(0, 60)) + '</a>';
+          }
+          sourcesDiv.innerHTML = sourcesHtml;
+          overlayMessages.appendChild(sourcesDiv);
+          overlayMessages.scrollTop = overlayMessages.scrollHeight;
+        }
+      } else {
+        addOverlayMessage('Sorry, I ran into an issue. Try rephrasing your question.', false);
+      }
+    })
+    .catch(function() {
+      loadingDiv.remove();
+      addOverlayMessage('Connection issue. Please try again.', false);
+    })
+    .finally(function() {
+      if (input) input.disabled = false;
+      if (sendBtn) sendBtn.disabled = false;
+      if (input) input.focus();
+    });
+  }
+
+  function addOverlayMessage(text, isUser) {
+    if (!overlayMessages) return;
+    var div = document.createElement('div');
+    div.className = 'message ' + (isUser ? 'user' : 'assistant');
+    if (!isUser) {
+      div.innerHTML = '<div class="avatar"><img src="/img/logo-hex.jpg" alt="P" style="width:16px;height:16px"></div><div class="bubble">' + formatText(text) + '</div>';
+    } else {
+      div.innerHTML = '<div class="avatar" style="background:var(--gradient);color:#fff">U</div><div class="bubble">' + escapeHtml(text) + '</div>';
+    }
+    overlayMessages.appendChild(div);
+    overlayMessages.scrollTop = overlayMessages.scrollHeight;
+  }
+
+  // ============== API CALL (for inline pulse) ==============
   async function askPulse(question, messagesEl) {
     if (!question.trim()) return;
     if (!messagesEl) return;
 
-    // Find input/send within the same container
-    const container = messagesEl.closest('.pulse-float-modal, .pulse-chat, .pulse-section');
-    const inputEl = container ? container.querySelector('.pulse-input') : null;
-    const sendBtn = container ? container.querySelector('.pulse-send') : null;
+    var container = messagesEl.closest('.pulse-float-modal, .pulse-chat, .pulse-section');
+    var inputEl = container ? container.querySelector('.pulse-input') : null;
+    var sendBtn = container ? container.querySelector('.pulse-send') : null;
 
     if (inputEl) inputEl.disabled = true;
     if (sendBtn) sendBtn.disabled = true;
 
-    // Add user message
     addMessage(question, true, messagesEl);
 
-    // Show loading
-    const loadingDiv = document.createElement('div');
+    var loadingDiv = document.createElement('div');
     loadingDiv.className = 'pulse-message pulse-message-bot';
     loadingDiv.innerHTML = '<img src="/img/logo-hex.jpg" alt="Pulse" class="pulse-message-avatar"><div class="pulse-bubble pulse-loading"><span class="pulse-dot"></span><span class="pulse-dot"></span><span class="pulse-dot"></span></div>';
     messagesEl.appendChild(loadingDiv);
     messagesEl.scrollTop = messagesEl.scrollHeight;
 
     try {
-      const res = await fetch('/api/pulse/', {
+      var res = await fetch('/api/pulse/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ question })
+        body: JSON.stringify({ question: question, context: currentArticleContext })
       });
-      const data = await res.json();
+      var data = await res.json();
 
       loadingDiv.remove();
 
       if (data.answer) {
         addMessage(data.answer, false, messagesEl);
-
-        // Update quota badge
         var badge = document.getElementById('pulseQuotaBadge');
         if (badge && data.quota) {
           badge.textContent = data.quota.remaining + ' premium';
@@ -201,7 +357,7 @@
         }
 
         if (data.sources && data.sources.length > 0) {
-          const sourcesDiv = document.createElement('div');
+          var sourcesDiv = document.createElement('div');
           sourcesDiv.className = 'pulse-sources';
           sourcesDiv.innerHTML = '<div class="pulse-sources-title">Sources:</div>' +
             data.sources.map(function(s) {
@@ -225,7 +381,7 @@
 
   // ============== HELPERS ==============
   function addMessage(text, isUser, messagesEl) {
-    const div = document.createElement('div');
+    var div = document.createElement('div');
     div.className = 'pulse-message ' + (isUser ? 'pulse-message-user' : 'pulse-message-bot');
     if (!isUser) {
       div.innerHTML = '<img src="/img/logo-hex.jpg" alt="Pulse" class="pulse-message-avatar"><div class="pulse-bubble">' + formatText(text) + '</div>';
