@@ -813,3 +813,27 @@ if (fs.existsSync(svsSrc)) {
   fs.writeFileSync(svsDst, svsContent);
   console.log(`  ✅ Signal vs. Street page synced from project root`);
 }
+
+// ─── Pricing page ───
+const pricingSrc = path.join(ROOT, 'pricing', 'index.html');
+const pricingDst = path.join(DST, 'pricing', 'index.html');
+if (fs.existsSync(pricingSrc)) {
+  fs.mkdirSync(path.dirname(pricingDst), { recursive: true });
+  fs.copyFileSync(pricingSrc, pricingDst);
+  let pricingContent = fs.readFileSync(pricingDst, 'utf8');
+  pricingContent = pricingContent.replace(/"\/img\//g, '"' + R2_IMG_BASE + '/img/');
+  fs.writeFileSync(pricingDst, pricingContent);
+  console.log(`  ✅ Pricing page synced`);
+}
+
+// ─── Account page ───
+const accountSrc = path.join(ROOT, 'account', 'index.html');
+const accountDst = path.join(DST, 'account', 'index.html');
+if (fs.existsSync(accountSrc)) {
+  fs.mkdirSync(path.dirname(accountDst), { recursive: true });
+  fs.copyFileSync(accountSrc, accountDst);
+  let accountContent = fs.readFileSync(accountDst, 'utf8');
+  accountContent = accountContent.replace(/"\/img\//g, '"' + R2_IMG_BASE + '/img/');
+  fs.writeFileSync(accountDst, accountContent);
+  console.log(`  ✅ Account page synced`);
+}

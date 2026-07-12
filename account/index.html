@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08080e">
+  <link rel="canonical" href="https://readthesignal.net/account">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/apple-touch-icon.png">
+  <meta name="robots" content="max-image-preview:large">
+  <meta name="description" content="Manage your Signal account and subscription.">
+  <meta property="og:title" content="Account — The Signal">
+  <meta property="og:description" content="Manage your subscription and account settings.">
+  <meta property="og:url" content="https://readthesignal.net/account">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Oxanium:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css?v=15">
+  <link rel="stylesheet" href="/css/pulse-badge.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-98KDVDFBCW"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-98KDVDFBCW');</script>
+  <script src="/js/prices.js" defer></script>
+  <script src="/js/search.js" defer></script>
+  <script src="/js/auth.js?v=2" defer></script>
+  <script src="/js/theme.js?v=2" defer></script>
+  <title>Account — The Signal</title>
+  <style>
+    .account-page { max-width:700px; margin:0 auto; padding:2rem 1.5rem 4rem; color:#e0e0e0; }
+    .account-hero { text-align:center; margin:2rem 0 3rem; }
+    .account-hero h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,5vw,3rem); background:linear-gradient(135deg,#6366f1,#06b6d4); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin:0 0 .5rem; }
+    .account-card { background:linear-gradient(145deg,#12121a,#1a1a2e); border:1px solid #2a2a3e; border-radius:16px; padding:2rem; margin-bottom:2rem; }
+    .account-card h2 { font-family:'Oxanium',sans-serif; font-size:1.3rem; font-weight:700; color:#fff; margin:0 0 1.5rem; }
+    .account-info { margin-bottom:1rem; }
+    .account-info label { display:block; font-size:.85rem; color:#94a3b8; margin-bottom:.3rem; }
+    .account-info .value { font-size:1rem; color:#e0e0e0; font-weight:500; }
+    .premium-status { display:flex; align-items:center; gap:.5rem; margin-bottom:1rem; }
+    .premium-badge { background:linear-gradient(135deg,#6366f1,#818cf8); color:#fff; font-size:.75rem; font-weight:700; padding:4px 12px; border-radius:12px; letter-spacing:.05em; }
+    .free-badge { background:#2a2a3e; color:#94a3b8; font-size:.75rem; font-weight:700; padding:4px 12px; border-radius:12px; letter-spacing:.05em; }
+    .btn-manage { display:block; width:100%; padding:14px; border:none; border-radius:10px; font-family:'Oxanium',sans-serif; font-size:1rem; font-weight:700; cursor:pointer; transition:all .2s; text-align:center; text-decoration:none; }
+    .btn-manage.primary { background:linear-gradient(135deg,#6366f1,#818cf8); color:#fff; }
+    .btn-manage.primary:hover { filter:brightness(1.1); }
+    .btn-manage.secondary { background:#2a2a3e; color:#94a3b8; margin-top:.5rem; }
+    .btn-manage.secondary:hover { background:#3a3a4e; }
+    .empty-state { text-align:center; padding:3rem 0; color:#94a3b8; }
+    .empty-state p { margin:1rem 0; }
+    @media (max-width:640px) { .account-page { padding:1rem; } }
+  </style>
+<link rel="stylesheet" href="/css/nav.css">
+</head>
+<body>
+  <main class="account-page">
+    <div class="account-hero">
+      <h1>Your Account</h1>
+    </div>
+
+    <div id="account-content">
+      <div class="empty-state">
+        <p>Loading your account...</p>
+      </div>
+    </div>
+  </main>
+
+  <script>
+ (function() {
+  function getUser() {
+    try { return JSON.parse(localStorage.getItem('hive_user') || 'null'); }
+    catch(e) { return null; }
+  }
+
+  function getToken() {
+    return localStorage.getItem('hive_token') || '';
+  }
+
+  async function loadAccount() {
+    const user = getUser();
+    const token = getToken();
+
+    if (!user || !token) {
+      document.getElementById('account-content').innerHTML = `
+        <div class="empty-state">
+          <p>Please sign in to view your account.</p>
+          <a href="/" class="btn-manage primary">Back to Home</a>
+        </div>
+      `;
+      return;
+    }
+
+    // Fetch account info from Hive API
+    try {
+      const resp = await fetch(`/api/hive?action=me&token=${encodeURIComponent(token)}`);
+      const data = await resp.json();
+
+      if (!data.authenticated) {
+        document.getElementById('account-content').innerHTML = `
+          <div class="empty-state">
+            <p>Session expired. Please sign in again.</p>
+            <a href="/" class="btn-manage primary">Back to Home</a>
+          </div>
+        `;
+        return;
+      }
+
+      const isPremium = data.isPremium;
+      const plan = data.premiumPlan || 'free';
+
+      let html = `
+        <div class="account-card">
+          <h2>Profile</h2>
+          <div class="account-info">
+            <label>Username</label>
+            <div class="value">${data.username || 'N/A'}</div>
+          </div>
+          <div class="account-info">
+            <label>Display Name</label>
+            <div class="value">${data.displayName || 'N/A'}</div>
+          </div>
+          <div class="account-info">
+            <label>Email</label>
+            <div class="value">${data.email || 'Not set'}</div>
+          </div>
+        </div>
+
+        <div class="account-card">
+          <h2>Subscription</h2>
+          <div class="premium-status">
+            <span style="font-size:.9rem; color:#94a3b8;">Status:</span>
+            ${isPremium
+              ? `<span class="premium-badge">${plan.toUpperCase()} MEMBER</span>`
+              : `<span class="free-badge">FREE TIER</span>`
+            }
+          </div>
+      `;
+
+      if (isPremium) {
+        html += `
+          <div class="account-info">
+            <label>Plan</label>
+            <div class="value">${plan === 'premium' ? 'Premium' : plan === 'pro' ? 'Pro' : 'Premium'} — $15.99/month</div>
+          </div>
+          ${data.premiumSince ? `<div class="account-info"><label>Member Since</label><div class="value">${new Date(data.premiumSince).toLocaleDateString()}</div></div>` : ''}
+          <button class="btn-manage primary" onclick="manageBilling('${token}')">Manage Billing</button>
+          <button class="btn-manage secondary" onclick="window.location.href='/pricing'">Change Plan</button>
+        `;
+      } else {
+        html += `
+          <div style="margin-top:1.5rem;">
+            <p style="color:#94a3b8; font-size:.9rem; margin-bottom:1rem;">
+              Upgrade to Premium for unlimited AI queries, full community portfolio access, and more.
+            </p>
+            <a href="/pricing" class="btn-manage primary">Upgrade to Premium</a>
+          </div>
+        `;
+      }
+
+      html += `</div>`;
+
+      document.getElementById('account-content').innerHTML = html;
+
+    } catch (err) {
+      console.error('Account load error:', err);
+      document.getElementById('account-content').innerHTML = `
+        <div class="empty-state">
+          <p>Could not load account information. Please try again.</p>
+          <a href="/" class="btn-manage primary">Back to Home</a>
+        </div>
+      `;
+    }
+  }
+
+  window.manageBilling = async function(token) {
+    try {
+      const resp = await fetch('/api/portal-session', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ token })
+      });
+      const data = await resp.json();
+      if (data.url) {
+        window.location.href = data.url;
+      } else {
+        alert(data.error || 'Could not create billing portal session.');
+      }
+    } catch (err) {
+      console.error('Billing portal error:', err);
+      alert('Something went wrong. Please try again.');
+    }
+  };
+
+  loadAccount();
+})();
+  </script>
+</body>
+</html>

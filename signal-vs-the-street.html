@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#08080e">
   <title>Signal vs. The Street — The Signal</title>
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/apple-touch-icon.png">
   <meta name="robots" content="max-image-preview:large">
 
   <!-- Font Stack -->
@@ -183,7 +183,7 @@
       text-align: center;
       overflow: hidden;
       background:
-        url("/img/svs-hero-bg.jpg") center 30% / cover no-repeat;
+        url("https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/svs-hero-bg.jpg") center 30% / cover no-repeat;
     }
     .hero::before {
       content: '';
@@ -722,7 +722,7 @@
        ════════════════════════════════════════════════ -->
   <nav class="nav">
     <div class="nav-inner">
-      <a href="/" class="logo"><img src="/img/logo-hex.jpg" alt="The Signal" class="logo-img"><span class="logo-text"><span class="logo-the">THE</span> <strong>SIGNAL</strong></span></a>
+      <a href="/" class="logo"><img src="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/logo-hex.jpg" alt="The Signal" class="logo-img"><span class="logo-text"><span class="logo-the">THE</span> <strong>SIGNAL</strong></span></a>
       <div class="nav-actions">
         <button class="nav-btn search-btn" id="searchToggle" aria-label="Search">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -1003,11 +1003,32 @@
        ════════════════════════════════════════════════ -->
   <footer class="footer">
     <div class="footer-inner">
-      <div class="footer-brand"><img src="/img/logo-hex.jpg" alt="The Signal" class="footer-logo"> THE <strong>SIGNAL</strong></div>
+      <div class="footer-brand"><img src="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/logo-hex.jpg" alt="The Signal" class="footer-logo"> THE <strong>SIGNAL</strong></div>
       <div class="footer-tag">The Signal Editorial Team &middot; readthesignal.net</div>
       <div class="footer-copy">&copy; 2026 The Signal &mdash; Market Intelligence. Data from public sources.</div>
     </div>
   </footer>
+
+  <!-- ════════════════════════════════════════════════
+       CHECK PREMIUM STATUS
+       ════════════════════════════════════════════════ -->
+  <script>
+    (function() {
+      var token = localStorage.getItem('hive_token');
+      if (token) {
+        fetch('/api/hive?action=me&token=' + encodeURIComponent(token))
+          .then(function(r) { return r.json(); })
+          .then(function(data) {
+            if (data.authenticated && data.isPremium) {
+              window.isPremiumUser = true;
+              // Re-render holdings if already loaded
+              if (typeof renderHoldings === 'function') renderHoldings();
+            }
+          })
+          .catch(function() {});
+      }
+    })();
+  </script>
 
   <!-- ════════════════════════════════════════════════
        SCROLL REVEAL + DYNAMIC PORTFOLIO DATA

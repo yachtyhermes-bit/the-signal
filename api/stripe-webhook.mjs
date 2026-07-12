@@ -2,6 +2,8 @@
 // Handles: checkout.session.completed, customer.subscription.deleted
 // Persists premium status via Hive API (set-premium / cancel-premium actions)
 
+const SK = process.env.STRIPE_SECRET_KEY || '';
+const WH_SECRET = process.env.STRIPE_WEBHOOK_SECRET || '';
 const ADMIN_KEY = process.env.ADMIN_KEY || '';
 const HIVE_API = 'https://readthesignal.net/api/hive';
 
@@ -17,8 +19,20 @@ export default async function handler(req, res) {
   }
 
   try {
-    // Parse the event (Vercel handles body parsing)
-    const event = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
+    // Parse the event
+    let event;
+    if (WH_SECRET && req.headers['stripe-signature']) {
+      // Verify signature
+      const stripe = await import('stripe');
+      const stripeClient = new stripe.default(SK);
+      const sig = req.headers['stripe-signature'];
+      // Get raw body for verification
+      const rawBody = typeof req.body === 'string' ? req.body : JSON.stringify(req.body);
+      event = stripeClient.webhooks.constructEvent(rawBody, sig, WH_SECRET);
+    } else {
+      // No webhook secret — parse event directly (for initial testing)
+      event = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
+    }
 
     console.log('Webhook event:', event.type);
 
