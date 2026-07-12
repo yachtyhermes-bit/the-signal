@@ -66,7 +66,10 @@
       '</div>' +
       '<div class="pulse-overlay-messages" id="overlayMessages">' +
         '<div class="message assistant">' +
-          '<div class="avatar"><img src="/img/logo-hex.jpg" alt="P" style="width:16px;height:16px"></div>' +
+          '<div class="pulse-assistant-header">' +
+            '<div class="pulse-brand-icon"><img src="/img/logo-hex.jpg" alt="" style="width:12px;height:12px;border-radius:3px"></div>' +
+            '<div class="pulse-brand-name">Ask <span class="pulse-gradient">Pulse</span></div>' +
+          '</div>' +
           '<div class="bubble">Hey, I\'m <strong>Pulse</strong>. Ask me about earnings, stock moves, contracts, or anything in our coverage. I search the web for real-time data.</div>' +
         '</div>' +
       '</div>' +
@@ -249,7 +252,7 @@
     // Build body with optional article context
     var body = { question: question };
     if (currentArticleContext) {
-      body.context = currentArticleContext;
+      body.articleContext = currentArticleContext;
     }
 
     fetch('/api/pulse/', {
@@ -261,7 +264,7 @@
     .then(function(data) {
       loadingDiv.remove();
       if (data.answer) {
-        addOverlayMessage(data.answer, false);
+        addOverlayMessageTyped(data.answer, false);
         // Update quota badge
         var badge = document.querySelector('.pulse-float-sub #pulseQuotaBadge');
         if (!badge) badge = document.getElementById('pulseQuotaBadge');
@@ -294,12 +297,12 @@
           overlayMessages.scrollTop = overlayMessages.scrollHeight;
         }
       } else {
-        addOverlayMessage('Sorry, I ran into an issue. Try rephrasing your question.', false);
+        addOverlayMessageTyped('Sorry, I ran into an issue. Try rephrasing your question.', false);
       }
     })
     .catch(function() {
       loadingDiv.remove();
-      addOverlayMessage('Connection issue. Please try again.', false);
+      addOverlayMessageTyped('Connection issue. Please try again.', false);
     })
     .finally(function() {
       if (input) input.disabled = false;
@@ -313,12 +316,64 @@
     var div = document.createElement('div');
     div.className = 'message ' + (isUser ? 'user' : 'assistant');
     if (!isUser) {
-      div.innerHTML = '<div class="avatar"><img src="/img/logo-hex.jpg" alt="P" style="width:16px;height:16px"></div><div class="bubble">' + formatText(text) + '</div>';
+      // Brand header (logo + "Pulse" label) above assistant response
+      var headerHtml = '<div class="pulse-assistant-header">' +
+        '<div class="pulse-brand-icon"><img src="/img/logo-hex.jpg" alt="" style="width:12px;height:12px;border-radius:3px"></div>' +
+        '<div class="pulse-brand-name">Ask <span class="pulse-gradient">Pulse</span></div>' +
+        '</div>';
+      div.innerHTML = headerHtml + '<div class="bubble">' + formatText(text) + '</div>';
     } else {
-      div.innerHTML = '<div class="avatar" style="background:var(--gradient);color:#fff">U</div><div class="bubble">' + escapeHtml(text) + '</div>';
+      div.innerHTML = '<div class="bubble">' + escapeHtml(text) + '</div>';
     }
     overlayMessages.appendChild(div);
     overlayMessages.scrollTop = overlayMessages.scrollHeight;
+  }
+
+  // Typing reveal effect — adds message then reveals text character by character
+  function addOverlayMessageTyped(text, isUser) {
+    if (!overlayMessages) return;
+    var div = document.createElement('div');
+    div.className = 'message assistant';
+    var headerHtml = '<div class="pulse-assistant-header">' +
+      '<div class="pulse-brand-icon"><img src="/img/logo-hex.jpg" alt="" style="width:12px;height:12px;border-radius:3px"></div>' +
+      '<div class="pulse-brand-name">Ask <span class="pulse-gradient">Pulse</span></div>' +
+      '</div>';
+    var bubbleEl = document.createElement('div');
+    bubbleEl.className = 'bubble';
+    div.innerHTML = headerHtml;
+    div.appendChild(bubbleEl);
+    overlayMessages.appendChild(div);
+
+    // Create cursor element
+    var cursor = document.createElement('span');
+    cursor.className = 'pulse-typing-cursor';
+    bubbleEl.appendChild(cursor);
+
+    overlayMessages.scrollTop = overlayMessages.scrollHeight;
+
+    // Animate reveal
+    var formatted = formatText(text);
+    // Strip HTML for char-by-char, then set final HTML
+    var plainText = text;
+    var i = 0;
+    var speed = 12; // ms per character
+    var chunkSize = 3; // chars per tick for speed
+
+    function typeNext() {
+      i += chunkSize;
+      if (i >= plainText.length) {
+        // Done — set final formatted HTML and remove cursor
+        bubbleEl.innerHTML = formatted;
+        return;
+      }
+      // Show partial text as plain (will be replaced with formatted at end)
+      var partial = formatText(plainText.slice(0, i));
+      bubbleEl.innerHTML = partial + '<span class="pulse-typing-cursor"></span>';
+      overlayMessages.scrollTop = overlayMessages.scrollHeight;
+      setTimeout(typeNext, speed);
+    }
+
+    setTimeout(typeNext, 100);
   }
 
   // ============== API CALL (for inline pulse) ==============
@@ -345,7 +400,7 @@
       var res = await fetch('/api/pulse/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ question: question, context: currentArticleContext })
+        body: JSON.stringify({ question: question, articleContext: currentArticleContext })
       });
       var data = await res.json();
 

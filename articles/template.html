@@ -10,7 +10,7 @@
   <meta name="robots" content="max-image-preview:large">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Oxanium:wght@400;500;600;700&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/main.css?v=19">
+  <link rel="stylesheet" href="/css/main.css?v=20">
   <link rel="stylesheet" href="/css/pulse-badge.css">
   <link rel="stylesheet" href="/css/tts.css">
   <link rel="stylesheet" href="/css/nav.css">
@@ -242,7 +242,7 @@
       <div class="pulse-divider"
            data-article-title="{{TITLE}}"
            data-article-slug="{{SLUG}}"
-           onclick="window.pulseOpenPanel ? pulseOpenPanel({title:'{{TITLE}}',slug:'{{SLUG}}'}) : (window.togglePulseOverlay ? togglePulseOverlay({title:'{{TITLE}}',slug:'{{SLUG}}'}) : null)"
+           onclick="window.pulseOpenPanel ? pulseOpenPanel({title:'{{TITLE}}',slug:'{{SLUG}}',bodyPreview:document.querySelector('.article-body') ? document.querySelector('.article-body').innerText.slice(0,800) : ''}) : (window.togglePulseOverlay ? togglePulseOverlay({title:'{{TITLE}}',slug:'{{SLUG}}',bodyPreview:document.querySelector('.article-body') ? document.querySelector('.article-body').innerText.slice(0,800) : ''}) : null)"
            style="margin:24px 0 16px">
         <span></span>
         <span class="pulse-divider-label">
