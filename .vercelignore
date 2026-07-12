@@ -1,4 +1,7 @@
 # Reduce Vercel upload size
+public_bak/
+public/
+cf-worker/
 dist/audio/
 dist/sector/
 dist_bloated/
