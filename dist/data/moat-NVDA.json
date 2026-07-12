@@ -1,0 +1,35 @@
+{
+  "symbol": "NVDA",
+  "industry": "Semiconductors",
+  "rating": "Wide",
+  "stars": 5,
+  "confidence": "High",
+  "sources": [
+    {
+      "name": "Switching Costs",
+      "score": 5,
+      "rationale": "dominant segment at 91.0% of revenue (deep ecosystem lock-in); operating margin 66% vs 25% industry (extreme pricing power); gross margins 74% indicate premium pricing / low substitution"
+    },
+    {
+      "name": "Intangible Assets",
+      "score": 4,
+      "rationale": "premium gross margins 74% reflect brand/IP power; large revenue base (253B) enables sustained IP investment"
+    },
+    {
+      "name": "Network Effect",
+      "score": 5,
+      "rationale": "platform-centric business (data center at 91.0%); explosive 85% revenue growth (flywheel spinning); high EPS growth 214% (operating leverage from scale)"
+    },
+    {
+      "name": "Cost Advantage",
+      "score": 5,
+      "rationale": "gross margins 74% well above 50% industry; operating margin 66% vs 25% (extreme efficiency); massive scale ($253B revenue) enables fixed-cost absorption"
+    },
+    {
+      "name": "Efficient Scale",
+      "score": 5,
+      "rationale": "Data Center at 91.0% share (near-monopoly position); premium 74% gross margins sustained (high barriers); $100B+ revenue scale creates massive entry barrier"
+    }
+  ],
+  "analysis": "Switching Costs and Intangible Assets and Network Effect create a durable competitive fortress. The company's moat is reinforced by multiple reinforcing factors, making it unlikely competitors can erode its position in the next decade."
+}

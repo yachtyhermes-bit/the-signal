@@ -1,0 +1,35 @@
+{
+  "symbol": "AMZN",
+  "industry": "Internet Retail",
+  "rating": "Wide",
+  "stars": 4,
+  "confidence": "High",
+  "sources": [
+    {
+      "name": "Switching Costs",
+      "score": 3,
+      "rationale": "moderate segment concentration at 50.0%"
+    },
+    {
+      "name": "Intangible Assets",
+      "score": 4,
+      "rationale": "large revenue base (743B) enables sustained IP investment"
+    },
+    {
+      "name": "Network Effect",
+      "score": 4,
+      "rationale": "high EPS growth 75% (operating leverage from scale)"
+    },
+    {
+      "name": "Cost Advantage",
+      "score": 5,
+      "rationale": "gross margins slightly above industry average; massive scale ($743B revenue) enables fixed-cost absorption"
+    },
+    {
+      "name": "Efficient Scale",
+      "score": 4,
+      "rationale": "majority revenue from one segment (50.0%); $100B+ revenue scale creates massive entry barrier"
+    }
+  ],
+  "analysis": "Intangible Assets and Network Effect and Cost Advantage create a durable competitive fortress. The company's moat is reinforced by multiple reinforcing factors, making it unlikely competitors can erode its position in the next decade."
+}

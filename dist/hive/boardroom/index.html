@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#13131a">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <title>The Hive — Simulated Trading Competition — The Signal</title>
+  <meta name="description" content="You read the signals. Now trade on them. Get $100K in paper capital, compete against the sharpest minds in the community, and prove your thesis across AI, defense, space, cyber, and quantum stocks.">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { background: #0d0d1a; }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: #0d0d1a;
+      color: rgba(255,255,255,0.98);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ===== DESIGN 1 — THE BOARDROOM ===== */
+    /* Ultra dark, gold accents, thin elegance, sharp corners — enhanced gold glow */
+
+    /* ---------- NAV ---------- */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(13,13,26,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(212,175,55,0.3);
+      box-shadow: 0 0 20px rgba(212,175,55,0.08), 0 0 60px rgba(212,175,55,0.03);
+    }
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .logo-img {
+      width: 24px; height: 24px;
+      border-radius: 2px;
+      object-fit: cover;
+    }
+    .logo-text {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.8);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+    .logo-text strong {
+      font-weight: 600;
+      color: rgba(255,255,255,0.95);
+    }
+    .nav-links { display: flex; gap: 2px; }
+    .nav-link {
+      padding: 6px 14px;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-link:hover { color: #D4AF37; }
+    .hamburger-btn { display: none; }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 56px; left: 0; right: 0;
+      background: rgba(5,5,5,0.98);
+      z-index: 999;
+      border-bottom: 1px solid rgba(212,175,55,0.08);
+    }
+    .mobile-menu.open { display: block; }
+    .mobile-menu-links {
+      display: flex;
+      flex-direction: column;
+      padding: 8px 24px 16px;
+    }
+    .mobile-nav-link {
+      padding: 10px 12px;
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .hero-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      opacity: 0.3;
+      z-index: 0;
+    }
+    .hero-video-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(19,19,26,0) 0%, rgba(19,19,26,0.2) 40%, rgba(19,19,26,0.6) 70%, #0d0d1a 100%);
+      z-index: 0;
+      pointer-events: none;
+    }
+    .hero-glow {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 700px; height: 700px;
+      background: radial-gradient(ellipse, rgba(212,175,55,0.15) 0%, rgba(212,175,55,0.06) 30%, transparent 70%);
+      z-index: 1;
+      pointer-events: none;
+      animation: goldPulse 4s ease-in-out infinite;
+    }
+    @keyframes goldPulse {
+      0%, 100% { opacity: 0.6; transform: translate(-50%, -50%) scale(1); }
+      50% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 680px;
+      padding: 120px 24px 80px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 18px;
+      border: 1px solid rgba(212,175,55,0.6);
+      background: rgba(212,175,55,0.15);
+      margin-bottom: 36px;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #D4AF37;
+      box-shadow: 0 0 20px rgba(212,175,55,0.08);
+    }
+    .badge-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: rgba(212,175,55,0.9);
+      box-shadow: 0 0 8px rgba(212,175,55,0.6);
+    }
+
+    .hero-brand {
+      font-family: 'Inter', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 12px;
+      text-transform: uppercase;
+      color: #D4AF37;
+      text-shadow: 0 0 40px rgba(212,175,55,0.4), 0 0 80px rgba(212,175,55,0.15);
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      font-size: clamp(38px, 6.5vw, 56px);
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+      margin-bottom: 20px;
+      color: rgba(255,255,255,1);
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: #D4AF37;
+      text-shadow: 0 0 30px rgba(212,175,55,0.35), 0 0 60px rgba(212,175,55,0.12);
+    }
+
+    .hero-sub {
+      font-size: clamp(14px, 1.6vw, 16px);
+      font-weight: 350;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.95);
+      max-width: 520px;
+      margin: 0 auto 36px;
+    }
+    .hero-sub strong {
+      color: rgba(255,255,255,0.98);
+      font-weight: 500;
+    }
+
+    .divider-line {
+      width: 40px;
+      height: 1.5px;
+      background: rgba(212,175,55,0.8);
+      box-shadow: 0 0 12px rgba(212,175,55,0.4), 0 0 24px rgba(212,175,55,0.15);
+      margin: 0 auto 36px;
+    }
+
+    .cta-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 34px;
+      border: none;
+      background: rgba(212,175,55,0.92);
+      color: #050505;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 0 30px rgba(212,175,55,0.25), 0 0 60px rgba(212,175,55,0.1);
+    }
+    .btn-primary::after {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      border-radius: 0;
+      background: linear-gradient(135deg, rgba(212,175,55,0), rgba(212,175,55,0.15), rgba(212,175,55,0));
+      background-size: 200% 100%;
+      animation: shimmer 3s ease-in-out infinite;
+      z-index: -1;
+    }
+    .btn-primary:hover {
+      background: rgba(212,175,55,1);
+      transform: translateY(-1px);
+      box-shadow: 0 0 40px rgba(212,175,55,0.4), 0 0 80px rgba(212,175,55,0.15);
+    }
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 34px;
+      border: 1px solid rgba(255,255,255,0.2);
+      background: transparent;
+      color: rgba(255,255,255,0.85);
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .btn-secondary:hover {
+      border-color: rgba(212,175,55,0.35);
+      color: rgba(255,255,255,0.92);
+    }
+
+    .stats-row {
+      display: flex;
+      justify-content: center;
+      gap: 56px;
+      margin-top: 60px;
+    }
+    .stat { text-align: center; }
+    .stat-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 22px;
+      font-weight: 600;
+      color: #D4AF37;
+      text-shadow: 0 0 20px rgba(212,175,55,0.4), 0 0 40px rgba(212,175,55,0.12);
+    }
+    .stat-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.85);
+      margin-top: 6px;
+    }
+
+    /* ---------- SCROLL INDICATOR ---------- */
+    /* ---------- ANIMATIONS ---------- */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+
+    .reveal {
+      opacity: 0; transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    .hero-enter { animation: fadeUp 0.8s ease forwards; }
+    .hero-enter:nth-child(1) { animation-delay: 0.1s; }
+    .hero-enter:nth-child(2) { animation-delay: 0.2s; }
+    .hero-enter:nth-child(3) { animation-delay: 0.35s; }
+    .hero-enter:nth-child(4) { animation-delay: 0.5s; }
+    .hero-enter:nth-child(5) { animation-delay: 0.65s; }
+
+    /* Podium glow + float */
+    .podium-card {
+      animation: float 4s ease-in-out infinite;
+    }
+    .podium-card:nth-child(2) { animation-delay: -1.3s; }
+    .podium-card:nth-child(3) { animation-delay: -2.6s; }
+    .podium-card.gold-card {
+      box-shadow: 0 0 20px rgba(212,175,55,0.12), 0 0 40px rgba(212,175,55,0.04);
+      transition: box-shadow 0.5s ease;
+    }
+    .podium-card.gold-card:hover {
+      box-shadow: 0 0 30px rgba(212,175,55,0.2), 0 0 60px rgba(212,175,55,0.08);
+    }
+
+    .scroll-indicator {
+      text-align: center;
+      padding: 10px 0 30px;
+    }
+    .scroll-indicator span {
+      font-size: 8px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      animation: fadeIn 2s ease 1s infinite alternate;
+    }
+
+    /* ---------- FEATURE CARDS ---------- */
+    .features {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 24px 60px;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: rgba(212,175,55,0.12);
+    }
+    @media (max-width: 900px) { .features-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 500px) { .features-grid { grid-template-columns: 1fr; } }
+
+    .feature-card {
+      background: #1a1a2e;
+      padding: 32px 24px;
+      text-align: center;
+      position: relative;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+    .feature-card:hover {
+      background: rgba(212,175,55,0.04);
+      border-color: rgba(212,175,55,0.2);
+      box-shadow: 0 0 30px rgba(212,175,55,0.06), inset 0 0 20px rgba(212,175,55,0.03);
+    }
+    .feature-card-icon {
+      font-size: 28px;
+      display: block;
+      margin-bottom: 12px;
+      opacity: 0.9;
+    }
+    .feature-card h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,1);
+      margin-bottom: 10px;
+    }
+    .feature-card p {
+      font-size: 13px;
+      font-weight: 350;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.9);
+    }
+    .feature-card .new-tag {
+      position: absolute;
+      top: 12px; left: 12px;
+      padding: 2px 8px;
+      border: 1px solid rgba(212,175,55,0.4);
+      background: rgba(212,175,55,0.1);
+      color: #D4AF37;
+      font-size: 8px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      box-shadow: 0 0 12px rgba(212,175,55,0.08);
+    }
+
+    /* ---------- SIGNAL BAR ---------- */
+    .signal-bar {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px 40px;
+    }
+    .signal-bar-inner {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      padding: 14px 24px;
+      border: 1px solid rgba(212,175,55,0.2);
+      box-shadow: 0 0 20px rgba(212,175,55,0.04);
+      flex-wrap: wrap;
+    }
+    .signal-bar-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 350;
+      color: rgba(255,255,255,0.9);
+      letter-spacing: 0.5px;
+    }
+    .signal-bar-item .icon { font-size: 14px; opacity: 0.9; }
+    .signal-bar-item .hl { color: #D4AF37; font-weight: 600; text-shadow: 0 0 8px rgba(212,175,55,0.2); }
+
+    /* ---------- LEADERBOARD ---------- */
+    .lb-section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+    .lb-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .lb-header-left h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 500;
+      font-size: 30px;
+      color: rgba(255,255,255,0.95);
+      letter-spacing: -0.5px;
+      text-shadow: 0 0 30px rgba(212,175,55,0.12);
+    }
+    .lb-header-left .sub {
+      font-size: 12px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.75);
+      margin-top: 2px;
+    }
+    .lb-header-right { text-align: right; }
+    .lb-header-right .total {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 26px;
+      font-weight: 500;
+      color: #D4AF37;
+      text-shadow: 0 0 20px rgba(212,175,55,0.3);
+    }
+    .lb-header-right .total-label {
+      font-size: 8px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* Pills */
+    .pills {
+      display: flex;
+      gap: 2px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+    .pill {
+      padding: 8px 20px;
+      font-size: 10px;
+      font-weight: 500;
+      font-family: inherit;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border: 1px solid rgba(255,255,255,0.15);
+      background: transparent;
+      color: rgba(255,255,255,0.7);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .pill:hover {
+      border-color: rgba(212,175,55,0.15);
+      color: rgba(255,255,255,0.7);
+    }
+    .pill.active {
+      border-color: rgba(212,175,55,0.5);
+      background: rgba(212,175,55,0.12);
+      color: #D4AF37;
+      box-shadow: 0 0 15px rgba(212,175,55,0.1);
+    }
+
+    /* Podium */
+    .podium {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr 1fr;
+      gap: 1px;
+      margin-bottom: 28px;
+      align-items: end;
+      background: rgba(212,175,55,0.12);
+    }
+    @media (max-width: 768px) {
+      .podium { grid-template-columns: 1fr; gap: 1px; }
+      .podium .gold-card { order: -1; }
+    }
+    .podium-card {
+      background: #1a1a2e;
+      padding: 24px 16px 20px;
+      text-align: center;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    .podium-card:hover {
+      background: rgba(212,175,55,0.02);
+    }
+    .podium-card.gold-card {
+      padding: 32px 16px 24px;
+      box-shadow: inset 0 1px 0 rgba(212,175,55,0.15), 0 0 40px rgba(212,175,55,0.15), 0 0 80px rgba(212,175,55,0.06);
+    }
+    .podium-card.gold-card:hover {
+      box-shadow: inset 0 1px 0 rgba(212,175,55,0.2), 0 0 50px rgba(212,175,55,0.25), 0 0 100px rgba(212,175,55,0.1);
+    }
+    .podium-rank {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+      color: rgba(255,255,255,0.7);
+    }
+    .podium-rank.gold { color: #D4AF37; text-shadow: 0 0 12px rgba(212,175,55,0.3); }
+    .podium-rank.silver { color: rgba(200,200,210,0.4); }
+    .podium-rank.bronze { color: rgba(180,83,9,0.4); }
+    .podium-avatar {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      margin: 8px auto 10px;
+      border: 1px solid rgba(255,255,255,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.5);
+      overflow: hidden;
+    }
+    .podium-card.gold-card .podium-avatar {
+      width: 60px; height: 60px;
+      border-color: rgba(212,175,55,0.25);
+      box-shadow: 0 0 20px rgba(212,175,55,0.15);
+    }
+    .podium-name {
+      font-size: 15px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.95);
+      margin-bottom: 2px;
+    }
+    .podium-card.gold-card .podium-name {
+      color: #D4AF37;
+      text-shadow: 0 0 20px rgba(212,175,55,0.3);
+    }
+    .podium-return {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 22px;
+      font-weight: 600;
+      margin: 6px 0;
+    }
+    .podium-return.positive { color: #22c55e; }
+    .podium-return.negative { color: #ef4444; }
+    .podium-value {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: rgba(255,255,255,0.7);
+    }
+    .podium-crown { font-size: 18px; display: block; margin-bottom: 2px; }
+
+    /* Table */
+    .table-wrap {
+      border: 1px solid rgba(212,175,55,0.15);
+      overflow: hidden;
+    }
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+    }
+    .table thead th {
+      padding: 12px 18px;
+      text-align: left;
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #D4AF37;
+      border-bottom: 1px solid rgba(212,175,55,0.2);
+      background: rgba(212,175,55,0.04);
+    }
+    .table tbody td {
+      padding: 10px 18px;
+      color: rgba(255,255,255,0.8);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .table tbody tr:hover { background: rgba(212,175,55,0.06); }
+
+    /* ---------- FOOTER ---------- */
+    .footer {
+      border-top: 1px solid rgba(212,175,55,0.2);
+      box-shadow: 0 -10px 40px rgba(212,175,55,0.04);
+      padding: 32px 24px;
+      text-align: center;
+    }
+    .footer-brand {
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 4px;
+    }
+    .footer-brand img {
+      width: 16px; height: 16px;
+      border-radius: 2px;
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+    .footer-copy {
+      font-size: 9px;
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* ---------- LOADING ---------- */
+    .loading-state {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 60px 20px;
+      color: rgba(255,255,255,0.7);
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger-btn {
+        display: flex; align-items: center; justify-content: center;
+        width: 36px; height: 36px; cursor: pointer;
+        position: relative;
+      }
+      .hamburger-line, .hamburger-line::before, .hamburger-line::after {
+        display: block;
+        width: 16px; height: 1px;
+        background: rgba(255,255,255,0.6);
+        border-radius: 0;
+        transition: 0.25s ease;
+        position: relative;
+      }
+      .hamburger-line::before, .hamburger-line::after {
+        content: '';
+        position: absolute; left: 0;
+      }
+      .hamburger-line::before { top: -5px; }
+      .hamburger-line::after { top: 5px; }
+      .mobile-menu.open + .hamburger-btn .hamburger-line {
+        background: transparent;
+      }
+      .hero-content { padding: 100px 20px 60px; }
+      .hero-brand { font-size: 18px; letter-spacing: 8px; }
+      .stats-row { gap: 24px; flex-wrap: wrap; }
+      .stat { min-width: 80px; }
+      .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+      .feature-card { padding: 24px 16px; }
+      .feature-card:active { background: rgba(212,175,55,0.08); border-color: rgba(212,175,55,0.3); }
+      .signal-bar-inner { gap: 16px; padding: 12px 16px; }
+      .signal-bar-item { font-size: 10px; }
+      .lb-header { flex-direction: column; align-items: flex-start; }
+      .lb-header-right { text-align: left; }
+      .pills { overflow-x: auto; flex-wrap: nowrap; gap: 4px; padding-bottom: 4px; }
+      .pill { flex-shrink: 0; }
+      .table-wrap { overflow-x: auto; }
+      .table { min-width: 600px; }
+      .footer { padding: 24px 16px; }
+    }
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 30px; }
+      .hero-sub { font-size: 13px; }
+      .hero-brand { font-size: 24px; letter-spacing: 8px; }
+      .stat-num { font-size: 18px; }
+      .features { padding: 24px 16px 40px; }
+      .lb-section { padding: 0 16px 60px; }
+      .podium-card { padding: 18px 12px 16px; }
+      .podium-card.gold-card { padding: 26px 12px 20px; }
+      .table thead th, .table tbody td { padding: 8px 12px; font-size: 11px; }
+    }
+  </style>
+<link rel="stylesheet" href="/css/nav.css">
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">
+        <img src="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/logo-hex.jpg" alt="The Signal" class="logo-img">
+        <span class="logo-text">THE <strong>SIGNAL</strong></span>
+      </a>
+      <div class="nav-links">
+        <a href="/sector/ai" class="nav-link">AI</a>
+        <a href="/sector/cyber" class="nav-link">Cyber</a>
+        <a href="/sector/defense" class="nav-link">Defense</a>
+        <a href="/sector/space" class="nav-link">Space</a>
+        <a href="/sector/mega-cap" class="nav-link">Mega-Cap</a>
+        <a href="/sector/quantum" class="nav-link">Quantum</a>
+      </div>
+      <div class="hamburger-btn" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
+        <span class="hamburger-line"></span>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-links">
+      <a href="/sector/ai" class="mobile-nav-link">AI</a>
+      <a href="/sector/cyber" class="mobile-nav-link">Cyber</a>
+      <a href="/sector/defense" class="mobile-nav-link">Defense</a>
+      <a href="/sector/space" class="mobile-nav-link">Space</a>
+      <a href="/sector/mega-cap" class="mobile-nav-link">Mega-Cap</a>
+      <a href="/sector/quantum" class="mobile-nav-link">Quantum</a>
+      <a href="/hive" class="mobile-nav-link">The Hive</a>
+    </div>
+  </div>
+
+  <!-- ===== MAIN ===== -->
+  <div style="padding-top: 56px;">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/hive-hero.mp4" type="video/mp4">
+      </video>
+      <div class="hero-video-overlay"></div>
+      <div class="hero-glow"></div>
+      <div class="hero-content">
+        <div class="hero-brand hero-enter">THE HIVE</div>
+        <div class="badge hero-enter">
+          <span class="badge-dot"></span>
+          Live Competition
+        </div>
+        <h1 class="hero-enter">Where the <em>Community</em><br>Beats the Market</h1>
+        <p class="hero-sub hero-enter">
+          You read the signals. Now trade on them. Get <strong>$100K in paper capital</strong>, compete against the sharpest minds in the community, and prove your thesis across AI, defense, space, cyber, and quantum.
+        </p>
+        <div class="divider-line hero-enter"></div>
+        <div class="cta-row hero-enter">
+          <button class="btn-primary" onclick="handleCTAClick()">⚡ Claim Your $100K Fund</button>
+          <a href="#leaderboard" class="btn-secondary">View Leaderboard</a>
+        </div>
+        <div class="stats-row hero-enter">
+          <div class="stat"><span class="stat-num">70+</span><span class="stat-label">Stocks</span></div>
+          <div class="stat"><span class="stat-num">6</span><span class="stat-label">Sectors</span></div>
+          <div class="stat"><span class="stat-num">$100K</span><span class="stat-label">Capital</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="scroll-indicator"><span>Scroll</span></div>
+
+    <!-- ===== FEATURES ===== -->
+    <div class="features reveal" id="featuresSection">
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="new-tag">New</div>
+          <span class="feature-card-icon">📊</span>
+          <h3>70+ Stocks</h3>
+          <p>Trade across 6 sectors — AI, defense, space, cyber, mega-cap, quantum</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-card-icon">🏆</span>
+          <h3>Real-Time Ranks</h3>
+          <p>Live leaderboard updates as you trade. See where you stack up instantly.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-card-icon">🧠</span>
+          <h3>Crowd Wisdom</h3>
+          <p>Signal Master aggregates the hive mind — see what the community buys.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-card-icon">🆓</span>
+          <h3>Free to Play</h3>
+          <p>$100K simulated capital — no risk, real competition, serious bragging rights.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SIGNAL BAR ===== -->
+    <div class="signal-bar reveal" id="signalBarSection">
+      <div class="signal-bar-inner">
+        <div class="signal-bar-item"><span class="icon">📊</span> Trade <span class="hl">70+ stocks</span> across 6 sectors</div>
+        <div class="signal-bar-item"><span class="icon">🏆</span> <span class="hl">Real-time</span> portfolio leaderboard</div>
+        <div class="signal-bar-item"><span class="icon">🔮</span> Signal Master <span class="hl">crowd wisdom</span> insights</div>
+        <div class="signal-bar-item"><span class="icon">🆓</span> Completely <span class="hl">free</span> to play</div>
+      </div>
+    </div>
+
+    <!-- ===== LEADERBOARD ===== -->
+    <section class="lb-section reveal" id="leaderboard">
+      <div class="lb-header">
+        <div class="lb-header-left">
+          <h2>Leaderboard</h2>
+          <div class="sub">Top traders ranked by portfolio return</div>
+        </div>
+      </div>
+
+      <div class="pills">
+        <button class="pill" data-period="weekly" onclick="switchPeriod('weekly')">Weekly Sprint</button>
+        <button class="pill active" data-period="monthly" onclick="switchPeriod('monthly')">30-Day Alpha</button>
+        <button class="pill" data-period="alltime" onclick="switchPeriod('alltime')">All-Time High</button>
+      </div>
+
+      <div id="hiveLeaderboardContent">
+        <div id="hivePodium" class="podium"></div>
+        <div id="hiveTableWrap" class="table-wrap">
+          <table class="table" id="hiveTable">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Trader</th>
+                <th>Return</th>
+                <th>Portfolio</th>
+                <th>Trades</th>
+              </tr>
+            </thead>
+            <tbody id="hiveTableBody"></tbody>
+          </table>
+        </div>
+        <div id="hiveLoading" class="loading-state">
+          <span>Loading leaderboard...</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="footer-brand"><img src="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/logo-hex.jpg" alt="The Signal"> THE SIGNAL</div>
+      <div class="footer-copy">© 2026 The Signal — Market Intelligence</div>
+    </footer>
+
+  </div>
+
+  <script>
+    function handleCTAClick() {
+      window.location.href = '/hive';
+    }
+
+    // ── LEADERBOARD ──
+    const lbCache = {};
+
+    function renderPodium(rows) {
+      const podium = document.getElementById('hivePodium');
+      if (!rows.length) { podium.innerHTML = '<div style="padding:40px;text-align:center;color:rgba(255,255,255,0.5);font-size:12px;letter-spacing:2px;text-transform:uppercase">No traders yet — be the first</div>'; return; }
+      const top3 = rows.slice(0, 3);
+      // Reorder for display: 2nd, 1st, 3rd
+      const order = top3.length >= 2 ? [top3[1], top3[0], top3[2]] : top3;
+      if (top3.length === 1) order[0] = top3[0];
+      const medals = ['', '🥇', '🥈', '🥉'];
+      const rankClasses = ['', 'gold', 'silver', 'bronze'];
+      podium.innerHTML = order.map((r, i) => {
+        const isFirst = r.rank === 1;
+        const medal = medals[r.rank] || '';
+        const rc = rankClasses[r.rank] || '';
+        const sign = r.return >= 0 ? '+' : '';
+        const avatar = r.displayName ? r.displayName.charAt(0).toUpperCase() : '?';
+        return `<div class="podium-card${isFirst ? ' gold-card' : ''}">
+          <div class="podium-rank ${rc}">${medal} ${r.displayName ? 'RANK' : ''} ${r.rank}<span class="podium-crown">${isFirst ? '👑' : ''}</span></div>
+          <div class="podium-avatar">${avatar}</div>
+          <div class="podium-name">${r.displayName || 'Anonymous'}</div>
+          <div class="podium-return ${r.return >= 0 ? 'positive' : 'negative'}">${sign}${r.return.toFixed(2)}%</div>
+          <div class="podium-value">$${r.value.toLocaleString('en-US', {minimumFractionDigits:2})}</div>
+        </div>`;
+      }).join('');
+    }
+
+    function renderTable(rows) {
+      const tbody = document.getElementById('hiveTableBody');
+      const remaining = rows.slice(3);
+      if (!remaining.length) { tbody.innerHTML = ''; return; }
+      tbody.innerHTML = remaining.map(r => {
+        const sign = r.return >= 0 ? '+' : '';
+        return `<tr>
+          <td style="font-weight:500">${r.rank}</td>
+          <td style="font-weight:400;color:rgba(255,255,255,0.85)">${r.displayName || 'Anonymous'}</td>
+          <td style="font-family:'JetBrains Mono',monospace;color:${r.return >= 0 ? '#22c55e' : '#ef4444'};font-weight:500">${sign}${r.return.toFixed(2)}%</td>
+          <td style="font-family:'JetBrains Mono',monospace;color:rgba(255,255,255,0.8)">$${r.value.toLocaleString('en-US', {minimumFractionDigits:2})}</td>
+          <td style="color:rgba(255,255,255,0.7)">${r.trades || 0}</td>
+        </tr>`;
+      }).join('');
+    }
+
+    function loadLeaderboard(period) {
+      const loading = document.getElementById('hiveLoading');
+      const podium = document.getElementById('hivePodium');
+      const tableWrap = document.getElementById('hiveTableWrap');
+      loading.style.display = 'flex';
+
+      // Check cache
+      if (lbCache[period]) {
+        const data = lbCache[period];
+        const rows = (data.leaderboard || []).slice(0, 25);
+        renderPodium(rows);
+        renderTable(rows);
+        loading.style.display = 'none';
+        return;
+      }
+
+      fetch('/api/hive?leaderboard=' + period)
+        .then(r => r.json())
+        .then(data => {
+          lbCache[period] = data;
+          const rows = (data.leaderboard || []).slice(0, 25);
+          renderPodium(rows);
+          renderTable(rows);
+          loading.style.display = 'none';
+        })
+        .catch(err => {
+          loading.innerHTML = '<span>Failed to load leaderboard</span>';
+          console.error('LB error:', err);
+        });
+    }
+
+    function switchPeriod(p) {
+      document.querySelectorAll('.pill').forEach(el => el.classList.remove('active'));
+      document.querySelector('.pill[data-period="' + p + '"]').classList.add('active');
+      loadLeaderboard(p);
+    }
+
+    // ── SCROLL REVEAL ──
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Smooth scroll
+    document.querySelector('a[href="#leaderboard"]')?.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.getElementById('leaderboard')?.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // Load initial leaderboard on page load
+    document.addEventListener('DOMContentLoaded', () => loadLeaderboard('monthly'));
+  </script>
+</body>
+</html>

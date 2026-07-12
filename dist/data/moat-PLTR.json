@@ -1,0 +1,35 @@
+{
+  "symbol": "PLTR",
+  "industry": "Software - Infrastructure",
+  "rating": "Wide",
+  "stars": 5,
+  "confidence": "High",
+  "sources": [
+    {
+      "name": "Switching Costs",
+      "score": 5,
+      "rationale": "moderate segment concentration at 55.0%; operating margin 46% vs 15% industry (extreme pricing power); gross margins 84% indicate premium pricing / low substitution"
+    },
+    {
+      "name": "Intangible Assets",
+      "score": 4,
+      "rationale": "premium gross margins 84% reflect brand/IP power"
+    },
+    {
+      "name": "Network Effect",
+      "score": 5,
+      "rationale": "explosive 85% revenue growth (flywheel spinning); high EPS growth 325% (operating leverage from scale)"
+    },
+    {
+      "name": "Cost Advantage",
+      "score": 5,
+      "rationale": "gross margins 84% vs 40% industry (massive cost advantage); operating margin 46% vs 15% (extreme efficiency); strong free cash flow (34% of revenue)"
+    },
+    {
+      "name": "Efficient Scale",
+      "score": 5,
+      "rationale": "majority revenue from one segment (55.0%); premium 84% gross margins sustained (high barriers)"
+    }
+  ],
+  "analysis": "Switching Costs and Intangible Assets and Network Effect create a durable competitive fortress. The company's moat is reinforced by multiple reinforcing factors, making it unlikely competitors can erode its position in the next decade."
+}

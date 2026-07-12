@@ -1,0 +1,35 @@
+{
+  "symbol": "SPACEX",
+  "industry": "Aerospace & Defense",
+  "rating": "Wide",
+  "stars": 4,
+  "confidence": "High",
+  "sources": [
+    {
+      "name": "Switching Costs",
+      "score": 4,
+      "rationale": "Governments and enterprises locked into Falcon 9/Heavy launch cadence and Starlink constellation — switching would require years of re-qualification and billions in new infrastructure"
+    },
+    {
+      "name": "Intangible Assets",
+      "score": 5,
+      "rationale": "Unmatched brand in commercial spaceflight, proprietary reusable rocket technology, extensive patent portfolio, Starship platform with no near-term competitor, multi-year technology lead"
+    },
+    {
+      "name": "Network Effect",
+      "score": 4,
+      "rationale": "Starlink's 5,000+ satellite constellation creates a self-reinforcing cycle — more satellites improve coverage, attracting more subscribers, funding further expansion. Launch frequency data improves reusability."
+    },
+    {
+      "name": "Cost Advantage",
+      "score": 5,
+      "rationale": "Falcon 9 reusability drives launch costs to ~$67M vs $150M+ for competitors. Starship projected to reduce cost-per-kg by another order of magnitude. No competitor within 5+ years of matching."
+    },
+    {
+      "name": "Efficient Scale",
+      "score": 4,
+      "rationale": "Launch market is naturally concentrated — enormous capital requirements, regulatory barriers, and technology moat prevent new entrants. SpaceX captures dominant share of global commercial launches."
+    }
+  ],
+  "analysis": "SpaceX commands one of the widest moats in aerospace and defense. Reusable rocket technology has created an insurmountable cost advantage, while Starlink's satellite constellation generates recurring revenue with strong network effects. Government and enterprise launch contracts carry high switching costs. The Starship platform extends the technology lead further — no competitor has a credible path to matching SpaceX's launch economics this decade."
+}

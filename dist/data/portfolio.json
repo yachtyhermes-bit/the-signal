@@ -1,0 +1,31 @@
+{
+  "name": "The Signal Portfolio",
+  "inception": "2024-06-01",
+  "lastUpdated": "2026-07-11",
+  "positions": [
+    {"ticker": "AMD", "weight": 7.2},
+    {"ticker": "NVDA", "weight": 7.2},
+    {"ticker": "AMZN", "weight": 6.5},
+    {"ticker": "GOOG", "weight": 6.5},
+    {"ticker": "RKLB", "weight": 6.4},
+    {"ticker": "GE", "weight": 6.3},
+    {"ticker": "META", "weight": 6.1},
+    {"ticker": "NBIS", "weight": 6.0},
+    {"ticker": "AVGO", "weight": 5.7},
+    {"ticker": "TSM", "weight": 5.5},
+    {"ticker": "SOFI", "weight": 5.0},
+    {"ticker": "RTX", "weight": 5.0},
+    {"ticker": "CRWD", "weight": 4.1},
+    {"ticker": "PLTR", "weight": 3.5},
+    {"ticker": "HOOD", "weight": 3.3},
+    {"ticker": "MSFT", "weight": 3.2},
+    {"ticker": "CHAT", "weight": 2.9},
+    {"ticker": "AXON", "weight": 2.5},
+    {"ticker": "RBRK", "weight": 2.1},
+    {"ticker": "SHLD", "weight": 1.4},
+    {"ticker": "VST", "weight": 1.2},
+    {"ticker": "AIPO", "weight": 1.1},
+    {"ticker": "LUNR", "weight": 0.8},
+    {"ticker": "MDA", "weight": 0.5}
+  ]
+}

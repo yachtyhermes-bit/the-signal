@@ -1,0 +1,35 @@
+{
+  "symbol": "MRVL",
+  "industry": "Semiconductors",
+  "rating": "Narrow",
+  "stars": 3,
+  "confidence": "Medium",
+  "sources": [
+    {
+      "name": "Switching Costs",
+      "score": 2,
+      "rationale": "no strong switching-cost indicators detected"
+    },
+    {
+      "name": "Intangible Assets",
+      "score": 2,
+      "rationale": "limited intangible asset indicators available"
+    },
+    {
+      "name": "Network Effect",
+      "score": 4,
+      "rationale": "strong 28% revenue growth"
+    },
+    {
+      "name": "Cost Advantage",
+      "score": 4,
+      "rationale": "strong free cash flow (26% of revenue)"
+    },
+    {
+      "name": "Efficient Scale",
+      "score": 3,
+      "rationale": "insufficient data for efficient scale assessment"
+    }
+  ],
+  "analysis": "Network Effect and Cost Advantage provide some competitive protection, but not all moat sources are fully developed. The company has defensible advantages that should persist for several years but may face erosion over time."
+}

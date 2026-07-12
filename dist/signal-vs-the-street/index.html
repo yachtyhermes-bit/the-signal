@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08080e">
+  <title>Signal vs. The Street — The Signal</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/apple-touch-icon.png">
+  <meta name="robots" content="max-image-preview:large">
+
+  <!-- Font Stack -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Michroma&display=swap&family=Barlow+Condensed:wght@400;500;600;700" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/main.css?v=15">
+  <link rel="stylesheet" href="/css/nav.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-98KDVDFBCW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-98KDVDFBCW');
+  </script>
+  <script src="/js/theme.js?v=2" defer></script>
+  <script src="/js/auth.js?v=2" defer></script>
+  <script src="/js/search.js" defer></script>
+  <script src="/js/nav.js" defer></script>
+
+  <style>
+    /* ════════════════════════════════════════════════════════════
+       RESET & BASE
+       ════════════════════════════════════════════════════════════ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #161718;
+      color: #b9b9ba;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+
+    /* ════════════════════════════════════════════════════════════
+       COLOR SYSTEM
+       ════════════════════════════════════════════════════════════ */
+    :root {
+      --color-black: #000;
+      --color-blue-500: #0680ff;
+      --color-grayscale-50: #fff;
+      --color-grayscale-200: #f3f3f3;
+      --color-grayscale-500: #b9b9ba;
+      --color-grayscale-800: #454546;
+      --color-grayscale-950: #161718;
+      --color-halo: #0680ff;
+      --color-stealth: #161718;
+      --color-stealth-30: #b9b9ba;
+      --color-stealth-80: #454546;
+      --color-optic: #fff;
+      --color-white: #fff;
+      --gradient-1: linear-gradient(270deg, hsla(0,0%,9%,.5), hsla(0,0%,9%,.3));
+      --gradient-2: linear-gradient(180deg, rgba(22,23,24,0) 50%, var(--color-grayscale-950) 100%);
+      --container-max: 82.5rem;
+      --container-pad: 3.75rem;
+      --container-pad-mobile: 0.9375rem;
+      --header-height: 59px;
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       CONTAINER & GRID
+       ════════════════════════════════════════════════════════════ */
+    .container {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding-left: var(--container-pad);
+      padding-right: var(--container-pad);
+    }
+
+    .grid-12 {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 1.5rem;
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       DECORATIVE T-MARK BORDERS
+       ════════════════════════════════════════════════════════════ */
+    .section-border {
+      position: relative;
+      padding-top: 2.5rem;
+      margin-top: 3rem;
+    }
+    .section-border::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: var(--color-stealth-80);
+    }
+    .section-border::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 16px;
+      height: 1px;
+      background: var(--color-stealth-80);
+      box-shadow: 0 -6px 0 0 var(--color-stealth-80);
+    }
+    .section-border .tm-bracket {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 16px;
+      height: 1px;
+      background: var(--color-stealth-80);
+    }
+    .section-border .tm-bracket::before {
+      content: '';
+      position: absolute;
+      top: -6px;
+      right: 0;
+      width: 1px;
+      height: 6px;
+      background: var(--color-stealth-80);
+    }
+
+    .section-wrap {
+      position: relative;
+      margin-bottom: 5rem;
+    }
+    .section-wrap .border-top {
+      position: relative;
+      height: 1px;
+      background: var(--color-stealth-80);
+      margin-bottom: 2.5rem;
+    }
+    .section-wrap .border-top::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 16px;
+      height: 1px;
+      background: var(--color-stealth-80);
+      box-shadow: 0 -6px 0 0 var(--color-stealth-80);
+    }
+    .section-wrap .border-top .corner-right {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 16px;
+      height: 1px;
+      background: var(--color-stealth-80);
+    }
+    .section-wrap .border-top .corner-right::before {
+      content: '';
+      position: absolute;
+      top: -6px;
+      right: 0;
+      width: 1px;
+      height: 6px;
+      background: var(--color-stealth-80);
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       HERO SECTION
+       ════════════════════════════════════════════════════════════ */
+    .hero {
+      position: relative;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      background:
+        url("https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/svs-hero-bg.jpg") center 30% / cover no-repeat;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(4,4,10,0.75) 0%,
+        rgba(4,4,10,0.55) 40%,
+        rgba(4,4,10,0.45) 70%,
+        rgba(4,4,10,0.80) 100%
+      );
+      z-index: 1;
+    }
+    .hero > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-inner {
+      max-width: 72rem;
+      padding: 7rem var(--container-pad) 5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100dvh;
+    }
+
+    .hero-category {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--color-optic);
+      margin-bottom: 2rem;
+      opacity: 0.8;
+    }
+
+    .hero-title {
+      font-family: 'Michroma', sans-serif;
+      font-size: clamp(2.8rem, 8vw, 6.5rem);
+      line-height: 1.1;
+      color: var(--color-optic);
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+    }
+    .hero-title .highlight {
+      color: var(--color-blue-500);
+    }
+
+    .hero-sub {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(1rem, 1.6vw, 1.3rem);
+      font-weight: 400;
+      color: var(--color-grayscale-200);
+      max-width: 44rem;
+      margin: 0 auto 3rem;
+      line-height: 1.8;
+      letter-spacing: 0.01em;
+      text-align: center;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--color-optic);
+      border: 1px solid var(--color-stealth-80);
+      padding: 12px 32px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .hero-cta:hover {
+      border-color: var(--color-blue-500);
+      background: rgba(6,128,255,0.08);
+    }
+
+    .hero-return-box {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(22,23,24,0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 1rem 2.5rem;
+      text-align: center;
+      border-radius: 4px;
+    }
+    .hero-return-box .return-label {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.55rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--color-optic);
+      opacity: 0.7;
+      text-align: center;
+    }
+    .hero-return-box .return-value {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #00c853;
+      letter-spacing: -0.02em;
+      text-align: center;
+    }
+    .hero-return-box .return-benchmark {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.65rem;
+      color: var(--color-optic);
+      opacity: 0.6;
+      text-align: center;
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       SECTION TITLES
+       ════════════════════════════════════════════════════════════ */
+    .section-label {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--color-stealth-80);
+      margin-bottom: 0.75rem;
+    }
+    .section-heading {
+      font-family: 'Michroma', sans-serif;
+      font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+      color: var(--color-optic);
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+    }
+    .section-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      color: var(--color-grayscale-500);
+      max-width: 48rem;
+      line-height: 1.8;
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       SCOREBOARD SECTION
+       ════════════════════════════════════════════════════════════ */
+    .scoreboard-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .score-card {
+      border: 1px solid var(--color-stealth-80);
+      padding: 2rem 1.5rem;
+      position: relative;
+      background: rgba(22,23,24,0.6);
+      transition: border-color 0.3s ease;
+    }
+    .score-card:hover {
+      border-color: var(--color-stealth-30);
+    }
+    .score-period {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--color-stealth-80);
+      margin-bottom: 1rem;
+    }
+    .score-values {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .score-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+    }
+    .score-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--color-grayscale-500);
+    }
+    .score-number {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+    .score-number.positive { color: #00c853; }
+    .score-number.negative { color: #ff1744; }
+    .score-number.signal { color: var(--color-blue-500); }
+    .score-number.benchmark { color: var(--color-grayscale-500); }
+
+    /* ════════════════════════════════════════════════════════════
+       HOLDINGS TABLE (Dynamic via JS)
+       ════════════════════════════════════════════════════════════ */
+    .holdings-table-wrap {
+      margin-top: 2rem;
+      overflow-x: auto;
+      border: 1px solid var(--color-stealth-80);
+    }
+    .holdings-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: 'Inter', sans-serif;
+    }
+    .holdings-table thead th {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--color-stealth-80);
+      text-align: left;
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--color-stealth-80);
+      background: rgba(22,23,24,0.8);
+    }
+    .holdings-table tbody td {
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid rgba(69,69,70,0.3);
+      font-size: 0.85rem;
+      color: var(--color-grayscale-500);
+      font-family: 'Roboto Mono', monospace;
+    }
+    .holdings-table tbody tr:hover td {
+      background: rgba(6,128,255,0.04);
+    }
+    .holdings-table .ticker {
+      font-family: 'Roboto Mono', monospace;
+      font-weight: 600;
+      color: var(--color-optic);
+      font-size: 0.9rem;
+    }
+    .holdings-table .weight {
+      font-family: 'Roboto Mono', monospace;
+      color: var(--color-grayscale-500);
+    }
+    .holdings-table .return-pos {
+      font-family: 'Roboto Mono', monospace;
+      color: #00c853;
+      font-weight: 500;
+    }
+    .holdings-table .return-neg {
+      font-family: 'Roboto Mono', monospace;
+      color: #ff1744;
+      font-weight: 500;
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       RETURN CARDS (Dynamic via JS)
+       ════════════════════════════════════════════════════════════ */
+    .svs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .svs-card {
+      border: 1px solid var(--color-stealth-80);
+      padding: 2rem 1.5rem;
+      background: rgba(22,23,24,0.6);
+      transition: border-color 0.3s ease;
+    }
+    .svs-card:hover {
+      border-color: var(--color-stealth-30);
+    }
+    .svs-card-label {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--color-stealth-80);
+      margin-bottom: 1rem;
+    }
+    .svs-card-return {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #00c853;
+      letter-spacing: -0.02em;
+    }
+    .svs-card-vs {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      color: var(--color-grayscale-500);
+      margin-top: 0.5rem;
+    }
+    .svs-card-vs span {
+      font-family: 'Roboto Mono', monospace;
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       FOOTER — SVS-specific overrides for visibility
+       ════════════════════════════════════════════════════════════ */
+    footer.footer {
+      display: block !important;
+      background: #1c1d1e;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding: 40px 24px;
+      margin-top: 48px;
+      color: #b9b9ba;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+    footer.footer .footer-inner {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      text-align: center;
+      display: block;
+      visibility: visible;
+      opacity: 1;
+    }
+    footer.footer .footer-brand {
+      display: block;
+      color: #b9b9ba;
+      font-size: 1rem;
+      margin-bottom: 8px;
+      visibility: visible;
+    }
+    footer.footer .footer-brand strong {
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    footer.footer .footer-tag,
+    footer.footer .footer-copy {
+      display: block;
+      color: #777788;
+      font-size: 0.8rem;
+      margin-top: 4px;
+      visibility: visible;
+    }
+    footer.footer .footer-logo {
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      border-radius: 3px;
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       PREMIUM PAYWALL — Holdings blur for non-premium
+       ════════════════════════════════════════════════════════════ */
+    .holdings-locked {
+      position: relative;
+      overflow: hidden;
+    }
+    .holdings-locked table {
+      filter: blur(4px);
+      pointer-events: none;
+      user-select: none;
+    }
+    .holdings-locked::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      background: linear-gradient(
+        to bottom,
+        rgba(22,23,24,0) 0%,
+        rgba(22,23,24,0.6) 30%,
+        rgba(22,23,24,0.9) 60%
+      );
+      pointer-events: none;
+      z-index: 2;
+    }
+    .premium-paywall {
+      position: relative;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      background: rgba(22,23,24,0.8);
+      border: 1px solid rgba(6,128,255,0.2);
+      margin-top: -1px;
+    }
+    .premium-paywall-icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .premium-paywall-title {
+      font-family: 'Michroma', sans-serif;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--color-optic);
+      margin-bottom: 0.5rem;
+    }
+    .premium-paywall-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      color: var(--color-grayscale-500);
+      max-width: 36rem;
+      margin: 0 auto 1.25rem;
+      line-height: 1.6;
+    }
+    .premium-paywall-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--color-optic);
+      background: rgba(6,128,255,0.12);
+      border: 1px solid var(--color-blue-500);
+      padding: 12px 32px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .premium-paywall-cta:hover {
+      background: rgba(6,128,255,0.25);
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       SCROLL REVEAL ANIMATIONS
+       ════════════════════════════════════════════════════════════ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(1.5em);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-delay-5 { transition-delay: 0.5s; }
+
+    /* ════════════════════════════════════════════════════════════
+       RESPONSIVE
+       ════════════════════════════════════════════════════════════ */
+    @media (max-width: 1024px) {
+      .grid-12 { gap: 1rem; }
+    }
+
+    @media (max-width: 768px) {
+      :root {
+        --container-pad: var(--container-pad-mobile);
+        --header-height: 52px;
+      }
+      .hero-title {
+        font-size: clamp(2rem, 10vw, 3.5rem);
+      }
+      .hero-sub {
+        font-size: 1rem;
+        line-height: 1.7;
+      }
+      .hero-inner {
+        padding: 6rem var(--container-pad-mobile) 4rem;
+      }
+      .scoreboard-grid,
+      .svs-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      .score-card,
+      .svs-card {
+        padding: 1.5rem 1rem;
+      }
+      .score-number {
+        font-size: 1.15rem;
+      }
+      .holdings-table thead th,
+      .holdings-table tbody td {
+        padding: 0.75rem 0.85rem;
+        font-size: 0.75rem;
+      }
+      .holdings-table .ticker {
+        font-size: 0.8rem;
+      }
+      .section-heading {
+        font-size: 1.3rem;
+      }
+      .hero-return-box {
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 0.7rem 1.25rem;
+        width: 100%;
+      }
+      .hero-return-box .return-value {
+        font-size: 1.2rem;
+      }
+      .hero-return-box .return-benchmark {
+        font-size: 0.55rem;
+      }
+      .hero-return-box div[style*="border-left"] {
+        border-left: none !important;
+        padding-left: 0 !important;
+        padding-top: 0.5rem;
+        border-top: 1px solid rgba(69,69,70,0.4);
+      }
+      .svs-card-return {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-title {
+        font-size: 1.4rem;
+      }
+      .hero-category {
+        font-size: 0.6rem;
+        letter-spacing: 2px;
+      }
+      .hero-cta {
+        font-size: 0.65rem;
+        padding: 10px 24px;
+      }
+    }
+  </style>
+</head>
+<body class="dark">
+
+  <!-- ════════════════════════════════════════════════
+       SITE NAVIGATION — Standard Signal Nav
+       ════════════════════════════════════════════════ -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo"><img src="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/logo-hex.jpg" alt="The Signal" class="logo-img"><span class="logo-text"><span class="logo-the">THE</span> <strong>SIGNAL</strong></span></a>
+      <div class="nav-actions">
+        <button class="nav-btn search-btn" id="searchToggle" aria-label="Search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <div class="auth-container" id="authContainer">
+            <button class="nav-btn auth-btn" id="authToggle" aria-label="Sign In">
+              <div class="auth-btn-avatar" id="authBtnAvatar">
+                <span class="auth-btn-initial" id="authBtnInitial"></span>
+                <img class="auth-btn-img" id="authBtnImg" src="" alt="" style="display:none">
+              </div>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="auth-btn-icon" id="authBtnIcon">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              <span class="auth-label" id="authLabel">Sign In</span>
+            </button>
+            <div class="auth-dropdown" id="authDropdown">
+              <!-- Signed-in Profile -->
+              <div class="auth-profile" id="authProfile" style="display:none">
+                <div class="auth-profile-header">
+                  <div class="auth-profile-avatar" id="authProfileAvatar">
+                    <img id="authProfileImg" src="" alt="" style="display:none">
+                    <span class="auth-profile-initial" id="authProfileInitial"></span>
+                  </div>
+                  <div class="auth-profile-info">
+                    <span class="auth-profile-name" id="authProfileName"></span>
+                    <span class="auth-profile-username" id="authProfileUsername"></span>
+                  </div>
+                  <div class="auth-profile-badge">HIVE</div>
+                </div>
+                <div class="auth-profile-stats" id="authProfileStats">
+                  <div class="auth-stat">
+                    <span class="auth-stat-label">Portfolio</span>
+                    <span class="auth-stat-value" id="authStatValue">-</span>
+                  </div>
+                  <div class="auth-stat">
+                    <span class="auth-stat-label">Return</span>
+                    <span class="auth-stat-value" id="authStatReturn">-</span>
+                  </div>
+                </div>
+                <div class="auth-drop-divider"></div>
+                <div class="auth-profile-nav">
+                  <a href="/sector/ai" class="auth-nav-item">AI</a>
+                  <a href="/sector/cyber" class="auth-nav-item">Cyber</a>
+                  <a href="/sector/defense" class="auth-nav-item">Defense</a>
+                  <a href="/sector/space" class="auth-nav-item">Space</a>
+                  <a href="/sector/mega-cap" class="auth-nav-item">Mega-Cap</a>
+                  <a href="/sector/quantum" class="auth-nav-item">Quantum</a>
+                  <a href="/sector/ai-power" class="auth-nav-item">AI Power</a>
+                  <a href="/sector/fintech" class="auth-nav-item">FinTech</a>
+                  <a href="/sector/etfs" class="auth-nav-item">ETFs</a>
+                  <div class="auth-nav-section-header">FEATURES</div>
+                  <a href="/hive" class="auth-nav-item">Hive</a>
+                  <a href="/signal-vs-the-street" class="auth-nav-item">Signal vs. Street</a>
+                  <a href="/stocks/" class="auth-nav-item">Stock Pages</a>
+                </div>
+                <div class="auth-drop-divider"></div>
+                <div class="auth-profile-footer">
+                  <a href="/account/settings" class="auth-footer-link">✏️ Edit Profile</a>
+                  <a href="/hive" class="auth-footer-link" onclick="navigateToHiveLeaderboard(event)">Leaderboard</a>
+                  <button class="auth-signout-btn" id="authSignOut">Sign Out</button>
+                </div>
+              </div>
+              <!-- Guest View -->
+              <div class="auth-guest" id="authGuest">
+                <div class="auth-guest-brand">
+                  <span class="auth-guest-title">Welcome to <strong>The Signal</strong></span>
+                  <span class="auth-guest-sub">Join the hive to track your portfolio</span>
+                </div>
+                <button class="auth-option auth-option-primary" onclick="showHiveJoinModal('login')">
+                  <span class="auth-option-icon">🔑</span> Sign In
+                </button>
+                <button class="auth-option" onclick="showHiveJoinModal('register')">
+                  <span class="auth-option-icon">✨</span> Create Account
+                </button>
+                <div class="auth-drop-divider"></div>
+                <div class="auth-profile-nav">
+                  <a href="/sector/ai" class="auth-nav-item">AI</a>
+                  <a href="/sector/cyber" class="auth-nav-item">Cyber</a>
+                  <a href="/sector/defense" class="auth-nav-item">Defense</a>
+                  <a href="/sector/space" class="auth-nav-item">Space</a>
+                  <a href="/sector/mega-cap" class="auth-nav-item">Mega-Cap</a>
+                  <a href="/sector/quantum" class="auth-nav-item">Quantum</a>
+                  <a href="/sector/ai-power" class="auth-nav-item">AI Power</a>
+                  <a href="/sector/fintech" class="auth-nav-item">FinTech</a>
+                  <a href="/sector/etfs" class="auth-nav-item">ETFs</a>
+                  <div class="auth-nav-section-header">FEATURES</div>
+                  <a href="/hive" class="auth-nav-item">Hive</a>
+                  <a href="/signal-vs-the-street" class="auth-nav-item">Signal vs. Street</a>
+                  <a href="/stocks/" class="auth-nav-item">Stock Pages</a>
+                </div>
+              </div>
+          </div>
+        </div>
+        <button class="nav-btn hamburger-btn" id="hamburgerToggle" aria-label="Menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+        <button class="nav-btn theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle theme" style="display:flex;align-items:center;gap:4px;background:none;border:1px solid var(--border);border-radius:6px;padding:6px 8px;cursor:pointer;color:var(--text-secondary);font-size:12px">
+          <svg class="theme-icon-sun" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <svg class="theme-icon-moon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ════════════════════════════════════════════════
+       ROCKET LAB TWO-LEVEL DRAWER
+       ════════════════════════════════════════════════ -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <div class="drawer" id="drawer">
+    <div class="drawer-header">
+      <a href="/" class="drawer-logo">
+        <span class="the">THE</span>
+        <span class="signal">SIGNAL</span>
+      </a>
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">&#10005;</button>
+    </div>
+    <div class="drawer-body" id="drawerBody">
+      <div class="drawer-main" id="drawerMain">
+        <div class="drawer-section-label">SECTORS</div>
+        <a href="javascript:void(0)" class="drawer-link" onclick="openSubDrawer()">SECTORS</a>
+        <a href="/stocks/" class="drawer-link">STOCK PAGES</a>
+        <a href="/#scorecard" class="drawer-link">SIGNAL SCORECARD</a>
+        <a href="/hive" class="drawer-link">HIVE</a>
+        <a href="/signal-vs-the-street" class="drawer-link">SIGNAL VS. STREET</a>
+        <a href="/pricing" class="drawer-link">SIGNAL PREMIUM</a>
+        <a href="/pricing" class="drawer-cta">GET PREMIUM ACCESS</a>
+      </div>
+      <div class="drawer-sub" id="drawerSub">
+        <div class="sub-header" onclick="closeSubDrawer()">
+          <span class="sub-back">&#8249;</span>
+          <span class="sub-title">SECTORS</span>
+        </div>
+        <a href="/sector/ai" class="drawer-link">AI</a>
+        <a href="/sector/cyber" class="drawer-link">CYBER</a>
+        <a href="/sector/defense" class="drawer-link">DEFENSE</a>
+        <a href="/sector/space" class="drawer-link">SPACE</a>
+        <a href="/sector/mega-cap" class="drawer-link">MEGA-CAP</a>
+        <a href="/sector/quantum" class="drawer-link">QUANTUM</a>
+        <a href="/sector/ai-power" class="drawer-link">AI POWER</a>
+        <a href="/sector/etfs" class="drawer-link">ETFS</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════
+       SEARCH OVERLAY
+       ════════════════════════════════════════════════ -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-backdrop" id="searchBackdrop"></div>
+    <div class="search-modal">
+      <div class="search-header">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search articles by title, ticker, sector, or tag…" autofocus>
+        <button class="search-close" id="searchClose" aria-label="Close search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+      <div class="search-empty" id="searchEmpty">Start typing to search articles…</div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════
+       MAIN CONTENT
+       ════════════════════════════════════════════════ -->
+  <main class="main" style="padding-top:0;background:#161718;">
+
+    <!-- ════════════════════════════════════════════════
+         HERO — Full viewport with svs-hero-bg background
+         ════════════════════════════════════════════════ -->
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="hero-category reveal">_Live Portfolio</p>
+
+        <h1 class="hero-title reveal reveal-delay-1">
+          Signal<br>
+          <span class="highlight">vs.</span> The Street
+        </h1>
+
+        <p class="hero-sub reveal reveal-delay-2">
+          Quality first. Strong balance sheets. Proven competitive moats.
+          Companies generating real free cash flow at reasonable valuations.
+          We pair fundamental conviction with technical timing — entries
+          informed by chart structure, exits guided by risk discipline.
+          No hype. No FOMO. Just signal.
+        </p>
+
+        <div style="flex:1; min-height:2rem;"></div>
+
+        <!-- Return box at bottom of hero -->
+        <div class="hero-return-box reveal reveal-delay-3" id="heroReturnBox">
+          <div>
+            <p class="return-label">Total Return Since Inception</p>
+            <p class="return-value" id="heroReturnValue">—</p>
+          </div>
+          <div style="border-left:1px solid rgba(69,69,70,0.4); padding-left:1.5rem;">
+            <p class="return-label">vs. S&amp;P 500</p>
+            <p class="return-benchmark">S&amp;P 500: <span id="heroBenchmarkValue">—</span> &mdash; Alpha: <strong id="heroAlphaValue" style="color:#00c853;"></strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════
+         RETURN CARDS — Dynamic from portfolio-returns.json
+         ════════════════════════════════════════════════ -->
+    <section class="container" style="padding-top: 5rem; padding-bottom: 3rem;">
+      <div class="section-wrap">
+        <div class="border-top"><div class="corner-right"></div></div>
+
+        <div>
+          <p class="section-label reveal">Performance</p>
+          <h2 class="section-heading reveal reveal-delay-1">Returns vs. Benchmarks</h2>
+          <p class="section-desc reveal reveal-delay-2">
+            Signal portfolio total returns vs. the S&amp;P 500 and Nasdaq 100 across key time windows.
+          </p>
+        </div>
+
+        <div class="svs-grid" id="svsCards">
+          <p style="color:var(--color-stealth-80); grid-column:1/-1;">Loading portfolio data...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════
+         HOLDINGS TABLE — Dynamic from portfolio-returns.json
+         ════════════════════════════════════════════════ -->
+    <section class="container" style="padding-bottom: 4rem;">
+      <div class="section-wrap">
+        <div class="border-top"><div class="corner-right"></div></div>
+
+        <div>
+          <p class="section-label reveal">Portfolio</p>
+          <h2 class="section-heading reveal reveal-delay-1">Holdings</h2>
+          <p class="section-desc reveal reveal-delay-2">
+            Current portfolio positions sorted by weight. Full details available to subscribers.
+          </p>
+        </div>
+
+        <div class="holdings-table-wrap reveal reveal-delay-3" id="holdingsWrap">
+          <table class="holdings-table">
+            <thead>
+              <tr>
+                <th>Ticker</th>
+                <th>Weight</th>
+                <th>Return Since Inception</th>
+              </tr>
+            </thead>
+            <tbody id="holdingsBody">
+              <tr><td colspan="3" style="color:var(--color-stealth-80); padding:1rem 1.25rem;">Loading...</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Premium paywall — shown for non-premium users -->
+        <div id="holdingsPaywall" class="premium-paywall" style="display:none;">
+          <div class="premium-paywall-icon">📡</div>
+          <div class="premium-paywall-title">Full Portfolio — Signal Premium</div>
+          <p class="premium-paywall-desc">
+            See all 24 positions with real-time weights and returns. Track community portfolio additions and removals as they happen.
+          </p>
+          <a href="/pricing" class="premium-paywall-cta">
+            Unlock Premium Access →
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ════════════════════════════════════════════════
+       FOOTER
+       ════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand"><img src="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/logo-hex.jpg" alt="The Signal" class="footer-logo"> THE <strong>SIGNAL</strong></div>
+      <div class="footer-tag">The Signal Editorial Team &middot; readthesignal.net</div>
+      <div class="footer-copy">&copy; 2026 The Signal &mdash; Market Intelligence. Data from public sources.</div>
+    </div>
+  </footer>
+
+  <!-- ════════════════════════════════════════════════
+       CHECK PREMIUM STATUS
+       ════════════════════════════════════════════════ -->
+  <script>
+    (function() {
+      var token = localStorage.getItem('hive_token');
+      if (token) {
+        fetch('/api/hive?action=me&token=' + encodeURIComponent(token))
+          .then(function(r) { return r.json(); })
+          .then(function(data) {
+            if (data.authenticated && data.isPremium) {
+              window.isPremiumUser = true;
+              // Re-render holdings if already loaded
+              if (typeof renderHoldings === 'function') renderHoldings();
+            }
+          })
+          .catch(function() {});
+      }
+    })();
+  </script>
+
+  <!-- ════════════════════════════════════════════════
+       SCROLL REVEAL + DYNAMIC PORTFOLIO DATA
+       ════════════════════════════════════════════════ -->
+  <script>
+    // ── Scroll reveal animations ──
+    (function() {
+      'use strict';
+      var els = document.querySelectorAll('.reveal');
+      if (!els.length) return;
+      var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
+          if (e.isIntersecting) e.target.classList.add('visible');
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      els.forEach(function(el) { obs.observe(el); });
+    })();
+
+    // ── Load dynamic portfolio data ──
+    fetch('/data/portfolio-returns.json')
+      .then(function(r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.json();
+      })
+      .then(function(d) {
+        // 1. Hero return box
+        var si = d.periods && d.periods.sinceInception;
+        if (si) {
+          var heroVal = document.getElementById('heroReturnValue');
+          if (heroVal) heroVal.textContent = (si.portfolioReturn >= 0 ? '+' : '') + si.portfolioReturn.toFixed(1) + '%';
+          var heroBmk = document.getElementById('heroBenchmarkValue');
+          if (heroBmk) heroBmk.textContent = (si.spyReturn >= 0 ? '+' : '') + si.spyReturn.toFixed(1) + '%';
+          var heroAlpha = document.getElementById('heroAlphaValue');
+          if (heroAlpha) heroAlpha.textContent = (si.vsSPY >= 0 ? '+' : '') + si.vsSPY.toFixed(1) + '%';
+        }
+
+        // 2. Return cards
+        var periods = d.periods || {};
+        var labels = {
+          sinceInception: 'Since Inception',
+          ytd: 'Year to Date',
+          oneYear: 'Trailing 12 Months'
+        };
+        var cardsHtml = '';
+        var order = ['sinceInception', 'ytd', 'oneYear'];
+        order.forEach(function(key) {
+          var p = periods[key];
+          if (!p) return;
+          var portStr = (p.portfolioReturn >= 0 ? '+' : '') + p.portfolioReturn.toFixed(1) + '%';
+          var spyStr = (p.spyReturn >= 0 ? '+' : '') + p.spyReturn.toFixed(1) + '%';
+          var qqqStr = (p.qqqReturn >= 0 ? '+' : '') + p.qqqReturn.toFixed(1) + '%';
+          var vsSpyStr = (p.vsSPY >= 0 ? '+' : '') + p.vsSPY.toFixed(1) + '%';
+          var vsQqqStr = (p.vsQQQ >= 0 ? '+' : '') + p.vsQQQ.toFixed(1) + '%';
+          var spyArrow = p.vsSPY >= 0 ? '▲' : '▼';
+          var qqqArrow = p.vsQQQ >= 0 ? '▲' : '▼';
+          cardsHtml += '<div class="svs-card">' +
+            '<div class="svs-card-label">' + (labels[key] || p.label) + '</div>' +
+            '<div class="svs-card-return">' + portStr + '</div>' +
+            '<div class="svs-card-vs">vs SPY <span>' + spyStr + '</span> (' + spyArrow + ' ' + Math.abs(p.vsSPY).toFixed(1) + '%)</div>' +
+            '<div class="svs-card-vs">vs QQQ <span>' + qqqStr + '</span> (' + qqqArrow + ' ' + Math.abs(p.vsQQQ).toFixed(1) + '%)</div>' +
+            '</div>';
+        });
+        if (cardsHtml) {
+          document.getElementById('svsCards').innerHTML = cardsHtml;
+        }
+
+        // 3. Holdings table — show first 6, blur remainder behind premium paywall
+        var holdings = d.holdings || [];
+        var FREE_HOLDINGS = 6;
+        var isPremium = (window.isPremiumUser || false);
+        var visible = isPremium ? holdings : holdings.slice(0, FREE_HOLDINGS);
+        var locked = !isPremium && holdings.length > FREE_HOLDINGS;
+        var totalHoldings = holdings.length;
+        var rowsHtml = '';
+        visible.forEach(function(h) {
+          var ret = h.return !== null ? (h.return >= 0 ? '+' : '') + h.return.toFixed(1) + '%' : '—';
+          var cls = h.return > 0 ? 'return-pos' : (h.return < 0 ? 'return-neg' : '');
+          rowsHtml += '<tr><td class="ticker">' + h.ticker + '</td><td class="weight">' + h.weight.toFixed(1) + '%</td><td class="' + cls + '">' + ret + '</td></tr>';
+        });
+        if (locked) {
+          // Add blurred placeholder rows to hint at locked content
+          for (var i = FREE_HOLDINGS; i < totalHoldings; i++) {
+            var h2 = holdings[i];
+            var fakeRet = h2.return !== null ? (h2.return >= 0 ? '+' : '') + h2.return.toFixed(1) + '%' : '—';
+            rowsHtml += '<tr><td class="ticker">' + h2.ticker + '</td><td class="weight">' + h2.weight.toFixed(1) + '%</td><td>' + fakeRet + '</td></tr>';
+          }
+          // Add premium row spanning full table
+          rowsHtml += '<tr><td colspan="3" style="text-align:center;padding:1.5rem 1.25rem;color:var(--color-blue-500);font-weight:600;font-size:0.8rem;letter-spacing:1px;text-transform:uppercase;">+ ' + (totalHoldings - FREE_HOLDINGS) + ' more holdings — Signal Premium</td></tr>';
+        }
+        document.getElementById('holdingsBody').innerHTML = rowsHtml;
+        if (locked) {
+          document.getElementById('holdingsWrap').classList.add('holdings-locked');
+          var pw = document.getElementById('holdingsPaywall');
+          if (pw) pw.style.display = 'block';
+        }
+
+        // 4. Footer date
+        var footer = document.querySelector('.footer-copy');
+        if (footer && d.lastUpdated) {
+          var dateStr = new Date(d.lastUpdated).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+          footer.textContent = footer.textContent + ' Data as of ' + dateStr + '.';
+        }
+      })
+      .catch(function(err) {
+        // Only show error message on actual fetch failure
+        var svsCards = document.getElementById('svsCards');
+        if (svsCards) {
+          svsCards.innerHTML = '<p style="color:var(--color-stealth-80); grid-column:1/-1;">Unable to load portfolio data. Please try again later.</p>';
+        }
+        console.warn('Portfolio data fetch failed:', err.message);
+      });
+  </script>
+  <script>
+    // Close drawer on link click
+    document.addEventListener('DOMContentLoaded', function(){
+      var drawer = document.getElementById('drawer');
+      if (drawer) {
+        drawer.querySelectorAll('a').forEach(function(a){
+          a.addEventListener('click', function(){ 
+            if (window.closeDrawer) window.closeDrawer();
+          });
+        });
+      }
+    });
+  </script>
+</body>
+</html>

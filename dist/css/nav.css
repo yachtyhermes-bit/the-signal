@@ -1,0 +1,181 @@
+/* ============================================================
+   THE SIGNAL — Rocket Lab-Style Drawer (hamburger only)
+   Font: Barlow Condensed | Black bg | Off-white text | Signal blue
+   ============================================================ */
+
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+.drawer-overlay.open { opacity: 1; visibility: visible; }
+
+.drawer {
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
+  width: 100%;
+  max-width: 420px;
+  background: #000;
+  z-index: 1001;
+  transform: translateX(-100%);
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.drawer.open { transform: translateX(0); }
+
+.drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 28px;
+  border-bottom: 1px solid rgba(229, 229, 229, 0.15);
+  min-height: 80px;
+}
+.drawer-logo {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+.drawer-logo .the {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  line-height: 1.1;
+}
+.drawer-logo .signal {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 20px;
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
+.drawer-logo-img, .drawer-logo-text { display: none !important; }
+.drawer-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 36px; height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3b82f6;
+  font-size: 24px;
+  font-weight: 300;
+  transition: opacity 0.15s ease;
+  padding: 0;
+  line-height: 1;
+}
+.drawer-close:hover { opacity: 0.6; }
+
+.drawer-body {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+.drawer-main,
+.drawer-sub {
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.drawer-main { transform: translateX(0); }
+.drawer-sub { transform: translateX(100%); }
+.drawer-main.hidden { transform: translateX(-100%); }
+.drawer-sub.active { transform: translateX(0); }
+
+.drawer-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 28px;
+  border-bottom: 1px solid rgba(229, 229, 229, 0.15);
+  cursor: pointer;
+  text-decoration: none;
+  color: #e5e5e5;
+  transition: opacity 0.15s ease;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.drawer-link:hover { opacity: 0.6; }
+.drawer-link::after {
+  content: '\203A';
+  font-size: 20px;
+  font-weight: 300;
+  color: #e5e5e5;
+  opacity: 0.7;
+  line-height: 1;
+}
+
+.drawer-section-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(229, 229, 229, 0.4);
+  padding: 20px 28px 8px;
+}
+
+.drawer-cta {
+  margin: 24px 28px;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: #3b82f6;
+  border: 1px solid #3b82f6;
+  padding: 16px 24px;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+.drawer-cta:hover { background: #3b82f6; color: #e5e5e5; }
+
+.sub-header {
+  display: flex;
+  align-items: center;
+  padding: 22px 28px;
+  border-bottom: 1px solid rgba(229, 229, 229, 0.15);
+  cursor: pointer;
+  text-decoration: none;
+  color: #e5e5e5;
+  transition: opacity 0.15s ease;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+.sub-header:hover { opacity: 0.6; }
+.sub-back {
+  font-size: 20px;
+  font-weight: 300;
+  margin-right: 12px;
+  opacity: 0.7;
+  line-height: 1;
+}
+.sub-title {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+}

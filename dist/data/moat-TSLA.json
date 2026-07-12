@@ -1,0 +1,35 @@
+{
+  "symbol": "TSLA",
+  "industry": "Auto Manufacturers",
+  "rating": "Wide",
+  "stars": 4,
+  "confidence": "High",
+  "sources": [
+    {
+      "name": "Switching Costs",
+      "score": 4,
+      "rationale": "high segment concentration at 75.0% (significant platform stickiness)"
+    },
+    {
+      "name": "Intangible Assets",
+      "score": 4,
+      "rationale": "large revenue base (98B) enables sustained IP investment"
+    },
+    {
+      "name": "Network Effect",
+      "score": 3,
+      "rationale": "no clear network-effect indicators in available data"
+    },
+    {
+      "name": "Cost Advantage",
+      "score": 4,
+      "rationale": "significant scale ($98B revenue)"
+    },
+    {
+      "name": "Efficient Scale",
+      "score": 4,
+      "rationale": "Automotive dominance at 75.0% revenue share"
+    }
+  ],
+  "analysis": "Switching Costs and Intangible Assets and Cost Advantage create a durable competitive fortress. The company's moat is reinforced by multiple reinforcing factors, making it unlikely competitors can erode its position in the next decade."
+}

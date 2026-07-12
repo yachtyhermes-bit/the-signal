@@ -1,0 +1,49 @@
+{
+  "slug": "smci-q3-earnings-surge-ai-value",
+  "title": "Super Micro Just Doubled Revenue — And Trades at 11x Earnings. The Market Is Priced for a Slowdown That Isn't Coming.",
+  "subtitle": "$SMCI surged 20% after reporting Q3 FY2026 revenue of $33.7B — up 122% YoY — yet the stock sits at 11x forward earnings with a 0.63x price-to-sales ratio.",
+  "summary": "Super Micro Computer ($SMCI) jumped ~20% after Q3 FY2026 earnings showed revenue doubling to $33.7B with 122% YoY growth and quarterly earnings surging 344%. The AI server builder trades at just 11x forward earnings — absurdly cheap for a company growing triple digits in the AI infrastructure boom.",
+  "ticker": "SMCI",
+  "sector": "ai",
+  "sentiment": "bullish",
+  "date": "2026-05-24T18:00:00.000Z",
+  "image": {
+    "src": "/img/articles/smci-q3-earnings-surge-ai-value.jpg",
+    "caption": "Super Micro Computer data center server racks powering AI infrastructure workloads."
+  },
+  "tags": ["Super Micro", "SMCI", "AI Servers", "Earnings", "Value AI"],
+  "links": [
+    {
+      "url": "https://www.cnbc.com/2026/05/22/super-micro-stock-jumps-18-on-guidance-beat-as-revenue-more-than-doubles.html",
+      "label": "Super Micro stock jumps 18% on guidance beat (CNBC) →"
+    },
+    {
+      "url": "https://finance.yahoo.com/news/super-micro-computer-q3-earnings-2026-130000123.html",
+      "label": "SMCI Q3 Earnings: Revenue Doubles (Yahoo Finance) →"
+    },
+    {
+      "url": "https://www.fool.com/investing/2026/05/23/why-super-micro-computer-stock-is-still-a-buy/",
+      "label": "Why Super Micro Is Still a Buy (Motley Fool) →"
+    }
+  ],
+  "bodyHtml": "<p><strong>$SMCI</strong> just delivered a quarter that would make any growth investor swoon — and the market yawned. Not quite, but a 20% pop on a 122% revenue beat tells you everything about the weird valuation disconnect happening in AI infrastructure right now.</p><p>Super Micro Computer ($SMCI) reported Q3 FY2026 earnings that obliterated expectations. Revenue hit <strong>$33.7 billion</strong>, more than double the prior year's haul. Quarterly earnings growth clocked in at an eye-watering <strong>+344%</strong>. This is not a company slowing down — this is a company accelerating.</p><p>And yet, $SMCI trades at <strong>11x forward earnings</strong>. That's not a typo. Eleven. Compare that to $NVDA at 30x-plus forward earnings, and the absurdity of the valuation gap becomes obvious.</p><p>The price-to-sales ratio? <strong>0.63x</strong>. For a company growing revenue at triple digits. That's cheaper than most mature consumer staples stocks. The market is pricing in a slowdown that the numbers simply do not support.</p><h2>The AI Server Boom Is Just Getting Started</h2><p>Every hyperscaler — Microsoft, Amazon, Google, Meta — is in a capex arms race that shows no signs of cooling. Those data centers don't build themselves. $SMCI is the company supplying the racks, cooling systems, and GPU servers that make AI training possible.</p><p>The bull case is straightforward: AI infrastructure demand keeps accelerating, margins improve as Super Micro scales its manufacturing, and the market eventually re-rates the stock to something closer to a reasonable multiple for a company growing this fast.</p><h2>The Bear Case Is Real — But Priced In</h2><p>Let's not bury the risks. Gross margins sit at just <strong>8.4%</strong>. The server business is notoriously low-margin, and $SMCI's profit margin is only 3.7%. Free cash flow is deeply negative at <strong>-$7.4 billion</strong> — the company is spending heavily on capex to keep up with AI demand. Debt-to-equity sits at 120.8%.</p><p>Competition from $DELL and $HPE is intensifying. Dell's AI server business is growing fast, and the company has a stronger balance sheet and better brand trust with enterprise customers.</p><p>But here's the key insight: the market has already punished $SMCI for these risks. The stock is down <strong>43% from its 52-week high of $62.36</strong>. At $35.58, with a $21.4B market cap and $33.7B in trailing revenue, you're buying an AI infrastructure powerhouse at a steep discount.</p><h2>Analyst Sentiment: Tepid, With Hidden Upside</h2><p>Wall Street is cautious. The 16-analyst consensus is a <strong>Hold</strong> (2.83 mean rating), with a mean price target of $37.13 — just 4% upside. But the high target sits at <strong>$58</strong> (63% upside), and two analysts rate it Strong Buy. With 10 holds and only 3 sell-equivalent ratings, the bias is actually neutral-to-positive on valuation.</p><p>If $SMCI delivers two more quarters of triple-digit growth and shows margin improvement, those hold ratings flip to buys, and the stock re-rates. That's the asymmetric bet here.</p><p><strong>The bottom line:</strong> $SMCI is the value play in the AI infrastructure trade. While the market obsesses over $NVDA's GPU shipments and $DELL's enterprise trust, $SMCI sits quietly at 11x forward earnings with 122% revenue growth. Either the growth slows dramatically, or this stock doubles. We know which side we're betting on.</p><!-- VIDEO 0 -->",
+  "videos": [
+    {
+      "url": "https://www.youtube.com/watch?v=uXRqf73AAFY",
+      "source": "YouTube",
+      "title": "SMCI Earnings Shock Wall Street 📈 Is This AI Stock Ready For Another Massive Rally?"
+    }
+  ],
+  "meta": {
+    "author": "The Signal Editorial Team",
+    "estimatedReadTime": "4 minutes",
+    "editorialTags": ["AI Infrastructure", "Value Investing", "Earnings Analysis", "Growth at Value Price"],
+    "seoKeywords": ["SMCI stock", "Super Micro Computer earnings", "AI servers", "value AI stocks", "SMCI Q3 2026", "undervalued AI plays"],
+    "relatedTickers": ["DELL", "NVDA", "AMD"],
+    "keyMetrics": {
+      "revenue": "$33.7B",
+      "forwardPE": 11.05,
+      "revenueGrowth": "122%"
+    }
+  }
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08080e">
+  <link rel="canonical" href="https://readthesignal.net/pricing">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/apple-touch-icon.png">
+  <meta name="robots" content="max-image-preview:large">
+  <meta name="description" content="Choose your Signal membership — Free, Premium, or Pro. AI-powered market intelligence, real-time Pulse analysis, and expert stock insights.">
+  <meta property="og:title" content="Pricing — The Signal">
+  <meta property="og:description" content="Choose your Signal membership plan.">
+  <meta property="og:url" content="https://readthesignal.net/pricing">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Oxanium:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css?v=15">
+  <link rel="stylesheet" href="/css/pulse-badge.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-98KDVDFBCW"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-98KDVDFBCW');</script>
+  <script src="/js/prices.js" defer></script>
+  <script src="/js/search.js" defer></script>
+  <script src="/js/auth.js?v=2" defer></script>
+  <script src="/js/theme.js?v=2" defer></script>
+  <title>Pricing — The Signal</title>
+  <style>
+    .pricing-page { max-width:1100px; margin:0 auto; padding:2rem 1.5rem 4rem; color:#e0e0e0; }
+    .pricing-hero { text-align:center; margin:3rem 0 4rem; }
+    .pricing-hero h1 { font-family:'Anton',sans-serif; font-size:clamp(2.2rem,5vw,3.5rem); background:linear-gradient(135deg,#6366f1,#06b6d4); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin:0 0 1rem; }
+    .pricing-hero p { color:#94a3b8; font-size:1.1rem; max-width:550px; margin:0 auto; line-height:1.6; }
+    .pricing-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1.5rem; margin-bottom:3rem; }
+    .pricing-card { background:linear-gradient(145deg,#12121a,#1a1a2e); border:1px solid #2a2a3e; border-radius:16px; padding:2rem 1.5rem; position:relative; transition:transform .2s,border-color .2s; }
+    .pricing-card:hover { transform:translateY(-4px); border-color:#6366f1; }
+    .pricing-card.featured { border-color:#6366f1; background:linear-gradient(145deg,#12121a,#1a1a3e); box-shadow:0 0 40px rgba(99,102,241,.15); }
+    .pricing-card.featured::before { content:'MOST POPULAR'; position:absolute; top:-12px; left:50%; transform:translateX(-50%); background:linear-gradient(135deg,#6366f1,#818cf8); color:#fff; font-size:.7rem; font-weight:700; letter-spacing:.1em; padding:4px 16px; border-radius:20px; }
+    .plan-name { font-family:'Oxanium',sans-serif; font-size:1.3rem; font-weight:700; color:#fff; margin:0 0 .3rem; }
+    .plan-price { font-size:2.8rem; font-weight:900; color:#fff; margin:.5rem 0; font-family:'JetBrains Mono',monospace; }
+    .plan-price span { font-size:1rem; font-weight:400; color:#94a3b8; }
+    .plan-desc { color:#94a3b8; font-size:.9rem; margin:1rem 0 1.5rem; line-height:1.5; }
+    .plan-features { list-style:none; padding:0; margin:0 0 2rem; }
+    .plan-features li { padding:.4rem 0; color:#c0c0d0; font-size:.9rem; display:flex; align-items:center; gap:.5rem; }
+    .plan-features li::before { content:'\2713'; color:#22c55e; font-weight:700; }
+    .btn-subscribe { display:block; width:100%; padding:14px; border:none; border-radius:10px; font-family:'Oxanium',sans-serif; font-size:1rem; font-weight:700; cursor:pointer; transition:all .2s; text-align:center; text-decoration:none; }
+    .btn-subscribe.free { background:#2a2a3e; color:#94a3b8; }
+    .btn-subscribe.free:hover { background:#3a3a4e; }
+    .btn-subscribe.premium { background:linear-gradient(135deg,#6366f1,#818cf8); color:#fff; }
+    .btn-subscribe.premium:hover { filter:brightness(1.1); }
+    .btn-subscribe.pro { background:linear-gradient(135deg,#06b6d4,#22d3ee); color:#0f172a; }
+    .btn-subscribe.pro:hover { filter:brightness(1.1); }
+    .pricing-faq { max-width:700px; margin:4rem auto 0; }
+    .pricing-faq h2 { font-family:'Anton',sans-serif; font-size:1.5rem; color:#fff; margin:0 0 1.5rem; text-align:center; }
+    .faq-item { border-bottom:1px solid #2a2a3e; padding:1rem 0; }
+    .faq-item summary { font-weight:600; color:#e0e0e0; cursor:pointer; font-size:.95rem; }
+    .faq-item p { color:#94a3b8; font-size:.9rem; margin:.5rem 0 0; line-height:1.5; }
+    @media (max-width:640px) { .pricing-page { padding:1rem; } .pricing-grid { grid-template-columns:1fr; } }
+    .coming-soon-card { opacity:0.85; }
+    .coming-soon-price { font-size:1.4rem !important; font-weight:700; background:linear-gradient(135deg,#6366f1,#06b6d4); -webkit-background-clip:text; -webkit-text-fill-color:transparent; letter-spacing:.02em; }
+    .coming-soon-btn { background:#1a1a2e !important; color:#6366f1 !important; cursor:default !important; border:1px solid #2a2a3e; font-size:.85rem !important; letter-spacing:.05em; }
+    .coming-soon-btn:hover { filter:none !important; transform:none !important; background:#1a1a2e !important; }
+  </style>
+<link rel="stylesheet" href="/css/nav.css">
+</head>
+<body>
+  <main class="pricing-page">
+    <div class="pricing-hero">
+      <h1>Choose Your Signal</h1>
+      <p>Get an edge with premium access — community portfolio insights, unlimited AI queries, and deep market analysis.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card coming-soon-card">
+        <div class="plan-name">Free</div>
+        <div class="plan-price">$0<span>/mo</span></div>
+        <p class="plan-desc">Stay informed with market-moving news and essential stock data.</p>
+        <ul class="plan-features">
+          <li>Daily market news &amp; analysis</li>
+          <li>14 stock detail pages</li>
+          <li>5 premium Pulse AI queries/day</li>
+          <li>Signal Highlights &amp; Scorecard</li>
+          <li>Hive community access</li>
+        </ul>
+        <a href="/" class="btn-subscribe free">Get Started Free</a>
+      </div>
+      <div class="pricing-card featured">
+        <div class="plan-name">Premium</div>
+        <div class="plan-price">$15.99<span>/mo</span></div>
+        <p class="plan-desc">Unlock the full platform. For serious retail investors who want an edge.</p>
+        <ul class="plan-features">
+          <li>Everything in Free</li>
+          <li>Unlimited Pulse AI queries</li>
+          <li>Full community portfolio access</li>
+          <li>Real-time search &amp; data</li>
+          <li>Early access to deep dives</li>
+          <li>Ad-free reading experience</li>
+          <li>Priority daily newsletter</li>
+        </ul>
+        <button class="btn-subscribe premium" onclick="subscribe('premium')">Subscribe Now</button>
+      </div>
+      <div class="pricing-card coming-soon-card">
+        <div class="plan-name">Pro</div>
+        <div class="plan-price coming-soon-price">Coming Soon</div>
+        <p class="plan-desc">Professional-grade tools for traders and analysts who live in the markets.</p>
+        <ul class="plan-features">
+          <li>Everything in Premium</li>
+          <li>Custom stock alerts &amp; watchlists</li>
+          <li>Advanced portfolio tracking</li>
+          <li>Direct analyst Q&amp;A sessions</li>
+          <li>Export data to CSV/Excel</li>
+          <li>Priority support</li>
+        </ul>
+        <div class="btn-subscribe coming-soon-btn">Coming Soon</div>
+      </div>
+    </div>
+    <div class="pricing-faq">
+      <h2>Frequently Asked Questions</h2>
+      <details class="faq-item"><summary>What's included in Premium?</summary><p>Full access to the community portfolio, unlimited Pulse AI queries, early access to deep dives, and an ad-free experience.</p></details>
+      <details class="faq-item"><summary>Can I cancel anytime?</summary><p>Yes — cancel anytime from your account page. You'll keep access until the end of your billing period.</p></details>
+      <details class="faq-item"><summary>What payment methods do you accept?</summary><p>All major credit/debit cards via Stripe, plus Apple Pay and Google Pay.</p></details>
+    </div>
+  </main>
+
+  <script>
+    async function subscribe(plan) {
+      const token = localStorage.getItem('hive_token') || '';
+      if (!token) {
+        alert('Please sign in or create a Hive account first.');
+        window.location.href = '/';
+        return;
+      }
+
+      try {
+        const resp = await fetch('/api/create-checkout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ plan, token })
+        });
+        const data = await resp.json();
+        if (data.url) {
+          window.location.href = data.url;
+        } else {
+          alert(data.error || 'Could not create checkout session. Please try again.');
+        }
+      } catch (err) {
+        console.error('Checkout error:', err);
+        alert('Something went wrong. Please try again.');
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+/* ─── TTS Listen Button (in article header) ─── */
+.tts-listen-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: 1px solid var(--border-secondary, #333);
+  border-radius: 20px;
+  padding: 4px 14px;
+  color: var(--text-secondary, #999);
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  vertical-align: middle;
+}
+.tts-listen-btn:hover {
+  background: var(--bg-hover, rgba(255,255,255,0.05));
+  color: var(--text-primary, #fff);
+  border-color: var(--accent, #6366f1);
+}
+
+/* ─── Floating Controller Bar ─── */
+.tts-controller {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(120px);
+  background: var(--bg-card, #1a1a2e);
+  border: 1px solid var(--border, #333);
+  border-radius: 40px;
+  padding: 8px 20px;
+  z-index: 9999;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5), 0 0 0 1px rgba(99,102,241,0.1);
+  backdrop-filter: blur(12px);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.tts-controller.visible {
+  transform: translateX(-50%) translateY(0);
+}
+body.tts-active {
+  padding-bottom: 100px;
+}
+
+.tts-ctrl-inner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tts-ctrl-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text-secondary, #999);
+  cursor: pointer;
+  transition: all 0.15s;
+  flex-shrink: 0;
+  font-size: 14px;
+}
+.tts-ctrl-btn:hover {
+  background: rgba(255,255,255,0.08);
+  color: var(--text-primary, #fff);
+}
+#ttsStopBtn { color: #ef4444; }
+#ttsStopBtn:hover { background: rgba(239,68,68,0.12); }
+
+/* Time displays */
+.tts-ctrl-time {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--text-secondary, #888);
+  min-width: 36px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* Progress + scrub container */
+.tts-ctrl-progress {
+  flex: 1;
+  min-width: 50px;
+  height: 6px;
+  position: relative;
+  background: rgba(255,255,255,0.1);
+  border-radius: 3px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.tts-ctrl-bar {
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  background: var(--accent, #6366f1);
+  border-radius: 3px;
+  width: 0%;
+  pointer-events: none;
+}
+.tts-ctrl-scrub {
+  position: absolute;
+  top: -8px; left: 0;
+  width: 100%;
+  height: 22px;
+  opacity: 0;
+  cursor: pointer;
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+}
+.tts-ctrl-scrub::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent, #6366f1);
+  cursor: pointer;
+  box-shadow: 0 0 6px rgba(99,102,241,0.5);
+}
+.tts-ctrl-scrub::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent, #6366f1);
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 6px rgba(99,102,241,0.5);
+}
+
+/* Speed button */
+#ttsSpeedBtn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--accent, #6366f1);
+  width: auto;
+  padding: 0 8px;
+  border-radius: 14px;
+}
+
+/* ─── Mobile ─── */
+@media (max-width: 640px) {
+  .tts-controller {
+    bottom: 12px;
+    left: 8px;
+    right: 8px;
+    transform: translateY(120px);
+    border-radius: 28px;
+    padding: 8px 12px;
+  }
+  .tts-controller.visible {
+    transform: translateY(0);
+  }
+  .tts-ctrl-inner {
+    gap: 4px;
+  }
+  .tts-ctrl-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+  .tts-ctrl-time {
+    font-size: 10px;
+    min-width: 30px;
+  }
+  .tts-ctrl-progress {
+    min-width: 30px;
+  }
+  #ttsSpeedBtn {
+    font-size: 10px;
+    padding: 0 6px;
+  }
+  body.tts-active {
+    padding-bottom: 75px;
+  }
+}

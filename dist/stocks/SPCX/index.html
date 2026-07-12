@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en" class="stock-page">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>SPCX — The Signal</title>
+  <link rel="stylesheet" href="/css/stock-card.css">
+  <link rel="stylesheet" href="/css/nav.css">
+  <script src="https://cdn.jsdelivr.net/npm/lightweight-charts@4.1.3/dist/lightweight-charts.standalone.production.js"></script>
+</head>
+<body class="stock-page">
+
+  <!-- ── NAV ── -->
+  <nav class="stock-nav">
+    <div class="stock-nav-inner">
+      <a href="/stocks/" class="stock-nav-stocks">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        Stocks
+      </a>
+      <a href="/" class="stock-nav-logo">
+        <span class="logo-text"><span class="logo-the">THE</span> <strong>SIGNAL</strong></span>
+      </a>
+      <div class="stock-nav-right">
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+          <span class="theme-icon">☀️</span>
+        </button>
+        <button class="nav-btn hamburger-btn" id="hamburgerToggle" aria-label="Menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Rocket Lab-Style Drawer -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <div class="drawer" id="drawer">
+    <div class="drawer-header">
+      <a href="/" class="drawer-logo">
+        <span class="the">THE</span>
+        <span class="signal">SIGNAL</span>
+      </a>
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">&#10005;</button>
+    </div>
+    <div class="drawer-body" id="drawerBody">
+      <div class="drawer-main" id="drawerMain">
+        <div class="drawer-section-label">SECTORS</div>
+        <a href="javascript:void(0)" class="drawer-link" onclick="openSubDrawer()">SECTORS</a>
+        <a href="/stocks/" class="drawer-link">STOCK PAGES</a>
+        <a href="/#scorecard" class="drawer-link">SIGNAL SCORECARD</a>
+        <a href="/hive" class="drawer-link">HIVE</a>
+        <a href="/signal-vs-the-street" class="drawer-link">SIGNAL VS. STREET</a>
+        <a href="/pricing" class="drawer-link">SIGNAL PREMIUM</a>
+        <a href="/pricing" class="drawer-cta">GET PREMIUM ACCESS</a>
+      </div>
+      <div class="drawer-sub" id="drawerSub">
+        <div class="sub-header" onclick="closeSubDrawer()">
+          <span class="sub-back">&#8249;</span>
+          <span class="sub-title">SECTORS</span>
+        </div>
+        <a href="/sector/ai" class="drawer-link">AI</a>
+        <a href="/sector/cyber" class="drawer-link">CYBER</a>
+        <a href="/sector/defense" class="drawer-link">DEFENSE</a>
+        <a href="/sector/space" class="drawer-link">SPACE</a>
+        <a href="/sector/mega-cap" class="drawer-link">MEGA-CAP</a>
+        <a href="/sector/quantum" class="drawer-link">QUANTUM</a>
+        <a href="/sector/ai-power" class="drawer-link">AI POWER</a>
+        <a href="/sector/etfs" class="drawer-link">ETFS</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="stock-page-main">
+
+    <!-- ═══════════ HERO ═══════════ -->
+    <section class="stock-hero">
+      <div class="stock-hero-inner">
+        <div class="stock-hero-left">
+          <div class="stock-ticker-badge">$SPCX · NASDAQ</div>
+          <h1 class="stock-company-name">Space Exploration Technologies Corp.</h1>
+          
+          <div class="stock-company-meta">
+            <span class="flag">🇺🇸</span>
+            <span>Industrials</span>
+            <span class="dot"></span>
+            <span>Aerospace &amp; Defense</span>
+          </div>
+        </div>
+        <div class="stock-hero-right">
+          <div class="stock-price-display" data-price="SPCX">$145.30</div>
+          <div class="stock-change-display negative" data-change="SPCX">
+            ▼ 4.51%
+          </div>
+          
+        </div>
+      </div>
+      <div class="stock-hero-stats">
+        <div class="hero-stat"><span class="hero-stat-label">Market Cap</span><span class="hero-stat-value">$1.9T</span></div>
+        <div class="hero-stat"><span class="hero-stat-label">P/E (TTM)</span><span class="hero-stat-value">—</span></div>
+        <div class="hero-stat"><span class="hero-stat-label">52W Range</span><span class="hero-stat-value">$145.07 – $225.64</span></div>
+        <div class="hero-stat"><span class="hero-stat-label">Volume</span><span class="hero-stat-value">147.1M</span></div>
+        <div class="hero-stat"><span class="hero-stat-label">Beta</span><span class="hero-stat-value">—</span></div>
+      </div>
+    </section>
+
+    <!-- ═══════════ TABS ═══════════ -->
+    <nav class="stock-tabs">
+      <button class="stock-tab active" data-tab="overview">Summary</button>
+      <button class="stock-tab" data-tab="financials">Financials</button>
+      <button class="stock-tab" data-tab="earnings">Earnings</button>
+      <button class="stock-tab" data-tab="news">News</button>
+    </nav>
+
+    <!-- ═══════════ OVERVIEW TAB (default) ═══════════ -->
+    <div id="tab-overview" class="stock-tab-panel active">
+      <!-- Chart -->
+      
+      <section class="stock-chart-section">
+        <div class="chart-header">
+          <div class="chart-timeframe-bar">
+            <button class="tf-btn active" data-tf="1m">1M</button>
+            <button class="tf-btn" data-tf="3m">3M</button>
+            <button class="tf-btn" data-tf="6m">6M</button>
+            <button class="tf-btn" data-tf="1y">1Y</button>
+            <button class="tf-btn" data-tf="5y">5Y</button>
+            <button class="tf-btn" data-tf="all">ALL</button>
+          </div>
+        </div>
+        <div id="stockChart" class="stock-chart"></div>
+      </section>
+      
+
+      <!-- Key Statistics -->
+      <section class="stock-section">
+        <div class="stock-section-header"><h2 class="stock-section-title">Key Statistics</h2></div>
+        <div class="stock-stats-grid">
+          <div class="stat-card accent"><span class="stat-label">Revenue</span><span class="stat-value">$19.3B</span><span class="stat-change positive">15.4%</span></div>
+          <div class="stat-card"><span class="stat-label">Net Income</span><span class="stat-value">$-9.4B</span></div>
+          <div class="stat-card"><span class="stat-label">Gross Margin</span><span class="stat-value">48.8%</span></div>
+          <div class="stat-card"><span class="stat-label">Net Margin</span><span class="stat-value">-45.0%</span></div>
+          <div class="stat-card"><span class="stat-label">P/E Ratio</span><span class="stat-value">—</span></div>
+          <div class="stat-card"><span class="stat-label">Forward P/E</span><span class="stat-value">167.64</span></div>
+          <div class="stat-card"><span class="stat-label">PEG Ratio</span><span class="stat-value">—</span></div>
+          <div class="stat-card"><span class="stat-label">P/S Ratio</span><span class="stat-value">99.2x</span></div>
+        </div>
+      </section>
+
+      <!-- Financial Performance -->
+      <section class="stock-section">
+        <div class="stock-section-header"><h2 class="stock-section-title">Financial Performance</h2></div>
+        <div class="stock-stats-grid">
+          <div class="stat-card"><span class="stat-label">EBITDA</span><span class="stat-value">$4.0B</span></div>
+          <div class="stat-card"><span class="stat-label">Free Cash Flow</span><span class="stat-value">—</span></div>
+          <div class="stat-card"><span class="stat-label">Operating Margin</span><span class="stat-value">-41.6%</span></div>
+          <div class="stat-card"><span class="stat-label">ROE</span><span class="stat-value">—</span></div>
+          <div class="stat-card"><span class="stat-label">Total Debt</span><span class="stat-value">$30.6B</span></div>
+          <div class="stat-card"><span class="stat-label">Total Cash</span><span class="stat-value">$23.7B</span></div>
+          <div class="stat-card"><span class="stat-label">Dividend Yield</span><span class="stat-value">—</span></div>
+          <div class="stat-card"><span class="stat-label">EPS (TTM)</span><span class="stat-value">$-0.67</span></div>
+        </div>
+      </section>
+
+      <!-- The Signal Report -->
+      <section class="stock-section signal-report-section">
+        <div class="signal-report-header">
+          <div class="signal-report-title-row">
+            <img src="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/logo-original.png" alt="The Signal" class="signal-report-logo" />
+            <h2 class="stock-section-title">The Signal Report</h2>
+            <span class="signal-report-badge">PREMIUM</span>
+          </div>
+        </div>
+
+        <div class="signal-report-grid">
+          <!-- Column 1: Rating -->
+          <div class="signal-rating-col">
+            <div class="signal-rating-label">Moat Rating</div>
+            <div class="signal-moat-badge narrow">🛡️ Narrow Moat</div>
+            <div class="signal-stars">★★★☆☆</div>
+            <div class="signal-moat-reasons">
+              <div class="moat-source-row">
+      <span class="moat-source-name">Switching Costs</span>
+      <span class="moat-source-dots">●●○○○</span>
+    </div><div class="moat-source-row">
+      <span class="moat-source-name">Intangible Assets</span>
+      <span class="moat-source-dots">●●○○○</span>
+    </div><div class="moat-source-row">
+      <span class="moat-source-name">Network Effect</span>
+      <span class="moat-source-dots">●●●○○</span>
+    </div><div class="moat-source-row">
+      <span class="moat-source-name">Cost Advantage</span>
+      <span class="moat-source-dots">●●●●○</span>
+    </div><div class="moat-source-row">
+      <span class="moat-source-name">Efficient Scale</span>
+      <span class="moat-source-dots">●●●●○</span>
+    </div>
+            </div>
+            <div class="signal-moat-confidence">Confidence: Medium</div>
+          </div>
+
+          <!-- Column 2: Fair Value -->
+          <div class="signal-fair-value-col">
+            <div class="signal-fair-value-label">Fair Value</div>
+            <div class="signal-fair-value-price">$242.22</div>
+            <div class="signal-fair-value-change positive">+66.7% upside</div>
+            <div class="signal-fair-value-context">Based on 18 analyst targets</div>
+          </div>
+        </div>
+
+        <!-- AI Analysis -->
+        <div class="signal-ai-analysis">
+          <div class="signal-ai-header">
+            <span class="signal-ai-icon">🤖</span>
+            <span>Pulse AI Analysis</span>
+          </div>
+          <p class="signal-ai-text">Based on our analysis, Space Exploration Technologies Corp. demonstrates buy fundamentals. with revenue reaching $19.3B and growing at 15.4% year-over-year. Our fair value estimate of $242.22 suggests +66.7% upside from current levels of $145.30. The company maintains a competitive position in Indus...</p>
+          <div class="signal-premium-cta">
+            <span class="premium-lock">🔒</span>
+            <span>Members Only</span>
+            <span class="premium-arrow">→</span>
+          </div>
+        </div>
+
+        <!-- Valuation Quick Stats -->
+        <div class="signal-valuation-stats">
+          <div class="signal-val-stat">
+            <div class="signal-val-label">P/E (TTM)</div>
+            <div class="signal-val-value">—</div>
+          </div>
+          <div class="signal-val-stat">
+            <div class="signal-val-label">Forward P/E</div>
+            <div class="signal-val-value">167.64</div>
+          </div>
+          <div class="signal-val-stat">
+            <div class="signal-val-label">PEG Ratio</div>
+            <div class="signal-val-value">—</div>
+          </div>
+          <div class="signal-val-stat">
+            <div class="signal-val-label">Analyst Consensus</div>
+            <div class="signal-val-value buy">buy</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Analyst Consensus -->
+      <section class="stock-section">
+        <div class="stock-section-header"><h2 class="stock-section-title">Wall Street Consensus</h2></div>
+        <span class="analyst-rating-badge buy">buy</span>
+        
+        <div class="analyst-target-row">
+          <div class="analyst-target-item"><span class="target-label">Mean Target</span><span class="target-value">$242.22</span><span class="target-upside">+66.7%</span></div>
+          <div class="analyst-target-divider"></div>
+          <div class="analyst-target-item"><span class="target-label">High</span><span class="target-value">$800.00</span></div>
+          <div class="analyst-target-divider"></div>
+          <div class="analyst-target-item"><span class="target-label">Low</span><span class="target-value">$62.00</span></div>
+        </div>
+        
+        <div class="consensus-list">
+          <div class="consensus-row"><span class="consensus-label">Strong Buy</span><div class="consensus-bar-track"><div class="consensus-bar-fill" style="width:19%;background:#22c55e"></div></div><span class="consensus-count">6</span></div>
+          <div class="consensus-row"><span class="consensus-label">Buy</span><div class="consensus-bar-track"><div class="consensus-bar-fill" style="width:65%;background:#86efac"></div></div><span class="consensus-count">20</span></div>
+          <div class="consensus-row"><span class="consensus-label">Hold</span><div class="consensus-bar-track"><div class="consensus-bar-fill" style="width:13%;background:#f59e0b"></div></div><span class="consensus-count">4</span></div>
+          <div class="consensus-row"><span class="consensus-label">Sell</span><div class="consensus-bar-track"><div class="consensus-bar-fill" style="width:3%;background:#ef4444"></div></div><span class="consensus-count">1</span></div>
+          
+        </div>
+      </section>
+
+      <!-- Total Returns -->
+      <section class="stock-section">
+        <div class="stock-section-header"><h2 class="stock-section-title">Total Returns</h2></div>
+        <div class="stock-returns-grid">
+          <div class="return-card"><span class="return-label">1 Year</span><span class="return-value negative">-9.7%</span></div>
+          <div class="return-card"><span class="return-label">5 Year</span><span class="return-value ">—</span></div>
+          <div class="return-card"><span class="return-label">10 Year</span><span class="return-value ">—</span></div>
+          <div class="return-card"><span class="return-label">Year to Date</span><span class="return-value negative">-9.7%</span></div>
+        </div>
+      </section>
+
+      <!-- Company Profile -->
+      <section class="stock-section">
+        <div class="stock-section-header"><h2 class="stock-section-title">Company Profile</h2></div>
+        <p class="stock-profile-text">Space Exploration Technologies Corp. provides satellite-based broadband services in the United States, Ireland, Canada, and internationally. The company's Connectivity segment operates a high-speed, low-latency broadband network powered by various Starlink satellites in low-earth orbit, delivering connectivity to various consumer, enterprise, and government customers through its Starlink offering. Its Space segment designs, manufactures, and launches reusable rockets to provide access to space. It offers launch services for the deployment of payloads to intended orbits for commercial and government customers utilizing Falcon 9 and Falcon Heavy; and launch and development for the development </p>
+        <div class="stock-profile-grid">
+          <div class="profile-item"><span class="profile-label">Sector</span><span class="profile-value">Industrials</span></div>
+          <div class="profile-item"><span class="profile-label">Industry</span><span class="profile-value">Aerospace &amp; Defense</span></div>
+          <div class="profile-item"><span class="profile-label">Employees</span><span class="profile-value">22,000</span></div>
+          <div class="profile-item"><span class="profile-label">Headquarters</span><span class="profile-value">Starbase, TX</span></div>
+          <div class="profile-item"><span class="profile-label">Exchange</span><span class="profile-value">NasdaqGS</span></div>
+          <div class="profile-item"><span class="profile-label">Website</span><span class="profile-value"><a href="https://www.spacex.com" target="_blank" rel="noopener">https://www.spacex.com</a></span></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ═══════════ FINANCIALS TAB ═══════════ -->
+    <div id="tab-financials" class="stock-tab-panel">
+      <!-- ══ INCOME STATEMENT ══ -->
+      <section class="fin-section">
+        <div class="fin-header">
+          <span class="fin-title">Income Statement</span>
+          <div class="fin-toggle-group">
+            <button class="fin-toggle-btn" data-mode="quarterly">Quarterly</button>
+            <button class="fin-toggle-btn active" data-mode="annual">Annual</button>
+          </div>
+        </div>
+        <div class="fin-chart-container">
+          <div class="fin-chart-area">
+            <div class="fin-chart-grid" id="finChartGrid"></div>
+            <div class="fin-chart-bars" id="finChartBars"></div>
+          </div>
+          <div class="fin-chart-yaxis" id="finChartYAxis"></div>
+        </div>
+        <div class="fin-chart-xaxis" id="finChartXAxis"></div>
+        <div class="fin-legend">
+          <div class="fin-legend-item"><span class="fin-legend-dot" style="background:#4b8ae5"></span> Total Revenues</div>
+          <div class="fin-legend-item"><span class="fin-legend-dot" style="background:#8d939c"></span> Net Income</div>
+        </div>
+      </section>
+      <section class="fin-section">
+        <div class="fin-table-wrap">
+          <table class="fin-data-table" id="finDataTable">
+            <thead><tr><th>Period Ending:</th></tr></thead>
+            <tbody>
+              <tr class="fin-data-row"><td class="fin-data-label">Total Revenues</td></tr>
+              <tr class="fin-data-row"><td class="fin-data-label">Gross Profit</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <!-- ══ BALANCE SHEET ══ -->
+      <section class="fin-section">
+        <div class="fin-header">
+          <span class="fin-title">Balance Sheet</span>
+          <div class="fin-toggle-group">
+            <button class="fin-toggle-btn-bs" data-mode="quarterly">Quarterly</button>
+            <button class="fin-toggle-btn-bs active" data-mode="annual">Annual</button>
+          </div>
+        </div>
+        <div class="fin-chart-container">
+          <div class="fin-chart-area">
+            <div class="fin-chart-grid" id="finBsGrid"></div>
+            <div class="fin-chart-bars" id="finBsBars"></div>
+          </div>
+          <div class="fin-chart-yaxis" id="finBsYAxis"></div>
+        </div>
+        <div class="fin-chart-xaxis" id="finBsXAxis"></div>
+        <div class="fin-legend">
+          <div class="fin-legend-item"><span class="fin-legend-dot" style="background:#4b8ae5"></span> Total Assets</div>
+          <div class="fin-legend-item"><span class="fin-legend-dot" style="background:#8d939c"></span> Total Liabilities</div>
+        </div>
+      </section>
+      <section class="fin-section">
+        <div class="fin-table-wrap">
+          <table class="fin-data-table" id="finBsTable">
+            <thead><tr><th>Period Ending:</th></tr></thead>
+            <tbody>
+              <tr class="fin-data-row"><td class="fin-data-label">Total Assets</td></tr>
+              <tr class="fin-data-row"><td class="fin-data-label">Total Liabilities</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <!-- ═══════════ EARNINGS TAB ═══════════ -->
+    <div id="tab-earnings" class="stock-tab-panel">
+      <div class="earn-summary"><p class="earn-summary-text">Earnings data will be available after the next report.</p></div>
+    </div>
+
+    <!-- ═══════════ NEWS TAB ═══════════ -->
+    <div id="tab-news" class="stock-tab-panel">
+      
+      <div class="news-grid">
+        <a href="https://readthesignal.net/article/spacex-lockup-timing-strategy-2026/" class="news-card" target="_blank" rel="noopener"><div class="news-card-img-wrap"><img class="news-card-img" src="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/articles/spacex-lockup-timing-strategy-2026.jpg" alt="The SpaceX Lockup Calendar: When To Buy $SPCX" loading="lazy"></div><div class="news-card-body"><h3 class="news-card-title">The SpaceX Lockup Calendar: When To Buy $SPCX</h3><div class="news-card-meta"><span class="news-card-date">Jun 23, 2026</span><span class="news-card-readtime">4 minutes</span></div><p class="news-card-summary">SpaceX's record-shattering IPO saw the stock surge past $225 before settling back. But with under 5% float and a complex…</p></div></a><a href="https://readthesignal.net/article/spacex-record-ipo-june-2026/" class="news-card" target="_blank" rel="noopener"><div class="news-card-img-wrap"><img class="news-card-img" src="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/articles/spacex-ipo-june-2026.jpg" alt="SpaceX Blasts Through the Nasdaq Roof — $75B IPO Closes at $161, Musk Is Now Worth More Than Most Countries" loading="lazy"></div><div class="news-card-body"><h3 class="news-card-title">SpaceX Blasts Through the Nasdaq Roof — $75B IPO Closes at $161, Musk Is Now Worth More Than Most Countries</h3><div class="news-card-meta"><span class="news-card-date">Jun 12, 2026</span><span class="news-card-readtime">3 min read</span></div><p class="news-card-summary">SpaceX completed the largest IPO in history on June 12, raising $75 billion at a $1.8 trillion valuation. Shares surged …</p></div></a><a href="https://readthesignal.net/article/spacex-75b-ipo-record-2026/" class="news-card" target="_blank" rel="noopener"><div class="news-card-img-wrap"><img class="news-card-img" src="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/articles/spacex-75b-ipo-record-2026.jpg" alt="Forget Saudi Aramco — SpaceX Just Dropped the Biggest IPO in History. $75 Billion at $135 a Share." loading="lazy"></div><div class="news-card-body"><h3 class="news-card-title">Forget Saudi Aramco — SpaceX Just Dropped the Biggest IPO in History. $75 Billion at $135 a Share.</h3><div class="news-card-meta"><span class="news-card-date">Jun 4, 2026</span><span class="news-card-readtime">5 minutes</span></div><p class="news-card-summary">SpaceX set its IPO terms on June 3, 2026, at $135 per share — a fixed-price, all-primary offering targeting $75 billion,…</p></div></a>
+      </div>
+    </div>
+
+    <!-- ═══════════ STATISTICS TAB (removed — now on Overview) ═══════════ -->
+  </main>
+
+  <script id="chartData-SPCX" type="application/json">{"prices":[{"time":"2026-06-12","open":150,"high":176.52,"low":149.34,"close":160.95},{"time":"2026-06-15","open":171.74,"high":193,"low":168.35,"close":192.5},{"time":"2026-06-16","open":200.51,"high":225.64,"low":199.98,"close":211.39},{"time":"2026-06-17","open":209.84,"high":213.8,"low":187.01,"close":191.82},{"time":"2026-06-18","open":188.39,"high":190,"low":172.11,"close":185},{"time":"2026-06-22","open":176.04,"high":176.75,"low":154,"close":154.6},{"time":"2026-06-23","open":151.06,"high":165.5,"low":147.11,"close":156.11},{"time":"2026-06-24","open":154.2,"high":159.86,"low":150.72,"close":154.54},{"time":"2026-06-25","open":156.63,"high":160.65,"low":150,"close":153},{"time":"2026-06-26","open":150.62,"high":158.4,"low":148.51,"close":153.23},{"time":"2026-06-29","open":157.36,"high":166.17,"low":151.74,"close":164.19},{"time":"2026-06-30","open":163.38,"high":172.4,"low":161.64,"close":170.86},{"time":"2026-07-01","open":171.57,"high":171.74,"low":155,"close":157.54},{"time":"2026-07-02","open":159.73,"high":162.16,"low":155.88,"close":162},{"time":"2026-07-06","open":165.95,"high":167.9,"low":155.04,"close":160.42},{"time":"2026-07-07","open":158.92,"high":159.3,"low":148.86,"close":149.47},{"time":"2026-07-08","open":152.55,"high":152.93,"low":145.2,"close":148.3},{"time":"2026-07-09","open":150.45,"high":153.5,"low":147.59,"close":152.16},{"time":"2026-07-10","open":150.13,"high":150.57,"low":145.07,"close":145.3000030517578}],"quarterly":{"revenue":[{"period":"2026/Q1","actual":4694000000},{"period":"2025/Q1","actual":4067000000},{"period":"2026/Q2","estimated":6821850680},{"period":"2026/Q3","estimated":11885574910}],"netIncome":[{"period":"2026/Q1","actual":-4276000000},{"period":"2025/Q1","actual":-528000000}],"eps":[],"ebit":[{"period":"2026/Q1","actual":-3606000000},{"period":"2025/Q1","actual":-67000000}],"totalAssets":[{"period":"2026/Q1","actual":102094000000}],"totalLiabilities":[{"period":"2026/Q1","actual":60512000000}]},"annual":{"income":[{"period":"12/2025","Total Revenue":18674000000,"Gross Profit":9223000000,"Net Income":-4937000000},{"period":"12/2024","Total Revenue":14015000000,"Gross Profit":6019000000,"Net Income":791000000},{"period":"12/2023","Total Revenue":10387000000,"Gross Profit":4277000000,"Net Income":-4628000000}],"balance":[{"period":"12/2025","Total Assets":92079000000,"Total Liabilities":50754000000},{"period":"12/2024","Total Assets":57062000000,"Total Liabilities":31258000000}]},"earnings":[]}</script>
+  <script src="/js/stock-chart.js?v=11"></script>
+  <script>
+(function() {
+  const saved = localStorage.getItem('stock-theme');
+  if (saved === 'light') {
+    document.documentElement.classList.add('light');
+    var icon = document.querySelector('.theme-icon');
+    if (icon) icon.textContent = '🌙';
+  }
+})();
+function toggleTheme() {
+  const html = document.documentElement;
+  html.classList.toggle('light');
+  localStorage.setItem('stock-theme', html.classList.contains('light') ? 'light' : 'dark');
+  var icon = document.querySelector('.theme-icon');
+  if (icon) icon.textContent = html.classList.contains('light') ? '🌙' : '☀️';
+  if (window._updateChartTheme) window._updateChartTheme();
+}
+  </script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function(){
+    var btn = document.querySelector('.hamburger-btn');
+    var drawer = document.getElementById('drawer');
+    var overlay = document.getElementById('drawerOverlay');
+    var closeBtn = document.getElementById('drawerClose');
+    function openDrawer() {
+      if(drawer){drawer.classList.add('open');}
+      if(overlay){overlay.classList.add('open');}
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDrawer() {
+      if(drawer){drawer.classList.remove('open');}
+      if(overlay){overlay.classList.remove('open');}
+      document.body.style.overflow = '';
+      var main = document.getElementById('drawerMain');
+      var sub = document.getElementById('drawerSub');
+      if (main) main.classList.remove('hidden');
+      if (sub) sub.classList.remove('active');
+    }
+    window.openSubDrawer = function() {
+      var main = document.getElementById('drawerMain');
+      var sub = document.getElementById('drawerSub');
+      if (main) main.classList.add('hidden');
+      if (sub) sub.classList.add('active');
+    };
+    window.closeSubDrawer = function() {
+      var main = document.getElementById('drawerMain');
+      var sub = document.getElementById('drawerSub');
+      if (main) main.classList.remove('hidden');
+      if (sub) sub.classList.remove('active');
+    };
+    if (btn && drawer && overlay) {
+      btn.addEventListener('click', function(){ openDrawer(); });
+      overlay.addEventListener('click', function(){ closeDrawer(); });
+      if (closeBtn) closeBtn.addEventListener('click', function(){ closeDrawer(); });
+      document.addEventListener('keydown', function(e){
+        if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
+      });
+      drawer.querySelectorAll('a').forEach(function(a){
+        a.addEventListener('click', function(){ closeDrawer(); });
+      });
+    }
+  });
+  </script>
+  <script>
+  // Live price updater for stock header
+  (function(){var I=300000;function f(n){if(n==null||isNaN(n))return'---';return n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})}function u(p){document.querySelectorAll('[data-price]').forEach(function(e){var s=e.getAttribute('data-price');var d=p[s];if(d&&d.price!=null)e.textContent='$'+f(d.price)});document.querySelectorAll('[data-change]').forEach(function(e){var s=e.getAttribute('data-change');var d=p[s];if(d&&d.changePercent!=null){var c=(d.changePercent>=0?'+':'')+d.changePercent.toFixed(2)+'%';e.textContent=(d.changePercent>=0?'▲ ':'▼ ')+Math.abs(d.changePercent).toFixed(2)+'%';var cl=e.className.replace(/positive|negative/g,'').trim();e.className=cl+' '+(d.changePercent>=0?'positive':'negative')}})})function r(){fetch(location.origin+'/api/prices/').then(function(r){return r.json()}).then(function(d){u((d.prices||d))}).catch(function(e){console.warn('price update:',e.message)})}r();setInterval(r,I)})();
+  </script>
+</body>
+</html>

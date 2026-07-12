@@ -1,0 +1,35 @@
+{
+  "symbol": "AXON",
+  "industry": "Aerospace & Defense",
+  "rating": "Wide",
+  "stars": 4,
+  "confidence": "Medium",
+  "sources": [
+    {
+      "name": "Switching Costs",
+      "score": 2,
+      "rationale": "no strong switching-cost indicators detected"
+    },
+    {
+      "name": "Intangible Assets",
+      "score": 4,
+      "rationale": "premium gross margins 60% reflect brand/IP power"
+    },
+    {
+      "name": "Network Effect",
+      "score": 4,
+      "rationale": "strong 34% revenue growth; high EPS growth 90% (operating leverage from scale)"
+    },
+    {
+      "name": "Cost Advantage",
+      "score": 4,
+      "rationale": "gross margins 60% well above 40% industry"
+    },
+    {
+      "name": "Efficient Scale",
+      "score": 5,
+      "rationale": "premium 60% gross margins sustained (high barriers)"
+    }
+  ],
+  "analysis": "Intangible Assets and Network Effect and Cost Advantage create a durable competitive fortress. The company's moat is reinforced by multiple reinforcing factors, making it unlikely competitors can erode its position in the next decade."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "credo-ai-connectivity-chips-2026",
+  "slug": "credo-ai-connectivity-chips-2026",
+  "ticker": "CRDO",
+  "sector": "ai",
+  "sentiment": "bullish",
+  "date": "2026-07-09T00:00:00.000Z",
+  "title": "CRDO's Purple Cables Are the Hidden Plumbing of Every AI Data Center \u2014 and They're Just Getting Started",
+  "subtitle": "Revenue tripled to $1.34B. Three analysts raised targets in two days. And the stock just pulled back 13% from its high. Here's why Credo might be the most overlooked connectivity bet in AI.",
+  "summary": "Credo Technology Group (CRDO) is the company making the $500 purple cables that connect every major AI cluster. Revenue tripled to $1.34 billion, gross margins sit at 68%, and the DustPhotonics acquisition gave them a vertically integrated optical stack worth $600M+ in FY2027. Three analyst upgrades in 48 hours point to $350. The stock pulled back to ~$268. This is the picks-and-shovels AI play that actually works.",
+  "image": {
+    "src": "/img/articles/credo-ai-connectivity-chips-2026.jpg",
+    "caption": "Credo Technology Group's signature purple active electrical cables \u2014 the connectivity fabric powering AI data centers worldwide."
+  },
+  "tags": [
+    "CRDO",
+    "Credo Technology Group",
+    "AI",
+    "semiconductors",
+    "data center",
+    "AEC",
+    "active electrical cables",
+    "optical networking",
+    "DustPhotonics",
+    "silicon photonics"
+  ],
+  "links": [
+    {
+      "label": "CNBC: The $500 Purple Cables Powering the AI Boom",
+      "url": "https://www.cnbc.com/2025/10/17/500-purple-cables-put-credo-in-middle-of-the-ai-boom.html"
+    },
+    {
+      "label": "CNBC: Credo Nearly Doubled in 2026 \u2014 Evercore Says Gains Ahead",
+      "url": "https://www.cnbc.com/2026/06/22/credo-technology-nearly-doubled-in-2026-evercore-isi-says-gains-ahead.html"
+    },
+    {
+      "label": "Credo Investor Relations",
+      "url": "https://investors.credosemi.com/overview/default.aspx"
+    }
+  ],
+  "videos": [
+    {
+      "id": "LgUsaUeIK2Q",
+      "title": "Credo CEO Bill Brennan: This AI buildout is global in nature",
+      "source": "youtube",
+      "url": "https://www.youtube.com/watch?v=LgUsaUeIK2Q",
+      "position": "after_3rd_paragraph"
+    }
+  ],
+  "price": 268.0,
+  "bodyHtml": "<p>There's a company in San Jose selling $500 purple cables, and it just tripled its revenue to $1.34 billion in a single year. By some measures it's still early. That sentence should make you pay attention.</p><p>Credo Technology Group \u2014 ticker CRDO \u2014 is what happens when you find a niche so essential that no AI data center on earth can function without it, then you dominate that niche so completely that competitors are still figuring out how you did it. The company's <a href=\"https://investors.credosemi.com/overview/default.aspx\">active electrical cables</a> \u2014 those famous purple cables \u2014 connect GPUs, switches, and servers inside hyperscale AI clusters. They're cheaper than fiber, use less power, and don't drop connections the way optical links do. Credo owns roughly 73% of the AEC market. When you need to move data between 100,000 GPUs without losing a single bit, you call Credo.</p><p>The numbers are genuinely absurd. Full-year FY2026 revenue hit $1.34 billion \u2014 up 206% year-over-year. The Q4 quarter alone, $437 million, surpassed the company's entire FY2025 revenue. Gross margins sit at 68%. Non-GAAP operating margin: 47.8%. The company is essentially debt-free with $1.4 billion in net cash. This is not a startup burning money to chase growth. This is a machine.</p><!-- VIDEO 0 --><p>And yet the stock \u2014 trading around $268 as of this morning \u2014 sits roughly 13% below its 52-week high of $308.67. The pullback happened for no fundamental reason. No earnings miss, no guidance cut, no customer loss. Just the market deciding that a stock up roughly 86% year-to-date needed a breather. If you've been waiting for an entry point into Credo, this might be your window.</p><p>Three major analysts certainly think so. Between June 22 and June 23, Stifel raised its target to $350, Bank of America went to $340, and Evercore ISI initiated coverage with an Outperform and a $325 target. Three of the biggest names on the Street, all converging on the same thesis within 48 hours: Credo's connectivity story has legs well beyond copper cables. Stifel called it a \"vertically integrated, system-level connectivity strategy\" after multi-day meetings with management. BofA labeled Credo a key AI capex winner with a long runway through 2030. These aren't cautious nods. These are conviction calls.</p><p>The conviction comes from <a href=\"https://investors.credosemi.com/news-events/news/news-details/2026/Credo-Completes-Acquisition-of-DustPhotonics/default.aspx\">DustPhotonics</a>. Credo closed its $1.3 billion acquisition of the Israeli silicon photonics company in May, and it changes the entire growth narrative. Before DustPhotonics, Credo was primarily a copper-cable company with some optical DSPs on the side. Now it has a fully vertically integrated optical stack: Credo's own SerDes IP feeding into Credo's own DSPs, sending signals through DustPhotonics' silicon photonic integrated circuits. The combined optical portfolio is expected to generate $600 million or more in FY2027 \u2014 three revenue legs (optical DSPs, silicon photonics PICs, ZeroFlap optics) each doing $100 million-plus individually.</p><p>CEO Bill Brennan told <a href=\"https://www.cnbc.com/2025/10/17/500-purple-cables-put-credo-in-middle-of-the-ai-boom.html\">CNBC</a> this AI buildout is \"global in nature\" \u2014 and the numbers back him up. Every hyperscaler \u2014 Amazon, Microsoft, xAI, Meta \u2014 is building clusters that need Credo's connectivity fabric. The AEC market alone is projected to hit $4 billion by 2028. And Credo's guide for FY2027 calls for 80%+ revenue growth. Not 20%. Not 30%. Eighty percent. On top of a year where revenue already tripled. Forward EPS estimates sit at $8.91, which puts the forward P/E at roughly 30x \u2014 expensive, sure, but a lot more reasonable than the 107x trailing multiple suggests.</p><p>There are risks \u2014 and you should know them. Customer concentration is extreme: the top two customers account for 71% of revenue combined, with the single biggest at 39%. Losing either would hurt badly. Insider selling totaling $76.9 million from the CEO, CFO, CTO, and legal chief in mid-June is worth noting \u2014 though execs at high-growth companies sell shares all the time, and Brennan still owns significant skin in the game. At 107x trailing earnings, the stock prices in years of perfection with zero room for execution missteps or a slowdown in AI capex.</p><p>But here's the thing about picks-and-shovels plays: they don't depend on which AI model wins. Doesn't matter if it's OpenAI, Anthropic, xAI, or Google DeepMind. Every training cluster needs connectivity. Every rack of GPUs needs cables. Every data center needs retimers and DSPs to keep signals clean at 1.6T speeds. Credo is the plumbing underneath the entire AI revolution \u2014 and if FY2027 guidance is anywhere close to accurate, it's plumbing that's about to get a whole lot bigger.</p><p class=\"disclosure\"><em>Disclosure: The Signal holds no position in CRDO. Positions may change. This is not financial advice.</em></p>"
+}

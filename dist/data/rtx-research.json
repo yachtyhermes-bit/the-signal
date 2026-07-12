@@ -1,0 +1,199 @@
+{
+  "company": "RTX Corporation",
+  "ticker": "RTX",
+  "exchange": "NYSE",
+  "sector": "Industrials",
+  "industry": "Aerospace & Defense",
+  "dataAsOf": "2026-06-25",
+  "sources": {
+    "financialData": "yfinance (Yahoo Finance API)",
+    "news": "Google News RSS, Yahoo Finance, Breaking Defense, Investing.com, TIKR, Quartz"
+  },
+  "marketData": {
+    "currentPrice": 186.59,
+    "source": "yfinance Ticker('RTX').info['currentPrice']",
+    "previousClose": 185.06,
+    "fiftyTwoWeekHigh": 214.50,
+    "fiftyTwoWeekLow": 141.26,
+    "sharesOutstanding": 1346683428,
+    "ytdReturn": 0.0039,
+    "ytdReturnPct": "0.39%",
+    "ytdCalculation": {
+      "priceAtJan2": 185.86,
+      "source": "yfinance history(start='2026-01-01', end='2026-01-05') close price"
+    }
+  },
+  "valuation": {
+    "marketCap": 251277656064,
+    "marketCapFormatted": "$251.3B",
+    "source": "yfinance Ticker('RTX').info['marketCap']",
+    "trailingPE": 35.01,
+    "forwardPE": 24.62,
+    "trailingEPS": 5.33,
+    "forwardEPS": 7.58,
+    "enterpriseValue": 283088224256,
+    "enterpriseValueFormatted": "$283.1B"
+  },
+  "revenue": {
+    "totalRevenue_TTM": 90372997120,
+    "totalRevenue_TTM_formatted": "$90.4B",
+    "source": "yfinance Ticker('RTX').info['totalRevenue']",
+    "revenueGrowth_YoY": 0.087,
+    "revenueGrowth_YoY_pct": "8.7%",
+    "revenueGrowthNote": "yfinance trailing revenue growth (TTM vs prior TTM)",
+    "revenueGrowth_annual_2024_to_2025": 0.0974,
+    "revenueGrowth_annual_2024_to_2025_pct": "9.74%",
+    "revenueBreakdown": {
+      "annual_2025": 88603000000,
+      "annual_2024": 80738000000,
+      "annual_2023": 68920000000,
+      "quarterly_Q1_2026": 22076000000,
+      "quarterly_Q4_2025": 24238000000,
+      "quarterly_Q3_2025": 22478000000,
+      "quarterly_Q2_2025": 21581000000,
+      "quarterly_Q1_2025": 20306000000,
+      "source": "yfinance quarterly_income_stmt and income_stmt"
+    }
+  },
+  "profitability": {
+    "operatingIncome_TTM": null,
+    "operatingMargin": 0.1318,
+    "profitMargin": 0.0803,
+    "returnOnEquity": 0.1157,
+    "earningsGrowth": 0.325,
+    "earningsQuarterlyGrowth": 0.341,
+    "source": "yfinance Ticker('RTX').info"
+  },
+  "balanceSheet": {
+    "totalDebt": 38934999040,
+    "totalDebtFormatted": "$38.9B",
+    "totalCash": 6817999872,
+    "totalCashFormatted": "$6.8B",
+    "freeCashflow": 7233375232,
+    "freeCashflowFormatted": "$7.2B",
+    "debtToEquity": 57.23,
+    "source": "yfinance Ticker('RTX').info"
+  },
+  "backlog": {
+    "totalBacklog": 271000000000,
+    "totalBacklogFormatted": "$271 billion (record)",
+    "defenseBacklog": 109000000000,
+    "defenseBacklogFormatted": "$109 billion",
+    "defenseBacklogGrowth_YoY": "18.5%",
+    "asOfDate": "2026-03-31",
+    "source": "Yahoo Finance article: 'Defense ETFs to Buy Now as Record Backlogs Signal Sustained Growth' (Jun 22, 2026)",
+    "sourceUrl": "https://finance.yahoo.com/markets/stocks/articles/defense-etfs-buy-now-record-142700346.html"
+  },
+  "recentCatalysts": [
+    {
+      "date": "2026-06-22",
+      "title": "Record Backlos & Defense Spending Tailwinds - Record $271B backlog at end of March 2026",
+      "summary": "RTX backlog hit record $271B (defense: $109B, +18.5% YoY). Company investing heavily in production of Tomahawk, AMRAAM, and Standard Missile family over next decade to meet growing demand.",
+      "source": "Yahoo Finance / Zacks",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/defense-etfs-buy-now-record-142700346.html"
+    },
+    {
+      "date": "2026-06-08",
+      "title": "RTX invests $100 million to accelerate radar testing and interceptor production",
+      "summary": "RTX invests $100M to expand facility in Rhode Island for radar testing and missile interceptor production capacity.",
+      "source": "RTX Official Press Release",
+      "url": "https://www.rtx.com/News/2026"
+    },
+    {
+      "date": "2026-06-07",
+      "title": "RTX wins billion-dollar air defense contract",
+      "summary": "RTX wins a $1B+ air defense contract with long-term revenue visibility.",
+      "source": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/news/rtx-wins-billion-dollar-air-defense-contract-150000023.html"
+    },
+    {
+      "date": "2026-06-03",
+      "title": "RTX awarded $515 million contract for SPY-6 family of radars",
+      "summary": "RTX's Raytheon unit awarded $515M US Navy contract for SPY-6 radar family support. Company also plans to double SPY-6 radar output by 2028.",
+      "source": "RTX Official Press Release / Naval Technology",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNeDF4S2ZWWnVVeDZ6bGczeFNSa2RwdU1ycV9RZ05nM2FxcXR1MFgxX3Z5Q0lrWWJMOWppUThkdmdTemZoWmNoc28zUTY3dy02MXk4WE5lMFZv"
+    },
+    {
+      "date": "2026-06-22",
+      "title": "MDA Space buys Blue Canyon Technologies from Raytheon for $620M",
+      "summary": "RTX divests Blue Canyon Technologies (satellite components) to Canadian firm MDA Space for $620M all-cash deal.",
+      "source": "Quartz / IBD",
+      "url": "https://qz.com/mda-space-blue-canyon-technologies-raytheon-acquisition-062226"
+    },
+    {
+      "date": "2026-06-14",
+      "title": "RTX bets on doubling SPY-6 radar output by 2028",
+      "summary": "RTX scaling SPY-6(A) production, targeting doubling of radar output by 2028. Stock sits ~14% below highs.",
+      "source": "TIKR.com",
+      "url": "https://www.tikr.com/blog/raytheon-spy6-radar-output"
+    },
+    {
+      "date": "2026-05-28",
+      "title": "RTX sets to revolutionize munitions manufacturing",
+      "summary": "RTX investing in advanced manufacturing for missile/munitions production at scale.",
+      "source": "MarketBeat",
+      "url": "https://www.marketbeat.com/instant-alerts/rtx-is-set-to-revolutionize-munitions-manufacturing/"
+    },
+    {
+      "date": "2026-05-04",
+      "title": "RTX wins $6.6 billion engine contract",
+      "summary": "RTX secured a $6.6B engine contract with significant impact on 2026 revenue pipeline.",
+      "source": "TIKR.com",
+      "url": "https://www.tikr.com/en/blog/rtx-corp-just-won-a-6-6-billion-engine-contract"
+    },
+    {
+      "date": "2026-04-21",
+      "title": "RTX Q1 2026 strong results beat forecasts",
+      "summary": "RTX posted strong Q1 2026 results, beating analyst forecasts on both revenue and EPS. Quarterly revenue: $22.08B (up from $20.31B Q1 2025, +8.8% YoY).",
+      "source": "Investing.com",
+      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-rtx-corp-posts-strong-q1-2026-results"
+    },
+    {
+      "date": "2026-04-15",
+      "title": "Raytheon secures $3.7B deal with Ukraine for German-funded Patriot interceptors",
+      "summary": "RTX wins $3.7B Patriot missile interceptor contract for Ukraine, funded by Germany.",
+      "source": "Breaking Defense",
+      "url": "https://breakingdefense.com/2026/04/raytheon-secures-3-7b-deal-with-ukraine-for-german-funded-patriot-interceptors/"
+    },
+    {
+      "date": "2026-04-08",
+      "title": "Netherlands awards RTX's Raytheon $627M Patriot contract",
+      "summary": "The Netherlands awards RTX's Raytheon a $627M contract for Patriot air and missile defense equipment.",
+      "source": "RTX Official Press Release",
+      "url": "https://www.rtx.com/News"
+    },
+    {
+      "date": "2026-01-28",
+      "title": "RTX posts double-digit growth in 2025, projects higher sales & cash flow in 2026",
+      "summary": "RTX reported full-year 2025 revenue of $88.6B (up ~10% from $80.7B in 2024). Projected higher sales and cash flow for 2026.",
+      "source": "GovCon Wire",
+      "url": "https://www.govconwire.com/2026/01/rtx-posts-double-digit-growth-in-2025-projects-higher-sales-cash-flow-in-2026/"
+    }
+  ],
+  "macroTailwinds": [
+    {
+      "title": "Trump's $1.5 Trillion Defense Budget Request for FY2027",
+      "date": "2026-04-14",
+      "source": "Quincy Institute",
+      "url": "https://qir.studio/2026/04/trumps-1-5-trillion-defense-budget-request/",
+      "note": "Massive defense spending increase benefits RTX as #2 US defense contractor by revenue"
+    },
+    {
+      "title": "NATO defense spending increases",
+      "date": "2026-06",
+      "source": "Multiple (Politico, BBC, etc.)",
+      "note": "All 32 NATO members committed to 5% GDP defense spending target, driving international orders for RTX Patriot, SPY-6, and munitions"
+    },
+    {
+      "title": "Iran conflict driving defense contractor profits",
+      "date": "2026-03-06",
+      "source": "Jacobin",
+      "note": "Geopolitical tensions increasing demand for air defense systems where RTX is a dominant supplier"
+    }
+  ],
+  "summary": {
+    "bullCase": "Record $271B backlog with 18.5% defense backlog growth. Multiple multibillion-dollar contract wins (Patriot, SPY-6, engine). Double-digit revenue growth. Massive global defense spending increases (NATO 5% target, Trump $1.5T budget). Munitions production ramp-up aligns with demand surge from Ukraine/Iran conflicts.",
+    "bearCase": "Trailing P/E of 35x is rich for a defense contractor. Only 0.4% YTD return suggests market skepticism on premium valuation. Forward P/E of 24.6x also elevated. 4.7% return on capital cited as underwhelming. Ceasefire hopes could reduce urgency premium.",
+    "keyMetrics": "MarketCap=$251.3B | Revenue(TTM)=$90.4B | RevenueGrowth=8.7-9.7% | P/E=35.0(trailing)/24.6(fwd) | YTD=+0.4% | Backlog=$271B(record) | FCF=$7.2B | Margin=8.0%"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "symbol": "AVGO",
+  "industry": "Semiconductors",
+  "rating": "Wide",
+  "stars": 4,
+  "confidence": "High",
+  "sources": [
+    {
+      "name": "Switching Costs",
+      "score": 4,
+      "rationale": "operating margin 49% well above industry; gross margins 76% indicate premium pricing / low substitution"
+    },
+    {
+      "name": "Intangible Assets",
+      "score": 4,
+      "rationale": "premium gross margins 76% reflect brand/IP power; large revenue base (75B) enables sustained IP investment"
+    },
+    {
+      "name": "Network Effect",
+      "score": 4,
+      "rationale": "strong 48% revenue growth; high EPS growth 85% (operating leverage from scale)"
+    },
+    {
+      "name": "Cost Advantage",
+      "score": 5,
+      "rationale": "gross margins 76% vs 50% industry (massive cost advantage); significant scale ($75B revenue); strong free cash flow (36% of revenue)"
+    },
+    {
+      "name": "Efficient Scale",
+      "score": 5,
+      "rationale": "premium 76% gross margins sustained (high barriers)"
+    }
+  ],
+  "analysis": "Switching Costs and Intangible Assets and Network Effect create a durable competitive fortress. The company's moat is reinforced by multiple reinforcing factors, making it unlikely competitors can erode its position in the next decade."
+}

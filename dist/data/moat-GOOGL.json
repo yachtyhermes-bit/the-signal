@@ -1,0 +1,35 @@
+{
+  "symbol": "GOOGL",
+  "industry": "Internet Content & Information",
+  "rating": "Wide",
+  "stars": 4,
+  "confidence": "High",
+  "sources": [
+    {
+      "name": "Switching Costs",
+      "score": 4,
+      "rationale": "operating margin 36% well above industry"
+    },
+    {
+      "name": "Intangible Assets",
+      "score": 4,
+      "rationale": "premium gross margins 60% reflect brand/IP power; large revenue base (422B) enables sustained IP investment"
+    },
+    {
+      "name": "Network Effect",
+      "score": 4,
+      "rationale": "strong 22% revenue growth; high EPS growth 82% (operating leverage from scale)"
+    },
+    {
+      "name": "Cost Advantage",
+      "score": 5,
+      "rationale": "gross margins 60% vs 40% industry (massive cost advantage); operating margin 36% vs 15% (extreme efficiency); massive scale ($422B revenue) enables fixed-cost absorption"
+    },
+    {
+      "name": "Efficient Scale",
+      "score": 5,
+      "rationale": "premium 60% gross margins sustained (high barriers); $100B+ revenue scale creates massive entry barrier"
+    }
+  ],
+  "analysis": "Switching Costs and Intangible Assets and Network Effect create a durable competitive fortress. The company's moat is reinforced by multiple reinforcing factors, making it unlikely competitors can erode its position in the next decade."
+}

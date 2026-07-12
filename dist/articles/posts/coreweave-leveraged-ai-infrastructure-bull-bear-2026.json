@@ -1,0 +1,55 @@
+{
+  "slug": "coreweave-leveraged-ai-infrastructure-bull-bear-2026",
+  "title": "$35 Billion in Debt and Zero Safety Net \u2014 Why Bulls Love CoreWeave Anyway",
+  "subtitle": "Revenue growing 100%+, $23B in locked-in contracts, $690M quarterly EBITDA. So why is the stock down 44% from its high?",
+  "summary": "CoreWeave has $35B in debt, grows revenue 100%+ a year, and has nearly $23 billion in contracted backlog. It's either the most brilliant AI infrastructure bet in history or the most dangerous leverage play in tech \u2014 and both sides have a point.",
+  "publishedAt": "2026-06-25T22:00:00.000Z",
+  "updatedAt": "2026-06-25T22:00:00.000Z",
+  "author": "The Signal",
+  "sector": "ai",
+  "sentiment": "bullish",
+  "tags": [
+    "CRWV",
+    "CoreWeave",
+    "GPU Cloud",
+    "AI Infrastructure",
+    "Microsoft",
+    "Leverage",
+    "Data Center",
+    "NVIDIA"
+  ],
+  "ticker": "CRWV",
+  "image": {
+    "src": "/img/articles/coreweave-leveraged-ai-infrastructure-bull-bear-2026.jpg",
+    "caption": "CoreWeave GPU cluster infrastructure"
+  },
+  "video": {
+    "youtubeId": "FTXSP9flkU4",
+    "title": "CoreWeave CEO on stock climbing after company announces $6 billion AI data center",
+    "channel": "CNBC Television"
+  },
+  "links": [
+    {
+      "label": "CoreWeave Website \u2192",
+      "url": "https://www.coreweave.com/"
+    },
+    {
+      "label": "Stock on Yahoo Finance \u2192",
+      "url": "https://finance.yahoo.com/quote/CRWV/"
+    },
+    {
+      "label": "SEC Filings \u2192",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=coreweave&type=10-Q&dateb=&owner=include&count=10"
+    }
+  ],
+  "bodyHtml": "<p>Let me paint you a picture. <a href=\"/ticker/CRWV\">$CRWV</a> has $35 billion in debt. Revenue is growing over 100% a year. The stock just dropped 44% from its all-time high. And somehow, both the bulls and the bears are absolutely convinced they're right.</p><p>So which side are you on?</p><h2>The Bull Case Is Stupid Simple</h2><p>Look at this revenue trajectory. <strong>$1.21 billion \u2192 $1.36B \u2192 $1.57B \u2192 $2.08B.</strong> That's four straight quarters of acceleration. Gross margins sitting at 69%. EBITDA positive every single quarter \u2014 $690M last quarter alone. And here's the kicker: they've got <strong>$23 billion in contracted revenue backlog.</strong> That's not a forecast. That's signed, legally binding contracts. The money is already locked in.</p><p>You know what that means? Even if CoreWeave never signs another customer, they've got years of guaranteed revenue sitting on the books. That's not speculation \u2014 that's a contractual obligation. Their biggest customers can't just walk away.</p><p>When your backlog is literally 10x your annual revenue, growth isn't even a question anymore. It's an engineering problem.</p><h2>The Infrastructure Moat Nobody Talks About</h2><p>Here's what most people miss. CoreWeave isn't trying to be AWS. It's not competing on 500 services and global data centers. It's purpose-built for one thing: <strong>GPU workloads at massive scale.</strong></p><!-- VIDEO 0 --><p>The hyperscalers \u2014 Amazon, Google, <a href=\"/ticker/MSFT\">$MSFT</a> \u2014 they bolted GPUs onto their existing general-purpose cloud infrastructure. It's like putting a jet engine on a boat. It works, but it's not optimized. CoreWeave built the jet ski from the ground up.</p><p>For AI training workloads \u2014 the exact workload that matters most \u2014 CoreWeave delivers better performance per dollar. That's why Microsoft is 62% of their revenue. They didn't land $MSFT by accident. They landed them because their infrastructure is objectively better for what they need.</p><blockquote>The moat isn't that they have GPUs. The moat is that they built the entire stack around GPUs being the only thing that matters.</blockquote><h2>The Bear Case Keeps You Up at Night</h2><p>Now here's where it gets uncomfortable. <strong>$35 billion in debt. $3.3 billion in equity.</strong> That's a 738% debt-to-equity ratio. Let that sink in. This company is leveraged like a 2006 buyout firm.</p><p>But it gets scarier. <a href=\"/ticker/MSFT\">$MSFT</a> is 62% of revenue. ONE customer. If Microsoft sneezes, CoreWeave catches pneumonia. And what happens if AI spending pauses for even one quarter? Those debt payments don't pause. They don't care about your growth rate or your backlog.</p><p>Then there's the GPU depreciation problem. Those H100 clusters are worth a fortune today. But what about twelve months from now? When B200s are everywhere and H100s are last-gen hardware? Your collateral depreciates faster than any asset class in tech.</p><ul><li>$35B debt service doesn't wait for you to figure it out</li><li>One customer = one point of failure</li><li>GPUs depreciate. Revenue doesn't offset that risk fast enough</li><li>If AI capex pauses for one quarter, the whole thesis is in play</li></ul><h2>The Bottom Line</h2><p>This isn't a stock you buy for safety. There is no safety here. This is a pure conviction play. You either believe GPU demand is structural, unrelenting, and this $23B backlog converts to cash exactly as planned \u2014 or you think this is a telecom debt bubble in AI clothing, one bad quarter away from existential refinancing risk.</p><p>The bull case: revenue compounds, margins expand, debt becomes manageable, stock doubles. The bear case: AI spending hits a speed bump, debt becomes unpayable, equity gets wiped in a restructuring.</p><p><strong>Both sides have a point. Both sides can be right. That's what makes this the most interesting leverage story in tech right now.</strong></p><p>The question isn't whether CoreWeave can grow. It's whether growth happens fast enough, consistently enough, to justify $35 billion in debt with no safety net underneath.</p><p>Your move.</p><em>\u2014 The Signal</em>",
+  "videos": [
+    {
+      "url": "https://www.youtube.com/watch?v=FTXSP9flkU4",
+      "title": "CoreWeave CEO on stock climbing after company announces $6 billion AI data center",
+      "source": "CNBC Television"
+    }
+  ],
+  "audio_url": "https://pub-8273cb321ee94239b3b958e2de76a8d4.r2.dev/v2/coreweave-leveraged-ai-infrastructure-bull-bear-2026.mp3",
+  "date": "2026-06-25T22:00:00.000Z"
+}

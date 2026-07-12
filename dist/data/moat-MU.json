@@ -1,0 +1,35 @@
+{
+  "symbol": "MU",
+  "industry": "Semiconductors",
+  "rating": "Wide",
+  "stars": 5,
+  "confidence": "High",
+  "sources": [
+    {
+      "name": "Switching Costs",
+      "score": 5,
+      "rationale": "operating margin 80% vs 25% industry (extreme pricing power); gross margins 73% indicate premium pricing / low substitution"
+    },
+    {
+      "name": "Intangible Assets",
+      "score": 4,
+      "rationale": "premium gross margins 73% reflect brand/IP power; large revenue base (90B) enables sustained IP investment"
+    },
+    {
+      "name": "Network Effect",
+      "score": 5,
+      "rationale": "explosive 346% revenue growth (flywheel spinning); high EPS growth 1368% (operating leverage from scale)"
+    },
+    {
+      "name": "Cost Advantage",
+      "score": 5,
+      "rationale": "gross margins 73% well above 50% industry; operating margin 80% vs 25% (extreme efficiency); significant scale ($90B revenue)"
+    },
+    {
+      "name": "Efficient Scale",
+      "score": 5,
+      "rationale": "premium 73% gross margins sustained (high barriers)"
+    }
+  ],
+  "analysis": "Switching Costs and Intangible Assets and Network Effect create a durable competitive fortress. The company's moat is reinforced by multiple reinforcing factors, making it unlikely competitors can erode its position in the next decade."
+}

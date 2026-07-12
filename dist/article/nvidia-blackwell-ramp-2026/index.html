@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08080e">
+  <link rel="canonical" href="https://readthesignal.net/article/nvidia-blackwell-ramp-2026">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/apple-touch-icon.png">
+  <meta name="robots" content="max-image-preview:large">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Oxanium:wght@400;500;600;700&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css?v=20">
+  <link rel="stylesheet" href="/css/pulse-badge.css">
+  <link rel="stylesheet" href="/css/tts.css">
+  <link rel="stylesheet" href="/css/nav.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-98KDVDFBCW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-98KDVDFBCW');
+  </script>
+  <script src="/js/prices.js" defer></script>
+  <script src="/js/search.js" defer></script>
+  <script src="/js/auth.js?v=2" defer></script>
+  <script src="/js/pulse.js?v=3" defer></script>
+  <script src="/js/theme.js?v=2" defer></script>
+  <script src="/js/comments.js" defer></script>
+  <script src="/js/share.js" defer></script>
+  <script src="/js/hive.js?v=3" defer></script>
+  <script src="/js/carousel.js" defer></script>
+  <script src="/js/tts.js" defer></script>
+  <title>Nvidia's Blackwell Ramp: Inside the $100B AI Infrastructure Super-Cycle — The Signal</title>
+  <meta name="description" content="Nvidia's Blackwell B200 is shipping in volume, hyperscaler orders are accelerating, and data center revenue is tracking toward $100B+. But with AMD's MI350 on the horizon and custom ASICs gaining traction, the bull case faces its most credible challenge yet.">
+  <meta property="og:title" content="Nvidia's Blackwell Ramp: Inside the $100B AI Infrastructure Super-Cycle — The Signal">
+  <meta property="og:description" content="Nvidia's Blackwell B200 is shipping in volume, hyperscaler orders are accelerating, and data center revenue is tracking toward $100B+. But with AMD's MI350 on the horizon and custom ASICs gaining traction, the bull case faces its most credible challenge yet.">
+  <meta property="og:image" content="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/articles/nvidia-vera-rubin-chip.jpg?v=1783893033720">
+  <meta property="og:url" content="https://readthesignal.net/article/nvidia-blackwell-ramp-2026">
+  <meta property="og:type" content="article">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nvidia's Blackwell Ramp: Inside the $100B AI Infrastructure Super-Cycle — The Signal">
+  <meta name="twitter:description" content="Nvidia's Blackwell B200 is shipping in volume, hyperscaler orders are accelerating, and data center revenue is tracking toward $100B+. But with AMD's MI350 on the horizon and custom ASICs gaining traction, the bull case faces its most credible challenge yet.">
+  <meta name="twitter:image" content="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/articles/nvidia-vera-rubin-chip.jpg?v=1783893033720">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "headline": "Nvidia's Blackwell Ramp: Inside the $100B AI Infrastructure Super-Cycle",
+      "description": "Nvidia's Blackwell B200 is shipping in volume, hyperscaler orders are accelerating, and data center revenue is tracking toward $100B+. But with AMD's MI350 on the horizon and custom ASICs gaining traction, the bull case faces its most credible challenge yet.",
+      "image": "https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/articles/nvidia-vera-rubin-chip.jpg?v=1783893033720",
+      "datePublished": "2026-05-20T20:00:00.000Z",
+      "author": {"@type": "Organization", "name": "The Signal Editorial Team"}
+    }
+  </script>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo"><img src="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/logo-hex.jpg" alt="The Signal" class="logo-img"><span class="logo-text"><span class="logo-the">THE</span> <strong>SIGNAL</strong></span></a>
+      <div class="nav-actions">
+        <button class="nav-btn search-btn" id="searchToggle" aria-label="Search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+        <div class="auth-container" id="authContainer">
+          <button class="nav-btn auth-btn" id="authToggle" aria-label="Sign In">
+            <div class="auth-btn-avatar" id="authBtnAvatar">
+              <span class="auth-btn-initial" id="authBtnInitial"></span>
+              <img class="auth-btn-img" id="authBtnImg" src="" alt="" style="display:none">
+            </div>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="auth-btn-icon" id="authBtnIcon"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <span class="auth-label" id="authLabel">Sign In</span>
+          </button>
+          <div class="auth-dropdown" id="authDropdown">
+            <!-- Signed-in Profile -->
+            <div class="auth-profile" id="authProfile" style="display:none">
+              <div class="auth-profile-header">
+                <div class="auth-profile-avatar" id="authProfileAvatar">
+                  <img id="authProfileImg" src="" alt="" style="display:none">
+                  <span class="auth-profile-initial" id="authProfileInitial"></span>
+                </div>
+                <div class="auth-profile-info">
+                  <span class="auth-profile-name" id="authProfileName"></span>
+                  <span class="auth-profile-username" id="authProfileUsername"></span>
+                </div>
+                <div class="auth-profile-badge">HIVE</div>
+              </div>
+              <div class="auth-profile-stats" id="authProfileStats">
+                <div class="auth-stat">
+                  <span class="auth-stat-label">Portfolio</span>
+                  <span class="auth-stat-value" id="authStatValue">-</span>
+                </div>
+                <div class="auth-stat">
+                  <span class="auth-stat-label">Return</span>
+                  <span class="auth-stat-value" id="authStatReturn">-</span>
+                </div>
+              </div>
+              <div class="auth-drop-divider"></div>
+              <div class="auth-profile-nav">
+                <a href="/sector/ai" class="auth-nav-item">AI</a>
+                <a href="/sector/cyber" class="auth-nav-item">Cyber</a>
+                <a href="/sector/defense" class="auth-nav-item">Defense</a>
+                <a href="/sector/space" class="auth-nav-item">Space</a>
+                <a href="/sector/mega-cap" class="auth-nav-item">Mega-Cap</a>
+                <a href="/sector/quantum" class="auth-nav-item">Quantum</a>
+                <a href="/sector/ai-power" class="auth-nav-item">AI Power</a>
+                <a href="/sector/fintech" class="auth-nav-item">FinTech</a>
+                <a href="/sector/etfs" class="auth-nav-item">ETFs</a>
+                <div class="auth-nav-section-header">FEATURES</div>
+                <a href="/hive" class="auth-nav-item">Hive</a>
+                <a href="/signal-vs-the-street" class="auth-nav-item">Signal vs. Street</a>
+                <a href="/stocks/" class="auth-nav-item">Stock Pages</a>
+              </div>
+              <div class="auth-drop-divider"></div>
+              <div class="auth-profile-footer">
+                <a href="/account/settings" class="auth-footer-link">✏️ Edit Profile</a>
+                <a href="/hive" class="auth-footer-link" onclick="navigateToHiveLeaderboard(event)">Leaderboard</a>
+                <button class="auth-signout-btn" id="authSignOut">Sign Out</button>
+              </div>
+            </div>
+            <!-- Guest View -->
+            <div class="auth-guest" id="authGuest">
+              <div class="auth-guest-brand">
+                <span class="auth-guest-title">Welcome to <strong>The Signal</strong></span>
+                <span class="auth-guest-sub">Join the hive to track your portfolio</span>
+              </div>
+              <button class="auth-option auth-option-primary" onclick="showHiveJoinModal('login')">
+                <span class="auth-option-icon">🔑</span> Sign In
+              </button>
+              <button class="auth-option" onclick="showHiveJoinModal('register')">
+                <span class="auth-option-icon">✨</span> Create Account
+              </button>
+              <div class="auth-drop-divider"></div>
+              <div class="auth-profile-nav">
+                <a href="/sector/ai" class="auth-nav-item">AI</a>
+                <a href="/sector/cyber" class="auth-nav-item">Cyber</a>
+                <a href="/sector/defense" class="auth-nav-item">Defense</a>
+                <a href="/sector/space" class="auth-nav-item">Space</a>
+                <a href="/sector/mega-cap" class="auth-nav-item">Mega-Cap</a>
+                <a href="/sector/quantum" class="auth-nav-item">Quantum</a>
+                <a href="/sector/ai-power" class="auth-nav-item">AI Power</a>
+                <a href="/sector/fintech" class="auth-nav-item">FinTech</a>
+                <a href="/sector/etfs" class="auth-nav-item">ETFs</a>
+                <div class="auth-nav-section-header">FEATURES</div>
+                <a href="/hive" class="auth-nav-item">Hive</a>
+                <a href="/signal-vs-the-street" class="auth-nav-item">Signal vs. Street</a>
+                <a href="/stocks/" class="auth-nav-item">Stock Pages</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="nav-btn hamburger-btn" id="hamburgerToggle" aria-label="Menu">
+          <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+        </button>
+        <button class="nav-btn theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle theme" style="display:flex;align-items:center;gap:4px;background:none;border:1px solid var(--border);border-radius:6px;padding:6px 8px;cursor:pointer;color:var(--text-secondary);font-size:12px">
+          <svg class="theme-icon-sun" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <svg class="theme-icon-moon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Rocket Lab-Style Drawer -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <div class="drawer" id="drawer">
+    <div class="drawer-header">
+      <a href="/" class="drawer-logo">
+        <img src="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/logo-hex.jpg" alt="The Signal" class="drawer-logo-img">
+        <span class="drawer-logo-text">SIGNAL</span>
+      </a>
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">&#10005;</button>
+    </div>
+    <div class="drawer-body" id="drawerBody">
+      <div class="drawer-main" id="drawerMain">
+        <a href="javascript:void(0)" class="drawer-link" onclick="openSubDrawer()">SECTORS</a>
+        <a href="/stocks/" class="drawer-link">STOCK PAGES</a>
+        <a href="/#scorecard" class="drawer-link">SIGNAL SCORECARD</a>
+        <a href="/hive" class="drawer-link">HIVE</a>
+        <a href="/signal-vs-the-street" class="drawer-link">SIGNAL VS. STREET</a>
+        <a href="/pricing" class="drawer-link">SIGNAL PREMIUM</a>
+        <a href="/pricing" class="drawer-cta">GET PREMIUM ACCESS</a>
+      </div>
+      <div class="drawer-sub" id="drawerSub">
+        <div class="sub-header" onclick="closeSubDrawer()">
+          <span class="sub-back">&#8249;</span>
+          <span class="sub-title">SECTORS</span>
+        </div>
+        <a href="/sector/ai" class="drawer-link">AI</a>
+        <a href="/sector/cyber" class="drawer-link">CYBER</a>
+        <a href="/sector/defense" class="drawer-link">DEFENSE</a>
+        <a href="/sector/space" class="drawer-link">SPACE</a>
+        <a href="/sector/mega-cap" class="drawer-link">MEGA-CAP</a>
+        <a href="/sector/quantum" class="drawer-link">QUANTUM</a>
+        <a href="/sector/ai-power" class="drawer-link">AI POWER</a>
+        <a href="/sector/fintech" class="drawer-link">FINTECH</a>
+        <a href="/sector/etfs" class="drawer-link">ETFS</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEARCH OVERLAY -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-backdrop" id="searchBackdrop"></div>
+    <div class="search-modal">
+      <div class="search-header">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search articles by title, ticker, sector, or tag…" autofocus>
+        <button class="search-close" id="searchClose" aria-label="Close search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+      <div class="search-empty" id="searchEmpty">Start typing to search articles…</div>
+    </div>
+  </div>
+
+  <!-- ARTICLE CONTENT -->
+  <main class="main">
+    <div class="article-page">
+      <header class="article-header">
+        <div class="article-breadcrumbs">
+          <a href="/">Home</a> <span>/</span> <a href="/sector/ai">AI</a> <span>/</span> <span>NVDA</span>
+        </div>
+        <div class="article-ticker-bar">
+          <span class="ticker-badge">NVDA</span>
+        </div>
+        <h1 class="article-title">Nvidia's Blackwell Ramp: Inside the $100B AI Infrastructure Super-Cycle</h1>
+        <p class="article-subtitle">With Blackwell in full production and every hyperscaler doubling down, Nvidia's data center revenue is on track to exceed $100B. We examine the supply chain, competitive threats, and whether the valuation still makes sense.</p>
+        <div class="article-meta">
+          <span>May 20, 2026</span>
+          <span>8 minutes</span>
+        </div>
+      </header>
+
+      <div class="article-image"><img src="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/articles/nvidia-vera-rubin-chip.jpg?v=1783893033720" alt="NVIDIA Vera Rubin chip architecture — the next-generation AI platform powering Blackwell's successor" width="1200" height="675"></div>
+
+      <div class="article-body">
+        <p>Few product cycles have generated as much anticipation—or revenue—as Nvidia's Blackwell architecture. The B200 GPU, now shipping to hyperscalers worldwide, is the centerpiece of what Jensen Huang calls “the first $1 trillion data center buildout in history.”</p>
+
+
+>
+
+
+<h2>The Blackwell B200: Specs, Pricing, and Production</h2>
+
+<p>The B200 packs 208 billion transistors on TSMC's 4NP process, delivering 4.5 PFLOPS FP8 Tensor Core performance (2.5x vs H100), 192 GB of HBM3e memory at 8 TB/s, and NVLink 5.0 at 1.8 TB/s per GPU. Enterprises are paying <strong>$30,000–$50,000 per GPU</strong>, with DGX B200 systems north of $300,000. Demand outstrips supply: lead times run 36–52 weeks. Current estimates point to roughly <strong>1.5–2 million B200 units</strong> shipping in calendar 2026, implying over $50 billion in Blackwell GPU revenue alone. TSMC's CoWoS-L packaging remains the primary bottleneck, though additional capacity from Amkor's new Arizona plant is expected in H2 2026.</p>
+
+<h2>Hyperscaler Demand: Who's Buying and How Much?</h2>
+
+<p>The ramp is driven overwhelmingly by the four major US hyperscalers, all accelerating CapEx for 2026:</p>
+
+<ul>
+  <li><strong>Microsoft</strong> — deploying B200s across Azure for Copilot, Bing, and OpenAI inference, with AI infrastructure spend tracking toward $60B+</li>
+  <li><strong>Google</strong> — adopting Blackwell alongside internal TPU v6, with 2026 CapEx guided at $55B+</li>
+  <li><strong>Amazon</strong> — offering B200 through EC2 P6, SageMaker, and Bedrock, with CapEx expected to exceed $65B</li>
+  <li><strong>Meta</strong> — committed to Blackwell for Llama 4 training and recommendation systems, with CapEx guided to $40B+</li>
+</ul>
+
+<p>Beyond the hyperscalers, enterprise adoption is accelerating across financial services, healthcare, and energy. The “sovereign AI” wave—Japan, India, Saudi Arabia, and the UAE building national AI supercomputers—adds another demand layer.</p>
+
+<div class="video-section">
+    <div class="video-section-title">▶ CNBC</div>
+    <div class="video-embed">
+      <iframe src="https://www.youtube.com/embed/ZkPU5GHDqkQ" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+    </div>
+    <div class="video-info">
+      <div class="video-info-title">Nvidia Vera Rubin and Blackwell analysis</div>
+    </div>
+  </div>
+
+<h2>Competition: AMD, Cerebras, and Custom ASICs</h2>
+
+<p>AMD's <a href="https://signal-stock-pi.vercel.app/stock/AMD/">/ticker/AMD</a> MI350, based on CDNA 4 and shipping late 2025, narrows the raw performance gap with up to 2.3x FP8 improvement over MI300X and 288 GB of HBM3e. AMD guided $15–18B in data center GPU revenue for 2026, but supply remains a major headwind: TSMC CoWoS allocation for AMD is roughly <strong>one-sixth</strong> of Nvidia's. ROCm software has made meaningful strides but still lags CUDA.</p>
+
+<p>Cerebras has carved an inference niche with wafer-scale CS-3, claiming up to <strong>10x lower latency</strong> vs H100 for LLMs, but remains a small player ($800M–1.2B estimated 2026 revenue). The more credible long-term threat is custom ASICs: Google's TPU v6, Amazon's Trainium 3, and Microsoft's Maia 100 are designed to reduce Nvidia dependence for specific internal workloads. We estimate custom ASICs will reach <strong>15–20% of AI accelerator spending by 2028</strong>, up from ~8% today.</p>
+
+<h2>NVDA Valuation: The ‘70% CAGR’ Debate</h2>
+
+<p>Nvidia's data center revenue has grown from $15B in FY2024 to an estimated $78B in FY2026, on track for <strong>$105–120B</strong> in FY2027. Gross margins sit at 78–80% with operating margins near 62%. At ~$1,150, <a href="https://signal-stock-pi.vercel.app/stock/NVDA/">/ticker/NVDA</a> trades at ~32x forward P/E with a PEG ratio of ~0.9x — defensible but not cheap.</p>
+
+<p>The bull case argues AI compute is a structural multi-decade shift. The bear case points to inference efficiency gains, model commoditization, and capex ROI concerns that could trigger a correction. Our view: the bull case holds for 12–18 months, but the “70% CAGR” will decelerate to <strong>25–35% growth</strong> from FY2028 onward as the base grows and competitive alternatives gain share.</p>
+
+<blockquote>“Nvidia’s competitive moat — spanning hardware, networking, and the CUDA ecosystem (4M+ developers) — will limit share losses to non-core workloads where hyperscalers can achieve meaningful savings through vertical integration.”</blockquote>
+
+<p>Beyond Blackwell, the Rubin architecture (2027, TSMC N3, up to 300B transistors, HBM4) and Spectrum-X networking (a $10B+ opportunity) extend the runway. We remain <strong>bullish</strong> on NVDA with a clear stop-loss framework — the franchise remains the defining bet of the AI era.</p>
+
+<p><em>Disclosure: The Signal may hold positions in securities mentioned. This article is for informational purposes only and does not constitute investment advice.</em></p>
+      </div>
+
+      <!-- ⚡ Ask Pulse — opens Pulse overlay with article context -->
+      <div class="pulse-divider"
+           data-article-title="Nvidia's Blackwell Ramp: Inside the $100B AI Infrastructure Super-Cycle"
+           data-article-slug="nvidia-blackwell-ramp-2026"
+           onclick="var t=this;var ctx={title:t.dataset.articleTitle||'',slug:t.dataset.articleSlug||'',bodyPreview:document.querySelector('.article-body')?document.querySelector('.article-body').innerText.slice(0,800):''};(window.pulseOpenPanel||window.togglePulseOverlay||function(){})(ctx);"
+           style="margin:24px 0 16px">
+        <span></span>
+        <span class="pulse-divider-label">
+          <img src="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/logo-hex.jpg" alt="Pulse" class="pulse-hex-thumb">
+          <span class="pulse-gradient">Ask Pulse</span>
+          <span class="pulse-arrow">›</span>
+        </span>
+        <span></span>
+      </div>
+      <p class="pulse-divider-sub" style="margin:-12px 0 24px">Ask questions about this article with AI-powered research &amp; live web search</p>
+
+      <div class="article-tags"><span class="tag">Nvidia</span><span class="tag">Blackwell</span><span class="tag">AI Chips</span><span class="tag">Datacenter</span><span class="tag">GPU</span><span class="tag">Semiconductor</span><span class="tag">Infrastructure</span></div>
+
+      
+
+      <div class="share-bar">
+        <span class="share-label">Share</span>
+        <button class="share-btn share-x" onclick="window.open('https://x.com/intent/tweet?text='+encodeURIComponent(document.title)+'&url='+encodeURIComponent(window.location.href),'_blank')" aria-label="Share on X">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </button>
+        <button class="share-btn share-fb" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href),'_blank')" aria-label="Share on Facebook">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </button>
+        <button class="share-btn share-li" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank')" aria-label="Share on LinkedIn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </button>
+        <button class="share-btn share-copy" id="copyShareBtn" aria-label="Copy link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          <span class="copy-tooltip">Copied!</span>
+        </button>
+      </div>
+
+      <div class="article-signoff">
+        <hr>
+        <p>— <strong>The Signal Editorial Team</strong></p>
+        <p class="signoff-disclosure">This article is for informational purposes only and does not constitute investment advice. The Signal may hold positions in securities mentioned. Past performance is not indicative of future results. Always conduct your own research before making investment decisions.</p>
+      </div>
+
+    </div>
+
+    <!-- Comments -->
+    <section class="comments-section" style="max-width:720px;margin:0 auto;padding:0 24px 48px">
+      <div id="commentsContainer" data-slug="nvidia-blackwell-ramp-2026"></div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Related Articles -->
+    <section class="feed-continued" style="padding-top:0">
+      <h3 style="font-family:'Anton',Impact,sans-serif;font-size:20px;color:var(--text-primary);margin:0 24px 20px;letter-spacing:1px">More From The Signal</h3>
+      <div class="article-grid article-grid-compact" id="relatedArticles">
+        <a href="/article/credo-ai-connectivity-chips-2026" class="related-card">
+      <div class="card-image"><img src="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/articles/credo-ai-connectivity-chips-2026.jpg?v=1783893033720" alt="CRDO's Purple Cables Are the Hidden Plumbing of Every AI Data Center — and They're Just Getting Started" loading="lazy" decoding="async" width="1200" height="675"></div>
+      <div class="card-body">
+        <h3 class="card-title">CRDO's Purple Cables Are the Hidden Plumbing of Every AI Data Center — and They're Just Getting Started</h3>
+      </div>
+    </a>
+<a href="/article/lockheed-martin-defense-moat-2026" class="related-card">
+      <div class="card-image"><img src="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/articles/lockheed-martin-defense-moat-2026.jpg?v=1783893033720" alt="The Biggest Munitions Ramp Since World War II Is Happening Right Now" loading="lazy" decoding="async" width="1200" height="675"></div>
+      <div class="card-body">
+        <h3 class="card-title">The Biggest Munitions Ramp Since World War II Is Happening Right Now</h3>
+      </div>
+    </a>
+<a href="/article/meta-rayban-display-launch-2026" class="related-card">
+      <div class="card-image"><img src="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/articles/meta-rayban-display-launch-2026.jpg?v=1783893033720" alt="Meta's Smart Glasses Are Here — And They're Already Too Popular" loading="lazy" decoding="async" width="1200" height="675"></div>
+      <div class="card-body">
+        <h3 class="card-title">Meta's Smart Glasses Are Here — And They're Already Too Popular</h3>
+      </div>
+    </a>
+<a href="/article/palantir-commercial-ai-revenue-inflection-2026" class="related-card">
+      <div class="card-image"><img src="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/articles/palantir-commercial-ai-revenue-inflection-2026.jpg?v=1783893033720" alt="Palantir Is Growing Revenue 85% And The Market Just Doesn't Care" loading="lazy" decoding="async" width="1200" height="675"></div>
+      <div class="card-body">
+        <h3 class="card-title">Palantir Is Growing Revenue 85% And The Market Just Doesn't Care</h3>
+      </div>
+    </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <div class="footer-brand"><img src="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/logo-hex.jpg" alt="The Signal" class="footer-logo"> THE <strong>SIGNAL</strong></div>
+          <p>Market intelligence for AI, defense, space, and cybersecurity stocks. Data-driven analysis that moves before the headlines.</p>
+          <div class="footer-social">
+            <a href="https://x.com/ReadTheSignal21" target="_blank" rel="noopener" aria-label="X / Twitter">𝕏</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Sectors</h4>
+          <a href="/sector/ai">AI</a>
+          <a href="/sector/defense">Defense</a>
+          <a href="/sector/cyber">Cyber</a>
+          <a href="/sector/space">Space</a>
+          <a href="/sector/mega-cap">Mega-Cap</a>
+          <a href="/sector/quantum">Quantum</a>
+          <a href="/sector/ai-power">AI Power</a>
+          <a href="/sector/fintech">FinTech</a>
+          <a href="/sector/etfs">ETFs</a>
+        </div>
+        <div class="footer-col">
+          <h4>Features</h4>
+          <a href="/stocks/">Stock Pages</a>
+          <a href="/about/">About</a>
+        </div>
+        <div class="footer-col">
+          <h4>More</h4>
+          <a href="/about/">Contact Us</a>
+          <a href="/">Home</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-tag">The Signal Editorial Team · readthesignal.net</div>
+        <div class="footer-copy">© 2026 The Signal — Market Intelligence. Data from public sources. Not investment advice.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function(){
+    var copyBtn=document.getElementById('copyShareBtn'); if(copyBtn){ copyBtn.addEventListener('click',function(){ navigator.clipboard.writeText(window.location.href).then(function(){ copyBtn.classList.add('copied'); setTimeout(function(){ copyBtn.classList.remove('copied'); },2000); }); }); }
+  });
+  </script>
+  <script src="/js/nav.js" defer></script>
+  
+</body>
+</html>

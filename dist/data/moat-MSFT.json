@@ -1,0 +1,35 @@
+{
+  "symbol": "MSFT",
+  "industry": "Software - Infrastructure",
+  "rating": "Wide",
+  "stars": 4,
+  "confidence": "Medium",
+  "sources": [
+    {
+      "name": "Switching Costs",
+      "score": 5,
+      "rationale": "operating margin 46% vs 15% industry (extreme pricing power); gross margins 68% indicate premium pricing / low substitution"
+    },
+    {
+      "name": "Intangible Assets",
+      "score": 4,
+      "rationale": "premium gross margins 68% reflect brand/IP power; large revenue base (318B) enables sustained IP investment"
+    },
+    {
+      "name": "Network Effect",
+      "score": 3,
+      "rationale": "no clear network-effect indicators in available data"
+    },
+    {
+      "name": "Cost Advantage",
+      "score": 5,
+      "rationale": "gross margins 68% vs 40% industry (massive cost advantage); operating margin 46% vs 15% (extreme efficiency); massive scale ($318B revenue) enables fixed-cost absorption"
+    },
+    {
+      "name": "Efficient Scale",
+      "score": 5,
+      "rationale": "premium 68% gross margins sustained (high barriers); $100B+ revenue scale creates massive entry barrier"
+    }
+  ],
+  "analysis": "Switching Costs and Intangible Assets and Cost Advantage create a durable competitive fortress. The company's moat is reinforced by multiple reinforcing factors, making it unlikely competitors can erode its position in the next decade."
+}

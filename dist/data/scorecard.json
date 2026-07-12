@@ -1,0 +1,134 @@
+[
+  {
+    "ticker": "AXON",
+    "name": "Axon Enterprise",
+    "sector": "Defense Tech",
+    "signal": "Bullish",
+    "score": 76,
+    "color": "#84cc16",
+    "drivers": [
+      "Revenue up +33.5% YoY to $2.98B",
+      "Premium valuation at 157x P/E",
+      "Target upside +72.5%"
+    ],
+    "upside": "+72.5%",
+    "logo": "https://logo.clearbit.com/axon.com",
+    "metrics": {
+      "revenue": "$2.98B",
+      "growth": "+33.5%",
+      "netIncome": "$205.99M",
+      "pe": "156.5x",
+      "ps": "10.6x"
+    }
+  },
+  {
+    "ticker": "META",
+    "name": "Meta Platforms",
+    "sector": "Social Media",
+    "signal": "Strong Bullish",
+    "score": 82,
+    "color": "#10b981",
+    "drivers": [
+      "Revenue up +22.2% YoY to $214.96B",
+      "P/E at 22.3x \u2014 attractively valued",
+      "Target upside +29.9%"
+    ],
+    "upside": "+29.9%",
+    "logo": "https://logo.clearbit.com/meta.com",
+    "metrics": {
+      "revenue": "$214.96B",
+      "growth": "+22.2%",
+      "netIncome": "$70.59B",
+      "pe": "22.3x",
+      "ps": "7.5x"
+    }
+  },
+  {
+    "ticker": "PLTR",
+    "name": "Palantir Technologies",
+    "sector": "AI Software",
+    "signal": "Strong Bullish",
+    "score": 83,
+    "color": "#10b981",
+    "drivers": [
+      "Revenue up +56.2% YoY to $5.22B",
+      "Premium valuation at 154x P/E",
+      "Target upside +50.9%"
+    ],
+    "upside": "+50.9%",
+    "logo": "https://logo.clearbit.com/palantir.com",
+    "metrics": {
+      "revenue": "$5.22B",
+      "growth": "+56.2%",
+      "netIncome": "$2.28B",
+      "pe": "154.1x",
+      "ps": "60.8x"
+    }
+  },
+  {
+    "ticker": "RTX",
+    "name": "RTX Corporation",
+    "sector": "Defense",
+    "signal": "Bullish",
+    "score": 71,
+    "color": "#84cc16",
+    "drivers": [
+      "Revenue up +9.7% YoY to $90.37B",
+      "Target upside +24.6%",
+      "Net income $7.26B"
+    ],
+    "upside": "+24.6%",
+    "logo": "https://logo.clearbit.com/rtx.com",
+    "metrics": {
+      "revenue": "$90.37B",
+      "growth": "+9.7%",
+      "netIncome": "$7.26B",
+      "pe": "33.6x",
+      "ps": "2.6x"
+    }
+  },
+  {
+    "ticker": "NFLX",
+    "name": "Netflix Inc.",
+    "sector": "Entertainment",
+    "signal": "Bullish",
+    "score": 75,
+    "color": "#84cc16",
+    "drivers": [
+      "Revenue up +15.9% YoY to $46.89B",
+      "P/E at 28.2x \u2014 attractively valued",
+      "Target upside +31.7%"
+    ],
+    "upside": "+31.7%",
+    "logo": "https://logo.clearbit.com/netflix.com",
+    "metrics": {
+      "revenue": "$46.89B",
+      "growth": "+15.9%",
+      "netIncome": "$13.37B",
+      "pe": "28.2x",
+      "ps": "7.8x"
+    }
+  },
+  {
+    "ticker": "RBRK",
+    "name": "Rubrik Inc.",
+    "sector": "Cybersecurity",
+    "signal": "Neutral",
+    "score": 52,
+    "color": "#64748b",
+    "drivers": [
+      "Revenue up +48.5% YoY to $1.32B",
+      "Still operating at net loss $-348.83M",
+      "Target upside +26.1%"
+    ],
+    "upside": "+26.1%",
+    "logo": "https://logo.clearbit.com/rubrik.com",
+    "metrics": {
+      "revenue": "$1.32B",
+      "growth": "+48.5%",
+      "netIncome": "$-348.83M",
+      "pe": "N/A",
+      "ps": "10.3x"
+    }
+  }
+]

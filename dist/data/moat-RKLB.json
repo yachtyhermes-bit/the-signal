@@ -1,0 +1,35 @@
+{
+  "symbol": "RKLB",
+  "industry": "Aerospace & Defense",
+  "rating": "Narrow",
+  "stars": 3,
+  "confidence": "Medium",
+  "sources": [
+    {
+      "name": "Switching Costs",
+      "score": 4,
+      "rationale": "high segment concentration at 68.0% (significant platform stickiness)"
+    },
+    {
+      "name": "Intangible Assets",
+      "score": 2,
+      "rationale": "limited intangible asset indicators available"
+    },
+    {
+      "name": "Network Effect",
+      "score": 5,
+      "rationale": "explosive 64% revenue growth (flywheel spinning)"
+    },
+    {
+      "name": "Cost Advantage",
+      "score": 2,
+      "rationale": "cost position not clearly distinguishable from data"
+    },
+    {
+      "name": "Efficient Scale",
+      "score": 4,
+      "rationale": "Space Systems dominance at 68.0% revenue share"
+    }
+  ],
+  "analysis": "Switching Costs and Network Effect provide some competitive protection, but not all moat sources are fully developed. The company has defensible advantages that should persist for several years but may face erosion over time."
+}

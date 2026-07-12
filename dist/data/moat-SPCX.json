@@ -1,0 +1,35 @@
+{
+  "symbol": "SPCX",
+  "industry": "Aerospace & Defense",
+  "rating": "Narrow",
+  "stars": 3,
+  "confidence": "Medium",
+  "sources": [
+    {
+      "name": "Switching Costs",
+      "score": 2,
+      "rationale": "no strong switching-cost indicators detected"
+    },
+    {
+      "name": "Intangible Assets",
+      "score": 2,
+      "rationale": "limited intangible asset indicators available"
+    },
+    {
+      "name": "Network Effect",
+      "score": 3,
+      "rationale": "no clear network-effect indicators in available data"
+    },
+    {
+      "name": "Cost Advantage",
+      "score": 4,
+      "rationale": "gross margins slightly above industry average; significant scale ($19B revenue)"
+    },
+    {
+      "name": "Efficient Scale",
+      "score": 4,
+      "rationale": "insufficient data for efficient scale assessment"
+    }
+  ],
+  "analysis": "Cost Advantage and Efficient Scale provide some competitive protection, but not all moat sources are fully developed. The company has defensible advantages that should persist for several years but may face erosion over time."
+}

@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Disallow admin/internal paths
+Disallow: /account/
+Disallow: /api/
+
+# XML Sitemap
+Sitemap: https://readthesignal.net/sitemap.xml

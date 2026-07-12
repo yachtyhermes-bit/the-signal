@@ -1,0 +1,43 @@
+{
+  "slug": "amd-mi400-datacenter-gpu-comeback-2026",
+  "ticker": "AMD",
+  "sector": "ai",
+  "sentiment": "bullish",
+  "date": "2026-07-04T02:00:00.000Z",
+  "title": "AMD's MI400 Is the First Chip That Actually Scared NVIDIA",
+  "subtitle": "137% YTD, $844B market cap, and a 2nm datacenter monster that just rewrote the AI silicon pecking order.",
+  "summary": "AMD is no longer the perennial bridesmaid of the AI chip wars. With the MI400 launching H2 2026 on 2nm and hyperscaler deals stacking at Meta, OpenAI, and Microsoft, the company that once lived off Intel scraps now owns more than half its own revenue from datacenter alone. The stock tripled. Now earnings have to catch up, and MI400 is the bridge.",
+  "image": {
+    "src": "/img/articles/amd-mi400-datacenter-gpu-comeback-2026.jpg",
+    "caption": "AMD MI400 accelerator concept rendering (Source: AMD corporate materials)."
+  },
+  "tags": [
+    "AMD",
+    "MI400",
+    "NVIDIA",
+    "AI chips",
+    "datacenter",
+    "EPYC",
+    "HBM4",
+    "hyperscalers",
+    "semiconductors",
+    "Lisa Su"
+  ],
+  "links": [
+    {
+      "label": "AMD Investor Relations",
+      "url": "https://ir.amd.com"
+    },
+    {
+      "label": "AMD on Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/AMD/"
+    },
+    {
+      "label": "AMD Official Site",
+      "url": "https://www.amd.com/en/corporate.html"
+    }
+  ],
+  "videos": [],
+  "price": 517.82,
+  "bodyHtml": "<p>Everyone called AMD the bridesmaid of the AI boom. For three years the narrative was the same: NVIDIA owns the socket, NVIDIA owns the software, NVIDIA owns the future, and Lisa Su is just fighting for scraps of hyperscaler goodwill that Meta feels obligated to throw her way. Then July 4, 2026 happened, and AMD closed at $517.82, up 137% year-to-date, up 275% over 12 months, with a market cap that quietly crossed $844 billion and a 52-week high of $584.73 that barely qualifies as a ceiling anymore.</p><p>The math is stupid and you should sit with it. AMD started this year around $218.90. Trailing revenue is $37.45 billion, up 34.9% year-over-year, with datacenter finally crossing over half of total revenue for the first time in the company's fifty-five-year life. Every analyst joke you ever heard about AMD being a PC and gaming company is now officially a generation old. This is a datacenter-first semiconductor platform wearing an AMD logo.</p><p>Here is the part the bears keep getting wrong. Yes, the trailing P/E is 172x. Yes, the gross margin at 53% sits awkwardly next to NVIDIA's 75%. Yes, gaming is a declining asset. But the forward P/E has already compressed to 39x, which is the single most important number in this story because it tells you earnings are no longer a promise \u2014 they are a sprint. Forty-eight analysts rate AMD a STRONG BUY. The mean target is $508, which the stock is already beating from, and the high end sits at $700. Wells Fargo just lifted their price target to $615 and their server CPU revenue estimate to $25 billion by 2028. That is not a bull case. That is the consensus.</p><p>The actual weapon here is the MI400, launching H2 2026 on a 2nm process with 320 billion transistors and 432GB of HBM4 memory. This is the first AMD accelerator that does not qualify as a polite alternative to NVIDIA. It is the first one that can be pitched to a hyperscaler procurement team without them quietly forwarding the quote to Jensen Huang for a second quote. Meta signed a multi-year deal. OpenAI signed a multi-year deal. Microsoft signed a multi-year deal. Gartner literally named AMD \"The Company to Beat for Enterprise AI Server CPUs\" on June 25, 2026, and if you had told an AMD fan that in 2021 they would have called you delusional.</p><p>Let the numbers land in a grid because they deserve their own paragraph.</p><div class=\"stats-grid\"><div class=\"stat\"><span class=\"value\">$844B</span><span class=\"label\">Market Cap</span></div><div class=\"stat\"><span class=\"value\">+137%</span><span class=\"label\">YTD</span></div><div class=\"stat\"><span class=\"value\">+37.8%</span><span class=\"label\">TTM Revenue Growth</span></div><div class=\"stat\"><span class=\"value\">39x</span><span class=\"label\">Forward P/E</span></div><div class=\"stat\"><span class=\"value\">432GB</span><span class=\"label\">MI400 HBM4</span></div><div class=\"stat\"><span class=\"value\">2nm</span><span class=\"label\">Process Node</span></div><div class=\"stat\"><span class=\"value\">$700</span><span class=\"label\">High Analyst Target</span></div><div class=\"stat\"><span class=\"value\">5-7%</span><span class=\"label\">AI Accelerator Share</span></div></div><p>The market context is the real headline though. The non-NVIDIA chipmakers just posted a record $2 trillion rally in Q2 2026. This is not AMD-specific froth. Hyperscalers are actively diversifying away from a single-vendor NVIDIA dependency because the capex math no longer works when one supplier owns 80 to 85% of the AI accelerator market. AMD has 5 to 7% of that market right now and it is the share that is growing. Venice, the 2nm EPYC server CPU dropping in the same H2 window, gives AMD a one-two punch that Intel cannot match and NVIDIA cannot copy because they do not make CPUs anymore.</p><p>What could break this. The CUDA software moat still exists and any serious bear will point to it. If MI400 ships with half-baked ROCm drivers or the yield curve on TSMC's 2nm stumbles, the tripled stock price runs into a wall faster than a gaming GPU into a PCIe slot. 172x trailing P/E is only defensible if the next eight quarters execute cleanly, and execution is exactly what AMD has historically been bad at. But the last eight quarters have been the best execution streak the company has had in its modern era, and Lisa Su has not made a wrong product call since 2017.</p><p>The contrarian read is that AMD is no longer the underdog bet. It is the established #2 in a $175 billion AI accelerator market, trading at a forward multiple that assumes it still has to prove it. It does not. The hyperscaler contracts are the proof. The MI400 silicon tape-out is the proof. The 37.8% revenue growth and the 39x forward P/E are the proof. The only real question left is whether the stock re-rates to Wells Fargo's $615 in the next quarter or the next one, and that is a boring question because the answer is obviously yes.</p><p class=\"disclosure\"><em>Disclosure: The Signal holds no position in AMD. Positions may change. This is not financial advice.</em></p>"
+}

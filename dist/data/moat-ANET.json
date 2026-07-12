@@ -1,0 +1,35 @@
+{
+  "symbol": "ANET",
+  "industry": "Computer Hardware",
+  "rating": "Wide",
+  "stars": 5,
+  "confidence": "High",
+  "sources": [
+    {
+      "name": "Switching Costs",
+      "score": 5,
+      "rationale": "operating margin 43% vs 15% industry (extreme pricing power)"
+    },
+    {
+      "name": "Intangible Assets",
+      "score": 4,
+      "rationale": "premium gross margins 64% reflect brand/IP power"
+    },
+    {
+      "name": "Network Effect",
+      "score": 4,
+      "rationale": "strong 35% revenue growth"
+    },
+    {
+      "name": "Cost Advantage",
+      "score": 5,
+      "rationale": "gross margins 64% vs 40% industry (massive cost advantage); operating margin 43% vs 15% (extreme efficiency); strong free cash flow (45% of revenue)"
+    },
+    {
+      "name": "Efficient Scale",
+      "score": 5,
+      "rationale": "premium 64% gross margins sustained (high barriers)"
+    }
+  ],
+  "analysis": "Switching Costs and Intangible Assets and Network Effect create a durable competitive fortress. The company's moat is reinforced by multiple reinforcing factors, making it unlikely competitors can erode its position in the next decade."
+}

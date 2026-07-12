@@ -1,0 +1,35 @@
+{
+  "symbol": "AMAT",
+  "industry": "Semiconductor Equipment & Materials",
+  "rating": "Narrow",
+  "stars": 3,
+  "confidence": "Medium",
+  "sources": [
+    {
+      "name": "Switching Costs",
+      "score": 4,
+      "rationale": "operating margin 32% well above industry"
+    },
+    {
+      "name": "Intangible Assets",
+      "score": 2,
+      "rationale": "limited intangible asset indicators available"
+    },
+    {
+      "name": "Network Effect",
+      "score": 3,
+      "rationale": "no clear network-effect indicators in available data"
+    },
+    {
+      "name": "Cost Advantage",
+      "score": 5,
+      "rationale": "gross margins slightly above industry average; operating margin 32% vs 15% (extreme efficiency); significant scale ($29B revenue)"
+    },
+    {
+      "name": "Efficient Scale",
+      "score": 3,
+      "rationale": "insufficient data for efficient scale assessment"
+    }
+  ],
+  "analysis": "Switching Costs and Cost Advantage provide some competitive protection, but not all moat sources are fully developed. The company has defensible advantages that should persist for several years but may face erosion over time."
+}

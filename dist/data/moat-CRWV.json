@@ -1,0 +1,35 @@
+{
+  "symbol": "CRWV",
+  "industry": "Software - Infrastructure",
+  "rating": "Wide",
+  "stars": 5,
+  "confidence": "High",
+  "sources": [
+    {
+      "name": "Switching Costs",
+      "score": 4,
+      "rationale": "gross margins 69% indicate premium pricing / low substitution"
+    },
+    {
+      "name": "Intangible Assets",
+      "score": 4,
+      "rationale": "premium gross margins 69% reflect brand/IP power"
+    },
+    {
+      "name": "Network Effect",
+      "score": 5,
+      "rationale": "explosive 112% revenue growth (flywheel spinning)"
+    },
+    {
+      "name": "Cost Advantage",
+      "score": 5,
+      "rationale": "gross margins 69% vs 40% industry (massive cost advantage)"
+    },
+    {
+      "name": "Efficient Scale",
+      "score": 5,
+      "rationale": "premium 69% gross margins sustained (high barriers)"
+    }
+  ],
+  "analysis": "Switching Costs and Intangible Assets and Network Effect create a durable competitive fortress. The company's moat is reinforced by multiple reinforcing factors, making it unlikely competitors can erode its position in the next decade."
+}

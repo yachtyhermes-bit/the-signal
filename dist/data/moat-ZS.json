@@ -1,0 +1,35 @@
+{
+  "symbol": "ZS",
+  "industry": "Software - Infrastructure",
+  "rating": "Wide",
+  "stars": 4,
+  "confidence": "High",
+  "sources": [
+    {
+      "name": "Switching Costs",
+      "score": 4,
+      "rationale": "gross margins 77% indicate premium pricing / low substitution"
+    },
+    {
+      "name": "Intangible Assets",
+      "score": 4,
+      "rationale": "premium gross margins 77% reflect brand/IP power"
+    },
+    {
+      "name": "Network Effect",
+      "score": 4,
+      "rationale": "strong 25% revenue growth"
+    },
+    {
+      "name": "Cost Advantage",
+      "score": 5,
+      "rationale": "gross margins 77% vs 40% industry (massive cost advantage); strong free cash flow (35% of revenue)"
+    },
+    {
+      "name": "Efficient Scale",
+      "score": 5,
+      "rationale": "premium 77% gross margins sustained (high barriers)"
+    }
+  ],
+  "analysis": "Switching Costs and Intangible Assets and Network Effect create a durable competitive fortress. The company's moat is reinforced by multiple reinforcing factors, making it unlikely competitors can erode its position in the next decade."
+}

@@ -1,0 +1,280 @@
+================================================================================
+SERVICENOW (NOW) - DEEP RESEARCH REPORT
+Generated: June 19, 2026
+Data sources: Yahoo Finance (yfinance), Bing News Search, direct article scraping
+================================================================================
+
+================================================================================
+1. KEY FINANCIAL METRICS (Verified via yfinance)
+================================================================================
+
+Market Cap:              $98.02B
+Current Price:           $95.04
+52-Week High:            $211.48
+52-Week Low:             $81.24
+52-Week Change:          -50.9%
+YTD 2026 Return:         -35.54% (Jan 2: $147.45 -> Jun 18: $95.04)
+1-Year Return:           -51.08%
+
+Trailing P/E:            56.57
+Forward P/E:             18.91
+PEG Ratio:               0.98
+Price/Book:              8.36
+Book Value:              $11.37
+
+Gross Margin (TTM):      76.56%
+Operating Margin (TTM):  13.34%
+Profit Margin (TTM):     12.59%
+EBITDA Margin (TTM):     20.69%
+
+Total Revenue (TTM):     $13.96B
+EBITDA:                  $2.89B
+Free Cash Flow:          $5.11B
+Total Cash:               $5.18B
+Total Debt:               $2.43B
+Debt/Equity:             20.73
+
+Beta:                    0.93
+Employees:               29,187
+
+================================================================================
+2. REVENUE HISTORY (Annual, verified via yfinance)
+================================================================================
+
+FY2023:  $8.971B
+FY2024:  $10.984B  (+22.4% YoY)
+FY2025:  $13.278B  (+20.9% YoY)
+
+Gross Profit:
+  FY2023: $7.050B (78.6% margin)
+  FY2024: $8.697B (79.2% margin)
+  FY2025: $10.295B (77.5% margin)
+
+Operating Income:
+  FY2023: $762M (8.5% margin)
+  FY2024: $1.364B (12.4% margin)
+  FY2025: $1.824B (13.7% margin)
+
+Net Income:
+  FY2023: $1.731B (19.3% margin)
+  FY2024: $1.425B (13.0% margin)
+  FY2025: $1.748B (13.2% margin)
+
+Diluted EPS:
+  FY2023: $1.68
+  FY2024: $1.37
+  FY2025: $1.67
+
+================================================================================
+3. Q1 2026 EARNINGS (Quarter ending March 31, 2026 - verified via yfinance)
+================================================================================
+
+Total Revenue:    $3.77B
+Gross Profit:     $2.83B (75.1% margin)
+Operating Income: $503M (13.3% margin)
+Net Income:       $469M (12.4% margin)
+Diluted EPS:      $0.45
+
+Subscription revenue grew 19% YoY on constant-currency basis (~$3.7B).
+Management beat estimates. Q1 2026 EPS reported at $0.97 vs $0.97 estimate (+0.39% surprise).
+
+Source: yfinance (Ticker('NOW').quarterly_financials)
+
+================================================================================
+4. ANALYST CONSENSUS (Verified via yfinance)
+================================================================================
+
+Number of Analysts:      44
+Consensus Rating:        Strong Buy (1.44/5.00)
+Mean Target Price:       $141.98 (+49.4% upside from $95.04)
+High Target:             $236.00
+Low Target:              $85.00
+
+Additional analyst notes (from web research):
+- Benchmark analyst Yi Fu Lee (June 15, 2026): Buy rating, PT raised to $130 from $125.
+  "Walked away feeling bullish on one of the cleanest operating models in SaaS sector
+   balancing profitable growth." Source: TheFly / Yahoo Finance
+- 90% Buy, 8% Hold from 50 analysts per CNN Money (June 2026)
+- Zacks Rank: #4 (Sell) - concern about acquisition dilution from Armis, Moveworks,
+  Veza, Pyramid Analytics
+- Zacks Consensus FY2026 EPS: $4.14, FY2027 EPS: $5.01
+
+Source URLs:
+- https://finance.yahoo.com/technology/ai/articles/why-servicenow-now-best-generative-150320993.html
+- https://www.theglobeandmail.com/investing/markets/stocks/NOW/pressreleases/2475867/
+
+================================================================================
+5. AI MONETIZATION: NOW ASSIST & AI AGENTS
+================================================================================
+
+ServiceNow expects $1.5 BILLION in AI revenue in 2026, driven by Now Assist and
+related AI products. Source: Globe and Mail / Zacks article
+
+Key AI product traction (Q1 2026):
+- Deals with 3+ Now Assist products grew ~70% YoY - customers expanding AI
+  usage across multiple workflows, not just piloting single features
+- Now Assist adoption is driving demand for AI Control Tower and RaptorDB Pro
+- AI Control Tower average deal sizes MORE THAN DOUBLED sequentially in Q1
+- RaptorDB Pro deal volume increased 80% YoY
+- cRPO growth accelerated to 25% YoY in Q4 2025 (from finsee.ai earnings review)
+- Now Assist net new ACV DOUBLED YoY in Q4 2025
+
+ServiceNow's AI platform integrates with "any cloud, any model, any data source"
+to orchestrate how work flows across the enterprise. Positioning as the "AI
+control tower for business reinvention."
+
+CEO Amit Zavery: "Our platform ensures that agentic AI runs inside governed
+workflows, which is fundamentally different from, and more trustworthy than,
+AI operating outside an enterprise's control layer."
+
+Source URLs:
+- https://www.theglobeandmail.com/investing/markets/stocks/NOW/pressreleases/2475867/
+- https://finsee.ai/earnings/now/2025/q4/en/
+- https://finance.yahoo.com/technology/ai/articles/servicenow-now-wipro-partnership-close-190001095.html
+
+================================================================================
+6. PARTNERSHIPS
+================================================================================
+
+A. NVIDIA PARTNERSHIP (June 1, 2026 - NVIDIA GTC Taipei):
+   - ServiceNow secured "Project Arc" (enterprise autonomous desktop agent) with
+     NVIDIA OpenShell for policy-based management and enterprise safety
+   - Part of NVIDIA Agent Toolkit ecosystem for building secure, long-running
+     AI agents that act as digital coworkers
+   - NVIDIA + Microsoft also partnering on Windows security primitives for agent
+     runtime; ServiceNow is part of this ecosystem
+   - Jensen Huang: "The world's software leaders are bringing AI agents into the
+     systems where work gets done"
+   Source: https://markets.businessinsider.com/news/stocks/enterprise-software-leaders-build-ai-agents-with-nvidia-1036210331
+
+B. IBM PARTNERSHIP (June 2026 - expanded):
+   - Three core services launching H2 2026:
+     1. Modernizing aging legacy systems for AI readiness
+     2. Extending ServiceNow Workflow Data Fabric with IBM's enterprise data capabilities
+     3. Enabling autonomous IT operations
+   - Combines IBM's AI, data, and automation with ServiceNow's AI Platform
+   - John Aisien (SVP ServiceNow): "Most enterprises have the ambition to deploy
+     agentic AI, but lack the foundation to run it at scale"
+   Source: https://www.networkworld.com/article/4184195/ibm-servicenow-team-to-bring-ai-to-legacy-enterprise-systems.html
+
+C. GOOGLE CLOUD PARTNERSHIP:
+   - ServiceNow and Google Cloud expanded collaboration introducing autonomous AI
+     solutions at Google Cloud Next
+   - Focus on connected AI agents for enterprises
+   Source: https://www.msn.com/en-us/money/general/servicenow-google-cloud-roll-out-connected-ai-agents-for-enterprises/ar-AA21ztAx
+
+D. NICE LTD. AI ALLIANCE (June 9, 2026):
+   - Joint AI solution connecting real-time customer engagement with enterprise
+     workflow execution
+   - Links front, middle, and back-office teams so customer intent feeds directly
+     into automated service fulfillment
+   - Aims to reduce service silos and speed up issue resolution
+   Source: https://finance.yahoo.com/markets/stocks/articles/servicenow-nice-ai-alliance-links-021217496.html
+
+E. WIPRO PARTNERSHIP (May 28, 2026 - expanded):
+   - Deploying agentic AI workflows at scale across core enterprise functions
+   - Combines Wipro's AI-powered enterprise solutions with ServiceNow AI Platform
+   - Focus on closing the "execution gap" between AI pilots and full deployment
+   Source: https://finance.yahoo.com/technology/ai/articles/servicenow-now-wipro-partnership-close-190001095.html
+
+F. COGNIZANT PARTNERSHIP (June 2026):
+   - Accelerating scalable, operationalized AI governance at enterprise scale
+   - Pairs ServiceNow's visibility and governance with Cognizant's agentic
+     intelligence and control platform
+   Source: https://www.morningstar.com/news/pr-newswire/20260604ny76513/
+
+G. MICROSOFT (via NVIDIA ecosystem):
+   - ServiceNow uses NVIDIA OpenShell secured by Windows security primitives
+   - Part of broader NVIDIA-Microsoft-ServiceNow agent runtime partnership
+   Source: NVIDIA GTC Taipei announcement (June 2026)
+
+================================================================================
+7. COMPETITIVE POSITION: ENTERPRISE AI AGENT MOAT
+================================================================================
+
+ServiceNow vs Salesforce:
+- ServiceNow forward P/E: 18.91 vs Salesforce: higher multiple but growing AI faster
+- ServiceNow forward sales multiple: 6.02X vs Salesforce: 2.85X
+- Salesforce Agentforce ARR exceeded $1B in Q1 FY2027, making it one of fastest-growing
+  businesses; processed 28.6T AI tokens (+152% sequentially)
+- ServiceNow NOW has broader workflow reach (ITSM, HR, CSM, SecOps) - deeper
+  enterprise integration across more departments
+- Zacks currently prefers CRM over NOW due to margin dilution from acquisitions
+  and upward EPS revisions for CRM
+Source: https://www.theglobeandmail.com/investing/markets/stocks/NOW/pressreleases/2475867/
+
+ServiceNow vs Palantir:
+- ServiceNow forward P/E 21 vs Palantir 105; nearly double the free cash flow
+- Palantir beta 1.52 vs ServiceNow 0.93
+- Both positioned as AI platform plays for enterprise
+Source: https://247wallst.com/investing/2026/06/03/servicenow-vs-palantir-which-enterprise-ai-stock-belongs-in-a-retirement-portfolio/
+
+Competitive threats:
+- Kore.ai launched Artemis AI agent platform targeting ServiceNow/Salesforce
+- BMC remains competitor in ITSM space but lacks ServiceNow's AI breadth
+- Startups building vertical AI agents could disrupt horizontal platforms
+- "SaaSpocalypse" fears overblown for ServiceNow: the company's deep enterprise
+  integration and AI control tower position make it a beneficiary, not victim
+
+ServiceNow's MOAT factors:
+1. Workflow Data Fabric - proprietary data layer across all enterprise systems
+2. AI Control Tower - centralized AI governance and orchestration
+3. Deep enterprise integration - 29,000+ employees, thousands of long-standing
+   enterprise relationships
+4. Platform approach - integrates "any cloud, any model, any data source"
+5. Acquisition strategy - Armis (security), Veza (identity), Moveworks (AI assistant),
+   Pyramid Analytics (BI) expanding the AI platform footprint
+
+Key risk: Multiple simultaneous acquisitions (Armis, Moveworks, Veza, Pyramid
+Analytics) creating integration challenges and margin pressure in 2026.
+Armis acquisition expected to reduce 2026 subscription gross margin by 25bp,
+operating margin by 75bp, and FCF margin by 200bp.
+
+Source URLs:
+- https://www.fool.com/investing/2026/05/30/forget-saas-why-ai-agents-could-make-servicenow-an/
+- https://www.theglobeandmail.com/investing/markets/stocks/NOW/pressreleases/2475867/
+- https://www.zacks.com/stock/news/2928306/can-servicenow-sustain-its-growth-amid-rising-ai-competition
+
+================================================================================
+8. RECENT STOCK CATALYSTS (May-June 2026)
+================================================================================
+
+- May 29, 2026: ServiceNow surged 14% to $124 as Dell's blowout AI server revenue
+  (+757% YoY) validated enterprise AI infrastructure thesis. Snowflake strong Q1
+  also helped dismantle "SaaSpocalypse" narrative.
+- June 1, 2026: NVIDIA GTC Taipei - ServiceNow + NVIDIA Project Arc announcement
+- June 2026: Multiple partnership announcements (IBM expanded, NICE alliance,
+  Cognizant, Wipro expanded)
+- June 15, 2026: Benchmark analyst raises PT to $130, maintains Buy
+- June 18, 2026: Stock at $95.04, YTD -35.54%
+
+Source URLs:
+- https://247wallst.com/investing/2026/05/29/servicenow-soars-14-on-enterprise-ai-rotation-as-dells-blowout-earnings-lift-software-sector/
+- https://seekingalpha.com/news/4598465-servicenow-leads-software-rally-as-ai-fears-turn-to-optimism
+
+================================================================================
+9. KEY SOURCE URLs (All Verified)
+================================================================================
+
+Financial Data (yfinance):
+- Primary source: yfinance Ticker('NOW').info, .financials, .quarterly_financials
+
+Web Research Sources:
+- https://markets.businessinsider.com/news/stocks/enterprise-software-leaders-build-ai-agents-with-nvidia-1036210331
+- https://www.networkworld.com/article/4184195/ibm-servicenow-team-to-bring-ai-to-legacy-enterprise-systems.html
+- https://finance.yahoo.com/markets/stocks/articles/servicenow-nice-ai-alliance-links-021217496.html
+- https://finance.yahoo.com/technology/ai/articles/servicenow-now-wipro-partnership-close-190001095.html
+- https://finance.yahoo.com/technology/ai/articles/why-servicenow-now-best-generative-150320993.html
+- https://www.theglobeandmail.com/investing/markets/stocks/NOW/pressreleases/2475867/
+- https://www.fool.com/investing/2026/05/30/forget-saas-why-ai-agents-could-make-servicenow-an/
+- https://www.fool.com/investing/2026/05/23/is-this-beaten-down-ai-stock-buy/
+- https://247wallst.com/investing/2026/05/29/servicenow-soars-14-on-enterprise-ai-rotation-as-dells-blowout-earnings-lift-software-sector/
+- https://247wallst.com/investing/2026/06/03/servicenow-vs-palantir-which-enterprise-ai-stock-belongs-in-a-retirement-portfolio/
+- https://www.manilatimes.net/2026/06/01/tmt-newswire/globenewswire/enterprise-software-leaders-build-ai-agents-with-nvidia/2355355
+- https://www.morningstar.com/news/pr-newswire/20260604ny76513/
+- https://seekingalpha.com/news/4598465-servicenow-leads-software-rally-as-ai-fears-turn-to-optimism
+- https://finsee.ai/earnings/now/2025/q4/en/
+
+================================================================================
+END OF REPORT
+================================================================================
