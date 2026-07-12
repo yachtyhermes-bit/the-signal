@@ -100,8 +100,24 @@ async function callGemini(systemPrompt, userQuestion) {
 
   const data = await res.json();
   const text = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
-  const searched = data.candidates?.[0]?.groundingMetadata?.webSearchQueries?.length > 0;
-  return { text, searched };
+  const groundMeta = data.candidates?.[0]?.groundingMetadata;
+  const searched = groundMeta?.webSearchQueries?.length > 0;
+
+  // Extract actual web search source URLs from Google's grounding data
+  const webSources = [];
+  const chunks = groundMeta?.groundingChunks || [];
+  const seen = new Set();
+  for (const chunk of chunks) {
+    const uri = chunk.web?.uri;
+    const title = chunk.web?.title || uri;
+    if (uri && !seen.has(uri)) {
+      seen.add(uri);
+      webSources.push({ url: uri, title });
+    }
+    if (webSources.length >= 5) break;
+  }
+
+  return { text, searched, webSources };
 }
 
 // ─── Handler ───
@@ -145,13 +161,16 @@ Covered: NVDA, AMD, AVGO, MRVL, PLTR, CRWD, RKLB, RDW, LMT, RTX, GOOGL, META, MS
 Article library (${articleCount} articles):
 ${articleContext}`;
 
-    const { text: answer, searched } = await callGemini(systemPrompt, question);
+    const { text: answer, searched, webSources } = await callGemini(systemPrompt, question);
 
     if (!answer) {
       return res.status(200).json({ answer: "Couldn't find a good answer. Try rephrasing.", sources: [], searched: false });
     }
 
-    const sources = findSources(answer);
+    // Always prefer real web search URLs from Google grounding
+    const sources = webSources && webSources.length > 0
+      ? webSources.map(s => ({ title: s.title, url: s.url, source: 'web' }))
+      : findSources(answer);
     const result = { answer, sources, searched };
     cacheSet(cacheKey, result);
     return res.status(200).json(result);

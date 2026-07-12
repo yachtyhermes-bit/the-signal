@@ -279,8 +279,15 @@
           sourcesDiv.className = 'pulse-sources';
           var sourcesHtml = '<div class="pulse-sources-title">Sources:</div>';
           for (var si = 0; si < data.sources.length; si++) {
-            sourcesHtml += '<a href="/article/' + data.sources[si].slug + '" class="pulse-source-link">' +
-              escapeHtml(data.sources[si].ticker) + ' &mdash; ' + escapeHtml(data.sources[si].title.slice(0, 60)) + '</a>';
+            var s = data.sources[si];
+            if (s.url) {
+              // Web source — show clean title as clickable link
+              sourcesHtml += '<a href="' + s.url + '" target="_blank" rel="noopener" class="pulse-source-link">' +
+                escapeHtml(s.title || s.url) + '</a>';
+            } else {
+              // Fallback: local article source
+              sourcesHtml += '<a href="/article/' + s.slug + '" class="pulse-source-link">' + escapeHtml(s.ticker) + ' &mdash; ' + escapeHtml((s.title || '').slice(0, 60)) + '</a>';
+            }
           }
           sourcesDiv.innerHTML = sourcesHtml;
           overlayMessages.appendChild(sourcesDiv);
@@ -361,7 +368,11 @@
           sourcesDiv.className = 'pulse-sources';
           sourcesDiv.innerHTML = '<div class="pulse-sources-title">Sources:</div>' +
             data.sources.map(function(s) {
-              return '<a href="/article/' + s.slug + '" class="pulse-source-link">' + s.ticker + ' &mdash; ' + escapeHtml(s.title.slice(0, 60)) + '</a>';
+              if (s.url) {
+                return '<a href="' + s.url + '" target="_blank" rel="noopener" class="pulse-source-link">' +
+                  escapeHtml(s.title || s.url) + '</a>';
+              }
+              return '<a href="/article/' + s.slug + '" class="pulse-source-link">' + s.ticker + ' &mdash; ' + escapeHtml((s.title || '').slice(0, 60)) + '</a>';
             }).join('');
           messagesEl.appendChild(sourcesDiv);
           messagesEl.scrollTop = messagesEl.scrollHeight;
