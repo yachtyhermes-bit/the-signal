@@ -563,8 +563,12 @@ if (fs.existsSync(highlightsPath)) {
 }
 
 // ─── 9. Copy API serverless functions ───
+// Clean dist/api/ first to remove stale files from previous builds
 const apiDir = path.join(ROOT, 'api');
 const distApiDir = path.join(DST, 'api');
+if (fs.existsSync(distApiDir)) {
+  fs.rmSync(distApiDir, { recursive: true, force: true });
+}
 if (fs.existsSync(apiDir)) {
   fs.mkdirSync(distApiDir, { recursive: true });
   const apiFiles = fs.readdirSync(apiDir);
