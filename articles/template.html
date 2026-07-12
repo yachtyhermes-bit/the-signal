@@ -10,7 +10,7 @@
   <meta name="robots" content="max-image-preview:large">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Oxanium:wght@400;500;600;700&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/main.css?v=18">
+  <link rel="stylesheet" href="/css/main.css?v=19">
   <link rel="stylesheet" href="/css/pulse-badge.css">
   <link rel="stylesheet" href="/css/tts.css">
   <link rel="stylesheet" href="/css/nav.css">
@@ -238,6 +238,22 @@
         {{BODY}}
       </div>
 
+      <!-- ⚡ Ask Pulse — opens Pulse overlay with article context -->
+      <div class="pulse-divider"
+           data-article-title="{{TITLE}}"
+           data-article-slug="{{SLUG}}"
+           onclick="window.pulseOpenPanel ? pulseOpenPanel({title:'{{TITLE}}',slug:'{{SLUG}}'}) : (window.togglePulseOverlay ? togglePulseOverlay({title:'{{TITLE}}',slug:'{{SLUG}}'}) : null)"
+           style="margin:24px 0 16px">
+        <span></span>
+        <span class="pulse-divider-label">
+          <img src="/img/logo-hex.jpg" alt="Pulse" class="pulse-hex-thumb">
+          <span class="pulse-gradient">Ask Pulse</span>
+          <span class="pulse-arrow">›</span>
+        </span>
+        <span></span>
+      </div>
+      <p class="pulse-divider-sub" style="margin:-12px 0 24px">Ask questions about this article with AI-powered research &amp; live web search</p>
+
       {{TAGS_HTML}}
 
       {{LINKS_HTML}}
@@ -264,20 +280,6 @@
         <p>— <strong>The Signal Editorial Team</strong></p>
         <p class="signoff-disclosure">This article is for informational purposes only and does not constitute investment advice. The Signal may hold positions in securities mentioned. Past performance is not indicative of future results. Always conduct your own research before making investment decisions.</p>
       </div>
-
-      <!-- ⚡ Ask Pulse — opens Pulse overlay with article context -->
-      <div class="pulse-divider"
-           data-article-title="{{TITLE}}"
-           data-article-slug="{{SLUG}}"
-           onclick="window.pulseOpenPanel ? pulseOpenPanel({title:'{{TITLE}}',slug:'{{SLUG}}'}) : (window.togglePulseOverlay ? togglePulseOverlay({title:'{{TITLE}}',slug:'{{SLUG}}'}) : null)">
-        <span></span>
-        <span class="pulse-divider-label">
-          <img src="/img/logo-hex.jpg" alt="Pulse" class="pulse-hex-thumb">
-          <span class="pulse-gradient">Ask Pulse</span>
-        </span>
-        <span></span>
-      </div>
-      <p class="pulse-divider-sub">Ask questions about this article with AI-powered research &amp; live web search</p>
 
     </div>
 

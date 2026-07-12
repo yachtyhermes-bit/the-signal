@@ -8,6 +8,8 @@
     { "src": "/stock/(.*)", "dest": "/stocks/$1" },
     { "src": "/data/(.*)", "dest": "/data/$1" },
     { "src": "/about(/.*)?", "dest": "/about/index.html" },
+    { "src": "/signal-vs-the-street", "dest": "/signal-vs-the-street.html" },
+    { "src": "/signal-vs-the-street/", "dest": "/signal-vs-the-street.html" },
     { "src": "/art/(.*)", "dest": "/article/$1" },
     { "src": "/(.*)", "dest": "/index.html" }
   ],

@@ -430,8 +430,72 @@ export default async function handler(req, res) {
         uid: account.uid,
         displayName: account.displayName,
         username: account.username,
-        createdAt: account.createdAt
+        createdAt: account.createdAt,
+        isPremium: !!account.isPremium,
+        premiumPlan: account.premiumPlan || null,
+        email: account.email || null
       });
+    }
+
+    // POST /api/hive?action=set-premium — called by Stripe webhook with ADMIN_KEY
+    if (req.method === 'POST' && req.query.action === 'set-premium') {
+      const adminKey = req.query.admin_key || (req.body && req.body.admin_key);
+      if (adminKey !== process.env.ADMIN_KEY) {
+        return res.status(403).json({ error: 'Forbidden' });
+      }
+      const { email, plan, customerId, subscriptionId } = req.body && req.body.admin_key ? req.body : (req.query.admin_key ? req.body : {}) || {};
+      if (!email || !customerId) {
+        return res.status(400).json({ error: 'Email and customerId required' });
+      }
+      const emailLower = email.toLowerCase().trim();
+      // Find account by email or username
+      let targetAccount = null;
+      let targetUsername = null;
+      for (const [uname, acct] of Object.entries(data.accounts)) {
+        if (acct.email && acct.email.toLowerCase() === emailLower) {
+          targetAccount = acct;
+          targetUsername = uname;
+          break;
+        }
+        if (uname === emailLower) {
+          targetAccount = acct;
+          targetUsername = uname;
+          break;
+        }
+      }
+      if (!targetAccount) {
+        return res.status(404).json({ error: 'No account found for email: ' + email });
+      }
+      targetAccount.isPremium = true;
+      targetAccount.premiumPlan = plan || 'premium';
+      targetAccount.stripeCustomerId = customerId;
+      targetAccount.stripeSubscriptionId = subscriptionId;
+      targetAccount.premiumSince = new Date().toISOString();
+      await writeData(data);
+      console.log(`Premium activated: ${email} -> ${plan}`);
+      return res.json({ status: 'ok', message: `Premium activated for ${email}` });
+    }
+
+    // POST /api/hive?action=cancel-premium — called by Stripe webhook on subscription delete
+    if (req.method === 'POST' && req.query.action === 'cancel-premium') {
+      const adminKey = req.query.admin_key || (req.body && req.body.admin_key);
+      if (adminKey !== process.env.ADMIN_KEY) {
+        return res.status(403).json({ error: 'Forbidden' });
+      }
+      const { customerId } = req.body && req.body.admin_key ? req.body : (req.query.admin_key ? req.body : {}) || {};
+      if (!customerId) {
+        return res.status(400).json({ error: 'customerId required' });
+      }
+      for (const [uname, acct] of Object.entries(data.accounts)) {
+        if (acct.stripeCustomerId === customerId) {
+          acct.isPremium = false;
+          acct.stripeSubscriptionId = null;
+          console.log(`Premium canceled: ${uname} (${customerId})`);
+          break;
+        }
+      }
+      await writeData(data);
+      return res.json({ status: 'ok' });
     }
 
     // POST /api/hive?action=google-auth

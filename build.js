@@ -791,3 +791,25 @@ function formatDate(d) {
     return `${months[dt.getMonth()]} ${dt.getDate()}, ${dt.getFullYear()}`;
   } catch { return d; }
 }
+
+// ─── Copy data/ directory for static JSON assets ───
+const dataDir = path.join(ROOT, 'data');
+const distDataDir = path.join(DST, 'data');
+if (fs.existsSync(dataDir)) {
+  fs.cpSync(dataDir, distDataDir, { recursive: true });
+  const dataCount = countFiles(distDataDir);
+  console.log(`  ✅ ${dataCount} data files → dist/data/`);
+}
+
+// ─── Signal vs. Street page — always use latest source ───
+const svsSrc = path.join(ROOT, 'signal-vs-the-street.html');
+const svsDst = path.join(DST, 'signal-vs-the-street', 'index.html');
+if (fs.existsSync(svsSrc)) {
+  fs.mkdirSync(path.dirname(svsDst), { recursive: true });
+  fs.copyFileSync(svsSrc, svsDst);
+  // Rewrite image paths in SVS page too (copied after main rewriter)
+  let svsContent = fs.readFileSync(svsDst, 'utf8');
+  svsContent = svsContent.replace(/"\/img\//g, '"' + R2_IMG_BASE + '/img/');
+  fs.writeFileSync(svsDst, svsContent);
+  console.log(`  ✅ Signal vs. Street page synced from project root`);
+}

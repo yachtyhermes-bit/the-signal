@@ -24,7 +24,9 @@
     gtag('js', new Date());
     gtag('config', 'G-98KDVDFBCW');
   </script>
-  <script src="/js/theme.js" defer></script>
+  <script src="/js/theme.js?v=2" defer></script>
+  <script src="/js/auth.js?v=2" defer></script>
+  <script src="/js/search.js" defer></script>
   <script src="/js/nav.js" defer></script>
 
   <style>
@@ -181,15 +183,19 @@
       text-align: center;
       overflow: hidden;
       background:
-        var(--gradient-2),
-        var(--gradient-1),
-        url('/img/svs-hero-bg.jpg') center 30% / cover no-repeat;
+        url("/img/svs-hero-bg.jpg") center 30% / cover no-repeat;
     }
     .hero::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: rgba(22,23,24,0.35);
+      background: linear-gradient(
+        to bottom,
+        rgba(4,4,10,0.75) 0%,
+        rgba(4,4,10,0.55) 40%,
+        rgba(4,4,10,0.45) 70%,
+        rgba(4,4,10,0.80) 100%
+      );
       z-index: 1;
     }
     .hero > * {
@@ -232,13 +238,14 @@
 
     .hero-sub {
       font-family: 'Inter', sans-serif;
-      font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+      font-size: clamp(1rem, 1.6vw, 1.3rem);
       font-weight: 400;
-      color: var(--color-grayscale-500);
-      max-width: 60rem;
+      color: var(--color-grayscale-200);
+      max-width: 44rem;
+      margin: 0 auto 3rem;
       line-height: 1.8;
-      margin-bottom: 3rem;
       letter-spacing: 0.01em;
+      text-align: center;
     }
 
     .hero-cta {
@@ -267,10 +274,12 @@
       align-items: center;
       gap: 1.5rem;
       border: 1px solid rgba(255,255,255,0.08);
-      background: rgba(22,23,24,0.5);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      padding: 0.85rem 2rem;
+      background: rgba(22,23,24,0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 1rem 2.5rem;
+      text-align: center;
+      border-radius: 4px;
     }
     .hero-return-box .return-label {
       font-family: 'Roboto Mono', monospace;
@@ -279,20 +288,22 @@
       text-transform: uppercase;
       color: var(--color-optic);
       opacity: 0.7;
+      text-align: center;
     }
     .hero-return-box .return-value {
       font-family: 'Roboto Mono', monospace;
-      font-size: 1.6rem;
+      font-size: 1.8rem;
       font-weight: 700;
       color: #00c853;
       letter-spacing: -0.02em;
+      text-align: center;
     }
     .hero-return-box .return-benchmark {
       font-family: 'Inter', sans-serif;
       font-size: 0.65rem;
       color: var(--color-optic);
       opacity: 0.6;
-      text-align: left;
+      text-align: center;
     }
 
     /* ════════════════════════════════════════════════════════════
@@ -478,6 +489,131 @@
     }
 
     /* ════════════════════════════════════════════════════════════
+       FOOTER — SVS-specific overrides for visibility
+       ════════════════════════════════════════════════════════════ */
+    footer.footer {
+      display: block !important;
+      background: #1c1d1e;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding: 40px 24px;
+      margin-top: 48px;
+      color: #b9b9ba;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+    footer.footer .footer-inner {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      text-align: center;
+      display: block;
+      visibility: visible;
+      opacity: 1;
+    }
+    footer.footer .footer-brand {
+      display: block;
+      color: #b9b9ba;
+      font-size: 1rem;
+      margin-bottom: 8px;
+      visibility: visible;
+    }
+    footer.footer .footer-brand strong {
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    footer.footer .footer-tag,
+    footer.footer .footer-copy {
+      display: block;
+      color: #777788;
+      font-size: 0.8rem;
+      margin-top: 4px;
+      visibility: visible;
+    }
+    footer.footer .footer-logo {
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      border-radius: 3px;
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       PREMIUM PAYWALL — Holdings blur for non-premium
+       ════════════════════════════════════════════════════════════ */
+    .holdings-locked {
+      position: relative;
+      overflow: hidden;
+    }
+    .holdings-locked table {
+      filter: blur(4px);
+      pointer-events: none;
+      user-select: none;
+    }
+    .holdings-locked::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      background: linear-gradient(
+        to bottom,
+        rgba(22,23,24,0) 0%,
+        rgba(22,23,24,0.6) 30%,
+        rgba(22,23,24,0.9) 60%
+      );
+      pointer-events: none;
+      z-index: 2;
+    }
+    .premium-paywall {
+      position: relative;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      background: rgba(22,23,24,0.8);
+      border: 1px solid rgba(6,128,255,0.2);
+      margin-top: -1px;
+    }
+    .premium-paywall-icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .premium-paywall-title {
+      font-family: 'Michroma', sans-serif;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--color-optic);
+      margin-bottom: 0.5rem;
+    }
+    .premium-paywall-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      color: var(--color-grayscale-500);
+      max-width: 36rem;
+      margin: 0 auto 1.25rem;
+      line-height: 1.6;
+    }
+    .premium-paywall-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--color-optic);
+      background: rgba(6,128,255,0.12);
+      border: 1px solid var(--color-blue-500);
+      padding: 12px 32px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .premium-paywall-cta:hover {
+      background: rgba(6,128,255,0.25);
+    }
+
+    /* ════════════════════════════════════════════════════════════
        SCROLL REVEAL ANIMATIONS
        ════════════════════════════════════════════════════════════ */
     .reveal {
@@ -594,10 +730,104 @@
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
         </button>
+        <div class="auth-container" id="authContainer">
+            <button class="nav-btn auth-btn" id="authToggle" aria-label="Sign In">
+              <div class="auth-btn-avatar" id="authBtnAvatar">
+                <span class="auth-btn-initial" id="authBtnInitial"></span>
+                <img class="auth-btn-img" id="authBtnImg" src="" alt="" style="display:none">
+              </div>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="auth-btn-icon" id="authBtnIcon">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              <span class="auth-label" id="authLabel">Sign In</span>
+            </button>
+            <div class="auth-dropdown" id="authDropdown">
+              <!-- Signed-in Profile -->
+              <div class="auth-profile" id="authProfile" style="display:none">
+                <div class="auth-profile-header">
+                  <div class="auth-profile-avatar" id="authProfileAvatar">
+                    <img id="authProfileImg" src="" alt="" style="display:none">
+                    <span class="auth-profile-initial" id="authProfileInitial"></span>
+                  </div>
+                  <div class="auth-profile-info">
+                    <span class="auth-profile-name" id="authProfileName"></span>
+                    <span class="auth-profile-username" id="authProfileUsername"></span>
+                  </div>
+                  <div class="auth-profile-badge">HIVE</div>
+                </div>
+                <div class="auth-profile-stats" id="authProfileStats">
+                  <div class="auth-stat">
+                    <span class="auth-stat-label">Portfolio</span>
+                    <span class="auth-stat-value" id="authStatValue">-</span>
+                  </div>
+                  <div class="auth-stat">
+                    <span class="auth-stat-label">Return</span>
+                    <span class="auth-stat-value" id="authStatReturn">-</span>
+                  </div>
+                </div>
+                <div class="auth-drop-divider"></div>
+                <div class="auth-profile-nav">
+                  <a href="/sector/ai" class="auth-nav-item">AI</a>
+                  <a href="/sector/cyber" class="auth-nav-item">Cyber</a>
+                  <a href="/sector/defense" class="auth-nav-item">Defense</a>
+                  <a href="/sector/space" class="auth-nav-item">Space</a>
+                  <a href="/sector/mega-cap" class="auth-nav-item">Mega-Cap</a>
+                  <a href="/sector/quantum" class="auth-nav-item">Quantum</a>
+                  <a href="/sector/ai-power" class="auth-nav-item">AI Power</a>
+                  <a href="/sector/fintech" class="auth-nav-item">FinTech</a>
+                  <a href="/sector/etfs" class="auth-nav-item">ETFs</a>
+                  <div class="auth-nav-section-header">FEATURES</div>
+                  <a href="/hive" class="auth-nav-item">Hive</a>
+                  <a href="/signal-vs-the-street" class="auth-nav-item">Signal vs. Street</a>
+                  <a href="/stocks/" class="auth-nav-item">Stock Pages</a>
+                </div>
+                <div class="auth-drop-divider"></div>
+                <div class="auth-profile-footer">
+                  <a href="/account/settings" class="auth-footer-link">✏️ Edit Profile</a>
+                  <a href="/hive" class="auth-footer-link" onclick="navigateToHiveLeaderboard(event)">Leaderboard</a>
+                  <button class="auth-signout-btn" id="authSignOut">Sign Out</button>
+                </div>
+              </div>
+              <!-- Guest View -->
+              <div class="auth-guest" id="authGuest">
+                <div class="auth-guest-brand">
+                  <span class="auth-guest-title">Welcome to <strong>The Signal</strong></span>
+                  <span class="auth-guest-sub">Join the hive to track your portfolio</span>
+                </div>
+                <button class="auth-option auth-option-primary" onclick="showHiveJoinModal('login')">
+                  <span class="auth-option-icon">🔑</span> Sign In
+                </button>
+                <button class="auth-option" onclick="showHiveJoinModal('register')">
+                  <span class="auth-option-icon">✨</span> Create Account
+                </button>
+                <div class="auth-drop-divider"></div>
+                <div class="auth-profile-nav">
+                  <a href="/sector/ai" class="auth-nav-item">AI</a>
+                  <a href="/sector/cyber" class="auth-nav-item">Cyber</a>
+                  <a href="/sector/defense" class="auth-nav-item">Defense</a>
+                  <a href="/sector/space" class="auth-nav-item">Space</a>
+                  <a href="/sector/mega-cap" class="auth-nav-item">Mega-Cap</a>
+                  <a href="/sector/quantum" class="auth-nav-item">Quantum</a>
+                  <a href="/sector/ai-power" class="auth-nav-item">AI Power</a>
+                  <a href="/sector/fintech" class="auth-nav-item">FinTech</a>
+                  <a href="/sector/etfs" class="auth-nav-item">ETFs</a>
+                  <div class="auth-nav-section-header">FEATURES</div>
+                  <a href="/hive" class="auth-nav-item">Hive</a>
+                  <a href="/signal-vs-the-street" class="auth-nav-item">Signal vs. Street</a>
+                  <a href="/stocks/" class="auth-nav-item">Stock Pages</a>
+                </div>
+              </div>
+          </div>
+        </div>
         <button class="nav-btn hamburger-btn" id="hamburgerToggle" aria-label="Menu">
           <span class="hamburger-line"></span>
           <span class="hamburger-line"></span>
           <span class="hamburger-line"></span>
+        </button>
+        <button class="nav-btn theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle theme" style="display:flex;align-items:center;gap:4px;background:none;border:1px solid var(--border);border-radius:6px;padding:6px 8px;cursor:pointer;color:var(--text-secondary);font-size:12px">
+          <svg class="theme-icon-sun" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <svg class="theme-icon-moon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
       </div>
     </div>
@@ -640,6 +870,23 @@
         <a href="/sector/ai-power" class="drawer-link">AI POWER</a>
         <a href="/sector/etfs" class="drawer-link">ETFS</a>
       </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════
+       SEARCH OVERLAY
+       ════════════════════════════════════════════════ -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-backdrop" id="searchBackdrop"></div>
+    <div class="search-modal">
+      <div class="search-header">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search articles by title, ticker, sector, or tag…" autofocus>
+        <button class="search-close" id="searchClose" aria-label="Close search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+      <div class="search-empty" id="searchEmpty">Start typing to search articles…</div>
     </div>
   </div>
 
@@ -720,7 +967,7 @@
           </p>
         </div>
 
-        <div class="holdings-table-wrap reveal reveal-delay-3">
+        <div class="holdings-table-wrap reveal reveal-delay-3" id="holdingsWrap">
           <table class="holdings-table">
             <thead>
               <tr>
@@ -733,6 +980,18 @@
               <tr><td colspan="3" style="color:var(--color-stealth-80); padding:1rem 1.25rem;">Loading...</td></tr>
             </tbody>
           </table>
+        </div>
+
+        <!-- Premium paywall — shown for non-premium users -->
+        <div id="holdingsPaywall" class="premium-paywall" style="display:none;">
+          <div class="premium-paywall-icon">📡</div>
+          <div class="premium-paywall-title">Full Portfolio — Signal Premium</div>
+          <p class="premium-paywall-desc">
+            See all 24 positions with real-time weights and returns. Track community portfolio additions and removals as they happen.
+          </p>
+          <a href="/pricing" class="premium-paywall-cta">
+            Unlock Premium Access →
+          </a>
         </div>
       </div>
     </section>
@@ -768,7 +1027,7 @@
     })();
 
     // ── Load dynamic portfolio data ──
-    fetch('/api/portfolio-returns.json')
+    fetch('/data/portfolio-returns.json')
       .then(function(r) {
         if (!r.ok) throw new Error('HTTP ' + r.status);
         return r.json();
@@ -815,15 +1074,35 @@
           document.getElementById('svsCards').innerHTML = cardsHtml;
         }
 
-        // 3. Holdings table
+        // 3. Holdings table — show first 6, blur remainder behind premium paywall
         var holdings = d.holdings || [];
+        var FREE_HOLDINGS = 6;
+        var isPremium = (window.isPremiumUser || false);
+        var visible = isPremium ? holdings : holdings.slice(0, FREE_HOLDINGS);
+        var locked = !isPremium && holdings.length > FREE_HOLDINGS;
+        var totalHoldings = holdings.length;
         var rowsHtml = '';
-        holdings.forEach(function(h) {
+        visible.forEach(function(h) {
           var ret = h.return !== null ? (h.return >= 0 ? '+' : '') + h.return.toFixed(1) + '%' : '—';
           var cls = h.return > 0 ? 'return-pos' : (h.return < 0 ? 'return-neg' : '');
           rowsHtml += '<tr><td class="ticker">' + h.ticker + '</td><td class="weight">' + h.weight.toFixed(1) + '%</td><td class="' + cls + '">' + ret + '</td></tr>';
         });
+        if (locked) {
+          // Add blurred placeholder rows to hint at locked content
+          for (var i = FREE_HOLDINGS; i < totalHoldings; i++) {
+            var h2 = holdings[i];
+            var fakeRet = h2.return !== null ? (h2.return >= 0 ? '+' : '') + h2.return.toFixed(1) + '%' : '—';
+            rowsHtml += '<tr><td class="ticker">' + h2.ticker + '</td><td class="weight">' + h2.weight.toFixed(1) + '%</td><td>' + fakeRet + '</td></tr>';
+          }
+          // Add premium row spanning full table
+          rowsHtml += '<tr><td colspan="3" style="text-align:center;padding:1.5rem 1.25rem;color:var(--color-blue-500);font-weight:600;font-size:0.8rem;letter-spacing:1px;text-transform:uppercase;">+ ' + (totalHoldings - FREE_HOLDINGS) + ' more holdings — Signal Premium</td></tr>';
+        }
         document.getElementById('holdingsBody').innerHTML = rowsHtml;
+        if (locked) {
+          document.getElementById('holdingsWrap').classList.add('holdings-locked');
+          var pw = document.getElementById('holdingsPaywall');
+          if (pw) pw.style.display = 'block';
+        }
 
         // 4. Footer date
         var footer = document.querySelector('.footer-copy');

@@ -1,13 +1,9 @@
 // Stripe Webhook — Vercel serverless function
-// Handles Stripe events: checkout.session.completed, customer.subscription.deleted
+// Handles: checkout.session.completed, customer.subscription.deleted
+// Persists premium status via Hive API (set-premium / cancel-premium actions)
 
-const SK = process.env.STRIPE_SECRET_KEY || '';
-const WH_SECRET = process.env.STRIPE_WEBHOOK_SECRET || '';
 const ADMIN_KEY = process.env.ADMIN_KEY || '';
-
-// Premium status storage — in-memory (resets on cold start)
-// For production: use Firebase Firestore or a database
-const premiumUsers = new Map();
+const HIVE_API = 'https://readthesignal.net/api/hive';
 
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -15,19 +11,13 @@ export default async function handler(req, res) {
   if (req.method === 'OPTIONS') return res.status(200).end();
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
-  if (!SK || !WH_SECRET) {
-    console.log('Stripe webhook not configured');
-    return res.status(500).json({ error: 'Webhook not configured' });
+  if (!ADMIN_KEY) {
+    console.log('Webhook: ADMIN_KEY not configured');
+    return res.status(500).json({ error: 'ADMIN_KEY not configured' });
   }
 
   try {
-    const sig = req.headers['stripe-signature'];
-    const payload = typeof req.body === 'string' ? req.body : JSON.stringify(req.body);
-
-    // Verify webhook signature
-    const stripe = await import('stripe');
-    // Note: full signature verification requires raw body access
-    // For now, accept the event and validate minimally
+    // Parse the event (Vercel handles body parsing)
     const event = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
 
     console.log('Webhook event:', event.type);
@@ -35,21 +25,35 @@ export default async function handler(req, res) {
     switch (event.type) {
       case 'checkout.session.completed': {
         const session = event.data.object;
-        const customerEmail = session.customer_details?.email;
+        const customerEmail = session.customer_details?.email || session.customer_email;
         const customerId = session.customer;
         const subscriptionId = session.subscription;
         const plan = session.metadata?.plan || 'premium';
+        const hiveUid = session.metadata?.hive_uid;
 
-        console.log(`Payment completed: ${customerEmail} -> ${plan}`);
-        premiumUsers.set(customerEmail, {
-          plan,
-          customerId,
-          subscriptionId,
-          startedAt: new Date().toISOString()
+        console.log(`Checkout completed: email=${customerEmail}, customer=${customerId}, plan=${plan}, uid=${hiveUid}`);
+
+        // Tell Hive API to activate premium for this account
+        const resp = await fetch(`${HIVE_API}?action=set-premium&admin_key=${encodeURIComponent(ADMIN_KEY)}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            admin_key: ADMIN_KEY,
+            email: customerEmail,
+            plan,
+            customerId,
+            subscriptionId,
+            hiveUid
+          }),
+          signal: AbortSignal.timeout(10000)
         });
 
-        // Future: write to Firebase Firestore
-        // await db.collection('premium_users').doc(customerEmail).set({...});
+        const result = await resp.json();
+        if (!resp.ok) {
+          console.error('set-premium failed:', result);
+        } else {
+          console.log('set-premium success:', result.message);
+        }
         break;
       }
 
@@ -57,19 +61,35 @@ export default async function handler(req, res) {
         const sub = event.data.object;
         const customerId = sub.customer;
 
-        // Find and remove the user
-        for (const [email, data] of premiumUsers) {
-          if (data.customerId === customerId) {
-            premiumUsers.delete(email);
-            console.log(`Subscription canceled: ${email}`);
-            break;
-          }
+        console.log(`Subscription deleted: customer=${customerId}`);
+
+        const resp = await fetch(`${HIVE_API}?action=cancel-premium&admin_key=${encodeURIComponent(ADMIN_KEY)}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            admin_key: ADMIN_KEY,
+            customerId
+          }),
+          signal: AbortSignal.timeout(10000)
+        });
+
+        if (!resp.ok) {
+          const result = await resp.json();
+          console.error('cancel-premium failed:', result);
         }
         break;
       }
 
+      case 'invoice.payment_failed': {
+        const invoice = event.data.object;
+        const customerId = invoice.customer;
+        console.log(`Payment failed: customer=${customerId}`);
+        // Could send notification here in the future
+        break;
+      }
+
       default:
-        console.log(`Unhandled event type: ${event.type}`);
+        console.log(`Unhandled event: ${event.type}`);
     }
 
     return res.json({ received: true });
@@ -77,13 +97,4 @@ export default async function handler(req, res) {
     console.error('Webhook error:', err);
     return res.status(400).json({ error: 'Webhook error' });
   }
-}
-
-// Export for Pulse to check premium status
-export function isPremium(email) {
-  return premiumUsers.has(email);
-}
-
-export function getPremiumData(email) {
-  return premiumUsers.get(email) || null;
 }
