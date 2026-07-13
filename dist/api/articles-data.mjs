@@ -2,6 +2,14 @@
 // Contains article metadata for Pulse AI
 const ARTICLES = [
   {
+    "title": "Starlink Prints Money, Starship Burns It, and AI Eats the Rest — Decoding SpaceX",
+    "slug": "spcx-spacex-starlink-ipo-analysis-2026",
+    "ticker": "SPCX",
+    "sector": "space",
+    "date": "2026-07-13",
+    "summary": "SpaceX ($SPCX) is three businesses in one ticker — Starlink (39% margins, $11.4B revenue), Launch Services ($4.7B, 166 launches), and AI/xAI ($3.2B rev, $14B annual burn). Trading at $145.30 near its 52-week low with a looming lock-up expiration, here’s what you need to know before the September earnings report."
+  },
+  {
     "title": "The Biggest Munitions Ramp Since World War II Is Happening Right Now",
     "slug": "lockheed-martin-defense-moat-2026",
     "ticker": "LMT",

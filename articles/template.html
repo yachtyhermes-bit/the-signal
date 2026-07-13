@@ -242,7 +242,7 @@
       <div class="pulse-divider"
            data-article-title="{{TITLE}}"
            data-article-slug="{{SLUG}}"
-           onclick="window.pulseOpenPanel ? pulseOpenPanel({title:'{{TITLE}}',slug:'{{SLUG}}',bodyPreview:document.querySelector('.article-body') ? document.querySelector('.article-body').innerText.slice(0,800) : ''}) : (window.togglePulseOverlay ? togglePulseOverlay({title:'{{TITLE}}',slug:'{{SLUG}}',bodyPreview:document.querySelector('.article-body') ? document.querySelector('.article-body').innerText.slice(0,800) : ''}) : null)"
+           onclick="var t=this;var ctx={title:t.dataset.articleTitle||'',slug:t.dataset.articleSlug||'',bodyPreview:document.querySelector('.article-body')?document.querySelector('.article-body').innerText.slice(0,800):''};(window.pulseOpenPanel||window.togglePulseOverlay||function(){})(ctx);"
            style="margin:24px 0 16px">
         <span></span>
         <span class="pulse-divider-label">
