@@ -59,7 +59,7 @@
           '<div class="logo-mark"><img src="/img/logo-hex.jpg" alt="Pulse" style="width:22px;height:22px;border-radius:4px"></div>' +
           '<div><div class="brand-text">Ask <span class="pulse-gradient">Pulse</span></div><div class="sub">AI research &amp; live web search</div></div>' +
         '</div>' +
-        '<button class="close-btn" id="overlayClose" aria-label="Close">&times;</button>' +
+        '<button class="close-btn" id="overlayClose" aria-label="Close">&#x2715;</button>' +
       '</div>' +
       '<div class="pulse-context-banner" id="contextBanner" style="display:none">' +
         '<span>&#x1F4C4;</span>' +
@@ -160,14 +160,18 @@
     isOpen = true;
     document.body.classList.add('pulse-modal-open');
 
+    // [FIX] Explicitly hide floating bubble when chat opens
+    var floatBubble = document.querySelector('.pulse-float-bubble');
+    if (floatBubble) floatBubble.style.display = 'none';
+
     // Focus input
     var input = overlayEl.querySelector('#overlayInput');
-    if (input) setTimeout(function() { input.focus(); }, 400);
+    // [FIX] No auto-focus — prevents mobile keyboard auto-popup
 
-    // Scroll messages to bottom
+    // [FIX] Scroll to top so user reads from beginning
     if (overlayMessages) setTimeout(function() {
-      overlayMessages.scrollTop = overlayMessages.scrollHeight;
-    }, 100);
+      overlayMessages.scrollTop = 0;
+    }, 50);
   }
 
   function closeOverlay() {
@@ -176,6 +180,10 @@
     backdropEl.classList.remove('visible');
     isOpen = false;
     document.body.classList.remove('pulse-modal-open');
+
+    // [FIX] Show floating bubble again when chat closes
+    var floatBubble = document.querySelector('.pulse-float-bubble');
+    if (floatBubble) floatBubble.style.display = '';
 
     // Reset conversation history and restore suggestion chips
     conversationHistory = [];
@@ -285,7 +293,7 @@
         // Track assistant response in history
         conversationHistory.push({ role: 'assistant', text: data.answer });
         // Scroll to top so user reads response from the start (like Gemini)
-        overlayMessages.scrollTop = 0;
+
         addOverlayMessageTyped(data.answer, false);
         // Update quota badge
         var badge = document.querySelector('.pulse-float-sub #pulseQuotaBadge');
@@ -316,7 +324,7 @@
           }
           sourcesDiv.innerHTML = sourcesHtml;
           overlayMessages.appendChild(sourcesDiv);
-          overlayMessages.scrollTop = overlayMessages.scrollHeight;
+          scrollToLatestResponse();
         }
       } else {
         conversationHistory.push({ role: 'assistant', text: 'Sorry, I ran into an issue. Try rephrasing your question.' });
@@ -331,7 +339,7 @@
     .finally(function() {
       if (input) input.disabled = false;
       if (sendBtn) sendBtn.disabled = false;
-      if (input) input.focus();
+      // [FIX] No auto-focus after send
     });
   }
 
@@ -352,6 +360,20 @@
     overlayMessages.appendChild(div);
     overlayMessages.scrollTop = overlayMessages.scrollHeight;
   }
+  function scrollToLatestResponse() {
+    if (!overlayMessages) return;
+    var allMessages = overlayMessages.querySelectorAll('.message.assistant');
+    if (allMessages.length > 0) {
+      var lastMsg = allMessages[allMessages.length - 1];
+      var containerTop = overlayMessages.getBoundingClientRect().top;
+      var msgTop = lastMsg.getBoundingClientRect().top;
+      var offset = msgTop - containerTop + overlayMessages.scrollTop;
+      overlayMessages.scrollTop = offset - 10;
+    } else {
+      scrollToLatestResponse();
+    }
+  }
+
 
   // Instant reveal — shows full response immediately
   function addOverlayMessageTyped(text, isUser) {
@@ -387,7 +409,7 @@
     loadingDiv.className = 'pulse-message pulse-message-bot';
     loadingDiv.innerHTML = '<img src="/img/logo-hex.jpg" alt="Pulse" class="pulse-message-avatar"><div class="pulse-bubble pulse-loading"><span class="pulse-dot"></span><span class="pulse-dot"></span><span class="pulse-dot"></span></div>';
     messagesEl.appendChild(loadingDiv);
-    messagesEl.scrollTop = messagesEl.scrollHeight;
+    messagesEl.scrollTop = 0;
 
     try {
       var res = await fetch('/api/pulse/', {
@@ -423,7 +445,7 @@
               return '<a href="/article/' + s.slug + '" class="pulse-source-link">' + s.ticker + ' &mdash; ' + escapeHtml((s.title || '').slice(0, 60)) + '</a>';
             }).join('');
           messagesEl.appendChild(sourcesDiv);
-          messagesEl.scrollTop = messagesEl.scrollHeight;
+          messagesEl.scrollTop = 0;
         }
       } else {
         addMessage('Sorry, I ran into an issue. Try rephrasing your question.', false, messagesEl);
@@ -435,7 +457,7 @@
 
     if (inputEl) inputEl.disabled = false;
     if (sendBtn) sendBtn.disabled = false;
-    if (inputEl) inputEl.focus();
+    // [FIX] No auto-focus
   }
 
   // ============== HELPERS ==============
@@ -448,7 +470,7 @@
       div.innerHTML = '<div class="pulse-bubble pulse-bubble-user">' + escapeHtml(text) + '</div>';
     }
     messagesEl.appendChild(div);
-    messagesEl.scrollTop = messagesEl.scrollHeight;
+    messagesEl.scrollTop = 0;
   }
 
   function formatText(text) {
