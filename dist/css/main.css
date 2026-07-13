@@ -1495,28 +1495,34 @@ main {
 .pulse-sources {
   margin-top: 4px;
   margin-left: 38px;
-  padding: 8px 12px;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  font-size: 12px;
+  padding: 4px 8px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  font-size: 11px;
 }
 .pulse-sources-title {
   font-weight: 600;
   color: var(--accent);
-  font-size: 10px;
+  font-size: 9px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  margin-bottom: 4px;
+  display: inline;
 }
 .pulse-source-link {
-  display: block;
+  display: inline;
   color: var(--text-secondary);
-  padding: 3px 0;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
+  padding: 0;
+  font-family: system-ui, sans-serif;
+  font-size: 10px;
+  opacity: 0.7;
 }
-.pulse-source-link:hover { color: var(--accent); }
+.pulse-source-link:not(:last-child)::after {
+  content: '·';
+  margin: 0 4px;
+  opacity: 0.5;
+}
+.pulse-source-link:hover { color: var(--accent); opacity: 1; }
 .pulse-input-area {
   display: flex;
   align-items: center;
@@ -2642,7 +2648,9 @@ main {
     width: 44px;
     height: 44px;
     font-size: 1.6rem;
-    background: rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.18);
+    border: 2px solid rgba(255,255,255,0.6);
+    flex-shrink: 0;
     color: #ffffff;
     margin-top: 4px;
   }
@@ -2814,18 +2822,22 @@ main {
   opacity: 0.7;
 }
 
-/* Suggestion chips */
+/* Suggestion chips — compact single row */
 .suggestion-chips {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  flex-wrap: nowrap;
+  gap: 4px;
   padding: 4px 20px 8px;
   flex-shrink: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
 }
+.suggestion-chips::-webkit-scrollbar { display: none; }
 .suggestion-chip {
-  font-size: 0.75rem;
+  font-size: 0.68rem;
   font-weight: 500;
-  padding: 6px 14px;
+  padding: 4px 10px;
   border-radius: 9999px;
   background: #1a1a2e;
   color: #8888aa;
@@ -2833,6 +2845,7 @@ main {
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   white-space: nowrap;
+  flex-shrink: 0;
 }
 .suggestion-chip:hover {
   background: rgba(99, 102, 241, 0.1);

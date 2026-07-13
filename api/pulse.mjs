@@ -73,17 +73,33 @@ function buildArticleContext() {
 }
 
 // ─── Gemini API call ───
-async function callGemini(systemPrompt, userQuestion) {
+async function callGemini(systemPrompt, userQuestion, history = []) {
   const key = process.env.GEMINI_API_KEY || '';
   if (!key) throw new Error('403: No GEMINI_API_KEY configured.');
 
   const url = `${GEMINI_BASE}/models/${GEMINI_MODEL}:generateContent?key=${key}`;
 
+  // Build multi-turn contents array from history
+  const contents = [];
+  for (const msg of history) {
+    contents.push({
+      role: msg.role === 'assistant' ? 'model' : 'user',
+      parts: [{ text: msg.text }]
+    });
+  }
+  contents.push({ role: 'user', parts: [{ text: userQuestion }] });
+
   const payload = {
     systemInstruction: { parts: [{ text: systemPrompt }] },
-    contents: [{ role: 'user', parts: [{ text: userQuestion }] }],
+    contents,
     tools: [{ googleSearch: {} }],
-    generationConfig: { temperature: 0.3, maxOutputTokens: 2048 }
+    generationConfig: { temperature: 0.3, maxOutputTokens: 8192 },
+    safetySettings: [
+      { category: 'HARM_CATEGORY_HARASSMENT', threshold: 'BLOCK_NONE' },
+      { category: 'HARM_CATEGORY_HATE_SPEECH', threshold: 'BLOCK_NONE' },
+      { category: 'HARM_CATEGORY_SEXUALLY_EXPLICIT', threshold: 'BLOCK_NONE' },
+      { category: 'HARM_CATEGORY_DANGEROUS_CONTENT', threshold: 'BLOCK_NONE' }
+    ]
   };
 
   const res = await fetch(url, {
@@ -99,7 +115,16 @@ async function callGemini(systemPrompt, userQuestion) {
   }
 
   const data = await res.json();
-  const text = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
+
+  // Join ALL parts from the response (Gemini can split into multiple parts)
+  const parts = data.candidates?.[0]?.content?.parts || [];
+  const text = parts.map(p => p.text || '').join('');
+
+  const finishReason = data.candidates?.[0]?.finishReason;
+  if (finishReason === 'MAX_TOKENS' || finishReason === 'SAFETY') {
+    console.error(`Gemini finish reason: ${finishReason} for query`);
+  }
+
   const groundMeta = data.candidates?.[0]?.groundingMetadata;
   const searched = groundMeta?.webSearchQueries?.length > 0;
 
@@ -129,13 +154,13 @@ export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
   try {
-    const { question, articleContext: requestContext } = req.body;
+    const { question, articleContext: requestContext, history = [] } = req.body;
     if (!question || question.trim().length < 3) {
       return res.status(200).json({ answer: 'Ask me anything about markets or stocks.', sources: [], searched: false });
     }
 
     const cacheKey = getCacheKey(question);
-    const cached = cacheGet(cacheKey);
+    const cached = (!history.length) ? cacheGet(cacheKey) : null;
     if (cached) return res.status(200).json(cached);
 
     const articleContext = buildArticleContext();
@@ -143,14 +168,15 @@ export default async function handler(req, res) {
 
     const systemPrompt = `You are Pulse, AI on The Signal (readthesignal.net) — market intelligence.
 
-TONE: Direct, punchy. Bold key numbers. Under 300 words.
+TONE: Direct, punchy. Bold key numbers. Under 800 words.
 
 CAPABILITIES:
 1. Google Search — live web search for prices, earnings, news.
 2. Article Library — Signal articles below. Use EXACT titles when referencing.
 
 RULES:
-- Search the web for current data. If you do, end with "(via web)".
+- Search the web for current data on ALL companies asked about.
+- When asked about "companies" plural, list ALL relevant ones, not just 2-3.
 - Reference Signal articles by EXACT title from the list below.
 - Our library has ${articleCount} articles. NEVER say we don't cover something without checking the list.
 - NEVER make up article titles or stock prices.
@@ -161,7 +187,7 @@ Covered: NVDA, AMD, AVGO, MRVL, PLTR, CRWD, RKLB, RDW, LMT, RTX, GOOGL, META, MS
 Article library (${articleCount} articles):
 ${articleContext}`;
 
-    const { text: answer, searched, webSources } = await callGemini(systemPrompt, question);
+    const { text: answer, searched, webSources } = await callGemini(systemPrompt, question, history);
 
     if (!answer) {
       return res.status(200).json({ answer: "Couldn't find a good answer. Try rephrasing.", sources: [], searched: false });

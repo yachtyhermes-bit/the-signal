@@ -31,7 +31,7 @@ const ARTICLES = [
     "ticker": "TSM",
     "sector": "ai",
     "date": "2026-07-12",
-    "summary": "TSMC controls 92%+ of sub-7nm chip manufacturing — the only place NVIDIA, AMD, Apple, Broadcom, and Amazon can fab their AI silicon. With Q1 2026 revenue of $35.9B (up 35% YoY), 61.9% gross margins, and a $52-56B capex wall no rival can climb, the $TSM monopoly is printing money. Price: $434.11."
+    "summary": "TSMC controls 92%+ of sub-7nm chip manufacturing — the only place NVIDIA, AMD, Apple, Broadcom, and Amazon can fab their AI silicon. With Q1 2026 revenue of $35.9B (up 35% YoY), 66.2% gross margins, and a $52-56B capex wall no rival can climb, the $TSM monopoly is printing money. Price: $434.11."
   },
   {
     "title": "Marvell's 102.4 Tbps AI Switch Just Fired a Shot at Broadcom — And Wall Street Is Catching On",

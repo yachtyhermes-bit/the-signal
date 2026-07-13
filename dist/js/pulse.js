@@ -7,6 +7,8 @@
   let overlayMessages = null;
   let isOpen = false;
   let currentArticleContext = null;
+  let conversationHistory = []; // {role: 'user'|'assistant', text: '...'}
+  let hasSentFirstMessage = false;
 
   function init() {
     // Inline Pulse section (homepage) — init separately from floating bubble
@@ -174,6 +176,12 @@
     backdropEl.classList.remove('visible');
     isOpen = false;
     document.body.classList.remove('pulse-modal-open');
+
+    // Reset conversation history and restore suggestion chips
+    conversationHistory = [];
+    hasSentFirstMessage = false;
+    var chips = overlayEl.querySelector('#suggestionChips');
+    if (chips) chips.style.display = '';
   }
 
   function toggleOverlay(context) {
@@ -239,6 +247,16 @@
     if (input) input.disabled = true;
     if (sendBtn) sendBtn.disabled = true;
 
+    // Track in conversation history
+    conversationHistory.push({ role: 'user', text: question });
+
+    // Hide suggestion chips after first message
+    if (!hasSentFirstMessage) {
+      hasSentFirstMessage = true;
+      var chips = overlayEl.querySelector('#suggestionChips');
+      if (chips) chips.style.display = 'none';
+    }
+
     // Add user message
     addOverlayMessage(question, true);
 
@@ -249,8 +267,8 @@
     overlayMessages.appendChild(loadingDiv);
     overlayMessages.scrollTop = overlayMessages.scrollHeight;
 
-    // Build body with optional article context
-    var body = { question: question };
+    // Build body with conversation history (send last 20 messages)
+    var body = { question: question, history: conversationHistory.slice(0, -1).slice(-20) };
     if (currentArticleContext) {
       body.articleContext = currentArticleContext;
     }
@@ -264,6 +282,10 @@
     .then(function(data) {
       loadingDiv.remove();
       if (data.answer) {
+        // Track assistant response in history
+        conversationHistory.push({ role: 'assistant', text: data.answer });
+        // Scroll to top so user reads response from the start (like Gemini)
+        overlayMessages.scrollTop = 0;
         addOverlayMessageTyped(data.answer, false);
         // Update quota badge
         var badge = document.querySelector('.pulse-float-sub #pulseQuotaBadge');
@@ -297,11 +319,13 @@
           overlayMessages.scrollTop = overlayMessages.scrollHeight;
         }
       } else {
+        conversationHistory.push({ role: 'assistant', text: 'Sorry, I ran into an issue. Try rephrasing your question.' });
         addOverlayMessageTyped('Sorry, I ran into an issue. Try rephrasing your question.', false);
       }
     })
     .catch(function() {
       loadingDiv.remove();
+      conversationHistory.push({ role: 'assistant', text: 'Connection issue. Please try again.' });
       addOverlayMessageTyped('Connection issue. Please try again.', false);
     })
     .finally(function() {
@@ -329,7 +353,7 @@
     overlayMessages.scrollTop = overlayMessages.scrollHeight;
   }
 
-  // Typing reveal effect — adds message then reveals text character by character
+  // Instant reveal — shows full response immediately
   function addOverlayMessageTyped(text, isUser) {
     if (!overlayMessages) return;
     var div = document.createElement('div');
@@ -338,42 +362,11 @@
       '<div class="pulse-brand-icon"><img src="/img/logo-hex.jpg" alt="" style="width:12px;height:12px;border-radius:3px"></div>' +
       '<div class="pulse-brand-name">Ask <span class="pulse-gradient">Pulse</span></div>' +
       '</div>';
-    var bubbleEl = document.createElement('div');
-    bubbleEl.className = 'bubble';
-    div.innerHTML = headerHtml;
-    div.appendChild(bubbleEl);
-    overlayMessages.appendChild(div);
-
-    // Create cursor element
-    var cursor = document.createElement('span');
-    cursor.className = 'pulse-typing-cursor';
-    bubbleEl.appendChild(cursor);
-
-    overlayMessages.scrollTop = overlayMessages.scrollHeight;
-
-    // Animate reveal
     var formatted = formatText(text);
-    // Strip HTML for char-by-char, then set final HTML
-    var plainText = text;
-    var i = 0;
-    var speed = 12; // ms per character
-    var chunkSize = 3; // chars per tick for speed
-
-    function typeNext() {
-      i += chunkSize;
-      if (i >= plainText.length) {
-        // Done — set final formatted HTML and remove cursor
-        bubbleEl.innerHTML = formatted;
-        return;
-      }
-      // Show partial text as plain (will be replaced with formatted at end)
-      var partial = formatText(plainText.slice(0, i));
-      bubbleEl.innerHTML = partial + '<span class="pulse-typing-cursor"></span>';
-      overlayMessages.scrollTop = overlayMessages.scrollHeight;
-      setTimeout(typeNext, speed);
-    }
-
-    setTimeout(typeNext, 100);
+    div.innerHTML = headerHtml + '<div class="bubble">' + formatted + '</div>';
+    overlayMessages.appendChild(div);
+    // Scroll to top so user reads from the start (like Gemini)
+    overlayMessages.scrollTop = 0;
   }
 
   // ============== API CALL (for inline pulse) ==============
