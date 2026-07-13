@@ -1468,7 +1468,7 @@ main {
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 10px 14px;
-  font-size: 13.5px;
+  font-size: 15px;
   line-height: 1.6;
   color: var(--text-primary);
 }
@@ -1566,7 +1566,7 @@ main {
   .pulse-desc { font-size: 12px; }
   .pulse-messages { max-height: 320px; padding: 12px; }
   .pulse-message { max-width: 90%; }
-  .pulse-bubble { font-size: 13px; padding: 8px 12px; }
+  .pulse-bubble { font-size: 15px; padding: 8px 12px; }
   .pulse-input-area { padding: 8px 12px; }
   .feed-continued { padding-top: 0; }
 }
@@ -2557,15 +2557,15 @@ main {
   max-width: 440px;
   height: 100%;
   max-height: 100vh;
-  background: #111122;
-  border-left: 1px solid #1e1e3a;
+  background: #f8f9fa;
+  border-left: 1px solid #e5e7eb;
   z-index: 999;
   display: flex;
   flex-direction: column;
   transform: translateX(100%);
   transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   box-shadow: -8px 0 40px rgba(0,0,0,0.4);
-  color: #e8e8f0;
+  color: #1a1a2e;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 .pulse-overlay.open {
@@ -2578,7 +2578,7 @@ main {
   align-items: center;
   justify-content: space-between;
   padding: 18px 20px 14px;
-  border-bottom: 1px solid #1e1e3a;
+  border-bottom: 1px solid #e5e7eb;
   flex-shrink: 0;
 }
 .pulse-overlay-header .brand {
@@ -2597,14 +2597,14 @@ main {
 }
 .pulse-overlay-header .brand-text {
   font-family: 'Anton', Impact, sans-serif;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   line-height: 1.2;
 }
 .pulse-overlay-header .sub {
   font-size: 0.65rem;
-  color: #666688;
+  color: #94a3b8;
   font-weight: 400;
   font-family: 'Inter', sans-serif;
   text-transform: none;
@@ -2612,48 +2612,47 @@ main {
   -webkit-text-fill-color: #666688;
 }
 .pulse-overlay-header .close-btn {
-  background: rgba(124, 140, 255, 0.15);
-  border: 1.5px solid rgba(124, 140, 255, 0.4);
-  color: #a0b0ff;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: none;
+  background: #f1f5f9;
+  color: #64748b;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.4rem;
-  font-weight: 600;
-  line-height: 1;
-  padding: 8px 10px;
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  transition: all 0.2s;
-  flex-shrink: 0;
+  font-size: 1.2rem;
+  font-weight: 300;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .pulse-overlay-header .close-btn:hover {
-  background: rgba(124, 140, 255, 0.25);
-  color: #c0d0ff;
+  background: #e2e8f0;
+  color: #6366f1;
 }
 
 /* Mobile: larger, always-visible close button */
 @media (max-width: 768px) {
   .pulse-overlay {
     top: 0;
-    padding-top: max(env(safe-area-inset-top, 0px), 8px);
+    padding-top: 50px;
   }
   .pulse-overlay-header {
-    padding-top: max(env(safe-area-inset-top, 12px), 12px);
-    padding-bottom: 10px;
+    padding: 6px 16px 4px;
     position: sticky;
     top: 0;
     z-index: 10;
-    background: #111122;
+    background: #ffffff;
   }
   .pulse-overlay-header .close-btn {
-    font-size: 1.5rem;
-    color: #c0d0ff;
+    width: 32px;
+    height: 32px;
+    font-size: 1.3rem;
+    background: transparent;
+    border: none;
     flex-shrink: 0;
-    width: 40px;
-    height: 40px;
+    color: #1a1a2e;
+    margin-top: 2px;
   }
 }
 
@@ -2663,14 +2662,14 @@ main {
   font-size: 0.75rem;
   color: #8888aa;
   background: rgba(99, 102, 241, 0.04);
-  border-bottom: 1px solid #1e1e3a;
+  border-bottom: 1px solid #e5e7eb;
   display: flex;
   align-items: center;
   gap: 8px;
   flex-shrink: 0;
 }
 .pulse-context-banner .badge {
-  background: rgba(99, 102, 241, 0.1);
+  background: rgba(99, 102, 241, 0.12);
   color: #6366f1;
   padding: 2px 8px;
   border-radius: 9999px;
@@ -2693,7 +2692,7 @@ main {
 }
 .pulse-overlay-messages::-webkit-scrollbar { width: 4px; }
 .pulse-overlay-messages::-webkit-scrollbar-track { background: transparent; }
-.pulse-overlay-messages::-webkit-scrollbar-thumb { background: #1e1e3a; border-radius: 4px; }
+.pulse-overlay-messages::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
 
 /* Message bubbles */
 .pulse-overlay-messages .message {
@@ -2720,9 +2719,9 @@ main {
   background: linear-gradient(135deg, #6366f1, #a855f7);
   color: #fff;
   border-radius: 16px 16px 4px 16px;
-  padding: 9px 14px;
-  font-size: 0.85rem;
-  line-height: 1.5;
+  padding: 10px 16px;
+  font-size: 1rem;
+  line-height: 1.55;
   max-width: 80%;
   word-wrap: break-word;
 }
@@ -2733,11 +2732,11 @@ main {
 }
 .pulse-overlay-messages .message.assistant .bubble {
   background: none;
-  color: #e8e8f0;
+  color: #1a1a2e;
   border: none;
-  padding: 0 0 8px 0;
-  font-size: 0.88rem;
-  line-height: 1.65;
+  padding: 0 0 10px 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
   max-width: 100%;
   width: 100%;
   border-radius: 0;
@@ -2769,7 +2768,7 @@ main {
 .pulse-assistant-header .pulse-brand-name {
   font-size: 0.8rem;
   font-weight: 600;
-  color: #e8e8f0;
+  color: #1a1a2e;
   display: flex;
   align-items: center;
   gap: 4px;
@@ -2840,18 +2839,18 @@ main {
   font-weight: 500;
   padding: 4px 10px;
   border-radius: 9999px;
-  background: #1a1a2e;
-  color: #8888aa;
-  border: 1px solid #1e1e3a;
+  background: #ffffff;
+  color: #64748b;
+  border: 1px solid #e5e7eb;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   white-space: nowrap;
   flex-shrink: 0;
 }
 .suggestion-chip:hover {
-  background: rgba(99, 102, 241, 0.1);
+  background: rgba(99, 102, 241, 0.08);
   border-color: #6366f1;
-  color: #e8e8f0;
+  color: #6366f1;
 }
 
 /* Input area */
@@ -2860,16 +2859,16 @@ main {
   align-items: center;
   gap: 8px;
   padding: 12px 20px 16px;
-  border-top: 1px solid #1e1e3a;
-  background: #111122;
+  border-top: 1px solid #e5e7eb;
+  background: #ffffff;
   flex-shrink: 0;
 }
 .pulse-overlay-input .input-wrap {
   flex: 1;
   display: flex;
   align-items: center;
-  background: #1a1a2e;
-  border: 1px solid #1e1e3a;
+  background: #f1f5f9;
+  border: 1px solid #e5e7eb;
   border-radius: 9999px;
   padding: 0 4px 0 16px;
   transition: border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -2882,14 +2881,14 @@ main {
   background: transparent;
   border: none;
   outline: none;
-  color: #e8e8f0;
+  color: #1a1a2e;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 0.9rem;
   padding: 11px 0;
   min-width: 0;
 }
 .pulse-overlay-input input::placeholder {
-  color: #666688;
+  color: #94a3b8;
 }
 
 /* Icon buttons */
@@ -2902,15 +2901,15 @@ main {
   border-radius: 50%;
   border: none;
   background: transparent;
-  color: #8888aa;
+  color: #64748b;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   flex-shrink: 0;
   font-size: 1rem;
 }
 .icon-btn:hover {
-  background: #222244;
-  color: #e8e8f0;
+  background: #f1f5f9;
+  color: #6366f1;
 }
 .icon-btn.mic.active {
   color: #a855f7;
@@ -3062,8 +3061,8 @@ main {
   max-width: 100%;
   height: 560px;
   max-height: calc(100vh - 140px);
-  background: var(--bg-primary);
-  border: 1px solid var(--border);
+  background: #f8f9fa;
+  border: 1px solid #e5e7eb;
   border-radius: 16px;
   display: flex;
   flex-direction: column;
@@ -3079,8 +3078,8 @@ main {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 16px;
-  border-bottom: 1px solid var(--border);
+  padding: 50px 16px 4px;
+  border-bottom: 1px solid #e5e7eb;
   flex-shrink: 0;
 }
 .pulse-float-avatar {
@@ -3094,10 +3093,11 @@ main {
   font-size: 16px;
   font-weight: 700;
   line-height: 1.2;
+  color: #1a1a2e;
 }
 .pulse-float-sub {
   font-size: 11px;
-  color: var(--text-secondary);
+  color: #64748b;
   margin-top: 2px;
 }
 .pulse-float-close {
@@ -3105,8 +3105,8 @@ main {
   height: 32px;
   border-radius: 8px;
   border: none;
-  background: var(--bg-secondary);
-  color: var(--text-secondary);
+  background: transparent;
+  color: #64748b;
   font-size: 20px;
   line-height: 1;
   cursor: pointer;
@@ -3116,8 +3116,8 @@ main {
   transition: background 0.15s ease;
 }
 .pulse-float-close:hover {
-  background: var(--bg-hover);
-  color: var(--text-primary);
+  background: #f1f5f9;
+  color: #1a1a2e;
 }
 .pulse-float-messages {
   flex: 1;
@@ -3126,26 +3126,44 @@ main {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  background: #f8f9fa;
 }
 .pulse-float-messages .pulse-message {
   max-width: 90%;
 }
+/* Light mode overrides for floating modal */
+.pulse-float-messages .pulse-bubble {
+  background: #ffffff;
+  border-color: #e5e7eb;
+  color: #1a1a2e;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.pulse-float-messages .pulse-bubble strong { color: #6366f1; }
+.pulse-float-messages .pulse-message-user .pulse-bubble-user {
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  border-color: transparent;
+  color: #ffffff;
+}
+.pulse-float-messages .pulse-dot {
+  background: #94a3b8;
+}
+.pulse-float-input::placeholder { color: #94a3b8; }
 .pulse-float-input-area {
   display: flex;
   gap: 8px;
   padding: 12px 16px;
-  border-top: 1px solid var(--border);
-  background: var(--bg-card);
+  border-top: 1px solid #e5e7eb;
+  background: #ffffff;
   flex-shrink: 0;
 }
 .pulse-float-input {
   flex: 1;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
+  background: #f1f5f9;
+  border: 1px solid #e5e7eb;
   border-radius: 10px;
   padding: 10px 14px;
   font-size: 13.5px;
-  color: var(--text-primary);
+  color: #1a1a2e;
   outline: none;
   transition: border-color 0.15s ease;
 }
@@ -3157,7 +3175,7 @@ main {
   height: 40px;
   border-radius: 10px;
   border: none;
-  background: var(--accent);
+  background: linear-gradient(135deg, #6366f1, #a855f7);
   color: white;
   cursor: pointer;
   display: flex;
@@ -3167,7 +3185,7 @@ main {
   flex-shrink: 0;
 }
 .pulse-float-send:hover {
-  background: var(--accent-hover);
+  background: linear-gradient(135deg, #818cf8, #c084fc);
 }
 .pulse-float-send:disabled {
   opacity: 0.4;

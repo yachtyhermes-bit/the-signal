@@ -57,7 +57,7 @@
       '<div class="pulse-overlay-header">' +
         '<div class="brand">' +
           '<div class="logo-mark"><img src="/img/logo-hex.jpg" alt="Pulse" style="width:22px;height:22px;border-radius:4px"></div>' +
-          '<div><div class="brand-text">Ask <span class="pulse-gradient">Pulse</span></div><div class="sub">AI research &amp; live web search</div></div>' +
+          '<div><div class="brand-text">Ask <span class="pulse-gradient">Pulse</span></div></div>' +
         '</div>' +
         '<button class="close-btn" id="overlayClose" aria-label="Close">&#x2715;</button>' +
       '</div>' +
@@ -122,9 +122,50 @@
       });
     });
 
-    // Mic button (visual toggle only — native SpeechRecognition is experimental)
+    // Mic button — real SpeechRecognition with fallback
     overlayEl.querySelector('#overlayMic').addEventListener('click', function() {
-      this.classList.toggle('active');
+      var mic = this;
+      var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!SR) {
+        // No native support
+        mic.classList.toggle('active');
+        if (!mic.classList.contains('active')) return;
+        if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+          alert('Speech recognition is not supported on this browser.');
+          mic.classList.remove('active');
+          return;
+        }
+        alert('Voice input is not available. Try Chrome or Edge for speech recognition.');
+        mic.classList.remove('active');
+        return;
+      }
+      if (mic._recognizing) {
+        mic._recognition.stop();
+        return;
+      }
+      var rec = new SR();
+      mic._recognition = rec;
+      mic._recognizing = true;
+      rec.continuous = false;
+      rec.interimResults = true;
+      rec.lang = 'en-US';
+      mic.classList.add('active');
+      rec.start();
+      rec.onresult = function(evt) {
+        var transcript = '';
+        for (var i = evt.resultIndex; i < evt.results.length; i++) {
+          transcript += evt.results[i][0].transcript;
+        }
+        input.value = transcript;
+      };
+      rec.onend = function() {
+        mic.classList.remove('active');
+        mic._recognizing = false;
+      };
+      rec.onerror = function() {
+        mic.classList.remove('active');
+        mic._recognizing = false;
+      };
     });
 
     // Escape key

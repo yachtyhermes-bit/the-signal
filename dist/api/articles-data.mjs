@@ -2,6 +2,14 @@
 // Contains article metadata for Pulse AI
 const ARTICLES = [
   {
+    "title": "Eaton Announced Its Q2 Date Today — And the Stock Just Gave You an Entry",
+    "slug": "eaton-q2-earnings-preview-ai-power-2026",
+    "ticker": "ETN",
+    "sector": "energy",
+    "date": "2026-07-13",
+    "summary": "Eaton Corporation announced Q2 2026 earnings for July 31, sending a signal to investors watching the AI infrastructure buildout. The stock sits at $401.55 — down 8% from highs — after a 23% YTD run. This earnings preview breaks down the Boyd acquisition impact, the new data center segment, and why the pullback might be the entry window before the numbers drop."
+  },
+  {
     "title": "Starlink Prints Money, Starship Burns It, and AI Eats the Rest — Decoding SpaceX",
     "slug": "spcx-spacex-starlink-ipo-analysis-2026",
     "ticker": "SPCX",

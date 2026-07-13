@@ -841,3 +841,19 @@ if (fs.existsSync(accountSrc)) {
   fs.writeFileSync(accountDst, accountContent);
   console.log(`  ✅ Account page synced`);
 }
+
+// ─── Post-build: Sync Ask Pulse CSS/JS to public/ (lock-in) ───
+// Prevents stale copies in public/ from overwriting our curated _backup_dist/ changes
+const pulseCssSrc = path.join(SRC, 'css', 'main.css');
+const pulseCssDst = path.join(ROOT, 'public', 'css', 'main.css');
+if (fs.existsSync(pulseCssSrc)) {
+  fs.copyFileSync(pulseCssSrc, pulseCssDst);
+  console.log('  🔒 Synced Ask Pulse CSS to public/ (lock-in)');
+}
+
+const pulseJsSrc = path.join(SRC, 'js', 'pulse.js');
+const pulseJsDst = path.join(ROOT, 'public', 'js', 'pulse.js');
+if (fs.existsSync(pulseJsSrc) && fs.existsSync(path.dirname(pulseJsDst))) {
+  fs.copyFileSync(pulseJsSrc, pulseJsDst);
+  console.log('  🔒 Synced Ask Pulse JS to public/ (lock-in)');
+}

@@ -1,33 +1,29 @@
 #!/bin/bash
-# deploy.sh — Full Signal deploy: Jenny TTS pre-generation → build → Vercel deploy
+# One-command deploy: build → sync → push to Vercel
+# Source of truth is _backup_dist/ for CSS/JS
+
 set -e
 cd "$(dirname "$0")"
 
-echo "═══════════════════════════════════════════"
-echo "🚀 The Signal Deploy Pipeline"
-echo "═══════════════════════════════════════════"
+echo "🔨 Building from _backup_dist/..."
+node build.js
 
-# Source env vars for R2 access
-if [ -f .dev.vars ]; then
-  set -a; source .dev.vars; set +a
-  echo "📦 Env vars loaded from .dev.vars"
+echo "📦 Syncing dist/ → /tmp/vercel-deploy/..."
+rm -rf /tmp/vercel-deploy
+cp -r dist /tmp/vercel-deploy
+
+# Copy Vercel project config so it deploys to correct project (the-signal)
+if [ -d ".vercel" ] && [ -f ".vercel/project.json" ]; then
+  cp -r .vercel /tmp/vercel-deploy/.vercel
+  echo "  ✅ .vercel/ project config copied"
+fi
+if [ -f "vercel.json" ]; then
+  cp vercel.json /tmp/vercel-deploy/vercel.json
+  echo "  ✅ vercel.json copied"
 fi
 
-# Step 1: Pre-generate missing Jenny TTS for recently modified articles
-echo ""
-echo "━━━ Step 1: Jenny TTS pre-generation (recent articles) ━━━"
-python3 -u scripts/prebuild-tts.py --recent 48
-echo ""
+echo "🚀 Deploying to Vercel (production)..."
+cd /tmp/vercel-deploy
+vercel --prod --yes --archive=tgz
 
-# Step 2: Build
-echo "━━━ Step 2: Build ━━━"
-node build.js
-echo ""
-
-# Step 3: Deploy
-echo "━━━ Step 3: Deploy to Vercel ━━━"
-npx vercel --prod --token "$(cat /home/chino/.vercel/token)" --force
-echo ""
-echo "═══════════════════════════════════════════"
-echo "✅ Deploy complete — https://readthesignal.net"
-echo "═══════════════════════════════════════════"
+echo "✅ Deployed to https://readthesignal.net"
