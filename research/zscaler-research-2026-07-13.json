@@ -1,0 +1,102 @@
+{
+  "ticker": "ZS",
+  "company_name": "Zscaler, Inc.",
+  "exchange": "NASDAQ",
+  "research_date": "2026-07-13",
+  "current_price": 141.82,
+  "market_cap": 22933645312,
+  "market_cap_display": "$22.93B",
+  "revenue_ttm": 3173563904,
+  "revenue_ttm_display": "$3.17B",
+  "revenue_annual_fy2025": 2673115000,
+  "revenue_annual_fy2025_display": "$2.67B",
+  "revenue_annual_fy2024": 2167771000,
+  "revenue_annual_fy2024_display": "$2.17B",
+  "revenue_growth_pct": 25.4,
+  "pe_ratio": "N/A",
+  "pe_ratio_note": "GAAP net loss; trailing P/E is null",
+  "forward_pe": 30.85,
+  "peg_ratio": 1.52,
+  "free_cash_flow": 726693000,
+  "free_cash_flow_display": "$726.7M",
+  "free_cash_flow_margin_pct": 22.8,
+  "total_debt": 1868162944,
+  "total_debt_display": "$1.87B",
+  "cash_and_investments": 3510000000,
+  "cash_and_investments_display": "$3.51B",
+  "net_cash_position": 1641837056,
+  "net_cash_position_display": "$1.64B (net cash positive)",
+  "operating_margin_pct": -3.28,
+  "profit_margin_pct": -2.44,
+  "gross_margin_pct": 77.0,
+  "fifty_two_week_high": 336.99,
+  "fifty_two_week_low": 114.63,
+  "pct_off_52w_high": -57.9,
+  "ytd_change_pct": -35.70,
+  "beta": 0.958,
+  "ps_ratio": 7.23,
+  "ev_revenue": 6.57,
+  "price_to_book": 9.69,
+  "analyst_consensus": "Buy",
+  "analyst_mean_rating": 1.52,
+  "analyst_count": 44,
+  "analyst_mean_target": 192.58,
+  "analyst_high_target": 250.00,
+  "analyst_low_target": 145.00,
+  "upside_to_target_pct": 35.8,
+  "institutional_ownership_pct": 55.9,
+  "short_ratio": 1.68,
+  "narrative_angle": "Zscaler's stock was crushed — down 31% in a single day after cautious FY2027 guidance and a sales leadership shakeup. But beneath the wreckage, the AI security business is on fire: AI security ARR hit $400M three quarters early, growing 80%+ YoY, and the company just unveiled Project AI-Guardian and the AI Security Suite at Zenith Live 2026. Trading at a P/S ratio below 7 for the first time since 2023, with 44 analysts still rating it a Buy and a consensus target 36% above current levels, Zscaler is shaping up as the most interesting value-vs-growth debate in cybersecurity right now.",
+  "key_catalysts": [
+    "AI Security Suite launch & Project AI-Guardian at Zenith Live 2026 — partnerships with AWS, Google Cloud, OpenAI, Databricks, CoreWeave, and 8 system integrators",
+    "AI security ARR exceeded $400M target three quarters early, growing over 80% YoY — the fastest-growing segment in the business",
+    "Multiple analyst upgrades after the crash: Guggenheim to Buy ($214 target), Riley to Buy ($225), Cantor Fitzgerald Overweight ($225)",
+    "Consensus Moderate Buy rating from 44 analysts with mean target of ~$193 implying ~36% upside",
+    "P/S ratio of 7.2x — cheapest since 2023, well below CrowdStrike and Palo Alto Networks peers",
+    "Free cash flow of $727M (FY2025) with 77% gross margins — strong underlying economics despite GAAP net losses from stock-based compensation",
+    "Zscaler AI Broker and Zscaler Endpoint AI Security launched — targeting the fast-growing market for securing autonomous AI agents",
+    "Trading 58% off 52-week high of $337 and 36% off YTD open — potential mean-reversion setup if FY2027 execution stabilizes",
+    "Symmetry Systems acquisition (July 2026) adds AI data security posture management capabilities",
+    "ThreatLabz 2026 report found 100% of enterprise AI systems had critical flaws and could be compromised in 16 minutes — urgency tailwind for AI security spend"
+  ],
+  "external_links": [
+    {
+      "label": "Zscaler Investor Relations",
+      "url": "https://investors.zscaler.com/"
+    },
+    {
+      "label": "CNBC — Zscaler tanks 31% for worst day ever on 'prudent' guidance, sales shakeup (May 27, 2026)",
+      "url": "https://www.cnbc.com/2026/05/27/zscaler-zs-earnings-q3-2026.html"
+    },
+    {
+      "label": "Investing.com — Zscaler expands AI security initiative with tech partners (June 9, 2026)",
+      "url": "https://www.investing.com/news/company-news/zscaler-expands-ai-security-initiative-with-tech-partners-93CH-4733515"
+    },
+    {
+      "label": "Yahoo Finance — ZS Stock Quote & History",
+      "url": "https://finance.yahoo.com/quote/ZS/"
+    },
+    {
+      "label": "Motley Fool — Wall Street Just Cut This Tech Stock's Rating. History Says That's When You Buy (June 1, 2026)",
+      "url": "https://www.fool.com/investing/2026/06/01/wall-street-cut-tech-stock-rating-history-buy-zs"
+    }
+  ],
+  "suggested_title": "Zscaler Blew Up in May. Its AI Security Business Is the Real Story.",
+  "suggested_subtitle": "Down 36% YTD after a brutal guidance reset, Zscaler's AI security revenue is growing 80%+ and Wall Street is starting to call the sell-off overdone.",
+  "suggested_tags": [
+    "Zscaler",
+    "ZS",
+    "cybersecurity",
+    "AI security",
+    "zero trust",
+    "cloud security",
+    "earnings",
+    "enterprise software",
+    "AI",
+    "value investing"
+  ],
+  "suggested_slug": "zscaler-ai-security-phoenix-2026",
+  "slug_exists": false,
+  "existing_slugs": ["zscaler-zero-trust-cloud-security-2026"],
+  "recent_news_summary": "Last 5 days (July 8-13, 2026): Zscaler continues to rebound from its May crash. Stock is up 6% on renewed investor reassessment of the AI security thesis. Guggenheim and Riley both upgraded after the crash. The Zenith Live conference (early July) produced multiple positive headlines around Project AI-Guardian, the AI Broker, and Endpoint AI Security. An insider sale filing (Form 144, July 6) added some noise but is considered routine. Sentiment is cautiously constructive as the market digests whether the FY2027 guidance reset was overly cautious or a genuine growth slowdown signal."
+}

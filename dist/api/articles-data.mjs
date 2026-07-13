@@ -2,6 +2,14 @@
 // Contains article metadata for Pulse AI
 const ARTICLES = [
   {
+    "title": "The Nvidia Paradox: How Losing the Top Spot Makes Arista an Even Better Bet",
+    "slug": "arista-networks-nvidia-paradox-ai-2026",
+    "ticker": "ANET",
+    "sector": "ai",
+    "date": "2026-07-13T12:00:00.000Z",
+    "summary": "Nvidia ($NVDA) just overtook Arista ($ANET) as the #1 data center Ethernet switch vendor with 21.5% market share. But here's what the fear trade misses: the total market exploded 39.8% YoY to $15.4B, Arista's absolute revenue is still accelerating, its 1.6T 7060XE7 switches just went live at Meta, Microsoft, and Oracle, and the company sits on $12.35B cash with zero debt. The rising tide lifts all Ethernet boats. Price: $185.79."
+  },
+  {
     "title": "Eaton Announced Its Q2 Date Today — And the Stock Just Gave You an Entry",
     "slug": "eaton-q2-earnings-preview-ai-power-2026",
     "ticker": "ETN",
@@ -16,6 +24,14 @@ const ARTICLES = [
     "sector": "space",
     "date": "2026-07-13",
     "summary": "SpaceX ($SPCX) is three businesses in one ticker — Starlink (39% margins, $11.4B revenue), Launch Services ($4.7B, 166 launches), and AI/xAI ($3.2B rev, $14B annual burn). Trading at $145.30 near its 52-week low with a looming lock-up expiration, here’s what you need to know before the September earnings report."
+  },
+  {
+    "title": "Zscaler Blew Up in May. Its AI Security Business Is the Real Story.",
+    "slug": "zscaler-ai-security-phoenix-2026",
+    "ticker": "ZS",
+    "sector": "cybersecurity",
+    "date": "2026-07-13",
+    "summary": "Down 36% YTD after a brutal guidance reset, Zscaler's AI security revenue is growing 80%+ and Wall Street is starting to call the sell-off overdone."
   },
   {
     "title": "The Biggest Munitions Ramp Since World War II Is Happening Right Now",
