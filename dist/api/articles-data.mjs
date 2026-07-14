@@ -2,6 +2,14 @@
 // Contains article metadata for Pulse AI
 const ARTICLES = [
   {
+    "title": "Northrop Grumman Is Down 31% With a $95.6B Backlog — Something Doesn't Add Up",
+    "slug": "northrop-grumman-defense-backlog-moat-2026",
+    "ticker": "NOC",
+    "sector": "defense",
+    "date": "2026-07-14T18:00:00Z",
+    "summary": "Northrop Grumman (NOC) is down 31% from its 52-week high despite a record $95.6B backlog, sole-source franchises in B-21 Raider and Sentinel ICBM, and 85% EPS growth last quarter. At 16.7x trailing earnings, it's the cheapest defense prime — and Q2 earnings arrive July 21."
+  },
+  {
     "title": "Everyone's Obsessed With AI. Axon Already Put It In Every Cop Car in America.",
     "slug": "axon-ai-policing-moat-2026",
     "ticker": "AXON",
@@ -10,12 +18,12 @@ const ARTICLES = [
     "summary": "Axon Enterprise is down 38% from its ATH despite 33% revenue growth, 80%+ body camera market share, and an AI revolution in policing that's already deployed. Here's why the disconnect is worth your attention."
   },
   {
-    "title": "Salesforce's Agentforce Just Hit $1B in ARR. The Stock's Down 35% Anyway.",
+    "title": "Salesforce's Agentforce Just Hit $1B in ARR. The Stock's Down 38% Anyway.",
     "slug": "salesforce-agentforce-ai-growth-2026",
     "ticker": "CRM",
     "sector": "ai",
     "date": "2026-07-14T10:00:00.000Z",
-    "summary": "Salesforce (CRM) crossed $1B in Agentforce ARR in under a year — the fastest product ramp in company history. Revenue re-accelerated to 13% YoY, free cash flow hit $16.6B, and forward PE sits at an absurd 11x. Yet the stock is down 35% from its 52-week high. Here's why the disconnect between Salesforce's AI momentum and its valuation is the most interesting setup in enterprise tech right now."
+    "summary": "Salesforce (CRM) crossed $1B in Agentforce ARR in under a year — the fastest product ramp in company history. Revenue re-accelerated to 13% YoY, free cash flow hit $16.6B, and forward PE sits at an absurd 11x. Yet the stock is down 38% from its 52-week high. Here's why the disconnect between Salesforce's AI momentum and its valuation is the most interesting setup in enterprise tech right now."
   },
   {
     "title": "The Nvidia Paradox: How Losing the Top Spot Makes Arista an Even Better Bet",
