@@ -1,68 +1,68 @@
 {
   "name": "The Signal Portfolio",
   "inception": "2024-06-01",
-  "lastUpdated": "2026-07-12T22:03:18.348Z",
+  "lastUpdated": "2026-07-13T22:01:59.317Z",
   "periods": {
     "sinceInception": {
       "label": "Since Inception",
-      "portfolioReturn": 242.28,
-      "spyReturn": 43.04,
-      "qqqReturn": 60.11,
-      "vsSPY": 199.24,
-      "vsQQQ": 182.17
+      "portfolioReturn": 231.88,
+      "spyReturn": 41.94,
+      "qqqReturn": 57.07,
+      "vsSPY": 189.94,
+      "vsQQQ": 174.81
     },
     "ytd": {
       "label": "YTD",
-      "portfolioReturn": 27.5,
-      "spyReturn": 10.51,
-      "qqqReturn": 18.33,
-      "vsSPY": 16.99,
-      "vsQQQ": 9.17
+      "portfolioReturn": 24.31,
+      "spyReturn": 9.66,
+      "qqqReturn": 16.08,
+      "vsSPY": 14.65,
+      "vsQQQ": 8.23
     },
     "oneYear": {
       "label": "1 Year",
       "portfolioReturn": 81.49,
-      "spyReturn": 28.09,
-      "qqqReturn": 39.76,
-      "vsSPY": 53.4,
-      "vsQQQ": 41.73
+      "spyReturn": 27.11,
+      "qqqReturn": 37.11,
+      "vsSPY": 54.38,
+      "vsQQQ": 44.38
     }
   },
   "holdings": [
     {
       "ticker": "AMD",
       "weight": 7.2,
-      "return": 241.11
+      "return": 226.74
     },
     {
       "ticker": "NVDA",
       "weight": 7.2,
-      "return": 83.44
+      "return": 76.98
     },
     {
       "ticker": "AMZN",
       "weight": 6.5,
-      "return": 37.57
+      "return": 38.67
     },
     {
       "ticker": "GOOG",
       "weight": 6.5,
-      "return": 103.55
+      "return": 101.05
     },
     {
       "ticker": "RKLB",
       "weight": 6.4,
-      "return": 1771.59
+      "return": 1672.06
     },
     {
       "ticker": "GE",
       "weight": 6.3,
-      "return": 122.51
+      "return": 118.89
     },
     {
       "ticker": "META",
       "weight": 6.1,
-      "return": 40.15
+      "return": 37.54
     },
     {
       "ticker": "NBIS",
@@ -72,67 +72,67 @@
     {
       "ticker": "AVGO",
       "weight": 5.7,
-      "return": 202.57
+      "return": 190.53
     },
     {
       "ticker": "TSM",
       "weight": 5.5,
-      "return": 180.16
+      "return": 172.07
     },
     {
       "ticker": "SOFI",
       "weight": 5,
-      "return": 177.4
+      "return": 167.8
     },
     {
       "ticker": "RTX",
       "weight": 5,
-      "return": 82.48
+      "return": 82.91
     },
     {
       "ticker": "CRWD",
       "weight": 4.1,
-      "return": 142.55
+      "return": 143.49
     },
     {
       "ticker": "PLTR",
       "weight": 3.5,
-      "return": 494.7
+      "return": 509.94
     },
     {
       "ticker": "HOOD",
       "weight": 3.3,
-      "return": 426.17
+      "return": 416.26
     },
     {
       "ticker": "MSFT",
       "weight": 3.2,
-      "return": -6.87
+      "return": -5.45
     },
     {
       "ticker": "CHAT",
       "weight": 2.9,
-      "return": 163.17
+      "return": 151.38
     },
     {
       "ticker": "AXON",
       "weight": 2.5,
-      "return": 103.14
+      "return": 96.4
     },
     {
       "ticker": "RBRK",
       "weight": 2.1,
-      "return": 173.87
+      "return": 172.12
     },
     {
       "ticker": "SHLD",
       "weight": 1.4,
-      "return": 79.55
+      "return": 77.44
     },
     {
       "ticker": "VST",
       "weight": 1.2,
-      "return": 70.36
+      "return": 69.57
     },
     {
       "ticker": "AIPO",
@@ -142,7 +142,7 @@
     {
       "ticker": "LUNR",
       "weight": 0.8,
-      "return": 226.72
+      "return": 206.68
     },
     {
       "ticker": "MDA",
