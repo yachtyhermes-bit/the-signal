@@ -7,8 +7,8 @@
     "changeDirection": "down",
     "fairValue": {
       "status": "Undervalued",
-      "price": 109.86,
-      "upside": "+133.9%"
+      "price": 109.33,
+      "upside": "+132.8%"
     },
     "earnings": {
       "revTtm": "$1.42B",
@@ -19,7 +19,7 @@
     },
     "analyst": {
       "consensus": "Strong Buy",
-      "target": 109.86,
+      "target": 109.33,
       "buys": 15,
       "holds": 5,
       "sells": 0
@@ -33,8 +33,8 @@
     "changeDirection": "down",
     "fairValue": {
       "status": "Undervalued",
-      "price": 142.29,
-      "upside": "+70.8%"
+      "price": 141.15,
+      "upside": "+69.4%"
     },
     "earnings": {
       "revTtm": "$6.23B",
@@ -45,7 +45,7 @@
     },
     "analyst": {
       "consensus": "Buy",
-      "target": 142.29,
+      "target": 141.15,
       "buys": 15,
       "holds": 16,
       "sells": 0
@@ -59,19 +59,19 @@
     "changeDirection": "down",
     "fairValue": {
       "status": "Undervalued",
-      "price": 670.37,
-      "upside": "+22.5%"
+      "price": 673.15,
+      "upside": "+23.1%"
     },
     "earnings": {
       "revTtm": "$2.98B",
       "revGrowth": "+33.7%",
       "netIncome": "$205.99M",
-      "peRatio": "219.7x",
+      "peRatio": "222.4x",
       "psRatio": "14.8x"
     },
     "analyst": {
       "consensus": "Strong Buy",
-      "target": 670.37,
+      "target": 673.15,
       "buys": 12,
       "holds": 8,
       "sells": 0
@@ -92,7 +92,7 @@
       "revTtm": "$318.27B",
       "revGrowth": "+18.3%",
       "netIncome": "$125.22B",
-      "peRatio": "23.3x",
+      "peRatio": "22.9x",
       "psRatio": "9.1x"
     },
     "analyst": {
@@ -170,7 +170,7 @@
       "revTtm": "$253.49B",
       "revGrowth": "+85.2%",
       "netIncome": "$159.61B",
-      "peRatio": "31.1x",
+      "peRatio": "31.2x",
       "psRatio": "19.4x"
     },
     "analyst": {
@@ -196,7 +196,7 @@
       "revTtm": "$75.46B",
       "revGrowth": "+47.9%",
       "netIncome": "$29.32B",
-      "peRatio": "64.0x",
+      "peRatio": "64.1x",
       "psRatio": "24.2x"
     },
     "analyst": {

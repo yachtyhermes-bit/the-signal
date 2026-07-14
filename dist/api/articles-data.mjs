@@ -2,6 +2,14 @@
 // Contains article metadata for Pulse AI
 const ARTICLES = [
   {
+    "title": "Everyone's Obsessed With AI. Axon Already Put It In Every Cop Car in America.",
+    "slug": "axon-ai-policing-moat-2026",
+    "ticker": "AXON",
+    "sector": "defense",
+    "date": "2026-07-14T10:00:00.000Z",
+    "summary": "Axon Enterprise is down 38% from its ATH despite 33% revenue growth, 80%+ body camera market share, and an AI revolution in policing that's already deployed. Here's why the disconnect is worth your attention."
+  },
+  {
     "title": "Salesforce's Agentforce Just Hit $1B in ARR. The Stock's Down 35% Anyway.",
     "slug": "salesforce-agentforce-ai-growth-2026",
     "ticker": "CRM",
@@ -792,14 +800,6 @@ const ARTICLES = [
     "sector": "ai",
     "date": "2026-06-13T11:00:00Z",
     "summary": "ServiceNow is embedding AI agents into its enterprise workflow platform, automating IT operations, HR, and customer service workflows across the Fortune 500. Despite 22% revenue growth and a commanding enterprise moat, the stock has cratered from its $211 high to $102 — a valuation that's starting to look like a steal for the platform layer of enterprise AI."
-  },
-  {
-    "title": "Axon Got Cut in Half — and the Business Just Had Its Best Quarter Ever. The AI Policing Moat Nobody's Priced In.",
-    "slug": "axon-ai-policing-moat-2026",
-    "ticker": "AXON",
-    "sector": "defense",
-    "date": "2026-06-13T10:00:00.000Z",
-    "summary": "Axon Enterprise ($AXON) dropped 50% from $885 highs to $441 despite revenue accelerating to 34% YoY and Q1 beating at $807M. With ~80% body camera market share, 17,000+ agencies locked into its AI platform, and a new counter-drone expansion into the Pentagon's $54B autonomous systems budget, the disconnect between price and fundamentals has never been wider. Analyst consensus Buy with a $662 target implies +50% upside."
   },
   {
     "title": "SentinelOne Just Turned Profitable and the Stock Got Smashed — The AI-Native Cyber Play Nobody's Watching",
