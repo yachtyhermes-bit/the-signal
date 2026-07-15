@@ -2,6 +2,22 @@
 // Contains article metadata for Pulse AI
 const ARTICLES = [
   {
+    "title": "Microsoft Just Deployed a $2.5B Army of 6,000 Engineers. Wall Street Isn't Paying Attention Yet.",
+    "slug": "msft-frontier-ai-2026",
+    "ticker": "MSFT",
+    "sector": "mega-cap",
+    "date": "2026-07-15T16:00:00.000Z",
+    "summary": "Microsoft launched Frontier Co. on July 2, 2026 — a $2.5 billion unit putting 6,000 forward-deployed engineers inside enterprise customers to wire AI into actual operations. With Azure growing 40% and AI revenue at a $37B run rate (up 123% YoY), the stock sits at $393.41, down 21% YTD. The disconnect between Microsoft's AI deployment and its valuation is the story."
+  },
+  {
+    "title": "The $596 Question: Applied Materials Got Hammered 19.5% — But Is This the Easiest Buy of the AI Chip Cycle?",
+    "slug": "amat-chip-equipment-selloff-opportunity-2026",
+    "ticker": "AMAT",
+    "sector": "ai",
+    "date": "2026-07-15",
+    "summary": "Applied Materials crashed 19.5% from its all-time high to $595.70 as Michael Burry's short, China export restriction fears taking out $600-710M in revenue, and an SK Hynix rout sent semiconductor equipment stocks reeling. But with $29B in TTM revenue, record Q2 results ($7.91B revenue, $3.51 GAAP EPS), Q3 guidance of $8.95B accelerating to 23% YoY growth, and CEO Gary Dickerson guiding 30%+ growth in semi equipment for CY2026, the structural bull case for the machine that builds every AI chip ma"
+  },
+  {
     "title": "Northrop Grumman Is Down 31% With a $95.6B Backlog — Something Doesn't Add Up",
     "slug": "northrop-grumman-defense-backlog-moat-2026",
     "ticker": "NOC",
@@ -23,7 +39,7 @@ const ARTICLES = [
     "ticker": "CRM",
     "sector": "ai",
     "date": "2026-07-14T10:00:00.000Z",
-    "summary": "Salesforce (CRM) crossed $1B in Agentforce ARR in under a year — the fastest product ramp in company history. Revenue re-accelerated to 13% YoY, free cash flow hit $16.6B, and forward PE sits at an absurd 11x. Yet the stock is down 38% from its 52-week high. Here's why the disconnect between Salesforce's AI momentum and its valuation is the most interesting setup in enterprise tech right now."
+    "summary": "Salesforce (CRM) crossed $1B in Agentforce ARR in under a year — the fastest product ramp in company history. Revenue re-accelerated to 13% YoY, free cash flow hit $14.4B, and forward PE sits at an absurd 11x. Yet the stock is down 38% from its 52-week high. Here's why the disconnect between Salesforce's AI momentum and its valuation is the most interesting setup in enterprise tech right now."
   },
   {
     "title": "The Nvidia Paradox: How Losing the Top Spot Makes Arista an Even Better Bet",

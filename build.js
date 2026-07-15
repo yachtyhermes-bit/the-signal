@@ -385,7 +385,8 @@ if (!template) {
         .replace(/{{TAGS_HTML}}/g, tagsHtml)
         .replace(/{{LINKS_HTML}}/g, linksHtml)
         .replace(/{{RELATED_ARTICLES}}/g, pickRelated(articles, slug, 4))
-        .replace('<!-- ARTICLES_DATA_JSON -->', '')
+        .replace('<!-- ARTICLES_DATA_JSON -->',
+          `<script id="articles-data" type="application/json">${articlesJson}</script>`)
         .replace(/\{\{[A-Z_]+\}\}/g, '');
 
       // Inject Rocket Lab navigation
@@ -401,6 +402,13 @@ if (!template) {
   }
   console.log(`  ✅ ${generated} article pages generated`);
 }
+
+// ─── 7.5. Generate /articles/index.json for search fallback ───
+const articlesIndexDir = path.join(DST, 'articles');
+fs.mkdirSync(articlesIndexDir, { recursive: true });
+fs.writeFileSync(path.join(articlesIndexDir, 'index.json'), articlesJson);
+const indexJsonKb = Math.round(articlesJson.length / 1024);
+console.log(`  📄 /articles/index.json written (${indexJsonKb}KB) — search fallback ready`);
 
 // ─── 8. Generate sector pages ───
 const sectorTemplate = fs.existsSync(SECTOR_TEMPLATE)
