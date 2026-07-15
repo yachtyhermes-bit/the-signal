@@ -7,7 +7,7 @@ const ARTICLES = [
     "ticker": "MSFT",
     "sector": "mega-cap",
     "date": "2026-07-15T16:00:00.000Z",
-    "summary": "Microsoft launched Frontier Co. on July 2, 2026 — a $2.5 billion unit putting 6,000 forward-deployed engineers inside enterprise customers to wire AI into actual operations. With Azure growing 40% and AI revenue at a $37B run rate (up 123% YoY), the stock sits at $393.41, down 21% YTD. The disconnect between Microsoft's AI deployment and its valuation is the story."
+    "summary": "Microsoft launched Frontier Co. on July 2, 2026 — a $2.5 billion unit putting 6,000 forward-deployed engineers inside enterprise customers to wire AI into actual operations. With Azure growing 40% and AI revenue at a $37B run rate (up 123% YoY), the stock sits at $393.41, down 18% YTD. The disconnect between Microsoft's AI deployment and its valuation is the story."
   },
   {
     "title": "The $596 Question: Applied Materials Got Hammered 19.5% — But Is This the Easiest Buy of the AI Chip Cycle?",
@@ -16,6 +16,14 @@ const ARTICLES = [
     "sector": "ai",
     "date": "2026-07-15",
     "summary": "Applied Materials crashed 19.5% from its all-time high to $595.70 as Michael Burry's short, China export restriction fears taking out $600-710M in revenue, and an SK Hynix rout sent semiconductor equipment stocks reeling. But with $29B in TTM revenue, record Q2 results ($7.91B revenue, $3.51 GAAP EPS), Q3 guidance of $8.95B accelerating to 23% YoY growth, and CEO Gary Dickerson guiding 30%+ growth in semi equipment for CY2026, the structural bull case for the machine that builds every AI chip ma"
+  },
+  {
+    "title": "Constellation Energy Dropped 38% in Six Months. The PJM Auction Could Flip the Script Overnight.",
+    "slug": "ceg-pjm-auction-catalyst-2026",
+    "ticker": "CEG",
+    "sector": "mega-cap",
+    "date": "2026-07-15",
+    "summary": "Constellation Energy dropped 37.8% from its 52-week high as the Calpine secondary sell-off ($3.1B, 11M shares) and a Citi downgrade on PJM reliability concerns dragged the stock to $228.63. But the underlying business has never been stronger — 13 nuclear plants at 94.7% capacity factor, massive AI/hyperscaler PPAs worth ~$1.5B annual revenue by 2028, and a PJM capacity auction that could deliver record-high prices for baseload power. With a Strong Buy consensus (20 Buy, 3 Hold, 0 Sell), $3.5B in"
   },
   {
     "title": "Northrop Grumman Is Down 31% With a $95.6B Backlog — Something Doesn't Add Up",
