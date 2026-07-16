@@ -18,6 +18,14 @@ const ARTICLES = [
     "summary": "Reddit's $130M/year in AI data licensing deals with Google and OpenAI are just the opening bid. With 1B+ posts, dynamic pricing negotiations, and irreplaceable human discourse, the data moat is the real story the market hasn't priced in."
   },
   {
+    "title": "SoFi Is Down 46% From Its High — And the Business Has Never Been Stronger",
+    "slug": "sofi-everything-app-bank-charter-2026",
+    "ticker": "SOFI",
+    "sector": "fintech",
+    "date": "2026-07-16",
+    "summary": "SoFi trades at $17.61, down 46% from its $32.73 high, despite posting record Q1 revenue of $1.1B, GAAP profitability, a national bank charter fueling $40.2B in deposits, the SoFiUSD stablecoin launch, AI-powered investing through Composer, and a PEG ratio of 0.85. The everything app thesis is real — the market just hasn't noticed yet."
+  },
+  {
     "title": "Microsoft Just Deployed a $2.5B Army of 6,000 Engineers. Wall Street Isn't Paying Attention Yet.",
     "slug": "msft-frontier-ai-2026",
     "ticker": "MSFT",
