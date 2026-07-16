@@ -2,6 +2,22 @@
 // Contains article metadata for Pulse AI
 const ARTICLES = [
   {
+    "title": "SMCI Is Priced for Bankruptcy While Building the Backbone of AI — Something's Gotta Give",
+    "slug": "smci-ai-server-comeback-2026",
+    "ticker": "SMCI",
+    "sector": "ai",
+    "date": "2026-07-16T16:00:00.000Z",
+    "summary": "SMCI trades at just 8.2x forward P/E despite 123% revenue growth and a 70-80% stranglehold on the liquid cooling market Nvidia's hottest chips require. With $39B in orders and FY2026 guidance at $36B+, the divergence between price and reality is getting impossible to ignore."
+  },
+  {
+    "title": "Reddit's Real Moat Isn't Ads — It's the Language Model Training Ground Nobody Can Replicate",
+    "slug": "rddt-ai-data-licensing-moat-2026",
+    "ticker": "RDDT",
+    "sector": "ai",
+    "date": "2026-07-16",
+    "summary": "Reddit's $130M/year in AI data licensing deals with Google and OpenAI are just the opening bid. With 1B+ posts, dynamic pricing negotiations, and irreplaceable human discourse, the data moat is the real story the market hasn't priced in."
+  },
+  {
     "title": "Microsoft Just Deployed a $2.5B Army of 6,000 Engineers. Wall Street Isn't Paying Attention Yet.",
     "slug": "msft-frontier-ai-2026",
     "ticker": "MSFT",

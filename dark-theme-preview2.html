@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Signal — Blue Dim Lighter Preview</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', -apple-system, sans-serif; }
+
+  .palette-row {
+    display: flex;
+    min-height: 100vh;
+  }
+
+  .palette-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .palette-col + .palette-col { border-left: 1px solid rgba(255,255,255,0.08); }
+
+  .palette-header {
+    text-align: center;
+    padding: 14px 0 8px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border-bottom: 1px solid;
+  }
+
+  .palette-subhead {
+    text-align: center;
+    padding: 0 0 12px;
+    font-size: 10px;
+    letter-spacing: 0.3px;
+    border-bottom: 1px solid;
+  }
+
+  .palette-body {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .sample-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    height: 44px;
+    border-radius: 8px;
+    backdrop-filter: blur(24px) saturate(1.4);
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .sample-nav .logo-part { display: flex; align-items: center; gap: 8px; }
+  .sample-nav .logo-dot {
+    width: 18px; height: 18px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10px; font-weight: 700;
+  }
+
+  .sample-card {
+    padding: 16px;
+    border-radius: var(--radius);
+  }
+  .sample-card h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .sample-card p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .sample-card .meta {
+    display: flex; gap: 8px; margin-top: 8px; font-size: 11px;
+  }
+  .sample-card .tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 500;
+  }
+
+  .sample-article {
+    padding: 16px;
+    border-radius: var(--radius);
+  }
+  .sample-article h1 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+  .sample-article .byline {
+    font-size: 11px;
+    margin-bottom: 12px;
+  }
+  .sample-article p {
+    font-size: 12.5px;
+    line-height: 1.65;
+    margin-bottom: 8px;
+  }
+
+  .sample-table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 11px;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .sample-table th, .sample-table td {
+    padding: 6px 10px;
+    text-align: left;
+  }
+  .sample-table th { font-weight: 600; font-size: 10px; text-transform: uppercase; letter-spacing: 0.3px; }
+
+  .sample-sidebar {
+    padding: 14px;
+    border-radius: var(--radius);
+    font-size: 12px;
+  }
+  .sample-sidebar h4 {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+  }
+  .sample-sidebar .item {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+    font-size: 11.5px;
+  }
+  .sample-sidebar .change-pos { font-weight: 500; }
+  .sample-sidebar .change-neg { font-weight: 500; }
+
+  .sample-footer {
+    margin-top: auto;
+    padding: 12px 0;
+    text-align: center;
+    font-size: 10px;
+    border-top: 1px solid;
+    letter-spacing: 0.3px;
+  }
+
+  /* ===== THEMES ===== */
+
+  /* 0. TWITTER DIM (reference) */
+  .theme-twitter {
+    --text: #f8fafc;
+    --bg-primary: #15202B;
+    --bg-secondary: #1a2735;
+    --bg-card: #1d2b3a;
+    --bg-card-hover: #243547;
+    --bg-accent: #1a2a48;
+    --text-primary: #f8fafc;
+    --text-secondary: #8899a6;
+    --text-muted: #5c7080;
+    --accent: #3b82f6;
+    --border: #253545;
+    --radius: 12px;
+    --radius-sm: 6px;
+    --green: #22c55e;
+    --red: #ef4444;
+    --gold: #f59e0b;
+  }
+
+  /* 1. STEP +1 (barely lighter) */
+  .theme-step1 {
+    --text: #f8fafc;
+    --bg-primary: #1a2d3e;
+    --bg-secondary: #1f3346;
+    --bg-card: #23384d;
+    --bg-card-hover: #2a4058;
+    --bg-accent: #1e3050;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --accent: #3b82f6;
+    --border: #2a4055;
+    --radius: 12px;
+    --radius-sm: 6px;
+    --green: #22c55e;
+    --red: #ef4444;
+    --gold: #f59e0b;
+  }
+
+  /* 2. STEP +2 (noticeably lighter) */
+  .theme-step2 {
+    --text: #f8fafc;
+    --bg-primary: #1e3348;
+    --bg-secondary: #233a50;
+    --bg-card: #28415a;
+    --bg-card-hover: #304a66;
+    --bg-accent: #223758;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --accent: #3b82f6;
+    --border: #304a62;
+    --radius: 12px;
+    --radius-sm: 6px;
+    --green: #22c55e;
+    --red: #ef4444;
+    --gold: #f59e0b;
+  }
+
+  /* 3. STEP +3 (clearly lighter) */
+  .theme-step3 {
+    --text: #f8fafc;
+    --bg-primary: #233a52;
+    --bg-secondary: #29405a;
+    --bg-card: #2e4866;
+    --bg-card-hover: #365276;
+    --bg-accent: #263e62;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --accent: #3b82f6;
+    --border: #36526e;
+    --radius: 12px;
+    --radius-sm: 6px;
+    --green: #22c55e;
+    --red: #ef4444;
+    --gold: #f59e0b;
+  }
+</style>
+</head>
+<body>
+<div class="palette-row">
+
+  <!-- TWITTER DIM (reference) -->
+  <div class="palette-col theme-twitter" style="background:#15202B;">
+    <div class="palette-header" style="background:#1a2735;color:#8899a6;border-color:#253545;">🐦 Twitter Dim</div>
+    <div class="palette-subhead" style="color:#5c7080;border-color:#253545;">Reference (#15202B)</div>
+    <div class="palette-body" style="color:#f8fafc;">
+      <div class="sample-nav" style="background:rgba(21,32,43,0.92);border:1px solid #253545;">
+        <div class="logo-part"><span class="logo-dot" style="background:#3b82f6;color:#fff;">S</span>THE SIGNAL</div>
+        <span style="color:#8899a6;font-weight:400;">Articles · Markets · Portfolio</span>
+      </div>
+      <div class="sample-article" style="background:#1d2b3a;border:1px solid #253545;">
+        <h1>SK Hynix CEO Warns 2027 Will Be Worst Memory Shortage in History</h1>
+        <div class="byline" style="color:#8899a6;">By The Signal — July 16, 2026 · 5 min read</div>
+        <p style="color:#f8fafc;">SK Hynix CEO Kwak Noh-jung told Reuters Friday that 2027 will bring the most severe memory supply crunch the industry has ever seen, and demand will keep running ahead of capacity through 2030 — just days after the company's record-breaking $26.5B Nasdaq IPO.</p>
+        <p style="color:#8899a6;">"We forecast that next year will be the worst year in the industry's history from the supply perspective," Kwak said. "Our customer demand continues to go up, while our capacity has limitations."</p>
+        <div class="meta">
+          <span class="tag" style="background:rgba(59,130,246,0.15);color:#60a5fa;">$SKHY</span>
+          <span class="tag" style="background:rgba(34,197,94,0.12);color:#22c55e;">HBM</span>
+          <span class="tag" style="background:rgba(245,158,11,0.12);color:#f59e0b;">Semiconductors</span>
+        </div>
+      </div>
+      <div class="sample-card" style="background:#1d2b3a;border:1px solid #253545;">
+        <h3>Arista Networks: The NVIDIA Paradox</h3>
+        <p style="color:#8899a6;">As NVIDIA's data center Ethernet spend quadruples, <span style="color:#3b82f6;">Arista is the quiet winner</span> — every 800G switch deployed is another brick in the AI infrastructure wall.</p>
+        <div class="meta">
+          <span style="color:#22c55e;font-weight:600;">+3.2%</span>
+          <span style="color:#5c7080;">Today</span>
+        </div>
+      </div>
+      <table class="sample-table" style="background:#1d2b3a;border:1px solid #253545;">
+        <thead><tr style="background:#1a2735;"><th style="color:#8899a6;">Ticker</th><th style="color:#8899a6;">Price</th><th style="color:#8899a6;">Change</th></tr></thead>
+        <tr style="border-top:1px solid #253545;"><td style="color:#f8fafc;font-weight:600;">NVDA</td><td style="color:#f8fafc;">$187.42</td><td style="color:#22c55e;">+2.8%</td></tr>
+        <tr style="border-top:1px solid #253545;"><td style="color:#f8fafc;font-weight:600;">ANET</td><td style="color:#f8fafc;">$124.80</td><td style="color:#22c55e;">+1.9%</td></tr>
+        <tr style="border-top:1px solid #253545;"><td style="color:#f8fafc;font-weight:600;">AVGO</td><td style="color:#f8fafc;">$243.15</td><td style="color:#ef4444;">-0.7%</td></tr>
+      </table>
+      <div class="sample-sidebar" style="background:#1a2a48;border:1px solid #253545;">
+        <h4 style="color:#8899a6;">Today's Movers</h4>
+        <div class="item"><span style="color:#f8fafc;">HOOD</span><span class="change-pos" style="color:#22c55e;">+5.3%</span></div>
+        <div class="item"><span style="color:#f8fafc;">RKLB</span><span class="change-pos" style="color:#22c55e;">+4.1%</span></div>
+        <div class="item"><span style="color:#f8fafc;">SHLD</span><span class="change-neg" style="color:#ef4444;">-2.8%</span></div>
+      </div>
+      <div class="sample-footer" style="color:#5c7080;border-color:#253545;">© 2026 The Signal — readthesignal.net</div>
+    </div>
+  </div>
+
+  <!-- STEP +1 -->
+  <div class="palette-col theme-step1" style="background:#1a2d3e;">
+    <div class="palette-header" style="background:#1f3346;color:#94a3b8;border-color:#2a4055;">🟦 +1</div>
+    <div class="palette-subhead" style="color:#64748b;border-color:#2a4055;">Barely lighter (#1a2d3e)</div>
+    <div class="palette-body" style="color:#f8fafc;">
+      <div class="sample-nav" style="background:rgba(26,45,62,0.92);border:1px solid #2a4055;">
+        <div class="logo-part"><span class="logo-dot" style="background:#3b82f6;color:#fff;">S</span>THE SIGNAL</div>
+        <span style="color:#94a3b8;font-weight:400;">Articles · Markets · Portfolio</span>
+      </div>
+      <div class="sample-article" style="background:#23384d;border:1px solid #2a4055;">
+        <h1>SK Hynix CEO Warns 2027 Will Be Worst Memory Shortage in History</h1>
+        <div class="byline" style="color:#94a3b8;">By The Signal — July 16, 2026 · 5 min read</div>
+        <p style="color:#f8fafc;">SK Hynix CEO Kwak Noh-jung told Reuters Friday that 2027 will bring the most severe memory supply crunch the industry has ever seen, and demand will keep running ahead of capacity through 2030 — just days after the company's record-breaking $26.5B Nasdaq IPO.</p>
+        <p style="color:#94a3b8;">"We forecast that next year will be the worst year in the industry's history from the supply perspective," Kwak said. "Our customer demand continues to go up, while our capacity has limitations."</p>
+        <div class="meta">
+          <span class="tag" style="background:rgba(59,130,246,0.15);color:#60a5fa;">$SKHY</span>
+          <span class="tag" style="background:rgba(34,197,94,0.12);color:#22c55e;">HBM</span>
+          <span class="tag" style="background:rgba(245,158,11,0.12);color:#f59e0b;">Semiconductors</span>
+        </div>
+      </div>
+      <div class="sample-card" style="background:#23384d;border:1px solid #2a4055;">
+        <h3>Arista Networks: The NVIDIA Paradox</h3>
+        <p style="color:#94a3b8;">As NVIDIA's data center Ethernet spend quadruples, <span style="color:#3b82f6;">Arista is the quiet winner</span> — every 800G switch deployed is another brick in the AI infrastructure wall.</p>
+        <div class="meta">
+          <span style="color:#22c55e;font-weight:600;">+3.2%</span>
+          <span style="color:#64748b;">Today</span>
+        </div>
+      </div>
+      <table class="sample-table" style="background:#23384d;border:1px solid #2a4055;">
+        <thead><tr style="background:#1f3346;"><th style="color:#94a3b8;">Ticker</th><th style="color:#94a3b8;">Price</th><th style="color:#94a3b8;">Change</th></tr></thead>
+        <tr style="border-top:1px solid #2a4055;"><td style="color:#f8fafc;font-weight:600;">NVDA</td><td style="color:#f8fafc;">$187.42</td><td style="color:#22c55e;">+2.8%</td></tr>
+        <tr style="border-top:1px solid #2a4055;"><td style="color:#f8fafc;font-weight:600;">ANET</td><td style="color:#f8fafc;">$124.80</td><td style="color:#22c55e;">+1.9%</td></tr>
+        <tr style="border-top:1px solid #2a4055;"><td style="color:#f8fafc;font-weight:600;">AVGO</td><td style="color:#f8fafc;">$243.15</td><td style="color:#ef4444;">-0.7%</td></tr>
+      </table>
+      <div class="sample-sidebar" style="background:#1e3050;border:1px solid #2a4055;">
+        <h4 style="color:#94a3b8;">Today's Movers</h4>
+        <div class="item"><span style="color:#f8fafc;">HOOD</span><span class="change-pos" style="color:#22c55e;">+5.3%</span></div>
+        <div class="item"><span style="color:#f8fafc;">RKLB</span><span class="change-pos" style="color:#22c55e;">+4.1%</span></div>
+        <div class="item"><span style="color:#f8fafc;">SHLD</span><span class="change-neg" style="color:#ef4444;">-2.8%</span></div>
+      </div>
+      <div class="sample-footer" style="color:#64748b;border-color:#2a4055;">© 2026 The Signal — readthesignal.net</div>
+    </div>
+  </div>
+
+  <!-- STEP +2 -->
+  <div class="palette-col theme-step2" style="background:#1e3348;">
+    <div class="palette-header" style="background:#233a50;color:#94a3b8;border-color:#304a62;">🟦 +2</div>
+    <div class="palette-subhead" style="color:#64748b;border-color:#304a62;">Noticeably lighter (#1e3348)</div>
+    <div class="palette-body" style="color:#f8fafc;">
+      <div class="sample-nav" style="background:rgba(30,51,72,0.92);border:1px solid #304a62;">
+        <div class="logo-part"><span class="logo-dot" style="background:#3b82f6;color:#fff;">S</span>THE SIGNAL</div>
+        <span style="color:#94a3b8;font-weight:400;">Articles · Markets · Portfolio</span>
+      </div>
+      <div class="sample-article" style="background:#28415a;border:1px solid #304a62;">
+        <h1>SK Hynix CEO Warns 2027 Will Be Worst Memory Shortage in History</h1>
+        <div class="byline" style="color:#94a3b8;">By The Signal — July 16, 2026 · 5 min read</div>
+        <p style="color:#f8fafc;">SK Hynix CEO Kwak Noh-jung told Reuters Friday that 2027 will bring the most severe memory supply crunch the industry has ever seen, and demand will keep running ahead of capacity through 2030 — just days after the company's record-breaking $26.5B Nasdaq IPO.</p>
+        <p style="color:#94a3b8;">"We forecast that next year will be the worst year in the industry's history from the supply perspective," Kwak said. "Our customer demand continues to go up, while our capacity has limitations."</p>
+        <div class="meta">
+          <span class="tag" style="background:rgba(59,130,246,0.15);color:#60a5fa;">$SKHY</span>
+          <span class="tag" style="background:rgba(34,197,94,0.12);color:#22c55e;">HBM</span>
+          <span class="tag" style="background:rgba(245,158,11,0.12);color:#f59e0b;">Semiconductors</span>
+        </div>
+      </div>
+      <div class="sample-card" style="background:#28415a;border:1px solid #304a62;">
+        <h3>Arista Networks: The NVIDIA Paradox</h3>
+        <p style="color:#94a3b8;">As NVIDIA's data center Ethernet spend quadruples, <span style="color:#3b82f6;">Arista is the quiet winner</span> — every 800G switch deployed is another brick in the AI infrastructure wall.</p>
+        <div class="meta">
+          <span style="color:#22c55e;font-weight:600;">+3.2%</span>
+          <span style="color:#64748b;">Today</span>
+        </div>
+      </div>
+      <table class="sample-table" style="background:#28415a;border:1px solid #304a62;">
+        <thead><tr style="background:#233a50;"><th style="color:#94a3b8;">Ticker</th><th style="color:#94a3b8;">Price</th><th style="color:#94a3b8;">Change</th></tr></thead>
+        <tr style="border-top:1px solid #304a62;"><td style="color:#f8fafc;font-weight:600;">NVDA</td><td style="color:#f8fafc;">$187.42</td><td style="color:#22c55e;">+2.8%</td></tr>
+        <tr style="border-top:1px solid #304a62;"><td style="color:#f8fafc;font-weight:600;">ANET</td><td style="color:#f8fafc;">$124.80</td><td style="color:#22c55e;">+1.9%</td></tr>
+        <tr style="border-top:1px solid #304a62;"><td style="color:#f8fafc;font-weight:600;">AVGO</td><td style="color:#f8fafc;">$243.15</td><td style="color:#ef4444;">-0.7%</td></tr>
+      </table>
+      <div class="sample-sidebar" style="background:#223758;border:1px solid #304a62;">
+        <h4 style="color:#94a3b8;">Today's Movers</h4>
+        <div class="item"><span style="color:#f8fafc;">HOOD</span><span class="change-pos" style="color:#22c55e;">+5.3%</span></div>
+        <div class="item"><span style="color:#f8fafc;">RKLB</span><span class="change-pos" style="color:#22c55e;">+4.1%</span></div>
+        <div class="item"><span style="color:#f8fafc;">SHLD</span><span class="change-neg" style="color:#ef4444;">-2.8%</span></div>
+      </div>
+      <div class="sample-footer" style="color:#64748b;border-color:#304a62;">© 2026 The Signal — readthesignal.net</div>
+    </div>
+  </div>
+
+  <!-- STEP +3 -->
+  <div class="palette-col theme-step3" style="background:#233a52;">
+    <div class="palette-header" style="background:#29405a;color:#94a3b8;border-color:#36526e;">🟦 +3</div>
+    <div class="palette-subhead" style="color:#64748b;border-color:#36526e;">Clearly lighter (#233a52)</div>
+    <div class="palette-body" style="color:#f8fafc;">
+      <div class="sample-nav" style="background:rgba(35,58,82,0.92);border:1px solid #36526e;">
+        <div class="logo-part"><span class="logo-dot" style="background:#3b82f6;color:#fff;">S</span>THE SIGNAL</div>
+        <span style="color:#94a3b8;font-weight:400;">Articles · Markets · Portfolio</span>
+      </div>
+      <div class="sample-article" style="background:#2e4866;border:1px solid #36526e;">
+        <h1>SK Hynix CEO Warns 2027 Will Be Worst Memory Shortage in History</h1>
+        <div class="byline" style="color:#94a3b8;">By The Signal — July 16, 2026 · 5 min read</div>
+        <p style="color:#f8fafc;">SK Hynix CEO Kwak Noh-jung told Reuters Friday that 2027 will bring the most severe memory supply crunch the industry has ever seen, and demand will keep running ahead of capacity through 2030 — just days after the company's record-breaking $26.5B Nasdaq IPO.</p>
+        <p style="color:#94a3b8;">"We forecast that next year will be the worst year in the industry's history from the supply perspective," Kwak said. "Our customer demand continues to go up, while our capacity has limitations."</p>
+        <div class="meta">
+          <span class="tag" style="background:rgba(59,130,246,0.15);color:#60a5fa;">$SKHY</span>
+          <span class="tag" style="background:rgba(34,197,94,0.12);color:#22c55e;">HBM</span>
+          <span class="tag" style="background:rgba(245,158,11,0.12);color:#f59e0b;">Semiconductors</span>
+        </div>
+      </div>
+      <div class="sample-card" style="background:#2e4866;border:1px solid #36526e;">
+        <h3>Arista Networks: The NVIDIA Paradox</h3>
+        <p style="color:#94a3b8;">As NVIDIA's data center Ethernet spend quadruples, <span style="color:#3b82f6;">Arista is the quiet winner</span> — every 800G switch deployed is another brick in the AI infrastructure wall.</p>
+        <div class="meta">
+          <span style="color:#22c55e;font-weight:600;">+3.2%</span>
+          <span style="color:#64748b;">Today</span>
+        </div>
+      </div>
+      <table class="sample-table" style="background:#2e4866;border:1px solid #36526e;">
+        <thead><tr style="background:#29405a;"><th style="color:#94a3b8;">Ticker</th><th style="color:#94a3b8;">Price</th><th style="color:#94a3b8;">Change</th></tr></thead>
+        <tr style="border-top:1px solid #36526e;"><td style="color:#f8fafc;font-weight:600;">NVDA</td><td style="color:#f8fafc;">$187.42</td><td style="color:#22c55e;">+2.8%</td></tr>
+        <tr style="border-top:1px solid #36526e;"><td style="color:#f8fafc;font-weight:600;">ANET</td><td style="color:#f8fafc;">$124.80</td><td style="color:#22c55e;">+1.9%</td></tr>
+        <tr style="border-top:1px solid #36526e;"><td style="color:#f8fafc;font-weight:600;">AVGO</td><td style="color:#f8fafc;">$243.15</td><td style="color:#ef4444;">-0.7%</td></tr>
+      </table>
+      <div class="sample-sidebar" style="background:#263e62;border:1px solid #36526e;">
+        <h4 style="color:#94a3b8;">Today's Movers</h4>
+        <div class="item"><span style="color:#f8fafc;">HOOD</span><span class="change-pos" style="color:#22c55e;">+5.3%</span></div>
+        <div class="item"><span style="color:#f8fafc;">RKLB</span><span class="change-pos" style="color:#22c55e;">+4.1%</span></div>
+        <div class="item"><span style="color:#f8fafc;">SHLD</span><span class="change-neg" style="color:#ef4444;">-2.8%</span></div>
+      </div>
+      <div class="sample-footer" style="color:#64748b;border-color:#36526e;">© 2026 The Signal — readthesignal.net</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
