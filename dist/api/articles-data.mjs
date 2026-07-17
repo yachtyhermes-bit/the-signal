@@ -2,6 +2,14 @@
 // Contains article metadata for Pulse AI
 const ARTICLES = [
   {
+    "title": "Oracle Has a $638 Billion Backlog and Nobody Cares",
+    "slug": "orcl-ai-infrastructure-backlog-2026",
+    "ticker": "ORCL",
+    "sector": "ai",
+    "date": "2026-07-17T16:00:00.000Z",
+    "summary": "Oracle trades at $123.66 — a 52-week low, down 61% from its $345.72 peak — despite posting $67.4B in FY2026 revenue, 93% OCI growth, and a staggering $638B remaining performance obligation. S&P downgraded Oracle to BBB- over OpenAI concentration (~50% of the backlog), but the market is pricing in a total collapse that ignores Oracle's structural moat: the database that every bank, airline, hospital, and government agency runs on, now becoming the database layer of every cloud through multi-cloud"
+  },
+  {
     "title": "SMCI Is Priced for Bankruptcy While Building the Backbone of AI — Something's Gotta Give",
     "slug": "smci-ai-server-comeback-2026",
     "ticker": "SMCI",

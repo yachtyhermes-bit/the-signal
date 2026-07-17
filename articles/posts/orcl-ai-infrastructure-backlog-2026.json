@@ -1,0 +1,37 @@
+{
+  "slug": "orcl-ai-infrastructure-backlog-2026",
+  "id": "orcl-ai-infrastructure-backlog-2026",
+  "ticker": "ORCL",
+  "sector": "ai",
+  "sentiment": "bullish",
+  "date": "2026-07-17T16:00:00.000Z",
+  "title": "Oracle Has a $638 Billion Backlog and Nobody Cares",
+  "subtitle": "The stock trades at an 11x forward multiple with cloud revenue growing 93% and a backlog that would buy Nvidia twice over. The market sees OpenAI concentration risk. What it's missing is the database that runs the world.",
+  "summary": "Oracle trades at $123.66 — a 52-week low, down 61% from its $345.72 peak — despite posting $67.4B in FY2026 revenue, 93% OCI growth, and a staggering $638B remaining performance obligation. S&P downgraded Oracle to BBB- over OpenAI concentration (~50% of the backlog), but the market is pricing in a total collapse that ignores Oracle's structural moat: the database that every bank, airline, hospital, and government agency runs on, now becoming the database layer of every cloud through multi-cloud partnerships.",
+  "image": {
+    "src": "/img/articles/orcl-ai-infrastructure-backlog-2026.jpg",
+    "caption": "Oracle corporate headquarters"
+  },
+  "tags": [
+    "ORCL",
+    "Oracle",
+    "cloud computing",
+    "AI infrastructure",
+    "OCI",
+    "data centers",
+    "enterprise software"
+  ],
+  "links": [
+    {
+      "label": "Oracle Investor Relations",
+      "url": "https://investor.oracle.com/"
+    },
+    {
+      "label": "Oracle Cloud Infrastructure",
+      "url": "https://www.oracle.com/cloud/"
+    }
+  ],
+  "videos": [],
+  "price": 123.66,
+  "bodyHtml": "<p>Something doesn't add up. Oracle just reported a $638 billion remaining performance obligation — the largest backlog in enterprise software history. Cloud revenue hit $34 billion, growing 39% year over year. OCI infrastructure alone grew 93% in Q4. And the stock? $123.66, a 52-week low, down 61% from its peak. A company with a backlog bigger than Nvidia's market cap, trading at 11 times forward earnings. You have to work to make that math make sense.</p><p>The market has an answer. On July 10, S&P downgraded Oracle to BBB-, one notch above junk. The reason: OpenAI concentration. Roughly half of that $638 billion backlog — something north of $300 billion — is tied to the AI training infrastructure deal Oracle secured this year. When OpenAI also signed a $138 billion deal with AWS, the market decided Oracle's concentration risk was existential. If OpenAI walks, the backlog evaporates, the capex drowns the company, and the stock goes lower.</p><p>It's a clean narrative. It's also wrong.</p><p>Let's look at what the OpenAI fear means in the numbers. Oracle spent $55.7 billion on capex in FY2026 — free cash flow came in at negative $24.5 billion. S&P projects a $42 billion FCF deficit in FY2027 on $70 billion in planned capex. One customer wobbles and you're funding data centers with debt rated one notch above junk. Total debt sits at $167 billion against $27 billion in cash. That spine doesn't snap in a light breeze.</p><p>But here's what the downgrade analysis misses: Oracle's database business is not a cloud also-ran. It's the operating system of the global economy. Every Fortune 500 company runs Oracle Database. Every major bank processes transactions through it. Airlines, hospitals, government agencies, stock exchanges — they're all on Oracle. You don't rip that out in a decade. The switching cost is measured in years and billions of dollars. For the workloads that matter, there isn't a viable alternative.</p><p>That's the structural moat the market has forgotten. Oracle's Autonomous Database patches, tunes, and secures itself — no DBA needed. Exadata delivers performance commodity cloud databases can't touch. And the multi-cloud strategy — Database@AWS, Database@Azure, Database@Google Cloud — means Oracle Database lives inside every major cloud platform. Your three biggest competitors are now reselling your most profitable product. That's not a company being disrupted. That's a company that knows it's indispensable.</p><p>Now layer in the AI angle. Everyone assumes Oracle is a distant fourth in cloud. In AI training, that's wrong. OCI's RDMA networking, built on Acceleron RoCE, delivers 97.5% GPU utilization on AI clusters — meaningfully better than AWS or Azure. When you're spending $70 billion on data centers, you'd better have a technical edge. OCI does, and the hyperscalers know it.</p><p>The $638 billion backlog is real revenue visibility. Yes, OpenAI is a massive chunk. But the market is pricing Oracle as if OpenAI is the only customer that matters. That ignores the grinding migration of the entire Oracle database installed base to the cloud. Every on-premise Oracle customer is a future OCI or Database@Cloud customer. That migration is happening on Oracle's terms because there is no alternative for mission-critical enterprise workloads. No one is migrating from Oracle Database to open source at a Fortune 500 bank. It's just not happening.</p><p>At $123.66, Oracle trades at 13.9 times trailing earnings and roughly 11.4 times forward. For a company growing cloud revenue 39% with a $638 billion backlog and zero realistic competitive threat. That's not a growth stock discount. That's a distress price. The market is pricing in OpenAI walking away and the database business collapsing simultaneously. One of those could happen. Both together? That's the mispricing.</p><p>Pull back OpenAI entirely — say the deal falls apart and half the backlog vanishes. You're still left with an enterprise software company generating $17 billion in net income, growing cloud 40% a year, with the stickiest product in technology history. Trading at a single-digit multiple. That's not a value trap. That's a margin of safety you could drive a fleet of Exadata machines through.</p><p>You're not buying Oracle because of OpenAI. You're buying it because the database that runs the global financial system is still Oracle's, and that installed base is moving to the cloud whether Wall Street notices or not. The $638 billion backlog is the proof. The 11x multiple is the opportunity.</p><p class=\"disclosure\"><em>Disclosure: The Signal holds no position in ORCL. Positions may change. This is not financial advice.</em></p>"
+}
