@@ -2,12 +2,44 @@
 // Contains article metadata for Pulse AI
 const ARTICLES = [
   {
+    "title": "Everyone's Chasing the Next Nvidia. CoreWeave Already Has a $100 Billion Head Start.",
+    "slug": "coreweave-ai-factory-moat-2026",
+    "ticker": "CRWV",
+    "sector": "ai",
+    "date": "2026-07-18T16:00:00.000Z",
+    "summary": "CoreWeave trades at $73.21 with a $39.9B market cap — roughly half its 52-week high. But while shorts feast on the 52% slide, the company has quietly locked in $100B in take-or-pay contracts, landed a $2B strategic investment from NVIDIA, and built purpose-built AI infrastructure that hyperscalers can't replicate. This is the AI factory thesis in its purest form."
+  },
+  {
+    "title": "Bots Just Took Over the Internet. Cloudflare Is Building the Immune System.",
+    "slug": "net-cloudflare-precursor-agentic-internet-2026",
+    "ticker": "NET",
+    "sector": "cybersecurity",
+    "date": "2026-07-18",
+    "summary": "Cloudflare's Precursor launch marks a turning point: bots now outnumber humans on the web. With $2.33B in TTM revenue (+33.5% YoY), $755M in FCF, and a platform play spanning bot defense, edge compute, and AI inference, NET is quietly remaking itself into the backbone of the agentic internet — but a 176x P/E leaves no room for error."
+  },
+  {
+    "title": "Apple Just Cracked China’s AI Wall — 40x Earnings Be Damned, This Rally Has Legs",
+    "slug": "aapl-ai-china-rally-2026",
+    "ticker": "AAPL",
+    "sector": "mega-cap",
+    "date": "2026-07-17T16:00:00.000Z",
+    "summary": "Apple’s stock surged to $330 after China approved Apple Intelligence, unlocking 600 million iPhone users in the world’s largest smartphone market. Citi sees $365. KeyBanc sees $250. With Tim Cook’s last earnings call potentially on deck and a 40x P/E screaming for a reality check, we break down both sides."
+  },
+  {
+    "title": "Arm Stopped Just Drawing Blueprints — Now It's Building the House",
+    "slug": "arm-agi-cpu-custom-silicon-bet-2026",
+    "ticker": "ARM",
+    "sector": "ai",
+    "date": "2026-07-17T16:00:00.000Z",
+    "summary": "Arm spent 35 years collecting royalty checks on every smartphone and tablet on earth at 97% gross margins. Then it shipped its first in-house data center chip — the AGI CPU — with Meta as anchor customer and over $2B in orders. Custom silicon is eating the data center, and every hyperscaler building their own chip validates Arm's architecture. The licensing multiple doesn't fit anymore."
+  },
+  {
     "title": "Oracle Has a $638 Billion Backlog and Nobody Cares",
     "slug": "orcl-ai-infrastructure-backlog-2026",
     "ticker": "ORCL",
     "sector": "ai",
     "date": "2026-07-17T16:00:00.000Z",
-    "summary": "Oracle trades at $123.66 — a 52-week low, down 61% from its $345.72 peak — despite posting $67.4B in FY2026 revenue, 93% OCI growth, and a staggering $638B remaining performance obligation. S&P downgraded Oracle to BBB- over OpenAI concentration (~50% of the backlog), but the market is pricing in a total collapse that ignores Oracle's structural moat: the database that every bank, airline, hospital, and government agency runs on, now becoming the database layer of every cloud through multi-cloud"
+    "summary": "Oracle trades at $123.66 — a 52-week low, down 64% from its $345.72 peak — despite posting $67.4B in FY2026 revenue, 93% OCI growth, and a staggering $638B remaining performance obligation. S&P downgraded Oracle to BBB- over OpenAI concentration (~50% of the backlog), but the market is pricing in a total collapse that ignores Oracle's structural moat: the database that every bank, airline, hospital, and government agency runs on, now becoming the database layer of every cloud through multi-cloud"
   },
   {
     "title": "SMCI Is Priced for Bankruptcy While Building the Backbone of AI — Something's Gotta Give",
