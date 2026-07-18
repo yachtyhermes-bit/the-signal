@@ -10,6 +10,14 @@ const ARTICLES = [
     "summary": "CoreWeave trades at $73.21 with a $39.9B market cap — roughly half its 52-week high. But while shorts feast on the 52% slide, the company has quietly locked in $100B in take-or-pay contracts, landed a $2B strategic investment from NVIDIA, and built purpose-built AI infrastructure that hyperscalers can't replicate. This is the AI factory thesis in its purest form."
   },
   {
+    "title": "Palo Alto Networks Looks Like a Money-Loser on Paper. It's Actually a $3.8 Billion Cash Machine.",
+    "slug": "panw-ai-security-cash-flow-machine-2026",
+    "ticker": "PANW",
+    "sector": "cybersecurity",
+    "date": "2026-07-18T16:00:00.000Z",
+    "summary": "Palo Alto Networks generated $3.79 billion in free cash flow over the last twelve months despite reporting GAAP losses — and that cash-generation machine, powered by $8.1B in NGS ARR and a quad-fecta of network, cloud, SOC, and identity platforms, is what the market keeps under-pricing."
+  },
+  {
     "title": "Bots Just Took Over the Internet. Cloudflare Is Building the Immune System.",
     "slug": "net-cloudflare-precursor-agentic-internet-2026",
     "ticker": "NET",
