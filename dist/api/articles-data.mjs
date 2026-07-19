@@ -10,6 +10,30 @@ const ARTICLES = [
     "summary": "GE Aerospace carries $19.2 billion in deferred service revenue from power-by-the-hour maintenance contracts on 44,000+ engines — an installed base that generates 20–30 years of recurring cash flows per engine. While the market prices GE as a cyclical aerospace manufacturer, the numbers tell a different story: a capital-light services machine with a 48.2% ROE and a widening competitive moat as Pratt & Whitney's GTF engine crisis drives airlines toward LEAP-powered narrowbodies."
   },
   {
+    "title": "Taiwan Semi Is Printing Cash Like Nobody's Business — Here's Why It's Still a Buy at $398",
+    "slug": "tsm-ai-chip-monopoly-2026",
+    "ticker": "TSM",
+    "sector": "ai",
+    "date": "2026-07-19T16:00:00.000Z",
+    "summary": "TSM's AI chip manufacturing monopoly and $100B US expansion make it a standout at $398 with 30%+ analyst upside. Deep dive on the numbers, catalysts, and risks."
+  },
+  {
+    "title": "Robinhood Tripled Revenue, Turned a $1B Loss Into $1.9B Profit, and the Stock Is Down 35%. Make It Make Sense.",
+    "slug": "hood-fintech-turnaround-profitability-expansion-2026",
+    "ticker": "HOOD",
+    "sector": "fintech",
+    "date": "2026-07-19",
+    "summary": "Robinhood Markets (HOOD) has executed one of the most dramatic turnarounds in fintech history — revenue tripling from $1.36B to $4.47B in three years, net income swinging from a $1.03B loss to $1.88B in profit, with 92.2% gross margins and zero debt. The stock sits at $99.96, down 35% from highs, with earnings due July 29."
+  },
+  {
+    "title": "Shopify Just Quietly Became the Commerce Layer for the AI Era — and Wall Street Is Still Sleeping on It",
+    "slug": "shopify-ai-commerce-moat-ecosystem-2026",
+    "ticker": "SHOP",
+    "sector": "ai",
+    "date": "2026-07-19",
+    "summary": "Shopify (SHOP) at $123.56 is building the checkout protocol for the AI agent era through its Universal Commerce Protocol with Google. With $11.56B in revenue (+30%), operating margins swinging from -12% to +16% in three years, a $5.6B net cash fortress, and 150M Shop Pay users creating a consumer-side network effect, the bull case is that Shopify isn't just an e-commerce platform anymore — it's the rails for every AI shopping agent, retail checkout, and brand-owned commerce transaction on the in"
+  },
+  {
     "title": "Everyone's Chasing the Next Nvidia. CoreWeave Already Has a $100 Billion Head Start.",
     "slug": "coreweave-ai-factory-moat-2026",
     "ticker": "CRWV",
@@ -31,7 +55,7 @@ const ARTICLES = [
     "ticker": "NET",
     "sector": "cybersecurity",
     "date": "2026-07-18",
-    "summary": "Cloudflare's Precursor launch marks a turning point: bots now outnumber humans on the web. With $2.33B in TTM revenue (+33.5% YoY), $755M in FCF, and a platform play spanning bot defense, edge compute, and AI inference, NET is quietly remaking itself into the backbone of the agentic internet — but a 176x P/E leaves no room for error."
+    "summary": "Cloudflare's Precursor launch marks a turning point: bots now outnumber humans on the web. With $2.33B in TTM revenue (+33.5% YoY), $292M in FCF, and a platform play spanning bot defense, edge compute, and AI inference, NET is quietly remaking itself into the backbone of the agentic internet — but a 176x P/E leaves no room for error."
   },
   {
     "title": "Apple Just Cracked China’s AI Wall — 40x Earnings Be Damned, This Rally Has Legs",
