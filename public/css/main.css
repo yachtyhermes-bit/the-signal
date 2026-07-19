@@ -299,6 +299,8 @@ main {
 .focus-item.focus-mega { color: #f87171; }
 .focus-item.focus-ai-power { color: #facc15; }
 .focus-item.focus-etfs { color: #c084fc; }
+.focus-item.focus-quantum { color: #34d399; }
+.focus-item.focus-fintech { color: #f472b6; }
 .focus-divider { color: var(--text-muted); font-size: 14px; }
 
 /* === FEED === */
@@ -6737,4 +6739,103 @@ body.pulse-modal-open {
   .trending-row-price { font-size: 0.8125rem; min-width: 64px; }
   .trending-row-change { font-size: 0.75rem; min-width: 54px; }
   .trending-row-right { gap: 12px; }
+}
+
+/* === Light Theme — Scorecard === */
+[data-theme="light"] .sc-card {
+  background: #ffffff;
+  border-color: #d0d0da;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06), 0 0 0 1px rgba(0,0,0,0.02);
+}
+[data-theme="light"] .sc-card:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1), 0 0 0 1px rgba(0,0,0,0.04);
+  transform: translateY(-4px);
+}
+[data-theme="light"] .sc-table-container {
+  background: #ffffff;
+  border-color: #d0d0da;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+[data-theme="light"] .sc-table th,
+[data-theme="light"] .sc-table td {
+  border-bottom-color: rgba(0,0,0,0.06);
+}
+
+/* === Light Theme — Trending, Highlights, Newsletter === */
+[data-theme="light"] .trending-title {
+  color: #1a1a2e;
+}
+[data-theme="light"] .trending-row {
+  background: #ffffff;
+  border-color: rgba(0,0,0,0.06);
+}
+[data-theme="light"] .trending-row-ticker,
+[data-theme="light"] .trending-row-price {
+  color: #1a1a2e;
+}
+[data-theme="light"] .trending-row-name {
+  color: #555570;
+}
+[data-theme="light"] .detail-stocks-header {
+  background: rgba(59,130,246,0.08);
+  color: #2563eb;
+}
+[data-theme="light"] .newsletter-inner {
+  background: #ffffff;
+  border-color: #d0d0da;
+}
+[data-theme="light"] .newsletter-title {
+  color: #1a1a2e;
+}
+[data-theme="light"] .newsletter-desc {
+  color: #555570;
+}
+[data-theme="light"] .newsletter-input {
+  background: #f0f0f5;
+  border-color: #d0d0da;
+  color: #1a1a2e;
+}
+[data-theme="light"] .newsletter-input:focus {
+  border-color: #3b82f6;
+}
+[data-theme="light"] .newsletter-badge {
+  background: rgba(59,130,246,0.1);
+  color: #2563eb;
+  border-color: rgba(59,130,246,0.2);
+}
+
+/* === Light Theme — Scorecard Glow Animation Override === */
+[data-theme="light"] .sc-card {
+  animation: none;
+}
+
+/* === Light Theme — Scorecard Additional Overrides === */
+[data-theme="light"] .scorecard-inner {
+  background: #ffffff;
+  border-color: #d0d0da;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+[data-theme="light"] .scorecard-title {
+  color: #1a1a2e;
+}
+[data-theme="light"] .scorecard-subtitle {
+  color: #555570;
+}
+[data-theme="light"] .sc-card-name {
+  color: #1a1a2e;
+}
+[data-theme="light"] .sc-card-sub {
+  color: #555570;
+}
+[data-theme="light"] .sc-driver {
+  color: #555570;
+}
+[data-theme="light"] .sc-table-header h3 {
+  color: #1a1a2e;
+}
+[data-theme="light"] .sc-table td {
+  color: #333340;
+}
+[data-theme="light"] .sc-table th {
+  color: #666680;
 }

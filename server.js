@@ -56,6 +56,12 @@ app.get('/sector/:name', (req, res) => {
     'defense': ['LMT', 'RTX', 'NOC', 'GD', 'LHX', 'KTOS', 'AVAV', 'PL'],
     'space': ['RKLB', 'RDW', 'LUNR', 'ASTS'],
     'mega-cap': ['AAPL', 'MSFT', 'GOOGL', 'AMZN', 'META', 'TSLA'],
+    'quantum': ['IONQ', 'RGTI'],
+    'ai-power': ['CEG', 'ETN', 'GEV', 'VRT'],
+    'fintech': ['COIN', 'SOFI'],
+    'etfs': ['AIPO', 'SHLD', 'SPMO'],
+    'semiconductors': ['AMD', 'ARM', 'AVGO'],
+    'public-safety': ['AXON'],
     'ai-software': ['PLTR', 'CRWD', 'DDOG', 'SNOW', 'NOW', 'NET', 'AI'],
     'all': []
   };

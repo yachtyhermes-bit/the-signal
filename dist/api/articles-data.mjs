@@ -2,6 +2,14 @@
 // Contains article metadata for Pulse AI
 const ARTICLES = [
   {
+    "title": "GE Aerospace Isn't an Engine Maker. It's a Recurring Revenue Machine.",
+    "slug": "ge-aftermarket-moat-2026",
+    "ticker": "GE",
+    "sector": "aerospace-and-defense",
+    "date": "2026-07-19T16:00:00.000Z",
+    "summary": "GE Aerospace carries $19.2 billion in deferred service revenue from power-by-the-hour maintenance contracts on 44,000+ engines — an installed base that generates 20–30 years of recurring cash flows per engine. While the market prices GE as a cyclical aerospace manufacturer, the numbers tell a different story: a capital-light services machine with a 48.2% ROE and a widening competitive moat as Pratt & Whitney's GTF engine crisis drives airlines toward LEAP-powered narrowbodies."
+  },
+  {
     "title": "Everyone's Chasing the Next Nvidia. CoreWeave Already Has a $100 Billion Head Start.",
     "slug": "coreweave-ai-factory-moat-2026",
     "ticker": "CRWV",

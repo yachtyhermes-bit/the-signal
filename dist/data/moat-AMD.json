@@ -1,8 +1,8 @@
 {
   "symbol": "AMD",
   "industry": "Semiconductors",
-  "rating": "Narrow",
-  "stars": 3,
+  "rating": "Wide",
+  "stars": 4,
   "confidence": "Medium",
   "sources": [
     {
@@ -12,13 +12,13 @@
     },
     {
       "name": "Intangible Assets",
-      "score": 2,
-      "rationale": "limited intangible asset indicators available"
+      "score": 5,
+      "rationale": "R&D at 21.6% of revenue (top-tier innovation spend); R&D spending growing at 25% YoY"
     },
     {
       "name": "Network Effect",
       "score": 4,
-      "rationale": "strong 38% revenue growth; high EPS growth 91% (operating leverage from scale)"
+      "rationale": "strong 38% revenue growth; accelerating multi-year revenue growth (network effect building); high EPS growth 91% (operating leverage from scale)"
     },
     {
       "name": "Cost Advantage",
@@ -31,5 +31,5 @@
       "rationale": "insufficient data for efficient scale assessment"
     }
   ],
-  "analysis": "Network Effect and Cost Advantage provide some competitive protection, but not all moat sources are fully developed. The company has defensible advantages that should persist for several years but may face erosion over time."
+  "analysis": "Intangible Assets and Network Effect and Cost Advantage create a durable competitive fortress. The company's moat is reinforced by multiple reinforcing factors, making it unlikely competitors can erode its position in the next decade."
 }

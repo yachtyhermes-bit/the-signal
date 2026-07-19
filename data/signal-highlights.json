@@ -33,8 +33,8 @@
     "changeDirection": "up",
     "fairValue": {
       "status": "Undervalued",
-      "price": 140.85,
-      "upside": "+92.4%"
+      "price": 140.55,
+      "upside": "+92.0%"
     },
     "earnings": {
       "revTtm": "$6.23B",
@@ -45,7 +45,7 @@
     },
     "analyst": {
       "consensus": "Buy",
-      "target": 140.85,
+      "target": 140.55,
       "buys": 15,
       "holds": 16,
       "sells": 0
@@ -92,7 +92,7 @@
       "revTtm": "$318.27B",
       "revGrowth": "+18.3%",
       "netIncome": "$125.22B",
-      "peRatio": "23.9x",
+      "peRatio": "23.5x",
       "psRatio": "9.2x"
     },
     "analyst": {
@@ -170,7 +170,7 @@
       "revTtm": "$253.49B",
       "revGrowth": "+85.2%",
       "netIncome": "$159.61B",
-      "peRatio": "31.7x",
+      "peRatio": "31.1x",
       "psRatio": "19.4x"
     },
     "analyst": {

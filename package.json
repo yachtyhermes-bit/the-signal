@@ -15,6 +15,7 @@
     "nodemailer": "^9.0.1"
   },
   "devDependencies": {
+    "vercel": "^56.3.2",
     "wrangler": "^4.99.0"
   }
 }
