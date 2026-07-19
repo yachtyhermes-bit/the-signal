@@ -2,6 +2,14 @@
 // Contains article metadata for Pulse AI
 const ARTICLES = [
   {
+    "title": "ASML Just Dropped a Q2 Nuclear Bomb — and Raised Guidance to the Moon",
+    "slug": "asml-q2-blowout-record-guidance-euv-2026",
+    "ticker": "ASML",
+    "sector": "ai",
+    "date": "2026-07-19T16:00:00.000Z",
+    "summary": "ASML smashed Q2 2026 expectations with €9.33B in revenue and record net profit, then raised full-year guidance to as high as €45B. The EUV monopoly is in full effect, High-NA is shipping commercially, and the AI chip boom has turned ASML into the most important company in semiconductors."
+  },
+  {
     "title": "GE Aerospace Isn't an Engine Maker. It's a Recurring Revenue Machine.",
     "slug": "ge-aftermarket-moat-2026",
     "ticker": "GE",
@@ -24,6 +32,14 @@ const ARTICLES = [
     "sector": "fintech",
     "date": "2026-07-19",
     "summary": "Robinhood Markets (HOOD) has executed one of the most dramatic turnarounds in fintech history — revenue tripling from $1.36B to $4.47B in three years, net income swinging from a $1.03B loss to $1.88B in profit, with 92.2% gross margins and zero debt. The stock sits at $99.96, down 35% from highs, with earnings due July 29."
+  },
+  {
+    "title": "The Defense Supercycle Is Here. RTX Has $271 Billion Reasons to Care.",
+    "slug": "rtx-defense-supercycle-nato-2026",
+    "ticker": "RTX",
+    "sector": "defense",
+    "date": "2026-07-19",
+    "summary": "RTX (RTX) is sitting on a record $271 billion backlog — that's over three years of locked-in revenue — as NATO defense spending surges past $1.8 trillion in 2026. With Patriot interceptor contracts from Germany and the Netherlands, a $6.6 billion F-35 engine deal, SPY-6 radar rollouts, and Stinger production doubling globally, RTX is the most diversified defense contractor in the world. Trading well below its highs with a forward P/E of 25.5x against 32.5% EPS growth, earnings on July 23 could b"
   },
   {
     "title": "Shopify Just Quietly Became the Commerce Layer for the AI Era — and Wall Street Is Still Sleeping on It",
