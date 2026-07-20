@@ -2,6 +2,14 @@
 // Contains article metadata for Pulse AI
 const ARTICLES = [
   {
+    "title": "MARVELL: THE CUSTOM SILICON PLAY BEHIND EVERY HYPERSCALER'S AI AMBITIONS",
+    "slug": "mrvl-custom-ai-silicon-hyperscaler-shift-2026",
+    "ticker": "MRVL",
+    "sector": "AI / Semiconductors",
+    "date": "2026-07-20T16:00:00.000Z",
+    "summary": "Marvell's custom AI silicon business is exploding as hyperscalers race to build their own chips. With $8.7B in revenue, partnerships spanning Amazon and Google, and a 102.4 Tbps networking switch that just dropped, Marvell is the structural AI play Wall Street is still catching up to."
+  },
+  {
     "title": "The AI Power Play Wall Street Is Still Sleeping On",
     "slug": "vistra-ai-power-nuclear-data-center-2026",
     "ticker": "VST",
