@@ -273,10 +273,10 @@ const sectorArticles = articles.slice(HOMEPAGE_LIMIT);
 
 // Homepage splits
 const featuredArticle = homepage.slice(0, 1);   // 1 featured
-const grid1 = homepage.slice(1, 9);              // 8 articles
-const grid2 = homepage.slice(9, 16);             // 7 articles
-const grid3 = homepage.slice(16, 25);            // 9 articles
-const grid4 = homepage.slice(25, 40);            // 15 articles
+const grid1 = homepage.slice(1, 7);              // 6 articles
+const grid2 = homepage.slice(7, 13);             // 6 articles
+const grid3 = homepage.slice(13, 19);            // 6 articles
+const grid4 = homepage.slice(19, 40);            // 21 remaining
 
 console.log(`  📰 Homepage: ${homepage.length} total (1 featured + ${grid1.length} + ${grid2.length} + ${grid3.length} + ${grid4.length})`);
 console.log(`  📂 Sector pages: ${sectorArticles.length} articles`);
@@ -479,7 +479,7 @@ if (!sectorTemplate) {
 // ─── 8.5. Inject Trending Stocks list from live prices ───
 const pricesPath2 = path.join(ROOT, 'data', 'prices.json');
 const prices = fs.existsSync(pricesPath2) ? JSON.parse(fs.readFileSync(pricesPath2, 'utf8')) : {};
-const trendingTickers = ['NVDA', 'AVGO', 'TSLA', 'MSFT', 'AMZN', 'PLTR'];
+const trendingTickers = ['NVDA', 'AVGO', 'TSLA', 'MSFT', 'AMZN', 'PLTR', 'META'];
 let trendingHtml = '';
 for (const sym of trendingTickers) {
   const p = prices[sym] || {};

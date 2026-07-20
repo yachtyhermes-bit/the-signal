@@ -19,8 +19,8 @@ TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
 echo "=== $TIMESTAMP ===" | tee -a "$LOG"
 
 # All tickers to process (all public — yfinance/fetch-fmp for all)
-PUBLIC_TICKERS="NVDA TSLA PLTR RKLB AMZN KTOS CRWV AXON MSFT SOFI ZS AVGO GOOGL SPCX MU MRVL AMD ANET AMAT"
-ALL_TICKERS="NVDA TSLA PLTR RKLB AMZN KTOS CRWV AXON MSFT SOFI ZS AVGO GOOGL SPCX MU MRVL AMD ANET AMAT"
+PUBLIC_TICKERS="NVDA TSLA PLTR RKLB AMZN KTOS CRWV AXON MSFT SOFI ZS AVGO GOOGL SPCX MU MRVL AMD ANET AMAT META RTX NFLX RBRK AVAV"
+ALL_TICKERS="NVDA TSLA PLTR RKLB AMZN KTOS CRWV AXON MSFT SOFI ZS AVGO GOOGL SPCX MU MRVL AMD ANET AMAT META RTX NFLX RBRK AVAV"
 
 PRICE_ONLY=false
 NO_FMP=false
@@ -78,7 +78,23 @@ node scripts/build-stocks-index.js >> "$LOG" 2>&1 || {
 }
 echo "  ✅ Stocks index rebuilt" | tee -a "$LOG"
 
-echo "  🌐 Stock pages ready at dist/stocks/" | tee -a "$LOG"
+# ── Step: Copy rebuilt stock pages into dist/stocks/ for readthesignal.net ──
+stockSrc="dist/stock/stock"
+stockDst="dist/stocks"
+if [ -d "$stockSrc" ]; then
+  rm -rf "$stockDst"
+  cp -r "$stockSrc" "$stockDst"
+  echo "  ✅ Fresh stock pages copied to dist/stocks/" | tee -a "$LOG"
+fi
+# Copy stock CSS/JS
+if [ -d "dist/stock/css" ]; then
+  cp dist/stock/css/*.css dist/css/ 2>/dev/null || true
+fi
+if [ -d "dist/stock/js" ]; then
+  cp dist/stock/js/*.js dist/js/ 2>/dev/null || true
+fi
+
+echo "  🌐 Stock pages ready at dist/stocks/"
 
 # ── Step: Deploy if requested ──
 if $DEPLOY; then

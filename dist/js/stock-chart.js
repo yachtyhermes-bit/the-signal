@@ -1,5 +1,4 @@
-// The Signal — Stock Profile Charts v5
-// Heikin-Ashi candlesticks · Div-based financials bar chart · Tab management
+// The Signal — Stock Profile Charts v6
 
 (function() {
   'use strict';
@@ -21,17 +20,6 @@
   const quarterly = pageData.quarterly || {};
   const annual = pageData.annual || {};
 
-  // ═══ HEIKIN-ASHI ═══════════════════════════════════════════
-  function computeHeikinAshi(data) {
-    const ha = [];
-    for (let i = 0; i < data.length; i++) {
-      const hc = (data[i].open + data[i].high + data[i].low + data[i].close) / 4;
-      const ho = i === 0 ? (data[i].open + data[i].close) / 2 : (ha[i-1].open + ha[i-1].close) / 2;
-      ha.push({ time: data[i].time, open: ho, high: Math.max(data[i].high, ho, hc), low: Math.min(data[i].low, ho, hc), close: hc });
-    }
-    return ha;
-  }
-
   function filterByTF(data, tf) {
     const now = new Date();
     let cutoff;
@@ -52,13 +40,12 @@
     if (!chartEl || !ohlcData.length) return;
 
     const rawOHLC = ohlcData.map(d => ({ time: d.time, open: d.open, high: d.high, low: d.low, close: d.close }));
-    const heikinAshi = computeHeikinAshi(rawOHLC);
 
     mainChart = window.LightweightCharts.createChart(chartEl, {
       layout: { background: { type: 'solid', color: BG }, textColor: TEXT },
       grid: { vertLines: { color: GRID, style: 1 }, horzLines: { color: GRID, style: 1 } },
       crosshair: { mode: 0 },
-      rightPriceScale: { borderColor: BORDER, scaleMargins: { top: 0.12, bottom: 0.05 } },
+      rightPriceScale: { borderColor: BORDER, scaleMargins: { top: 0.12, bottom: 0.05 }, visible: true, entireTextOnly: false, minimumWidth: 60 },
       timeScale: { borderColor: BORDER, timeVisible: true },
       width: chartEl.clientWidth,
       height: isMobile ? 340 : 480,
@@ -68,6 +55,9 @@
 
     const candleSeries = mainChart.addCandlestickSeries({
       upColor: GREEN, downColor: RED, borderUpColor: GREEN, borderDownColor: RED, wickUpColor: GREEN, wickDownColor: RED,
+      lastValueVisible: true,
+      priceLineVisible: true,
+      priceFormat: { type: 'price', minMove: 0.01 },
     });
 
     const volumeSeries = mainChart.addHistogramSeries({
@@ -76,13 +66,28 @@
     mainChart.priceScale('volume').applyOptions({ scaleMargins: { top: 0.82, bottom: 0 } });
 
     function setChartData(tf) {
-      const haFiltered = filterByTF(heikinAshi, tf);
       const rawFiltered = filterByTF(ohlcData, tf);
-      candleSeries.setData(haFiltered);
+      candleSeries.setData(rawFiltered);
       volumeSeries.setData(rawFiltered.map(d => ({
         time: d.time, value: d.volume || 0,
         color: d.close >= d.open ? 'rgba(34,197,94,0.12)' : 'rgba(239,68,68,0.1)',
       })));
+
+      // Add current price line (from server-side prices.json, not HA close)
+      if (pageData.currentPrice != null) {
+        // Remove old price line if exists
+        if (mainChart._currentPriceLine) {
+          mainChart.removePriceLine(mainChart._currentPriceLine);
+        }
+        mainChart._currentPriceLine = mainChart.addPriceLine({
+          price: pageData.currentPrice,
+          color: RED + '80', // semi-transparent red
+          lineWidth: 1,
+          lineStyle: 2,
+          axisLabelVisible: true,
+          title: 'Current',
+        });
+      }
       const m = window.innerWidth < 768;
       const spacings = { '1m': { bar: m ? 7 : 12, min: m ? 3 : 5 }, '3m': { bar: m ? 3 : 7, min: m ? 1.5 : 3 }, '6m': { bar: m ? 2 : 5, min: m ? 1 : 2 }, '1y': { bar: m ? 1.2 : 3, min: m ? 0.6 : 1.5 }, '5y': { bar: m ? 0.5 : 2, min: m ? 0.25 : 0.8 }, 'all': { bar: m ? 0.3 : 1.5, min: m ? 0.15 : 0.5 } };
       const s = spacings[tf] || spacings['1y'];

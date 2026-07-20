@@ -10,6 +10,14 @@ const ARTICLES = [
     "summary": "Vistra Corp (VST) is the overlooked middle ground in the AI power race — nuclear baseload from the Energy Harbor acquisition, a massive gas fleet for peaking, 5 million retail customers as a natural hedge, and a Meta PPA that signals hyperscaler demand for 24/7 carbon-free power. With a forward P/E of ~14.4x versus CEG at 18.6x and a PEG of 0.45, the market is pricing Vistra like a regulated utility when it's anything but."
   },
   {
+    "title": "Zscaler Just Got Destroyed — Here's Why Buying the Panic Makes Sense",
+    "slug": "zs-blood-in-the-streets-zero-trust-2026",
+    "ticker": "ZS",
+    "sector": "cyber",
+    "date": "2026-07-20",
+    "summary": "Zscaler cratered 31% in a single session after soft guidance and a sales leadership shakeup spooked the market — but with 77% gross margins, $2.46B in deferred revenue, and a forward multiple of 32x (a fraction of its peers), the blood in the streets might be a gift for patient investors."
+  },
+  {
     "title": "ASML Just Dropped a Q2 Nuclear Bomb — and Raised Guidance to the Moon",
     "slug": "asml-q2-blowout-record-guidance-euv-2026",
     "ticker": "ASML",

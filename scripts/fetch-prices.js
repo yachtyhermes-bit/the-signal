@@ -89,7 +89,7 @@ const COMPANY_INFO = {
 // Fetch from Yahoo Finance v8 API
 function fetchQuote(ticker) {
   return new Promise((resolve, reject) => {
-    const url = `https://query1.finance.yahoo.com/v8/finance/chart/${ticker}?interval=1d&range=2d`;
+    const url = `https://query1.finance.yahoo.com/v8/finance/chart/${ticker}?interval=1d&range=5d`;
     https.get(url, { headers: { 'User-Agent': 'Mozilla/5.0' } }, (res) => {
       let data = '';
       res.on('data', chunk => data += chunk);
@@ -100,15 +100,44 @@ function fetchQuote(ticker) {
           if (!result) return resolve(null);
           const meta = result.meta;
           const quotes = result.indicators?.quote?.[0];
+          const timestamps = result.timestamp || [];
           // Use actual quote closes for accuracy, not chartPreviousClose
           const closes = quotes?.close?.filter(c => c != null) || [];
+          const opens = quotes?.open || [];
+          const highs = quotes?.high || [];
+          const lows = quotes?.low || [];
+          const volumes = quotes?.volume || [];
           const current = closes.length ? closes[closes.length - 1] : (meta.regularMarketPrice || null);
           const close = closes.length >= 2 ? closes[closes.length - 2] : (meta.chartPreviousClose || null);
-          const open = quotes?.open?.filter(o => o != null)?.[0] || null;
+          const open = opens.filter(o => o != null)?.[0] || null;
           const change = current && close ? current - close : null;
           const changePercent = current && close ? (change / close) * 100 : null;
-          const volume = quotes?.volume?.[quotes.volume.length - 1] || null;
+          const volume = volumes[volumes.length - 1] || null;
           const info = COMPANY_INFO[ticker] || {};
+
+          // Extract OHLC chart candles from the response
+          const ohlcCandles = [];
+          for (let i = 0; i < timestamps.length; i++) {
+            const ts = timestamps[i];
+            const o = opens[i];
+            const h = highs[i];
+            const l = lows[i];
+            const c = closes[i];
+            const v = volumes[i];
+            if (o != null && h != null && l != null && c != null && ts) {
+              const date = new Date(ts * 1000);
+              const dateStr = date.toISOString().split('T')[0];
+              ohlcCandles.push({
+                time: dateStr,
+                open: Math.round(o * 100) / 100,
+                high: Math.round(h * 100) / 100,
+                low: Math.round(l * 100) / 100,
+                close: Math.round(c * 100) / 100,
+                volume: v || 0,
+              });
+            }
+          }
+
           resolve({
             ticker,
             name: info.name || ticker,
@@ -119,6 +148,7 @@ function fetchQuote(ticker) {
             change,
             changePercent,
             volume,
+            ohlcCandles,  // Fresh OHLC data to update financials.json
             lastUpdated: new Date().toISOString()
           });
         } catch (e) { reject(e); }
@@ -151,6 +181,48 @@ async function main() {
   }
   fs.writeFileSync(pricesPath, JSON.stringify(prices, null, 2));
   console.log(`✅ Fetched prices for ${Object.keys(prices).length}/${TICKERS.length} tickers`);
+
+  // ── Also update financials.json chartData with fresh OHLC from Yahoo ──
+  const financialsPath = path.join(__dirname, '..', 'data', 'financials.json');
+  if (fs.existsSync(financialsPath)) {
+    try {
+      let financials = JSON.parse(fs.readFileSync(financialsPath, 'utf8'));
+      let updated = 0;
+      for (const [key, val] of Object.entries(prices)) {
+        const candles = val.ohlcCandles;
+        if (!candles || !candles.length) continue;
+        const fin = financials[key];
+        if (!fin) continue;
+        const existing = fin.chartData || [];
+        // Build a map of existing dates for quick lookup
+        const dateMap = new Map();
+        for (const c of existing) dateMap.set(c.time, c);
+        // Upsert: update existing candles, add new ones
+        for (const c of candles) {
+          if (dateMap.has(c.time)) {
+            const old = dateMap.get(c.time);
+            // Only update if the new data has non-zero volume (real day, not empty)
+            if (c.volume > 0) {
+              old.open = c.open; old.high = c.high; old.low = c.low; old.close = c.close; old.volume = c.volume;
+            }
+          } else {
+            existing.push(c);
+            dateMap.set(c.time, c);
+          }
+        }
+        // Sort by time ascending
+        existing.sort((a, b) => a.time.localeCompare(b.time));
+        fin.chartData = existing;
+        updated++;
+      }
+      if (updated > 0) {
+        fs.writeFileSync(financialsPath, JSON.stringify(financials, null, 2));
+        console.log(`  ✅ Updated chartData in financials.json for ${updated}/${Object.keys(prices).length} tickers`);
+      }
+    } catch (e) {
+      console.log(`  ⚠️  financials.json chartData update failed: ${e.message}`);
+    }
+  }
 }
 
 main().catch(console.error);

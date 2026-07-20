@@ -1,0 +1,12 @@
+}
+@media (max-width: 480px) {
+  .pulse-messages { max-height: 280px; }
+  .pulse-message { max-width: 95%; }
+}
+/* Ensure gap between pulse area and the feed below it */
+@media (max-width: 768px) {
+  .featured-pulse-row { margin-bottom: 32px; }
+  .feed-continued { margin-top: 0; }
+}
+
+/* === RESPONSIVE === */

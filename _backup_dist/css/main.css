@@ -950,7 +950,7 @@ main {
 }
 .feed-continued {
   padding-top: 0;
-  margin-top: -24px;
+  margin-top: 0;
 }
 
 /* === SECTOR PAGE === */
@@ -1348,7 +1348,7 @@ main {
 }
 .featured-pulse-aside .pulse-section {
   margin: 0;
-  padding: 20px 20px 0;
+  padding: 20px 20px 16px;
   max-width: none;
   border-top: none;
   height: 100%;
@@ -1564,13 +1564,15 @@ main {
   justify-content: center;
   transition: all 0.2s;
   flex-shrink: 0;
+  width: 34px;
+  height: 34px;
 }
 .pulse-send:hover { background: var(--accent-light); }
 .pulse-send:disabled { opacity: 0.4; cursor: not-allowed; }
 
 /* Pulse responsive */
 @media (max-width: 768px) {
-  .pulse-section { padding: 0 16px; margin-bottom: 32px; }
+  .pulse-section { padding: 0 16px 24px; margin-bottom: 32px; }
   .pulse-avatar { width: 40px; height: 40px; }
   .pulse-title { font-size: 18px; }
   .pulse-desc { font-size: 12px; }
@@ -1578,7 +1580,7 @@ main {
   .pulse-message { max-width: 90%; }
   .pulse-bubble { font-size: 15px; padding: 8px 12px; }
   .pulse-input-area { padding: 8px 12px; }
-  .feed-continued { padding-top: 0; }
+  .feed-continued { padding-top: 0; margin-top: 0; }
 }
 @media (max-width: 480px) {
   .pulse-messages { max-height: 280px; }
@@ -1591,6 +1593,8 @@ main {
   .hero-title { font-size: 30px; }
   .hero-desc { font-size: 13px; }
   .featured-card { grid-template-columns: 1fr; }
+  .featured-pulse-row { margin: 0 0 32px; padding: 0 12px; }
+  .featured-pulse-aside .pulse-section { padding-bottom: 24px; }
   .featured-image { min-height: 180px; order: -1; }
   .featured-image::after {
     background: linear-gradient(0deg, var(--bg-card) 0%, transparent 40%);
@@ -3258,7 +3262,192 @@ body.pulse-modal-open {
   border-radius: 2px;
 }
 
+@media (max-width: 640px) {
+  .section-divider {
+    margin: 24px 0;
+  }
+}
+
 /* === Scorecard Section === */
+/* ── Trending + Newsletter + HIVE layout ── */
+.trending-hive-row {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Desktop: trending-newsletter on left, hive on right */
+@media (min-width: 769px) {
+  .trending-hive-row {
+    display: flex;
+    gap: 24px;
+    align-items: stretch;
+  }
+  .trending-hive-row > .trending-newsletter-row {
+    flex: 1.3;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+  }
+  .trending-hive-row > .hive-home-section {
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+  }
+}
+
+/* Mobile: trending + hive side by side, both compact */
+@media (max-width: 768px) {
+  .trending-hive-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 0 16px;
+  }
+  .trending-hive-row > .trending-newsletter-row {
+    flex: 0 0 calc(50% - 6px);
+    min-width: 0;
+    width: auto;
+    padding: 0;
+    margin: 0;
+  }
+  .trending-hive-row > .hive-home-section {
+    flex: 0 0 calc(50% - 6px);
+    min-width: 0;
+    width: auto;
+    margin: 0;
+  }
+  /* Compact hive inside trending-hive-row */
+  .trending-hive-row .hive-home-inner {
+    padding: 20px 16px;
+  }
+  .trending-hive-row .hive-home-headline {
+    font-size: 16px;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+  .trending-hive-row .hive-home-desc {
+    font-size: 12px;
+    line-height: 1.4;
+    margin-bottom: 12px;
+  }
+  .trending-hive-row .hive-home-stats {
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  .trending-hive-row .hive-home-stat {
+    min-width: 60px;
+  }
+  .trending-hive-row .hive-stat-number {
+    font-size: 13px;
+  }
+  .trending-hive-row .hive-stat-label {
+    font-size: 9px;
+  }
+  .trending-hive-row .hive-home-badge {
+    font-size: 9px;
+    padding: 3px 10px;
+    margin-bottom: 8px;
+  }
+  .trending-hive-row .hive-home-actions {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .trending-hive-row .hive-home-cta {
+    font-size: 11px;
+    padding: 8px 14px;
+  }
+  /* Compact trending inside trending-hive-row */
+  .trending-hive-row .trending-section .trending-header {
+    margin-bottom: 8px;
+  }
+  .trending-hive-row .trending-section .trending-title {
+    font-size: 15px;
+  }
+  .trending-hive-row .trending-section .trending-view-all {
+    font-size: 11px;
+  }
+  .trending-hive-row .trending-row {
+    padding: 5px 8px;
+  }
+  .trending-hive-row .trending-row-ticker {
+    font-size: 12px;
+  }
+  .trending-hive-row .trending-row-name {
+    font-size: 10px;
+  }
+  .trending-hive-row .trending-row-price {
+    font-size: 12px;
+  }
+  .trending-hive-row .trending-row-change {
+    font-size: 10px;
+  }
+  /* Hide newsletter on small mobile when in trending-hive-row */
+  .trending-hive-row .newsletter-section {
+    flex: 0 0 100%;
+    margin-top: 0;
+  }
+  .trending-hive-row .newsletter-section .newsletter-inner {
+    padding: 16px;
+  }
+}
+
+/* ── Trending + Newsletter side by side on desktop ── */
+.trending-newsletter-row {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (max-width: 768px) {
+  .trending-newsletter-row {
+    display: block;
+  }
+  .trending-newsletter-row .trending-section {
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+  }
+  .trending-newsletter-row .newsletter-section {
+    margin-top: 24px;
+    padding: 0;
+    min-width: 0;
+  }
+  .trending-newsletter-row .newsletter-section .newsletter-inner {
+    padding: 28px 20px;
+  }
+  .trending-newsletter-row .trending-list .trending-row:nth-child(n+6) {
+    display: none;
+  }
+}
+
+/* Desktop: trending + newsletter side by side, equal widths */
+@media (min-width: 769px) {
+  .trending-newsletter-row {
+    display: flex;
+    gap: 24px;
+    align-items: stretch;
+  }
+  .trending-newsletter-row .trending-section {
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+  }
+  .trending-newsletter-row .newsletter-section {
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+  }
+  .trending-newsletter-row .newsletter-inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
 .scorecard-section {
   max-width: 1280px;
   margin: 0 auto;
@@ -3312,11 +3501,18 @@ body.pulse-modal-open {
   text-align: center;
   box-shadow: 0 0 30px rgba(59,130,246,0.3), 0 0 60px rgba(59,130,246,0.1);
   position: relative;
+  text-decoration: none;
+  color: inherit;
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease;
   cursor: pointer;
   will-change: transform, opacity;
+}
+.sc-card:hover {
+  border-color: rgba(59, 130, 246, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(59, 130, 246, 0.08);
 }
 .sc-card.reveal {
   opacity: 1;
@@ -3475,21 +3671,26 @@ body.pulse-modal-open {
 /* Carousel wrapper — handles overflow + arrow overlap breathing room */
 .detail-stocks-carousel-wrap {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   margin: 0 -12px;
   padding: 0 12px;
 }
 
-/* Track — cards flow horizontally, no clipping */
+/* Track — cards flow horizontally, CSS scroll-snap for smooth sliding */
 .detail-stocks-carousel {
   display: flex;
   gap: 16px;
   padding: 4px 0 8px;
-  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
 }
+.detail-stocks-carousel::-webkit-scrollbar { display: none; }
 .detail-stocks-carousel .detail-card-link {
   flex: 0 0 340px;
   min-width: 0;
+  scroll-snap-align: start;
 }
 
 /* Carousel cards are always visible — no reveal animation needed */
@@ -5213,6 +5414,18 @@ body.pulse-modal-open {
   .hive-home-actions { flex-direction: column; align-items: center; }
   .hive-home-cta { width: 100%; justify-content: center; }
 }
+@media (max-width: 480px) {
+  .hive-home-section { margin: 24px auto; }
+  .hive-home-inner { padding: 20px 14px; }
+  .hive-home-headline { font-size: 20px; margin-bottom: 10px; }
+  .hive-home-desc { font-size: 12px; margin-bottom: 20px; }
+  .hive-home-stats { gap: 16px; margin-bottom: 20px; }
+  .hive-home-stat { min-width: 60px; }
+  .hive-stat-number { font-size: 14px; }
+  .hive-stat-label { font-size: 8px; letter-spacing: 1px; }
+  .hive-home-badge { font-size: 8px; padding: 4px 12px; margin-bottom: 16px; letter-spacing: 2px; }
+  .hive-home-cta { padding: 10px 20px; font-size: 9px; }
+}
 .hive-spotlight-item {
   display: flex;
   align-items: center;
@@ -6209,6 +6422,11 @@ body.pulse-modal-open {
   padding: 48px 24px 64px;
   position: relative;
 }
+@media (max-width: 640px) {
+  .comments-section {
+    padding: 24px 16px 32px;
+  }
+}
 .comment-form-area {
   background: rgba(255,255,255,0.03);
   backdrop-filter: blur(16px);
@@ -6344,7 +6562,7 @@ body.pulse-modal-open {
 }
 
 /* === ARTICLE GRID — 3 columns on large desktop, 2 on medium === */
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .article-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -6439,7 +6657,7 @@ body.pulse-modal-open {
     grid-template-columns: 1fr 300px;
     gap: 20px;
     max-width: 1440px;
-    margin: 0 auto 0;
+    margin: 0 auto 32px;
     padding: 0 40px;
     align-items: stretch;
   }
@@ -6569,8 +6787,8 @@ body.pulse-modal-open {
     gap: 0;
   }
 
-  /* ── ARTICLE GRID: fixed 4 columns for clean even rows ── */
-  .article-grid     { grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  /* ── ARTICLE GRID: fixed 3 columns for clean even rows ── */
+  .article-grid     { grid-template-columns: repeat(3, 1fr); gap: 20px; }
 
   /* ── CARDS ── */
   .card-image       { height: 190px; }
@@ -6637,7 +6855,7 @@ body.pulse-modal-open {
   .featured-hero .featured-card .card-body  { padding: 72px 80px; }
   .featured-hero .featured-card .card-summary { font-size: 18px; }
 
-  .article-grid     { grid-template-columns: repeat(4, 1fr); gap: 24px; }
+  .article-grid     { grid-template-columns: repeat(3, 1fr); gap: 24px; }
   .related-grid     { grid-template-columns: repeat(5, 1fr); }
 }
 
@@ -6746,6 +6964,17 @@ body.pulse-modal-open {
   .trending-row-price { font-size: 0.8125rem; min-width: 64px; }
   .trending-row-change { font-size: 0.75rem; min-width: 54px; }
   .trending-row-right { gap: 12px; }
+}
+@media (max-width: 480px) {
+  .trending-row { padding: 6px 10px; gap: 6px; }
+  .trending-row-ticker { font-size: 0.75rem; min-width: 40px; }
+  .trending-row-name { font-size: 0.65rem; }
+  .trending-row-price { font-size: 0.75rem; min-width: 54px; }
+  .trending-row-change { font-size: 0.7rem; min-width: 46px; }
+  .trending-row-right { gap: 8px; }
+  .trending-header { margin-bottom: 6px; }
+  .trending-title { font-size: 0.7rem; }
+  .trending-view-all { font-size: 0.65rem; }
 }
 
 /* === Light Theme — Scorecard === */
