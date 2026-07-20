@@ -1319,10 +1319,18 @@ main {
 .featured-pulse-row {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0;
+  gap: 16px;
   margin: 0 0 24px;
+  padding: 0 16px;
   position: relative;
   z-index: 1;
+}
+@media (min-width: 1024px) {
+  .featured-pulse-row {
+    grid-template-columns: 1fr 400px;
+    max-width: 1400px;
+    margin: 0 auto 24px;
+  }
 }
 .featured-pulse-feat {
   min-width: 0;
@@ -2489,7 +2497,7 @@ main {
   align-items: center;
   gap: 14px;
   margin: 48px 0 32px;
-  color: #666688;
+  color: var(--text-muted);
   font-size: 1.15rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -2502,7 +2510,7 @@ main {
   content: '';
   flex: 1;
   height: 1px;
-  background: #1e1e3a;
+  background: var(--border);
 }
 .pulse-divider-label {
   display: flex;
@@ -2528,7 +2536,7 @@ main {
 .pulse-divider-sub {
   text-align: center;
   font-size: 0.95rem;
-  color: #666688;
+  color: var(--text-muted);
   margin: -24px 0 32px;
   font-weight: 500;
 }
@@ -6423,6 +6431,38 @@ body.pulse-modal-open {
 }
 
 /* ═══════════════════════════════════════════
+   DESKTOP SIDE-BY-SIDE (≥1024px)
+   ═══════════════════════════════════════════ */
+@media (min-width: 1024px) {
+  /* ── FEATURED + PULSE: side-by-side 65/35 split ── */
+  .featured-pulse-row {
+    grid-template-columns: 1fr 300px;
+    gap: 20px;
+    max-width: 1440px;
+    margin: 0 auto 0;
+    padding: 0 40px;
+    align-items: stretch;
+  }
+  /* Reset the 100vw hack — inside grid, just fill cell */
+  .featured-pulse-feat .featured-hero {
+    width: 100%;
+    left: auto;
+    right: auto;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .featured-pulse-feat .featured-card {
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+  }
+  /* Pulse trigger card fills its grid cell */
+  .homepage-pulse-trigger {
+    min-width: 0;
+  }
+}
+
+/* ═══════════════════════════════════════════
    DESKTOP LAYOUT (≥1280px) — wide-screen polish
    ═══════════════════════════════════════════ */
 @media (min-width: 1280px) {
@@ -6455,39 +6495,6 @@ body.pulse-modal-open {
 
   /* Theme toggle positioned absolute */
   .hero-theme-toggle { position: relative; z-index: 2; }
-
-  /* ── FEATURED + PULSE: side-by-side 65/35 split ── */
-  .featured-pulse-row {
-    grid-template-columns: 1fr 400px;
-    gap: 20px;
-    max-width: 1440px;
-    margin: 0 auto 32px;
-    padding: 0 40px;
-    align-items: stretch;
-  }
-  /* Reset the 100vw hack — inside grid, just fill cell */
-  .featured-pulse-feat .featured-hero {
-    width: 100%;
-    left: auto;
-    right: auto;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-  }
-  .featured-pulse-feat .featured-card {
-    border-radius: var(--radius);
-    border: 1px solid var(--border);
-  }
-  /* Pulse aside: compact card style */
-  .featured-pulse-aside .pulse-section {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-  }
-  /* Adjust pulse when standalone (mobile only — reset at desktop) */
-  .pulse-section:not(.featured-pulse-aside .pulse-section) {
-    max-width: 960px;
-  }
 
   /* ── FEATURED HERO: full-viewport edge-to-edge hero banner (standalone, not in side-by-side) ── */
   .featured-hero {
@@ -6615,7 +6622,7 @@ body.pulse-modal-open {
   .footer-inner     { max-width: 1600px; }
   .ticker-page      { max-width: 1600px; }
   .sector-page      { max-width: 1600px; }
-  .featured-pulse-row { max-width: 1600px; grid-template-columns: 1fr 440px; }
+  .featured-pulse-row { max-width: 1600px; grid-template-columns: 1fr 300px; }
   .article-page     { max-width: 1000px; }
   .comments-section { max-width: 1000px !important; }
   .related-articles { max-width: 1600px; }
@@ -6839,3 +6846,6 @@ body.pulse-modal-open {
 [data-theme="light"] .sc-table th {
   color: #666680;
 }
+
+/* === Dark Theme — Pulse Overlay === */
+/* Pulse ALWAYS uses light-mode colors — dark overrides intentionally removed */

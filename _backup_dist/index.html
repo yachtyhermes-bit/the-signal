@@ -280,7 +280,7 @@
   <div class="featured-pulse-feat">
   <!-- FEATURED_ARTICLE -->
   </div>
-  <div class="featured-pulse-aside">
+  <div class="featured-pulse-aside" onclick="window.pulseOpenPanel ? pulseOpenPanel() : (window.togglePulseOverlay ? togglePulseOverlay() : null)" style="cursor: pointer;">
     <section class="pulse-section" id="pulseSection">
     <div class="pulse-header">
       <img src="/img/logo-hex.jpg" alt="Pulse" class="pulse-avatar">
@@ -296,7 +296,7 @@
           <div class="pulse-bubble">Hey, I'm <strong>Pulse</strong>. Ask me anything — earnings data, stock analysis, market moves, or company filings. I search the web for real-time info.</div>
         </div>
       </div>
-      <div class="pulse-input-area">
+      <div class="pulse-input-area" onclick="event.stopPropagation()">
         <input type="text" class="pulse-input" id="pulseInput" placeholder="e.g. What were Nvidia's latest earnings?">
         <button class="pulse-send" id="pulseSend" aria-label="Send">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

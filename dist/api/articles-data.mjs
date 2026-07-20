@@ -2,6 +2,14 @@
 // Contains article metadata for Pulse AI
 const ARTICLES = [
   {
+    "title": "The AI Power Play Wall Street Is Still Sleeping On",
+    "slug": "vistra-ai-power-nuclear-data-center-2026",
+    "ticker": "VST",
+    "sector": "energy",
+    "date": "2026-07-20T16:00:00.000Z",
+    "summary": "Vistra Corp (VST) is the overlooked middle ground in the AI power race — nuclear baseload from the Energy Harbor acquisition, a massive gas fleet for peaking, 5 million retail customers as a natural hedge, and a Meta PPA that signals hyperscaler demand for 24/7 carbon-free power. With a forward P/E of ~14.4x versus CEG at 18.6x and a PEG of 0.45, the market is pricing Vistra like a regulated utility when it's anything but."
+  },
+  {
     "title": "ASML Just Dropped a Q2 Nuclear Bomb — and Raised Guidance to the Moon",
     "slug": "asml-q2-blowout-record-guidance-euv-2026",
     "ticker": "ASML",
