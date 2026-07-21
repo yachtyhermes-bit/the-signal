@@ -2,6 +2,14 @@
 // Contains article metadata for Pulse AI
 const ARTICLES = [
   {
+    "title": "Two Legs of the Nuclear Triad. One Company. Zero Competition. That's Northrop Grumman.",
+    "slug": "noc-b21-sentinel-strategic-triad-2026",
+    "ticker": "NOC",
+    "sector": "defense",
+    "date": "2026-07-21",
+    "summary": "Northrop Grumman (NOC) is the sole-source contractor on both the B-21 Raider stealth bomber (air leg) and the Sentinel ICBM (land leg) — two of the three legs of America's nuclear triad. With a $95.7 billion backlog, $3.3 billion in free cash flow, and a $4.5 billion B-21 production acceleration deal signed in February 2026, Northrop is the most strategically irreplaceable company in American defense. This isn't a trade. It's structural math."
+  },
+  {
     "title": "MARVELL: THE CUSTOM SILICON PLAY BEHIND EVERY HYPERSCALER'S AI AMBITIONS",
     "slug": "mrvl-custom-ai-silicon-hyperscaler-shift-2026",
     "ticker": "MRVL",
@@ -55,7 +63,7 @@ const ARTICLES = [
     "ticker": "HOOD",
     "sector": "fintech",
     "date": "2026-07-19",
-    "summary": "Robinhood Markets (HOOD) has executed one of the most dramatic turnarounds in fintech history — revenue tripling from $1.36B to $4.47B in three years, net income swinging from a $1.03B loss to $1.88B in profit, with 92.2% gross margins and zero debt. The stock sits at $99.96, down 35% from highs, with earnings due July 29."
+    "summary": "Robinhood Markets (HOOD) has executed one of the most dramatic turnarounds in fintech history — revenue tripling from $1.36B to $4.47B in three years, net income swinging from a $1.03B loss to $1.88B in profit, with 92.2% gross margins and zero debt. The stock sits near 52-week lows, down 35% from highs, with earnings due July 29."
   },
   {
     "title": "The Defense Supercycle Is Here. RTX Has $271 Billion Reasons to Care.",
@@ -79,7 +87,7 @@ const ARTICLES = [
     "ticker": "CRWV",
     "sector": "ai",
     "date": "2026-07-18T16:00:00.000Z",
-    "summary": "CoreWeave trades at $73.21 with a $39.9B market cap — roughly half its 52-week high. But while shorts feast on the 52% slide, the company has quietly locked in $100B in take-or-pay contracts, landed a $2B strategic investment from NVIDIA, and built purpose-built AI infrastructure that hyperscalers can't replicate. This is the AI factory thesis in its purest form."
+    "summary": "CoreWeave trades near 52-week lows with a $39.9B market cap — roughly half its 52-week high. But while shorts feast on the 52% slide, the company has quietly locked in $100B in take-or-pay contracts, landed a $2B strategic investment from NVIDIA, and built purpose-built AI infrastructure that hyperscalers can't replicate. This is the AI factory thesis in its purest form."
   },
   {
     "title": "Palo Alto Networks Looks Like a Money-Loser on Paper. It's Actually a $3.8 Billion Cash Machine.",
