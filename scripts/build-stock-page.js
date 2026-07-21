@@ -648,7 +648,7 @@ function buildStockPage(symbol) {
   </main>
 
   <script id="chartData-${symbol}" type="application/json">${embeddedData}</script>
-  <script src="/js/stock-chart.js?v=12"></script>
+  <script src="/js/stock-chart.js?v=13"></script>
   <script>
 (function() {
   const saved = localStorage.getItem('stock-theme');
@@ -719,7 +719,7 @@ function toggleTheme() {
 </body>
 </html>`;
 
-  const dir = path.join(DIST, 'stocks', symbol);
+  const dir = path.join(DIST, 'stocks', symbol.toLowerCase());
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, 'index.html'), html);
   return true;

@@ -2,6 +2,22 @@
 // Contains article metadata for Pulse AI
 const ARTICLES = [
   {
+    "title": "AeroVironment Just Landed the Pentagon's Biggest Counter-Drone Deal Ever — So Why Is the Stock at 52-Week Lows?",
+    "slug": "avav-counterdrone-switchblade-contracts-2026",
+    "ticker": "AVAV",
+    "sector": "defense",
+    "date": "2026-07-21",
+    "summary": "AeroVironment won the Pentagon's largest-ever counter-UAS contract — $500M — and followed it up with a $186M Army delivery order. Revenue hit nearly $2B, backlog sits at $1.2B, and the stock is near 52-week lows. The disconnect is staggering. Here's why the bear case doesn't hold."
+  },
+  {
+    "title": "Micron at 6.4x Forward Earnings? The Cheapest AI Giant You're Ignoring",
+    "slug": "mu-forward-pe-anomaly-2026",
+    "ticker": "MU",
+    "sector": "AI / Semiconductors",
+    "date": "2026-07-21",
+    "summary": "The market is treating Micron like a cyclical trap at 6.4x forward earnings, but with HBM demand exploding and $100B+ in locked-in backlog, the real risk is to the upside."
+  },
+  {
     "title": "Two Legs of the Nuclear Triad. One Company. Zero Competition. That's Northrop Grumman.",
     "slug": "noc-b21-sentinel-strategic-triad-2026",
     "ticker": "NOC",

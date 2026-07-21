@@ -79,7 +79,7 @@
         if (mainChart._currentPriceLine) {
           mainChart.removePriceLine(mainChart._currentPriceLine);
         }
-        mainChart._currentPriceLine = mainChart.addPriceLine({
+        mainChart._currentPriceLine = mainChart.createPriceLine({
           price: pageData.currentPrice,
           color: RED + '80', // semi-transparent red
           lineWidth: 1,
