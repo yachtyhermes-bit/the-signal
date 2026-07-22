@@ -63,15 +63,15 @@ const ROCKET_DRAWER = `  <!-- Rocket Lab-Style Drawer -->
           <span class="sub-back">&#8249;</span>
           <span class="sub-title">SECTORS</span>
         </div>
-        <a href="/sector/ai" class="drawer-link">AI</a>
-        <a href="/sector/cyber" class="drawer-link">CYBER</a>
-        <a href="/sector/defense" class="drawer-link">DEFENSE</a>
-        <a href="/sector/space" class="drawer-link">SPACE</a>
-        <a href="/sector/mega-cap" class="drawer-link">MEGA-CAP</a>
-        <a href="/sector/quantum" class="drawer-link">QUANTUM</a>
-        <a href="/sector/ai-power" class="drawer-link">AI POWER</a>
-        <a href="/sector/fintech" class="drawer-link">FINTECH</a>
-        <a href="/sector/etfs" class="drawer-link">ETFS</a>
+        <a href="/sector/ai/" class="drawer-link">AI</a>
+        <a href="/sector/cyber/" class="drawer-link">CYBER</a>
+        <a href="/sector/defense/" class="drawer-link">DEFENSE</a>
+        <a href="/sector/space/" class="drawer-link">SPACE</a>
+        <a href="/sector/mega-cap/" class="drawer-link">MEGA-CAP</a>
+        <a href="/sector/quantum/" class="drawer-link">QUANTUM</a>
+        <a href="/sector/ai-power/" class="drawer-link">AI POWER</a>
+        <a href="/sector/fintech/" class="drawer-link">FINTECH</a>
+        <a href="/sector/etfs/" class="drawer-link">ETFS</a>
       </div>
     </div>
   </div>`;
@@ -88,12 +88,12 @@ function injectRocketNav(html) {
 
   // 2. Add nav.css stylesheet before </head> if not already present
   if (!html.includes('/css/nav.css')) {
-    html = html.replace('</head>', '  <link rel="stylesheet" href="/css/nav.css">\n</head>');
+    html = html.replace('</head>', '  <link rel="stylesheet" href="/css/nav.css?v=1">\n</head>');
   }
 
   // 2b. Add nav.js script before </head> if not already present
   if (!html.includes('/js/nav.js')) {
-    html = html.replace('</head>', '  <script src="/js/nav.js" defer></script>\n</head>');
+    html = html.replace('</head>', '  <script src="/js/nav.js?v=1" defer></script>\n</head>');
   }
 
   // 3. Replace DRAWER placeholder with Rocket Lab drawer
@@ -341,7 +341,8 @@ if (!template) {
 
       const date = article.date ? article.date.slice(0, 10) : '';
       const readTime = (article.meta && article.meta.estimatedReadTime) || '1 min read';
-      const imageSrc = ((article.image && article.image.src) || '/img/articles/_default.jpg') + '?v=' + BUILD_TS;
+      const rawSrc = (article.image && article.image.src) || '/img/articles/_default.jpg';
+      const imageSrc = (rawSrc.startsWith('/') ? rawSrc : '/' + rawSrc) + '?v=' + BUILD_TS;
       const imageCaption = (article.image && article.image.caption) || article.title || '';
       const sector = article.sector || 'ai';
       const sectorName = SECTORS[sector] || sector.toUpperCase();

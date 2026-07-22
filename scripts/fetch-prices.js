@@ -10,7 +10,7 @@ const TICKERS = [
   // AI Infrastructure
   'VRT',
   // Cybersecurity
-  'CRWD', 'PANW', 'FTNT', 'ZS', 'S', 'CHKP', 'CYBR', 'TENB',
+  'CRWD', 'PANW', 'FTNT', 'ZS', 'S', 'CHKP', 'CYBR', 'TENB', 'RBRK',
   // AI Software
   'PLTR', 'DDOG', 'SNOW', 'NOW', 'NET', 'AI',
   // Defense Primes
@@ -83,6 +83,7 @@ const COMPANY_INFO = {
   'QCOM': { name: 'Qualcomm Inc.', url: 'https://www.qualcomm.com/' },
   'SMCI': { name: 'Super Micro Computer Inc.', url: 'https://www.supermicro.com/' },
   'ANET': { name: 'Arista Networks Inc.', url: 'https://www.arista.com/' },
+  'RBRK': { name: 'Rubrik Inc.', url: 'https://www.rubrik.com/' },
   'SPCX': { name: 'SpaceX Inc.', url: 'https://www.spacex.com/' }
 };
 

@@ -6,11 +6,11 @@
   const isMobile = window.innerWidth < 768;
   const isLight = document.documentElement.classList.contains('light');
   const BG = isLight ? '#ffffff' : '#11141c';
-  const GRID = isLight ? '#e5e5e5' : '#1a1e28';
+  const GRID = isLight ? '#f0f0f0' : '#18202e';
   const TEXT = isLight ? '#4b5563' : '#5c6270';
   const BORDER = isLight ? '#d1d5db' : '#1f2430';
-  const BLUE = '#3b82f6', GREEN = isLight ? '#16a34a' : '#22c55e', RED = isLight ? '#dc2626' : '#ef4444';
-  let mainChart = null, finInitialized = false;
+  const BLUE = '#3b82f6', GREEN = '#089981', RED = '#f23645';
+  let mainChart = null, candleSeries = null, finInitialized = false, livePriceLine = null;
 
   // ═══ DATA ══════════════════════════════════════════════════
   const dataScript = document.querySelector('script[id^="chartData-"]');
@@ -45,7 +45,7 @@
       layout: { background: { type: 'solid', color: BG }, textColor: TEXT },
       grid: { vertLines: { color: GRID, style: 1 }, horzLines: { color: GRID, style: 1 } },
       crosshair: { mode: 0 },
-      rightPriceScale: { borderColor: BORDER, scaleMargins: { top: 0.12, bottom: 0.05 } },
+      rightPriceScale: { borderColor: BORDER, scaleMargins: { top: 0.12, bottom: 0.05 }, visible: true, entireTextOnly: false, minimumWidth: 60 },
       timeScale: { borderColor: BORDER, timeVisible: true },
       width: chartEl.clientWidth,
       height: isMobile ? 340 : 480,
@@ -53,10 +53,10 @@
       handleScale: { axisPressedMouseMove: true },
     });
 
-    const candleSeries = mainChart.addCandlestickSeries({
-      upColor: GREEN, downColor: RED, borderUpColor: GREEN, borderDownColor: RED, wickUpColor: GREEN, wickDownColor: RED,
+    candleSeries = mainChart.addCandlestickSeries({
+      upColor: GREEN, downColor: RED, wickUpColor: GREEN, wickDownColor: RED,
       lastValueVisible: true,
-      priceLineVisible: true,
+      priceLineVisible: false,
       priceFormat: { type: 'price', minMove: 0.01 },
     });
 
@@ -73,23 +73,8 @@
         color: d.close >= d.open ? 'rgba(34,197,94,0.12)' : 'rgba(239,68,68,0.1)',
       })));
 
-      // Add current price line (from server-side prices.json, not HA close)
-      if (pageData.currentPrice != null) {
-        // Remove old price line if exists
-        if (mainChart._currentPriceLine) {
-          mainChart.removePriceLine(mainChart._currentPriceLine);
-        }
-        mainChart._currentPriceLine = mainChart.createPriceLine({
-          price: pageData.currentPrice,
-          color: RED + '80', // semi-transparent red
-          lineWidth: 1,
-          lineStyle: 2,
-          axisLabelVisible: true,
-          title: 'Current',
-        });
-      }
       const m = window.innerWidth < 768;
-      const spacings = { '1m': { bar: m ? 7 : 12, min: m ? 3 : 5 }, '3m': { bar: m ? 3 : 7, min: m ? 1.5 : 3 }, '6m': { bar: m ? 2 : 5, min: m ? 1 : 2 }, '1y': { bar: m ? 1.2 : 3, min: m ? 0.6 : 1.5 }, '5y': { bar: m ? 0.5 : 2, min: m ? 0.25 : 0.8 }, 'all': { bar: m ? 0.3 : 1.5, min: m ? 0.15 : 0.5 } };
+      const spacings = { '1m': { bar: m ? 5 : 10, min: m ? 2 : 4 }, '3m': { bar: m ? 2.5 : 6, min: m ? 1 : 2.5 }, '6m': { bar: m ? 1.5 : 4, min: m ? 0.7 : 1.5 }, '1y': { bar: m ? 0.9 : 2.5, min: m ? 0.4 : 1 }, '5y': { bar: m ? 0.4 : 1.5, min: m ? 0.2 : 0.6 }, 'all': { bar: m ? 0.25 : 1, min: m ? 0.1 : 0.4 } };
       const s = spacings[tf] || spacings['1y'];
       mainChart.timeScale().applyOptions({ barSpacing: s.bar, minBarSpacing: s.min, fixLeftEdge: true });
       mainChart.timeScale().fitContent();
@@ -130,6 +115,23 @@
       const m = window.innerWidth < 768;
       mainChart.applyOptions({ width: chartEl.clientWidth, height: m ? 340 : 480 });
     });
+  }
+
+  // ═══ LIVE PRICE LINE ═══════════════════════════════════════
+  window._updateLivePriceLine = function(price) {
+    if (!candleSeries) return;
+    if (livePriceLine) candleSeries.removePriceLine(livePriceLine);
+    livePriceLine = candleSeries.createPriceLine({
+      price: price,
+      color: RED + '80',
+      lineWidth: 1,
+      lineStyle: 2,
+      axisLabelVisible: true,
+      title: 'Live',
+    });
+  };
+  if (pageData.currentPrice != null) {
+    window._updateLivePriceLine(pageData.currentPrice);
   }
 
   // ═══ FORMAT ═════════════════════════════════════════════════
@@ -340,7 +342,7 @@
       const light = document.documentElement.classList.contains('light');
       mainChart.applyOptions({
         layout: { background: { type: 'solid', color: light ? '#ffffff' : '#11141c' }, textColor: light ? '#4b5563' : '#5c6270' },
-        grid: { vertLines: { color: light ? '#e5e5e5' : '#1a1e28' }, horzLines: { color: light ? '#e5e5e5' : '#1a1e28' } },
+        grid: { vertLines: { color: light ? '#f0f0f0' : '#18202e' }, horzLines: { color: light ? '#f0f0f0' : '#18202e' } },
         rightPriceScale: { borderColor: light ? '#d1d5db' : '#1f2430' },
         timeScale: { borderColor: light ? '#d1d5db' : '#1f2430' },
       });
@@ -373,7 +375,18 @@
     function refresh() {
       fetch('/api/prices/')
         .then(function(r) { return r.json(); })
-        .then(function(data) { update(data.prices || data); })
+        .then(function(data) {
+          var px = data.prices || data;
+          update(px);
+          // Sync chart live price line
+          var symEl = document.querySelector('[data-price]');
+          if (symEl && window._updateLivePriceLine) {
+            var sym = symEl.getAttribute('data-price');
+            if (px[sym] && px[sym].price != null) {
+              window._updateLivePriceLine(px[sym].price);
+            }
+          }
+        })
         .catch(function(){});
     }
     refresh();

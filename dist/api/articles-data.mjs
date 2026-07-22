@@ -2,6 +2,30 @@
 // Contains article metadata for Pulse AI
 const ARTICLES = [
   {
+    "title": "Everyone's Betting on a Different AI Chip. Applied Materials Collects the Rent.",
+    "slug": "amat-picks-shovels-ai-supercycle-2026",
+    "ticker": "AMAT",
+    "sector": "semiconductors",
+    "date": "2026-07-22",
+    "summary": "Applied Materials reported $8.95 billion in Q3 revenue, up 23% year-over-year, and CEO Gary Dickerson guided 30%+ growth for the semiconductor equipment market in calendar 2026. As the only company touching nearly every step of the fab process — from deposition to etch to inspection — AMAT is the purest picks-and-shovels play in the AI infrastructure trade."
+  },
+  {
+    "title": "Salesforce Is Getting Treated Like a Dinosaur While Agentforce Prints a Billion Dollars",
+    "slug": "crm-agentforce-doubt-discount-2026",
+    "ticker": "CRM",
+    "sector": "ai",
+    "date": "2026-07-22",
+    "summary": "Salesforce is getting hammered by the 'SaaSpocalypse' narrative while Agentforce hits $1B ARR in under 12 months — the fastest product ramp in company history. With $14.4B in FCF, a $50B buyback, and an 11x forward P/E (half of MSFT and NOW), this is the most misunderstood AI play in the market."
+  },
+  {
+    "title": "Rubrik's Category Bet: 80% Margins, 40% Growth, Zero Backup Labels",
+    "slug": "rbrk-cyber-resilience-secular-growth-2026",
+    "ticker": "RBRK",
+    "sector": "cyber",
+    "date": "2026-07-22",
+    "summary": "Rubrik's IPO was one of 2024's biggest. Two years later, the company has nearly doubled revenue, flipped to profitability, and proven that 'cyber resilience' isn't marketing — it's a new category with eighty percent gross margins and forty percent growth."
+  },
+  {
     "title": "AeroVironment Just Landed the Pentagon's Biggest Counter-Drone Deal Ever — So Why Is the Stock at 52-Week Lows?",
     "slug": "avav-counterdrone-switchblade-contracts-2026",
     "ticker": "AVAV",
@@ -13,7 +37,7 @@ const ARTICLES = [
     "title": "Micron at 6.4x Forward Earnings? The Cheapest AI Giant You're Ignoring",
     "slug": "mu-forward-pe-anomaly-2026",
     "ticker": "MU",
-    "sector": "AI / Semiconductors",
+    "sector": "semiconductors",
     "date": "2026-07-21",
     "summary": "The market is treating Micron like a cyclical trap at 6.4x forward earnings, but with HBM demand exploding and $100B+ in locked-in backlog, the real risk is to the upside."
   },
@@ -29,7 +53,7 @@ const ARTICLES = [
     "title": "MARVELL: THE CUSTOM SILICON PLAY BEHIND EVERY HYPERSCALER'S AI AMBITIONS",
     "slug": "mrvl-custom-ai-silicon-hyperscaler-shift-2026",
     "ticker": "MRVL",
-    "sector": "AI / Semiconductors",
+    "sector": "semiconductors",
     "date": "2026-07-20T16:00:00.000Z",
     "summary": "Marvell's custom AI silicon business is exploding as hyperscalers race to build their own chips. With $8.7B in revenue, partnerships spanning Amazon and Google, and a 102.4 Tbps networking switch that just dropped, Marvell is the structural AI play Wall Street is still catching up to."
   },
@@ -37,7 +61,7 @@ const ARTICLES = [
     "title": "The AI Power Play Wall Street Is Still Sleeping On",
     "slug": "vistra-ai-power-nuclear-data-center-2026",
     "ticker": "VST",
-    "sector": "energy",
+    "sector": "ai-power",
     "date": "2026-07-20T16:00:00.000Z",
     "summary": "Vistra Corp (VST) is the overlooked middle ground in the AI power race — nuclear baseload from the Energy Harbor acquisition, a massive gas fleet for peaking, 5 million retail customers as a natural hedge, and a Meta PPA that signals hyperscaler demand for 24/7 carbon-free power. With a forward P/E of ~14.4x versus CEG at 18.6x and a PEG of 0.45, the market is pricing Vistra like a regulated utility when it's anything but."
   },
@@ -61,7 +85,7 @@ const ARTICLES = [
     "title": "GE Aerospace Isn't an Engine Maker. It's a Recurring Revenue Machine.",
     "slug": "ge-aftermarket-moat-2026",
     "ticker": "GE",
-    "sector": "aerospace-and-defense",
+    "sector": "defense",
     "date": "2026-07-19T16:00:00.000Z",
     "summary": "GE Aerospace carries $19.2 billion in deferred service revenue from power-by-the-hour maintenance contracts on 44,000+ engines — an installed base that generates 20–30 years of recurring cash flows per engine. While the market prices GE as a cyclical aerospace manufacturer, the numbers tell a different story: a capital-light services machine with a 48.2% ROE and a widening competitive moat as Pratt & Whitney's GTF engine crisis drives airlines toward LEAP-powered narrowbodies."
   },
@@ -109,7 +133,7 @@ const ARTICLES = [
     "title": "Palo Alto Networks Looks Like a Money-Loser on Paper. It's Actually a $3.8 Billion Cash Machine.",
     "slug": "panw-ai-security-cash-flow-machine-2026",
     "ticker": "PANW",
-    "sector": "cybersecurity",
+    "sector": "cyber",
     "date": "2026-07-18T16:00:00.000Z",
     "summary": "Palo Alto Networks generated $3.79 billion in free cash flow over the last twelve months despite reporting GAAP losses — and that cash-generation machine, powered by $8.1B in NGS ARR and a quad-fecta of network, cloud, SOC, and identity platforms, is what the market keeps under-pricing."
   },
@@ -117,7 +141,7 @@ const ARTICLES = [
     "title": "Bots Just Took Over the Internet. Cloudflare Is Building the Immune System.",
     "slug": "net-cloudflare-precursor-agentic-internet-2026",
     "ticker": "NET",
-    "sector": "cybersecurity",
+    "sector": "cyber",
     "date": "2026-07-18",
     "summary": "Cloudflare's Precursor launch marks a turning point: bots now outnumber humans on the web. With $2.33B in TTM revenue (+33.5% YoY), $292M in FCF, and a platform play spanning bot defense, edge compute, and AI inference, NET is quietly remaking itself into the backbone of the agentic internet — but a 176x P/E leaves no room for error."
   },
@@ -229,7 +253,7 @@ const ARTICLES = [
     "title": "Eaton Announced Its Q2 Date Today — And the Stock Just Gave You an Entry",
     "slug": "eaton-q2-earnings-preview-ai-power-2026",
     "ticker": "ETN",
-    "sector": "energy",
+    "sector": "ai-power",
     "date": "2026-07-13",
     "summary": "Eaton Corporation announced Q2 2026 earnings for July 31, sending a signal to investors watching the AI infrastructure buildout. The stock sits at $401.55 — down 8% from highs — after a 23% YTD run. This earnings preview breaks down the Boyd acquisition impact, the new data center segment, and why the pullback might be the entry window before the numbers drop."
   },
@@ -245,7 +269,7 @@ const ARTICLES = [
     "title": "Zscaler Blew Up in May. Its AI Security Business Is the Real Story.",
     "slug": "zscaler-ai-security-phoenix-2026",
     "ticker": "ZS",
-    "sector": "cybersecurity",
+    "sector": "cyber",
     "date": "2026-07-13",
     "summary": "Down 36% YTD after a brutal guidance reset, Zscaler's AI security revenue is growing 80%+ and Wall Street is starting to call the sell-off overdone."
   },
@@ -285,7 +309,7 @@ const ARTICLES = [
     "title": "Palo Alto Networks' Platformization Play Is A $265B Juggernaut — Don't Call It A Firewall Company Anymore",
     "slug": "palo-alto-networks-platformization-2026",
     "ticker": "PANW",
-    "sector": "cybersecurity",
+    "sector": "cyber",
     "date": "2026-07-11T00:00:00.000Z",
     "summary": "Palo Alto Networks (PANW) is executing a masterful platformization strategy, consolidating cybersecurity from 50+ vendors to 4 core platforms. With NGS ARR at $8.1B, revenue accelerating to 31% growth, the CyberArk acquisition rebranded as Idira, and the stock up 82% YTD, PANW is the platformization play to watch."
   },
@@ -309,7 +333,7 @@ const ARTICLES = [
     "title": "The Power Behind the Prompt",
     "slug": "ge-vernova-power-ai-data-centers-2026",
     "ticker": "GEV",
-    "sector": "energy",
+    "sector": "ai-power",
     "date": "2026-07-10",
     "summary": "GE Vernova holds a $163B backlog, controls ~30% of global gas turbine supply, and is sold out through 2030 — all while AI data centers scramble for power. With $2.4B in data center equipment orders in a single quarter, America's nuclear renaissance in its portfolio, and a pristine balance sheet, GEV is the overlooked infrastructure backbone of the AI revolution."
   },
@@ -421,7 +445,7 @@ const ARTICLES = [
     "title": "CrowdStrike Just Hit $197B. Here's How the Comeback Kid Became the King",
     "slug": "crowdstrike-cybersecurity-ai-platform-2026",
     "ticker": "CRWD",
-    "sector": "cybersecurity",
+    "sector": "cyber",
     "date": "2026-07-06T10:00:00.000Z",
     "summary": "CrowdStrike (CRWD) just hit a $197.5 billion market cap with a 71% YTD rally, record ARR of $5.51 billion, and its first GAAP-profitable quarter. Here's how the cybersecurity platform that almost died became the one that won."
   },
@@ -437,7 +461,7 @@ const ARTICLES = [
     "title": "Zscaler: The Zero Trust Titan Caught in the Growth Deceleration Trap",
     "slug": "zscaler-zero-trust-cloud-security-2026",
     "ticker": "ZS",
-    "sector": "cybersecurity",
+    "sector": "cyber",
     "date": "2026-07-05T10:00:00.000Z",
     "summary": "Zscaler (ZS) delivered a Q3 FY2026 earnings beat but saw its stock crash 31% after guiding 16-17% ARR growth for FY2027. Despite $890M in free cash flow, a zero trust product that is winning Fortune 500 deals, and a consensus analyst target of $192.58, the market is pricing in a growth reset that has the stock down 53% in a year — making this a high-conviction value-versus-growth debate."
   },
@@ -549,7 +573,7 @@ const ARTICLES = [
     "title": "The $2B Cash Machine Nobody's Pricing: CrowdStrike Just Made AI Insecurity Its Best Product",
     "slug": "crowdstrike-ai-security-platform-2026",
     "ticker": "CRWD",
-    "sector": "cybersecurity",
+    "sector": "cyber",
     "date": "2026-07-01T00:00:00.000Z",
     "summary": "CrowdStrike launched its Unified AI Security Platform on June 29, cementing its position as the AI-native cybersecurity leader. With $1.93B in free cash flow, a 37.8% FCF margin, $4.72B in deferred revenue, and a 4:1 stock split tomorrow, CRWD is a cash machine growing 25%+ into the widening AI threat vector."
   },
@@ -661,7 +685,7 @@ const ARTICLES = [
     "title": "SentinelOne: The $5.4B Cybersecurity Giant Nobody's Talking About",
     "slug": "sentinelone-ai-cybersecurity-platform-moat-2026",
     "ticker": "S",
-    "sector": "cybersecurity",
+    "sector": "cyber",
     "date": "2026-06-27",
     "summary": "SentinelOne (S) is the $5.4B AI-native cybersecurity platform with $657M cash, zero debt, 73% gross margins, and 21% revenue growth. While CrowdStrike hogs headlines, SentinelOne's Purple AI and fortress balance sheet make it the most compelling acquisition target in endpoint security."
   },
@@ -677,7 +701,7 @@ const ARTICLES = [
     "title": "The AI Monopoly Nobody's Talking About Just Dropped 50% — And It's Printing Cash",
     "slug": "axon-public-safety-ai-moat-2026",
     "ticker": "AXON",
-    "sector": "public-safety",
+    "sector": "ai",
     "date": "2026-06-26",
     "summary": "Axon isn't a body cam company anymore. It's the de facto operating system for American policing — with software margins above 80%, $1.5B in ARR, and an AI attach rate that's exploding 700% year-over-year. The stock's down 50% from highs while fundamentals accelerate. That's the kind of dislocation where fortunes get made."
   },
