@@ -3,416 +3,210 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Signal — Dark Theme Preview</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>Dark Theme Palette Preview — The Signal</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: 'Inter', -apple-system, sans-serif; }
+  body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+  
+  .preview { display: flex; flex-wrap: wrap; min-height: 100vh; }
+  .col { flex: 1; min-width: 320px; padding: 24px; display: flex; flex-direction: column; gap: 16px; }
+  .col-header { padding-bottom: 16px; border-bottom: 1px solid var(--border); margin-bottom: 8px; }
+  .col-header h2 { font-size: 18px; font-weight: 700; color: var(--text-primary); margin-bottom: 4px; }
+  .col-header .hex { font-size: 13px; color: var(--text-secondary); font-family: 'SF Mono', 'Fira Code', monospace; }
+  .col-header .vibe { font-size: 12px; color: var(--text-muted); margin-top: 2px; font-style: italic; }
 
-  .palette-row {
-    display: flex;
-    min-height: 100vh;
-  }
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+  .card h3 { font-size: 16px; font-weight: 600; color: var(--text-primary); margin-bottom: 8px; }
+  .card p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+  .card .muted { font-size: 12px; color: var(--text-muted); margin-top: 8px; }
+  .card .tag { display: inline-block; background: var(--bg-accent); padding: 3px 10px; border-radius: 4px; font-size: 11px; color: var(--accent); margin-right: 4px; }
 
-  .palette-col {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-  }
-  .palette-col:nth-child(2) { border-left: 1px solid rgba(255,255,255,0.08); border-right: 1px solid rgba(255,255,255,0.08); }
+  .stock-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px; display: flex; justify-content: space-between; align-items: center; }
+  .stock-card .ticker { font-size: 16px; font-weight: 700; color: var(--text-primary); }
+  .stock-card .price { font-size: 16px; font-weight: 600; color: var(--text-primary); }
+  .stock-card .change { font-size: 13px; color: var(--green); }
+  .stock-card .sub { font-size: 12px; color: var(--text-muted); }
 
-  .palette-header {
-    text-align: center;
-    padding: 14px 0;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    border-bottom: 1px solid;
-  }
+  .nav { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 12px 16px; display: flex; gap: 20px; align-items: center; }
+  .nav .logo { font-weight: 800; font-size: 14px; color: var(--text-primary); letter-spacing: 1px; }
+  .nav .logo span { color: var(--accent); }
+  .nav .link { font-size: 13px; color: var(--text-secondary); }
+  .nav .link.active { color: var(--text-primary); font-weight: 600; }
 
-  .palette-body {
-    flex: 1;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
+  .scorecard { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+  .scorecard .label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+  .scorecard .badge { display: inline-flex; align-items: center; gap: 4px; font-size: 12px; padding: 4px 10px; border-radius: 6px; margin: 2px; }
+  .badge.green { background: var(--green-dim); color: var(--green); }
+  .badge.gold { background: var(--gold-dim); color: var(--gold); }
+  .badge.red { background: var(--red-dim); color: var(--red); }
 
-  /* Nav */
-  .sample-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 16px;
-    height: 44px;
-    border-radius: 8px;
-    backdrop-filter: blur(24px) saturate(1.4);
-    font-size: 13px;
-    font-weight: 600;
-  }
-  .sample-nav .logo-part { display: flex; align-items: center; gap: 8px; }
-  .sample-nav .logo-dot {
-    width: 18px; height: 18px; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 10px; font-weight: 700;
-  }
+  .accent-box { background: linear-gradient(135deg, var(--bg-card), var(--bg-accent)); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+  .accent-box h3 { font-size: 15px; color: var(--text-primary); }
+  .accent-box p { font-size: 13px; color: var(--text-secondary); }
 
-  /* Card */
-  .sample-card {
-    padding: 16px;
-    border-radius: var(--radius);
-  }
-  .sample-card h3 {
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 6px;
-  }
-  .sample-card p {
-    font-size: 12px;
-    line-height: 1.5;
-  }
-  .sample-card .meta {
-    display: flex; gap: 8px; margin-top: 8px; font-size: 11px;
-  }
-  .sample-card .tag {
-    display: inline-block;
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-size: 10px;
-    font-weight: 500;
-  }
+  .swatch-row { display: flex; gap: 8px; flex-wrap: wrap; }
+  .swatch { width: 40px; height: 40px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 8px; color: rgba(255,255,255,0.7); font-family: monospace; }
 
-  /* Article */
-  .sample-article {
-    padding: 16px;
-    border-radius: var(--radius);
-  }
-  .sample-article h1 {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 1.3;
-    margin-bottom: 8px;
-  }
-  .sample-article .byline {
-    font-size: 11px;
-    margin-bottom: 12px;
-  }
-  .sample-article p {
-    font-size: 12.5px;
-    line-height: 1.65;
-    margin-bottom: 8px;
-  }
+  /* Current (live) */
+  .theme-current { background: #06060e; color: #e8e8f0; }
+  .theme-current { --bg-primary: #06060e; --bg-secondary: #0a0a1a; --bg-card: #0f0f20; --bg-card-hover: #161630; --bg-accent: #12123a; --border: #181830; --text-primary: #e8e8f0; --text-secondary: #8888aa; --text-muted: #555570; --accent: #3b82f6; --green: #22c55e; --green-dim: rgba(34,197,94,0.12); --gold: #f59e0b; --gold-dim: rgba(245,158,11,0.12); --red: #ef4444; --red-dim: rgba(239,68,68,0.12); }
 
-  /* Table */
-  .sample-table {
-    border-collapse: collapse;
-    width: 100%;
-    font-size: 11px;
-    border-radius: 6px;
-    overflow: hidden;
-  }
-  .sample-table th, .sample-table td {
-    padding: 6px 10px;
-    text-align: left;
-  }
-  .sample-table th { font-weight: 600; font-size: 10px; text-transform: uppercase; letter-spacing: 0.3px; }
+  /* Slate Noir */
+  .theme-slate-noir { background: #16162a; color: #d8d8e8; --bg-primary: #16162a; --bg-secondary: #1a1a32; --bg-card: #1e1e36; --bg-card-hover: #262644; --bg-accent: #1a1a40; --border: #222240; --text-primary: #d8d8e8; --text-secondary: #9898b8; --text-muted: #606080; --accent: #3b82f6; --green: #22c55e; --green-dim: rgba(34,197,94,0.12); --gold: #f59e0b; --gold-dim: rgba(245,158,11,0.12); --red: #ef4444; --red-dim: rgba(239,68,68,0.12); }
 
-  /* Sidebar */
-  .sample-sidebar {
-    padding: 14px;
-    border-radius: var(--radius);
-    font-size: 12px;
-  }
-  .sample-sidebar h4 {
-    font-size: 11px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 8px;
-  }
-  .sample-sidebar .item {
-    display: flex;
-    justify-content: space-between;
-    padding: 4px 0;
-    font-size: 11.5px;
-  }
-  .sample-sidebar .change-pos { font-weight: 500; }
-  .sample-sidebar .change-neg { font-weight: 500; }
+  /* Warm Hearth */
+  .theme-warm-hearth { background: #1a1822; color: #ddd8e0; --bg-primary: #1a1822; --bg-secondary: #1f1c28; --bg-card: #23212e; --bg-card-hover: #2d2a3a; --bg-accent: #211e30; --border: #2a2638; --text-primary: #ddd8e0; --text-secondary: #9a94a8; --text-muted: #625c74; --accent: #3b82f6; --green: #22c55e; --green-dim: rgba(34,197,94,0.12); --gold: #f59e0b; --gold-dim: rgba(245,158,11,0.12); --red: #ef4444; --red-dim: rgba(239,68,68,0.12); }
 
-  /* Footer */
-  .sample-footer {
-    margin-top: auto;
-    padding: 12px 0;
-    text-align: center;
-    font-size: 10px;
-    border-top: 1px solid;
-    letter-spacing: 0.3px;
-  }
+  /* Deep Mercury */
+  .theme-deep-mercury { background: #1c1c24; color: #d6d6de; --bg-primary: #1c1c24; --bg-secondary: #20202a; --bg-card: #24242e; --bg-card-hover: #30303c; --bg-accent: #222234; --border: #2a2a36; --text-primary: #d6d6de; --text-secondary: #9494a2; --text-muted: #5c5c6a; --accent: #3b82f6; --green: #22c55e; --green-dim: rgba(34,197,94,0.12); --gold: #f59e0b; --gold-dim: rgba(245,158,11,0.12); --red: #ef4444; --red-dim: rgba(239,68,68,0.12); }
 
-  /* Current Theme */
-  .theme-current {
-    --text: #e8e8f0;
-    --bg-primary: #06060e;
-    --bg-secondary: #0a0a18;
-    --bg-card: #0f0f20;
-    --bg-card-hover: #161630;
-    --bg-accent: #12123a;
-    --text-primary: #e8e8f0;
-    --text-secondary: #8888aa;
-    --text-muted: #555570;
-    --accent: #3b82f6;
-    --border: #181830;
-    --radius: 12px;
-    --radius-sm: 6px;
-    --green: #22c55e;
-    --red: #ef4444;
-    --gold: #f59e0b;
-  }
+  /* Storm */
+  .theme-storm { background: #1e293b; color: #f8fafc; --bg-primary: #1e293b; --bg-secondary: #25324a; --bg-card: #334155; --bg-card-hover: #3d4a60; --bg-accent: #2a3a52; --border: #3a485e; --text-primary: #f8fafc; --text-secondary: #94a3b8; --text-muted: #64748b; --accent: #3b82f6; --green: #22c55e; --green-dim: rgba(34,197,94,0.12); --gold: #f59e0b; --gold-dim: rgba(245,158,11,0.12); --red: #ef4444; --red-dim: rgba(239,68,68,0.12); }
 
-  /* Slate Noir (A) */
-  .theme-slate {
-    --text: #d8d8e8;
-    --bg-primary: #16162a;
-    --bg-secondary: #1a1a30;
-    --bg-card: #1e1e36;
-    --bg-card-hover: #242440;
-    --bg-accent: #1a1a48;
-    --text-primary: #d8d8e8;
-    --text-secondary: #9999ba;
-    --text-muted: #6a6a88;
-    --accent: #3b82f6;
-    --border: #282848;
-    --radius: 12px;
-    --radius-sm: 6px;
-    --green: #22c55e;
-    --red: #ef4444;
-    --gold: #f59e0b;
-  }
+  /* Coffee */
+  .theme-coffee { background: #1a1410; color: #e8ddd0; --bg-primary: #1a1410; --bg-secondary: #201a14; --bg-card: #282018; --bg-card-hover: #342a20; --bg-accent: #241c14; --border: #2e261c; --text-primary: #e8ddd0; --text-secondary: #a09480; --text-muted: #6a5e4c; --accent: #ca8a4e; --green: #22c55e; --green-dim: rgba(34,197,94,0.12); --gold: #d4a040; --gold-dim: rgba(40,30,10,0.12); --red: #ef4444; --red-dim: rgba(239,68,68,0.12); }
 
-  /* Warm Hearth (B) */
-  .theme-warm {
-    --text: #ddd8e0;
-    --bg-primary: #1a1822;
-    --bg-secondary: #1e1c28;
-    --bg-card: #23212e;
-    --bg-card-hover: #292736;
-    --bg-accent: #1d1b38;
-    --text-primary: #ddd8e0;
-    --text-secondary: #a098ae;
-    --text-muted: #70687e;
-    --accent: #3b82f6;
-    --border: #2e2b3e;
-    --radius: 12px;
-    --radius-sm: 6px;
-    --green: #22c55e;
-    --red: #ef4444;
-    --gold: #f59e0b;
-  }
+  /* Zinc */
+  .theme-zinc { background: #18181b; color: #f4f4f5; --bg-primary: #18181b; --bg-secondary: #1e1e22; --bg-card: #27272a; --bg-card-hover: #333336; --bg-accent: #222228; --border: #2e2e32; --text-primary: #f4f4f5; --text-secondary: #a1a1aa; --text-muted: #6b6b74; --accent: #3b82f6; --green: #22c55e; --green-dim: rgba(34,197,94,0.12); --gold: #f59e0b; --gold-dim: rgba(39,39,42,0.12); --red: #ef4444; --red-dim: rgba(239,68,68,0.12); }
 
-  /* Custom (Dim Blue) */
-  .theme-custom {
-    --text: #F8FAFC;
-    --bg-primary: #15202B;
-    --bg-secondary: #1a2b3a;
-    --bg-card: #334155;
-    --bg-card-hover: #3b4f6b;
-    --bg-accent: #1e3a5f;
-    --text-primary: #F8FAFC;
-    --text-secondary: #94A3B8;
-    --text-muted: #64748b;
-    --accent: #3b82f6;
-    --border: #273548;
-    --radius: 12px;
-    --radius-sm: 6px;
-    --green: #22c55e;
-    --red: #ef4444;
-    --gold: #f59e0b;
-  }
+  /* Twitter Dim */
+  .theme-twitter-dim { background: #15202B; color: #f8fafc; --bg-primary: #15202B; --bg-secondary: #1a2c3a; --bg-card: #1e3040; --bg-card-hover: #253848; --bg-accent: #1a2a36; --border: #253848; --text-primary: #f8fafc; --text-secondary: #8899a6; --text-muted: #5c6e7e; --accent: #3b82f6; --green: #22c55e; --green-dim: rgba(34,197,94,0.12); --gold: #f59e0b; --gold-dim: rgba(245,158,11,0.12); --red: #ef4444; --red-dim: rgba(239,68,68,0.12); }
+
+  /* +2 (lighter Twitter) */
+  .theme-twitter-2 { background: #1e3348; color: #f8fafc; --bg-primary: #1e3348; --bg-secondary: #243c54; --bg-card: #2a425c; --bg-card-hover: #324c66; --bg-accent: #263a50; --border: #2e4862; --text-primary: #f8fafc; --text-secondary: #94a3b8; --text-muted: #64748b; --accent: #3b82f6; --green: #22c55e; --green-dim: rgba(34,197,94,0.12); --gold: #f59e0b; --gold-dim: rgba(245,158,11,0.12); --red: #ef4444; --red-dim: rgba(239,68,68,0.12); }
+
+  /* Current deployed (lightened) */
+  .theme-deployed { background: #1a1c2a; color: #e8e8f0; --bg-primary: #1a1c2a; --bg-secondary: #1e2032; --bg-card: #2a2d48; --bg-card-hover: #353860; --bg-accent: #262948; --border: #30325a; --text-primary: #e8e8f0; --text-secondary: #8888aa; --text-muted: #555570; --accent: #3b82f6; --green: #22c55e; --green-dim: rgba(34,197,94,0.12); --gold: #f59e0b; --gold-dim: rgba(245,158,11,0.12); --red: #ef4444; --red-dim: rgba(239,68,68,0.12); }
+
+  .highlight { outline: 2px solid #3b82f6; outline-offset: -2px; }
 </style>
 </head>
 <body>
-<div class="palette-row">
+<div class="preview">
 
-  <!-- CURRENT -->
-  <div class="palette-col theme-current" style="background:#06060e;">
-    <div class="palette-header" style="background:#0a0a18;color:#8888aa;border-color:#181830;">⬛ Current</div>
-    <div class="palette-body" style="color:#e8e8f0;">
-      <div class="sample-nav" style="background:rgba(6,6,14,0.92);border:1px solid #181830;">
-        <div class="logo-part"><span class="logo-dot" style="background:#3b82f6;color:#fff;">S</span>THE SIGNAL</div>
-        <span style="color:#8888aa;font-weight:400;">Articles · Markets · Portfolio</span>
-      </div>
-      <div class="sample-article" style="background:#0f0f20;border:1px solid #181830;">
-        <h1>SK Hynix CEO Warns 2027 Will Be Worst Memory Shortage in History</h1>
-        <div class="byline" style="color:#8888aa;">By The Signal — July 16, 2026 · 5 min read</div>
-        <p style="color:#e8e8f0;">SK Hynix CEO Kwak Noh-jung told Reuters Friday that 2027 will bring the most severe memory supply crunch the industry has ever seen, and demand will keep running ahead of capacity through 2030 — just days after the company's record-breaking $26.5B Nasdaq IPO.</p>
-        <p style="color:#8888aa;">"We forecast that next year will be the worst year in the industry's history from the supply perspective," Kwak said. "Our customer demand continues to go up, while our capacity has limitations."</p>
-        <div class="meta">
-          <span class="tag" style="background:rgba(59,130,246,0.15);color:#60a5fa;">$SKHY</span>
-          <span class="tag" style="background:rgba(34,197,94,0.12);color:#22c55e;">HBM</span>
-          <span class="tag" style="background:rgba(245,158,11,0.12);color:#f59e0b;">Semiconductors</span>
-        </div>
-      </div>
-      <div class="sample-card" style="background:#0f0f20;border:1px solid #181830;">
-        <h3>Arista Networks: The NVIDIA Paradox</h3>
-        <p style="color:#8888aa;">As NVIDIA's data center Ethernet spend quadruples, <span style="color:#3b82f6;">Arista is the quiet winner</span> — every 800G switch deployed is another brick in the AI infrastructure wall.</p>
-        <div class="meta">
-          <span style="color:#22c55e;font-weight:600;">+3.2%</span>
-          <span style="color:#555570;">Today</span>
-        </div>
-      </div>
-      <table class="sample-table" style="background:#0f0f20;border:1px solid #181830;">
-        <thead><tr style="background:#0a0a18;"><th style="color:#8888aa;">Ticker</th><th style="color:#8888aa;">Price</th><th style="color:#8888aa;">Change</th></tr></thead>
-        <tbody>
-          <tr style="border-top:1px solid #181830;"><td style="color:#e8e8f0;font-weight:600;">NVDA</td><td style="color:#e8e8f0;">$187.42</td><td style="color:#22c55e;">+2.8%</td></tr>
-          <tr style="border-top:1px solid #181830;"><td style="color:#e8e8f0;font-weight:600;">ANET</td><td style="color:#e8e8f0;">$124.80</td><td style="color:#22c55e;">+1.9%</td></tr>
-          <tr style="border-top:1px solid #181830;"><td style="color:#e8e8f0;font-weight:600;">AVGO</td><td style="color:#e8e8f0;">$243.15</td><td style="color:#ef4444;">-0.7%</td></tr>
-        </tbody>
-      </table>
-      <div class="sample-sidebar" style="background:#12123a;border:1px solid #181830;">
-        <h4 style="color:#8888aa;">Today's Movers</h4>
-        <div class="item"><span style="color:#e8e8f0;">HOOD</span><span class="change-pos" style="color:#22c55e;">+5.3%</span></div>
-        <div class="item"><span style="color:#e8e8f0;">RKLB</span><span class="change-pos" style="color:#22c55e;">+4.1%</span></div>
-        <div class="item"><span style="color:#e8e8f0;">SHLD</span><span class="change-neg" style="color:#ef4444;">-2.8%</span></div>
-      </div>
-      <div class="sample-footer" style="color:#555570;border-color:#181830;">© 2026 The Signal — readthesignal.net</div>
+  <!-- CURRENT LIVE -->
+  <div class="col theme-current">
+    <div class="col-header">
+      <h2>⚫ Current Live</h2>
+      <div class="hex">#06060e · <span style="color:var(--text-muted)">#0f0f20 cards</span></div>
+      <div class="vibe">Original near-black — too dark</div>
     </div>
+    <div class="nav"><div class="logo">THE <span>SIGNAL</span></div><span class="link active">Home</span><span class="link">Stocks</span><span class="link">News</span></div>
+    <div class="card"><h3>NVIDIA Drives AI Infrastructure</h3><p>Shares climbed as data center revenue guidance topped estimates, fueled by demand for next-gen Blackwell GPUs.</p><div class="muted">2 hours ago · 5 min read</div></div>
+    <div class="stock-card"><div><div class="ticker">NVDA</div><div class="sub">NVIDIA Corp</div></div><div><div class="price">$203.28</div><div class="change">+0.23%</div></div></div>
+    <div class="scorecard"><div class="label">Signal Score</div><span class="badge green">▲ Bullish 82</span><span class="badge gold">⟐ Neutral 54</span></div>
+    <div class="accent-box"><h3>Market Pulse</h3><p>Tech leads broad rally as rate-cut hopes re-emerge.</p></div>
+    <div class="swatch-row" style="margin-top:auto"><div class="swatch" style="background:var(--bg-primary)">bg</div><div class="swatch" style="background:var(--bg-card)">card</div><div class="swatch" style="background:var(--bg-secondary)">nav</div><div class="swatch" style="background:var(--border)">bdr</div></div>
   </div>
 
-  <!-- SLATE NOIR (A) -->
-  <div class="palette-col theme-slate" style="background:#16162a;">
-    <div class="palette-header" style="background:#1a1a30;color:#9999ba;border-color:#282848;">🔵 Slate Noir</div>
-    <div class="palette-body" style="color:#d8d8e8;">
-      <div class="sample-nav" style="background:rgba(22,22,42,0.92);border:1px solid #282848;">
-        <div class="logo-part"><span class="logo-dot" style="background:#3b82f6;color:#fff;">S</span>THE SIGNAL</div>
-        <span style="color:#9999ba;font-weight:400;">Articles · Markets · Portfolio</span>
-      </div>
-      <div class="sample-article" style="background:#1e1e36;border:1px solid #282848;">
-        <h1>SK Hynix CEO Warns 2027 Will Be Worst Memory Shortage in History</h1>
-        <div class="byline" style="color:#9999ba;">By The Signal — July 16, 2026 · 5 min read</div>
-        <p style="color:#d8d8e8;">SK Hynix CEO Kwak Noh-jung told Reuters Friday that 2027 will bring the most severe memory supply crunch the industry has ever seen, and demand will keep running ahead of capacity through 2030 — just days after the company's record-breaking $26.5B Nasdaq IPO.</p>
-        <p style="color:#9999ba;">"We forecast that next year will be the worst year in the industry's history from the supply perspective," Kwak said. "Our customer demand continues to go up, while our capacity has limitations."</p>
-        <div class="meta">
-          <span class="tag" style="background:rgba(59,130,246,0.15);color:#60a5fa;">$SKHY</span>
-          <span class="tag" style="background:rgba(34,197,94,0.12);color:#22c55e;">HBM</span>
-          <span class="tag" style="background:rgba(245,158,11,0.12);color:#f59e0b;">Semiconductors</span>
-        </div>
-      </div>
-      <div class="sample-card" style="background:#1e1e36;border:1px solid #282848;">
-        <h3>Arista Networks: The NVIDIA Paradox</h3>
-        <p style="color:#9999ba;">As NVIDIA's data center Ethernet spend quadruples, <span style="color:#3b82f6;">Arista is the quiet winner</span> — every 800G switch deployed is another brick in the AI infrastructure wall.</p>
-        <div class="meta">
-          <span style="color:#22c55e;font-weight:600;">+3.2%</span>
-          <span style="color:#6a6a88;">Today</span>
-        </div>
-      </div>
-      <table class="sample-table" style="background:#1e1e36;border:1px solid #282848;">
-        <thead><tr style="background:#1a1a30;"><th style="color:#9999ba;">Ticker</th><th style="color:#9999ba;">Price</th><th style="color:#9999ba;">Change</th></tr></thead>
-        <tbody>
-          <tr style="border-top:1px solid #282848;"><td style="color:#d8d8e8;font-weight:600;">NVDA</td><td style="color:#d8d8e8;">$187.42</td><td style="color:#22c55e;">+2.8%</td></tr>
-          <tr style="border-top:1px solid #282848;"><td style="color:#d8d8e8;font-weight:600;">ANET</td><td style="color:#d8d8e8;">$124.80</td><td style="color:#22c55e;">+1.9%</td></tr>
-          <tr style="border-top:1px solid #282848;"><td style="color:#d8d8e8;font-weight:600;">AVGO</td><td style="color:#d8d8e8;">$243.15</td><td style="color:#ef4444;">-0.7%</td></tr>
-        </tbody>
-      </table>
-      <div class="sample-sidebar" style="background:#1a1a48;border:1px solid #282848;">
-        <h4 style="color:#9999ba;">Today's Movers</h4>
-        <div class="item"><span style="color:#d8d8e8;">HOOD</span><span class="change-pos" style="color:#22c55e;">+5.3%</span></div>
-        <div class="item"><span style="color:#d8d8e8;">RKLB</span><span class="change-pos" style="color:#22c55e;">+4.1%</span></div>
-        <div class="item"><span style="color:#d8d8e8;">SHLD</span><span class="change-neg" style="color:#ef4444;">-2.8%</span></div>
-      </div>
-      <div class="sample-footer" style="color:#6a6a88;border-color:#282848;">© 2026 The Signal — readthesignal.net</div>
+  <!-- DEPLOYED (current lighter) -->
+  <div class="col theme-deployed">
+    <div class="col-header">
+      <h2>🔵 Deployed Now</h2>
+      <div class="hex">#1a1c2a · <span style="color:var(--text-muted)">#2a2d48 cards</span></div>
+      <div class="vibe">Dry — you said this looks "dry"</div>
     </div>
+    <div class="nav"><div class="logo">THE <span>SIGNAL</span></div><span class="link active">Home</span><span class="link">Stocks</span><span class="link">News</span></div>
+    <div class="card"><h3>NVIDIA Drives AI Infrastructure</h3><p>Shares climbed as data center revenue guidance topped estimates, fueled by demand for next-gen Blackwell GPUs.</p><div class="muted">2 hours ago · 5 min read</div></div>
+    <div class="stock-card"><div><div class="ticker">NVDA</div><div class="sub">NVIDIA Corp</div></div><div><div class="price">$203.28</div><div class="change">+0.23%</div></div></div>
+    <div class="scorecard"><div class="label">Signal Score</div><span class="badge green">▲ Bullish 82</span><span class="badge gold">⟐ Neutral 54</span></div>
+    <div class="accent-box"><h3>Market Pulse</h3><p>Tech leads broad rally as rate-cut hopes re-emerge.</p></div>
+    <div class="swatch-row"><div class="swatch" style="background:var(--bg-primary)">bg</div><div class="swatch" style="background:var(--bg-card)">card</div><div class="swatch" style="background:var(--bg-secondary)">nav</div><div class="swatch" style="background:var(--border)">bdr</div></div>
   </div>
 
-  <!-- WARM HEARTH (B) -->
-  <div class="palette-col theme-warm" style="background:#1a1822;">
-    <div class="palette-header" style="background:#1e1c28;color:#a098ae;border-color:#2e2b3e;">🟤 Warm Hearth</div>
-    <div class="palette-body" style="color:#ddd8e0;">
-      <div class="sample-nav" style="background:rgba(26,24,34,0.92);border:1px solid #2e2b3e;">
-        <div class="logo-part"><span class="logo-dot" style="background:#3b82f6;color:#fff;">S</span>THE SIGNAL</div>
-        <span style="color:#a098ae;font-weight:400;">Articles · Markets · Portfolio</span>
-      </div>
-      <div class="sample-article" style="background:#23212e;border:1px solid #2e2b3e;">
-        <h1>SK Hynix CEO Warns 2027 Will Be Worst Memory Shortage in History</h1>
-        <div class="byline" style="color:#a098ae;">By The Signal — July 16, 2026 · 5 min read</div>
-        <p style="color:#ddd8e0;">SK Hynix CEO Kwak Noh-jung told Reuters Friday that 2027 will bring the most severe memory supply crunch the industry has ever seen, and demand will keep running ahead of capacity through 2030 — just days after the company's record-breaking $26.5B Nasdaq IPO.</p>
-        <p style="color:#a098ae;">"We forecast that next year will be the worst year in the industry's history from the supply perspective," Kwak said. "Our customer demand continues to go up, while our capacity has limitations."</p>
-        <div class="meta">
-          <span class="tag" style="background:rgba(59,130,246,0.15);color:#60a5fa;">$SKHY</span>
-          <span class="tag" style="background:rgba(34,197,94,0.12);color:#22c55e;">HBM</span>
-          <span class="tag" style="background:rgba(245,158,11,0.12);color:#f59e0b;">Semiconductors</span>
-        </div>
-      </div>
-      <div class="sample-card" style="background:#23212e;border:1px solid #2e2b3e;">
-        <h3>Arista Networks: The NVIDIA Paradox</h3>
-        <p style="color:#a098ae;">As NVIDIA's data center Ethernet spend quadruples, <span style="color:#3b82f6;">Arista is the quiet winner</span> — every 800G switch deployed is another brick in the AI infrastructure wall.</p>
-        <div class="meta">
-          <span style="color:#22c55e;font-weight:600;">+3.2%</span>
-          <span style="color:#70687e;">Today</span>
-        </div>
-      </div>
-      <table class="sample-table" style="background:#23212e;border:1px solid #2e2b3e;">
-        <thead><tr style="background:#1e1c28;"><th style="color:#a098ae;">Ticker</th><th style="color:#a098ae;">Price</th><th style="color:#a098ae;">Change</th></tr></thead>
-        <tbody>
-          <tr style="border-top:1px solid #2e2b3e;"><td style="color:#ddd8e0;font-weight:600;">NVDA</td><td style="color:#ddd8e0;">$187.42</td><td style="color:#22c55e;">+2.8%</td></tr>
-          <tr style="border-top:1px solid #2e2b3e;"><td style="color:#ddd8e0;font-weight:600;">ANET</td><td style="color:#ddd8e0;">$124.80</td><td style="color:#22c55e;">+1.9%</td></tr>
-          <tr style="border-top:1px solid #2e2b3e;"><td style="color:#ddd8e0;font-weight:600;">AVGO</td><td style="color:#ddd8e0;">$243.15</td><td style="color:#ef4444;">-0.7%</td></tr>
-        </tbody>
-      </table>
-      <div class="sample-sidebar" style="background:#1d1b38;border:1px solid #2e2b3e;">
-        <h4 style="color:#a098ae;">Today's Movers</h4>
-        <div class="item"><span style="color:#ddd8e0;">HOOD</span><span class="change-pos" style="color:#22c55e;">+5.3%</span></div>
-        <div class="item"><span style="color:#ddd8e0;">RKLB</span><span class="change-pos" style="color:#22c55e;">+4.1%</span></div>
-        <div class="item"><span style="color:#ddd8e0;">SHLD</span><span class="change-neg" style="color:#ef4444;">-2.8%</span></div>
-      </div>
-      <div class="sample-footer" style="color:#70687e;border-color:#2e2b3e;">© 2026 The Signal — readthesignal.net</div>
+  <!-- SLATE NOIR -->
+  <div class="col theme-slate-noir">
+    <div class="col-header">
+      <h2>Slate Noir</h2>
+      <div class="hex">#16162a · <span style="color:var(--text-muted)">#1e1e36 cards</span></div>
+      <div class="vibe">Cool blue-slate, premium financial feel</div>
     </div>
+    <div class="nav"><div class="logo">THE <span>SIGNAL</span></div><span class="link active">Home</span><span class="link">Stocks</span><span class="link">News</span></div>
+    <div class="card"><h3>NVIDIA Drives AI Infrastructure</h3><p>Shares climbed as data center revenue guidance topped estimates, fueled by demand for next-gen Blackwell GPUs.</p><div class="muted">2 hours ago · 5 min read</div></div>
+    <div class="stock-card"><div><div class="ticker">NVDA</div><div class="sub">NVIDIA Corp</div></div><div><div class="price">$203.28</div><div class="change">+0.23%</div></div></div>
+    <div class="scorecard"><div class="label">Signal Score</div><span class="badge green">▲ Bullish 82</span><span class="badge gold">⟐ Neutral 54</span></div>
+    <div class="accent-box"><h3>Market Pulse</h3><p>Tech leads broad rally as rate-cut hopes re-emerge.</p></div>
+    <div class="swatch-row"><div class="swatch" style="background:var(--bg-primary)">bg</div><div class="swatch" style="background:var(--bg-card)">card</div><div class="swatch" style="background:var(--bg-secondary)">nav</div><div class="swatch" style="background:var(--border)">bdr</div></div>
   </div>
 
-  <!-- CUSTOM (Dim Blue) -->
-  <div class="palette-col theme-custom" style="background:#15202B;">
-    <div class="palette-header" style="background:#1a2b3a;color:#94A3B8;border-color:#273548;">🎨 Custom Dim Blue</div>
-    <div class="palette-body" style="color:#F8FAFC;">
-      <div class="sample-nav" style="background:rgba(21,32,43,0.92);border:1px solid #273548;">
-        <div class="logo-part"><span class="logo-dot" style="background:#3b82f6;color:#fff;">S</span>THE SIGNAL</div>
-        <span style="color:#94A3B8;font-weight:400;">Articles · Markets · Portfolio</span>
-      </div>
-      <div class="sample-article" style="background:#334155;border:1px solid #273548;">
-        <h1>SK Hynix CEO Warns 2027 Will Be Worst Memory Shortage in History</h1>
-        <div class="byline" style="color:#94A3B8;">By The Signal — July 16, 2026 · 5 min read</div>
-        <p style="color:#F8FAFC;">SK Hynix CEO Kwak Noh-jung told Reuters Friday that 2027 will bring the most severe memory supply crunch the industry has ever seen, and demand will keep running ahead of capacity through 2030 — just days after the company's record-breaking $26.5B Nasdaq IPO.</p>
-        <p style="color:#94A3B8;">"We forecast that next year will be the worst year in the industry's history from the supply perspective," Kwak said. "Our customer demand continues to go up, while our capacity has limitations."</p>
-        <div class="meta">
-          <span class="tag" style="background:rgba(59,130,246,0.15);color:#60a5fa;">$SKHY</span>
-          <span class="tag" style="background:rgba(34,197,94,0.12);color:#22c55e;">HBM</span>
-          <span class="tag" style="background:rgba(245,158,11,0.12);color:#f59e0b;">Semiconductors</span>
-        </div>
-      </div>
-      <div class="sample-card" style="background:#334155;border:1px solid #273548;">
-        <h3>Arista Networks: The NVIDIA Paradox</h3>
-        <p style="color:#94A3B8;">As NVIDIA's data center Ethernet spend quadruples, <span style="color:#3b82f6;">Arista is the quiet winner</span> — every 800G switch deployed is another brick in the AI infrastructure wall.</p>
-        <div class="meta">
-          <span style="color:#22c55e;font-weight:600;">+3.2%</span>
-          <span style="color:#64748b;">Today</span>
-        </div>
-      </div>
-      <table class="sample-table" style="background:#334155;border:1px solid #273548;">
-        <thead><tr style="background:#1a2b3a;"><th style="color:#94A3B8;">Ticker</th><th style="color:#94A3B8;">Price</th><th style="color:#94A3B8;">Change</th></tr></thead>
-        <tbody>
-          <tr style="border-top:1px solid #273548;"><td style="color:#F8FAFC;font-weight:600;">NVDA</td><td style="color:#F8FAFC;">$187.42</td><td style="color:#22c55e;">+2.8%</td></tr>
-          <tr style="border-top:1px solid #273548;"><td style="color:#F8FAFC;font-weight:600;">ANET</td><td style="color:#F8FAFC;">$124.80</td><td style="color:#22c55e;">+1.9%</td></tr>
-          <tr style="border-top:1px solid #273548;"><td style="color:#F8FAFC;font-weight:600;">AVGO</td><td style="color:#F8FAFC;">$243.15</td><td style="color:#ef4444;">-0.7%</td></tr>
-        </tbody>
-      </table>
-      <div class="sample-sidebar" style="background:#1e3a5f;border:1px solid #273548;">
-        <h4 style="color:#94A3B8;">Today's Movers</h4>
-        <div class="item"><span style="color:#F8FAFC;">HOOD</span><span class="change-pos" style="color:#22c55e;">+5.3%</span></div>
-        <div class="item"><span style="color:#F8FAFC;">RKLB</span><span class="change-pos" style="color:#22c55e;">+4.1%</span></div>
-        <div class="item"><span style="color:#F8FAFC;">SHLD</span><span class="change-neg" style="color:#ef4444;">-2.8%</span></div>
-      </div>
-      <div class="sample-footer" style="color:#64748b;border-color:#273548;">© 2026 The Signal — readthesignal.net</div>
+  <!-- WARM HEARTH -->
+  <div class="col theme-warm-hearth">
+    <div class="col-header">
+      <h2>Warm Hearth</h2>
+      <div class="hex">#1a1822 · <span style="color:var(--text-muted)">#23212e cards</span></div>
+      <div class="vibe">Warm taupe, cozy, best at night</div>
     </div>
+    <div class="nav"><div class="logo">THE <span>SIGNAL</span></div><span class="link active">Home</span><span class="link">Stocks</span><span class="link">News</span></div>
+    <div class="card"><h3>NVIDIA Drives AI Infrastructure</h3><p>Shares climbed as data center revenue guidance topped estimates, fueled by demand for next-gen Blackwell GPUs.</p><div class="muted">2 hours ago · 5 min read</div></div>
+    <div class="stock-card"><div><div class="ticker">NVDA</div><div class="sub">NVIDIA Corp</div></div><div><div class="price">$203.28</div><div class="change">+0.23%</div></div></div>
+    <div class="scorecard"><div class="label">Signal Score</div><span class="badge green">▲ Bullish 82</span><span class="badge gold">⟐ Neutral 54</span></div>
+    <div class="accent-box"><h3>Market Pulse</h3><p>Tech leads broad rally as rate-cut hopes re-emerge.</p></div>
+    <div class="swatch-row"><div class="swatch" style="background:var(--bg-primary)">bg</div><div class="swatch" style="background:var(--bg-card)">card</div><div class="swatch" style="background:var(--bg-secondary)">nav</div><div class="swatch" style="background:var(--border)">bdr</div></div>
+  </div>
+
+</div>
+
+<!-- SECOND ROW -->
+<div class="preview">
+
+  <!-- DEEP MERCURY -->
+  <div class="col theme-deep-mercury">
+    <div class="col-header">
+      <h2>Deep Mercury</h2>
+      <div class="hex">#1c1c24 · <span style="color:var(--text-muted)">#24242e cards</span></div>
+      <div class="vibe">Neutral gray, zero hue — colors pop</div>
+    </div>
+    <div class="nav"><div class="logo">THE <span>SIGNAL</span></div><span class="link active">Home</span><span class="link">Stocks</span><span class="link">News</span></div>
+    <div class="card"><h3>NVIDIA Drives AI Infrastructure</h3><p>Shares climbed as data center revenue guidance topped estimates, fueled by demand for next-gen Blackwell GPUs.</p><div class="muted">2 hours ago · 5 min read</div></div>
+    <div class="stock-card"><div><div class="ticker">NVDA</div><div class="sub">NVIDIA Corp</div></div><div><div class="price">$203.28</div><div class="change">+0.23%</div></div></div>
+    <div class="scorecard"><div class="label">Signal Score</div><span class="badge green">▲ Bullish 82</span><span class="badge gold">⟐ Neutral 54</span></div>
+    <div class="accent-box"><h3>Market Pulse</h3><p>Tech leads broad rally as rate-cut hopes re-emerge.</p></div>
+    <div class="swatch-row"><div class="swatch" style="background:var(--bg-primary)">bg</div><div class="swatch" style="background:var(--bg-card)">card</div><div class="swatch" style="background:var(--bg-secondary)">nav</div><div class="swatch" style="background:var(--border)">bdr</div></div>
+  </div>
+
+  <!-- STORM -->
+  <div class="col theme-storm">
+    <div class="col-header">
+      <h2>Storm</h2>
+      <div class="hex">#1e293b · <span style="color:var(--text-muted)">#334155 cards</span></div>
+      <div class="vibe">Blue-gray slate, balanced contrast</div>
+    </div>
+    <div class="nav"><div class="logo">THE <span>SIGNAL</span></div><span class="link active">Home</span><span class="link">Stocks</span><span class="link">News</span></div>
+    <div class="card"><h3>NVIDIA Drives AI Infrastructure</h3><p>Shares climbed as data center revenue guidance topped estimates, fueled by demand for next-gen Blackwell GPUs.</p><div class="muted">2 hours ago · 5 min read</div></div>
+    <div class="stock-card"><div><div class="ticker">NVDA</div><div class="sub">NVIDIA Corp</div></div><div><div class="price">$203.28</div><div class="change">+0.23%</div></div></div>
+    <div class="scorecard"><div class="label">Signal Score</div><span class="badge green">▲ Bullish 82</span><span class="badge gold">⟐ Neutral 54</span></div>
+    <div class="accent-box"><h3>Market Pulse</h3><p>Tech leads broad rally as rate-cut hopes re-emerge.</p></div>
+    <div class="swatch-row"><div class="swatch" style="background:var(--bg-primary)">bg</div><div class="swatch" style="background:var(--bg-card)">card</div><div class="swatch" style="background:var(--bg-secondary)">nav</div><div class="swatch" style="background:var(--border)">bdr</div></div>
+  </div>
+
+  <!-- COFFEE -->
+  <div class="col theme-coffee">
+    <div class="col-header">
+      <h2>Coffee</h2>
+      <div class="hex">#1a1410 · <span style="color:var(--text-muted)">#282018 cards</span></div>
+      <div class="vibe">Warm brown, gentlest on eyes</div>
+    </div>
+    <div class="nav"><div class="logo">THE <span>SIGNAL</span></div><span class="link active">Home</span><span class="link">Stocks</span><span class="link">News</span></div>
+    <div class="card"><h3>NVIDIA Drives AI Infrastructure</h3><p>Shares climbed as data center revenue guidance topped estimates, fueled by demand for next-gen Blackwell GPUs.</p><div class="muted">2 hours ago · 5 min read</div></div>
+    <div class="stock-card"><div><div class="ticker">NVDA</div><div class="sub">NVIDIA Corp</div></div><div><div class="price">$203.28</div><div class="change">+0.23%</div></div></div>
+    <div class="scorecard"><div class="label">Signal Score</div><span class="badge green">▲ Bullish 82</span><span class="badge gold">⟐ Neutral 54</span></div>
+    <div class="accent-box"><h3>Market Pulse</h3><p>Tech leads broad rally as rate-cut hopes re-emerge.</p></div>
+    <div class="swatch-row"><div class="swatch" style="background:var(--bg-primary)">bg</div><div class="swatch" style="background:var(--bg-card)">card</div><div class="swatch" style="background:var(--bg-secondary)">nav</div><div class="swatch" style="background:var(--border)">bdr</div></div>
+  </div>
+
+  <!-- TWITTER DIM +2 -->
+  <div class="col theme-twitter-2">
+    <div class="col-header">
+      <h2>Twitter +2</h2>
+      <div class="hex">#1e3348 · <span style="color:var(--text-muted)">#2a425c cards</span></div>
+      <div class="vibe">Twitter Dim base, stepped lighter</div>
+    </div>
+    <div class="nav"><div class="logo">THE <span>SIGNAL</span></div><span class="link active">Home</span><span class="link">Stocks</span><span class="link">News</span></div>
+    <div class="card"><h3>NVIDIA Drives AI Infrastructure</h3><p>Shares climbed as data center revenue guidance topped estimates, fueled by demand for next-gen Blackwell GPUs.</p><div class="muted">2 hours ago · 5 min read</div></div>
+    <div class="stock-card"><div><div class="ticker">NVDA</div><div class="sub">NVIDIA Corp</div></div><div><div class="price">$203.28</div><div class="change">+0.23%</div></div></div>
+    <div class="scorecard"><div class="label">Signal Score</div><span class="badge green">▲ Bullish 82</span><span class="badge gold">⟐ Neutral 54</span></div>
+    <div class="accent-box"><h3>Market Pulse</h3><p>Tech leads broad rally as rate-cut hopes re-emerge.</p></div>
+    <div class="swatch-row"><div class="swatch" style="background:var(--bg-primary)">bg</div><div class="swatch" style="background:var(--bg-card)">card</div><div class="swatch" style="background:var(--bg-secondary)">nav</div><div class="swatch" style="background:var(--border)">bdr</div></div>
   </div>
 
 </div>

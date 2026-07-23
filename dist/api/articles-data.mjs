@@ -2,6 +2,30 @@
 // Contains article metadata for Pulse AI
 const ARTICLES = [
   {
+    "title": "Fortinet Is Boring. That's Why It's the Best Cyber Stock Out There.",
+    "slug": "ftnt-boring-cyber-consolidator-2026",
+    "ticker": "FTNT",
+    "sector": "cyber",
+    "date": "2026-07-23",
+    "summary": "While Palo Alto, CrowdStrike, and Zscaler dominated headlines with AI hype and growth-at-any-cost narratives, Fortinet has been quietly printing money — 27.5% net margins, $2.4B in free cash flow, and accelerating revenue growth to 20%. The \"boring\" firewall company might just be the best business model in all of cybersecurity."
+  },
+  {
+    "title": "Snowflake's Data Cloud Just Got an AI Upgrade — and the Numbers Are Insane",
+    "slug": "snow-ai-data-cloud-consumption-2026",
+    "ticker": "SNOW",
+    "sector": "ai",
+    "date": "2026-07-23",
+    "summary": "Snowflake's Q2 FY2026 results show accelerating growth at $1.39B (+33.5% YoY), with AI adoption driving a record $400M+ deal and RPO surging 42% to $9.8B. Here's why the data cloud company is winning the AI infrastructure race."
+  },
+  {
+    "title": "Vertiv Is the Most Important AI Stock You've Never Heard Of",
+    "slug": "vrt-data-center-cooling-ai-infrastructure-2026",
+    "ticker": "VRT",
+    "sector": "ai-power",
+    "date": "2026-07-23",
+    "summary": "While everyone obsesses over which GPU maker wins the AI race, Vertiv quietly sells the picks and shovels every data center needs — power distribution, thermal management, and liquid cooling. Locked into NVIDIA's Vera Rubin reference architecture, with a $15B+ backlog that proves demand is real, this is the purest play on the AI infrastructure buildout you'll find anywhere."
+  },
+  {
     "title": "Everyone's Betting on a Different AI Chip. Applied Materials Collects the Rent.",
     "slug": "amat-picks-shovels-ai-supercycle-2026",
     "ticker": "AMAT",

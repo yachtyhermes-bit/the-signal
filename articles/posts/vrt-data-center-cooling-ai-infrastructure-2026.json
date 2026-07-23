@@ -1,0 +1,47 @@
+{
+  "slug": "vrt-data-center-cooling-ai-infrastructure-2026",
+  "ticker": "VRT",
+  "sector": "ai-power",
+  "sentiment": "bullish",
+  "date": "2026-07-23",
+  "title": "Vertiv Is the Most Important AI Stock You've Never Heard Of",
+  "subtitle": "Every GPU needs power and cooling. NVIDIA gets the headlines. This 60-year-old Ohio company gets the contracts. And a fifteen-billion-dollar backlog says the party's just getting started.",
+  "summary": "While everyone obsesses over which GPU maker wins the AI race, Vertiv quietly sells the picks and shovels every data center needs — power distribution, thermal management, and liquid cooling. Locked into NVIDIA's Vera Rubin reference architecture, with a $15B+ backlog that proves demand is real, this is the purest play on the AI infrastructure buildout you'll find anywhere.",
+  "image": {
+    "src": "/img/articles/vrt-data-center-cooling-ai-infrastructure-2026.jpg",
+    "caption": "Vertiv power and cooling infrastructure at a modern AI data center. (The Signal / AI-generated)"
+  },
+  "tags": [
+    "vrt",
+    "ai",
+    "data-centers",
+    "infrastructure",
+    "thermal-management",
+    "power",
+    "liquid-cooling",
+    "semiconductors"
+  ],
+  "links": [
+    {
+      "label": "Vertiv Investor Relations",
+      "url": "https://investors.vertiv.com/"
+    },
+    {
+      "label": "Goldman Sachs: AI Poised to Drive 160% Increase in Power Demand by 2030",
+      "url": "https://www.goldmansachs.com/insights/articles/AI-poised-to-drive-160-increase-in-power-demand"
+    },
+    {
+      "label": "NVIDIA Vera Rubin DSX AI Factory Reference Design (featuring Vertiv)",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-vera-rubin-dsx-ai-factory-reference-design-omniverse-digital-twin"
+    }
+  ],
+  "videos": [
+    {
+      "embedUrl": "https://www.youtube.com/embed/HUt_XDrKxvA",
+      "title": "Vertiv CEO on data center industry health and AI demand",
+      "channel": "Fox Business"
+    }
+  ],
+  "price": 304.68,
+  "bodyHtml": "<p>Pop quiz: what's the most important company in AI?</p><p>If you said NVIDIA, you're not wrong. But you're not fully right either.</p><p>Because here's the thing — the most advanced GPU on the planet is just an expensive paperweight without two things: power and cooling. And nobody does both better than a 60-year-old company from Westerville, Ohio that most retail investors have never heard of.</p><p>Vertiv Holdings. Ticker VRT. And it might just be the purest AI infrastructure bet on the entire market.</p><!-- VIDEO 0 --><p>Let's talk about what Vertiv actually does, because it's not flashy but it's brutally essential. Power distribution. Uninterruptible power supplies. Low and medium voltage switchgear. Thermal management — both air and liquid cooling. Rack infrastructure. Monitoring software. The boring, unsexy stuff that keeps a data center running 24/7/365.</p><p>Without Vertiv, a data center is just an expensive empty building with a really good floor.</p><p>And here's where it gets interesting for the AI thesis. Every new generation of GPU runs hotter than the last. NVIDIA's H100 pulls about 700 watts. The Blackwell B200 bumps that past 1000 watts. And the upcoming Vera Rubin? We're talking 1200 watts or more per chip. At those densities, air cooling simply doesn't cut it anymore. You need liquid cooling. You need cold plates. You need the kind of thermal engineering that Vertiv has been perfecting for decades.</p><p>That's why NVIDIA chose Vertiv as their certified power and cooling partner for the Vera Rubin DSX AI factory reference design. Not as a vendor. As a partner baked into the blueprint from the start. Every Vera Rubin deployment that follows that reference architecture uses Vertiv infrastructure by design. That's not a contract win. That's a lock-in.</p><p>And Vertiv just doubled down. On July 20, they announced the acquisition of Strategic Thermal Labs — a cold-plate design firm that adds precision liquid cooling expertise to Vertiv's already formidable arsenal. This isn't a diversification play. It's a targeted strike at the highest-growth segment of the AI infrastructure market.</p><p>The numbers back up the story. Vertiv's backlog has swelled past $15 billion — that's nearly three times annualized revenue in contracted orders. A 2.9 book-to-bill ratio means demand is accelerating, not slowing. Revenue hit $10.23 billion over the trailing twelve months, up over 30% year over year. Free cash flow clocked in at nearly $2 billion. This isn't a speculative narrative. It's a spreadsheet that keeps getting better every quarter.</p><p>The macro backdrop is even more compelling. The hyperscalers — Microsoft, Amazon, Google, Meta — have collectively committed over a trillion dollars to AI infrastructure capex over the next three to five years. Goldman Sachs projects that AI will drive a 160% increase in data center power demand by 2030. And here's the kicker: the US electrical grid is already constrained. Building new transmission capacity takes years. That means every additional megawatt of compute has to be used more efficiently, which means better cooling, better power management, better infrastructure. That's Vertiv's entire reason for existing.</p><p>Competitors exist, sure. Eaton at $161 billion market cap. Schneider Electric at $170 billion. But they're massive, diversified industrial conglomerates. Vertiv generates roughly 80% of its revenue from data centers. When the AI buildout accelerates, Vertiv feels it directly and immediately. When it slows, same thing. That's a double-edged sword, but right now the edge cuts firmly in one direction.</p><p>The bull case is straightforward. AI computing power doubles roughly every six to eight months. Each doubling requires more electricity and generates more heat. The electrical grid can't keep pace. The solution isn't just more power plants — it's smarter power and cooling infrastructure. Vertiv sells that infrastructure. The backlog proves the demand is real. The NVIDIA partnership proves the technology is essential. And 60 years of operating history proves the company will be around to deliver.</p><p>The bears will tell you the valuation is rich — 34 times forward earnings, high beta, hyperscaler capex dependence. Fair points. But structural shifts that happen once in a generation don't come cheap. And the AI infrastructure buildout is the largest industrial undertaking since the Interstate Highway System.</p><p>Vertiv isn't the fastest horse in the race. It's the company selling shovels to everyone digging for gold. In this particular gold rush, that might be the best seat in the house.</p><p class=\"disclosure\"><em>Disclosure: The Signal holds no position in VRT. Positions may change. This is not financial advice.</em></p>"
+}

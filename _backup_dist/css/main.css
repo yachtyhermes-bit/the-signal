@@ -1,14 +1,14 @@
 /* === THE SIGNAL — Main Stylesheet v2 === */
 :root {
   --text: #e8e8f0;
-  --bg-primary: #06060e;
-  --bg-secondary: #0a0a18;
-  --bg-card: #0f0f20;
-  --bg-card-hover: #161630;
-  --bg-accent: #12123a;
+  --bg-primary: #1f3058;
+  --bg-secondary: #22355e;
+  --bg-card: #2a4678;
+  --bg-card-hover: #325088;
+  --bg-accent: #273e6a;
   --text-primary: #e8e8f0;
-  --text-secondary: #8888aa;
-  --text-muted: #555570;
+  --text-secondary: #9aaac4;
+  --text-muted: #6a7c9e;
   --accent: #3b82f6;
   --accent-glow: rgba(59, 130, 246, 0.15);
   --accent-light: #60a5fa;
@@ -20,7 +20,7 @@
   --gold: #f59e0b;
   --gold-dim: rgba(245, 158, 11, 0.12);
   --purple: #a78bfa;
-  --border: #181830;
+  --border: #334b82;
   --radius: 12px;
   --radius-sm: 6px;
 }
@@ -55,7 +55,7 @@ body::before {
 
 /* === NAVIGATION === */
 .nav {
-  background: rgba(6, 6, 14, 0.92);
+  background: rgba(31, 48, 88, 0.92);
   backdrop-filter: blur(24px) saturate(1.4);
   -webkit-backdrop-filter: blur(24px) saturate(1.4);
   border-bottom: 1px solid var(--border);
@@ -203,7 +203,7 @@ main {
   padding: 80px 24px 48px;
   text-align: center;
   overflow: hidden;
-  background: #08080e;
+  background: var(--bg-primary);
 }
 .hero-video-bg {
   position: absolute;
@@ -3931,7 +3931,7 @@ body.pulse-modal-open {
 .newsletter-input {
   flex: 1;
   padding: 10px 14px;
-  background: #0a0a14;
+  background: var(--bg-accent);
   border: 1px solid var(--border, #222);
   border-radius: 8px;
   color: var(--text-primary, #e8e8f0);
