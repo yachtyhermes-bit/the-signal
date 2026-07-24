@@ -66,7 +66,7 @@ const stockListData = symbols.map(sym => {
 
 // Build stock cards HTML — slim row layout
 const cardsHtml = stockListData.map(s => {
-  return `<a href="/stocks/${esc(s.sym.toLowerCase())}/" class="stocks-card" data-ticker="${esc(s.sym)}">
+  return `<a href="/stocks/${esc(s.sym.toUpperCase())}/" class="stocks-card" data-ticker="${esc(s.sym)}">
     <div class="stocks-card-left">
       <span class="stocks-card-ticker">$${esc(s.sym)}</span>
       <span class="stocks-card-name">${esc(s.name)}</span>

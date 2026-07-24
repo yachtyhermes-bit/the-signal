@@ -2,6 +2,14 @@
 // Contains article metadata for Pulse AI
 const ARTICLES = [
   {
+    "title": "Constellation Energy Has the Nuclear Fleet AI Data Centers Are Desperate For",
+    "slug": "ceg-nuclear-ai-data-center-catalysts-2026",
+    "ticker": "CEG",
+    "sector": "ai-power",
+    "date": "2026-07-24",
+    "summary": "America's largest nuclear operator, Constellation Energy controls 25% of domestic nuclear capacity with a 32GW fleet. Between the Three Mile Island restart with Microsoft, a novel Blue Energy manufacturing investment, Walmart PPA, and a 20%+ EPS growth outlook through 2029, CEG is the most underappreciated AI infrastructure bet on the board."
+  },
+  {
     "title": "Intuitive Machines Is Building the Toll Road to the Moon. The Market Still Sees a Launch Company.",
     "slug": "lunr-lunar-economy-moat-2026",
     "ticker": "LUNR",

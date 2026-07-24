@@ -5622,6 +5622,16 @@ body.pulse-modal-open {
 [data-theme="light"] .hero p {
   color: #b0b0c8;
 }
+[data-theme="light"] .hero {
+  background: #1b2b50;
+}
+[data-theme="light"] .hero-video-bg::after {
+  background:
+    radial-gradient(ellipse 100% 60% at 50% 0%, color-mix(in srgb, #1b2b50 85%, transparent) 0%, transparent 100%),
+    radial-gradient(ellipse 100% 50% at 50% 100%, color-mix(in srgb, #1b2b50 75%, transparent) 0%, transparent 100%),
+    radial-gradient(ellipse 80% 50% at 50% 50%, transparent 30%, color-mix(in srgb, #1b2b50 55%, transparent) 100%);
+}
+
 [data-theme="light"] .focus-bar {
   /* no background, same clean layout as dark */
 }

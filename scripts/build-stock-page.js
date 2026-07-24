@@ -719,7 +719,7 @@ function toggleTheme() {
 </body>
 </html>`;
 
-  const dir = path.join(DIST, 'stocks', symbol.toLowerCase());
+  const dir = path.join(DIST, 'stocks', symbol.toUpperCase());
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, 'index.html'), html);
   return true;
