@@ -1,14 +1,14 @@
 /* === THE SIGNAL — Main Stylesheet v2 === */
 :root {
   --text: #e8e8f0;
-  --bg-primary: #1f3058;
-  --bg-secondary: #22355e;
-  --bg-card: #2a4678;
-  --bg-card-hover: #325088;
-  --bg-accent: #273e6a;
+  --bg-primary: #1b2b50;
+  --bg-secondary: #1e3054;
+  --bg-card: #233b64;
+  --bg-card-hover: #2b4676;
+  --bg-accent: #23375d;
   --text-primary: #e8e8f0;
-  --text-secondary: #9aaac4;
-  --text-muted: #6a7c9e;
+  --text-secondary: #889abb;
+  --text-muted: #5e7092;
   --accent: #3b82f6;
   --accent-glow: rgba(59, 130, 246, 0.15);
   --accent-light: #60a5fa;
@@ -20,7 +20,7 @@
   --gold: #f59e0b;
   --gold-dim: rgba(245, 158, 11, 0.12);
   --purple: #a78bfa;
-  --border: #334b82;
+  --border: #2c426f;
   --radius: 12px;
   --radius-sm: 6px;
 }
@@ -212,6 +212,17 @@ main {
   height: 100%;
   overflow: hidden;
   z-index: 0;
+}
+.hero-video-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 100% 60% at 50% 0%, color-mix(in srgb, var(--bg-primary) 85%, transparent) 0%, transparent 100%),
+    radial-gradient(ellipse 100% 50% at 50% 100%, color-mix(in srgb, var(--bg-primary) 75%, transparent) 0%, transparent 100%),
+    radial-gradient(ellipse 80% 50% at 50% 50%, transparent 30%, color-mix(in srgb, var(--bg-primary) 55%, transparent) 100%);
+  z-index: 1;
+  pointer-events: none;
 }
 .hero-content { max-width: 720px; margin: 0 auto; position: relative; z-index: 1; }
 .hero-badge {

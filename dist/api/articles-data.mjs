@@ -2,6 +2,14 @@
 // Contains article metadata for Pulse AI
 const ARTICLES = [
   {
+    "title": "Intuitive Machines Is Building the Toll Road to the Moon. The Market Still Sees a Launch Company.",
+    "slug": "lunr-lunar-economy-moat-2026",
+    "ticker": "LUNR",
+    "sector": "space",
+    "date": "2026-07-24",
+    "summary": "Intuitive Machines is the only private company to land on the Moon — twice. With a $4.82B NASA communications contract, six CLPS awards, and Q1 2026's first-ever positive Adjusted EBITDA, the company is transitioning from mission contractor to lunar infrastructure utility. But a 25.9% short interest and insider selling suggest the market hasn't caught up to the thesis."
+  },
+  {
     "title": "Fortinet Is Boring. That's Why It's the Best Cyber Stock Out There.",
     "slug": "ftnt-boring-cyber-consolidator-2026",
     "ticker": "FTNT",
