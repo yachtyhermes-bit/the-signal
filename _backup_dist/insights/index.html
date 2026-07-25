@@ -78,7 +78,7 @@
 <link rel="stylesheet" href="/css/nav.css">
 </head>
 <body>
-  <main class="insights-page">
+  <main class="insights-page" id="premiumContent" style="display:none">
     <div class="insights-hero">
       <h1>Trader Insights</h1>
       <p>Track portfolios, recent trades, and performance of the world's most famous investors and traders.</p>
@@ -399,6 +399,20 @@
       if (main) main.style.transform = 'translateX(0)';
       if (sub) sub.style.transform = 'translateX(-100%)';
     };
+  </script>
+  <script>
+  (function(){
+    var token = localStorage.getItem('hive_token');
+    var pc = document.getElementById('premiumContent');
+    if (!token) { return; }
+    fetch('/api/hive?action=premium&token='+encodeURIComponent(token))
+      .then(function(r){return r.json()})
+      .then(function(d){
+        if(d.premium && (d.plan==='premium'||d.plan==='pro')){
+          if(pc) pc.style.display='';
+        }
+      }).catch(function(){});
+  })();
   </script>
 </body>
 </html>
