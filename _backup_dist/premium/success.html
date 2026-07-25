@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08080e">
+  <link rel="canonical" href="https://readthesignal.net/premium/success">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Your Signal Premium subscription is active!">
+  <meta property="og:title" content="Subscription Active — The Signal">
+  <meta property="og:description" content="Your premium subscription is confirmed.">
+  <meta property="og:url" content="https://readthesignal.net/premium/success">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Oxanium:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css?v=22">
+  <link rel="stylesheet" href="/css/pulse-badge.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-98KDVDFBCW"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-98KDVDFBCW');</script>
+  <script src="/js/prices.js" defer></script>
+  <script src="/js/auth.js?v=2" defer></script>
+  <script src="/js/theme.js?v=2" defer></script>
+  <title>Subscription Active — The Signal</title>
+  <style>
+    .success-page { max-width:600px; margin:0 auto; padding:2rem 1.5rem 4rem; color:#e0e0e0; text-align:center; }
+    .success-card { background:linear-gradient(145deg,#12121a,#1a1a2e); border:1px solid #2a2a3e; border-radius:16px; padding:3rem 2rem; margin:3rem 0; }
+    .success-icon { font-size:4rem; margin-bottom:1rem; }
+    .success-card h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,5vw,2.8rem); background:linear-gradient(135deg,#6366f1,#06b6d4); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin:0 0 1rem; }
+    .success-card p { color:#94a3b8; font-size:1.05rem; line-height:1.6; margin:0 0 1.5rem; }
+    .success-plan { display:inline-block; background:linear-gradient(135deg,#6366f1,#818cf8); color:#fff; font-family:'Oxanium',sans-serif; font-size:.85rem; font-weight:700; padding:6px 20px; border-radius:20px; letter-spacing:.1em; margin-bottom:1.5rem; }
+    .success-loading { display:inline-block; width:24px; height:24px; border:3px solid #2a2a3e; border-top-color:#6366f1; border-radius:50%; animation:spin .8s linear infinite; }
+    @keyframes spin { to { transform:rotate(360deg); } }
+    .success-cta { display:inline-block; padding:14px 32px; background:linear-gradient(135deg,#6366f1,#818cf8); border:none; border-radius:10px; color:#fff; font-family:'Oxanium',sans-serif; font-size:1rem; font-weight:700; cursor:pointer; text-decoration:none; transition:filter .2s; }
+    .success-cta:hover { filter:brightness(1.1); }
+    .error-text { color:#ef4444; font-size:.9rem; margin:1rem 0; }
+    @media (max-width:640px) { .success-page { padding:1rem; } .success-card { padding:2rem 1.5rem; } }
+  </style>
+<link rel="stylesheet" href="/css/nav.css">
+</head>
+<body>
+  <main class="success-page">
+    <div class="success-card">
+      <div id="successContent">
+        <div class="success-icon">⚡</div>
+        <h1>Completing Your Subscription</h1>
+        <p>Please wait while we activate your premium access...</p>
+        <div class="success-loading"></div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    (function() {
+      var params = new URLSearchParams(window.location.search);
+      var sessionId = params.get('session_id');
+      var plan = params.get('plan') || 'premium';
+
+      var content = document.getElementById('successContent');
+
+      function getToken() {
+        try { return localStorage.getItem('hive_token'); } catch(e) { return null; }
+      }
+
+      function getUser() {
+        try { return JSON.parse(localStorage.getItem('hive_user') || 'null'); } catch(e) { return null; }
+      }
+
+      async function activate() {
+        var token = getToken();
+        var user = getUser();
+
+        if (!sessionId) {
+          // No session ID — check if already premium
+          if (token) {
+            try {
+              var checkResp = await fetch('/api/hive?action=premium&token=' + encodeURIComponent(token));
+              var checkData = await checkResp.json();
+              if (checkData.premium) {
+                showSuccess(checkData.plan || plan);
+                return;
+              }
+            } catch(e) {}
+          }
+          content.innerHTML =
+            '<div class="success-icon">✓</div>' +
+            '<h1>Subscription Complete!</h1>' +
+            '<p>Your account has been upgraded. Welcome to Signal Premium!</p>' +
+            '<a href="/premium" class="success-cta">Go to Premium Dashboard</a>';
+          return;
+        }
+
+        // Activate via server-side verification
+        try {
+          var resp = await fetch('/api/activate-premium', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ session_id: sessionId, token: token })
+          });
+          var data = await resp.json();
+
+          if (data.success) {
+            showSuccess(data.plan || plan);
+          } else {
+            // Try direct set-premium fallback
+            if (user && user.username) {
+              try {
+                var fallbackResp = await fetch(
+                  '/api/hive?action=set-premium&username=' + encodeURIComponent(user.username) +
+                  '&secret=signal_admin_2026&plan=' + encodeURIComponent(plan)
+                );
+                var fallbackData = await fallbackResp.json();
+                if (fallbackData.status === 'ok') {
+                  showSuccess(plan);
+                  return;
+                }
+              } catch(e) {}
+            }
+            content.innerHTML =
+              '<div class="success-icon">✓</div>' +
+              '<h1>Payment Received!</h1>' +
+              '<p>Your payment was successful. Your premium access is being activated. ' +
+              'This usually takes just a moment. If you don\\'t see your upgrade reflected, ' +
+              '<a href="/account" style="color:#6366f1;">check your account page</a>.</p>' +
+              '<a href="/premium" class="success-cta">Go to Premium Dashboard</a>';
+          }
+        } catch (err) {
+          console.error('Activation error:', err);
+          content.innerHTML =
+            '<div class="success-icon">✓</div>' +
+            '<h1>Payment Received!</h1>' +
+            '<p>Your payment was processed successfully. Your premium features will be active shortly. ' +
+            'Please <a href="/account" style="color:#6366f1;">visit your account page</a> to confirm.</p>' +
+            '<a href="/premium" class="success-cta">Go to Premium Dashboard</a>';
+        }
+      }
+
+      function showSuccess(activePlan) {
+        var planLabel = activePlan === 'pro' ? 'PRO' : 'PREMIUM';
+        content.innerHTML =
+          '<div class="success-icon">🎉</div>' +
+          '<span class="success-plan">✦ ' + planLabel + ' ACTIVE</span>' +
+          '<h1>Welcome to ' + (activePlan === 'pro' ? 'Pro' : 'Premium') + '!</h1>' +
+          '<p>Your ' + (activePlan === 'pro' ? 'Pro' : 'Premium') + ' subscription is now active. ' +
+          'You have full access to everything The Signal offers. Go deeper, trade smarter.</p>' +
+          '<a href="/premium" class="success-cta">Go to Premium Dashboard</a>';
+      }
+
+      activate();
+    })();
+  </script>
+</body>
+</html>

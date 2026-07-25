@@ -47,7 +47,7 @@ export default async function handler(req, res) {
     const params = new URLSearchParams();
     params.append('line_items[0][quantity]', '1');
     params.append('mode', 'subscription');
-    params.append('success_url', `https://readthesignal.net/account?success=true&plan=${plan}`);
+    params.append('success_url', `https://readthesignal.net/premium/success?session_id={CHECKOUT_SESSION_ID}&plan=${plan}`);
     params.append('cancel_url', 'https://readthesignal.net/pricing?canceled=true');
     params.append('allow_promotion_codes', 'true');
     params.append('billing_address_collection', 'auto');

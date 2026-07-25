@@ -30,6 +30,14 @@
       "dest": "/signal-vs-the-street.html"
     },
     {
+      "src": "/premium/success",
+      "dest": "/premium/success.html"
+    },
+    {
+      "src": "/premium(/.*)?",
+      "dest": "/premium/index.html"
+    },
+    {
       "src": "/art/(.*)",
       "dest": "/article/$1"
     },

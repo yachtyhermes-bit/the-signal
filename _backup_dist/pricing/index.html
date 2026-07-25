@@ -23,6 +23,7 @@
   <script src="/js/search.js" defer></script>
   <script src="/js/auth.js?v=2" defer></script>
   <script src="/js/theme.js?v=2" defer></script>
+  <script src="https://js.stripe.com/v3/"></script>
   <title>Pricing — The Signal</title>
   <style>
     .pricing-page { max-width:1100px; margin:0 auto; padding:2rem 1.5rem 4rem; color:#e0e0e0; }
@@ -106,7 +107,7 @@
           <li>Priority daily newsletter</li>
           <li>Custom stock watchlists</li>
         </ul>
-        <a href="/premium" class="btn-subscribe premium" id="subscribePremium">Subscribe Now</a>
+        <button class="btn-subscribe premium" id="subscribePremium" onclick="subscribe('premium')">Subscribe Now</button>
       </div>
       <div class="pricing-card" data-plan="pro">
         <div class="plan-name">Pro</div>
@@ -121,7 +122,7 @@
           <li>API access</li>
           <li>Priority support</li>
         </ul>
-        <a href="/premium" class="btn-subscribe pro" id="subscribePro">Subscribe Now</a>
+        <button class="btn-subscribe pro" id="subscribePro" onclick="subscribe('pro')">Subscribe Now</button>
       </div>
     </div>
 
@@ -231,38 +232,28 @@
               if (data.plan === 'premium' && premiumBtn) {
                 premiumBtn.textContent = 'Current Plan';
                 premiumBtn.className = 'btn-subscribe current-plan';
-                premiumBtn.href = '/premium';
+                premiumBtn.onclick = function() { window.location.href = '/premium'; };
               }
               if (data.plan === 'pro' && proBtn) {
                 proBtn.textContent = 'Current Plan';
                 proBtn.className = 'btn-subscribe current-plan';
-                proBtn.href = '/premium';
+                proBtn.onclick = function() { window.location.href = '/premium'; };
               }
             }
           })
           .catch(function() {});
       }
 
-      // Subscribe button click handler
-      document.querySelectorAll('.btn-subscribe.premium, .btn-subscribe.pro').forEach(function(btn) {
-        btn.addEventListener('click', function(e) {
-          if (btn.classList.contains('current-plan')) {
-            e.preventDefault();
-            window.location.href = '/premium';
-            return;
-          }
-          var user = null;
-          try { user = JSON.parse(localStorage.getItem('hive_user') || 'null'); } catch(ex) {}
-          if (!user) {
-            e.preventDefault();
-            if (typeof showHiveJoinModal === 'function') {
-              showHiveJoinModal('login');
-            } else {
-              window.location.href = '/hive';
-            }
-          }
-        });
-      });
+      // Check for checkout status from URL params
+      (function() {
+        var params = new URLSearchParams(window.location.search);
+        if (params.get('canceled') === 'true') {
+          var banner = document.createElement('div');
+          banner.style.cssText = 'background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.2);border-radius:12px;padding:1rem 1.5rem;text-align:center;margin-bottom:1rem;';
+          banner.innerHTML = '<span style="color:#ef4444;font-weight:700;font-size:.9rem;">Payment canceled. No charges were made.</span>';
+          document.querySelector('.pricing-hero').after(banner);
+        }
+      })();
 
       // Drawer toggle
       function initDrawer() {
@@ -292,6 +283,37 @@
       }
       initDrawer();
     })();
+
+    // Stripe Checkout subscription function
+    async function subscribe(plan) {
+      var token = null;
+      try { token = localStorage.getItem('hive_token'); } catch(e) {}
+      if (!token) {
+        if (typeof showHiveJoinModal === 'function') {
+          showHiveJoinModal('login');
+        } else {
+          window.location.href = '/hive';
+        }
+        return;
+      }
+
+      try {
+        var resp = await fetch('/api/create-checkout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ plan: plan, token: token })
+        });
+        var data = await resp.json();
+        if (data.url) {
+          window.location.href = data.url;
+        } else {
+          alert(data.error || 'Could not create checkout session. Please try again.');
+        }
+      } catch (err) {
+        console.error('Checkout error:', err);
+        alert('Something went wrong. Please try again.');
+      }
+    }
 
     // Sub-drawer navigation
     window.openSubDrawer = function() {
