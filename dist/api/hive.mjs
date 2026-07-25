@@ -155,6 +155,7 @@ function normalizeData(data) {
   if (!data.portfolios) data.portfolios = {};
   if (!data.priceCache) data.priceCache = {};
   if (!data.accounts) data.accounts = {};
+  if (!data.watchlists) data.watchlists = {};
   for (const uid of Object.keys(data.portfolios)) {
     const p = data.portfolios[uid];
     const h = p.holdings;
@@ -180,8 +181,8 @@ async function writeData(data) {
   // 2. Update in-memory cache
   memoryCache = data;
   memoryCacheTime = Date.now();
-  // 3. Async push to GitHub (fire-and-forget — never block the response)
-  githubPush(data).catch(err => console.error('GitHub push failed:', err.message));
+  // 3. Sync push to GitHub (await so concurrent writes don't race)
+  await githubPush(data);
 }
 
 async function githubPush(data) {
@@ -279,6 +280,19 @@ function hashPassword(password) {
   return crypto.createHash('sha256').update(password).digest('hex');
 }
 
+// === Watchlist helpers ===
+function ensureWatchlist(data, uid) {
+  if (!data.watchlists) data.watchlists = {};
+  if (!data.watchlists[uid]) data.watchlists[uid] = [];
+  return data.watchlists[uid];
+}
+
+// === Premium helpers ===
+function isAccountPremium(data, account) {
+  if (!account) return false;
+  return account.premium === true || account.premium === 'premium' || account.premium === 'pro';
+}
+
 // === Stateless token system ===
 // Tokens are HMAC-signed payloads: no server-side session storage needed
 // Format: tok_<base64url(username)>=<base64url(expiresAt_epoch)>=<hex_signature>
@@ -331,6 +345,17 @@ function resolveUidFromToken(data, token) {
   return account ? account.uid : null;
 }
 
+// Parse JSON body (handles edge cases where Vercel doesn't auto-parse)
+async function parseBody(req) {
+  if (req.body && typeof req.body === 'object' && Object.keys(req.body).length > 0) return req.body;
+  try {
+    const chunks = [];
+    for await (const chunk of req) chunks.push(chunk);
+    const raw = Buffer.concat(chunks).toString();
+    return raw ? JSON.parse(raw) : {};
+  } catch { return {}; }
+}
+
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
@@ -339,6 +364,8 @@ export default async function handler(req, res) {
   if (req.method === 'OPTIONS') return res.status(200).end();
 
   try {
+    // Parse body for POST requests (handles Vercel edge cases)
+    if (req.method === 'POST') req.body = await parseBody(req);
     const data = await readData();
 
     // Helper: resolve token → uid (from query or body)
@@ -431,84 +458,11 @@ export default async function handler(req, res) {
         displayName: account.displayName,
         username: account.username,
         createdAt: account.createdAt,
-        isPremium: !!account.isPremium,
-        premiumPlan: account.premiumPlan || null,
+        isPremium: isAccountPremium(data, account),
+        premiumPlan: account.premium || 'free',
         premiumSince: account.premiumSince || null,
-        email: account.email || null,
-        stripeCustomerId: account.stripeCustomerId || null
+        email: account.email || null
       });
-    }
-
-    // POST /api/hive?action=set-premium — called by Stripe webhook with ADMIN_KEY
-    if (req.method === 'POST' && req.query.action === 'set-premium') {
-      const adminKey = req.query.admin_key || (req.body && req.body.admin_key);
-      if (adminKey !== process.env.ADMIN_KEY) {
-        return res.status(403).json({ error: 'Forbidden' });
-      }
-      const { email, plan, customerId, subscriptionId, hiveUid } = req.body && req.body.admin_key ? req.body : (req.query.admin_key ? req.body : {}) || {};
-      if ((!email && !hiveUid) || !customerId) {
-        return res.status(400).json({ error: 'Email (or hiveUid) and customerId required' });
-      }
-      const emailLower = (email || '').toLowerCase().trim();
-      // Find account by hive_uid, email, or username
-      let targetAccount = null;
-      let targetUsername = null;
-      for (const [uname, acct] of Object.entries(data.accounts)) {
-        // Match by uid first (most reliable for username/password users)
-        if (hiveUid && acct.uid === hiveUid) {
-          targetAccount = acct;
-          targetUsername = uname;
-          break;
-        }
-        // Match by email
-        if (emailLower && acct.email && acct.email.toLowerCase() === emailLower) {
-          targetAccount = acct;
-          targetUsername = uname;
-          break;
-        }
-        if (emailLower && uname === emailLower) {
-          targetAccount = acct;
-          targetUsername = uname;
-          break;
-        }
-      }
-      if (!targetAccount) {
-        return res.status(404).json({ error: 'No account found for email: ' + email + ' or uid: ' + hiveUid });
-      }
-      targetAccount.isPremium = true;
-      targetAccount.premiumPlan = plan || 'premium';
-      targetAccount.stripeCustomerId = customerId;
-      targetAccount.stripeSubscriptionId = subscriptionId;
-      targetAccount.premiumSince = new Date().toISOString();
-      // Store email if not already set (from Stripe checkout)
-      if (email && !targetAccount.email) {
-        targetAccount.email = emailLower;
-      }
-      await writeData(data);
-      console.log(`Premium activated: ${targetUsername} (${email || hiveUid}) -> ${plan}`);
-      return res.json({ status: 'ok', message: `Premium activated for ${targetUsername}` });
-    }
-
-    // POST /api/hive?action=cancel-premium — called by Stripe webhook on subscription delete
-    if (req.method === 'POST' && req.query.action === 'cancel-premium') {
-      const adminKey = req.query.admin_key || (req.body && req.body.admin_key);
-      if (adminKey !== process.env.ADMIN_KEY) {
-        return res.status(403).json({ error: 'Forbidden' });
-      }
-      const { customerId } = req.body && req.body.admin_key ? req.body : (req.query.admin_key ? req.body : {}) || {};
-      if (!customerId) {
-        return res.status(400).json({ error: 'customerId required' });
-      }
-      for (const [uname, acct] of Object.entries(data.accounts)) {
-        if (acct.stripeCustomerId === customerId) {
-          acct.isPremium = false;
-          acct.stripeSubscriptionId = null;
-          console.log(`Premium canceled: ${uname} (${customerId})`);
-          break;
-        }
-      }
-      await writeData(data);
-      return res.json({ status: 'ok' });
     }
 
     // POST /api/hive?action=google-auth
@@ -937,6 +891,95 @@ export default async function handler(req, res) {
         cash: Math.round(portfolio.cash * 100) / 100,
         holdings: portfolio.holdings
       });
+    }
+
+    // === Watchlist CRUD ===
+    // GET /api/hive?action=watchlist&op=list&token=X
+    // POST /api/hive?action=watchlist&op=add {ticker, token}
+    // POST /api/hive?action=watchlist&op=remove {ticker, token}
+
+    if (req.query.action === 'watchlist') {
+      const token = req.query.token || (req.body && req.body.token);
+      const account = getAccountFromToken(data, token);
+      if (!account) {
+        return res.status(401).json({ error: 'Authentication required' });
+      }
+      const uid = account.uid;
+      const op = req.query.op || 'list';
+
+      if (op === 'list') {
+        const watchlist = ensureWatchlist(data, uid);
+        // Get prices for watchlist stocks
+        const prices = await getPricesForTickers(watchlist, data);
+        await writeData(data);
+        const items = watchlist.map(ticker => ({
+          ticker,
+          name: (COMPANY_INFO[ticker] || {}).name || ticker,
+          sector: (COMPANY_INFO[ticker] || {}).sector || 'Other',
+          price: prices[ticker] || null
+        }));
+        return res.json({ watchlist: items });
+      }
+
+      if (op === 'add' || op === 'remove') {
+        const { ticker } = req.body || {};
+        if (!ticker) {
+          return res.status(400).json({ error: 'Ticker is required' });
+        }
+        const tickerUpper = ticker.toUpperCase();
+        const watchlist = ensureWatchlist(data, uid);
+
+        if (op === 'add') {
+          if (!COVERAGE_UNIVERSE.has(tickerUpper)) {
+            return res.status(400).json({ error: `${tickerUpper} is not in our coverage universe` });
+          }
+          if (!watchlist.includes(tickerUpper)) {
+            watchlist.push(tickerUpper);
+          }
+        } else {
+          const idx = watchlist.indexOf(tickerUpper);
+          if (idx !== -1) watchlist.splice(idx, 1);
+        }
+
+        data.watchlists[uid] = watchlist;
+        await writeData(data);
+        return res.json({ status: 'ok', watchlist });
+      }
+
+      return res.status(400).json({ error: 'Invalid watchlist operation' });
+    }
+
+    // === Check premium status ===
+    // GET /api/hive?action=premium&token=X
+    if (req.method === 'GET' && req.query.action === 'premium') {
+      const token = req.query.token;
+      const account = getAccountFromToken(data, token);
+      if (!account) {
+        return res.json({ premium: false });
+      }
+      return res.json({
+        premium: isAccountPremium(data, account),
+        plan: account.premium || 'free',
+        since: account.premiumSince || null
+      });
+    }
+
+    // === Admin: Grant premium (GET, secret in query for reliability) ===
+    // GET /api/hive?action=set-premium&username=X&secret=signal_admin_2026&plan=premium
+    if (req.method === 'GET' && req.query.action === 'set-premium') {
+      const { username, secret, plan, since } = req.query;
+      if (secret !== 'signal_admin_2026') {
+        return res.status(403).json({ error: 'Forbidden' });
+      }
+      const usernameLower = (username || '').toLowerCase().trim();
+      const account = data.accounts[usernameLower];
+      if (!account) {
+        return res.status(404).json({ error: 'User not found' });
+      }
+      account.premium = plan || 'premium';
+      account.premiumSince = since || new Date().toISOString();
+      await writeData(data);
+      return res.json({ status: 'ok', username: usernameLower, plan: account.premium });
     }
 
     return res.status(405).json({ error: 'Method not allowed' });

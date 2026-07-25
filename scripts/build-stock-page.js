@@ -249,6 +249,9 @@ function buildStockPage(symbol) {
         <a href="/#scorecard" class="drawer-link">SIGNAL SCORECARD</a>
         <a href="/hive" class="drawer-link">HIVE</a>
         <a href="/signal-vs-the-street" class="drawer-link">SIGNAL VS. STREET</a>
+        <a href="/premium" class="drawer-link">PREMIUM DASHBOARD</a>
+        <a href="/insights" class="drawer-link">TRADER INSIGHTS</a>
+        <a href="/watchlist" class="drawer-link">MY WATCHLIST</a>
         <a href="/pricing" class="drawer-link">SIGNAL PREMIUM</a>
         <a href="/pricing" class="drawer-cta">GET PREMIUM ACCESS</a>
       </div>
@@ -396,17 +399,19 @@ function buildStockPage(symbol) {
         </div>
 
         <!-- AI Analysis -->
-        <div class="signal-ai-analysis">
+        <div class="signal-ai-analysis" id="aiAnalysis">
           <div class="signal-ai-header">
             <span class="signal-ai-icon">🤖</span>
             <span>Pulse AI Analysis</span>
+            <span class="premium-unlock-badge" id="premiumBadge" style="display:none">✓ Unlocked</span>
           </div>
-          <p class="signal-ai-text">${esc((fin.aiAnalysis || '').slice(0, 300))}${(fin.aiAnalysis || '').length > 300 ? '...' : ''}</p>
-          <div class="signal-premium-cta">
+          <p class="signal-ai-text" id="aiTextPreview">${esc((fin.aiAnalysis || '').slice(0, 300))}${(fin.aiAnalysis || '').length > 300 ? '...' : ''}</p>
+          <p class="signal-ai-text signal-ai-full" id="aiTextFull" style="display:none">${esc(fin.aiAnalysis || '')}</p>
+          <a href="/pricing" class="signal-premium-cta" id="premiumCta">
             <span class="premium-lock">🔒</span>
             <span>Members Only</span>
             <span class="premium-arrow">→</span>
-          </div>
+          </a>
         </div>
 
         <!-- Valuation Quick Stats -->
@@ -711,6 +716,24 @@ function toggleTheme() {
       });
     }
   });
+  </script>
+  <script>
+  // Premium unlock check for Pulse AI Analysis
+  (function(){
+    var token = localStorage.getItem('hive_token');
+    if (!token) return;
+    fetch('/api/hive?action=premium&token=' + encodeURIComponent(token))
+      .then(function(r){ return r.json(); })
+      .then(function(d){
+        if (d.premium && d.plan === 'premium') {
+          document.getElementById('premiumCta').style.display = 'none';
+          document.getElementById('aiTextPreview').style.display = 'none';
+          document.getElementById('aiTextFull').style.display = 'block';
+          document.getElementById('premiumBadge').style.display = 'inline';
+        }
+      })
+      .catch(function(){});
+  })();
   </script>
   <script>
   // Live price updater for stock header

@@ -218,9 +218,9 @@ main {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 100% 60% at 50% 0%, color-mix(in srgb, var(--bg-primary) 85%, transparent) 0%, transparent 100%),
-    radial-gradient(ellipse 100% 50% at 50% 100%, color-mix(in srgb, var(--bg-primary) 75%, transparent) 0%, transparent 100%),
-    radial-gradient(ellipse 80% 50% at 50% 50%, transparent 30%, color-mix(in srgb, var(--bg-primary) 55%, transparent) 100%);
+    radial-gradient(ellipse 100% 60% at 50% 0%, color-mix(in srgb, var(--bg-primary) 55%, transparent) 0%, transparent 100%),
+    radial-gradient(ellipse 100% 50% at 50% 100%, color-mix(in srgb, var(--bg-primary) 45%, transparent) 0%, transparent 100%),
+    radial-gradient(ellipse 80% 50% at 50% 50%, transparent 30%, color-mix(in srgb, var(--bg-primary) 30%, transparent) 100%);
   z-index: 1;
   pointer-events: none;
 }
@@ -264,7 +264,7 @@ main {
   background-clip: text;
 }
 .hero-sub {
-  color: var(--text-secondary);
+  color: var(--text-primary);
   font-size: 17px;
   font-weight: 400;
   line-height: 1.6;
@@ -272,7 +272,7 @@ main {
   margin: 0 auto 10px;
 }
 .hero-desc {
-  color: var(--text-muted);
+  color: var(--text-secondary);
   font-size: 14px;
   line-height: 1.6;
   max-width: 560px;
@@ -5627,9 +5627,9 @@ body.pulse-modal-open {
 }
 [data-theme="light"] .hero-video-bg::after {
   background:
-    radial-gradient(ellipse 100% 60% at 50% 0%, color-mix(in srgb, #1b2b50 85%, transparent) 0%, transparent 100%),
-    radial-gradient(ellipse 100% 50% at 50% 100%, color-mix(in srgb, #1b2b50 75%, transparent) 0%, transparent 100%),
-    radial-gradient(ellipse 80% 50% at 50% 50%, transparent 30%, color-mix(in srgb, #1b2b50 55%, transparent) 100%);
+    radial-gradient(ellipse 100% 60% at 50% 0%, color-mix(in srgb, #1b2b50 55%, transparent) 0%, transparent 100%),
+    radial-gradient(ellipse 100% 50% at 50% 100%, color-mix(in srgb, #1b2b50 45%, transparent) 0%, transparent 100%),
+    radial-gradient(ellipse 80% 50% at 50% 50%, transparent 30%, color-mix(in srgb, #1b2b50 30%, transparent) 100%);
 }
 
 [data-theme="light"] .focus-bar {
@@ -6606,7 +6606,7 @@ body.pulse-modal-open {
   }
   /* Keep video absolute (not fixed) so it stays inside hero section */
   .hero-video-bg video {
-    opacity: 0.55;
+    opacity: 0.75;
   }
   .hero-content     { max-width: 960px; }
   .hero-title       { font-size: 64px; letter-spacing: -1px; }

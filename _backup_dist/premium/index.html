@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08080e">
+  <link rel="canonical" href="https://readthesignal.net/premium">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <meta name="robots" content="max-image-preview:large">
+  <meta name="description" content="Welcome to Signal Premium — your exclusive dashboard for AI-powered market intelligence.">
+  <meta property="og:title" content="Premium Dashboard — The Signal">
+  <meta property="og:description" content="Your premium member dashboard.">
+  <meta property="og:url" content="https://readthesignal.net/premium">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Oxanium:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css?v=22">
+  <link rel="stylesheet" href="/css/pulse-badge.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-98KDVDFBCW"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-98KDVDFBCW');</script>
+  <script src="/js/prices.js" defer></script>
+  <script src="/js/search.js" defer></script>
+  <script src="/js/auth.js?v=2" defer></script>
+  <script src="/js/theme.js?v=2" defer></script>
+  <title>Premium Dashboard — The Signal</title>
+  <style>
+    .premium-page { max-width:1100px; margin:0 auto; padding:2rem 1.5rem 4rem; color:#e0e0e0; }
+    .premium-banner { background:linear-gradient(135deg,rgba(99,102,241,.15),rgba(6,182,212,.1)); border:1px solid rgba(99,102,241,.3); border-radius:16px; padding:2rem; text-align:center; margin:2rem 0 3rem; position:relative; overflow:hidden; }
+    .premium-banner::before { content:''; position:absolute; top:-50%; left:-50%; width:200%; height:200%; background:radial-gradient(circle,rgba(99,102,241,.05) 0%,transparent 70%); pointer-events:none; }
+    .premium-banner h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,5vw,3rem); background:linear-gradient(135deg,#6366f1,#06b6d4); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin:0 0 .5rem; position:relative; }
+    .premium-badge-lg { display:inline-block; background:linear-gradient(135deg,#6366f1,#818cf8); color:#fff; font-family:'Oxanium',sans-serif; font-size:.8rem; font-weight:700; padding:6px 20px; border-radius:20px; letter-spacing:.1em; margin-bottom:1rem; }
+    .premium-hero { text-align:center; margin:3rem 0 4rem; position:relative; }
+    .premium-hero h1 { font-family:'Anton',sans-serif; font-size:clamp(2.2rem,5vw,3.5rem); background:linear-gradient(135deg,#6366f1,#06b6d4); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin:0 0 1rem; }
+    .premium-hero p { color:#94a3b8; font-size:1.1rem; max-width:550px; margin:0 auto; line-height:1.6; }
+    .premium-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:1.5rem; margin-bottom:3rem; }
+    .premium-card { background:linear-gradient(145deg,#12121a,#1a1a2e); border:1px solid #2a2a3e; border-radius:16px; padding:2rem; transition:transform .2s,border-color .2s; }
+    .premium-card:hover { transform:translateY(-4px); border-color:#6366f1; }
+    .premium-card-icon { font-size:2.5rem; margin-bottom:1rem; }
+    .premium-card h3 { font-family:'Oxanium',sans-serif; font-size:1.1rem; font-weight:700; color:#fff; margin:0 0 .5rem; }
+    .premium-card p { color:#94a3b8; font-size:.9rem; line-height:1.5; margin:0; }
+    .premium-card .card-link { display:inline-block; margin-top:1rem; color:#6366f1; text-decoration:none; font-weight:600; font-size:.9rem; }
+    .premium-card .card-link:hover { color:#818cf8; }
+    .premium-section { margin:3rem 0; }
+    .premium-section h2 { font-family:'Anton',sans-serif; font-size:1.5rem; color:#fff; margin:0 0 1.5rem; }
+    .premium-features { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1rem; }
+    .premium-feature { display:flex; align-items:flex-start; gap:1rem; padding:1rem; background:rgba(99,102,241,.05); border:1px solid rgba(99,102,241,.1); border-radius:12px; }
+    .premium-feature-icon { font-size:1.5rem; flex-shrink:0; }
+    .premium-feature-text h4 { font-family:'Oxanium',sans-serif; font-size:.95rem; font-weight:600; color:#fff; margin:0 0 .3rem; }
+    .premium-feature-text p { color:#94a3b8; font-size:.85rem; margin:0; line-height:1.4; }
+    .premium-exclusive { background:linear-gradient(145deg,#0a1a2e,#12122a); border:1px solid rgba(6,182,212,.2); border-radius:16px; padding:2rem; margin:3rem 0; }
+    .premium-exclusive h2 { font-family:'Anton',sans-serif; font-size:1.3rem; color:#06b6d4; margin:0 0 1rem; }
+    .premium-exclusive-content { min-height:200px; display:flex; align-items:center; justify-content:center; background:rgba(6,182,212,.02); border:1px dashed rgba(6,182,212,.15); border-radius:12px; padding:2rem; text-align:center; }
+    .premium-exclusive-content p { color:#94a3b8; font-size:.95rem; }
+    .login-prompt { text-align:center; padding:4rem 2rem; }
+    .login-prompt h2 { font-family:'Anton',sans-serif; font-size:2rem; color:#fff; margin:0 0 1rem; }
+    .login-prompt p { color:#94a3b8; margin:0 0 2rem; }
+    .premium-cta-btn { display:inline-block; padding:14px 32px; background:linear-gradient(135deg,#6366f1,#818cf8); border:none; border-radius:10px; color:#fff; font-family:'Oxanium',sans-serif; font-size:1rem; font-weight:700; cursor:pointer; text-decoration:none; transition:filter .2s; }
+    .premium-cta-btn:hover { filter:brightness(1.1); }
+    .premium-cta-btn.secondary { background:#2a2a3e; color:#94a3b8; }
+    .premium-cta-btn.secondary:hover { background:#3a3a4e; }
+    @media (max-width:640px) { .premium-page { padding:1rem; } .premium-grid { grid-template-columns:1fr; } }
+  </style>
+<link rel="stylesheet" href="/css/nav.css">
+</head>
+<body>
+  <main class="premium-page">
+    <!-- Premium Status Banner (shown after auth check) -->
+    <div id="premiumStatusBanner"></div>
+
+    <!-- Premium Content (shown for premium users) -->
+    <div id="premiumContent" style="display:none;">
+      <div class="premium-banner">
+        <span class="premium-badge-lg">✦ PREMIUM MEMBER</span>
+        <h1>Welcome to Premium</h1>
+        <p style="color:#94a3b8;font-size:1rem;margin:1rem 0 0;max-width:500px;margin-left:auto;margin-right:auto;">
+          You have full access to everything The Signal offers. Go deeper, trade smarter.
+        </p>
+      </div>
+
+      <div class="premium-grid">
+        <div class="premium-card">
+          <div class="premium-card-icon">🤖</div>
+          <h3>Unlimited Pulse AI</h3>
+          <p>Ask unlimited questions about any stock in our coverage universe. Get instant AI-powered analysis.</p>
+          <a href="/#pulse" class="card-link">Ask Pulse →</a>
+        </div>
+        <div class="premium-card">
+          <div class="premium-card-icon">📊</div>
+          <h3>Full Stock Universe</h3>
+          <p>Access every stock detail page — AI, Cyber, Defense, Space, Mega-Cap, and Quantum.</p>
+          <a href="/stocks/" class="card-link">Browse Stocks →</a>
+        </div>
+        <div class="premium-card">
+          <div class="premium-card-icon">📋</div>
+          <h3>Custom Watchlists</h3>
+          <p>Create and manage personalized stock watchlists with real-time price tracking.</p>
+          <a href="/watchlist" class="card-link">My Watchlist →</a>
+        </div>
+        <div class="premium-card">
+          <div class="premium-card-icon">🐝</div>
+          <h3>Hive Trading</h3>
+          <p>Compete in The Hive with a $100K simulated portfolio. Track your performance on the leaderboard.</p>
+          <a href="/hive" class="card-link">Open Hive →</a>
+        </div>
+        <div class="premium-card">
+          <div class="premium-card-icon">📰</div>
+          <h3>Priority Newsletter</h3>
+          <p>Get our daily briefing delivered before the market opens — exclusive early access for Premium members.</p>
+          <a href="/" class="card-link">Today's Briefing →</a>
+        </div>
+        <div class="premium-card">
+          <div class="premium-card-icon">🔍</div>
+          <h3>Real-Time Search</h3>
+          <p>Search across all articles, stock pages, and analysis with real-time results and filtering.</p>
+          <a href="/#search" class="card-link">Search Now →</a>
+        </div>
+      </div>
+
+      <div class="premium-section">
+        <h2>✦ Premium Features</h2>
+        <div class="premium-features">
+          <div class="premium-feature">
+            <div class="premium-feature-icon">🎯</div>
+            <div class="premium-feature-text">
+              <h4>Unlimited Pulse AI Queries</h4>
+              <p>No daily cap. Ask the AI anything about markets, stocks, or sectors.</p>
+            </div>
+          </div>
+          <div class="premium-feature">
+            <div class="premium-feature-icon">⚡</div>
+            <div class="premium-feature-text">
+              <h4>Real-Time Data</h4>
+              <p>Live price updates, search results, and market data at your fingertips.</p>
+            </div>
+          </div>
+          <div class="premium-feature">
+            <div class="premium-feature-icon">🚫</div>
+            <div class="premium-feature-text">
+              <h4>Ad-Free Experience</h4>
+              <p>Read without distractions. No banners, no interruptions.</p>
+            </div>
+          </div>
+          <div class="premium-feature">
+            <div class="premium-feature-icon">📖</div>
+            <div class="premium-feature-text">
+              <h4>Early Access Deep Dives</h4>
+              <p>Get our premium research reports before they're released to the public.</p>
+            </div>
+          </div>
+          <div class="premium-feature">
+            <div class="premium-feature-icon">📬</div>
+            <div class="premium-feature-text">
+              <h4>Priority Newsletter</h4>
+              <p>Exclusive morning briefing with actionable insights before the bell.</p>
+            </div>
+          </div>
+          <div class="premium-feature">
+            <div class="premium-feature-icon">📋</div>
+            <div class="premium-feature-text">
+              <h4>Stock Watchlists</h4>
+              <p>Track your favorite stocks with saved watchlists and live prices.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="premium-exclusive">
+        <h2>📈 Exclusive Content</h2>
+        <div class="premium-exclusive-content" id="exclusiveContent">
+          <div>
+            <p style="font-size:1.2rem;margin-bottom:.5rem;">Premium Research &amp; Analysis</p>
+            <p style="color:#5e7092;">Exclusive deep dives and premium reports will appear here as they're published.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Not Premium Content (shown for non-premium or logged-out) -->
+    <div id="notPremiumContent">
+      <div class="premium-hero">
+        <h1>Signal Premium</h1>
+        <p>Unlock the full power of The Signal. Get unlimited AI analysis, real-time data, and exclusive research.</p>
+      </div>
+
+      <div class="premium-grid">
+        <div class="premium-card">
+          <div class="premium-card-icon">🤖</div>
+          <h3>Unlimited Pulse AI</h3>
+          <p>No daily caps. Ask the AI anything about any stock in our coverage universe.</p>
+        </div>
+        <div class="premium-card">
+          <div class="premium-card-icon">⚡</div>
+          <h3>Real-Time Everything</h3>
+          <p>Live price data, instant search results, up-to-the-second market intelligence.</p>
+        </div>
+        <div class="premium-card">
+          <div class="premium-card-icon">📋</div>
+          <h3>Custom Watchlists</h3>
+          <p>Save and track your favorite stocks with real-time price monitoring.</p>
+        </div>
+        <div class="premium-card">
+          <div class="premium-card-icon">📖</div>
+          <h3>Early Access</h3>
+          <p>Get deep dive research reports before they hit the public feed.</p>
+        </div>
+        <div class="premium-card">
+          <div class="premium-card-icon">🚫</div>
+          <h3>Ad-Free Reading</h3>
+          <p>No banner ads. No distractions. Just pure market intelligence.</p>
+        </div>
+      </div>
+
+      <div class="login-prompt">
+        <h2>Ready to Upgrade?</h2>
+        <p>Sign in and upgrade your account to unlock premium features.</p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+          <button class="premium-cta-btn" onclick="handleUpgradeClick()">Sign In &amp; Upgrade</button>
+          <a href="/pricing" class="premium-cta-btn secondary">View Pricing</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Rocket Lab-Style Drawer -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <div class="drawer" id="drawer">
+    <div class="drawer-header">
+      <a href="/" class="drawer-logo">
+        <span class="the">THE</span>
+        <span class="signal">SIGNAL</span>
+      </a>
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">&#10005;</button>
+    </div>
+    <div class="drawer-body" id="drawerBody">
+      <div class="drawer-main" id="drawerMain">
+        <div class="drawer-section-label">SECTORS</div>
+        <a href="javascript:void(0)" class="drawer-link" onclick="openSubDrawer()">SECTORS</a>
+        <a href="/stocks/" class="drawer-link">STOCK PAGES</a>
+        <a href="/#scorecard" class="drawer-link">SIGNAL SCORECARD</a>
+        <a href="/hive" class="drawer-link">HIVE</a>
+        <a href="/signal-vs-the-street" class="drawer-link">SIGNAL VS. STREET</a>
+        <a href="/watchlist" class="drawer-link">WATCHLIST</a>
+        <a href="/insights" class="drawer-link">TRADER INSIGHTS</a>
+        <a href="/pricing" class="drawer-link">SIGNAL PREMIUM</a>
+        <a href="/premium" class="drawer-cta">GO PREMIUM</a>
+      </div>
+      <div class="drawer-sub" id="drawerSub">
+        <div class="sub-header" onclick="closeSubDrawer()">
+          <span class="sub-back">&#8249;</span>
+          <span class="sub-title">SECTORS</span>
+        </div>
+        <a href="/sector/ai/" class="drawer-link">AI</a>
+        <a href="/sector/cyber/" class="drawer-link">CYBER</a>
+        <a href="/sector/defense/" class="drawer-link">DEFENSE</a>
+        <a href="/sector/space/" class="drawer-link">SPACE</a>
+        <a href="/sector/mega-cap/" class="drawer-link">MEGA-CAP</a>
+        <a href="/sector/quantum/" class="drawer-link">QUANTUM</a>
+        <a href="/sector/ai-power/" class="drawer-link">AI POWER</a>
+        <a href="/sector/fintech/" class="drawer-link">FINTECH</a>
+        <a href="/sector/etfs/" class="drawer-link">ETFS</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      var premiumContent = document.getElementById('premiumContent');
+      var notPremiumContent = document.getElementById('notPremiumContent');
+      var banner = document.getElementById('premiumStatusBanner');
+
+      function getToken() {
+        try { return localStorage.getItem('hive_token'); } catch(e) { return null; }
+      }
+
+      function getUser() {
+        try { return JSON.parse(localStorage.getItem('hive_user') || 'null'); } catch(e) { return null; }
+      }
+
+      var token = getToken();
+      if (!token) {
+        // Not logged in — show pricing/upgrade page
+        premiumContent.style.display = 'none';
+        notPremiumContent.style.display = 'block';
+        return;
+      }
+
+      fetch('/api/hive?action=premium&token=' + encodeURIComponent(token))
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          if (data.premium) {
+            premiumContent.style.display = 'block';
+            notPremiumContent.style.display = 'none';
+            // Update banner
+            banner.innerHTML = '<div style="background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.2);border-radius:12px;padding:1rem 1.5rem;text-align:center;margin-bottom:1rem;">' +
+              '<span style="color:#22c55e;font-weight:700;font-size:.9rem;">✓ You\'re in — ' + (data.plan || 'Premium').toUpperCase() + ' active</span>' +
+              '<span style="color:#5e7092;font-size:.8rem;margin-left:1rem;">' + (data.since ? 'Member since ' + new Date(data.since).toLocaleDateString() : '') + '</span>' +
+              '</div>';
+          } else {
+            premiumContent.style.display = 'none';
+            notPremiumContent.style.display = 'block';
+          }
+        })
+        .catch(function() {
+          premiumContent.style.display = 'none';
+          notPremiumContent.style.display = 'block';
+        });
+
+      window.handleUpgradeClick = function() {
+        var user = getUser();
+        if (user) {
+          window.location.href = '/pricing';
+        } else {
+          if (typeof showHiveJoinModal === 'function') {
+            showHiveJoinModal('login');
+          } else {
+            window.location.href = '/hive';
+          }
+        }
+      };
+
+      // Drawer toggle
+      function initDrawer() {
+        var toggle = document.getElementById('hamburgerToggle');
+        var overlay = document.getElementById('drawerOverlay');
+        var drawer = document.getElementById('drawer');
+        var close = document.getElementById('drawerClose');
+        if (!toggle) return;
+        function openDrawer() {
+          overlay.classList.add('active');
+          drawer.classList.add('open');
+          document.body.style.overflow = 'hidden';
+        }
+        function closeDrawer() {
+          overlay.classList.remove('active');
+          drawer.classList.remove('open');
+          document.body.style.overflow = '';
+        }
+        toggle.addEventListener('click', openDrawer);
+        if (overlay) overlay.addEventListener('click', closeDrawer);
+        if (close) close.addEventListener('click', closeDrawer);
+      }
+      initDrawer();
+    })();
+
+    window.openSubDrawer = function() {
+      var main = document.getElementById('drawerMain');
+      var sub = document.getElementById('drawerSub');
+      if (main) main.style.transform = 'translateX(-100%)';
+      if (sub) sub.style.transform = 'translateX(0)';
+    };
+    window.closeSubDrawer = function() {
+      var main = document.getElementById('drawerMain');
+      var sub = document.getElementById('drawerSub');
+      if (main) main.style.transform = 'translateX(0)';
+      if (sub) sub.style.transform = 'translateX(-100%)';
+    };
+  </script>
+</body>
+</html>

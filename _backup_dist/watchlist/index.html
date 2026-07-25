@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08080e">
+  <link rel="canonical" href="https://readthesignal.net/watchlist">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <meta name="robots" content="max-image-preview:large">
+  <meta name="description" content="Your personalized stock watchlist on The Signal. Track your favorite stocks with real-time prices.">
+  <meta property="og:title" content="Watchlist — The Signal">
+  <meta property="og:description" content="Track your favorite stocks.">
+  <meta property="og:url" content="https://readthesignal.net/watchlist">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Oxanium:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css?v=22">
+  <link rel="stylesheet" href="/css/pulse-badge.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-98KDVDFBCW"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-98KDVDFBCW');</script>
+  <script src="/js/prices.js" defer></script>
+  <script src="/js/search.js" defer></script>
+  <script src="/js/auth.js?v=2" defer></script>
+  <script src="/js/theme.js?v=2" defer></script>
+  <script src="/js/watchlist.js" defer></script>
+  <title>Watchlist — The Signal</title>
+  <style>
+    .watchlist-page { max-width:900px; margin:0 auto; padding:2rem 1.5rem 4rem; color:#e0e0e0; }
+    .watchlist-hero { text-align:center; margin:2rem 0 3rem; }
+    .watchlist-hero h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,5vw,3rem); background:linear-gradient(135deg,#6366f1,#06b6d4); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin:0 0 .5rem; }
+    .watchlist-hero p { color:#94a3b8; font-size:1rem; max-width:500px; margin:0 auto; line-height:1.6; }
+    .watchlist-controls { display:flex; gap:.5rem; align-items:center; margin-bottom:1.5rem; flex-wrap:wrap; }
+    .watchlist-search { flex:1; min-width:200px; padding:10px 14px; background:#1a1a2e; border:1px solid #2a2a3e; border-radius:10px; color:#e0e0e0; font-family:'Inter',sans-serif; font-size:.9rem; outline:none; transition:border-color .2s; }
+    .watchlist-search:focus { border-color:#6366f1; }
+    .watchlist-search::placeholder { color:#5e7092; }
+    .watchlist-count { color:#5e7092; font-size:.85rem; font-family:'JetBrains Mono',monospace; }
+    .hive-spinner { width:32px; height:32px; border:3px solid #2a2a3e; border-top-color:#6366f1; border-radius:50%; animation:spin .6s linear infinite; }
+    @keyframes spin { to { transform:rotate(360deg); } }
+    @media (max-width:640px) { .watchlist-page { padding:1rem; } }
+  </style>
+<link rel="stylesheet" href="/css/nav.css">
+</head>
+<body>
+  <main class="watchlist-page">
+    <div class="watchlist-hero">
+      <h1>My Watchlist</h1>
+      <p>Track your favorite stocks. Save tickers from any stock page and monitor prices in real time.</p>
+    </div>
+
+    <div class="watchlist-controls">
+      <input type="text" class="watchlist-search" id="watchlistSearch" placeholder="Filter tickers..." oninput="filterWatchlist(this.value)">
+      <span class="watchlist-count" id="watchlistCount">0 stocks</span>
+    </div>
+
+    <div id="watchlistContent">
+      <div style="text-align:center;padding:3rem;">
+        <div class="hive-spinner" style="margin:0 auto 1rem;"></div>
+        <span style="color:#94a3b8;">Loading your watchlist...</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- Rocket Lab-Style Drawer -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <div class="drawer" id="drawer">
+    <div class="drawer-header">
+      <a href="/" class="drawer-logo">
+        <span class="the">THE</span>
+        <span class="signal">SIGNAL</span>
+      </a>
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">&#10005;</button>
+    </div>
+    <div class="drawer-body" id="drawerBody">
+      <div class="drawer-main" id="drawerMain">
+        <div class="drawer-section-label">SECTORS</div>
+        <a href="javascript:void(0)" class="drawer-link" onclick="openSubDrawer()">SECTORS</a>
+        <a href="/stocks/" class="drawer-link">STOCK PAGES</a>
+        <a href="/#scorecard" class="drawer-link">SIGNAL SCORECARD</a>
+        <a href="/hive" class="drawer-link">HIVE</a>
+        <a href="/signal-vs-the-street" class="drawer-link">SIGNAL VS. STREET</a>
+        <a href="/watchlist" class="drawer-link">WATCHLIST</a>
+        <a href="/insights" class="drawer-link">TRADER INSIGHTS</a>
+        <a href="/pricing" class="drawer-link">SIGNAL PREMIUM</a>
+        <a href="/premium" class="drawer-cta">GO PREMIUM</a>
+      </div>
+      <div class="drawer-sub" id="drawerSub">
+        <div class="sub-header" onclick="closeSubDrawer()">
+          <span class="sub-back">&#8249;</span>
+          <span class="sub-title">SECTORS</span>
+        </div>
+        <a href="/sector/ai/" class="drawer-link">AI</a>
+        <a href="/sector/cyber/" class="drawer-link">CYBER</a>
+        <a href="/sector/defense/" class="drawer-link">DEFENSE</a>
+        <a href="/sector/space/" class="drawer-link">SPACE</a>
+        <a href="/sector/mega-cap/" class="drawer-link">MEGA-CAP</a>
+        <a href="/sector/quantum/" class="drawer-link">QUANTUM</a>
+        <a href="/sector/ai-power/" class="drawer-link">AI POWER</a>
+        <a href="/sector/fintech/" class="drawer-link">FINTECH</a>
+        <a href="/sector/etfs/" class="drawer-link">ETFS</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/watchlist.js"></script>
+  <script>
+    (function() {
+      var container = document.getElementById('watchlistContent');
+      if (container && window.watchlistAPI) {
+        window.watchlistAPI.render(container);
+      } else if (container) {
+        // Fallback if watchlist.js hasn't loaded
+        var check = setInterval(function() {
+          if (window.watchlistAPI) {
+            clearInterval(check);
+            window.watchlistAPI.render(container);
+          }
+        }, 200);
+        setTimeout(function() { clearInterval(check); }, 10000);
+      }
+
+      // Drawer toggle
+      function initDrawer() {
+        var toggle = document.getElementById('hamburgerToggle');
+        var overlay = document.getElementById('drawerOverlay');
+        var drawer = document.getElementById('drawer');
+        var close = document.getElementById('drawerClose');
+        if (!toggle) return;
+        function openDrawer() {
+          overlay.classList.add('active');
+          drawer.classList.add('open');
+          document.body.style.overflow = 'hidden';
+        }
+        function closeDrawer() {
+          overlay.classList.remove('active');
+          drawer.classList.remove('open');
+          document.body.style.overflow = '';
+        }
+        toggle.addEventListener('click', openDrawer);
+        if (overlay) overlay.addEventListener('click', closeDrawer);
+        if (close) close.addEventListener('click', closeDrawer);
+      }
+      initDrawer();
+    })();
+
+    window.openSubDrawer = function() {
+      var main = document.getElementById('drawerMain');
+      var sub = document.getElementById('drawerSub');
+      if (main) main.style.transform = 'translateX(-100%)';
+      if (sub) sub.style.transform = 'translateX(0)';
+    };
+    window.closeSubDrawer = function() {
+      var main = document.getElementById('drawerMain');
+      var sub = document.getElementById('drawerSub');
+      if (main) main.style.transform = 'translateX(0)';
+      if (sub) sub.style.transform = 'translateX(-100%)';
+    };
+
+    window.filterWatchlist = function(query) {
+      var items = document.querySelectorAll('.watchlist-item');
+      var count = 0;
+      var q = query.toLowerCase().trim();
+      items.forEach(function(item) {
+        var ticker = item.getAttribute('data-ticker') || '';
+        if (ticker.toLowerCase().indexOf(q) !== -1 || q === '') {
+          item.style.display = '';
+          count++;
+        } else {
+          item.style.display = 'none';
+        }
+      });
+      var countEl = document.getElementById('watchlistCount');
+      if (countEl) countEl.textContent = count + ' stock' + (count !== 1 ? 's' : '');
+    };
+  </script>
+</body>
+</html>

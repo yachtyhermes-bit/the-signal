@@ -2,6 +2,30 @@
 // Contains article metadata for Pulse AI
 const ARTICLES = [
   {
+    "title": "Intel's Foundry Pivot: The $75 Billion Turnaround the US Government Is Betting On",
+    "slug": "intc-foundry-gamble-national-champion-2026",
+    "ticker": "INTC",
+    "sector": "semiconductors",
+    "date": "2026-07-25",
+    "summary": "Intel's foundry gamble on 18A, backed by $39B in CHIPS Act subsidies and a 9.9% government stake, makes it simultaneously America's most critical semiconductor asset and its most controversial turnaround story."
+  },
+  {
+    "title": "Is Open Source AI Actually Killing OpenAI and Anthropic Pricing Power",
+    "slug": "open-source-ai-killing-openai-anthropic-pricing-power",
+    "ticker": "",
+    "sector": "ai",
+    "date": "2026-07-25",
+    "summary": "In the last twelve months OpenAI has cut GPT-4o pricing by more than 70 percent on input tokens and Anthropic has had to match. But the real driver is not competition between labs — it is open source. When Meta released Llama 4 and DeepSeek V3 and Qwen 2.5 showed you could run a frontier class model for under $2 per million tokens on your own cluster, the floor fell out. The market is splitting into two layers: a commodity inference layer where open source wins on price, and a premium reasoning "
+  },
+  {
+    "title": "SentinelOne Got Destroyed by the Market. The Business Has Never Been Stronger.",
+    "slug": "s-ai-cybersecurity-turnaround-2026",
+    "ticker": "S",
+    "sector": "cyber",
+    "date": "2026-07-25",
+    "summary": "SentinelOne has been beaten down 63% from its 52-week high, but the underlying business tells a completely different story. Revenue of $1.049 billion TTM growing 20.8% YoY, gross margins of 73.2%, positive FCF of $268 million, a pristine balance sheet with zero debt, and an AI-native architecture — Purple AI, Autonomous SOC, the new Neo for AI agent security — that competitors are scrambling to match. At 5.9x price-to-sales vs CrowdStrike at 36.6x, this is either a value trap or the most mispric"
+  },
+  {
     "title": "Constellation Energy Has the Nuclear Fleet AI Data Centers Are Desperate For",
     "slug": "ceg-nuclear-ai-data-center-catalysts-2026",
     "ticker": "CEG",
@@ -16,6 +40,14 @@ const ARTICLES = [
     "sector": "space",
     "date": "2026-07-24",
     "summary": "Intuitive Machines is the only private company to land on the Moon — twice. With a $4.82B NASA communications contract, six CLPS awards, and Q1 2026's first-ever positive Adjusted EBITDA, the company is transitioning from mission contractor to lunar infrastructure utility. But a 25.9% short interest and insider selling suggest the market hasn't caught up to the thesis."
+  },
+  {
+    "title": "Netflix Is the Only Streaming Company Actually Making Money. The Market Punished It Anyway.",
+    "slug": "nflx-streaming-moat-content-catalog-2026",
+    "ticker": "NFLX",
+    "sector": "mega-cap",
+    "date": "2026-07-24",
+    "summary": "Netflix reported a beat in Q2 and got sold off for it — down 7% on July 17 despite record revenue, record margins, and $11.2B in trailing free cash flow. At 18x forward P/E with 50% ROE, a $20B content engine, and an ad tier that tripled to 250M MAUs in a year, the market is pricing the only profitable streamer like a declining media company. The structural moat hasn't been this mispriced since the 2022 washout."
   },
   {
     "title": "Fortinet Is Boring. That's Why It's the Best Cyber Stock Out There.",

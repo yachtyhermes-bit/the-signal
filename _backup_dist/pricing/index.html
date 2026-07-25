@@ -8,7 +8,7 @@
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
   <meta name="robots" content="max-image-preview:large">
-  <meta name="description" content="Choose your Signal membership — Free, Premium, or Pro. AI-powered market intelligence, real-time Pulse analysis, and expert stock insights.">
+  <meta name="description" content="Choose your Signal membership — Free, Premium ($9/mo), or Pro ($29/mo). AI-powered market intelligence, real-time Pulse analysis, and expert stock insights.">
   <meta property="og:title" content="Pricing — The Signal">
   <meta property="og:description" content="Choose your Signal membership plan.">
   <meta property="og:url" content="https://readthesignal.net/pricing">
@@ -34,6 +34,8 @@
     .pricing-card:hover { transform:translateY(-4px); border-color:#6366f1; }
     .pricing-card.featured { border-color:#6366f1; background:linear-gradient(145deg,#12121a,#1a1a3e); box-shadow:0 0 40px rgba(99,102,241,.15); }
     .pricing-card.featured::before { content:'MOST POPULAR'; position:absolute; top:-12px; left:50%; transform:translateX(-50%); background:linear-gradient(135deg,#6366f1,#818cf8); color:#fff; font-size:.7rem; font-weight:700; letter-spacing:.1em; padding:4px 16px; border-radius:20px; }
+    .pricing-card.premium-user { border-color:#22c55e; background:linear-gradient(145deg,#0a1a0a,#1a2a1e); }
+    .pricing-card.premium-user::before { content:'YOUR PLAN'; position:absolute; top:-12px; left:50%; transform:translateX(-50%); background:#22c55e; color:#fff; font-size:.7rem; font-weight:700; letter-spacing:.1em; padding:4px 16px; border-radius:20px; }
     .plan-name { font-family:'Oxanium',sans-serif; font-size:1.3rem; font-weight:700; color:#fff; margin:0 0 .3rem; }
     .plan-price { font-size:2.8rem; font-weight:900; color:#fff; margin:.5rem 0; font-family:'JetBrains Mono',monospace; }
     .plan-price span { font-size:1rem; font-weight:400; color:#94a3b8; }
@@ -48,16 +50,25 @@
     .btn-subscribe.premium:hover { filter:brightness(1.1); }
     .btn-subscribe.pro { background:linear-gradient(135deg,#06b6d4,#22d3ee); color:#0f172a; }
     .btn-subscribe.pro:hover { filter:brightness(1.1); }
+    .btn-subscribe.current-plan { background:#2a2a3e; color:#22c55e; cursor:default; border:1px solid #22c55e; }
+    .btn-subscribe.current-plan:hover { background:#2a2a3e; }
     .pricing-faq { max-width:700px; margin:4rem auto 0; }
     .pricing-faq h2 { font-family:'Anton',sans-serif; font-size:1.5rem; color:#fff; margin:0 0 1.5rem; text-align:center; }
     .faq-item { border-bottom:1px solid #2a2a3e; padding:1rem 0; }
     .faq-item summary { font-weight:600; color:#e0e0e0; cursor:pointer; font-size:.95rem; }
     .faq-item p { color:#94a3b8; font-size:.9rem; margin:.5rem 0 0; line-height:1.5; }
-    @media (max-width:640px) { .pricing-page { padding:1rem; } .pricing-grid { grid-template-columns:1fr; } }
-    .coming-soon-card { opacity:0.85; }
-    .coming-soon-price { font-size:1.4rem !important; font-weight:700; background:linear-gradient(135deg,#6366f1,#06b6d4); -webkit-background-clip:text; -webkit-text-fill-color:transparent; letter-spacing:.02em; }
-    .coming-soon-btn { background:#1a1a2e !important; color:#6366f1 !important; cursor:default !important; border:1px solid #2a2a3e; font-size:.85rem !important; letter-spacing:.05em; }
-    .coming-soon-btn:hover { filter:none !important; transform:none !important; background:#1a1a2e !important; }
+    .pricing-compare { margin-top:3rem; }
+    .pricing-compare h2 { font-family:'Anton',sans-serif; font-size:1.5rem; color:#fff; text-align:center; margin:0 0 1.5rem; }
+    .compare-table { width:100%; border-collapse:collapse; background:#12121a; border-radius:12px; overflow:hidden; }
+    .compare-table th, .compare-table td { padding:12px 16px; text-align:left; border-bottom:1px solid #2a2a3e; font-size:.9rem; }
+    .compare-table th { background:#1a1a2e; color:#94a3b8; font-family:'Oxanium',sans-serif; font-weight:600; font-size:.8rem; text-transform:uppercase; letter-spacing:.05em; }
+    .compare-table td:first-child { color:#c0c0d0; font-weight:500; }
+    .compare-table td { color:#94a3b8; }
+    .compare-table .check { color:#22c55e; font-size:1.1rem; }
+    .compare-table .cross { color:#ef4444; font-size:1rem; }
+    .compare-table tr:hover { background:#1a1a2e; }
+    @media (max-width:640px) { .pricing-page { padding:1rem; } .pricing-grid { grid-template-columns:1fr; } .compare-table th, .compare-table td { padding:8px 10px; font-size:.8rem; } }
+    @media (max-width:480px) { .compare-table { font-size:.75rem; } .compare-table th, .compare-table td { padding:6px 8px; } }
   </style>
 <link rel="stylesheet" href="/css/nav.css">
 </head>
@@ -65,25 +76,26 @@
   <main class="pricing-page">
     <div class="pricing-hero">
       <h1>Choose Your Signal</h1>
-      <p>Premium memberships are on the way. Sign up below and be the first to know when we launch.</p>
+      <p>Get the edge you need. From free daily insights to professional-grade tools — pick the plan that fits your trading style.</p>
     </div>
-    <div class="pricing-grid">
-      <div class="pricing-card coming-soon-card">
+    <div class="pricing-grid" id="pricingGrid">
+      <div class="pricing-card" data-plan="free">
         <div class="plan-name">Free</div>
         <div class="plan-price">$0<span>/mo</span></div>
         <p class="plan-desc">Stay informed with market-moving news and essential stock data.</p>
         <ul class="plan-features">
           <li>Daily market news &amp; analysis</li>
           <li>14 stock detail pages</li>
-          <li>5 premium Pulse AI queries/day</li>
+          <li>5 Pulse AI queries/day</li>
           <li>Signal Highlights &amp; Scorecard</li>
           <li>Hive community access</li>
+          <li>Standard newsletter</li>
         </ul>
         <a href="/" class="btn-subscribe free">Get Started Free</a>
       </div>
-      <div class="pricing-card coming-soon-card">
+      <div class="pricing-card featured" data-plan="premium">
         <div class="plan-name">Premium</div>
-        <div class="plan-price coming-soon-price">Coming Soon</div>
+        <div class="plan-price">$9<span>/mo</span></div>
         <p class="plan-desc">Unlock the full platform. For serious retail investors who want an edge.</p>
         <ul class="plan-features">
           <li>Everything in Free</li>
@@ -92,35 +104,208 @@
           <li>Early access to deep dives</li>
           <li>Ad-free reading experience</li>
           <li>Priority daily newsletter</li>
+          <li>Custom stock watchlists</li>
         </ul>
-        <div class="btn-subscribe coming-soon-btn">Coming Soon</div>
+        <a href="/premium" class="btn-subscribe premium" id="subscribePremium">Subscribe Now</a>
       </div>
-      <div class="pricing-card coming-soon-card">
+      <div class="pricing-card" data-plan="pro">
         <div class="plan-name">Pro</div>
-        <div class="plan-price coming-soon-price">Coming Soon</div>
+        <div class="plan-price">$29<span>/mo</span></div>
         <p class="plan-desc">Professional-grade tools for traders and analysts who live in the markets.</p>
         <ul class="plan-features">
           <li>Everything in Premium</li>
-          <li>Custom stock alerts &amp; watchlists</li>
+          <li>Custom stock alerts</li>
           <li>Advanced portfolio tracking</li>
           <li>Direct analyst Q&amp;A sessions</li>
           <li>Export data to CSV/Excel</li>
+          <li>API access</li>
           <li>Priority support</li>
         </ul>
-        <div class="btn-subscribe coming-soon-btn">Coming Soon</div>
+        <a href="/premium" class="btn-subscribe pro" id="subscribePro">Subscribe Now</a>
       </div>
     </div>
+
+    <div class="pricing-compare">
+      <h2>Compare Plans</h2>
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Free</th>
+            <th>Premium</th>
+            <th>Pro</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Daily Market News</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+          <tr><td>Stock Detail Pages</td><td>14 stocks</td><td>All stocks</td><td>All stocks</td></tr>
+          <tr><td>Pulse AI Queries</td><td>5/day</td><td>Unlimited</td><td>Unlimited</td></tr>
+          <tr><td>Signal Scorecard</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+          <tr><td>Hive Community</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+          <tr><td>Real-Time Search</td><td><span class="cross">✗</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+          <tr><td>Early Access Deep Dives</td><td><span class="cross">✗</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+          <tr><td>Ad-Free Experience</td><td><span class="cross">✗</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+          <tr><td>Priority Newsletter</td><td><span class="cross">✗</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+          <tr><td>Custom Stock Watchlists</td><td><span class="cross">✗</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+          <tr><td>Real-Time Price Alerts</td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td><td><span class="check">✓</span></td></tr>
+          <tr><td>Direct Analyst Q&amp;A</td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td><td><span class="check">✓</span></td></tr>
+          <tr><td>Data Export (CSV)</td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td><td><span class="check">✓</span></td></tr>
+          <tr><td>API Access</td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td><td><span class="check">✓</span></td></tr>
+          <tr><td>Priority Support</td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td><td><span class="check">✓</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
     <div class="pricing-faq">
       <h2>Frequently Asked Questions</h2>
-      <details class="faq-item"><summary>When will Premium and Pro launch?</summary><p>We're putting the finishing touches on our membership platform. Target launch is July 2026. Free tier remains available.</p></details>
-      <details class="faq-item"><summary>Will there be a free trial?</summary><p>Yes. Premium will include a 7-day free trial, Pro a 14-day trial. Cancel before it ends and you won't be charged.</p></details>
-      <details class="faq-item"><summary>Can I get notified when it launches?</summary><p>Absolutely. Just keep using The Signal — we'll announce it on the homepage and in the Hive the moment it's live.</p></details>
-      <details class="faq-item"><summary>What payment methods will you accept?</summary><p>All major credit/debit cards via Stripe, plus Apple Pay and Google Pay.</p></details>
+      <details class="faq-item"><summary>Can I start with Free and upgrade later?</summary><p>Absolutely. Free is yours forever. Upgrade to Premium or Pro whenever you're ready — your data and settings carry over.</p></details>
+      <details class="faq-item"><summary>Will there be a free trial?</summary><p>Yes. Premium includes a 7-day free trial, Pro a 14-day trial. Cancel before it ends and you won't be charged.</p></details>
+      <details class="faq-item"><summary>What payment methods do you accept?</summary><p>All major credit/debit cards via Stripe, plus Apple Pay and Google Pay.</p></details>
+      <details class="faq-item"><summary>Can I cancel anytime?</summary><p>Yes. No lock-in contracts. Cancel from your Account settings and you'll retain access until the end of your billing period.</p></details>
+      <details class="faq-item"><summary>Is there a student or annual discount?</summary><p>Annual plans save you 20%. Pro members get an additional 15% discount with a valid .edu email. Contact us for details.</p></details>
     </div>
   </main>
 
+  <!-- Rocket Lab-Style Drawer -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <div class="drawer" id="drawer">
+    <div class="drawer-header">
+      <a href="/" class="drawer-logo">
+        <span class="the">THE</span>
+        <span class="signal">SIGNAL</span>
+      </a>
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">&#10005;</button>
+    </div>
+    <div class="drawer-body" id="drawerBody">
+      <div class="drawer-main" id="drawerMain">
+        <div class="drawer-section-label">SECTORS</div>
+        <a href="javascript:void(0)" class="drawer-link" onclick="openSubDrawer()">SECTORS</a>
+        <a href="/stocks/" class="drawer-link">STOCK PAGES</a>
+        <a href="/#scorecard" class="drawer-link">SIGNAL SCORECARD</a>
+        <a href="/hive" class="drawer-link">HIVE</a>
+        <a href="/signal-vs-the-street" class="drawer-link">SIGNAL VS. STREET</a>
+        <a href="/watchlist" class="drawer-link">WATCHLIST</a>
+        <a href="/insights" class="drawer-link">TRADER INSIGHTS</a>
+        <a href="/pricing" class="drawer-link">SIGNAL PREMIUM</a>
+        <a href="/premium" class="drawer-cta">GO PREMIUM</a>
+      </div>
+      <div class="drawer-sub" id="drawerSub">
+        <div class="sub-header" onclick="closeSubDrawer()">
+          <span class="sub-back">&#8249;</span>
+          <span class="sub-title">SECTORS</span>
+        </div>
+        <a href="/sector/ai/" class="drawer-link">AI</a>
+        <a href="/sector/cyber/" class="drawer-link">CYBER</a>
+        <a href="/sector/defense/" class="drawer-link">DEFENSE</a>
+        <a href="/sector/space/" class="drawer-link">SPACE</a>
+        <a href="/sector/mega-cap/" class="drawer-link">MEGA-CAP</a>
+        <a href="/sector/quantum/" class="drawer-link">QUANTUM</a>
+        <a href="/sector/ai-power/" class="drawer-link">AI POWER</a>
+        <a href="/sector/fintech/" class="drawer-link">FINTECH</a>
+        <a href="/sector/etfs/" class="drawer-link">ETFS</a>
+      </div>
+    </div>
+  </div>
+
   <script>
-    // Premium checkout coming soon
+    (function() {
+      // Check if user is premium and update UI
+      var token = null;
+      try { token = localStorage.getItem('hive_token'); } catch(e) {}
+
+      if (token) {
+        fetch('/api/hive?action=premium&token=' + encodeURIComponent(token))
+          .then(function(r) { return r.json(); })
+          .then(function(data) {
+            if (data.premium) {
+              var cards = document.querySelectorAll('.pricing-card');
+              for (var i = 0; i < cards.length; i++) {
+                var plan = cards[i].getAttribute('data-plan');
+                if (data.plan === plan) {
+                  cards[i].classList.add('premium-user');
+                }
+              }
+              // Update subscribe buttons
+              var premiumBtn = document.getElementById('subscribePremium');
+              var proBtn = document.getElementById('subscribePro');
+              if (data.plan === 'premium' && premiumBtn) {
+                premiumBtn.textContent = 'Current Plan';
+                premiumBtn.className = 'btn-subscribe current-plan';
+                premiumBtn.href = '/premium';
+              }
+              if (data.plan === 'pro' && proBtn) {
+                proBtn.textContent = 'Current Plan';
+                proBtn.className = 'btn-subscribe current-plan';
+                proBtn.href = '/premium';
+              }
+            }
+          })
+          .catch(function() {});
+      }
+
+      // Subscribe button click handler
+      document.querySelectorAll('.btn-subscribe.premium, .btn-subscribe.pro').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+          if (btn.classList.contains('current-plan')) {
+            e.preventDefault();
+            window.location.href = '/premium';
+            return;
+          }
+          var user = null;
+          try { user = JSON.parse(localStorage.getItem('hive_user') || 'null'); } catch(ex) {}
+          if (!user) {
+            e.preventDefault();
+            if (typeof showHiveJoinModal === 'function') {
+              showHiveJoinModal('login');
+            } else {
+              window.location.href = '/hive';
+            }
+          }
+        });
+      });
+
+      // Drawer toggle
+      function initDrawer() {
+        var toggle = document.getElementById('hamburgerToggle');
+        var overlay = document.getElementById('drawerOverlay');
+        var drawer = document.getElementById('drawer');
+        var close = document.getElementById('drawerClose');
+        if (!toggle) {
+          // Create hamburger if missing
+          var nav = document.querySelector('.stock-nav-inner') || document.querySelector('nav .nav-inner');
+          // For pages without nav, we don't need drawer toggle
+          return;
+        }
+        function openDrawer() {
+          overlay.classList.add('active');
+          drawer.classList.add('open');
+          document.body.style.overflow = 'hidden';
+        }
+        function closeDrawer() {
+          overlay.classList.remove('active');
+          drawer.classList.remove('open');
+          document.body.style.overflow = '';
+        }
+        toggle.addEventListener('click', openDrawer);
+        if (overlay) overlay.addEventListener('click', closeDrawer);
+        if (close) close.addEventListener('click', closeDrawer);
+      }
+      initDrawer();
+    })();
+
+    // Sub-drawer navigation
+    window.openSubDrawer = function() {
+      var main = document.getElementById('drawerMain');
+      var sub = document.getElementById('drawerSub');
+      if (main) main.style.transform = 'translateX(-100%)';
+      if (sub) sub.style.transform = 'translateX(0)';
+    };
+    window.closeSubDrawer = function() {
+      var main = document.getElementById('drawerMain');
+      var sub = document.getElementById('drawerSub');
+      if (main) main.style.transform = 'translateX(0)';
+      if (sub) sub.style.transform = 'translateX(-100%)';
+    };
   </script>
 </body>
 </html>

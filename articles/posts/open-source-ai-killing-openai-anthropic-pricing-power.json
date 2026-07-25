@@ -7,6 +7,7 @@
   "title": "Is Open Source AI Actually Killing OpenAI and Anthropic Pricing Power",
   "subtitle": "Two years ago the story was simple — OpenAI and Anthropic set the price and everyone else paid it. That story just broke.",
   "summary": "In the last twelve months OpenAI has cut GPT-4o pricing by more than 70 percent on input tokens and Anthropic has had to match. But the real driver is not competition between labs — it is open source. When Meta released Llama 4 and DeepSeek V3 and Qwen 2.5 showed you could run a frontier class model for under $2 per million tokens on your own cluster, the floor fell out. The market is splitting into two layers: a commodity inference layer where open source wins on price, and a premium reasoning layer where OpenAI and Anthropic keep margin but have to earn it every quarter with better models. The winners of open source deflation are not the open models themselves — they are the picks and shovels: Arista, Broadcom custom silicon, Micron HBM, and the neoclouds like CoreWeave.",
+  "audio": "v2/open-source-ai-killing-openai-anthropic-pricing-power.mp3",
   "image": {
     "src": "/img/articles/open-source-ai-killing-openai-anthropic-pricing-power.jpg",
     "caption": "Abstract visualization of open source arrows piercing a high-price umbrella — OpenAI and Anthropic pricing power under assault from open source AI models. (The Signal / AI-generated)"
