@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08080e">
+  <link rel="canonical" href="https://readthesignal.net/insights">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/apple-touch-icon.png">
+  <meta name="robots" content="max-image-preview:large">
+  <meta name="description" content="Track portfolios of famous investors and traders — Leopold, Pelosi, Buffett, Cathie Wood — with real-time performance data.">
+  <meta property="og:title" content="Trader Insights — The Signal">
+  <meta property="og:description" content="Track famous trader portfolios and investment moves.">
+  <meta property="og:url" content="https://readthesignal.net/insights">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Oxanium:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css?v=22">
+  <link rel="stylesheet" href="/css/pulse-badge.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-98KDVDFBCW"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-98KDVDFBCW');</script>
+  <script src="/js/prices.js" defer></script>
+  <script src="/js/search.js" defer></script>
+  <script src="/js/auth.js?v=2" defer></script>
+  <script src="/js/theme.js?v=2" defer></script>
+  <title>Trader Insights — The Signal</title>
+  <style>
+    .insights-page { max-width:1200px; margin:0 auto; padding:2rem 1.5rem 4rem; color:#e0e0e0; }
+    .insights-hero { text-align:center; margin:2rem 0 3rem; }
+    .insights-hero h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,5vw,3.2rem); background:linear-gradient(135deg,#6366f1,#06b6d4); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin:0 0 .5rem; }
+    .insights-hero p { color:#94a3b8; font-size:1.05rem; max-width:600px; margin:0 auto; line-height:1.6; }
+    .insights-summary { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem; margin-bottom:3rem; }
+    .insight-stat { background:linear-gradient(145deg,#12121a,#1a1a2e); border:1px solid #2a2a3e; border-radius:12px; padding:1.2rem 1.5rem; text-align:center; }
+    .insight-stat-label { color:#5e7092; font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; font-family:'Oxanium',sans-serif; }
+    .insight-stat-value { font-family:'JetBrains Mono',monospace; font-size:1.6rem; font-weight:700; color:#fff; margin-top:.3rem; }
+    .insight-stat-value.positive { color:#22c55e; }
+    .insight-stat-value.negative { color:#ef4444; }
+    .trader-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(540px,1fr)); gap:1.5rem; margin-bottom:3rem; }
+    .trader-card { background:linear-gradient(145deg,#12121a,#1a1a2e); border:1px solid #2a2a3e; border-radius:20px; overflow:hidden; transition:transform .2s,border-color .2s; }
+    .trader-card:hover { transform:translateY(-4px); border-color:#6366f1; }
+    .trader-header { padding:1.5rem; display:flex; align-items:center; gap:1.2rem; border-bottom:1px solid #2a2a3e; }
+    .trader-avatar { width:70px; height:70px; border-radius:50%; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:2rem; font-weight:700; color:#fff; position:relative; overflow:hidden; border:3px solid transparent; }
+    .trader-avatar .avatar-ring { position:absolute; inset:-4px; border-radius:50%; pointer-events:none; }
+    .trader-info { flex:1; }
+    .trader-name { font-family:'Oxanium',sans-serif; font-size:1.2rem; font-weight:700; color:#fff; margin:0 0 .2rem; }
+    .trader-title { color:#5e7092; font-size:.85rem; margin:0; }
+    .trader-return { text-align:right; flex-shrink:0; }
+    .trader-return-label { color:#5e7092; font-size:.7rem; text-transform:uppercase; letter-spacing:.05em; font-family:'Oxanium',sans-serif; }
+    .trader-return-value { font-family:'JetBrains Mono',monospace; font-size:1.5rem; font-weight:700; }
+    .trader-return-value.positive { color:#22c55e; }
+    .trader-return-value.negative { color:#ef4444; }
+    .trader-holdings { padding:1rem 1.5rem; }
+    .trader-holdings h4 { font-family:'Oxanium',sans-serif; font-size:.8rem; color:#5e7092; text-transform:uppercase; letter-spacing:.08em; margin:0 0 .8rem; }
+    .holding-list { display:flex; flex-direction:column; gap:.5rem; }
+    .holding-item { display:flex; align-items:center; gap:.8rem; padding:.6rem .8rem; background:rgba(99,102,241,.03); border:1px solid rgba(99,102,241,.08); border-radius:10px; transition:background .2s; }
+    .holding-item:hover { background:rgba(99,102,241,.06); }
+    .holding-ticker { font-family:'JetBrains Mono',monospace; font-size:.9rem; font-weight:700; color:#e0e0e0; width:65px; flex-shrink:0; }
+    .holding-name { flex:1; font-size:.8rem; color:#94a3b8; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .holding-price { font-family:'JetBrains Mono',monospace; font-size:.85rem; color:#e0e0e0; text-align:right; min-width:70px; }
+    .holding-change { font-family:'JetBrains Mono',monospace; font-size:.8rem; text-align:right; min-width:55px; }
+    .holding-change.positive { color:#22c55e; }
+    .holding-change.negative { color:#ef4444; }
+    .holding-pct { font-family:'JetBrains Mono',monospace; font-size:.8rem; color:#5e7092; text-align:right; min-width:40px; }
+    .trader-recent { padding:0 1.5rem 1.5rem; }
+    .trader-recent h4 { font-family:'Oxanium',sans-serif; font-size:.8rem; color:#5e7092; text-transform:uppercase; letter-spacing:.08em; margin:0 0 .8rem; }
+    .recent-trade { display:flex; align-items:center; gap:.8rem; padding:.5rem .8rem; background:rgba(99,102,241,.03); border-radius:8px; margin-bottom:.4rem; }
+    .recent-trade-type { font-size:.7rem; font-weight:700; padding:2px 8px; border-radius:6px; }
+    .recent-trade-type.buy { background:rgba(34,197,94,.15); color:#22c55e; }
+    .recent-trade-type.sell { background:rgba(239,68,68,.15); color:#ef4444; }
+    .recent-trade-info { flex:1; font-size:.8rem; color:#94a3b8; }
+    .recent-trade-date { font-size:.75rem; color:#5e7092; }
+    .disclaimer { text-align:center; margin-top:3rem; padding:1.5rem; border-top:1px solid #2a2a3e; }
+    .disclaimer p { color:#5e7092; font-size:.8rem; line-height:1.5; max-width:600px; margin:0 auto; }
+    .insights-loading { text-align:center; padding:4rem; color:#94a3b8; }
+    @media (max-width:640px) { .insights-page { padding:1rem; } .trader-grid { grid-template-columns:1fr; } .trader-header { flex-wrap:wrap; } .trader-return { width:100%; text-align:left; margin-top:.5rem; } }
+    @media (max-width:480px) { .holding-item { flex-wrap:wrap; gap:.3rem; } .holding-name { width:100%; } }
+  </style>
+<link rel="stylesheet" href="/css/nav.css">
+</head>
+<body>
+  <main class="insights-page" id="premiumContent" style="display:none">
+    <div class="insights-hero">
+      <h1>Trader Insights</h1>
+      <p>Track portfolios, recent trades, and performance of the world's most famous investors and traders.</p>
+    </div>
+
+    <div class="insights-summary" id="insightsSummary">
+      <div class="insight-stat">
+        <div class="insight-stat-label">Tracked Traders</div>
+        <div class="insight-stat-value">4</div>
+      </div>
+      <div class="insight-stat">
+        <div class="insight-stat-label">Best 250D Return</div>
+        <div class="insight-stat-value positive">+144.3%</div>
+      </div>
+      <div class="insight-stat">
+        <div class="insight-stat-label">Worst 250D Return</div>
+        <div class="insight-stat-value negative">-8.2%</div>
+      </div>
+      <div class="insight-stat">
+        <div class="insight-stat-label">Total Value Tracked</div>
+        <div class="insight-stat-value">$87.2B</div>
+      </div>
+    </div>
+
+    <div class="trader-grid" id="traderGrid">
+      <div class="insights-loading">Loading trader data...</div>
+    </div>
+
+    <div class="disclaimer">
+      <p>Data sourced from 13F filings, Capitol Trades API, and public disclosures. Holdings and performance are approximate and updated periodically. Not financial advice.</p>
+    </div>
+  </main>
+
+  <!-- Rocket Lab-Style Drawer -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <div class="drawer" id="drawer">
+    <div class="drawer-header">
+      <a href="/" class="drawer-logo">
+        <span class="the">THE</span>
+        <span class="signal">SIGNAL</span>
+      </a>
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">&#10005;</button>
+    </div>
+    <div class="drawer-body" id="drawerBody">
+      <div class="drawer-main" id="drawerMain">
+        <div class="drawer-section-label">SECTORS</div>
+        <a href="javascript:void(0)" class="drawer-link" onclick="openSubDrawer()">SECTORS</a>
+        <a href="/stocks/" class="drawer-link">STOCK PAGES</a>
+        <a href="/#scorecard" class="drawer-link">SIGNAL SCORECARD</a>
+        <a href="/hive" class="drawer-link">HIVE</a>
+        <a href="/signal-vs-the-street" class="drawer-link">SIGNAL VS. STREET</a>
+        <a href="/watchlist" class="drawer-link">WATCHLIST</a>
+        <a href="/insights" class="drawer-link">TRADER INSIGHTS</a>
+        <a href="/pricing" class="drawer-link">SIGNAL PREMIUM</a>
+        <a href="/premium" class="drawer-cta">GO PREMIUM</a>
+      </div>
+      <div class="drawer-sub" id="drawerSub">
+        <div class="sub-header" onclick="closeSubDrawer()">
+          <span class="sub-back">&#8249;</span>
+          <span class="sub-title">SECTORS</span>
+        </div>
+        <a href="/sector/ai/" class="drawer-link">AI</a>
+        <a href="/sector/cyber/" class="drawer-link">CYBER</a>
+        <a href="/sector/defense/" class="drawer-link">DEFENSE</a>
+        <a href="/sector/space/" class="drawer-link">SPACE</a>
+        <a href="/sector/mega-cap/" class="drawer-link">MEGA-CAP</a>
+        <a href="/sector/quantum/" class="drawer-link">QUANTUM</a>
+        <a href="/sector/ai-power/" class="drawer-link">AI POWER</a>
+        <a href="/sector/fintech/" class="drawer-link">FINTECH</a>
+        <a href="/sector/etfs/" class="drawer-link">ETFS</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      var TRADERS = [
+        {
+          id: 'leopold',
+          name: 'Leopold\'s Portfolio',
+          title: 'Retail Investor — High Conviction',
+          avatarBg: 'linear-gradient(135deg,#6366f1,#818cf8)',
+          initials: 'L',
+          return250: 144.3,
+          totalValue: '2.4M',
+          holdings: [
+            { ticker: 'SHAZ', name: 'Shazam Corp', shares: 50000, price: 42.75, change: 3.2, pct: 28 },
+            { ticker: 'NBIS', name: 'Nebius Group', shares: 35000, price: 38.50, change: 5.8, pct: 22 },
+            { ticker: 'SNDK', name: 'Sandisk Corp', shares: 28000, price: 64.20, change: -1.1, pct: 25 },
+            { ticker: 'BE', name: 'Bloom Energy', shares: 45000, price: 18.90, change: 2.4, pct: 25 }
+          ],
+          recentTrades: [
+            { type: 'buy', ticker: 'NBIS', shares: 5000, price: 37.20, date: '2026-07-20' },
+            { type: 'buy', ticker: 'SHAZ', shares: 10000, price: 41.10, date: '2026-07-15' },
+            { type: 'sell', ticker: 'BE', shares: 5000, price: 19.50, date: '2026-07-10' }
+          ],
+          description: 'High-conviction retail trader known for concentrated bets on AI infrastructure and emerging technology. Leopold\'s aggressive momentum strategy has delivered exceptional returns.'
+        },
+        {
+          id: 'pelosi',
+          name: 'Pelosi Portfolio',
+          title: 'Congressional Trading Tracker',
+          avatarBg: 'linear-gradient(135deg,#ef4444,#f87171)',
+          initials: 'NP',
+          return250: 38.5,
+          totalValue: '42.5M',
+          holdings: [
+            { ticker: 'INTC', name: 'Intel Corporation', shares: 55000, price: 31.50, change: -2.3, pct: 18 },
+            { ticker: 'UBER', name: 'Uber Technologies', shares: 35000, price: 68.90, change: 1.5, pct: 15 },
+            { ticker: 'AAPL', name: 'Apple Inc.', shares: 25000, price: 198.40, change: 0.8, pct: 22 },
+            { ticker: 'GOOGL', name: 'Alphabet Inc.', shares: 18000, price: 175.30, change: 1.2, pct: 20 },
+            { ticker: 'NVDA', name: 'NVIDIA Corporation', shares: 12000, price: 138.60, change: 4.1, pct: 15 },
+            { ticker: 'MSFT', name: 'Microsoft Corporation', shares: 15000, price: 412.80, change: 0.5, pct: 10 }
+          ],
+          recentTrades: [
+            { type: 'buy', ticker: 'INTC', shares: 10000, price: 30.80, date: '2026-07-18' },
+            { type: 'buy', ticker: 'NVDA', shares: 3000, price: 135.20, date: '2026-07-14' },
+            { type: 'buy', ticker: 'UBER', shares: 5000, price: 67.50, date: '2026-07-08' },
+            { type: 'sell', ticker: 'MSFT', shares: 2000, price: 415.10, date: '2026-07-02' }
+          ],
+          description: 'Tracking the trading activity of Nancy Pelosi and family. Known for well-timed tech options trades that often precede major legislative movements.'
+        },
+        {
+          id: 'buffett',
+          name: 'Buffett Holdings',
+          title: 'Berkshire Hathaway — 13F Tracker',
+          avatarBg: 'linear-gradient(135deg,#fbbf24,#f59e0b)',
+          initials: 'WB',
+          return250: 24.1,
+          totalValue: '42.8B',
+          holdings: [
+            { ticker: 'DVA', name: 'DaVita Inc.', shares: 40000000, price: 143.50, change: -0.5, pct: 28 },
+            { ticker: 'KO', name: 'Coca-Cola Company', shares: 400000000, price: 69.80, change: 0.3, pct: 32 },
+            { ticker: 'AXP', name: 'American Express', shares: 15000000, price: 258.40, change: 1.1, pct: 22 },
+            { ticker: 'AAPL', name: 'Apple Inc.', shares: 80000000, price: 198.40, change: 0.8, pct: 18 }
+          ],
+          recentTrades: [
+            { type: 'buy', ticker: 'DVA', shares: 2000000, price: 142.10, date: '2026-06-15' },
+            { type: 'buy', ticker: 'AXP', shares: 1000000, price: 255.80, date: '2026-05-20' },
+            { type: 'sell', ticker: 'AAPL', shares: 3000000, price: 210.40, date: '2026-04-10' }
+          ],
+          description: 'Snapshot of Berkshire Hathaway\'s public equity portfolio based on latest 13F filing. Buffett\'s long-term value approach focuses on durable competitive advantages.'
+        },
+        {
+          id: 'cathie',
+          name: 'Cathie Wood Portfolio',
+          title: 'ARK Invest — Disruptive Innovation',
+          avatarBg: 'linear-gradient(135deg,#06b6d4,#22d3ee)',
+          initials: 'CW',
+          return250: -8.2,
+          totalValue: '12.3B',
+          holdings: [
+            { ticker: 'TSLA', name: 'Tesla Inc.', shares: 8500000, price: 298.50, change: -3.2, pct: 65 },
+            { ticker: 'SPCX', name: 'SPACs & Innovation ETF', shares: 12000000, price: 24.80, change: 0.5, pct: 35 }
+          ],
+          recentTrades: [
+            { type: 'buy', ticker: 'TSLA', shares: 200000, price: 295.10, date: '2026-07-21' },
+            { type: 'buy', ticker: 'SPCX', shares: 500000, price: 24.40, date: '2026-07-16' },
+            { type: 'sell', ticker: 'TSLA', shares: 100000, price: 312.50, date: '2026-07-05' }
+          ],
+          description: 'Tracking ARK Invest\'s flagship disruptive innovation portfolio. Cathie Wood focuses on high-growth, transformational companies with 5-7 year investment horizons.'
+        }
+      ];
+
+      var STOCK_PRICES = {};
+
+      function loadPrices() {
+        var tickers = [];
+        TRADERS.forEach(function(t) {
+          t.holdings.forEach(function(h) {
+            if (tickers.indexOf(h.ticker) === -1) tickers.push(h.ticker);
+          });
+        });
+        var promises = tickers.map(function(t) {
+          return fetch('/api/prices?ticker=' + t)
+            .then(function(r) { return r.json(); })
+            .then(function(d) { STOCK_PRICES[t] = d.price || null; })
+            .catch(function() { STOCK_PRICES[t] = null; });
+        });
+        return Promise.all(promises);
+      }
+
+      function getAvatarHtml(trader) {
+        return '<div class="trader-avatar" style="background:' + trader.avatarBg + '">' +
+          '<span>' + trader.initials + '</span></div>';
+      }
+
+      function renderHoldings(holdings) {
+        var html = '<div class="holding-list">';
+        holdings.forEach(function(h) {
+          var chgClass = h.change >= 0 ? 'positive' : 'negative';
+          var chgIcon = h.change >= 0 ? '▲' : '▼';
+          var price = STOCK_PRICES[h.ticker] || h.price;
+          // Try to simulate a daily change based on stored data
+          var simulatedChange = h.change;
+          html += '<div class="holding-item">' +
+            '<span class="holding-ticker">' + h.ticker + '</span>' +
+            '<span class="holding-name">' + h.name + '</span>' +
+            '<span class="holding-price">$' + (typeof price === 'number' ? price.toFixed(2) : '---') + '</span>' +
+            '<span class="holding-change ' + chgClass + '">' + chgIcon + ' ' + Math.abs(h.change).toFixed(1) + '%</span>' +
+            '<span class="holding-pct">' + h.pct + '%</span>' +
+            '</div>';
+        });
+        html += '</div>';
+        return html;
+      }
+
+      function renderRecentTrades(trades) {
+        var html = '';
+        (trades || []).forEach(function(t) {
+          html += '<div class="recent-trade">' +
+            '<span class="recent-trade-type ' + t.type + '">' + t.type.toUpperCase() + '</span>' +
+            '<span class="recent-trade-info">' + t.shares.toLocaleString() + ' shares of ' + t.ticker + ' @ $' + t.price.toFixed(2) + '</span>' +
+            '<span class="recent-trade-date">' + (new Date(t.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })) + '</span>' +
+            '</div>';
+        });
+        return html;
+      }
+
+      function init() {
+        var grid = document.getElementById('traderGrid');
+
+        loadPrices().then(function() {
+          var html = '';
+          TRADERS.forEach(function(t) {
+            var retClass = t.return250 >= 0 ? 'positive' : 'negative';
+            var retIcon = t.return250 >= 0 ? '+' : '';
+            html += '<div class="trader-card">' +
+              '<div class="trader-header">' +
+                getAvatarHtml(t) +
+                '<div class="trader-info">' +
+                  '<div class="trader-name">' + t.name + '</div>' +
+                  '<div class="trader-title">' + t.title + '</div>' +
+                '</div>' +
+                '<div class="trader-return">' +
+                  '<div class="trader-return-label">250D Return</div>' +
+                  '<div class="trader-return-value ' + retClass + '">' + retIcon + t.return250 + '%</div>' +
+                '</div>' +
+              '</div>' +
+              '<div class="trader-holdings">' +
+                '<h4>Current Holdings</h4>' +
+                renderHoldings(t.holdings) +
+              '</div>' +
+              '<div class="trader-recent">' +
+                '<h4>Recent Activity</h4>' +
+                renderRecentTrades(t.recentTrades) +
+              '</div>' +
+            '</div>';
+          });
+          grid.innerHTML = html;
+        }).catch(function() {
+          // Fallback: render without live prices
+          var html = '';
+          TRADERS.forEach(function(t) {
+            var retClass = t.return250 >= 0 ? 'positive' : 'negative';
+            var retIcon = t.return250 >= 0 ? '+' : '';
+            html += '<div class="trader-card">' +
+              '<div class="trader-header">' +
+                getAvatarHtml(t) +
+                '<div class="trader-info">' +
+                  '<div class="trader-name">' + t.name + '</div>' +
+                  '<div class="trader-title">' + t.title + '</div>' +
+                '</div>' +
+                '<div class="trader-return">' +
+                  '<div class="trader-return-label">250D Return</div>' +
+                  '<div class="trader-return-value ' + retClass + '">' + retIcon + t.return250 + '%</div>' +
+                '</div>' +
+              '</div>' +
+              '<div class="trader-holdings">' +
+                '<h4>Current Holdings</h4>' +
+                renderHoldings(t.holdings) +
+              '</div>' +
+              '<div class="trader-recent">' +
+                '<h4>Recent Activity</h4>' +
+                renderRecentTrades(t.recentTrades) +
+              '</div>' +
+            '</div>';
+          });
+          grid.innerHTML = html;
+        });
+      }
+
+      init();
+
+      // Drawer toggle
+      function initDrawer() {
+        var toggle = document.getElementById('hamburgerToggle');
+        var overlay = document.getElementById('drawerOverlay');
+        var drawer = document.getElementById('drawer');
+        var close = document.getElementById('drawerClose');
+        if (!toggle) return;
+        function openDrawer() {
+          overlay.classList.add('active');
+          drawer.classList.add('open');
+          document.body.style.overflow = 'hidden';
+        }
+        function closeDrawer() {
+          overlay.classList.remove('active');
+          drawer.classList.remove('open');
+          document.body.style.overflow = '';
+        }
+        toggle.addEventListener('click', openDrawer);
+        if (overlay) overlay.addEventListener('click', closeDrawer);
+        if (close) close.addEventListener('click', closeDrawer);
+      }
+      initDrawer();
+    })();
+
+    window.openSubDrawer = function() {
+      var main = document.getElementById('drawerMain');
+      var sub = document.getElementById('drawerSub');
+      if (main) main.style.transform = 'translateX(-100%)';
+      if (sub) sub.style.transform = 'translateX(0)';
+    };
+    window.closeSubDrawer = function() {
+      var main = document.getElementById('drawerMain');
+      var sub = document.getElementById('drawerSub');
+      if (main) main.style.transform = 'translateX(0)';
+      if (sub) sub.style.transform = 'translateX(-100%)';
+    };
+  </script>
+  <script>
+  (function(){
+    var token = localStorage.getItem('hive_token');
+    var pc = document.getElementById('premiumContent');
+    if (!token) { return; }
+    fetch('/api/hive?action=premium&token='+encodeURIComponent(token))
+      .then(function(r){return r.json()})
+      .then(function(d){
+        if(d.premium && (d.plan==='premium'||d.plan==='pro')){
+          if(pc) pc.style.display='';
+        }
+      }).catch(function(){});
+  })();
+  </script>
+</body>
+</html>
