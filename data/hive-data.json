@@ -5,7 +5,9 @@
       "displayName": "charlie943",
       "passwordHash": "0b06b7c509c6f9740bf1ac13119477046d2d7d45226ecd5585a16e0b364a2047",
       "createdAt": "2025-11-27T10:21:15.000Z",
-      "uid": "usr_ee2913dcbfd9625a"
+      "uid": "usr_ee2913dcbfd9625a",
+      "premium": "premium",
+      "premiumSince": "2026-07-25T13:27:27.590Z"
     },
     "quantwolf": {
       "username": "quantwolf",
@@ -33666,5 +33668,6 @@
       "price": 381.7900085449219,
       "updatedAt": "2026-07-24T10:25:51.494Z"
     }
-  }
+  },
+  "watchlists": {}
 }
