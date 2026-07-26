@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#08080e">
+  <meta name="theme-color" content="#1b2b50">
   <link rel="canonical" href="https://readthesignal.net/premium/success">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/apple-touch-icon.png">
@@ -14,39 +14,203 @@
   <meta property="og:url" content="https://readthesignal.net/premium/success">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Oxanium:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/main.css?v=22">
-  <link rel="stylesheet" href="/css/pulse-badge.css">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Oxanium:wght@400;500;600;700&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css?v=27">
+  <link rel="stylesheet" href="/css/nav.css?v=1">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-98KDVDFBCW"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-98KDVDFBCW');</script>
   <script src="/js/prices.js" defer></script>
+  <script src="/js/search.js" defer></script>
   <script src="/js/auth.js?v=2" defer></script>
   <script src="/js/theme.js?v=2" defer></script>
+  <script src="/js/nav.js?v=1" defer></script>
   <title>Subscription Active — The Signal</title>
   <style>
-    .success-page { max-width:600px; margin:0 auto; padding:2rem 1.5rem 4rem; color:#e0e0e0; text-align:center; }
-    .success-card { background:linear-gradient(145deg,#12121a,#1a1a2e); border:1px solid #2a2a3e; border-radius:16px; padding:3rem 2rem; margin:3rem 0; }
-    .success-icon { font-size:4rem; margin-bottom:1rem; }
-    .success-card h1 { font-family:'Anton',sans-serif; font-size:clamp(2rem,5vw,2.8rem); background:linear-gradient(135deg,#6366f1,#06b6d4); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin:0 0 1rem; }
-    .success-card p { color:#94a3b8; font-size:1.05rem; line-height:1.6; margin:0 0 1.5rem; }
-    .success-plan { display:inline-block; background:linear-gradient(135deg,#6366f1,#818cf8); color:#fff; font-family:'Oxanium',sans-serif; font-size:.85rem; font-weight:700; padding:6px 20px; border-radius:20px; letter-spacing:.1em; margin-bottom:1.5rem; }
-    .success-loading { display:inline-block; width:24px; height:24px; border:3px solid #2a2a3e; border-top-color:#6366f1; border-radius:50%; animation:spin .8s linear infinite; }
-    @keyframes spin { to { transform:rotate(360deg); } }
-    .success-cta { display:inline-block; padding:14px 32px; background:linear-gradient(135deg,#6366f1,#818cf8); border:none; border-radius:10px; color:#fff; font-family:'Oxanium',sans-serif; font-size:1rem; font-weight:700; cursor:pointer; text-decoration:none; transition:filter .2s; }
-    .success-cta:hover { filter:brightness(1.1); }
-    .error-text { color:#ef4444; font-size:.9rem; margin:1rem 0; }
-    @media (max-width:640px) { .success-page { padding:1rem; } .success-card { padding:2rem 1.5rem; } }
+    .success-page { max-width: 640px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+    .success-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 3rem 2.5rem; margin: 2rem 0; text-align: center; position: relative; overflow: hidden; }
+    .success-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--accent-gradient); }
+    .success-icon { width: 72px; height: 72px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 1.25rem; }
+    .success-icon.check { background: rgba(34,197,94,.12); }
+    .success-icon.loading { background: rgba(59,130,246,.1); }
+    .success-plan-badge { display: inline-block; background: var(--accent-gradient); color: #fff; font-family: 'Oxanium', sans-serif; font-size: .7rem; font-weight: 700; letter-spacing: .1em; padding: 5px 18px; border-radius: 100px; text-transform: uppercase; margin-bottom: 1rem; }
+    .success-card h1 { font-family: 'Anton', sans-serif; font-size: clamp(1.8rem,4vw,2.6rem); color: var(--text-primary); margin: 0 0 .75rem; }
+    .success-card h1 .gradient { background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .success-card p { color: var(--text-secondary); font-size: 1rem; line-height: 1.6; margin: 0 0 1.75rem; }
+    .success-card .success-cta { display: inline-block; padding: 14px 34px; background: var(--accent-gradient); border: none; border-radius: 10px; color: #fff; font-family: 'Oxanium', sans-serif; font-size: .95rem; font-weight: 700; cursor: pointer; text-decoration: none; transition: all .25s ease; }
+    .success-card .success-cta:hover { filter: brightness(1.1); box-shadow: 0 4px 24px rgba(59,130,246,.25); }
+    .success-card .secondary-cta { display: inline-block; padding: 14px 34px; background: transparent; border: 1px solid var(--border); border-radius: 10px; color: var(--text-secondary); font-family: 'Oxanium', sans-serif; font-size: .95rem; font-weight: 700; cursor: pointer; text-decoration: none; transition: all .25s ease; margin-left: .75rem; }
+    .success-card .secondary-cta:hover { border-color: var(--accent); color: var(--accent); }
+    .success-loading { display: inline-block; width: 28px; height: 28px; border: 3px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin .8s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .success-card .error-text { color: var(--red); font-size: .85rem; margin: 1rem 0 0; }
+    .success-bonus { margin-top: 1.5rem; padding: 1.25rem; background: rgba(59,130,246,.04); border: 1px solid rgba(59,130,246,.1); border-radius: 10px; }
+    .success-bonus h4 { font-family: 'Oxanium', sans-serif; font-size: .85rem; color: var(--accent); margin: 0 0 .3rem; }
+    .success-bonus p { color: var(--text-muted); font-size: .82rem; margin: 0; }
+
+    @media (max-width: 640px) {
+      .success-page { padding: 2rem 1rem 4rem; }
+      .success-card { padding: 2rem 1.5rem; }
+      .success-card .secondary-cta { margin-left: 0; margin-top: .75rem; }
+    }
   </style>
-<link rel="stylesheet" href="/css/nav.css">
 </head>
 <body>
-  <main class="success-page">
-    <div class="success-card">
-      <div id="successContent">
-        <div class="success-icon">⚡</div>
-        <h1>Completing Your Subscription</h1>
-        <p>Please wait while we activate your premium access...</p>
-        <div class="success-loading"></div>
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo"><img src="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/logo-hex.jpg" alt="The Signal" class="logo-img"><span class="logo-text"><span class="logo-the">THE</span> <strong>SIGNAL</strong></span></a>
+      <div class="nav-actions">
+        <button class="nav-btn search-btn" id="searchToggle" aria-label="Search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+        <div class="auth-container" id="authContainer">
+          <button class="nav-btn auth-btn" id="authToggle" aria-label="Sign In">
+            <div class="auth-btn-avatar" id="authBtnAvatar">
+              <span class="auth-btn-initial" id="authBtnInitial"></span>
+              <img class="auth-btn-img" id="authBtnImg" src="" alt="" style="display:none">
+            </div>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="auth-btn-icon" id="authBtnIcon"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <span class="auth-label" id="authLabel">Sign In</span>
+          </button>
+          <div class="auth-dropdown" id="authDropdown">
+            <div class="auth-profile" id="authProfile" style="display:none">
+              <div class="auth-profile-header">
+                <div class="auth-profile-avatar" id="authProfileAvatar">
+                  <img id="authProfileImg" src="" alt="" style="display:none">
+                  <span class="auth-profile-initial" id="authProfileInitial"></span>
+                </div>
+                <div class="auth-profile-info">
+                  <span class="auth-profile-name" id="authProfileName"></span>
+                  <span class="auth-profile-username" id="authProfileUsername"></span>
+                </div>
+                <div class="auth-profile-badge">HIVE</div>
+              </div>
+              <div class="auth-profile-stats" id="authProfileStats">
+                <div class="auth-stat"><span class="auth-stat-label">Portfolio</span><span class="auth-stat-value" id="authStatValue">-</span></div>
+                <div class="auth-stat"><span class="auth-stat-label">Return</span><span class="auth-stat-value" id="authStatReturn">-</span></div>
+              </div>
+              <div class="auth-drop-divider"></div>
+              <div class="auth-profile-nav">
+                <a href="/sector/ai" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
+                <a href="/sector/cyber" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
+                <a href="/sector/defense" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
+                <a href="/sector/space" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
+                <a href="/sector/mega-cap" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
+                <a href="/sector/quantum" class="auth-nav-item"><span class="auth-nav-icon">🔬</span> Quantum</a>
+                <a href="/sector/ai-power" class="auth-nav-item"><span class="auth-nav-icon">⚡</span> AI Power</a>
+                <a href="/sector/etfs" class="auth-nav-item"><span class="auth-nav-icon">💼</span> ETFs</a>
+                <div class="auth-nav-section-header">FEATURES</div>
+                <a href="/hive" class="auth-nav-item"><span class="auth-nav-icon">🐝</span> Hive</a>
+                <a href="/signal-vs-the-street" class="auth-nav-item"><span class="auth-nav-icon">📈</span> Signal vs. Street</a>
+                <a href="/stocks/" class="auth-nav-item"><span class="auth-nav-icon">📉</span> Stock Pages</a>
+                <a href="/#scorecard" class="auth-nav-item"><span class="auth-nav-icon">📊</span> Signal Scorecard</a>
+              </div>
+              <div class="auth-drop-divider"></div>
+              <div class="auth-profile-footer">
+                <a href="/hive" class="auth-footer-link" onclick="navigateToHiveLeaderboard(event)">Leaderboard</a>
+                <a href="/account/settings" class="auth-footer-link">Settings</a>
+                <button class="auth-signout-btn" id="authSignOut">Sign Out</button>
+              </div>
+            </div>
+            <div class="auth-guest" id="authGuest">
+              <div class="auth-guest-brand">
+                <span class="auth-guest-title">Welcome to <strong>The Signal</strong></span>
+                <span class="auth-guest-sub">Join the hive to track your portfolio</span>
+              </div>
+              <button class="auth-option auth-option-primary" onclick="showHiveJoinModal('login')"><span class="auth-option-icon">🔑</span> Sign In</button>
+              <button class="auth-option" onclick="showHiveJoinModal('register')"><span class="auth-option-icon">✨</span> Create Account</button>
+              <div class="auth-drop-divider"></div>
+              <div class="auth-profile-nav">
+                <a href="/sector/ai" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
+                <a href="/sector/cyber" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
+                <a href="/sector/defense" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
+                <a href="/sector/space" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
+                <a href="/sector/mega-cap" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
+                <a href="/sector/quantum" class="auth-nav-item"><span class="auth-nav-icon">🔬</span> Quantum</a>
+                <a href="/sector/ai-power" class="auth-nav-item"><span class="auth-nav-icon">⚡</span> AI Power</a>
+                <a href="/sector/etfs" class="auth-nav-item"><span class="auth-nav-icon">💼</span> ETFs</a>
+                <div class="auth-nav-section-header">FEATURES</div>
+                <a href="/hive" class="auth-nav-item"><span class="auth-nav-icon">🐝</span> Hive</a>
+                <a href="/signal-vs-the-street" class="auth-nav-item"><span class="auth-nav-icon">📈</span> Signal vs. Street</a>
+                <a href="/stocks/" class="auth-nav-item"><span class="auth-nav-icon">📉</span> Stock Pages</a>
+                <a href="/#scorecard" class="auth-nav-item"><span class="auth-nav-icon">📊</span> Signal Scorecard</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="nav-btn hamburger-btn" id="hamburgerToggle" aria-label="Menu">
+          <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Drawer -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <div class="drawer" id="drawer">
+    <div class="drawer-header">
+      <a href="/" class="drawer-logo"><span class="the">THE</span><span class="signal">SIGNAL</span></a>
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">&#10005;</button>
+    </div>
+    <div class="drawer-body" id="drawerBody">
+      <div class="drawer-main" id="drawerMain">
+        <div class="drawer-section-label">SECTORS</div>
+        <a href="javascript:void(0)" class="drawer-link" onclick="openSubDrawer()">SECTORS</a>
+        <a href="/stocks/" class="drawer-link">STOCK PAGES</a>
+        <a href="/#scorecard" class="drawer-link">SIGNAL SCORECARD</a>
+        <a href="/hive" class="drawer-link">HIVE</a>
+        <a href="/signal-vs-the-street" class="drawer-link">SIGNAL VS. STREET</a>
+        <a href="/watchlist" class="drawer-link">WATCHLIST</a>
+        <a href="/insights" class="drawer-link">TRADER INSIGHTS</a>
+        <a href="/pricing" class="drawer-link">SIGNAL PREMIUM</a>
+        <a href="/premium" class="drawer-cta">GO PREMIUM</a>
+      </div>
+      <div class="drawer-sub" id="drawerSub">
+        <div class="sub-header" onclick="closeSubDrawer()">
+          <span class="sub-back">&#8249;</span>
+          <span class="sub-title">SECTORS</span>
+        </div>
+        <a href="/sector/ai/" class="drawer-link">AI</a>
+        <a href="/sector/cyber/" class="drawer-link">CYBER</a>
+        <a href="/sector/defense/" class="drawer-link">DEFENSE</a>
+        <a href="/sector/space/" class="drawer-link">SPACE</a>
+        <a href="/sector/mega-cap/" class="drawer-link">MEGA-CAP</a>
+        <a href="/sector/quantum/" class="drawer-link">QUANTUM</a>
+        <a href="/sector/ai-power/" class="drawer-link">AI POWER</a>
+        <a href="/sector/fintech/" class="drawer-link">FINTECH</a>
+        <a href="/sector/etfs/" class="drawer-link">ETFS</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Overlay -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-backdrop" id="searchBackdrop"></div>
+    <div class="search-modal">
+      <div class="search-header">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search articles by title, ticker, sector, or tag…" autofocus>
+        <button class="search-close" id="searchClose" aria-label="Close search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+      <div class="search-empty" id="searchEmpty">Start typing to search articles…</div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <div class="success-page">
+      <div class="success-card">
+        <div id="successContent">
+          <!-- Initial loading state -->
+          <div class="success-icon loading">
+            <div class="success-loading"></div>
+          </div>
+          <h1>Completing Your <span class="gradient">Subscription</span></h1>
+          <p>Please wait while we activate your premium access...</p>
+          <div id="activationStatus"></div>
+        </div>
       </div>
     </div>
   </main>
@@ -58,14 +222,10 @@
       var plan = params.get('plan') || 'premium';
 
       var content = document.getElementById('successContent');
+      var statusEl = document.getElementById('activationStatus');
 
-      function getToken() {
-        try { return localStorage.getItem('hive_token'); } catch(e) { return null; }
-      }
-
-      function getUser() {
-        try { return JSON.parse(localStorage.getItem('hive_user') || 'null'); } catch(e) { return null; }
-      }
+      function getToken() { try { return localStorage.getItem('hive_token'); } catch(e) { return null; } }
+      function getUser() { try { return JSON.parse(localStorage.getItem('hive_user') || 'null'); } catch(e) { return null; } }
 
       async function activate() {
         var token = getToken();
@@ -83,16 +243,14 @@
               }
             } catch(e) {}
           }
-          content.innerHTML =
-            '<div class="success-icon">✓</div>' +
-            '<h1>Subscription Complete!</h1>' +
-            '<p>Your account has been upgraded. Welcome to Signal Premium!</p>' +
-            '<a href="/premium" class="success-cta">Go to Premium Dashboard</a>';
+          // Fallback: show generic success
+          showGenericSuccess();
           return;
         }
 
-        // Activate via server-side verification
+        // Try primary activation path
         try {
+          statusEl.innerHTML = '<p style="color:var(--text-muted);font-size:.85rem;">Verifying payment...</p>';
           var resp = await fetch('/api/activate-premium', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -102,52 +260,72 @@
 
           if (data.success) {
             showSuccess(data.plan || plan);
-          } else {
-            // Try direct set-premium fallback
-            if (user && user.username) {
-              try {
-                var fallbackResp = await fetch(
-                  '/api/hive?action=set-premium&username=' + encodeURIComponent(user.username) +
-                  '&secret=signal_admin_2026&plan=' + encodeURIComponent(plan)
-                );
-                var fallbackData = await fallbackResp.json();
-                if (fallbackData.status === 'ok') {
-                  showSuccess(plan);
-                  return;
-                }
-              } catch(e) {}
-            }
-            content.innerHTML =
-              '<div class="success-icon">✓</div>' +
-              '<h1>Payment Received!</h1>' +
-              '<p>Your payment was successful. Your premium access is being activated. ' +
-              'This usually takes just a moment. If you don\\'t see your upgrade reflected, ' +
-              '<a href="/account" style="color:#6366f1;">check your account page</a>.</p>' +
-              '<a href="/premium" class="success-cta">Go to Premium Dashboard</a>';
+            return;
           }
+
+          // Fallback via direct set-premium
+          if (user && user.username) {
+            statusEl.innerHTML = '<p style="color:var(--text-muted);font-size:.85rem;">Activating premium...</p>';
+            try {
+              var fallbackResp = await fetch(
+                '/api/hive?action=set-premium&username=' + encodeURIComponent(user.username) +
+                '&secret=signal_admin_2026&plan=' + encodeURIComponent(plan)
+              );
+              var fallbackData = await fallbackResp.json();
+              if (fallbackData.status === 'ok') {
+                showSuccess(plan);
+                return;
+              }
+            } catch(e) {}
+          }
+
+          showGenericSuccess();
         } catch (err) {
           console.error('Activation error:', err);
-          content.innerHTML =
-            '<div class="success-icon">✓</div>' +
-            '<h1>Payment Received!</h1>' +
-            '<p>Your payment was processed successfully. Your premium features will be active shortly. ' +
-            'Please <a href="/account" style="color:#6366f1;">visit your account page</a> to confirm.</p>' +
-            '<a href="/premium" class="success-cta">Go to Premium Dashboard</a>';
+          showGenericSuccess();
         }
       }
 
       function showSuccess(activePlan) {
         var planLabel = activePlan === 'pro' ? 'PRO' : 'PREMIUM';
         content.innerHTML =
-          '<div class="success-icon">🎉</div>' +
-          '<span class="success-plan">✦ ' + planLabel + ' ACTIVE</span>' +
-          '<h1>Welcome to ' + (activePlan === 'pro' ? 'Pro' : 'Premium') + '!</h1>' +
+          '<div class="success-icon check" style="background:rgba(34,197,94,.12);">✓</div>' +
+          '<div class="success-plan-badge">✦ ' + planLabel + ' ACTIVE</div>' +
+          '<h1>Welcome to <span class="gradient">' + (activePlan === 'pro' ? 'Pro' : 'Premium') + '</span>!</h1>' +
           '<p>Your ' + (activePlan === 'pro' ? 'Pro' : 'Premium') + ' subscription is now active. ' +
           'You have full access to everything The Signal offers. Go deeper, trade smarter.</p>' +
-          '<a href="/premium" class="success-cta">Go to Premium Dashboard</a>';
+          '<a href="/premium" class="success-cta">Go to Premium Dashboard</a>' +
+          '<a href="/watchlist" class="secondary-cta">My Watchlist</a>' +
+          '<div class="success-bonus">' +
+            '<h4>⚡ What\'s next</h4>' +
+            '<p>Set up your watchlist, ask Pulse unlimited questions, and explore every stock detail page. Welcome aboard.</p>' +
+          '</div>';
+      }
+
+      function showGenericSuccess() {
+        content.innerHTML =
+          '<div class="success-icon check" style="background:rgba(34,197,94,.12);">✓</div>' +
+          '<h1>Payment <span class="gradient">Received</span></h1>' +
+          '<p>Your payment was successful. Your premium access is being activated. ' +
+          'This usually takes just a moment. <a href="/premium" style="color:var(--accent);">Go to your dashboard</a> to verify.</p>' +
+          '<a href="/premium" class="success-cta">Go to Premium Dashboard</a>' +
+          '<a href="/" class="secondary-cta">Back to Home</a>';
       }
 
       activate();
+
+      window.openSubDrawer = function() {
+        var main = document.getElementById('drawerMain');
+        var sub = document.getElementById('drawerSub');
+        if (main) main.style.transform = 'translateX(-100%)';
+        if (sub) sub.style.transform = 'translateX(0)';
+      };
+      window.closeSubDrawer = function() {
+        var main = document.getElementById('drawerMain');
+        var sub = document.getElementById('drawerSub');
+        if (main) main.style.transform = 'translateX(0)';
+        if (sub) sub.style.transform = 'translateX(-100%)';
+      };
     })();
   </script>
 </body>

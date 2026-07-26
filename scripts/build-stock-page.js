@@ -205,6 +205,7 @@ function buildStockPage(symbol) {
   <link rel="stylesheet" href="/css/stock-card.css">
   <link rel="stylesheet" href="/css/nav.css">
   <script src="https://cdn.jsdelivr.net/npm/lightweight-charts@4.1.3/dist/lightweight-charts.standalone.production.js"></script>
+  <script src="/js/watchlist.js" defer></script>
 </head>
 <body class="stock-page">
 

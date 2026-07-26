@@ -8,6 +8,7 @@ dist_bloated/
 _backup_dist/
 .venv/
 node_modules/
+.git/
 *.bak
 sector/ai/
 sector/cyber/

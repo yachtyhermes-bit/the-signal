@@ -2,12 +2,28 @@
 // Contains article metadata for Pulse AI
 const ARTICLES = [
   {
+    "title": "Qualcomm Is No Longer Just the Phone Chip Company",
+    "slug": "qcom-snapdragon-beyond-mobile-2026",
+    "ticker": "QCOM",
+    "sector": "semiconductors",
+    "date": "2026-07-26",
+    "summary": "Qualcomm has transformed from a smartphone chip pure-play into a computing platform spanning PCs, automotive, and AI at the edge. With a $45B+ automotive backlog, Snapdragon X Elite Windows-on-Arm inflection, and on-device AI becoming the killer app, the thesis is stronger than ever — even if the stock says otherwise."
+  },
+  {
     "title": "Intel's Foundry Pivot: The $75 Billion Turnaround the US Government Is Betting On",
     "slug": "intc-foundry-gamble-national-champion-2026",
     "ticker": "INTC",
     "sector": "semiconductors",
     "date": "2026-07-25",
     "summary": "Intel's foundry gamble on 18A, backed by $39B in CHIPS Act subsidies and a 9.9% government stake, makes it simultaneously America's most critical semiconductor asset and its most controversial turnaround story."
+  },
+  {
+    "title": "Cloudflare Is Betting $93 Billion on an Edge Nobody's Built Yet",
+    "slug": "net-edge-inference-2026",
+    "ticker": "NET",
+    "sector": "cyber",
+    "date": "2026-07-25",
+    "summary": "Cloudflare is staking a $93B market cap on becoming the planet's AI edge inference layer. With $2.33B in TTM revenue growing 33.5%, 73.3% gross margins, and $292M in FCF — but still a ~$102M GAAP net loss — NET's bet on Workers AI, Dynamic Workers, AI Gateway, and a 330+ city network is either visionary or very, very early."
   },
   {
     "title": "Is Open Source AI Actually Killing OpenAI and Anthropic Pricing Power",
