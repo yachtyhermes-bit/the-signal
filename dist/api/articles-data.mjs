@@ -2,6 +2,14 @@
 // Contains article metadata for Pulse AI
 const ARTICLES = [
   {
+    "title": "AST SpaceMobile's 10 Satellites Are in Orbit. The Real Race Starts Now.",
+    "slug": "asts-bluebird-delays-commercial-2026",
+    "ticker": "ASTS",
+    "sector": "space",
+    "date": "2026-07-26",
+    "summary": "AST SpaceMobile pushed its 45-satellite goal from end of 2026 to early 2027 after New Glenn's catastrophic failure, but $3.5 billion in cash and a $1.2 billion partner commitment book suggest the story is far from over."
+  },
+  {
     "title": "Qualcomm Is No Longer Just the Phone Chip Company",
     "slug": "qcom-snapdragon-beyond-mobile-2026",
     "ticker": "QCOM",
@@ -47,7 +55,7 @@ const ARTICLES = [
     "ticker": "S",
     "sector": "cyber",
     "date": "2026-07-25",
-    "summary": "SentinelOne has been beaten down 63% from its 52-week high, but the underlying business tells a completely different story. Revenue of $1.049 billion TTM growing 20.8% YoY, gross margins of 73.2%, positive FCF of $268 million, a pristine balance sheet with zero debt, and an AI-native architecture — Purple AI, Autonomous SOC, the new Neo for AI agent security — that competitors are scrambling to match. At 5.9x price-to-sales vs CrowdStrike at 36.6x, this is either a value trap or the most mispric"
+    "summary": "SentinelOne has been beaten down 63% from its 52-week high, but the underlying business tells a completely different story. Revenue of $1.049 billion TTM growing 20.8% YoY, gross margins of 73.2%, positive FCF of $37 million, a pristine balance sheet with zero debt, and an AI-native architecture — Purple AI, Autonomous SOC, the new Neo for AI agent security — that competitors are scrambling to match. At 5.9x price-to-sales vs CrowdStrike at 36.6x, this is either a value trap or the most misprice"
   },
   {
     "title": "Constellation Energy Has the Nuclear Fleet AI Data Centers Are Desperate For",
