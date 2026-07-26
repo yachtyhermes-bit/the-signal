@@ -101,6 +101,24 @@
     @media (max-width: 480px) {
       .premium-stats { grid-template-columns: 1fr; }
     }
+
+    /* Premium nav badge */
+    .premium-nav-badge { display:inline-flex; align-items:center; gap:4px; background:linear-gradient(135deg,#6366f1,#818cf8); color:#fff; font-family:'Oxanium',sans-serif; font-size:.65rem; font-weight:700; letter-spacing:.08em; padding:4px 12px; border-radius:100px; text-transform:uppercase; cursor:default; white-space:nowrap; }
+    .premium-nav-badge:hover { filter:brightness(1.1); }
+    .nav-inner .premium-nav-badge { margin-right:2px; }
+    @media (max-width: 640px) { .premium-nav-badge { font-size:.55rem; padding:3px 8px; } }
+
+    /* Stock Universe section */
+    .stock-universe { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); padding:1.5rem 2rem; margin-bottom:2.5rem; }
+    .stock-universe-header { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:.75rem; margin-bottom:1rem; }
+    .stock-universe-header h2 { font-family:'Oxanium',sans-serif; font-size:1.1rem; font-weight:700; color:var(--text-primary); margin:0; display:flex; align-items:center; gap:.5rem; }
+    .stock-universe-count { font-family:'JetBrains Mono',monospace; font-size:1.2rem; font-weight:700; color:var(--accent); }
+    .stock-universe-bar { height:6px; background:rgba(59,130,246,.1); border-radius:100px; overflow:hidden; margin-bottom:1rem; }
+    .stock-universe-bar-fill { height:100%; border-radius:100px; background:var(--accent-gradient); transition:width .8s ease; }
+    .stock-universe-recent { display:flex; flex-wrap:wrap; gap:.4rem; }
+    .stock-universe-tag { display:inline-block; padding:3px 10px; border-radius:6px; font-family:'JetBrains Mono',monospace; font-size:.72rem; font-weight:500; background:rgba(59,130,246,.08); color:var(--accent); transition:all .2s; text-decoration:none; }
+    .stock-universe-tag:hover { background:rgba(59,130,246,.15); transform:translateY(-1px); }
+    .stock-universe-empty { color:var(--text-muted); font-size:.85rem; padding:.5rem 0; }
   </style>
 </head>
 <body>
@@ -187,6 +205,7 @@
             </div>
           </div>
         </div>
+        <div class="premium-nav-badge" id="premiumNavBadge" style="display:none" title="Premium Member">✦ PREMIUM</div>
         <button class="nav-btn hamburger-btn" id="hamburgerToggle" aria-label="Menu">
           <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
         </button>
@@ -274,14 +293,14 @@
           <div class="premium-stat">
             <div class="premium-stat-icon green">📊</div>
             <div class="premium-stat-info">
-              <div class="premium-stat-value" id="statStockCount">50+</div>
+              <div class="premium-stat-value" id="statStockCount">—</div>
               <div class="premium-stat-label">Stock detail pages</div>
             </div>
           </div>
           <div class="premium-stat">
             <div class="premium-stat-icon purple">📋</div>
             <div class="premium-stat-info">
-              <div class="premium-stat-value" id="statWatchlistCount">0</div>
+              <div class="premium-stat-value" id="statWatchlistCount">—</div>
               <div class="premium-stat-label">Watchlist stocks</div>
             </div>
           </div>
@@ -292,6 +311,19 @@
               <div class="premium-stat-label">Reading experience</div>
             </div>
           </div>
+        </div>
+
+        <!-- Your Stock Universe -->
+        <div class="stock-universe" id="stockUniverse">
+          <div class="stock-universe-header">
+            <h2>📡 Your Stock Universe</h2>
+            <span class="stock-universe-count" id="universePct">0%</span>
+          </div>
+          <div class="stock-universe-bar">
+            <div class="stock-universe-bar-fill" id="universeBar" style="width:0%"></div>
+          </div>
+          <div class="stock-universe-recent" id="universeRecent"></div>
+          <div class="stock-universe-empty" id="universeEmpty" style="display:none">Start exploring — each stock page you view adds to your universe.</div>
         </div>
 
         <!-- Feature Cards -->
@@ -378,6 +410,7 @@
       var premiumContent = document.getElementById('premiumContent');
       var notPremiumContent = document.getElementById('notPremiumContent');
       var statusBar = document.getElementById('premiumStatusBar');
+      var premiumNavBadge = document.getElementById('premiumNavBadge');
 
       function getToken() { try { return localStorage.getItem('hive_token'); } catch(e) { return null; } }
       function getUser() { try { return JSON.parse(localStorage.getItem('hive_user') || 'null'); } catch(e) { return null; } }
@@ -390,6 +423,29 @@
         return;
       }
 
+      // Fetch stock coverage count for the universe
+      function fetchCoverageCount(cb) {
+        fetch('/api/hive?stocks=true')
+          .then(function(r) { return r.json(); })
+          .then(function(data) {
+            var count = 0;
+            if (Array.isArray(data)) count = data.length;
+            else if (data.stocks && Array.isArray(data.stocks)) count = data.stocks.length;
+            else if (data.count) count = data.count;
+            else count = 51; // fallback
+            if (cb) cb(count);
+          })
+          .catch(function() { if (cb) cb(51); });
+      }
+
+      // Fetch stock viewing history for universe section
+      function fetchStockViews(token, cb) {
+        // Try to get viewed stocks from a dedicated endpoint or localStorage
+        var viewed;
+        try { viewed = JSON.parse(localStorage.getItem('signal_viewed_stocks') || '[]'); } catch(e) { viewed = []; }
+        if (cb) cb(viewed);
+      }
+
       // Check premium status
       fetch('/api/hive?action=premium&token=' + encodeURIComponent(token))
         .then(function(r) { return r.json(); })
@@ -397,8 +453,8 @@
           if (data.premium) {
             premiumContent.style.display = 'block';
             notPremiumContent.style.display = 'none';
+            if (premiumNavBadge) premiumNavBadge.style.display = 'inline-flex';
 
-            // Status bar
             var planLabel = (data.plan || 'PREMIUM').toUpperCase();
             document.getElementById('premiumBadgeLabel').textContent = planLabel + ' MEMBER';
 
@@ -412,7 +468,7 @@
                 sinceHtml +
               '</div>' +
               '<div class="premium-status-right">' +
-                '<a href="/pricing" class="premium-status-link">Manage Plan</a>' +
+                '<a href="javascript:void(0)" class="premium-status-link" onclick="openBillingPortal(\'' + token + '\')">Manage Subscription</a>' +
                 '<a href="/watchlist" class="premium-status-link">Watchlist</a>' +
               '</div>';
 
@@ -424,9 +480,35 @@
                 document.getElementById('statWatchlistCount').textContent = count;
               }).catch(function() {});
 
+            // Load stock coverage + universe
+            fetchCoverageCount(function(totalStocks) {
+              document.getElementById('statStockCount').textContent = totalStocks;
+
+              fetchStockViews(token, function(viewedStocks) {
+                var viewedCount = viewedStocks.length || 0;
+                var pct = totalStocks > 0 ? Math.round((viewedCount / totalStocks) * 100) : 0;
+                document.getElementById('universePct').textContent = viewedCount + '/' + totalStocks + ' (' + pct + '%)';
+                document.getElementById('universeBar').style.width = pct + '%';
+
+                var recent = document.getElementById('universeRecent');
+                var empty = document.getElementById('universeEmpty');
+                if (viewedCount > 0) {
+                  empty.style.display = 'none';
+                  var maxTags = Math.min(viewedStocks.length, 20);
+                  var show = viewedStocks.slice(-maxTags).reverse();
+                  recent.innerHTML = show.map(function(s) {
+                    return '<a href="/stocks/' + s.toLowerCase() + '/" class="stock-universe-tag">' + s.toUpperCase() + '</a>';
+                  }).join('');
+                } else {
+                  empty.style.display = 'block';
+                }
+              });
+            });
+
           } else {
             premiumContent.style.display = 'none';
             notPremiumContent.style.display = 'block';
+            if (premiumNavBadge) premiumNavBadge.style.display = 'none';
           }
         })
         .catch(function() {
@@ -445,6 +527,20 @@
             window.location.href = '/hive';
           }
         }
+      };
+
+      window.openBillingPortal = function(token) {
+        fetch('/api/portal-session', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ token: token })
+        })
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          if (data.url) window.location.href = data.url;
+          else alert(data.error || 'Could not open billing portal.');
+        })
+        .catch(function() { alert('Something went wrong. Please try again.'); });
       };
 
       function setupNav() {

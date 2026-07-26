@@ -1,0 +1,106 @@
+{
+  "factCheckDate": "2026-05-31",
+  "articles": [
+    {
+      "title": "The Blueprint: Why Nobody Moves in AI Without TSM",
+      "file": "/home/chino/thesignal/articles/posts/tsm-blueprint.json",
+      "slug": "tsm-blueprint",
+      "sourceLinkVerification": [
+        {
+          "url": "https://finance.yahoo.com/quote/TSM/",
+          "status": 429,
+          "verdict": "RATE LIMITED - URL is legitimate, Yahoo Finance is blocking automated requests"
+        },
+        {
+          "url": "https://www.tsmc.com/english/dedicatedFoundry/technology/leadership",
+          "status": 403,
+          "verdict": "ACCESS DENIED - Domain is real, TSMC site blocks automated scraping"
+        },
+        {
+          "url": "https://www.csis.org/programs/strategic-technologies-program",
+          "status": 200,
+          "verdict": "WORKING - Page loads successfully"
+        }
+      ],
+      "fabricatedSources": [],
+      "metricVerification": [
+        {"claim": "TSM controls 90%+ of advanced semiconductors", "articleValue": "90%+", "verifiedValue": "Industry consensus", "status": "VERIFIED"},
+        {"claim": "Market Cap", "articleValue": "$2.17T", "verifiedValue": "$2.17T", "status": "CONFIRMED"},
+        {"claim": "Forward P/E", "articleValue": "21.44", "verifiedValue": "21.44", "status": "CONFIRMED"},
+        {"claim": "Trailing P/E", "articleValue": "35.83", "verifiedValue": "35.86", "status": "CONFIRMED (minor rounding)"},
+        {"claim": "EPS", "articleValue": "$11.68", "verifiedValue": "$11.67", "status": "CONFIRMED (minor rounding)"},
+        {"claim": "Analyst Consensus", "articleValue": "1.47 (Strong Buy)", "verifiedValue": "1.47 (strong_buy)", "status": "CONFIRMED"},
+        {"claim": "Price Target Mean", "articleValue": "$467.84", "verifiedValue": "$467.84", "status": "CONFIRMED"},
+        {"claim": "Revenue", "articleValue": "$121.2B", "verifiedValue": "~$121.1B (TTM, converted from TWD)", "status": "CONFIRMED"},
+        {"claim": "Revenue Growth YoY", "articleValue": "35.1%", "verifiedValue": "35.1%", "status": "CONFIRMED"},
+        {"claim": "Analysts Covering", "articleValue": "18", "verifiedValue": "18", "status": "CONFIRMED"},
+        {"claim": "52-Week Range", "articleValue": "$190.56 - $430.55", "verifiedValue": "High $430.55 ✅; Official Yahoo low is $192.20, actual lowest intraday low was $190.56 on 2025-05-30", "status": "DISCREPANCY - Article uses actual lowest intraday price ($190.56), Yahoo official 52W low field is $192.20"}
+      ],
+      "otherClaims": [
+        {"claim": "YouTube video plays", "articleValue": "xMoADouJ8P4", "status": "VERIFIED (HTTP 200)"}
+      ],
+      "unverifiableClaims": [],
+      "verdict": "PASS with minor discrepancy - The article's 52-week low of $190.56 is the actual lowest intraday price, but Yahoo Finance's official 52-week low field shows $192.20. All other financial metrics verified against Yahoo Finance data."
+    },
+    {
+      "title": "$ALAB Up 311% from 52-Week Low: The AI Connectivity Company Powering Every Data Center",
+      "file": "/home/chino/thesignal/articles/posts/astera-labs-ai-connectivity-2026.json",
+      "slug": "astera-labs-ai-connectivity-2026",
+      "sourceLinkVerification": [
+        {
+          "url": "https://finance.yahoo.com/quote/ALAB/",
+          "status": 429,
+          "verdict": "RATE LIMITED - URL is legitimate"
+        },
+        {
+          "url": "https://www.barrons.com/articles/astera-labs-stock-record-high",
+          "status": 401,
+          "verdict": "PAYWALL PROTECTED - URL is legitimate, Barron's blocks automated requests"
+        },
+        {
+          "url": "https://www.asteralabs.com/news",
+          "status": 403,
+          "verdict": "CLOUDFLARE PROTECTED - URL is legitimate"
+        }
+      ],
+      "fabricatedSources": [],
+      "metricVerification": [
+        {"claim": "Stock Price", "articleValue": "$349.17", "verifiedValue": "$349.17 (May 28 close)", "status": "CONFIRMED"},
+        {"claim": "5-day return", "articleValue": "+17%", "verifiedValue": "17.2% (from $297.84 on May 21 to $349.17 on May 28)", "status": "CONFIRMED"},
+        {"claim": "Return from 52-week low", "articleValue": "+311%", "verifiedValue": "311.8% (from $84.78 to $349.17)", "status": "CONFIRMED"},
+        {"claim": "52-Week Range", "articleValue": "$84.78 - $354.53", "verifiedValue": "$84.78 - $354.53", "status": "CONFIRMED"},
+        {"claim": "Revenue Growth YoY", "articleValue": "93.4%", "verifiedValue": "93.4%", "status": "CONFIRMED"},
+        {"claim": "Earnings Growth", "articleValue": "144.4%", "verifiedValue": "144.4%", "status": "CONFIRMED"},
+        {"claim": "Market Cap", "articleValue": "$59.9B", "verifiedValue": "$58.8B (current), ~$60B at article price", "status": "APPROXIMATE"},
+        {"claim": "Forward P/E", "articleValue": "83x", "verifiedValue": "81.5x", "status": "CLOSE BUT NOT EXACT"},
+        {"claim": "Trailing P/E", "articleValue": "239x", "verifiedValue": "233.2x", "status": "CLOSE BUT NOT EXACT"},
+        {"claim": "Profit Margin", "articleValue": "26.7%", "verifiedValue": "26.7%", "status": "CONFIRMED"},
+        {"claim": "ROE", "articleValue": "21%", "verifiedValue": "21.1%", "status": "CONFIRMED"},
+        {"claim": "Analyst Count", "articleValue": "22", "verifiedValue": "22", "status": "CONFIRMED"},
+        {"claim": "Analyst Consensus", "articleValue": "Buy", "verifiedValue": "Buy (recommendationKey: 'buy')", "status": "CONFIRMED"},
+        {"claim": "Mean Price Target", "articleValue": "$245", "verifiedValue": "$244.97", "status": "CONFIRMED (rounded)"},
+        {"claim": "High Price Target", "articleValue": "$297", "verifiedValue": "$297.00", "status": "CONFIRMED"}
+      ],
+      "errorsFound": [
+        {
+          "severity": "ERROR",
+          "location": "bodyHtml (line inside body)",
+          "description": "\"The high target sits at $297, which still leaves 15% upside from here\" - At $349.17, the stock is 17.6% ABOVE the high target of $297 (i.e., 15% downside, not upside)",
+          "correction": "Should state: the stock has already exceeded even the high target by ~18%"
+        },
+        {
+          "severity": "TYPO",
+          "location": "meta.sourceLinks (line 78)",
+          "description": "URL contains 'alera-labs' instead of 'astera-labs': https://www.barrons.com/articles/alera-labs-stock-record-high",
+          "correction": "Should be: https://www.barrons.com/articles/astera-labs-stock-record-high (correctly spelled in links section at line 30)"
+        }
+      ],
+      "unverifiableClaims": [
+        {"claim": "COO sold 400,000 shares (insider selling)", "reason": "Cannot verify without insider transaction database access"},
+        {"claim": "General Counsel sold 796 shares (insider selling)", "reason": "Cannot verify without insider transaction database access"},
+        {"claim": "Astera debuting next-gen hardware at Computex 2026", "reason": "Astera Labs news page blocked by Cloudflare"}
+      ],
+      "verdict": "FAIL - Contains a factual error (direction of upside/downside relative to high price target) and a typo in metadata sourceLinks. The core financial metrics are largely confirmed but two specific claims are incorrect."
+    }
+  ]
+}

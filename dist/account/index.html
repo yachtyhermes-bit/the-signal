@@ -41,6 +41,8 @@
     .btn-manage.primary:hover { filter:brightness(1.1); }
     .btn-manage.secondary { background:#2a2a3e; color:#94a3b8; margin-top:.5rem; }
     .btn-manage.secondary:hover { background:#3a3a4e; }
+    .btn-manage.danger { background:rgba(220,38,38,.12); color:#ef4444; border:1px solid rgba(220,38,38,.2); margin-top:.5rem; }
+    .btn-manage.danger:hover { background:rgba(220,38,38,.2); }
     .empty-state { text-align:center; padding:3rem 0; color:#94a3b8; }
     .empty-state p { margin:1rem 0; }
     @media (max-width:640px) { .account-page { padding:1rem; } }
@@ -135,19 +137,21 @@
         html += `
           <div class="account-info">
             <label>Plan</label>
-            <div class="value">${plan === 'premium' ? 'Premium' : plan === 'pro' ? 'Pro' : 'Premium'} — $15.99/month</div>
+            <div class="value">${plan === 'premium' ? 'Premium' : plan === 'pro' ? 'Pro' : 'Premium'} — ${plan === 'pro' ? '$15.99/month' : '$9/month'}</div>
           </div>
-          ${data.premiumSince ? `<div class="account-info"><label>Member Since</label><div class="value">${new Date(data.premiumSince).toLocaleDateString()}</div></div>` : ''}
+          ${data.premiumSince ? `<div class="account-info"><label>Member Since</label><div class="value">${new Date(data.premiumSince).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</div></div>` : ''}
           <button class="btn-manage primary" onclick="manageBilling('${token}')">Manage Billing</button>
-          <button class="btn-manage secondary" onclick="window.location.href='/pricing'">Change Plan</button>
+          <button class="btn-manage danger" onclick="cancelSubscription('${token}')">Cancel Subscription</button>
+          <button class="btn-manage secondary" onclick="window.location.href='/pricing'" style="margin-top:.5rem">Change Plan</button>
         `;
       } else {
         html += `
           <div style="margin-top:1.5rem;">
             <p style="color:#94a3b8; font-size:.9rem; margin-bottom:1rem;">
-              Upgrade to Premium for unlimited AI queries, full community portfolio access, and more.
+              Upgrade to Premium for <strong>${'$9/month'}</strong> — unlimited AI queries, full community portfolio access, ad-free reading, and more.
             </p>
-            <a href="/pricing" class="btn-manage primary">Upgrade to Premium</a>
+            <a href="/pricing" class="btn-manage primary">Upgrade to Premium — ${'$9/month'}</a>
+            <a href="/pricing" class="btn-manage secondary" style="margin-top:.5rem; background:transparent; border:1px solid #2a2a3e;">View Pricing Details</a>
           </div>
         `;
       }
@@ -182,6 +186,26 @@
       }
     } catch (err) {
       console.error('Billing portal error:', err);
+      alert('Something went wrong. Please try again.');
+    }
+  };
+
+  window.cancelSubscription = async function(token) {
+    if (!confirm('Are you sure you want to cancel your subscription? You will lose access to premium features at the end of your current billing period.')) return;
+    try {
+      const resp = await fetch('/api/portal-session', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ token })
+      });
+      const data = await resp.json();
+      if (data.url) {
+        window.location.href = data.url;
+      } else {
+        alert(data.error || 'Could not open billing portal. Please try again.');
+      }
+    } catch (err) {
+      console.error('Cancel subscription error:', err);
       alert('Something went wrong. Please try again.');
     }
   };

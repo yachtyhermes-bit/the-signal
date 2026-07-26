@@ -118,6 +118,30 @@
     }
   }
 
+  // === Update premium badge in nav ===
+
+  function updatePremiumNavBadge(user) {
+    var badge = document.getElementById('premiumNavBadge');
+    if (!badge) {
+      // Create badge element if it doesn't exist in the nav
+      var navActions = document.querySelector('.nav-actions');
+      if (!navActions) return;
+      badge = document.createElement('div');
+      badge.id = 'premiumNavBadge';
+      badge.className = 'premium-nav-badge';
+      badge.title = 'Premium Member';
+      badge.style.display = 'none';
+      navActions.insertBefore(badge, navActions.firstChild);
+    }
+    if (user && user.isPremium) {
+      var planLabel = (user.premiumPlan || 'PREMIUM').toUpperCase();
+      badge.textContent = '✦ ' + planLabel;
+      badge.style.display = 'inline-flex';
+    } else {
+      badge.style.display = 'none';
+    }
+  }
+
   // === Fetch portfolio stats ===
 
   function fetchPortfolioStats(user) {
@@ -158,22 +182,27 @@
               uid: data.uid,
               username: data.username,
               displayName: data.displayName,
-              photoURL: data.photoURL
+              photoURL: data.photoURL,
+              isPremium: data.isPremium || false,
+              premiumPlan: data.premiumPlan || 'free'
             };
             try { localStorage.setItem('hive_user', JSON.stringify(updatedUser)); } catch(e) {}
             userCache = updatedUser;
             updateProfileDropdown(updatedUser, null);
             fetchPortfolioStats(updatedUser);
+            updatePremiumNavBadge(updatedUser);
           } else {
             clearHiveSession();
             userCache = null;
             portfolioCache = null;
             updateProfileDropdown(null, null);
+            updatePremiumNavBadge(null);
           }
         })
         .catch(function() {
           // Server unreachable — use cached data
           updateProfileDropdown(user, portfolioCache);
+          updatePremiumNavBadge(user);
         });
     } else {
       updateProfileDropdown(null, null);

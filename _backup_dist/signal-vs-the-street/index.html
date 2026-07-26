@@ -598,6 +598,46 @@
       background: rgba(6,128,255,0.25);
     }
 
+    /* Premium Feature badge */
+    .premium-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.55rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #0680ff;
+      border: 1px solid rgba(6,128,255,0.25);
+      background: rgba(6,128,255,0.08);
+      padding: 2px 8px;
+      border-radius: 3px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+    .locked-row-badge {
+      text-align: center;
+      padding: 1.5rem 1.25rem;
+      color: var(--color-grayscale-500);
+      font-size: 0.8rem;
+      line-height: 1.7;
+    }
+    .locked-row-badge .premium-badge {
+      margin-left: 0;
+      margin-right: 6px;
+    }
+    .locked-row-badge .upgrade-link {
+      color: #0680ff;
+      cursor: pointer;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .locked-row-badge .upgrade-link:hover {
+      color: #3399ff;
+    }
+
     /* ════════════════════════════════════════════════════════════
        SCROLL REVEAL ANIMATIONS
        ════════════════════════════════════════════════════════════ */
@@ -634,17 +674,17 @@
     [data-theme="light"] .hero::before {
       background: linear-gradient(
         to bottom,
-        rgba(4,4,10,0.55) 0%,
-        rgba(4,4,10,0.35) 40%,
-        rgba(4,4,10,0.25) 70%,
-        rgba(4,4,10,0.60) 100%
+        rgba(245,245,242,0.88) 0%,
+        rgba(245,245,242,0.70) 40%,
+        rgba(245,245,242,0.55) 70%,
+        rgba(245,245,242,0.92) 100%
       );
     }
     [data-theme="light"] .hero-category,
     [data-theme="light"] .hero-title,
     [data-theme="light"] .hero-sub,
     [data-theme="light"] .hero-cta {
-      color: #ffffff;
+      color: #1a1a1c;
     }
     [data-theme="light"] .hero-title .highlight {
       color: #0680ff;
@@ -727,11 +767,25 @@
     [data-theme="light"] .premium-paywall-cta:hover {
       background: #0670e0;
     }
+    [data-theme="light"] .premium-badge {
+      color: #0680ff;
+      border-color: rgba(6,128,255,0.3);
+      background: rgba(6,128,255,0.1);
+    }
+    [data-theme="light"] .locked-row-badge {
+      color: #555558;
+    }
+    [data-theme="light"] .locked-row-badge .upgrade-link {
+      color: #0680ff;
+    }
+    [data-theme="light"] .locked-row-badge .upgrade-link:hover {
+      color: #3399ff;
+    }
     [data-theme="light"] .hero-return-box {
-      background: rgba(255,255,255,0.92);
+      background: rgba(255,255,255,0.85);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-      border-color: rgba(0,0,0,0.12);
+      border-color: rgba(0,0,0,0.08);
     }
     [data-theme="light"] .hero-return-box .return-label {
       color: #555558;
@@ -1115,13 +1169,13 @@
         <!-- Premium paywall — shown for non-premium users -->
         <div id="holdingsPaywall" class="premium-paywall" style="display:none;">
           <div class="premium-paywall-icon">📡</div>
-          <div class="premium-paywall-title">Full Portfolio — Signal Premium</div>
+          <div class="premium-paywall-title">Full Portfolio — Signal Premium <span class="premium-badge">Premium</span></div>
           <p class="premium-paywall-desc">
             See all 24 positions with real-time weights and returns. Track community portfolio additions and removals as they happen.
           </p>
-          <a href="/pricing" class="premium-paywall-cta">
-            Unlock Premium Access →
-          </a>
+          <button onclick="handleUpgradeClick()" class="premium-paywall-cta">
+            Unlock Full Portfolio →
+          </button>
         </div>
       </div>
     </section>
@@ -1140,10 +1194,29 @@
   </footer>
 
   <!-- ════════════════════════════════════════════════
-       CHECK PREMIUM STATUS
+       CHECK PREMIUM STATUS + UPGRADE HANDLER
        ════════════════════════════════════════════════ -->
   <script>
     (function() {
+      // ── Upgrade handler ──
+      window.handleUpgradeClick = function() {
+        var user = null;
+        try {
+          var data = localStorage.getItem('hive_user');
+          if (data) user = JSON.parse(data);
+        } catch(e) {}
+        if (user) {
+          window.location.href = '/pricing';
+        } else {
+          if (typeof showHiveJoinModal === 'function') {
+            showHiveJoinModal('login');
+          } else {
+            window.location.href = '/hive';
+          }
+        }
+      };
+
+      // ── Premium status check ──
       var token = localStorage.getItem('hive_token');
       if (token) {
         fetch('/api/hive?action=me&token=' + encodeURIComponent(token))
@@ -1151,7 +1224,6 @@
           .then(function(data) {
             if (data.authenticated && data.isPremium) {
               window.isPremiumUser = true;
-              // Re-render holdings if already loaded
               if (typeof renderHoldings === 'function') renderHoldings();
             }
           })
@@ -1225,9 +1297,9 @@
           document.getElementById('svsCards').innerHTML = cardsHtml;
         }
 
-        // 3. Holdings table — show first 6 cleanly, paywall below for the rest
+        // 3. Holdings table — show first 5 cleanly, paywall below for the rest
         var holdings = d.holdings || [];
-        var FREE_HOLDINGS = 6;
+        var FREE_HOLDINGS = 5;
         var isPremium = (window.isPremiumUser || false);
         var visible = isPremium ? holdings : holdings.slice(0, FREE_HOLDINGS);
         var locked = !isPremium && holdings.length > FREE_HOLDINGS;
@@ -1239,8 +1311,8 @@
           rowsHtml += '<tr><td class="ticker">' + h.ticker + '</td><td class="weight">' + h.weight.toFixed(1) + '%</td><td class="' + cls + '">' + ret + '</td></tr>';
         });
         if (locked) {
-          // Premium upsell row — clean break after 6th row, no blur
-          rowsHtml += '<tr><td colspan="3" style="text-align:center;padding:2rem 1.25rem;color:var(--color-stealth-80);font-size:0.8rem;">Full portfolio with all ' + totalHoldings + ' positions available to Signal Premium subscribers</td></tr>';
+          // Premium upsell row — clean break after 5th row with badge
+          rowsHtml += '<tr><td colspan="3" class="locked-row-badge"><span class="premium-badge">🔒 Premium</span> Full portfolio with all ' + totalHoldings + ' positions — <span class="upgrade-link" onclick="handleUpgradeClick()">upgrade to unlock</span></td></tr>';
         }
         document.getElementById('holdingsBody').innerHTML = rowsHtml;
         if (locked) {

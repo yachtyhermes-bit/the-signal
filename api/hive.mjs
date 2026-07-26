@@ -35,6 +35,9 @@ const GAME_START = '2025-07-01T00:00:00.000Z';
 // Server secret for stateless token signing
 const SERVER_SECRET = 'hive_signal_secret_2026_' + (process.env.HIVE_SECRET || 'default_dev_secret');
 
+// Admin key for webhook-based premium grant (from env var, matches stripe-webhook.mjs)
+const ADMIN_KEY = process.env.ADMIN_KEY || '';
+
 const COVERAGE_UNIVERSE = new Set([
   // AI
   'NVDA','AMD','AVGO','MRVL','TSM','ASML','MU','CBRS','CRWV','NBIS','INTC','IREN','LRCX','AMAT','QCOM','SMCI',
@@ -962,6 +965,113 @@ export default async function handler(req, res) {
         plan: account.premium || 'free',
         since: account.premiumSince || null
       });
+    }
+
+    // === Pulse AI quota tracking ===
+    // GET /api/hive?action=pulse-count&token=X — returns today's count
+    // POST /api/hive?action=pulse-count&token=X&increment=1 — increments count (also via GET with &increment=1)
+    if (req.query.action === 'pulse-count') {
+      const token = req.query.token;
+      const account = getAccountFromToken(data, token);
+      if (!account) {
+        return res.status(401).json({ error: 'Authentication required' });
+      }
+      const today = new Date().toISOString().slice(0, 10);
+      if (!data.pulseQuotas) data.pulseQuotas = {};
+      if (!data.pulseQuotas[today]) data.pulseQuotas[today] = {};
+      const count = data.pulseQuotas[today][account.username] || 0;
+
+      // If this is an increment request (POST or GET with increment=1)
+      if (req.method === 'POST' || req.query.increment === '1') {
+        data.pulseQuotas[today][account.username] = count + 1;
+        await writeData(data);
+        return res.json({ count: count + 1, date: today, remaining: 4 - count });
+      }
+
+      return res.json({ count, date: today, remaining: 5 - count });
+    }
+
+    // === Admin: Grant premium via webhook (POST, admin_key in env) ===
+    // POST /api/hive?action=set-premium
+    // Body: { admin_key, email, plan, customerId, subscriptionId, hiveUid }
+    if (req.method === 'POST' && req.query.action === 'set-premium') {
+      const { admin_key, email, plan, hiveUid } = req.body || {};
+      if (!admin_key || admin_key !== ADMIN_KEY) {
+        return res.status(403).json({ error: 'Forbidden: invalid admin_key' });
+      }
+      // Look up account by uid (session.metadata.hive_uid)
+      let account = null;
+      let username = null;
+      if (hiveUid) {
+        for (const [uname, acct] of Object.entries(data.accounts)) {
+          if (acct.uid === hiveUid) {
+            account = acct;
+            username = uname;
+            break;
+          }
+        }
+      }
+      // Fallback: look up by email
+      if (!account && email) {
+        const emailLower = email.toLowerCase().trim();
+        for (const [uname, acct] of Object.entries(data.accounts)) {
+          if (acct.email && acct.email.toLowerCase() === emailLower) {
+            account = acct;
+            username = uname;
+            break;
+          }
+        }
+      }
+      if (!account) {
+        return res.status(404).json({ error: 'User not found by uid or email' });
+      }
+      account.premium = plan || 'premium';
+      account.premiumSince = new Date().toISOString();
+      // Store Stripe metadata for cancellation lookups
+      const { customerId, subscriptionId } = req.body || {};
+      if (customerId) account.customerId = customerId;
+      if (subscriptionId) account.subscriptionId = subscriptionId;
+      await writeData(data);
+      return res.json({ status: 'ok', username, plan: account.premium });
+    }
+
+    // === Admin: Cancel premium via webhook (POST, admin_key in env) ===
+    // POST /api/hive?action=cancel-premium
+    // Body: { admin_key, customerId }
+    if (req.method === 'POST' && req.query.action === 'cancel-premium') {
+      const { admin_key, customerId } = req.body || {};
+      if (!admin_key || admin_key !== ADMIN_KEY) {
+        return res.status(403).json({ error: 'Forbidden: invalid admin_key' });
+      }
+      // Find account with matching customerId (stored as premium metadata)
+      let account = null;
+      let username = null;
+      for (const [uname, acct] of Object.entries(data.accounts)) {
+        if (acct.customerId === customerId) {
+          account = acct;
+          username = uname;
+          break;
+        }
+      }
+      // If no match by customerId, iterate all premium accounts and clear them
+      // (webhook may not have customerId on first setup)
+      if (!account && customerId) {
+        // Mark all accounts whose premium was set via this customer
+        for (const [uname, acct] of Object.entries(data.accounts)) {
+          if (acct.premium) {
+            account = acct;
+            username = uname;
+            break;
+          }
+        }
+      }
+      if (!account) {
+        return res.status(404).json({ error: 'No premium account found' });
+      }
+      account.premium = false;
+      account.premiumSince = null;
+      await writeData(data);
+      return res.json({ status: 'ok', username, plan: 'free' });
     }
 
     // === Admin: Grant premium (GET, secret in query for reliability) ===

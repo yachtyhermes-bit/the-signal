@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Hive × Pulse — Preview</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #0a0a12;
+    color: #e2e8f0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+  }
+
+  /* Comparison header */
+  .cmp-header {
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 800px;
+  }
+  .cmp-header h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: 42px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .cmp-header p {
+    color: #8892a0;
+    font-size: 14px;
+  }
+  .cmp-header .badge {
+    display: inline-flex;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .cmp-header .badge span {
+    background: rgba(59,130,246,0.15);
+    color: #60a5fa;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid rgba(59,130,246,0.2);
+  }
+
+  /* Two columns */
+  .cmp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1400px;
+    width: 100%;
+  }
+
+  /* === CURRENT STYLING (left column) === */
+  .variant-current {
+    border: 1px solid #1e293b;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #08080e;
+  }
+  .variant-current .v-label {
+    background: #1e293b;
+    color: #8892a0;
+    padding: 8px 16px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #1e293b;
+  }
+  .variant-current .v-body {
+    padding: 24px;
+  }
+  .variant-current .v-body h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #ef4444;
+    margin-bottom: 4px;
+  }
+  .variant-current .v-body .tagline {
+    font-size: 13px;
+    color: #64748b;
+    margin-bottom: 16px;
+  }
+
+  /* Current tabs */
+  .current-tabs {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #1e293b;
+    padding-bottom: 8px;
+  }
+  .current-tabs .tab {
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #64748b;
+    cursor: default;
+  }
+  .current-tabs .tab.active {
+    background: #1e293b;
+    color: #e2e8f0;
+  }
+  .current-tabs .tab.red { color: #ef4444; }
+
+  /* Summary cards (current) */
+  .summary-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .summary-card {
+    background: #0f0f1a;
+    border: 1px solid #1e293b;
+    border-radius: 8px;
+    padding: 12px;
+  }
+  .summary-card .label { font-size: 10px; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; }
+  .summary-card .val {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 2px;
+  }
+  .summary-card .val.green { color: #22c55e; }
+  .summary-card .val.red { color: #ef4444; }
+
+  /* Holdings table (current) */
+  .current-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+  }
+  .current-table th {
+    text-align: left;
+    color: #64748b;
+    padding: 6px 8px;
+    border-bottom: 1px solid #1e293b;
+    font-weight: 500;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .current-table td {
+    padding: 8px;
+    border-bottom: 1px solid #0f0f1a;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+  }
+  .current-table .ticker { color: #e2e8f0; font-weight: 600; }
+  .current-table .name { font-family: 'Inter', sans-serif; font-size: 10px; color: #64748b; }
+  .current-table .pos { color: #22c55e; }
+  .current-table .neg { color: #ef4444; }
+
+  /* === PULSE VARIANT (right column) === */
+  .variant-pulse {
+    border: 1px solid rgba(59,130,246,0.2);
+    border-radius: 16px;
+    overflow: hidden;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(59,130,246,0.06), transparent 70%),
+                radial-gradient(ellipse 60% 40% at 80% 100%, rgba(139,92,246,0.04), transparent 60%),
+                #08080e;
+    box-shadow: 0 0 40px rgba(59,130,246,0.04);
+  }
+  .variant-pulse .v-label {
+    background: linear-gradient(90deg, rgba(59,130,246,0.15), rgba(139,92,246,0.15));
+    color: #60a5fa;
+    padding: 8px 16px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(59,130,246,0.15);
+  }
+  .variant-pulse .v-body {
+    padding: 24px;
+  }
+  .variant-pulse .v-body h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #60a5fa, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 2px;
+    text-shadow: 0 0 30px rgba(59,130,246,0.3);
+  }
+  .variant-pulse .v-body .tagline {
+    font-size: 13px;
+    color: #64748b;
+    margin-bottom: 16px;
+  }
+
+  /* Pulse tabs */
+  .pulse-tabs {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid rgba(59,130,246,0.1);
+    padding-bottom: 8px;
+  }
+  .pulse-tabs .tab {
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #4b5563;
+    cursor: default;
+    transition: all 0.2s;
+  }
+  .pulse-tabs .tab.active {
+    background: rgba(59,130,246,0.12);
+    color: #60a5fa;
+    box-shadow: 0 0 12px rgba(59,130,246,0.08);
+  }
+  .pulse-tabs .tab.pulse-glow {
+    color: #a78bfa;
+  }
+  .pulse-tabs .tab.pulse-glow.active {
+    background: rgba(139,92,246,0.12);
+    color: #a78bfa;
+  }
+
+  /* Summary cards (pulse) */
+  .pulse-summary-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .pulse-card {
+    background: rgba(59,130,246,0.04);
+    border: 1px solid rgba(59,130,246,0.12);
+    border-radius: 10px;
+    padding: 12px;
+    position: relative;
+    overflow: hidden;
+  }
+  .pulse-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(59,130,246,0.3), transparent);
+  }
+  .pulse-card .label { font-size: 10px; color: #4b5563; text-transform: uppercase; letter-spacing: 0.5px; }
+  .pulse-card .val {
+    font-family: 'Anton', sans-serif;
+    font-size: 22px;
+    letter-spacing: 1px;
+    margin-top: 2px;
+    background: linear-gradient(135deg, #e2e8f0, #94a3b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .pulse-card .val.glow-green {
+    background: linear-gradient(135deg, #22c55e, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .pulse-card .val.glow-red {
+    background: linear-gradient(135deg, #ef4444, #f43f5e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Holdings table (pulse) */
+  .pulse-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+  }
+  .pulse-table th {
+    text-align: left;
+    color: #4b5563;
+    padding: 6px 8px;
+    border-bottom: 1px solid rgba(59,130,246,0.1);
+    font-weight: 500;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .pulse-table td {
+    padding: 8px;
+    border-bottom: 1px solid rgba(59,130,246,0.04);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+  }
+  .pulse-table .ticker {
+    font-family: 'Anton', sans-serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #60a5fa, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .pulse-table .name { font-family: 'Inter', sans-serif; font-size: 10px; color: #4b5563; }
+  .pulse-table .pos { color: #22c55e; }
+  .pulse-table .neg { color: #ef4444; }
+
+  /* Glowing pulse indicator */
+  .pulse-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #60a5fa;
+    margin-right: 6px;
+    vertical-align: middle;
+    animation: pulse-glow 2s ease-in-out infinite;
+    box-shadow: 0 0 8px rgba(59,130,246,0.5);
+  }
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 8px rgba(59,130,246,0.3); opacity: 0.8; }
+    50% { box-shadow: 0 0 16px rgba(59,130,246,0.6); opacity: 1; }
+  }
+
+  /* Footer note */
+  .footer-note {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 13px;
+    color: #4b5563;
+    max-width: 600px;
+  }
+
+  @media (max-width: 900px) {
+    .cmp-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cmp-header">
+  <h1>🐝 The Hive × Pulse</h1>
+  <p>Comparing the current Hive look (left) vs. a Pulse AI-inspired neon blue/purple palette with Anton font (right)</p>
+  <div class="badge">
+    <span>Current: Red accents · Inter · Solid borders</span>
+    <span>Pulse: Neon blue/purple glow · Anton headings · Gradient tints</span>
+  </div>
+</div>
+
+<div class="cmp-grid">
+
+  <!-- === CURRENT (left) === -->
+  <div class="variant-current">
+    <div class="v-label">⬤ Current — The Hive</div>
+    <div class="v-body">
+      <h2>🐝 THE HIVE</h2>
+      <p class="tagline">Track the smartest money in the room</p>
+
+      <div class="current-tabs">
+        <span class="tab active">Portfolio</span>
+        <span class="tab">Stocks</span>
+        <span class="tab">Leaderboard</span>
+        <span class="tab">Signal Master</span>
+        <span class="tab red">Rules</span>
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-card">
+          <div class="label">Cash Balance</div>
+          <div class="val">$72,415.30</div>
+        </div>
+        <div class="summary-card">
+          <div class="label">Holdings Value</div>
+          <div class="val">$29,673.42</div>
+        </div>
+        <div class="summary-card">
+          <div class="label">Total Portfolio</div>
+          <div class="val">$102,088.72</div>
+        </div>
+        <div class="summary-card">
+          <div class="label">Return</div>
+          <div class="val green">+2.09%</div>
+        </div>
+      </div>
+
+      <table class="current-table">
+        <thead><tr><th>Ticker</th><th>Shares</th><th>Price</th><th>Value</th><th>% of PF</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><span class="ticker">NVDA</span><div class="name">NVIDIA Corp.</div></td>
+            <td>150</td>
+            <td>$212.93</td>
+            <td>$31,939.50</td>
+            <td>31.3%</td>
+          </tr>
+          <tr>
+            <td><span class="ticker">AVGO</span><div class="name">Broadcom Inc.</div></td>
+            <td>50</td>
+            <td>$420.82</td>
+            <td>$21,041.00</td>
+            <td>20.6%</td>
+          </tr>
+          <tr>
+            <td><span class="ticker">PLTR</span><div class="name">Palantir Tech.</div></td>
+            <td>100</td>
+            <td>$132.88</td>
+            <td>$13,288.00</td>
+            <td>13.0%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- === PULSE VARIANT (right) === -->
+  <div class="variant-pulse">
+    <div class="v-label"><span class="pulse-dot"></span> Pulse Variant — The Hive (Preview)</div>
+    <div class="v-body">
+      <h2>🐝 THE HIVE</h2>
+      <p class="tagline">Track the smartest money in the room</p>
+
+      <div class="pulse-tabs">
+        <span class="tab active">Portfolio</span>
+        <span class="tab">Stocks</span>
+        <span class="tab">Leaderboard</span>
+        <span class="tab pulse-glow">Signal Master</span>
+        <span class="tab">Rules</span>
+      </div>
+
+      <div class="pulse-summary-row">
+        <div class="pulse-card">
+          <div class="label">Cash Balance</div>
+          <div class="val">$72,415</div>
+        </div>
+        <div class="pulse-card">
+          <div class="label">Holdings Value</div>
+          <div class="val">$29,673</div>
+        </div>
+        <div class="pulse-card">
+          <div class="label">Total Portfolio</div>
+          <div class="val">$102,089</div>
+        </div>
+        <div class="pulse-card">
+          <div class="label">Return</div>
+          <div class="val glow-green">+2.09%</div>
+        </div>
+      </div>
+
+      <table class="pulse-table">
+        <thead><tr><th>Ticker</th><th>Shares</th><th>Price</th><th>Value</th><th>% of PF</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><span class="ticker">NVDA</span><div class="name">NVIDIA Corp.</div></td>
+            <td>150</td>
+            <td class="pos">$212.93</td>
+            <td>$31,940</td>
+            <td>31.3%</td>
+          </tr>
+          <tr>
+            <td><span class="ticker">AVGO</span><div class="name">Broadcom Inc.</div></td>
+            <td>50</td>
+            <td class="pos">$420.82</td>
+            <td>$21,041</td>
+            <td>20.6%</td>
+          </tr>
+          <tr>
+            <td><span class="ticker">PLTR</span><div class="name">Palantir Tech.</div></td>
+            <td>100</td>
+            <td class="pos">$132.88</td>
+            <td>$13,288</td>
+            <td>13.0%</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div style="margin-top: 16px; padding: 12px; border: 1px solid rgba(139,92,246,0.1); border-radius: 8px; background: rgba(139,92,246,0.03);">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+          <span style="width:6px;height:6px;border-radius:50%;background:#a78bfa;box-shadow:0 0 8px rgba(139,92,246,0.5);display:inline-block;animation:pulse-glow 2s ease-in-out infinite;"></span>
+          <span style="font-family:'Anton',sans-serif;font-size:14px;letter-spacing:1px;background:linear-gradient(135deg,#a78bfa,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">SIGNAL MASTER SPOTLIGHT</span>
+        </div>
+        <div style="display:flex;gap:12px;align-items:center">
+          <div style="flex:1;height:4px;border-radius:2px;background:rgba(59,130,246,0.08);overflow:hidden">
+            <div style="width:78%;height:100%;border-radius:2px;background:linear-gradient(90deg,#60a5fa,#a78bfa);box-shadow:0 0 6px rgba(59,130,246,0.2)"></div>
+          </div>
+          <span style="font-family:'Anton',sans-serif;font-size:13px;letter-spacing:1px;color:#60a5fa">78%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer-note">
+  <p>Left: current red-accent style · Right: Pulse AI-inspired neon blue/purple gradient palette + Anton font for tickers & headings</p>
+  <p style="margin-top:6px;font-size:12px;color:#4b5563">Preview only — nothing on the live site has changed</p>
+</div>
+
+</body>
+</html>

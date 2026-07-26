@@ -216,7 +216,7 @@
 
   <!-- ARTICLE CONTENT -->
   <main class="main">
-    <div class="article-page">
+    <div class="article-page" data-premium="{{IS_PREMIUM}}">
       <header class="article-header">
         <div class="article-breadcrumbs">
           <a href="/">Home</a> <span>/</span> <a href="/sector/{{SECTOR}}">{{SECTOR_UC}}</a> <span>/</span> <span>{{TICKER}}</span>
@@ -236,6 +236,19 @@
 
       <div class="article-body">
         {{BODY}}
+      </div>
+
+      <!-- Premium Paywall Overlay (hidden by default, shown via JS for gated articles) -->
+      <div class="premium-paywall" id="premiumPaywall" style="display:none">
+        <div class="premium-paywall-inner">
+          <div class="premium-paywall-icon">&#x1F512;</div>
+          <h2 class="premium-paywall-title">Premium Article</h2>
+          <p class="premium-paywall-desc">This article is available exclusively to Signal Premium subscribers. Upgrade for full access to all premium analysis, deep research, and exclusive market intelligence.</p>
+          <div class="premium-paywall-actions">
+            <a href="/pricing" class="premium-paywall-cta">Upgrade to Premium</a>
+            <button class="premium-paywall-sso" onclick="premiumCheck()">Already a subscriber? <strong>Sign in</strong></button>
+          </div>
+        </div>
       </div>
 
       <!-- ⚡ Ask Pulse — opens Pulse overlay with article context -->
@@ -340,12 +353,94 @@
     </div>
   </footer>
 
-  <script>
-  document.addEventListener('DOMContentLoaded', function(){
-    var copyBtn=document.getElementById('copyShareBtn'); if(copyBtn){ copyBtn.addEventListener('click',function(){ navigator.clipboard.writeText(window.location.href).then(function(){ copyBtn.classList.add('copied'); setTimeout(function(){ copyBtn.classList.remove('copied'); },2000); }); }); }
-  });
-  </script>
+  <script>document.addEventListener('DOMContentLoaded',function(){var copyBtn=document.getElementById('copyShareBtn');if(copyBtn){copyBtn.addEventListener('click',function(){navigator.clipboard.writeText(window.location.href).then(function(){copyBtn.classList.add('copied');setTimeout(function(){copyBtn.classList.remove('copied');},2000);});});}});</script>
   <script src="/js/nav.js" defer></script>
   <!-- ARTICLES_DATA_JSON -->
+
+  <!-- Premium gating: show paywall overlay for premium articles to non-premium users -->
+  <script>
+  window.premiumCheck = function() {
+    var token;
+    try { token = localStorage.getItem('hive_token'); } catch(e) {}
+    if (!token) {
+      if (typeof showHiveJoinModal === 'function') {
+        showHiveJoinModal('login');
+      } else {
+        window.location.href = '/hive';
+      }
+      return;
+    }
+    fetch('/api/hive?action=premium&token=' + encodeURIComponent(token))
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        if (data.premium === true) {
+          // Hide paywall, show body
+          var pw = document.getElementById('premiumPaywall');
+          if (pw) { pw.style.display = 'none'; }
+          var body = document.querySelector('.article-body');
+          if (body) { body.style.filter = ''; body.style.opacity = '1'; body.style.pointerEvents = ''; body.style.maxHeight = ''; }
+          // Force scroll reset so premium content renders
+          window.dispatchEvent(new Event('resize'));
+        } else {
+          alert('This account does not have an active Premium subscription. Upgrade to access this article.');
+          window.location.href = '/pricing';
+        }
+      })
+      .catch(function() {
+        alert('Unable to verify subscription. Please try again.');
+      });
+  };
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // Check if this article is premium-gated
+    var articlePage = document.querySelector('.article-page');
+    if (!articlePage || articlePage.getAttribute('data-premium') !== 'true') return;
+
+    var paywall = document.getElementById('premiumPaywall');
+    var body = document.querySelector('.article-body');
+    if (!paywall || !body) return;
+
+    // Check if user is signed in
+    var token;
+    try { token = localStorage.getItem('hive_token'); } catch(e) {}
+
+    if (!token) {
+      // No auth — show paywall, blur body
+      body.style.filter = 'blur(8px)';
+      body.style.opacity = '0.3';
+      body.style.pointerEvents = 'none';
+      body.style.maxHeight = '60vh';
+      body.style.overflow = 'hidden';
+      paywall.style.display = '';
+      return;
+    }
+
+    // User is signed in — check premium status
+    fetch('/api/hive?action=premium&token=' + encodeURIComponent(token))
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        if (data.premium === true) {
+          // Premium user — show everything normally
+          return;
+        }
+        // Free user — show paywall
+        body.style.filter = 'blur(8px)';
+        body.style.opacity = '0.3';
+        body.style.pointerEvents = 'none';
+        body.style.maxHeight = '60vh';
+        body.style.overflow = 'hidden';
+        paywall.style.display = '';
+      })
+      .catch(function() {
+        // API error — show paywall as safe default
+        body.style.filter = 'blur(8px)';
+        body.style.opacity = '0.3';
+        body.style.pointerEvents = 'none';
+        body.style.maxHeight = '60vh';
+        body.style.overflow = 'hidden';
+        paywall.style.display = '';
+      });
+  });
+  </script>
 </body>
 </html>

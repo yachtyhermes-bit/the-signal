@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Row 1 — Reference Palettes</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+  .preview { display: flex; min-height: 100vh; }
+  .col { flex: 1; min-width: 280px; padding: 20px; display: flex; flex-direction: column; gap: 14px; }
+  .col-header { padding-bottom: 12px; border-bottom: 1px solid var(--border); margin-bottom: 6px; }
+  .col-header h2 { font-size: 16px; font-weight: 700; color: var(--text-primary); margin-bottom: 3px; }
+  .col-header .hex { font-size: 11px; color: var(--text-secondary); font-family: 'SF Mono', 'Fira Code', monospace; }
+  .col-header .vibe { font-size: 11px; color: var(--text-muted); margin-top: 2px; font-style: italic; }
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 14px; }
+  .card h3 { font-size: 14px; font-weight: 600; color: var(--text-primary); margin-bottom: 6px; }
+  .card p { font-size: 12px; color: var(--text-secondary); line-height: 1.5; }
+  .card .muted { font-size: 11px; color: var(--text-muted); margin-top: 6px; }
+  .stock-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 12px; display: flex; justify-content: space-between; align-items: center; }
+  .stock-card .ticker { font-size: 14px; font-weight: 700; color: var(--text-primary); }
+  .stock-card .price { font-size: 14px; font-weight: 600; color: var(--text-primary); }
+  .stock-card .change { font-size: 11px; color: var(--green); }
+  .swatch-row { display: flex; gap: 6px; margin-top: auto; }
+  .swatch { width: 32px; height: 32px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 7px; color: rgba(255,255,255,0.7); font-family: monospace; }
+
+  .theme-current { background: #06060e; color: #e8e8f0; --bg-primary: #06060e; --bg-secondary: #0a0a1a; --bg-card: #0f0f20; --bg-card-hover: #161630; --bg-accent: #12123a; --border: #181830; --text-primary: #e8e8f0; --text-secondary: #8888aa; --text-muted: #555570; --accent: #3b82f6; --green: #22c55e; --green-dim: rgba(34,197,94,0.12); --gold: #f59e0b; --gold-dim: rgba(245,158,11,0.12); --red: #ef4444; --red-dim: rgba(239,68,68,0.12); }
+  .theme-deployed { background: #1a1c2a; color: #e8e8f0; --bg-primary: #1a1c2a; --bg-secondary: #1e2032; --bg-card: #2a2d48; --bg-card-hover: #353860; --bg-accent: #262948; --border: #30325a; --text-primary: #e8e8f0; --text-secondary: #8888aa; --text-muted: #555570; --accent: #3b82f6; --green: #22c55e; --green-dim: rgba(34,197,94,0.12); --gold: #f59e0b; --gold-dim: rgba(245,158,11,0.12); --red: #ef4444; --red-dim: rgba(239,68,68,0.12); }
+  .theme-slate-noir { background: #16162a; color: #d8d8e8; --bg-primary: #16162a; --bg-secondary: #1a1a32; --bg-card: #1e1e36; --bg-card-hover: #262644; --bg-accent: #1a1a40; --border: #222240; --text-primary: #d8d8e8; --text-secondary: #9898b8; --text-muted: #606080; --accent: #3b82f6; --green: #22c55e; --green-dim: rgba(34,197,94,0.12); --gold: #f59e0b; --gold-dim: rgba(245,158,11,0.12); --red: #ef4444; --red-dim: rgba(239,68,68,0.12); }
+  .theme-warm-hearth { background: #1a1822; color: #ddd8e0; --bg-primary: #1a1822; --bg-secondary: #1f1c28; --bg-card: #23212e; --bg-card-hover: #2d2a3a; --bg-accent: #211e30; --border: #2a2638; --text-primary: #ddd8e0; --text-secondary: #9a94a8; --text-muted: #625c74; --accent: #3b82f6; --green: #22c55e; --green-dim: rgba(34,197,94,0.12); --gold: #f59e0b; --gold-dim: rgba(245,158,11,0.12); --red: #ef4444; --red-dim: rgba(239,68,68,0.12); }
+</style>
+</head>
+<body>
+<div class="preview">
+  <div class="col theme-current">
+    <div class="col-header"><h2>⚫ Current Live</h2><div class="hex">#06060e · #0f0f20 cards</div><div class="vibe">Original near-black</div></div>
+    <div class="card"><h3>NVIDIA Drives AI</h3><p>Guidance topped estimates on Blackwell demand.</p><div class="muted">2h ago · 5 min</div></div>
+    <div class="stock-card"><div><div class="ticker">NVDA</div></div><div><div class="price">$203.28</div><div class="change">+0.23%</div></div></div>
+    <div class="swatch-row"><div class="swatch" style="background:var(--bg-primary)">bg</div><div class="swatch" style="background:var(--bg-card)">card</div><div class="swatch" style="background:var(--border)">bdr</div></div>
+  </div>
+  <div class="col theme-deployed">
+    <div class="col-header"><h2>🔵 Deployed Now</h2><div class="hex">#1a1c2a · #2a2d48 cards</div><div class="vibe">"Dry" — what you're seeing</div></div>
+    <div class="card"><h3>NVIDIA Drives AI</h3><p>Guidance topped estimates on Blackwell demand.</p><div class="muted">2h ago · 5 min</div></div>
+    <div class="stock-card"><div><div class="ticker">NVDA</div></div><div><div class="price">$203.28</div><div class="change">+0.23%</div></div></div>
+    <div class="swatch-row"><div class="swatch" style="background:var(--bg-primary)">bg</div><div class="swatch" style="background:var(--bg-card)">card</div><div class="swatch" style="background:var(--border)">bdr</div></div>
+  </div>
+  <div class="col theme-slate-noir">
+    <div class="col-header"><h2>Slate Noir</h2><div class="hex">#16162a · #1e1e36 cards</div><div class="vibe">Cool blue-slate, premium</div></div>
+    <div class="card"><h3>NVIDIA Drives AI</h3><p>Guidance topped estimates on Blackwell demand.</p><div class="muted">2h ago · 5 min</div></div>
+    <div class="stock-card"><div><div class="ticker">NVDA</div></div><div><div class="price">$203.28</div><div class="change">+0.23%</div></div></div>
+    <div class="swatch-row"><div class="swatch" style="background:var(--bg-primary)">bg</div><div class="swatch" style="background:var(--bg-card)">card</div><div class="swatch" style="background:var(--border)">bdr</div></div>
+  </div>
+  <div class="col theme-warm-hearth">
+    <div class="col-header"><h2>Warm Hearth</h2><div class="hex">#1a1822 · #23212e cards</div><div class="vibe">Warm taupe, cozy at night</div></div>
+    <div class="card"><h3>NVIDIA Drives AI</h3><p>Guidance topped estimates on Blackwell demand.</p><div class="muted">2h ago · 5 min</div></div>
+    <div class="stock-card"><div><div class="ticker">NVDA</div></div><div><div class="price">$203.28</div><div class="change">+0.23%</div></div></div>
+    <div class="swatch-row"><div class="swatch" style="background:var(--bg-primary)">bg</div><div class="swatch" style="background:var(--bg-card)">card</div><div class="swatch" style="background:var(--border)">bdr</div></div>
+  </div>
+</div>
+</body>
+</html>

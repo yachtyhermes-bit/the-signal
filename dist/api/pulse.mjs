@@ -154,9 +154,60 @@ export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
   try {
-    const { question, articleContext: requestContext, history = [] } = req.body;
+    const { question, articleContext: requestContext, history = [], token } = req.body;
     if (!question || question.trim().length < 3) {
       return res.status(200).json({ answer: 'Ask me anything about markets or stocks.', sources: [], searched: false });
+    }
+
+    // ─── Premium / Rate limit check ───
+    // If token provided, verify auth, check premium status, enforce daily limit
+    let userIsPremium = false;
+    let userTier = 'free';
+    if (token && typeof token === 'string' && token.startsWith('tok_')) {
+      try {
+        const host = req.headers['x-forwarded-host'] || req.headers.host || 'readthesignal.net';
+        const baseUrl = `https://${host}`;
+
+        // Verify token and get user info
+        const meResp = await fetch(`${baseUrl}/api/hive?action=me&token=${encodeURIComponent(token)}`, {
+          signal: AbortSignal.timeout(5000)
+        });
+        if (meResp.ok) {
+          const meData = await meResp.json();
+          if (meData.authenticated) {
+            // Check premium status
+            const premResp = await fetch(`${baseUrl}/api/hive?action=premium&token=${encodeURIComponent(token)}`, {
+              signal: AbortSignal.timeout(5000)
+            });
+            if (premResp.ok) {
+              const premData = await premResp.json();
+              userIsPremium = premData.premium === true;
+              userTier = userIsPremium ? 'premium' : 'free';
+            }
+
+            // Free users: check daily quota
+            if (!userIsPremium) {
+              const quotaResp = await fetch(`${baseUrl}/api/hive?action=pulse-count&token=${encodeURIComponent(token)}`, {
+                signal: AbortSignal.timeout(5000)
+              });
+              if (quotaResp.ok) {
+                const quotaData = await quotaResp.json();
+                if (quotaData.count >= 5) {
+                  return res.status(200).json({
+                    answer: "You've used all 5 free Pulse queries today. Upgrade to Premium for unlimited queries.",
+                    upgrade: true,
+                    tier: 'free',
+                    quota: { used: quotaData.count, remaining: 0, limit: 5 }
+                  });
+                }
+              }
+            }
+          }
+        }
+      } catch (err) {
+        // Auth/quota check failed — proceed but as free/unauthenticated
+        console.error('Pulse auth check failed:', err.message);
+      }
     }
 
     const cacheKey = getCacheKey(question);
@@ -197,7 +248,27 @@ ${articleContext}`;
     const sources = webSources && webSources.length > 0
       ? webSources.map(s => ({ title: s.title, url: s.url, source: 'web' }))
       : findSources(answer);
-    const result = { answer, sources, searched };
+    const result = { answer, sources, searched, tier: userTier };
+
+    // Include quota info for free users
+    if (!userIsPremium && token) {
+      try {
+        const host = req.headers['x-forwarded-host'] || req.headers.host || 'readthesignal.net';
+        const baseUrl = `https://${host}`;
+        const incResp = await fetch(`${baseUrl}/api/hive?action=pulse-count&token=${encodeURIComponent(token)}&increment=1`, {
+          signal: AbortSignal.timeout(5000)
+        });
+        if (incResp.ok) {
+          const incData = await incResp.json();
+          result.quota = { used: incData.count, remaining: incData.remaining, limit: 5 };
+        }
+      } catch (err) {
+        console.error('Pulse quota increment failed:', err.message);
+      }
+    } else if (userIsPremium) {
+      result.quota = { remaining: 999, limit: 999 };
+    }
+
     cacheSet(cacheKey, result);
     return res.status(200).json(result);
 
@@ -205,7 +276,7 @@ ${articleContext}`;
     const errMsg = error.message || String(error);
     console.error('Pulse error:', errMsg);
     if (error.message === 'RATE_LIMITED') {
-      return res.status(200).json({ answer: 'Rate limited. Try again in a minute.', sources: [], searched: false });
+      return res.status(200).json({ answer: 'Rate limited. Try again in a minute.', sources: [], searched: false, tier: 'free' });
     }
     return res.status(200).json({ answer: `Issue: ${errMsg.slice(0, 100)}`, sources: [], searched: false });
   }

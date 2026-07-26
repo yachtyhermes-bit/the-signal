@@ -1,0 +1,1442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08080e">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css?v=10">
+  <link rel="stylesheet" href="/css/pulse-badge.css">
+  <title>The Hive — Simulated Trading Competition — The Signal</title>
+  <meta name="description" content="Join The Hive at The Signal. Get a $100,000 simulated portfolio to trade AI, defense, space, cyber, mega-cap, and quantum stocks. Compete on the leaderboard.">
+  <meta property="og:title" content="The Hive — Simulated Trading Competition — The Signal">
+  <meta property="og:description" content="Join The Hive at The Signal. Get a $100,000 simulated portfolio to trade AI, defense, space, cyber, mega-cap, and quantum stocks. Compete on the leaderboard.">
+  <style>
+    /* ===== THE SIGNAL DESIGN TOKENS (standalone) ===== */
+    :root {
+      --bg-primary: #0b0e17;
+      --bg-secondary: #111520;
+      --bg-card: #161b2b;
+      --bg-card-hover: #1d2340;
+      --text-primary: #eef0f8;
+      --text-secondary: #8b93b5;
+      --text-muted: #555e7a;
+      --accent: #00d4ff;
+      --accent-glow: rgba(0, 212, 255, 0.15);
+      --accent-light: #33ddff;
+      --accent-gradient: linear-gradient(135deg, #00d4ff, #5865f2);
+      --green: #22c55e;
+      --red: #ef4444;
+      --gold: #fbbf24;
+      --purple: #a78bfa;
+      --border: #1e2538;
+      --radius: 16px;
+      --radius-sm: 8px;
+    }
+
+    /* ===== HIVE LANDING — Premium Marketing Page ===== */
+    /* Built using the site's existing CSS custom properties */
+
+    /* --- Base overrides for splash page --- */
+    .hive-landing {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+    }
+
+    /* --- Animated background particles grid --- */
+    .hive-particles {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .hive-particles::before {
+      content: '';
+      position: absolute;
+      width: 200%; height: 200%;
+      top: -50%; left: -50%;
+      background-image:
+        radial-gradient(1px 1px at 10% 20%, rgba(59,130,246,0.15) 0%, transparent 100%),
+        radial-gradient(1px 1px at 20% 40%, rgba(59,130,246,0.10) 0%, transparent 100%),
+        radial-gradient(1px 1px at 30% 60%, rgba(139,92,246,0.12) 0%, transparent 100%),
+        radial-gradient(1px 1px at 40% 80%, rgba(59,130,246,0.08) 0%, transparent 100%),
+        radial-gradient(1px 1px at 50% 10%, rgba(139,92,246,0.15) 0%, transparent 100%),
+        radial-gradient(1px 1px at 60% 30%, rgba(59,130,246,0.10) 0%, transparent 100%),
+        radial-gradient(1px 1px at 70% 50%, rgba(139,92,246,0.12) 0%, transparent 100%),
+        radial-gradient(1px 1px at 80% 70%, rgba(59,130,246,0.08) 0%, transparent 100%),
+        radial-gradient(1px 1px at 90% 90%, rgba(139,92,246,0.10) 0%, transparent 100%),
+        radial-gradient(1px 1px at 15% 75%, rgba(59,130,246,0.14) 0%, transparent 100%),
+        radial-gradient(1px 1px at 35% 45%, rgba(139,92,246,0.08) 0%, transparent 100%),
+        radial-gradient(1px 1px at 55% 15%, rgba(59,130,246,0.12) 0%, transparent 100%),
+        radial-gradient(1px 1px at 75% 85%, rgba(139,92,246,0.10) 0%, transparent 100%),
+        radial-gradient(1px 1px at 95% 25%, rgba(59,130,246,0.08) 0%, transparent 100%),
+        radial-gradient(1px 1px at 5% 55%, rgba(139,92,246,0.14) 0%, transparent 100%),
+        radial-gradient(1px 1px at 25% 5%, rgba(59,130,246,0.10) 0%, transparent 100%),
+        radial-gradient(1px 1px at 45% 65%, rgba(139,92,246,0.12) 0%, transparent 100%),
+        radial-gradient(1px 1px at 65% 35%, rgba(59,130,246,0.08) 0%, transparent 100%),
+        radial-gradient(1px 1px at 85% 95%, rgba(139,92,246,0.10) 0%, transparent 100%);
+      animation: particleDrift 40s linear infinite;
+      opacity: 0.6;
+    }
+    .hive-particles::after {
+      content: '';
+      position: absolute;
+      width: 100%; height: 100%;
+      background:
+        repeating-linear-gradient(0deg, transparent, transparent 120px, rgba(59,130,246,0.015) 120px, rgba(59,130,246,0.015) 121px),
+        repeating-linear-gradient(90deg, transparent, transparent 120px, rgba(59,130,246,0.015) 120px, rgba(59,130,246,0.015) 121px);
+      opacity: 0.3;
+    }
+    @keyframes particleDrift {
+      0% { transform: translate(0, 0) rotate(0deg); }
+      25% { transform: translate(-2%, -1%) rotate(0.5deg); }
+      50% { transform: translate(1%, -2%) rotate(-0.3deg); }
+      75% { transform: translate(-1%, 1%) rotate(0.4deg); }
+      100% { transform: translate(0, 0) rotate(0deg); }
+    }
+
+    /* --- Hero Section --- */
+    .hive-hero {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 120px 24px 60px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .hive-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 18px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, rgba(59,130,246,0.12), rgba(139,92,246,0.12));
+      color: var(--accent-light);
+      border: 1px solid rgba(0,212,255,0.15);
+      margin-bottom: 24px;
+      backdrop-filter: blur(8px);
+      animation: badgePulse 3s ease-in-out infinite;
+    }
+    .hive-hero-badge .pulse-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--green);
+      animation: pulseDot 2s ease-in-out infinite;
+      box-shadow: 0 0 8px rgba(34,197,94,0.5);
+    }
+    @keyframes badgePulse {
+      0%, 100% { border-color: rgba(0,212,255,0.15); }
+      50% { border-color: rgba(0,212,255,0.4); }
+    }
+    .hive-hero h1 {
+      font-size: clamp(40px, 7vw, 68px);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -1.2px;
+      margin-bottom: 20px;
+    }
+    .hive-hero h1 .gradient-text {
+      background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 40%, #8b5cf6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      background-size: 200% 200%;
+      animation: gradientShift 4s ease-in-out infinite;
+    }
+    @keyframes gradientShift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+    .hive-hero-sub {
+      color: var(--text-secondary);
+      font-size: clamp(16px, 2.2vw, 20px);
+      font-weight: 400;
+      line-height: 1.6;
+      max-width: 640px;
+      margin: 0 auto 32px;
+    }
+    .hive-hero-stats-mini {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 36px;
+      flex-wrap: wrap;
+    }
+    .hive-hero-stat-mini {
+      text-align: center;
+    }
+    .hive-hero-stat-mini .num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--text-primary);
+      display: block;
+    }
+    .hive-hero-stat-mini .num.signal-blue { color: var(--accent); }
+    .hive-hero-stat-mini .label {
+      font-size: 11px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 2px;
+      display: block;
+    }
+
+    /* --- CTA --- */
+    .hive-cta-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 36px;
+      font-size: 16px;
+      font-weight: 700;
+      font-family: inherit;
+      border: none;
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, #3b82f6, #6366f1);
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(59,130,246,0.3);
+    }
+    .hive-cta-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 40px rgba(59,130,246,0.45);
+    }
+    .hive-cta-primary:active {
+      transform: translateY(0);
+    }
+    .hive-cta-primary::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+      animation: ctaShimmer 3s ease-in-out infinite;
+    }
+    @keyframes ctaShimmer {
+      0%, 100% { left: -100%; }
+      50% { left: 100%; }
+    }
+    .hive-cta-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 16px 36px;
+      font-size: 16px;
+      font-weight: 700;
+      font-family: inherit;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: rgba(15,15,32,0.6);
+      backdrop-filter: blur(12px);
+      color: var(--text-primary);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-left: 12px;
+    }
+    .hive-cta-secondary:hover {
+      border-color: var(--accent);
+      background: rgba(59,130,246,0.08);
+    }
+    .hive-hero-ctas {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* --- Global Metrics Bar --- */
+    .hive-metrics {
+      position: relative;
+      z-index: 2;
+      max-width: 1100px;
+      margin: 0 auto 48px;
+      padding: 0 24px;
+    }
+    .hive-metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .hive-metric-card {
+      background: linear-gradient(180deg, rgba(15,15,32,0.9), rgba(15,15,32,0.6));
+      padding: 24px 20px;
+      text-align: center;
+      backdrop-filter: blur(8px);
+      position: relative;
+      overflow: hidden;
+      transition: background 0.3s ease;
+    }
+    .hive-metric-card:hover {
+      background: linear-gradient(180deg, rgba(22,22,48,0.9), rgba(15,15,32,0.7));
+    }
+    .hive-metric-card::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      opacity: 0.5;
+    }
+    .hive-metric-label {
+      font-size: 11px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .hive-metric-value {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--text-primary);
+      transition: all 0.3s ease;
+    }
+    .hive-metric-value.accent { color: var(--accent); }
+    .hive-metric-value.green { color: var(--green); }
+    .hive-metric-value.gold { color: var(--gold); }
+    .hive-metric-ticker {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 4px;
+      animation: tickerFade 2s ease-in-out infinite;
+    }
+    @keyframes tickerFade {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    .hive-metric-ticker-bar {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      margin-top: 4px;
+    }
+    .hive-metric-ticker-bar span {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 3px;
+      background: rgba(59,130,246,0.06);
+      color: var(--text-muted);
+      border: 1px solid rgba(59,130,246,0.08);
+    }
+    .hive-metric-ticker-bar span.up { color: var(--green); border-color: rgba(34,197,94,0.15); background: rgba(34,197,94,0.06); }
+    .hive-metric-ticker-bar span.down { color: var(--red); border-color: rgba(239,68,68,0.15); background: rgba(239,68,68,0.06); }
+
+    /* --- Leaderboard Section --- */
+    .hive-lb-section {
+      position: relative;
+      z-index: 2;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+    .hive-lb-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .hive-lb-header-left h2 {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+    }
+    .hive-lb-header-left .sub {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-top: 2px;
+    }
+    .hive-lb-header-right {
+      text-align: right;
+    }
+    .hive-lb-header-right .total {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--accent);
+    }
+    .hive-lb-header-right .total-label {
+      font-size: 11px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* --- Pill Tabs --- */
+    .hive-lb-pills {
+      display: flex;
+      gap: 4px;
+      background: rgba(15,15,32,0.5);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      padding: 4px;
+      margin-bottom: 32px;
+      width: fit-content;
+      backdrop-filter: blur(8px);
+    }
+    .hive-lb-pill {
+      padding: 8px 22px;
+      font-size: 13px;
+      font-weight: 600;
+      font-family: inherit;
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      cursor: pointer;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    .hive-lb-pill:hover {
+      color: var(--text-secondary);
+    }
+    .hive-lb-pill.active {
+      color: var(--text-primary);
+      background: linear-gradient(135deg, rgba(59,130,246,0.15), rgba(139,92,246,0.10));
+      box-shadow: 0 2px 12px rgba(59,130,246,0.15), inset 0 1px 0 rgba(255,255,255,0.05);
+    }
+
+    /* --- Podium --- */
+    .hive-podium {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr 1fr;
+      gap: 16px;
+      margin-bottom: 32px;
+      align-items: end;
+    }
+    .hive-podium-card {
+      background: linear-gradient(180deg, rgba(15,15,32,0.8), rgba(15,15,32,0.4));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 16px 20px;
+      text-align: center;
+      backdrop-filter: blur(12px);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: default;
+    }
+    .hive-podium-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(0,212,255,0.3);
+    }
+    .hive-podium-card.gold {
+      border-color: rgba(245,158,11,0.3);
+      box-shadow: 0 0 40px rgba(245,158,11,0.06), inset 0 0 60px rgba(245,158,11,0.03);
+      padding: 32px 16px 24px;
+    }
+    .hive-podium-card.gold::before {
+      content: '';
+      position: absolute;
+      top: -50%; left: -50%;
+      width: 200%; height: 200%;
+      background: conic-gradient(from 0deg, transparent, rgba(245,158,11,0.03), transparent, rgba(245,158,11,0.03), transparent);
+      animation: goldRotate 6s linear infinite;
+    }
+    @keyframes goldRotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .hive-podium-card.silver { border-color: rgba(148,163,184,0.2); }
+    .hive-podium-card.bronze { border-color: rgba(180,83,9,0.2); }
+    .hive-podium-rank {
+      position: relative;
+      z-index: 1;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .hive-podium-rank.gold { color: var(--gold); }
+    .hive-podium-rank.silver { color: #94a3b8; }
+    .hive-podium-rank.bronze { color: #b45309; }
+    .hive-podium-avatar {
+      position: relative;
+      z-index: 1;
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      margin: 8px auto 10px;
+      background: var(--bg-card);
+      border: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--text-primary);
+      overflow: hidden;
+    }
+    .hive-podium-card.gold .hive-podium-avatar {
+      width: 68px; height: 68px;
+      border-color: rgba(245,158,11,0.3);
+      box-shadow: 0 0 20px rgba(245,158,11,0.1);
+    }
+    .hive-podium-avatar img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+    .hive-podium-name {
+      position: relative;
+      z-index: 1;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 2px;
+    }
+    .hive-podium-return {
+      position: relative;
+      z-index: 1;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 24px;
+      font-weight: 800;
+      margin: 6px 0;
+    }
+    .hive-podium-return.positive { color: var(--green); }
+    .hive-podium-return.negative { color: var(--red); }
+    .hive-podium-value {
+      position: relative;
+      z-index: 1;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .hive-podium-trades {
+      position: relative;
+      z-index: 1;
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 6px;
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+    }
+    .hive-podium-trades .num {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--text-secondary);
+      font-weight: 600;
+    }
+    .hive-podium-crown {
+      position: relative;
+      z-index: 1;
+      font-size: 20px;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    /* --- Leaderboard Table --- */
+    .hive-table-wrap {
+      background: linear-gradient(180deg, rgba(15,15,32,0.6), rgba(15,15,32,0.3));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      backdrop-filter: blur(8px);
+    }
+    .hive-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    .hive-table thead th {
+      padding: 12px 16px;
+      text-align: left;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+      background: rgba(6,6,14,0.4);
+    }
+    .hive-table thead th:last-child { text-align: right; }
+    .hive-table thead th:nth-child(2),
+    .hive-table thead th:nth-child(3),
+    .hive-table thead th:nth-child(4) { text-align: right; }
+    .hive-table tbody tr {
+      transition: background 0.2s ease;
+    }
+    .hive-table tbody tr:hover {
+      background: rgba(59,130,246,0.03);
+    }
+    .hive-table tbody tr:not(:last-child) td {
+      border-bottom: 1px solid rgba(24,24,48,0.5);
+    }
+    .hive-table tbody td {
+      padding: 12px 16px;
+      color: var(--text-primary);
+    }
+    .hive-table tbody td:nth-child(2),
+    .hive-table tbody td:nth-child(3),
+    .hive-table tbody td:nth-child(4),
+    .hive-table tbody td:last-child { text-align: right; }
+    .hive-table-rank {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      color: var(--text-muted);
+      min-width: 36px;
+    }
+    .hive-table-user {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .hive-table-avatar {
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-secondary);
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+    .hive-table-avatar img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+    .hive-table-name {
+      font-weight: 600;
+      font-size: 13px;
+    }
+    .hive-table-return {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .hive-table-return.positive { color: var(--green); }
+    .hive-table-return.negative { color: var(--red); }
+    .hive-table-holdings {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+    .hive-table-value {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+    .hive-table-action {
+      padding: 6px 14px;
+      font-size: 11px;
+      font-weight: 600;
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      background: transparent;
+      color: var(--accent);
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.2s ease;
+    }
+    .hive-table-action:hover {
+      background: rgba(0,212,255,0.08);
+      border-color: rgba(59,130,246,0.3);
+    }
+
+    /* --- Bottom Sticky HUD --- */
+    .hive-hud {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      background: rgba(6,6,14,0.92);
+      backdrop-filter: blur(24px) saturate(1.4);
+      -webkit-backdrop-filter: blur(24px) saturate(1.4);
+      border-top: 1px solid var(--border);
+      padding: 12px 24px;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      transition: transform 0.3s ease;
+    }
+    .hive-hud.visible {
+      display: flex;
+    }
+    .hive-hud-inner {
+      max-width: 1100px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .hive-hud-left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .hive-hud-stat {
+      display: flex;
+      flex-direction: column;
+    }
+    .hive-hud-stat .label {
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+    .hive-hud-stat .value {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--text-primary);
+    }
+    .hive-hud-stat .value.positive { color: var(--green); }
+    .hive-hud-stat .value.negative { color: var(--red); }
+    .hive-hud-divider {
+      width: 1px;
+      height: 28px;
+      background: var(--border);
+    }
+    .hive-hud-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .hive-hud-portfolio-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 24px;
+      font-size: 13px;
+      font-weight: 700;
+      font-family: inherit;
+      border: none;
+      border-radius: var(--radius-sm);
+      background: linear-gradient(135deg, #3b82f6, #6366f1);
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .hive-hud-portfolio-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 20px rgba(59,130,246,0.3);
+    }
+    .hive-hud-label {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .hive-hud-rank {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      font-size: 20px;
+      color: var(--accent);
+    }
+
+    /* --- Loading & Empty States --- */
+    .hive-lb-loading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 80px 20px;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+    .hive-lb-spinner {
+      width: 28px;
+      height: 28px;
+      border: 3px solid rgba(0,212,255,0.08);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: hiveSpin 0.7s linear infinite;
+    }
+    @keyframes hiveSpin { to { transform: rotate(360deg); } }
+    .hive-lb-error {
+      padding: 20px;
+      text-align: center;
+      color: var(--red);
+      background: var(--red-dim);
+      border: 1px solid var(--red);
+      border-radius: var(--radius);
+      font-size: 13px;
+    }
+
+    /* --- Scroll indicators --- */
+    .hive-scroll-indicator {
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      opacity: 0.5;
+      animation: bounceDown 2s ease-in-out infinite;
+    }
+    .hive-scroll-indicator span {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--text-muted);
+    }
+    .hive-scroll-indicator svg { color: var(--text-muted); }
+    @keyframes bounceDown {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(6px); }
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 768px) {
+      .hive-hero { padding: 100px 16px 40px; }
+      .hive-metrics-grid { grid-template-columns: repeat(2, 1fr); }
+      .hive-metric-card { padding: 16px; }
+      .hive-metric-value { font-size: 20px; }
+      .hive-podium { grid-template-columns: 1fr; gap: 12px; }
+      .hive-podium-card.gold { order: -1; }
+      .hive-lb-pills { width: 100%; justify-content: center; }
+      .hive-lb-pill { flex: 1; text-align: center; padding: 8px 12px; font-size: 12px; }
+      .hive-hero-stats-mini { gap: 20px; }
+      .hive-hero-stat-mini .num { font-size: 18px; }
+      .hive-hud-inner { flex-direction: column; align-items: center; text-align: center; }
+      .hive-hud-left { flex-wrap: wrap; justify-content: center; }
+      .hive-table-wrap { overflow-x: auto; }
+      .hive-table { min-width: 600px; }
+      .hive-hero-ctas { flex-direction: column; align-items: stretch; }
+      .hive-cta-secondary { margin-left: 0; }
+      .hive-hero h1 { font-size: 32px; }
+    }
+
+    /* --- Count-up animation helper --- */
+    .count-up {
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+
+    /* --- Signal bar separator --- */
+    .hive-signal-bar {
+      position: relative;
+      z-index: 2;
+      max-width: 1100px;
+      margin: 0 auto 32px;
+      padding: 0 24px;
+    }
+    .hive-signal-bar-inner {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      padding: 16px 24px;
+      background: linear-gradient(90deg, rgba(59,130,246,0.03), rgba(139,92,246,0.03));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      backdrop-filter: blur(8px);
+      flex-wrap: wrap;
+    }
+    .hive-signal-bar-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .hive-signal-bar-item .icon { font-size: 16px; }
+    .hive-signal-bar-item .hl { color: var(--text-secondary); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo"><img src="/img/logo-hex.jpg" alt="The Signal" class="logo-img"><span class="logo-text"><span class="logo-the">THE</span> <strong>SIGNAL</strong></span></a>
+      <div class="nav-links">
+        <a href="/sector/ai" class="nav-link">AI</a>
+        <a href="/sector/cyber" class="nav-link">Cyber</a>
+        <a href="/sector/defense" class="nav-link">Defense</a>
+        <a href="/sector/space" class="nav-link">Space</a>
+        <a href="/sector/mega-cap" class="nav-link">Mega-Cap</a>
+        <a href="/sector/quantum" class="nav-link">Quantum</a>
+        <a href="/hive" class="nav-link" style="color:var(--accent-light)">Hive</a>
+      </div>
+      <div class="nav-actions">
+        <button class="nav-btn search-btn" id="searchToggle" aria-label="Search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <div class="auth-container" id="authContainer">
+          <button class="nav-btn auth-btn" id="authToggle" aria-label="Sign In">
+            <div class="auth-btn-avatar" id="authBtnAvatar">
+              <span class="auth-btn-initial" id="authBtnInitial"></span>
+              <img class="auth-btn-img" id="authBtnImg" src="" alt="" style="display:none">
+            </div>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="auth-btn-icon" id="authBtnIcon">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span class="auth-label" id="authLabel">Sign In</span>
+          </button>
+          <div class="auth-dropdown" id="authDropdown">
+            <div class="auth-profile" id="authProfile" style="display:none">
+              <div class="auth-profile-header">
+                <div class="auth-profile-avatar" id="authProfileAvatar">
+                  <img id="authProfileImg" src="" alt="" style="display:none">
+                  <span class="auth-profile-initial" id="authProfileInitial"></span>
+                </div>
+                <div class="auth-profile-info">
+                  <span class="auth-profile-name" id="authProfileName"></span>
+                  <span class="auth-profile-username" id="authProfileUsername"></span>
+                </div>
+              </div>
+              <div class="auth-profile-stats" id="authProfileStats">
+                <div class="auth-stat">
+                  <span class="auth-stat-label">Portfolio</span>
+                  <span class="auth-stat-value" id="authStatValue">—</span>
+                </div>
+                <div class="auth-stat">
+                  <span class="auth-stat-label">Return</span>
+                  <span class="auth-stat-value" id="authStatReturn">—</span>
+                </div>
+              </div>
+              <div class="auth-profile-links">
+                <a href="/hive" class="auth-profile-link">🐝 My Hive</a>
+                <a href="/hive" class="auth-profile-link" onclick="navigateToHiveLeaderboard(event)">🏆 Leaderboard</a>
+              </div>
+              <button class="auth-profile-signout" id="authSignOut">Sign Out</button>
+            </div>
+            <div class="auth-guest" id="authGuest">
+              <button class="auth-option" onclick="showHiveJoinModal('login')" style="display:flex"><span class="auth-option-icon">🔑</span> Sign In</button>
+              <button class="auth-option" onclick="showHiveJoinModal('register')" style="display:flex"><span class="auth-option-icon">✨</span> Create Account</button>
+            </div>
+          </div>
+        </div>
+        <button class="nav-btn hamburger-btn" id="hamburgerToggle" aria-label="Menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-links">
+      <a href="/sector/ai" class="mobile-nav-link">AI</a>
+      <a href="/sector/cyber" class="mobile-nav-link">Cyber</a>
+      <a href="/sector/defense" class="mobile-nav-link">Defense</a>
+      <a href="/sector/space" class="mobile-nav-link">Space</a>
+      <a href="/sector/mega-cap" class="mobile-nav-link">Mega-Cap</a>
+      <a href="/sector/quantum" class="mobile-nav-link">Quantum</a>
+      <a href="/hive" class="mobile-nav-link">Hive</a>
+    </div>
+  </div>
+
+  <!-- Search Overlay -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-backdrop" id="searchBackdrop"></div>
+    <div class="search-modal">
+      <div class="search-header">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search articles by title, ticker, sector, or tag…" autofocus>
+        <button class="search-close" id="searchClose" aria-label="Close search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+      <div class="search-empty" id="searchEmpty">Start typing to search articles…</div>
+    </div>
+  </div>
+
+  <main>
+    <div class="hive-particles"></div>
+
+    <!-- ===== HERO ===== -->
+    <section class="hive-hero">
+      <div class="hive-hero-badge">
+        <span class="pulse-dot"></span>
+        🐝 The Hive — Live Competition
+      </div>
+      <h1>Where the <span class="gradient-text">Community</span><br>Beats the Market.</h1>
+      <p class="hive-hero-sub">
+        Get a <strong style="color:var(--text-primary)">$100,000 simulated portfolio</strong> and compete against the sharpest traders in The Signal community. Trade AI, defense, space, cyber, and quantum stocks in real time.
+      </p>
+      <div class="hive-hero-stats-mini">
+        <div class="hive-hero-stat-mini">
+          <span class="num" id="heroTotalUsers">—</span>
+          <span class="label">Active Traders</span>
+        </div>
+        <div class="hive-hero-stat-mini">
+          <span class="num signal-blue" id="heroCapitalDeployed">—</span>
+          <span class="label">Capital Deployed</span>
+        </div>
+        <div class="hive-hero-stat-mini">
+          <span class="num" id="heroTotalTrades">—</span>
+          <span class="label">Trades Executed</span>
+        </div>
+      </div>
+      <div class="hive-hero-ctas">
+        <button class="hive-cta-primary" id="ctaPrimaryBtn" onclick="handleCTAClick()">
+          <span>⚡</span> Claim Your $100K Fund
+        </button>
+        <a href="#leaderboard" class="hive-cta-secondary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          View Leaderboard
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== SCROLL INDICATOR ===== -->
+    <div class="hive-scroll-indicator">
+      <span>Scroll</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+    </div>
+
+    <!-- ===== GLOBAL METRICS ===== -->
+    <div class="hive-metrics">
+      <div class="hive-metrics-grid">
+        <div class="hive-metric-card">
+          <div class="hive-metric-label">Active Traders</div>
+          <div class="hive-metric-value accent" id="metricUsers">—</div>
+          <div class="hive-metric-ticker">+12% this week</div>
+        </div>
+        <div class="hive-metric-card">
+          <div class="hive-metric-label">Capital Deployed</div>
+          <div class="hive-metric-value gold" id="metricCapital">—</div>
+          <div class="hive-metric-ticker-bar">
+            <span class="up">▲ NVDA</span>
+            <span class="down">▼ TSLA</span>
+            <span class="up">▲ PLTR</span>
+          </div>
+        </div>
+        <div class="hive-metric-card">
+          <div class="hive-metric-label">Hive Alpha (Avg Return)</div>
+          <div class="hive-metric-value" id="metricAlpha">—</div>
+          <div class="hive-metric-ticker">Top quartile: +18.4%</div>
+        </div>
+        <div class="hive-metric-card">
+          <div class="hive-metric-label">Trades Executed</div>
+          <div class="hive-metric-value accent" id="metricTrades">—</div>
+          <div class="hive-metric-ticker">2,347 today</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SIGNAL BAR ===== -->
+    <div class="hive-signal-bar">
+      <div class="hive-signal-bar-inner">
+        <div class="hive-signal-bar-item"><span class="icon">📊</span> Trade <span class="hl">50+ stocks</span> across 6 sectors</div>
+        <div class="hive-signal-bar-item"><span class="icon">🏆</span> <span class="hl">Real-time</span> portfolio leaderboard</div>
+        <div class="hive-signal-bar-item"><span class="icon">🔮</span> Signal Master <span class="hl">crowd wisdom</span> insights</div>
+        <div class="hive-signal-bar-item"><span class="icon">🆓</span> Completely <span class="hl">free</span> to play</div>
+      </div>
+    </div>
+
+    <!-- ===== LEADERBOARD ===== -->
+    <section class="hive-lb-section" id="leaderboard">
+      <div class="hive-lb-header">
+        <div class="hive-lb-header-left">
+          <h2>🏆 Leaderboard</h2>
+          <div class="sub">Top traders ranked by portfolio return</div>
+        </div>
+        <div class="hive-lb-header-right">
+          <div class="total" id="lbTotalParticipants">—</div>
+          <div class="total-label">Total Participants</div>
+        </div>
+      </div>
+
+      <!-- Pill Tabs -->
+      <div class="hive-lb-pills">
+        <button class="hive-lb-pill" data-period="weekly" onclick="switchPeriod('weekly')">⚡ Weekly Sprint</button>
+        <button class="hive-lb-pill active" data-period="monthly" onclick="switchPeriod('monthly')">📈 30-Day Alpha</button>
+        <button class="hive-lb-pill" data-period="alltime" onclick="switchPeriod('alltime')">🏅 All-Time High</button>
+      </div>
+
+      <!-- Content area -->
+      <div id="hiveLeaderboardContent">
+        <div class="hive-lb-loading">
+          <div class="hive-lb-spinner"></div>
+          <span>Loading leaderboard...</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== BOTTOM STICKY HUD ===== -->
+  <div class="hive-hud" id="hiveHUD">
+    <div class="hive-hud-inner">
+      <div class="hive-hud-left">
+        <div class="hive-hud-stat">
+          <span class="label">Your Rank</span>
+          <span class="hive-hud-rank" id="hudRank">—</span>
+        </div>
+        <div class="hive-hud-divider"></div>
+        <div class="hive-hud-stat">
+          <span class="label">Portfolio Value</span>
+          <span class="value" id="hudValue">—</span>
+        </div>
+        <div class="hive-hud-divider"></div>
+        <div class="hive-hud-stat">
+          <span class="label">Return</span>
+          <span class="value" id="hudReturn">—</span>
+        </div>
+      </div>
+      <div class="hive-hud-right">
+        <span class="hive-hud-label">You're in the competition</span>
+        <button class="hive-hud-portfolio-btn" onclick="handleCTAClick()">
+          <span>📊</span> View My Portfolio
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand"><img src="/img/logo-hex.jpg" alt="The Signal" class="footer-logo"> THE <strong>SIGNAL</strong></div>
+      <div class="footer-tag">The Signal Editorial Team · readthesignal.net</div>
+      <div class="footer-copy">© 2026 The Signal — Market Intelligence. Data from public sources. The Hive is a simulated trading competition for educational purposes only.</div>
+    </div>
+  </footer>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-98KDVDFBCW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-98KDVDFBCW');
+  </script>
+  <script id="articles-data" type="application/json">[]</script>
+  <script src="/js/prices.js" defer></script>
+  <script src="/js/search.js" defer></script>
+  <script src="/js/auth.js?v=2" defer></script>
+  <script src="/js/pulse.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/comments.js" defer></script>
+  <script src="/js/share.js" defer></script>
+  <script src="/js/hive.js?v=3" defer></script>
+
+  <script>
+  // ===== HIVE LANDING — Client-side logic =====
+  (function() {
+    'use strict';
+
+    const API_BASE = '/api/hive';
+    var currentPeriod = 'monthly';
+    var metaData = null;
+
+    // ===== Auth helpers =====
+    function getHiveToken() {
+      try { return localStorage.getItem('hive_token'); } catch(e) { return null; }
+    }
+    function getHiveUser() {
+      try {
+        var raw = localStorage.getItem('hive_user');
+        return raw ? JSON.parse(raw) : null;
+      } catch(e) { return null; }
+    }
+
+    function isAuthenticated() {
+      return !!getHiveToken();
+    }
+
+    // ===== Format helpers =====
+    function formatCurrency(val) {
+      if (val == null || isNaN(val)) return '—';
+      if (val >= 1e9) return '$' + (val / 1e9).toFixed(2) + 'B';
+      if (val >= 1e6) return '$' + (val / 1e6).toFixed(1) + 'M';
+      if (val >= 1e3) return '$' + (val / 1e3).toFixed(1) + 'K';
+      return '$' + val.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+    }
+    function formatReturn(val) {
+      if (val == null || isNaN(val)) return '—';
+      var sign = val >= 0 ? '+' : '';
+      return sign + val.toFixed(2) + '%';
+    }
+    function formatNumber(val) {
+      if (val == null || isNaN(val)) return '—';
+      return val.toLocaleString();
+    }
+    function formatCurrencyFull(val) {
+      if (val == null || isNaN(val)) return '—';
+      return '$' + val.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    }
+
+    // ===== Get primary allocation from user's holdings =====
+    function getPrimaryAllocation(holdings) {
+      if (!holdings || Object.keys(holdings).length === 0) return '—';
+      var top = null;
+      var maxShares = 0;
+      for (var ticker in holdings) {
+        if (holdings[ticker] > maxShares) {
+          maxShares = holdings[ticker];
+          top = ticker;
+        }
+      }
+      return top || '—';
+    }
+
+    // ===== Get user initials for avatar fallback =====
+    function getInitials(name) {
+      if (!name || name === 'Anonymous') return '?';
+      var parts = name.split(' ');
+      if (parts.length >= 2) return (parts[0][0] + parts[1][0]).toUpperCase();
+      return name.slice(0, 2).toUpperCase();
+    }
+
+    // ===== Fetch meta data =====
+    function fetchMeta() {
+      return fetch(API_BASE + '?meta=true')
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          metaData = data;
+          // Hero stats
+          document.getElementById('heroTotalUsers').textContent = formatNumber(data.totalUsers);
+          document.getElementById('heroCapitalDeployed').textContent = formatCurrency(data.totalPortfolioValue);
+          document.getElementById('heroTotalTrades').textContent = formatNumber(data.totalTrades);
+          // Metric cards
+          document.getElementById('metricUsers').textContent = formatNumber(data.totalUsers);
+          document.getElementById('metricCapital').textContent = formatCurrency(data.totalPortfolioValue);
+          document.getElementById('metricAlpha').textContent = formatReturn(data.averageReturn);
+          document.getElementById('metricAlpha').className = 'hive-metric-value ' + (data.averageReturn >= 0 ? 'green' : '');
+          document.getElementById('metricTrades').textContent = formatNumber(data.totalTrades);
+          return data;
+        })
+        .catch(function(err) {
+          console.error('Failed to fetch meta:', err);
+        });
+    }
+
+    // ===== Fetch leaderboard =====
+    function fetchLeaderboard(period, appendUid) {
+      var url = API_BASE + '?leaderboard=' + encodeURIComponent(period);
+      if (appendUid) {
+        var user = getHiveUser();
+        if (user && user.uid) url += '&uid=' + encodeURIComponent(user.uid);
+      }
+      return fetch(url)
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          renderLeaderboard(data, period);
+          // Update total participants
+          document.getElementById('lbTotalParticipants').textContent = formatNumber(data.totalParticipants);
+          // Update HUD if authenticated
+          if (isAuthenticated() && data.yourRank) {
+            updateHUD(data.yourRank);
+          }
+          return data;
+        })
+        .catch(function(err) {
+          document.getElementById('hiveLeaderboardContent').innerHTML =
+            '<div class="hive-lb-error">⚠️ Failed to load leaderboard: ' + err.message + '</div>';
+        });
+    }
+
+    // ===== Render leaderboard =====
+    function renderLeaderboard(data, period) {
+      var entries = data.leaderboard || [];
+      var container = document.getElementById('hiveLeaderboardContent');
+
+      if (entries.length === 0) {
+        container.innerHTML = '<div class="hive-lb-empty" style="text-align:center;padding:60px 20px;color:var(--text-muted)"><div style="font-size:48px;margin-bottom:12px">📭</div><h3 style="color:var(--text-primary);font-size:18px;margin-bottom:6px">No traders yet</h3><p style="font-size:14px">Be the first to claim your $100K fund and start trading!</p></div>';
+        return;
+      }
+
+      var podium = entries.slice(0, 3);
+      var table = entries.slice(3);
+
+      var html = '';
+
+      // === Podium ===
+      var medals = ['gold', 'silver', 'bronze'];
+      var crowns = ['👑', '🥈', '🥉'];
+      var rankLabels = ['#1', '#2', '#3'];
+
+      html += '<div class="hive-podium">';
+      // Rank 1 first, then Rank 2, then Rank 3
+      var podiumOrder = [0, 1, 2];
+      for (var pi = 0; pi < podiumOrder.length; pi++) {
+        var idx = podiumOrder[pi];
+        var user = podium[idx];
+        if (!user) {
+          html += '<div class="hive-podium-card"></div>';
+          continue;
+        }
+        var medalClass = medals[idx];
+        var isPositive = user.return >= 0;
+        var initials = getInitials(user.displayName);
+
+        html += '<div class="hive-podium-card ' + medalClass + '">';
+        html += '  <div class="hive-podium-rank ' + medalClass + '">' + rankLabels[idx] + '</div>';
+        html += '  <div class="hive-podium-crown">' + crowns[idx] + '</div>';
+        html += '  <div class="hive-podium-avatar">';
+        if (user.photoURL) {
+          html += '    <img src="' + user.photoURL + '" alt="' + escapeHtml(user.displayName) + '" loading="lazy">';
+        } else {
+          html += '    <span>' + initials + '</span>';
+        }
+        html += '  </div>';
+        html += '  <div class="hive-podium-name">' + escapeHtml(user.displayName) + '</div>';
+        html += '  <div class="hive-podium-return ' + (isPositive ? 'positive' : 'negative') + '">' + formatReturn(user.return) + '</div>';
+        html += '  <div class="hive-podium-value">' + formatCurrencyFull(user.value) + '</div>';
+        html += '  <div class="hive-podium-trades"><span class="num">' + (user.trades || 0) + '</span> trades</div>';
+        html += '</div>';
+      }
+      html += '</div>';
+
+      // === Table (ranks 4+) ===
+      if (table.length > 0) {
+        html += '<div class="hive-table-wrap">';
+        html += '<table class="hive-table">';
+        html += '<thead><tr><th>Rank</th><th>Trader</th><th>Return</th><th>Top Holding</th><th>Portfolio</th><th></th></tr></thead>';
+        html += '<tbody>';
+        for (var ti = 0; ti < table.length; ti++) {
+          var t = table[ti];
+          var isPos = t.return >= 0;
+          var tInitials = getInitials(t.displayName);
+          var topHolding = getPrimaryAllocation(t.holdings);
+
+          html += '<tr>';
+          html += '  <td><span class="hive-table-rank">#' + t.rank + '</span></td>';
+          html += '  <td>';
+          html += '    <div class="hive-table-user">';
+          html += '      <div class="hive-table-avatar">';
+          if (t.photoURL) {
+            html += '        <img src="' + t.photoURL + '" alt="' + escapeHtml(t.displayName) + '" loading="lazy">';
+          } else {
+            html += '        <span>' + tInitials + '</span>';
+          }
+          html += '      </div>';
+          html += '      <span class="hive-table-name">' + escapeHtml(t.displayName) + '</span>';
+          html += '    </div>';
+          html += '  </td>';
+          html += '  <td><span class="hive-table-return ' + (isPos ? 'positive' : 'negative') + '">' + formatReturn(t.return) + '</span></td>';
+          html += '  <td><span class="hive-table-holdings">' + escapeHtml(topHolding) + '</span></td>';
+          html += '  <td><span class="hive-table-value">' + formatCurrencyFull(t.value) + '</span></td>';
+          html += '  <td><button class="hive-table-action" onclick="handleCTAClick()">Follow</button></td>';
+          html += '</tr>';
+        }
+        html += '</tbody></table></div>';
+      }
+
+      container.innerHTML = html;
+    }
+
+    function escapeHtml(s) {
+      if (!s) return '';
+      return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+        .replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+    }
+
+    // ===== Switch leaderboard period =====
+    window.switchPeriod = function(period) {
+      if (period === currentPeriod) return;
+      currentPeriod = period;
+
+      // Update pill tabs
+      var pills = document.querySelectorAll('.hive-lb-pill');
+      for (var i = 0; i < pills.length; i++) {
+        pills[i].classList.remove('active');
+        if (pills[i].getAttribute('data-period') === period) {
+          pills[i].classList.add('active');
+        }
+      }
+
+      // Show loading
+      document.getElementById('hiveLeaderboardContent').innerHTML =
+        '<div class="hive-lb-loading"><div class="hive-lb-spinner"></div><span>Loading ' +
+        (period === 'weekly' ? 'Weekly Sprint' : period === 'monthly' ? '30-Day Alpha' : 'All-Time High') +
+        '…</span></div>';
+
+      // Fetch
+      fetchLeaderboard(period, true);
+    };
+
+    // ===== Update HUD =====
+    function updateHUD(yourRank) {
+      var hud = document.getElementById('hiveHUD');
+      hud.classList.add('visible');
+
+      document.getElementById('hudRank').textContent = '#' + yourRank.rank + ' / ' + yourRank.totalParticipants;
+      document.getElementById('hudValue').textContent = formatCurrencyFull(yourRank.value);
+      var retEl = document.getElementById('hudReturn');
+      retEl.textContent = formatReturn(yourRank.return);
+      retEl.className = 'value ' + (yourRank.return >= 0 ? 'positive' : 'negative');
+    }
+
+    // ===== Auth-aware CTA =====
+    window.handleCTAClick = function() {
+      if (isAuthenticated()) {
+        window.location.href = '/hive';
+      } else {
+        // Try to open the auth modal from hive.js
+        if (window.showHiveJoinModal) {
+          window.showHiveJoinModal('register');
+        } else {
+          window.location.href = '/hive';
+        }
+      }
+    };
+
+    // ===== Update CTA based on auth state =====
+    function updateCTA() {
+      var btn = document.getElementById('ctaPrimaryBtn');
+      if (isAuthenticated()) {
+        btn.innerHTML = '<span>📊</span> Go to My Portfolio';
+        btn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
+      } else {
+        btn.innerHTML = '<span>⚡</span> Claim Your $100K Fund';
+        btn.style.background = 'linear-gradient(135deg, #3b82f6, #6366f1)';
+      }
+    }
+
+    // ===== Init =====
+    function init() {
+      updateCTA();
+
+      // Show HUD if authenticated (even without yourRank we show a minimal HUD)
+      if (isAuthenticated()) {
+        var hud = document.getElementById('hiveHUD');
+        hud.classList.add('visible');
+        var user = getHiveUser();
+        if (user && user.displayName) {
+          document.querySelector('.hive-hud-label').textContent = 'Welcome back, ' + user.displayName;
+        }
+      }
+
+      // Fetch meta
+      fetchMeta();
+
+      // Fetch initial leaderboard (monthly)
+      fetchLeaderboard('monthly', true);
+    }
+
+    // Run on DOM ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+
+  })();
+  </script>
+</body>
+</html>

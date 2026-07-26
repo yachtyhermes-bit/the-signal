@@ -154,6 +154,12 @@
 }
 .drawer-cta:hover { background: #3b82f6; color: #e5e5e5; }
 
+/* Premium nav badge */
+.premium-nav-badge { display:inline-flex; align-items:center; gap:4px; background:linear-gradient(135deg,#6366f1,#818cf8); color:#fff; font-family:'Oxanium',sans-serif; font-size:.65rem; font-weight:700; letter-spacing:.08em; padding:4px 10px; border-radius:100px; text-transform:uppercase; cursor:default; white-space:nowrap; line-height:1.3; }
+.premium-nav-badge:hover { filter:brightness(1.1); }
+.nav-actions .premium-nav-badge { margin-right:4px; }
+@media (max-width:640px) { .premium-nav-badge { font-size:.55rem; padding:3px 7px; } }
+
 .sub-header {
   display: flex;
   align-items: center;

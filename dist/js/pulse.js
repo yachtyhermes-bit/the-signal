@@ -321,6 +321,10 @@
     if (currentArticleContext) {
       body.articleContext = currentArticleContext;
     }
+    // Include auth token for premium/rate-limit checks
+    var hiveToken = null;
+    try { hiveToken = localStorage.getItem('hive_token'); } catch(e) {}
+    if (hiveToken) body.token = hiveToken;
 
     fetch('/api/pulse/', {
       method: 'POST',
@@ -331,6 +335,25 @@
     .then(function(data) {
       loadingDiv.remove();
       if (data.answer) {
+        // Check for rate-limit / upgrade response
+        if (data.upgrade === true) {
+          var upgradeDiv = document.createElement('div');
+          upgradeDiv.className = 'message assistant';
+          upgradeDiv.innerHTML = '<div class="pulse-assistant-header">' +
+            '<div class="pulse-brand-icon"><img src="/img/logo-hex.jpg" alt="" style="width:12px;height:12px;border-radius:3px"></div>' +
+            '<div class="pulse-brand-name">Ask <span class="pulse-gradient">Pulse</span></div>' +
+            '</div>' +
+            '<div class="bubble pulse-upgrade-bubble">' +
+            '<div class="pulse-upgrade-icon">&#x26A0;&#xFE0F;</div>' +
+            '<div class="pulse-upgrade-text">' + escapeHtml(data.answer) + '</div>' +
+            '<a href="/pricing" class="pulse-upgrade-cta">Upgrade to Premium &rarr;</a>' +
+            '</div>';
+          overlayMessages.appendChild(upgradeDiv);
+          overlayMessages.scrollTop = 0;
+          if (input) input.disabled = false;
+          if (sendBtn) sendBtn.disabled = false;
+          return;
+        }
         // Track assistant response in history
         conversationHistory.push({ role: 'assistant', text: data.answer });
         // Scroll to top so user reads response from the start (like Gemini)
@@ -453,10 +476,15 @@
     messagesEl.scrollTop = 0;
 
     try {
+      var body = { question: question, articleContext: currentArticleContext };
+      var hiveToken$$1 = null;
+      try { hiveToken$$1 = localStorage.getItem('hive_token'); } catch(e) {}
+      if (hiveToken$$1) body.token = hiveToken$$1;
+
       var res = await fetch('/api/pulse/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ question: question, articleContext: currentArticleContext })
+        body: JSON.stringify(body)
       });
       var data = await res.json();
 
