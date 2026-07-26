@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1b2b50">
+  <link rel="canonical" href="https://readthesignal.net/premium">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <meta name="robots" content="max-image-preview:large">
+  <meta name="description" content="Welcome to Signal Premium — your exclusive dashboard for AI-powered market intelligence.">
+  <meta property="og:title" content="Premium Dashboard — The Signal">
+  <meta property="og:description" content="Your premium member dashboard.">
+  <meta property="og:url" content="https://readthesignal.net/premium">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Oxanium:wght@400;500;600;700&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css?v=27">
+  <link rel="stylesheet" href="/css/nav.css?v=1">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-98KDVDFBCW"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-98KDVDFBCW');</script>
+  <script src="/js/prices.js" defer></script>
+  <script src="/js/search.js" defer></script>
+  <script src="/js/auth.js?v=2" defer></script>
+  <script src="/js/theme.js?v=2" defer></script>
+  <script src="/js/nav.js?v=1" defer></script>
+  <title>Premium Dashboard — The Signal</title>
+  <style>
+    .premium-page { max-width: 1120px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+    
+    /* Status banner */
+    .premium-status-bar { background: linear-gradient(135deg, rgba(34,197,94,.08), rgba(59,130,246,.05)); border: 1px solid rgba(34,197,94,.15); border-radius: var(--radius); padding: 1rem 1.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .75rem; margin-bottom: 2rem; }
+    .premium-status-left { display: flex; align-items: center; gap: .75rem; }
+    .premium-status-badge { background: linear-gradient(135deg, var(--green), #16a34a); color: #fff; font-family: 'Oxanium', sans-serif; font-size: .65rem; font-weight: 700; letter-spacing: .1em; padding: 4px 14px; border-radius: 100px; text-transform: uppercase; }
+    .premium-status-text { color: var(--green); font-weight: 600; font-size: .85rem; }
+    .premium-status-since { color: var(--text-muted); font-size: .8rem; }
+    .premium-status-right { display: flex; gap: .5rem; }
+    .premium-status-link { color: var(--accent); font-size: .82rem; font-weight: 500; padding: 6px 14px; border: 1px solid var(--border); border-radius: 8px; transition: all .2s; text-decoration: none; }
+    .premium-status-link:hover { border-color: var(--accent); background: rgba(59,130,246,.05); }
+
+    /* Hero */
+    .premium-hero { text-align: center; margin: 1rem 0 3rem; }
+    .premium-hero .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(59,130,246,0.08); border: 1px solid rgba(59,130,246,0.12); border-radius: 100px; padding: 6px 16px; font-size: .75rem; font-weight: 600; color: var(--accent); letter-spacing: .08em; text-transform: uppercase; font-family: 'Oxanium', sans-serif; margin-bottom: 1rem; }
+    .premium-hero .hero-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); display: inline-block; animation: pulse-dot 2s ease-in-out infinite; }
+    @keyframes pulse-dot { 0%,100%{opacity:1} 50%{opacity:.4} }
+    .premium-hero h1 { font-family: 'Anton', sans-serif; font-size: clamp(2.2rem,5vw,3.5rem); color: var(--text-primary); margin: 0 0 .75rem; }
+    .premium-hero h1 .gradient { background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .premium-hero p { color: var(--text-secondary); font-size: 1.05rem; max-width: 540px; margin: 0 auto; line-height: 1.6; }
+
+    /* Quick stats row */
+    .premium-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 2.5rem; }
+    .premium-stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem 1.5rem; display: flex; align-items: center; gap: 1rem; transition: all .25s ease; }
+    .premium-stat:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .premium-stat-icon { width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
+    .premium-stat-icon.blue { background: rgba(59,130,246,.12); }
+    .premium-stat-icon.green { background: rgba(34,197,94,.12); }
+    .premium-stat-icon.purple { background: rgba(167,139,250,.12); }
+    .premium-stat-icon.gold { background: rgba(245,158,11,.12); }
+    .premium-stat-info { flex: 1; }
+    .premium-stat-value { font-family: 'JetBrains Mono', monospace; font-size: 1.3rem; font-weight: 700; color: var(--text-primary); }
+    .premium-stat-label { color: var(--text-muted); font-size: .78rem; margin-top: 2px; }
+
+    /* Feature grid */
+    .premium-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.25rem; margin-bottom: 3rem; }
+    .premium-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.75rem; transition: all .3s cubic-bezier(.25,.46,.45,.94); position: relative; overflow: hidden; }
+    .premium-card:hover { transform: translateY(-3px); border-color: var(--accent); box-shadow: 0 8px 24px rgba(59,130,246,.06); }
+    .premium-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--accent-gradient); opacity: 0; transition: opacity .3s ease; }
+    .premium-card:hover::before { opacity: 1; }
+    .premium-card-icon { width: 48px; height: 48px; border-radius: 12px; background: rgba(59,130,246,.08); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 1rem; }
+    .premium-card h3 { font-family: 'Oxanium', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin: 0 0 .4rem; }
+    .premium-card p { color: var(--text-secondary); font-size: .85rem; line-height: 1.6; margin: 0 0 1rem; }
+    .premium-card .card-link { color: var(--accent); font-weight: 600; font-size: .82rem; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; }
+    .premium-card .card-link:hover { color: var(--accent-light); gap: 8px; }
+
+    /* CTA for non-premium */
+    .premium-cta-section { text-align: center; padding: 4rem 2rem; }
+    .premium-cta-section h2 { font-family: 'Anton', sans-serif; font-size: 2rem; color: var(--text-primary); margin: 0 0 .75rem; }
+    .premium-cta-section p { color: var(--text-secondary); margin: 0 0 2rem; max-width: 480px; margin-left: auto; margin-right: auto; }
+    .premium-cta-btn { display: inline-block; padding: 14px 32px; background: var(--accent-gradient); border: none; border-radius: 10px; color: #fff; font-family: 'Oxanium', sans-serif; font-size: .95rem; font-weight: 700; cursor: pointer; text-decoration: none; transition: all .25s ease; }
+    .premium-cta-btn:hover { filter: brightness(1.1); box-shadow: 0 4px 24px rgba(59,130,246,.25); }
+    .premium-cta-btn.secondary { background: transparent; color: var(--text-secondary); border: 1px solid var(--border); }
+    .premium-cta-btn.secondary:hover { border-color: var(--accent); color: var(--accent); box-shadow: none; }
+
+    /* Not premium view */
+    .not-premium-hero { text-align: center; padding: 4rem 2rem; }
+    .not-premium-hero h1 { font-family: 'Anton', sans-serif; font-size: clamp(2rem,5vw,3rem); color: var(--text-primary); margin: 0 0 .75rem; }
+    .not-premium-hero h1 .gradient { background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .not-premium-hero p { color: var(--text-secondary); font-size: 1.05rem; max-width: 520px; margin: 0 auto 2rem; line-height: 1.6; }
+    .premium-teaser-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1.25rem; margin-bottom: 3rem; }
+    .premium-teaser-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; text-align: center; transition: all .25s ease; }
+    .premium-teaser-card:hover { transform: translateY(-3px); border-color: var(--accent); }
+    .premium-teaser-icon { font-size: 2rem; margin-bottom: .75rem; }
+    .premium-teaser-card h3 { font-family: 'Oxanium', sans-serif; font-size: .95rem; font-weight: 700; color: var(--text-primary); margin: 0 0 .3rem; }
+    .premium-teaser-card p { color: var(--text-muted); font-size: .82rem; margin: 0; line-height: 1.5; }
+
+    @media (max-width: 640px) {
+      .premium-page { padding: 2rem 1rem 4rem; }
+      .premium-stats { grid-template-columns: 1fr 1fr; }
+      .premium-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .premium-stats { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo"><img src="/img/logo-hex.jpg" alt="The Signal" class="logo-img"><span class="logo-text"><span class="logo-the">THE</span> <strong>SIGNAL</strong></span></a>
+      <div class="nav-actions">
+        <button class="nav-btn search-btn" id="searchToggle" aria-label="Search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+        <div class="auth-container" id="authContainer">
+          <button class="nav-btn auth-btn" id="authToggle" aria-label="Sign In">
+            <div class="auth-btn-avatar" id="authBtnAvatar">
+              <span class="auth-btn-initial" id="authBtnInitial"></span>
+              <img class="auth-btn-img" id="authBtnImg" src="" alt="" style="display:none">
+            </div>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="auth-btn-icon" id="authBtnIcon"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <span class="auth-label" id="authLabel">Sign In</span>
+          </button>
+          <div class="auth-dropdown" id="authDropdown">
+            <div class="auth-profile" id="authProfile" style="display:none">
+              <div class="auth-profile-header">
+                <div class="auth-profile-avatar" id="authProfileAvatar">
+                  <img id="authProfileImg" src="" alt="" style="display:none">
+                  <span class="auth-profile-initial" id="authProfileInitial"></span>
+                </div>
+                <div class="auth-profile-info">
+                  <span class="auth-profile-name" id="authProfileName"></span>
+                  <span class="auth-profile-username" id="authProfileUsername"></span>
+                </div>
+                <div class="auth-profile-badge">HIVE</div>
+              </div>
+              <div class="auth-profile-stats" id="authProfileStats">
+                <div class="auth-stat"><span class="auth-stat-label">Portfolio</span><span class="auth-stat-value" id="authStatValue">-</span></div>
+                <div class="auth-stat"><span class="auth-stat-label">Return</span><span class="auth-stat-value" id="authStatReturn">-</span></div>
+              </div>
+              <div class="auth-drop-divider"></div>
+              <div class="auth-profile-nav">
+                <a href="/sector/ai" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
+                <a href="/sector/cyber" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
+                <a href="/sector/defense" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
+                <a href="/sector/space" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
+                <a href="/sector/mega-cap" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
+                <a href="/sector/quantum" class="auth-nav-item"><span class="auth-nav-icon">🔬</span> Quantum</a>
+                <a href="/sector/ai-power" class="auth-nav-item"><span class="auth-nav-icon">⚡</span> AI Power</a>
+                <a href="/sector/etfs" class="auth-nav-item"><span class="auth-nav-icon">💼</span> ETFs</a>
+                <div class="auth-nav-section-header">FEATURES</div>
+                <a href="/hive" class="auth-nav-item"><span class="auth-nav-icon">🐝</span> Hive</a>
+                <a href="/signal-vs-the-street" class="auth-nav-item"><span class="auth-nav-icon">📈</span> Signal vs. Street</a>
+                <a href="/stocks/" class="auth-nav-item"><span class="auth-nav-icon">📉</span> Stock Pages</a>
+                <a href="/#scorecard" class="auth-nav-item"><span class="auth-nav-icon">📊</span> Signal Scorecard</a>
+              </div>
+              <div class="auth-drop-divider"></div>
+              <div class="auth-profile-footer">
+                <a href="/hive" class="auth-footer-link" onclick="navigateToHiveLeaderboard(event)">Leaderboard</a>
+                <a href="/account/settings" class="auth-footer-link">Settings</a>
+                <button class="auth-signout-btn" id="authSignOut">Sign Out</button>
+              </div>
+            </div>
+            <div class="auth-guest" id="authGuest">
+              <div class="auth-guest-brand">
+                <span class="auth-guest-title">Welcome to <strong>The Signal</strong></span>
+                <span class="auth-guest-sub">Join the hive to track your portfolio</span>
+              </div>
+              <button class="auth-option auth-option-primary" onclick="showHiveJoinModal('login')"><span class="auth-option-icon">🔑</span> Sign In</button>
+              <button class="auth-option" onclick="showHiveJoinModal('register')"><span class="auth-option-icon">✨</span> Create Account</button>
+              <div class="auth-drop-divider"></div>
+              <div class="auth-profile-nav">
+                <a href="/sector/ai" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
+                <a href="/sector/cyber" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
+                <a href="/sector/defense" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
+                <a href="/sector/space" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
+                <a href="/sector/mega-cap" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
+                <a href="/sector/quantum" class="auth-nav-item"><span class="auth-nav-icon">🔬</span> Quantum</a>
+                <a href="/sector/ai-power" class="auth-nav-item"><span class="auth-nav-icon">⚡</span> AI Power</a>
+                <a href="/sector/etfs" class="auth-nav-item"><span class="auth-nav-icon">💼</span> ETFs</a>
+                <div class="auth-nav-section-header">FEATURES</div>
+                <a href="/hive" class="auth-nav-item"><span class="auth-nav-icon">🐝</span> Hive</a>
+                <a href="/signal-vs-the-street" class="auth-nav-item"><span class="auth-nav-icon">📈</span> Signal vs. Street</a>
+                <a href="/stocks/" class="auth-nav-item"><span class="auth-nav-icon">📉</span> Stock Pages</a>
+                <a href="/#scorecard" class="auth-nav-item"><span class="auth-nav-icon">📊</span> Signal Scorecard</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="nav-btn hamburger-btn" id="hamburgerToggle" aria-label="Menu">
+          <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Drawer -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <div class="drawer" id="drawer">
+    <div class="drawer-header">
+      <a href="/" class="drawer-logo"><span class="the">THE</span><span class="signal">SIGNAL</span></a>
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">&#10005;</button>
+    </div>
+    <div class="drawer-body" id="drawerBody">
+      <div class="drawer-main" id="drawerMain">
+        <div class="drawer-section-label">SECTORS</div>
+        <a href="javascript:void(0)" class="drawer-link" onclick="openSubDrawer()">SECTORS</a>
+        <a href="/stocks/" class="drawer-link">STOCK PAGES</a>
+        <a href="/#scorecard" class="drawer-link">SIGNAL SCORECARD</a>
+        <a href="/hive" class="drawer-link">HIVE</a>
+        <a href="/signal-vs-the-street" class="drawer-link">SIGNAL VS. STREET</a>
+        <a href="/watchlist" class="drawer-link">WATCHLIST</a>
+        <a href="/insights" class="drawer-link">TRADER INSIGHTS</a>
+        <a href="/pricing" class="drawer-link">SIGNAL PREMIUM</a>
+        <a href="/premium" class="drawer-cta">GO PREMIUM</a>
+      </div>
+      <div class="drawer-sub" id="drawerSub">
+        <div class="sub-header" onclick="closeSubDrawer()">
+          <span class="sub-back">&#8249;</span>
+          <span class="sub-title">SECTORS</span>
+        </div>
+        <a href="/sector/ai/" class="drawer-link">AI</a>
+        <a href="/sector/cyber/" class="drawer-link">CYBER</a>
+        <a href="/sector/defense/" class="drawer-link">DEFENSE</a>
+        <a href="/sector/space/" class="drawer-link">SPACE</a>
+        <a href="/sector/mega-cap/" class="drawer-link">MEGA-CAP</a>
+        <a href="/sector/quantum/" class="drawer-link">QUANTUM</a>
+        <a href="/sector/ai-power/" class="drawer-link">AI POWER</a>
+        <a href="/sector/fintech/" class="drawer-link">FINTECH</a>
+        <a href="/sector/etfs/" class="drawer-link">ETFS</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Overlay -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-backdrop" id="searchBackdrop"></div>
+    <div class="search-modal">
+      <div class="search-header">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search articles by title, ticker, sector, or tag…" autofocus>
+        <button class="search-close" id="searchClose" aria-label="Close search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+      <div class="search-empty" id="searchEmpty">Start typing to search articles…</div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <div class="premium-page">
+      <!-- Status bar (shown for premium) -->
+      <div id="premiumStatusBar" style="display:none;"></div>
+
+      <!-- Premium Content -->
+      <div id="premiumContent" style="display:none;">
+        <!-- Welcome Hero -->
+        <div class="premium-hero">
+          <div class="hero-badge"><span class="hero-badge-dot"></span> <span id="premiumBadgeLabel">PREMIUM MEMBER</span></div>
+          <h1>Welcome to <span class="gradient">Premium</span></h1>
+          <p>You have full access to everything The Signal offers. Go deeper, trade smarter.</p>
+        </div>
+
+        <!-- Quick Stats -->
+        <div class="premium-stats">
+          <div class="premium-stat">
+            <div class="premium-stat-icon blue">⚡</div>
+            <div class="premium-stat-info">
+              <div class="premium-stat-value">Unlimited</div>
+              <div class="premium-stat-label">Pulse AI queries</div>
+            </div>
+          </div>
+          <div class="premium-stat">
+            <div class="premium-stat-icon green">📊</div>
+            <div class="premium-stat-info">
+              <div class="premium-stat-value" id="statStockCount">50+</div>
+              <div class="premium-stat-label">Stock detail pages</div>
+            </div>
+          </div>
+          <div class="premium-stat">
+            <div class="premium-stat-icon purple">📋</div>
+            <div class="premium-stat-info">
+              <div class="premium-stat-value" id="statWatchlistCount">0</div>
+              <div class="premium-stat-label">Watchlist stocks</div>
+            </div>
+          </div>
+          <div class="premium-stat">
+            <div class="premium-stat-icon gold">🏆</div>
+            <div class="premium-stat-info">
+              <div class="premium-stat-value">Ad-Free</div>
+              <div class="premium-stat-label">Reading experience</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature Cards -->
+        <div class="premium-grid">
+          <div class="premium-card">
+            <div class="premium-card-icon">🤖</div>
+            <h3>Unlimited Pulse AI</h3>
+            <p>Ask unlimited questions about any stock in our coverage universe. Get instant AI-powered analysis with real-time data.</p>
+            <a href="/" class="card-link">Ask Pulse →</a>
+          </div>
+          <div class="premium-card">
+            <div class="premium-card-icon">📊</div>
+            <h3>Full Stock Universe</h3>
+            <p>Access every stock detail page — AI, Cyber, Defense, Space, Mega-Cap, and Quantum — with comprehensive data.</p>
+            <a href="/stocks/" class="card-link">Browse Stocks →</a>
+          </div>
+          <div class="premium-card">
+            <div class="premium-card-icon">📋</div>
+            <h3>Custom Watchlists</h3>
+            <p>Create and manage personalized stock watchlists with real-time price tracking and instant filtering.</p>
+            <a href="/watchlist" class="card-link">My Watchlist →</a>
+          </div>
+          <div class="premium-card">
+            <div class="premium-card-icon">🐝</div>
+            <h3>Hive Trading</h3>
+            <p>Compete in The Hive with a $100K simulated portfolio. Track your performance on the leaderboard against other traders.</p>
+            <a href="/hive" class="card-link">Open Hive →</a>
+          </div>
+          <div class="premium-card">
+            <div class="premium-card-icon">📰</div>
+            <h3>Priority Newsletter</h3>
+            <p>Get our daily briefing delivered before the market opens — exclusive early access for Premium members.</p>
+            <a href="/" class="card-link">Today's Briefing →</a>
+          </div>
+          <div class="premium-card">
+            <div class="premium-card-icon">📈</div>
+            <h3>Trader Insights</h3>
+            <p>Track portfolios of famous investors — Leopold, Pelosi, Buffett, Cathie Wood — with real-time performance data.</p>
+            <a href="/insights" class="card-link">View Insights →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Non-Premium / Not Logged In -->
+      <div id="notPremiumContent">
+        <div class="not-premium-hero">
+          <div class="hero-badge"><span class="hero-badge-dot"></span> Premium Membership</div>
+          <h1>Unlock <span class="gradient">Premium</span></h1>
+          <p>Get unlimited AI analysis, real-time data, custom watchlists, and exclusive research. Upgrade your trading edge.</p>
+          <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+            <button class="premium-cta-btn" onclick="handleUpgradeClick()">Get Premium</button>
+            <a href="/pricing" class="premium-cta-btn secondary">View Pricing</a>
+          </div>
+        </div>
+
+        <div class="premium-teaser-grid">
+          <div class="premium-teaser-card">
+            <div class="premium-teaser-icon">🤖</div>
+            <h3>Unlimited Pulse AI</h3>
+            <p>No daily caps. Ask the AI anything about any stock in our coverage universe.</p>
+          </div>
+          <div class="premium-teaser-card">
+            <div class="premium-teaser-icon">⚡</div>
+            <h3>Real-Time Everything</h3>
+            <p>Live price data, instant search results, up-to-the-second market intelligence.</p>
+          </div>
+          <div class="premium-teaser-card">
+            <div class="premium-teaser-icon">📋</div>
+            <h3>Custom Watchlists</h3>
+            <p>Save and track your favorite stocks with real-time price monitoring.</p>
+          </div>
+          <div class="premium-teaser-card">
+            <div class="premium-teaser-icon">🚫</div>
+            <h3>Ad-Free Reading</h3>
+            <p>No banner ads. No distractions. Just pure market intelligence.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    (function() {
+      var premiumContent = document.getElementById('premiumContent');
+      var notPremiumContent = document.getElementById('notPremiumContent');
+      var statusBar = document.getElementById('premiumStatusBar');
+
+      function getToken() { try { return localStorage.getItem('hive_token'); } catch(e) { return null; } }
+      function getUser() { try { return JSON.parse(localStorage.getItem('hive_user') || 'null'); } catch(e) { return null; } }
+
+      var token = getToken();
+      if (!token) {
+        premiumContent.style.display = 'none';
+        notPremiumContent.style.display = 'block';
+        setupNav();
+        return;
+      }
+
+      // Check premium status
+      fetch('/api/hive?action=premium&token=' + encodeURIComponent(token))
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          if (data.premium) {
+            premiumContent.style.display = 'block';
+            notPremiumContent.style.display = 'none';
+
+            // Status bar
+            var planLabel = (data.plan || 'PREMIUM').toUpperCase();
+            document.getElementById('premiumBadgeLabel').textContent = planLabel + ' MEMBER';
+
+            statusBar.style.display = 'flex';
+            statusBar.className = 'premium-status-bar';
+            var sinceHtml = data.since ? '<span class="premium-status-since">Member since ' + new Date(data.since).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) + '</span>' : '';
+            statusBar.innerHTML =
+              '<div class="premium-status-left">' +
+                '<span class="premium-status-badge">✦ ' + planLabel + '</span>' +
+                '<span class="premium-status-text">Active</span>' +
+                sinceHtml +
+              '</div>' +
+              '<div class="premium-status-right">' +
+                '<a href="/pricing" class="premium-status-link">Manage Plan</a>' +
+                '<a href="/watchlist" class="premium-status-link">Watchlist</a>' +
+              '</div>';
+
+            // Load watchlist count
+            fetch('/api/hive?action=watchlist&op=list&token=' + encodeURIComponent(token))
+              .then(function(r) { return r.json(); })
+              .then(function(wlData) {
+                var count = (wlData.watchlist || []).length;
+                document.getElementById('statWatchlistCount').textContent = count;
+              }).catch(function() {});
+
+          } else {
+            premiumContent.style.display = 'none';
+            notPremiumContent.style.display = 'block';
+          }
+        })
+        .catch(function() {
+          premiumContent.style.display = 'none';
+          notPremiumContent.style.display = 'block';
+        });
+
+      window.handleUpgradeClick = function() {
+        var user = getUser();
+        if (user) {
+          window.location.href = '/pricing';
+        } else {
+          if (typeof showHiveJoinModal === 'function') {
+            showHiveJoinModal('login');
+          } else {
+            window.location.href = '/hive';
+          }
+        }
+      };
+
+      function setupNav() {
+        window.openSubDrawer = function() {
+          var main = document.getElementById('drawerMain');
+          var sub = document.getElementById('drawerSub');
+          if (main) main.style.transform = 'translateX(-100%)';
+          if (sub) sub.style.transform = 'translateX(0)';
+        };
+        window.closeSubDrawer = function() {
+          var main = document.getElementById('drawerMain');
+          var sub = document.getElementById('drawerSub');
+          if (main) main.style.transform = 'translateX(0)';
+          if (sub) sub.style.transform = 'translateX(-100%)';
+        };
+      }
+      setupNav();
+    })();
+  </script>
+</body>
+</html>

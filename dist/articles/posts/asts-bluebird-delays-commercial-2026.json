@@ -1,0 +1,48 @@
+{
+  "slug": "asts-bluebird-delays-commercial-2026",
+  "ticker": "ASTS",
+  "sector": "space",
+  "sentiment": "neutral",
+  "date": "2026-07-26",
+  "title": "AST SpaceMobile's 10 Satellites Are in Orbit. The Real Race Starts Now.",
+  "subtitle": "A rocket explosion, a convertible note, and a six-month delay \u2014 the first space-based cellular broadband network is taking longer than promised, but the prize hasn't shrunk.",
+  "summary": "AST SpaceMobile pushed its 45-satellite goal from end of 2026 to early 2027 after New Glenn's catastrophic failure, but $3.5 billion in cash and a $1.2 billion partner commitment book suggest the story is far from over.",
+  "image": {
+    "src": "/img/articles/asts-bluebird-delays-commercial-2026.jpg",
+    "caption": "AST SpaceMobile's BlueBird satellite in orbit \u2014 the company's 2,400 sq ft phased arrays are the largest commercial communications arrays ever deployed in low Earth orbit."
+  },
+  "tags": [
+    "ASTS",
+    "AST SpaceMobile",
+    "BlueBird",
+    "satellite broadband",
+    "direct-to-device",
+    "space",
+    "New Glenn",
+    "cellular broadband",
+    "Starlink"
+  ],
+  "links": [
+    {
+      "label": "AST SpaceMobile Investor Relations",
+      "url": "https://investors.ast-science.com/"
+    },
+    {
+      "label": "Light Reading: AST SpaceMobile targets initial service in 2026",
+      "url": "https://www.lightreading.com/satellite/ast-spacemobile-targets-intermittent-national-coverage-in-early-2026"
+    },
+    {
+      "label": "Yahoo Finance: AST SpaceMobile Delays Service Launch to 2027",
+      "url": "https://finance.yahoo.com/technology/articles/ast-spacemobile-delays-launch-2027-231838039.html"
+    }
+  ],
+  "videos": [
+    {
+      "embedUrl": "https://www.youtube.com/embed/zjQieDzQTGo",
+      "title": "BlueBird 8-10 Mission Launch Webcast",
+      "channel": "AST SpaceMobile"
+    }
+  ],
+  "price": 56.20,
+  "bodyHtml": "<p>Here's the thing about a constellation that can reach three billion people: it costs a constellation of money to build. And when you're AST SpaceMobile \u2014 the company trying to stitch together the world's first space-based cellular broadband network \u2014 the tension between ambition and execution has never been sharper.</p><p>On July 15, the company filed an SEC disclosure that quietly reset the clock. The goal of reaching 45 operational satellites shifted from \u201cend of 2026\u201d to \u201cearly 2027.\u201d The reason was plain enough: New Glenn, the heavy-lift rocket AST SpaceMobile had counted on for bulk deployment, went out of commission after an April launch failure and a May pad explosion at Cape Canaveral. When your ride to orbit breaks down, the schedule breaks with it.</p><p>The stock cratered on the news. Shares tumbled as the market digested the reality of a six-month slip in the commercial service timeline \u2014 from the second half of 2026 to the first half of 2027 for the AT&T and Verizon partnerships that anchor AST SpaceMobile's U.S. go-to-market strategy. AT&T CEO John Stankey has publicly backed the partnership, but patience has limits, especially when competitors are already selling service.</p><p>And the competitor is formidable. Starlink's Direct-to-Cell service, operated by SpaceX, already has more than 650 satellites in orbit and 16 million users. It's commercial. It's live. It's growing. AST SpaceMobile's answer is a technical argument: its Block 2 BlueBird satellites carry 2,400-square-foot phased arrays \u2014 the largest commercial communications arrays ever deployed in low Earth orbit \u2014 capable of peak download speeds of nearly 200 megabits per second. That's real broadband, not just messaging or SOS.</p><!-- VIDEO 0 --><p>But the numbers game is brutal. Ten satellites are in orbit today: five Block 1 spacecraft launched in September 2024 and five Block 2 satellites that went up in batches this year, most recently with the BlueBird 8-10 mission on Falcon 9 in June. The next launch \u2014 BlueBirds 11 through 13 \u2014 is scheduled for August aboard another Falcon 9. At a manufacturing rate of six satellites per month, the company is building toward critical mass. But the gap between \u201cbuilding\u201d and \u201cbuilt\u201d is the whole story.</p><p>That gap is also why the company just raised $1 billion in convertible notes \u2014 priced at 1.625%, due 2034, with a conversion price of $79.57 per share. The offering beefed up an already strong cash position to roughly $3.5 billion, giving AST SpaceMobile a multi-year runway even as it burns heavily on constellation construction. Free cash flow ran negative $1.19 billion over the trailing twelve months \u2014 the price of building a network from nothing.</p><p>The bull case, stripped of hype, comes down to ecosystem. The company has signed more than 60 mobile network operator partners covering three billion subscribers globally. Many of those deals include revenue-sharing agreements and, in some cases, capacity pre-purchases. The company has booked more than $1.2 billion in cumulative commitments from partners. Q1 2026 revenue reached $14.74 million \u2014 modest but up nearly 2,000% from the same quarter a year ago, when revenue was near zero. The company's full-year 2026 guidance calls for $150 million to $200 million in revenue.</p><p>A $21.8 billion market capitalization against $84.9 million in trailing revenue requires enormous faith in what comes next. Twenty percent of the float is sold short. Institutional ownership sits at 48.6%. The analysts covering the stock see an average price target of roughly $83 \u2014 a meaningful premium to where shares recently traded, but well off the 52-week highs above $134 that reflected peak euphoria before the New Glenn crisis and the timeline reset.</p><p>What makes this story worth watching is the sheer scale of the prize. The direct-to-device market is projected to grow from roughly $4 billion today to more than $14 billion this decade. AST SpaceMobile holds the most valuable spectrum assets of any space-based competitor \u2014 the kind of low-band cellular frequencies that can penetrate buildings and reach the interior of a car. Not even Starlink's 650 D2C satellites can claim that. Lynk Global is smaller, less funded, and further behind.</p><p>The July 15 filing was a warning, not a funeral. Constellation delays are the norm in this industry, not the exception. What matters is that the cash is in the bank, the partnerships are locked, the manufacturing line is running, and the next launch is weeks away. The question isn't whether AST SpaceMobile can build the network. It's whether the market has the patience to let it finish.</p><p class=\"disclosure\"><em>Disclosure: The Signal holds no position in ASTS. Positions may change. This is not financial advice.</em></p>"
+}

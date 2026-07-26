@@ -1,0 +1,49 @@
+{
+  "slug": "net-edge-inference-2026",
+  "ticker": "NET",
+  "sector": "cyber",
+  "sentiment": "bullish",
+  "date": "2026-07-25",
+  "title": "Cloudflare Is Betting $93 Billion on an Edge Nobody's Built Yet",
+  "subtitle": "Workers AI, a 330-city network, and a GAAP loss that won't quit \u2014 Cloudflare's all-in on becoming the world's inference layer. The market is buying the vision. Is the math real?",
+  "summary": "Cloudflare is staking a $93B market cap on becoming the planet's AI edge inference layer. With $2.33B in TTM revenue growing 33.5%, 73.3% gross margins, and $292M in FCF \u2014 but still a ~$102M GAAP net loss \u2014 NET's bet on Workers AI, Dynamic Workers, AI Gateway, and a 330+ city network is either visionary or very, very early.",
+  "image": {
+    "src": "/img/articles/net-ai-edge-inference-2026.jpg",
+    "caption": "Cloudflare edge network \u2014 330+ cities powering AI inference at the edge"
+  },
+  "tags": [
+    "NET",
+    "Cloudflare",
+    "ai",
+    "edge-computing",
+    "inference",
+    "serverless",
+    "cybersecurity",
+    "cloud-infrastructure"
+  ],
+  "links": [
+    {
+      "label": "Cloudflare Developer Week \u2014 Full Recap",
+      "url": "https://blog.cloudflare.com/tag/developer-week/"
+    },
+    {
+      "label": "Cloudflare Q1 2026 Earnings Release",
+      "url": "https://www.cloudflare.com/press/press-releases/2026/cloudflare-announces-first-quarter-2026-financial-results/"
+    },
+    {
+      "label": "Yahoo Finance \u2014 NET Analyst Ratings",
+      "url": "https://finance.yahoo.com/quote/NET/analysts/"
+    }
+  ],
+  "videos": [
+    {
+      "id": "nCrG-ixRoGg",
+      "title": "Cloudflare Agents Week Preview: What to Expect",
+      "source": "Cloudflare",
+      "url": "https://www.youtube.com/watch?v=nCrG-ixRoGg",
+      "position": "after_2nd_paragraph"
+    }
+  ],
+  "bodyHtml": "<p>Here's the thing about Cloudflare right now: it's worth ninety-three billion dollars, and it still can't turn a GAAP profit. That's not a typo. That's the bet. The market is pricing NET like the next AWS, while the income statement still says 'we lose money.' The gap between those two realities is where the whole story lives \u2014 and it all comes down to one question: can Cloudflare own AI inference at the edge before anybody else figures out they should?</p><p>Because that's what the market cap is really buying. Not a CDN. Not a DDoS scrubber. Cloudflare's real thesis is that the next trillion dollars of compute won't happen in a data center in Virginia \u2014 it'll happen at the edge, inside the 330+ cities where Cloudflare's network already lives. Every AI model needs inference. Cloudflare wants inference to run on their turf.</p><!-- VIDEO 0 --><p>Enter <a href=\"https://www.cloudflare.com/ai/\">Workers AI</a>. It's a unified inference API that gives you access to fifty-plus open-source models \u2014 Llama, Mistral, Stable Diffusion, Whisper \u2014 all behind a single endpoint. You switch models with one line of code. No lock-in. No GPU provisioning hell. Just pick your model, deploy, and you're running inference within milliseconds of your end users. Why ship every prompt to a centralized GPU cluster when you can run it at the edge, where the user already is?</p><p>The infrastructure advantage is real. Cloudflare's network touches 95% of the global population within 50 milliseconds. That's not a flex \u2014 that's physics. Inference is latency-sensitive. A chatbot that takes three seconds to respond feels broken. Running those workloads on Cloudflare's global network means the model is never more than a few hops away. Nobody else has that footprint. Not AWS. Not Google. Not Fastly.</p><p>Then there's <a href=\"https://www.cloudflare.com/developer-platform/\">Dynamic Workers</a>, the stateful serverless platform Cloudflare dropped during Developer Week 2026. Until Dynamic Workers, serverless was stateless by design \u2014 spin up, execute, forget. That works for simple API calls but falls apart for anything that needs memory: AI sessions, real-time collaboration, multi-step agent loops. Dynamic Workers flips that with durable state, long-running execution, and SQLite-backed storage inside the Workers runtime. It's the missing piece that turns Cloudflare from an edge compute toy into a legitimate platform for building full AI applications.</p><p>And the moat keeps getting wider. <a href=\"https://www.cloudflare.com/ai-gateway/\">AI Gateway</a> sits between your app and the model provider, caching inference results so you're not paying for the same completion twice. Cloudflare says it cuts AI API costs by up to 40%. That's real money when you're serving millions of prompts. Meanwhile, <a href=\"https://www.cloudflare.com/application-security/\">AI Firewall</a> catches prompt injections at a 96.3% detection rate. And <a href=\"https://www.cloudflare.com/developer-platform/r2/\">R2 storage</a> charges zero egress fees \u2014 moving data between inference runs costs you nothing. Each product alone is useful. Together, they're a vertically integrated stack that makes it cheaper, faster, and safer to run AI at Cloudflare than anywhere else.</p><p>So what about the numbers? Revenue hit $2.33 billion over the trailing twelve months, up 33.5% year over year. The three-year CAGR sits around 30.5%. Gross margins clock in at 73.3%, elite for a company running physical infrastructure. Free cash flow hit $291.8 million \u2014 the business is self-funding. The balance sheet carries $943.5 million in cash against $3.52 billion in debt, net leverage that's manageable given the revenue trajectory. Analysts rate NET a Strong Buy, with a consensus score of 1.88. The bull case has the receipts.</p><p>But \u2014 and you knew there was a but \u2014 Cloudflare lost roughly $102 million on a GAAP basis in FY2025. Stock-based compensation is the main culprit, and it's not going away. The company uses equity aggressively to attract engineering talent, and at this scale, that SBC line item is real dilution. The ninety-three-billion-dollar market cap against $2.33 billion in revenue gives you a multiple north of 40x. That's a growth stock priced for perfection in a macro environment where perfection is never guaranteed. If growth decelerates \u2014 if Developer Week 2026 doesn't translate into paid workloads \u2014 that multiple compresses fast.</p><p>None of that makes Cloudflare wrong. It just means the bet is priced in. Workers AI, Dynamic Workers, AI Gateway, the 330-city network \u2014 it's a coherent, ambitious, genuinely differentiated vision. The question isn't whether Cloudflare has the technology. It's whether the market's patience lasts long enough for GAAP profitability to catch up to the valuation. Because right now, the market is paying for the world Cloudflare says it's building. If that world arrives, $93 billion looks cheap. If it doesn't \u2014 well, you know how that story ends.</p><p class=\"disclosure\"><em>Disclosure: The Signal holds no position in NET. Positions may change. This is not financial advice.</em></p>",
+  "price": 262.15
+}
