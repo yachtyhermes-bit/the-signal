@@ -3,7 +3,7 @@
   "industry": "Internet Retail",
   "rating": "Wide",
   "stars": 4,
-  "confidence": "Medium",
+  "confidence": "High",
   "sources": [
     {
       "name": "Switching Costs",
@@ -12,13 +12,13 @@
     },
     {
       "name": "Intangible Assets",
-      "score": 5,
-      "rationale": "R&D at 14.6% of revenue (top-tier innovation spend); R&D spending growing at 23% YoY; large revenue base (743B) enables sustained IP investment"
+      "score": 4,
+      "rationale": "large revenue base (743B) enables sustained IP investment"
     },
     {
       "name": "Network Effect",
       "score": 4,
-      "rationale": "accelerating multi-year revenue growth (network effect building); high EPS growth 75% (operating leverage from scale)"
+      "rationale": "high EPS growth 75% (operating leverage from scale)"
     },
     {
       "name": "Cost Advantage",

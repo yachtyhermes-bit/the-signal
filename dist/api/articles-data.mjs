@@ -10,6 +10,14 @@ const ARTICLES = [
     "summary": "Qualcomm has transformed from a smartphone chip pure-play into a computing platform spanning PCs, automotive, and AI at the edge. With a $45B+ automotive backlog, Snapdragon X Elite Windows-on-Arm inflection, and on-device AI becoming the killer app, the thesis is stronger than ever — even if the stock says otherwise."
   },
   {
+    "title": "Shopify's Agentic Commerce Bet Is the Most Important Story in Retail Tech",
+    "slug": "shop-agentic-commerce-2026",
+    "ticker": "SHOP",
+    "sector": "fintech",
+    "date": "2026-07-26",
+    "summary": "Shopify has staked its future on agentic commerce — a world where AI agents, not humans, do the shopping. Sidekick adoption is up 385% and the Universal Commerce Protocol with Google positions Shopify as the backend for the AI shopping era. But bears warn that the same technology could strip away Shopify's pricing power. Q2 earnings on August 5 will be the first real test."
+  },
+  {
     "title": "Intel's Foundry Pivot: The $75 Billion Turnaround the US Government Is Betting On",
     "slug": "intc-foundry-gamble-national-champion-2026",
     "ticker": "INTC",
