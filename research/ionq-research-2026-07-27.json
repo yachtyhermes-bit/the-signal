@@ -1,0 +1,161 @@
+{
+  "ticker": "IONQ",
+  "company": "IonQ Inc.",
+  "sector": "quantum",
+  "date_researched": "2026-07-27",
+  "existing_slugs_taken": [
+    "ionq-record-earnings-quantum-2026"
+  ],
+  "slug_proposed": "ionq-defense-contracts-quantum-2026",
+  "financials": {
+    "current_price": 36.78,
+    "previous_close": 32.84,
+    "market_cap": "$13.73B",
+    "enterprise_value": "$10.27B",
+    "revenue": {
+      "ttm": "$187.1M",
+      "q1_2026": "$64.67M (beat $49.75M consensus by +30%)",
+      "q4_2025": "$61.89M (beat $40.38M consensus by +53.3%)",
+      "q3_2025": "$39.87M",
+      "q2_2025": "$20.69M",
+      "q1_2025": "$7.57M",
+      "yoy_growth_q1": "+754.7%"
+    },
+    "revenue_guidance_fy2026": "$260M-$270M (raised, vs $236.3M consensus)",
+    "gross_margin": "36.1% (TTM reported)",
+    "trailing_pe": 94.31,
+    "forward_pe": -33.47,
+    "gaap_net_income_q1_2026": "$805.4M (driven by ~$1.1B non-cash warrant valuation adjustment)",
+    "adjusted_ebitda_loss_q1_2026": "-$96.8M",
+    "cash_position": "$2.03B (total cash & short-term investments $2.39B)",
+    "total_debt": "$30.4M (minimal, nearly debt-free)",
+    "free_cash_flow": "-$91.4M (TTM)",
+    "backlog": "$370M",
+    "operating_loss_q1_2026": "-$271.5M"
+  },
+  "analyst_sentiment": {
+    "consensus_rating": "Strong Buy / Moderate Buy",
+    "number_of_analysts": 16,
+    "avg_price_target": "$69.11",
+    "high_target": "$100 (Rosenblatt, June 2026)",
+    "low_target": "$30 (Goldman Sachs, Jan 2025)",
+    "key_recent_ratings": [
+      "Northland Capital Markets: Outperform, $70 (June 22, 2026)",
+      "Rosenblatt: Buy, $100 (June 11, 2026)",
+      "JP Morgan: Neutral, $47 (May 7, 2026)",
+      "Jefferies: Buy, $85 (May 7, 2026)",
+      "Morgan Stanley: $48.50 (May 7, 2026)",
+      "Needham: Buy, $80 (Jan 27, 2026)",
+      "Wedbush: Outperform, $60 (Dec 17, 2025)",
+      "Mizuho: Outperform, $90 (Dec 11, 2025)"
+    ]
+  },
+  "recent_news_and_catalysts": [
+    {
+      "date": "July 24, 2026",
+      "title": "IonQ to Report Q2 2026 Results on August 5, 2026",
+      "detail": "Next earnings trigger. Q2 revenue guided to $65M-$68M."
+    },
+    {
+      "date": "June 17, 2026",
+      "title": "Clavis XG Multiplex Launch",
+      "detail": "New QKD product allowing quantum and classical traffic to coexist on existing metro fiber. Deployed on Florida LambdaRail QKD corridor and Geneva Quantum Network."
+    },
+    {
+      "date": "June 2026",
+      "title": "DARPA HARQ Contract Win",
+      "detail": "Selected for DARPA Heterogeneous Architectures for Quantum (HARQ) program using quantum memory and interconnect tech to link qubit species. Major technical credibility signal."
+    },
+    {
+      "date": "2026",
+      "title": "Missile Defense Agency SHIELD Contract",
+      "detail": "Selected for SHIELD IDIQ contract with $151B ceiling for quantum capabilities."
+    },
+    {
+      "date": "Feb 2026",
+      "title": "Golden Dome Contract",
+      "detail": "Contract related to national missile defense system."
+    },
+    {
+      "date": "2026",
+      "title": "IonQ Federal Launch",
+      "detail": "Unified government-facing quantum initiatives. Over $100M in AFRL contracts. Robert Cardillo (former NGA director) appointed Executive Chairman."
+    },
+    {
+      "date": "May 6, 2026",
+      "title": "Q1 2026 Earnings: Fourth Consecutive Record Quarter",
+      "detail": "$64.67M revenue (+755% YoY). Raised FY2026 guidance to $260M-$270M. Fourth consecutive record quarter."
+    },
+    {
+      "date": "2025-2026",
+      "title": "Acquisition Spree",
+      "detail": "Oxford Ionics (Sept 2025, trapped-ion tech), Vector Atomic (Oct 2025, atomic clocks), Seed Innovations (Jan 2025, ML/software), Capella Space, ID Quantique, Qubitekk, Lightsynq."
+    },
+    {
+      "date": "Oct 2025",
+      "title": "$2B Equity Raise at $93/share",
+      "detail": "Bolstered cash position to ~$3.68B pro forma."
+    },
+    {
+      "date": "Sept 2025",
+      "title": "AQ 64 Milestone on Tempo",
+      "detail": "IonQ Tempo achieved #AQ 64 three months ahead of schedule. 100-qubit system, 99.9% fidelity, 99.99% 2-qubit gate fidelity."
+    }
+  ],
+  "competitor_landscape": {
+    "ionq": {
+      "market_cap": "$13.73B",
+      "revenue_ttm": "$187.1M",
+      "approach": "Trapped-ion",
+      "key_advantage": "Highest fidelity (99.99% 2-qubit), 100+ qubits, quantum networking deployed, massive defense contracts"
+    },
+    "rigetti_rgti": {
+      "market_cap": "$5.26B",
+      "revenue_ttm": "$10M",
+      "approach": "Superconducting",
+      "key_detail": "108-qubit Cepheus-1 launched; $5.8M AFRL contract"
+    },
+    "dwave_qbts": {
+      "market_cap": "$7.13B",
+      "revenue_ttm": "$12.4M",
+      "approach": "Quantum annealing + gate-model",
+      "key_detail": "Dual-platform strategy; acquired Quantum Circuits in early 2026; commercial traction in optimization"
+    },
+    "ibm_quantum": {
+      "approach": "Superconducting",
+      "key_detail": "Largest enterprise quantum fleet; 1,121-qubit Condor; quantum revenue small fraction of $64B total IBM revenue"
+    }
+  },
+  "macro_context": {
+    "quantum_market_size_2025": "$3.52B (170% YoY growth from $1.3B in 2024)",
+    "projected_2030": "$20.2B (41.8% CAGR)",
+    "projected_2035": "$72B+",
+    "key_tailwinds": [
+      "CHIPS Act $2B quantum funding (May 2026)",
+      "Defense Quantum Acceleration Act",
+      "Pentagon/NATO quantum networking urgency",
+      "Harvest now decrypt later threat driving QKD adoption",
+      "Fortune Business Insights: 30.6% CAGR through 2034"
+    ],
+    "key_headwinds": [
+      "Extreme valuations, no operating profitability at any pure-play",
+      "Fault-tolerant quantum computing likely a decade away",
+      "Sector volatility: Quantum Computing Technologies Index down 21.4% in July 2026 alone"
+    ]
+  },
+  "news_angle": "IonQ Is Quietly Becoming the Pentagon's Quantum Powerhouse: DARPA, AFRL, SHIELD, and Golden Dome contracts totaling billions in addressable opportunity signal that IonQ's defense-adjacent flywheel is accelerating faster than the pure quantum narrative suggests. While the market fixates on Tempo qubit counts and earnings beats, IonQ's real moat may be its growing lock on U.S. government quantum infrastructure.",
+  "external_links": [
+    {
+      "label": "IonQ Q1 2026 Earnings Press Release",
+      "url": "https://investors.ionq.com/news/news-details/2026/IonQ-Announces-First-Quarter-2026-Financial-Results/default.aspx"
+    },
+    {
+      "label": "IonQ Launches Clavis XG Multiplex for Metro Quantum Security",
+      "url": "https://www.ionq.com/news/ionq-introduces-clavis-xg-multiplex-making-quantum-security-deployable-at-scale-in-metro-networks"
+    },
+    {
+      "label": "IonQ Federal Launch \u2014 Unifying Government Quantum Initiatives",
+      "url": "https://www.ionq.com/news/ionq-announces-ionq-federal-to-meet-the-increasing-demand-for-quantum"
+    }
+  ]
+}
