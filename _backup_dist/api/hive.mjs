@@ -728,7 +728,8 @@ export default async function handler(req, res) {
     }
 
     // === GET /api/hive?uid=XXX (or ?token=XXX) ===
-    if (req.method === 'GET' && (req.query.uid || req.query.token)) {
+    // Portfolio lookup — only for requests WITHOUT an action parameter
+    if (req.method === 'GET' && (req.query.uid || req.query.token) && !req.query.action) {
       const uid = resolveUid(req);
       if (!uid) {
         return res.status(400).json({ error: 'User ID or valid token required' });
