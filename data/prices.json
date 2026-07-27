@@ -3,12 +3,12 @@
     "ticker": "NVDA",
     "name": "NVIDIA Corporation",
     "companyUrl": "https://www.nvidia.com/",
-    "price": 201.75,
+    "price": 199.49000549316406,
     "open": 207.5399932861328,
     "previousClose": 208.75999450683594,
-    "change": -7.0099945068359375,
-    "changePercent": -3.3579204307779347,
-    "volume": 21109493,
+    "change": -9.269989013671875,
+    "changePercent": -4.440500698216068,
+    "volume": 51244054,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -35,18 +35,18 @@
         "volume": 110505300
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:03.104Z"
+    "lastUpdated": "2026-07-27T15:01:39.428Z"
   },
   "AMD": {
     "ticker": "AMD",
     "name": "Advanced Micro Devices",
     "companyUrl": "https://www.amd.com/",
-    "price": 504.2300109863281,
+    "price": 486.989990234375,
     "open": 526,
     "previousClose": 539.6900024414062,
-    "change": -35.459991455078125,
-    "changePercent": -6.570436972088989,
-    "volume": 4678487,
+    "change": -52.70001220703125,
+    "changePercent": -9.764867232787559,
+    "volume": 12441914,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -73,18 +73,18 @@
         "volume": 27155100
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:03.080Z"
+    "lastUpdated": "2026-07-27T15:01:39.417Z"
   },
   "AVGO": {
     "ticker": "AVGO",
     "name": "Broadcom Inc.",
     "companyUrl": "https://www.broadcom.com/",
-    "price": 382.0400085449219,
+    "price": 382.9700927734375,
     "open": 390.2099914550781,
     "previousClose": 392.4700012207031,
-    "change": -10.42999267578125,
-    "changePercent": -2.657526089469449,
-    "volume": 1672904,
+    "change": -9.499908447265625,
+    "changePercent": -2.4205438422600376,
+    "volume": 4494018,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -111,18 +111,18 @@
         "volume": 16348700
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:03.084Z"
+    "lastUpdated": "2026-07-27T15:01:39.426Z"
   },
   "MRVL": {
     "ticker": "MRVL",
     "name": "Marvell Technology",
     "companyUrl": "https://www.marvell.com/",
-    "price": 193.58419799804688,
+    "price": 186.99000549316406,
     "open": 205.55999755859375,
     "previousClose": 209.32000732421875,
-    "change": -15.735809326171875,
-    "changePercent": -7.517584930043718,
-    "volume": 2813344,
+    "change": -22.330001831054688,
+    "changePercent": -10.667877436325247,
+    "volume": 8443500,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -149,18 +149,18 @@
         "volume": 16359900
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:03.083Z"
+    "lastUpdated": "2026-07-27T15:01:39.429Z"
   },
   "TSM": {
     "ticker": "TSM",
     "name": "Taiwan Semiconductor",
     "companyUrl": "https://www.tsmc.com/",
-    "price": 400.42999267578125,
+    "price": 394.67498779296875,
     "open": 418.739990234375,
     "previousClose": 415.5799865722656,
-    "change": -15.149993896484375,
-    "changePercent": -3.645506132632286,
-    "volume": 1850866,
+    "change": -20.904998779296875,
+    "changePercent": -5.0303189409391065,
+    "volume": 5288923,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -187,18 +187,18 @@
         "volume": 11048800
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:03.090Z"
+    "lastUpdated": "2026-07-27T15:01:39.437Z"
   },
   "ASML": {
     "ticker": "ASML",
     "name": "ASML Holding",
     "companyUrl": "https://www.asml.com/",
-    "price": 1692.574951171875,
+    "price": 1653.3800048828125,
     "open": 1801.199951171875,
     "previousClose": 1803,
-    "change": -110.425048828125,
-    "changePercent": -6.1245174058860234,
-    "volume": 692349,
+    "change": -149.6199951171875,
+    "changePercent": -8.29839129879021,
+    "volume": 1401102,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -225,18 +225,18 @@
         "volume": 1106700
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:04.248Z"
+    "lastUpdated": "2026-07-27T15:01:40.540Z"
   },
   "MU": {
     "ticker": "MU",
     "name": "Micron Technology",
     "companyUrl": "https://www.micron.com/",
-    "price": 909.260009765625,
+    "price": 873.926513671875,
     "open": 925.3499755859375,
     "previousClose": 990.2100219726562,
-    "change": -80.95001220703125,
-    "changePercent": -8.175034630104623,
-    "volume": 7042012,
+    "change": -116.28350830078125,
+    "changePercent": -11.743317651857932,
+    "volume": 19316245,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -263,18 +263,18 @@
         "volume": 40196300
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:04.258Z"
+    "lastUpdated": "2026-07-27T15:01:40.519Z"
   },
   "CBRS": {
     "ticker": "CBRS",
     "name": "Cerebras Systems",
     "companyUrl": "https://www.cerebras.net/",
-    "price": 191.16000366210938,
+    "price": 186.0198974609375,
     "open": 180.7899932861328,
     "previousClose": 220,
-    "change": -28.839996337890625,
-    "changePercent": -13.109089244495738,
-    "volume": 1112939,
+    "change": -33.9801025390625,
+    "changePercent": -15.445501154119318,
+    "volume": 2434626,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -301,18 +301,18 @@
         "volume": 8227200
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:04.234Z"
+    "lastUpdated": "2026-07-27T15:01:40.473Z"
   },
   "INTC": {
     "ticker": "INTC",
     "name": "Intel Corporation",
     "companyUrl": "https://www.intel.com/",
-    "price": 91.08999633789062,
+    "price": 89.84010314941406,
     "open": 103.19000244140625,
     "previousClose": 100.2300033569336,
-    "change": -9.140007019042969,
-    "changePercent": -9.119032937167603,
-    "volume": 21690510,
+    "change": -10.389900207519531,
+    "changePercent": -10.366057926307343,
+    "volume": 54887604,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -339,18 +339,18 @@
         "volume": 140806900
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:04.490Z"
+    "lastUpdated": "2026-07-27T15:01:40.819Z"
   },
   "IREN": {
     "ticker": "IREN",
     "name": "Iris Energy",
     "companyUrl": "https://www.irisenergy.co/",
-    "price": 36.790000915527344,
+    "price": 35.600101470947266,
     "open": 40.90999984741211,
     "previousClose": 40.58000183105469,
-    "change": -3.7900009155273438,
-    "changePercent": -9.33957798056817,
-    "volume": 5280708,
+    "change": -4.979900360107422,
+    "changePercent": -12.271809106465959,
+    "volume": 12857708,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -377,18 +377,18 @@
         "volume": 41864300
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:04.254Z"
+    "lastUpdated": "2026-07-27T15:01:40.489Z"
   },
   "LRCX": {
     "ticker": "LRCX",
     "name": "Lam Research Corp.",
     "companyUrl": "https://www.lamresearch.com/",
-    "price": 296.8599853515625,
+    "price": 285.17498779296875,
     "open": 328.1300048828125,
     "previousClose": 319.7799987792969,
-    "change": -22.920013427734375,
-    "changePercent": -7.167431832893689,
-    "volume": 1383348,
+    "change": -34.605010986328125,
+    "changePercent": -10.821505759718114,
+    "volume": 3878732,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -415,18 +415,18 @@
         "volume": 8106900
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:05.820Z"
+    "lastUpdated": "2026-07-27T15:01:41.872Z"
   },
   "AMAT": {
     "ticker": "AMAT",
     "name": "Applied Materials Inc.",
     "companyUrl": "https://www.appliedmaterials.com/",
-    "price": 527.1749877929688,
+    "price": 508.7850036621094,
     "open": 564.9500122070312,
     "previousClose": 562.7999877929688,
-    "change": -35.625,
-    "changePercent": -6.329957493372404,
-    "volume": 944771,
+    "change": -54.014984130859375,
+    "changePercent": -9.597545362905958,
+    "volume": 2630869,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -453,18 +453,18 @@
         "volume": 5706400
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:05.825Z"
+    "lastUpdated": "2026-07-27T15:01:41.874Z"
   },
   "QCOM": {
     "ticker": "QCOM",
     "name": "Qualcomm Inc.",
     "companyUrl": "https://www.qualcomm.com/",
-    "price": 170.05999755859375,
+    "price": 168.52999877929688,
     "open": 175.49000549316406,
     "previousClose": 171.11000061035156,
-    "change": -1.0500030517578125,
-    "changePercent": -0.6136421296314875,
-    "volume": 1207609,
+    "change": -2.5800018310546875,
+    "changePercent": -1.5078030634397686,
+    "volume": 3063174,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -491,18 +491,18 @@
         "volume": 10827500
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:05.831Z"
+    "lastUpdated": "2026-07-27T15:01:41.910Z"
   },
   "SMCI": {
     "ticker": "SMCI",
     "name": "Super Micro Computer Inc.",
     "companyUrl": "https://www.supermicro.com/",
-    "price": 29.940000534057617,
+    "price": 29.114999771118164,
     "open": 24.399999618530273,
     "previousClose": 31.200000762939453,
-    "change": -1.260000228881836,
-    "changePercent": -4.038462173303893,
-    "volume": 6945696,
+    "change": -2.085000991821289,
+    "changePercent": -6.682695323193494,
+    "volume": 15643819,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -529,18 +529,18 @@
         "volume": 86788900
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:05.783Z"
+    "lastUpdated": "2026-07-27T15:01:41.849Z"
   },
   "CRWD": {
     "ticker": "CRWD",
     "name": "CrowdStrike Holdings",
     "companyUrl": "https://www.crowdstrike.com/",
-    "price": 186.02000427246094,
+    "price": 183.1999969482422,
     "open": 199.80999755859375,
     "previousClose": 183.4199981689453,
-    "change": 2.600006103515625,
-    "changePercent": 1.4175150634996736,
-    "volume": 591606,
+    "change": -0.220001220703125,
+    "changePercent": -0.11994396625197067,
+    "volume": 1469039,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -567,18 +567,18 @@
         "volume": 6592300
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:07.147Z"
+    "lastUpdated": "2026-07-27T15:01:42.943Z"
   },
   "PANW": {
     "ticker": "PANW",
     "name": "Palo Alto Networks",
     "companyUrl": "https://www.paloaltonetworks.com/",
-    "price": 329.6199951171875,
+    "price": 323.69500732421875,
     "open": 349.44000244140625,
     "previousClose": 325.6300048828125,
-    "change": 3.989990234375,
-    "changePercent": 1.2253140602970278,
-    "volume": 496215,
+    "change": -1.93499755859375,
+    "changePercent": -0.5942319594565972,
+    "volume": 1162124,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -605,18 +605,18 @@
         "volume": 5938200
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:07.065Z"
+    "lastUpdated": "2026-07-27T15:01:42.946Z"
   },
   "FTNT": {
     "ticker": "FTNT",
     "name": "Fortinet Inc.",
     "companyUrl": "https://www.fortinet.com/",
-    "price": 154.82000732421875,
+    "price": 153.5399932861328,
     "open": 163.3800048828125,
     "previousClose": 151.5399932861328,
-    "change": 3.2800140380859375,
-    "changePercent": 2.1644543905269438,
-    "volume": 310868,
+    "change": 2,
+    "changePercent": 1.3197836139689316,
+    "volume": 925948,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -643,18 +643,18 @@
         "volume": 4590500
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:06.995Z"
+    "lastUpdated": "2026-07-27T15:01:42.945Z"
   },
   "ZS": {
     "ticker": "ZS",
     "name": "Zscaler Inc.",
     "companyUrl": "https://www.zscaler.com/",
-    "price": 146.35000610351562,
+    "price": 144.6649932861328,
     "open": 147.24000549316406,
     "previousClose": 139.6999969482422,
-    "change": 6.6500091552734375,
-    "changePercent": 4.76020708700317,
-    "volume": 173408,
+    "change": 4.964996337890625,
+    "changePercent": 3.554041837044649,
+    "volume": 355043,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -681,18 +681,18 @@
         "volume": 1777400
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:07.233Z"
+    "lastUpdated": "2026-07-27T15:01:42.945Z"
   },
   "S": {
     "ticker": "S",
     "name": "SentinelOne Inc.",
     "companyUrl": "https://www.sentinelone.com/",
-    "price": 18.299999237060547,
+    "price": 18.059999465942383,
     "open": 19.299999237060547,
     "previousClose": 17.3799991607666,
-    "change": 0.9200000762939453,
-    "changePercent": 5.2934414310602635,
-    "volume": 387665,
+    "change": 0.6800003051757812,
+    "changePercent": 3.9125450978778273,
+    "volume": 1126446,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -719,18 +719,18 @@
         "volume": 7399100
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:07.191Z"
+    "lastUpdated": "2026-07-27T15:01:42.947Z"
   },
   "CHKP": {
     "ticker": "CHKP",
     "name": "Check Point Software",
     "companyUrl": "https://www.checkpoint.com/",
-    "price": 132.74000549316406,
+    "price": 132.87620544433594,
     "open": 134.0500030517578,
     "previousClose": 126.01000213623047,
-    "change": 6.730003356933594,
-    "changePercent": 5.340848538084883,
-    "volume": 139666,
+    "change": 6.866203308105469,
+    "changePercent": 5.448935157292005,
+    "volume": 373900,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -757,18 +757,18 @@
         "volume": 1224900
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:08.283Z"
+    "lastUpdated": "2026-07-27T15:01:43.989Z"
   },
   "TENB": {
     "ticker": "TENB",
     "name": "Tenable Holdings",
     "companyUrl": "https://www.tenable.com/",
-    "price": 33.125,
+    "price": 32.720001220703125,
     "open": 36.25,
     "previousClose": 31.6200008392334,
-    "change": 1.5049991607666016,
-    "changePercent": 4.759643013352586,
-    "volume": 174690,
+    "change": 1.1000003814697266,
+    "changePercent": 3.478811993277592,
+    "volume": 361672,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -795,18 +795,18 @@
         "volume": 3705900
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:08.263Z"
+    "lastUpdated": "2026-07-27T15:01:43.988Z"
   },
   "PLTR": {
     "ticker": "PLTR",
     "name": "Palantir Technologies",
     "companyUrl": "https://www.palantir.com/",
-    "price": 127.71499633789062,
+    "price": 127.20999908447266,
     "open": 133.8300018310547,
     "previousClose": 123.37000274658203,
-    "change": 4.344993591308594,
-    "changePercent": 3.521920640817179,
-    "volume": 4947427,
+    "change": 3.839996337890625,
+    "changePercent": 3.1125851117783263,
+    "volume": 9439974,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -833,18 +833,18 @@
         "volume": 29757900
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:08.283Z"
+    "lastUpdated": "2026-07-27T15:01:43.990Z"
   },
   "DDOG": {
     "ticker": "DDOG",
     "name": "Datadog Inc.",
     "companyUrl": "https://www.datadoghq.com/",
-    "price": 255.00999450683594,
+    "price": 250.7050018310547,
     "open": 258.5,
     "previousClose": 244.38999938964844,
-    "change": 10.6199951171875,
-    "changePercent": 4.345511331769057,
-    "volume": 407853,
+    "change": 6.31500244140625,
+    "changePercent": 2.5839856201880793,
+    "volume": 849400,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -871,18 +871,18 @@
         "volume": 2447300
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:09.436Z"
+    "lastUpdated": "2026-07-27T15:01:45.024Z"
   },
   "SNOW": {
     "ticker": "SNOW",
     "name": "Snowflake Inc.",
     "companyUrl": "https://www.snowflake.com/",
-    "price": 274.4800109863281,
+    "price": 266.1099853515625,
     "open": 271.6700134277344,
     "previousClose": 265.1300048828125,
-    "change": 9.350006103515625,
-    "changePercent": 3.5265741075395556,
-    "volume": 537965,
+    "change": 0.97998046875,
+    "changePercent": 0.36962261935730417,
+    "volume": 1030298,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -909,18 +909,18 @@
         "volume": 3114300
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:09.437Z"
+    "lastUpdated": "2026-07-27T15:01:45.022Z"
   },
   "NOW": {
     "ticker": "NOW",
     "name": "ServiceNow Inc.",
     "companyUrl": "https://www.servicenow.com/",
-    "price": 102.16000366210938,
+    "price": 103.05000305175781,
     "open": 101.6500015258789,
     "previousClose": 91.94000244140625,
-    "change": 10.220001220703125,
-    "changePercent": 11.115946214180683,
-    "volume": 4515449,
+    "change": 11.110000610351562,
+    "changePercent": 12.08396814806701,
+    "volume": 8914917,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -947,18 +947,18 @@
         "volume": 48998200
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:09.456Z"
+    "lastUpdated": "2026-07-27T15:01:45.017Z"
   },
   "NET": {
     "ticker": "NET",
     "name": "Cloudflare Inc.",
     "companyUrl": "https://www.cloudflare.com/",
-    "price": 269.6700134277344,
+    "price": 260.67999267578125,
     "open": 272.9700012207031,
     "previousClose": 262.32000732421875,
-    "change": 7.350006103515625,
-    "changePercent": 2.801923565986815,
-    "volume": 160559,
+    "change": -1.6400146484375,
+    "changePercent": -0.6251961736225848,
+    "volume": 442342,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -985,18 +985,18 @@
         "volume": 2333700
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:09.457Z"
+    "lastUpdated": "2026-07-27T15:01:45.210Z"
   },
   "AI": {
     "ticker": "AI",
     "name": "C3.ai Inc.",
     "companyUrl": "https://c3.ai/",
-    "price": 8.515000343322754,
+    "price": 8.681400299072266,
     "open": 8.505000114440918,
     "previousClose": 8.149999618530273,
-    "change": 0.36500072479248047,
-    "changePercent": 4.478536710144077,
-    "volume": 728615,
+    "change": 0.5314006805419922,
+    "changePercent": 6.520254054169172,
+    "volume": 1434039,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -1023,18 +1023,18 @@
         "volume": 5341900
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:09.449Z"
+    "lastUpdated": "2026-07-27T15:01:45.021Z"
   },
   "LMT": {
     "ticker": "LMT",
     "name": "Lockheed Martin",
     "companyUrl": "https://www.lockheedmartin.com/",
-    "price": 581.614990234375,
+    "price": 581.4099731445312,
     "open": 501,
     "previousClose": 568.5900268554688,
-    "change": 13.02496337890625,
-    "changePercent": 2.290747773213598,
-    "volume": 137374,
+    "change": 12.8199462890625,
+    "changePercent": 2.2546906705279293,
+    "volume": 304928,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -1061,18 +1061,18 @@
         "volume": 3275500
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:10.579Z"
+    "lastUpdated": "2026-07-27T15:01:46.395Z"
   },
   "RTX": {
     "ticker": "RTX",
     "name": "RTX Corporation",
     "companyUrl": "https://www.rtx.com/",
-    "price": 217.57000732421875,
+    "price": 217.55999755859375,
     "open": 194,
     "previousClose": 209.16000366210938,
-    "change": 8.410003662109375,
-    "changePercent": 4.02084696637099,
-    "volume": 638984,
+    "change": 8.399993896484375,
+    "changePercent": 4.016061268603853,
+    "volume": 1427540,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -1099,18 +1099,18 @@
         "volume": 9998800
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:10.564Z"
+    "lastUpdated": "2026-07-27T15:01:46.379Z"
   },
   "NOC": {
     "ticker": "NOC",
     "name": "Northrop Grumman",
     "companyUrl": "https://www.northropgrumman.com/",
-    "price": 547.9663696289062,
+    "price": 548.260009765625,
     "open": 490,
     "previousClose": 533.47998046875,
-    "change": 14.48638916015625,
-    "changePercent": 2.715451317859683,
-    "volume": 50962,
+    "change": 14.780029296875,
+    "changePercent": 2.770493708852638,
+    "volume": 134834,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -1137,18 +1137,18 @@
         "volume": 1083600
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:10.564Z"
+    "lastUpdated": "2026-07-27T15:01:46.378Z"
   },
   "GD": {
     "ticker": "GD",
     "name": "General Dynamics",
     "companyUrl": "https://www.gd.com/",
-    "price": 391.8550109863281,
+    "price": 390.17498779296875,
     "open": 368.94000244140625,
     "previousClose": 381.7900085449219,
-    "change": 10.06500244140625,
-    "changePercent": 2.636266590570557,
-    "volume": 102472,
+    "change": 8.384979248046875,
+    "changePercent": 2.196228046931796,
+    "volume": 237477,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -1175,18 +1175,18 @@
         "volume": 1685400
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:10.575Z"
+    "lastUpdated": "2026-07-27T15:01:46.378Z"
   },
   "LHX": {
     "ticker": "LHX",
     "name": "L3Harris Technologies",
     "companyUrl": "https://www.l3harris.com/",
-    "price": 305.3900146484375,
+    "price": 305.2250061035156,
     "open": 275.1600036621094,
     "previousClose": 299.6700134277344,
-    "change": 5.720001220703125,
-    "changePercent": 1.9087666314275744,
-    "volume": 102591,
+    "change": 5.55499267578125,
+    "changePercent": 1.8537032158277127,
+    "volume": 248547,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -1213,18 +1213,18 @@
         "volume": 2029200
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:10.480Z"
+    "lastUpdated": "2026-07-27T15:01:46.379Z"
   },
   "RKLB": {
     "ticker": "RKLB",
     "name": "Rocket Lab USA",
     "companyUrl": "https://www.rocketlabusa.com/",
-    "price": 66.13500213623047,
+    "price": 65.27999877929688,
     "open": 66.33999633789062,
     "previousClose": 69.98999786376953,
-    "change": -3.8549957275390625,
-    "changePercent": -5.507923767968293,
-    "volume": 4505111,
+    "change": -4.709999084472656,
+    "changePercent": -6.729531687713905,
+    "volume": 7670715,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -1251,18 +1251,18 @@
         "volume": 14155500
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:11.606Z"
+    "lastUpdated": "2026-07-27T15:01:47.418Z"
   },
   "RDW": {
     "ticker": "RDW",
     "name": "Redwire Corporation",
     "companyUrl": "https://www.rdw.com/",
-    "price": 8.9399995803833,
+    "price": 8.774999618530273,
     "open": 8.739999771118164,
     "previousClose": 9.279999732971191,
-    "change": -0.3400001525878906,
-    "changePercent": -3.663794853138776,
-    "volume": 2528125,
+    "change": -0.505000114440918,
+    "changePercent": -5.4418117346133945,
+    "volume": 4565847,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -1289,18 +1289,18 @@
         "volume": 15178500
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:11.605Z"
+    "lastUpdated": "2026-07-27T15:01:47.451Z"
   },
   "KTOS": {
     "ticker": "KTOS",
     "name": "Kratos Defense & Security",
     "companyUrl": "https://www.kratosdefense.com/",
-    "price": 48.56999969482422,
+    "price": 48.68000030517578,
     "open": 46.09000015258789,
     "previousClose": 49.439998626708984,
-    "change": -0.8699989318847656,
-    "changePercent": -1.7597066263160572,
-    "volume": 580744,
+    "change": -0.7599983215332031,
+    "changePercent": -1.5372134762209095,
+    "volume": 961308,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -1327,18 +1327,18 @@
         "volume": 4799200
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:11.608Z"
+    "lastUpdated": "2026-07-27T15:01:47.419Z"
   },
   "AVAV": {
     "ticker": "AVAV",
     "name": "AeroVironment Inc.",
     "companyUrl": "https://www.avinc.com/",
-    "price": 152.66000366210938,
+    "price": 153.8083953857422,
     "open": 141.75,
     "previousClose": 158.72999572753906,
-    "change": -6.0699920654296875,
-    "changePercent": -3.824098928251005,
-    "volume": 167310,
+    "change": -4.921600341796875,
+    "changePercent": -3.1006113994010494,
+    "volume": 336831,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -1365,18 +1365,18 @@
         "volume": 1654000
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:11.607Z"
+    "lastUpdated": "2026-07-27T15:01:47.424Z"
   },
   "LUNR": {
     "ticker": "LUNR",
     "name": "Intuitive Machines",
     "companyUrl": "https://www.intuitivemachines.com/",
-    "price": 13.295000076293945,
+    "price": 13.180000305175781,
     "open": 14.010000228881836,
     "previousClose": 13.710000038146973,
-    "change": -0.41499996185302734,
-    "changePercent": -3.0269873136274494,
-    "volume": 1350043,
+    "change": -0.5299997329711914,
+    "changePercent": -3.8657894346937254,
+    "volume": 2376408,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -1403,18 +1403,18 @@
         "volume": 5613600
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:11.606Z"
+    "lastUpdated": "2026-07-27T15:01:47.419Z"
   },
   "ASTS": {
     "ticker": "ASTS",
     "name": "AST SpaceMobile",
     "companyUrl": "https://www.ast-science.com/",
-    "price": 58.099998474121094,
+    "price": 57.47010040283203,
     "open": 58.880001068115234,
     "previousClose": 59.18000030517578,
-    "change": -1.0800018310546875,
-    "changePercent": -1.8249439430304166,
-    "volume": 1747794,
+    "change": -1.70989990234375,
+    "changePercent": -2.8893205365431625,
+    "volume": 3443893,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -1441,18 +1441,18 @@
         "volume": 11963300
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:12.810Z"
+    "lastUpdated": "2026-07-27T15:01:48.553Z"
   },
   "PL": {
     "ticker": "PL",
     "name": "Planet Labs",
     "companyUrl": "https://www.planet.com/",
-    "price": 20.760000228881836,
+    "price": 20.645000457763672,
     "open": 22.649999618530273,
     "previousClose": 22.360000610351562,
-    "change": -1.6000003814697266,
-    "changePercent": -7.155636573323735,
-    "volume": 1055743,
+    "change": -1.7150001525878906,
+    "changePercent": -7.66994680578824,
+    "volume": 1891770,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -1479,18 +1479,18 @@
         "volume": 5778200
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:12.811Z"
+    "lastUpdated": "2026-07-27T15:01:48.526Z"
   },
   "AAPL": {
     "ticker": "AAPL",
     "name": "Apple Inc.",
     "companyUrl": "https://www.apple.com/",
-    "price": 335.3500061035156,
+    "price": 339.3299865722656,
     "open": 323.1300048828125,
     "previousClose": 321.6600036621094,
-    "change": 13.69000244140625,
-    "changePercent": 4.256047467992643,
-    "volume": 6709202,
+    "change": 17.66998291015625,
+    "changePercent": 5.49337272554341,
+    "volume": 16356500,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -1517,18 +1517,18 @@
         "volume": 40840800
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:12.812Z"
+    "lastUpdated": "2026-07-27T15:01:48.554Z"
   },
   "MSFT": {
     "ticker": "MSFT",
     "name": "Microsoft Corporation",
     "companyUrl": "https://www.microsoft.com/",
-    "price": 390.7200012207031,
+    "price": 390.06500244140625,
     "open": 398.80999755859375,
     "previousClose": 381.5799865722656,
-    "change": 9.1400146484375,
-    "changePercent": 2.3953076602738745,
-    "volume": 4268291,
+    "change": 8.485015869140625,
+    "changePercent": 2.2236532752573193,
+    "volume": 8711956,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -1555,18 +1555,18 @@
         "volume": 30351800
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:12.742Z"
+    "lastUpdated": "2026-07-27T15:01:48.537Z"
   },
   "GOOGL": {
     "ticker": "GOOGL",
     "name": "Alphabet Inc.",
     "companyUrl": "https://abc.xyz/",
-    "price": 327.7049865722656,
+    "price": 328.3550109863281,
     "open": 351.32000732421875,
     "previousClose": 317.69000244140625,
-    "change": 10.014984130859375,
-    "changePercent": 3.152439187225134,
-    "volume": 5440761,
+    "change": 10.665008544921875,
+    "changePercent": 3.3570488409967814,
+    "volume": 11545523,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -1593,18 +1593,18 @@
         "volume": 69419700
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:12.748Z"
+    "lastUpdated": "2026-07-27T15:01:48.493Z"
   },
   "AMZN": {
     "ticker": "AMZN",
     "name": "Amazon.com Inc.",
     "companyUrl": "https://www.amazon.com/",
-    "price": 233.7100067138672,
+    "price": 233.52999877929688,
     "open": 249.11000061035156,
     "previousClose": 233.66000366210938,
-    "change": 0.0500030517578125,
-    "changePercent": 0.021399919102167275,
-    "volume": 4109737,
+    "change": -0.1300048828125,
+    "changePercent": -0.05563848359794483,
+    "volume": 9229313,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -1631,18 +1631,18 @@
         "volume": 47465300
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:13.844Z"
+    "lastUpdated": "2026-07-27T15:01:49.593Z"
   },
   "META": {
     "ticker": "META",
     "name": "Meta Platforms",
     "companyUrl": "https://about.meta.com/",
-    "price": 604.5900268554688,
+    "price": 603.7849731445312,
     "open": 654.1799926757812,
     "previousClose": 606.0999755859375,
-    "change": -1.50994873046875,
-    "changePercent": -0.2491253574146792,
-    "volume": 1532117,
+    "change": -2.31500244140625,
+    "changePercent": -0.3819505914297816,
+    "volume": 3435157,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -1669,18 +1669,18 @@
         "volume": 15494800
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:13.874Z"
+    "lastUpdated": "2026-07-27T15:01:49.612Z"
   },
   "TSLA": {
     "ticker": "TSLA",
     "name": "Tesla Inc.",
     "companyUrl": "https://www.tesla.com/",
-    "price": 308.7850036621094,
+    "price": 308.8999938964844,
     "open": 371.1700134277344,
     "previousClose": 319.69000244140625,
-    "change": -10.904998779296875,
-    "changePercent": -3.4111166117231257,
-    "volume": 8427755,
+    "change": -10.790008544921875,
+    "changePercent": -3.3751473185025547,
+    "volume": 17722628,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -1707,18 +1707,18 @@
         "volume": 115606400
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:13.863Z"
+    "lastUpdated": "2026-07-27T15:01:49.594Z"
   },
   "NFLX": {
     "ticker": "NFLX",
     "name": "Netflix Inc.",
     "companyUrl": "https://www.netflix.com/",
-    "price": 69.87999725341797,
+    "price": 70.63999938964844,
     "open": 67.41999816894531,
     "previousClose": 68.88999938964844,
-    "change": 0.9899978637695312,
-    "changePercent": 1.4370705073896264,
-    "volume": 3756428,
+    "change": 1.75,
+    "changePercent": 2.5402816308675407,
+    "volume": 8518063,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -1745,18 +1745,18 @@
         "volume": 45029100
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:13.873Z"
+    "lastUpdated": "2026-07-27T15:01:49.621Z"
   },
   "AXON": {
     "ticker": "AXON",
     "name": "Axon Enterprise",
     "companyUrl": "https://www.axon.com/",
-    "price": 519.3150024414062,
+    "price": 520.7899780273438,
     "open": 528.2000122070312,
     "previousClose": 491.8999938964844,
-    "change": 27.415008544921875,
-    "changePercent": 5.573289059786226,
-    "volume": 64441,
+    "change": 28.889984130859375,
+    "changePercent": 5.873141794943586,
+    "volume": 143743,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -1783,18 +1783,18 @@
         "volume": 577000
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:13.863Z"
+    "lastUpdated": "2026-07-27T15:01:49.594Z"
   },
   "CRWV": {
     "ticker": "CRWV",
     "name": "CoreWeave Inc.",
     "companyUrl": "https://www.coreweave.com/",
-    "price": 72.51000213623047,
+    "price": 70.7300033569336,
     "open": 75.00199890136719,
     "previousClose": 81.0999984741211,
-    "change": -8.589996337890625,
-    "changePercent": -10.591857582625828,
-    "volume": 3063419,
+    "change": -10.3699951171875,
+    "changePercent": -12.78667732712295,
+    "volume": 7203698,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -1821,18 +1821,18 @@
         "volume": 18173700
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:14.920Z"
+    "lastUpdated": "2026-07-27T15:01:50.648Z"
   },
   "SOFI": {
     "ticker": "SOFI",
     "name": "SoFi Technologies, Inc.",
     "companyUrl": "https://www.sofi.com/",
-    "price": 17.190099716186523,
+    "price": 16.859899520874023,
     "open": 17.079999923706055,
     "previousClose": 16.649999618530273,
-    "change": 0.54010009765625,
-    "changePercent": 3.243844504687896,
-    "volume": 11695319,
+    "change": 0.20989990234375,
+    "changePercent": 1.2606601030197397,
+    "volume": 21894212,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -1859,7 +1859,7 @@
         "volume": 73418100
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:14.915Z"
+    "lastUpdated": "2026-07-27T15:01:50.662Z"
   },
   "SPACEX": {
     "ticker": "SPACEX",
@@ -1877,12 +1877,12 @@
     "ticker": "VRT",
     "name": "Vertiv Holdings",
     "companyUrl": "https://www.vertiv.com/",
-    "price": 287.8999938964844,
+    "price": 278.55499267578125,
     "open": 303.04998779296875,
     "previousClose": 304.0400085449219,
-    "change": -16.1400146484375,
-    "changePercent": -5.308516706627054,
-    "volume": 509284,
+    "change": -25.485015869140625,
+    "changePercent": -8.382125757431433,
+    "volume": 1582864,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -1909,18 +1909,18 @@
         "volume": 3098500
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:05.831Z"
+    "lastUpdated": "2026-07-27T15:01:41.851Z"
   },
   "SPCX": {
     "ticker": "SPCX",
     "name": "SpaceX Inc.",
     "companyUrl": "https://www.spacex.com/",
-    "price": 110.63999938964844,
+    "price": 111.02140045166016,
     "open": 122.11000061035156,
     "previousClose": 118.23999786376953,
-    "change": -7.599998474121094,
-    "changePercent": -6.427603697081802,
-    "volume": 14437657,
+    "change": -7.218597412109375,
+    "changePercent": -6.105038517022216,
+    "volume": 30213956,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -1947,18 +1947,18 @@
         "volume": 75246500
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:14.921Z"
+    "lastUpdated": "2026-07-27T15:01:50.664Z"
   },
   "ANET": {
     "ticker": "ANET",
     "name": "Arista Networks Inc.",
     "companyUrl": "https://www.arista.com/",
-    "price": 174.77000427246094,
+    "price": 168.2899932861328,
     "open": 174.44000244140625,
     "previousClose": 176.61000061035156,
-    "change": -1.839996337890625,
-    "changePercent": -1.0418415330568647,
-    "volume": 527009,
+    "change": -8.32000732421875,
+    "changePercent": -4.710949150934487,
+    "volume": 1709632,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -1985,18 +1985,18 @@
         "volume": 4338800
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:14.924Z"
+    "lastUpdated": "2026-07-27T15:01:50.663Z"
   },
   "RBRK": {
     "ticker": "RBRK",
     "name": "Rubrik Inc.",
     "companyUrl": "https://www.rubrik.com/",
-    "price": 75.47000122070312,
+    "price": 74.55500030517578,
     "open": 78.2699966430664,
     "previousClose": 72.62999725341797,
-    "change": 2.8400039672851562,
-    "changePercent": 3.9102355427275,
-    "volume": 181332,
+    "change": 1.9250030517578125,
+    "changePercent": 2.650424238680832,
+    "volume": 439957,
     "ohlcCandles": [
       {
         "time": "2026-07-21",
@@ -2023,6 +2023,6 @@
         "volume": 1869200
       }
     ],
-    "lastUpdated": "2026-07-27T14:00:08.264Z"
+    "lastUpdated": "2026-07-27T15:01:43.990Z"
   }
 }
