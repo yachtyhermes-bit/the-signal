@@ -379,6 +379,8 @@
       function getToken() { try { return localStorage.getItem('hive_token'); } catch(e) { return null; } }
 
       // === Show content to all users (no premium gate) ===
+      var insightsGate = document.getElementById('insightsGate');
+      var insightsContent = document.getElementById('insightsContent');
       insightsGate.style.display = 'none';
       insightsContent.style.display = 'block';
       initInsights();
