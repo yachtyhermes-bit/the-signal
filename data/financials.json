@@ -12,16 +12,16 @@
     },
     "stats": {
       "marketCap": {
-        "raw": 4759668391936.0,
-        "fmt": "$4.8T"
+        "raw": 4695482957824.0,
+        "fmt": "$4.7T"
       },
       "trailingPE": {
-        "raw": 31.64,
-        "fmt": "31.64"
+        "raw": 31.22,
+        "fmt": "31.22"
       },
       "forwardPE": {
-        "raw": 15.27,
-        "fmt": "15.27"
+        "raw": 15.06,
+        "fmt": "15.06"
       },
       "epsTrailing": {
         "raw": 6.21,
@@ -36,11 +36,11 @@
         "fmt": "2.21"
       },
       "avgVolume": {
-        "raw": 154508954.0,
-        "fmt": "154.5M"
+        "raw": 154089254.0,
+        "fmt": "154.1M"
       },
       "dividendYield": {
-        "raw": 0.0002035519820874256,
+        "raw": 0.00020633446817290828,
         "fmt": "0.02%"
       },
       "fiftyTwoWeekLow": {
@@ -113,8 +113,8 @@
         "fmt": "214.5%"
       },
       "priceToSales": {
-        "raw": 18.8,
-        "fmt": "18.8x"
+        "raw": 18.5,
+        "fmt": "18.5x"
       },
       "enterpriseValue": {
         "raw": 4715184128000.0,
@@ -143,20 +143,20 @@
     },
     "returns": {
       "oneYear": {
-        "raw": 0.113,
-        "fmt": "+11.3%"
+        "raw": 0.098,
+        "fmt": "+9.8%"
       },
       "fiveYear": {
-        "raw": 7.807,
-        "fmt": "+780.7%"
+        "raw": 7.688,
+        "fmt": "+768.8%"
       },
       "tenYear": {
-        "raw": 129.439,
-        "fmt": "+12943.9%"
+        "raw": 127.687,
+        "fmt": "+12768.7%"
       },
       "ytd": {
-        "raw": 0.042,
-        "fmt": "+4.2%"
+        "raw": 0.028,
+        "fmt": "+2.8%"
       }
     },
     "analystTarget": {
@@ -189,8 +189,8 @@
       },
       "numberOfAnalystOpinions": 58,
       "currentPrice": {
-        "raw": 196.51,
-        "fmt": "$196.51"
+        "raw": 193.86,
+        "fmt": "$193.86"
       }
     },
     "earnings": [
@@ -5875,7 +5875,7 @@
       },
       {
         "time": "2019-10-07",
-        "open": 4.59,
+        "open": 4.58,
         "high": 4.68,
         "low": 4.58,
         "close": 4.58
@@ -9935,7 +9935,7 @@
       },
       {
         "time": "2022-01-25",
-        "open": 22.48,
+        "open": 22.47,
         "high": 22.87,
         "low": 21.93,
         "close": 22.25
@@ -14277,7 +14277,7 @@
         "time": "2024-07-16",
         "open": 128.23,
         "high": 128.83,
-        "low": 124.37,
+        "low": 124.38,
         "close": 126.15
       },
       {
@@ -17835,6 +17835,13 @@
         "high": 208.75,
         "low": 195.44,
         "close": 196.51
+      },
+      {
+        "time": "2026-07-28",
+        "open": 194.95,
+        "high": 195.46,
+        "low": 192.8,
+        "close": 193.85
       }
     ],
     "quarterlyFinancials": {
@@ -18077,7 +18084,7 @@
         }
       ]
     },
-    "aiAnalysis": "Based on our analysis, NVIDIA Corporation demonstrates strong buy fundamentals. with revenue reaching $253.5B and growing at 85.2% year-over-year. Our fair value estimate of $302.83 suggests +54.1% upside from current levels of $196.51. The company maintains a competitive position in Technology, supported by its market presence and financial performance.",
+    "aiAnalysis": "Based on our analysis, NVIDIA Corporation demonstrates strong buy fundamentals. with revenue reaching $253.5B and growing at 85.2% year-over-year. Our fair value estimate of $302.83 suggests +56.2% upside from current levels of $193.86. The company maintains a competitive position in Technology, supported by its market presence and financial performance.",
     "lastUpdated": "2026-07-28",
     "fmpIncome": [
       {
@@ -18126,8 +18133,7 @@
         "totalAssets": 41182000000.0,
         "totalLiabilities": 19081000000.0
       }
-    ],
-    "fmpCalls": 0
+    ]
   },
   "TSLA": {
     "company": {
@@ -18142,16 +18148,16 @@
     },
     "stats": {
       "marketCap": {
-        "raw": 1221279088640.0,
+        "raw": 1202479169536.0,
         "fmt": "$1.2T"
       },
       "trailingPE": {
-        "raw": 286.31,
-        "fmt": "286.31"
+        "raw": 281.91,
+        "fmt": "281.91"
       },
       "forwardPE": {
-        "raw": 139.07,
-        "fmt": "139.07"
+        "raw": 136.93,
+        "fmt": "136.93"
       },
       "epsTrailing": {
         "raw": 1.08,
@@ -18166,8 +18172,8 @@
         "fmt": "1.80"
       },
       "avgVolume": {
-        "raw": 48091729.0,
-        "fmt": "48.1M"
+        "raw": 48049303.0,
+        "fmt": "48.0M"
       },
       "fiftyTwoWeekLow": {
         "raw": 297.82,
@@ -18239,8 +18245,8 @@
         "fmt": "-3.0%"
       },
       "priceToSales": {
-        "raw": 11.8,
-        "fmt": "11.8x"
+        "raw": 11.6,
+        "fmt": "11.6x"
       },
       "enterpriseValue": {
         "raw": 1194496098304.0,
@@ -18269,20 +18275,20 @@
     },
     "returns": {
       "oneYear": {
-        "raw": -0.05,
-        "fmt": "-5.0%"
+        "raw": -0.065,
+        "fmt": "-6.5%"
       },
       "fiveYear": {
-        "raw": 0.261,
-        "fmt": "+26.1%"
+        "raw": 0.242,
+        "fmt": "+24.2%"
       },
       "tenYear": {
-        "raw": 20.878,
-        "fmt": "+2087.8%"
+        "raw": 20.543,
+        "fmt": "+2054.3%"
       },
       "ytd": {
-        "raw": -0.294,
-        "fmt": "-29.4%"
+        "raw": -0.305,
+        "fmt": "-30.5%"
       }
     },
     "analystTarget": {
@@ -18315,8 +18321,8 @@
       },
       "numberOfAnalystOpinions": 40,
       "currentPrice": {
-        "raw": 309.22,
-        "fmt": "$309.22"
+        "raw": 304.46,
+        "fmt": "$304.46"
       }
     },
     "earnings": [
@@ -35961,6 +35967,13 @@
         "high": 317.0,
         "low": 304.28,
         "close": 309.22
+      },
+      {
+        "time": "2026-07-28",
+        "open": 305.92,
+        "high": 307.19,
+        "low": 302.37,
+        "close": 304.48
       }
     ],
     "quarterlyFinancials": {
@@ -36227,7 +36240,7 @@
         }
       ]
     },
-    "aiAnalysis": "Based on our analysis, Tesla, Inc. demonstrates buy fundamentals. with revenue reaching $103.6B and growing at 25.5% year-over-year. Our fair value estimate of $401.07 suggests +29.7% upside from current levels of $309.22. The company maintains a competitive position in Consumer Cyclical, supported by its market presence and financial performance.",
+    "aiAnalysis": "Based on our analysis, Tesla, Inc. demonstrates buy fundamentals. with revenue reaching $103.6B and growing at 25.5% year-over-year. Our fair value estimate of $401.07 suggests +31.7% upside from current levels of $304.46. The company maintains a competitive position in Consumer Cyclical, supported by its market presence and financial performance.",
     "lastUpdated": "2026-07-28",
     "fmpIncome": [
       {
@@ -36276,8 +36289,7 @@
         "totalAssets": 82338000000.0,
         "totalLiabilities": 36440000000.0
       }
-    ],
-    "fmpCalls": 0
+    ]
   },
   "PLTR": {
     "company": {
@@ -36292,20 +36304,20 @@
     },
     "stats": {
       "marketCap": {
-        "raw": 315318435840.0,
-        "fmt": "$315.3B"
+        "raw": 285591764992.0,
+        "fmt": "$285.6B"
       },
       "trailingPE": {
-        "raw": 138.45,
-        "fmt": "138.45"
+        "raw": 133.85,
+        "fmt": "133.85"
       },
       "forwardPE": {
-        "raw": 62.8,
-        "fmt": "62.80"
+        "raw": 56.88,
+        "fmt": "56.88"
       },
       "epsTrailing": {
-        "raw": 0.95,
-        "fmt": "$0.95"
+        "raw": 0.89,
+        "fmt": "$0.89"
       },
       "epsForward": {
         "raw": 2.09,
@@ -36316,8 +36328,8 @@
         "fmt": "1.56"
       },
       "avgVolume": {
-        "raw": 41347413.0,
-        "fmt": "41.3M"
+        "raw": 41543013.0,
+        "fmt": "41.5M"
       },
       "fiftyTwoWeekLow": {
         "raw": 106.37,
@@ -36328,12 +36340,12 @@
         "fmt": "$207.52"
       },
       "fiftyDayAverage": {
-        "raw": 131.61,
-        "fmt": "$131.61"
+        "raw": 131.64,
+        "fmt": "$131.64"
       },
       "twoHundredDayAverage": {
-        "raw": 154.29,
-        "fmt": "$154.29"
+        "raw": 154.04,
+        "fmt": "$154.04"
       },
       "targetMeanPrice": {
         "raw": 182.2,
@@ -36389,8 +36401,8 @@
         "fmt": "325.0%"
       },
       "priceToSales": {
-        "raw": 60.4,
-        "fmt": "60.4x"
+        "raw": 54.7,
+        "fmt": "54.7x"
       },
       "enterpriseValue": {
         "raw": 307610615808.0,
@@ -36419,20 +36431,20 @@
     },
     "returns": {
       "oneYear": {
-        "raw": -0.167,
-        "fmt": "-16.7%"
+        "raw": -0.245,
+        "fmt": "-24.5%"
       },
       "fiveYear": {
-        "raw": 3.994,
-        "fmt": "+399.4%"
+        "raw": 3.524,
+        "fmt": "+352.4%"
       },
       "tenYear": {
-        "raw": 11.984,
-        "fmt": "+1198.4%"
+        "raw": 10.764,
+        "fmt": "+1076.4%"
       },
       "ytd": {
-        "raw": -0.216,
-        "fmt": "-21.6%"
+        "raw": -0.29,
+        "fmt": "-29.0%"
       }
     },
     "analystTarget": {
@@ -36465,8 +36477,8 @@
       },
       "numberOfAnalystOpinions": 27,
       "currentPrice": {
-        "raw": 131.53,
-        "fmt": "$131.53"
+        "raw": 119.13,
+        "fmt": "$119.13"
       }
     },
     "earnings": [
@@ -46754,6 +46766,13 @@
         "high": 132.41,
         "low": 125.31,
         "close": 131.53
+      },
+      {
+        "time": "2026-07-28",
+        "open": 125.82,
+        "high": 127.18,
+        "low": 117.89,
+        "close": 119.14
       }
     ],
     "quarterlyFinancials": {
@@ -46990,7 +47009,7 @@
         }
       ]
     },
-    "aiAnalysis": "Based on our analysis, Palantir Technologies Inc. demonstrates buy fundamentals. with revenue reaching $5.2B and growing at 84.7% year-over-year. Our fair value estimate of $182.20 suggests +38.5% upside from current levels of $131.53. The company maintains a competitive position in Technology, supported by its market presence and financial performance.",
+    "aiAnalysis": "Based on our analysis, Palantir Technologies Inc. demonstrates buy fundamentals. with revenue reaching $5.2B and growing at 84.7% year-over-year. Our fair value estimate of $182.20 suggests +52.9% upside from current levels of $119.13. The company maintains a competitive position in Technology, supported by its market presence and financial performance.",
     "lastUpdated": "2026-07-28",
     "fmpIncome": [
       {
@@ -47039,8 +47058,7 @@
         "totalAssets": 3461239000.0,
         "totalLiabilities": 818802000.0
       }
-    ],
-    "fmpCalls": 0
+    ]
   },
   "RKLB": {
     "company": {
@@ -47055,16 +47073,16 @@
     },
     "stats": {
       "marketCap": {
-        "raw": 41825370112.0,
-        "fmt": "$41.8B"
+        "raw": 38344503296.0,
+        "fmt": "$38.3B"
       },
       "forwardPE": {
-        "raw": 2231.33,
-        "fmt": "2231.33"
+        "raw": 2045.63,
+        "fmt": "2045.63"
       },
       "epsTrailing": {
-        "raw": -0.33,
-        "fmt": "$-0.33"
+        "raw": -0.32,
+        "fmt": "$-0.32"
       },
       "epsForward": {
         "raw": 0.03,
@@ -47075,8 +47093,8 @@
         "fmt": "2.55"
       },
       "avgVolume": {
-        "raw": 26636759.0,
-        "fmt": "26.6M"
+        "raw": 26661375.0,
+        "fmt": "26.7M"
       },
       "fiftyTwoWeekLow": {
         "raw": 37.57,
@@ -47087,12 +47105,12 @@
         "fmt": "$151.00"
       },
       "fiftyDayAverage": {
-        "raw": 103.18,
-        "fmt": "$103.18"
+        "raw": 102.03,
+        "fmt": "$102.03"
       },
       "twoHundredDayAverage": {
-        "raw": 77.8,
-        "fmt": "$77.80"
+        "raw": 77.82,
+        "fmt": "$77.82"
       },
       "targetMeanPrice": {
         "raw": 114.33,
@@ -47144,8 +47162,8 @@
         "fmt": "78.4%"
       },
       "priceToSales": {
-        "raw": 61.5,
-        "fmt": "61.5x"
+        "raw": 56.4,
+        "fmt": "56.4x"
       },
       "enterpriseValue": {
         "raw": 37496913920.0,
@@ -47170,20 +47188,20 @@
     },
     "returns": {
       "oneYear": {
-        "raw": 0.484,
-        "fmt": "+48.4%"
+        "raw": 0.361,
+        "fmt": "+36.1%"
       },
       "fiveYear": {
-        "raw": 5.674,
-        "fmt": "+567.4%"
+        "raw": 5.121,
+        "fmt": "+512.1%"
       },
       "tenYear": {
-        "raw": 5.621,
-        "fmt": "+562.1%"
+        "raw": 5.073,
+        "fmt": "+507.3%"
       },
       "ytd": {
-        "raw": -0.119,
-        "fmt": "-11.9%"
+        "raw": -0.192,
+        "fmt": "-19.2%"
       }
     },
     "analystTarget": {
@@ -47216,8 +47234,8 @@
       },
       "numberOfAnalystOpinions": 15,
       "currentPrice": {
-        "raw": 66.94,
-        "fmt": "$66.94"
+        "raw": 61.369,
+        "fmt": "$61.37"
       }
     },
     "earnings": [
@@ -57232,6 +57250,13 @@
         "high": 68.34,
         "low": 64.03,
         "close": 66.94
+      },
+      {
+        "time": "2026-07-28",
+        "open": 64.5,
+        "high": 64.95,
+        "low": 60.84,
+        "close": 61.4
       }
     ],
     "quarterlyFinancials": {
@@ -57456,7 +57481,7 @@
         }
       ]
     },
-    "aiAnalysis": "Based on our analysis, Rocket Lab Corporation demonstrates buy fundamentals. with revenue reaching $679.6M and growing at 63.5% year-over-year. Our fair value estimate of $114.33 suggests +70.8% upside from current levels of $66.94. The company maintains a competitive position in Industrials, supported by its market presence and financial performance.",
+    "aiAnalysis": "Based on our analysis, Rocket Lab Corporation demonstrates buy fundamentals. with revenue reaching $679.6M and growing at 63.5% year-over-year. Our fair value estimate of $114.33 suggests +86.3% upside from current levels of $61.37. The company maintains a competitive position in Industrials, supported by its market presence and financial performance.",
     "lastUpdated": "2026-07-28",
     "fmpIncome": [
       {
@@ -57505,8 +57530,7 @@
         "totalAssets": 989123000.0,
         "totalLiabilities": 315917000.0
       }
-    ],
-    "fmpCalls": 0
+    ]
   },
   "AMZN": {
     "company": {
@@ -57521,20 +57545,20 @@
     },
     "stats": {
       "marketCap": {
-        "raw": 2489087688704.0,
+        "raw": 2471768621056.0,
         "fmt": "$2.5T"
       },
       "trailingPE": {
-        "raw": 27.78,
-        "fmt": "27.78"
+        "raw": 27.52,
+        "fmt": "27.52"
       },
       "forwardPE": {
-        "raw": 23.32,
-        "fmt": "23.32"
+        "raw": 23.16,
+        "fmt": "23.16"
       },
       "epsTrailing": {
-        "raw": 8.33,
-        "fmt": "$8.33"
+        "raw": 8.35,
+        "fmt": "$8.35"
       },
       "epsForward": {
         "raw": 9.92,
@@ -57545,8 +57569,8 @@
         "fmt": "1.46"
       },
       "avgVolume": {
-        "raw": 48585143.0,
-        "fmt": "48.6M"
+        "raw": 48690591.0,
+        "fmt": "48.7M"
       },
       "fiftyTwoWeekLow": {
         "raw": 196.0,
@@ -57618,8 +57642,8 @@
         "fmt": "74.8%"
       },
       "priceToSales": {
-        "raw": 3.4,
-        "fmt": "3.4x"
+        "raw": 3.3,
+        "fmt": "3.3x"
       },
       "enterpriseValue": {
         "raw": 2581538537472.0,
@@ -57648,20 +57672,20 @@
     },
     "returns": {
       "oneYear": {
-        "raw": -0.006,
-        "fmt": "-0.6%"
+        "raw": -0.013,
+        "fmt": "-1.3%"
       },
       "fiveYear": {
-        "raw": 0.333,
-        "fmt": "+33.3%"
+        "raw": 0.324,
+        "fmt": "+32.4%"
       },
       "tenYear": {
-        "raw": 5.017,
-        "fmt": "+501.7%"
+        "raw": 4.975,
+        "fmt": "+497.5%"
       },
       "ytd": {
-        "raw": 0.022,
-        "fmt": "+2.2%"
+        "raw": 0.015,
+        "fmt": "+1.5%"
       }
     },
     "analystTarget": {
@@ -57694,8 +57718,8 @@
       },
       "numberOfAnalystOpinions": 62,
       "currentPrice": {
-        "raw": 231.39,
-        "fmt": "$231.39"
+        "raw": 229.78,
+        "fmt": "$229.78"
       }
     },
     "earnings": [
@@ -75340,6 +75364,13 @@
         "high": 235.89,
         "low": 230.99,
         "close": 231.39
+      },
+      {
+        "time": "2026-07-28",
+        "open": 232.85,
+        "high": 233.11,
+        "low": 229.3,
+        "close": 229.79
       }
     ],
     "quarterlyFinancials": {
@@ -75584,7 +75615,7 @@
         }
       ]
     },
-    "aiAnalysis": "Based on our analysis, Amazon.com, Inc. demonstrates strong buy fundamentals. with revenue reaching $742.8B and growing at 16.6% year-over-year. Our fair value estimate of $313.02 suggests +35.3% upside from current levels of $231.39. The company maintains a competitive position in Consumer Cyclical, supported by its market presence and financial performance.",
+    "aiAnalysis": "Based on our analysis, Amazon.com, Inc. demonstrates strong buy fundamentals. with revenue reaching $742.8B and growing at 16.6% year-over-year. Our fair value estimate of $313.02 suggests +36.2% upside from current levels of $229.78. The company maintains a competitive position in Consumer Cyclical, supported by its market presence and financial performance.",
     "lastUpdated": "2026-07-28",
     "fmpIncome": [
       {
@@ -75633,8 +75664,7 @@
         "totalAssets": 462675000000.0,
         "totalLiabilities": 316632000000.0
       }
-    ],
-    "fmpCalls": 0
+    ]
   },
   "KTOS": {
     "company": {
@@ -75649,20 +75679,20 @@
     },
     "stats": {
       "marketCap": {
-        "raw": 9272863744.0,
-        "fmt": "$9.3B"
+        "raw": 8860319744.0,
+        "fmt": "$8.9B"
       },
       "trailingPE": {
-        "raw": 274.72,
-        "fmt": "274.72"
+        "raw": 277.94,
+        "fmt": "277.94"
       },
       "forwardPE": {
-        "raw": 45.32,
-        "fmt": "45.32"
+        "raw": 43.3,
+        "fmt": "43.30"
       },
       "epsTrailing": {
-        "raw": 0.18,
-        "fmt": "$0.18"
+        "raw": 0.17,
+        "fmt": "$0.17"
       },
       "epsForward": {
         "raw": 1.09,
@@ -75673,7 +75703,7 @@
         "fmt": "1.07"
       },
       "avgVolume": {
-        "raw": 4794308.0,
+        "raw": 4819286.0,
         "fmt": "4.8M"
       },
       "fiftyTwoWeekLow": {
@@ -75746,8 +75776,8 @@
         "fmt": "130.6%"
       },
       "priceToSales": {
-        "raw": 6.6,
-        "fmt": "6.6x"
+        "raw": 6.3,
+        "fmt": "6.3x"
       },
       "enterpriseValue": {
         "raw": 7993963008.0,
@@ -75776,20 +75806,20 @@
     },
     "returns": {
       "oneYear": {
-        "raw": -0.167,
-        "fmt": "-16.7%"
+        "raw": -0.204,
+        "fmt": "-20.4%"
       },
       "fiveYear": {
-        "raw": 1.0,
-        "fmt": "+100.0%"
+        "raw": 0.911,
+        "fmt": "+91.1%"
       },
       "tenYear": {
-        "raw": 6.085,
-        "fmt": "+608.5%"
+        "raw": 5.769,
+        "fmt": "+576.9%"
       },
       "ytd": {
-        "raw": -0.376,
-        "fmt": "-37.6%"
+        "raw": -0.404,
+        "fmt": "-40.4%"
       }
     },
     "analystTarget": {
@@ -75822,8 +75852,8 @@
       },
       "numberOfAnalystOpinions": 21,
       "currentPrice": {
-        "raw": 49.45,
-        "fmt": "$49.45"
+        "raw": 47.25,
+        "fmt": "$47.25"
       }
     },
     "earnings": [
@@ -93468,6 +93498,13 @@
         "high": 49.72,
         "low": 46.78,
         "close": 49.45
+      },
+      {
+        "time": "2026-07-28",
+        "open": 48.6,
+        "high": 49.0,
+        "low": 46.85,
+        "close": 47.25
       }
     ],
     "quarterlyFinancials": {
@@ -93667,7 +93704,7 @@
       "segments": [],
       "breakdown": []
     },
-    "aiAnalysis": "Based on our analysis, Kratos Defense & Security Solutions, Inc. demonstrates strong buy fundamentals. with revenue reaching $1.4B and growing at 22.6% year-over-year. Our fair value estimate of $109.33 suggests +121.1% upside from current levels of $49.45. The company maintains a competitive position in Industrials, supported by its market presence and financial performance.",
+    "aiAnalysis": "Based on our analysis, Kratos Defense & Security Solutions, Inc. demonstrates strong buy fundamentals. with revenue reaching $1.4B and growing at 22.6% year-over-year. Our fair value estimate of $109.33 suggests +131.4% upside from current levels of $47.25. The company maintains a competitive position in Industrials, supported by its market presence and financial performance.",
     "lastUpdated": "2026-07-28",
     "fmpIncome": [
       {
@@ -93716,8 +93753,7 @@
         "totalAssets": 1551500000.0,
         "totalLiabilities": 604000000.0
       }
-    ],
-    "fmpCalls": 0
+    ]
   },
   "CRWV": {
     "company": {
@@ -93732,24 +93768,24 @@
     },
     "stats": {
       "marketCap": {
-        "raw": 38620925952.0,
-        "fmt": "$38.6B"
+        "raw": 35991277568.0,
+        "fmt": "$36.0B"
       },
       "forwardPE": {
-        "raw": -44.56,
-        "fmt": "-44.56"
+        "raw": -41.52,
+        "fmt": "-41.52"
       },
       "epsTrailing": {
-        "raw": -2.68,
-        "fmt": "$-2.68"
+        "raw": -2.72,
+        "fmt": "$-2.72"
       },
       "epsForward": {
         "raw": -1.59,
         "fmt": "$-1.59"
       },
       "avgVolume": {
-        "raw": 28705772.0,
-        "fmt": "28.7M"
+        "raw": 28545518.0,
+        "fmt": "28.5M"
       },
       "fiftyTwoWeekLow": {
         "raw": 63.8,
@@ -93760,12 +93796,12 @@
         "fmt": "$153.20"
       },
       "fiftyDayAverage": {
-        "raw": 97.59,
-        "fmt": "$97.59"
+        "raw": 96.78,
+        "fmt": "$96.78"
       },
       "twoHundredDayAverage": {
-        "raw": 96.56,
-        "fmt": "$96.56"
+        "raw": 96.27,
+        "fmt": "$96.27"
       },
       "targetMeanPrice": {
         "raw": 138.03,
@@ -93817,8 +93853,8 @@
         "fmt": "158.6%"
       },
       "priceToSales": {
-        "raw": 6.2,
-        "fmt": "6.2x"
+        "raw": 5.8,
+        "fmt": "5.8x"
       },
       "enterpriseValue": {
         "raw": 71501922304.0,
@@ -93843,20 +93879,20 @@
     },
     "returns": {
       "oneYear": {
-        "raw": -0.358,
-        "fmt": "-35.8%"
+        "raw": -0.402,
+        "fmt": "-40.2%"
       },
       "fiveYear": {
-        "raw": 0.714,
-        "fmt": "+71.4%"
+        "raw": 0.597,
+        "fmt": "+59.7%"
       },
       "tenYear": {
-        "raw": 0.714,
-        "fmt": "+71.4%"
+        "raw": 0.74,
+        "fmt": "+74.0%"
       },
       "ytd": {
-        "raw": -0.108,
-        "fmt": "-10.8%"
+        "raw": -0.168,
+        "fmt": "-16.8%"
       }
     },
     "analystTarget": {
@@ -93889,8 +93925,8 @@
       },
       "numberOfAnalystOpinions": 34,
       "currentPrice": {
-        "raw": 70.79,
-        "fmt": "$70.79"
+        "raw": 65.97,
+        "fmt": "$65.97"
       }
     },
     "earnings": [
@@ -96268,6 +96304,13 @@
         "high": 74.91,
         "low": 69.69,
         "close": 70.79
+      },
+      {
+        "time": "2026-07-28",
+        "open": 69.0,
+        "high": 69.17,
+        "low": 65.12,
+        "close": 65.98
       }
     ],
     "quarterlyFinancials": {
@@ -96457,7 +96500,7 @@
       "segments": [],
       "breakdown": []
     },
-    "aiAnalysis": "Based on our analysis, CoreWeave, Inc. demonstrates buy fundamentals. with revenue reaching $6.2B and growing at 111.6% year-over-year. Our fair value estimate of $138.03 suggests +95.0% upside from current levels of $70.79. The company maintains a competitive position in Technology, supported by its market presence and financial performance.",
+    "aiAnalysis": "Based on our analysis, CoreWeave, Inc. demonstrates buy fundamentals. with revenue reaching $6.2B and growing at 111.6% year-over-year. Our fair value estimate of $138.03 suggests +109.2% upside from current levels of $65.97. The company maintains a competitive position in Technology, supported by its market presence and financial performance.",
     "lastUpdated": "2026-07-28",
     "fmpIncome": [
       {
@@ -96501,8 +96544,7 @@
         "totalAssets": 4976975000.0,
         "totalLiabilities": 5573566000.0
       }
-    ],
-    "fmpCalls": 0
+    ]
   },
   "AXON": {
     "company": {
@@ -96517,20 +96559,20 @@
     },
     "stats": {
       "marketCap": {
-        "raw": 42354778112.0,
+        "raw": 42386214912.0,
         "fmt": "$42.4B"
       },
       "trailingPE": {
-        "raw": 204.47,
-        "fmt": "204.47"
+        "raw": 212.9,
+        "fmt": "212.90"
       },
       "forwardPE": {
-        "raw": 49.97,
-        "fmt": "49.97"
+        "raw": 50.01,
+        "fmt": "50.01"
       },
       "epsTrailing": {
-        "raw": 2.57,
-        "fmt": "$2.57"
+        "raw": 2.47,
+        "fmt": "$2.47"
       },
       "epsForward": {
         "raw": 10.52,
@@ -96541,7 +96583,7 @@
         "fmt": "1.38"
       },
       "avgVolume": {
-        "raw": 1132932.0,
+        "raw": 1138867.0,
         "fmt": "1.1M"
       },
       "fiftyTwoWeekLow": {
@@ -96648,12 +96690,12 @@
         "fmt": "-28.6%"
       },
       "fiveYear": {
-        "raw": 1.889,
-        "fmt": "+188.9%"
+        "raw": 1.891,
+        "fmt": "+189.1%"
       },
       "tenYear": {
-        "raw": 18.405,
-        "fmt": "+1840.5%"
+        "raw": 18.419,
+        "fmt": "+1841.9%"
       },
       "ytd": {
         "raw": -0.067,
@@ -96690,8 +96732,8 @@
       },
       "numberOfAnalystOpinions": 19,
       "currentPrice": {
-        "raw": 525.48,
-        "fmt": "$525.48"
+        "raw": 525.87,
+        "fmt": "$525.87"
       }
     },
     "earnings": [
@@ -114329,6 +114371,13 @@
         "high": 533.02,
         "low": 514.24,
         "close": 525.48
+      },
+      {
+        "time": "2026-07-28",
+        "open": 535.0,
+        "high": 540.06,
+        "low": 520.44,
+        "close": 525.87
       }
     ],
     "quarterlyFinancials": {
@@ -114516,7 +114565,7 @@
       "segments": [],
       "breakdown": []
     },
-    "aiAnalysis": "Based on our analysis, Axon Enterprise, Inc. demonstrates buy fundamentals. with revenue reaching $3.0B and growing at 33.7% year-over-year. Our fair value estimate of $660.88 suggests +25.8% upside from current levels of $525.48. The company maintains a competitive position in Industrials, supported by its market presence and financial performance.",
+    "aiAnalysis": "Based on our analysis, Axon Enterprise, Inc. demonstrates buy fundamentals. with revenue reaching $3.0B and growing at 33.7% year-over-year. Our fair value estimate of $660.88 suggests +25.7% upside from current levels of $525.87. The company maintains a competitive position in Industrials, supported by its market presence and financial performance.",
     "lastUpdated": "2026-07-28",
     "fmpIncome": [
       {
@@ -114565,8 +114614,7 @@
         "totalAssets": 2851894000.0,
         "totalLiabilities": 1583403000.0
       }
-    ],
-    "fmpCalls": 0
+    ]
   },
   "MSFT": {
     "company": {
@@ -114581,16 +114629,16 @@
     },
     "stats": {
       "marketCap": {
-        "raw": 2890404200448.0,
+        "raw": 2917666390016.0,
         "fmt": "$2.9T"
       },
       "trailingPE": {
-        "raw": 22.73,
-        "fmt": "22.73"
+        "raw": 22.94,
+        "fmt": "22.94"
       },
       "forwardPE": {
-        "raw": 20.09,
-        "fmt": "20.09"
+        "raw": 20.28,
+        "fmt": "20.28"
       },
       "epsTrailing": {
         "raw": 17.12,
@@ -114605,11 +114653,11 @@
         "fmt": "1.13"
       },
       "avgVolume": {
-        "raw": 39045725.0,
-        "fmt": "39.0M"
+        "raw": 39187406.0,
+        "fmt": "39.2M"
       },
       "dividendYield": {
-        "raw": 0.009149318941146234,
+        "raw": 0.009064059476525105,
         "fmt": "0.91%"
       },
       "fiftyTwoWeekLow": {
@@ -114682,8 +114730,8 @@
         "fmt": "23.4%"
       },
       "priceToSales": {
-        "raw": 9.1,
-        "fmt": "9.1x"
+        "raw": 9.2,
+        "fmt": "9.2x"
       },
       "enterpriseValue": {
         "raw": 2937607946240.0,
@@ -114712,20 +114760,20 @@
     },
     "returns": {
       "oneYear": {
-        "raw": -0.235,
-        "fmt": "-23.5%"
+        "raw": -0.227,
+        "fmt": "-22.7%"
       },
       "fiveYear": {
-        "raw": 0.34,
-        "fmt": "+34.0%"
+        "raw": 0.353,
+        "fmt": "+35.3%"
       },
       "tenYear": {
-        "raw": 6.612,
-        "fmt": "+661.2%"
+        "raw": 6.687,
+        "fmt": "+668.7%"
       },
       "ytd": {
-        "raw": -0.174,
-        "fmt": "-17.4%"
+        "raw": -0.166,
+        "fmt": "-16.6%"
       }
     },
     "analystTarget": {
@@ -114758,8 +114806,8 @@
       },
       "numberOfAnalystOpinions": 55,
       "currentPrice": {
-        "raw": 389.1,
-        "fmt": "$389.10"
+        "raw": 392.76,
+        "fmt": "$392.76"
       }
     },
     "earnings": [
@@ -119430,7 +119478,7 @@
       {
         "time": "2019-03-12",
         "open": 105.54,
-        "high": 106.64,
+        "high": 106.63,
         "low": 105.38,
         "close": 106.29
       },
@@ -120356,7 +120404,7 @@
         "open": 129.4,
         "high": 130.64,
         "low": 128.62,
-        "close": 130.49
+        "close": 130.5
       },
       {
         "time": "2019-09-19",
@@ -120748,7 +120796,7 @@
         "open": 142.73,
         "high": 143.56,
         "low": 142.05,
-        "close": 143.44
+        "close": 143.45
       },
       {
         "time": "2019-12-09",
@@ -120809,7 +120857,7 @@
       {
         "time": "2019-12-19",
         "open": 145.57,
-        "high": 147.24,
+        "high": 147.25,
         "low": 145.34,
         "close": 147.19
       },
@@ -122952,7 +123000,7 @@
         "time": "2021-03-10",
         "open": 226.92,
         "high": 226.92,
-        "low": 222.17,
+        "low": 222.18,
         "close": 222.54
       },
       {
@@ -123377,7 +123425,7 @@
       },
       {
         "time": "2021-06-07",
-        "open": 239.9,
+        "open": 239.91,
         "high": 243.85,
         "low": 239.74,
         "close": 243.58
@@ -123449,7 +123497,7 @@
         "time": "2021-06-21",
         "open": 249.35,
         "high": 252.9,
-        "low": 247.52,
+        "low": 247.53,
         "close": 252.05
       },
       {
@@ -123622,7 +123670,7 @@
       },
       {
         "time": "2021-07-27",
-        "open": 277.76,
+        "open": 277.77,
         "high": 277.91,
         "low": 271.55,
         "close": 274.99
@@ -124483,7 +124531,7 @@
       },
       {
         "time": "2022-01-20",
-        "open": 297.73,
+        "open": 297.72,
         "high": 300.21,
         "low": 290.09,
         "close": 290.53
@@ -124912,7 +124960,7 @@
         "time": "2022-04-19",
         "open": 269.68,
         "high": 276.24,
-        "low": 268.75,
+        "low": 268.74,
         "close": 275.4
       },
       {
@@ -125009,7 +125057,7 @@
       {
         "time": "2022-05-09",
         "open": 260.68,
-        "high": 262.91,
+        "high": 262.9,
         "low": 254.18,
         "close": 255.4
       },
@@ -125647,7 +125695,7 @@
         "time": "2022-09-19",
         "open": 235.1,
         "high": 237.68,
-        "low": 233.52,
+        "low": 233.53,
         "close": 237.08
       },
       {
@@ -125941,7 +125989,7 @@
         "time": "2022-11-16",
         "open": 236.07,
         "high": 237.05,
-        "low": 233.76,
+        "low": 233.77,
         "close": 235.04
       },
       {
@@ -126977,7 +127025,7 @@
         "time": "2023-06-22",
         "open": 326.4,
         "high": 332.26,
-        "low": 325.63,
+        "low": 325.64,
         "close": 331.86
       },
       {
@@ -127179,7 +127227,7 @@
       {
         "time": "2023-08-03",
         "open": 318.46,
-        "high": 322.25,
+        "high": 322.26,
         "low": 318.42,
         "close": 319.11
       },
@@ -127661,7 +127709,7 @@
       },
       {
         "time": "2023-11-09",
-        "open": 354.68,
+        "open": 354.67,
         "high": 357.11,
         "low": 352.78,
         "close": 353.1
@@ -127893,7 +127941,7 @@
       {
         "time": "2023-12-28",
         "open": 368.22,
-        "high": 369.28,
+        "high": 369.29,
         "low": 367.03,
         "close": 368.13
       },
@@ -129335,7 +129383,7 @@
       {
         "time": "2024-10-23",
         "open": 424.96,
-        "high": 425.17,
+        "high": 425.18,
         "low": 416.74,
         "close": 418.78
       },
@@ -129468,7 +129516,7 @@
       {
         "time": "2024-11-19",
         "open": 407.45,
-        "high": 412.22,
+        "high": 412.21,
         "low": 405.91,
         "close": 412.07
       },
@@ -129834,7 +129882,7 @@
         "open": 409.15,
         "high": 413.3,
         "low": 409.15,
-        "close": 410.94
+        "close": 410.95
       },
       {
         "time": "2025-02-07",
@@ -131528,7 +131576,7 @@
         "open": 463.25,
         "high": 472.15,
         "low": 459.95,
-        "close": 468.19
+        "close": 468.2
       },
       {
         "time": "2026-01-27",
@@ -132404,6 +132452,13 @@
         "high": 394.2,
         "low": 387.99,
         "close": 389.1
+      },
+      {
+        "time": "2026-07-28",
+        "open": 393.16,
+        "high": 400.21,
+        "low": 391.3,
+        "close": 392.95
       }
     ],
     "quarterlyFinancials": {
@@ -132591,7 +132646,7 @@
       "segments": [],
       "breakdown": []
     },
-    "aiAnalysis": "Based on our analysis, Microsoft Corporation demonstrates strong buy fundamentals. with revenue reaching $318.3B and growing at 18.3% year-over-year. Our fair value estimate of $556.75 suggests +43.1% upside from current levels of $389.10. The company maintains a competitive position in Technology, supported by its market presence and financial performance.",
+    "aiAnalysis": "Based on our analysis, Microsoft Corporation demonstrates strong buy fundamentals. with revenue reaching $318.3B and growing at 18.3% year-over-year. Our fair value estimate of $556.75 suggests +41.8% upside from current levels of $392.76. The company maintains a competitive position in Technology, supported by its market presence and financial performance.",
     "lastUpdated": "2026-07-28",
     "fmpIncome": [
       {
@@ -132640,8 +132695,7 @@
         "totalAssets": 364840000000.0,
         "totalLiabilities": 198298000000.0
       }
-    ],
-    "fmpCalls": 0
+    ]
   },
   "SOFI": {
     "company": {
@@ -132656,20 +132710,20 @@
     },
     "stats": {
       "marketCap": {
-        "raw": 21652670464.0,
-        "fmt": "$21.7B"
+        "raw": 20889440256.0,
+        "fmt": "$20.9B"
       },
       "trailingPE": {
-        "raw": 36.7,
-        "fmt": "36.70"
+        "raw": 36.19,
+        "fmt": "36.19"
       },
       "forwardPE": {
-        "raw": 20.81,
-        "fmt": "20.81"
+        "raw": 20.07,
+        "fmt": "20.07"
       },
       "epsTrailing": {
-        "raw": 0.46,
-        "fmt": "$0.46"
+        "raw": 0.45,
+        "fmt": "$0.45"
       },
       "epsForward": {
         "raw": 0.81,
@@ -132680,8 +132734,8 @@
         "fmt": "2.15"
       },
       "avgVolume": {
-        "raw": 79852160.0,
-        "fmt": "79.9M"
+        "raw": 79830996.0,
+        "fmt": "79.8M"
       },
       "fiftyTwoWeekLow": {
         "raw": 14.92,
@@ -132692,12 +132746,12 @@
         "fmt": "$32.73"
       },
       "fiftyDayAverage": {
-        "raw": 17.12,
-        "fmt": "$17.12"
+        "raw": 17.15,
+        "fmt": "$17.15"
       },
       "twoHundredDayAverage": {
-        "raw": 21.59,
-        "fmt": "$21.59"
+        "raw": 21.54,
+        "fmt": "$21.54"
       },
       "targetMeanPrice": {
         "raw": 20.63,
@@ -132741,8 +132795,8 @@
         "fmt": "101.2%"
       },
       "priceToSales": {
-        "raw": 5.5,
-        "fmt": "5.5x"
+        "raw": 5.3,
+        "fmt": "5.3x"
       },
       "enterpriseValue": {
         "raw": 20004478976.0,
@@ -132771,20 +132825,20 @@
     },
     "returns": {
       "oneYear": {
-        "raw": -0.197,
-        "fmt": "-19.7%"
+        "raw": -0.225,
+        "fmt": "-22.5%"
       },
       "fiveYear": {
-        "raw": 0.19,
-        "fmt": "+19.0%"
+        "raw": 0.148,
+        "fmt": "+14.8%"
       },
       "tenYear": {
-        "raw": -0.084,
-        "fmt": "-8.4%"
+        "raw": -0.116,
+        "fmt": "-11.6%"
       },
       "ytd": {
-        "raw": -0.385,
-        "fmt": "-38.5%"
+        "raw": -0.407,
+        "fmt": "-40.7%"
       }
     },
     "analystTarget": {
@@ -132817,8 +132871,8 @@
       },
       "numberOfAnalystOpinions": 19,
       "currentPrice": {
-        "raw": 16.88,
-        "fmt": "$16.88"
+        "raw": 16.285,
+        "fmt": "$16.29"
       }
     },
     "earnings": [
@@ -142651,6 +142705,13 @@
         "high": 17.5,
         "low": 16.69,
         "close": 16.88
+      },
+      {
+        "time": "2026-07-28",
+        "open": 16.55,
+        "high": 16.6,
+        "low": 16.17,
+        "close": 16.28
       }
     ],
     "quarterlyFinancials": {
@@ -142847,7 +142908,7 @@
       "segments": [],
       "breakdown": []
     },
-    "aiAnalysis": "Based on our analysis, SoFi Technologies, Inc. demonstrates hold fundamentals. with revenue reaching $3.9B and growing at 42.5% year-over-year. Our fair value estimate of $20.63 suggests +22.2% upside from current levels of $16.88. The company maintains a competitive position in Financial Services, supported by its market presence and financial performance.",
+    "aiAnalysis": "Based on our analysis, SoFi Technologies, Inc. demonstrates hold fundamentals. with revenue reaching $3.9B and growing at 42.5% year-over-year. Our fair value estimate of $20.63 suggests +26.7% upside from current levels of $16.29. The company maintains a competitive position in Financial Services, supported by its market presence and financial performance.",
     "lastUpdated": "2026-07-28",
     "fmpIncome": [
       {
@@ -142896,8 +142957,7 @@
         "totalAssets": 19007675000.0,
         "totalLiabilities": 13479199000.0
       }
-    ],
-    "fmpCalls": 0
+    ]
   },
   "ZS": {
     "company": {
@@ -142912,16 +142972,16 @@
     },
     "stats": {
       "marketCap": {
-        "raw": 23819812864.0,
-        "fmt": "$23.8B"
+        "raw": 23417155584.0,
+        "fmt": "$23.4B"
       },
       "forwardPE": {
-        "raw": 32.04,
-        "fmt": "32.04"
+        "raw": 31.5,
+        "fmt": "31.50"
       },
       "epsTrailing": {
-        "raw": -0.5,
-        "fmt": "$-0.50"
+        "raw": -0.49,
+        "fmt": "$-0.49"
       },
       "epsForward": {
         "raw": 4.6,
@@ -142932,7 +142992,7 @@
         "fmt": "0.96"
       },
       "avgVolume": {
-        "raw": 4505608.0,
+        "raw": 4502478.0,
         "fmt": "4.5M"
       },
       "fiftyTwoWeekLow": {
@@ -142944,12 +143004,12 @@
         "fmt": "$336.99"
       },
       "fiftyDayAverage": {
-        "raw": 143.31,
-        "fmt": "$143.31"
+        "raw": 143.21,
+        "fmt": "$143.21"
       },
       "twoHundredDayAverage": {
-        "raw": 193.94,
-        "fmt": "$193.94"
+        "raw": 193.22,
+        "fmt": "$193.22"
       },
       "targetMeanPrice": {
         "raw": 192.55,
@@ -143001,8 +143061,8 @@
         "fmt": "21.5%"
       },
       "priceToSales": {
-        "raw": 7.5,
-        "fmt": "7.5x"
+        "raw": 7.4,
+        "fmt": "7.4x"
       },
       "enterpriseValue": {
         "raw": 22148868096.0,
@@ -143031,20 +143091,20 @@
     },
     "returns": {
       "oneYear": {
-        "raw": -0.49,
-        "fmt": "-49.0%"
+        "raw": -0.499,
+        "fmt": "-49.9%"
       },
       "fiveYear": {
-        "raw": -0.471,
-        "fmt": "-47.1%"
+        "raw": -0.48,
+        "fmt": "-48.0%"
       },
       "tenYear": {
-        "raw": 3.928,
-        "fmt": "+392.8%"
+        "raw": 3.845,
+        "fmt": "+384.5%"
       },
       "ytd": {
-        "raw": -0.332,
-        "fmt": "-33.2%"
+        "raw": -0.343,
+        "fmt": "-34.3%"
       }
     },
     "analystTarget": {
@@ -143077,8 +143137,8 @@
       },
       "numberOfAnalystOpinions": 44,
       "currentPrice": {
-        "raw": 147.3,
-        "fmt": "$147.30"
+        "raw": 144.81,
+        "fmt": "$144.81"
       }
     },
     "earnings": [
@@ -157846,6 +157906,13 @@
         "high": 149.45,
         "low": 144.0,
         "close": 147.3
+      },
+      {
+        "time": "2026-07-28",
+        "open": 147.1,
+        "high": 148.26,
+        "low": 142.75,
+        "close": 144.81
       }
     ],
     "quarterlyFinancials": {
@@ -158053,7 +158120,7 @@
       "segments": [],
       "breakdown": []
     },
-    "aiAnalysis": "Based on our analysis, Zscaler, Inc. demonstrates buy fundamentals. with revenue reaching $3.2B and growing at 25.4% year-over-year. Our fair value estimate of $192.55 suggests +30.7% upside from current levels of $147.30. The company maintains a competitive position in Technology, supported by its market presence and financial performance.",
+    "aiAnalysis": "Based on our analysis, Zscaler, Inc. demonstrates buy fundamentals. with revenue reaching $3.2B and growing at 25.4% year-over-year. Our fair value estimate of $192.55 suggests +33.0% upside from current levels of $144.81. The company maintains a competitive position in Technology, supported by its market presence and financial performance.",
     "lastUpdated": "2026-07-28",
     "fmpIncome": [
       {
@@ -158102,8 +158169,7 @@
         "totalAssets": 2832665000.0,
         "totalLiabilities": 2259365000.0
       }
-    ],
-    "fmpCalls": 0
+    ]
   },
   "AVGO": {
     "company": {
@@ -158118,16 +158184,16 @@
     },
     "stats": {
       "marketCap": {
-        "raw": 1823199985664.0,
+        "raw": 1795463315456.0,
         "fmt": "$1.8T"
       },
       "trailingPE": {
-        "raw": 63.66,
-        "fmt": "63.66"
+        "raw": 62.69,
+        "fmt": "62.69"
       },
       "forwardPE": {
-        "raw": 19.64,
-        "fmt": "19.64"
+        "raw": 19.34,
+        "fmt": "19.34"
       },
       "epsTrailing": {
         "raw": 6.02,
@@ -158142,12 +158208,12 @@
         "fmt": "1.46"
       },
       "avgVolume": {
-        "raw": 25917532.0,
+        "raw": 25924372.0,
         "fmt": "25.9M"
       },
       "dividendYield": {
-        "raw": 0.0066280465528938985,
-        "fmt": "0.66%"
+        "raw": 0.006730438008426297,
+        "fmt": "0.67%"
       },
       "fiftyTwoWeekLow": {
         "raw": 281.61,
@@ -158219,8 +158285,8 @@
         "fmt": "85.4%"
       },
       "priceToSales": {
-        "raw": 24.2,
-        "fmt": "24.2x"
+        "raw": 23.8,
+        "fmt": "23.8x"
       },
       "enterpriseValue": {
         "raw": 1868478939136.0,
@@ -158249,20 +158315,20 @@
     },
     "returns": {
       "oneYear": {
-        "raw": 0.312,
-        "fmt": "+31.2%"
+        "raw": 0.293,
+        "fmt": "+29.3%"
       },
       "fiveYear": {
-        "raw": 7.466,
-        "fmt": "+746.6%"
+        "raw": 7.343,
+        "fmt": "+734.3%"
       },
       "tenYear": {
-        "raw": 27.336,
-        "fmt": "+2733.6%"
+        "raw": 26.924,
+        "fmt": "+2692.4%"
       },
       "ytd": {
-        "raw": 0.106,
-        "fmt": "+10.6%"
+        "raw": 0.091,
+        "fmt": "+9.1%"
       }
     },
     "analystTarget": {
@@ -158295,8 +158361,8 @@
       },
       "numberOfAnalystOpinions": 45,
       "currentPrice": {
-        "raw": 383.22,
-        "fmt": "$383.22"
+        "raw": 377.39,
+        "fmt": "$377.39"
       }
     },
     "earnings": [
@@ -158664,7 +158730,7 @@
         "open": 13.21,
         "high": 13.28,
         "low": 13.05,
-        "close": 13.13
+        "close": 13.12
       },
       {
         "time": "2016-09-29",
@@ -163787,7 +163853,7 @@
         "time": "2019-08-27",
         "open": 23.47,
         "high": 23.56,
-        "low": 23.12,
+        "low": 23.11,
         "close": 23.17
       },
       {
@@ -165020,7 +165086,7 @@
         "open": 23.73,
         "high": 24.02,
         "low": 23.54,
-        "close": 23.97
+        "close": 23.98
       },
       {
         "time": "2020-05-11",
@@ -168177,7 +168243,7 @@
         "open": 53.53,
         "high": 54.47,
         "low": 52.59,
-        "close": 53.29
+        "close": 53.3
       },
       {
         "time": "2022-02-23",
@@ -169303,7 +169369,7 @@
         "time": "2022-10-12",
         "open": 40.84,
         "high": 41.16,
-        "low": 40.44,
+        "low": 40.43,
         "close": 40.68
       },
       {
@@ -171376,7 +171442,7 @@
         "open": 106.22,
         "high": 111.52,
         "low": 106.16,
-        "close": 109.56
+        "close": 109.57
       },
       {
         "time": "2023-12-18",
@@ -171688,7 +171754,7 @@
       },
       {
         "time": "2024-02-22",
-        "open": 124.87,
+        "open": 124.88,
         "high": 127.73,
         "low": 124.36,
         "close": 127.13
@@ -172892,7 +172958,7 @@
       },
       {
         "time": "2024-10-28",
-        "open": 170.36,
+        "open": 170.37,
         "high": 171.32,
         "low": 168.74,
         "close": 169.4
@@ -173167,7 +173233,7 @@
         "time": "2024-12-23",
         "open": 223.84,
         "high": 230.46,
-        "low": 222.3,
+        "low": 222.29,
         "close": 229.42
       },
       {
@@ -174036,7 +174102,7 @@
         "open": 264.07,
         "high": 267.91,
         "low": 261.51,
-        "close": 262.73
+        "close": 262.72
       },
       {
         "time": "2025-06-26",
@@ -175941,6 +176007,13 @@
         "high": 389.9,
         "low": 373.5,
         "close": 383.22
+      },
+      {
+        "time": "2026-07-28",
+        "open": 374.23,
+        "high": 379.31,
+        "low": 371.52,
+        "close": 377.78
       }
     ],
     "quarterlyFinancials": {
@@ -176160,7 +176233,7 @@
       "segments": [],
       "breakdown": []
     },
-    "aiAnalysis": "Based on our analysis, Broadcom Inc. demonstrates strong buy fundamentals. with revenue reaching $75.5B and growing at 47.9% year-over-year. Our fair value estimate of $525.44 suggests +37.1% upside from current levels of $383.22. The company maintains a competitive position in Technology, supported by its market presence and financial performance.",
+    "aiAnalysis": "Based on our analysis, Broadcom Inc. demonstrates strong buy fundamentals. with revenue reaching $75.5B and growing at 47.9% year-over-year. Our fair value estimate of $525.44 suggests +39.2% upside from current levels of $377.39. The company maintains a competitive position in Technology, supported by its market presence and financial performance.",
     "lastUpdated": "2026-07-28",
     "fmpIncome": [
       {
@@ -176209,8 +176282,7 @@
         "totalAssets": 73249000000.0,
         "totalLiabilities": 50540000000.0
       }
-    ],
-    "fmpCalls": 0
+    ]
   },
   "GOOGL": {
     "company": {
@@ -176225,7 +176297,7 @@
     },
     "stats": {
       "marketCap": {
-        "raw": 3993807618048.0,
+        "raw": 3992278794240.0,
         "fmt": "$4.0T"
       },
       "trailingPE": {
@@ -176233,8 +176305,8 @@
         "fmt": "16.39"
       },
       "forwardPE": {
-        "raw": 22.21,
-        "fmt": "22.21"
+        "raw": 22.2,
+        "fmt": "22.20"
       },
       "epsTrailing": {
         "raw": 19.92,
@@ -176249,11 +176321,11 @@
         "fmt": "1.25"
       },
       "avgVolume": {
-        "raw": 33057353.0,
+        "raw": 33144226.0,
         "fmt": "33.1M"
       },
       "dividendYield": {
-        "raw": 0.002602890739833415,
+        "raw": 0.0026038874507941854,
         "fmt": "0.26%"
       },
       "fiftyTwoWeekLow": {
@@ -176356,20 +176428,20 @@
     },
     "returns": {
       "oneYear": {
-        "raw": 0.701,
-        "fmt": "+70.1%"
+        "raw": 0.7,
+        "fmt": "+70.0%"
       },
       "fiveYear": {
-        "raw": 1.277,
-        "fmt": "+127.7%"
+        "raw": 1.276,
+        "fmt": "+127.6%"
       },
       "tenYear": {
-        "raw": 7.342,
-        "fmt": "+734.2%"
+        "raw": 7.339,
+        "fmt": "+733.9%"
       },
       "ytd": {
-        "raw": 0.038,
-        "fmt": "+3.8%"
+        "raw": 0.037,
+        "fmt": "+3.7%"
       }
     },
     "analystTarget": {
@@ -176402,15 +176474,15 @@
       },
       "numberOfAnalystOpinions": 54,
       "currentPrice": {
-        "raw": 326.56,
-        "fmt": "$326.56"
+        "raw": 326.435,
+        "fmt": "$326.44"
       }
     },
     "earnings": [
       {
         "date": "2026-10-28",
         "epsActual": null,
-        "epsEstimate": 3.02,
+        "epsEstimate": 3.0,
         "revenueActual": null,
         "revenueEstimate": null
       },
@@ -177198,7 +177270,7 @@
         "open": 40.05,
         "high": 40.19,
         "low": 39.9,
-        "close": 40.03
+        "close": 40.04
       },
       {
         "time": "2016-12-27",
@@ -177428,7 +177500,7 @@
         "time": "2017-02-13",
         "open": 41.52,
         "high": 41.72,
-        "low": 41.44,
+        "low": 41.45,
         "close": 41.58
       },
       {
@@ -183419,7 +183491,7 @@
       {
         "time": "2020-07-09",
         "open": 74.83,
-        "high": 75.78,
+        "high": 75.79,
         "low": 74.12,
         "close": 75.27
       },
@@ -184168,7 +184240,7 @@
       {
         "time": "2020-12-09",
         "open": 89.72,
-        "high": 90.62,
+        "high": 90.61,
         "low": 87.33,
         "close": 88.11
       },
@@ -184405,7 +184477,7 @@
       },
       {
         "time": "2021-01-29",
-        "open": 90.89,
+        "open": 90.9,
         "high": 91.57,
         "low": 89.29,
         "close": 90.56
@@ -185289,7 +185361,7 @@
         "time": "2021-07-30",
         "open": 133.85,
         "high": 134.12,
-        "low": 133.07,
+        "low": 133.08,
         "close": 133.54
       },
       {
@@ -189306,7 +189378,7 @@
       {
         "time": "2023-11-09",
         "open": 130.8,
-        "high": 131.38,
+        "high": 131.39,
         "low": 128.93,
         "close": 129.1
       },
@@ -189363,7 +189435,7 @@
         "time": "2023-11-21",
         "open": 135.09,
         "high": 135.97,
-        "low": 134.76,
+        "low": 134.77,
         "close": 135.77
       },
       {
@@ -190932,7 +191004,7 @@
         "open": 162.6,
         "high": 165.18,
         "low": 162.36,
-        "close": 163.92
+        "close": 163.91
       },
       {
         "time": "2024-10-15",
@@ -194048,6 +194120,13 @@
         "high": 330.42,
         "low": 324.45,
         "close": 326.56
+      },
+      {
+        "time": "2026-07-28",
+        "open": 327.9,
+        "high": 330.3,
+        "low": 324.44,
+        "close": 326.43
       }
     ],
     "quarterlyFinancials": {
@@ -194123,7 +194202,7 @@
         {
           "period": "2026/Q4",
           "actual": null,
-          "estimated": 3.02
+          "estimated": 3.0
         },
         {
           "period": "2026/Q3",
@@ -194267,7 +194346,7 @@
       "segments": [],
       "breakdown": []
     },
-    "aiAnalysis": "Based on our analysis, Alphabet Inc. demonstrates strong buy fundamentals. with revenue reaching $445.9B and growing at 24.2% year-over-year. Our fair value estimate of $428.12 suggests +31.1% upside from current levels of $326.56. The company maintains a competitive position in Communication Services, supported by its market presence and financial performance.",
+    "aiAnalysis": "Based on our analysis, Alphabet Inc. demonstrates strong buy fundamentals. with revenue reaching $445.9B and growing at 24.2% year-over-year. Our fair value estimate of $428.12 suggests +31.2% upside from current levels of $326.44. The company maintains a competitive position in Communication Services, supported by its market presence and financial performance.",
     "lastUpdated": "2026-07-28",
     "fmpIncome": [
       {
@@ -194316,8 +194395,7 @@
         "totalAssets": 365264000000.0,
         "totalLiabilities": 109120000000.0
       }
-    ],
-    "fmpCalls": 0
+    ]
   },
   "SPCX": {
     "company": {
@@ -194325,47 +194403,47 @@
       "sector": "Industrials",
       "industry": "Aerospace & Defense",
       "employees": 22000,
-      "description": "Space Exploration Technologies Corp. provides satellite-based broadband services in the United States, Ireland, Canada, and internationally. The company's Connectivity segment operates a high-speed, low-latency broadband network powered by various Starlink satellites in low-earth orbit, delivering connectivity to various consumer, enterprise, and government customers through its Starlink offering. Its Space segment designs, manufactures, and launches reusable rockets to provide access to space. It offers launch services for the deployment of payloads to intended orbits for commercial and government customers utilizing Falcon 9 and Falcon Heavy; and launch and development for the development of spacecraft and the provision of launch and mission services for government agency space programs utilizing Falcon 9, Falcon Heavy, Starship, and Dragon. The company's AI segment operates a vertically integrated AI platform spanning a frontier LLM Grok; AI solutions for consumer and enterprise customers; X, a real-time information, entertainment, and free speech platform; and AI computational infrastructure. The company was founded in 2002 and is based in Starbase, Texas.",
+      "description": "Space Exploration Technologies Corp. provides satellite-based broadband services in the United States, Ireland, Canada, and internationally. It operates through three operating segments: Space, Connectivity, and AI. The Space segment designs, manufactures, and launches reusable rockets to provide access to space. It also provides launch services for the deployment of payloads to intended orbits for commercial and government customers utilizing Falcon 9 and Falcon Heavy; and engages in the launch and development for the development of spacecraft and the provision of launch and mission services for government agency space programs utilizing Falcon 9, Falcon Heavy, Starship, and Dragon. Its company's Connectivity segment operates broadband data and communications network by various Starlink satellites in low-earth orbit, delivering connectivity to various consumers, enterprise, and government customers. The company's AI segment operates a vertically integrated AI platform spanning a frontier LLM Grok; AI solutions for consumer and enterprise customers; X, a real-time information, entertainment, and free speech platform; and AI computational infrastructure. Space Exploration Technologies Corp. was incorporated in 2002 and is based in Starbase, Texas.",
       "website": "https://www.spacex.com",
       "city": "Starbase",
       "state": "TX"
     },
     "stats": {
       "marketCap": {
-        "raw": 1495270162432.0,
-        "fmt": "$1.5T"
+        "raw": 1420527796224.0,
+        "fmt": "$1.4T"
       },
       "forwardPE": {
-        "raw": 125.69,
-        "fmt": "125.69"
+        "raw": 119.41,
+        "fmt": "119.41"
       },
       "epsTrailing": {
-        "raw": -0.66,
-        "fmt": "$-0.66"
+        "raw": -0.67,
+        "fmt": "$-0.67"
       },
       "epsForward": {
         "raw": 0.9,
         "fmt": "$0.90"
       },
       "avgVolume": {
-        "raw": 119786958.0,
-        "fmt": "119.8M"
+        "raw": 118018156.0,
+        "fmt": "118.0M"
       },
       "fiftyTwoWeekLow": {
-        "raw": 108.66,
-        "fmt": "$108.66"
+        "raw": 107.01,
+        "fmt": "$107.01"
       },
       "fiftyTwoWeekHigh": {
         "raw": 225.64,
         "fmt": "$225.64"
       },
       "fiftyDayAverage": {
-        "raw": 151.07,
-        "fmt": "$151.07"
+        "raw": 149.81,
+        "fmt": "$149.81"
       },
       "twoHundredDayAverage": {
-        "raw": 151.07,
-        "fmt": "$151.07"
+        "raw": 149.81,
+        "fmt": "$149.81"
       },
       "targetMeanPrice": {
         "raw": 236.71,
@@ -194413,8 +194491,8 @@
         "fmt": "53.2%"
       },
       "priceToSales": {
-        "raw": 77.5,
-        "fmt": "77.5x"
+        "raw": 73.6,
+        "fmt": "73.6x"
       },
       "enterpriseValue": {
         "raw": 672021348352.0,
@@ -194435,14 +194513,14 @@
     },
     "returns": {
       "oneYear": {
-        "raw": -0.295,
-        "fmt": "-29.5%"
+        "raw": -0.33,
+        "fmt": "-33.0%"
       },
       "fiveYear": null,
       "tenYear": null,
       "ytd": {
-        "raw": -0.295,
-        "fmt": "-29.5%"
+        "raw": -0.331,
+        "fmt": "-33.1%"
       }
     },
     "analystTarget": {
@@ -194475,15 +194553,15 @@
       },
       "numberOfAnalystOpinions": 21,
       "currentPrice": {
-        "raw": 113.5,
-        "fmt": "$113.50"
+        "raw": 107.8266,
+        "fmt": "$107.83"
       }
     },
     "earnings": [
       {
         "date": "2026-08-04",
         "epsActual": null,
-        "epsEstimate": -0.28,
+        "epsEstimate": -0.29,
         "revenueActual": null,
         "revenueEstimate": null
       }
@@ -194698,6 +194776,13 @@
         "high": 114.85,
         "low": 108.66,
         "close": 113.5
+      },
+      {
+        "time": "2026-07-28",
+        "open": 109.32,
+        "high": 110.39,
+        "low": 107.01,
+        "close": 107.75
       }
     ],
     "quarterlyFinancials": {
@@ -194733,7 +194818,7 @@
         {
           "period": "2026/Q3",
           "actual": null,
-          "estimated": -0.28
+          "estimated": -0.29
         }
       ],
       "ebit": [
@@ -194773,7 +194858,7 @@
       "segments": [],
       "breakdown": []
     },
-    "aiAnalysis": "Based on our analysis, Space Exploration Technologies Corp. demonstrates buy fundamentals. with revenue reaching $19.3B and growing at 15.4% year-over-year. Our fair value estimate of $236.71 suggests +108.6% upside from current levels of $113.50. The company maintains a competitive position in Industrials, supported by its market presence and financial performance.",
+    "aiAnalysis": "Based on our analysis, Space Exploration Technologies Corp. demonstrates buy fundamentals. with revenue reaching $19.3B and growing at 15.4% year-over-year. Our fair value estimate of $236.71 suggests +119.5% upside from current levels of $107.83. The company maintains a competitive position in Industrials, supported by its market presence and financial performance.",
     "lastUpdated": "2026-07-28",
     "fmpIncome": [
       {
@@ -194806,8 +194891,7 @@
         "totalAssets": 57062000000.0,
         "totalLiabilities": 31258000000.0
       }
-    ],
-    "fmpCalls": 0
+    ]
   },
   "MU": {
     "company": {
@@ -194822,20 +194906,20 @@
     },
     "stats": {
       "marketCap": {
-        "raw": 1016679759872.0,
-        "fmt": "$1.0T"
+        "raw": 917959409664.0,
+        "fmt": "$918.0B"
       },
       "trailingPE": {
-        "raw": 20.83,
-        "fmt": "20.83"
+        "raw": 18.39,
+        "fmt": "18.39"
       },
       "forwardPE": {
-        "raw": 5.86,
-        "fmt": "5.86"
+        "raw": 5.29,
+        "fmt": "5.29"
       },
       "epsTrailing": {
-        "raw": 43.21,
-        "fmt": "$43.21"
+        "raw": 44.2,
+        "fmt": "$44.20"
       },
       "epsForward": {
         "raw": 153.74,
@@ -194846,12 +194930,12 @@
         "fmt": "2.14"
       },
       "avgVolume": {
-        "raw": 52192633.0,
-        "fmt": "52.2M"
+        "raw": 52317519.0,
+        "fmt": "52.3M"
       },
       "dividendYield": {
-        "raw": 0.0005887580537658298,
-        "fmt": "0.06%"
+        "raw": 0.0006520749517095437,
+        "fmt": "0.07%"
       },
       "fiftyTwoWeekLow": {
         "raw": 103.38,
@@ -194923,8 +195007,8 @@
         "fmt": "1368.5%"
       },
       "priceToSales": {
-        "raw": 11.3,
-        "fmt": "11.3x"
+        "raw": 10.2,
+        "fmt": "10.2x"
       },
       "enterpriseValue": {
         "raw": 997033705472.0,
@@ -194953,20 +195037,20 @@
     },
     "returns": {
       "oneYear": {
-        "raw": 7.105,
-        "fmt": "+710.5%"
+        "raw": 6.324,
+        "fmt": "+632.4%"
       },
       "fiveYear": {
-        "raw": 11.526,
-        "fmt": "+1152.6%"
+        "raw": 10.319,
+        "fmt": "+1031.9%"
       },
       "tenYear": {
-        "raw": 54.983,
-        "fmt": "+5498.3%"
+        "raw": 49.566,
+        "fmt": "+4956.6%"
       },
       "ytd": {
-        "raw": 1.856,
-        "fmt": "+185.6%"
+        "raw": 1.58,
+        "fmt": "+158.0%"
       }
     },
     "analystTarget": {
@@ -194999,8 +195083,8 @@
       },
       "numberOfAnalystOpinions": 42,
       "currentPrice": {
-        "raw": 900.2,
-        "fmt": "$900.20"
+        "raw": 812.79,
+        "fmt": "$812.79"
       }
     },
     "earnings": [
@@ -202765,7 +202849,7 @@
       {
         "time": "2020-12-09",
         "open": 71.33,
-        "high": 72.75,
+        "high": 72.76,
         "low": 69.02,
         "close": 69.63
       },
@@ -208231,7 +208315,7 @@
       },
       {
         "time": "2024-01-19",
-        "open": 85.37,
+        "open": 85.36,
         "high": 87.08,
         "low": 84.93,
         "close": 86.8
@@ -212645,6 +212729,13 @@
         "high": 935.0,
         "low": 854.79,
         "close": 900.2
+      },
+      {
+        "time": "2026-07-28",
+        "open": 840.47,
+        "high": 848.36,
+        "low": 805.41,
+        "close": 813.46
       }
     ],
     "quarterlyFinancials": {
@@ -212840,7 +212931,7 @@
       "segments": [],
       "breakdown": []
     },
-    "aiAnalysis": "Based on our analysis, Micron Technology, Inc. demonstrates strong buy fundamentals. with revenue reaching $90.3B and growing at 345.7% year-over-year. Our fair value estimate of $1507.38 suggests +67.4% upside from current levels of $900.20. The company maintains a competitive position in Technology, supported by its market presence and financial performance.",
+    "aiAnalysis": "Based on our analysis, Micron Technology, Inc. demonstrates strong buy fundamentals. with revenue reaching $90.3B and growing at 345.7% year-over-year. Our fair value estimate of $1507.38 suggests +85.5% upside from current levels of $812.79. The company maintains a competitive position in Technology, supported by its market presence and financial performance.",
     "lastUpdated": "2026-07-28",
     "fmpIncome": [
       {
@@ -212889,8 +212980,7 @@
         "totalAssets": 66283000000.0,
         "totalLiabilities": 16376000000.0
       }
-    ],
-    "fmpCalls": 0
+    ]
   },
   "MRVL": {
     "company": {
@@ -212905,16 +212995,16 @@
     },
     "stats": {
       "marketCap": {
-        "raw": 169788489728.0,
-        "fmt": "$169.8B"
+        "raw": 154844364800.0,
+        "fmt": "$154.8B"
       },
       "trailingPE": {
-        "raw": 65.01,
-        "fmt": "65.01"
+        "raw": 59.29,
+        "fmt": "59.29"
       },
       "forwardPE": {
-        "raw": 30.31,
-        "fmt": "30.31"
+        "raw": 27.64,
+        "fmt": "27.64"
       },
       "epsTrailing": {
         "raw": 2.91,
@@ -212929,12 +213019,12 @@
         "fmt": "2.20"
       },
       "avgVolume": {
-        "raw": 41143212.0,
-        "fmt": "41.1M"
+        "raw": 41374037.0,
+        "fmt": "41.4M"
       },
       "dividendYield": {
-        "raw": 0.0012687001110112599,
-        "fmt": "0.13%"
+        "raw": 0.0013911430558775793,
+        "fmt": "0.14%"
       },
       "fiftyTwoWeekLow": {
         "raw": 61.44,
@@ -213006,8 +213096,8 @@
         "fmt": "-80.4%"
       },
       "priceToSales": {
-        "raw": 19.5,
-        "fmt": "19.5x"
+        "raw": 17.8,
+        "fmt": "17.8x"
       },
       "enterpriseValue": {
         "raw": 166919520256.0,
@@ -213036,20 +213126,20 @@
     },
     "returns": {
       "oneYear": {
-        "raw": 1.497,
-        "fmt": "+149.7%"
+        "raw": 1.276,
+        "fmt": "+127.6%"
       },
       "fiveYear": {
-        "raw": 2.149,
-        "fmt": "+214.9%"
+        "raw": 1.871,
+        "fmt": "+187.1%"
       },
       "tenYear": {
-        "raw": 15.415,
-        "fmt": "+1541.5%"
+        "raw": 13.956,
+        "fmt": "+1395.6%"
       },
       "ytd": {
-        "raw": 1.119,
-        "fmt": "+111.9%"
+        "raw": 0.932,
+        "fmt": "+93.2%"
       }
     },
     "analystTarget": {
@@ -213082,8 +213172,8 @@
       },
       "numberOfAnalystOpinions": 40,
       "currentPrice": {
-        "raw": 189.17,
-        "fmt": "$189.17"
+        "raw": 172.52,
+        "fmt": "$172.52"
       }
     },
     "earnings": [
@@ -215527,7 +215617,7 @@
       },
       {
         "time": "2017-12-01",
-        "open": 20.97,
+        "open": 20.98,
         "high": 21.13,
         "low": 20.55,
         "close": 21.02
@@ -220176,7 +220266,7 @@
       {
         "time": "2020-07-24",
         "open": 33.97,
-        "high": 34.7,
+        "high": 34.69,
         "low": 33.48,
         "close": 34.18
       },
@@ -221148,7 +221238,7 @@
       },
       {
         "time": "2021-02-11",
-        "open": 50.15,
+        "open": 50.14,
         "high": 51.16,
         "low": 49.78,
         "close": 51.04
@@ -223634,7 +223724,7 @@
       {
         "time": "2022-07-12",
         "open": 45.04,
-        "high": 45.77,
+        "high": 45.76,
         "low": 44.52,
         "close": 44.87
       },
@@ -226657,7 +226747,7 @@
       },
       {
         "time": "2024-04-01",
-        "open": 70.98,
+        "open": 70.99,
         "high": 73.38,
         "low": 70.95,
         "close": 72.68
@@ -230728,6 +230818,13 @@
         "high": 199.79,
         "low": 181.76,
         "close": 189.17
+      },
+      {
+        "time": "2026-07-28",
+        "open": 180.0,
+        "high": 181.48,
+        "low": 170.39,
+        "close": 172.44
       }
     ],
     "quarterlyFinancials": {
@@ -230935,7 +231032,7 @@
       "segments": [],
       "breakdown": []
     },
-    "aiAnalysis": "Based on our analysis, Marvell Technology, Inc. demonstrates strong buy fundamentals. with revenue reaching $8.7B and growing at 27.6% year-over-year. Our fair value estimate of $256.91 suggests +35.8% upside from current levels of $189.17. The company maintains a competitive position in Technology, supported by its market presence and financial performance.",
+    "aiAnalysis": "Based on our analysis, Marvell Technology, Inc. demonstrates strong buy fundamentals. with revenue reaching $8.7B and growing at 27.6% year-over-year. Our fair value estimate of $256.91 suggests +48.9% upside from current levels of $172.52. The company maintains a competitive position in Technology, supported by its market presence and financial performance.",
     "lastUpdated": "2026-07-28",
     "fmpIncome": [
       {
@@ -230984,8 +231081,7 @@
         "totalAssets": 22522100000.0,
         "totalLiabilities": 6884900000.0
       }
-    ],
-    "fmpCalls": 0
+    ]
   },
   "AMD": {
     "company": {
@@ -231000,20 +231096,20 @@
     },
     "stats": {
       "marketCap": {
-        "raw": 807065747456.0,
-        "fmt": "$807.1B"
+        "raw": 742935494656.0,
+        "fmt": "$742.9B"
       },
       "trailingPE": {
-        "raw": 175.51,
-        "fmt": "175.51"
+        "raw": 150.87,
+        "fmt": "150.87"
       },
       "forwardPE": {
-        "raw": 35.92,
-        "fmt": "35.92"
+        "raw": 33.07,
+        "fmt": "33.07"
       },
       "epsTrailing": {
-        "raw": 2.82,
-        "fmt": "$2.82"
+        "raw": 3.02,
+        "fmt": "$3.02"
       },
       "epsForward": {
         "raw": 13.78,
@@ -231024,8 +231120,8 @@
         "fmt": "2.47"
       },
       "avgVolume": {
-        "raw": 33547790.0,
-        "fmt": "33.5M"
+        "raw": 33393844.0,
+        "fmt": "33.4M"
       },
       "fiftyTwoWeekLow": {
         "raw": 149.22,
@@ -231097,8 +231193,8 @@
         "fmt": "91.2%"
       },
       "priceToSales": {
-        "raw": 21.5,
-        "fmt": "21.5x"
+        "raw": 19.8,
+        "fmt": "19.8x"
       },
       "enterpriseValue": {
         "raw": 798589779968.0,
@@ -231127,20 +231223,20 @@
     },
     "returns": {
       "oneYear": {
-        "raw": 1.85,
-        "fmt": "+185.0%"
+        "raw": 1.625,
+        "fmt": "+162.5%"
       },
       "fiveYear": {
-        "raw": 3.47,
-        "fmt": "+347.0%"
+        "raw": 3.117,
+        "fmt": "+311.7%"
       },
       "tenYear": {
-        "raw": 65.885,
-        "fmt": "+6588.5%"
+        "raw": 60.601,
+        "fmt": "+6060.1%"
       },
       "ytd": {
-        "raw": 1.215,
-        "fmt": "+121.5%"
+        "raw": 1.04,
+        "fmt": "+104.0%"
       }
     },
     "analystTarget": {
@@ -231173,8 +231269,8 @@
       },
       "numberOfAnalystOpinions": 47,
       "currentPrice": {
-        "raw": 494.95,
-        "fmt": "$494.95"
+        "raw": 455.6208,
+        "fmt": "$455.62"
       }
     },
     "earnings": [
@@ -248819,6 +248915,13 @@
         "high": 528.0,
         "low": 476.93,
         "close": 494.95
+      },
+      {
+        "time": "2026-07-28",
+        "open": 466.0,
+        "high": 472.75,
+        "low": 450.1,
+        "close": 455.55
       }
     ],
     "quarterlyFinancials": {
@@ -249018,7 +249121,7 @@
       "segments": [],
       "breakdown": []
     },
-    "aiAnalysis": "Based on our analysis, Advanced Micro Devices, Inc. demonstrates strong buy fundamentals. with revenue reaching $37.5B and growing at 37.8% year-over-year. Our fair value estimate of $573.15 suggests +15.8% upside from current levels of $494.95. The company maintains a competitive position in Technology, supported by its market presence and financial performance.",
+    "aiAnalysis": "Based on our analysis, Advanced Micro Devices, Inc. demonstrates strong buy fundamentals. with revenue reaching $37.5B and growing at 37.8% year-over-year. Our fair value estimate of $573.15 suggests +25.8% upside from current levels of $455.62. The company maintains a competitive position in Technology, supported by its market presence and financial performance.",
     "lastUpdated": "2026-07-28",
     "fmpIncome": [
       {
@@ -249067,8 +249170,7 @@
         "totalAssets": 67580000000.0,
         "totalLiabilities": 12830000000.0
       }
-    ],
-    "fmpCalls": 0
+    ]
   },
   "ANET": {
     "company": {
@@ -249083,20 +249185,20 @@
     },
     "stats": {
       "marketCap": {
-        "raw": 215015768064.0,
-        "fmt": "$215.0B"
+        "raw": 204665389056.0,
+        "fmt": "$204.7B"
       },
       "trailingPE": {
-        "raw": 59.92,
-        "fmt": "59.92"
+        "raw": 56.05,
+        "fmt": "56.05"
       },
       "forwardPE": {
-        "raw": 38.22,
-        "fmt": "38.22"
+        "raw": 36.38,
+        "fmt": "36.38"
       },
       "epsTrailing": {
-        "raw": 2.85,
-        "fmt": "$2.85"
+        "raw": 2.9,
+        "fmt": "$2.90"
       },
       "epsForward": {
         "raw": 4.47,
@@ -249107,8 +249209,8 @@
         "fmt": "1.60"
       },
       "avgVolume": {
-        "raw": 9671477.0,
-        "fmt": "9.7M"
+        "raw": 9648708.0,
+        "fmt": "9.6M"
       },
       "fiftyTwoWeekLow": {
         "raw": 114.52,
@@ -249119,12 +249221,12 @@
         "fmt": "$189.82"
       },
       "fiftyDayAverage": {
-        "raw": 163.86,
-        "fmt": "$163.86"
+        "raw": 164.46,
+        "fmt": "$164.46"
       },
       "twoHundredDayAverage": {
-        "raw": 145.41,
-        "fmt": "$145.41"
+        "raw": 145.54,
+        "fmt": "$145.54"
       },
       "targetMeanPrice": {
         "raw": 192.31,
@@ -249180,8 +249282,8 @@
         "fmt": "25.0%"
       },
       "priceToSales": {
-        "raw": 22.1,
-        "fmt": "22.1x"
+        "raw": 21.1,
+        "fmt": "21.1x"
       },
       "enterpriseValue": {
         "raw": 202668228608.0,
@@ -249210,20 +249312,20 @@
     },
     "returns": {
       "oneYear": {
-        "raw": 0.453,
-        "fmt": "+45.3%"
+        "raw": 0.383,
+        "fmt": "+38.3%"
       },
       "fiveYear": {
-        "raw": 6.394,
-        "fmt": "+639.4%"
+        "raw": 6.038,
+        "fmt": "+603.8%"
       },
       "tenYear": {
-        "raw": 33.289,
-        "fmt": "+3328.9%"
+        "raw": 31.639,
+        "fmt": "+3163.9%"
       },
       "ytd": {
-        "raw": 0.278,
-        "fmt": "+27.8%"
+        "raw": 0.217,
+        "fmt": "+21.7%"
       }
     },
     "analystTarget": {
@@ -249256,8 +249358,8 @@
       },
       "numberOfAnalystOpinions": 27,
       "currentPrice": {
-        "raw": 170.76,
-        "fmt": "$170.76"
+        "raw": 162.54,
+        "fmt": "$162.54"
       }
     },
     "earnings": [
@@ -266902,6 +267004,13 @@
         "high": 176.73,
         "low": 165.9,
         "close": 170.76
+      },
+      {
+        "time": "2026-07-28",
+        "open": 165.57,
+        "high": 166.4,
+        "low": 159.27,
+        "close": 162.54
       }
     ],
     "quarterlyFinancials": {
@@ -267089,7 +267198,7 @@
       "segments": [],
       "breakdown": []
     },
-    "aiAnalysis": "Based on our analysis, Arista Networks, Inc. demonstrates strong buy fundamentals. with revenue reaching $9.7B and growing at 35.1% year-over-year. Our fair value estimate of $192.31 suggests +12.6% upside from current levels of $170.76. The company maintains a competitive position in Technology, supported by its market presence and financial performance.",
+    "aiAnalysis": "Based on our analysis, Arista Networks, Inc. demonstrates strong buy fundamentals. with revenue reaching $9.7B and growing at 35.1% year-over-year. Our fair value estimate of $192.31 suggests +18.3% upside from current levels of $162.54. The company maintains a competitive position in Technology, supported by its market presence and financial performance.",
     "lastUpdated": "2026-07-28",
     "fmpIncome": [
       {
@@ -267138,8 +267247,7 @@
         "totalAssets": 6775410000.0,
         "totalLiabilities": 1889590000.0
       }
-    ],
-    "fmpCalls": 0
+    ]
   },
   "AMAT": {
     "company": {
@@ -267154,20 +267262,20 @@
     },
     "stats": {
       "marketCap": {
-        "raw": 410389708800.0,
-        "fmt": "$410.4B"
+        "raw": 378726580224.0,
+        "fmt": "$378.7B"
       },
       "trailingPE": {
-        "raw": 50.53,
-        "fmt": "50.53"
+        "raw": 44.79,
+        "fmt": "44.79"
       },
       "forwardPE": {
-        "raw": 30.58,
-        "fmt": "30.58"
+        "raw": 28.22,
+        "fmt": "28.22"
       },
       "epsTrailing": {
-        "raw": 10.23,
-        "fmt": "$10.23"
+        "raw": 10.65,
+        "fmt": "$10.65"
       },
       "epsForward": {
         "raw": 16.9,
@@ -267178,12 +267286,12 @@
         "fmt": "1.57"
       },
       "avgVolume": {
-        "raw": 9582687.0,
+        "raw": 9569462.0,
         "fmt": "9.6M"
       },
       "dividendYield": {
-        "raw": 0.0036951769235233803,
-        "fmt": "0.37%"
+        "raw": 0.004004108928533993,
+        "fmt": "0.40%"
       },
       "fiftyTwoWeekLow": {
         "raw": 154.47,
@@ -267255,8 +267363,8 @@
         "fmt": "33.5%"
       },
       "priceToSales": {
-        "raw": 14.1,
-        "fmt": "14.1x"
+        "raw": 13.0,
+        "fmt": "13.0x"
       },
       "enterpriseValue": {
         "raw": 409416695808.0,
@@ -267285,20 +267393,20 @@
     },
     "returns": {
       "oneYear": {
-        "raw": 1.737,
-        "fmt": "+173.7%"
+        "raw": 1.528,
+        "fmt": "+152.8%"
       },
       "fiveYear": {
-        "raw": 2.982,
-        "fmt": "+298.2%"
+        "raw": 2.679,
+        "fmt": "+267.9%"
       },
       "tenYear": {
-        "raw": 18.252,
-        "fmt": "+1825.2%"
+        "raw": 16.783,
+        "fmt": "+1678.3%"
       },
       "ytd": {
-        "raw": 0.927,
-        "fmt": "+92.7%"
+        "raw": 0.78,
+        "fmt": "+78.0%"
       }
     },
     "analystTarget": {
@@ -267331,8 +267439,8 @@
       },
       "numberOfAnalystOpinions": 35,
       "currentPrice": {
-        "raw": 516.89,
-        "fmt": "$516.89"
+        "raw": 477.01,
+        "fmt": "$477.01"
       }
     },
     "earnings": [
@@ -269394,7 +269502,7 @@
         "open": 41.81,
         "high": 43.07,
         "low": 41.63,
-        "close": 42.78
+        "close": 42.79
       },
       {
         "time": "2017-09-15",
@@ -275092,7 +275200,7 @@
         "open": 85.24,
         "high": 86.22,
         "low": 85.06,
-        "close": 85.73
+        "close": 85.74
       },
       {
         "time": "2020-12-09",
@@ -275736,7 +275844,7 @@
         "open": 128.99,
         "high": 129.91,
         "low": 124.85,
-        "close": 126.09
+        "close": 126.1
       },
       {
         "time": "2021-04-23",
@@ -276120,7 +276228,7 @@
         "time": "2021-07-12",
         "open": 130.38,
         "high": 131.38,
-        "low": 129.12,
+        "low": 129.11,
         "close": 131.16
       },
       {
@@ -280048,7 +280156,7 @@
         "open": 135.61,
         "high": 136.91,
         "low": 132.43,
-        "close": 133.7
+        "close": 133.69
       },
       {
         "time": "2023-10-04",
@@ -280780,7 +280888,7 @@
       },
       {
         "time": "2024-03-05",
-        "open": 203.93,
+        "open": 203.94,
         "high": 206.89,
         "low": 201.02,
         "close": 203.58
@@ -284977,6 +285085,13 @@
         "high": 548.55,
         "low": 493.64,
         "close": 516.89
+      },
+      {
+        "time": "2026-07-28",
+        "open": 490.4,
+        "high": 495.0,
+        "low": 473.01,
+        "close": 477.45
       }
     ],
     "quarterlyFinancials": {
@@ -285184,7 +285299,7 @@
       "segments": [],
       "breakdown": []
     },
-    "aiAnalysis": "Based on our analysis, Applied Materials, Inc. demonstrates strong buy fundamentals. with revenue reaching $29.0B and growing at 11.4% year-over-year. Our fair value estimate of $627.66 suggests +21.4% upside from current levels of $516.89. The company maintains a competitive position in Technology, supported by its market presence and financial performance.",
+    "aiAnalysis": "Based on our analysis, Applied Materials, Inc. demonstrates strong buy fundamentals. with revenue reaching $29.0B and growing at 11.4% year-over-year. Our fair value estimate of $627.66 suggests +31.6% upside from current levels of $477.01. The company maintains a competitive position in Technology, supported by its market presence and financial performance.",
     "lastUpdated": "2026-07-28",
     "fmpIncome": [
       {
@@ -285233,8 +285348,7 @@
         "totalAssets": 26726000000.0,
         "totalLiabilities": 14532000000.0
       }
-    ],
-    "fmpCalls": 0
+    ]
   },
   "NFLX": {
     "company": {
@@ -285249,20 +285363,20 @@
     },
     "stats": {
       "marketCap": {
-        "raw": 293141348352.0,
-        "fmt": "$293.1B"
+        "raw": 306174459904.0,
+        "fmt": "$306.2B"
       },
       "trailingPE": {
-        "raw": 22.0,
-        "fmt": "22.00"
+        "raw": 23.12,
+        "fmt": "23.12"
       },
       "forwardPE": {
-        "raw": 18.44,
-        "fmt": "18.44"
+        "raw": 19.26,
+        "fmt": "19.26"
       },
       "epsTrailing": {
-        "raw": 3.2,
-        "fmt": "$3.20"
+        "raw": 3.18,
+        "fmt": "$3.18"
       },
       "epsForward": {
         "raw": 3.82,
@@ -285273,8 +285387,8 @@
         "fmt": "1.52"
       },
       "avgVolume": {
-        "raw": 43051785.0,
-        "fmt": "43.1M"
+        "raw": 43210877.0,
+        "fmt": "43.2M"
       },
       "fiftyTwoWeekLow": {
         "raw": 65.08,
@@ -285346,8 +285460,8 @@
         "fmt": "11.1%"
       },
       "priceToSales": {
-        "raw": 6.1,
-        "fmt": "6.1x"
+        "raw": 6.3,
+        "fmt": "6.3x"
       },
       "enterpriseValue": {
         "raw": 300668092416.0,
@@ -285376,20 +285490,20 @@
     },
     "returns": {
       "oneYear": {
-        "raw": -0.401,
-        "fmt": "-40.1%"
+        "raw": -0.374,
+        "fmt": "-37.4%"
       },
       "fiveYear": {
-        "raw": 0.237,
-        "fmt": "+23.7%"
+        "raw": 0.292,
+        "fmt": "+29.2%"
       },
       "tenYear": {
-        "raw": 6.224,
-        "fmt": "+622.4%"
+        "raw": 6.545,
+        "fmt": "+654.5%"
       },
       "ytd": {
-        "raw": -0.226,
-        "fmt": "-22.6%"
+        "raw": -0.192,
+        "fmt": "-19.2%"
       }
     },
     "analystTarget": {
@@ -285422,8 +285536,8 @@
       },
       "numberOfAnalystOpinions": 45,
       "currentPrice": {
-        "raw": 70.4,
-        "fmt": "$70.40"
+        "raw": 73.53,
+        "fmt": "$73.53"
       }
     },
     "earnings": [
@@ -303068,6 +303182,13 @@
         "high": 71.65,
         "low": 69.86,
         "close": 70.4
+      },
+      {
+        "time": "2026-07-28",
+        "open": 72.11,
+        "high": 73.6,
+        "low": 71.23,
+        "close": 73.52
       }
     ],
     "quarterlyFinancials": {
@@ -303263,7 +303384,7 @@
       "segments": [],
       "breakdown": []
     },
-    "aiAnalysis": "Based on our analysis, Netflix, Inc. demonstrates buy fundamentals. with revenue reaching $48.4B and growing at 13.4% year-over-year. Our fair value estimate of $94.84 suggests +34.7% upside from current levels of $70.40. The company maintains a competitive position in Communication Services, supported by its market presence and financial performance.",
+    "aiAnalysis": "Based on our analysis, Netflix, Inc. demonstrates buy fundamentals. with revenue reaching $48.4B and growing at 13.4% year-over-year. Our fair value estimate of $94.84 suggests +29.0% upside from current levels of $73.53. The company maintains a competitive position in Communication Services, supported by its market presence and financial performance.",
     "lastUpdated": "2026-07-28",
     "fmpIncome": [
       {
@@ -303312,8 +303433,7 @@
         "totalAssets": 48594768000.0,
         "totalLiabilities": 27817367000.0
       }
-    ],
-    "fmpCalls": 0
+    ]
   },
   "RBRK": {
     "company": {
@@ -303328,12 +303448,12 @@
     },
     "stats": {
       "marketCap": {
-        "raw": 15400092672.0,
-        "fmt": "$15.4B"
+        "raw": 14158947328.0,
+        "fmt": "$14.2B"
       },
       "forwardPE": {
-        "raw": 114.99,
-        "fmt": "114.99"
+        "raw": 105.72,
+        "fmt": "105.72"
       },
       "epsTrailing": {
         "raw": -1.49,
@@ -303348,7 +303468,7 @@
         "fmt": "1.10"
       },
       "avgVolume": {
-        "raw": 3630396.0,
+        "raw": 3617070.0,
         "fmt": "3.6M"
       },
       "fiftyTwoWeekLow": {
@@ -303360,12 +303480,12 @@
         "fmt": "$99.75"
       },
       "fiftyDayAverage": {
-        "raw": 74.57,
-        "fmt": "$74.57"
+        "raw": 74.88,
+        "fmt": "$74.88"
       },
       "twoHundredDayAverage": {
-        "raw": 66.8,
-        "fmt": "$66.80"
+        "raw": 66.78,
+        "fmt": "$66.78"
       },
       "targetMeanPrice": {
         "raw": 95.23,
@@ -303417,8 +303537,8 @@
         "fmt": "69.8%"
       },
       "priceToSales": {
-        "raw": 10.8,
-        "fmt": "10.8x"
+        "raw": 9.9,
+        "fmt": "9.9x"
       },
       "enterpriseValue": {
         "raw": 14797382656.0,
@@ -303439,20 +303559,20 @@
     },
     "returns": {
       "oneYear": {
-        "raw": -0.141,
-        "fmt": "-14.1%"
+        "raw": -0.21,
+        "fmt": "-21.0%"
       },
       "fiveYear": {
-        "raw": 1.455,
-        "fmt": "+145.5%"
+        "raw": 1.257,
+        "fmt": "+125.7%"
       },
       "tenYear": {
-        "raw": 1.455,
-        "fmt": "+145.5%"
+        "raw": 1.257,
+        "fmt": "+125.7%"
       },
       "ytd": {
-        "raw": -0.009,
-        "fmt": "-0.9%"
+        "raw": -0.089,
+        "fmt": "-8.9%"
       }
     },
     "analystTarget": {
@@ -303485,8 +303605,8 @@
       },
       "numberOfAnalystOpinions": 26,
       "currentPrice": {
-        "raw": 74.82,
-        "fmt": "$74.82"
+        "raw": 68.79,
+        "fmt": "$68.79"
       }
     },
     "earnings": [
@@ -307495,6 +307615,13 @@
         "high": 76.45,
         "low": 73.61,
         "close": 74.82
+      },
+      {
+        "time": "2026-07-28",
+        "open": 74.47,
+        "high": 74.47,
+        "low": 68.39,
+        "close": 68.79
       }
     ],
     "quarterlyFinancials": {
@@ -307702,7 +307829,7 @@
       "segments": [],
       "breakdown": []
     },
-    "aiAnalysis": "Based on our analysis, Rubrik, Inc. demonstrates strong buy fundamentals. with revenue reaching $1.4B and growing at 39.0% year-over-year. Our fair value estimate of $95.23 suggests +27.3% upside from current levels of $74.82. The company maintains a competitive position in Technology, supported by its market presence and financial performance.",
+    "aiAnalysis": "Based on our analysis, Rubrik, Inc. demonstrates strong buy fundamentals. with revenue reaching $1.4B and growing at 39.0% year-over-year. Our fair value estimate of $95.23 suggests +38.4% upside from current levels of $68.79. The company maintains a competitive position in Technology, supported by its market presence and financial performance.",
     "lastUpdated": "2026-07-28",
     "fmpIncome": [
       {
@@ -307751,8 +307878,7 @@
         "totalAssets": 769183000.0,
         "totalLiabilities": 1856512000.0
       }
-    ],
-    "fmpCalls": 0
+    ]
   },
   "AVAV": {
     "company": {
@@ -307767,16 +307893,16 @@
     },
     "stats": {
       "marketCap": {
-        "raw": 7805783040.0,
-        "fmt": "$7.8B"
+        "raw": 7630173184.0,
+        "fmt": "$7.6B"
       },
       "forwardPE": {
-        "raw": 34.87,
-        "fmt": "34.87"
+        "raw": 34.09,
+        "fmt": "34.09"
       },
       "epsTrailing": {
-        "raw": -5.57,
-        "fmt": "$-5.57"
+        "raw": -5.4,
+        "fmt": "$-5.40"
       },
       "epsForward": {
         "raw": 4.42,
@@ -307787,7 +307913,7 @@
         "fmt": "1.40"
       },
       "avgVolume": {
-        "raw": 1634798.0,
+        "raw": 1647362.0,
         "fmt": "1.6M"
       },
       "fiftyTwoWeekLow": {
@@ -307886,20 +308012,20 @@
     },
     "returns": {
       "oneYear": {
-        "raw": -0.43,
-        "fmt": "-43.0%"
+        "raw": -0.443,
+        "fmt": "-44.3%"
       },
       "fiveYear": {
-        "raw": 0.507,
-        "fmt": "+50.7%"
+        "raw": 0.473,
+        "fmt": "+47.3%"
       },
       "tenYear": {
-        "raw": 5.234,
-        "fmt": "+523.4%"
+        "raw": 5.093,
+        "fmt": "+509.3%"
       },
       "ytd": {
-        "raw": -0.398,
-        "fmt": "-39.8%"
+        "raw": -0.412,
+        "fmt": "-41.2%"
       }
     },
     "analystTarget": {
@@ -307932,8 +308058,8 @@
       },
       "numberOfAnalystOpinions": 19,
       "currentPrice": {
-        "raw": 154.24,
-        "fmt": "$154.24"
+        "raw": 150.77,
+        "fmt": "$150.77"
       }
     },
     "earnings": [
@@ -325578,6 +325704,13 @@
         "high": 156.54,
         "low": 148.25,
         "close": 154.24
+      },
+      {
+        "time": "2026-07-28",
+        "open": 151.81,
+        "high": 151.97,
+        "low": 148.5,
+        "close": 150.73
       }
     ],
     "quarterlyFinancials": {
@@ -325781,7 +325914,7 @@
       "segments": [],
       "breakdown": []
     },
-    "aiAnalysis": "Based on our analysis, AeroVironment, Inc. demonstrates buy fundamentals. with revenue reaching $2.0B and growing at 133.3% year-over-year. Our fair value estimate of $225.77 suggests +46.4% upside from current levels of $154.24. The company maintains a competitive position in Industrials, supported by its market presence and financial performance.",
+    "aiAnalysis": "Based on our analysis, AeroVironment, Inc. demonstrates buy fundamentals. with revenue reaching $2.0B and growing at 133.3% year-over-year. Our fair value estimate of $225.77 suggests +49.7% upside from current levels of $150.77. The company maintains a competitive position in Industrials, supported by its market presence and financial performance.",
     "lastUpdated": "2026-07-28",
     "fmpIncome": [
       {
@@ -325830,8 +325963,7 @@
         "totalAssets": 824577000.0,
         "totalLiabilities": 273607000.0
       }
-    ],
-    "fmpCalls": 0
+    ]
   },
   "META": {
     "company": {
@@ -325846,20 +325978,20 @@
     },
     "stats": {
       "marketCap": {
-        "raw": 1507493412864.0,
+        "raw": 1508369235968.0,
         "fmt": "$1.5T"
       },
       "trailingPE": {
-        "raw": 21.64,
-        "fmt": "21.64"
+        "raw": 21.61,
+        "fmt": "21.61"
       },
       "forwardPE": {
         "raw": 16.05,
         "fmt": "16.05"
       },
       "epsTrailing": {
-        "raw": 27.44,
-        "fmt": "$27.44"
+        "raw": 27.5,
+        "fmt": "$27.50"
       },
       "epsForward": {
         "raw": 37.01,
@@ -325870,11 +326002,11 @@
         "fmt": "1.25"
       },
       "avgVolume": {
-        "raw": 18282250.0,
+        "raw": 18291562.0,
         "fmt": "18.3M"
       },
       "dividendYield": {
-        "raw": 0.0035361274352972874,
+        "raw": 0.0035340743670220372,
         "fmt": "0.35%"
       },
       "fiftyTwoWeekLow": {
@@ -325886,12 +326018,12 @@
         "fmt": "$796.25"
       },
       "fiftyDayAverage": {
-        "raw": 606.07,
-        "fmt": "$606.07"
+        "raw": 605.62,
+        "fmt": "$605.62"
       },
       "twoHundredDayAverage": {
-        "raw": 638.07,
-        "fmt": "$638.07"
+        "raw": 637.48,
+        "fmt": "$637.48"
       },
       "targetMeanPrice": {
         "raw": 825.84,
@@ -325977,16 +326109,16 @@
     },
     "returns": {
       "oneYear": {
-        "raw": -0.17,
-        "fmt": "-17.0%"
+        "raw": -0.169,
+        "fmt": "-16.9%"
       },
       "fiveYear": {
-        "raw": 0.579,
-        "fmt": "+57.9%"
+        "raw": 0.58,
+        "fmt": "+58.0%"
       },
       "tenYear": {
-        "raw": 3.75,
-        "fmt": "+375.0%"
+        "raw": 3.754,
+        "fmt": "+375.4%"
       },
       "ytd": {
         "raw": -0.085,
@@ -326023,8 +326155,8 @@
       },
       "numberOfAnalystOpinions": 58,
       "currentPrice": {
-        "raw": 593.87,
-        "fmt": "$593.87"
+        "raw": 594.215,
+        "fmt": "$594.22"
       }
     },
     "earnings": [
@@ -328183,7 +328315,7 @@
         "time": "2017-10-04",
         "open": 168.35,
         "high": 169.18,
-        "low": 166.82,
+        "low": 166.83,
         "close": 166.95
       },
       {
@@ -330051,7 +330183,7 @@
       {
         "time": "2018-10-25",
         "open": 146.44,
-        "high": 150.89,
+        "high": 150.88,
         "low": 145.72,
         "close": 149.64
       },
@@ -330674,7 +330806,7 @@
       {
         "time": "2019-03-07",
         "open": 170.01,
-        "high": 170.25,
+        "high": 170.24,
         "low": 166.15,
         "close": 167.66
       },
@@ -332368,7 +332500,7 @@
       {
         "time": "2020-02-21",
         "open": 211.62,
-        "high": 212.38,
+        "high": 212.37,
         "low": 207.01,
         "close": 208.35
       },
@@ -332570,7 +332702,7 @@
       },
       {
         "time": "2020-04-02",
-        "open": 157.72,
+        "open": 157.71,
         "high": 159.95,
         "low": 154.56,
         "close": 156.81
@@ -333532,7 +333664,7 @@
         "open": 265.05,
         "high": 269.01,
         "low": 262.99,
-        "close": 263.61
+        "close": 263.62
       },
       {
         "time": "2020-10-19",
@@ -333923,7 +334055,7 @@
         "time": "2021-01-07",
         "open": 263.59,
         "high": 269.25,
-        "low": 262.48,
+        "low": 262.47,
         "close": 266.4
       },
       {
@@ -334043,7 +334175,7 @@
         "open": 261.7,
         "high": 266.51,
         "low": 260.98,
-        "close": 264.76
+        "close": 264.75
       },
       {
         "time": "2021-02-03",
@@ -334820,7 +334952,7 @@
         "open": 348.44,
         "high": 355.37,
         "low": 345.76,
-        "close": 349.02
+        "close": 349.03
       },
       {
         "time": "2021-07-14",
@@ -335638,7 +335770,7 @@
         "time": "2021-12-28",
         "open": 343.61,
         "high": 349.64,
-        "low": 342.2,
+        "low": 342.19,
         "close": 343.21
       },
       {
@@ -337162,7 +337294,7 @@
       },
       {
         "time": "2022-11-08",
-        "open": 95.09,
+        "open": 95.08,
         "high": 96.95,
         "low": 93.96,
         "close": 95.63
@@ -338366,7 +338498,7 @@
       },
       {
         "time": "2023-07-19",
-        "open": 310.31,
+        "open": 310.3,
         "high": 315.91,
         "low": 307.82,
         "close": 313.26
@@ -338499,7 +338631,7 @@
       },
       {
         "time": "2023-08-15",
-        "open": 303.47,
+        "open": 303.48,
         "high": 304.56,
         "low": 297.42,
         "close": 299.32
@@ -339153,7 +339285,7 @@
         "open": 352.97,
         "high": 355.87,
         "low": 352.22,
-        "close": 354.71
+        "close": 354.72
       },
       {
         "time": "2023-12-28",
@@ -339276,7 +339408,7 @@
       },
       {
         "time": "2024-01-24",
-        "open": 386.6,
+        "open": 386.61,
         "high": 392.7,
         "low": 384.43,
         "close": 387.3
@@ -339531,7 +339663,7 @@
         "open": 485.27,
         "high": 488.07,
         "low": 477.62,
-        "close": 480.39
+        "close": 480.4
       },
       {
         "time": "2024-03-18",
@@ -340495,7 +340627,7 @@
       {
         "time": "2024-10-02",
         "open": 571.57,
-        "high": 572.7,
+        "high": 572.71,
         "low": 566.08,
         "close": 569.53
       },
@@ -340742,7 +340874,7 @@
         "open": 559.71,
         "high": 563.11,
         "low": 551.03,
-        "close": 562.29
+        "close": 562.28
       },
       {
         "time": "2024-11-21",
@@ -341258,7 +341390,7 @@
       {
         "time": "2025-03-12",
         "open": 626.8,
-        "high": 630.21,
+        "high": 630.22,
         "low": 606.35,
         "close": 616.51
       },
@@ -342030,7 +342162,7 @@
         "open": 764.61,
         "high": 764.66,
         "low": 746.91,
-        "close": 749.03
+        "close": 749.02
       },
       {
         "time": "2025-08-20",
@@ -342700,7 +342832,7 @@
       {
         "time": "2026-01-06",
         "open": 658.4,
-        "high": 664.33,
+        "high": 664.34,
         "low": 650.74,
         "close": 659.44
       },
@@ -343669,6 +343801,13 @@
         "high": 611.26,
         "low": 593.13,
         "close": 593.87
+      },
+      {
+        "time": "2026-07-28",
+        "open": 595.9,
+        "high": 601.0,
+        "low": 591.0,
+        "close": 594.23
       }
     ],
     "quarterlyFinancials": {
@@ -343868,7 +344007,7 @@
       "segments": [],
       "breakdown": []
     },
-    "aiAnalysis": "Based on our analysis, Meta Platforms, Inc. demonstrates strong buy fundamentals. with revenue reaching $215.0B and growing at 33.1% year-over-year. Our fair value estimate of $825.84 suggests +39.1% upside from current levels of $593.87. The company maintains a competitive position in Communication Services, supported by its market presence and financial performance.",
+    "aiAnalysis": "Based on our analysis, Meta Platforms, Inc. demonstrates strong buy fundamentals. with revenue reaching $215.0B and growing at 33.1% year-over-year. Our fair value estimate of $825.84 suggests +39.0% upside from current levels of $594.22. The company maintains a competitive position in Communication Services, supported by its market presence and financial performance.",
     "lastUpdated": "2026-07-28",
     "fmpIncome": [
       {
@@ -343917,8 +344056,7 @@
         "totalAssets": 185727000000.0,
         "totalLiabilities": 60014000000.0
       }
-    ],
-    "fmpCalls": 0
+    ]
   },
   "RTX": {
     "company": {
@@ -343933,16 +344071,16 @@
     },
     "stats": {
       "marketCap": {
-        "raw": 294377324544.0,
-        "fmt": "$294.4B"
+        "raw": 297578233856.0,
+        "fmt": "$297.6B"
       },
       "trailingPE": {
-        "raw": 38.45,
-        "fmt": "38.45"
+        "raw": 38.87,
+        "fmt": "38.87"
       },
       "forwardPE": {
-        "raw": 27.99,
-        "fmt": "27.99"
+        "raw": 28.29,
+        "fmt": "28.29"
       },
       "epsTrailing": {
         "raw": 5.68,
@@ -343957,20 +344095,20 @@
         "fmt": "0.30"
       },
       "avgVolume": {
-        "raw": 5409783.0,
+        "raw": 5398236.0,
         "fmt": "5.4M"
       },
       "dividendYield": {
-        "raw": 0.012681988828861826,
-        "fmt": "1.27%"
+        "raw": 0.012545573948685433,
+        "fmt": "1.25%"
       },
       "fiftyTwoWeekLow": {
         "raw": 150.61,
         "fmt": "$150.61"
       },
       "fiftyTwoWeekHigh": {
-        "raw": 220.39,
-        "fmt": "$220.39"
+        "raw": 221.34,
+        "fmt": "$221.34"
       },
       "fiftyDayAverage": {
         "raw": 187.12,
@@ -344034,8 +344172,8 @@
         "fmt": "28.7%"
       },
       "priceToSales": {
-        "raw": 3.1,
-        "fmt": "3.1x"
+        "raw": 3.2,
+        "fmt": "3.2x"
       },
       "enterpriseValue": {
         "raw": 326695321600.0,
@@ -344064,20 +344202,20 @@
     },
     "returns": {
       "oneYear": {
-        "raw": 0.422,
-        "fmt": "+42.2%"
+        "raw": 0.437,
+        "fmt": "+43.7%"
       },
       "fiveYear": {
-        "raw": 1.86,
-        "fmt": "+186.0%"
+        "raw": 1.891,
+        "fmt": "+189.1%"
       },
       "tenYear": {
-        "raw": 3.082,
-        "fmt": "+308.2%"
+        "raw": 3.126,
+        "fmt": "+312.6%"
       },
       "ytd": {
-        "raw": 0.175,
-        "fmt": "+17.5%"
+        "raw": 0.188,
+        "fmt": "+18.8%"
       }
     },
     "analystTarget": {
@@ -344110,15 +344248,15 @@
       },
       "numberOfAnalystOpinions": 22,
       "currentPrice": {
-        "raw": 218.42,
-        "fmt": "$218.42"
+        "raw": 220.795,
+        "fmt": "$220.79"
       }
     },
     "earnings": [
       {
         "date": "2026-10-20",
         "epsActual": null,
-        "epsEstimate": 1.76,
+        "epsEstimate": 1.77,
         "revenueActual": null,
         "revenueEstimate": null
       },
@@ -346009,7 +346147,7 @@
       },
       {
         "time": "2017-08-11",
-        "open": 59.87,
+        "open": 59.86,
         "high": 60.25,
         "low": 59.53,
         "close": 59.81
@@ -349748,7 +349886,7 @@
       {
         "time": "2019-09-26",
         "open": 73.68,
-        "high": 74.51,
+        "high": 74.5,
         "low": 73.55,
         "close": 74.1
       },
@@ -350252,7 +350390,7 @@
       {
         "time": "2020-01-09",
         "open": 83.27,
-        "high": 83.49,
+        "high": 83.48,
         "low": 82.91,
         "close": 83.19
       },
@@ -350391,7 +350529,7 @@
       },
       {
         "time": "2020-02-07",
-        "open": 84.47,
+        "open": 84.46,
         "high": 85.47,
         "low": 84.25,
         "close": 84.91
@@ -352415,7 +352553,7 @@
       {
         "time": "2021-04-01",
         "open": 69.11,
-        "high": 69.28,
+        "high": 69.27,
         "low": 68.5,
         "close": 68.81
       },
@@ -353040,7 +353178,7 @@
         "open": 77.99,
         "high": 78.32,
         "low": 77.51,
-        "close": 78.0
+        "close": 78.01
       },
       {
         "time": "2021-08-10",
@@ -353318,7 +353456,7 @@
       {
         "time": "2021-10-05",
         "open": 79.3,
-        "high": 80.65,
+        "high": 80.64,
         "low": 79.06,
         "close": 79.95
       },
@@ -353829,7 +353967,7 @@
       {
         "time": "2022-01-19",
         "open": 82.24,
-        "high": 82.8,
+        "high": 82.79,
         "low": 81.2,
         "close": 81.31
       },
@@ -356734,7 +356872,7 @@
       {
         "time": "2023-09-14",
         "open": 69.63,
-        "high": 71.49,
+        "high": 71.48,
         "low": 69.58,
         "close": 71.35
       },
@@ -357639,7 +357777,7 @@
         "open": 91.04,
         "high": 91.54,
         "low": 90.41,
-        "close": 90.89
+        "close": 90.9
       },
       {
         "time": "2024-03-21",
@@ -361756,6 +361894,13 @@
         "high": 220.39,
         "low": 213.8,
         "close": 218.42
+      },
+      {
+        "time": "2026-07-28",
+        "open": 220.99,
+        "high": 221.34,
+        "low": 218.68,
+        "close": 220.79
       }
     ],
     "quarterlyFinancials": {
@@ -361815,7 +361960,7 @@
         {
           "period": "2026/Q4",
           "actual": null,
-          "estimated": 1.76
+          "estimated": 1.77
         },
         {
           "period": "2026/Q3",
@@ -361951,7 +362096,7 @@
       "segments": [],
       "breakdown": []
     },
-    "aiAnalysis": "Based on our analysis, RTX Corporation demonstrates buy fundamentals. with revenue reaching $93.5B and growing at 14.5% year-over-year. Our fair value estimate of $227.27 suggests +4.1% upside from current levels of $218.42. The company maintains a competitive position in Industrials, supported by its market presence and financial performance.",
+    "aiAnalysis": "Based on our analysis, RTX Corporation demonstrates buy fundamentals. with revenue reaching $93.5B and growing at 14.5% year-over-year. Our fair value estimate of $227.27 suggests +2.9% upside from current levels of $220.79. The company maintains a competitive position in Industrials, supported by its market presence and financial performance.",
     "lastUpdated": "2026-07-28",
     "fmpIncome": [
       {
@@ -362000,7 +362145,6 @@
         "totalAssets": 158864000000.0,
         "totalLiabilities": 84650000000.0
       }
-    ],
-    "fmpCalls": 0
+    ]
   }
 }

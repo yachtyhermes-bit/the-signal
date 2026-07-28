@@ -1,20 +1,12 @@
-# Reduce Vercel upload size
-public_bak/
-public/
-cf-worker/
-dist/audio/
-dist/sector/
-dist_bloated/
-_backup_dist/
-.venv/
-node_modules/
-.git/
-*.bak
-sector/ai/
-sector/cyber/
-sector/defense/
-sector/space/
-sector/mega-cap/
-sector/quantum/
-sector/ai-power/
-sector/etfs/
+# Ignore backup image folders
+public/img/_signal_bak_img/
+public/img/img/
+
+# Ignore audio files (not served from Vercel)
+public/audio/
+
+# Ignore local development files
+_node_modules
+.vercel
+.git
+*.log
