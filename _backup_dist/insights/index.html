@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#1b2b50">
+  <meta name="theme-color" content="#0a0a0a">
   <link rel="canonical" href="https://readthesignal.net/insights">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
   <meta name="robots" content="max-image-preview:large">
   <meta name="description" content="Track portfolios of famous investors and traders — Leopold, Pelosi, Buffett, Cathie Wood — with real-time performance data.">
-  <meta property="og:title" content="Trader Insights — The Signal">
+  <meta property="og:title" content="Traders Insider - Read The Signal">
   <meta property="og:description" content="Track famous trader portfolios and investment moves.">
   <meta property="og:url" content="https://readthesignal.net/insights">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Oxanium:wght@400;500;600;700&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/main.css?v=27">
   <link rel="stylesheet" href="/css/nav.css?v=1">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-98KDVDFBCW"></script>
@@ -24,85 +24,64 @@
   <script src="/js/auth.js?v=2" defer></script>
   <script src="/js/theme.js?v=2" defer></script>
   <script src="/js/nav.js?v=1" defer></script>
-  <title>Trader Insights — The Signal</title>
+  <title>Traders Insider - Read The Signal</title>
   <style>
-    .insights-page { max-width: 1200px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+    * { font-family: 'Inter', sans-serif; }
+    body { background: #0a0a0a; }
     
-    /* Hero */
-    .insights-hero { text-align: center; margin: 1rem 0 3rem; }
-    .insights-hero .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(59,130,246,0.08); border: 1px solid rgba(59,130,246,0.12); border-radius: 100px; padding: 6px 16px; font-size: .75rem; font-weight: 600; color: var(--accent); letter-spacing: .08em; text-transform: uppercase; font-family: 'Oxanium', sans-serif; margin-bottom: 1rem; }
-    .insights-hero .hero-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); display: inline-block; animation: pulse-dot 2s ease-in-out infinite; }
-    @keyframes pulse-dot { 0%,100%{opacity:1} 50%{opacity:.4} }
-    .insights-hero h1 { font-family: 'Anton', sans-serif; font-size: clamp(2.2rem,5vw,3.5rem); color: var(--text-primary); margin: 0 0 .75rem; }
-    .insights-hero h1 .gradient { background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .insights-hero p { color: var(--text-secondary); font-size: 1.05rem; max-width: 600px; margin: 0 auto; line-height: 1.6; }
-
-    /* Summary stats */
-    .insights-summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2.5rem; }
-    .insight-stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem 1.5rem; text-align: center; transition: all .25s ease; }
-    .insight-stat:hover { border-color: var(--accent); transform: translateY(-2px); }
-    .insight-stat-label { color: var(--text-muted); font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; font-family: 'Oxanium', sans-serif; }
-    .insight-stat-value { font-family: 'JetBrains Mono', monospace; font-size: 1.5rem; font-weight: 700; color: var(--text-primary); margin-top: .3rem; }
-    .insight-stat-value.positive { color: var(--green); }
-    .insight-stat-value.negative { color: var(--red); }
-
-    /* Trader cards */
-    .trader-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(540px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; }
-    .trader-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; transition: all .3s cubic-bezier(.25,.46,.45,.94); }
-    .trader-card:hover { transform: translateY(-4px); border-color: var(--accent); box-shadow: 0 8px 24px rgba(59,130,246,.06); }
-    .trader-header { padding: 1.5rem; display: flex; align-items: center; gap: 1.2rem; border-bottom: 1px solid var(--border); }
-    .trader-avatar { width: 64px; height: 64px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; color: #fff; position: relative; overflow: hidden; }
-    .trader-info { flex: 1; }
-    .trader-name { font-family: 'Oxanium', sans-serif; font-size: 1.1rem; font-weight: 700; color: var(--text-primary); margin: 0 0 .15rem; }
-    .trader-title { color: var(--text-muted); font-size: .8rem; margin: 0; }
-    .trader-return { text-align: right; flex-shrink: 0; }
-    .trader-return-label { color: var(--text-muted); font-size: .65rem; text-transform: uppercase; letter-spacing: .05em; font-family: 'Oxanium', sans-serif; }
-    .trader-return-value { font-family: 'JetBrains Mono', monospace; font-size: 1.4rem; font-weight: 700; }
-    .trader-return-value.positive { color: var(--green); }
-    .trader-return-value.negative { color: var(--red); }
-
-    .trader-holdings, .trader-recent { padding: 1rem 1.5rem; }
-    .trader-holdings h4, .trader-recent h4 { font-family: 'Oxanium', sans-serif; font-size: .72rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: .08em; margin: 0 0 .75rem; }
-    .holding-list { display: flex; flex-direction: column; gap: .4rem; }
-    .holding-item { display: flex; align-items: center; gap: .8rem; padding: .55rem .75rem; background: rgba(59,130,246,.03); border: 1px solid rgba(59,130,246,.06); border-radius: 8px; transition: background .2s; }
-    .holding-item:hover { background: rgba(59,130,246,.06); }
-    .holding-ticker { font-family: 'JetBrains Mono', monospace; font-size: .85rem; font-weight: 700; color: var(--text-primary); width: 60px; flex-shrink: 0; }
-    .holding-name { flex: 1; font-size: .78rem; color: var(--text-secondary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .holding-price { font-family: 'JetBrains Mono', monospace; font-size: .82rem; color: var(--text-primary); text-align: right; min-width: 65px; }
-    .holding-change { font-family: 'JetBrains Mono', monospace; font-size: .78rem; text-align: right; min-width: 50px; }
-    .holding-change.positive { color: var(--green); }
-    .holding-change.negative { color: var(--red); }
-    .holding-pct { font-family: 'JetBrains Mono', monospace; font-size: .78rem; color: var(--text-muted); text-align: right; min-width: 35px; }
-
-    .trader-recent { border-top: 1px solid var(--border); }
-    .recent-trade { display: flex; align-items: center; gap: .8rem; padding: .45rem .75rem; background: rgba(59,130,246,.02); border-radius: 8px; margin-bottom: .35rem; }
-    .recent-trade-type { font-size: .65rem; font-weight: 700; padding: 2px 8px; border-radius: 6px; }
-    .recent-trade-type.buy { background: var(--green-dim); color: var(--green); }
-    .recent-trade-type.sell { background: var(--red-dim); color: var(--red); }
-    .recent-trade-info { flex: 1; font-size: .78rem; color: var(--text-secondary); }
-    .recent-trade-date { font-size: .72rem; color: var(--text-muted); }
-
-    .disclaimer { text-align: center; margin-top: 3rem; padding: 1.5rem; border-top: 1px solid var(--border); }
-    .disclaimer p { color: var(--text-muted); font-size: .78rem; line-height: 1.5; max-width: 600px; margin: 0 auto; }
-
-    .insights-loading { text-align: center; padding: 4rem; color: var(--text-muted); }
-
-    /* Premium gate overlay */
-    .insights-gate { text-align: center; padding: 4rem 2rem; }
-    .insights-gate h2 { font-family: 'Anton', sans-serif; font-size: 2rem; color: var(--text-primary); margin: 0 0 .5rem; }
-    .insights-gate h2 .gradient { background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .insights-gate p { color: var(--text-secondary); font-size: 1rem; max-width: 460px; margin: 0 auto 2rem; line-height: 1.6; }
-    .insights-gate .gate-btn { display: inline-block; padding: 14px 32px; background: var(--accent-gradient); border: none; border-radius: 10px; color: #fff; font-family: 'Oxanium', sans-serif; font-size: .9rem; font-weight: 700; cursor: pointer; text-decoration: none; transition: all .25s ease; }
-    .insights-gate .gate-btn:hover { filter: brightness(1.1); box-shadow: 0 4px 24px rgba(59,130,246,.25); }
-
-    @media (max-width: 640px) {
-      .insights-page { padding: 2rem 1rem 4rem; }
-      .trader-grid { grid-template-columns: 1fr; }
-      .trader-header { flex-wrap: wrap; }
-      .trader-return { width: 100%; text-align: left; margin-top: .5rem; }
-      .holding-item { flex-wrap: wrap; gap: .3rem; }
-      .holding-name { width: 100%; }
+    .insights-container { max-width: 1160px; margin: 0 auto; padding: 1.5rem 1.5rem 6rem; }
+    
+    /* Header */
+    .insights-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem; }
+    .insights-title { font-size: 1.75rem; font-weight: 800; letter-spacing: -0.02em; color: #fff; }
+    .insights-subtitle { font-size: 0.8125rem; color: #a1a1aa; margin-top: 0.25rem; line-height: 1.5; }
+    
+    .insights-tabs { display: none; gap: 0.5rem; }
+    @media (min-width: 768px) {
+      .insights-tabs { display: flex; }
     }
+    .insights-tab { padding: 0.5rem 1rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; border: 1px solid #262626; background: #171717; color: #a1a1aa; cursor: pointer; transition: all 0.2s; }
+    .insights-tab.active { background: #fff; color: #000; border-color: #fff; }
+    
+    /* Grid */
+    .traders-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
+    @media (min-width: 768px) {
+      .traders-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    
+    /* Trader Card */
+    .trader-card { background: #171717; border: 1px solid #262626; border-radius: 1rem; padding: 1.25rem; transition: all 0.3s; cursor: pointer; }
+    .trader-card:hover { border-color: #2a2a2a; }
+    
+    .trader-card-main { display: flex; gap: 1rem; }
+    
+    /* Donut Chart */
+    .donut-container { position: relative; width: 96px; height: 96px; flex-shrink: 0; }
+    .donut-chart { position: absolute; inset: 0; border-radius: 50%; }
+    .donut-center { position: absolute; inset: 18px; border-radius: 50%; background: #171717; border: 1px solid #262626; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; }
+    .donut-badge { position: absolute; width: 1.75rem; height: 1.75rem; border-radius: 50%; background: #fff; border: 1px solid #e5e5e5; display: flex; align-items: center; justify-content: center; font-size: 0.5rem; font-weight: 800; color: #000; transform: translate(-50%, -50%); }
+    
+    /* Trader Info */
+    .trader-info { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+    .trader-name-row { display: flex; align-items: baseline; gap: 0.5rem; }
+    .trader-name { font-size: 0.9375rem; font-weight: 700; color: #fff; }
+    .trader-handle { font-size: 0.6875rem; color: #71717a; }
+    .trader-desc { font-size: 0.75rem; color: #a1a1aa; margin-top: 0.25rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    
+    .trader-stats { display: flex; gap: 1rem; margin-top: 0.75rem; }
+    .trader-stat-label { font-size: 0.625rem; font-weight: 600; text-transform: uppercase; color: #71717a; }
+    .trader-stat-value { font-size: 0.8125rem; font-weight: 700; color: #22c55e; }
+    .trader-stat-value.white { color: #fff; }
+    .trader-stat-date { font-size: 0.6875rem; color: #a1a1aa; }
+    
+    /* Holdings Bar */
+    .trader-holdings-section { margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid #1e1e1e; }
+    .trader-holdings-title { font-size: 0.6875rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .holdings-bar { display: flex; gap: 0.375rem; }
+    .holdings-segment { height: 0.375rem; border-radius: 9999px; flex-grow: 1; }
+    .holdings-legend { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
+    .holdings-badge { display: flex; align-items: center; font-size: 0.625rem; padding: 0.25rem 0.5rem; border-radius: 9999px; background: #101010; border: 1px solid #262626; }
+    .holdings-badge-dot { width: 0.5rem; height: 0.5rem; border-radius: 50%; margin-right: 0.25rem; }
   </style>
 </head>
 <body>
@@ -251,245 +230,179 @@
 
   <!-- Main Content -->
   <main>
-    <div class="insights-page" id="insightsPage">
-
-      <!-- Premium gate (shown for non-premium) -->
-      <div id="insightsGate" class="insights-gate" style="display:none;">
-        <div class="hero-badge"><span class="hero-badge-dot"></span> Premium Feature</div>
-        <h2>Trader <span class="gradient">Insights</span></h2>
-        <p>Track portfolios, recent trades, and performance of the world's most famous investors and traders. Available for Premium and Pro members.</p>
-        <a href="/pricing" class="gate-btn">Upgrade to Premium</a>
-      </div>
-
-      <!-- Premium content (shown for premium) -->
-      <div id="insightsContent" style="display:none;">
-        <div class="insights-hero">
-          <div class="hero-badge"><span class="hero-badge-dot"></span> Trader Insights</div>
-          <h1>Follow the <span class="gradient">Masters</span></h1>
-          <p>Track portfolios, recent trades, and performance of the world's most famous investors and traders.</p>
+    <div class="insights-container">
+      <div class="insights-header">
+        <div>
+          <h1 class="insights-title">Traders Insight</h1>
+          <p class="insights-subtitle">Track elite investors in real-time. See what pro traders are investing in and portfolio changes.</p>
         </div>
-
-        <div class="insights-summary" id="insightsSummary">
-          <div class="insight-stat">
-            <div class="insight-stat-label">Tracked Traders</div>
-            <div class="insight-stat-value">4</div>
-          </div>
-          <div class="insight-stat">
-            <div class="insight-stat-label">Best 250D Return</div>
-            <div class="insight-stat-value positive">+144.3%</div>
-          </div>
-          <div class="insight-stat">
-            <div class="insight-stat-label">Worst 250D Return</div>
-            <div class="insight-stat-value negative">-8.2%</div>
-          </div>
-          <div class="insight-stat">
-            <div class="insight-stat-label">Total Value Tracked</div>
-            <div class="insight-stat-value">$87.2B</div>
-          </div>
-        </div>
-
-        <div class="trader-grid" id="traderGrid">
-          <div class="insights-loading">Loading trader data...</div>
-        </div>
-
-        <div class="disclaimer">
-          <p>Data sourced from 13F filings, Capitol Trades API, and public disclosures. Holdings and performance are approximate and updated periodically. Not financial advice.</p>
+        <div class="insights-tabs">
+          <button class="insights-tab active">Top Investors</button>
+          <button class="insights-tab">Top Performers</button>
+          <button class="insights-tab">Recent Changes</button>
         </div>
       </div>
+
+      <div class="traders-grid" id="tradersGrid"></div>
     </div>
   </main>
 
   <script>
-    (function() {
-      // === Trader Data ===
-      var TRADERS = [
-        {
-          id: 'leopold', name: 'Leopold\'s Portfolio', title: 'Retail Investor — High Conviction',
-          avatarBg: 'linear-gradient(135deg,#3b82f6,#8b5cf6)', initials: 'L',
-          return250: 144.3, totalValue: '2.4M',
-          holdings: [
-            { ticker: 'SHAZ', name: 'Shazam Corp', shares: 50000, price: 42.75, change: 3.2, pct: 28 },
-            { ticker: 'NBIS', name: 'Nebius Group', shares: 35000, price: 38.50, change: 5.8, pct: 22 },
-            { ticker: 'SNDK', name: 'Sandisk Corp', shares: 28000, price: 64.20, change: -1.1, pct: 25 },
-            { ticker: 'BE', name: 'Bloom Energy', shares: 45000, price: 18.90, change: 2.4, pct: 25 }
-          ],
-          recentTrades: [
-            { type: 'buy', ticker: 'NBIS', shares: 5000, price: 37.20, date: '2026-07-20' },
-            { type: 'buy', ticker: 'SHAZ', shares: 10000, price: 41.10, date: '2026-07-15' },
-            { type: 'sell', ticker: 'BE', shares: 5000, price: 19.50, date: '2026-07-10' }
-          ],
-          description: 'High-conviction retail trader known for concentrated bets on AI infrastructure and emerging technology.'
-        },
-        {
-          id: 'pelosi', name: 'Pelosi Portfolio', title: 'Congressional Trading Tracker',
-          avatarBg: 'linear-gradient(135deg,#ef4444,#f87171)', initials: 'NP',
-          return250: 38.5, totalValue: '42.5M',
-          holdings: [
-            { ticker: 'INTC', name: 'Intel Corporation', shares: 55000, price: 31.50, change: -2.3, pct: 18 },
-            { ticker: 'UBER', name: 'Uber Technologies', shares: 35000, price: 68.90, change: 1.5, pct: 15 },
-            { ticker: 'AAPL', name: 'Apple Inc.', shares: 25000, price: 198.40, change: 0.8, pct: 22 },
-            { ticker: 'GOOGL', name: 'Alphabet Inc.', shares: 18000, price: 175.30, change: 1.2, pct: 20 },
-            { ticker: 'NVDA', name: 'NVIDIA Corporation', shares: 12000, price: 138.60, change: 4.1, pct: 15 },
-            { ticker: 'MSFT', name: 'Microsoft Corporation', shares: 15000, price: 412.80, change: 0.5, pct: 10 }
-          ],
-          recentTrades: [
-            { type: 'buy', ticker: 'INTC', shares: 10000, price: 30.80, date: '2026-07-18' },
-            { type: 'buy', ticker: 'NVDA', shares: 3000, price: 135.20, date: '2026-07-14' },
-            { type: 'buy', ticker: 'UBER', shares: 5000, price: 67.50, date: '2026-07-08' },
-            { type: 'sell', ticker: 'MSFT', shares: 2000, price: 415.10, date: '2026-07-02' }
-          ],
-          description: 'Tracking the trading activity of Nancy Pelosi and family.'
-        },
-        {
-          id: 'buffett', name: 'Buffett Holdings', title: 'Berkshire Hathaway — 13F Tracker',
-          avatarBg: 'linear-gradient(135deg,#fbbf24,#f59e0b)', initials: 'WB',
-          return250: 24.1, totalValue: '42.8B',
-          holdings: [
-            { ticker: 'DVA', name: 'DaVita Inc.', shares: 40000000, price: 143.50, change: -0.5, pct: 28 },
-            { ticker: 'KO', name: 'Coca-Cola Company', shares: 400000000, price: 69.80, change: 0.3, pct: 32 },
-            { ticker: 'AXP', name: 'American Express', shares: 15000000, price: 258.40, change: 1.1, pct: 22 },
-            { ticker: 'AAPL', name: 'Apple Inc.', shares: 80000000, price: 198.40, change: 0.8, pct: 18 }
-          ],
-          recentTrades: [
-            { type: 'buy', ticker: 'DVA', shares: 2000000, price: 142.10, date: '2026-06-15' },
-            { type: 'buy', ticker: 'AXP', shares: 1000000, price: 255.80, date: '2026-05-20' },
-            { type: 'sell', ticker: 'AAPL', shares: 3000000, price: 210.40, date: '2026-04-10' }
-          ],
-          description: 'Snapshot of Berkshire Hathaway\'s public equity portfolio based on latest 13F filing.'
-        },
-        {
-          id: 'cathie', name: 'Cathie Wood Portfolio', title: 'ARK Invest — Disruptive Innovation',
-          avatarBg: 'linear-gradient(135deg,#06b6d4,#22d3ee)', initials: 'CW',
-          return250: -8.2, totalValue: '12.3B',
-          holdings: [
-            { ticker: 'TSLA', name: 'Tesla Inc.', shares: 8500000, price: 298.50, change: -3.2, pct: 65 },
-            { ticker: 'SPCX', name: 'SPACs & Innovation ETF', shares: 12000000, price: 24.80, change: 0.5, pct: 35 }
-          ],
-          recentTrades: [
-            { type: 'buy', ticker: 'TSLA', shares: 200000, price: 295.10, date: '2026-07-21' },
-            { type: 'buy', ticker: 'SPCX', shares: 500000, price: 24.40, date: '2026-07-16' },
-            { type: 'sell', ticker: 'TSLA', shares: 100000, price: 312.50, date: '2026-07-05' }
-          ],
-          description: 'Tracking ARK Invest\'s flagship disruptive innovation portfolio.'
-        }
-      ];
-
-      var STOCK_PRICES = {};
-
-      function getToken() { try { return localStorage.getItem('hive_token'); } catch(e) { return null; } }
-
-      // === Show content to all users (no premium gate) ===
-      var insightsGate = document.getElementById('insightsGate');
-      var insightsContent = document.getElementById('insightsContent');
-      insightsGate.style.display = 'none';
-      insightsContent.style.display = 'block';
-      initInsights();
-
-      // === Insights rendering ===
-      function loadPrices() {
-        var tickers = [];
-        TRADERS.forEach(function(t) {
-          t.holdings.forEach(function(h) {
-            if (tickers.indexOf(h.ticker) === -1) tickers.push(h.ticker);
-          });
-        });
-        var promises = tickers.map(function(t) {
-          return fetch('/api/prices?ticker=' + t)
-            .then(function(r) { return r.json(); })
-            .then(function(d) { STOCK_PRICES[t] = d.price || null; })
-            .catch(function() { STOCK_PRICES[t] = null; });
-        });
-        return Promise.all(promises);
+    // Trader data
+    const investors = [
+      {
+        name: "Leopold's Portfolio",
+        handle: "@leopold",
+        desc: "AI Infrastructure focused portfolio tracking elite compute and energy holdings",
+        ret: "+144.83%",
+        hold: "10",
+        date: "Jul 1",
+        weights: [
+          {c: "#fbbf24", v: 28.81, label: "NBIS"},
+          {c: "#ef4444", v: 19.51, label: "SNDK"},
+          {c: "#22c55e", v: 14.82, label: "BE"},
+          {c: "#3b82f6", v: 9.44, label: "CORZ"},
+          {c: "#a855f7", v: 8.15, label: "CRWV"},
+          {c: "#06b6d4", v: 6.22, label: "IREN"},
+          {c: "#f97316", v: 5.31, label: "APLD"},
+          {c: "#eab308", v: 3.88, label: "SHAZ"}
+        ]
+      },
+      {
+        name: "Buffett Holdings",
+        handle: "@buffett",
+        desc: "Berkshire Hathaway tracking - value investing focused",
+        ret: "+24.13%",
+        hold: "10",
+        date: "Apr 30",
+        weights: [
+          {c: "#6aa9e0", v: 35, label: "AAPL"},
+          {c: "#1e3a5a", v: 15, label: "GOOGL"},
+          {c: "#1a3a5c", v: 14, label: "BAC"},
+          {c: "#0f2a4a", v: 12, label: "AXP"},
+          {c: "#123456", v: 10, label: "KO"},
+          {c: "#2a4a6c", v: 8, label: "CVX"},
+          {c: "#3a5a7c", v: 6, label: "WFC"}
+        ]
+      },
+      {
+        name: "Pelosi Holdings",
+        handle: "@pelosi",
+        desc: "Congress portfolio tracking - tech focused",
+        ret: "+45.2%",
+        hold: "7",
+        date: "Jun 15",
+        weights: [
+          {c: "#8bc34a", v: 30, label: "NVDA"},
+          {c: "#90caf9", v: 18, label: "AAPL"},
+          {c: "#1976d2", v: 14, label: "MSFT"},
+          {c: "#4caf50", v: 12, label: "GOOGL"},
+          {c: "#ff9800", v: 10, label: "AMZN"},
+          {c: "#f44336", v: 8, label: "AVGO"},
+          {c: "#b71c1c", v: 8, label: "CRWD"}
+        ]
+      },
+      {
+        name: "Cathie Wood",
+        handle: "@cathie",
+        desc: "ARKK innovation focused - disruptive tech",
+        ret: "+18.4%",
+        hold: "12",
+        date: "Jun 10",
+        weights: [
+          {c: "#ff6b6b", v: 22, label: "TSLA"},
+          {c: "#4ecdc4", v: 15, label: "COIN"},
+          {c: "#45b7d1", v: 12, label: "ROKU"},
+          {c: "#96ceb4", v: 10, label: "CRSP"},
+          {c: "#feca57", v: 9, label: "PLTR"}
+        ]
       }
+    ];
 
-      function getAvatarHtml(trader) {
-        return '<div class="trader-avatar" style="background:' + trader.avatarBg + '"><span>' + trader.initials + '</span></div>';
-      }
+    // Generate conic gradient for donut chart
+    function donutGradient(weights) {
+      let acc = 0;
+      const gradient = `conic-gradient(${weights.map(w => {
+        const s = `${w.c} ${acc}% ${acc + w.v}%`;
+        acc += w.v;
+        return s;
+      }).join(',')})`;
+      return gradient;
+    }
 
-      function renderHoldings(holdings) {
-        var html = '<div class="holding-list">';
-        holdings.forEach(function(h) {
-          var chgClass = h.change >= 0 ? 'positive' : 'negative';
-          var chgIcon = h.change >= 0 ? '▲' : '▼';
-          var price = STOCK_PRICES[h.ticker] || h.price;
-          html += '<div class="holding-item">' +
-            '<span class="holding-ticker">' + h.ticker + '</span>' +
-            '<span class="holding-name">' + h.name + '</span>' +
-            '<span class="holding-price">$' + (typeof price === 'number' ? price.toFixed(2) : '---') + '</span>' +
-            '<span class="holding-change ' + chgClass + '">' + chgIcon + ' ' + Math.abs(h.change).toFixed(1) + '%</span>' +
-            '<span class="holding-pct">' + h.pct + '%</span>' +
-            '</div>';
-        });
-        html += '</div>';
-        return html;
-      }
+    // Render traders
+    const grid = document.getElementById('tradersGrid');
+    investors.forEach(inv => {
+      // Generate donut badges
+      const badgeHTML = inv.weights.map((w, i) => {
+        const ang = (i * 360 / inv.weights.length - 90) * Math.PI / 180;
+        const r = 62;
+        return `<div class="donut-badge" style="left: 50%; top: 50%; transform: translate(-50%, -50%) translate(${Math.cos(ang) * r}px, ${Math.sin(ang) * r}px)">${w.label.slice(0, 2)}</div>`;
+      }).join('');
 
-      function renderRecentTrades(trades) {
-        var html = '';
-        (trades || []).forEach(function(t) {
-          html += '<div class="recent-trade">' +
-            '<span class="recent-trade-type ' + t.type + '">' + t.type.toUpperCase() + '</span>' +
-            '<span class="recent-trade-info">' + t.shares.toLocaleString() + ' shares of ' + t.ticker + ' @ $' + t.price.toFixed(2) + '</span>' +
-            '<span class="recent-trade-date">' + (new Date(t.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })) + '</span>' +
-            '</div>';
-        });
-        return html;
-      }
+      // Create card
+      const card = document.createElement('div');
+      card.className = 'trader-card';
+      card.innerHTML = `
+        <div class="trader-card-main">
+          <div class="donut-container">
+            <div class="donut-chart" style="background: ${donutGradient(inv.weights)}"></div>
+            <div class="donut-center">${inv.name[0]}</div>
+            ${badgeHTML}
+          </div>
+          <div class="trader-info">
+            <div class="trader-name-row">
+              <h3 class="trader-name">${inv.name}</h3>
+              <span class="trader-handle">${inv.handle}</span>
+            </div>
+            <p class="trader-desc">${inv.desc}</p>
+            <div class="trader-stats">
+              <div>
+                <div class="trader-stat-label">250D Return</div>
+                <div class="trader-stat-value">${inv.ret}</div>
+              </div>
+              <div>
+                <div class="trader-stat-label">Holdings</div>
+                <div class="trader-stat-value white">${inv.hold}</div>
+              </div>
+              <div>
+                <div class="trader-stat-label">Last Update</div>
+                <div class="trader-stat-date">${inv.date}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="trader-holdings-section">
+          <div class="trader-holdings-title">Top Holdings by Weight</div>
+          <div class="holdings-bar">
+            ${inv.weights.map(w => `<div class="holdings-segment" style="background: ${w.c}; flex-grow: ${w.v}"></div>`).join('')}
+          </div>
+          <div class="holdings-legend">
+            ${inv.weights.slice(0, 5).map(w => `
+              <div class="holdings-badge">
+                <span class="holdings-badge-dot" style="background: ${w.c}"></span>
+                ${w.label} ${w.v}%
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
 
-      function initInsights() {
-        var grid = document.getElementById('traderGrid');
-        loadPrices().then(function() {
-          var html = '';
-          TRADERS.forEach(function(t) {
-            var retClass = t.return250 >= 0 ? 'positive' : 'negative';
-            var retIcon = t.return250 >= 0 ? '+' : '';
-            html += '<div class="trader-card">' +
-              '<div class="trader-header">' +
-                getAvatarHtml(t) +
-                '<div class="trader-info"><div class="trader-name">' + t.name + '</div><div class="trader-title">' + t.title + '</div></div>' +
-                '<div class="trader-return"><div class="trader-return-label">250D Return</div><div class="trader-return-value ' + retClass + '">' + retIcon + t.return250 + '%</div></div>' +
-              '</div>' +
-              '<div class="trader-holdings"><h4>Current Holdings</h4>' + renderHoldings(t.holdings) + '</div>' +
-              '<div class="trader-recent"><h4>Recent Activity</h4>' + renderRecentTrades(t.recentTrades) + '</div>' +
-            '</div>';
-          });
-          grid.innerHTML = html;
-        }).catch(function() {
-          var html = '';
-          TRADERS.forEach(function(t) {
-            var retClass = t.return250 >= 0 ? 'positive' : 'negative';
-            var retIcon = t.return250 >= 0 ? '+' : '';
-            html += '<div class="trader-card">' +
-              '<div class="trader-header">' +
-                getAvatarHtml(t) +
-                '<div class="trader-info"><div class="trader-name">' + t.name + '</div><div class="trader-title">' + t.title + '</div></div>' +
-                '<div class="trader-return"><div class="trader-return-label">250D Return</div><div class="trader-return-value ' + retClass + '">' + retIcon + t.return250 + '%</div></div>' +
-              '</div>' +
-              '<div class="trader-holdings"><h4>Current Holdings</h4>' + renderHoldings(t.holdings) + '</div>' +
-              '<div class="trader-recent"><h4>Recent Activity</h4>' + renderRecentTrades(t.recentTrades) + '</div>' +
-            '</div>';
-          });
-          grid.innerHTML = html;
-        });
-      }
-
-      function setupNav() {
-        window.openSubDrawer = function() {
-          var main = document.getElementById('drawerMain');
-          var sub = document.getElementById('drawerSub');
-          if (main) main.style.transform = 'translateX(-100%)';
-          if (sub) sub.style.transform = 'translateX(0)';
-        };
-        window.closeSubDrawer = function() {
-          var main = document.getElementById('drawerMain');
-          var sub = document.getElementById('drawerSub');
-          if (main) main.style.transform = 'translateX(0)';
-          if (sub) sub.style.transform = 'translateX(-100%)';
-        };
-      }
-      setupNav();
-    })();
+    // Nav setup
+    window.openSubDrawer = function() {
+      var main = document.getElementById('drawerMain');
+      var sub = document.getElementById('drawerSub');
+      if (main) main.style.transform = 'translateX(-100%)';
+      if (sub) sub.style.transform = 'translateX(0)';
+    };
+    window.closeSubDrawer = function() {
+      var main = document.getElementById('drawerMain');
+      var sub = document.getElementById('drawerSub');
+      if (main) main.style.transform = 'translateX(0)';
+      if (sub) sub.style.transform = 'translateX(-100%)';
+    };
   </script>
 </body>
 </html>
-// Force rebuild - insights open access Tue Jul 28 04:06:54 CEST 2026
