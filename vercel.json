@@ -1,6 +1,7 @@
 {
   "outputDirectory": "dist",
-  "trailingSlash": true,
+  "cleanUrls": true,
+  "trailingSlash": false,
   "routes": [
     {
       "handle": "filesystem"
@@ -18,7 +19,11 @@
       "dest": "/data/$1"
     },
     {
-      "src": "/about(/.*)?",
+      "src": "/about",
+      "dest": "/about/index.html"
+    },
+    {
+      "src": "/about/",
       "dest": "/about/index.html"
     },
     {
@@ -34,7 +39,11 @@
       "dest": "/premium/success.html"
     },
     {
-      "src": "/premium(/.*)?",
+      "src": "/premium",
+      "dest": "/premium/index.html"
+    },
+    {
+      "src": "/premium/",
       "dest": "/premium/index.html"
     },
     {
@@ -43,7 +52,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "dest": "/$1/index.html"
     }
   ],
   "headers": [
