@@ -1297,14 +1297,13 @@
           document.getElementById('svsCards').innerHTML = cardsHtml;
         }
 
-        // 3. Holdings table — extracted to function so it re-runs when premium flag arrives
+        // 3. Holdings table — visible to all users (no premium gate)
         window._holdingsData = d.holdings || [];
-        var FREE_HOLDINGS = 5;
+        var FREE_HOLDINGS = 999;
         function renderHoldings() {
           var holdings = window._holdingsData || [];
-          var isP = (window.isPremiumUser || false);
-          var visible = isP ? holdings : holdings.slice(0, FREE_HOLDINGS);
-          var locked = !isP && holdings.length > FREE_HOLDINGS;
+          var visible = holdings;
+          var locked = false;
           var totalHoldings = holdings.length;
           var rowsHtml = '';
           visible.forEach(function(h) {
@@ -1312,12 +1311,9 @@
             var cls = h.return > 0 ? 'return-pos' : (h.return < 0 ? 'return-neg' : '');
             rowsHtml += '<tr><td class="ticker">' + h.ticker + '</td><td class="weight">' + h.weight.toFixed(1) + '%</td><td class="' + cls + '">' + ret + '</td></tr>';
           });
-          if (locked) {
-            rowsHtml += '<tr><td colspan="3" class="locked-row-badge"><span class="premium-badge">\uD83D\uDD12 Premium</span> Full portfolio with all ' + totalHoldings + ' positions \u2014 <span class="upgrade-link" onclick="handleUpgradeClick()">upgrade to unlock</span></td></tr>';
-          }
           document.getElementById('holdingsBody').innerHTML = rowsHtml;
           var pw = document.getElementById('holdingsPaywall');
-          if (pw) pw.style.display = locked ? 'block' : 'none';
+          if (pw) pw.style.display = 'none';
         }
         renderHoldings();
 
