@@ -47,7 +47,8 @@
     /* Hero Card */
     .hero-card { background: #171717; border: 1px solid #262626; border-radius: 1rem; padding: 1.5rem; display: flex; flex-direction: column; }
     .hero-card-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 1rem; }
-    .hero-avatar { width: 4rem; height: 4rem; border-radius: 50%; background: linear-gradient(135deg, #3b82f6, #1d4ed8); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 800; color: #fff; flex-shrink: 0; }
+    .hero-avatar { width: 4rem; height: 4rem; border-radius: 50%; background: linear-gradient(135deg, #3b82f6, #1d4ed8); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 800; color: #fff; flex-shrink: 0; overflow: hidden; }
+    .hero-avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
     .hero-handle { font-size: 0.75rem; color: #71717a; font-weight: 500; padding: 0.25rem 0.625rem; background: #101010; border: 1px solid #262626; border-radius: 9999px; }
     .hero-name { font-size: 1.375rem; font-weight: 800; color: #fff; margin: 0.25rem 0 0.125rem; letter-spacing: -0.02em; }
     .hero-title { font-size: 0.8125rem; color: #a1a1aa; margin-bottom: 0.25rem; }
@@ -61,19 +62,31 @@
 
     /* Portfolio Weighting Card */
     .weighting-card { background: #171717; border: 1px solid #262626; border-radius: 1rem; padding: 1.5rem; display: flex; flex-direction: column; align-items: center; }
-    .weighting-title { font-size: 0.9375rem; font-weight: 700; color: #fff; align-self: flex-start; margin-bottom: 1.25rem; }
+    .weighting-title { font-size: 0.9375rem; font-weight: 700; color: #fff; align-self: flex-start; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.375rem; }
+    .weighting-title .info-icon { display: inline-flex; align-items: center; justify-content: center; width: 1rem; height: 1rem; border-radius: 50%; background: #262626; color: #71717a; font-size: 0.5625rem; font-weight: 700; cursor: help; }
 
-    .donut-large { position: relative; width: 200px; height: 200px; flex-shrink: 0; }
+    .donut-large { position: relative; width: 220px; height: 220px; flex-shrink: 0; margin-bottom: 0.75rem; }
     .donut-large-chart { position: absolute; inset: 0; border-radius: 50%; }
-    .donut-large-center { position: absolute; inset: 40px; border-radius: 50%; background: #171717; border: 2px solid #262626; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.5rem; }
-    .donut-large-badge { position: absolute; width: 2.25rem; height: 2.25rem; border-radius: 50%; background: #fff; border: 2px solid #e5e5e5; display: flex; align-items: center; justify-content: center; font-size: 0.5625rem; font-weight: 800; color: #000; transform: translate(-50%, -50%); }
+    .donut-large-center { position: absolute; inset: 50px; border-radius: 50%; background: #171717; border: 2px solid #262626; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .donut-large-center img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+    .donut-large-center .fallback { font-weight: 800; font-size: 1.25rem; color: #fff; }
 
-    .weighting-legend { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.25rem; justify-content: center; }
-    .weighting-legend-item { display: flex; align-items: center; gap: 0.375rem; font-size: 0.6875rem; color: #a1a1aa; padding: 0.375rem 0.625rem; background: #101010; border: 1px solid #262626; border-radius: 9999px; }
-    .weighting-legend-dot { width: 0.625rem; height: 0.625rem; border-radius: 50%; flex-shrink: 0; }
-    .weighting-legend-pct { color: #fff; font-weight: 600; }
+    /* Segment labels OUTSIDE the ring */
+    .donut-label-outside {
+      position: absolute;
+      font-size: 0.625rem;
+      font-weight: 600;
+      color: #a1a1aa;
+      white-space: nowrap;
+      transform: translate(-50%, -50%);
+    }
 
-    /* Holdings + Sidebar grid */
+    .weighting-legend { display: grid; grid-template-columns: 1fr 1fr; gap: 0.375rem 1rem; margin-top: 0.75rem; width: 100%; max-width: 300px; }
+    .weighting-legend-item { display: flex; align-items: center; gap: 0.375rem; font-size: 0.6875rem; color: #a1a1aa; }
+    .weighting-legend-dot { width: 0.5rem; height: 0.5rem; border-radius: 50%; flex-shrink: 0; }
+    .weighting-legend-pct { color: #fff; font-weight: 600; margin-left: auto; }
+
+    /* Content Grid: Holdings + Sidebar */
     .content-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; margin-bottom: 1.25rem; }
     @media (min-width: 768px) {
       .content-grid { grid-template-columns: 1.4fr 1fr; }
@@ -93,7 +106,7 @@
     .holdings-table td:last-child { padding-right: 0; }
     .holdings-table tr:last-child td { border-bottom: none; }
 
-    .holding-ticker { display: inline-flex; align-items: center; justify-content: center; width: 2.25rem; height: 2.25rem; border-radius: 0.5rem; background: #101010; border: 1px solid #262626; font-size: 0.5625rem; font-weight: 800; color: #fff; }
+    .holding-ticker { display: inline-flex; align-items: center; justify-content: center; width: 2.25rem; height: 2.25rem; border-radius: 0.5rem; font-size: 0.5625rem; font-weight: 800; color: #fff; }
     .holding-name-row { display: flex; align-items: center; gap: 0.5rem; }
     .holding-company { font-size: 0.8125rem; font-weight: 600; color: #fff; }
     .holding-price { font-size: 0.75rem; color: #a1a1aa; }
@@ -103,9 +116,10 @@
     .weight-bar-fill { height: 100%; border-radius: 9999px; transition: width 0.6s ease; }
     .weight-pct { font-size: 0.75rem; font-weight: 700; color: #fff; min-width: 2.5rem; text-align: right; }
 
-    .holding-change { font-size: 0.75rem; font-weight: 600; white-space: nowrap; }
+    .holding-change { font-size: 0.75rem; font-weight: 600; white-space: nowrap; display: inline-flex; align-items: center; gap: 0.1875rem; }
     .holding-change.pos { color: #22c55e; }
     .holding-change.neg { color: #ef4444; }
+    .change-arrow { font-size: 0.625rem; }
 
     /* Performance Card */
     .perf-card { background: #171717; border: 1px solid #262626; border-radius: 1rem; padding: 1.5rem; }
@@ -116,10 +130,10 @@
     .perf-toggle.active { background: #fff; color: #000; }
     .perf-toggle:hover:not(.active) { color: #a1a1aa; }
 
-    .perf-chart-wrap { position: relative; width: 100%; height: 180px; margin-bottom: 0.75rem; }
-    .perf-chart-wrap svg { width: 100%; height: 100%; }
-    .perf-labels { display: flex; justify-content: space-between; font-size: 0.625rem; color: #52525b; margin-top: 0.25rem; }
-    .perf-legend { display: flex; gap: 1.25rem; margin-top: 0.5rem; }
+    .perf-chart-wrap { position: relative; width: 100%; height: 220px; margin-bottom: 0.5rem; }
+    .perf-chart-wrap svg { width: 100%; height: 100%; overflow: visible; }
+    .perf-labels { display: flex; justify-content: space-between; font-size: 0.625rem; color: #52525b; margin-top: 0.25rem; padding: 0 0.25rem; }
+    .perf-legend { display: flex; gap: 1.25rem; margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid #262626; }
     .perf-legend-item { display: flex; align-items: center; gap: 0.375rem; font-size: 0.75rem; color: #a1a1aa; }
     .perf-legend-dot { width: 0.5rem; height: 0.5rem; border-radius: 50%; }
     .perf-legend-item .perf-val { color: #fff; font-weight: 700; }
@@ -131,19 +145,18 @@
 
     .change-item { display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.75rem 0; border-bottom: 1px solid #1a1a1a; }
     .change-item:last-child { border-bottom: none; padding-bottom: 0; }
-    .change-icon { width: 1.75rem; height: 1.75rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.875rem; flex-shrink: 0; }
-    .change-icon.add { background: rgba(34, 197, 94, 0.15); color: #22c55e; }
-    .change-icon.reduce { background: rgba(239, 68, 68, 0.15); color: #ef4444; }
-    .change-icon.increase { background: rgba(34, 197, 94, 0.15); color: #22c55e; }
-    .change-icon.exit { background: rgba(239, 68, 68, 0.15); color: #ef4444; }
-    .change-icon.buy { background: rgba(34, 197, 94, 0.15); color: #22c55e; }
-    .change-icon.sell { background: rgba(239, 68, 68, 0.15); color: #ef4444; }
+    .change-icon-wrap { width: 1.75rem; height: 1.75rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.875rem; font-weight: 700; flex-shrink: 0; }
+    .change-icon-wrap.add { background: rgba(34, 197, 94, 0.15); color: #22c55e; }
+    .change-icon-wrap.reduce { background: rgba(239, 68, 68, 0.15); color: #ef4444; }
+    .change-icon-wrap.increase { background: rgba(34, 197, 94, 0.15); color: #22c55e; }
+    .change-icon-wrap.exit { background: rgba(239, 68, 68, 0.15); color: #ef4444; }
     .change-info { flex: 1; }
     .change-action { font-size: 0.8125rem; font-weight: 600; color: #fff; }
-    .change-detail { font-size: 0.75rem; color: #71717a; margin-top: 0.125rem; }
-    .change-pct { font-size: 0.75rem; font-weight: 700; white-space: nowrap; }
-    .change-pct.pos { color: #22c55e; }
-    .change-pct.neg { color: #ef4444; }
+    .change-detail-row { font-size: 0.75rem; color: #71717a; margin-top: 0.125rem; display: flex; gap: 0.75rem; align-items: center; }
+    .change-ticker { font-weight: 600; color: #a1a1aa; }
+    .change-amount { font-size: 0.75rem; font-weight: 700; white-space: nowrap; }
+    .change-amount.pos { color: #22c55e; }
+    .change-amount.neg { color: #ef4444; }
 
     /* Disclaimer */
     .disclaimer { margin-top: 2rem; padding: 1rem 1.25rem; background: #101010; border: 1px solid #262626; border-radius: 0.75rem; font-size: 0.6875rem; color: #52525b; line-height: 1.6; }
@@ -154,12 +167,12 @@
       .detail-container { padding: 1rem 1rem 5rem; }
       .hero-stats { gap: 1rem; }
       .donut-large { width: 160px; height: 160px; }
-      .donut-large-center { inset: 32px; font-size: 1.25rem; }
-      .donut-large-badge { width: 1.75rem; height: 1.75rem; font-size: 0.5rem; }
+      .donut-large-center { inset: 36px; }
       .holdings-table { font-size: 0.75rem; }
       .holdings-table th, .holdings-table td { padding: 0.375rem 0.5rem 0.375rem 0; }
       .holding-ticker { width: 1.75rem; height: 1.75rem; font-size: 0.5rem; }
       .weight-bar { max-width: 5rem; }
+      .weighting-legend { max-width: 100%; }
     }
   </style>
 </head>
@@ -322,7 +335,10 @@
         <!-- Hero Card (left) -->
         <div class="hero-card">
           <div class="hero-card-header">
-            <div class="hero-avatar">WB</div>
+            <div class="hero-avatar">
+              <img src="/assets/buffett_face.png" alt="Warren Buffett" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <span class="fallback" style="display:none;width:100%;height:100%;align-items:center;justify-content:center;font-weight:800;font-size:1.5rem">WB</span>
+            </div>
             <span class="hero-handle">@buffett</span>
           </div>
           <div class="hero-name">Warren Buffett</div>
@@ -346,26 +362,36 @@
 
         <!-- Portfolio Weighting Card (right) -->
         <div class="weighting-card">
-          <div class="weighting-title">Portfolio Weighting</div>
+          <div class="weighting-title">Portfolio Weighting <span class="info-icon">i</span></div>
           <div class="donut-large">
-            <div class="donut-large-chart" style="background: conic-gradient(#6aa9e0 0% 35%, #1e3a5a 35% 50%, #1a3a5c 50% 64%, #0f2a4a 64% 76%, #123456 76% 86%, #2a4a6c 86% 94%, #3a5a7c 94% 100%)"></div>
-            <div class="donut-large-center">WB</div>
-            <div class="donut-large-badge" style="left: 50%; top: 50%; transform: translate(-50%, -50%) translate(0px, -88px)">AP</div>
-            <div class="donut-large-badge" style="left: 50%; top: 50%; transform: translate(-50%, -50%) translate(63px, -63px)">GO</div>
-            <div class="donut-large-badge" style="left: 50%; top: 50%; transform: translate(-50%, -50%) translate(88px, 0px)">BA</div>
-            <div class="donut-large-badge" style="left: 50%; top: 50%; transform: translate(-50%, -50%) translate(63px, 63px)">AX</div>
-            <div class="donut-large-badge" style="left: 50%; top: 50%; transform: translate(-50%, -50%) translate(0px, 88px)">KO</div>
-            <div class="donut-large-badge" style="left: 50%; top: 50%; transform: translate(-50%, -50%) translate(-63px, 63px)">CV</div>
-            <div class="donut-large-badge" style="left: 50%; top: 50%; transform: translate(-50%, -50%) translate(-88px, 0px)">WF</div>
+            <div class="donut-large-chart" style="background: conic-gradient(#3b82f6 0% 35%, #1e3a5a 35% 50%, #0f2a4a 50% 62%, #ef4444 62% 74%, #f97316 74% 84%, #f59e0b 84% 92%, #8b5cf6 92% 96%, #06b6d4 96% 99%, #ec4899 99% 100%)"></div>
+            <div class="donut-large-center">
+              <img src="/assets/buffett_face.png" alt="WB" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <span class="fallback" style="display:none;width:100%;height:100%;align-items:center;justify-content:center;font-weight:800;font-size:1.25rem">WB</span>
+            </div>
+            <!-- Outside labels -->
+            <div class="donut-label-outside" style="left:50%;top:-5px;transform:translate(-50%,-100%)">Apple 35%</div>
+            <div class="donut-label-outside" style="left:84%;top:8%;transform:translate(-50%,0)">Google 15%</div>
+            <div class="donut-label-outside" style="left:97%;top:36%;transform:translate(-100%,0)">BAC 14%</div>
+            <div class="donut-label-outside" style="left:96%;top:72%;transform:translate(-100%,0)">AXP 12%</div>
+            <div class="donut-label-outside" style="left:76%;top:99%;transform:translate(-50%,0)">KO 10%</div>
+            <div class="donut-label-outside" style="left:42%;top:103%;transform:translate(-50%,0)">CVX 8%</div>
+            <div class="donut-label-outside" style="left:12%;top:92%;transform:translate(-50%,0)">OXY 6%</div>
+            <div class="donut-label-outside" style="left:3%;top:66%;transform:translate(0,0)">MCO 4%</div>
+            <div class="donut-label-outside" style="left:2%;top:36%;transform:translate(0,0)">CB 3%</div>
+            <div class="donut-label-outside" style="left:10%;top:12%;transform:translate(-50%,0)">DVA 2%</div>
           </div>
           <div class="weighting-legend">
-            <div class="weighting-legend-item"><span class="weighting-legend-dot" style="background:#6aa9e0"></span>Apple <span class="weighting-legend-pct">35%</span></div>
+            <div class="weighting-legend-item"><span class="weighting-legend-dot" style="background:#3b82f6"></span>Apple <span class="weighting-legend-pct">35%</span></div>
             <div class="weighting-legend-item"><span class="weighting-legend-dot" style="background:#1e3a5a"></span>Google <span class="weighting-legend-pct">15%</span></div>
-            <div class="weighting-legend-item"><span class="weighting-legend-dot" style="background:#1a3a5c"></span>BAC <span class="weighting-legend-pct">14%</span></div>
-            <div class="weighting-legend-item"><span class="weighting-legend-dot" style="background:#0f2a4a"></span>AXP <span class="weighting-legend-pct">12%</span></div>
-            <div class="weighting-legend-item"><span class="weighting-legend-dot" style="background:#123456"></span>Coca-Cola <span class="weighting-legend-pct">10%</span></div>
-            <div class="weighting-legend-item"><span class="weighting-legend-dot" style="background:#2a4a6c"></span>Chevron <span class="weighting-legend-pct">8%</span></div>
-            <div class="weighting-legend-item"><span class="weighting-legend-dot" style="background:#3a5a7c"></span>WFC <span class="weighting-legend-pct">6%</span></div>
+            <div class="weighting-legend-item"><span class="weighting-legend-dot" style="background:#0f2a4a"></span>Bank of America <span class="weighting-legend-pct">14%</span></div>
+            <div class="weighting-legend-item"><span class="weighting-legend-dot" style="background:#ef4444"></span>American Express <span class="weighting-legend-pct">12%</span></div>
+            <div class="weighting-legend-item"><span class="weighting-legend-dot" style="background:#f97316"></span>Coca-Cola <span class="weighting-legend-pct">10%</span></div>
+            <div class="weighting-legend-item"><span class="weighting-legend-dot" style="background:#f59e0b"></span>Chevron <span class="weighting-legend-pct">8%</span></div>
+            <div class="weighting-legend-item"><span class="weighting-legend-dot" style="background:#8b5cf6"></span>Occidental <span class="weighting-legend-pct">6%</span></div>
+            <div class="weighting-legend-item"><span class="weighting-legend-dot" style="background:#06b6d4"></span>Moody's <span class="weighting-legend-pct">4%</span></div>
+            <div class="weighting-legend-item"><span class="weighting-legend-dot" style="background:#ec4899"></span>Chubb <span class="weighting-legend-pct">3%</span></div>
+            <div class="weighting-legend-item"><span class="weighting-legend-dot" style="background:#10b981"></span>DaVita <span class="weighting-legend-pct">2%</span></div>
           </div>
         </div>
       </div>
@@ -376,7 +402,7 @@
         <div class="holdings-card">
           <div class="holdings-header">
             <span class="holdings-title">Top 10 Holdings by Weight</span>
-            <a href="#" class="holdings-view-all">View all &rarr;</a>
+            <a href="https://en.wikipedia.org/wiki/Berkshire_Hathaway" target="_blank" rel="noopener" class="holdings-view-all">View all &rarr;</a>
           </div>
           <table class="holdings-table">
             <thead>
@@ -389,8 +415,9 @@
               </tr>
             </thead>
             <tbody>
+              <!-- 1. AAPL - Apple -->
               <tr>
-                <td><span class="holding-ticker" style="background:#6aa9e0;color:#fff">AAP</span></td>
+                <td><span class="holding-ticker" style="background:#3b82f6">AAPL</span></td>
                 <td>
                   <div class="holding-name-row">
                     <span class="holding-company">Apple Inc.</span>
@@ -399,30 +426,15 @@
                 <td><span class="holding-price">$182.54</span></td>
                 <td>
                   <div class="weight-bar-wrap">
-                    <div class="weight-bar"><div class="weight-bar-fill" style="width:100%;background:#6aa9e0"></div></div>
+                    <div class="weight-bar"><div class="weight-bar-fill" style="width:100%;background:#3b82f6"></div></div>
                     <span class="weight-pct">35%</span>
                   </div>
                 </td>
-                <td><span class="holding-change pos">+2.4%</span></td>
+                <td><span class="holding-change pos"><span class="change-arrow">&#9650;</span>+2.4%</span></td>
               </tr>
+              <!-- 2. BAC - Bank of America -->
               <tr>
-                <td><span class="holding-ticker" style="background:#1e3a5a;color:#fff">GO</span></td>
-                <td>
-                  <div class="holding-name-row">
-                    <span class="holding-company">Alphabet Inc.</span>
-                  </div>
-                </td>
-                <td><span class="holding-price">$175.40</span></td>
-                <td>
-                  <div class="weight-bar-wrap">
-                    <div class="weight-bar"><div class="weight-bar-fill" style="width:42.9%;background:#1e3a5a"></div></div>
-                    <span class="weight-pct">15%</span>
-                  </div>
-                </td>
-                <td><span class="holding-change pos">+1.2%</span></td>
-              </tr>
-              <tr>
-                <td><span class="holding-ticker" style="background:#1a3a5c;color:#fff">BA</span></td>
+                <td><span class="holding-ticker" style="background:#1e3a5a">BAC</span></td>
                 <td>
                   <div class="holding-name-row">
                     <span class="holding-company">Bank of America</span>
@@ -431,14 +443,15 @@
                 <td><span class="holding-price">$34.12</span></td>
                 <td>
                   <div class="weight-bar-wrap">
-                    <div class="weight-bar"><div class="weight-bar-fill" style="width:40%;background:#1a3a5c"></div></div>
-                    <span class="weight-pct">14%</span>
+                    <div class="weight-bar"><div class="weight-bar-fill" style="width:42.9%;background:#1e3a5a"></div></div>
+                    <span class="weight-pct">15%</span>
                   </div>
                 </td>
-                <td><span class="holding-change pos">+0.8%</span></td>
+                <td><span class="holding-change pos"><span class="change-arrow">&#9650;</span>+0.8%</span></td>
               </tr>
+              <!-- 3. AXP - American Express -->
               <tr>
-                <td><span class="holding-ticker" style="background:#0f2a4a;color:#fff">AX</span></td>
+                <td><span class="holding-ticker" style="background:#0f2a4a">AXP</span></td>
                 <td>
                   <div class="holding-name-row">
                     <span class="holding-company">American Express</span>
@@ -447,14 +460,15 @@
                 <td><span class="holding-price">$214.63</span></td>
                 <td>
                   <div class="weight-bar-wrap">
-                    <div class="weight-bar"><div class="weight-bar-fill" style="width:34.3%;background:#0f2a4a"></div></div>
-                    <span class="weight-pct">12%</span>
+                    <div class="weight-bar"><div class="weight-bar-fill" style="width:40%;background:#0f2a4a"></div></div>
+                    <span class="weight-pct">14%</span>
                   </div>
                 </td>
-                <td><span class="holding-change pos">+1.5%</span></td>
+                <td><span class="holding-change pos"><span class="change-arrow">&#9650;</span>+1.5%</span></td>
               </tr>
+              <!-- 4. KO - Coca-Cola -->
               <tr>
-                <td><span class="holding-ticker" style="background:#123456;color:#fff">KO</span></td>
+                <td><span class="holding-ticker" style="background:#ef4444">KO</span></td>
                 <td>
                   <div class="holding-name-row">
                     <span class="holding-company">Coca-Cola Co.</span>
@@ -463,14 +477,15 @@
                 <td><span class="holding-price">$59.22</span></td>
                 <td>
                   <div class="weight-bar-wrap">
-                    <div class="weight-bar"><div class="weight-bar-fill" style="width:28.6%;background:#123456"></div></div>
-                    <span class="weight-pct">10%</span>
+                    <div class="weight-bar"><div class="weight-bar-fill" style="width:34.3%;background:#ef4444"></div></div>
+                    <span class="weight-pct">12%</span>
                   </div>
                 </td>
-                <td><span class="holding-change neg">-0.3%</span></td>
+                <td><span class="holding-change neg"><span class="change-arrow">&#9660;</span>-0.3%</span></td>
               </tr>
+              <!-- 5. CVX - Chevron -->
               <tr>
-                <td><span class="holding-ticker" style="background:#2a4a6c;color:#fff">CV</span></td>
+                <td><span class="holding-ticker" style="background:#f97316">CVX</span></td>
                 <td>
                   <div class="holding-name-row">
                     <span class="holding-company">Chevron Corp.</span>
@@ -479,14 +494,15 @@
                 <td><span class="holding-price">$154.87</span></td>
                 <td>
                   <div class="weight-bar-wrap">
-                    <div class="weight-bar"><div class="weight-bar-fill" style="width:22.9%;background:#2a4a6c"></div></div>
-                    <span class="weight-pct">8%</span>
+                    <div class="weight-bar"><div class="weight-bar-fill" style="width:28.6%;background:#f97316"></div></div>
+                    <span class="weight-pct">10%</span>
                   </div>
                 </td>
-                <td><span class="holding-change neg">-1.1%</span></td>
+                <td><span class="holding-change neg"><span class="change-arrow">&#9660;</span>-1.1%</span></td>
               </tr>
+              <!-- 6. OXY - Occidental Petroleum -->
               <tr>
-                <td><span class="holding-ticker" style="background:#3a5a7c;color:#fff">OX</span></td>
+                <td><span class="holding-ticker" style="background:#f59e0b">OXY</span></td>
                 <td>
                   <div class="holding-name-row">
                     <span class="holding-company">Occidental Petroleum</span>
@@ -495,14 +511,15 @@
                 <td><span class="holding-price">$61.02</span></td>
                 <td>
                   <div class="weight-bar-wrap">
-                    <div class="weight-bar"><div class="weight-bar-fill" style="width:17.1%;background:#3a5a7c"></div></div>
-                    <span class="weight-pct">6%</span>
+                    <div class="weight-bar"><div class="weight-bar-fill" style="width:22.9%;background:#f59e0b"></div></div>
+                    <span class="weight-pct">8%</span>
                   </div>
                 </td>
-                <td><span class="holding-change pos">+3.4%</span></td>
+                <td><span class="holding-change pos"><span class="change-arrow">&#9650;</span>+3.4%</span></td>
               </tr>
+              <!-- 7. MCO - Moody's -->
               <tr>
-                <td><span class="holding-ticker" style="background:#4a6a8c;color:#fff">MC</span></td>
+                <td><span class="holding-ticker" style="background:#8b5cf6">MCO</span></td>
                 <td>
                   <div class="holding-name-row">
                     <span class="holding-company">Moody's Corp.</span>
@@ -511,14 +528,15 @@
                 <td><span class="holding-price">$392.10</span></td>
                 <td>
                   <div class="weight-bar-wrap">
-                    <div class="weight-bar"><div class="weight-bar-fill" style="width:14.3%;background:#4a6a8c"></div></div>
-                    <span class="weight-pct">5%</span>
+                    <div class="weight-bar"><div class="weight-bar-fill" style="width:17.1%;background:#8b5cf6"></div></div>
+                    <span class="weight-pct">6%</span>
                   </div>
                 </td>
-                <td><span class="holding-change pos">+0.5%</span></td>
+                <td><span class="holding-change pos"><span class="change-arrow">&#9650;</span>+0.5%</span></td>
               </tr>
+              <!-- 8. CB - Chubb -->
               <tr>
-                <td><span class="holding-ticker" style="background:#5a7a9c;color:#fff">CB</span></td>
+                <td><span class="holding-ticker" style="background:#06b6d4">CB</span></td>
                 <td>
                   <div class="holding-name-row">
                     <span class="holding-company">Chubb Ltd.</span>
@@ -527,14 +545,15 @@
                 <td><span class="holding-price">$238.45</span></td>
                 <td>
                   <div class="weight-bar-wrap">
-                    <div class="weight-bar"><div class="weight-bar-fill" style="width:11.4%;background:#5a7a9c"></div></div>
+                    <div class="weight-bar"><div class="weight-bar-fill" style="width:11.4%;background:#06b6d4"></div></div>
                     <span class="weight-pct">4%</span>
                   </div>
                 </td>
-                <td><span class="holding-change neg">-0.7%</span></td>
+                <td><span class="holding-change neg"><span class="change-arrow">&#9660;</span>-0.7%</span></td>
               </tr>
+              <!-- 9. DVA - DaVita -->
               <tr>
-                <td><span class="holding-ticker" style="background:#6a8aac;color:#fff">DV</span></td>
+                <td><span class="holding-ticker" style="background:#10b981">DVA</span></td>
                 <td>
                   <div class="holding-name-row">
                     <span class="holding-company">DaVita Inc.</span>
@@ -543,14 +562,15 @@
                 <td><span class="holding-price">$124.50</span></td>
                 <td>
                   <div class="weight-bar-wrap">
-                    <div class="weight-bar"><div class="weight-bar-fill" style="width:8.6%;background:#6a8aac"></div></div>
+                    <div class="weight-bar"><div class="weight-bar-fill" style="width:8.6%;background:#10b981"></div></div>
                     <span class="weight-pct">3%</span>
                   </div>
                 </td>
-                <td><span class="holding-change neg">-1.9%</span></td>
+                <td><span class="holding-change neg"><span class="change-arrow">&#9660;</span>-1.9%</span></td>
               </tr>
+              <!-- 10. KHC - Kraft Heinz -->
               <tr>
-                <td><span class="holding-ticker" style="background:#7a9abc;color:#fff">KH</span></td>
+                <td><span class="holding-ticker" style="background:#ec4899">KHC</span></td>
                 <td>
                   <div class="holding-name-row">
                     <span class="holding-company">Kraft Heinz Co.</span>
@@ -559,11 +579,11 @@
                 <td><span class="holding-price">$34.80</span></td>
                 <td>
                   <div class="weight-bar-wrap">
-                    <div class="weight-bar"><div class="weight-bar-fill" style="width:5.7%;background:#7a9abc"></div></div>
+                    <div class="weight-bar"><div class="weight-bar-fill" style="width:5.7%;background:#ec4899"></div></div>
                     <span class="weight-pct">2%</span>
                   </div>
                 </td>
-                <td><span class="holding-change neg">-0.4%</span></td>
+                <td><span class="holding-change neg"><span class="change-arrow">&#9660;</span>-0.4%</span></td>
               </tr>
             </tbody>
           </table>
@@ -582,23 +602,46 @@
               </div>
             </div>
             <div class="perf-chart-wrap">
-              <svg viewBox="0 0 340 160" preserveAspectRatio="none">
+              <svg viewBox="0 0 340 200" preserveAspectRatio="none">
+                <!-- Y-axis labels -->
+                <text x="-8" y="14" text-anchor="end" fill="#52525b" font-size="9">$0y</text>
+                <text x="-8" y="64" text-anchor="end" fill="#52525b" font-size="9">Br</text>
+                <text x="-8" y="114" text-anchor="end" fill="#52525b" font-size="9">$0</text>
                 <!-- Grid lines -->
+                <line x1="0" y1="20" x2="340" y2="20" stroke="#262626" stroke-width="1"/>
+                <line x1="0" y1="70" x2="340" y2="70" stroke="#262626" stroke-width="1"/>
                 <line x1="0" y1="120" x2="340" y2="120" stroke="#262626" stroke-width="1"/>
-                <line x1="0" y1="80" x2="340" y2="80" stroke="#262626" stroke-width="1"/>
-                <line x1="0" y1="40" x2="340" y2="40" stroke="#262626" stroke-width="1"/>
                 <!-- Portfolio line (orange) -->
                 <polyline fill="none" stroke="#f97316" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-                  points="10,140 40,130 80,118 120,100 160,85 200,70 240,55 280,42 320,30 335,26"/>
+                  points="10,180 40,170 80,158 120,140 160,125 200,110 240,95 280,82 320,70 335,62"/>
+                <!-- Portfolio data dots -->
+                <circle cx="10" cy="180" r="2.5" fill="#f97316"/>
+                <circle cx="40" cy="170" r="2.5" fill="#f97316"/>
+                <circle cx="80" cy="158" r="2.5" fill="#f97316"/>
+                <circle cx="120" cy="140" r="2.5" fill="#f97316"/>
+                <circle cx="160" cy="125" r="2.5" fill="#f97316"/>
+                <circle cx="200" cy="110" r="2.5" fill="#f97316"/>
+                <circle cx="240" cy="95" r="2.5" fill="#f97316"/>
+                <circle cx="280" cy="82" r="2.5" fill="#f97316"/>
+                <circle cx="320" cy="70" r="2.5" fill="#f97316"/>
+                <circle cx="335" cy="62" r="4" fill="#f97316"/>
                 <!-- S&P 500 line (gray) -->
-                <polyline fill="none" stroke="#52525b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-                  points="10,140 40,136 80,130 120,122 160,115 200,108 240,100 280,95 320,88 335,85"/>
-                <!-- End point dots -->
-                <circle cx="335" cy="26" r="4" fill="#f97316"/>
-                <circle cx="335" cy="85" r="4" fill="#52525b"/>
+                <polyline fill="none" stroke="#52525b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  points="10,180 40,176 80,170 120,162 160,155 200,148 240,140 280,135 320,128 335,125"/>
+                <!-- S&P data dots -->
+                <circle cx="10" cy="180" r="2.5" fill="#52525b"/>
+                <circle cx="40" cy="176" r="2.5" fill="#52525b"/>
+                <circle cx="80" cy="170" r="2.5" fill="#52525b"/>
+                <circle cx="120" cy="162" r="2.5" fill="#52525b"/>
+                <circle cx="160" cy="155" r="2.5" fill="#52525b"/>
+                <circle cx="200" cy="148" r="2.5" fill="#52525b"/>
+                <circle cx="240" cy="140" r="2.5" fill="#52525b"/>
+                <circle cx="280" cy="135" r="2.5" fill="#52525b"/>
+                <circle cx="320" cy="128" r="2.5" fill="#52525b"/>
+                <circle cx="335" cy="125" r="4" fill="#52525b"/>
                 <!-- End point labels -->
-                <text x="335" y="18" text-anchor="end" fill="#f97316" font-size="10" font-weight="700">+24.13%</text>
-                <text x="335" y="108" text-anchor="end" fill="#71717a" font-size="10" font-weight="600">+12.08%</text>
+                <text x="335" y="52" text-anchor="end" fill="#f97316" font-size="10" font-weight="700">+24.13%</text>
+                <text x="335" y="148" text-anchor="end" fill="#71717a" font-size="10" font-weight="600">+12.08%</text>
               </svg>
             </div>
             <div class="perf-labels">
@@ -623,35 +666,48 @@
               Recent Portfolio Changes
             </div>
             <div class="change-item">
-              <div class="change-icon add">+</div>
+              <div class="change-icon-wrap add">+</div>
               <div class="change-info">
                 <div class="change-action">Added 50k shares &bull; Occidental Petroleum</div>
-                <div class="change-detail">Apr 22, 2024 &bull; +$3.1M</div>
+                <div class="change-detail-row">
+                  <span>Apr 22, 2024</span>
+                  <span class="change-ticker">(OXY)</span>
+                </div>
               </div>
-              <span class="change-pct pos">+$3.1M</span>
+              <div class="change-amount pos">+$3.1M</div>
             </div>
             <div class="change-item">
-              <div class="change-icon reduce">&minus;</div>
+              <div class="change-icon-wrap reduce">&minus;</div>
               <div class="change-info">
                 <div class="change-action">Reduced position &bull; Wells Fargo</div>
-                <div class="change-detail">Apr 15, 2024 &bull; &minus;$1.8M</div>
+                <div class="change-detail-row">
+                  <span>Apr 15, 2024</span>
+                  <span class="change-ticker">(WFC)</span>
+                </div>
               </div>
-              <span class="change-pct neg">&minus;$1.8M</span>
+              <div class="change-amount neg">&minus;$1.8M</div>
             </div>
             <div class="change-item">
-              <div class="change-icon increase">+</div>
+              <div class="change-icon-wrap increase">+</div>
               <div class="change-info">
                 <div class="change-action">Increased stake &bull; Apple</div>
-                <div class="change-detail">Apr 10, 2024</div>
+                <div class="change-detail-row">
+                  <span>Apr 10, 2024</span>
+                  <span class="change-ticker">(AAPL)</span>
+                </div>
               </div>
+              <div class="change-amount pos">+$4.2M</div>
             </div>
             <div class="change-item">
-              <div class="change-icon exit">&times;</div>
+              <div class="change-icon-wrap exit">&times;</div>
               <div class="change-info">
                 <div class="change-action">Exited position &bull; IBM</div>
-                <div class="change-detail">Mar 18, 2024 &bull; &minus;$2.2M</div>
+                <div class="change-detail-row">
+                  <span>Mar 18, 2024</span>
+                  <span class="change-ticker">(IBM)</span>
+                </div>
               </div>
-              <span class="change-pct neg">&minus;$2.2M</span>
+              <div class="change-amount neg">&minus;$2.2M</div>
             </div>
           </div>
         </div>

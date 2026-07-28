@@ -32,16 +32,27 @@
     .insights-container { max-width: 1160px; margin: 0 auto; padding: 1.5rem 1.5rem 6rem; }
     
     /* Header */
-    .insights-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem; }
+    .insights-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem; flex-wrap: wrap; gap: 0.75rem; }
     .insights-title { font-size: 1.75rem; font-weight: 800; letter-spacing: -0.02em; color: #fff; }
     .insights-subtitle { font-size: 0.8125rem; color: #a1a1aa; margin-top: 0.25rem; line-height: 1.5; }
     
-    .insights-tabs { display: none; gap: 0.5rem; }
-    @media (min-width: 768px) {
-      .insights-tabs { display: flex; }
+    .insights-tabs { display: flex; gap: 0.5rem; }
+    .insights-tab {
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border: 1px solid #262626;
+      background: #262626;
+      color: #a1a1aa;
+      cursor: pointer;
+      transition: all 0.2s;
     }
-    .insights-tab { padding: 0.5rem 1rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; border: 1px solid #262626; background: #171717; color: #a1a1aa; cursor: pointer; transition: all 0.2s; }
-    .insights-tab.active { background: #fff; color: #000; border-color: #fff; }
+    .insights-tab.active {
+      background: #0a0a0a;
+      color: #fff;
+      border-color: #3f3f46;
+    }
     
     /* Grid */
     .traders-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
@@ -50,38 +61,204 @@
     }
     
     /* Trader Card */
-    .trader-card { background: #171717; border: 1px solid #262626; border-radius: 1rem; padding: 1.25rem; transition: all 0.3s; cursor: pointer; }
+    .trader-card {
+      background: #171717;
+      border: 1px solid #262626;
+      border-radius: 1rem;
+      padding: 1.25rem;
+      transition: all 0.3s;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+    }
     .trader-card:hover { border-color: #2a2a2a; }
     
-    .trader-card-main { display: flex; gap: 1rem; }
+    /* Card Header Row */
+    .card-header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+    }
+    .card-header-left {
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+    }
+    .card-avatar {
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+    .card-avatar.leopold { background: linear-gradient(135deg, #06b6d4, #0891b2); color: #fff; }
+    .card-avatar.buffett { background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: #fff; }
+    .card-avatar.pelosi { background: linear-gradient(135deg, #22c55e, #16a34a); color: #fff; }
+    .card-avatar.cathie { background: linear-gradient(135deg, #a855f7, #7c3aed); color: #fff; }
     
-    /* Donut Chart */
-    .donut-container { position: relative; width: 96px; height: 96px; flex-shrink: 0; }
-    .donut-chart { position: absolute; inset: 0; border-radius: 50%; }
-    .donut-center { position: absolute; inset: 18px; border-radius: 50%; background: #171717; border: 1px solid #262626; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; }
-    .donut-badge { position: absolute; width: 1.75rem; height: 1.75rem; border-radius: 50%; background: #fff; border: 1px solid #e5e5e5; display: flex; align-items: center; justify-content: center; font-size: 0.5rem; font-weight: 800; color: #000; transform: translate(-50%, -50%); }
+    .card-name-group { display: flex; flex-direction: column; }
+    .card-name { font-size: 0.875rem; font-weight: 700; color: #fff; line-height: 1.2; }
+    .card-handle { font-size: 0.6875rem; color: #71717a; }
     
-    /* Trader Info */
-    .trader-info { flex: 1; display: flex; flex-direction: column; justify-content: center; }
-    .trader-name-row { display: flex; align-items: baseline; gap: 0.5rem; }
-    .trader-name { font-size: 0.9375rem; font-weight: 700; color: #fff; }
-    .trader-handle { font-size: 0.6875rem; color: #71717a; }
-    .trader-desc { font-size: 0.75rem; color: #a1a1aa; margin-top: 0.25rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .card-return-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.3125rem 0.625rem;
+      border-radius: 9999px;
+      background: rgba(34, 197, 94, 0.12);
+      color: #22c55e;
+      font-size: 0.75rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .card-return-pill .arrow { font-size: 0.625rem; }
     
-    .trader-stats { display: flex; gap: 1rem; margin-top: 0.75rem; }
-    .trader-stat-label { font-size: 0.625rem; font-weight: 600; text-transform: uppercase; color: #71717a; }
-    .trader-stat-value { font-size: 0.8125rem; font-weight: 700; color: #22c55e; }
-    .trader-stat-value.white { color: #fff; }
-    .trader-stat-date { font-size: 0.6875rem; color: #a1a1aa; }
+    /* Category label */
+    .card-category {
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      padding: 0.125rem 0;
+    }
+    .card-category.leopold { color: #06b6d4; }
+    .card-category.buffett { color: #3b82f6; }
+    .card-category.pelosi { color: #22c55e; }
+    .card-category.cathie { color: #a855f7; }
     
-    /* Holdings Bar */
-    .trader-holdings-section { margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid #1e1e1e; }
-    .trader-holdings-title { font-size: 0.6875rem; font-weight: 600; margin-bottom: 0.5rem; }
-    .holdings-bar { display: flex; gap: 0.375rem; }
-    .holdings-segment { height: 0.375rem; border-radius: 9999px; flex-grow: 1; }
-    .holdings-legend { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
-    .holdings-badge { display: flex; align-items: center; font-size: 0.625rem; padding: 0.25rem 0.5rem; border-radius: 9999px; background: #101010; border: 1px solid #262626; }
-    .holdings-badge-dot { width: 0.5rem; height: 0.5rem; border-radius: 50%; margin-right: 0.25rem; }
+    /* Main body: bars left + donut right */
+    .card-body {
+      display: flex;
+      gap: 1rem;
+      flex: 1;
+    }
+    .card-bars-section {
+      flex: 1;
+      min-width: 0;
+    }
+    .card-bars-title {
+      font-size: 0.6875rem;
+      font-weight: 600;
+      color: #71717a;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.5rem;
+    }
+    
+    /* Bar rows */
+    .bar-row {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.375rem;
+    }
+    .bar-ticker {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #fff;
+      min-width: 3rem;
+    }
+    .bar-track {
+      flex: 1;
+      height: 0.5rem;
+      border-radius: 9999px;
+      background: #101010;
+      overflow: hidden;
+      min-width: 0;
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 9999px;
+      transition: width 0.6s ease;
+    }
+    .bar-pct {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #fff;
+      min-width: 2.75rem;
+      text-align: right;
+    }
+    
+    /* Donut chart */
+    .card-donut-section {
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .card-donut {
+      position: relative;
+      width: 180px;
+      height: 180px;
+    }
+    @media (max-width: 500px) {
+      .card-donut { width: 140px; height: 140px; }
+    }
+    .donut-ring { position: absolute; inset: 0; border-radius: 50%; }
+    .donut-center-icon {
+      position: absolute;
+      inset: 32px;
+      border-radius: 50%;
+      background: #171717;
+      border: 2px solid #262626;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      overflow: hidden;
+    }
+    .donut-center-icon img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+    .donut-badge {
+      position: absolute;
+      width: 1.75rem;
+      height: 1.75rem;
+      border-radius: 50%;
+      background: #0a0a0a;
+      border: 1.5px solid #3f3f46;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.5rem;
+      font-weight: 800;
+      color: #fff;
+      transform: translate(-50%, -50%);
+    }
+    
+    /* Card footer pills */
+    .card-footer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.375rem;
+      margin-top: 0.75rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid #1e1e1e;
+    }
+    .ticker-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.25rem 0.5rem;
+      border-radius: 9999px;
+      font-size: 0.625rem;
+      font-weight: 700;
+      background: #101010;
+      border: 1px solid #262626;
+    }
+    .ticker-pill.more {
+      color: #71717a;
+      background: #0a0a0a;
+      border: 1px solid #1e1e1e;
+    }
+    
+    /* Mobile responsive */
+    @media (max-width: 500px) {
+      .card-body { flex-direction: column; }
+      .card-donut-section { align-self: center; }
+    }
   </style>
 </head>
 <body>
@@ -248,145 +425,165 @@
   </main>
 
   <script>
-    // Trader data
+    // Trader data for the reference design
     const investors = [
       {
         name: "Leopold's Portfolio",
         handle: "@leopold",
-        desc: "AI Infrastructure focused portfolio tracking elite compute and energy holdings",
+        category: "AI Infrastructure",
+        categoryClass: "leopold",
+        avatarClass: "leopold",
+        avatarIcon: "🐂",
         ret: "+144.83%",
-        hold: "10",
-        date: "Jul 1",
-        weights: [
-          {c: "#fbbf24", v: 28.81, label: "NBIS"},
-          {c: "#ef4444", v: 19.51, label: "SNDK"},
-          {c: "#22c55e", v: 14.82, label: "BE"},
-          {c: "#3b82f6", v: 9.44, label: "CORZ"},
-          {c: "#a855f7", v: 8.15, label: "CRWV"},
-          {c: "#06b6d4", v: 6.22, label: "IREN"},
-          {c: "#f97316", v: 5.31, label: "APLD"},
-          {c: "#eab308", v: 3.88, label: "SHAZ"}
-        ]
+        barColors: { NBIS: "#06b6d4", SNDK: "#14b8a6", BE: "#3b82f6", SMCI: "#6b7280" },
+        bars: [
+          { ticker: "NBIS", pct: 42, color: "#06b6d4" },
+          { ticker: "SNDK", pct: 22, color: "#14b8a6" },
+          { ticker: "BE",   pct: 16, color: "#3b82f6" },
+          { ticker: "SMCI", pct: 9,  color: "#6b7280" }
+        ],
+        donutColors: ["#06b6d4","#14b8a6","#3b82f6","#6b7280","#8b5cf6","#0ea5e9","#84cc16","#f59e0b"],
+        donutPcts: [28.81,19.51,14.82,9.44,8.15,6.22,5.31,3.88],
+        donutLabels: ["NB","SN","BE","CZ","CR","IR","AP","SH"],
+        pills: ["NBIS","SNDK","BE","+7 more"],
+        pillColors: ["#06b6d4","#14b8a6","#3b82f6","#71717a"],
+        donutCenter: "🐂"
       },
       {
         name: "Buffett Holdings",
         handle: "@buffett",
-        desc: "Berkshire Hathaway tracking - value investing focused",
+        category: "Value Investing",
+        categoryClass: "buffett",
+        avatarClass: "buffett",
+        avatarIcon: "WB",
         ret: "+24.13%",
-        hold: "10",
-        date: "Apr 30",
-        weights: [
-          {c: "#6aa9e0", v: 35, label: "AAPL"},
-          {c: "#1e3a5a", v: 15, label: "GOOGL"},
-          {c: "#1a3a5c", v: 14, label: "BAC"},
-          {c: "#0f2a4a", v: 12, label: "AXP"},
-          {c: "#123456", v: 10, label: "KO"},
-          {c: "#2a4a6c", v: 8, label: "CVX"},
-          {c: "#3a5a7c", v: 6, label: "WFC"}
-        ]
+        bars: [
+          { ticker: "AAPL", pct: 35, color: "#3b82f6" },
+          { ticker: "BAC",  pct: 20, color: "#1e3a5a" },
+          { ticker: "KO",   pct: 15, color: "#ef4444" },
+          { ticker: "AXP",  pct: 12, color: "#6b7280" }
+        ],
+        donutColors: ["#3b82f6","#1e3a5a","#1a3a5c","#ef4444","#f97316","#f59e0b","#8b5cf6","#0ea5e9"],
+        donutPcts: [35,15,14,12,10,8,4,2],
+        donutLabels: ["AP","GO","BA","AX","KO","CV","MC","KH"],
+        pills: ["AAPL","BAC","KO","+7 more"],
+        pillColors: ["#3b82f6","#1e3a5a","#ef4444","#71717a"],
+        donutCenter: "WB"
       },
       {
         name: "Pelosi Holdings",
         handle: "@pelosi",
-        desc: "Congress portfolio tracking - tech focused",
-        ret: "+45.2%",
-        hold: "7",
-        date: "Jun 15",
-        weights: [
-          {c: "#8bc34a", v: 30, label: "NVDA"},
-          {c: "#90caf9", v: 18, label: "AAPL"},
-          {c: "#1976d2", v: 14, label: "MSFT"},
-          {c: "#4caf50", v: 12, label: "GOOGL"},
-          {c: "#ff9800", v: 10, label: "AMZN"},
-          {c: "#f44336", v: 8, label: "AVGO"},
-          {c: "#b71c1c", v: 8, label: "CRWD"}
-        ]
+        category: "Congressional Trading Focus",
+        categoryClass: "pelosi",
+        avatarClass: "pelosi",
+        avatarIcon: "🏛",
+        ret: "+45.20%",
+        bars: [
+          { ticker: "NVDA", pct: 38, color: "#22c55e" },
+          { ticker: "MSFT", pct: 22, color: "#16a34a" },
+          { ticker: "PLTR", pct: 14, color: "#15803d" },
+          { ticker: "AMD",  pct: 10, color: "#6b7280" }
+        ],
+        donutColors: ["#22c55e","#16a34a","#15803d","#4ade80","#86efac","#bbf7d0","#a3e635","#84cc16"],
+        donutPcts: [30,18,14,12,10,8,5,3],
+        donutLabels: ["NV","MS","PL","GO","AM","AV","CR","TS"],
+        pills: ["NVDA","MSFT","PLTR","+5 more"],
+        pillColors: ["#22c55e","#16a34a","#15803d","#71717a"],
+        donutCenter: "🏛"
       },
       {
         name: "Cathie Wood",
         handle: "@cathie",
-        desc: "ARKK innovation focused - disruptive tech",
-        ret: "+18.4%",
-        hold: "12",
-        date: "Jun 10",
-        weights: [
-          {c: "#ff6b6b", v: 22, label: "TSLA"},
-          {c: "#4ecdc4", v: 15, label: "COIN"},
-          {c: "#45b7d1", v: 12, label: "ROKU"},
-          {c: "#96ceb4", v: 10, label: "CRSP"},
-          {c: "#feca57", v: 9, label: "PLTR"}
-        ]
+        category: "ARK Innovation",
+        categoryClass: "cathie",
+        avatarClass: "cathie",
+        avatarIcon: "🚀",
+        ret: "+18.40%",
+        bars: [
+          { ticker: "TSLA", pct: 35, color: "#a855f7" },
+          { ticker: "ROKU", pct: 20, color: "#e879f9" },
+          { ticker: "COIN", pct: 15, color: "#c084fc" },
+          { ticker: "ARKK", pct: 10, color: "#6b7280" }
+        ],
+        donutColors: ["#a855f7","#e879f9","#c084fc","#f472b6","#fbbf24","#34d399","#38bdf8","#fb923c"],
+        donutPcts: [22,15,12,10,9,8,7,7],
+        donutLabels: ["TS","RO","CO","CR","PL","ZM","SQ","TW"],
+        pills: ["TSLA","ROKU","COIN","+5 more"],
+        pillColors: ["#a855f7","#e879f9","#c084fc","#71717a"],
+        donutCenter: "🚀"
       }
     ];
 
-    // Generate conic gradient for donut chart
-    function donutGradient(weights) {
+    // Generate conic gradient
+    function donutGradient(colors, pcts) {
       let acc = 0;
-      const gradient = `conic-gradient(${weights.map(w => {
-        const s = `${w.c} ${acc}% ${acc + w.v}%`;
-        acc += w.v;
+      return 'conic-gradient(' + colors.map((c, i) => {
+        const s = c + ' ' + acc + '% ' + (acc + pcts[i]) + '%';
+        acc += pcts[i];
         return s;
-      }).join(',')})`;
-      return gradient;
+      }).join(',') + ')';
     }
 
     // Render traders
     const grid = document.getElementById('tradersGrid');
     investors.forEach(inv => {
-      // Generate donut badges
-      const badgeHTML = inv.weights.map((w, i) => {
-        const ang = (i * 360 / inv.weights.length - 90) * Math.PI / 180;
-        const r = 62;
-        return `<div class="donut-badge" style="left: 50%; top: 50%; transform: translate(-50%, -50%) translate(${Math.cos(ang) * r}px, ${Math.sin(ang) * r}px)">${w.label.slice(0, 2)}</div>`;
+      // Donut badges around ring
+      const badgeHTML = inv.donutLabels.map((label, i) => {
+        const totalPct = inv.donutPcts.reduce((a, b) => a + b, 0);
+        // Position badge at midpoint angle of each segment
+        let angleOffset = 0;
+        for (let j = 0; j < i; j++) angleOffset += inv.donutPcts[j];
+        const midAngle = (angleOffset + inv.donutPcts[i] / 2) / totalPct * 360 - 90;
+        const angRad = midAngle * Math.PI / 180;
+        const r = 72;
+        return '<div class="donut-badge" style="left:50%;top:50%;transform:translate(-50%,-50%) translate(' +
+          (Math.cos(angRad) * r).toFixed(1) + 'px,' + (Math.sin(angRad) * r).toFixed(1) + 'px)">' +
+          label + '</div>';
       }).join('');
 
-      // Create card
+      // Bar rows
+      const barsHTML = inv.bars.map(b =>
+        '<div class="bar-row">' +
+          '<span class="bar-ticker">' + b.ticker + '</span>' +
+          '<div class="bar-track"><div class="bar-fill" style="width:' + b.pct + '%;background:' + b.color + '"></div></div>' +
+          '<span class="bar-pct">' + b.pct + '%</span>' +
+        '</div>'
+      ).join('');
+
+      // Footer pills
+      const pillsHTML = inv.pills.map((p, i) =>
+        '<span class="ticker-pill' + (p.startsWith('+') ? ' more' : '') + '" style="color:' + inv.pillColors[i] + '">' + p + '</span>'
+      ).join('');
+
       const card = document.createElement('div');
       card.className = 'trader-card';
-      card.innerHTML = `
-        <div class="trader-card-main">
-          <div class="donut-container">
-            <div class="donut-chart" style="background: ${donutGradient(inv.weights)}"></div>
-            <div class="donut-center">${inv.name[0]}</div>
-            ${badgeHTML}
-          </div>
-          <div class="trader-info">
-            <div class="trader-name-row">
-              <h3 class="trader-name">${inv.name}</h3>
-              <span class="trader-handle">${inv.handle}</span>
-            </div>
-            <p class="trader-desc">${inv.desc}</p>
-            <div class="trader-stats">
-              <div>
-                <div class="trader-stat-label">250D Return</div>
-                <div class="trader-stat-value">${inv.ret}</div>
-              </div>
-              <div>
-                <div class="trader-stat-label">Holdings</div>
-                <div class="trader-stat-value white">${inv.hold}</div>
-              </div>
-              <div>
-                <div class="trader-stat-label">Last Update</div>
-                <div class="trader-stat-date">${inv.date}</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="trader-holdings-section">
-          <div class="trader-holdings-title">Top Holdings by Weight</div>
-          <div class="holdings-bar">
-            ${inv.weights.map(w => `<div class="holdings-segment" style="background: ${w.c}; flex-grow: ${w.v}"></div>`).join('')}
-          </div>
-          <div class="holdings-legend">
-            ${inv.weights.slice(0, 5).map(w => `
-              <div class="holdings-badge">
-                <span class="holdings-badge-dot" style="background: ${w.c}"></span>
-                ${w.label} ${w.v}%
-              </div>
-            `).join('')}
-          </div>
-        </div>
-      `;
+      card.innerHTML =
+        '<div class="card-header-row">' +
+          '<div class="card-header-left">' +
+            '<div class="card-avatar ' + inv.avatarClass + '">' + inv.avatarIcon + '</div>' +
+            '<div class="card-name-group">' +
+              '<span class="card-name">' + inv.name + '</span>' +
+              '<span class="card-handle">' + inv.handle + '</span>' +
+            '</div>' +
+          '</div>' +
+          '<span class="card-return-pill">' + inv.ret + ' <span class="arrow">↗</span></span>' +
+        '</div>' +
+        '<div class="card-category ' + inv.categoryClass + '">' + inv.category + '</div>' +
+        '<div class="card-body">' +
+          '<div class="card-bars-section">' +
+            '<div class="card-bars-title">Top 10 Holdings by Weight:</div>' +
+            barsHTML +
+          '</div>' +
+          '<div class="card-donut-section">' +
+            '<div class="card-donut">' +
+              '<div class="donut-ring" style="background:' + donutGradient(inv.donutColors, inv.donutPcts) + '"></div>' +
+              '<div class="donut-center-icon">' + inv.donutCenter + '</div>' +
+              badgeHTML +
+            '</div>' +
+          '</div>' +
+        '</div>' +
+        '<div class="card-footer">' + pillsHTML + '</div>';
+
       grid.appendChild(card);
     });
 
