@@ -378,34 +378,10 @@
 
       function getToken() { try { return localStorage.getItem('hive_token'); } catch(e) { return null; } }
 
-      // === Premium check ===
-      var insightsGate = document.getElementById('insightsGate');
-      var insightsContent = document.getElementById('insightsContent');
-
-      var token = getToken();
-      if (!token) {
-        insightsGate.style.display = 'block';
-        insightsContent.style.display = 'none';
-        setupNav();
-        return;
-      }
-
-      fetch('/api/hive?action=premium&token=' + encodeURIComponent(token))
-        .then(function(r) { return r.json(); })
-        .then(function(data) {
-          if (data.premium) {
-            insightsGate.style.display = 'none';
-            insightsContent.style.display = 'block';
-            initInsights();
-          } else {
-            insightsGate.style.display = 'block';
-            insightsContent.style.display = 'none';
-          }
-        })
-        .catch(function() {
-          insightsGate.style.display = 'block';
-          insightsContent.style.display = 'none';
-        });
+      // === Show content to all users (no premium gate) ===
+      insightsGate.style.display = 'none';
+      insightsContent.style.display = 'block';
+      initInsights();
 
       // === Insights rendering ===
       function loadPrices() {
