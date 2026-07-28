@@ -210,6 +210,14 @@ if (fs.existsSync(audioDir)) {
   console.log(`  ✅ ${countFiles(distAudioDir)} audio files → dist/audio/`);
 }
 
+// ─── 1.5.55. Copy assets (donut images, etc.) ───
+const assetsDir = path.join(ROOT, 'public', 'assets');
+const distAssetsDir = path.join(DST, 'assets');
+if (fs.existsSync(assetsDir)) {
+  fs.cpSync(assetsDir, distAssetsDir, { recursive: true });
+  console.log(`  ✅ ${countFiles(distAssetsDir)} assets files → dist/assets/`);
+}
+
 // ─── 1.5.6. Check for missing TTS audio ───
 (function checkMissingAudio() {
   if (!fs.existsSync(POSTS_DIR)) return;
