@@ -228,6 +228,14 @@
       color: #fff;
       transform: translate(-50%, -50%);
     }
+    .donut-image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: contain;
+    }
     
     /* Card footer pills */
     .card-footer {
@@ -578,8 +586,11 @@
           '</div>' +
           '<div class="card-donut-section">' +
             '<div class="card-donut">' +
-              '<div class="donut-ring" style="background:' + donutGradient(inv.donutColors, inv.donutPcts) + '"></div>' +
-              '<div class="donut-center-icon">' + inv.donutCenter + '</div>' +
+              (inv.donutImage
+                ? '<img class="donut-image" src="' + inv.donutImage + '" alt="">'
+                : '<div class="donut-ring" style="background:' + donutGradient(inv.donutColors, inv.donutPcts) + '"></div>' +
+                  '<div class="donut-center-icon">' + inv.donutCenter + '</div>'
+              ) +
               badgeHTML +
             '</div>' +
           '</div>' +
