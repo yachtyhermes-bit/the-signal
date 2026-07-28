@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="canonical" href="https://readthesignal.net/buffett">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <meta name="robots" content="max-image-preview:large">
+  <meta name="description" content="Warren Buffett's Berkshire Hathaway portfolio — track value investing holdings, portfolio weighting, and performance data in real-time.">
+  <meta property="og:title" content="Buffett Holdings - Read The Signal">
+  <meta property="og:description" content="Warren Buffett's Berkshire Hathaway portfolio tracking with real-time performance data.">
+  <meta property="og:url" content="https://readthesignal.net/buffett">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css?v=27">
+  <link rel="stylesheet" href="/css/nav.css?v=1">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-98KDVDFBCW"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-98KDVDFBCW');</script>
+  <script src="/js/prices.js" defer></script>
+  <script src="/js/search.js" defer></script>
+  <script src="/js/auth.js?v=2" defer></script>
+  <script src="/js/theme.js?v=2" defer></script>
+  <script src="/js/nav.js?v=1" defer></script>
+  <title>Buffett Holdings - Read The Signal</title>
+  <style>
+    * { font-family: 'Inter', sans-serif; }
+    body { background: #0a0a0a; color: #fff; }
+
+    .detail-container { max-width: 1240px; margin: 0 auto; padding: 1.25rem 1.5rem 6rem; }
+
+    /* Breadcrumbs */
+    .breadcrumbs { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8125rem; color: #71717a; margin-bottom: 1.25rem; }
+    .breadcrumbs a { color: #a1a1aa; text-decoration: none; transition: color 0.2s; }
+    .breadcrumbs a:hover { color: #fff; }
+    .breadcrumbs .sep { color: #3f3f46; }
+    .breadcrumbs .current { color: #fff; font-weight: 600; }
+
+    /* 2-col hero grid */
+    .hero-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; margin-bottom: 1.25rem; }
+    @media (min-width: 768px) {
+      .hero-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    /* Hero Card */
+    .hero-card { background: #171717; border: 1px solid #262626; border-radius: 1rem; padding: 1.5rem; display: flex; flex-direction: column; }
+    .hero-card-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 1rem; }
+    .hero-avatar { width: 4rem; height: 4rem; border-radius: 50%; background: linear-gradient(135deg, #3b82f6, #1d4ed8); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 800; color: #fff; flex-shrink: 0; }
+    .hero-handle { font-size: 0.75rem; color: #71717a; font-weight: 500; padding: 0.25rem 0.625rem; background: #101010; border: 1px solid #262626; border-radius: 9999px; }
+    .hero-name { font-size: 1.375rem; font-weight: 800; color: #fff; margin: 0.25rem 0 0.125rem; letter-spacing: -0.02em; }
+    .hero-title { font-size: 0.8125rem; color: #a1a1aa; margin-bottom: 0.25rem; }
+    .hero-desc { font-size: 0.75rem; color: #71717a; line-height: 1.5; margin-bottom: 1rem; }
+    .hero-stats { display: flex; gap: 1.5rem; padding-top: 1rem; border-top: 1px solid #262626; }
+    .hero-stat-label { font-size: 0.625rem; font-weight: 600; text-transform: uppercase; color: #71717a; letter-spacing: 0.04em; }
+    .hero-stat-value { font-size: 1.125rem; font-weight: 700; margin-top: 0.125rem; }
+    .hero-stat-value.green { color: #22c55e; }
+    .hero-stat-value.white { color: #fff; }
+    .hero-stat-date { font-size: 0.75rem; color: #a1a1aa; }
+
+    /* Portfolio Weighting Card */
+    .weighting-card { background: #171717; border: 1px solid #262626; border-radius: 1rem; padding: 1.5rem; display: flex; flex-direction: column; align-items: center; }
+    .weighting-title { font-size: 0.9375rem; font-weight: 700; color: #fff; align-self: flex-start; margin-bottom: 1.25rem; }
+
+    .donut-large { position: relative; width: 200px; height: 200px; flex-shrink: 0; }
+    .donut-large-chart { position: absolute; inset: 0; border-radius: 50%; }
+    .donut-large-center { position: absolute; inset: 40px; border-radius: 50%; background: #171717; border: 2px solid #262626; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.5rem; }
+    .donut-large-badge { position: absolute; width: 2.25rem; height: 2.25rem; border-radius: 50%; background: #fff; border: 2px solid #e5e5e5; display: flex; align-items: center; justify-content: center; font-size: 0.5625rem; font-weight: 800; color: #000; transform: translate(-50%, -50%); }
+
+    .weighting-legend { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.25rem; justify-content: center; }
+    .weighting-legend-item { display: flex; align-items: center; gap: 0.375rem; font-size: 0.6875rem; color: #a1a1aa; padding: 0.375rem 0.625rem; background: #101010; border: 1px solid #262626; border-radius: 9999px; }
+    .weighting-legend-dot { width: 0.625rem; height: 0.625rem; border-radius: 50%; flex-shrink: 0; }
+    .weighting-legend-pct { color: #fff; font-weight: 600; }
+
+    /* Holdings + Sidebar grid */
+    .content-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; margin-bottom: 1.25rem; }
+    @media (min-width: 768px) {
+      .content-grid { grid-template-columns: 1.4fr 1fr; }
+    }
+
+    /* Holdings Table */
+    .holdings-card { background: #171717; border: 1px solid #262626; border-radius: 1rem; padding: 1.5rem; }
+    .holdings-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
+    .holdings-title { font-size: 0.9375rem; font-weight: 700; color: #fff; }
+    .holdings-view-all { font-size: 0.75rem; color: #3b82f6; text-decoration: none; font-weight: 600; }
+    .holdings-view-all:hover { text-decoration: underline; }
+
+    .holdings-table { width: 100%; border-collapse: collapse; }
+    .holdings-table th { font-size: 0.625rem; font-weight: 600; text-transform: uppercase; color: #71717a; letter-spacing: 0.04em; text-align: left; padding: 0.5rem 0.75rem 0.5rem 0; border-bottom: 1px solid #262626; }
+    .holdings-table th:last-child { padding-right: 0; }
+    .holdings-table td { padding: 0.625rem 0.75rem 0.625rem 0; border-bottom: 1px solid #1a1a1a; font-size: 0.8125rem; }
+    .holdings-table td:last-child { padding-right: 0; }
+    .holdings-table tr:last-child td { border-bottom: none; }
+
+    .holding-ticker { display: inline-flex; align-items: center; justify-content: center; width: 2.25rem; height: 2.25rem; border-radius: 0.5rem; background: #101010; border: 1px solid #262626; font-size: 0.5625rem; font-weight: 800; color: #fff; }
+    .holding-name-row { display: flex; align-items: center; gap: 0.5rem; }
+    .holding-company { font-size: 0.8125rem; font-weight: 600; color: #fff; }
+    .holding-price { font-size: 0.75rem; color: #a1a1aa; }
+
+    .weight-bar-wrap { display: flex; align-items: center; gap: 0.625rem; }
+    .weight-bar { flex: 1; height: 0.5rem; border-radius: 9999px; background: #101010; overflow: hidden; max-width: 8rem; }
+    .weight-bar-fill { height: 100%; border-radius: 9999px; transition: width 0.6s ease; }
+    .weight-pct { font-size: 0.75rem; font-weight: 700; color: #fff; min-width: 2.5rem; text-align: right; }
+
+    .holding-change { font-size: 0.75rem; font-weight: 600; white-space: nowrap; }
+    .holding-change.pos { color: #22c55e; }
+    .holding-change.neg { color: #ef4444; }
+
+    /* Performance Card */
+    .perf-card { background: #171717; border: 1px solid #262626; border-radius: 1rem; padding: 1.5rem; }
+    .perf-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
+    .perf-title { font-size: 0.9375rem; font-weight: 700; color: #fff; }
+    .perf-toggles { display: flex; gap: 0.25rem; background: #101010; border: 1px solid #262626; border-radius: 0.5rem; padding: 0.1875rem; }
+    .perf-toggle { padding: 0.3125rem 0.625rem; border-radius: 0.375rem; font-size: 0.6875rem; font-weight: 600; border: none; background: transparent; color: #71717a; cursor: pointer; transition: all 0.2s; }
+    .perf-toggle.active { background: #fff; color: #000; }
+    .perf-toggle:hover:not(.active) { color: #a1a1aa; }
+
+    .perf-chart-wrap { position: relative; width: 100%; height: 180px; margin-bottom: 0.75rem; }
+    .perf-chart-wrap svg { width: 100%; height: 100%; }
+    .perf-labels { display: flex; justify-content: space-between; font-size: 0.625rem; color: #52525b; margin-top: 0.25rem; }
+    .perf-legend { display: flex; gap: 1.25rem; margin-top: 0.5rem; }
+    .perf-legend-item { display: flex; align-items: center; gap: 0.375rem; font-size: 0.75rem; color: #a1a1aa; }
+    .perf-legend-dot { width: 0.5rem; height: 0.5rem; border-radius: 50%; }
+    .perf-legend-item .perf-val { color: #fff; font-weight: 700; }
+
+    /* Recent Changes Card */
+    .changes-card { background: #171717; border: 1px solid #262626; border-radius: 1rem; padding: 1.5rem; margin-top: 1.25rem; }
+    .changes-title { font-size: 0.9375rem; font-weight: 700; color: #fff; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+    .changes-title svg { width: 1rem; height: 1rem; color: #71717a; }
+
+    .change-item { display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.75rem 0; border-bottom: 1px solid #1a1a1a; }
+    .change-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .change-icon { width: 1.75rem; height: 1.75rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.875rem; flex-shrink: 0; }
+    .change-icon.add { background: rgba(34, 197, 94, 0.15); color: #22c55e; }
+    .change-icon.reduce { background: rgba(239, 68, 68, 0.15); color: #ef4444; }
+    .change-icon.increase { background: rgba(34, 197, 94, 0.15); color: #22c55e; }
+    .change-icon.exit { background: rgba(239, 68, 68, 0.15); color: #ef4444; }
+    .change-icon.buy { background: rgba(34, 197, 94, 0.15); color: #22c55e; }
+    .change-icon.sell { background: rgba(239, 68, 68, 0.15); color: #ef4444; }
+    .change-info { flex: 1; }
+    .change-action { font-size: 0.8125rem; font-weight: 600; color: #fff; }
+    .change-detail { font-size: 0.75rem; color: #71717a; margin-top: 0.125rem; }
+    .change-pct { font-size: 0.75rem; font-weight: 700; white-space: nowrap; }
+    .change-pct.pos { color: #22c55e; }
+    .change-pct.neg { color: #ef4444; }
+
+    /* Disclaimer */
+    .disclaimer { margin-top: 2rem; padding: 1rem 1.25rem; background: #101010; border: 1px solid #262626; border-radius: 0.75rem; font-size: 0.6875rem; color: #52525b; line-height: 1.6; }
+    .disclaimer strong { color: #71717a; }
+
+    /* Responsive tweaks */
+    @media (max-width: 767px) {
+      .detail-container { padding: 1rem 1rem 5rem; }
+      .hero-stats { gap: 1rem; }
+      .donut-large { width: 160px; height: 160px; }
+      .donut-large-center { inset: 32px; font-size: 1.25rem; }
+      .donut-large-badge { width: 1.75rem; height: 1.75rem; font-size: 0.5rem; }
+      .holdings-table { font-size: 0.75rem; }
+      .holdings-table th, .holdings-table td { padding: 0.375rem 0.5rem 0.375rem 0; }
+      .holding-ticker { width: 1.75rem; height: 1.75rem; font-size: 0.5rem; }
+      .weight-bar { max-width: 5rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo"><img src="/img/logo-hex.jpg" alt="The Signal" class="logo-img"><span class="logo-text"><span class="logo-the">THE</span> <strong>SIGNAL</strong></span></a>
+      <div class="nav-actions">
+        <button class="nav-btn search-btn" id="searchToggle" aria-label="Search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+        <div class="auth-container" id="authContainer">
+          <button class="nav-btn auth-btn" id="authToggle" aria-label="Sign In">
+            <div class="auth-btn-avatar" id="authBtnAvatar">
+              <span class="auth-btn-initial" id="authBtnInitial"></span>
+              <img class="auth-btn-img" id="authBtnImg" src="" alt="" style="display:none">
+            </div>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="auth-btn-icon" id="authBtnIcon"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <span class="auth-label" id="authLabel">Sign In</span>
+          </button>
+          <div class="auth-dropdown" id="authDropdown">
+            <div class="auth-profile" id="authProfile" style="display:none">
+              <div class="auth-profile-header">
+                <div class="auth-profile-avatar" id="authProfileAvatar">
+                  <img id="authProfileImg" src="" alt="" style="display:none">
+                  <span class="auth-profile-initial" id="authProfileInitial"></span>
+                </div>
+                <div class="auth-profile-info">
+                  <span class="auth-profile-name" id="authProfileName"></span>
+                  <span class="auth-profile-username" id="authProfileUsername"></span>
+                </div>
+                <div class="auth-profile-badge">HIVE</div>
+              </div>
+              <div class="auth-profile-stats" id="authProfileStats">
+                <div class="auth-stat"><span class="auth-stat-label">Portfolio</span><span class="auth-stat-value" id="authStatValue">-</span></div>
+                <div class="auth-stat"><span class="auth-stat-label">Return</span><span class="auth-stat-value" id="authStatReturn">-</span></div>
+              </div>
+              <div class="auth-drop-divider"></div>
+              <div class="auth-profile-nav">
+                <a href="/sector/ai" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
+                <a href="/sector/cyber" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
+                <a href="/sector/defense" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
+                <a href="/sector/space" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
+                <a href="/sector/mega-cap" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
+                <a href="/sector/quantum" class="auth-nav-item"><span class="auth-nav-icon">🔬</span> Quantum</a>
+                <a href="/sector/ai-power" class="auth-nav-item"><span class="auth-nav-icon">⚡</span> AI Power</a>
+                <a href="/sector/etfs" class="auth-nav-item"><span class="auth-nav-icon">💼</span> ETFs</a>
+                <div class="auth-nav-section-header">FEATURES</div>
+                <a href="/hive" class="auth-nav-item"><span class="auth-nav-icon">🐝</span> Hive</a>
+                <a href="/signal-vs-the-street" class="auth-nav-item"><span class="auth-nav-icon">📈</span> Signal vs. Street</a>
+                <a href="/stocks/" class="auth-nav-item"><span class="auth-nav-icon">📉</span> Stock Pages</a>
+                <a href="/#scorecard" class="auth-nav-item"><span class="auth-nav-icon">📊</span> Signal Scorecard</a>
+              </div>
+              <div class="auth-drop-divider"></div>
+              <div class="auth-profile-footer">
+                <a href="/hive" class="auth-footer-link" onclick="navigateToHiveLeaderboard(event)">Leaderboard</a>
+                <a href="/account/settings" class="auth-footer-link">Settings</a>
+                <button class="auth-signout-btn" id="authSignOut">Sign Out</button>
+              </div>
+            </div>
+            <div class="auth-guest" id="authGuest">
+              <div class="auth-guest-brand">
+                <span class="auth-guest-title">Welcome to <strong>The Signal</strong></span>
+                <span class="auth-guest-sub">Join the hive to track your portfolio</span>
+              </div>
+              <button class="auth-option auth-option-primary" onclick="showHiveJoinModal('login')"><span class="auth-option-icon">🔑</span> Sign In</button>
+              <button class="auth-option" onclick="showHiveJoinModal('register')"><span class="auth-option-icon">✨</span> Create Account</button>
+              <div class="auth-drop-divider"></div>
+              <div class="auth-profile-nav">
+                <a href="/sector/ai" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
+                <a href="/sector/cyber" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
+                <a href="/sector/defense" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
+                <a href="/sector/space" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
+                <a href="/sector/mega-cap" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
+                <a href="/sector/quantum" class="auth-nav-item"><span class="auth-nav-icon">🔬</span> Quantum</a>
+                <a href="/sector/ai-power" class="auth-nav-item"><span class="auth-nav-icon">⚡</span> AI Power</a>
+                <a href="/sector/etfs" class="auth-nav-item"><span class="auth-nav-icon">💼</span> ETFs</a>
+                <div class="auth-nav-section-header">FEATURES</div>
+                <a href="/hive" class="auth-nav-item"><span class="auth-nav-icon">🐝</span> Hive</a>
+                <a href="/signal-vs-the-street" class="auth-nav-item"><span class="auth-nav-icon">📈</span> Signal vs. Street</a>
+                <a href="/stocks/" class="auth-nav-item"><span class="auth-nav-icon">📉</span> Stock Pages</a>
+                <a href="/#scorecard" class="auth-nav-item"><span class="auth-nav-icon">📊</span> Signal Scorecard</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="nav-btn hamburger-btn" id="hamburgerToggle" aria-label="Menu">
+          <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Drawer -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <div class="drawer" id="drawer">
+    <div class="drawer-header">
+      <a href="/" class="drawer-logo"><span class="the">THE</span><span class="signal">SIGNAL</span></a>
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">&#10005;</button>
+    </div>
+    <div class="drawer-body" id="drawerBody">
+      <div class="drawer-main" id="drawerMain">
+        <div class="drawer-section-label">SECTORS</div>
+        <a href="javascript:void(0)" class="drawer-link" onclick="openSubDrawer()">SECTORS</a>
+        <a href="/stocks/" class="drawer-link">STOCK PAGES</a>
+        <a href="/#scorecard" class="drawer-link">SIGNAL SCORECARD</a>
+        <a href="/hive" class="drawer-link">HIVE</a>
+        <a href="/signal-vs-the-street" class="drawer-link">SIGNAL VS. STREET</a>
+        <a href="/watchlist" class="drawer-link">WATCHLIST</a>
+        <a href="/insights" class="drawer-link">TRADER INSIGHTS</a>
+        <a href="/pricing" class="drawer-link">SIGNAL PREMIUM</a>
+        <a href="/premium" class="drawer-cta">GO PREMIUM</a>
+      </div>
+      <div class="drawer-sub" id="drawerSub">
+        <div class="sub-header" onclick="closeSubDrawer()">
+          <span class="sub-back">&#8249;</span>
+          <span class="sub-title">SECTORS</span>
+        </div>
+        <a href="/sector/ai/" class="drawer-link">AI</a>
+        <a href="/sector/cyber/" class="drawer-link">CYBER</a>
+        <a href="/sector/defense/" class="drawer-link">DEFENSE</a>
+        <a href="/sector/space/" class="drawer-link">SPACE</a>
+        <a href="/sector/mega-cap/" class="drawer-link">MEGA-CAP</a>
+        <a href="/sector/quantum/" class="drawer-link">QUANTUM</a>
+        <a href="/sector/ai-power/" class="drawer-link">AI POWER</a>
+        <a href="/sector/fintech/" class="drawer-link">FINTECH</a>
+        <a href="/sector/etfs/" class="drawer-link">ETFS</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Overlay -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-backdrop" id="searchBackdrop"></div>
+    <div class="search-modal">
+      <div class="search-header">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search articles by title, ticker, sector, or tag…" autofocus>
+        <button class="search-close" id="searchClose" aria-label="Close search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+      <div class="search-empty" id="searchEmpty">Start typing to search articles…</div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <div class="detail-container">
+      <!-- Breadcrumbs -->
+      <div class="breadcrumbs">
+        <a href="/insights">Insights</a>
+        <span class="sep">/</span>
+        <span class="current">Buffett Holdings</span>
+      </div>
+
+      <!-- Hero Grid -->
+      <div class="hero-grid">
+        <!-- Hero Card (left) -->
+        <div class="hero-card">
+          <div class="hero-card-header">
+            <div class="hero-avatar">WB</div>
+            <span class="hero-handle">@buffett</span>
+          </div>
+          <div class="hero-name">Warren Buffett</div>
+          <div class="hero-title">Chairman &amp; CEO &bull; Berkshire Hathaway</div>
+          <div class="hero-desc">Berkshire Hathaway portfolio tracking &bull; Value investing &bull; Long-term equities</div>
+          <div class="hero-stats">
+            <div>
+              <div class="hero-stat-label">250D Return</div>
+              <div class="hero-stat-value green">+24.13%</div>
+            </div>
+            <div>
+              <div class="hero-stat-label">Holdings</div>
+              <div class="hero-stat-value white">10</div>
+            </div>
+            <div>
+              <div class="hero-stat-label">Last Update</div>
+              <div class="hero-stat-date">Apr 30</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portfolio Weighting Card (right) -->
+        <div class="weighting-card">
+          <div class="weighting-title">Portfolio Weighting</div>
+          <div class="donut-large">
+            <div class="donut-large-chart" style="background: conic-gradient(#6aa9e0 0% 35%, #1e3a5a 35% 50%, #1a3a5c 50% 64%, #0f2a4a 64% 76%, #123456 76% 86%, #2a4a6c 86% 94%, #3a5a7c 94% 100%)"></div>
+            <div class="donut-large-center">WB</div>
+            <div class="donut-large-badge" style="left: 50%; top: 50%; transform: translate(-50%, -50%) translate(0px, -88px)">AP</div>
+            <div class="donut-large-badge" style="left: 50%; top: 50%; transform: translate(-50%, -50%) translate(63px, -63px)">GO</div>
+            <div class="donut-large-badge" style="left: 50%; top: 50%; transform: translate(-50%, -50%) translate(88px, 0px)">BA</div>
+            <div class="donut-large-badge" style="left: 50%; top: 50%; transform: translate(-50%, -50%) translate(63px, 63px)">AX</div>
+            <div class="donut-large-badge" style="left: 50%; top: 50%; transform: translate(-50%, -50%) translate(0px, 88px)">KO</div>
+            <div class="donut-large-badge" style="left: 50%; top: 50%; transform: translate(-50%, -50%) translate(-63px, 63px)">CV</div>
+            <div class="donut-large-badge" style="left: 50%; top: 50%; transform: translate(-50%, -50%) translate(-88px, 0px)">WF</div>
+          </div>
+          <div class="weighting-legend">
+            <div class="weighting-legend-item"><span class="weighting-legend-dot" style="background:#6aa9e0"></span>Apple <span class="weighting-legend-pct">35%</span></div>
+            <div class="weighting-legend-item"><span class="weighting-legend-dot" style="background:#1e3a5a"></span>Google <span class="weighting-legend-pct">15%</span></div>
+            <div class="weighting-legend-item"><span class="weighting-legend-dot" style="background:#1a3a5c"></span>BAC <span class="weighting-legend-pct">14%</span></div>
+            <div class="weighting-legend-item"><span class="weighting-legend-dot" style="background:#0f2a4a"></span>AXP <span class="weighting-legend-pct">12%</span></div>
+            <div class="weighting-legend-item"><span class="weighting-legend-dot" style="background:#123456"></span>Coca-Cola <span class="weighting-legend-pct">10%</span></div>
+            <div class="weighting-legend-item"><span class="weighting-legend-dot" style="background:#2a4a6c"></span>Chevron <span class="weighting-legend-pct">8%</span></div>
+            <div class="weighting-legend-item"><span class="weighting-legend-dot" style="background:#3a5a7c"></span>WFC <span class="weighting-legend-pct">6%</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content Grid: Holdings + Sidebar -->
+      <div class="content-grid">
+        <!-- Top 10 Holdings Table (left, wider) -->
+        <div class="holdings-card">
+          <div class="holdings-header">
+            <span class="holdings-title">Top 10 Holdings by Weight</span>
+            <a href="#" class="holdings-view-all">View all &rarr;</a>
+          </div>
+          <table class="holdings-table">
+            <thead>
+              <tr>
+                <th>Ticker</th>
+                <th>Company</th>
+                <th>Price</th>
+                <th>Weight</th>
+                <th>Change</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="holding-ticker" style="background:#6aa9e0;color:#fff">AAP</span></td>
+                <td>
+                  <div class="holding-name-row">
+                    <span class="holding-company">Apple Inc.</span>
+                  </div>
+                </td>
+                <td><span class="holding-price">$182.54</span></td>
+                <td>
+                  <div class="weight-bar-wrap">
+                    <div class="weight-bar"><div class="weight-bar-fill" style="width:100%;background:#6aa9e0"></div></div>
+                    <span class="weight-pct">35%</span>
+                  </div>
+                </td>
+                <td><span class="holding-change pos">+2.4%</span></td>
+              </tr>
+              <tr>
+                <td><span class="holding-ticker" style="background:#1e3a5a;color:#fff">GO</span></td>
+                <td>
+                  <div class="holding-name-row">
+                    <span class="holding-company">Alphabet Inc.</span>
+                  </div>
+                </td>
+                <td><span class="holding-price">$175.40</span></td>
+                <td>
+                  <div class="weight-bar-wrap">
+                    <div class="weight-bar"><div class="weight-bar-fill" style="width:42.9%;background:#1e3a5a"></div></div>
+                    <span class="weight-pct">15%</span>
+                  </div>
+                </td>
+                <td><span class="holding-change pos">+1.2%</span></td>
+              </tr>
+              <tr>
+                <td><span class="holding-ticker" style="background:#1a3a5c;color:#fff">BA</span></td>
+                <td>
+                  <div class="holding-name-row">
+                    <span class="holding-company">Bank of America</span>
+                  </div>
+                </td>
+                <td><span class="holding-price">$34.12</span></td>
+                <td>
+                  <div class="weight-bar-wrap">
+                    <div class="weight-bar"><div class="weight-bar-fill" style="width:40%;background:#1a3a5c"></div></div>
+                    <span class="weight-pct">14%</span>
+                  </div>
+                </td>
+                <td><span class="holding-change pos">+0.8%</span></td>
+              </tr>
+              <tr>
+                <td><span class="holding-ticker" style="background:#0f2a4a;color:#fff">AX</span></td>
+                <td>
+                  <div class="holding-name-row">
+                    <span class="holding-company">American Express</span>
+                  </div>
+                </td>
+                <td><span class="holding-price">$214.63</span></td>
+                <td>
+                  <div class="weight-bar-wrap">
+                    <div class="weight-bar"><div class="weight-bar-fill" style="width:34.3%;background:#0f2a4a"></div></div>
+                    <span class="weight-pct">12%</span>
+                  </div>
+                </td>
+                <td><span class="holding-change pos">+1.5%</span></td>
+              </tr>
+              <tr>
+                <td><span class="holding-ticker" style="background:#123456;color:#fff">KO</span></td>
+                <td>
+                  <div class="holding-name-row">
+                    <span class="holding-company">Coca-Cola Co.</span>
+                  </div>
+                </td>
+                <td><span class="holding-price">$59.22</span></td>
+                <td>
+                  <div class="weight-bar-wrap">
+                    <div class="weight-bar"><div class="weight-bar-fill" style="width:28.6%;background:#123456"></div></div>
+                    <span class="weight-pct">10%</span>
+                  </div>
+                </td>
+                <td><span class="holding-change neg">-0.3%</span></td>
+              </tr>
+              <tr>
+                <td><span class="holding-ticker" style="background:#2a4a6c;color:#fff">CV</span></td>
+                <td>
+                  <div class="holding-name-row">
+                    <span class="holding-company">Chevron Corp.</span>
+                  </div>
+                </td>
+                <td><span class="holding-price">$154.87</span></td>
+                <td>
+                  <div class="weight-bar-wrap">
+                    <div class="weight-bar"><div class="weight-bar-fill" style="width:22.9%;background:#2a4a6c"></div></div>
+                    <span class="weight-pct">8%</span>
+                  </div>
+                </td>
+                <td><span class="holding-change neg">-1.1%</span></td>
+              </tr>
+              <tr>
+                <td><span class="holding-ticker" style="background:#3a5a7c;color:#fff">OX</span></td>
+                <td>
+                  <div class="holding-name-row">
+                    <span class="holding-company">Occidental Petroleum</span>
+                  </div>
+                </td>
+                <td><span class="holding-price">$61.02</span></td>
+                <td>
+                  <div class="weight-bar-wrap">
+                    <div class="weight-bar"><div class="weight-bar-fill" style="width:17.1%;background:#3a5a7c"></div></div>
+                    <span class="weight-pct">6%</span>
+                  </div>
+                </td>
+                <td><span class="holding-change pos">+3.4%</span></td>
+              </tr>
+              <tr>
+                <td><span class="holding-ticker" style="background:#4a6a8c;color:#fff">MC</span></td>
+                <td>
+                  <div class="holding-name-row">
+                    <span class="holding-company">Moody's Corp.</span>
+                  </div>
+                </td>
+                <td><span class="holding-price">$392.10</span></td>
+                <td>
+                  <div class="weight-bar-wrap">
+                    <div class="weight-bar"><div class="weight-bar-fill" style="width:14.3%;background:#4a6a8c"></div></div>
+                    <span class="weight-pct">5%</span>
+                  </div>
+                </td>
+                <td><span class="holding-change pos">+0.5%</span></td>
+              </tr>
+              <tr>
+                <td><span class="holding-ticker" style="background:#5a7a9c;color:#fff">CB</span></td>
+                <td>
+                  <div class="holding-name-row">
+                    <span class="holding-company">Chubb Ltd.</span>
+                  </div>
+                </td>
+                <td><span class="holding-price">$238.45</span></td>
+                <td>
+                  <div class="weight-bar-wrap">
+                    <div class="weight-bar"><div class="weight-bar-fill" style="width:11.4%;background:#5a7a9c"></div></div>
+                    <span class="weight-pct">4%</span>
+                  </div>
+                </td>
+                <td><span class="holding-change neg">-0.7%</span></td>
+              </tr>
+              <tr>
+                <td><span class="holding-ticker" style="background:#6a8aac;color:#fff">DV</span></td>
+                <td>
+                  <div class="holding-name-row">
+                    <span class="holding-company">DaVita Inc.</span>
+                  </div>
+                </td>
+                <td><span class="holding-price">$124.50</span></td>
+                <td>
+                  <div class="weight-bar-wrap">
+                    <div class="weight-bar"><div class="weight-bar-fill" style="width:8.6%;background:#6a8aac"></div></div>
+                    <span class="weight-pct">3%</span>
+                  </div>
+                </td>
+                <td><span class="holding-change neg">-1.9%</span></td>
+              </tr>
+              <tr>
+                <td><span class="holding-ticker" style="background:#7a9abc;color:#fff">KH</span></td>
+                <td>
+                  <div class="holding-name-row">
+                    <span class="holding-company">Kraft Heinz Co.</span>
+                  </div>
+                </td>
+                <td><span class="holding-price">$34.80</span></td>
+                <td>
+                  <div class="weight-bar-wrap">
+                    <div class="weight-bar"><div class="weight-bar-fill" style="width:5.7%;background:#7a9abc"></div></div>
+                    <span class="weight-pct">2%</span>
+                  </div>
+                </td>
+                <td><span class="holding-change neg">-0.4%</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Sidebar (right, narrower) -->
+        <div>
+          <!-- Performance Card -->
+          <div class="perf-card">
+            <div class="perf-header">
+              <span class="perf-title">Performance</span>
+              <div class="perf-toggles">
+                <button class="perf-toggle active" data-perf="1y">1Y</button>
+                <button class="perf-toggle" data-perf="3y">3Y</button>
+                <button class="perf-toggle" data-perf="5y">5Y</button>
+              </div>
+            </div>
+            <div class="perf-chart-wrap">
+              <svg viewBox="0 0 340 160" preserveAspectRatio="none">
+                <!-- Grid lines -->
+                <line x1="0" y1="120" x2="340" y2="120" stroke="#262626" stroke-width="1"/>
+                <line x1="0" y1="80" x2="340" y2="80" stroke="#262626" stroke-width="1"/>
+                <line x1="0" y1="40" x2="340" y2="40" stroke="#262626" stroke-width="1"/>
+                <!-- Portfolio line (orange) -->
+                <polyline fill="none" stroke="#f97316" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                  points="10,140 40,130 80,118 120,100 160,85 200,70 240,55 280,42 320,30 335,26"/>
+                <!-- S&P 500 line (gray) -->
+                <polyline fill="none" stroke="#52525b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                  points="10,140 40,136 80,130 120,122 160,115 200,108 240,100 280,95 320,88 335,85"/>
+                <!-- End point dots -->
+                <circle cx="335" cy="26" r="4" fill="#f97316"/>
+                <circle cx="335" cy="85" r="4" fill="#52525b"/>
+                <!-- End point labels -->
+                <text x="335" y="18" text-anchor="end" fill="#f97316" font-size="10" font-weight="700">+24.13%</text>
+                <text x="335" y="108" text-anchor="end" fill="#71717a" font-size="10" font-weight="600">+12.08%</text>
+              </svg>
+            </div>
+            <div class="perf-labels">
+              <span>Jan</span>
+              <span>Mar</span>
+              <span>May</span>
+              <span>Jul</span>
+              <span>Sep</span>
+              <span>Nov</span>
+              <span>Jan</span>
+            </div>
+            <div class="perf-legend">
+              <div class="perf-legend-item"><span class="perf-legend-dot" style="background:#f97316"></span>Portfolio <span class="perf-val">+24.13%</span></div>
+              <div class="perf-legend-item"><span class="perf-legend-dot" style="background:#52525b"></span>S&amp;P 500 <span class="perf-val">+12.08%</span></div>
+            </div>
+          </div>
+
+          <!-- Recent Portfolio Changes Card -->
+          <div class="changes-card">
+            <div class="changes-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Recent Portfolio Changes
+            </div>
+            <div class="change-item">
+              <div class="change-icon add">+</div>
+              <div class="change-info">
+                <div class="change-action">Added 50k shares &bull; Occidental Petroleum</div>
+                <div class="change-detail">Apr 22, 2024 &bull; +$3.1M</div>
+              </div>
+              <span class="change-pct pos">+$3.1M</span>
+            </div>
+            <div class="change-item">
+              <div class="change-icon reduce">&minus;</div>
+              <div class="change-info">
+                <div class="change-action">Reduced position &bull; Wells Fargo</div>
+                <div class="change-detail">Apr 15, 2024 &bull; &minus;$1.8M</div>
+              </div>
+              <span class="change-pct neg">&minus;$1.8M</span>
+            </div>
+            <div class="change-item">
+              <div class="change-icon increase">+</div>
+              <div class="change-info">
+                <div class="change-action">Increased stake &bull; Apple</div>
+                <div class="change-detail">Apr 10, 2024</div>
+              </div>
+            </div>
+            <div class="change-item">
+              <div class="change-icon exit">&times;</div>
+              <div class="change-info">
+                <div class="change-action">Exited position &bull; IBM</div>
+                <div class="change-detail">Mar 18, 2024 &bull; &minus;$2.2M</div>
+              </div>
+              <span class="change-pct neg">&minus;$2.2M</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Disclaimer -->
+      <div class="disclaimer">
+        <strong>Disclaimer:</strong> Data shown is for informational purposes only and may be delayed. Holdings and weights are based on latest available SEC 13F filings. Past performance does not guarantee future results. This is not investment advice.
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Nav drawer functions
+    window.openSubDrawer = function() {
+      var main = document.getElementById('drawerMain');
+      var sub = document.getElementById('drawerSub');
+      if (main) main.style.transform = 'translateX(-100%)';
+      if (sub) sub.style.transform = 'translateX(0)';
+    };
+    window.closeSubDrawer = function() {
+      var main = document.getElementById('drawerMain');
+      var sub = document.getElementById('drawerSub');
+      if (main) main.style.transform = 'translateX(0)';
+      if (sub) sub.style.transform = 'translateX(-100%)';
+    };
+
+    // Performance toggle interactivity
+    document.querySelectorAll('.perf-toggle').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.perf-toggle').forEach(function(b) { b.classList.remove('active'); });
+        this.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
