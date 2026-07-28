@@ -434,11 +434,10 @@
   </main>
 
   <script>
-    // Trader data for the reference design
+    // Trader data
     const investors = [
       {
         name: "Leopold's Portfolio",
-        pageUrl: "/leopold",
         handle: "leopold",
         category: "AI Infrastructure",
         categoryClass: "leopold",
@@ -446,23 +445,21 @@
         avatarIcon: "L",
         donutImage: "/assets/leopold_donut_transparent.png",
         ret: "+144.83%",
-        barColors: { NBIS: "#06b6d4", SNDK: "#14b8a6", BE: "#3b82f6", SMCI: "#6b7280" },
         bars: [
-          { ticker: "NBIS", pct: 42, color: "#06b6d4" },
-          { ticker: "SNDK", pct: 22, color: "#14b8a6" },
-          { ticker: "BE",   pct: 16, color: "#3b82f6" },
-          { ticker: "SMCI", pct: 9,  color: "#6b7280" }
+          { ticker: "NBIS", pct: 40, color: "#f5b731" },
+          { ticker: "BE",   pct: 12, color: "#4caf50" },
+          { ticker: "SNDK", pct: 10, color: "#e53935" },
+          { ticker: "CRWV", pct: 8,  color: "#9c27b0" }
         ],
-        donutColors: ["#f5b731","#e53935","#00bcd4","#9c27b0","#f57c20","#2e5dbb","#4caf50"],
-        donutPcts: [29,20,15,10,9,9,8],
-        donutLabels: ["NB","SN","IR","CW","AZ","CS","BE"],
-        pills: ["NBIS","SNDK","CW","IR"],
-        pillColors: ["#f5b731","#e53935","#9c27b0","#00bcd4"],
+        donutColors: ["#f5b731","#4caf50","#e53935","#9c27b0","#00bcd4","#2e5dbb","#f57c20"],
+        donutPcts: [40,12,10,8,6,5,4],
+        donutLabels: ["NB","BE","SN","CW","IR","CS","AP"],
+        pills: ["NBIS","BE","SNDK","+4 more"],
+        pillColors: ["#f5b731","#4caf50","#e53935","#71717a"],
         donutCenter: ""
       },
       {
         name: "Buffett Holdings",
-        pageUrl: "/buffett",
         handle: "buffett",
         category: "Blue-Chip Value",
         categoryClass: "buffett",
@@ -471,21 +468,20 @@
         donutImage: "/assets/buffett_donut_transparent.png",
         ret: "+24.13%",
         bars: [
-          { ticker: "AAPL", pct: 35, color: "#3b82f6" },
-          { ticker: "BAC",  pct: 20, color: "#1e3a5a" },
-          { ticker: "KO",   pct: 15, color: "#ef4444" },
-          { ticker: "AXP",  pct: 12, color: "#6b7280" }
+          { ticker: "AAPL", pct: 22, color: "#3b82f6" },
+          { ticker: "AXP",  pct: 17, color: "#1e3a5a" },
+          { ticker: "KO",   pct: 12, color: "#ef4444" },
+          { ticker: "BAC",  pct: 10, color: "#6b7280" }
         ],
-        donutColors: ["#3b82f6","#1e3a5a","#1a3a5c","#ef4444","#f97316","#f59e0b","#8b5cf6","#0ea5e9"],
-        donutPcts: [35,15,14,12,10,8,4,2],
-        donutLabels: ["AP","GO","BA","AX","KO","CV","MC","KH"],
-        pills: ["AAPL","BAC","KO","+7 more"],
-        pillColors: ["#3b82f6","#1e3a5a","#ef4444","#71717a"],
-        donutCenter: "WB"
+        donutColors: ["#3b82f6","#f59e0b","#1e3a5a","#ef4444","#f97316","#8b5cf6","#10b981","#0ea5e9"],
+        donutPcts: [22,17,12,10,7,7,6,4],
+        donutLabels: ["AP","AX","KO","BA","CV","OY","GO","CH"],
+        pills: ["AAPL","AXP","KO","+5 more"],
+        pillColors: ["#3b82f6","#f59e0b","#ef4444","#71717a"],
+        donutCenter: ""
       },
       {
         name: "Pelosi Holdings",
-        pageUrl: "/pelosi",
         handle: "pelosi",
         category: "Congressional Trading",
         categoryClass: "pelosi",
@@ -494,21 +490,20 @@
         donutImage: "/assets/pelosi_donut_transparent.png",
         ret: "+45.20%",
         bars: [
-          { ticker: "NVDA", pct: 38, color: "#22c55e" },
-          { ticker: "MSFT", pct: 22, color: "#16a34a" },
-          { ticker: "PLTR", pct: 14, color: "#15803d" },
-          { ticker: "AMD",  pct: 10, color: "#6b7280" }
+          { ticker: "AAPL", pct: 25, color: "#3b82f6" },
+          { ticker: "GOOGL",pct: 19, color: "#f59e0b" },
+          { ticker: "AMZN", pct: 13, color: "#f97316" },
+          { ticker: "NVDA", pct: 8,  color: "#22c55e" }
         ],
-        donutColors: ["#22c55e","#16a34a","#15803d","#4ade80","#86efac","#bbf7d0","#a3e635","#84cc16"],
-        donutPcts: [30,18,14,12,10,8,5,3],
-        donutLabels: ["NV","MS","PL","GO","AM","AV","CR","TS"],
-        pills: ["NVDA","MSFT","PLTR","+5 more"],
-        pillColors: ["#22c55e","#16a34a","#15803d","#71717a"],
-        donutCenter: "🏛"
+        donutColors: ["#3b82f6","#f59e0b","#f97316","#22c55e","#8b5cf6","#16a34a","#06b6d4","#e879f9"],
+        donutPcts: [25,19,13,8,7,5,3,3],
+        donutLabels: ["AP","GO","AZ","NV","MS","AV","UB","TS"],
+        pills: ["AAPL","GOOGL","AMZN","+5 more"],
+        pillColors: ["#3b82f6","#f59e0b","#f97316","#71717a"],
+        donutCenter: ""
       },
       {
         name: "Cathie Wood",
-        pageUrl: "/cathie",
         handle: "cathie",
         category: "Disruptive Innovation",
         categoryClass: "cathie",
@@ -517,16 +512,16 @@
         donutImage: "/assets/cathie_donut_transparent.png",
         ret: "+18.40%",
         bars: [
-          { ticker: "TSLA", pct: 28, color: "#ff1997" },
-          { ticker: "ROKU", pct: 16, color: "#f8c8dc" },
-          { ticker: "COIN", pct: 11, color: "#1a1ad4" },
-          { ticker: "ARKK", pct: 9,  color: "#6b7280" }
+          { ticker: "TSLA", pct: 10, color: "#ff1997" },
+          { ticker: "TEMP", pct: 6,  color: "#1a1ad4" },
+          { ticker: "AMD",  pct: 5,  color: "#e8a820" },
+          { ticker: "CRSP", pct: 5,  color: "#0a9e6b" }
         ],
-        donutColors: ["#ff1997","#f8c8dc","#1a1ad4","#4a0e78","#e8a820","#0a9e6b","#b4a7f5"],
-        donutPcts: [22,15,15,12,11,9,8,8],
-        donutLabels: ["T","R","CO","T","P","DNA","R"],
-        pills: ["TSLA","ROKU","COIN","+4 more"],
-        pillColors: ["#ff1997","#f8c8dc","#1a1ad4","#71717a"],
+        donutColors: ["#ff1997","#1a1ad4","#e8a820","#0a9e6b","#f8c8dc","#b4a7f5","#16a34a","#ec4899"],
+        donutPcts: [10,6,5,5,4,4,3,3],
+        donutLabels: ["TS","TM","AM","CR","RK","CO","BM","TX"],
+        pills: ["TSLA","TEMP","AMD","+5 more"],
+        pillColors: ["#ff1997","#1a1ad4","#e8a820","#71717a"],
         donutCenter: ""
       }
     ];
