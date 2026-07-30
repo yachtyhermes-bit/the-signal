@@ -1,0 +1,63 @@
+{
+  "slug": "rbrk-data-resilience-cyber-perimeter-2026",
+  "ticker": "RBRK",
+  "sector": "cyber",
+  "sentiment": "bullish",
+  "date": "2026-07-30",
+  "title": "Data Resilience Is Eating the Cyber Budget — and Rubrik Owns the Category",
+  "subtitle": "With $1.57B in subscription ARR, expanding margins, and a recovery-first architecture that treats breach as inevitable, Rubrik is creating the fourth pillar of enterprise security.",
+  "summary": "Rubrik's structural bull case isn't about backup market share — it's about category creation. As data resilience splits from cybersecurity into its own boardroom line item, the company is delivering $1.57B in subscription ARR, 19% FCF margins, and a recovery-first platform purpose-built for a world where 56% of ransomware attacks still succeed.",
+  "image": {
+    "src": "/img/articles/rbrk-data-resilience-cyber-moat-2026.jpg",
+    "caption": "Rubrik's zero-trust data security architecture positions it at the center of the emerging data resilience category — the fourth pillar of enterprise security alongside network, endpoint, and identity."
+  },
+  "tags": [
+    "Rubrik",
+    "RBRK",
+    "cybersecurity",
+    "data resilience",
+    "ransomware",
+    "cyber recovery",
+    "enterprise security",
+    "subscription ARR",
+    "zero-trust",
+    "agentic AI"
+  ],
+  "links": [
+    {
+      "label": "Rubrik Q1 FY2027 Earnings Release",
+      "url": "https://www.rubrik.com/company/newsroom/press-releases/26/rubrik-reports-first-quarter-fiscal-year-2027-financial-results"
+    },
+    {
+      "label": "Rubrik Now Available as AI Agent",
+      "url": "https://www.rubrik.com/company/newsroom/press-releases/26/rubrik-now-available-as-ai-agent"
+    },
+    {
+      "label": "Rubrik Joins Internet2",
+      "url": "https://finance.yahoo.com/technology/ai/articles/rubrik-joins-internet2-advance-cyber-130000622.html"
+    },
+    {
+      "label": "Sophos State of Ransomware 2026",
+      "url": "https://www.sophos.com/en-us/blog/sophos-state-of-ransomware-2026"
+    },
+    {
+      "label": "Data Resiliency Market Report (MRFR)",
+      "url": "https://www.marketresearchfuture.com/reports/data-resiliency-market-6386"
+    },
+    {
+      "label": "Rubrik x MEDITECH Partnership",
+      "url": "https://www.rubrik.com/company/newsroom/press-releases/26/rubrik-offers-unified-cloud-and-on-premises-cyber-resilience-solution-for-meditech-healthcare-customers"
+    }
+  ],
+  "videos": [
+    {
+      "id": "u6MjPILWXzU",
+      "title": "Rubrik (RBRK) Q1 FY2027 Earnings Analysis",
+      "source": "youtube",
+      "url": "https://www.youtube.com/watch?v=u6MjPILWXzU",
+      "position": "body"
+    }
+  ],
+  "price": 71.91,
+  "bodyHtml": "<p>They got in through a compromised identity. As they so often do. Within hours, encryption keys were deployed across thousands of endpoints, and the hospital's electronic health records system went dark. This scene plays out somewhere in the world every single day — Sophos reports that 56% of ransomware attacks still succeed in encrypting data, and the average recovery tab now runs $1.53 million per incident. The cybersecurity industry has spent two decades building taller walls. The problem is that attackers have only gotten better at climbing them.</p><p>Rubrik is building something different: a recovery-first architecture that assumes the perimeter will be breached. The company's thesis — that data resilience is splitting away from the broader cybersecurity budget to become its own boardroom line item — is showing up in financial results that have turned skeptics into believers.</p><p>Subscription annual recurring revenue hit $1.57 billion in the fiscal first quarter, up 32% year over year. Total revenue of $387 million climbed 39%, easily clearing the Street's estimates. Those numbers impress in isolation. What makes them structural is the margin story underneath. Free cash flow margin expanded to 19%, up from 12% a year ago, and the subscription ARR contribution margin — a measure of how efficiently the company converts new bookings into profitable recurring revenue — swung from negative 11% to positive 13.2% in the span of twelve months.</p><p>The bull case for this stock has never been about stealing market share from legacy backup vendors. It is about category creation. Rubrik is positioning data resilience as the fourth pillar of enterprise security alongside network, endpoint, and identity. The logic is straightforward: even the best prevention eventually fails. When it does, recovery speed and data integrity determine whether a ransomware event is a disruption or an existential crisis.</p><p>The addressable market backs up the ambition. The global data resiliency market was valued at $22.8 billion in 2025 and is forecast to reach $96.6 billion by 2035, a compound annual growth rate of nearly 17%. That trajectory is being fueled by regulatory mandates like the EU's Digital Operational Resilience Act and the NIST Cybersecurity Framework 2.0, which for the first time introduced \"Govern\" and \"Recover\" functions that push cyber resilience into boardroom oversight.</p><p>McKinsey estimates that 15% of enterprise cybersecurity spend now originates outside the CISO's office — from risk committees, audit functions, and even the CFO — and that share is growing at 24% annually. This is Rubrik's natural constituency: executives who want proof that their organization can actually recover, not just a report on how many threats were blocked.</p><p>The competitive picture is evolving fast. Cohesity-Veritas leads the broader market at roughly 19% share, backed by Nvidia and headed for an IPO. Veeam remains strong in the mid-market. But Rubrik leads in brand momentum and wallet-share growth among enterprises spending more than $100,000 annually on subscription ARR — now more than 2,900 customers deep, growing 24% year over year. The company has been named a Gartner Leader for six consecutive years and an IDC MarketScape Leader for Cyber Recovery.</p><p>The technological moat lies in Rubrik's zero-trust data security architecture. The platform runs on a proprietary append-only file system that prevents ransomware from encrypting or deleting backups. A logical air gap isolates recovery data from the production network, and quorum authorization ensures that no single administrator — or compromised credential — can destroy an organization's last clean copy. These are not features bolted onto a legacy product. They were architected from the ground up for a world where attackers go after backups first. Gartner finds that 78% of organizations are now implementing isolated recovery environments, yet 53% still lack immutable backups — a gap that represents both risk and opportunity for the category leader.</p><p>Rubrik is leaning into the moment with product velocity. The company launched Rubrik AI at its Forward conference in June 2026, delivering an agentic cyber recovery experience that reasons across data, identity, and deployed agents to orchestrate recovery sequences that once took human teams weeks. In February, it commercially launched Rubrik Agent Cloud, extending data resilience to the AI infrastructure layer. Strategic partnerships with MEDITECH in May and Internet2 in July have opened channels into healthcare and higher education — two sectors where ransomware downtime carries consequences far beyond the balance sheet.</p><p>The structural bull case for Rubrik rests on a simple idea that is gaining urgency every quarter: when prevention fails, recovery is the last line of defense. The company owns that conversation, and the numbers suggest it is only getting started.</p><p class=\"disclosure\"><em>Disclosure: The Signal holds no position in RBRK. Positions may change. This is not financial advice.</em></p>"
+}

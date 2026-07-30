@@ -1,7 +1,7 @@
 {
   "outputDirectory": "dist",
-  "cleanUrls": true,
-  "trailingSlash": false,
+  "trailingSlash": true,
+  "buildCommand": "",
   "routes": [
     {
       "handle": "filesystem"
@@ -49,6 +49,10 @@
     {
       "src": "/art/(.*)",
       "dest": "/article/$1"
+    },
+    {
+      "src": "/article/(.*)",
+      "dest": "/article/$1/index.html"
     },
     {
       "src": "/(.*)",
@@ -103,6 +107,5 @@
         }
       ]
     }
-  ],
-  "cleanUrls": false
+  ]
 }
