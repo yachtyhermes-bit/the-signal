@@ -1,0 +1,42 @@
+{
+  "slug": "mpwr-ai-power-management-q2-2026",
+  "title": "The AI Trade Nobody's Talking About: Monolithic Power Just Printed Its Best Quarter Ever",
+  "subtitle": "Enterprise data revenue doubled. Guidance crushed estimates. MPWR is the picks-and-shovels play hiding in plain sight.",
+  "summary": "Monolithic Power Systems just posted its strongest quarter in company history, with enterprise data revenue surging 164% as AI infrastructure demand reshapes the power management semiconductor market.",
+  "ticker": "MPWR",
+  "sector": "semiconductor",
+  "sentiment": "bullish",
+  "date": "2026-08-03T22:00:00Z",
+  "price": 1344.37,
+  "featured": false,
+  "tags": [
+    "MPWR",
+    "semiconductor",
+    "AI infrastructure",
+    "power management",
+    "data center",
+    "earnings"
+  ],
+  "image": {
+    "src": "/img/articles/mpwr-ai-power-management-q2-2026.jpg",
+    "alt": "Modern data center server room with rows of server racks and blue LED lights"
+  },
+  "meta": {
+    "readTime": "6 min read"
+  },
+  "bodyHtml": "<p>There's a whole ecosystem of companies that bill themselves as AI infrastructure plays, and most of them are selling you a story about GPUs. Monolithic Power Systems doesn't sell GPUs. It sells the power management chips that make those GPUs run at all — the tiny voltage regulators, the 48-volt power modules, the components that turn wall current into something a $40,000 accelerator can actually consume. It is the definition of a picks-and-shovels business, and on Thursday night it delivered the kind of quarter that makes you wonder why the market was so slow to figure that out.</p><p>Revenue came in at $980.6 million, up 47.6% year over year and roughly 8.6% ahead of the consensus around $903 million. Adjusted earnings per share of $6.50 blew past the $5.87 to $5.98 range analysts had modeled. Neither number was close. This wasn't a beat at the margins of a rounding error — it was a beat that redefines what this company is.</p><p>The engine of the quarter was the Enterprise Data segment, which grew 164% year over year to $380.6 million and now accounts for roughly 39% of total revenue. Add in the consumer and automotive lines that feed data-center-adjacent markets, and management says about half of all revenue is now tied to data-center-related demand. Half. For a company known five years ago primarily for quiet analog power chips in laptops and phones, that is a transformation of the entire business model.</p><p>And the guidance is where it gets really interesting. Management guided third-quarter revenue to $1.14 to $1.16 billion, roughly 16% above the consensus near $987 million. That's not a modest step up — that's a step change. The company also raised its Enterprise Data growth floor from 85% to 130% and said it's expanding capacity beyond a $6 billion annual revenue run-rate. For context, trailing twelve-month revenue is around $3.27 billion. Management is essentially telling you it expects to nearly double the business.</p><p>The competitive position explains why they can say that with a straight face. MPWR holds 80%+ share on Nvidia's Hopper and Blackwell GPU platforms. Every GPU server rack needs power management ICs — dozens of them, from the big 48-volt bus converters down to the tiny point-of-load regulators feeding individual memory chips — and MPWR is the default supplier on the most important AI hardware on the planet. Its 48V power module platform is displacing legacy 12V designs across the data center, a secular tailwind that has nothing to do with any single customer's capex cycle.</p><p>New DDR5 memory component orders are starting to flow, adding a second growth vector inside the same rack. And the balance sheet is as clean as it gets in semis: trailing gross margin around 55%, $1.41 billion in cash against just $20 million in debt, and a freshly authorized $500 million share buyback. This is a company growing like a startup while being run like a fortress.</p><p>Now the honest part. Nothing in this business is risk-free, and MPWR has three things worth watching. First, there's a shareholder investigation tied to Nvidia Blackwell order cancellations — the kind of noise that produces headline risk even when the underlying story is intact. Second, the company went through an accounting restatement in February 2026, which investors should keep in mind even if it looks like a non-event operationally. Third, and most importantly, the valuation: the stock trades at roughly 38 times forward earnings, a premium multiple that leaves no room for a growth stumble. If the AI capex cycle hiccups, this is a stock that could give back its gains fast.</p><p>But here's the core argument, and it's why the risk is worth taking. The AI infrastructure buildout is still in early innings. Every GPU server, every data center rack, every expansion of compute capacity needs power management silicon — and MPWR gets paid no matter which large language model wins, no matter whose accelerator ends up dominant. That's the beauty of the picks-and-shovels position. You don't need to pick the AI winner. You just need AI to keep getting built, and it is being built at a pace that has forced this company to plan for double the revenue.</p><p>Shares surged on the print, and they've earned it. This was the best quarter in company history, the guidance was a statement of intent, and the stock — even at a premium valuation — remains the quietest way to own the AI buildout.</p><p class=\"disclosure\">Disclosure: The Signal holds no position in MPWR. Positions may change. This is not financial advice.</p>",
+  "links": [
+    {
+      "label": "MPWR Q2 2026 Earnings Call Transcript",
+      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-monolithic-power-systems-tops-q2-2026-estimates-93CH-4826411"
+    },
+    {
+      "label": "MPWR on Yahoo Finance →",
+      "url": "https://finance.yahoo.com/quote/MPWR/"
+    },
+    {
+      "label": "Monolithic Power Systems Investor Relations",
+      "url": "https://ir.monolithicpower.com/"
+    }
+  ]
+}
