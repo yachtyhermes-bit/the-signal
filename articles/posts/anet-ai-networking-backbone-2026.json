@@ -1,0 +1,41 @@
+{
+  "slug": "anet-ai-networking-backbone-2026",
+  "title": "Networking Is the New GPU: Arista's Q2 Numbers Prove It",
+  "subtitle": "Deferred revenue up ~100%, an AI networking target raised to $3.5 billion, and a 1.6T portfolio endorsed by Meta, Microsoft, and Oracle — Arista is becoming the tollbooth of the AI buildout.",
+  "summary": "Arista Networks reported Q2 2026 earnings after the close on August 4, and the real story is in what customers are prepaying for: $6.2 billion in deferred revenue, an AI networking target raised to $3.5 billion, and more than 100 AI customers. With $12.35 billion in cash, zero debt, and hyperscaler endorsements across its 1.6T portfolio, the AI Ethernet tollbooth is just getting built.",
+  "ticker": "ANET",
+  "sector": "semiconductor",
+  "sentiment": "bullish",
+  "date": "2026-08-05T10:00:00Z",
+  "price": 189.80,
+  "featured": false,
+  "image": {
+    "src": "/img/articles/anet-ai-networking-backbone-2026.jpg",
+    "alt": "Arista Networks AI data center networking"
+  },
+  "bodyHtml": "<p>Deferred revenue is the most honest number in enterprise tech, and Arista Networks just posted one that should make you stop scrolling. At the end of its first quarter, <strong>deferred revenue sat at $6.2 billion</strong> — up roughly 100 percent year over year. Customers aren't just buying AI networking gear anymore; they're prepaying for it, sometimes a year or more in advance. That is the difference between a vendor riding a wave and one that has become the wave.</p>\n\n<p>That prepaid signal matters because of what it says about the AI buildout's next bottleneck. GPUs get all the headlines, but a hundred-thousand-accelerator cluster is useless if the network can't move the data between them fast enough. Every training run is a networking problem as much as a compute problem, and the market is only now figuring out who owns that layer. Arista has been quietly owning it for years — and its latest report, out after the close on August 4, made the case louder than ever.</p>\n\n<p>Walk the numbers and the consistency is almost boring, in the best way. The setup entering this report was already strong: first-quarter revenue of $2.709 billion, up 35.1 percent year over year, and non-GAAP EPS of $0.87 against a $0.81 consensus — <strong>the fifth straight quarter of EPS beats</strong>. Management had guided second-quarter revenue to roughly $2.8 billion, up about 27 percent, with EPS around $0.88, and then raised the full-year outlook to roughly $11.5 billion, a 27.7 percent increase.</p>\n\n<p>The most telling number in the whole report, though, is the AI networking target: <strong>raised to $3.5 billion from $3.25 billion</strong>. That's <strong>more than double</strong> last year's roughly $1.5 billion. Arista isn't promising to grow into AI networking — it's already doing it, and it's lifting a target into a guide.</p>\n\n<p>The conviction behind those numbers is sitting on the balance sheet. Purchase commitments ballooned to <strong>$8.9 billion</strong> — Arista is locking in supply for customers years out. Combined with that $6.2 billion deferred revenue wall, the visibility here is the envy of the sector. This isn't a company hoping demand shows up; it's a company collecting deposits on demand that's already booked.</p>\n\n<p>On the product side, the moat is getting deeper. The 1.6T portfolio, anchored by the 7060XE7 Series launched in June, pushes <strong>100 Tbps per system</strong> on Broadcom Tomahawk 6 silicon with linear pluggable optics. Meta is endorsing it for liquid-cooled next-gen training and inference. Microsoft is deploying it across Azure Maia and Fairwater datacenters. Oracle is building OCI RDMA fabrics on it. When hyperscalers name your product in their build plans, that's not a vendor relationship — that's a standard.</p>\n\n<p>The customer base is the quiet revolution here. Arista now counts <strong>more than 100 AI customers</strong>, a long way from the days when a handful of hyperscalers made up the whole story. Microsoft and Meta are both 10 percent-plus customers today, and management has hinted one or two more could cross that line. Diversification was the biggest knock on this stock for years; it's becoming the bull case.</p>\n\n<p>Financially, the company is a fortress. $12.35 billion in cash, <strong>zero debt</strong>, $4.36 billion in trailing free cash flow. TTM revenue sits at $9.71 billion with gross margins at 63.5 percent and operating margins at 42.7 percent. For a company growing revenue 27 percent, those margins are absurd — and they're the reason Arista can fund the AI buildout without begging Wall Street for capital.</p>\n\n<p>Now the honest risks, because there are real ones. Supply chain constraints are a genuine 1-2 year issue — that $8.9 billion in purchase commitments is Arista managing scarcity, not splurging. Customer concentration remains a live concern with two 10 percent-plus customers. And the competition is elite: NVIDIA keeps pushing into networking, and Cisco isn't going to hand over the AI Ethernet story without a fight.</p>\n\n<p>Here's the bottom line. The AI trade has been mostly about chips, power, and servers — but the network is the layer that connects all of them, and Arista is the tollbooth. With prepaid demand, a raised AI target, hyperscaler endorsements, and a balance sheet that could fund a small country, the setup is about as clean as it gets. The bears will point to concentration and supply risk, and they're not wrong. But five straight beats, a $6.2 billion deferred revenue wall, and customers prepaying for capacity a year out? That's not a cyclical story. That's infrastructure.</p>\n\n<p class=\"disclosure\">Disclosure: The Signal holds no position in ANET. Positions may change. This is not financial advice.</p>",
+  "links": [
+    {
+      "label": "Arista Networks Investor Relations",
+      "url": "https://investors.arista.com/"
+    },
+    {
+      "label": "Arista Q1 2026 Financial Results",
+      "url": "https://www.businesswire.com/news/home/20260505592008/en/"
+    },
+    {
+      "label": "Arista 1.6T AI Networking Portfolio Launch",
+      "url": "https://www.businesswire.com/news/home/20260609500565/en/"
+    }
+  ],
+  "tags": [
+    "ANET",
+    "Arista Networks",
+    "AI networking",
+    "Ethernet",
+    "data center"
+  ],
+  "meta": {
+    "readTime": "4 min read"
+  }
+}
