@@ -1,0 +1,41 @@
+{
+  "slug": "onsemi-ai-power-surge-2026",
+  "title": "ON Semiconductor's AI Power Bet Is Paying Off Faster Than Anyone Expected",
+  "subtitle": "AI data center revenue is on track to more than double this year, guidance got raised instead of cut, and the market's favorite fallen angel just found its growth engine.",
+  "summary": "onsemi crushed Q2 estimates and raised guidance as its AI data center business \u2014 set to more than double in 2026 \u2014 becomes the company's growth engine. Shares surged as the beaten-down semiconductor name finally got its repricing.",
+  "ticker": "ON",
+  "sector": "semiconductor",
+  "sentiment": "bullish",
+  "date": "2026-08-04T22:00:00Z",
+  "featured": true,
+  "tags": [
+    "ON",
+    "onsemi",
+    "semiconductor",
+    "AI data center",
+    "power management",
+    "silicon carbide"
+  ],
+  "image": {
+    "src": "/img/articles/onsemi-ai-power-surge-2026.jpg",
+    "alt": "Data center server racks with advanced power management systems and blue LED lighting"
+  },
+  "meta": {
+    "readTime": "7 min read"
+  },
+  "bodyHtml": "<p>For the better part of a year, the market treated onsemi like a fallen angel: a chipmaker too exposed to autos and industrial equipment to matter in the AI boom. The stock sat roughly 40% below its 52-week high, and heading into this print, traders braced for the worst \u2014 a guidance cut, another leg down, another quarter of the same old story. Instead, ON Semiconductor did something the bears didn't have modeled: it raised guidance, blew past estimates, and revealed that its AI data center business has become the company's growth engine. The stock surged in response. The narrative just changed.</p><p>The headline numbers tell the story of a company firing on a new cylinder. Revenue came in at $1.60 billion, a touch ahead of the $1.59 billion consensus and up 9% year over year. Non-GAAP earnings per share of $0.74 beat the $0.71 analysts expected \u2014 a 40% year-over-year jump that left revenue growth in the dust. As the CFO put it, earnings per share grew four times faster than revenue. Free cash flow hit $425.4 million, roughly four times the prior year's figure, and non-GAAP gross margin ticked up to 39.3%, the fourth consecutive quarter of improvement.</p><p>The engine of all this is AI data center demand, and the numbers there are the kind that used to belong to GPU companies, not analog power shops. Management now expects AI data center revenue to more than double in 2026 \u2014 a raise from prior guidance \u2014 after the end market jumped 34% sequentially to roughly $400 million in the quarter. CEO Hassane El-Khoury was characteristically blunt: 'AI data center remains our fastest-growing business.' It isn't close, either.</p><p>What makes this durable rather than a one-quarter spike is the breadth of onsemi's position in the AI power chain \u2014 what management calls the power tree. The company spans the whole thing, from high-voltage infrastructure at the building level down to low-voltage delivery right next to the processors. It's supplying advanced power systems into NVIDIA's MGX ecosystem, and it just racked up new design wins with Great Wall, the Chinese cloud and AI infrastructure builder, and with AWS. Silicon carbide, the wide-bandgap technology that powers the highest-efficiency conversion stages, is expected to grow roughly 60% in AI data centers this year. That's not a side business anymore.</p><p>The context makes the quarter even more striking. This was a stock that had fallen about 13% in the month before earnings, with the market bracing for weakness \u2014 and presumably a guidance cut. Instead, onsemi raised. Factory utilization climbed to 83% from 77%, and management notes that each point of utilization adds 25 to 30 basis points of gross margin. Lead times have stretched to roughly 32 weeks, and the book-to-bill ratio has been above 1 for several quarters. During Q2, the company explicitly prioritized AI data center shipments over automotive and industrial orders. The demand is real enough that they're rationing it.</p><p>The guide confirms this isn't a one-quarter fluke. Q3 revenue is expected between $1.65 billion and $1.75 billion, with the midpoint above the $1.67 billion consensus, and non-GAAP EPS is guided to $0.81 to $0.93, above the $0.84 analysts were looking for. Gross margin is guided to 40% to 42%, continuing the expansion trend. And the CFO flagged a second round of price increases to offset input costs. When a semiconductor company can raise prices and raise guidance in the same quarter, that's pricing power \u2014 the rarest commodity in this industry.</p><p>The next leg is already being built. onsemi is ramping toward an 800-volt DC distribution architecture for data centers, expected to hit the market late 2027 or early 2028 \u2014 a step change in efficiency that management is positioning as the next growth wave. Meanwhile, the company is executing the Synaptics acquisition, on track to close in mid-2027, and its FabRight restructuring is on pace to deliver roughly $35 million in annualized savings. None of that shows up in this quarter's numbers. All of it shows up in the trajectory.</p><p>Here's the bottom line. Twenty-four analysts cover the stock with a consensus Buy, and the mean price target implies roughly 40% upside from current levels. At around 18 times forward earnings, onsemi trades at a discount to just about every AI-exposed name in the semiconductor complex \u2014 which makes sense only if you still believe the old story. The new story is a power management company sitting at the center of the AI buildout, growing margins, raising prices, and guiding up. The market priced this stock for a cyclical downturn. The quarter says it's compounding instead.</p><p class=\"disclosure\">Disclosure: The Signal holds no position in ON. Positions may change. This is not financial advice.</p>",
+  "links": [
+    {
+      "label": "onsemi Q2 2026 Earnings Press Release \u2192",
+      "url": "https://investor.onsemi.com/news-releases/news-release-details/onsemi-reports-second-quarter-2026-results"
+    },
+    {
+      "label": "ON Semiconductor on Yahoo Finance \u2192",
+      "url": "https://finance.yahoo.com/quote/ON/"
+    },
+    {
+      "label": "ON Semiconductor Q2 2026 Earnings Call Transcript \u2192",
+      "url": "https://www.investing.com/news/cryptocurrency-news/on-semiconductor-corp-on-q2-2026-earnings-call-transcript-93CH-4410556"
+    }
+  ]
+}
