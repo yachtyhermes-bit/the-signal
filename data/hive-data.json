@@ -17155,7 +17155,7 @@
       "uid": "usr_ee2913dcbfd9625a",
       "displayName": "charlie943",
       "photoURL": null,
-      "cash": 20713.129817733767,
+      "cash": 21188.779823074343,
       "holdings": {
         "NVDA": 80,
         "CRWV": 62,
@@ -17164,7 +17164,6 @@
         "KTOS": 97,
         "RBRK": 34,
         "RTX": 68,
-        "RDW": 35,
         "AXON": 28,
         "PLTR": 103,
         "NFLX": 95,
@@ -18378,6 +18377,13 @@
           "shares": 35,
           "price": 90.67,
           "date": "2026-08-08T07:05:52.589Z"
+        },
+        {
+          "ticker": "RDW",
+          "action": "sell",
+          "shares": 35,
+          "price": 13.59,
+          "date": "2026-08-08T07:06:53.105Z"
         }
       ],
       "createdAt": "2025-11-27T10:21:15.000Z"
