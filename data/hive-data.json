@@ -33763,7 +33763,12 @@
       {
         "id": "wl-mskrbjmznuqp",
         "name": "Gems",
-        "tickers": [],
+        "tickers": [
+          {
+            "ticker": "NVDA",
+            "addedAt": "2026-08-08T19:19:19.894Z"
+          }
+        ],
         "createdAt": "2026-08-08T19:18:47.340Z"
       }
     ]
