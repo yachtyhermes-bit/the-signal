@@ -261,6 +261,7 @@ try {
   if (fs.existsSync(stockJsSrc)) fs.cpSync(stockJsSrc, stockJsDst, { recursive: true });
   // Build stocks index page
   require('./scripts/build-stocks-index.js');
+  require('./scripts/build-traders.js');
 } catch (e) {
   console.error('  ⚠️  Stock pages build failed:', e.message);
 }
@@ -375,7 +376,23 @@ if (!template) {
       bodyHtml = bodyHtml.replace(/\\"/g, '"');
       bodyHtml = bodyHtml.replace(/\\n/g, '\n');
       // Rewrite /ticker/SYMBOL links to stock pages (single + double quotes)
-      bodyHtml = bodyHtml.replace(/href=['"]\/ticker\/([A-Z]+)['"]/g, 'href="https://signal-stock-pi.vercel.app/stock/$1/"');
+      bodyHtml = bodyHtml.replace(/href=['"]\/ticker\/([A-Z]+)['"]/g, 'href="https://readthesignal.net/stocks/$1/"');
+
+      // ── Auto-inject "The Numbers That Matter" stats card from meta.keyMetrics ──
+      // (new-article convention: fill meta.keyMetrics {label: value}; build renders the table)
+      const keyMetrics = (article.meta && article.meta.keyMetrics) || null;
+      if (keyMetrics && typeof keyMetrics === 'object' && Object.keys(keyMetrics).length > 0 && !bodyHtml.includes('stats-card')) {
+        const rows = Object.entries(keyMetrics)
+          .map(([label, value]) => `<tr><td class="stat-label">${escapeHtml(String(label))}</td><td class="stat-value">${escapeHtml(String(value))}</td></tr>`)
+          .join('');
+        const statsCard = `<div class="stats-card"><div class="stats-card-title">The Numbers That Matter</div><table class="stats-table">${rows}</table></div>`;
+        const firstP = bodyHtml.indexOf('</p>');
+        if (firstP !== -1) {
+          bodyHtml = bodyHtml.slice(0, firstP + 4) + statsCard + bodyHtml.slice(firstP + 4);
+        } else {
+          bodyHtml = statsCard + bodyHtml;
+        }
+      }
 
       const isPremium = article.premium === true ? 'true' : 'false';
 
