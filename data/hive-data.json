@@ -17155,10 +17155,10 @@
       "uid": "usr_ee2913dcbfd9625a",
       "displayName": "charlie943",
       "photoURL": null,
-      "cash": 17539.67988182068,
+      "cash": 20713.129817733767,
       "holdings": {
         "NVDA": 80,
-        "CRWV": 97,
+        "CRWV": 62,
         "META": 7,
         "AMZN": 8,
         "KTOS": 97,
@@ -18371,6 +18371,13 @@
           "shares": 10,
           "price": 90.07,
           "date": "2026-08-08T07:05:14.054Z"
+        },
+        {
+          "ticker": "CRWV",
+          "action": "sell",
+          "shares": 35,
+          "price": 90.67,
+          "date": "2026-08-08T07:05:52.589Z"
         }
       ],
       "createdAt": "2025-11-27T10:21:15.000Z"
