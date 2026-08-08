@@ -33746,12 +33746,19 @@
   "watchlists": {
     "usr_ee2913dcbfd9625a": [
       {
-        "ticker": "CRWV",
-        "addedAt": "2026-08-05T09:16:32.230Z"
-      },
-      {
-        "ticker": "SPCX",
-        "addedAt": "2026-08-08T07:37:04.688Z"
+        "id": "default",
+        "name": "My Watchlist",
+        "tickers": [
+          {
+            "ticker": "CRWV",
+            "addedAt": "2026-08-05T09:16:32.230Z"
+          },
+          {
+            "ticker": "SPCX",
+            "addedAt": "2026-08-08T07:37:04.688Z"
+          }
+        ],
+        "createdAt": "2026-08-08T12:03:55.972Z"
       }
     ]
   }
