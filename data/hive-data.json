@@ -17155,7 +17155,7 @@
       "uid": "usr_ee2913dcbfd9625a",
       "displayName": "charlie943",
       "photoURL": null,
-      "cash": 21188.779823074343,
+      "cash": 24915.48999763489,
       "holdings": {
         "NVDA": 80,
         "CRWV": 62,
@@ -17172,7 +17172,6 @@
         "MSFT": 16,
         "RKLB": 70,
         "MRVL": 53,
-        "LHX": 13,
         "AVGO": 11,
         "TSLA": 24
       },
@@ -18384,6 +18383,13 @@
           "shares": 35,
           "price": 13.59,
           "date": "2026-08-08T07:06:53.105Z"
+        },
+        {
+          "ticker": "LHX",
+          "action": "sell",
+          "shares": 13,
+          "price": 286.67,
+          "date": "2026-08-08T07:07:06.743Z"
         }
       ],
       "createdAt": "2025-11-27T10:21:15.000Z"
