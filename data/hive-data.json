@@ -17155,14 +17155,14 @@
       "uid": "usr_ee2913dcbfd9625a",
       "displayName": "charlie943",
       "photoURL": null,
-      "cash": 16638.97988487244,
+      "cash": 17539.67988182068,
       "holdings": {
         "NVDA": 80,
         "CRWV": 97,
         "META": 7,
         "AMZN": 8,
         "KTOS": 97,
-        "RBRK": 44,
+        "RBRK": 34,
         "RTX": 68,
         "RDW": 35,
         "AXON": 28,
@@ -18364,6 +18364,13 @@
           "shares": 5,
           "price": 186.73,
           "date": "2026-08-08T07:04:45.336Z"
+        },
+        {
+          "ticker": "RBRK",
+          "action": "sell",
+          "shares": 10,
+          "price": 90.07,
+          "date": "2026-08-08T07:05:14.054Z"
         }
       ],
       "createdAt": "2025-11-27T10:21:15.000Z"
