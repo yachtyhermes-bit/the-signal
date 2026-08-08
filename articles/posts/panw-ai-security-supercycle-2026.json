@@ -7,9 +7,16 @@
   "sector": "cyber",
   "sentiment": "bullish",
   "date": "2026-08-07T22:00:00Z",
-  "price": 359.49,
+  "price": 363.86,
   "featured": false,
-  "tags": ["PANW", "Palo Alto Networks", "Cybersecurity", "AI Security", "Platformization", "XSIAM"],
+  "tags": [
+    "PANW",
+    "Palo Alto Networks",
+    "Cybersecurity",
+    "AI Security",
+    "Platformization",
+    "XSIAM"
+  ],
   "image": {
     "src": "/img/articles/panw-ai-security-supercycle-2026.jpg",
     "alt": "Cybersecurity operations center with analysts monitoring threats on multi-screen dashboards — Palo Alto Networks SOC"

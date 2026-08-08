@@ -7,9 +7,16 @@
   "sector": "cyber",
   "sentiment": "bullish",
   "date": "2026-08-07T22:00:00Z",
-  "price": 162.60,
+  "price": 168.68,
   "featured": true,
-  "tags": ["ZS", "Zscaler", "Zero Trust", "Cybersecurity", "SASE", "Cloud Security"],
+  "tags": [
+    "ZS",
+    "Zscaler",
+    "Zero Trust",
+    "Cybersecurity",
+    "SASE",
+    "Cloud Security"
+  ],
   "image": {
     "src": "/img/articles/zs-cloud-native-zero-trust-moat-2026.jpg",
     "alt": "Abstract cloud network diagram representing Zscaler's cloud-native Zero Trust Exchange inspecting traffic inline"
