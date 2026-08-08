@@ -17155,7 +17155,7 @@
       "uid": "usr_ee2913dcbfd9625a",
       "displayName": "charlie943",
       "photoURL": null,
-      "cash": 14719.509908447266,
+      "cash": 15083.30990196228,
       "holdings": {
         "NVDA": 80,
         "CRWV": 97,
@@ -17177,8 +17177,7 @@
         "IONQ": 14,
         "LHX": 13,
         "AVGO": 11,
-        "TSLA": 24,
-        "S": 17
+        "TSLA": 24
       },
       "trades": [
         {
@@ -18346,6 +18345,13 @@
           "shares": 35,
           "price": 172.01,
           "date": "2026-08-08T07:03:08.866Z"
+        },
+        {
+          "ticker": "S",
+          "action": "sell",
+          "shares": 17,
+          "price": 21.4,
+          "date": "2026-08-08T07:04:02.693Z"
         }
       ],
       "createdAt": "2025-11-27T10:21:15.000Z"
