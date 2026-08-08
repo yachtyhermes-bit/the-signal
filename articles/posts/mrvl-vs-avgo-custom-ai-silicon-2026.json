@@ -1,0 +1,70 @@
+{
+  "slug": "mrvl-vs-avgo-custom-ai-silicon-2026",
+  "title": "Marvell vs Broadcom: Who Really Owns Custom AI Silicon",
+  "subtitle": "Broadcom built the TPU playbook. Marvell built the full-stack data-movement machine. One $2B Nvidia investment later, the custom silicon duopoly has a new shape — and both names keep winning.",
+  "summary": "Broadcom and Marvell are the only two companies building custom AI silicon at hyperscale. Broadcom owns the training playbook and the network fabric; Marvell owns inference, optics, and three hyperscaler wins. Here's how the duopoly actually works — and where Nvidia just changed the game.",
+  "ticker": "MRVL",
+  "sector": "semiconductor",
+  "sentiment": "bullish",
+  "date": "2026-08-08T14:00:00Z",
+  "price": 218.72,
+  "featured": false,
+  "tags": [
+    "Semiconductors",
+    "AI",
+    "Custom Silicon",
+    "Marvell",
+    "Broadcom"
+  ],
+  "image": {
+    "src": "/img/articles/mrvl-vs-avgo-custom-ai-silicon-2026.jpg",
+    "caption": "Marvell and Broadcom custom AI accelerators in a hyperscale data center. Photo: The Signal / AI-generated."
+  },
+  "links": [
+    {
+      "label": "MRVL stock page",
+      "url": "https://readthesignal.net/stocks/MRVL/"
+    },
+    {
+      "label": "AVGO stock page",
+      "url": "https://readthesignal.net/stocks/AVGO/"
+    }
+  ],
+  "meta": {
+    "author": "The Signal Editorial Team",
+    "estimatedReadTime": "7 minutes",
+    "editorialTags": [
+      "custom-silicon",
+      "semiconductors",
+      "ai-infrastructure",
+      "asic",
+      "mrvl-avgo-duopoly"
+    ],
+    "seoKeywords": [
+      "Marvell vs Broadcom",
+      "custom AI silicon",
+      "MRVL stock",
+      "AVGO stock",
+      "AI ASIC duopoly",
+      "Trainium Marvell",
+      "Google TPU Broadcom"
+    ],
+    "relatedTickers": [
+      "AVGO",
+      "NVDA",
+      "MRVL"
+    ],
+    "keyMetrics": {
+      "MRVL Price": "$218.72",
+      "Market Cap": "$196.3B",
+      "Forward P/E": "35.05x",
+      "Total Revenue (TTM)": "$8.72B",
+      "Data Center Rev. (FY26)": "$6.1B",
+      "52-Week Low": "$61.44",
+      "52-Week High": "$329.88",
+      "Analyst Consensus": "1.93 (Strong Buy)",
+      "Analyst Target Mean": "$256.91"
+    }
+  },
+  "bodyHtml": "<p>For years the AI chip story was simple. Nvidia built the GPUs and everyone else bought them. In 2026 that story broke. The hyperscalers decided they wanted their own chips for cost, for supply, and for control, and only two companies have the IP and the manufacturing muscle to build them at scale: <strong>Broadcom and Marvell</strong>. They are now in a straight duopoly for the most important layer of AI infrastructure.</p><div class=\"stats-card\"><div class=\"stats-card-title\">The Numbers That Matter</div><table class=\"stats-table\"><tr><td class=\"stat-label\">MRVL Price<span class=\"stats-live-badge\">LIVE</span></td><td class=\"stat-value\" data-live-ticker=\"MRVL\" data-live-field=\"price\">$218.72</td></tr><tr><td class=\"stat-label\">Market Cap</td><td class=\"stat-value\">$196.3B</td></tr><tr><td class=\"stat-label\">Forward P/E</td><td class=\"stat-value\">35.05x</td></tr><tr><td class=\"stat-label\">Total Revenue (TTM)</td><td class=\"stat-value\">$8.72B</td></tr><tr><td class=\"stat-label\">Data Center Rev. (FY26)</td><td class=\"stat-value\">$6.1B</td></tr><tr><td class=\"stat-label\">52-Week Low</td><td class=\"stat-value\">$61.44</td></tr><tr><td class=\"stat-label\">52-Week High</td><td class=\"stat-value\">$329.88</td></tr><tr><td class=\"stat-label\">Analyst Consensus</td><td class=\"stat-value\">1.93 (Strong Buy)</td></tr><tr><td class=\"stat-label\">Analyst Target Mean</td><td class=\"stat-value\">$256.91</td></tr></table><div class=\"stats-card-note\">Price refreshes live · All other figures as of Aug 8, 2026</div></div><p>Broadcom is the incumbent. It has been building Google's TPU since 2016, and that relationship alone created the custom silicon playbook. You bring your architecture, Broadcom brings 112G and 224G SerDes, HBM integration, PCIe Gen6, advanced packaging at TSMC, and the ability to ship at Google scale. That model now extends to Meta's MTIA training and inference chips, to OpenAI and Anthropic workloads that run on TPUs, and to Apple and ByteDance. Broadcom also owns the network around the chip. Its Tomahawk chips are the top-of-rack Ethernet switch and Jericho is the spine. When they sell you an accelerator, they can sell you the fabric that connects ten thousand of them. The model is high NRE upfront, very high margin, very sticky.</p><p><a href=\"/ticker/MRVL\">Marvell</a> took a different path. Five years ago it was known as a networking and storage company. Under Matt Murphy it turned itself into a full-stack AI infrastructure company. It does not just do the ASIC — it does the whole data movement problem. That includes high-speed SerDes, die-to-die interconnect, custom Arm compute, Ethernet switching, PAM4 optical DSPs for 800G and 1.6T optics, active electrical cable DSPs, and now silicon photonics and co-packaged optics.</p><p>That full-stack approach is how it won three hyperscalers. With Amazon it has a five-year multi-generational deal through 2029 that covers Trainium. Marvell ramped Trainium2 and has secured purchase orders for Trainium3, even with recent noise that Alchip is taking some interface work on Trainium3 and 4. With Google it is ramping Axion, Google's Arm-based server CPU that competes with Amazon Graviton and Microsoft Cobalt, plus an AI inference accelerator that started ramping in 2025. With Microsoft it is building Maia. Maia is the biggest of the three. Marvell itself said the third hyperscaler win would be larger than Amazon and Google combined. Maia 200 was just shown with a claim of three times the FP4 performance of Trainium3 and Google's Ironwood, using a two-tier Ethernet-based scale-up network with 2.8 terabits of bidirectional bandwidth. Four Maia 200s can be linked in a tray without a switch. Maia 300 is the production part, set to go into production in calendar 2026 and drive a major step-up in Marvell's custom revenue in fiscal 2028.</p><p>The numbers show the shift. Marvell has 18 active custom silicon programs right now. Its data center revenue was $6.1 billion in fiscal 2026, up 46 percent year over year. It targeted $2.5 billion in AI revenue in fiscal 2026, and management now talks about a $10 billion lifetime funnel by fiscal 2029. The company sees the total data center semiconductor TAM growing from $21 billion to over $75 billion by 2028 — and it wants 20 percent of it.</p><p>That is where the two models collide. Broadcom is training-heavy and network-core heavy. Marvell is inference, CPU, and optics heavy. Inference is where cost matters most, and hyperscalers argue that a custom chip can cut total cost of ownership by 40 to 50 percent compared to merchant GPUs. The bottleneck in 2026 is not FLOPS — it is how fast you can move data between accelerators and between racks, which is exactly where Marvell's optical portfolio gives it leverage.</p><p>Then <a href=\"/ticker/NVDA\">Nvidia</a> changed the game. On March 31, 2026, Nvidia invested $2 billion in Marvell and announced NVLink Fusion and a joint push on silicon photonics. For two years Marvell was helping hyperscalers build UALink, the open alternative to NVLink, to connect their custom chips. Nvidia's move was defensive and smart: instead of fighting Marvell, it made sure Marvell's custom chips can plug directly into Nvidia's ecosystem.</p><p>So now Broadcom is the champion of the open UALink world with Google, Meta and others, and Marvell is the only player that can build for both worlds — a custom Maia or Trainium that still talks NVLink Fusion inside an Nvidia rack.</p><p>If you are a hyperscaler today, the choice is not either-or. If you want the most proven large-scale training system, you call <a href=\"/ticker/AVGO\">Broadcom</a> for a TPU-like engine. If you want a cheaper inference engine plus the switches, cables and optics to wire it at data center scale, you call Marvell. That is why most of the big clouds are now calling both — and why custom silicon went from a side project to the center of AI infrastructure this year.</p><p class=\"disclosure\">Disclosure: The Signal holds no position in MRVL. Positions may change. This is not financial advice.</p>"
+}
