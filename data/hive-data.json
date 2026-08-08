@@ -17155,7 +17155,7 @@
       "uid": "usr_ee2913dcbfd9625a",
       "displayName": "charlie943",
       "photoURL": null,
-      "cash": 8699.160100708008,
+      "cash": 14719.509908447266,
       "holdings": {
         "NVDA": 80,
         "CRWV": 97,
@@ -17166,7 +17166,7 @@
         "RTX": 68,
         "RDW": 35,
         "AXON": 28,
-        "PLTR": 138,
+        "PLTR": 103,
         "NFLX": 95,
         "GE": 10,
         "PANW": 8,
@@ -18339,6 +18339,13 @@
           "shares": 15,
           "price": 223.96,
           "date": "2026-08-08T07:02:42.917Z"
+        },
+        {
+          "ticker": "PLTR",
+          "action": "sell",
+          "shares": 35,
+          "price": 172.01,
+          "date": "2026-08-08T07:03:08.866Z"
         }
       ],
       "createdAt": "2025-11-27T10:21:15.000Z"
