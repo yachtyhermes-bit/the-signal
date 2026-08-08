@@ -17155,9 +17155,9 @@
       "uid": "usr_ee2913dcbfd9625a",
       "displayName": "charlie943",
       "photoURL": null,
-      "cash": 5339.76,
+      "cash": 8699.160100708008,
       "holdings": {
-        "NVDA": 95,
+        "NVDA": 80,
         "CRWV": 97,
         "META": 7,
         "AMZN": 8,
@@ -18332,6 +18332,13 @@
           "price": 102.39,
           "date": "2026-06-12T00:00:00Z",
           "uid": "usr_ee2913dcbfd9625a"
+        },
+        {
+          "ticker": "NVDA",
+          "action": "sell",
+          "shares": 15,
+          "price": 223.96,
+          "date": "2026-08-08T07:02:42.917Z"
         }
       ],
       "createdAt": "2025-11-27T10:21:15.000Z"
@@ -33622,7 +33629,7 @@
     },
     "NVDA": {
       "price": 223.9600067138672,
-      "updatedAt": "2026-08-08T06:57:13.442Z"
+      "updatedAt": "2026-08-08T07:02:42.917Z"
     },
     "RBRK": {
       "price": 90.06999969482422,
