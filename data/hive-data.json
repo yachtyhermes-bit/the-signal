@@ -17155,7 +17155,7 @@
       "uid": "usr_ee2913dcbfd9625a",
       "displayName": "charlie943",
       "photoURL": null,
-      "cash": 15705.329906234741,
+      "cash": 16638.97988487244,
       "holdings": {
         "NVDA": 80,
         "CRWV": 97,
@@ -17173,7 +17173,6 @@
         "MSFT": 16,
         "RKLB": 70,
         "MRVL": 53,
-        "AVAV": 5,
         "LHX": 13,
         "AVGO": 11,
         "TSLA": 24
@@ -18358,6 +18357,13 @@
           "shares": 14,
           "price": 44.43,
           "date": "2026-08-08T07:04:16.037Z"
+        },
+        {
+          "ticker": "AVAV",
+          "action": "sell",
+          "shares": 5,
+          "price": 186.73,
+          "date": "2026-08-08T07:04:45.336Z"
         }
       ],
       "createdAt": "2025-11-27T10:21:15.000Z"
