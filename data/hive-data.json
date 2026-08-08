@@ -17155,7 +17155,7 @@
       "uid": "usr_ee2913dcbfd9625a",
       "displayName": "charlie943",
       "photoURL": null,
-      "cash": 24915.48999763489,
+      "cash": 32801.409675369265,
       "holdings": {
         "NVDA": 80,
         "CRWV": 62,
@@ -17172,8 +17172,7 @@
         "MSFT": 16,
         "RKLB": 70,
         "MRVL": 53,
-        "AVGO": 11,
-        "TSLA": 24
+        "AVGO": 11
       },
       "trades": [
         {
@@ -18390,6 +18389,13 @@
           "shares": 13,
           "price": 286.67,
           "date": "2026-08-08T07:07:06.743Z"
+        },
+        {
+          "ticker": "TSLA",
+          "action": "sell",
+          "shares": 24,
+          "price": 328.58,
+          "date": "2026-08-08T07:07:35.963Z"
         }
       ],
       "createdAt": "2025-11-27T10:21:15.000Z"
