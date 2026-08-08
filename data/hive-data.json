@@ -17155,7 +17155,7 @@
       "uid": "usr_ee2913dcbfd9625a",
       "displayName": "charlie943",
       "photoURL": null,
-      "cash": 15083.30990196228,
+      "cash": 15705.329906234741,
       "holdings": {
         "NVDA": 80,
         "CRWV": 97,
@@ -17174,7 +17174,6 @@
         "RKLB": 70,
         "MRVL": 53,
         "AVAV": 5,
-        "IONQ": 14,
         "LHX": 13,
         "AVGO": 11,
         "TSLA": 24
@@ -18352,6 +18351,13 @@
           "shares": 17,
           "price": 21.4,
           "date": "2026-08-08T07:04:02.693Z"
+        },
+        {
+          "ticker": "IONQ",
+          "action": "sell",
+          "shares": 14,
+          "price": 44.43,
+          "date": "2026-08-08T07:04:16.037Z"
         }
       ],
       "createdAt": "2025-11-27T10:21:15.000Z"
