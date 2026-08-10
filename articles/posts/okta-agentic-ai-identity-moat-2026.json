@@ -1,0 +1,64 @@
+{
+  "slug": "okta-agentic-ai-identity-moat-2026",
+  "title": "Okta: The Last Independent Identity Platform Is the Picks-and-Shovels Play on Agentic AI",
+  "subtitle": "CyberArk went to Palo Alto Networks. Ping went to Thales. Okta is the last neutral, multi-cloud identity vendor standing — and every AI agent on earth needs an identity. Here is the full thesis.",
+  "summary": "Okta is the only large independent identity platform left standing after the category's consolidation wave, and it sits at the enforcement point of the agentic AI boom. Q1 FY27 revenue rose 11% to $765M with RPO up 16%, fiscal 2026 delivered the first full-year GAAP operating profit and $863M in free cash flow, and Okta for AI Agents — now the featured identity provider for Anthropic's Claude Enterprise — turns the thesis into product. Identity is the new perimeter, and Okta is the last independent landlord on it.",
+  "ticker": "OKTA",
+  "sector": "cyber",
+  "sentiment": "bullish",
+  "date": "2026-08-10T22:00:00Z",
+  "price": 148.32,
+  "image": {
+    "src": "/img/articles/okta-agentic-ai-identity-moat-2026.jpg",
+    "alt": "Okta identity platform at the center of a network of AI agents, humans, and cloud applications — identity as the new perimeter"
+  },
+  "featured": false,
+  "tags": [
+    "OKTA",
+    "cybersecurity",
+    "identity",
+    "AI agents",
+    "zero trust",
+    "SaaS"
+  ],
+  "bodyHtml": "<p>Ask a CISO where the perimeter is these days and you will get a long pause. It used to be the network edge, the firewall chokepoint every packet crossed. That world is gone. Applications live in every cloud, employees work from everywhere, and the castle now has tenants without bodies. AI agents are being deployed by the thousands, each one logging in and touching data. Eighty-eight percent of organizations report AI-agent security incidents, and non-human identities outnumber humans by as many as fifty to one. The perimeter has not disappeared; it has moved to identity — who or what is allowed to do what. Standing on that new perimeter as the last independent landlord is Okta.</p><p>Look at how the neighborhood has emptied out. CyberArk, the crown jewel of privileged access, was absorbed by Palo Alto Networks in a deal north of twenty-five billion dollars. Ping and ForgeRock were folded into Thales. Microsoft's Entra is the biggest identity platform on the planet, but it is welded to Azure — adopt Entra and you are renting the castle from the cloud vendor. That leaves exactly one large, neutral, multi-cloud identity company standing, and independence is the moat: the Forrester Wave this spring handed Okta a perfect five out of five in nine criteria, praising its freedom from any suite or single cloud. When an enterprise wants identity without handcuffing itself to a stack, Okta is the only game at scale.</p><div class=\"stats-card\"><div class=\"stats-card-title\">The Numbers That Matter</div><table class=\"stats-table\"><tr><td class=\"stat-label\">Price <span class=\"stats-live-badge\">LIVE</span></td><td class=\"stat-value\" data-live-ticker=\"OKTA\" data-live-field=\"price\">$148.32</td></tr><tr><td class=\"stat-label\">Market Cap</td><td class=\"stat-value\">~$26B</td></tr><tr><td class=\"stat-label\">Forward P/E</td><td class=\"stat-value\">~35x</td></tr><tr><td class=\"stat-label\">Total Revenue (TTM)</td><td class=\"stat-value\">~$3.0B</td></tr><tr><td class=\"stat-label\">FCF (TTM)</td><td class=\"stat-value\">~$863M</td></tr><tr><td class=\"stat-label\">Dollar-Based Net Retention</td><td class=\"stat-value\">107%</td></tr><tr><td class=\"stat-label\">RPO</td><td class=\"stat-value\">$4.72B</td></tr><tr><td class=\"stat-label\">Analyst Consensus</td><td class=\"stat-value\">Buy (Strong Buy)</td></tr></table><div class=\"stats-card-note\">Price refreshes live · All other figures as of August 10, 2026</div></div><p>The financials have caught up with the narrative. In the May quarter, revenue grew 11 percent to 765 million dollars, non-GAAP earnings of ninety-one cents beat estimates by six, remaining performance obligations climbed 16 percent to 4.72 billion, and free cash flow hit 271 million dollars — a 35 percent margin. Fiscal 2026 was the inflection year: the first full-year GAAP operating profit, 863 million dollars in free cash flow, more than twenty thousand customers, over five thousand paying north of a hundred grand a year. Management raised full-year guidance, and with 2.2 billion in net cash and a billion-dollar buyback authorized, the balance sheet behaves like a mature franchise's.</p><p>But the fundamental story — the reason this stock has surged more than seventy percent year to date — is agents. Every AI agent needs an identity: something to authenticate it, authorize its tools, audit its actions, and revoke it the moment it goes rogue. Okta for AI Agents went generally available in late April, bringing shadow-agent discovery, agent-to-agent connection mapping, and a Universal Logout kill switch that can yank a rogue swarm offline with one command. Six weeks later Okta became the featured identity provider for Anthropic's Claude Enterprise launch, with Ramp, Webflow, and HubSpot as marquee customers. The timing is no accident: the Model Context Protocol became a Linux Foundation standard in December with tens of millions of monthly SDK downloads, and the XAA standard, backed by two dozen-plus vendors, routes every agent-to-app call through identity policy.</p><p>The Permiso Security acquisition announced in late July — roughly two hundred million dollars — is the tell. Permiso hunts compromised credentials across identity systems Okta does not even run, from Entra ID to legacy Active Directory, turning Okta into a security operations story and cementing the neutrality pitch: secure identity everywhere, even where someone else is the system of record. Add eighteen thousand prebuilt integrations — the industry's largest catalog — plus Universal Directory as the system of record, and you have a tollbooth that gets busier whether Okta wins the deal or merely secures it.</p><p>The honest caveats deserve airtime. Growth is decelerating — the full-year guide of roughly nine percent is a far cry from the thirty percent days, and net revenue retention has drifted from 124 percent to 107. Microsoft will keep bundling Entra into Azure deals and undercutting on price; the 2022-2023 breach still shadows procurement conversations. Agentic revenue is not yet a line item — the thesis is real, but for now it is a story inside the numbers. At roughly thirty-five times forward earnings after a seventy percent run, the market is not giving this away.</p><p>Here is the bottom line. The agentic AI era is a gold rush, and the reliable money in a gold rush is picks and shovels. Every model vendor wants to sell you the AI; Okta sits at the enforcement point where that AI meets your data, across every cloud and every model. The next catalyst is the August earnings report, and the long game is simpler: identity is the new perimeter, the perimeter gets more crowded with machines by the day, and Okta is the last independent landlord on the block. That is a position worth a reasonable premium.</p><p class=\"disclosure\">Disclosure: The Signal holds no position in OKTA. Positions may change. This is not financial advice.</p>",
+  "links": [
+    {
+      "label": "Okta Investor Relations →",
+      "url": "https://investor.okta.com/"
+    },
+    {
+      "label": "Okta for AI Agents — product overview →",
+      "url": "https://www.okta.com/platform/okta-for-ai-agents/"
+    },
+    {
+      "label": "Anthropic — Claude Enterprise announcement →",
+      "url": "https://www.anthropic.com/news/claude-enterprise"
+    },
+    {
+      "label": "Okta to Acquire Permiso Security →",
+      "url": "https://www.okta.com/press/"
+    },
+    {
+      "label": "Linux Foundation — Agentic AI Foundation →",
+      "url": "https://www.linuxfoundation.org/"
+    },
+    {
+      "label": "OKTA on Yahoo Finance →",
+      "url": "https://finance.yahoo.com/quote/OKTA/"
+    }
+  ],
+  "meta": {
+    "readTime": "7 min read",
+    "keyMetrics": {
+      "Price": "$148.32",
+      "Market Cap": "~$26B",
+      "Forward P/E": "~35x",
+      "Total Revenue (TTM)": "~$3.0B",
+      "FCF (TTM)": "~$863M",
+      "Dollar-Based Net Retention": "107%",
+      "RPO": "$4.72B",
+      "Analyst Consensus": "Buy (Strong Buy)"
+    }
+  }
+}
