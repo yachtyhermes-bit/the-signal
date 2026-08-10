@@ -409,6 +409,7 @@ if (!template) {
         .replace(/{{READ_TIME}}/g, readTime)
         .replace(/{{IMAGE_SRC}}/g, imageSrc)
         .replace(/{{IMAGE_HTML}}/g, imageHtml)
+        .replace(/{{OG_IMAGE}}/g, (article.ogImage || imageSrc))
         .replace(/{{BODY}}/g, bodyHtml)
         .replace(/{{TAGS_HTML}}/g, tagsHtml)
         .replace(/{{LINKS_HTML}}/g, linksHtml)
