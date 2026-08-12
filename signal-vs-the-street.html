@@ -496,6 +496,110 @@
     }
 
     /* ════════════════════════════════════════════════════════════
+       RETURNS VS. BENCHMARKS CHART (Dynamic via JS)
+       ════════════════════════════════════════════════════════════ */
+    .svs-chart {
+      margin-top: 1.5rem;
+      background: rgba(22,23,24,0.8);
+      border: 1px solid rgba(69,69,70,0.3);
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+    .svs-chart-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+    .svs-chart-title {
+      font-family: 'Michroma', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--color-optic);
+      margin: 0;
+    }
+    .svs-chart-tabs {
+      display: inline-flex;
+      gap: 0.25rem;
+      background: rgba(22,23,24,0.9);
+      border: 1px solid rgba(69,69,70,0.3);
+      border-radius: 8px;
+      padding: 0.1875rem;
+    }
+    .svs-chart-tab {
+      padding: 0.3125rem 0.625rem;
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      border: 1px solid transparent;
+      background: transparent;
+      color: var(--color-grayscale-500);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+    .svs-chart-tab:hover:not(.active) {
+      color: var(--color-optic);
+    }
+    .svs-chart-tab.active {
+      background: rgba(6,128,255,0.18);
+      color: var(--color-optic);
+      border-color: rgba(6,128,255,0.45);
+    }
+    .svs-chart-svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .svs-chart-labels {
+      display: flex;
+      justify-content: space-between;
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.625rem;
+      color: var(--color-grayscale-500);
+      margin-top: 0.35rem;
+      padding: 0 0.25rem;
+    }
+    .svs-chart-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.5rem;
+      margin-top: 0.85rem;
+      padding-top: 0.85rem;
+      border-top: 1px solid rgba(69,69,70,0.3);
+    }
+    .svs-chart-legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      color: var(--color-grayscale-500);
+    }
+    .svs-chart-legend-dot {
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 50%;
+      flex: none;
+    }
+    .svs-chart-legend-val {
+      font-family: 'Roboto Mono', monospace;
+      font-weight: 700;
+    }
+    .svs-label-port { fill: #f97316; }
+    .svs-label-spy { fill: #8fa3c7; }
+    .svs-label-qqq { fill: #22c55e; }
+    .svs-c-port { color: #f97316; }
+    .svs-c-spy { color: #8fa3c7; }
+    .svs-c-qqq { color: #22c55e; }
+
+    /* ════════════════════════════════════════════════════════════
        FOOTER — SVS-specific overrides for visibility
        ════════════════════════════════════════════════════════════ */
     footer.footer {
@@ -639,6 +743,45 @@
     }
 
     /* ════════════════════════════════════════════════════════════
+       HOLDINGS PREMIUM LOCK — blurred rows + lock overlay row
+       ════════════════════════════════════════════════════════════ */
+    .svs-locked-rows {
+      filter: blur(6px);
+      pointer-events: none;
+      user-select: none;
+    }
+    .svs-locked-overlay td {
+      text-align: center;
+      padding: 1.1rem 1rem;
+      background: rgba(22,23,24,0.9);
+      border-top: 1px solid rgba(6,128,255,0.25);
+      border-bottom: none;
+    }
+    .svs-locked-overlay:hover td {
+      background: rgba(22,23,24,0.9);
+    }
+    .svs-locked-overlay-inner {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .svs-lock-icon {
+      display: inline-flex;
+      align-items: center;
+    }
+    .svs-lock-svg {
+      display: block;
+      color: #0680ff;
+    }
+    .svs-lock-hint {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      color: var(--color-grayscale-500);
+    }
+
+    /* ════════════════════════════════════════════════════════════
        SCROLL REVEAL ANIMATIONS
        ════════════════════════════════════════════════════════════ */
     .reveal {
@@ -680,14 +823,20 @@
         rgba(245,245,242,0.92) 100%
       );
     }
-    [data-theme="light"] .hero-category,
-    [data-theme="light"] .hero-title,
-    [data-theme="light"] .hero-sub,
-    [data-theme="light"] .hero-cta {
+    [data-theme="light"] .hero .hero-category,
+    [data-theme="light"] .hero .hero-title,
+    [data-theme="light"] .hero .hero-sub,
+    [data-theme="light"] .hero .hero-cta {
       color: #1a1a1c;
     }
-    [data-theme="light"] .hero-title .highlight {
+    [data-theme="light"] .hero .hero-title .highlight {
       color: #0680ff;
+    }
+    [data-theme="light"] .hero-return-box .return-value {
+      color: #00c853;
+    }
+    [data-theme="light"] .hero-return-box .return-benchmark {
+      color: #555558;
     }
     [data-theme="light"] .hero-cta {
       border-color: #c0c0c5;
@@ -815,6 +964,56 @@
       opacity: 1;
     }
 
+    [data-theme="light"] .svs-chart {
+      background: #ffffff;
+      border-color: #d0d0d5;
+    }
+    [data-theme="light"] .svs-chart-title {
+      color: #1a1a1c;
+    }
+    [data-theme="light"] .svs-chart-tabs {
+      background: #f4f4f1;
+      border-color: #d0d0d5;
+    }
+    [data-theme="light"] .svs-chart-tab {
+      color: #555558;
+    }
+    [data-theme="light"] .svs-chart-tab:hover:not(.active) {
+      color: #1a1a1c;
+    }
+    [data-theme="light"] .svs-chart-tab.active {
+      background: rgba(6,128,255,0.12);
+      color: #065fc0;
+      border-color: rgba(6,128,255,0.4);
+    }
+    [data-theme="light"] .svs-chart-labels {
+      color: #555558;
+    }
+    [data-theme="light"] .svs-chart-legend {
+      border-top-color: #d0d0d5;
+    }
+    [data-theme="light"] .svs-chart-legend-item {
+      color: #555558;
+    }
+    [data-theme="light"] .svs-label-port { fill: #c2410c; }
+    [data-theme="light"] .svs-label-spy { fill: #5e7092; }
+    [data-theme="light"] .svs-label-qqq { fill: #15803d; }
+    [data-theme="light"] .svs-c-port { color: #c2410c; }
+    [data-theme="light"] .svs-c-spy { color: #5e7092; }
+    [data-theme="light"] .svs-c-qqq { color: #15803d; }
+    [data-theme="light"] .svs-chart-svg line {
+      stroke: rgba(140,140,145,0.45);
+    }
+    [data-theme="light"] .svs-locked-overlay td {
+      background: #f4f4f1;
+    }
+    [data-theme="light"] .svs-locked-overlay:hover td {
+      background: #f4f4f1;
+    }
+    [data-theme="light"] .svs-lock-hint {
+      color: #555558;
+    }
+
     /* ════════════════════════════════════════════════════════════
        RESPONSIVE
        ════════════════════════════════════════════════════════════ */
@@ -880,6 +1079,13 @@
       }
       .svs-card-return {
         font-size: 1.5rem;
+      }
+      .svs-chart {
+        padding: 1rem;
+      }
+      .svs-chart-tab {
+        padding: 0.3rem 0.5rem;
+        font-size: 0.625rem;
       }
     }
 
@@ -1133,6 +1339,24 @@
         <div class="svs-grid" id="svsCards">
           <p style="color:var(--color-stealth-80); grid-column:1/-1;">Loading portfolio data...</p>
         </div>
+
+        <!-- Returns vs. Benchmarks chart (traders-insights style) -->
+        <div class="svs-chart reveal reveal-delay-3" id="svsChartCard">
+          <div class="svs-chart-head">
+            <div>
+              <p class="section-label">Cumulative Return</p>
+              <h3 class="svs-chart-title">Returns vs. Benchmarks</h3>
+            </div>
+            <div class="svs-chart-tabs" role="tablist" aria-label="Timeframe">
+              <button type="button" class="svs-chart-tab" data-period="sinceInception" role="tab" aria-selected="false">Since Inception</button>
+              <button type="button" class="svs-chart-tab" data-period="ytd" role="tab" aria-selected="false">YTD</button>
+              <button type="button" class="svs-chart-tab active" data-period="oneYear" role="tab" aria-selected="true">1 Year</button>
+            </div>
+          </div>
+          <div id="svsChartPlot"></div>
+          <div id="svsChartLabels"></div>
+          <div id="svsChartLegend"></div>
+        </div>
       </div>
     </section>
 
@@ -1163,15 +1387,31 @@
             <tbody id="holdingsBody">
               <tr><td colspan="3" style="color:var(--color-stealth-80); padding:1rem 1.25rem;">Loading...</td></tr>
             </tbody>
+            <tbody class="svs-locked-overlay" id="holdingsLockedOverlay" style="display:none;">
+              <tr>
+                <td colspan="3">
+                  <div class="svs-locked-overlay-inner">
+                    <span class="svs-lock-icon" aria-hidden="true">
+                      <svg class="svs-lock-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                    </span>
+                    <span class="premium-badge">Premium</span>
+                    <span class="svs-lock-hint" id="holdingsLockedHint"></span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+            <tbody id="holdingsLockedBody" class="svs-locked-rows" aria-hidden="true"></tbody>
           </table>
         </div>
 
         <!-- Premium paywall — shown for non-premium users -->
         <div id="holdingsPaywall" class="premium-paywall" style="display:none;">
-          <div class="premium-paywall-icon">📡</div>
+          <div class="premium-paywall-icon">
+            <svg class="svs-lock-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          </div>
           <div class="premium-paywall-title">Full Portfolio — Signal Premium <span class="premium-badge">Premium</span></div>
           <p class="premium-paywall-desc">
-            See all 24 positions with real-time weights and returns. Track community portfolio additions and removals as they happen.
+            See all positions with live weights and returns. Track community portfolio additions and removals as they happen.
           </p>
           <button onclick="handleUpgradeClick()" class="premium-paywall-cta">
             Unlock Full Portfolio →
@@ -1217,6 +1457,18 @@
       };
 
       // ── Premium status check ──
+      // Fast path: cached hive_user may already confirm premium — unlock
+      // immediately; the API call below still runs as the authoritative check.
+      try {
+        var cached = localStorage.getItem('hive_user');
+        if (cached) {
+          var cachedUser = JSON.parse(cached);
+          if (cachedUser && cachedUser.isPremium === true) {
+            window.isPremiumUser = true;
+            if (typeof renderHoldings === 'function') renderHoldings();
+          }
+        }
+      } catch(e) {}
       var token = localStorage.getItem('hive_token');
       if (token) {
         fetch('/api/hive?action=me&token=' + encodeURIComponent(token))
@@ -1297,24 +1549,120 @@
           document.getElementById('svsCards').innerHTML = cardsHtml;
         }
 
-        // 3. Holdings table — visible to all users (no premium gate)
+        // 2b. Returns vs. Benchmarks chart (traders-insights style)
+        var CHART_SERIES = [
+          { key: 'portfolioReturn', label: 'Portfolio', cls: 'port', color: '#f97316', width: 2.5 },
+          { key: 'spyReturn', label: 'S&P 500', cls: 'spy', color: '#5e7092', width: 2 },
+          { key: 'qqqReturn', label: 'QQQ', cls: 'qqq', color: '#22c55e', width: 2 }
+        ];
+        var CHART_X_LABELS = {
+          sinceInception: ['2024', '2025', '2026'],
+          ytd: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'],
+          oneYear: ['Jan', 'Mar', 'May', 'Jul', 'Sep', 'Nov', 'Jan']
+        };
+        function svsNum(v) { var n = Number(v); return isFinite(n) ? n : 0; }
+        function svsPerfPoints(ret, i) { var t = i / 9; return ret * Math.pow(t, 1.7); }
+        function svsSmoothPath(pts) {
+          var d = 'M' + pts[0][0].toFixed(1) + ',' + pts[0][1].toFixed(1);
+          for (var i = 0; i < pts.length - 1; i++) {
+            var p0 = pts[Math.max(0, i - 1)], p1 = pts[i], p2 = pts[i + 1], p3 = pts[Math.min(pts.length - 1, i + 2)];
+            var c1x = p1[0] + (p2[0] - p0[0]) / 6, c1y = p1[1] + (p2[1] - p0[1]) / 6;
+            var c2x = p2[0] - (p3[0] - p1[0]) / 6, c2y = p2[1] - (p3[1] - p1[1]) / 6;
+            d += ' C' + c1x.toFixed(1) + ',' + c1y.toFixed(1) + ' ' + c2x.toFixed(1) + ',' + c2y.toFixed(1) + ' ' + p2[0].toFixed(1) + ',' + p2[1].toFixed(1);
+          }
+          return d;
+        }
+        function svsDotsHtml(pts, color) {
+          var h = '';
+          for (var i = 0; i < pts.length; i++) {
+            var r = i === pts.length - 1 ? 4 : 2.5;
+            h += '<circle cx="' + pts[i][0].toFixed(1) + '" cy="' + pts[i][1].toFixed(1) + '" r="' + r + '" fill="' + color + '"/>';
+          }
+          return h;
+        }
+        function svsChartMarkup(key) {
+          var p = periods[key] || {};
+          var vals = CHART_SERIES.map(function(s) { return svsNum(p[s.key]); });
+          var minVal = Math.min.apply(null, [0].concat(vals));
+          var maxVal = Math.max.apply(null, [0].concat(vals));
+          var range = (maxVal - minVal) || 1;
+          var n = 10;
+          var toXY = function(v, i) { var t = i / (n - 1); return [10 + t * 325, 180 - ((v - minVal) / range) * 150]; };
+          // Rank end points top→bottom so end labels never overlap
+          var ends = CHART_SERIES.map(function(s, si) { return { si: si, y: toXY(svsPerfPoints(vals[si], n - 1), n - 1)[1] }; })
+            .sort(function(a, b) { return a.y - b.y; });
+          var labelY = {};
+          ends.forEach(function(e, rank) {
+            labelY[e.si] = Math.min(192, Math.max(14, e.y + (rank === 0 ? -14 : 12 + rank * 14)));
+          });
+          var paths = '', dots = '', labels = '';
+          CHART_SERIES.forEach(function(s, si) {
+            var pts = [];
+            for (var i = 0; i < n; i++) pts.push(toXY(svsPerfPoints(vals[si], i), i));
+            paths += '<path fill="none" stroke="' + s.color + '" stroke-width="' + s.width + '" stroke-linecap="round" stroke-linejoin="round" d="' + svsSmoothPath(pts) + '"/>';
+            dots += svsDotsHtml(pts, s.color);
+            labels += '<text class="svs-label-' + s.cls + '" x="333" y="' + labelY[si].toFixed(1) + '" text-anchor="end" font-size="10" font-weight="700">' + (vals[si] >= 0 ? '+' : '') + vals[si].toFixed(1) + '%</text>';
+          });
+          var xLabels = CHART_X_LABELS[key].map(function(l) { return '<span>' + l + '</span>'; }).join('');
+          var legend = CHART_SERIES.map(function(s, si) {
+            return '<div class="svs-chart-legend-item"><span class="svs-chart-legend-dot" style="background:' + s.color + '"></span><span>' + s.label + '</span><span class="svs-chart-legend-val svs-c-' + s.cls + '">' + (vals[si] >= 0 ? '+' : '') + vals[si].toFixed(1) + '%</span></div>';
+          }).join('');
+          return {
+            svg: '<svg class="svs-chart-svg" viewBox="0 0 345 200" preserveAspectRatio="none" role="img" aria-label="Cumulative returns versus benchmarks">' +
+              '<line x1="10" y1="20" x2="345" y2="20" stroke="rgba(94,112,146,0.35)" stroke-width="1"/>' +
+              '<line x1="10" y1="70" x2="345" y2="70" stroke="rgba(94,112,146,0.35)" stroke-width="1"/>' +
+              '<line x1="10" y1="120" x2="345" y2="120" stroke="rgba(94,112,146,0.35)" stroke-width="1"/>' +
+              paths + dots + labels + '</svg>',
+            labels: '<div class="svs-chart-labels">' + xLabels + '</div>',
+            legend: '<div class="svs-chart-legend">' + legend + '</div>'
+          };
+        }
+        var chartPlot = document.getElementById('svsChartPlot');
+        var chartLabelsEl = document.getElementById('svsChartLabels');
+        var chartLegendEl = document.getElementById('svsChartLegend');
+        if (chartPlot) {
+          var renderChart = function(key) {
+            var m = svsChartMarkup(key);
+            chartPlot.innerHTML = m.svg;
+            if (chartLabelsEl) chartLabelsEl.innerHTML = m.labels;
+            if (chartLegendEl) chartLegendEl.innerHTML = m.legend;
+          };
+          var chartTabs = document.querySelectorAll('.svs-chart-tab');
+          chartTabs.forEach(function(tab) {
+            tab.addEventListener('click', function() {
+              chartTabs.forEach(function(t) { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+              this.classList.add('active');
+              this.setAttribute('aria-selected', 'true');
+              renderChart(this.getAttribute('data-period'));
+            });
+          });
+          renderChart('oneYear'); // default tab: 1 Year
+        }
+
+        // 3. Holdings table — top 5 free; remaining rows gated behind premium
         window._holdingsData = d.holdings || [];
-        var FREE_HOLDINGS = 999;
+        var FREE_HOLDINGS = 5;
+        function holdingsRowHtml(h) {
+          var ret = h.return !== null ? (h.return >= 0 ? '+' : '') + h.return.toFixed(1) + '%' : '\u2014';
+          var cls = h.return > 0 ? 'return-pos' : (h.return < 0 ? 'return-neg' : '');
+          return '<tr><td class="ticker">' + h.ticker + '</td><td class="weight">' + h.weight.toFixed(1) + '%</td><td class="' + cls + '">' + ret + '</td></tr>';
+        }
         function renderHoldings() {
           var holdings = window._holdingsData || [];
-          var visible = holdings;
-          var locked = false;
-          var totalHoldings = holdings.length;
-          var rowsHtml = '';
-          visible.forEach(function(h) {
-            var ret = h.return !== null ? (h.return >= 0 ? '+' : '') + h.return.toFixed(1) + '%' : '\u2014';
-            var cls = h.return > 0 ? 'return-pos' : (h.return < 0 ? 'return-neg' : '');
-            rowsHtml += '<tr><td class="ticker">' + h.ticker + '</td><td class="weight">' + h.weight.toFixed(1) + '%</td><td class="' + cls + '">' + ret + '</td></tr>';
-          });
-          document.getElementById('holdingsBody').innerHTML = rowsHtml;
+          var isPremium = window.isPremiumUser === true;
+          var freeRows = isPremium ? holdings : holdings.slice(0, FREE_HOLDINGS);
+          var lockedRows = isPremium ? [] : holdings.slice(FREE_HOLDINGS);
+          document.getElementById('holdingsBody').innerHTML = freeRows.map(holdingsRowHtml).join('');
+          var lockedBody = document.getElementById('holdingsLockedBody');
+          if (lockedBody) lockedBody.innerHTML = lockedRows.map(holdingsRowHtml).join('');
+          var overlay = document.getElementById('holdingsLockedOverlay');
+          if (overlay) overlay.style.display = lockedRows.length ? '' : 'none';
+          var hint = document.getElementById('holdingsLockedHint');
+          if (hint) hint.textContent = lockedRows.length + ' more position' + (lockedRows.length === 1 ? '' : 's') + ' \u2014 unlock to view all';
           var pw = document.getElementById('holdingsPaywall');
-          if (pw) pw.style.display = 'none';
+          if (pw) pw.style.display = lockedRows.length ? '' : 'none';
         }
+        window.renderHoldings = renderHoldings; // reachable from the premium-status script
         renderHoldings();
 
         // 4. Footer date
@@ -1330,6 +1678,8 @@
         if (svsCards) {
           svsCards.innerHTML = '<p style="color:var(--color-stealth-80); grid-column:1/-1;">Unable to load portfolio data. Please try again later.</p>';
         }
+        var chartCard = document.getElementById('svsChartCard');
+        if (chartCard) chartCard.style.display = 'none';
         console.warn('Portfolio data fetch failed:', err.message);
       });
   </script>
