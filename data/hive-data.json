@@ -33531,6 +33531,15 @@
         }
       ],
       "createdAt": "2025-07-01T00:00:00.000Z"
+    },
+    "undefined": {
+      "uid": "undefined",
+      "displayName": "Anonymous",
+      "photoURL": null,
+      "cash": 100000,
+      "holdings": {},
+      "trades": [],
+      "createdAt": "2026-08-12T23:19:54.151Z"
     }
   },
   "priceCache": {
