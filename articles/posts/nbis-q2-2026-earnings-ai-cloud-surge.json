@@ -1,0 +1,52 @@
+{
+  "slug": "nbis-q2-2026-earnings-ai-cloud-surge",
+  "ticker": "NBIS",
+  "company": "Nebius Group",
+  "sector": "ai",
+  "sentiment": "bullish",
+  "date": "2026-08-12T08:00:00Z",
+  "title": "Nebius Smashes Q2 2026: Revenue Up 454%, ARR Tops $3B, Power Pipeline Jumps to 5 GW",
+  "subtitle": "$582M in quarterly revenue (+454% YoY), $3.0B in ARR (+58% QoQ), a 50% adjusted EBITDA margin in AI Cloud, and contracted power guidance raised to 5 GW — Nebius is outgrowing its own bottlenecks.",
+  "summary": "Nebius Group reported a blowout Q2 2026: revenue surged 454% year over year to $582 million, ARR reached $3.0 billion (+58% QoQ), and AI Cloud adjusted EBITDA margin nearly doubled to 50%. Management raised 2026 contracted power guidance to 5 GW — a 5x increase since August 2025 — and reaffirmed full-year guidance. The report makes one thing clear: the constraint on AI infrastructure is no longer demand, it is power and silicon, and Nebius has locked up both.",
+  "image": {
+    "src": "/img/articles/nbis-q2-2026-earnings-ai-cloud-surge.jpg",
+    "caption": "Nebius AI cloud data center campus at night, with high-voltage transmission infrastructure converging on the site"
+  },
+  "featured": false,
+  "tags": [
+    "NBIS",
+    "Nebius",
+    "earnings",
+    "AI cloud",
+    "ARR",
+    "GPU",
+    "data center",
+    "power",
+    "AI infrastructure",
+    "Europe"
+  ],
+  "links": [
+    {
+      "label": "Nebius Q2 2026 Earnings Release →",
+      "url": "https://nebius.com/newsroom/nebius-reports-second-quarter-2026-financial-results",
+      "source": "Nebius"
+    },
+    {
+      "label": "Nebius Investor Relations →",
+      "url": "https://nebius.com/investor-hub",
+      "source": "Nebius"
+    },
+    {
+      "label": "Nebius — AI Cloud Platform →",
+      "url": "https://nebius.com/",
+      "source": "Nebius"
+    }
+  ],
+  "price": 234.7,
+  "meta": {
+    "estimatedReadTime": "6 min read",
+    "leadType": "earnings",
+    "reasoning": "User-requested: NBIS Q2 2026 earnings smash. Revenue $582M +454% YoY; EPS -$0.12 +68% YoY; ARR $3.0B +58% QoQ; AI Cloud adj EBITDA margin 50% vs 24% in Q4 2025; contracted power guidance raised to 5 GW (5x since Aug 2025); capacity expanding across US & Europe; FY2026 guidance reaffirmed."
+  },
+  "bodyHtml": "<p>Nebius Group just delivered the kind of quarter that resets expectations for European AI infrastructure — and the numbers are still sinking in. The company reported Q2 2026 revenue of $582 million, up 454% year over year, while annualized recurring revenue reached $3.0 billion at the end of June, up 58% quarter over quarter. Adjusted EBITDA loss per share narrowed by 68% year over year as the AI Cloud segment posted a 50% adjusted EBITDA margin, up from 24% in Q4 2025.</p><h2>The Revenue Machine Is Scaling Faster Than Its Inputs</h2><p>Revenue growth of this magnitude usually comes with a warning label: margins get crushed while capacity catches up. Nebius is running the opposite play. The AI Cloud's adjusted EBITDA margin roughly doubled in two quarters, evidence that the GPU fleet is filling up and operating leverage is kicking in. ARR of $3.0 billion — 58% higher than the March quarter — suggests the contracted base compounds even as new clusters come online.</p><p>The company's positioning is straightforward: rent the scarce thing. Every hyperscaler and AI lab on earth is competing for the same NVIDIA silicon and the same gigawatts. Nebius has locked up both — and its privileged relationship with NVIDIA, which holds a roughly $2 billion passive stake, keeps its name near the top of the allocation queue.</p><h2>Power Is the Real Story: 5 GW and Climbing</h2><p>Management raised 2026 contracted power guidance to 5 gigawatts — a fivefold increase since August 2025 and well ahead of the 3.5 GW contracted as of the first quarter. The capacity footprint is expanding across the United States and Europe, with new sites coming online to serve both sovereign AI demand on the continent and the wholesale AI cloud market in North America.</p><p>That power pipeline matters more than any single revenue line. Utility interconnection queues in most Western markets stretch years into the future; a gigawatt portfolio is effectively a structural barrier to entry. Every additional GW Nebius contracts today is capacity its competitors cannot build before 2028.</p><h2>Guidance Reaffirmed, Momentum Unbroken</h2><p>Full-year 2026 guidance was reaffirmed, with the company still on pace for roughly $3.0 to $3.4 billion in revenue this fiscal year — a sixfold jump from fiscal 2025. Management's framing after the print was unambiguous: AI infrastructure demand is just getting started.</p><p>That view is easy to dismiss as cheerleading until you look at who is buying. European enterprises running sovereign workloads, US AI labs desperate for power-locked capacity, and a management team that keeps raising its own targets and then beating them.</p><h2>What Could Go Wrong</h2><p>The bull case is loud, but the risks are real. Capex intensity is enormous: building 5 GW of capacity requires billions in annual spend, and the balance sheet carries the weight of that buildout. The company remains dependent on NVIDIA for silicon allocation — a cozy relationship, but one with a single point of failure. Competition is intensifying as every hyperscaler and a wave of AI cloud startups chase the same contracts. And with shares trading at a significant premium to the July report, valuation assumes the growth trajectory continues without a stumble.</p><p>For now, the market's verdict is clear: Nebius is compounding at hyperscale speed, and its bottlenecks — power and silicon — are the same bottlenecks constraining every AI buildout on earth. The company that secured both early is the one to watch.</p>"
+}
