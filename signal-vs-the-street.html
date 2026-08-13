@@ -552,6 +552,14 @@
       color: var(--color-optic);
       border-color: rgba(6,128,255,0.45);
     }
+    .svs-chart-period {
+      margin-top: 0.625rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.6875rem;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      color: var(--color-grayscale-500);
+    }
     .svs-chart-svg {
       display: block;
       width: 100%;
@@ -978,6 +986,9 @@
     [data-theme="light"] .svs-chart-tab {
       color: #555558;
     }
+    [data-theme="light"] .svs-chart-period {
+      color: #555558;
+    }
     [data-theme="light"] .svs-chart-tab:hover:not(.active) {
       color: #1a1a1c;
     }
@@ -1315,7 +1326,7 @@
         <!-- Return box at bottom of hero -->
         <div class="hero-return-box reveal reveal-delay-3" id="heroReturnBox">
           <div>
-            <p class="return-label">Total Return Since Inception</p>
+            <p class="return-label">Total Return Since Inception <span id="heroInceptionLabel" style="color:var(--color-grayscale-500);font-weight:500;"></span></p>
             <p class="return-value" id="heroReturnValue">—</p>
           </div>
           <div style="border-left:1px solid rgba(69,69,70,0.4); padding-left:1.5rem;">
@@ -1358,6 +1369,7 @@
               <button type="button" class="svs-chart-tab active" data-period="oneYear" role="tab" aria-selected="true">1 Year</button>
             </div>
           </div>
+          <div class="svs-chart-period" id="svsChartPeriod"></div>
           <div id="svsChartPlot"></div>
           <div id="svsChartLabels"></div>
           <div id="svsChartLegend"></div>
@@ -1522,6 +1534,10 @@
           if (heroBmk) heroBmk.textContent = (si.spyReturn >= 0 ? '+' : '') + si.spyReturn.toFixed(1) + '%';
           var heroAlpha = document.getElementById('heroAlphaValue');
           if (heroAlpha) heroAlpha.textContent = (si.vsSPY >= 0 ? '+' : '') + si.vsSPY.toFixed(1) + '%';
+          var heroInc = document.getElementById('heroInceptionLabel');
+          if (heroInc && d.inception) {
+            heroInc.textContent = '· ' + new Date(d.inception).toLocaleString('en-US', { month: 'short', year: 'numeric' });
+          }
         }
 
         // 2. Return cards
@@ -1625,12 +1641,34 @@
         var chartPlot = document.getElementById('svsChartPlot');
         var chartLabelsEl = document.getElementById('svsChartLabels');
         var chartLegendEl = document.getElementById('svsChartLegend');
+        var chartPeriodEl = document.getElementById('svsChartPeriod');
         if (chartPlot) {
+          var fmtMonthYear = function(dt) {
+            return dt.toLocaleString('en-US', { month: 'short', year: 'numeric' });
+          };
+          // Explicit date anchor for every timeframe — "Since Inception" must
+          // state when inception actually was (data: d.inception / d.lastUpdated).
+          var periodCaption = function(key) {
+            var last = d && d.lastUpdated ? new Date(d.lastUpdated) : new Date();
+            var end = fmtMonthYear(last);
+            if (key === 'sinceInception' && d && d.inception) {
+              var inc = new Date(d.inception);
+              var months = (last.getFullYear() - inc.getFullYear()) * 12 + (last.getMonth() - inc.getMonth());
+              return 'Inception ' + fmtMonthYear(inc) + ' – ' + end + ' · ' + months + ' months';
+            }
+            if (key === 'ytd') {
+              return 'Jan – ' + end;
+            }
+            var prev = new Date(last);
+            prev.setFullYear(last.getFullYear() - 1);
+            return fmtMonthYear(prev) + ' – ' + end;
+          };
           var renderChart = function(key) {
             var m = svsChartMarkup(key);
             chartPlot.innerHTML = m.svg;
             if (chartLabelsEl) chartLabelsEl.innerHTML = m.labels;
             if (chartLegendEl) chartLegendEl.innerHTML = m.legend;
+            if (chartPeriodEl) chartPeriodEl.innerHTML = periodCaption(key);
           };
           var chartTabs = document.querySelectorAll('.svs-chart-tab');
           chartTabs.forEach(function(tab) {
