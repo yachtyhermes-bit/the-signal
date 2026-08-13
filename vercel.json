@@ -35,6 +35,14 @@
       "dest": "/signal-vs-the-street.html"
     },
     {
+      "src": "/hiv",
+      "dest": "/hive-landing-sleeper-v2.html"
+    },
+    {
+      "src": "/hiv/",
+      "dest": "/hive-landing-sleeper-v2.html"
+    },
+    {
       "src": "/premium/success",
       "dest": "/premium/success.html"
     },

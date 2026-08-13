@@ -9,6 +9,31 @@
   <title>The Hive — Simulated Trading Competition — The Signal</title>
   <meta name="description" content="You read the signals. Now trade on them. Get $100K in paper capital, compete against the sharpest minds in the community, and prove your thesis across AI, defense, space, cyber, and quantum stocks.">
   <style>
+    :root {
+      --text: #e8e8f0;
+      --bg-primary: #1b2b50;
+      --bg-secondary: #1e3054;
+      --bg-card: #233b64;
+      --bg-card-hover: #2b4676;
+      --bg-accent: #23375d;
+      --text-primary: #e8e8f0;
+      --text-secondary: #889abb;
+      --text-muted: #5e7092;
+      --accent: #3b82f6;
+      --accent-glow: rgba(59, 130, 246, 0.15);
+      --accent-light: #60a5fa;
+      --accent-gradient: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      --green: #22c55e;
+      --green-dim: rgba(34, 197, 94, 0.12);
+      --red: #ef4444;
+      --red-dim: rgba(239, 68, 68, 0.12);
+      --gold: #f59e0b;
+      --gold-dim: rgba(245, 158, 11, 0.12);
+      --purple: #a78bfa;
+      --border: #2c426f;
+      --radius: 12px;
+      --radius-sm: 6px;
+    }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { background: #0d0d1a; }
     body {
@@ -23,87 +48,7 @@
     /* ===== DESIGN 1 — THE BOARDROOM ===== */
     /* Ultra dark, gold accents, thin elegance, sharp corners — enhanced gold glow */
 
-    /* ---------- NAV ---------- */
-    .nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 1000;
-      background: rgba(13,13,26,0.96);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(212,175,55,0.3);
-      box-shadow: 0 0 20px rgba(212,175,55,0.08), 0 0 60px rgba(212,175,55,0.03);
-    }
-    .nav-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 56px;
-    }
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-    }
-    .logo-img {
-      width: 24px; height: 24px;
-      border-radius: 2px;
-      object-fit: cover;
-    }
-    .logo-text {
-      font-family: 'Inter', sans-serif;
-      font-size: 13px;
-      font-weight: 300;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.5);
-    }
-    .logo-text strong {
-      font-weight: 600;
-      color: rgba(255,255,255,0.8);
-    }
-    .nav-links { display: flex; gap: 2px; }
-    .nav-link {
-      padding: 6px 14px;
-      font-size: 10px;
-      font-weight: 500;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.55);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .nav-link:hover { color: rgba(212,175,55,0.8); }
-    .hamburger-btn { display: none; }
-
-    .mobile-menu {
-      display: none;
-      position: fixed;
-      top: 56px; left: 0; right: 0;
-      background: rgba(5,5,5,0.98);
-      z-index: 999;
-      border-bottom: 1px solid rgba(212,175,55,0.08);
-    }
-    .mobile-menu.open { display: block; }
-    .mobile-menu-links {
-      display: flex;
-      flex-direction: column;
-      padding: 8px 24px 16px;
-    }
-    .mobile-nav-link {
-      padding: 10px 12px;
-      font-size: 12px;
-      font-weight: 400;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.3);
-      text-decoration: none;
-    }
-
-    /* ---------- HERO ---------- */
+        /* ---------- HERO ---------- */
     .hero {
       position: relative;
       min-height: 100vh;
@@ -681,29 +626,6 @@
 
     /* ---------- RESPONSIVE ---------- */
     @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .hamburger-btn {
-        display: flex; align-items: center; justify-content: center;
-        width: 36px; height: 36px; cursor: pointer;
-        position: relative;
-      }
-      .hamburger-line, .hamburger-line::before, .hamburger-line::after {
-        display: block;
-        width: 16px; height: 1px;
-        background: rgba(255,255,255,0.2);
-        border-radius: 0;
-        transition: 0.25s ease;
-        position: relative;
-      }
-      .hamburger-line::before, .hamburger-line::after {
-        content: '';
-        position: absolute; left: 0;
-      }
-      .hamburger-line::before { top: -5px; }
-      .hamburger-line::after { top: 5px; }
-      .mobile-menu.open + .hamburger-btn .hamburger-line {
-        background: transparent;
-      }
       .hero-content { padding: 100px 20px 60px; }
       .hero-brand { font-size: 18px; letter-spacing: 8px; }
       .stats-row { gap: 24px; flex-wrap: wrap; }
@@ -733,38 +655,170 @@
       .table thead th, .table tbody td { padding: 8px 12px; font-size: 11px; }
     }
   </style>
+  <link rel="stylesheet" href="/css/nav.css">
 </head>
 <body>
 
-  <!-- ===== NAV ===== -->
-  <nav class="nav">
+<nav class="nav">
     <div class="nav-inner">
-      <a href="/" class="logo">
-        <img src="/img/logo-hex.jpg" alt="The Signal" class="logo-img">
-        <span class="logo-text">THE <strong>SIGNAL</strong></span>
-      </a>
-      <div class="nav-links">
-        <a href="/sector/ai" class="nav-link">AI</a>
-        <a href="/sector/cyber" class="nav-link">Cyber</a>
-        <a href="/sector/defense" class="nav-link">Defense</a>
-        <a href="/sector/space" class="nav-link">Space</a>
-        <a href="/sector/mega-cap" class="nav-link">Mega-Cap</a>
-        <a href="/sector/quantum" class="nav-link">Quantum</a>
-      </div>
-      <div class="hamburger-btn" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
-        <span class="hamburger-line"></span>
+      <a href="/" class="logo"><img src="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/logo-hex.jpg" alt="The Signal" class="logo-img"><span class="logo-text"><span class="logo-the">THE</span> <strong>SIGNAL</strong></span></a>
+      <div class="nav-actions">
+        <button class="nav-btn search-btn" id="searchToggle" aria-label="Search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <div class="auth-container" id="authContainer">
+            <button class="nav-btn auth-btn" id="authToggle" aria-label="Sign In">
+              <div class="auth-btn-avatar" id="authBtnAvatar">
+                <span class="auth-btn-initial" id="authBtnInitial"></span>
+                <img class="auth-btn-img" id="authBtnImg" src="" alt="" style="display:none">
+              </div>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="auth-btn-icon" id="authBtnIcon">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              <span class="auth-label" id="authLabel">Sign In</span>
+            </button>
+            <div class="auth-dropdown" id="authDropdown">
+              <!-- Signed-in Profile -->
+              <div class="auth-profile" id="authProfile" style="display:none">
+                <div class="auth-profile-header">
+                  <div class="auth-profile-avatar" id="authProfileAvatar">
+                    <img id="authProfileImg" src="" alt="" style="display:none">
+                    <span class="auth-profile-initial" id="authProfileInitial"></span>
+                  </div>
+                  <div class="auth-profile-info">
+                    <span class="auth-profile-name" id="authProfileName"></span>
+                    <span class="auth-profile-username" id="authProfileUsername"></span>
+                  </div>
+                  <div class="auth-profile-badge">HIVE</div>
+                </div>
+                <div class="auth-profile-stats" id="authProfileStats">
+                  <div class="auth-stat">
+                    <span class="auth-stat-label">Portfolio</span>
+                    <span class="auth-stat-value" id="authStatValue">-</span>
+                  </div>
+                  <div class="auth-stat">
+                    <span class="auth-stat-label">Return</span>
+                    <span class="auth-stat-value" id="authStatReturn">-</span>
+                  </div>
+                </div>
+                <div class="auth-drop-divider"></div>
+                <div class="auth-profile-nav">
+                  <a href="/sector/ai" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
+                  <a href="/sector/cyber" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
+                  <a href="/sector/defense" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
+                  <a href="/sector/space" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
+                  <a href="/sector/mega-cap" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
+                  <a href="/sector/quantum" class="auth-nav-item"><span class="auth-nav-icon">🔬</span> Quantum</a>
+                  <a href="/sector/ai-power" class="auth-nav-item"><span class="auth-nav-icon">⚡</span> AI Power</a>
+                  <a href="/sector/etfs" class="auth-nav-item"><span class="auth-nav-icon">💼</span> ETFs</a>
+                  <div class="auth-nav-section-header">FEATURES</div>
+                  <a href="/hive" class="auth-nav-item"><span class="auth-nav-icon">🐝</span> Hive</a>
+                  <a href="/signal-vs-the-street" class="auth-nav-item"><span class="auth-nav-icon">📈</span> Signal vs. Street</a>
+                  <a href="/stocks/" class="auth-nav-item"><span class="auth-nav-icon">📉</span> Stock Pages</a>
+                  <a href="/#scorecard" class="auth-nav-item"><span class="auth-nav-icon">📊</span> Signal Scorecard</a>
+                </div>
+                <div class="auth-drop-divider"></div>
+                <div class="auth-profile-footer">
+                  <a href="/hive" class="auth-footer-link" onclick="navigateToHiveLeaderboard(event)">Leaderboard</a>
+                  <a href="/account/settings" class="auth-footer-link">Settings</a>
+                  <button class="auth-signout-btn" id="authSignOut">Sign Out</button>
+                </div>
+              </div>
+              <!-- Guest View -->
+              <div class="auth-guest" id="authGuest">
+                <div class="auth-guest-brand">
+                  <span class="auth-guest-title">Welcome to <strong>The Signal</strong></span>
+                  <span class="auth-guest-sub">Join the hive to track your portfolio</span>
+                </div>
+                <button class="auth-option auth-option-primary" onclick="showHiveJoinModal(&#39;login&#39;)">
+                  <span class="auth-option-icon">🔑</span> Sign In
+                </button>
+                <button class="auth-option" onclick="showHiveJoinModal(&#39;register&#39;)">
+                  <span class="auth-option-icon">✨</span> Create Account
+                </button>
+                <div class="auth-drop-divider"></div>
+                <div class="auth-profile-nav">
+                  <a href="/sector/ai" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
+                  <a href="/sector/cyber" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
+                  <a href="/sector/defense" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
+                  <a href="/sector/space" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
+                  <a href="/sector/mega-cap" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
+                  <a href="/sector/quantum" class="auth-nav-item"><span class="auth-nav-icon">🔬</span> Quantum</a>
+                  <a href="/sector/ai-power" class="auth-nav-item"><span class="auth-nav-icon">⚡</span> AI Power</a>
+                  <a href="/sector/etfs" class="auth-nav-item"><span class="auth-nav-icon">💼</span> ETFs</a>
+                  <div class="auth-nav-section-header">FEATURES</div>
+                  <a href="/hive" class="auth-nav-item"><span class="auth-nav-icon">🐝</span> Hive</a>
+                  <a href="/signal-vs-the-street" class="auth-nav-item"><span class="auth-nav-icon">📈</span> Signal vs. Street</a>
+                  <a href="/stocks/" class="auth-nav-item"><span class="auth-nav-icon">📉</span> Stock Pages</a>
+                  <a href="/#scorecard" class="auth-nav-item"><span class="auth-nav-icon">📊</span> Signal Scorecard</a>
+                </div>
+              </div>
+          </div>
+        </div>
+        <button class="nav-btn hamburger-btn" id="hamburgerToggle" aria-label="Menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      
       </div>
     </div>
   </nav>
-  <div class="mobile-menu" id="mobileMenu">
-    <div class="mobile-menu-links">
-      <a href="/sector/ai" class="mobile-nav-link">AI</a>
-      <a href="/sector/cyber" class="mobile-nav-link">Cyber</a>
-      <a href="/sector/defense" class="mobile-nav-link">Defense</a>
-      <a href="/sector/space" class="mobile-nav-link">Space</a>
-      <a href="/sector/mega-cap" class="mobile-nav-link">Mega-Cap</a>
-      <a href="/sector/quantum" class="mobile-nav-link">Quantum</a>
-      <a href="/hive" class="mobile-nav-link">The Hive</a>
+
+        <!-- Rocket Lab-Style Drawer -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <div class="drawer" id="drawer">
+    <div class="drawer-header">
+      <a href="/" class="drawer-logo">
+        <span class="the">THE</span>
+        <span class="signal">SIGNAL</span>
+      </a>
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">&#10005;</button>
+    </div>
+    <div class="drawer-body" id="drawerBody">
+      <div class="drawer-main" id="drawerMain">
+        <div class="drawer-section-label">SECTORS</div>
+        <a href="javascript:void(0)" class="drawer-link" onclick="openSubDrawer()">SECTORS</a>
+        <a href="/stocks/" class="drawer-link">STOCK PAGES</a>
+        <a href="/#scorecard" class="drawer-link">SIGNAL SCORECARD</a>
+        <a href="/hive" class="drawer-link">HIVE</a>
+        <a href="/signal-vs-the-street" class="drawer-link">SIGNAL VS. STREET</a>
+        <a href="/premium" class="drawer-link">PREMIUM DASHBOARD</a>
+        <a href="/insights" class="drawer-link">TRADER INSIGHTS</a>
+        <a href="/watchlist" class="drawer-link">MY WATCHLIST</a>
+        <a href="/pricing" class="drawer-link">SIGNAL PREMIUM</a>
+        <a href="/pricing" class="drawer-cta">GET PREMIUM ACCESS</a>
+      </div>
+      <div class="drawer-sub" id="drawerSub">
+        <div class="sub-header" onclick="closeSubDrawer()">
+          <span class="sub-back">&#8249;</span>
+          <span class="sub-title">SECTORS</span>
+        </div>
+        <a href="/sector/ai" class="drawer-link">AI</a>
+        <a href="/sector/cyber" class="drawer-link">CYBER</a>
+        <a href="/sector/defense" class="drawer-link">DEFENSE</a>
+        <a href="/sector/space" class="drawer-link">SPACE</a>
+        <a href="/sector/mega-cap" class="drawer-link">MEGA-CAP</a>
+        <a href="/sector/quantum" class="drawer-link">QUANTUM</a>
+        <a href="/sector/ai-power" class="drawer-link">AI POWER</a>
+        <a href="/sector/etfs" class="drawer-link">ETFS</a>
+      </div>
+    </div>
+  </div><!-- Search Overlay -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-backdrop" id="searchBackdrop"></div>
+    <div class="search-modal">
+      <div class="search-header">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search stocks &amp; articles…" autofocus>
+        <button class="search-close" id="searchClose" aria-label="Close search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+      <div class="search-results" id="searchResults"></div>
+      <div class="search-empty" id="searchEmpty">Start typing to search articles…</div>
     </div>
   </div>
 
@@ -886,6 +940,11 @@
 
   </div>
 
+  <script src="/js/nav.js?v=1" defer></script>
+  <script src="/js/search.js" defer></script>
+  <script src="/js/auth.js?v=2" defer></script>
+  <script src="/js/hive.js?v=3" defer></script>
+  <script src="/js/theme.js?v=2" defer></script>
   <script>
     function handleCTAClick() {
       window.location.href = '/hive';

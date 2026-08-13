@@ -218,6 +218,22 @@ if (fs.existsSync(assetsDir)) {
   console.log(`  ✅ ${countFiles(distAssetsDir)} assets files → dist/assets/`);
 }
 
+// ─── 1.5.555. Copy Hive landing page (public → dist) ───
+const landingSrc = path.join(ROOT, 'public', 'hive-landing-sleeper-v2.html');
+const landingDst = path.join(DST, 'hive-landing-sleeper-v2.html');
+if (fs.existsSync(landingSrc)) {
+  fs.copyFileSync(landingSrc, landingDst);
+  console.log('  ✅ hive-landing-sleeper-v2.html → dist/ (served at /hiv)');
+}
+
+// ─── 1.5.5555. Copy canonical nav.js (public source of truth → dist) ───
+const navJsSrc = path.join(ROOT, 'public', 'js', 'nav.js');
+const navJsDst = path.join(DST, 'js', 'nav.js');
+if (fs.existsSync(navJsSrc)) {
+  fs.copyFileSync(navJsSrc, navJsDst);
+  console.log('  ✅ public/js/nav.js → dist/js/nav.js (sub-drawer-safe close-on-click)');
+}
+
 // ─── 1.5.6. Check for missing TTS audio ───
 (function checkMissingAudio() {
   if (!fs.existsSync(POSTS_DIR)) return;

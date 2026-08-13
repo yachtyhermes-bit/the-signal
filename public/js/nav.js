@@ -48,9 +48,14 @@
       if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
     });
 
-    // Close drawer when any link is clicked inside it
+    // Close drawer when a real navigation link is clicked inside it
+    // (skip javascript:void(0) links — e.g. the SECTORS sub-drawer trigger —
+    // otherwise openSubDrawer() is immediately undone by closeDrawer())
     drawer.querySelectorAll('a').forEach(function(a) {
-      a.addEventListener('click', function() { closeDrawer(); });
+      var href = a.getAttribute('href') || '';
+      if (href.indexOf('javascript:') !== 0) {
+        a.addEventListener('click', function() { closeDrawer(); });
+      }
     });
   });
 
