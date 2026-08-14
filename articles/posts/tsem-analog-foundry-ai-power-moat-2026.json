@@ -4,19 +4,46 @@
   "subtitle": "How a pure-play analog foundry turned silicon photonics into $1.3 billion of contracted 2027 revenue — and became one of AI's least obvious bottlenecks.",
   "summary": "Tower's specialty analog foundry model is compounding: silicon photonics run-rate up nearly 4x in a year, $1.3B of 2027 contracts signed with prepayments in hand, and a 2028 target of $3.6B in revenue.",
   "ticker": "TSEM",
-  "sector": "semiconductor",
+  "sector": "ai",
   "sentiment": "bullish",
   "date": "2026-08-13T22:00:00Z",
   "price": 252.95,
-  "image": {"src": "/img/articles/tsem-analog-foundry-ai-power-moat-2026.jpg"},
-  "tags": ["TSEM", "Tower Semiconductor", "silicon photonics", "foundry", "semiconductors", "AI infrastructure"],
+  "image": {
+    "src": "/img/articles/tsem-analog-foundry-ai-power-moat-2026.jpg"
+  },
+  "tags": [
+    "TSEM",
+    "Tower Semiconductor",
+    "silicon photonics",
+    "foundry",
+    "semiconductors",
+    "AI infrastructure"
+  ],
   "links": [
-    {"label": "Tower Semiconductor Q2 2026 Results", "url": "https://towersemi.com/2026/08/04/08042026"},
-    {"label": "$1.3B Silicon Photonics Customer Contracts", "url": "https://ir.towersemi.com/news-releases/news-release-details/tower-semiconductor-signs-customer-contracts-13-billion-silicon"},
-    {"label": "NVIDIA 1.6T Silicon Photonics Partnership", "url": "https://towersemi.com/2026/02/05/02052026"},
-    {"label": "Reuters: $3B Japan Expansion Backed by Grants", "url": "https://www.reuters.com/world/asia-pacific/tower-semiconductor-invest-3-billion-japan-backed-by-government-grants-2026-07-14/"},
-    {"label": "Marvell & Tower Ship 5M+ Coherent Photonic ICs", "url": "https://www.globenewswire.com/news-release/2026/06/18/3313991/0/en/Tower-Semiconductor-and-Marvell-Ship-Over-Five-Million-Coherent-Photonic-ICs.html"},
-    {"label": "Intel Backs Away From New Mexico Deal", "url": "https://evertiq.com/design/2026-02-16-intel-backs-away-from-manufacturing-deal-with-tower-semiconductor"}
+    {
+      "label": "Tower Semiconductor Q2 2026 Results",
+      "url": "https://towersemi.com/2026/08/04/08042026"
+    },
+    {
+      "label": "$1.3B Silicon Photonics Customer Contracts",
+      "url": "https://ir.towersemi.com/news-releases/news-release-details/tower-semiconductor-signs-customer-contracts-13-billion-silicon"
+    },
+    {
+      "label": "NVIDIA 1.6T Silicon Photonics Partnership",
+      "url": "https://towersemi.com/2026/02/05/02052026"
+    },
+    {
+      "label": "Reuters: $3B Japan Expansion Backed by Grants",
+      "url": "https://www.reuters.com/world/asia-pacific/tower-semiconductor-invest-3-billion-japan-backed-by-government-grants-2026-07-14/"
+    },
+    {
+      "label": "Marvell & Tower Ship 5M+ Coherent Photonic ICs",
+      "url": "https://www.globenewswire.com/news-release/2026/06/18/3313991/0/en/Tower-Semiconductor-and-Marvell-Ship-Over-Five-Million-Coherent-Photonic-ICs.html"
+    },
+    {
+      "label": "Intel Backs Away From New Mexico Deal",
+      "url": "https://evertiq.com/design/2026-02-16-intel-backs-away-from-manufacturing-deal-with-tower-semiconductor"
+    }
   ],
   "meta": {
     "readTime": "6 min read",

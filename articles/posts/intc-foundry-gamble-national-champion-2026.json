@@ -1,7 +1,7 @@
 {
   "slug": "intc-foundry-gamble-national-champion-2026",
   "ticker": "INTC",
-  "sector": "semiconductors",
+  "sector": "ai",
   "sentiment": "neutral",
   "date": "2026-07-25",
   "title": "Intel's Foundry Pivot: The $75 Billion Turnaround the US Government Is Betting On",
@@ -11,7 +11,16 @@
     "src": "/img/articles/intc-foundry-gamble-national-champion-2026.jpg",
     "caption": "Intel's 18A wafer at the company's Arizona fab — the node that will determine whether the foundry pivot succeeds or fails."
   },
-  "tags": ["INTC", "intel", "semiconductors", "foundry", "chips-act", "18a", "turnaround", "national-security"],
+  "tags": [
+    "INTC",
+    "intel",
+    "semiconductors",
+    "foundry",
+    "chips-act",
+    "18a",
+    "turnaround",
+    "national-security"
+  ],
   "links": [
     {
       "label": "Reuters: US finalizes CHIPS Act awards for Intel",

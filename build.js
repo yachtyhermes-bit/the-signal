@@ -27,7 +27,7 @@ const BUILD_TS = Date.now(); // cache-busting timestamp for images
 const SECTORS = {
   ai: 'AI', cyber: 'Cyber', defense: 'Defense',
   space: 'Space', 'mega-cap': 'Mega-Cap', quantum: 'Quantum',
-  etfs: 'ETFs', 'ai-power': 'AI Power', fintech: 'FinTech', semiconductors: 'Semiconductors'
+  etfs: 'ETFs', 'ai-power': 'AI Power', fintech: 'FinTech'
 };
 
 const HOMEPAGE_LIMIT = 40;
