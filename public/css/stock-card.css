@@ -24,6 +24,8 @@
   --blue-glow: rgba(59,130,246,0.2);
   --accent-gradient: linear-gradient(135deg, #3b82f6, #8b5cf6);
   --accent-light: #60a5fa;
+  --accent: var(--blue);
+  --bg-card-hover: var(--bg-hover);
   --gold: #e2a83d;
   --gold-bg: rgba(226,168,61,0.08);
   --green: #22c55e;
@@ -121,6 +123,24 @@ html.stock-page.light .signal-val-label { color: #4b5563; }
 html.stock-page.light .signal-val-value.buy { color: #16a34a; }
 html.stock-page.light .signal-val-value.hold { color: #b45309; }
 html.stock-page.light .signal-val-value.strong-buy { color: #16a34a; }
+html.stock-page.light .signal-section-block { background: rgba(99, 102, 241, 0.04); border-color: rgba(99, 102, 241, 0.14); }
+html.stock-page.light .signal-section-title { color: #4338ca; }
+html.stock-page.light .signal-section-text,
+html.stock-page.light .signal-perf-value,
+html.stock-page.light .signal-catalysts-list li,
+html.stock-page.light .signal-moat-detail,
+html.stock-page.light .signal-risk-list li,
+html.stock-page.light .signal-bb-list li { color: #374151; }
+html.stock-page.light .signal-catalysts-label { color: #4b5563; }
+html.stock-page.light .signal-moat-detail strong { color: #4338ca; }
+html.stock-page.light .signal-risk-list li { border-bottom-color: rgba(0, 0, 0, 0.06); }
+html.stock-page.light .signal-risk-list li::before { color: #b45309; }
+html.stock-page.light .signal-bulls-title { color: #15803d; }
+html.stock-page.light .signal-bears-title { color: #b91c1c; }
+html.stock-page.light .signal-bulls-col { background: rgba(22, 163, 74, 0.06); border-color: rgba(22, 163, 74, 0.2); }
+html.stock-page.light .signal-bears-col { background: rgba(220, 38, 38, 0.06); border-color: rgba(220, 38, 38, 0.2); }
+html.stock-page.light .signal-bulls-col .signal-bb-list li::before { color: #15803d; }
+html.stock-page.light .signal-bears-col .signal-bb-list li::before { color: #b91c1c; }
 
 /* ── Base ───────────────────────────────────────────────── */
 .stock-page {
@@ -135,6 +155,11 @@ html.stock-page.light .signal-val-value.strong-buy { color: #16a34a; }
   max-width: 1120px;
   margin: 0 auto;
   padding: 1rem 1.5rem 4rem;
+}
+
+/* Shared nav is fixed (56px) — keep hero clear of it */
+main.stock-page-main {
+  padding-top: 72px;
 }
 
 /* ── NAV ────────────────────────────────────────────────── */
@@ -405,6 +430,18 @@ html.stock-page.light .signal-val-value.strong-buy { color: #16a34a; }
   margin-bottom: 0.6rem;
   letter-spacing: 0.04em;
 }
+.stock-back-link {
+  display: block;
+  width: fit-content;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--blue);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+.stock-back-link:hover { color: var(--accent-light); }
 .stock-company-name {
   font-size: 1.5rem;
   font-weight: 800;
@@ -1149,6 +1186,204 @@ html.stock-page.light .signal-val-value.strong-buy { color: #16a34a; }
 }
 .signal-ai-full { margin-top: 4px; }
 
+/* Signal Report Sections */
+.signal-section-block {
+  margin-bottom: 20px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.signal-section-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #a5b4fc;
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.signal-section-text {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #d1d5db;
+  margin: 0;
+}
+
+.signal-perf-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.signal-perf-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.signal-perf-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  color: #6b7280;
+}
+
+.signal-perf-value {
+  font-size: 13px;
+  font-weight: 500;
+  color: #e5e7eb;
+}
+
+.signal-catalysts {
+  margin-top: 12px;
+}
+
+.signal-catalysts-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #9ca3af;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.signal-catalysts-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.signal-catalysts-list li {
+  font-size: 13px;
+  color: #d1d5db;
+  padding: 6px 0 6px 20px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.signal-catalysts-list li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #6366f1;
+  font-weight: bold;
+}
+
+.signal-moat-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.signal-moat-detail {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #d1d5db;
+}
+
+.signal-moat-detail strong {
+  color: #a5b4fc;
+  font-weight: 600;
+}
+
+.signal-risk-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.signal-risk-list li {
+  font-size: 13px;
+  color: #d1d5db;
+  padding: 8px 0 8px 24px;
+  position: relative;
+  line-height: 1.5;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.signal-risk-list li:last-child {
+  border-bottom: none;
+}
+
+.signal-risk-list li::before {
+  content: "⚠";
+  position: absolute;
+  left: 0;
+  color: #f59e0b;
+  font-size: 14px;
+}
+
+.signal-bulls-bears {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.signal-bulls-col,
+.signal-bears-col {
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.signal-bulls-col {
+  background: rgba(34, 197, 94, 0.05);
+  border: 1px solid rgba(34, 197, 94, 0.15);
+}
+
+.signal-bears-col {
+  background: rgba(239, 68, 68, 0.05);
+  border: 1px solid rgba(239, 68, 68, 0.15);
+}
+
+.signal-bb-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.signal-bulls-title {
+  color: #22c55e;
+}
+
+.signal-bears-title {
+  color: #ef4444;
+}
+
+.signal-bb-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.signal-bb-list li {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #d1d5db;
+  padding: 6px 0 6px 20px;
+  position: relative;
+}
+
+.signal-bulls-col .signal-bb-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #22c55e;
+  font-weight: bold;
+}
+
+.signal-bears-col .signal-bb-list li::before {
+  content: "✗";
+  position: absolute;
+  left: 0;
+  color: #ef4444;
+  font-weight: bold;
+}
+
 .signal-valuation-stats {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1368,5 +1603,115 @@ html.stock-page.light .signal-val-value.strong-buy { color: #16a34a; }
   }
   .stocks-count {
     text-align: center;
+  }
+}
+/* ═══════════════════════════════════════════════════════════
+   Watchlist Star Picker (injected by watchlist.js on stock pages)
+   Multi-watchlist chooser shown when tapping the ☆ heart.
+   Same class names as the main.css block; adapted to stock-card
+   tokens (--bg-hover / --blue / --blue-bg). z-index 9000 sits
+   above the nav and drawer (both 1000).
+   ═══════════════════════════════════════════════════════════ */
+.wl-star-picker-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+.wl-star-picker {
+  width: min(360px, 100%);
+  max-height: 70vh;
+  overflow-y: auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+.wl-star-picker-title {
+  margin: 0;
+  padding: 1rem 1.1rem 0.9rem;
+  font-family: 'Oxanium', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  border-bottom: 1px solid var(--border);
+}
+.wl-star-picker-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.8rem 1.1rem;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.wl-star-picker-item + .wl-star-picker-item { border-top: 1px solid var(--border); }
+.wl-star-picker-item:hover { background: var(--bg-hover); }
+.wl-star-picker-item-name {
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.wl-star-picker-item-count {
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+.wl-star-picker-new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.85rem 1.1rem;
+  background: none;
+  border: none;
+  border-top: 1px dashed var(--border);
+  color: var(--blue);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.wl-star-picker-new:hover {
+  background: var(--blue-bg);
+  color: var(--blue);
+}
+.wl-star-picker-loading {
+  padding: 1.5rem 1.1rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+html.stock-page.light .wl-star-picker-item:hover { background: var(--blue-bg); }
+html.stock-page.light .wl-star-picker { box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18); }
+
+/* Bottom-sheet layout on small phones */
+@media (max-width: 480px) {
+  .wl-star-picker-backdrop { align-items: flex-end; padding: 0; }
+  .wl-star-picker {
+    width: 100%;
+    max-height: 75vh;
+    border-radius: var(--radius) var(--radius) 0 0;
+    border-bottom: none;
+    box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.45);
   }
 }
