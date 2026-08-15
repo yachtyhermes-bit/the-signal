@@ -1,34 +1,28 @@
 #!/usr/bin/env python3
-"""Generate a hero image for 'qcom-snapdragon-beyond-mobile-2026' using FAL flux/schnell."""
-
+"""Generate the QCOM hero image — text-free, photo-realistic semiconductor cleanroom scene."""
 import os
 import sys
 import requests
+from PIL import Image
 
-SLUG = "qcom-snapdragon-beyond-mobile-2026"
-W, H = 1200, 675
-
-OUTPUT1 = f"/home/chino/thesignal/public/img/articles/{SLUG}.jpg"
-OUTPUT2 = f"/home/chino/thesignal/_backup_dist/img/articles/{SLUG}.jpg"
-
-R2_URL = f"https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/articles/{SLUG}.jpg"
+OUTPUT = "/home/chino/thesignal/public/img/articles/qcom-edge-ai-diversification-2026.jpg"
+W, H = 1440, 810  # 16:9 generation size; final output 1920x1080
+FINAL_W, FINAL_H = 1920, 1080
 
 PROMPT = (
-    "Professional stock photograph of a modern smart car dashboard with a large center touchscreen "
-    "running a Qualcomm Snapdragon-powered infotainment system, alongside a sleek Snapdragon-powered "
-    "laptop on a contemporary wooden desk. A smartphone lies on the desk connected to the system, "
-    "representing AI at the edge, IoT connectivity, and next-gen automotive computing. "
-    "Warm ambient lighting from the car cabin and a soft blue glow from the laptop and phone screens. "
-    "Modern minimalist interior setting with leather seats visible in the background. "
-    "Photo-realistic, shallow depth of field, professional studio lighting, ultra-realistic, "
-    "sharp focus, 8K resolution, cinematic color grading. "
-    "No text overlays, no logos, no branding. Photographed with a full-frame DSLR."
+    "Ultra-realistic professional photograph inside a state-of-the-art semiconductor "
+    "cleanroom fabrication facility: a technician wearing a full white bunny suit and "
+    "face shield inspecting a large circular silicon wafer under a bright inspection "
+    "microscope, rows of advanced lithography and chip manufacturing equipment receding "
+    "into the background, cool blue-white industrial lighting, reflective sealed floor, "
+    "shallow depth of field with the technician and wafer in sharp focus, photorealistic "
+    "corporate photography, high detail. "
+    "STRICTLY no text, no letters, no numbers, no logos, no brand names, no labels, no "
+    "signage, no screens with visible UI, no watermark, no abstract art, no digital art, "
+    "no neon, no glowing lines, no geometric patterns, no cartoon, no illustration."
 )
 
-def main():
-    import fal_client
-
-    # Set FAL_KEY from the studio-api env file
+def load_fal_key():
     env_path = "/home/chino/hermes-workspace/studio-api/.env"
     if os.path.exists(env_path):
         with open(env_path) as f:
@@ -36,31 +30,26 @@ def main():
                 if line.startswith("FAL_KEY="):
                     key = line.split("=", 1)[1].strip().strip('"').strip("'")
                     os.environ["FAL_KEY"] = key
-                    break
+                    return key
+    return os.environ.get("FAL_KEY")
 
-    if not os.environ.get("FAL_KEY"):
+def generate(prompt, out_path):
+    import fal_client
+    key = load_fal_key()
+    if not key:
         print("ERROR: FAL_KEY not found")
         sys.exit(1)
-
-    print(f"Generating hero image for '{SLUG}'...")
-    print(f"Prompt: {PROMPT[:100]}...")
-
+    print("Generating image with FAL flux/schnell...")
+    print(f"Prompt: {prompt[:120]}...")
     result = fal_client.subscribe(
         "fal-ai/flux/schnell",
         arguments={
-            "prompt": PROMPT,
-            "image_size": {
-                "width": W,
-                "height": H,
-            },
+            "prompt": prompt,
+            "image_size": {"width": W, "height": H},
             "num_inference_steps": 4,
             "enable_safety_checker": False,
         },
     )
-
-    print(f"Result keys: {list(result.keys())}")
-
-    # Extract the image URL
     image_url = None
     if "images" in result and len(result["images"]) > 0:
         image_url = result["images"][0]["url"]
@@ -68,75 +57,44 @@ def main():
         image_url = result["output"]
     elif "image" in result:
         image_url = result["image"]
-
     if not image_url:
-        print(f"ERROR: Could not find image URL in result")
-        print(f"Full result: {result}")
+        print(f"ERROR: Could not find image URL in result: {result}")
         sys.exit(1)
-
     print(f"Image URL: {image_url}")
-
-    # Download the image
-    print("Downloading image...")
     r = requests.get(image_url, timeout=120)
     r.raise_for_status()
+    os.makedirs(os.path.dirname(out_path), exist_ok=True)
+    with open(out_path, "wb") as f:
+        f.write(r.content)
+    img = Image.open(out_path)
+    print(f"Downloaded: {out_path}  size={img.size}  bytes={len(r.content)}")
+    return img
 
-    # Save to both locations
-    from PIL import Image
-    img_data = r.content
+def crop_to_16x9(img):
+    """Center-crop to 16:9, then resize to 1920x1080."""
+    w, h = img.size
+    target_ratio = FINAL_W / FINAL_H  # 16/9
+    cur_ratio = w / h
+    if cur_ratio > target_ratio:
+        new_w = int(h * target_ratio)
+        left = (w - new_w) // 2
+        img = img.crop((left, 0, left + new_w, h))
+    elif cur_ratio < target_ratio:
+        new_h = int(w / target_ratio)
+        top = (h - new_h) // 2
+        img = img.crop((0, top, w, top + new_h))
+    img = img.resize((FINAL_W, FINAL_H), Image.LANCZOS)
+    return img
 
-    for output_path in [OUTPUT1, OUTPUT2]:
-        os.makedirs(os.path.dirname(output_path), exist_ok=True)
-        with open(output_path, "wb") as f:
-            f.write(img_data)
-
-        file_size = os.path.getsize(output_path)
-        print(f"✅ Saved to {output_path}")
-        print(f"   Size: {file_size} bytes ({file_size/1024:.1f} KB)")
-
-        # Verify and resize if needed
-        img = Image.open(output_path)
-        print(f"   Dimensions: {img.size}")
-
-        if img.size != (W, H):
-            print(f"⚠️  Resizing from {img.size} to ({W}, {H})...")
-            img = img.resize((W, H), Image.LANCZOS)
-            img.save(output_path, "JPEG", quality=92, optimize=True)
-            file_size = os.path.getsize(output_path)
-            print(f"   New size: {file_size} bytes ({file_size/1024:.1f} KB)")
-            print(f"   New dimensions: {img.size}")
-
-        if file_size < 10240:
-            print(f"⚠️  File too small ({file_size} bytes), re-saving with higher quality...")
-            img.save(output_path, "JPEG", quality=98, optimize=True)
-            file_size = os.path.getsize(output_path)
-            print(f"   New size: {file_size} bytes ({file_size/1024:.1f} KB)")
-
-    print("✅ Local saves complete!")
-
-    # --- Upload to R2 ---
-    print(f"\nUploading to R2 via r2_upload.py...")
-    result = os.system(f"cd /home/chino/thesignal && python3 scripts/r2_upload.py hero {SLUG}")
-    if result == 0:
-        print(f"✅ R2 upload succeeded!")
-    else:
-        print(f"❌ R2 upload failed (exit code {result})")
-        sys.exit(1)
-
-    # Verify accessibility
-    print(f"\nVerifying image on R2 CDN...")
-    try:
-        resp = requests.head(R2_URL, timeout=30)
-        print(f"   HTTP {resp.status_code}")
-        if resp.status_code == 200:
-            print(f"✅ Image accessible at: {R2_URL}")
-        else:
-            print(f"⚠️  Got HTTP {resp.status_code}, might not be publicly accessible")
-    except Exception as e:
-        print(f"⚠️  Verification error: {e}")
-
-    print(f"\n✅ All done! R2 URL: {R2_URL}")
-
+def main():
+    img = generate(PROMPT, OUTPUT)
+    img = crop_to_16x9(img)
+    img.save(OUTPUT, "JPEG", quality=92, optimize=True)
+    size = os.path.getsize(OUTPUT)
+    print(f"Saved final hero: {OUTPUT}  dimensions={img.size}  bytes={size}")
+    if size < 10240:
+        img.save(OUTPUT, "JPEG", quality=98, optimize=True)
+        print(f"Re-saved with higher quality: {os.path.getsize(OUTPUT)} bytes")
 
 if __name__ == "__main__":
     main()
