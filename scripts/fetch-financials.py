@@ -892,6 +892,11 @@ def main():
         except (json.JSONDecodeError, IOError):
             existing = {}
 
+    # Preserve curated fields the fetcher doesn't regenerate (signalReport etc.)
+    preserved = {k: existing.get(ticker_symbol, {}).get(k)
+                 for k in ('signalReport', 'signalReportGenerated', 'aiAnalysis')
+                 if existing.get(ticker_symbol, {}).get(k) is not None}
+
     existing[ticker_symbol] = ticker_data
 
     with open(out_path, 'w') as f:
@@ -913,6 +918,7 @@ def main():
         ticker_data = enrich_ticker_data(ticker_symbol, ticker_data)
         # Update the merged file with enriched data
         existing[ticker_symbol] = ticker_data
+        existing[ticker_symbol].update(preserved)
         with open(out_path, 'w') as f:
             json.dump(existing, f, indent=2)
         print("✅ FMP enrichment complete")
