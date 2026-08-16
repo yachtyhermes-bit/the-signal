@@ -7,11 +7,6 @@ const ROOT = path.join(__dirname, '..');
 const DST = path.join(ROOT, 'dist');
 const POSTS_DIR = path.join(ROOT, 'articles', 'posts');
 
-const SECTORS = {
-  ai: 'AI', cyber: 'Cyber', defense: 'Defense',
-  space: 'Space', 'mega-cap': 'Mega-Cap', quantum: 'Quantum'
-};
-
 const today = new Date().toISOString().split('T')[0];
 const urls = [];
 
@@ -28,8 +23,18 @@ if (fs.existsSync(finPath)) {
   }
 }
 
-// Sector pages
-for (const sector of Object.keys(SECTORS)) {
+// Sector pages — derive from actual article sector values (matches build.js bySector)
+const sectors = new Set();
+if (fs.existsSync(POSTS_DIR)) {
+  const files = fs.readdirSync(POSTS_DIR).filter(f => f.endsWith('.json'));
+  for (const file of files) {
+    try {
+      const a = JSON.parse(fs.readFileSync(path.join(POSTS_DIR, file), 'utf8'));
+      if (a.sector) sectors.add(a.sector);
+    } catch (_) {}
+  }
+}
+for (const sector of sectors) {
   urls.push({ loc: `https://readthesignal.net/sector/${sector}/`, priority: '0.7', changefreq: 'daily' });
 }
 
@@ -49,7 +54,14 @@ if (fs.existsSync(POSTS_DIR)) {
 // Static pages
 urls.push({ loc: 'https://readthesignal.net/pricing/', priority: '0.7', changefreq: 'weekly' });
 urls.push({ loc: 'https://readthesignal.net/hive/', priority: '0.5', changefreq: 'daily' });
+urls.push({ loc: 'https://readthesignal.net/hive/boardroom/', priority: '0.4', changefreq: 'daily' });
 urls.push({ loc: 'https://readthesignal.net/signal-vs-the-street/', priority: '0.5', changefreq: 'daily' });
+urls.push({ loc: 'https://readthesignal.net/about/', priority: '0.3', changefreq: 'monthly' });
+urls.push({ loc: 'https://readthesignal.net/premium/', priority: '0.5', changefreq: 'weekly' });
+urls.push({ loc: 'https://readthesignal.net/insights/', priority: '0.6', changefreq: 'daily' });
+urls.push({ loc: 'https://readthesignal.net/watchlist/', priority: '0.6', changefreq: 'daily' });
+urls.push({ loc: 'https://readthesignal.net/buffett/', priority: '0.4', changefreq: 'weekly' });
+urls.push({ loc: 'https://readthesignal.net/pelosi/', priority: '0.4', changefreq: 'weekly' });
 
 // Generate XML
 let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';

@@ -913,3 +913,6 @@ if (fs.existsSync(pulseJsSrc) && fs.existsSync(path.dirname(pulseJsDst))) {
   fs.copyFileSync(pulseJsSrc, pulseJsDst);
   console.log('  🔒 Synced Ask Pulse JS to public/ (lock-in)');
 }
+
+// ─── Sitemap generation (last — needs all pages built) ───
+require('./scripts/generate-sitemap.js');
