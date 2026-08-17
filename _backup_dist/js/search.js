@@ -46,7 +46,7 @@
       });
   }
 
-  // ── Load stock pages (for premium) ──
+  // ── Load stock pages (public — stock pages are free static pages) ──
   function loadStockPages(callback) {
     if (stockPages.length > 0) {
       callback(stockPages);
@@ -127,19 +127,21 @@
                  tags.indexOf(q) !== -1;
         });
 
-        // ── Search stock pages (premium only) ──
-        var stockResults = [];
-        if (isPremium) {
-          loadStockPages(function(stocks) {
-            stockResults = stocks.filter(function(s) {
-              var name = ((s.name || s.ticker || '') + ' ' + (s.ticker || s.name || '') + ' ' + (s.sector || '')).toLowerCase();
-              return name.indexOf(q) !== -1;
-            });
-            renderResults(q, filtered, stockResults, isPremium);
+        // ── Search stock pages (public — stock pages are free static pages) ──
+        loadStockPages(function(stocks) {
+          var stockResults = stocks.filter(function(s) {
+            var ticker = s.ticker || s.sym || '';
+            var name = ((s.name || ticker) + ' ' + ticker + ' ' + (s.sector || '')).toLowerCase();
+            return name.indexOf(q) !== -1;
           });
-        } else {
+          // Exact ticker match pinned first (case-insensitive); rest keep index order
+          stockResults.sort(function(a, b) {
+            var aExact = ((a.ticker || a.sym || '').toLowerCase() === q) ? 0 : 1;
+            var bExact = ((b.ticker || b.sym || '').toLowerCase() === q) ? 0 : 1;
+            return aExact - bExact;
+          });
           renderResults(q, filtered, stockResults, isPremium);
-        }
+        });
       });
     });
   }
@@ -163,19 +165,21 @@
 
     var html = '';
 
-    // ── Stock page results (premium) ──
+    // ── Stock page results (public) ──
     if (stockResults.length > 0) {
-      html += '<div class="search-section-label" style="padding:0.5rem 1rem;font-size:0.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--color-stealth-80);font-family:Roboto Mono,monospace;">Stock Pages <span style="font-size:0.5rem;border:1px solid rgba(6,128,255,0.3);border-radius:3px;padding:1px 6px;margin-left:6px;color:#0680ff;">⚡ Premium</span></div>';
+      html += '<div class="search-section-label" style="padding:0.5rem 1rem;font-size:0.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--color-stealth-80);font-family:Roboto Mono,monospace;">Stock Pages</div>';
       stockResults.forEach(function(s) {
-        var ticker = s.ticker || '';
+        var ticker = s.ticker || s.sym || '';
         var name = s.name || ticker;
         var sector = s.sector || '';
-        html += '<a href="/stocks/' + ticker.toLowerCase() + '" class="search-result-item" onclick="handleSearchClose()">' +
+        var priceText = (s.price != null && !isNaN(s.price)) ? '$' + Number(s.price).toFixed(2) : '—';
+        html += '<a href="/stocks/' + ticker.toUpperCase() + '" class="search-result-item" onclick="handleSearchClose()">' +
           '<div class="search-result-info">' +
-            '<div class="search-result-title">' + escapeHtml(name) + ' <span style="font-size:0.65rem;color:#0680ff;">⚡</span></div>' +
+            '<div class="search-result-title">' + escapeHtml(name) + '</div>' +
             '<div class="search-result-meta">' +
               '<span class="search-result-ticker">$' + escapeHtml(ticker) + '</span>' +
               (sector ? '<span class="search-result-sector">' + escapeHtml(sector) + '</span>' : '') +
+              '<span data-price="' + escapeHtml(ticker.toUpperCase()) + '" style="margin-left:auto;color:var(--text-secondary);font-weight:600;">' + priceText + '</span>' +
             '</div>' +
           '</div>' +
         '</a>';

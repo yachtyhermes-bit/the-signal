@@ -125,7 +125,7 @@ for a in articles:
     links_html += '</ul>'
     
     # Sector label
-    sector_map = {'ai': 'AI', 'cyber': 'Cyber', 'defense': 'Defense', 'space': 'Space', 'mega-cap': 'Mega-Cap', 'quantum': 'Quantum', 'ai-power': 'AI Power', 'fintech': 'FinTech', 'etfs': 'ETFs', 'semiconductors': 'Semiconductors'}
+    sector_map = {'ai': 'AI', 'cyber': 'Cyber', 'defense': 'Defense', 'space': 'Space', 'mega-cap': 'Mega-Cap', 'quantum': 'Quantum', 'ai-power': 'AI Power', 'fintech': 'FinTech', 'etfs': 'ETFs', 'semiconductor': 'AI', 'semiconductors': 'AI'}
     sector_label = sector_map.get(a.get('sector', ''), a.get('sector', ''))
 
     # Date

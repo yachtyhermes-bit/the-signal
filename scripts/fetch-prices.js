@@ -21,6 +21,8 @@ const TICKERS = [
   'AAPL', 'MSFT', 'GOOGL', 'AMZN', 'META', 'TSLA', 'NFLX',
   // The Signal coverage
   'AXON', 'CRWV', 'SOFI',
+  // AI Power (Independent Power Producers)
+  'CEG', 'VST',
   // Special tickers
   'SPCX', 'ANET'
 ];

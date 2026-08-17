@@ -1,6 +1,5 @@
-# Ignore dist audio/audio files (served from R2 CDN, not from Vercel)
+# Ignore dist audio files (served from R2 CDN, not from Vercel)
 dist/audio/
-dist/article/
 
 # Ignore backup image folders
 public/img/_signal_bak_img/
@@ -8,6 +7,9 @@ public/img/img/
 
 # Ignore audio files (not served from Vercel)
 public/audio/
+
+# Ignore wrangler state (local Cloudflare R2 cache)
+public/cf-worker/.wrangler/
 
 # Ignore local development files
 node_modules

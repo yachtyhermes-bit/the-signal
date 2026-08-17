@@ -8,7 +8,7 @@ except ImportError:
     os.system(f"{sys.executable} -m pip install yfinance -q --break-system-packages")
     import yfinance as yf
 
-TICKERS = ['AXON', 'META', 'PLTR', 'RTX', 'NFLX', 'RBRK']
+TICKERS = ['AXON', 'META', 'CEG', 'MU', 'NFLX', 'VST', 'NVDA', 'AVAV']
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'data')
 os.makedirs(DATA_DIR, exist_ok=True)
 
@@ -16,10 +16,12 @@ os.makedirs(DATA_DIR, exist_ok=True)
 COMPANIES = {
     'AXON': {'name': 'Axon Enterprise', 'sector': 'Defense Tech', 'logo': ''},
     'META': {'name': 'Meta Platforms', 'sector': 'Social Media', 'logo': ''},
-    'PLTR': {'name': 'Palantir Technologies', 'sector': 'AI Software', 'logo': ''},
-    'RTX': {'name': 'RTX Corporation', 'sector': 'Defense', 'logo': ''},
+    'CEG': {'name': 'Constellation Energy', 'sector': 'AI Power', 'logo': ''},
+    'MU': {'name': 'Micron Technology, Inc.', 'sector': 'Semiconductors', 'logo': ''},
     'NFLX': {'name': 'Netflix Inc.', 'sector': 'Entertainment', 'logo': ''},
-    'RBRK': {'name': 'Rubrik Inc.', 'sector': 'Cybersecurity', 'logo': ''},
+    'VST': {'name': 'Vistra Corp.', 'sector': 'AI Power', 'logo': ''},
+    'NVDA': {'name': 'NVIDIA Corporation', 'sector': 'Semiconductors', 'logo': ''},
+    'AVAV': {'name': 'AeroVironment Inc.', 'sector': 'Defense Tech', 'logo': ''},
 }
 
 def fmt_billions(v):

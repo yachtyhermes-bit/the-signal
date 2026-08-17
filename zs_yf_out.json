@@ -1,0 +1,362 @@
+{
+  "ZS": {
+    "name": "Zscaler, Inc.",
+    "price": 162.6,
+    "marketCap": 26293968896,
+    "enterpriseValue": 24469401600,
+    "trailingPE": null,
+    "forwardPE": 35.369667,
+    "priceToSalesTrailing12Months": 8.285313,
+    "EVToRevenue": 7.71,
+    "EVToEBITDA": -402.484,
+    "grossMargins": 0.76737,
+    "operatingMargins": -0.03276,
+    "profitMargins": -0.024389999,
+    "totalCash": 3539107072,
+    "totalDebt": 1868162944,
+    "totalCashPerShare": 21.886,
+    "freeCashflow": 1108818560,
+    "operatingCashflow": 1100973056,
+    "sharesOutstanding": 161709525,
+    "floatShares": 105124128,
+    "shortPercentOfFloat": 0.0765,
+    "beta": 0.917,
+    "52WeekChange": -0.4331743,
+    "recommendationMean": 1.52174,
+    "numberOfAnalystOpinions": 44,
+    "targetMeanPrice": 192.5534,
+    "targetHighPrice": 250.0,
+    "targetLowPrice": 145.0,
+    "annualRevenueHistory": [
+      [
+        "2025-07-31",
+        2673115000.0
+      ],
+      [
+        "2024-07-31",
+        2167771000.0
+      ],
+      [
+        "2023-07-31",
+        1616952000.0
+      ],
+      [
+        "2022-07-31",
+        1090946000.0
+      ]
+    ],
+    "quarterlyRevenueHistory": [
+      [
+        "2026-04-30",
+        850475000.0
+      ],
+      [
+        "2026-01-31",
+        815751000.0
+      ],
+      [
+        "2025-10-31",
+        788112000.0
+      ],
+      [
+        "2025-07-31",
+        719226000.0
+      ],
+      [
+        "2025-04-30",
+        678034000.0
+      ]
+    ],
+    "ttmRevenue": 3173563904,
+    "ttmGrossProfit": null,
+    "ttmNetIncome": -77388000
+  },
+  "PANW": {
+    "name": "Palo Alto Networks, Inc.",
+    "price": 359.49,
+    "marketCap": 292984356864,
+    "enterpriseValue": 294586908672,
+    "trailingPE": 309.90518,
+    "forwardPE": 87.20321,
+    "priceToSalesTrailing12Months": 27.623095,
+    "EVToRevenue": 27.774,
+    "EVToEBITDA": 198.576,
+    "grossMargins": 0.71963996,
+    "operatingMargins": -0.02465,
+    "profitMargins": 0.07947,
+    "totalCash": 3111000064,
+    "totalDebt": 2130000000,
+    "totalCashPerShare": 3.817,
+    "freeCashflow": 3579375104,
+    "operatingCashflow": 4216999936,
+    "sharesOutstanding": 815000000,
+    "floatShares": 808186600,
+    "shortPercentOfFloat": 0.0252,
+    "beta": 0.893,
+    "52WeekChange": 1.0650208,
+    "recommendationMean": 1.6,
+    "numberOfAnalystOpinions": 50,
+    "targetMeanPrice": 337.7008,
+    "targetHighPrice": 433.0,
+    "targetLowPrice": 162.34,
+    "annualRevenueHistory": [
+      [
+        "2025-07-31",
+        9221500000.0
+      ],
+      [
+        "2024-07-31",
+        8027500000.0
+      ],
+      [
+        "2023-07-31",
+        6892700000.0
+      ],
+      [
+        "2022-07-31",
+        5501500000.0
+      ]
+    ],
+    "quarterlyRevenueHistory": [
+      [
+        "2026-04-30",
+        3002000000.0
+      ],
+      [
+        "2026-01-31",
+        2594000000.0
+      ],
+      [
+        "2025-10-31",
+        2474000000.0
+      ],
+      [
+        "2025-07-31",
+        2536300000.0
+      ],
+      [
+        "2025-04-30",
+        2289000000.0
+      ]
+    ],
+    "ttmRevenue": 10606499840,
+    "ttmGrossProfit": null,
+    "ttmNetIncome": 842899968
+  },
+  "FTNT": {
+    "name": "Fortinet, Inc.",
+    "price": 160.11,
+    "marketCap": 117474893824,
+    "enterpriseValue": 113966694400,
+    "trailingPE": 56.776596,
+    "forwardPE": 42.58743,
+    "priceToSalesTrailing12Months": 15.606304,
+    "EVToRevenue": 15.14,
+    "EVToEBITDA": 43.904,
+    "grossMargins": 0.80204004,
+    "operatingMargins": 0.33595002,
+    "profitMargins": 0.28173,
+    "totalCash": 4069600000,
+    "totalDebt": 561400000,
+    "totalCashPerShare": 5.547,
+    "freeCashflow": 2265587456,
+    "operatingCashflow": 3396100096,
+    "sharesOutstanding": 733713653,
+    "floatShares": 618718712,
+    "shortPercentOfFloat": 0.0239,
+    "beta": 1.058,
+    "52WeekChange": 1.1674635,
+    "recommendationMean": 2.68182,
+    "numberOfAnalystOpinions": 37,
+    "targetMeanPrice": 160.86485,
+    "targetHighPrice": 220.0,
+    "targetLowPrice": 86.0,
+    "annualRevenueHistory": [
+      [
+        "2025-12-31",
+        6799600000.0
+      ],
+      [
+        "2024-12-31",
+        5955800000.0
+      ],
+      [
+        "2023-12-31",
+        5304800000.0
+      ],
+      [
+        "2022-12-31",
+        4417400000.0
+      ]
+    ],
+    "quarterlyRevenueHistory": [
+      [
+        "2026-06-30",
+        2047900000.0
+      ],
+      [
+        "2026-03-31",
+        1849600000.0
+      ],
+      [
+        "2025-12-31",
+        1905000000.0
+      ],
+      [
+        "2025-09-30",
+        1724900000.0
+      ],
+      [
+        "2025-06-30",
+        1630000000.0
+      ]
+    ],
+    "ttmRevenue": 7527399936,
+    "ttmGrossProfit": null,
+    "ttmNetIncome": 2120700032
+  },
+  "CRWD": {
+    "name": "CrowdStrike Holdings, Inc.",
+    "price": 207.39,
+    "marketCap": 211176783872,
+    "enterpriseValue": 210001887232,
+    "trailingPE": null,
+    "forwardPE": 132.71602,
+    "priceToSalesTrailing12Months": 41.454357,
+    "EVToRevenue": 41.224,
+    "EVToEBITDA": 3540.213,
+    "grossMargins": 0.75136,
+    "operatingMargins": -0.022079999,
+    "profitMargins": -0.00598,
+    "totalCash": 4552800768,
+    "totalDebt": 821342976,
+    "totalCashPerShare": 4.471,
+    "freeCashflow": 1926365056,
+    "operatingCashflow": 1819179008,
+    "sharesOutstanding": 1018259280,
+    "floatShares": 1000378647,
+    "shortPercentOfFloat": 0.0274,
+    "beta": 1.234,
+    "52WeekChange": 0.9062588,
+    "recommendationMean": 1.66038,
+    "numberOfAnalystOpinions": 50,
+    "targetMeanPrice": 193.1296,
+    "targetHighPrice": 250.0,
+    "targetLowPrice": 103.25,
+    "annualRevenueHistory": [
+      [
+        "2026-01-31",
+        4812005000.0
+      ],
+      [
+        "2025-01-31",
+        3953624000.0
+      ],
+      [
+        "2024-01-31",
+        3055555000.0
+      ],
+      [
+        "2023-01-31",
+        2241236000.0
+      ]
+    ],
+    "quarterlyRevenueHistory": [
+      [
+        "2026-04-30",
+        1385629000.0
+      ],
+      [
+        "2026-01-31",
+        1305375000.0
+      ],
+      [
+        "2025-10-31",
+        1234244000.0
+      ],
+      [
+        "2025-07-31",
+        1168952000.0
+      ],
+      [
+        "2025-04-30",
+        1103434000.0
+      ]
+    ],
+    "ttmRevenue": 5094199808,
+    "ttmGrossProfit": null,
+    "ttmNetIncome": -30464000
+  },
+  "NET": {
+    "name": "Cloudflare, Inc.",
+    "price": 284.43,
+    "marketCap": 100955455488,
+    "enterpriseValue": 99897065472,
+    "trailingPE": null,
+    "forwardPE": 179.34927,
+    "priceToSalesTrailing12Months": 43.35448,
+    "EVToRevenue": 42.9,
+    "EVToEBITDA": -2753.275,
+    "grossMargins": 0.73327005,
+    "operatingMargins": -0.09689999,
+    "profitMargins": -0.037249997,
+    "totalCash": 4163877888,
+    "totalDebt": 3524536064,
+    "totalCashPerShare": 11.78,
+    "freeCashflow": 754998272,
+    "operatingCashflow": 615660032,
+    "sharesOutstanding": 321184834,
+    "floatShares": 317730809,
+    "shortPercentOfFloat": 0.0347,
+    "beta": 1.66,
+    "52WeekChange": 0.34356582,
+    "recommendationMean": 1.88235,
+    "numberOfAnalystOpinions": 31,
+    "targetMeanPrice": 269.13257,
+    "targetHighPrice": 330.0,
+    "targetLowPrice": 136.0,
+    "annualRevenueHistory": [
+      [
+        "2025-12-31",
+        2167937000.0
+      ],
+      [
+        "2024-12-31",
+        1669626000.0
+      ],
+      [
+        "2023-12-31",
+        1296745000.0
+      ],
+      [
+        "2022-12-31",
+        975241000.0
+      ]
+    ],
+    "quarterlyRevenueHistory": [
+      [
+        "2026-03-31",
+        639755000.0
+      ],
+      [
+        "2025-12-31",
+        614507000.0
+      ],
+      [
+        "2025-09-30",
+        562027000.0
+      ],
+      [
+        "2025-06-30",
+        512316000.0
+      ],
+      [
+        "2025-03-31",
+        479087000.0
+      ]
+    ],
+    "ttmRevenue": 2328604928,
+    "ttmGrossProfit": null,
+    "ttmNetIncome": -86740000
+  }
+}

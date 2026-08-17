@@ -82,6 +82,7 @@ body::before {
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 1.8px;
+  text-decoration: none;
 }
 .logo:hover { color: var(--text-primary); }
 .logo-img {
@@ -1158,6 +1159,45 @@ main {
   color: #ef4444;
 }
 
+/* Live stats — "The Numbers That Matter" price refresh */
+.article-body .stats-table .stats-live-badge {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 0 5px;
+  border-radius: 4px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  color: #3b82f6;
+  border: 1px solid rgba(59, 130, 246, 0.5);
+  vertical-align: middle;
+}
+.article-body .stats-table .stat-live-chip {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 1px 7px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  vertical-align: middle;
+}
+.article-body .stats-table .stat-live-chip.up {
+  color: #22c55e;
+  background: rgba(34, 197, 94, 0.12);
+}
+.article-body .stats-table .stat-live-chip.down {
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.12);
+}
+.article-body .stats-card-note {
+  margin-top: 14px;
+  font-size: 12px;
+  color: #8888aa;
+  text-align: center;
+  letter-spacing: 0.3px;
+}
+
 /* === FOOTER === */
 .footer {
   border-top: 1px solid var(--border);
@@ -1623,7 +1663,8 @@ main {
 @media (max-width: 480px) {
   .nav-inner { padding: 0 8px; gap: 2px; }
   .nav-btn { padding: 6px; }
-  .logo-text { font-size: 13px; letter-spacing: 0.8px; }
+  .logo-text { font-size: 24px; letter-spacing: 0.8px; }
+  .logo-the { font-size: 12px; }
   .hero-title { font-size: 24px; }
   .focus-bar { gap: 6px; padding: 8px 10px; font-size: 10px; }
 }
@@ -2264,6 +2305,8 @@ main {
 }
 .search-input {
   flex: 1;
+  min-width: 0;
+  width: 100%;
   background: transparent;
   border: none;
   outline: none;
@@ -2272,6 +2315,8 @@ main {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
   padding: 8px 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .search-input::placeholder {
   color: var(--text-muted);
@@ -2358,6 +2403,44 @@ main {
   color: var(--text-muted);
   margin-left: auto;
 }
+
+/* Search result section headers (Stock Pages / Articles) */
+.search-section-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 16px 6px !important;
+  font-size: 11px !important;
+  font-weight: 600;
+  letter-spacing: 1.5px !important;
+  text-transform: uppercase !important;
+  color: var(--text-muted) !important;
+  font-family: 'JetBrains Mono', monospace !important;
+}
+.search-section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+  opacity: 0.65;
+  margin-left: 4px;
+}
+
+/* Stock page result — live price */
+.search-stock-price {
+  margin-left: auto;
+  flex-shrink: 0;
+  font-family: 'JetBrains Mono', 'SF Mono', monospace;
+  font-size: 13px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  color: var(--text-secondary);
+}
+.search-stock-price.up,
+.search-stock-price[data-direction="up"] { color: var(--green); }
+.search-stock-price.down,
+.search-stock-price[data-direction="down"] { color: var(--red); }
 
 /* === ARTICLE COMMENTS === */
 .article-comments {
@@ -2479,6 +2562,8 @@ main {
   }
   .search-result-title { font-size: 14px; }
   .search-results { max-height: 50vh; }
+  .search-section-label { padding: 12px 14px 4px !important; }
+  .search-stock-price { font-size: 12px; }
   .search-close { padding: 10px; }
   .related-grid { grid-template-columns: 1fr; }
   .auth-label { display: none; }
@@ -2486,8 +2571,8 @@ main {
   .nav-btn { padding: 8px; }
   .logo-img { display: none; }
   .logo { gap: 2px; }
-  .logo-text { font-size: 26px; letter-spacing: 0.6px; display: flex; flex-direction: column; align-items: flex-start; line-height: 0.85; gap: 0; }
-  .logo-the { font-size: 11px; letter-spacing: 2.5px; opacity: 0.6; font-family: 'Inter', sans-serif; font-weight: 500; }
+  .logo-text { font-size: 28px; letter-spacing: 0.6px; display: flex; flex-direction: column; align-items: flex-start; line-height: 0.85; gap: 0; }
+  .logo-the { font-size: 12px; letter-spacing: 2.5px; opacity: 0.6; font-family: 'Inter', sans-serif; font-weight: 500; }
   .article-comments { padding: 32px 16px 16px; }
   .related-articles { padding: 16px 16px 0; }
 }
@@ -2502,6 +2587,9 @@ main {
   .search-result-meta { gap: 6px; font-size: 10px; flex-wrap: wrap; }
   .search-close { padding: 12px; }
   .search-results { max-height: 45vh; }
+  .search-section-label { padding: 10px 12px 3px !important; font-size: 10px !important; letter-spacing: 1.2px !important; }
+  .search-stock-price { font-size: 11px; }
+  .search-input::placeholder { font-size: 14px; }
   .search-empty { font-size: 13px; padding: 24px 16px; }
 }
 
@@ -5460,6 +5548,12 @@ body.pulse-modal-open {
   --text-secondary: #555570;
   --text-muted: #8888aa;
   --border: #d0d0da;
+  --green: #16a34a;
+  --green-dim: rgba(22, 163, 74, 0.1);
+  --red: #dc2626;
+  --red-dim: rgba(220, 38, 38, 0.08);
+  --gold: #b45309;
+  --gold-dim: rgba(180, 83, 9, 0.08);
 }
 [data-theme="light"] .nav {
   background: rgba(240, 240, 245, 0.95);
@@ -7116,4 +7210,114 @@ body.pulse-modal-open {
 .pulse-quota-badge.free {
   background: rgba(255,255,255,0.06);
   color: var(--text-muted);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Watchlist Star Picker (injected by watchlist.js on stock pages)
+   Multi-watchlist chooser shown when tapping the ☆ heart.
+   z-index 9000 sits above the nav (1000) and auth dropdown (1001).
+   ═══════════════════════════════════════════════════════════ */
+.wl-star-picker-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+.wl-star-picker {
+  width: min(360px, 100%);
+  max-height: 70vh;
+  overflow-y: auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+.wl-star-picker-title {
+  margin: 0;
+  padding: 1rem 1.1rem 0.9rem;
+  font-family: 'Oxanium', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  border-bottom: 1px solid var(--border);
+}
+.wl-star-picker-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.8rem 1.1rem;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.wl-star-picker-item + .wl-star-picker-item { border-top: 1px solid var(--border); }
+.wl-star-picker-item:hover { background: var(--bg-card-hover); }
+.wl-star-picker-item-name {
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.wl-star-picker-item-count {
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+.wl-star-picker-new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.85rem 1.1rem;
+  background: none;
+  border: none;
+  border-top: 1px dashed var(--border);
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.wl-star-picker-new:hover {
+  background: rgba(59, 130, 246, 0.08);
+  color: var(--accent-light);
+}
+.wl-star-picker-loading {
+  padding: 1.5rem 1.1rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+[data-theme="light"] .wl-star-picker-item:hover { background: rgba(59, 130, 246, 0.08); }
+[data-theme="light"] .wl-star-picker { box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18); }
+[data-theme="light"] .wl-star-picker-new:hover { color: #2563eb; }
+
+/* Bottom-sheet layout on small phones */
+@media (max-width: 480px) {
+  .wl-star-picker-backdrop { align-items: flex-end; padding: 0; }
+  .wl-star-picker {
+    width: 100%;
+    max-height: 75vh;
+    border-radius: var(--radius) var(--radius) 0 0;
+    border-bottom: none;
+    box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.45);
+  }
 }

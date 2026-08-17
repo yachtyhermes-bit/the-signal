@@ -1,26 +1,48 @@
 #!/usr/bin/env python3
-"""Generate an ARM hero image using FAL flux/schnell."""
+"""Generate an ARM Holdings hero image using FAL flux/schnell.
+
+Photo-realistic style ONLY: professional stock photograph of a modern
+data center server room with ARM-based server processors.
+"""
+
 import os
 import sys
 import requests
 
-OUTPUT = "/home/chino/thesignal/public/img/articles/arm-agi-cpu-custom-silicon-bet-2026.jpg"
-SLUG = "arm-agi-cpu-custom-silicon-bet-2026"
+SLUG = "arm-v9-royalty-moat-ai-era-2026"
 W, H = 1200, 675
+OUTPUTS = [
+    f"/home/chino/thesignal/public/img/articles/{SLUG}.jpg",
+]
 
 PROMPT = (
-    "Professional stock photograph of a modern data center server room "
-    "with rows of sleek server racks illuminated by cool blue LED lighting. "
-    "A large ARM company logo sign is visible on the wall. "
-    "Clean, cool lighting, shallow depth of field, corporate technology photography style. "
-    "Photorealistic, professional corporate photography lighting, 8K resolution, sharp focus."
+    "Professional stock photograph of a modern data center server room with ARM architecture "
+    "server processors. Rows of sleek black server racks with cooling fans and visible CPU "
+    "heatsinks, a technician in a cleanroom suit walking between aisles, soft cool-blue "
+    "LED status lights reflecting off brushed metal. Realistic photo, shallow depth of field, "
+    "professional lighting, clean aesthetic, corporate editorial photography. "
+    "Photographed with a full-frame DSLR, 50mm lens, natural color grading, sharp focus, "
+    "high-end technology magazine style. No text overlays, no logos, no watermark."
 )
+
 
 def main():
     import fal_client
 
-    print(f"Generating image with FAL flux/schnell...")
-    print(f"Prompt: {PROMPT[:100]}...")
+    # FAL_KEY lookup: env first, then fallback file
+    fal_key = os.environ.get("FAL_KEY")
+    if not fal_key:
+        fal_key_path = "/home/chino/video_output/.fal_real"
+        with open(fal_key_path) as f:
+            raw = f.read().strip().split("\n")[0]
+            if "|" in raw:
+                fal_key = raw.split("|", 1)[1]
+            else:
+                fal_key = raw
+        os.environ["FAL_KEY"] = fal_key
+
+    print(f"Generating hero image for '{SLUG}'...")
+    print(f"Prompt: {PROMPT[:120]}...")
 
     result = fal_client.subscribe(
         "fal-ai/flux/schnell",
@@ -28,7 +50,7 @@ def main():
             "prompt": PROMPT,
             "image_size": {
                 "width": W,
-                "height": H
+                "height": H,
             },
             "num_inference_steps": 4,
             "enable_safety_checker": False,
@@ -37,6 +59,7 @@ def main():
 
     print(f"Result keys: {list(result.keys())}")
 
+    # Extract the image URL
     image_url = None
     if "images" in result and len(result["images"]) > 0:
         image_url = result["images"][0]["url"]
@@ -52,37 +75,66 @@ def main():
 
     print(f"Image URL: {image_url}")
 
-    print(f"Downloading image...")
+    # Download the image
+    print("Downloading image...")
     r = requests.get(image_url, timeout=120)
     r.raise_for_status()
 
-    os.makedirs(os.path.dirname(OUTPUT), exist_ok=True)
-    with open(OUTPUT, "wb") as f:
-        f.write(r.content)
+    for outpath in OUTPUTS:
+        os.makedirs(os.path.dirname(outpath), exist_ok=True)
+        with open(outpath, "wb") as f:
+            f.write(r.content)
+        file_size = os.path.getsize(outpath)
+        print(f"✅ Saved to {outpath}")
+        print(f"   Size: {file_size} bytes ({file_size/1024:.1f} KB)")
 
-    file_size = os.path.getsize(OUTPUT)
-    print(f"✅ Saved to {OUTPUT}")
-    print(f"   Size: {file_size} bytes ({file_size/1024:.1f} KB)")
-
+    # Verify and resize if needed
     from PIL import Image
-    img = Image.open(OUTPUT)
+    img = Image.open(OUTPUTS[0])
     print(f"   Dimensions: {img.size}")
 
     if img.size != (W, H):
         print(f"⚠️  Resizing from {img.size} to ({W}, {H})...")
         img = img.resize((W, H), Image.LANCZOS)
-        img.save(OUTPUT, "JPEG", quality=92, optimize=True)
-        file_size = os.path.getsize(OUTPUT)
-        print(f"   New size: {file_size} bytes ({file_size/1024:.1f} KB)")
-        print(f"   New dimensions: {img.size}")
+        for outpath in OUTPUTS:
+            img.save(outpath, "JPEG", quality=92, optimize=True)
+            file_size = os.path.getsize(outpath)
+            print(f"   Saved {outpath}: {file_size} bytes ({file_size/1024:.1f} KB)")
 
-    if file_size < 10240:
-        print(f"⚠️  File too small ({file_size} bytes), re-saving with higher quality...")
-        img.save(OUTPUT, "JPEG", quality=98, optimize=True)
-        file_size = os.path.getsize(OUTPUT)
-        print(f"   New size: {file_size} bytes ({file_size/1024:.1f} KB)")
+    for outpath in OUTPUTS:
+        file_size = os.path.getsize(outpath)
+        if file_size < 10240:
+            print(f"⚠️  File too small ({file_size} bytes), re-saving with higher quality...")
+            img.save(outpath, "JPEG", quality=98, optimize=True)
+            file_size = os.path.getsize(outpath)
+            print(f"   New size: {file_size} bytes ({file_size/1024:.1f} KB)")
 
-    print(f"✅ All checks passed!")
+    print("✅ Local save complete!")
+
+    # --- Upload to R2 ---
+    print(f"\nUploading to R2 via r2_upload.py...")
+    result_code = os.system(f"cd /home/chino/thesignal && python3 scripts/r2_upload.py hero {SLUG}")
+    if result_code == 0:
+        print(f"✅ R2 upload succeeded!")
+    else:
+        print(f"❌ R2 upload failed (exit code {result_code})")
+        sys.exit(1)
+
+    # Verify accessibility
+    R2_URL = f"https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/articles/{SLUG}.jpg"
+    print(f"\nVerifying image on R2 CDN...")
+    try:
+        resp = requests.get(R2_URL, timeout=30)
+        print(f"   HTTP {resp.status_code}")
+        if resp.status_code == 200:
+            print(f"✅ Image accessible at: {R2_URL}")
+        else:
+            print(f"⚠️  Got HTTP {resp.status_code}, might not be publicly accessible")
+    except Exception as e:
+        print(f"⚠️  Verification error: {e}")
+
+    print(f"\n✅ All done! Final slug: {SLUG}")
+
 
 if __name__ == "__main__":
     main()

@@ -78,6 +78,33 @@ async function generateReport(ticker, fin, articles) {
   
   const company = fin.company || {};
   const finSummary = extractFinancialSummary(fin);
+
+  // Load curated moat assessment (authoritative — from our research desk)
+  let curatedMoat = null;
+  for (const cand of [ticker, ticker.toLowerCase(), ticker.toUpperCase()]) {
+    const p = path.join(__dirname, '..', 'data', `moat-${cand}.json`);
+    if (fs.existsSync(p)) {
+      try { curatedMoat = JSON.parse(fs.readFileSync(p, 'utf8')); } catch (_) {}
+      if (curatedMoat) break;
+    }
+  }
+
+  let moatSection = '';
+  if (curatedMoat) {
+    moatSection = `
+CURATED MOAT ASSESSMENT (from our research desk — AUTHORITATIVE):
+- Moat Rating: ${curatedMoat.rating}
+- Star Rating: ${curatedMoat.stars}/5
+- Confidence: ${curatedMoat.confidence}
+- Factor scores:
+${(curatedMoat.sources || []).map(s => `  - ${s.name}: ${s.score}/5 — ${s.rationale}`).join('\n')}
+
+Your "valuation.moatRating" MUST equal "${curatedMoat.rating}" and "valuation.starRating" MUST equal ${curatedMoat.stars}. You may nuance the factor write-ups, but the rating and stars are fixed.`;
+  } else {
+    moatSection = `
+MOAT RATING STANDARD (Morningstar-style, STRICT):
+- "Wide" is exceptional and RARE (~10-15% of companies): durable structural advantage lasting 10+ years, sustained high ROIC, pricing power that survives downturns. Default is "Narrow" for solid companies; "None" for commodity businesses, young IPOs, and capital-intensive infrastructure with no proprietary edge. Recent momentum or fast growth is NOT a moat.`;
+  }
   
   const prompt = `You are a financial analyst writing a deep research report for ${company.name} (${ticker}).
 
@@ -118,6 +145,7 @@ ${finSummary.recentEarnings.map(e => `- ${e.date}: EPS ${e.epsActual || 'N/A'} v
 
 Recent Coverage (our articles):
 ${articles.map(a => `- ${a.title}: ${a.summary}`).join('\n')}
+${moatSection}
 
 Generate a structured Signal Report in JSON format with these sections:
 
@@ -213,6 +241,26 @@ async function main() {
   
   try {
     const report = await generateReport(ticker, fin, articles);
+    
+    // Enforce curated moat rating/stars if a moat file exists
+    const moatPath = path.join(__dirname, '..', 'data', `moat-${ticker.toUpperCase()}.json`);
+    if (fs.existsSync(moatPath)) {
+      try {
+        const curated = JSON.parse(fs.readFileSync(moatPath, 'utf8'));
+        if (curated.rating && curated.rating !== report.valuation.moatRating) {
+          console.log(`   ⚠ Moat override: AI said "${report.valuation.moatRating}", curated says "${curated.rating}" → using curated`);
+          report.valuation.moatRating = curated.rating;
+        }
+        if (curated.stars && curated.stars !== report.valuation.starRating) {
+          console.log(`   ⚠ Star override: AI said ${report.valuation.starRating}, curated says ${curated.stars} → using curated`);
+          report.valuation.starRating = curated.stars;
+        }
+        if (curated.confidence) {
+          const map = { 'High': 'Low', 'Medium': 'Medium', 'Low': 'High' };
+          report.valuation.uncertaintyRating = map[curated.confidence] || report.valuation.uncertaintyRating;
+        }
+      } catch (_) {}
+    }
     
     // Add to financials
     financials[ticker].signalReport = report;

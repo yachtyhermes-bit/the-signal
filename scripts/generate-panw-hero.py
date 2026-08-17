@@ -1,37 +1,54 @@
 #!/usr/bin/env python3
-"""Generate a PANW hero image using FAL flux/schnell, save locally, upload to R2."""
-
+"""Generate a Palo Alto Networks (PANW) hero image using FAL flux/schnell."""
 import os
 import sys
 import requests
 
-OUTPUT = "/home/chino/thesignal/public/img/articles/panw-platformization-ai-security-2026.jpg"
-SLUG = "panw-platformization-ai-security-2026"
+OUTPUT = "/home/chino/thesignal/public/img/articles/panw-ai-security-supercycle-2026.jpg"
+SLUG = "panw-ai-security-supercycle-2026"
 W, H = 1200, 675
 
 PROMPT = (
-    "Professional stock photograph of a modern cybersecurity operations center, "
-    "multiple monitors displaying security dashboards and threat maps, blue ambient lighting, "
-    "clean corporate environment. Photo-realistic, shallow depth of field, professional lighting. "
-    "No text overlays, no logos, no branding. Ultra-realistic, sharp focus, high detail."
+    "Professional stock photograph of a modern cybersecurity operations center "
+    "(SOC) during a busy workday. In the foreground, security analysts sit at "
+    "rows of desks with large multi-monitor setups showing network security "
+    "dashboards and world map threat displays, one analyst pointing at a screen. "
+    "In the softly blurred background, tall rows of server racks with small "
+    "blinking status lights and neatly organized cables. Clean office lighting, "
+    "natural realistic colors, shallow depth of field focused on the analysts, "
+    "professional corporate photography, sharp focus, high detail. "
+    "Ultra-realistic photo, no abstract art, no digital art, no neon/synthwave, "
+    "no glowing lines, no geometric patterns, no text, no logos, no watermark."
 )
-
-R2_URL = "https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/articles/panw-platformization-ai-security-2026.jpg"
-
 
 def main():
     import fal_client
 
+    # Set FAL_KEY from the studio-api env file
+    env_path = "/home/chino/hermes-workspace/studio-api/.env"
+    if os.path.exists(env_path):
+        with open(env_path) as f:
+            for line in f:
+                if line.startswith("FAL_KEY="):
+                    key = line.split("=", 1)[1].strip().strip('"').strip("'")
+                    os.environ["FAL_KEY"] = key
+                    break
+
+    if not os.environ.get("FAL_KEY"):
+        print("ERROR: FAL_KEY not found")
+        sys.exit(1)
+
     print(f"Generating image with FAL flux/schnell...")
     print(f"Prompt: {PROMPT[:80]}...")
 
+    # Use the subscribe method which blocks until complete
     result = fal_client.subscribe(
         "fal-ai/flux/schnell",
         arguments={
             "prompt": PROMPT,
             "image_size": {
                 "width": W,
-                "height": H,
+                "height": H
             },
             "num_inference_steps": 4,
             "enable_safety_checker": False,
@@ -67,17 +84,16 @@ def main():
         f.write(r.content)
 
     file_size = os.path.getsize(OUTPUT)
-    print(f"✅ Saved to {OUTPUT}")
+    print(f"Saved to {OUTPUT}")
     print(f"   Size: {file_size} bytes ({file_size/1024:.1f} KB)")
 
     # Verify dimensions
     from PIL import Image
-
     img = Image.open(OUTPUT)
     print(f"   Dimensions: {img.size}")
 
     if img.size != (W, H):
-        print(f"⚠️  Resizing from {img.size} to ({W}, {H})...")
+        print(f"Resizing from {img.size} to ({W}, {H})...")
         img = img.resize((W, H), Image.LANCZOS)
         img.save(OUTPUT, "JPEG", quality=92, optimize=True)
         file_size = os.path.getsize(OUTPUT)
@@ -85,44 +101,12 @@ def main():
         print(f"   New dimensions: {img.size}")
 
     if file_size < 10240:
-        print(f"⚠️  File too small ({file_size} bytes), re-saving with higher quality...")
+        print(f"File too small ({file_size} bytes), re-saving with higher quality...")
         img.save(OUTPUT, "JPEG", quality=98, optimize=True)
         file_size = os.path.getsize(OUTPUT)
         print(f"   New size: {file_size} bytes ({file_size/1024:.1f} KB)")
 
-    print(f"✅ Local save complete!")
-
-    # --- Upload to R2 ---
-    print(f"\nUploading to R2...")
-
-    # Read token from .dev.vars
-    token = ""
-    with open("/home/chino/thesignal/.dev.vars") as f:
-        for line in f:
-            if line.startswith("CLOUDFLARE_API_TOKEN="):
-                token = line.split("=", 1)[1].strip().strip('"').strip("'")
-                break
-
-    if not token:
-        print("ERROR: CLOUDFLARE_API_TOKEN not found in .dev.vars")
-        sys.exit(1)
-
-    headers = {
-        "Authorization": "Bearer " + token,
-        "Content-Type": "image/jpeg",
-    }
-
-    with open(OUTPUT, "rb") as fh:
-        resp = requests.put(R2_URL, headers=headers, data=fh.read())
-
-    print(f"R2 upload HTTP {resp.status_code}")
-    if resp.status_code in (200, 201):
-        print(f"✅ Uploaded to {R2_URL}")
-    else:
-        print(f"❌ Upload failed: {resp.text}")
-        sys.exit(1)
-
-    print(f"✅ All done!")
+    print(f"All checks passed!")
 
 
 if __name__ == "__main__":

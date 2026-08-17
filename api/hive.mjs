@@ -146,7 +146,7 @@ async function readData() {
     }
   } catch { /* GitHub unavailable — return default */ }
   // 4. Return default empty structure
-  const defaults = { portfolios: {}, priceCache: {}, accounts: {} };
+  const defaults = { portfolios: {}, priceCache: {}, accounts: {}, watchlists: {} };
   memoryCache = defaults;
   memoryCacheTime = Date.now();
   return JSON.parse(JSON.stringify(defaults));
@@ -173,6 +173,9 @@ function normalizeData(data) {
       p.holdings = flat;
     }
   }
+
+  // Migrate legacy single-list watchlist data to the multi-watchlist shape
+  migrateWatchlists(data);
 }
 
 async function writeData(data) {
@@ -229,6 +232,19 @@ async function githubPush(data) {
   }
 }
 
+// Serialize read-modify-write mutations. writeData() replaces the WHOLE data
+// store, so two overlapping mutations (each holding a snapshot taken before the
+// other's write) would clobber each other's changes. Chaining the
+// read→mutate→write sequence on a single promise queue — with a fresh readData
+// INSIDE the lock — prevents lost updates and duplicate-insert races. Used by
+// the watchlist mutations; failures propagate to the caller, the chain survives.
+let mutationChain = Promise.resolve();
+function serializeMutation(fn) {
+  const run = mutationChain.then(fn, fn);
+  mutationChain = run.then(() => {}, () => {});
+  return run;
+}
+
 async function fetchPrice(ticker) {
   try {
     const url = `https://readthesignal.net/api/prices?ticker=${ticker}`;
@@ -283,17 +299,161 @@ function hashPassword(password) {
   return crypto.createHash('sha256').update(password).digest('hex');
 }
 
-// === Watchlist helpers ===
-function ensureWatchlist(data, uid) {
+// === Watchlist helpers (multi-watchlist v2) ===
+// Storage shape: data.watchlists[uid] = [{id, name, tickers:[{ticker, addedAt}], createdAt}]
+const WATCHLIST_LIMIT = 5;
+// Matches the frontend's client-side cap (watchlist.js rejects names > 60).
+const WATCHLIST_NAME_MAX = 60;
+const WATCHLIST_TICKER_RE = /^[A-Z0-9.-]{1,10}$/;
+
+// True when item looks like a migrated watchlist object {id, name, tickers, createdAt}
+function isWatchlistListObject(item) {
+  return !!item && typeof item === 'object' && !Array.isArray(item) &&
+    typeof item.id === 'string' && item.id.length > 0 &&
+    Array.isArray(item.tickers);
+}
+
+// Short unique-per-user id: wl-<base36 timestamp><random suffix>
+function generateWatchlistId(existingIds) {
+  const existing = existingIds || new Set();
+  let id;
+  do {
+    id = 'wl-' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+  } while (existing.has(id));
+  return id;
+}
+
+// Normalize a single watchlist object to {id, name, tickers:[{ticker, addedAt}], createdAt}.
+// Sanitizes name, dedupes/uppercases tickers, fills missing id/createdAt.
+function normalizeWatchlistList(list, existingIds) {
+  const now = new Date().toISOString();
+  const id = (list && typeof list.id === 'string' && list.id) || generateWatchlistId(existingIds);
+  const rawName = (list && list.name !== undefined) ? String(list.name).trim() : '';
+  const name = (rawName && rawName.length <= WATCHLIST_NAME_MAX) ? rawName : 'My Watchlist';
+  const seen = new Set();
+  const tickers = [];
+  for (const item of (list && Array.isArray(list.tickers) ? list.tickers : [])) {
+    const norm = normalizeWatchlistItem(item);
+    if (norm && !seen.has(norm.ticker)) {
+      seen.add(norm.ticker);
+      tickers.push({ ticker: norm.ticker, addedAt: norm.addedAt || now });
+    }
+  }
+  return {
+    id,
+    name,
+    tickers,
+    createdAt: (list && typeof list.createdAt === 'string' && list.createdAt) || now
+  };
+}
+
+// Migrate data.watchlists[uid] to the multi-watchlist shape. Legacy values were
+// plain arrays of ticker strings or {ticker, addedAt} objects → wrapped into a
+// single {id:'default', name:'My Watchlist', tickers:[...]} list preserving the
+// user's tickers. Idempotent — safe to call on every read.
+function migrateWatchlists(data) {
   if (!data.watchlists) data.watchlists = {};
-  if (!data.watchlists[uid]) data.watchlists[uid] = [];
-  return data.watchlists[uid];
+  for (const uid of Object.keys(data.watchlists)) {
+    const raw = data.watchlists[uid];
+    if (!Array.isArray(raw)) {
+      data.watchlists[uid] = [];
+      continue;
+    }
+    const hasMigratedList = raw.some(isWatchlistListObject);
+    if (!hasMigratedList) {
+      // Legacy ticker array (plain strings or {ticker, addedAt} objects)
+      if (raw.length === 0) {
+        data.watchlists[uid] = [];
+        continue;
+      }
+      const now = new Date().toISOString();
+      const seen = new Set();
+      const tickers = [];
+      for (const item of raw) {
+        const norm = normalizeWatchlistItem(item);
+        if (norm && !seen.has(norm.ticker)) {
+          seen.add(norm.ticker);
+          tickers.push({ ticker: norm.ticker, addedAt: norm.addedAt || now });
+        }
+      }
+      data.watchlists[uid] = [{
+        id: 'default',
+        name: 'My Watchlist',
+        tickers,
+        createdAt: now
+      }];
+      continue;
+    }
+    // Already (partially) migrated — normalize each list, and fold any stray
+    // legacy ticker entries (mixed-shape data from a mid-migration write) into
+    // the first list so tickers are never silently dropped.
+    const existingIds = new Set();
+    const lists = [];
+    const orphanTickers = [];
+    for (const item of raw) {
+      if (isWatchlistListObject(item)) {
+        const norm = normalizeWatchlistList(item, existingIds);
+        existingIds.add(norm.id);
+        lists.push(norm);
+      } else {
+        const norm = normalizeWatchlistItem(item);
+        if (norm) orphanTickers.push(norm);
+      }
+    }
+    if (orphanTickers.length) {
+      const now = new Date().toISOString();
+      let target = lists[0];
+      if (!target) {
+        target = { id: 'default', name: 'My Watchlist', tickers: [], createdAt: now };
+        lists.push(target);
+      }
+      const seen = new Set(watchlistTickers(target.tickers));
+      for (const t of orphanTickers) {
+        if (!seen.has(t.ticker)) {
+          seen.add(t.ticker);
+          target.tickers.push({ ticker: t.ticker, addedAt: t.addedAt || now });
+        }
+      }
+    }
+    data.watchlists[uid] = lists;
+  }
+  return data.watchlists;
+}
+
+// Normalize a stored watchlist entry — legacy entries are plain strings,
+// newer entries are {ticker, addedAt} objects. Returns {ticker, addedAt} or null.
+function normalizeWatchlistItem(item) {
+  if (!item) return null;
+  const rawTicker = typeof item === 'string' ? item : item.ticker;
+  if (typeof rawTicker !== 'string') return null;
+  const ticker = rawTicker.trim().toUpperCase();
+  if (!ticker) return null;
+  const addedAt = (item && typeof item === 'object' && item.addedAt) || null;
+  return { ticker, addedAt };
+}
+
+// Deduped uppercase ticker strings from a stored watchlist array
+function watchlistTickers(watchlist) {
+  const seen = new Set();
+  for (const item of (watchlist || [])) {
+    const norm = normalizeWatchlistItem(item);
+    if (norm && !seen.has(norm.ticker)) seen.add(norm.ticker);
+  }
+  return Array.from(seen);
 }
 
 // === Premium helpers ===
 function isAccountPremium(data, account) {
   if (!account) return false;
   return account.premium === true || account.premium === 'premium' || account.premium === 'pro';
+}
+
+// Canonical plan label so action=me, action=premium and the mutation gate
+// always agree (set-premium may store boolean true or 'premium'/'pro' strings).
+function premiumPlanLabel(account) {
+  if (!account || !account.premium) return 'free';
+  if (account.premium === true) return 'premium';
+  return account.premium;
 }
 
 // === Stateless token system ===
@@ -461,8 +621,9 @@ export default async function handler(req, res) {
         displayName: account.displayName,
         username: account.username,
         createdAt: account.createdAt,
+        photoURL: account.photoURL || null,
         isPremium: isAccountPremium(data, account),
-        premiumPlan: account.premium || 'free',
+        premiumPlan: premiumPlanLabel(account),
         premiumSince: account.premiumSince || null,
         email: account.email || null
       });
@@ -752,6 +913,15 @@ export default async function handler(req, res) {
 
       if (req.query.displayName) portfolio.displayName = req.query.displayName;
       if (req.query.photoURL) portfolio.photoURL = req.query.photoURL;
+      // Keep the account record in sync so action=me (auth.js's source of
+      // truth for hive_user) reflects profile updates instead of going stale.
+      if (req.query.token) {
+        const account = getAccountFromToken(data, req.query.token);
+        if (account && account.uid === uid) {
+          if (req.query.displayName) account.displayName = req.query.displayName;
+          if (req.query.photoURL) account.photoURL = req.query.photoURL;
+        }
+      }
       await writeData(data);
 
       const tickers = Object.keys(portfolio.holdings || {});
@@ -785,7 +955,10 @@ export default async function handler(req, res) {
     }
 
     // === POST /api/hive (submit trade) ===
-    if (req.method === 'POST') {
+    // Trade submission only applies to requests WITHOUT an action parameter
+    // (mirrors the portfolio-lookup guard above; action routes like
+    // watchlist/set-premium are handled below)
+    if (req.method === 'POST' && !req.query.action) {
       const uid = resolveUid(req);
       const { ticker, action, shares } = req.body || {};
 
@@ -897,11 +1070,16 @@ export default async function handler(req, res) {
       });
     }
 
-    // === Watchlist CRUD ===
-    // GET /api/hive?action=watchlist&op=list&token=X
-    // POST /api/hive?action=watchlist&op=add {ticker, token}
-    // POST /api/hive?action=watchlist&op=remove {ticker, token}
-
+    // === Watchlist CRUD (multi-watchlist v2) ===
+    // GET  /api/hive?action=watchlist&op=list&token=X
+    // POST /api/hive?action=watchlist&op=create  {name, token}
+    // POST /api/hive?action=watchlist&op=rename  {id, name, token}
+    // POST /api/hive?action=watchlist&op=delete  {id, token}
+    // POST /api/hive?action=watchlist&op=add     {id, ticker, token}
+    // POST /api/hive?action=watchlist&op=remove  {id, ticker, token}
+    // list = any logged-in user; all mutations = premium members only.
+    // Every response carries the FULL watchlists array (new shape). The legacy
+    // `watchlist` key (first list's items) is kept for old callers.
     if (req.query.action === 'watchlist') {
       const token = req.query.token || (req.body && req.body.token);
       const account = getAccountFromToken(data, token);
@@ -910,47 +1088,150 @@ export default async function handler(req, res) {
       }
       const uid = account.uid;
       const op = req.query.op || 'list';
+      const body = req.body || {};
+      // Read params from body first, fall back to query (tolerant of GET-style calls)
+      const param = key => (body[key] !== undefined ? body[key] : req.query[key]);
 
+      // --- list: any logged-in user (read-only for watchlists) ---
+      // Price fetching is slow, so it runs OUTSIDE the mutation lock; only the
+      // price-cache write goes through the lock (with a fresh read) so it can
+      // never clobber a concurrent mutation's commit.
       if (op === 'list') {
-        const watchlist = ensureWatchlist(data, uid);
-        // Get prices for watchlist stocks
-        const prices = await getPricesForTickers(watchlist, data);
-        await writeData(data);
-        const items = watchlist.map(ticker => ({
+        // Ensure this user's entry exists and is in the v2 shape (idempotent)
+        migrateWatchlists(data);
+        let lists = data.watchlists[uid];
+        if (!Array.isArray(lists)) {
+          lists = [];
+          data.watchlists[uid] = lists;
+        }
+        // Enrich the first list's tickers for the legacy renderer
+        const firstTickers = lists[0] ? watchlistTickers(lists[0].tickers) : [];
+        const prices = await getPricesForTickers(firstTickers, data);
+        const items = firstTickers.map(ticker => ({
           ticker,
           name: (COMPANY_INFO[ticker] || {}).name || ticker,
           sector: (COMPANY_INFO[ticker] || {}).sector || 'Other',
           price: prices[ticker] || null
         }));
-        return res.json({ watchlist: items });
+        await serializeMutation(async () => {
+          const fresh = await readData();
+          for (const [t, price] of Object.entries(prices)) {
+            if (price && !(fresh.priceCache[t] && fresh.priceCache[t].price)) {
+              fresh.priceCache[t] = { price, updatedAt: new Date().toISOString() };
+            }
+          }
+          await writeData(fresh);
+        });
+        return res.json({ status: 'ok', watchlists: lists, watchlist: items });
       }
 
-      if (op === 'add' || op === 'remove') {
-        const { ticker } = req.body || {};
-        if (!ticker) {
-          return res.status(400).json({ error: 'Ticker is required' });
+      // --- mutations: premium gate + serialized read-modify-write ---
+      // The whole read→mutate→write sequence is chained on a promise queue and
+      // re-reads data inside the lock, so rapid concurrent mutations on the same
+      // store can't lose updates or double-insert a ticker.
+      return serializeMutation(async () => {
+        const fresh = await readData();
+        const freshAccount = getAccountFromToken(fresh, token);
+        if (!freshAccount) {
+          return res.status(401).json({ error: 'Authentication required' });
         }
-        const tickerUpper = ticker.toUpperCase();
-        const watchlist = ensureWatchlist(data, uid);
-
-        if (op === 'add') {
-          if (!COVERAGE_UNIVERSE.has(tickerUpper)) {
-            return res.status(400).json({ error: `${tickerUpper} is not in our coverage universe` });
-          }
-          if (!watchlist.includes(tickerUpper)) {
-            watchlist.push(tickerUpper);
-          }
-        } else {
-          const idx = watchlist.indexOf(tickerUpper);
-          if (idx !== -1) watchlist.splice(idx, 1);
+        if (!isAccountPremium(fresh, freshAccount)) {
+          return res.status(403).json({ error: 'Premium membership required to manage watchlists' });
         }
 
-        data.watchlists[uid] = watchlist;
-        await writeData(data);
-        return res.json({ status: 'ok', watchlist });
-      }
+        // Ensure this user's entry exists and is in the v2 shape (idempotent)
+        migrateWatchlists(fresh);
+        let lists = fresh.watchlists[freshAccount.uid];
+        if (!Array.isArray(lists)) {
+          lists = [];
+          fresh.watchlists[freshAccount.uid] = lists;
+        }
 
-      return res.status(400).json({ error: 'Invalid watchlist operation' });
+        if (op === 'create') {
+          const name = (param('name') !== undefined ? String(param('name')) : '').trim();
+          if (!name || name.length > WATCHLIST_NAME_MAX) {
+            return res.status(400).json({ error: `Watchlist name must be 1-${WATCHLIST_NAME_MAX} characters` });
+          }
+          if (lists.length >= WATCHLIST_LIMIT) {
+            return res.status(400).json({ error: `Watchlist limit reached (max ${WATCHLIST_LIMIT})` });
+          }
+          if (lists.some(l => l.name.toLowerCase() === name.toLowerCase())) {
+            return res.status(400).json({ error: 'A watchlist with that name already exists' });
+          }
+          lists.push({
+            id: generateWatchlistId(new Set(lists.map(l => l.id))),
+            name,
+            tickers: [],
+            createdAt: new Date().toISOString()
+          });
+          await writeData(fresh);
+          return res.json({ status: 'ok', watchlists: lists, watchlist: lists[0] ? lists[0].tickers : [] });
+        }
+
+        if (op === 'rename') {
+          const target = lists.find(l => l.id === param('id'));
+          if (!target) {
+            return res.status(400).json({ error: 'Watchlist not found' });
+          }
+          const name = (param('name') !== undefined ? String(param('name')) : '').trim();
+          if (!name || name.length > WATCHLIST_NAME_MAX) {
+            return res.status(400).json({ error: `Watchlist name must be 1-${WATCHLIST_NAME_MAX} characters` });
+          }
+          if (lists.some(l => l.id !== target.id && l.name.toLowerCase() === name.toLowerCase())) {
+            return res.status(400).json({ error: 'A watchlist with that name already exists' });
+          }
+          target.name = name;
+          await writeData(fresh);
+          return res.json({ status: 'ok', watchlists: lists, watchlist: lists[0] ? lists[0].tickers : [] });
+        }
+
+        if (op === 'delete') {
+          const idx = lists.findIndex(l => l.id === param('id'));
+          if (idx === -1) {
+            return res.status(400).json({ error: 'Watchlist not found' });
+          }
+          lists.splice(idx, 1);
+          await writeData(fresh);
+          return res.json({ status: 'ok', watchlists: lists, watchlist: lists[0] ? lists[0].tickers : [] });
+        }
+
+        if (op === 'add' || op === 'remove') {
+          const id = param('id');
+          let target = lists.find(l => l.id === id);
+          if (!target && (id === undefined || id === null || id === '')) {
+            // Legacy caller (no id): operate on the first list — or auto-create
+            // the default 'My Watchlist' list on add, mirroring the old behavior
+            target = lists[0];
+            if (!target && op === 'add') {
+              target = { id: 'default', name: 'My Watchlist', tickers: [], createdAt: new Date().toISOString() };
+              lists.push(target);
+            }
+          }
+          if (!target) {
+            return res.status(400).json({ error: 'Watchlist not found' });
+          }
+          const rawTicker = param('ticker') !== undefined ? String(param('ticker')) : '';
+          const tickerUpper = rawTicker.trim().toUpperCase();
+          if (!tickerUpper || !WATCHLIST_TICKER_RE.test(tickerUpper)) {
+            return res.status(400).json({ error: 'Ticker must be 1-10 characters (A-Z, 0-9, . or -)' });
+          }
+          if (op === 'add') {
+            // Dedupe case-insensitively; keep existing entry's addedAt
+            if (!watchlistTickers(target.tickers).includes(tickerUpper)) {
+              target.tickers.push({ ticker: tickerUpper, addedAt: new Date().toISOString() });
+            }
+          } else {
+            target.tickers = target.tickers.filter(item => {
+              const norm = normalizeWatchlistItem(item);
+              return !norm || norm.ticker !== tickerUpper;
+            });
+          }
+          await writeData(fresh);
+          return res.json({ status: 'ok', watchlists: lists, watchlist: lists[0] ? lists[0].tickers : [] });
+        }
+
+        return res.status(400).json({ error: 'Invalid watchlist operation' });
+      });
     }
 
     // === Check premium status ===
@@ -963,7 +1244,7 @@ export default async function handler(req, res) {
       }
       return res.json({
         premium: isAccountPremium(data, account),
-        plan: account.premium || 'free',
+        plan: premiumPlanLabel(account),
         since: account.premiumSince || null
       });
     }

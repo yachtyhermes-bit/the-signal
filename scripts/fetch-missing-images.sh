@@ -131,7 +131,7 @@ if [ "$REBUILD" = true ]; then
   echo ''
   echo '  🔄 Real images found — rebuilding and redeploying...'
   node build.js && echo '  ✅ Rebuild success' || { echo '  ❌ Rebuild failed'; exit 1; }
-  vercel --prod --token "$(cat /home/chino/.vercel/token 2>/dev/null)" && echo '  ✅ Redeployed to https://readthesignal.net' || { echo '  ❌ Redeploy failed'; exit 1; }
+  vercel --prod --archive=tgz --token "$(cat /home/chino/.vercel/token 2>/dev/null)" && echo '  ✅ Redeployed to https://readthesignal.net' || { echo '  ❌ Redeploy failed'; exit 1; }
   echo '  ✅ Placeholder images replaced with real images'
 else
   echo '  ℹ️  No new real images sourced — placeholders remain'

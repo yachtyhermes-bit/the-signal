@@ -4,22 +4,36 @@ import os
 import sys
 import requests
 
-OUTPUT = "/home/chino/thesignal/public/img/articles/orcl-ai-infrastructure-backlog-2026.jpg"
-SLUG = "orcl-ai-infrastructure-backlog-2026"
+OUTPUT = "/home/chino/thesignal/public/img/articles/orcl-ai-infra-debt-gamble-2026.jpg"
+SLUG = "orcl-ai-infra-debt-gamble-2026"
 W, H = 1200, 675
 
 PROMPT = (
-    "Professional stock photograph of Oracle corporate headquarters. "
-    "Modern glass office buildings with the red ORACLE logo on the exterior. "
-    "Clean, corporate, professional photography. "
-    "Photo-realistic, shallow depth of field, professional lighting. "
-    "No AI art, no neon, no abstract. "
-    "No model numbers, no serial numbers, no text labels, no markings — only the company logo. "
-    "Clear blue sky, manicured landscaping, sharp focus, high detail."
+    "Professional stock photograph of a modern Oracle AI data center. "
+    "Rows of server racks with blinking status LEDs, organized network cables, "
+    "cool blue ambient lighting, enterprise server room atmosphere. "
+    "Photorealistic, shallow depth of field, professional lighting. "
+    "No abstract art, no digital art, no neon/synthwave, no glowing lines, no geometric patterns. "
+    "No text, no logos, no branding. "
+    "Ultra-realistic, 8K resolution, sharp focus, high detail."
 )
 
 def main():
     import fal_client
+
+    # Set FAL_KEY from the studio-api env file
+    env_path = "/home/chino/hermes-workspace/studio-api/.env"
+    if os.path.exists(env_path):
+        with open(env_path) as f:
+            for line in f:
+                if line.startswith("FAL_KEY="):
+                    key = line.split("=", 1)[1].strip().strip('"').strip("'")
+                    os.environ["FAL_KEY"] = key
+                    break
+
+    if not os.environ.get("FAL_KEY"):
+        print("ERROR: FAL_KEY not found")
+        sys.exit(1)
 
     print(f"Generating image with FAL flux/schnell...")
     print(f"Prompt: {PROMPT[:80]}...")

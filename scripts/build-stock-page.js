@@ -5,8 +5,11 @@
 
 const fs = require('fs');
 const path = require('path');
+const { getSharedNav, getSharedNavJS } = require('./shared-nav');
 
 const DIST = path.join(__dirname, '..', 'dist');
+const R2_IMG_BASE = 'https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev';
+const BUILD_TS = Date.now();
 const PUBLIC = path.join(__dirname, '..', 'public');
 const DATA = path.join(__dirname, '..', 'data');
 const ARTICLES = path.join(__dirname, '..', 'articles', 'posts');
@@ -202,76 +205,16 @@ function buildStockPage(symbol) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>${esc(symbol)} — The Signal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Oxanium:wght@400;500;600;700&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/stock-card.css">
   <link rel="stylesheet" href="/css/nav.css">
   <script src="https://cdn.jsdelivr.net/npm/lightweight-charts@4.1.3/dist/lightweight-charts.standalone.production.js"></script>
-  <script src="/js/watchlist.js" defer></script>
+  <script src="/js/watchlist.js?v=2" defer></script>
 </head>
 <body class="stock-page">
 
-  <!-- ── NAV ── -->
-  <nav class="stock-nav">
-    <div class="stock-nav-inner">
-      <a href="/stocks/" class="stock-nav-stocks">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-        Stocks
-      </a>
-      <a href="/" class="stock-nav-logo">
-        <span class="logo-text"><span class="logo-the">THE</span> <strong>SIGNAL</strong></span>
-      </a>
-      <div class="stock-nav-right">
-        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
-          <span class="theme-icon">☀️</span>
-        </button>
-        <button class="nav-btn hamburger-btn" id="hamburgerToggle" aria-label="Menu">
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-        </button>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Rocket Lab-Style Drawer -->
-  <div class="drawer-overlay" id="drawerOverlay"></div>
-  <div class="drawer" id="drawer">
-    <div class="drawer-header">
-      <a href="/" class="drawer-logo">
-        <span class="the">THE</span>
-        <span class="signal">SIGNAL</span>
-      </a>
-      <button class="drawer-close" id="drawerClose" aria-label="Close menu">&#10005;</button>
-    </div>
-    <div class="drawer-body" id="drawerBody">
-      <div class="drawer-main" id="drawerMain">
-        <div class="drawer-section-label">SECTORS</div>
-        <a href="javascript:void(0)" class="drawer-link" onclick="openSubDrawer()">SECTORS</a>
-        <a href="/stocks/" class="drawer-link">STOCK PAGES</a>
-        <a href="/#scorecard" class="drawer-link">SIGNAL SCORECARD</a>
-        <a href="/hive" class="drawer-link">HIVE</a>
-        <a href="/signal-vs-the-street" class="drawer-link">SIGNAL VS. STREET</a>
-        <a href="/premium" class="drawer-link">PREMIUM DASHBOARD</a>
-        <a href="/insights" class="drawer-link">TRADER INSIGHTS</a>
-        <a href="/watchlist" class="drawer-link">MY WATCHLIST</a>
-        <a href="/pricing" class="drawer-link">SIGNAL PREMIUM</a>
-        <a href="/pricing" class="drawer-cta">GET PREMIUM ACCESS</a>
-      </div>
-      <div class="drawer-sub" id="drawerSub">
-        <div class="sub-header" onclick="closeSubDrawer()">
-          <span class="sub-back">&#8249;</span>
-          <span class="sub-title">SECTORS</span>
-        </div>
-        <a href="/sector/ai" class="drawer-link">AI</a>
-        <a href="/sector/cyber" class="drawer-link">CYBER</a>
-        <a href="/sector/defense" class="drawer-link">DEFENSE</a>
-        <a href="/sector/space" class="drawer-link">SPACE</a>
-        <a href="/sector/mega-cap" class="drawer-link">MEGA-CAP</a>
-        <a href="/sector/quantum" class="drawer-link">QUANTUM</a>
-        <a href="/sector/ai-power" class="drawer-link">AI POWER</a>
-        <a href="/sector/etfs" class="drawer-link">ETFS</a>
-      </div>
-    </div>
-  </div>
+  <!-- ── SHARED NAV ── -->
+  ${getSharedNav()}
 
   <main class="stock-page-main">
 
@@ -279,6 +222,7 @@ function buildStockPage(symbol) {
     <section class="stock-hero">
       <div class="stock-hero-inner">
         <div class="stock-hero-left">
+          <a href="/stocks/" class="stock-back-link">All Stocks</a>
           <div class="stock-ticker-badge">$${esc(symbol)}${isPrivate ? ' · Private Company' : ' · NASDAQ'}</div>
           <h1 class="stock-company-name">${esc(company.name || symbol)}</h1>
           ${isPrivate ? '<div class="stock-private-badge">Private Company</div>' : ''}
@@ -406,14 +350,96 @@ function buildStockPage(symbol) {
             <span>Pulse AI Analysis</span>
             <span class="premium-unlock-badge" id="premiumBadge" style="display:none">✓ Unlocked</span>
           </div>
-          <p class="signal-ai-text" id="aiTextPreview">${esc((fin.aiAnalysis || '').slice(0, 300))}${(fin.aiAnalysis || '').length > 300 ? '...' : ''}</p>
-          <p class="signal-ai-text signal-ai-full" id="aiTextFull" style="display:none">${esc(fin.aiAnalysis || '')}</p>
+          <p class="signal-ai-text" id="aiTextPreview">${esc((fin.signalReport?.aiAnalysis || fin.aiAnalysis || '').slice(0, 300))}${(fin.signalReport?.aiAnalysis || fin.aiAnalysis || '').length > 300 ? '...' : ''}</p>
+          <p class="signal-ai-text signal-ai-full" id="aiTextFull" style="display:none">${esc(fin.signalReport?.aiAnalysis || fin.aiAnalysis || '')}</p>
           <a href="/pricing" class="signal-premium-cta" id="premiumCta">
             <span class="premium-lock">🔒</span>
             <span>Members Only</span>
             <span class="premium-arrow">→</span>
           </a>
         </div>
+
+        ${fin.signalReport ? `
+        <!-- Recent Performance & Catalysts -->
+        <div class="signal-section-block">
+          <h3 class="signal-section-title">Recent Performance & Catalysts</h3>
+          <div class="signal-perf-grid">
+            <div class="signal-perf-item">
+              <span class="signal-perf-label">Latest Earnings</span>
+              <span class="signal-perf-value">${esc(fin.signalReport.recentPerformance?.latestEarnings || '—')}</span>
+            </div>
+            <div class="signal-perf-item">
+              <span class="signal-perf-label">Revenue Growth</span>
+              <span class="signal-perf-value">${esc(fin.signalReport.recentPerformance?.revenueGrowth || '—')}</span>
+            </div>
+          </div>
+          ${fin.signalReport.recentPerformance?.catalysts?.length ? `
+          <div class="signal-catalysts">
+            <span class="signal-catalysts-label">Upcoming Catalysts:</span>
+            <ul class="signal-catalysts-list">
+              ${fin.signalReport.recentPerformance.catalysts.map(c => `<li>${esc(c)}</li>`).join('')}
+            </ul>
+          </div>` : ''}
+        </div>
+
+        <!-- Core Strengths & Moat Sources -->
+        <div class="signal-section-block">
+          <h3 class="signal-section-title">Core Strengths & Moat Sources</h3>
+          <div class="signal-moat-details">
+            ${fin.signalReport.coreStrengths?.switchingCosts ? `<div class="signal-moat-detail"><strong>Switching Costs:</strong> ${esc(fin.signalReport.coreStrengths.switchingCosts)}</div>` : ''}
+            ${fin.signalReport.coreStrengths?.intangibleAssets ? `<div class="signal-moat-detail"><strong>Intangible Assets:</strong> ${esc(fin.signalReport.coreStrengths.intangibleAssets)}</div>` : ''}
+            ${fin.signalReport.coreStrengths?.networkEffects ? `<div class="signal-moat-detail"><strong>Network Effects:</strong> ${esc(fin.signalReport.coreStrengths.networkEffects)}</div>` : ''}
+            ${fin.signalReport.coreStrengths?.costAdvantage ? `<div class="signal-moat-detail"><strong>Cost Advantage:</strong> ${esc(fin.signalReport.coreStrengths.costAdvantage)}</div>` : ''}
+            ${fin.signalReport.coreStrengths?.efficientScale ? `<div class="signal-moat-detail"><strong>Efficient Scale:</strong> ${esc(fin.signalReport.coreStrengths.efficientScale)}</div>` : ''}
+          </div>
+        </div>
+
+        <!-- Main Risks -->
+        ${fin.signalReport.mainRisks?.length ? `
+        <div class="signal-section-block">
+          <h3 class="signal-section-title">Main Risks</h3>
+          <ul class="signal-risk-list">
+            ${fin.signalReport.mainRisks.map(r => `<li>${esc(r)}</li>`).join('')}
+          </ul>
+        </div>` : ''}
+
+        <!-- Bulls Say / Bears Say -->
+        <div class="signal-bulls-bears">
+          <div class="signal-bulls-col">
+            <h3 class="signal-bb-title signal-bulls-title">🐂 Bulls Say</h3>
+            <ul class="signal-bb-list">
+              ${(fin.signalReport.bullsSay || []).map(b => `<li>${esc(b)}</li>`).join('')}
+            </ul>
+          </div>
+          <div class="signal-bears-col">
+            <h3 class="signal-bb-title signal-bears-title">🐻 Bears Say</h3>
+            <ul class="signal-bb-list">
+              ${(fin.signalReport.bearsSay || []).map(b => `<li>${esc(b)}</li>`).join('')}
+            </ul>
+          </div>
+        </div>
+
+        <!-- Financial Health -->
+        ${fin.signalReport.financialHealth ? `
+        <div class="signal-section-block">
+          <h3 class="signal-section-title">Financial Health</h3>
+          <p class="signal-section-text">${esc(fin.signalReport.financialHealth)}</p>
+        </div>` : ''}
+
+        <!-- Analyst Note -->
+        ${fin.signalReport.analystNote ? `
+        <div class="signal-section-block">
+          <h3 class="signal-section-title">Analyst Note</h3>
+          <p class="signal-section-text">${esc(fin.signalReport.analystNote)}</p>
+        </div>` : ''}
+
+        <!-- Business Strategy & Outlook -->
+        ${fin.signalReport.businessStrategy ? `
+        <div class="signal-section-block">
+          <h3 class="signal-section-title">Business Strategy & Outlook</h3>
+          <p class="signal-section-text">${esc(fin.signalReport.businessStrategy)}</p>
+        </div>` : ''}
+        ` : ''}
 
         <!-- Valuation Quick Stats -->
         <div class="signal-valuation-stats">
@@ -628,8 +654,8 @@ function buildStockPage(symbol) {
       ${relatedArticles.length ? `
       <div class="news-grid">
         ${relatedArticles.map(a => {
-          const imgRel = a.image?.src || a.image || '';
-          const imgSrc = imgRel ? 'https://readthesignal.net' + (imgRel.startsWith('/') ? '' : '/') + imgRel : '';
+          const imgRel = (a.image && a.image.src) || a.image || '';
+          const imgSrc = imgRel ? R2_IMG_BASE + '/' + imgRel.replace(/^\//, '') + '?v=' + BUILD_TS : '';
           const title = esc(a.title || '');
           const summary = esc((a.summary || '').slice(0, 120));
           const dateStr = fmtDate(a.date);
@@ -738,7 +764,7 @@ function toggleTheme() {
   </script>
   <script>
   // Live price updater for stock header
-  (function(){var I=300000;function f(n){if(n==null||isNaN(n))return'---';return n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})}function u(p){document.querySelectorAll('[data-price]').forEach(function(e){var s=e.getAttribute('data-price');var d=p[s];if(d&&d.price!=null)e.textContent='$'+f(d.price)});document.querySelectorAll('[data-change]').forEach(function(e){var s=e.getAttribute('data-change');var d=p[s];if(d&&d.changePercent!=null){var c=(d.changePercent>=0?'+':'')+d.changePercent.toFixed(2)+'%';e.textContent=(d.changePercent>=0?'▲ ':'▼ ')+Math.abs(d.changePercent).toFixed(2)+'%';var cl=e.className.replace(/positive|negative/g,'').trim();e.className=cl+' '+(d.changePercent>=0?'positive':'negative')}})})function r(){fetch(location.origin+'/api/prices/').then(function(r){return r.json()}).then(function(d){u((d.prices||d))}).catch(function(e){console.warn('price update:',e.message)})}r();setInterval(r,I)})();
+  (function(){var I=300000;function f(n){if(n==null||isNaN(n))return'---';return n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})}function u(p){document.querySelectorAll('[data-price]').forEach(function(e){var s=e.getAttribute('data-price');var d=p[s];if(d&&d.price!=null)e.textContent='$'+f(d.price)});document.querySelectorAll('[data-change]').forEach(function(e){var s=e.getAttribute('data-change');var d=p[s];if(d&&d.changePercent!=null){var c=(d.changePercent>=0?'+':'')+d.changePercent.toFixed(2)+'%';e.textContent=(d.changePercent>=0?'▲ ':'▼ ')+Math.abs(d.changePercent).toFixed(2)+'%';var cl=e.className.replace(/positive|negative/g,'').trim();e.className=cl+' '+(d.changePercent>=0?'positive':'negative')}})}function r(){fetch(location.origin+'/api/prices/').then(function(r){return r.json()}).then(function(d){u((d.prices||d))}).catch(function(e){console.warn('price update:',e.message)})}r();setInterval(r,I)})();
   </script>
 </body>
 </html>`;
@@ -795,3 +821,22 @@ for (const symbol of symbols) {
   else { console.log(`  ⚠️  Skipping ${symbol} — no data`); }
 }
 console.log(`✅ Built ${built} stock page(s)`);
+
+// ── Emit /stocks/index.json for site-wide search ──
+// Per-ticker {ticker, name, sector, price} — same data embedded into each stock page.
+const pricesRaw = fs.existsSync(pricesPath) ? JSON.parse(fs.readFileSync(pricesPath, 'utf8')) : {};
+const stockIndex = symbols
+  .filter(sym => financials[sym])
+  .map(sym => {
+    const comp = financials[sym].company || {};
+    const p = pricesRaw[sym];
+    return {
+      ticker: sym,
+      name: comp.name || sym,
+      sector: comp.sector || '',
+      price: p && p.price != null ? p.price : null
+    };
+  });
+fs.mkdirSync(path.join(DIST, 'stocks'), { recursive: true });
+fs.writeFileSync(path.join(DIST, 'stocks', 'index.json'), JSON.stringify({ stocks: stockIndex }, null, 2));
+console.log(`  ✅ /stocks/index.json written (${stockIndex.length} stocks) — search ready`);

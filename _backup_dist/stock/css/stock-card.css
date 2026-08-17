@@ -1359,3 +1359,113 @@ html.stock-page.light .signal-val-value.strong-buy { color: #16a34a; }
     text-align: center;
   }
 }
+/* ═══════════════════════════════════════════════════════════
+   Watchlist Star Picker (injected by watchlist.js on stock pages)
+   Multi-watchlist chooser shown when tapping the ☆ heart.
+   Same class names as the main.css block; adapted to stock-card
+   tokens (--bg-hover / --blue / --blue-bg). z-index 9000 sits
+   above the nav and drawer (both 1000).
+   ═══════════════════════════════════════════════════════════ */
+.wl-star-picker-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+.wl-star-picker {
+  width: min(360px, 100%);
+  max-height: 70vh;
+  overflow-y: auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+.wl-star-picker-title {
+  margin: 0;
+  padding: 1rem 1.1rem 0.9rem;
+  font-family: 'Oxanium', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  border-bottom: 1px solid var(--border);
+}
+.wl-star-picker-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.8rem 1.1rem;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.wl-star-picker-item + .wl-star-picker-item { border-top: 1px solid var(--border); }
+.wl-star-picker-item:hover { background: var(--bg-hover); }
+.wl-star-picker-item-name {
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.wl-star-picker-item-count {
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+.wl-star-picker-new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.85rem 1.1rem;
+  background: none;
+  border: none;
+  border-top: 1px dashed var(--border);
+  color: var(--blue);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.wl-star-picker-new:hover {
+  background: var(--blue-bg);
+  color: var(--blue);
+}
+.wl-star-picker-loading {
+  padding: 1.5rem 1.1rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+html.stock-page.light .wl-star-picker-item:hover { background: var(--blue-bg); }
+html.stock-page.light .wl-star-picker { box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18); }
+
+/* Bottom-sheet layout on small phones */
+@media (max-width: 480px) {
+  .wl-star-picker-backdrop { align-items: flex-end; padding: 0; }
+  .wl-star-picker {
+    width: 100%;
+    max-height: 75vh;
+    border-radius: var(--radius) var(--radius) 0 0;
+    border-bottom: none;
+    box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.45);
+  }
+}

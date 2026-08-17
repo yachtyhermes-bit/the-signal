@@ -55,6 +55,34 @@
     });
   }
 
+  // Update "The Numbers That Matter" stats tables on article pages
+  // (cells marked data-live-ticker + data-live-field, e.g. data-live-field="price")
+  function updateStatsTables(prices) {
+    document.querySelectorAll('.stats-table [data-live-ticker]').forEach(function(cell) {
+      var sym = cell.getAttribute('data-live-ticker');
+      var field = cell.getAttribute('data-live-field') || 'price';
+      var p = prices[sym];
+      if (!p) return;
+
+      if (field === 'price' && p.price != null) {
+        cell.textContent = '$' + formatNum(p.price);
+        if (p.changePercent != null) {
+          var chip = cell.querySelector('.stat-live-chip');
+          if (!chip) {
+            chip = document.createElement('span');
+            cell.appendChild(chip);
+          }
+          chip.className = 'stat-live-chip ' + (p.changePercent >= 0 ? 'up' : 'down');
+          chip.textContent = (p.changePercent >= 0 ? '+' : '') + p.changePercent.toFixed(2) + '%';
+        }
+      } else if (field === 'changePercent' && p.changePercent != null) {
+        cell.textContent = (p.changePercent >= 0 ? '+' : '') + p.changePercent.toFixed(2) + '%';
+        cell.classList.remove('positive', 'negative');
+        cell.classList.add(p.changePercent >= 0 ? 'positive' : 'negative');
+      }
+    });
+  }
+
   async function fetchPrices() {
     try {
       const res = await fetch('/api/prices/');
@@ -72,6 +100,7 @@
     if (!data) return;
     updateTickerTape(data);
     updateCardPrices(data);
+    updateStatsTables(data);
   }
 
   // Initial fetch after page loads

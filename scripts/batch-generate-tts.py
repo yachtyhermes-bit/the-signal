@@ -2,7 +2,7 @@
 """Batch generate Andrew TTS for all articles and upload to R2.
 Generates all MP3s first (with per-article timeout), then uploads.
 """
-import asyncio, edge_tts, json, os, sys, time, glob, re
+import asyncio, edge_tts, json, os, sys, time, glob, re, datetime
 import urllib.request, urllib.error
 from pathlib import Path
 
@@ -41,8 +41,39 @@ async def generate_one(slug, text, out_path):
     os.unlink(out_path)
     return False
 
+def _parse_date(value):
+    """Parse article date (ISO with Z, tz offset, or date-only) to aware UTC datetime."""
+    if not value:
+        return None
+    value = str(value).strip()
+    for fmt in (None, "%Y-%m-%d"):
+        try:
+            if fmt is None:
+                dt = datetime.datetime.fromisoformat(value.replace("Z", "+00:00"))
+            else:
+                dt = datetime.datetime.strptime(value, fmt)
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=datetime.timezone.utc)
+            return dt.astimezone(datetime.timezone.utc)
+        except ValueError:
+            continue
+    return None
+
 async def gen_all():
     json_files = sorted(POSTS_DIR.glob("*.json"))
+    cutoff = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(hours=48)
+    fresh = []
+    for jf in json_files:
+        try:
+            with open(jf) as f:
+                _art = json.load(f)
+        except Exception:
+            continue
+        d = _parse_date(_art.get("date"))
+        if d is not None and d >= cutoff:
+            fresh.append(jf)
+    print(f"Gen TTS for {len(fresh)} new articles (last 48h, cutoff={cutoff.isoformat()}); skipped {len(json_files)-len(fresh)} older", flush=True)
+    json_files = fresh
     print(f"Gen TTS for {len(json_files)} articles...", flush=True)
     gen_ok = gen_skip = gen_fail = 0
     for i, jf in enumerate(json_files):

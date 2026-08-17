@@ -1,15 +1,21 @@
 import json, re, subprocess
 
-slugs = [
-    "ge-vernova-ai-power-infrastructure-2026",
-    "asml-euv-monopoly-chokepoint-ai-chips",
-    "ge-vernova-power-ai-data-centers-2026",
-    "oracle-ai-cloud-capex-bet-2026",
-    "credo-ai-connectivity-chips-2026"
-]
+import glob, os
+slugs = []
+for f in glob.glob('articles/posts/*.json'):
+    try:
+        a = json.load(open(f))
+        slugs.append((a.get('date','2000'), a['slug']))
+    except: pass
+slugs.sort(reverse=True)
+slugs = [s[1] for s in slugs[:10]]
 
 for slug in slugs:
-    a = json.load(open(f'articles/posts/{slug}.json'))
+    try:
+        a = json.load(open(f'articles/posts/{slug}.json'))
+    except FileNotFoundError:
+        print(f"  SKIP: {slug} not found")
+        continue
     
     body = a['bodyHtml']
     text = re.sub(r'<[^>]+>', '', body)

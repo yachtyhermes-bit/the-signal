@@ -44,47 +44,47 @@
     }
   },
   {
-    "ticker": "PLTR",
-    "name": "Palantir Technologies",
-    "sector": "AI Software",
-    "signal": "Strong Bullish",
-    "score": 83,
-    "color": "#10b981",
+    "ticker": "CEG",
+    "name": "Constellation Energy",
+    "sector": "AI Power",
+    "signal": "Bullish",
+    "score": 77,
+    "color": "#84cc16",
     "drivers": [
-      "Revenue up +56.2% YoY to $5.22B",
-      "Premium valuation at 154x P/E",
-      "Target upside +50.9%"
+      "Revenue up +23.0% YoY to $31.3B",
+      "P/E at 26.4x \u2014 attractively valued",
+      "Target upside +29.7%"
     ],
-    "upside": "+50.9%",
-    "logo": "https://logo.clearbit.com/palantir.com",
+    "upside": "+29.7%",
+    "logo": "",
     "metrics": {
-      "revenue": "$5.22B",
-      "growth": "+56.2%",
-      "netIncome": "$2.28B",
-      "pe": "154.1x",
-      "ps": "60.8x"
+      "revenue": "$31.3B",
+      "growth": "+23.0%",
+      "netIncome": "$3.46B",
+      "pe": "26.4x",
+      "ps": "3.06x"
     }
   },
   {
-    "ticker": "RTX",
-    "name": "RTX Corporation",
-    "sector": "Defense",
-    "signal": "Bullish",
-    "score": 71,
-    "color": "#84cc16",
+    "ticker": "MU",
+    "name": "Micron Technology, Inc.",
+    "sector": "Semiconductors",
+    "signal": "Strong Bullish",
+    "score": 88,
+    "color": "#10b981",
     "drivers": [
-      "Revenue up +9.7% YoY to $90.37B",
-      "Target upside +24.6%",
-      "Net income $7.26B"
+      "Revenue up +346% YoY to $90.3B",
+      "P/E at 19.8x \u2014 attractively valued",
+      "Target upside +71.2%"
     ],
-    "upside": "+24.6%",
-    "logo": "https://logo.clearbit.com/rtx.com",
+    "upside": "+71.2%",
+    "logo": "",
     "metrics": {
-      "revenue": "$90.37B",
-      "growth": "+9.7%",
-      "netIncome": "$7.26B",
-      "pe": "33.6x",
-      "ps": "2.6x"
+      "revenue": "$90.3B",
+      "growth": "+345.7%",
+      "netIncome": "$50.47B",
+      "pe": "19.8x",
+      "ps": "10.98x"
     }
   },
   {
@@ -110,25 +110,179 @@
     }
   },
   {
-    "ticker": "RBRK",
-    "name": "Rubrik Inc.",
-    "sector": "Cybersecurity",
+    "ticker": "VST",
+    "name": "Vistra Corp.",
+    "sector": "AI Power",
+    "signal": "Bullish",
+    "score": 74,
+    "color": "#84cc16",
+    "drivers": [
+      "P/E at 23.6x \u2014 attractively valued",
+      "Target upside +58.0%",
+      "Net income $2.03B"
+    ],
+    "upside": "+58.0%",
+    "logo": "",
+    "metrics": {
+      "revenue": "$19.2B",
+      "growth": "-5.5%",
+      "netIncome": "$2.03B",
+      "pe": "23.6x",
+      "ps": "2.47x"
+    }
+  },
+  {
+    "ticker": "NVDA",
+    "name": "NVIDIA Corporation",
+    "sector": "Technology",
     "signal": "Neutral",
-    "score": 52,
+    "score": 50,
     "color": "#64748b",
     "drivers": [
-      "Revenue up +48.5% YoY to $1.32B",
-      "Still operating at net loss $-348.83M",
-      "Target upside +26.1%"
+      "Revenue up +0.0% YoY",
+      "P/E N/A",
+      "Target data pending"
     ],
-    "upside": "+26.1%",
-    "logo": "https://logo.clearbit.com/rubrik.com",
+    "upside": "N/A",
+    "logo": "https://logo.clearbit.com/www.nvidia.com",
     "metrics": {
-      "revenue": "$1.32B",
-      "growth": "+48.5%",
-      "netIncome": "$-348.83M",
+      "revenue": "N/A",
+      "growth": "+0.0%",
+      "netIncome": "N/A",
       "pe": "N/A",
-      "ps": "10.3x"
+      "ps": "N/A"
+    }
+  },
+  {
+    "ticker": "AMD",
+    "name": "Advanced Micro Devices, Inc.",
+    "sector": "Technology",
+    "signal": "Neutral",
+    "score": 50,
+    "color": "#64748b",
+    "drivers": [
+      "Revenue up +0.0% YoY",
+      "P/E N/A",
+      "Target data pending"
+    ],
+    "upside": "N/A",
+    "logo": "https://logo.clearbit.com/www.amd.com",
+    "metrics": {
+      "revenue": "N/A",
+      "growth": "+0.0%",
+      "netIncome": "N/A",
+      "pe": "N/A",
+      "ps": "N/A"
+    }
+  },
+  {
+    "ticker": "AVGO",
+    "name": "Broadcom Inc.",
+    "sector": "Technology",
+    "signal": "Neutral",
+    "score": 50,
+    "color": "#64748b",
+    "drivers": [
+      "Revenue up +0.0% YoY",
+      "P/E N/A",
+      "Target data pending"
+    ],
+    "upside": "N/A",
+    "logo": "https://logo.clearbit.com/www.broadcom.com",
+    "metrics": {
+      "revenue": "N/A",
+      "growth": "+0.0%",
+      "netIncome": "N/A",
+      "pe": "N/A",
+      "ps": "N/A"
+    }
+  },
+  {
+    "ticker": "MSFT",
+    "name": "Microsoft Corporation",
+    "sector": "Technology",
+    "signal": "Neutral",
+    "score": 50,
+    "color": "#64748b",
+    "drivers": [
+      "Revenue up +0.0% YoY",
+      "P/E N/A",
+      "Target data pending"
+    ],
+    "upside": "N/A",
+    "logo": "https://logo.clearbit.com/www.microsoft.com",
+    "metrics": {
+      "revenue": "N/A",
+      "growth": "+0.0%",
+      "netIncome": "N/A",
+      "pe": "N/A",
+      "ps": "N/A"
+    }
+  },
+  {
+    "ticker": "GOOGL",
+    "name": "Alphabet Inc.",
+    "sector": "Communication Services",
+    "signal": "Neutral",
+    "score": 50,
+    "color": "#64748b",
+    "drivers": [
+      "Revenue up +0.0% YoY",
+      "P/E N/A",
+      "Target data pending"
+    ],
+    "upside": "N/A",
+    "logo": "https://logo.clearbit.com/abc.xyz",
+    "metrics": {
+      "revenue": "N/A",
+      "growth": "+0.0%",
+      "netIncome": "N/A",
+      "pe": "N/A",
+      "ps": "N/A"
+    }
+  },
+  {
+    "ticker": "SOFI",
+    "name": "SoFi Technologies, Inc.",
+    "sector": "Financial Services",
+    "signal": "Neutral",
+    "score": 50,
+    "color": "#64748b",
+    "drivers": [
+      "Revenue up +0.0% YoY",
+      "P/E N/A",
+      "Target data pending"
+    ],
+    "upside": "N/A",
+    "logo": "https://logo.clearbit.com/www.sofi.com",
+    "metrics": {
+      "revenue": "N/A",
+      "growth": "+0.0%",
+      "netIncome": "N/A",
+      "pe": "N/A",
+      "ps": "N/A"
+    }
+  },
+  {
+    "ticker": "TSLA",
+    "name": "Tesla, Inc.",
+    "sector": "Consumer Cyclical",
+    "signal": "Neutral",
+    "score": 50,
+    "color": "#64748b",
+    "drivers": [
+      "Revenue up +0.0% YoY",
+      "P/E N/A",
+      "Target data pending"
+    ],
+    "upside": "N/A",
+    "logo": "https://logo.clearbit.com/www.tesla.com",
+    "metrics": {
+      "revenue": "N/A",
+      "growth": "+0.0%",
+      "netIncome": "N/A",
+      "pe": "N/A",
+      "ps": "N/A"
     }
   }
 ]

@@ -55,7 +55,7 @@ signal_deploy() {
   npx vercel link --project the-signal --yes > /dev/null 2>&1
 
   echo "  [DEPLOY] Vercel prod..."
-  local OUT=$(npx vercel --prod --yes 2>&1)
+  local OUT=$(npx vercel --prod --archive=tgz --yes 2>&1)
   echo "$OUT" | tail -5
 
   if [ -n "$ALIAS" ]; then
