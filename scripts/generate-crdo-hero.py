@@ -1,11 +1,15 @@
 #!/usr/bin/env python3
-"""Generate a hero image for 'crdo-ai-networking-dominance-2026' using FAL flux/schnell."""
+"""Generate a hero image for 'crdo-aec-ai-connectivity-moat-2026' using FAL flux/schnell.
+
+Photo-realistic only: modern AI data center with dense server racks and
+purple/blue high-speed copper cables. No abstract/digital/neon/glowing/geometric art.
+"""
 
 import os
 import sys
 import requests
 
-SLUG = "crdo-ai-networking-dominance-2026"
+SLUG = "crdo-aec-ai-connectivity-moat-2026"
 W, H = 1200, 675
 
 OUTPUT1 = f"/home/chino/thesignal/public/img/articles/{SLUG}.jpg"
@@ -14,12 +18,16 @@ OUTPUT2 = f"/home/chino/thesignal/_backup_dist/img/articles/{SLUG}.jpg"
 R2_URL = f"https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/articles/{SLUG}.jpg"
 
 PROMPT = (
-    "Professional stock photograph of a modern data center interior with rows of server racks "
-    "connected by high-speed networking cables and fiber optics. "
-    "Realistic photo, shallow depth of field, professional lighting, cool blue-white tones. "
-    "No text overlays, no logos, no branding. "
-    "Photographed with a full-frame DSLR, cinematic grading, 8K resolution."
+    "Professional stock photograph of the interior of a modern AI data center. "
+    "Rows of tall server racks filled with dense networking equipment, thick purple and blue "
+    "high-speed copper cables bundled and routed between network switches and GPU compute servers, "
+    "clean organized cable management, realistic metal and hardware detail, cool ambient lighting "
+    "with soft blue accents, shallow depth of field, professional industrial photography, "
+    "sharp focus on the cables and switch ports, 4K, shot on a full-frame DSLR. "
+    "No text overlays, no logos, no branding, no people, no illustration, no digital art, "
+    "no neon, no abstract shapes."
 )
+
 
 def main():
     import fal_client
@@ -39,7 +47,7 @@ def main():
         sys.exit(1)
 
     print(f"Generating hero image for '{SLUG}'...")
-    print(f"Prompt: {PROMPT[:100]}...")
+    print(f"Prompt: {PROMPT[:120]}...")
 
     result = fal_client.subscribe(
         "fal-ai/flux/schnell",
@@ -77,7 +85,6 @@ def main():
     r = requests.get(image_url, timeout=120)
     r.raise_for_status()
 
-    # Save to both locations
     from PIL import Image
     img_data = r.content
 
