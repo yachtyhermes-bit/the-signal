@@ -52,6 +52,7 @@ if (fs.existsSync(POSTS_DIR)) {
 }
 
 // Static pages
+urls.push({ loc: 'https://readthesignal.net/explainers/', priority: '0.7', changefreq: 'weekly' });
 urls.push({ loc: 'https://readthesignal.net/pricing/', priority: '0.7', changefreq: 'weekly' });
 urls.push({ loc: 'https://readthesignal.net/hive/', priority: '0.5', changefreq: 'daily' });
 urls.push({ loc: 'https://readthesignal.net/hive/boardroom/', priority: '0.4', changefreq: 'daily' });

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08080e">
+  <link rel="canonical" href="https://readthesignal.net/explainers/">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <meta name="robots" content="max-image-preview:large">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Oxanium:wght@400;500;600;700&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css?v=18">
+  <link rel="stylesheet" href="/css/pulse-badge.css">
+  <link rel="stylesheet" href="/css/nav.css?v=1">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-98KDVDFBCW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-98KDVDFBCW');
+  </script>
+  <script src="/js/prices.js" defer></script>
+  <script src="/js/search.js" defer></script>
+  <script src="/js/auth.js?v=2" defer></script>
+  <script src="/js/theme.js?v=2" defer></script>
+  <!-- ARTICLES_DATA_JSON -->
+  <title>Explainers — The Signal</title>
+  <meta name="description" content="The Signal's Explainers — plain-English breakdowns of the concepts driving AI, defense, space, cyber, quantum, and fintech.">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo"><img src="/img/logo-hex.jpg" alt="The Signal" class="logo-img"><span class="logo-text"><span class="logo-the">THE</span> <strong>SIGNAL</strong></span></a>
+      <div class="nav-actions">
+        <button class="nav-btn search-btn" id="searchToggle" aria-label="Search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <div class="auth-container" id="authContainer">
+            <button class="nav-btn auth-btn" id="authToggle" aria-label="Sign In">
+              <div class="auth-btn-avatar" id="authBtnAvatar">
+                <span class="auth-btn-initial" id="authBtnInitial"></span>
+                <img class="auth-btn-img" id="authBtnImg" src="" alt="" style="display:none">
+              </div>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="auth-btn-icon" id="authBtnIcon">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              <span class="auth-label" id="authLabel">Sign In</span>
+            </button>
+            <div class="auth-dropdown" id="authDropdown">
+              <!-- Signed-in Profile -->
+              <div class="auth-profile" id="authProfile" style="display:none">
+                <div class="auth-profile-header">
+                  <div class="auth-profile-avatar" id="authProfileAvatar">
+                    <img id="authProfileImg" src="" alt="" style="display:none">
+                    <span class="auth-profile-initial" id="authProfileInitial"></span>
+                  </div>
+                  <div class="auth-profile-info">
+                    <span class="auth-profile-name" id="authProfileName"></span>
+                    <span class="auth-profile-username" id="authProfileUsername"></span>
+                  </div>
+                  <div class="auth-profile-badge">HIVE</div>
+                </div>
+                <div class="auth-profile-stats" id="authProfileStats">
+                  <div class="auth-stat">
+                    <span class="auth-stat-label">Portfolio</span>
+                    <span class="auth-stat-value" id="authStatValue">-</span>
+                  </div>
+                  <div class="auth-stat">
+                    <span class="auth-stat-label">Return</span>
+                    <span class="auth-stat-value" id="authStatReturn">-</span>
+                  </div>
+                </div>
+                <div class="auth-drop-divider"></div>
+                <div class="auth-profile-nav">
+                  <a href="/sector/ai" class="auth-nav-item">AI</a>
+                  <a href="/sector/cyber" class="auth-nav-item">Cyber</a>
+                  <a href="/sector/defense" class="auth-nav-item">Defense</a>
+                  <a href="/sector/space" class="auth-nav-item">Space</a>
+                  <a href="/sector/mega-cap" class="auth-nav-item">Mega-Cap</a>
+                  <a href="/sector/quantum" class="auth-nav-item">Quantum</a>
+                  <a href="/sector/ai-power" class="auth-nav-item">AI Power</a>
+                  <a href="/sector/fintech" class="auth-nav-item">FinTech</a>
+                  <a href="/sector/etfs" class="auth-nav-item">ETFs</a>
+                  <div class="auth-nav-section-header">FEATURES</div>
+                  <a href="/hive" class="auth-nav-item">Hive</a>
+                  <a href="/signal-vs-the-street" class="auth-nav-item">Signal vs. Street</a>
+                  <a href="/stocks/" class="auth-nav-item">Stock Pages</a>
+                  <a href="/#scorecard" class="auth-nav-item">Signal Scorecard</a>
+                  <a href="/pricing" class="auth-nav-item">Signal Premium</a>
+                </div>
+                <div class="auth-drop-divider"></div>
+                <div class="auth-profile-footer">
+                  <a href="/account/settings" class="auth-footer-link">✏️ Edit Profile</a>
+                  <a href="/hive" class="auth-footer-link" onclick="navigateToHiveLeaderboard(event)">Leaderboard</a>
+                  <button class="auth-signout-btn" id="authSignOut">Sign Out</button>
+                </div>
+              </div>
+              <!-- Guest View -->
+              <div class="auth-guest" id="authGuest">
+                <div class="auth-guest-brand">
+                  <span class="auth-guest-title">Welcome to <strong>The Signal</strong></span>
+                  <span class="auth-guest-sub">Join the hive to track your portfolio</span>
+                </div>
+                <button class="auth-option auth-option-primary" onclick="showHiveJoinModal('login')">
+                  <span class="auth-option-icon">🔑</span> Sign In
+                </button>
+                <button class="auth-option" onclick="showHiveJoinModal('register')">
+                  <span class="auth-option-icon">✨</span> Create Account
+                </button>
+                <div class="auth-drop-divider"></div>
+                <div class="auth-profile-nav">
+                  <a href="/sector/ai" class="auth-nav-item">AI</a>
+                  <a href="/sector/cyber" class="auth-nav-item">Cyber</a>
+                  <a href="/sector/defense" class="auth-nav-item">Defense</a>
+                  <a href="/sector/space" class="auth-nav-item">Space</a>
+                  <a href="/sector/mega-cap" class="auth-nav-item">Mega-Cap</a>
+                  <a href="/sector/quantum" class="auth-nav-item">Quantum</a>
+                  <a href="/sector/ai-power" class="auth-nav-item">AI Power</a>
+                  <a href="/sector/fintech" class="auth-nav-item">FinTech</a>
+                  <a href="/sector/etfs" class="auth-nav-item">ETFs</a>
+                  <div class="auth-nav-section-header">FEATURES</div>
+                  <a href="/hive" class="auth-nav-item">Hive</a>
+                  <a href="/signal-vs-the-street" class="auth-nav-item">Signal vs. Street</a>
+                  <a href="/stocks/" class="auth-nav-item">Stock Pages</a>
+                  <a href="/#scorecard" class="auth-nav-item">Signal Scorecard</a>
+                  <a href="/pricing" class="auth-nav-item">Signal Premium</a>
+                </div>
+              </div>
+          </div>
+        </div>
+        <button class="nav-btn hamburger-btn" id="hamburgerToggle" aria-label="Menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <!-- DRAWER -->
+  <main class="main">
+    <div class="focus-bar">
+    <a href="/sector/ai" class="focus-item focus-ai">AI</a>
+    <span class="focus-divider">|</span>
+    <a href="/sector/cyber" class="focus-item focus-cyber">Cyber</a>
+    <span class="focus-divider">|</span>
+    <a href="/sector/defense" class="focus-item focus-defense">Defense</a>
+    <span class="focus-divider">|</span>
+    <a href="/sector/space" class="focus-item focus-space">Space</a>
+    <span class="focus-divider">|</span>
+    <a href="/sector/mega-cap" class="focus-item focus-mega">Mega-Cap</a>
+    <span class="focus-divider">|</span>
+    <a href="/sector/ai-power" class="focus-item focus-ai-power">AI Power</a>
+    <span class="focus-divider">|</span>
+    <a href="/sector/fintech" class="focus-item focus-fintech">FinTech</a>
+    <span class="focus-divider">|</span>
+    <a href="/sector/etfs" class="focus-item focus-etfs">ETFs</a>
+  </div>
+    <section class="sector-hero">
+      <div class="sector-hero-inner">
+        <h1 class="sector-hero-title">Explainers</h1>
+        <p class="sector-hero-desc">Concepts, decoded. Plain-English breakdowns of the ideas driving the market — each one linking to the stocks it moves.</p>
+      </div>
+    </section>
+    <section class="feed">
+      <div class="article-grid">
+        {{ARTICLE_CARDS}}
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <div class="footer-brand"><img src="/img/logo-hex.jpg" alt="The Signal" class="footer-logo"> THE <strong>SIGNAL</strong></div>
+          <p>Market intelligence for AI, defense, space, and cybersecurity stocks. Data-driven analysis that moves before the headlines.</p>
+          <div class="footer-social">
+            <a href="https://x.com/ReadTheSignal21" target="_blank" rel="noopener" aria-label="X / Twitter">𝕏</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Sectors</h4>
+          <a href="/sector/ai">AI</a>
+          <a href="/sector/defense">Defense</a>
+          <a href="/sector/cyber">Cyber</a>
+          <a href="/sector/space">Space</a>
+          <a href="/sector/mega-cap">Mega-Cap</a>
+          <a href="/sector/quantum">Quantum</a>
+          <a href="/sector/ai-power">AI Power</a>
+          <a href="/sector/fintech">FinTech</a>
+          <a href="/sector/etfs">ETFs</a>
+        </div>
+        <div class="footer-col">
+          <h4>Features</h4>
+          <a href="/stocks/">Stock Pages</a>
+          <a href="/about/">About</a>
+        </div>
+        <div class="footer-col">
+          <h4>More</h4>
+          <a href="/about/">Contact Us</a>
+          <a href="/">Home</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-tag">The Signal Editorial Team · readthesignal.net</div>
+        <div class="footer-copy">© 2026 The Signal — Market Intelligence. Data from public sources. Not investment advice.</div>
+      </div>
+    </div>
+  </footer>
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-backdrop" id="searchBackdrop"></div>
+    <div class="search-modal">
+      <div class="search-header">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search articles by title, ticker, sector, or tag…" autofocus>
+        <button class="search-close" id="searchClose" aria-label="Close search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+      <div class="search-empty" id="searchEmpty">Start typing to search articles…</div>
+    </div>
+  </div>
+  <style>
+  /* ── Sector Load More Pagination (#11) ── */
+  .article-card.sector-hidden { display: none; }
+  .sector-load-more {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    margin: 32px auto 48px;
+    padding: 14px 36px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 12px;
+    color: #e4e4e7;
+    font-family: Inter, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    letter-spacing: -0.01em;
+    grid-column: 1 / -1;
+    width: max-content;
+  }
+  .sector-load-more:hover {
+    background: linear-gradient(135deg, rgba(236,72,153,0.12), rgba(168,85,247,0.12));
+    border-color: rgba(236,72,153,0.4);
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(236,72,153,0.18);
+  }
+  .sector-load-more-count {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.45);
+  }
+  @media (max-width: 640px) {
+    .sector-load-more { padding: 12px 28px; font-size: 14px; }
+  }
+  </style>
+  <script>
+  // ── Sector Load More: reveal hidden cards in batches of 12 ──
+  function showMoreSector() {
+    var hidden = document.querySelectorAll('.article-card.sector-hidden');
+    var batchSize = 12;
+    var shown = 0;
+    for (var i = 0; i < hidden.length && shown < batchSize; i++) {
+      hidden[i].classList.remove('sector-hidden');
+      shown++;
+    }
+    var remaining = document.querySelectorAll('.article-card.sector-hidden').length;
+    var btn = document.getElementById('sectorLoadMore');
+    if (!btn) return;
+    var countEl = btn.querySelector('.sector-load-more-count');
+    if (remaining <= 0) {
+      btn.style.display = 'none';
+    } else if (countEl) {
+      countEl.textContent = remaining + ' remaining';
+    }
+  }
+  </script>
+  <script src="/js/nav.js?v=1" defer></script>
+</body>
+</html>

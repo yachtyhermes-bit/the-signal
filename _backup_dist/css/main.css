@@ -1198,6 +1198,203 @@ main {
   letter-spacing: 0.3px;
 }
 
+/* === EXPLAINER FORMAT — Key Terms, Bottom Line, Ticker Strip === */
+.article-body .explainer-box {
+  background: #1a1a2e;
+  border: 1px solid #2a2a44;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 24px 0;
+}
+.article-body .explainer-box-title {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: #8888aa;
+  margin-bottom: 16px;
+}
+.article-body .expl-term-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+}
+.article-body .expl-term {
+  background: #14142a;
+  border: 1px solid #2a2a44;
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.article-body .expl-term-name {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 4px;
+  font-family: 'JetBrains Mono', monospace;
+}
+.article-body .expl-term-def {
+  color: #b8b8cc;
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+.article-body .bottom-line-callout {
+  border-left: 4px solid #4338ca;
+  background: #14142a;
+}
+.article-body .bottom-line-callout .explainer-box-title {
+  color: #818cf8;
+}
+.article-body .bottom-line-callout p {
+  margin: 0;
+  color: #e6e6f0;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 500;
+}
+.article-body .explainer-tickers {
+  text-align: center;
+}
+.article-body .expl-ticker-strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.article-body .expl-ticker-chip {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid #4338ca;
+  color: #c7d2fe;
+  background: rgba(67, 56, 202, 0.12);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.article-body .expl-ticker-chip:hover {
+  background: #4338ca;
+  color: #ffffff;
+}
+[data-theme="light"] .article-body .explainer-box {
+  background: #ffffff;
+  border-color: #d0d0da;
+}
+[data-theme="light"] .article-body .explainer-box-title {
+  color: #4b5563;
+}
+[data-theme="light"] .article-body .expl-term {
+  background: #f7f7fa;
+  border-color: #d0d0da;
+}
+[data-theme="light"] .article-body .expl-term-name {
+  color: #1a1a2e;
+}
+[data-theme="light"] .article-body .expl-term-def {
+  color: #555570;
+}
+[data-theme="light"] .article-body .bottom-line-callout {
+  border-left-color: #4338ca;
+  background: #f7f7fa;
+}
+[data-theme="light"] .article-body .bottom-line-callout .explainer-box-title {
+  color: #4338ca;
+}
+[data-theme="light"] .article-body .bottom-line-callout p {
+  color: #1f2937;
+}
+[data-theme="light"] .article-body .expl-ticker-chip {
+  border-color: #4338ca;
+  color: #4338ca;
+  background: rgba(67, 56, 202, 0.08);
+}
+[data-theme="light"] .article-body .expl-ticker-chip:hover {
+  background: #4338ca;
+  color: #ffffff;
+}
+
+/* === EXPLAINERS SHELF (homepage) === */
+.explainers-shelf {
+  max-width: 1200px;
+  margin: 8px auto 0;
+  padding: 0 24px;
+}
+.shelf-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+.shelf-heading h2 {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0;
+}
+.shelf-link {
+  color: #818cf8;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.shelf-link:hover {
+  text-decoration: underline;
+}
+.expl-shelf-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.expl-shelf-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: #1a1a2e;
+  border: 1px solid #2a2a44;
+  border-radius: 12px;
+  padding: 18px 20px;
+  text-decoration: none;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.expl-shelf-card:hover {
+  border-color: #4338ca;
+  transform: translateY(-2px);
+}
+.expl-shelf-kicker {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  color: #818cf8;
+  text-transform: uppercase;
+}
+.expl-shelf-title {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #ffffff;
+}
+.expl-shelf-meta {
+  font-size: 12px;
+  color: #8888aa;
+}
+[data-theme="light"] .explainers-shelf h2 {
+  color: #1a1a2e;
+}
+[data-theme="light"] .expl-shelf-card {
+  background: #ffffff;
+  border-color: #d0d0da;
+}
+[data-theme="light"] .expl-shelf-title {
+  color: #1a1a2e;
+}
+[data-theme="light"] .expl-shelf-meta {
+  color: #6b7280;
+}
+
 /* === FOOTER === */
 .footer {
   border-top: 1px solid var(--border);

@@ -21,6 +21,7 @@ const SRC = path.join(ROOT, '_backup_dist');
 const DST = path.join(ROOT, 'dist');
 const ARTICLE_TEMPLATE = path.join(ROOT, 'articles', 'template.html');
 const SECTOR_TEMPLATE = path.join(ROOT, 'articles', 'sector-template.html');
+const EXPLAINERS_TEMPLATE = path.join(ROOT, 'articles', 'explainers-template.html');
 const POSTS_DIR = path.join(ROOT, 'articles', 'posts');
 const BUILD_TS = Date.now(); // cache-busting timestamp for images
 
@@ -296,6 +297,12 @@ articles.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
 const homepage = articles.slice(0, HOMEPAGE_LIMIT);
 const sectorArticles = articles.slice(HOMEPAGE_LIMIT);
 
+// Explainers (format === 'explainer') — for /explainers/ index + homepage shelf
+const explainers = articles.filter(a => a.format === 'explainer');
+if (explainers.length > 0) {
+  console.log(`  📗 ${explainers.length} explainer article(s) — /explainers/ + homepage shelf`);
+}
+
 // Homepage splits
 const featuredArticle = homepage.slice(0, 1);   // 1 featured
 const grid1 = homepage.slice(1, 7);              // 6 articles
@@ -327,6 +334,22 @@ indexHtml = indexHtml.replace('<!-- GRID_1 -->',
 
 indexHtml = indexHtml.replace('<!-- GRID_2 -->',
   `<section class="feed feed-continued">\n  <div class="article-grid">\n${grid2Html}\n  </div>\n</section>`);
+
+// Explainer shelf on homepage (inserted before GRID_3 placeholder)
+if (explainers.length > 0) {
+  const shelfCards = explainers.slice(0, 3).map(a => {
+    const readTime = (a.meta && a.meta.estimatedReadTime) || '1 min read';
+    const termCount = (a.keyTerms || []).length;
+    return `<a href="/article/${a.slug}" class="expl-shelf-card">\n` +
+      `  <span class="expl-shelf-kicker">EXPLAINER</span>\n` +
+      `  <span class="expl-shelf-title">${escapeHtml(a.title || '')}</span>\n` +
+      `  <span class="expl-shelf-meta">${termCount} key terms &middot; ${readTime}</span>\n</a>`;
+  }).join('\n');
+  const shelfHtml = `<section class="explainers-shelf">\n` +
+    `  <div class="shelf-heading"><h2>Explainers</h2><a href="/explainers/" class="shelf-link">See all &rarr;</a></div>\n` +
+    `  <div class="expl-shelf-grid">\n${shelfCards}\n  </div>\n</section>\n`;
+  indexHtml = indexHtml.replace('<!-- GRID_3 -->', shelfHtml + '<!-- GRID_3 -->');
+}
 
 indexHtml = indexHtml.replace('<!-- GRID_3 -->',
   `<section class="feed feed-continued">\n  <div class="article-grid">\n${grid3Html}\n  </div>\n</section>`);
@@ -407,6 +430,42 @@ if (!template) {
           bodyHtml = bodyHtml.slice(0, firstP + 4) + statsCard + bodyHtml.slice(firstP + 4);
         } else {
           bodyHtml = statsCard + bodyHtml;
+        }
+      }
+
+      // ── Explainer format: Key Terms + Bottom Line + Related Tickers ──
+      // (new-article convention: set "format": "explainer" + optional keyTerms[]
+      // [{term, definition}], bottomLine (string), tickers[] (related ticker list))
+      if (article.format === 'explainer') {
+        const keyTerms = (article.keyTerms || []).filter(t => t && t.term);
+        if (keyTerms.length > 0) {
+          const termsHtml = keyTerms.map(t =>
+            `<div class="expl-term"><div class="expl-term-name">${escapeHtml(t.term)}</div>` +
+            `<div class="expl-term-def">${escapeHtml(t.definition)}</div></div>`).join('');
+          const keyTermsBlock =
+            `<div class="explainer-box explainer-key-terms"><div class="explainer-box-title">Key Terms</div>` +
+            `<div class="expl-term-grid">${termsHtml}</div></div>`;
+          const firstP = bodyHtml.indexOf('</p>');
+          if (firstP !== -1) {
+            bodyHtml = bodyHtml.slice(0, firstP + 4) + keyTermsBlock + bodyHtml.slice(firstP + 4);
+          } else {
+            bodyHtml = keyTermsBlock + bodyHtml;
+          }
+        }
+        const bottomLine = article.bottomLine || '';
+        if (bottomLine) {
+          bodyHtml +=
+            `<div class="explainer-box bottom-line-callout"><div class="explainer-box-title">The Bottom Line</div>` +
+            `<p>${bottomLine}</p></div>`;
+        }
+        const relatedTickers = (article.tickers || (article.ticker ? [article.ticker] : []))
+          .filter(t => /^[A-Z.]+$/.test(String(t)));
+        if (relatedTickers.length > 0) {
+          const chipHtml = relatedTickers.map(t =>
+            `<a class="expl-ticker-chip" href="https://readthesignal.net/stocks/${escapeAttr(String(t))}/">${escapeHtml(String(t))}</a>`).join('');
+          bodyHtml +=
+            `<div class="explainer-box explainer-tickers"><div class="explainer-box-title">Dig Deeper — Signal Reports</div>` +
+            `<div class="expl-ticker-strip">${chipHtml}</div></div>`;
         }
       }
 
@@ -520,6 +579,37 @@ if (!sectorTemplate) {
     console.log(`  📂 /sector/${sector}/ — 0 articles (empty page)`);
   }
   console.log(`  ✅ ${sectorCount} sector pages generated`);
+}
+
+// ─── 8.4. Generate /explainers/ index page ───
+const explainersTemplate = fs.existsSync(EXPLAINERS_TEMPLATE)
+  ? fs.readFileSync(EXPLAINERS_TEMPLATE, 'utf8')
+  : null;
+
+if (!explainersTemplate) {
+  console.log('⚠️  No explainers template — skipping /explainers/ page');
+} else if (explainers.length === 0) {
+  console.log('  📗 /explainers/ — no explainer articles yet, skipping');
+} else {
+  const EXPL_PAGE_SIZE = 12;
+  const visible = explainers.slice(0, EXPL_PAGE_SIZE).map(a => articleCard(a)).join('\n');
+  const hidden = explainers.slice(EXPL_PAGE_SIZE).map(a => articleCard(a).replace('class="article-card"', 'class="article-card sector-hidden"')).join('\n');
+  const loadMoreBtn = explainers.length > EXPL_PAGE_SIZE
+    ? `\n<button class="sector-load-more" id="sectorLoadMore" onclick="showMoreSector()"><span class="sector-load-more-text">Load More Articles</span><span class="sector-load-more-count">${explainers.length - EXPL_PAGE_SIZE} remaining</span></button>`
+    : '';
+  const cards = visible + '\n' + hidden + loadMoreBtn;
+
+  let html = explainersTemplate
+    .replace('{{ARTICLE_CARDS}}', cards)
+    .replace('<!-- ARTICLES_DATA_JSON -->',
+      `<script id="articles-data" type="application/json">${articlesJson}</script>`);
+
+  html = injectRocketNav(html);
+
+  const outDir = path.join(DST, 'explainers');
+  fs.mkdirSync(outDir, { recursive: true });
+  fs.writeFileSync(path.join(outDir, 'index.html'), html);
+  console.log(`  📗 /explainers/ — ${explainers.length} explainers`);
 }
 
 // ─── 8.5. Inject Trending Stocks list from live prices ───
