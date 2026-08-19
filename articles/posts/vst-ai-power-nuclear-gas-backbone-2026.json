@@ -1,0 +1,54 @@
+{
+  "slug": "vst-ai-power-nuclear-gas-backbone-2026",
+  "title": "From Retirement Path to AI Backbone",
+  "subtitle": "Vistra's reactors were sunset assets in 2020. Meta and AWS now have them contracted for twenty years, the gas fleet is doubling down — and the shares trade a third off their highs.",
+  "summary": "Vistra signed the largest corporate-backed nuclear uprate deal in U.S. history, stacked a pending $4.7B gas acquisition on top, and printed record Q2 EBITDA — while the shares got cut roughly a third from their late-2025 highs. We break down the contracted backlog, the PJM scarcity backdrop, and the de-rating that has the market paying less for more.",
+  "ticker": "VST",
+  "sector": "ai-power",
+  "sentiment": "bullish",
+  "date": "2026-08-19T00:00:00Z",
+  "price": 140.52,
+  "image": {
+    "src": "/img/articles/vst-ai-power-nuclear-gas-backbone-2026.jpg"
+  },
+  "bodyHtml": "<p>In 2020, Vistra's nuclear plants were on a path to retirement. Less than six years later, they are the contracted backbone of the AI build-out, with two hyperscalers locked in for twenty years. That inversion — from sunset asset to critical infrastructure — is the entire story here, and the market seems to have lost track of it in the middle of a sector-wide de-rating.</p><div class=\"stats-card\"><div class=\"stats-card-title\">The Numbers That Matter</div><table class=\"stats-table\"><tr><td class=\"stat-label\">Price <span class=\"stats-live-badge\">LIVE</span></td><td class=\"stat-value\" data-live-ticker=\"VST\" data-live-field=\"price\">$140.52</td></tr><tr><td class=\"stat-label\">Market Cap</td><td class=\"stat-value\">$47.4B</td></tr><tr><td class=\"stat-label\">Forward P/E</td><td class=\"stat-value\">13.6</td></tr><tr><td class=\"stat-label\">Total Revenue (TTM)</td><td class=\"stat-value\">$19.2B</td></tr><tr><td class=\"stat-label\">52-Week Low</td><td class=\"stat-value\">$132.66</td></tr><tr><td class=\"stat-label\">52-Week High</td><td class=\"stat-value\">$219.82</td></tr><tr><td class=\"stat-label\">Analyst Consensus</td><td class=\"stat-value\">Strong Buy</td></tr><tr><td class=\"stat-label\">Analyst Target Mean</td><td class=\"stat-value\">$222.11</td></tr></table><div class=\"stats-card-note\">Price refreshes live &middot; All other figures as of August 18, 2026</div></div><p>Start with the moat. Vistra runs roughly 6.5 GW of nuclear across six reactors at four plants — the second-largest competitive nuclear fleet in America, behind only Constellation — and every license in the fleet has now been extended, with Comanche Peak through mid-century and Perry through 2046. In January, Meta signed 20-year power purchase agreements for 2,609 MW of that output: 2,176 MW of operating capacity at Perry and Davis-Besse in Ohio, plus 433 MW of uprates. That is the largest corporate-backed nuclear uprate program in U.S. history, more than 15% of it new supply to PJM, and Vistra expects mid-teens levered returns on the package.</p><p>Amazon Web Services matched the play in ERCOT, signing a 20-year agreement for up to 1,200 MW of carbon-free power from Comanche Peak that ramps from late 2027. On the demand side of the same trade, Meta broke ground in February on a $10B-plus, roughly 1 GW data-center campus in Indiana. Five years ago these reactors were retirement candidates; today they are uprate candidates with a nine-year construction program and about 3,000 jobs attached. The AI build-out did that.</p><p>The nuclear contracts win the long game, but the gas fleet wins the now — and the now is where the scarcity lives. Interconnection queues run three to four years and new builds take five to seven, which makes existing dispatchable megawatts the only bridge across the gap. Vistra has been buying that bridge: the pending $4.7B Cogentrix acquisition, approved by FERC in early August and still awaiting close, adds 5,496 MW of modern gas plants across PJM, ISO-NE, and ERCOT, on top of the roughly 2,600 MW Lotus bolt-on that closed last fall. Pro forma, the fleet approaches 50 GW across about 18 states, up from roughly 44 GW today.</p><p>The market backdrop is doing the rest. PJM capacity prices have set records four straight years — $269.92, then $329.17, then $333.44 per MW-day, clearing at the cap — while the grid has fallen thousands of megawatts short of its reliability target three years running. Data centers are roughly 94% of PJM's projected load growth through 2030, and the interconnection queue is backed up with more than 250 GW of requests. In that environment, in-market, always-available, PPA-backed megawatts are about the scarcest asset class in American energy.</p><p>Vistra is not the largest generator in the country — Constellation holds that title at roughly 55 GW after closing its Calpine deal — and Talen owns the flashiest co-location story. But Vistra is the only major independent producer stacking all the layers at once: nuclear, a big dispatchable gas fleet, about 5 million retail customers across 18 states, and a preferred-provider role in Helix, the $10B-plus KKR and NVIDIA data-center venture. A hyperscaler can get contracted nuclear, bridge gas, and a direct line into a dedicated AI campus builder from a single counterparty. Nobody else in the sector sells that bundle.</p><p>So why is the stock trading roughly a third below its late-2025 highs? Because the whole AI-power complex de-rated through 2026 — the trade cooled, not the fundamentals. Vistra printed record Q2 adjusted EBITDA, up 30-31% year over year, and its 2027 EBITDA midpoint of $7.4-7.8B excludes both Cogentrix and the Meta contracts. The headline GAAP miss that spooked the tape came from a $472M mark-to-market hedging loss, not operations, and management flagged softer ERCOT pricing on the same call. Meanwhile the company is hedged through roughly 94% of next year and has bought back so much stock that the share count is down about 30%.</p><p>The bottom line is a gap between backlog and valuation. The AI build-out's electricity backbone has never been more contracted, and the market has never been more skeptical of paying for it. If PJM's scarcity persists — and four straight record auctions say it will — that contracted cash flow compounds while the shares sit near their 52-week low. The bear case is a grid build-out that finally outruns demand; the bull case is a multi-year re-rating of the most complete AI-power franchise in the sector. We know which side of that trade we're on.</p><p class=\"disclosure\">Disclosure: The Signal holds no position in VST. Positions may change. This is not financial advice.</p>",
+  "tags": [
+    "VST",
+    "Vistra",
+    "nuclear",
+    "AI power",
+    "data centers",
+    "PJM"
+  ],
+  "links": [
+    {
+      "label": "Vistra + Meta nuclear PPA announcement (Jan 2026) →",
+      "url": "https://investor.vistracorp.com/2026-01-09-Vistra-and-Meta-Announce-Agreements-to-Support-Nuclear-Plants-in-PJM-and-Add-New-Nuclear-Generation-to-the-Grid"
+    },
+    {
+      "label": "Enverus: Vistra doubles down on data centers →",
+      "url": "https://www.enverus.com/blog/vistra-doubles-down-on-data-centers"
+    },
+    {
+      "label": "Investor's Business Daily: Vistra stock and the AI data-center trade →",
+      "url": "https://www.investors.com/research/the-new-america/vistra-stock-nuclear-power-ai-data-center-s-p-500"
+    },
+    {
+      "label": "Vistra Investor Relations →",
+      "url": "https://investor.vistracorp.com/"
+    }
+  ],
+  "meta": {
+    "keyMetrics": {
+      "Price": "$140.52",
+      "Market Cap": "$47.4B",
+      "Forward P/E": "13.6",
+      "Total Revenue (TTM)": "$19.2B",
+      "52-Week Low": "$132.66",
+      "52-Week High": "$219.82",
+      "Analyst Consensus": "Strong Buy",
+      "Analyst Target Mean": "$222.11"
+    },
+    "estimatedReadTime": "6 min read"
+  }
+}
