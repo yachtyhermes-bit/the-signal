@@ -7024,6 +7024,10 @@ body.pulse-modal-open {
   .ticker-item      { font-size: 12px; padding: 0 22px; }
 }
 
+/* Explainer infographic heroes: never crop — show full image (text bars at bottom must stay visible) */
+.article-image--contain { max-height: none !important; overflow: visible !important; }
+.article-image--contain img { width: 100% !important; height: auto !important; object-fit: contain; }
+
 /* Extra-wide screens (≥1600px) */
 @media (min-width: 1600px) {
   .nav-inner        { max-width: 1600px; }

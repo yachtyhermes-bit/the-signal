@@ -395,7 +395,8 @@ if (!template) {
       const sector = article.sector || 'ai';
       const sectorName = SECTORS[sector] || sector.toUpperCase();
       const subtitle = article.subtitle ? `<p class="article-subtitle">${article.subtitle}</p>` : '';
-      const imageHtml = `<div class="article-image"><img src="${imageSrc}" alt="${escapeHtml(imageCaption)}" width="1200" height="675"></div>`;
+      const imageFitClass = (article.image && article.image.fit === 'contain') ? ' article-image--contain' : '';
+      const imageHtml = `<div class="article-image${imageFitClass}"><img src="${imageSrc}" alt="${escapeHtml(imageCaption)}" width="1200" height="675"></div>`;
 
       let tagsHtml = '';
       const tags = article.tags || [];
