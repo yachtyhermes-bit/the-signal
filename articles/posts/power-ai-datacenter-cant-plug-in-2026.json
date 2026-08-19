@@ -1,0 +1,73 @@
+{
+  "slug": "power-ai-datacenter-cant-plug-in-2026",
+  "title": "Power, Explained: The Real Reason Your AI Data Center Can't Plug In",
+  "subtitle": "Everyone thinks AI is gated by GPUs. It's actually gated by extension cords. Here's how power actually gets to a gigawatt campus, and why electrons are the new HBM.",
+  "summary": "The most expensive part of an AI data center isn't the chips anymore. It's getting someone to turn the lights on. Front-of-the-meter vs behind-the-meter, and why the power stack is the new chokepoint.",
+  "format": "explainer",
+  "ticker": "GEV",
+  "tickers": ["GEV", "VST", "CEG", "BE"],
+  "sector": "ai-power",
+  "sentiment": "neutral",
+  "date": "2026-08-19T14:00:00Z",
+  "image": {
+    "src": "/img/articles/power-ai-datacenter-cant-plug-in-2026.jpg"
+  },
+  "keyTerms": [
+    {
+      "term": "Front-of-the-Meter (FTM)",
+      "definition": "Power made miles away at a utility plant. You buy it like you buy power at home. That's GEV, VST, CEG."
+    },
+    {
+      "term": "Behind-the-Meter (BTM)",
+      "definition": "Power made on your property, behind your meter. No transmission. You own it. That's BE."
+    },
+    {
+      "term": "SOFC - Solid Oxide Fuel Cell",
+      "definition": "BE's box. Imagine a ceramic sandwich that gets super hot - like 800 degrees C - and when you feed it natural gas, it doesn't burn it. It electrochemically pulls electrons off. No flame, just power. Each box is about the size of a parking space and makes 100kW. Want more? Add more boxes."
+    },
+    {
+      "term": "7HA Turbine",
+      "definition": "GEV's monster. It's literally a jet engine the size of a house. Suck in air, burn gas, spin a turbine, make 400-500MW. Two of them = 1GW. Built in Greenville, South Carolina. They have 100GW of orders right now - sold out through 2030."
+    },
+    {
+      "term": "PPA - Power Purchase Agreement",
+      "definition": "A 20-year subscription to electricity. Microsoft just signed one for 100% of Three Mile Island's output. It's take-or-pay. You pay even if you change your mind."
+    },
+    {
+      "term": "LTSA - Long-Term Service Agreement",
+      "definition": "You buy a turbine once. You pay GE to babysit it for 25 years. That's where GEV's $163B of future work lives."
+    }
+  ],
+  "bottomLine": "The AI trade started as GPUs. Now it's a power stack - gas pipe, electrons, and 20 years of service. GEV owns the factory and the 25-year blade. VST and CEG own the toll road. BE owns the fast lane. Most big campuses will end up with both: Bloom now to start the clock, utility power later to take over baseload.",
+  "bodyHtml": "<p>Everyone thinks AI is gated by GPUs. It's actually gated by extension cords. Here's how power actually gets to a gigawatt campus, and why electrons are the new HBM.</p><p>The most expensive part of an AI data center isn't the chips anymore. It's getting someone to turn the lights on.</p><p>So what's the actual problem?</p><p>Picture you just leased 100 acres in Ohio to build a 1GW AI campus. That's roughly the power for 800,000 homes, or one full training cluster.</p><p>You call your local utility and they say: \"Cool. We can get you power in 2031.\"</p><p>That's not a joke. Constellation just got told by PJM - the grid operator for 13 states - that Three Mile Island, a nuclear plant that already exists, can't reconnect until 2031. Four years of sitting there doing nothing.</p><p>Why? Because the US grid was built for suburbs and factories, not for a building that wants a nuclear reactor's worth of power overnight. To get power the traditional way, you have to:</p><p>Build a power plant somewhere else<br>Build new high-voltage towers for 10-100 miles<br>Wait in line for the grid to study you and say yes</p><p>That line is called the interconnection queue. Texas is at 4+ years. Every gas turbine factory in the West is sold out. So the AI industry did what it always does when something is slow and centralized: it made it modular and put it in the parking lot.</p><p>That's the whole electrification stack in one sentence: Front-of-the-meter vs Behind-the-meter.</p><p>The Two Ways to Skin a Gigawatt</p><p>Let's make this concrete.</p><p><img src=\"/img/articles/power-1gw-explained.jpg\" alt=\"1GW Explained: What 1GW Actually Looks Like\" style=\"width:100%;max-width:100%;height:auto;border-radius:8px;margin:20px 0;\"></p><p>Path 1: The GEV / Vistra / Constellation way - The Utility Plant</p><p>You want 1GW? Cool.</p><p>GEV builds two 7HA turbines. An EPC like Bechtel pours a power plant around them. Vistra or Constellation owns it. Then you have to build transmission towers, a substation, and wait for PJM or ERCOT to let you connect.</p><p>Units for 1GW: 2 turbines<br>Location: Off-site, miles away<br>Timeline: 3-7 years<br>If one trips: You lose 500MW, 50% of your campus goes dark.</p><p><img src=\"/img/articles/power-gev-flow-ftm.jpg\" alt=\"GEV Flow - Front-of-Meter\" style=\"width:100%;max-width:100%;height:auto;border-radius:8px;margin:20px 0;\"></p><p>And you don't buy the turbine. You buy the power from Vistra or Constellation. They clear 18,875MW of capacity for 2028-29 in PJM alone and get paid just to exist, plus the PPA premium. That's why analysts model 24% operating margins on these deals - fuel is $5-10/MWh, they sell it to you for $75-80 vs $45 market. That ∼70% premium is because only nuclear is both 24/7 and clean, and hyperscalers will pay anything for that label.</p><p>Path 2: The Bloom way - The Parking Lot</p><p>You want 1GW? Cool.</p><p>Bloom builds 10,000 boxes in Fremont, California. Each one is 100kW. Or 5,000 boxes if you use their 200kW version. You truck them to your parking lot. One big gas pipe comes to the site, then a manifold splits it like gas lines to apartments. One pipe feeds all 10,000. Short cable into your data center.</p><p>Units for 1GW: 5,000-10,000 boxes (25MW per acre)<br>Location: On-site, literally in the parking lot<br>Timeline: 90 days to 12 months<br>If one trips: You lose 0.01%. The other 9,999 keep running. N+1 redundancy, just like servers.</p><p><img src=\"/img/articles/power-bloom-flow-btm.jpg\" alt=\"Bloom Flow - Behind-the-Meter\" style=\"width:100%;max-width:100%;height:auto;border-radius:8px;margin:20px 0;\"></p><p>That's why Bloom's backlog is $20B now. Product backlog alone is ∼$6B, up 250% year-over-year. More than half of the data center backlog is now non-Oracle - other hyperscalers, neoclouds, colo.</p><p>AEP, the biggest utility in Ohio, did up to 1GW with Bloom. First 100MW for AWS and Cologix data centers, then a $2.65B 900MW order in Wyoming with a 20-year offtake. Equinix did 100MW+ across its IBX sites. Why? Because they could start selling data center racks now, not in 2031.</p><p>And Brookfield is the bank that makes it work. They went from a $5B financing framework to $25B in June. They buy the boxes, you rent them. Bloom gets paid up front, you get power without capex.</p><p>Wait, 10,000 boxes sounds like a nightmare to maintain?</p><p>It sounds crazy until you realize it's less scary than 2 turbines.</p><p>Think about fuel first. You're not refueling 10,000 boxes with trucks. You have one pipeline. One. It feeds a manifold. It's like an apartment building - one gas main, 10,000 stoves.</p><p>Think about failure. If you have 2 GE turbines and one trips, you're calling a crane crew for 3 weeks. If you have 10,000 Bloom boxes and one trips, your software shrugs. That's 0.01% of capacity. You hot-swap that 100kW module while everything else runs.</p><p>And yes, they have software for that. Bloom's fuel cells are based on proprietary solid oxide tech, and they partnered with C3 AI specifically to revolutionize fuel cell performance, service, and engineering analytics. Every stack has temperature, voltage, fuel flow sensors. Their ops center sees degradation months before failure.</p><p>The patent is the moat here. The stack design - interconnects, riser seals, perimeter seals - is patented. The method of refurbishing a component is patented. Only Bloom can refurbish a stack every 5-7 years. So that service annuity is a monopoly. No cheap third-party stack exists.</p><p>GE's world is different. There are cheaper third-party shops - MD&A, Sulzer, PSM will fix a GE turbine cheaper. GE even has a page that says \"we repair third-party repairs\" and that they maintain pricing integrity when you come back. But hyperscalers don't risk it. You lose your performance guarantee and remote monitoring. For a site where an hour down is millions, you pay OEM.</p><p>So who actually builds all this stuff?</p><p>This is the part investors miss.</p><p>GEV never sells to Microsoft directly. The chain is:</p><p><img src=\"/img/articles/power-gev-flow-ftm.jpg\" alt=\"GEV Flow - Front-of-Meter\" style=\"width:100%;max-width:100%;height:auto;border-radius:8px;margin:20px 0;\"></p><p>When Chevron and Engine No.1 announced a 4GW plant with seven 7HA turbines, they were acting like a utility. When Crusoe bought 29 LM2500XPRESS turbines for AI data centers, they were acting like a utility.</p><p>Bloom sells to YOU directly:</p><p><img src=\"/img/articles/power-bloom-flow-btm.jpg\" alt=\"Bloom Flow - Behind-the-Meter\" style=\"width:100%;max-width:100%;height:auto;border-radius:8px;margin:20px 0;\"></p><p>That's 3 middlemen and 100 miles of wire skipped. That's the 90 days vs 3-7 years.</p><p>What if Microsoft just... changes its mind?</p><p>PPAs are not a handshake. They're 20-year, take-or-pay contracts. Microsoft signed for 100% of Three Mile Island for 20 years at a huge premium. If they say \"we don't want it,\" they still pay.</p><p>If they truly default, Constellation still owns Crane Clean Energy Center - an 835MW nuclear plant. They can sell that power to the PJM grid at market price. They lose the 70% premium, but they don't lose the plant. Plus they get capacity market payments just for existing.</p><p>If a Bloom customer walks? Brookfield owns 10,000 boxes on wheels. They put them on trucks and move them to the next campus. That's why the $25B framework isn't a bet on one customer. The CEO put it this way: several customers who had alternative solutions in place abandoned them and came to Bloom. Once customers are in, they place more orders.</p><p>GEV already got paid when the turbine shipped. Vistra/CEG takes the risk if the hyperscaler walks. Bloom already got paid when the box shipped. Brookfield takes the risk if the customer walks. That's why Brookfield diversified across Oracle, Nebius, Equinix, AEP.</p><p>In a world where everyone is desperate for power, a canceled gigawatt doesn't stay vacant long. There are five other hyperscalers in line behind you.</p><p class=\"disclosure\">Disclosure: This article is for informational purposes only and does not constitute investment advice. The Signal may hold positions in securities mentioned. Past performance is not indicative of future results. Always conduct your own research before making investment decisions.</p>",
+  "tags": [
+    "power",
+    "data center",
+    "GEV",
+    "Bloom",
+    "VST",
+    "CEG",
+    "AI infrastructure"
+  ],
+  "links": [
+    {
+      "label": "GE Vernova Gas Turbines",
+      "url": "https://www.gevernova.com/power-generation/gas-power"
+    },
+    {
+      "label": "Bloom Energy",
+      "url": "https://www.bloomenergy.com/"
+    },
+    {
+      "label": "Vistra Energy",
+      "url": "https://www.vistracorp.com/"
+    },
+    {
+      "label": "Constellation Energy",
+      "url": "https://www.constellationenergy.com/"
+    }
+  ],
+  "meta": {
+    "estimatedReadTime": "8 min read"
+  }
+}
