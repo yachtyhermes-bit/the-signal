@@ -6,10 +6,8 @@
   "format": "explainer",
   "ticker": "GEV",
   "tickers": [
-    "GEV",
     "VST",
-    "CEG",
-    "BE"
+    "CEG"
   ],
   "sector": "ai-power",
   "sentiment": "neutral",
@@ -58,7 +56,7 @@
   "links": [
     {
       "label": "GE Vernova Gas Turbines",
-      "url": "https://www.gevernova.com/power-generation/gas-power"
+      "url": "https://www.gevernova.com/gas-power"
     },
     {
       "label": "Bloom Energy",
