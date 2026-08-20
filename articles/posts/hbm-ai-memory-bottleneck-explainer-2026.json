@@ -14,7 +14,8 @@
   "sentiment": "neutral",
   "date": "2026-08-18T14:00:00Z",
   "image": {
-    "src": "/img/articles/hbm-ai-memory-bottleneck-explainer-2026.jpg"
+    "src": "/img/articles/hbm-ai-memory-bottleneck-explainer-2026.jpg",
+    "fit": "contain"
   },
   "keyTerms": [
     {

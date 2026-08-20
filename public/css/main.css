@@ -7051,6 +7051,19 @@ body.pulse-modal-open {
 .article-image--contain { max-height: none !important; overflow: visible !important; }
 .article-image--contain img { width: 100% !important; height: auto !important; object-fit: contain; }
 
+/* HBM cover (hbm-ai-memory-bottleneck-explainer-2026): page H1 already titles the article, so cut the baked-in title band off the hero — show the bottom 75% (GPU/HBM art + comparison boxes + bottom banner) */
+.article-image--hbm-ai-memory-bottleneck-explainer-2026.article-image--contain {
+  max-height: none !important;
+  overflow: hidden !important;
+  aspect-ratio: 2048 / 862;
+}
+.article-image--hbm-ai-memory-bottleneck-explainer-2026.article-image--contain img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center bottom;
+}
+
 /* Extra-wide screens (≥1600px) */
 @media (min-width: 1600px) {
   .nav-inner        { max-width: 1600px; }

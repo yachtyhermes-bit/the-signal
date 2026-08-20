@@ -396,7 +396,7 @@ if (!template) {
       const sectorName = SECTORS[sector] || sector.toUpperCase();
       const subtitle = article.subtitle ? `<p class="article-subtitle">${article.subtitle}</p>` : '';
       const imageFitClass = (article.image && article.image.fit === 'contain') ? ' article-image--contain' : '';
-      const imageHtml = `<div class="article-image${imageFitClass}"><img src="${imageSrc}" alt="${escapeHtml(imageCaption)}" width="1200" height="675"></div>`;
+      const imageHtml = `<div class="article-image${imageFitClass} article-image--${slug}"><img src="${imageSrc}" alt="${escapeHtml(imageCaption)}" width="1200" height="675"></div>`;
 
       let tagsHtml = '';
       const tags = article.tags || [];
@@ -868,9 +868,10 @@ function featuredCard(a) {
   const readTime = (a.meta && a.meta.estimatedReadTime) || '1 min read';
   const dateStr = formatDate((a.date || '').slice(0, 10));
   const premiumBadge = a.premium === true ? '<span class="premium-badge">PREMIUM</span>' : '';
+  const containClass = (a.image && a.image.fit === 'contain') ? ' card-image--contain' : '';
 
   return `<a href="/article/${a.slug}" class="article-card featured-card">
-    <div class="card-image"><img src="${img}" alt="${escapeAttr(a.title || '')}" loading="eager" decoding="async" width="1200" height="675"></div>
+    <div class="card-image${containClass}"><img src="${img}" alt="${escapeAttr(a.title || '')}" loading="eager" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
       <span class="ticker-badge">${escapeHtml(a.ticker || '')}</span>${premiumBadge}
@@ -888,9 +889,10 @@ function articleCard(a) {
   const summary = (a.summary || '').substring(0, 160);
   const ellipsis = (a.summary || '').length > 160 ? '...' : '';
   const premiumBadge = a.premium === true ? '<span class="premium-badge">PREMIUM</span>' : '';
+  const containClass = (a.image && a.image.fit === 'contain') ? ' card-image--contain' : '';
 
   return `<a href="/article/${a.slug}" class="article-card">
-    <div class="card-image"><img src="${img}" alt="${escapeAttr(a.title || '')}" loading="lazy" decoding="async" width="1200" height="675"></div>
+    <div class="card-image${containClass}"><img src="${img}" alt="${escapeAttr(a.title || '')}" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
       <span class="ticker-badge">${escapeHtml(a.ticker || '')}</span>${premiumBadge}
