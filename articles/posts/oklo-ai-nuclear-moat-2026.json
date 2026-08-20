@@ -1,0 +1,82 @@
+{
+  "slug": "oklo-ai-nuclear-moat-2026",
+  "title": "Oklo's Moat Isn't the Reactor. It's the Fuel Cycle, the Licensing Wall, and Hyperscalers Who Can't Wait.",
+  "subtitle": "With the first DOE pilot reactor to reach criticality on private land, an owned fuel-recycling cycle no rival can copy, and a 14-gigawatt demand pipeline, Oklo has stacked the hardest moat in American energy just as the AI buildout runs out of power.",
+  "summary": "Oklo has spent six years grinding through the hardest licensing gauntlet in US energy and emerged with a triple-stacked moat: a first-mover position under the DOE Reactor Pilot Program, a vertically integrated fuel-recycling business no American rival has, and a roughly 14-gigawatt pipeline of mostly non-binding hyperscaler LOIs. Its Groves reactor reached first criticality in August 2026 — the fifth DOE pilot reactor to do so and the first on private land — while the company holds ~$3 billion in liquidity against effectively no debt. Pre-revenue and honest about it, Oklo is the purest way to own the bet that AI's power shortage is measured in years, not megawatts.",
+  "ticker": "OKLO",
+  "sector": "ai-power",
+  "sentiment": "bullish",
+  "date": "2026-08-19T22:00:00Z",
+  "tags": [
+    "small-modular-reactors",
+    "nuclear-energy",
+    "ai-power",
+    "clean-energy",
+    "nuclear-fuel",
+    "oklo"
+  ],
+  "image": {
+    "src": "/img/articles/oklo-ai-nuclear-moat-2026.jpg",
+    "caption": "A modern small modular reactor facility — the compact, factory-built nuclear plants Oklo is deploying to power the AI buildout. Photo: The Signal / AI-generated."
+  },
+  "links": [
+    {
+      "label": "Oklo Q2 2026 Form 10-Q (SEC)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1849056/000162828026054571/oklo-20260630.htm"
+    },
+    {
+      "label": "Oklo FY2025 Form 10-K (SEC)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1849056/000162828026018698/oklo-20251231.htm"
+    },
+    {
+      "label": "POWER — Meta's 6.6 GW nuclear deals",
+      "url": "https://www.powermag.com/meta-locks-in-up-to-6-6-gw-of-nuclear-power-through-deals-with-vistra-oklo-and-terrapower/"
+    },
+    {
+      "label": "POWER — Oklo's Groves reactor reaches criticality",
+      "url": "https://www.powermag.com/oklos-groves-becomes-fifth-doe-pilot-reactor-to-reach-criticality-first-on-private-land/"
+    },
+    {
+      "label": "Federal Register — NRC Part 53 final rule",
+      "url": "https://www.federalregister.gov/documents/2026/03/30/2026-06048/risk-informed-technology-inclusive-regulatory-framework-for-advanced-reactors"
+    },
+    {
+      "label": "Utility Dive — Oklo 75-MW design & 14 GW pipeline",
+      "url": "https://www.utilitydive.com/news/oklo-75-mw-reactor-design-smr-nuclear/743578/"
+    }
+  ],
+  "meta": {
+    "author": "The Signal Editorial Team",
+    "estimatedReadTime": "7 minutes",
+    "editorialTags": [
+      "smr",
+      "nuclear",
+      "ai-power",
+      "clean-energy",
+      "oklo"
+    ],
+    "seoKeywords": [
+      "Oklo",
+      "OKLO stock",
+      "small modular reactor",
+      "SMR",
+      "nuclear AI power",
+      "Oklo Aurora reactor",
+      "AI data center power crunch"
+    ],
+    "relatedTickers": [
+      "CEG",
+      "VST",
+      "GEV"
+    ],
+    "keyMetrics": {
+      "Cash & Short-Term Investments": "~$3.0B",
+      "Total Debt": "~$0.7M (effectively debt-free)",
+      "Demand Pipeline (LOIs)": "~14 GW",
+      "Aurora Reactor Output": "15–75 MWe",
+      "First Power Target": "2028",
+      "Analyst Consensus": "Buy"
+    }
+  },
+  "bodyHtml": "<p>America's data centers gulped about 4.4 percent of the nation's electricity in 2023, and federal researchers see that share nearly tripling by 2028. The hyperscalers funding the AI buildout have done the math: wind and gas alone will not close that gap. That is the vacuum Oklo is sprinting into.</p>\n<div class=\"stats-card\"><div class=\"stats-card-title\">The Numbers That Matter</div><table class=\"stats-table\"><tr><td class=\"stat-label\">Cash &amp; Short-Term Investments</td><td class=\"stat-value\">~$3.0B</td></tr><tr><td class=\"stat-label\">Total Debt</td><td class=\"stat-value\">~$0.7M (effectively debt-free)</td></tr><tr><td class=\"stat-label\">Demand Pipeline (LOIs)</td><td class=\"stat-value\">~14 GW</td></tr><tr><td class=\"stat-label\">Aurora Reactor Output</td><td class=\"stat-value\">15–75 MWe</td></tr><tr><td class=\"stat-label\">First Power Target</td><td class=\"stat-value\">2028</td></tr><tr><td class=\"stat-label\">Analyst Consensus</td><td class=\"stat-value\">Buy</td></tr></table></div>\n<p>Data center demand is hitting a grid built for gradual growth, and hyperscalers are writing nuclear checks directly: Meta alone has locked in up to 6.6 gigawatts across Vistra, Oklo, and TerraPower. When one customer signs for that much fission, small modular reactors stop being a science project and become a procurement category.</p>\n<p>Oklo's moat is a triple stack: the hardest licensing barrier in American energy, a first-mover build-out under the DOE Reactor Pilot Program, and a vertically integrated fuel-recycling business no US rival can match. If the stack holds, Oklo becomes the supplier hyperscalers cannot easily swap out — and buyers who cannot wait pay a premium for certainty.</p>\n<p>The reactor is Aurora, a sodium-cooled, metal-fueled fast reactor with EBR-II heritage, sold as a product line from 15 to 75 megawatts electric. It can burn fresh, recycled, or down-blended fuel — a flexibility that is the hinge of the fuel strategy.</p>\n<p>The licensing record is where the patience shows. In March 2020 Oklo filed the first-ever combined license application for an advanced non-light-water reactor, which ended in a denial without prejudice in 2022. It regrouped, cleared the first NRC Phase I pre-application readiness assessment with no significant gaps in July 2025, and won approval of its Principal Design Criteria topical report in April 2026.</p>\n<p>Part 53, the NRC's new framework for advanced reactors, only took effect on April 29, 2026, and Oklo says it is still evaluating whether to file under it. Aurora-INL, by contrast, is being built under DOE Reactor Pilot Program authorization — selected in August 2025, its Preliminary Documented Safety Analysis approved in June 2026 — not an NRC license.</p>\n<p>Execution skeptics got their answer in August 2026, when the Groves Isotope Test Reactor in Lockhart, Texas reached first criticality — the fifth DOE pilot reactor to do so, the first on private land, under a year from groundbreaking.</p>\n<p>Then comes the differentiator no US rival has: the fuel cycle. Oklo completed the first end-to-end demonstration of advanced fuel recycling with Argonne and Idaho National Laboratory, won a five-metric-ton HALEU award from recovered EBR-II used fuel, and announced a Tennessee recycling facility as phase one of an up-to-$1.68 billion Advanced Fuel Center — the first of its kind in the US. A Centrus letter of intent covers domestic HALEU supply. That is a cost and supply advantage no rival can price-match.</p>\n<p>The demand side is the payoff. Oklo states a pipeline of roughly 14 gigawatts, mostly non-binding letters of intent: a 12-gigawatt master power agreement with Switch, a 1.2-gigawatt Meta campus in Pike County, Ohio where Meta prepays and funds the fuel, with first power as early as 2030, and up to 500 megawatts with Equinix backed by a $25 million prepayment. None of it is revenue yet, but prepayments are how a developer de-risks a first-of-a-kind build.</p>\n<p>Oklo holds roughly $3 billion in cash and marketable securities against total liabilities of about $84 million, with long-term debt under a million dollars — effectively debt-free. The company remains pre-revenue, booking its first modest revenue of about $1.2 million in Q2 2026.</p>\n<p>Oklo is not alone in the SMR renaissance. NuScale won the first SMR design certification in 2023, then watched its flagship Utah project collapse. GE Vernova's BWRX-300 leads SMR construction at Darlington, Kairos holds Google's 500-megawatt deal, Microsoft and Constellation are restarting Three Mile Island, and X-energy went public in April 2026. Everyone is chasing the same dollars; Oklo just happens to have the pilot reactor, the fuel cycle, and the signed pipeline.</p>\n<p>Now the honest risks. Nothing is commercial yet; the letters of intent are non-binding and may never convert to power purchase agreements; and the first-power timeline has already slipped once, from late 2027 or early 2028 to 2028. Shareholders have also absorbed ongoing dilution. The story is compelling, but the financials are still a promise.</p>\n<p>Here is the bottom line. The AI buildout has created a power shortage measured in years, not megawatts, and Oklo is the only developer pairing a de-risked licensing path, a working reactor, and an owned fuel cycle. The moat is real and the execution visible; the risk is timelines slip and LOIs never harden into contracts. If you believe hyperscalers cannot wait for power, this is the purest way to own that bet. With a pre-revenue company, patience is the price of admission.</p>\n<p class=\"disclosure\">Disclosure: The Signal holds no position in OKLO. Positions may change. This is not financial advice.</p>"
+}
