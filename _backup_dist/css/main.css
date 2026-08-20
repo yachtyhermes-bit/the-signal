@@ -7051,11 +7051,11 @@ body.pulse-modal-open {
 .article-image--contain { max-height: none !important; overflow: visible !important; }
 .article-image--contain img { width: 100% !important; height: auto !important; object-fit: contain; }
 
-/* HBM cover (hbm-ai-memory-bottleneck-explainer-2026): page H1 already titles the article, so cut the baked-in title band off the hero — show the bottom 75% (GPU/HBM art + comparison boxes + bottom banner) */
+/* HBM cover (hbm-ai-memory-bottleneck-explainer-2026): page H1 already titles the article, so cut the baked-in title band off the hero — show the bottom 74% (GPU/HBM art + comparison boxes + bottom banner). Crop at y=305: subtitle text ends ~y=299, below is pure circuit-board art (crop at 290 clipped subtitle descenders). */
 .article-image--hbm-ai-memory-bottleneck-explainer-2026.article-image--contain {
   max-height: none !important;
   overflow: hidden !important;
-  aspect-ratio: 2048 / 862;
+  aspect-ratio: 2048 / 847;
 }
 .article-image--hbm-ai-memory-bottleneck-explainer-2026.article-image--contain img {
   width: 100% !important;
