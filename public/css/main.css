@@ -512,6 +512,29 @@ main {
   display: block;
   transition: transform 0.3s ease;
 }
+/* Designed infographic heroes (image.fit === 'contain') — fill the card edge-to-edge.
+   16:9 covers are full-bleed with zero crop, so the infographic text stays intact. */
+.article-card .card-image--contain,
+.featured-hero .featured-card .card-image--contain {
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+.article-card .card-image--contain img,
+.featured-hero .featured-card .card-image--contain img {
+  object-fit: cover;
+  background: var(--bg-card);
+}
+/* Desktop featured hero keeps its tall full-height image column (letterboxed contain) */
+@media (min-width: 1280px) {
+  .featured-hero .featured-card .card-image--contain {
+    height: 100%;
+    min-height: 560px;
+    aspect-ratio: auto;
+  }
+  .featured-hero .featured-card .card-image--contain img {
+    object-fit: contain;
+  }
+}
 .article-card:hover .card-image img {
   transform: scale(1.05);
 }
