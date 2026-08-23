@@ -1,0 +1,76 @@
+{
+  "slug": "space-launch-economics-explainer-2026",
+  "title": "Space Launch Economics, Explained: How Reusability Broke the Cost of Reaching Orbit",
+  "subtitle": "Getting a kilogram to orbit used to cost a fortune. Reusable rockets collapsed that price — and unlocked an entire economy in the sky.",
+  "summary": "Reusable rockets turned space from a government-only luxury into a commercial industry. Here's how the economics work, who's winning, and what cheap launch unlocks for AI, connectivity, and defense.",
+  "format": "explainer",
+  "ticker": "RKLB",
+  "tickers": [
+    "RKLB",
+    "SPCX",
+    "KTOS"
+  ],
+  "sector": "space",
+  "sentiment": "neutral",
+  "date": "2026-08-23T20:00:00Z",
+  "image": {
+    "src": "/img/articles/space-launch-economics-explainer-2026.jpg",
+    "fit": "cover",
+    "caption": "A reusable rocket lifting off at dawn. Photo: The Signal / AI-generated."
+  },
+  "keyTerms": [
+    {
+      "term": "Low Earth Orbit (LEO)",
+      "definition": "The band of space a few hundred kilometers up — close enough to reach cheaply and to beam signals back to Earth. Where almost every new satellite and megaconstellation lives."
+    },
+    {
+      "term": "Reusability",
+      "definition": "Recovering and re-flying the booster — the big, expensive bottom stage of a rocket — instead of dumping it in the ocean. The single biggest driver of falling launch costs."
+    },
+    {
+      "term": "Cost per kilogram",
+      "definition": "The unit price of access to space: what it costs to lift one kilogram to orbit. The metric that decides whether a space business can exist at all."
+    },
+    {
+      "term": "Megaconstellation",
+      "definition": "A network of hundreds or thousands of small satellites working together — for broadband internet, earth observation, or defense sensing. Only viable because launch got cheap."
+    },
+    {
+      "term": "Rideshare",
+      "definition": "Packing many small satellites from different customers onto one rocket and splitting the cost. Turns a launch that once cost a fortune into something a startup can afford."
+    },
+    {
+      "term": "Fully reusable",
+      "definition": "A rocket where both stages fly again — booster and upper stage. The end goal of the cost curve, where a launch's marginal cost approaches fuel and operations."
+    }
+  ],
+  "bottomLine": "Reusability turned the rocket from a throwaway product into a reusable service — and in doing so, it collapsed the cost of reaching orbit from a luxury only nations could afford into something companies book by the kilogram. That price collapse is the real story of the modern space economy: it's what made megaconstellations, satellite broadband, and proliferated defense constellations possible, and it's quietly extending the AI buildout into orbit. Watch the cost per kilogram — wherever it falls next, a new industry follows.",
+  "bodyHtml": "<p>For most of the space age, getting to orbit was a government problem — and a ruinously expensive one. The Space Shuttle lofted cargo at something like $50,000 per kilogram. That one number explains why space stayed small for half a century: when the ticket to orbit costs more than the payload, only nations and telecom giants get to play.</p><p>Then one company asked the question nobody else would: what if you didn't throw the rocket away? Today a <a href=\"/ticker/SPCX/\">SpaceX</a> Falcon 9 flies a satellite to orbit for a few thousand dollars per kilogram — and lands its booster back on a barge so it can do it again. That's the reusability revolution, and it's the steepest cost collapse in the history of transportation.</p><p>Here's the economics in plain English. A rocket is two stages stacked on top of each other. The bottom stage — the booster — is the expensive part: the engines, the tanks, the guts. For decades, the whole machine fell into the ocean after a single flight. SpaceX's insight was that if you catch that booster, land it, refuel it, and fly it again, you stop paying for the priciest part of the rocket over and over. Fuel is cheap. Hardware is not. Reuse turns a rocket from a product into a service.</p><p>That's why cost per kilogram is the number that matters. It's the unit economics of space. The Shuttle's roughly $50,000 per kilogram meant a handful of launches a year. Falcon 9's low-thousands per kilogram made businesses that were pure fantasy suddenly pencil out — and <a href=\"/ticker/SPCX/\">SpaceX</a> used that head start to build Starlink, a constellation of thousands of satellites that beams internet from orbit and, increasingly, carries data for AI systems far from any fiber line.</p><p>Small rockets carved out their own lane. <a href=\"/ticker/RKLB/\">Rocket Lab</a> built Electron, a rocket not much bigger than a utility pole that flies a dedicated small satellite to orbit for around $7.5 million. It's still pricey per kilogram — roughly $25,000 — but it's a dedicated ride: a startup owns its schedule instead of hitching a lift. Electron became the most-flown small rocket on the planet, and Rocket Lab turned that cadence into a second business building satellites and spacecraft parts for everyone else.</p><p>Now Rocket Lab is climbing the ladder with Neutron, a medium-lift rocket built around reusability and aimed straight at the megaconstellation market — the waves of small satellites companies are launching by the thousands. A reusable Neutron is designed to carry around 13,000 kilograms to low Earth orbit, making it the most direct challenge yet to Falcon 9's lock on the medium-lift lane.</p><p>And the ceiling is still falling. SpaceX's Starship is designed to be fully reusable — booster and upper stage both — with a target of more than 100 metric tons to orbit per flight. Reuse the whole vehicle and fly it often, and the marginal cost of a launch approaches the cost of propellant and operations. The goal isn't a cheaper rocket. It's a different price curve entirely.</p><p>The ripple effects reach everywhere. Cheap launch is what makes megaconstellations for internet and earth observation viable in the first place. It's why defense agencies are rebuilding around swarms of small satellites that can be replaced fast — and why firms like <a href=\"/ticker/KTOS/\">Kratos</a> are building the ground systems, sensors, and software a busier orbit demands. It's also quietly wiring the AI buildout into the sky: more satellites mean more data, more connectivity, and compute sitting closer to where it's actually needed.</p><p>The lesson isn't that space is cool. It's that when the unit cost of access collapses, entire industries appear out of nowhere. The reusability revolution turned the most expensive real estate in human history into something you can book by the kilogram.</p><p class=\"disclosure\">Disclosure: The Signal holds no position in RKLB, SPCX, or KTOS. Positions may change. This is not financial advice.</p>",
+  "tags": [
+    "space",
+    "launch",
+    "reusability",
+    "Rocket Lab",
+    "SpaceX",
+    "space economy",
+    "satellites",
+    "AI infrastructure"
+  ],
+  "links": [
+    {
+      "label": "Space launch market competition — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Space_launch_market_competition"
+    },
+    {
+      "label": "Rocket Lab",
+      "url": "https://www.rocketlabusa.com/"
+    },
+    {
+      "label": "SpaceX",
+      "url": "https://www.spacex.com/"
+    }
+  ],
+  "meta": {
+    "estimatedReadTime": "6 min read"
+  }
+}
