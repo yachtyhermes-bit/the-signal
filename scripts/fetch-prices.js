@@ -9,6 +9,8 @@ const TICKERS = [
   'NVDA', 'AMD', 'AVGO', 'MRVL', 'TSM', 'ASML', 'MU', 'CBRS', 'INTC', 'IREN', 'LRCX', 'AMAT', 'QCOM', 'SMCI',
   // AI Infrastructure
   'VRT',
+  // Quantum
+  'RGTI',
   // Cybersecurity
   'CRWD', 'PANW', 'FTNT', 'ZS', 'S', 'CHKP', 'CYBR', 'TENB', 'RBRK',
   // AI Software
@@ -86,6 +88,7 @@ const COMPANY_INFO = {
   'SMCI': { name: 'Super Micro Computer Inc.', url: 'https://www.supermicro.com/' },
   'ANET': { name: 'Arista Networks Inc.', url: 'https://www.arista.com/' },
   'RBRK': { name: 'Rubrik Inc.', url: 'https://www.rubrik.com/' },
+  'RGTI': { name: 'Rigetti Computing Inc.', url: 'https://www.rigetti.com/' },
   'SPCX': { name: 'SpaceX Inc.', url: 'https://www.spacex.com/' }
 };
 

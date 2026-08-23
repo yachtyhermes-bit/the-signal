@@ -1,0 +1,102 @@
+{
+  "slug": "rgti-systems-delivery-onprem-pivot-2026",
+  "title": "Rigetti Just Built a Department for Installing Quantum Computers — Right as Washington Bet $2B on the Sector",
+  "subtitle": "Rigetti created a Systems Delivery unit to ship on-prem quantum systems at scale — days before a sector-wide rally on renewed attention to the federal government's $2B quantum LOI program, where Rigetti holds a spot worth up to $100M.",
+  "summary": "Rigetti Computing created a dedicated Systems Delivery organization to install on-premises quantum computers at customer sites — a lab-to-data-center pivot that landed days before a sector-wide rally on renewed attention to the Commerce Department's $2.013B quantum LOI program, where Rigetti's slice runs up to $100M. New COO David Rivas and new CTO Andrew Bestwick take the reins as the company pushes a 99.5% fidelity target for its 108-qubit Cepheus system, with the federal government treating quantum like semiconductors: national-security infrastructure with Uncle Sam as a co-investor.",
+  "ticker": "RGTI",
+  "sector": "quantum",
+  "sentiment": "bullish",
+  "date": "2026-08-23T16:00:00Z",
+  "price": 17.91,
+  "tags": [
+    "Quantum Computing",
+    "Rigetti",
+    "RGTI",
+    "Systems Delivery",
+    "On-Premises Quantum",
+    "CHIPS Act"
+  ],
+  "image": {
+    "src": "/img/articles/rgti-systems-delivery-onprem-pivot-2026.jpg",
+    "fit": "cover",
+    "caption": "A superconducting quantum chip assembly in a laboratory. Photo: The Signal / AI-generated."
+  },
+  "links": [
+    {
+      "label": "Rigetti establishes dedicated Systems Delivery unit (press release, Aug 19) →",
+      "url": "https://investors.rigetti.com/news-releases/news-release-details/rigetti-computing-establishes-dedicated-systems-delivery"
+    },
+    {
+      "label": "Rigetti Q2 2026 results: revenue up 185% year over year (Aug 6) →",
+      "url": "https://investors.rigetti.com/news-releases/news-release-details/rigetti-computing-reports-second-quarter-2026-financial-results"
+    },
+    {
+      "label": "Why Rigetti created a Systems Delivery unit (The Quantum Insider, Aug 20) →",
+      "url": "https://thequantuminsider.com/2026/08/20/rigetti-systems-delivery-quantum-system-deployments/"
+    },
+    {
+      "label": "Rigetti names new COO and CTO to scale on-premises deployments (Quantum Computing Report) →",
+      "url": "https://quantumcomputingreport.com/rigetti-establishes-systems-delivery-unit-and-names-new-coo-and-cto-to-scale-on-premises-deployments/"
+    },
+    {
+      "label": "Commerce proposes $2B CHIPS investment across nine quantum developers (Quantum Computing Report) →",
+      "url": "https://quantumcomputingreport.com/u-s-department-of-commerce-proposes-2-billion-chips-investment-across-nine-quantum-hardware-and-foundry-developers/"
+    },
+    {
+      "label": "Quantum stocks rip on the federal funding pipeline (24/7 Wall St., Aug 21) →",
+      "url": "https://247wallst.com/investing/2026/08/21/infleqtion-soars-10-rigetti-jumps-9-ionq-climbs-7-whats-driving-quantum-computing-stocks-now/"
+    },
+    {
+      "label": "Why did Rigetti stock pop today? (Motley Fool, Aug 21) →",
+      "url": "https://www.fool.com/investing/2026/08/21/why-did-rigetti-quantum-stock-pop-today/"
+    },
+    {
+      "label": "The $2B Quantum Initiative fuels the rally (TradingKey, Aug 22) →",
+      "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/261937149-rgti-stock-2b-quantum-initiative-fuels-buy-2550-tradingkey"
+    },
+    {
+      "label": "Rigetti lands $5.7M in purchase orders for two Novera systems (Quantum Computing Report) →",
+      "url": "https://quantumcomputingreport.com/rigetti-announces-5-7-million-in-purchase-orders-for-two-novera-quantum-systems/"
+    },
+    {
+      "label": "Rigetti Q2 2026 Form 10-Q (SEC) →",
+      "url": "https://www.sec.gov/Archives/edgar/data/1838359/000110465926091993/rgti-20260630x10q.htm"
+    }
+  ],
+  "meta": {
+    "author": "The Signal",
+    "estimatedReadTime": "5 minutes",
+    "editorialTags": [
+      "quantum-computing",
+      "rigetti",
+      "rgti",
+      "systems-delivery",
+      "on-premises-quantum",
+      "chips-act"
+    ],
+    "seoKeywords": [
+      "Rigetti stock",
+      "RGTI stock",
+      "quantum computing stocks",
+      "Rigetti Systems Delivery",
+      "Rigetti COO CTO",
+      "federal quantum funding",
+      "Cepheus quantum computer"
+    ],
+    "relatedTickers": [
+      "IONQ",
+      "QBTS"
+    ],
+    "keyMetrics": {
+      "RGTI Price": "$17.91",
+      "Market Cap": "$6.0B",
+      "Forward P/E": "N/A",
+      "Total Revenue (TTM)": "$13.4M",
+      "52-Week Low": "$12.53",
+      "52-Week High": "$58.15",
+      "Analyst Consensus": "N/A",
+      "Analyst Target Mean": "$28.81"
+    }
+  },
+  "bodyHtml": "Here's a sentence you don't hear every day: Rigetti Computing just created a department whose entire job is showing up at a customer's site and installing a quantum computer. Not a demo. Not a cloud dashboard. A real machine, bolted in, wired up, running.\nAnd the punchline? Days later, the whole quantum sector ripped higher as Wall Street rediscovered the federal government's $2 billion bet on the industry — with Rigetti's name on a slice worth up to $100 million.\nSo what does Rigetti actually do, in plain English? Founded in 2013 and based in Berkeley, it builds full-stack quantum computers out of superconducting qubits — think chips, made the semiconductor way. It's one of the few that manufactures its own processors, at Fab-1, the industry's first dedicated quantum chip fab.\nAnd it sells real products: a 9-qubit Novera QPU that plugs into a customer's existing cryo and control gear, up to the 108-qubit Cepheus-1-108Q — the industry's largest multi-chip quantum computer. National labs, governments, universities, and research centers buy them. Prefer not to own the hardware? You can rent time on Rigetti's machines through its cloud service on AWS Braket, Azure, and qBraid.\n<div class=\"stats-card\"><div class=\"stats-card-title\">The Numbers That Matter</div><table class=\"stats-table\"><tr><td class=\"stat-label\">RGTI Price<span class=\"stats-live-badge\">LIVE</span></td><td class=\"stat-value\" data-live-ticker=\"RGTI\" data-live-field=\"price\">$17.91</td></tr><tr><td class=\"stat-label\">Market Cap</td><td class=\"stat-value\">$6.0B</td></tr><tr><td class=\"stat-label\">Forward P/E</td><td class=\"stat-value\">N/A</td></tr><tr><td class=\"stat-label\">Total Revenue (TTM)</td><td class=\"stat-value\">$13.4M</td></tr><tr><td class=\"stat-label\">52-Week Low</td><td class=\"stat-value\">$12.53</td></tr><tr><td class=\"stat-label\">52-Week High</td><td class=\"stat-value\">$58.15</td></tr><tr><td class=\"stat-label\">Analyst Consensus</td><td class=\"stat-value\">N/A</td></tr><tr><td class=\"stat-label\">Analyst Target Mean</td><td class=\"stat-value\">$28.81</td></tr></table><div class=\"stats-card-note\">Price refreshes live · All other figures as of August 21, 2026</div></div>\nThe company calls the new unit Systems Delivery, and it's more than an org chart. On-prem demand now spans 9-qubit Novera starters to 108-qubit Cepheus-class systems, and install-and-support used to live inside engineering — like a carmaker keeping its dealerships inside the factory. Now there's end-to-end accountability for getting machines to customer sites.\nEngineering, meanwhile, gets to focus on the roadmap — including a target of 99.5% median two-qubit gate fidelity on Cepheus-1-108Q, up from roughly 99.1% today. Two veterans moved up: David Rivas, CTO since 2023, becomes COO; Andrew Bestwick, the chiplet architect, becomes CTO. Both report to CEO Subodh Kulkarni, who pointed to 'growing deployment activity.'\nWall Street's first reaction? A shrug, honestly. The next day quantum names slid with the broader tape, headlines muttered about a 'leadership shake-up,' and a routine insider sale for taxes hit the wires. Then Friday happened.\nRigetti popped as much as 9% intraday and closed up 11.5%; IonQ and D-Wave climbed 7%; Infleqtion soared 10%. The sector ETF barely moved — up half a percent. That's a pure-play group trade on the funding pipeline, not any single company's news.\nThe funding pipeline is the Commerce Department's $2.013 billion quantum program under the CHIPS Act — announced back in May, mind you, not this week. Nine companies are in, and Uncle Sam takes non-controlling equity stakes — treating quantum like semiconductors: national-security infrastructure. GlobalFoundries is in line for up to $375 million for a secure quantum foundry, and IBM gets $1 billion for Anderon, a 300mm pure-play quantum wafer fab in Albany.\nSeven hardware vendors round out the list, including Rigetti with up to $100 million over three years. This week's coverage simply re-lit the sector as investors re-engaged with the letter-of-intent-to-contract pipeline — and Rigetti's own LOI has been signed since May.\nHere's why this matters beyond the trading tape. Quantum is the next compute layer after GPUs, and the federal program explicitly funds hardware optimization and data-center-compatible systems. Translation: quantum as an installed piece of the future data center, the same buildout logic as AI chips.\nThe near-term bridge is hybrid: HPE and the Pittsburgh Supercomputing Center are standing up TangleLab, an NSF-funded testbed with a Novera from Rigetti inside. Rigetti pitches its cloud as a quantum co-processor for classical and AI workloads, and banks and pharma firms are already piloting it for portfolio optimization and drug discovery. Pilots become contracts if the next-gen 100+ qubit system lands late this year.\nThe on-prem orders are real and global. India's C-DAC ordered a 108-qubit system for Bengaluru. The UK's National Quantum Computing Centre already runs a 36-qubit Rigetti machine. An Asian tech manufacturer and a California AI startup bought Novera systems.\nOne honest caveat: recognized backlog is still small — about $2.7 million at the end of June — so the bull case was never booked revenue. It's the order pipeline plus the federal LOI, backed by $541 million in cash, zero debt, and revenue up 185% year over year. Growth is the story; scale is the assignment.\nWatch three things in the coming quarters: LOIs converting to definitive agreements, Cepheus deliveries actually landing at customer sites, and the fidelity number ticking toward 99.5%. If the lab-to-data-center story holds, Rigetti stops being just a quantum trade and becomes an infrastructure company with the government as co-investor. That's a different company than the one that went public in the SPAC era — and it finally has a department built for the job.\n<p class=\"disclosure\">Disclosure: The Signal holds no position in RGTI. Positions may change. This is not financial advice.</p>"
+}
