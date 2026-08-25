@@ -1,0 +1,97 @@
+{
+  "slug": "avav-ai-drone-arsenal-2026",
+  "title": "AeroVironment: The Full-Stack Arsenal of the Drone Age",
+  "subtitle": "Wall Street priced it like a broken story. Then AeroVironment stacked record revenue, a $500 million homeland counter-drone contract, and an AI-swarm partnership into one stretch — and reminded everyone who owns the drone-vs-drone kill loop.",
+  "summary": "AeroVironment builds the small drones, the loitering munitions, and the laser drone-killers that define modern warfare — plus the AI that runs them. Shares sit roughly two-thirds below their 2025 peak after a rough year of headlines, but record revenue, a record backlog, a $500M homeland counter-drone IDIQ, and a new swarm-autonomy deal with Applied Intuition tell a different story. This is physical-world AI entering production.",
+  "ticker": "AVAV",
+  "sector": "defense",
+  "sentiment": "positive",
+  "date": "2026-08-25T22:00:00Z",
+  "price": 147.42,
+  "tags": [
+    "AVAV",
+    "AeroVironment",
+    "defense",
+    "drones",
+    "autonomous systems",
+    "counter-UAS",
+    "AI",
+    "loitering munitions"
+  ],
+  "image": {
+    "src": "/img/articles/avav-ai-drone-arsenal-2026.jpg",
+    "fit": "cover",
+    "caption": "A small military surveillance drone in flight during a field exercise. Photo: The Signal / AI-generated.",
+    "alt": "Small military surveillance drone in flight"
+  },
+  "links": [
+    {
+      "title": "AeroVironment Announces Fiscal 2026 Fourth Quarter and Fiscal Year Results",
+      "label": "AV FY2026 Results",
+      "url": "https://investor.avinc.com/news-releases/news-release-details/aerovironment-announces-fiscal-2026-fourth-quarter-and-fiscal"
+    },
+    {
+      "title": "AV and Applied Intuition Establish Strategic Collaboration to Advance Uncrewed Teaming",
+      "label": "AV x Applied Intuition Swarm Autonomy",
+      "url": "https://www.avinc.com/2026/07/29/av-and-applied-intuition-establish-strategic-collaboration-to-advance-uncrewed-teaming/"
+    },
+    {
+      "title": "AV Awarded $500 Million IDIQ for Support of JIATF-401 Domestic Shield Program",
+      "label": "$500M Counter-Drone IDIQ",
+      "url": "https://www.avinc.com/2026/07/06/av-awarded-500-million-idiq-for-support-of-jiatf-401-domestic-shield-program/"
+    },
+    {
+      "title": "AV Awarded $117.3 Million U.S. Army Production Contract for P550",
+      "label": "$117.3M P550 Army Contract",
+      "url": "https://www.avinc.com/2026/07/20/av-awarded-117-3-million-u-s-army-production-contract-for-p550/"
+    },
+    {
+      "title": "AV Delivers JLTV-Mounted LOCUST Laser Weapon Systems to U.S. Army",
+      "label": "LOCUST Laser Deliveries",
+      "url": "https://www.avinc.com/2025/12/18/av-delivers-jltv-mounted-locust-laser-weapon-systems-to-u-s-army/"
+    },
+    {
+      "title": "AeroVironment Highlights Growth Strategy and Unveils Fiscal Year 2030 Financial Targets at 2026 Investor Day",
+      "label": "Investor Day FY2030 Targets",
+      "url": "https://www.avinc.com/2026/07/08/aerovironment-inc-highlights-growth-strategy-and-unveils-fiscal-year-2030-financial-targets-at-2026-investor-day/"
+    }
+  ],
+  "meta": {
+    "author": "The Signal",
+    "estimatedReadTime": "5 minutes",
+    "editorialTags": [
+      "aerovironment",
+      "defense",
+      "drones",
+      "autonomous-systems",
+      "counter-uas",
+      "ai",
+      "loitering-munitions"
+    ],
+    "seoKeywords": [
+      "AeroVironment stock",
+      "AVAV stock",
+      "defense drones",
+      "loitering munitions",
+      "counter-UAS",
+      "military AI",
+      "autonomous systems"
+    ],
+    "relatedTickers": [
+      "KTOS",
+      "RTX",
+      "LMT"
+    ],
+    "keyMetrics": {
+      "AVAV Price": "$147.42",
+      "Market Cap": "$7.5B",
+      "Forward P/E": "33.5",
+      "Total Revenue (TTM)": "$1.98B",
+      "52-Week Low": "$135.20",
+      "52-Week High": "$417.86",
+      "Analyst Consensus": "Buy",
+      "Analyst Target Mean": "$225.77"
+    }
+  },
+  "bodyHtml": "<p>Somewhere over a contested border right now, a small drone is orbiting in silence, waiting. That's AeroVironment's whole world in one image — the quiet machines that watch, strike, and defend in the drone age. In plain English: it builds the eyes, the stingers, and the bouncers of modern warfare, and it just can't stop winning contracts.</p><p>The eyes are the Puma and Raven reconnaissance aircraft, the most battle-tested small drones on Earth, plus the bigger JUMP 20 and the new P550 for heavier lifting. The stingers are the Switchblade family and the Mayhem 10 — loitering munitions that circle over a target until the moment is right, then finish the job. The bouncers are the counter-drone systems: Titan, which finds and classifies hostile drones, and the LOCUST laser, which burns them out of the sky. After the 2025 BlueHalo acquisition, add space communications, directed energy, and cyber to the menu. The buyers? The U.S. Army, Navy, Marines, Air Force, and Space Force, the joint task force guarding the American homeland from drone threats, and NATO allies from Italy and Germany to Greece.</p><p>Here's why this is an AI story and not just a defense story. The Switchblade and Mayhem 10 don't fly on a joystick — they fly on computer vision and terminal guidance that keep working when GPS is jammed, plus autonomy that decides when to strike. In July, AV teamed up with Applied Intuition, the software powerhouse behind much of the autonomous-vehicle world, to bring collaborative swarm behavior to Mayhem 10: teams of munitions that autonomously find, fix, track, and engage targets under a single operator's supervision. That's physical-world agentic AI leaving the demo stage and going into production — the same intelligence your chatbot runs on, aimed at a very different problem.</p><p>The counter-drone side is just as AI-native. Titan has to tell a friendly quadcopter from a threat in seconds, using sensor fusion that fuses radar, RF, and optics into one picture. The LOCUST laser doesn't melt drones by luck — its targeting loop is machine-speed software trained for the job. Then there's Kinesis and AVACore, the command-and-control layer that orchestrates the whole fleet. See the moat yet? It was never really the airframes. It's the software that makes them think.</p><p>Wall Street, though, has spent the past year pricing AV like a broken story. A Space Force contract termination, an accounting restatement, securities litigation, a disputed counter-drone award — the worries stacked up, and shares tumbled roughly two-thirds below their October 2025 peak. It's the kind of drawdown that makes you wonder if the company is circling the drain. Look closer, and the timeline says otherwise.</p><p>Because in that same stretch, the receipts kept landing. Record revenue — roughly $1.98 billion in fiscal 2026, up about 133% year over year. Record backlog. A $500 million sole-source counter-drone IDIQ for the JIATF-401 Domestic Shield program, protecting critical infrastructure at home. A $400 million-plus Army plan to buy LOCUST laser systems. A $117.3 million Army order for 82 P550s delivered in roughly two months — production velocity that looks more like a Silicon Valley hardware startup than a defense contractor.</p><p>The international story compounds from here. Italy just assigned JUMP 20 the official MQ-31A designation, a strong signal from a major NATO buyer adopting it as a standard system. And AV Eagle, a new Greek joint venture with Eyeonix, is standing up local production capacity for what the company calls unprecedented European demand. Allies aren't just buying the hardware — they're building their industrial base around it.</p><p>Strip the drama away and you're left with the only publicly traded company that spans the entire drone-versus-drone kill loop: sense with Puma, strike with Switchblade, kill the enemy's drones with LOCUST and Titan, and orchestrate all of it through one software stack. Competitors own pieces of the loop. Nobody owns the whole thing.</p><p>The re-rate catalyst is refreshingly simple: a clean fiscal 2027. At Investor Day, management laid out $3.5 to $4 billion in revenue by fiscal 2030, a 15–20% organic growth clip — targets that sound audacious until you remember how the last two years actually went. Close the books without drama, and the credibility reset is done. The multiple follows.</p><p>Volatile? Sure. Broken? The receipts say otherwise. When the machines deciding the future of warfare run on autonomy, you want to own the company that builds the whole stack — eyes, stingers, bouncers, and all.</p><p class=\"disclosure\">Disclosure: The Signal holds no position in AVAV. Positions may change. This is not financial advice.</p>"
+}
