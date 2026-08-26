@@ -1,0 +1,77 @@
+{
+  "slug": "equinix-interconnection-ai-moat-2026",
+  "title": "Wall Street Calls Equinix a Boring REIT. It's Actually the AI Tollbooth.",
+  "subtitle": "The AI buildout's most defensible asset isn't the chip — it's the physical layer where AI traffic meets the network. Equinix just booked a record ~9,700 new cross-connects in one quarter, and every one of them pays a monthly toll.",
+  "summary": "Wall Street prices Equinix like a sleepy REIT, but its ~500,000 interconnections — the physical cables where clouds, networks and AI workloads plug into each other — are quietly becoming the AI buildout's best tollbooth. Q2 2026 delivered a record ~9,700 net new cross-connects, and guidance went up. Here's why the moat isn't the chips; it's the cables in the building.",
+  "ticker": "EQIX",
+  "sector": "ai",
+  "sentiment": "positive",
+  "date": "2026-08-26T22:00:00Z",
+  "price": 1079.61,
+  "tags": [
+    "EQIX",
+    "Equinix",
+    "data center",
+    "interconnection",
+    "AI infrastructure",
+    "digital infrastructure",
+    "REIT"
+  ],
+  "image": {
+    "src": "/img/articles/equinix-interconnection-ai-moat-2026.jpg",
+    "fit": "cover",
+    "caption": "Enterprise data center racks with dense fiber interconnection. Photo: The Signal / AI-generated.",
+    "alt": "Data center server racks with dense fiber optic cable interconnections"
+  },
+  "links": [
+    {
+      "label": "Equinix Reports Second Quarter 2026 Results, Raises 2026 Guidance (Equinix IR)",
+      "url": "https://investor.equinix.com/news-events/press-releases/detail/1114/equinix-reports-second-quarter-results-raises-2026"
+    },
+    {
+      "label": "Equinix Q2 FY2026: Enterprise AI Fuels the Next Phase of Data Center Growth (Futurum Group)",
+      "url": "https://futurumgroup.com/insights/equinix-q2-fy-2026-enterprise-ai-fuels-the-next-phase-of-data-center-growth/"
+    },
+    {
+      "label": "Equinix Hits 500,000 Interconnections — Here's What Could Come Next (TIKR)",
+      "url": "https://www.tikr.com/blog/equinix-hits-500000-interconnections-heres-what-could-come-next"
+    }
+  ],
+  "meta": {
+    "author": "The Signal",
+    "estimatedReadTime": "5 minutes",
+    "editorialTags": [
+      "equinix",
+      "eqix",
+      "ai",
+      "ai-infrastructure",
+      "data-center",
+      "interconnection",
+      "reit"
+    ],
+    "seoKeywords": [
+      "Equinix stock",
+      "EQIX stock",
+      "Equinix data centers",
+      "AI interconnection",
+      "cross-connects",
+      "digital infrastructure REIT"
+    ],
+    "relatedTickers": [
+      "DLR",
+      "IRM",
+      "NVDA"
+    ],
+    "keyMetrics": {
+      "EQIX Price": "$1079.61",
+      "Market Cap": "$106.5B",
+      "Forward P/E": "57.8",
+      "Total Revenue (TTM)": "$9.90B",
+      "52-Week Low": "$720.62",
+      "52-Week High": "$1128.68",
+      "Analyst Consensus": "Buy",
+      "Analyst Target Mean": "$1234.55"
+    }
+  },
+  "bodyHtml": "<p>Here's the part of the AI boom that never makes the keynote slides: the cables. Everyone wants to know which chip is fastest and which cluster is biggest, but every one of those chips has to talk to the network — and that conversation happens inside a building owned by someone else. Equinix is that someone else.</p>\n\n<p>In plain English: Equinix runs roughly 270 data centers planted in the world's business hubs across 33 countries — the places where networks, clouds and companies physically plug into one another. Founded in 1998 and based in Redwood City, California, it became a REIT in 2015 and is run today by CEO Adaire Fox-Martin. Its business model is almost insultingly simple: rent the space, then charge a recurring monthly fee for every cable that connects two customers inside the building.</p>\n\n<p>That second part is the moat nobody's shorting. The platform now carries about 500,000 interconnections linking more than 10,000 cloud, AI, network and SaaS providers, and Q2 2026 set a record with roughly 9,700 net new cross-connects added in a single quarter. Those aren't one-off sales — they're monthly tolls that keep ringing as long as the cable stays plugged in.</p>\n\n<div class=\"stats-card\">\n  <div class=\"stats-card-grid\">\n    <div class=\"stats-row\"><span class=\"stats-label\">Price</span><span class=\"stats-value\"><td class=\"stats-value\" data-live-ticker=\"EQIX\" data-live-field=\"price\">$1079.61</td><span class=\"stats-live-badge\">LIVE</span></span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">Market Cap</span><span class=\"stats-value\">$106.5B</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">Forward P/E</span><span class=\"stats-value\">57.8</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">Total Revenue (TTM)</span><span class=\"stats-value\">$9.90B</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">52-Week Low</span><span class=\"stats-value\">$720.62</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">52-Week High</span><span class=\"stats-value\">$1128.68</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">Analyst Consensus</span><span class=\"stats-value\">Buy</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">Analyst Target Mean</span><span class=\"stats-value\">$1234.55</span></div>\n  </div>\n  <div class=\"stats-card-note\">Price refreshes live · All other figures as of August 26, 2026</div>\n</div>\n\n<p>Why should the AI trade care? Because AI traffic doesn't look like the internet traffic of old. Training runs and inference workloads move data sideways — GPU to GPU, rack to rack — in what the industry calls east-west traffic, and all of it has to cross physical cables in physical buildings. A cross-connect sounds technical, but it's really just a cable one customer orders to reach another — ordered like a utility, billed like a subscription.</p>\n\n<p>The more models companies train, the more cross-connects they buy, and the more tolls Equinix collects. It's a network-effect loop hyperscalers can't replicate by renting GPU clusters — you can't copy half a million physical cables with a software update.</p>\n\n<p>The numbers back up the story without stealing it. Q2 revenue grew 16.4% year over year, interconnection revenue climbed 11.3%, adjusted EBITDA hit a record at roughly a 53% margin, and AFFO — the metric that actually matters for a REIT — rose 20%. Management raised full-year guidance, now expecting revenue growth of 11-12% and AFFO growth of 13-14%, while the dividend yields close to 2%.</p>\n\n<p>If you're new to REITs, one translation note: don't sweat GAAP earnings here. Payout ratios above 100% of reported EPS are normal for the structure — the right lens is AFFO, and that's compounding nicely. Interconnection revenue is only about 17% of the total, but it's the highest-margin, most-recurring line on the income statement, which is exactly why you should watch the cable count, not the rent roll.</p>\n\n<p>One honest caveat before the hype sets in: Q2's growth got a nine-figure one-time boost from xScale fees, so the organic picture runs a touch cooler than the headline. Strip those out and the story still compounds — it's just not superhero strong.</p>\n\n<p>The bull-bear argument, then, isn't really about the quarter. Shares have climbed roughly 40% over the past year and trade near their highs, with the Street's average target implying about 14% upside from here. Bears point to a valuation that makes classic REIT investors wince and to the usual rate sensitivity of anything with a dividend — and so far, the cable count has outrun every one of those worries.</p>\n\n<p>The story was never the revenue beat. It's that the cables in the building — not the chips in the racks — are the AI bottleneck nobody's shorting. Hyperscalers can spin up a GPU cluster in months; they can't spin up half a million cross-connects in a neighborhood that already has power, fiber and 10,000 customers.</p>\n\n<p>Next time someone shows you a photo of a gleaming GPU cluster, ask where it plugs in. Equinix's answer is already in the ground, and it bills by the month.</p>\n\n<p class=\"disclosure\">Disclosure: The Signal holds no position in EQIX. Positions may change. This is not financial advice.</p>"
+}
