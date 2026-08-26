@@ -1,0 +1,84 @@
+{
+  "slug": "smtc-ai-datacenter-connectivity-2026",
+  "title": "Everyone Watches the GPUs. Semtech Owns the Wires Between Them.",
+  "subtitle": "While the world obsesses over AI chips, Semtech's signal-integrity silicon is the quiet connective tissue between tens of thousands of GPUs — and it just guided the Street far past consensus.",
+  "summary": "The AI trade's loudest story is the GPU, but every accelerator has to talk to its neighbors — and Semtech's retimers, redrivers and optical DSPs are the silicon keeping those conversations alive. Signal-integrity revenue grew 64% year over year, guidance crushed expectations, and the company sold its cellular-module unit to go all-in on AI connectivity and IoT. Here's why this Camarillo chip designer is the pick-and-shovel play on the AI interconnect boom.",
+  "ticker": "SMTC",
+  "sector": "ai",
+  "sentiment": "positive",
+  "date": "2026-08-26T14:00:00Z",
+  "price": 127.52,
+  "tags": [
+    "SMTC",
+    "Semtech",
+    "AI infrastructure",
+    "data center",
+    "signal integrity",
+    "semiconductors"
+  ],
+  "image": {
+    "src": "/img/articles/smtc-ai-datacenter-connectivity-2026.jpg",
+    "fit": "cover",
+    "caption": "Server racks with dense cabling in a modern AI data center. Photo: The Signal / AI-generated.",
+    "alt": "AI data center server racks with dense copper and fiber cabling"
+  },
+  "links": [
+    {
+      "label": "Semtech Q2 FY27 Results — Press Release (Semtech IR)",
+      "url": "https://investors.semtech.com/news/semtech-announces-second-quarter-of-fiscal-year-2027-results/ac421ffd-681c-4ada-b123-885db7828158"
+    },
+    {
+      "label": "Semtech Investor Relations",
+      "url": "https://investors.semtech.com/"
+    },
+    {
+      "label": "Semtech Agrees to Sell Cellular Unit to Focus on Data Center, LoRa (StockTitan)",
+      "url": "https://www.stocktitan.net/news/SMTC/semtech-corporation-announces-definitive-agreement-on-sale-of-52sqky9lc0pi.html"
+    },
+    {
+      "label": "All SMTC News & Press Releases (StockTitan)",
+      "url": "https://www.stocktitan.net/news/SMTC/"
+    },
+    {
+      "label": "NVIDIA — Building the 800 VDC Ecosystem for AI Factories",
+      "url": "https://developer.nvidia.com/blog/building-the-800-vdc-ecosystem-for-efficient-scalable-ai-factories/"
+    }
+  ],
+  "meta": {
+    "author": "The Signal",
+    "estimatedReadTime": "5 minutes",
+    "editorialTags": [
+      "smtc",
+      "semtech",
+      "ai",
+      "ai-infrastructure",
+      "data-center",
+      "connectivity"
+    ],
+    "seoKeywords": [
+      "Semtech stock",
+      "SMTC stock",
+      "AI data center connectivity",
+      "signal integrity chips",
+      "CopperEdge",
+      "FiberEdge",
+      "LoRa"
+    ],
+    "relatedTickers": [
+      "NVDA",
+      "MRVL",
+      "AVGO"
+    ],
+    "keyMetrics": {
+      "SMTC Price": "$127.52",
+      "Market Cap": "$13.1B",
+      "Forward P/E": "34.8",
+      "Total Revenue (TTM)": "$1.17B",
+      "52-Week Low": "$55.18",
+      "52-Week High": "$177.35",
+      "Analyst Consensus": "Strong Buy",
+      "Analyst Target Mean": "$201.38"
+    }
+  },
+  "bodyHtml": "<p>Everyone's watching the GPUs — the keynote slides, the benchmark charts, the billion-dollar cluster announcements. But here's the part of the AI buildout almost nobody talks about: every one of those accelerators has to talk to its neighbors, and that conversation travels over copper and fiber. Somebody has to build the silicon that keeps it from turning into static.</p>\n\n<div class=\"stats-card\">\n  <div class=\"stats-card-grid\">\n    <div class=\"stats-row\"><span class=\"stats-label\">Price</span><span class=\"stats-value\"><td class=\"stats-value\" data-live-ticker=\"SMTC\" data-live-field=\"price\">$127.52</td><span class=\"stats-live-badge\">LIVE</span></span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">Market Cap</span><span class=\"stats-value\">$13.1B</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">Forward P/E</span><span class=\"stats-value\">34.8</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">Total Revenue (TTM)</span><span class=\"stats-value\">$1.17B</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">52-Week Low</span><span class=\"stats-value\">$55.18</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">52-Week High</span><span class=\"stats-value\">$177.35</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">Analyst Consensus</span><span class=\"stats-value\">Strong Buy</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">Analyst Target Mean</span><span class=\"stats-value\">$201.38</span></div>\n  </div>\n  <div class=\"stats-card-note\">Price refreshes live · All other figures as of August 26, 2026</div>\n</div>\n\n<p>That somebody is Semtech — ticker SMTC — a Camarillo, California chip designer that's been wiring the world since the 1960s. Its signal-integrity business makes the chips that sit between GPUs in AI clusters: CopperEdge retimers and redrivers that keep data moving over the copper links inside GPU racks, and FiberEdge optical DSPs that drive the 800G and 1.6T optical modules stitching racks together.</p>\n\n<p>If you've ever used LoRa — the low-power radio standard behind billions of IoT devices, from smart meters to farm sensors — that's Semtech too. Hyperscalers, networking OEMs and optical-module makers are the customers, and AI clusters are the reason the phone won't stop ringing.</p>\n\n<p>Here's why that matters: the AI buildout isn't just about compute, it's about interconnect. A modern cluster is a switching fabric — thousands of GPUs exchanging data at blistering speeds, and every single link needs signal conditioning or the data degrades into noise. Stack more GPUs, and you need more of that connective tissue per rack, every generation.</p>\n\n<p>Semtech's signal-integrity segment did $126.2 million last quarter, up 64% from a year ago, at gross margins north of 65%. That's the profile of a shovel seller in a gold rush.</p>\n\n<p>The quarter itself was a record — $341.9 million in net sales, up 33% year over year — and CEO Hong Hou says bookings are accelerating with a record backlog. But the headline landed with the outlook: Semtech guided fiscal Q3 to roughly $410 million, about 14% above what the Street had penciled in. Shares ticked up a couple percent after hours, then surged roughly 10% the next day, with Needham turning positive and analysts sitting at a Strong Buy consensus.</p>\n\n<p>The most telling part isn't even in the numbers, though — it's what Semtech is giving up to win. In August, the company agreed to sell its cellular-module business to Compal Electronics for $62 million in cash. That unit had real revenue, but it wasn't the future.</p>\n\n<p>Semtech is exiting cellular modules outright to go all-in on AI connectivity and IoT, and that move says more about its conviction than any guidance math could.</p>\n\n<p>Mark October 15 on your calendar: Semtech is hosting a data-center teach-in in San Jose, with the CEO, its signal-integrity chief and the CFO on stage. It's a rare chance to see the roadmap behind the ramp — and a signal in itself that management wants investors to understand exactly how deep this moat runs.</p>\n\n<p>Meanwhile the LoRa engine keeps humming — the newest transceivers, the LR2022 and LR2012, hit production in August — and the company generated $61.4 million of free cash flow in the quarter, with an adjusted EBITDA margin of 26.6%, up from 22.8% three months earlier.</p>\n\n<p>The bear case deserves a fair hearing: the stock isn't cheap, trading at a forward multiple in the mid-30s with a market cap north of $13 billion. It's not undiscovered anymore. If AI capex hiccups, interconnect demand follows, and that multiple compresses fast.</p>\n\n<p>That's the price of owning a pure-play on the wiring of the AI era — and so far, the wiring is the one part of the buildout that never sleeps.</p>\n\n<p>So the next time someone shows you a photo of a gleaming GPU cluster, ask the question the industry is asking: how do all those chips actually talk to each other? Semtech's answer is already in the racks — tiny chips doing the unglamorous work of keeping the world's biggest conversations moving.</p>\n\n<p class=\"disclosure\">Disclosure: The Signal holds no position in SMTC. Positions may change. This is not financial advice.</p>"
+}

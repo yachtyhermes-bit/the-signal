@@ -6,7 +6,7 @@ const path = require('path');
 
 const TICKERS = [
   // AI & Semis
-  'NVDA', 'AMD', 'AVGO', 'MRVL', 'TSM', 'ASML', 'MU', 'CBRS', 'INTC', 'IREN', 'LRCX', 'AMAT', 'QCOM', 'SMCI',
+  'NVDA', 'AMD', 'AVGO', 'MRVL', 'TSM', 'ASML', 'MU', 'CBRS', 'INTC', 'IREN', 'LRCX', 'AMAT', 'QCOM', 'SMCI', 'SMTC',
   // AI Infrastructure
   'VRT',
   // Quantum
