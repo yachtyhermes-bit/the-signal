@@ -1,0 +1,98 @@
+{
+  "slug": "avgo-custom-silicon-xpu-era-2026",
+  "title": "OpenAI's Jalapeño Chip Just Topped Nvidia. Broadcom Is the Arms Dealer of the AI Era.",
+  "subtitle": "The custom chip that out-worked Nvidia's flagship per watt was co-designed by Broadcom — the company behind Google's TPUs, Meta's MTIA, Microsoft's Maia, and the networking fabric that ties them all together. Q3 earnings land Tuesday.",
+  "summary": "OpenAI just published results showing its Broadcom-co-designed Jalapeño inference chip outworks Nvidia's flagship on work per watt — while Broadcom keeps stacking hyperscaler customers, a financing platform that could reach $100B, and roughly 70% of AI ethernet switching. Q3 earnings land Tuesday. Here's why the arms dealer of the custom-silicon era matters more than any single chip it designs.",
+  "ticker": "AVGO",
+  "sector": "ai",
+  "sentiment": "positive",
+  "date": "2026-08-29T22:00:00Z",
+  "price": 368.79,
+  "tags": [
+    "Broadcom",
+    "AVGO",
+    "custom silicon",
+    "XPU",
+    "AI infrastructure",
+    "networking",
+    "OpenAI",
+    "hyperscaler"
+  ],
+  "image": {
+    "src": "/img/articles/avgo-custom-silicon-xpu-era-2026.jpg",
+    "fit": "cover",
+    "caption": "Engineers in a semiconductor fab cleanroom inspecting a silicon wafer. Photo: The Signal / AI-generated.",
+    "alt": "Cleanroom engineers in white bunny suits examining a silicon wafer under golden light"
+  },
+  "links": [
+    {
+      "label": "OpenAI — Jalapeño first results (Aug 25, 2026)",
+      "url": "https://openai.com/index/jalapeno-first-results/"
+    },
+    {
+      "label": "Yahoo Finance — Broadcom's AI debt platform could reach $100B (Aug 28, 2026)",
+      "url": "https://finance.yahoo.com/technology/ai/articles/broadcom-debt-deal-could-reach-031137813.html"
+    },
+    {
+      "label": "Yahoo Finance — How networking became the critical layer of AI (Citi at Hot Chips, Aug 28, 2026)",
+      "url": "https://finance.yahoo.com/technology/ai/articles/networking-became-critical-layer-ai-071654651.html"
+    },
+    {
+      "label": "Google Cloud — TPU documentation",
+      "url": "https://cloud.google.com/tpu"
+    },
+    {
+      "label": "Wikipedia — Tensor Processing Unit",
+      "url": "https://en.wikipedia.org/wiki/Tensor_Processing_Unit"
+    },
+    {
+      "label": "Broadcom — StrataXGS switching (Tomahawk)",
+      "url": "https://www.broadcom.com/products/ethernet-connectivity/switching/strataxgs"
+    },
+    {
+      "label": "Broadcom Investor Relations",
+      "url": "https://investors.broadcom.com/"
+    }
+  ],
+  "meta": {
+    "author": "The Signal",
+    "estimatedReadTime": "5 minutes",
+    "editorialTags": [
+      "broadcom",
+      "avgo",
+      "ai",
+      "ai-infrastructure",
+      "custom-silicon",
+      "xpu",
+      "networking",
+      "hyperscaler"
+    ],
+    "seoKeywords": [
+      "Broadcom stock",
+      "AVGO earnings",
+      "custom AI silicon",
+      "Jalapeño chip",
+      "Tomahawk 6",
+      "AI networking",
+      "Broadcom Q3 FY26",
+      "custom XPU"
+    ],
+    "relatedTickers": [
+      "NVDA",
+      "MRVL",
+      "GOOGL",
+      "AMD"
+    ],
+    "keyMetrics": {
+      "AVGO Price": "$368.79",
+      "Market Cap": "$1.75T",
+      "Forward P/E": "18.9",
+      "Total Revenue (TTM)": "$75.5B",
+      "52-Week Low": "$287.17",
+      "52-Week High": "$495.00",
+      "Analyst Consensus": "Strong Buy",
+      "Analyst Target Mean": "$525.97"
+    }
+  },
+  "bodyHtml": "<p>OpenAI just took the gloves off. It published benchmark results for Jalapeño, its custom inference chip co-designed with Broadcom — and it flat-out beat Nvidia's flagship on the metric that matters most: work per watt. Peak mixed throughput per kilowatt ran roughly 1.9x higher than a GB200, end-to-end latency came in about 3.6x lower than a GB300, and at matched latency it delivered up to roughly 53.7x more throughput. It's a 700-watt, inference-only chip — Gen 2 already in development — and it lands in OpenAI's infrastructure by year-end.</p>\n\n<div class=\"stats-card\">\n  <div class=\"stats-card-grid\">\n    <div class=\"stats-row\"><span class=\"stats-label\">Price</span><span class=\"stats-value\"><td class=\"stats-value\" data-live-ticker=\"AVGO\" data-live-field=\"price\">$368.79</td><span class=\"stats-live-badge\">LIVE</span></span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">Market Cap</span><span class=\"stats-value\">$1.75T</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">Forward P/E</span><span class=\"stats-value\">18.9</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">Total Revenue (TTM)</span><span class=\"stats-value\">$75.5B</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">52-Week Low</span><span class=\"stats-value\">$287.17</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">52-Week High</span><span class=\"stats-value\">$495.00</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">Analyst Consensus</span><span class=\"stats-value\">Strong Buy</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">Analyst Target Mean</span><span class=\"stats-value\">$525.97</span></div>\n  </div>\n  <div class=\"stats-card-note\">Price refreshes live · All other figures as of August 29, 2026</div>\n</div>\n\n<p>Here's what Broadcom actually does, because the ticker hides the story. It's the design house behind the custom AI chips hyperscalers build to stop renting GPUs — you bring the models and the checkbook, Broadcom brings the silicon. It also makes the networking switches that let tens of thousands of chips talk at speeds that melt ordinary gear. Pick-and-shovel doesn't quite capture it. Arms dealer does.</p>\n\n<p>Every hyperscaler defecting from merchant GPUs is defecting to Broadcom. Google has co-developed TPUs with Broadcom since the first version in 2015; today's Ironwood packs 9,216 chips per pod and cranks out 42.5 exaflops. Meta signed a multi-generation MTIA deal in April and committed a gigawatt of custom silicon, with its Iris chip entering production next month. Microsoft moved its Maia program over from Marvell and announced Maia 200 in January. OpenAI's Jalapeño is the newest notch. Anthropic surfaced late last year as a mystery ten-billion-dollar customer.</p>\n\n<p>And if you can't pay for the hardware, Broadcom will lend you the money. A Broadcom-backed vehicle is raising $70-80B in debt — up to $100B in total arrangement — to fund AI chips for Anthropic and OpenAI, with Apollo and Blackstone leading and Broadcom backstopping the senior tranches. It scales the June platform that enables 20 gigawatts of AI compute. When your customers are the richest companies on Earth and you're still their banker, you're not a supplier. You're the infrastructure.</p>\n\n<p>The other half of the moat is the network. Tomahawk 6 is the world's first 102.4-terabit switch with co-packaged optics, announced in November, shipping in volume since March. The Jericho 4 router chip has been in the field since last summer. With roughly 70% of the AI ethernet switching market, Citi left Hot Chips this month declaring networking \"the critical layer of AI.\" Every GPU cluster, Nvidia's included, runs on fabric Broadcom sells.</p>\n\n<p>Then there's the software layer, the quiet money printer: infrastructure software doing about $7.2B a quarter at roughly 93% gross margins. It's also the soft spot — weak software sales were what spooked the market back in June. Guidance has the segment back to $8.9B, up 31% year over year. That's the number to watch Tuesday.</p>\n\n<p>The trajectory is the point, though. AI revenue ran $8.4B in the fiscal first quarter, $10.8B in the second, and more than $16B is guided for the third. The full-year guide sits around $56B, up roughly 180%, with an AI backlog near $60B and the CEO talking up a path to $100B-plus in 2027. Counterpoint sees Broadcom holding about 60% of the custom chip market by 2027, inside an accelerator market set to blow past $600B by 2033. Q3 lands Tuesday after the close, with revenue around $29.4B expected and AI revenue north of $16B.</p>\n\n<p>The bears' case deserves air. These benchmarks are OpenAI's own, and they're inference-only; Nvidia still owns training, and it just printed a record ~$96B quarter proving the merchant model isn't going anywhere. Marvell, the number two custom house, just got handed Google's inference TPU work, a shot at the throne, and MediaTek is projected to grab one in four AI ASIC server shipments by 2028. ByteDance, the big fish that got away, went in-house. And the stock, roughly a quarter below its June record and back at its 200-day average, is priced like the thesis already happened.</p>\n\n<p>Here's the thing: the thesis hasn't happened — it's just getting started. The hyperscalers aren't going back to renting GPUs, and each needs custom silicon only a handful of companies can build. Broadcom is the one they all call, the one that finances the deals, and the one that wires the clusters together. Tuesday is the next proof point. The custom-silicon era has its arms dealer.</p>\n\n<p class=\"disclosure\">Disclosure: The Signal holds no position in AVGO. Positions may change. This is not financial advice.</p>"
+}
