@@ -1213,6 +1213,70 @@ main {
   color: #ef4444;
   background: rgba(239, 68, 68, 0.12);
 }
+
+/* === STATS CARD — grid format (current generator output) === */
+.article-body .stats-card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+@media (min-width: 640px) {
+  .article-body .stats-card-grid {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 32px;
+  }
+}
+.article-body .stats-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 2px;
+  border-bottom: 1px solid #2a2a44;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.article-body .stats-row:last-child {
+  border-bottom: none;
+}
+.article-body .stats-label {
+  color: #8888aa;
+  font-weight: 400;
+  text-align: left;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.article-body .stats-value {
+  color: #ffffff;
+  font-weight: 700;
+  text-align: right;
+  margin-left: auto;
+  white-space: nowrap;
+}
+.article-body .stats-value.positive {
+  color: #22c55e;
+}
+.article-body .stats-value.negative {
+  color: #ef4444;
+}
+.article-body .stats-card .stats-live-badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 0 6px;
+  border-radius: 4px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  color: #3b82f6;
+  border: 1px solid rgba(59, 130, 246, 0.5);
+  vertical-align: middle;
+}
+/* stray <td> artifacts inside grid spans (generator quirk) */
+.article-body .stats-card-grid td {
+  display: inline;
+  border: none;
+  padding: 0;
+}
 .article-body .stats-card-note {
   margin-top: 14px;
   font-size: 12px;
@@ -6082,6 +6146,25 @@ body.pulse-modal-open {
 }
 [data-theme="light"] .article-body .stats-table .stat-value.negative {
   color: #dc2626;
+}
+[data-theme="light"] .article-body .stats-row {
+  border-bottom-color: #d0d0da;
+}
+[data-theme="light"] .article-body .stats-label {
+  color: #555570;
+}
+[data-theme="light"] .article-body .stats-value {
+  color: #111127;
+}
+[data-theme="light"] .article-body .stats-value.positive {
+  color: #16a34a;
+}
+[data-theme="light"] .article-body .stats-value.negative {
+  color: #dc2626;
+}
+[data-theme="light"] .article-body .stats-card .stats-live-badge {
+  color: #2563eb;
+  border-color: rgba(37, 99, 235, 0.4);
 }
 
 /* === The Hive — Premium Comment Styles === */

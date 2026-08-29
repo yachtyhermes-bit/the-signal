@@ -58,7 +58,7 @@
   // Update "The Numbers That Matter" stats tables on article pages
   // (cells marked data-live-ticker + data-live-field, e.g. data-live-field="price")
   function updateStatsTables(prices) {
-    document.querySelectorAll('.stats-table [data-live-ticker]').forEach(function(cell) {
+    document.querySelectorAll('.stats-table [data-live-ticker], .stats-card [data-live-ticker]').forEach(function(cell) {
       var sym = cell.getAttribute('data-live-ticker');
       var field = cell.getAttribute('data-live-field') || 'price';
       var p = prices[sym];
