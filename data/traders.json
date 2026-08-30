@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-08-30",
-  "refreshNote": "Pelosi holdings refreshed from pelositracker.app live data (2026-08-30); weekly cron refreshes prices only — holdings/weights updated manually on disclosure changes",
+  "refreshNote": "All 6 investors refreshed 2026-08-30 from primary sources: Buffett/Ackman/NVIDIA = Q2 2026 SEC 13F; Cathie = ARKK holdings API (Aug 28); Pelosi = pelositracker disclosures (Aug 24); Cohen = 13D implied (no 13F exists). Weekly cron refreshes prices only — holdings/weights update quarterly on 13F filings.",
   "investors": [
     {
       "slug": "buffett",
@@ -15,7 +15,7 @@
       "handle": "@buffett",
       "ret250": 7.13,
       "retSp500": 19.04,
-      "lastUpdate": "Q1 2026 13F",
+      "lastUpdate": "Q2 2026 13F (Jun 30)",
       "donutImage": "/assets/buffett_donut_transparent.png",
       "wikiUrl": "https://en.wikipedia.org/wiki/Berkshire_Hathaway",
       "holdings": [
@@ -24,90 +24,90 @@
           "short": "AP",
           "company": "Apple Inc.",
           "price": 319.7,
-          "weight": 22.0,
+          "weight": 22.04,
           "change": 1.6276,
-          "color": "#3b82f6"
+          "color": "#a3a3a3"
         },
         {
           "ticker": "AXP",
           "short": "AX",
           "company": "American Express Co.",
           "price": 333.2,
-          "weight": 17.4,
+          "weight": 17.14,
           "change": -0.2873,
-          "color": "#f59e0b"
+          "color": "#2563eb"
+        },
+        {
+          "ticker": "GOOGL",
+          "short": "GO",
+          "company": "Alphabet Inc.",
+          "price": 346.59,
+          "weight": 12.62,
+          "change": 1.7437,
+          "color": "#f97316"
         },
         {
           "ticker": "KO",
           "short": "KO",
           "company": "Coca-Cola Co.",
           "price": 89.66,
-          "weight": 11.6,
+          "weight": 10.86,
           "change": 0.6737,
-          "color": "#ef4444"
+          "color": "#dc2626"
         },
         {
           "ticker": "BAC",
           "short": "BA",
-          "company": "Bank of America",
+          "company": "Bank of America Corp.",
           "price": 62.32,
-          "weight": 9.5,
+          "weight": 9.2,
           "change": 1.88,
-          "color": "#1e3a5a"
+          "color": "#ef4444"
         },
         {
           "ticker": "CVX",
           "short": "CV",
           "company": "Chevron Corp.",
           "price": 201.86,
-          "weight": 6.6,
+          "weight": 4.67,
           "change": 1.0462,
-          "color": "#f97316"
+          "color": "#1e3a5a"
         },
         {
           "ticker": "OXY",
-          "short": "OY",
+          "short": "OX",
           "company": "Occidental Petroleum",
           "price": 59.1,
-          "weight": 6.5,
+          "weight": 4.3,
           "change": -0.1183,
-          "color": "#8b5cf6"
-        },
-        {
-          "ticker": "GOOGL",
-          "short": "GO",
-          "company": "Alphabet Inc. (Class A)",
-          "price": 346.59,
-          "weight": 5.9,
-          "change": 1.7437,
-          "color": "#a78bfa"
+          "color": "#059669"
         },
         {
           "ticker": "CB",
           "short": "CB",
           "company": "Chubb Ltd.",
           "price": 339.92,
-          "weight": 4.2,
+          "weight": 3.9,
           "change": 0.4759,
-          "color": "#10b981"
+          "color": "#0ea5e9"
         },
         {
           "ticker": "MCO",
           "short": "MC",
           "company": "Moody's Corp.",
           "price": 514.95,
-          "weight": 4.1,
+          "weight": 3.73,
           "change": 1.165,
-          "color": "#06b6d4"
+          "color": "#7c3aed"
         },
         {
           "ticker": "KHC",
           "short": "KH",
           "company": "Kraft Heinz Co.",
           "price": 25.7,
-          "weight": 2.8,
+          "weight": 2.57,
           "change": 2.2682,
-          "color": "#ec4899"
+          "color": "#b45309"
         }
       ],
       "changes": [
@@ -151,7 +151,7 @@
           "https://stockanalysis.com/stocks/brk.b/statistics (accessed 2026-08-06) - BRK.B 52-week price change +7.13%",
           "https://totalrealreturns.com/n/BRK-B (accessed 2026-08-05) - rolling cumulative total returns, dividends reinvested, period ending 2026-08-03; 1y values kept from existing site data"
         ],
-        "notes": "Weights = % of equity portfolio per Q1 2026 13F-HR (period 2026-03-31, filed ~May 2026). Q2 2026 13F not yet filed as of 2026-08-06 (due mid-Aug). BRK.B pays no dividend, so 52-week price change (+7.13%) equals total return. GOOGL (Alphabet Cl A) entered top 10 after Q1 2026 increases; DaVita no longer in top 10."
+        "notes": "Q2 2026 13F (SEC EDGAR accession 0001193125-26-352200, filed 2026-08-14). GOOGL now #3 (12.62%); C and VZ exited; MCO/CB up. Weights = value/total $299.25B."
       },
       "perf": {
         "1y": {
@@ -394,7 +394,7 @@
       "handle": "@cathie",
       "ret250": -8.06,
       "retSp500": 19.04,
-      "lastUpdate": "Aug 6, 2026",
+      "lastUpdate": "Aug 28, 2026",
       "donutImage": "/assets/cathie_donut_transparent.png",
       "wikiUrl": "https://en.wikipedia.org/wiki/ARK_Invest",
       "holdings": [
@@ -403,90 +403,90 @@
           "short": "TS",
           "company": "Tesla Inc.",
           "price": 348.75,
-          "weight": 9.38,
+          "weight": 9.05,
           "change": -1.708,
-          "color": "#ff1997"
+          "color": "#ef4444"
         },
         {
           "ticker": "TEM",
           "short": "TM",
-          "company": "Tempus AI Inc.",
+          "company": "Tempus AI",
           "price": 64.04,
-          "weight": 4.94,
+          "weight": 6.1,
           "change": -9.4073,
-          "color": "#1a1ad4"
+          "color": "#ec4899"
         },
         {
           "ticker": "SPCX",
           "short": "SP",
-          "company": "SpaceX (Space Exploration Tech.)",
+          "company": "SpaceX (Class A)",
           "price": 141.5,
-          "weight": 4.66,
+          "weight": 5.9,
           "change": 0.4472,
-          "color": "#8b5cf6"
+          "color": "#111827"
+        },
+        {
+          "ticker": "CRCL",
+          "short": "CR",
+          "company": "Circle Internet Group",
+          "price": 87.14,
+          "weight": 5.51,
+          "change": -7.534,
+          "color": "#22c55e"
         },
         {
           "ticker": "CRSP",
-          "short": "CR",
+          "short": "CS",
           "company": "CRISPR Therapeutics",
           "price": 57.72,
-          "weight": 4.64,
+          "weight": 4.77,
           "change": -2.7792,
-          "color": "#0a9e6b"
+          "color": "#8b5cf6"
         },
         {
           "ticker": "COIN",
           "short": "CO",
           "company": "Coinbase Global",
           "price": 178.64,
-          "weight": 4.42,
+          "weight": 4.7,
           "change": -6.3339,
-          "color": "#b4a7f5"
+          "color": "#f59e0b"
         },
         {
-          "ticker": "AMD",
-          "short": "AM",
-          "company": "Advanced Micro Devices",
-          "price": 465.58,
-          "weight": 4.35,
-          "change": -2.3266,
-          "color": "#e8a820"
+          "ticker": "TWST",
+          "short": "TW",
+          "company": "Twist Bioscience",
+          "price": 141.38,
+          "weight": 3.95,
+          "change": -7.6551,
+          "color": "#06b6d4"
         },
         {
           "ticker": "HOOD",
           "short": "HD",
           "company": "Robinhood Markets",
           "price": 104.26,
-          "weight": 4.33,
+          "weight": 3.76,
           "change": -5.0109,
-          "color": "#f59e0b"
+          "color": "#22c55e"
         },
         {
           "ticker": "SHOP",
           "short": "SH",
           "company": "Shopify Inc.",
           "price": 152.9,
-          "weight": 4.21,
+          "weight": 3.74,
           "change": -0.9266,
-          "color": "#3b82f6"
+          "color": "#059669"
         },
         {
-          "ticker": "CRCL",
-          "short": "CI",
-          "company": "Circle Internet Group",
-          "price": 87.14,
-          "weight": 3.65,
-          "change": -7.534,
-          "color": "#06b6d4"
-        },
-        {
-          "ticker": "TXG",
-          "short": "TX",
-          "company": "10x Genomics",
-          "price": 61.54,
-          "weight": 3.4,
-          "change": -5.1041,
-          "color": "#ec4899"
+          "ticker": "PLTR",
+          "short": "PL",
+          "company": "Palantir Technologies",
+          "price": 186.29,
+          "weight": 3.22,
+          "change": 0.1936,
+          "color": "#f97316"
         }
       ],
       "changes": [],
@@ -496,7 +496,7 @@
           "https://stockanalysis.com/etf/arkk/holdings (accessed 2026-08-06) - corroborating holdings list (48 holdings)",
           "https://totalrealreturns.com/n/ARKK (accessed 2026-08-05) - rolling cumulative total returns, dividends reinvested, period ending 2026-08-04; SPY benchmark from https://totalrealreturns.com/n/SPY; 1y values kept from existing site data"
         ],
-        "notes": "ARK publishes holdings daily; weights as of access date 2026-08-06. ARKK 1-year total return (incl. dividends) -8.06%. Tempus AI ticker changed TEMP->TEM. SPCX (SpaceX) and CRCL (Circle) are recent additions to top 10; ROKU and BEAM fell out of top 10."
+        "notes": "ARKK ETF holdings as of 2026-08-28 (arkfunds.io API, 47 positions). CRCL (Circle) new at #4 5.51%; TWST new; AMD dropped out of top 10 (2.94%)."
       },
       "perf": {
         "1y": {
@@ -528,108 +528,117 @@
       "handle": "@ackman",
       "ret250": -8.4,
       "retSp500": 19.04,
-      "lastUpdate": "Q1 2026 13F",
+      "lastUpdate": "Q2 2026 13F (Jun 30)",
       "donutImage": "/assets/ackman_donut_transparent.png",
       "wikiUrl": "https://en.wikipedia.org/wiki/Bill_Ackman",
       "holdings": [
-        {
-          "ticker": "BN",
-          "short": "BN",
-          "company": "Brookfield Corp.",
-          "price": 41.33,
-          "weight": 17.62,
-          "change": -0.2414,
-          "color": "#1e3a5a"
-        },
-        {
-          "ticker": "AMZN",
-          "short": "AZ",
-          "company": "Amazon.com Inc.",
-          "price": 266.43,
-          "weight": 17.39,
-          "change": 3.9686,
-          "color": "#f97316"
-        },
         {
           "ticker": "UBER",
           "short": "UB",
           "company": "Uber Technologies",
           "price": 78.82,
-          "weight": 15.71,
+          "weight": 12.72,
           "change": 2.4302,
-          "color": "#475569"
+          "color": "#111827"
+        },
+        {
+          "ticker": "BN",
+          "short": "BN",
+          "company": "Brookfield Corp.",
+          "price": 41.33,
+          "weight": 12.58,
+          "change": -0.2414,
+          "color": "#1e3a5a"
         },
         {
           "ticker": "MSFT",
           "short": "MS",
           "company": "Microsoft Corp.",
           "price": 513.53,
-          "weight": 15.26,
+          "weight": 11.89,
           "change": 1.677,
-          "color": "#60a5fa"
+          "color": "#0ea5e9"
         },
         {
-          "ticker": "QSR",
-          "short": "QS",
-          "company": "Restaurant Brands Intl",
-          "price": 78.26,
-          "weight": 12.2,
-          "change": 0.2434,
-          "color": "#ef4444"
-        },
-        {
-          "ticker": "META",
-          "short": "ME",
-          "company": "Meta Platforms",
-          "price": 578.02,
-          "weight": 11.1,
-          "change": 1.2117,
-          "color": "#3b82f6"
+          "ticker": "AMZN",
+          "short": "AZ",
+          "company": "Amazon.com Inc.",
+          "price": 266.43,
+          "weight": 10.49,
+          "change": 3.9686,
+          "color": "#f97316"
         },
         {
           "ticker": "HHH",
           "short": "HH",
           "company": "Howard Hughes Holdings",
           "price": 64.8,
-          "weight": 8.7,
+          "weight": 10.23,
           "change": -0.1848,
           "color": "#2563eb"
         },
         {
-          "ticker": "SEG",
-          "short": "SE",
-          "company": "Seaport Entertainment",
-          "price": 26.79,
-          "weight": 0.79,
-          "change": -0.8879,
-          "color": "#22c55e"
+          "ticker": "QSR",
+          "short": "QS",
+          "company": "Restaurant Brands Intl",
+          "price": 78.26,
+          "weight": 9.62,
+          "change": 0.2434,
+          "color": "#dc2626"
         },
         {
-          "ticker": "GOOG",
-          "short": "GG",
-          "company": "Alphabet Inc. (Class C)",
-          "price": 342.88,
-          "weight": 0.65,
-          "change": 1.5309,
-          "color": "#fbbf24"
+          "ticker": "META",
+          "short": "ME",
+          "company": "Meta Platforms",
+          "price": 578.02,
+          "weight": 9.25,
+          "change": 1.2117,
+          "color": "#3b82f6"
         },
         {
-          "ticker": "HTZ",
-          "short": "HZ",
-          "company": "Hertz Global Holdings",
-          "price": 2.14,
-          "weight": 0.51,
-          "change": 4.902,
-          "color": "#eab308"
+          "ticker": "V",
+          "short": "V",
+          "company": "Visa Inc.",
+          "price": 381.6,
+          "weight": 5.76,
+          "change": 0.511,
+          "color": "#2563eb"
         },
         {
-          "ticker": "GOOGL",
-          "short": "GL",
-          "company": "Alphabet Inc. (Class A)",
-          "price": 346.59,
-          "weight": 0.1,
-          "change": 1.7437,
-          "color": "#1e40af"
+          "ticker": "MA",
+          "short": "MA",
+          "company": "Mastercard Inc.",
+          "price": 595.3,
+          "weight": 5.61,
+          "change": 0.6033,
+          "color": "#f59e0b"
+        },
+        {
+          "ticker": "SPGI",
+          "short": "SG",
+          "company": "S&P Global Inc.",
+          "price": 442.89,
+          "weight": 5.43,
+          "change": 1.7226,
+          "color": "#7c3aed"
+        },
+        {
+          "ticker": "NFLX",
+          "short": "NF",
+          "company": "Netflix Inc.",
+          "price": 81.72,
+          "weight": 4.8,
+          "change": 2.3547,
+          "color": "#dc2626"
+        },
+        {
+          "ticker": "PSH",
+          "short": "PS",
+          "company": "Pershing Square USA",
+          "price": 49.97,
+          "weight": 0.77,
+          "change": -0.1139,
+          "color": "#1e3a5a"
         }
       ],
       "changes": [
@@ -681,7 +690,7 @@
           "https://assets.pershingsquareholdings.com/wp-content/uploads/2026/07/23144307/PSH-Fact-Sheet-June-2026-Website.pdf (accessed 2026-08-06) - PSH NAV net returns: 1Y -8.4%, 3Y +10.3%/yr, 5Y +9.7%/yr (annualized), as of 2026-06-30",
           "https://pershingsquareholdings.com/pershing-square-holdings-ltd-releases-monthly-net-asset-value-and-performance-report-for-july-2026 (accessed 2026-08-06) - July 2026 NAV $77.10, net +3.9% MTD"
         ],
-        "notes": "Weights = % of equity portfolio per Q1 2026 13F (period 2026-03-31, filed May 15, 2026). 13F equity book $13.71B. ret250 = PSH NAV 1-year net return -8.4% as of 2026-06-30 (July 2026 was +3.9% net). 3Y/5Y converted from annualized (10.3%/9.7%) to cumulative (34.4%/59.3%). HHH = Howard Hughes Holdings (Pershing Square spin-off). Hilton, Chipotle, CPKC exited in Q1 2026. GOOG/GOOGL massively reduced (-94.94%/-95.20%)."
+        "notes": "Q2 2026 13F — Pershing Square, Inc. (CIK 2026053, SEC, filed 2026-08-14). NOTE: PSCM now files 13F-NT only; full portfolio consolidated into PS Inc ($19.47B). UBER #1; META/V/MA/SPGI/NFLX NEW; CP/VRT/LYFT/SONY exited."
       },
       "perf": {
         "1y": {
@@ -711,7 +720,7 @@
       "handle": "@nvidia",
       "ret250": 22.51,
       "retSp500": 19.04,
-      "lastUpdate": "Aug 12, 2026",
+      "lastUpdate": "Q2 2026 13F (Jun 30)",
       "donutImage": "/assets/nvidia_donut_transparent.png?v=2",
       "wikiUrl": "https://en.wikipedia.org/wiki/NVIDIA",
       "disclaimer": "NVIDIA is a public company, not a fund. Positions shown are strategic equity investments disclosed by NVIDIA or partner announcements — not 13F holdings — and amounts are approximate as disclosed. Past performance does not guarantee future results. This is not investment advice.",
@@ -721,63 +730,72 @@
           "short": "IN",
           "company": "Intel Corp.",
           "price": 89.47,
-          "weight": 35.0,
+          "weight": 47.27,
           "change": -2.845,
-          "color": "#3b82f6"
+          "color": "#6366f1"
+        },
+        {
+          "ticker": "ASTS",
+          "short": "AS",
+          "company": "AST SpaceMobile",
+          "price": 58.05,
+          "weight": 33.06,
+          "change": -5.5176,
+          "color": "#06b6d4"
         },
         {
           "ticker": "CRWV",
-          "short": "CW",
+          "short": "CR",
           "company": "CoreWeave Inc.",
           "price": 84.23,
-          "weight": 14.0,
+          "weight": 7.41,
           "change": -2.9608,
-          "color": "#22c55e"
-        },
-        {
-          "ticker": "NBIS",
-          "short": "NB",
-          "company": "Nebius Group",
-          "price": 209.18,
-          "weight": 14.0,
-          "change": -4.2567,
-          "color": "#f97316"
-        },
-        {
-          "ticker": "SNPS",
-          "short": "SN",
-          "company": "Synopsys Inc.",
-          "price": 442.61,
-          "weight": 14.0,
-          "change": -4.7925,
-          "color": "#ec4899"
+          "color": "#8b5cf6"
         },
         {
           "ticker": "COHR",
           "short": "CO",
           "company": "Coherent Corp.",
           "price": 279.2,
-          "weight": 14.0,
+          "weight": 4.84,
           "change": -5.4809,
-          "color": "#eab308"
+          "color": "#22c55e"
         },
         {
           "ticker": "NOK",
           "short": "NO",
           "company": "Nokia Corp.",
           "price": 10.21,
-          "weight": 7.0,
+          "weight": 3.48,
           "change": -3.5883,
+          "color": "#2563eb"
+        },
+        {
+          "ticker": "SNPS",
+          "short": "SN",
+          "company": "Synopsys Inc.",
+          "price": 442.61,
+          "weight": 3.39,
+          "change": -4.7925,
           "color": "#ef4444"
         },
         {
-          "ticker": "GENB",
+          "ticker": "NBIS",
+          "short": "NB",
+          "company": "Nebius Group",
+          "price": 209.18,
+          "weight": 0.52,
+          "change": -4.2567,
+          "color": "#f59e0b"
+        },
+        {
+          "ticker": "GBIO",
           "short": "GB",
-          "company": "Generate:Biomedicines (Private)",
+          "company": "Generate Biomedicines",
           "price": null,
-          "weight": 2.0,
+          "weight": 0.02,
           "change": null,
-          "color": "#06b6d4"
+          "color": "#a3a3a3"
         }
       ],
       "changes": [
@@ -829,7 +847,7 @@
           "https://medium.com/@henry.nextinvest/october-2025-us-stock-market-intel-nokia-nvidia-part-2-bb5acfc5a63a (accessed 2026-08-12) - Intel $5B (May 2025); Nokia $1B at $6.01/share, 2.9% stake (Oct 28 2025)",
           "yfinance (accessed 2026-08-12) - NVDA total returns: 1y +22.51%, 3y +402.70%, 5y +989.62%"
         ],
-        "notes": "Corporate strategic investments as disclosed in press releases — NOT a 13F portfolio. Weights = disclosed dollar amount / total disclosed pool (~$14.25B: Intel $5B; CoreWeave, Nebius, Synopsys, Coherent $2B each; Nokia $1B; Generate:Biomedicines $250M). Marvell's $2B stake (Mar 2026) is excluded to match the 7-company wheel graphic. Generate:Biomedicines is private. 1y/3y/5y = NVDA stock total returns via yfinance (2026-08-12 close)."
+        "notes": "Q2 2026 13F (SEC, filed 2026-08-14, $63.4B total, +245% QoQ). ASTS NEW at 33.06% (#2); INTC 47.27%; CRWV cut 19.9%→7.4%; SNPS 10.4%→3.4%."
       },
       "perf": {
         "1y": {
@@ -860,18 +878,18 @@
       "handle": "@ryancohen",
       "ret250": -19.46,
       "retSp500": 19.04,
-      "lastUpdate": "Jan 2026 13D",
+      "lastUpdate": "Aug 2026 (13D est.)",
       "donutImage": "/assets/cohen_donut_transparent.png",
       "wikiUrl": "https://en.wikipedia.org/wiki/Ryan_Cohen",
       "disclaimer": "Ryan Cohen files no 13F: GME ownership is disclosed via SEC 13D filings; other positions are per 13D/G filings and press reports, with values approximate as reported. Weights are estimates, not audited fund allocations. Past performance does not guarantee future results. This is not investment advice.",
       "holdings": [
         {
-          "ticker": "GME",
-          "short": "GM",
-          "company": "GameStop Corp.",
-          "price": 17.87,
-          "weight": 16.0,
-          "change": -2.0822,
+          "ticker": "WFC",
+          "short": "WF",
+          "company": "Wells Fargo & Co.",
+          "price": 86.69,
+          "weight": 24.2,
+          "change": 2.0242,
           "color": "#ef4444"
         },
         {
@@ -879,54 +897,72 @@
           "short": "AP",
           "company": "Apple Inc.",
           "price": 319.7,
-          "weight": 18.0,
+          "weight": 23.9,
           "change": 1.6276,
-          "color": "#9ca3af"
+          "color": "#a3a3a3"
         },
         {
-          "ticker": "BABA",
-          "short": "BA",
-          "company": "Alibaba Group",
-          "price": 118.9,
-          "weight": 7.0,
-          "change": 2.2268,
-          "color": "#f97316"
+          "ticker": "GME",
+          "short": "GM",
+          "company": "GameStop Corp.",
+          "price": 17.87,
+          "weight": 18.3,
+          "change": -2.0822,
+          "color": "#dc2626"
         },
         {
           "ticker": "TSLA",
           "short": "TS",
           "company": "Tesla Inc.",
           "price": 348.75,
-          "weight": 17.0,
+          "weight": 12.9,
           "change": -1.708,
-          "color": "#d1d5db"
-        },
-        {
-          "ticker": "BBBY",
-          "short": "BB",
-          "company": "Bed Bath & Beyond (Exited)",
-          "price": null,
-          "weight": 3.0,
-          "change": null,
-          "color": "#3b82f6"
-        },
-        {
-          "ticker": "WFC",
-          "short": "WF",
-          "company": "Wells Fargo & Co.",
-          "price": 86.69,
-          "weight": 25.0,
-          "change": 2.0242,
-          "color": "#eab308"
+          "color": "#ef4444"
         },
         {
           "ticker": "NFLX",
           "short": "NF",
           "company": "Netflix Inc.",
           "price": 81.72,
-          "weight": 14.0,
+          "weight": 12.1,
           "change": 2.3547,
           "color": "#dc2626"
+        },
+        {
+          "ticker": "JPM",
+          "short": "JP",
+          "company": "JPMorgan Chase & Co.",
+          "price": 357.62,
+          "weight": 2.3,
+          "change": 0.9599,
+          "color": "#2563eb"
+        },
+        {
+          "ticker": "ULTA",
+          "short": "UL",
+          "company": "Ulta Beauty",
+          "price": 517.5,
+          "weight": 1.8,
+          "change": -4.1844,
+          "color": "#ec4899"
+        },
+        {
+          "ticker": "PLTR",
+          "short": "PL",
+          "company": "Palantir Technologies",
+          "price": 186.29,
+          "weight": 1.6,
+          "change": 0.1936,
+          "color": "#f97316"
+        },
+        {
+          "ticker": "BYND",
+          "short": "BY",
+          "company": "Beyond Meat",
+          "price": 13.86,
+          "weight": 0.9,
+          "change": -1.0,
+          "color": "#059669"
         }
       ],
       "changes": [
@@ -995,7 +1031,7 @@
           "https://www.forbes.com/profile/ryan-cohen (accessed 2026-08-12) - net worth $4.9B; confirmed holdings: GameStop, Netflix, Wells Fargo, Apple, Alibaba",
           "Press reports Jun-Aug 2025 (WSJ et al.) - Wells Fargo ~$1.5B (Jun 2025), Tesla >$1B (Jul 2025), Netflix new position (Aug 2025), Apple ~$1.05B, Alibaba ~$350M (2023)"
         ],
-        "notes": "RC Ventures files no 13F — GME is disclosed via 13D/Form 4 (most recent: Jan 2026, incl. 3,734,784 warrants @ $32 strike exp Oct 2026); Apple/Netflix/Wells Fargo/Alibaba positions per press reports and Forbes. Weights are estimates from reported values (~$5.7B pool: WFC ~$1.5B, AAPL ~$1.05B, TSLA ~$1B, GME $969.6M, NFLX ~$800M est, BABA ~$350M, BBBY exited). BBBY stake exited 2023 — kept on the wheel per user's graphic. ret250 = GME 1-year price return (-19.46%, yfinance 2026-08-12) used as the only defensible public proxy since no fund NAV exists; GME is his largest controlled position."
+        "notes": "RC Ventures files NO 13F/13G (verified SEC — 13D/13G only, 0 results). Weights = implied share counts from latest 13D (Jan 21, 2026 GME 13D/A) × Aug 30 prices, $5.03B total. BABA/BBBY removed (delisted/not verified)."
       },
       "perf": {
         "1y": {

@@ -8,13 +8,13 @@ except ImportError:
     os.system(f"{sys.executable} -m pip install yfinance -q --break-system-packages")
     import yfinance as yf
 
-TICKERS = ['AXON', 'META', 'CEG', 'MU', 'NFLX', 'VST', 'NVDA', 'AVAV']
+TICKERS = ['GEV', 'META', 'CEG', 'MU', 'NFLX', 'VST', 'NVDA', 'AVAV']
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'data')
 os.makedirs(DATA_DIR, exist_ok=True)
 
 # Company metadata
 COMPANIES = {
-    'AXON': {'name': 'Axon Enterprise', 'sector': 'Defense Tech', 'logo': ''},
+    'GEV': {'name': 'GE Vernova', 'sector': 'AI Power', 'logo': ''},
     'META': {'name': 'Meta Platforms', 'sector': 'Social Media', 'logo': ''},
     'CEG': {'name': 'Constellation Energy', 'sector': 'AI Power', 'logo': ''},
     'MU': {'name': 'Micron Technology, Inc.', 'sector': 'Semiconductors', 'logo': ''},
