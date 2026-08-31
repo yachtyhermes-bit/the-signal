@@ -1,0 +1,88 @@
+{
+  "slug": "amd-second-source-nvidia-2026",
+  "title": "AMD Turned ‘Second Source’ Into a Gigawatt Moat",
+  "subtitle": "OpenAI up to 6 gigawatts, Meta 6, Anthropic 2 — plus a record 46.2% server CPU share and a software stack that finally competes. AMD spent a year turning Plan B status into signed contracts, and the AI buildout now runs on two engines.",
+  "summary": "AMD is no longer just Nvidia's understudy. Gigawatt-scale deals with OpenAI, Meta, and Anthropic, a record 46.2% server CPU share, and a software stack that finally competes have turned the second-source story into a contractual moat — here's why the AI buildout now runs on two engines.",
+  "ticker": "AMD",
+  "sector": "ai",
+  "sentiment": "bullish",
+  "date": "2026-08-31T22:00:00Z",
+  "price": 470.72,
+  "tags": [
+    "amd",
+    "ai",
+    "ai-infrastructure",
+    "instinct",
+    "epyc",
+    "rocm"
+  ],
+  "image": {
+    "src": "/img/articles/amd-second-source-nvidia-2026.jpg",
+    "fit": "cover",
+    "caption": "A photo-realistic close-up of a server CPU processor package being inspected by a gloved technician in a semiconductor cleanroom. Photo: The Signal / AI-generated.",
+    "alt": "Technician inspecting a server CPU processor package in a cleanroom"
+  },
+  "links": [
+    {
+      "label": "AMD — Q2 2026 Financial Results (Aug 4, 2026)",
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1295/amd-reports-second-quarter-2026-financial-results"
+    },
+    {
+      "label": "AMD — Strategic partnership with Anthropic, up to 2 GW of MI450-series GPUs (Jul 22, 2026)",
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1292/amd-and-anthropic-announce-strategic-partnership-to-deploy-up-to-2-gigawatts-of-amd-instinct-mi450-series-gpus"
+    },
+    {
+      "label": "AMD — Advancing AI 2026: full-stack compute for the agentic AI era (Jul 23, 2026)",
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1294/aai-2026-amd-delivers-full-stack-compute-for-the-agentic-ai-era"
+    },
+    {
+      "label": "AMD — Q4 and FY2025 financial results (Feb 3, 2026)",
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1276/amd-reports-fourth-quarter-and-full-year-2025-financial-results"
+    },
+    {
+      "label": "AMD, Cisco and HUMAIN — Saudi Arabia AI infrastructure goes live (Aug 31, 2026)",
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1298/amd-cisco-and-humain-expand-saudi-arabias-ai-infrastructure-as-amd-instinct-systems-go-live"
+    }
+  ],
+  "meta": {
+    "author": "The Signal",
+    "estimatedReadTime": "5 minutes",
+    "editorialTags": [
+      "amd",
+      "ai",
+      "ai-infrastructure",
+      "instinct",
+      "epyc",
+      "rocm",
+      "second-source",
+      "accelerators"
+    ],
+    "seoKeywords": [
+      "AMD stock",
+      "AMD Instinct MI455X",
+      "ROCm 10",
+      "Helios rackscale",
+      "EPYC Venice",
+      "AMD vs NVIDIA",
+      "AI accelerators",
+      "data center revenue"
+    ],
+    "relatedTickers": [
+      "NVDA",
+      "MRVL",
+      "SMCI",
+      "TSM"
+    ],
+    "keyMetrics": {
+      "AMD Price": "$470.72",
+      "Market Cap": "$765.2B",
+      "Forward P/E": "30.3",
+      "Total Revenue (TTM)": "$41.3B",
+      "52-Week Low": "$149.22",
+      "52-Week High": "$584.73",
+      "Analyst Consensus": "Strong Buy",
+      "Analyst Target Mean": "$613.84"
+    }
+  },
+  "bodyHtml": "<p>Every hyperscaler has the same recurring nightmare: one supplier for the most important silicon on the planet. Nvidia's GPUs run the AI boom, and the giants betting tens of billions on it have exactly one credible second source — AMD. That used to be a talking point. Now it's a contract, signed in gigawatts.</p>\n\n<div class=\"stats-card\">\n  <div class=\"stats-card-grid\">\n    <div class=\"stats-row\"><span class=\"stats-label\">Price</span><span class=\"stats-value\"><td class=\"stats-value\" data-live-ticker=\"AMD\" data-live-field=\"price\">$470.72</td><span class=\"stats-live-badge\">LIVE</span></span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">Market Cap</span><span class=\"stats-value\">$765.2B</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">Forward P/E</span><span class=\"stats-value\">30.3</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">Total Revenue (TTM)</span><span class=\"stats-value\">$41.3B</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">52-Week Low</span><span class=\"stats-value\">$149.22</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">52-Week High</span><span class=\"stats-value\">$584.73</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">Analyst Consensus</span><span class=\"stats-value\">Strong Buy</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">Analyst Target Mean</span><span class=\"stats-value\">$613.84</span></div>\n  </div>\n  <div class=\"stats-card-note\">Price refreshes live · All other figures as of August 31, 2026</div>\n</div>\n\n<p>Here's what AMD actually does, because the ticker hides the story. It designs the chips that power AI — the Instinct MI accelerators that train and run models, the EPYC server CPUs inside cloud data centers, plus Ryzen client chips and Radeon GPUs. Its buyers are the hyperscalers you already know: Microsoft Azure, Oracle, Meta. And its customers are the AI labs doing the most ambitious work in the world: OpenAI and Anthropic.</p>\n\n<p>In the last year, AMD converted second-source status into something closer to a moat. OpenAI signed up for up to 6 gigawatts of Instinct compute. Meta committed to 6 gigawatts of GPUs. Anthropic inked a deal for up to 2 gigawatts of MI455X in Helios rackscale systems, with AMD committing up to $5 billion in strategic equity as part of the partnership. Microsoft is bringing Helios to Azure. When the biggest AI spenders on Earth sign gigawatt-scale deals, second-source stops being hypothetical. It becomes contractual.</p>\n\n<p>The financials back the story up. Q2 2026 was a record: $11.5 billion in revenue, up 50% year over year, with adjusted earnings per share of $1.66 — a beat against the $1.61 the Street expected. Data Center revenue hit $6.7 billion, up 107%, and now makes up 58% of the company. Q3 guidance lands near $13 billion, up 41% year over year. The stock dipped after the print anyway, because the bar was that demanding. Beat-and-raise with a demanding bar isn't a verdict. It's a receipt.</p>\n\n<p>The product side is where it gets fun. The Instinct MI400 family landed in late July, headlined by the MI455X with 34x token throughput versus the previous generation, plus the MI430X for HPC and sovereign AI, the MI440X for enterprise, and the MI350P value tier. Helios — the rackscale system that pairs 72 MI455X GPUs with 18 EPYC Venice CPUs per rack, Pensando networking, and ROCm software — delivers up to 30% more inference tokens per dollar than the leading competitive solution. It's shipping in the second half of this year, with OpenAI's build coming online beginning Q4 and accelerating through 2027.</p>\n\n<p>On the CPU side, the sixth-gen EPYC Venice line launched with up to 256 cores, Meta is the lead customer, and Azure runs VMs on it. Server CPU revenue share hit a record 46.2% in Q1, and AMD now pulls in more than 30% of all CPU segment revenue. Then there's ROCm 10, out since late August, with up to 3.3x inference uplift over ROCm 7, an AI-driven dev platform that's now generally available, CUDA compatibility via ZLUDA, and day-zero support for Qwen 3.8. Ubuntu's next LTS even ships ROCm natively. The software story that used to be AMD's weakness is quietly turning into a weapon.</p>\n\n<p>The global story is moving too. Saudi Arabia's HUMAIN platform went live with AMD Instinct systems on August 31, with the next phase scaling toward 250 megawatts from 2027 and a joint venture on track for 1 gigawatt by 2030. AMD guides to roughly a $2 trillion addressable market by 2030 — that's the hook-scale number. August also brought the quiet acquisition of Taalas, a Toronto inference-silicon startup — small print with big implications for where the roadmap goes next. None of this is risk-free: gaming revenue fell 31% year over year, the Anthropic equity stake is a future commitment rather than spent cash, and an $800 million export-control charge from a year ago shows policy risk cuts both ways. But the direction of travel is unmistakable.</p>\n\n<p>Here's the bottom line. The AI buildout needs a second source, and AMD just made itself the only one with gigawatt-scale receipts, record CPU share, a software stack that finally competes, and a roadmap that keeps compounding — backed by roughly 23% of revenue going back into R&D. For investors who want AI exposure without a one-name bet, AMD is the alternative that stopped being theoretical. The contracts are signed. Now the delivery begins.</p>\n\n<p class=\"disclosure\">Disclosure: The Signal holds no position in AMD. Positions may change. This is not financial advice.</p>"
+}
