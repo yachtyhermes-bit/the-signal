@@ -108,7 +108,7 @@ export default async function handler(req, res) {
 
     return res.json({ received: true });
   } catch (err) {
-    console.error('Webhook error:', err);
-    return res.status(400).json({ error: 'Webhook error' });
+    console.error('Webhook error:', err.message || String(err));
+    return res.status(400).json({ error: 'Webhook error', detail: err.message ? err.message.slice(0, 200) : String(err) });
   }
 }
