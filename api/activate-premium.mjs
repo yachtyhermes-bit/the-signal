@@ -3,7 +3,7 @@
 // POST: { session_id, token (hive auth token) }
 
 const SK = process.env.STRIPE_SECRET_KEY || '';
-const ADMIN_SECRET = 'signal_admin_2026';
+const ADMIN_KEY = process.env.ADMIN_KEY || '';
 const HIVE_API = 'https://readthesignal.net/api/hive';
 
 export default async function handler(req, res) {
@@ -28,6 +28,7 @@ export default async function handler(req, res) {
     // Resolve Hive user from token
     let username = '';
     let userUid = '';
+    let userEmail = '';
 
     if (token && token.startsWith('tok_')) {
       try {
@@ -39,6 +40,7 @@ export default async function handler(req, res) {
           if (meData.authenticated) {
             userUid = meData.uid;
             username = meData.username || '';
+            userEmail = meData.email || '';
           }
         }
       } catch (err) {
@@ -46,7 +48,7 @@ export default async function handler(req, res) {
       }
     }
 
-    if (!username) {
+    if (!username && !userUid) {
       return res.status(401).json({ error: 'Could not verify user identity. Please sign in again.' });
     }
 
@@ -77,10 +79,22 @@ export default async function handler(req, res) {
     // Determine plan from session
     const plan = session.metadata?.plan || 'premium';
 
-    // Activate premium via Hive API
+    if (!ADMIN_KEY) {
+      return res.status(500).json({ error: 'ADMIN_KEY not configured' });
+    }
+
+    // Activate premium via Hive API (POST admin endpoint — same path the webhook uses)
     const activateResp = await fetch(
-      `${HIVE_API}?action=set-premium&username=${encodeURIComponent(username)}&secret=${ADMIN_SECRET}&plan=${encodeURIComponent(plan)}`,
+      `${HIVE_API}?action=set-premium&admin_key=${encodeURIComponent(ADMIN_KEY)}`,
       {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          admin_key: ADMIN_KEY,
+          email: userEmail || username,
+          plan,
+          hiveUid: userUid
+        }),
         signal: AbortSignal.timeout(10000)
       }
     );

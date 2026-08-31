@@ -1356,11 +1356,11 @@ export default async function handler(req, res) {
       return res.json({ status: 'ok', username, plan: 'free' });
     }
 
-    // === Admin: Grant premium (GET, secret in query for reliability) ===
-    // GET /api/hive?action=set-premium&username=X&secret=signal_admin_2026&plan=premium
+    // === Admin: Grant premium (GET, admin_key in query for reliability) ===
+    // GET /api/hive?action=set-premium&username=X&admin_key=<env>&plan=premium
     if (req.method === 'GET' && req.query.action === 'set-premium') {
-      const { username, secret, plan, since } = req.query;
-      if (secret !== 'signal_admin_2026') {
+      const { username, admin_key, plan, since } = req.query;
+      if (!admin_key || admin_key !== ADMIN_KEY) {
         return res.status(403).json({ error: 'Forbidden' });
       }
       const usernameLower = (username || '').toLowerCase().trim();

@@ -263,23 +263,11 @@
             return;
           }
 
-          // Fallback via direct set-premium
-          if (user && user.username) {
-            statusEl.innerHTML = '<p style="color:var(--text-muted);font-size:.85rem;">Activating premium...</p>';
-            try {
-              var fallbackResp = await fetch(
-                '/api/hive?action=set-premium&username=' + encodeURIComponent(user.username) +
-                '&secret=signal_admin_2026&plan=' + encodeURIComponent(plan)
-              );
-              var fallbackData = await fallbackResp.json();
-              if (fallbackData.status === 'ok') {
-                showSuccess(plan);
-                return;
-              }
-            } catch(e) {}
-          }
-
-          showGenericSuccess();
+          // No client-side fallback — premium activation must be verified server-side
+          // (stripe session validation) via /api/activate-premium. The webhook also
+          // grants premium independently, so retry once after a short delay.
+          setTimeout(function() { window.location.reload(); }, 2500);
+          return;
         } catch (err) {
           console.error('Activation error:', err);
           showGenericSuccess();
