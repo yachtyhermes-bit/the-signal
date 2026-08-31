@@ -1,0 +1,54 @@
+{
+  "slug": "intc-sk-hynix-hbm4e-foundry-2026",
+  "title": "The HBM King Is Shopping for a Second Factory — Intel Is the Surprise Candidate",
+  "subtitle": "SK hynix reportedly wants Intel Foundry to make HBM4E base dies, breaking TSMC's grip on the hottest memory in AI. For Intel, it could be the customer that changes everything.",
+  "summary": "South Korea's Herald Business reports SK hynix is weighing Intel Foundry for part of its HBM4E base-die production — a dual-sourcing move away from sole-sourcing TSMC, whose HBM4 base dies reportedly cost three to four times more than SK hynix's own. Intel shares have more than tripled off their 52-week low, the CEO just bought $10 million worth of stock, and a 2027 HBM4E ramp could make Intel the second foundry the AI buildout actually needs.",
+  "ticker": "INTC",
+  "sector": "ai",
+  "sentiment": "bullish",
+  "date": "2026-08-31T18:00:00Z",
+  "price": 89.47,
+  "tags": ["intel", "foundry", "hbm", "semiconductors"],
+  "image": {
+    "src": "/img/articles/intc-sk-hynix-hbm4e-foundry-2026.jpg",
+    "fit": "cover",
+    "caption": "A photo-realistic close-up of a silicon wafer patterned with memory dies in a semiconductor cleanroom. Photo: The Signal / AI-generated.",
+    "alt": "Silicon wafer with memory dies in a semiconductor cleanroom"
+  },
+  "links": [
+    {
+      "url": "https://www.trendforce.com/news/2026/08/31/news-sk-hynix-reportedly-weighs-intel-for-hbm4e-base-dies-amid-tsmc-cost-pressure-and-supply-diversification/",
+      "title": "SK hynix reportedly weighs Intel for HBM4E base dies amid TSMC cost pressure and supply diversification (TrendForce)"
+    },
+    {
+      "url": "https://www.techpowerup.com/352169/sk-hynix-eyes-intel-foundry-for-hbm4e-base-die-manufacturing/",
+      "title": "SK hynix eyes Intel Foundry for HBM4E base-die manufacturing (TechPowerUp)"
+    },
+    {
+      "url": "https://www.techpowerup.com/352156/sk-hynix-eyes-intel-emib-2-5d-packaging-for-hbm-memory/",
+      "title": "SK hynix eyes Intel EMIB 2.5D packaging for HBM memory (TechPowerUp)"
+    },
+    {
+      "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262140719-sk-hynix-considers-intel-hbm4e-base-chip-reduce-reliance-tsmc-tradingkey",
+      "title": "SK hynix considers Intel for HBM4E base chip to reduce reliance on TSMC (TradingKey)"
+    }
+  ],
+  "meta": {
+    "author": "The Signal",
+    "estimatedReadTime": 5,
+    "editorialTags": ["ai", "foundry", "hbm", "chip-stocks"],
+    "seoKeywords": ["Intel stock", "INTC", "SK hynix HBM4E", "Intel Foundry", "HBM4 base die", "TSMC HBM", "AI memory bottleneck", "EMIB-T packaging", "advanced packaging", "Lip-Bu Tan"],
+    "relatedTickers": ["MU", "TSM"],
+    "keyMetrics": {
+      "INTC Price": "$89.47",
+      "Market Cap": "$472.9B",
+      "Forward P/E": "43.8",
+      "Total Revenue (TTM)": "$57.0B",
+      "52-Week Low": "$23.68",
+      "52-Week High": "$142.35",
+      "Analyst Consensus": "N/A",
+      "Analyst Target Mean": "$114.88"
+    }
+  },
+  "bodyHtml": "<p>Here's the angle nobody's talking about: the king of AI memory is quietly shopping for a second factory — and the surprise candidate is Intel.</p><p>South Korea's Herald Business reported today that SK hynix is weighing Intel Foundry for part of its HBM4E base-die production — a deliberate move away from sole-sourcing TSMC. SK hynix gave its standard no-comment, the polite \"difficult to confirm\" that rarely kills a story. Intel shares rose on the report.</p><p>First, the refresher, because Intel's story gets buried in earnings noise. Intel builds the chips inside most of the world's computers — and it's trying to become the factory other chip companies rent.</p><p>That second business, Intel Foundry, is the whole ballgame now: a US-based, US-owned alternative to TSMC for the companies building the AI era's silicon. This report is the strongest signal yet that the strategy is landing.</p><p>Here's why it matters for AI. High-bandwidth memory, or HBM, is the specialized memory stacked directly next to Nvidia's and AMD's accelerators, feeding them data faster than anything else on the market — and it's the industry's most talked-about bottleneck.</p><p>Whoever controls HBM supply shapes AI timelines. In the HBM4 era, the base die — the bottom layer that talks to the processor — is the key differentiator.</p><p>Why should you care? Because the AI buildout has a concentration problem. TSMC makes the world's most advanced chips, and the memory giant that feeds Nvidia and AMD has been handing it the base dies too.</p><p>Every company racing to build AI infrastructure is quietly terrified of that single point of failure, and Washington is too — that's why the CHIPS Act bet billions on a US foundry revival. A credible second factory on US soil doesn't just help Intel. It de-risks the entire sector.</p><p>SK hynix made base dies in-house through HBM3E, then turned to TSMC for HBM4, which is now in mass production on a 12nm-class process. But TSMC's HBM4 base dies reportedly cost three to four times more than SK hynix's own core dies — and the gap widens for HBM4E.</p><p>Passing those costs along is hard, because most HBM is locked into long-term supply agreements. SK hynix eats the difference between what TSMC charges and what customers will pay. Bring in Intel, and it gets cost flexibility plus supply stability: leverage it has never had with TSMC.</p><p>The exact Intel node is unconfirmed. Analysts float Intel 3 or 4 for the base dies, or even 18A, with older nodes seen as the more financially sensible pick for a chip that doesn't need bleeding-edge density. Either way, this is real validation — the HBM king is hedging its biggest supplier risk, and Intel is the hedge.</p><p>And it's not just base dies. At Hot Chips this year, SK hynix validated designs against Intel's EMIB-T packaging — TSV-based vertical power delivery purpose-built for 3D memory.</p><p>Intel also hired former SK hynix CEO Seok-Hee Lee to run advanced packaging; the guy who knows HBM better than almost anyone now sits across the negotiating table. Add it up, and this relationship has been quietly building for a year.</p><p>The timing suits Intel. Its 14A process is ahead of plan on defect density — the CFO called it the best progress since 22nm — and customers are reportedly \"competing for capacity.\" Fortinet is in as the first named external foundry customer under CEO Lip-Bu Tan, and Tan put his money where his mouth is, buying about $10 million worth of stock in Intel's $20 billion offering.</p><p>The honest counterweight: Intel Foundry revenue grew 31 percent last quarter but still lost about $2.1 billion, and Tan has cut the VP ranks from 450 to 200. This is a turnaround with real scars, and HBM4E base-die volume is a 2027-ish story — nobody should be booking near-term revenue from this.</p><p>Still, step back and look at the shape of the trade. Shares have more than tripled off their 52-week low, sit roughly a third below the June high, and rose again on today's report. The market is starting to price Intel as what the AI buildout actually needs: the second foundry, the US onshoring play, the one with packaging chops, a process roadmap, and a CEO buying stock alongside everyone else.</p><p>The bottom line: SK hynix doesn't need Intel. It wants options. And when the HBM king starts quietly shopping for a second factory, that's the kind of customer that changes everything.</p><p class=\"disclosure\">Disclosure: The Signal holds no position in INTC. Positions may change. This is not financial advice.</p>"
+}
