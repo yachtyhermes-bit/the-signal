@@ -1,0 +1,81 @@
+{
+  "slug": "spcx-cursor-openai-showdown-2026",
+  "title": "SpaceX Bought Cursor for $60 Billion. OpenAI Just Cut It Off.",
+  "subtitle": "OpenAI is winding down Cursor's access to its models by November 12, citing “experience with Elon Musk's companies violating contracts.” Cursor says OpenAI models are just 5% of its traffic — and Anthropic just stepped up. The Musk–Altman feud now runs through the AI coding market.",
+  "summary": "OpenAI says it will cut off Cursor's access to its models by November 12 — the latest escalation of the Musk–Altman feud, now playing out in the AI coding market. SpaceX closed its $60 billion acquisition of Cursor's parent company in August, and Anthropic is already pledging more Claude compute to fill any gap.",
+  "ticker": "SPCX",
+  "sector": "space",
+  "sentiment": "neutral",
+  "date": "2026-09-01T14:00:00Z",
+  "price": 143.69,
+  "tags": [
+    "spacex",
+    "cursor",
+    "openai",
+    "ai-coding",
+    "musk",
+    "ai-tools",
+    "anysphere",
+    "anthropic"
+  ],
+  "image": {
+    "src": "/img/articles/spcx-cursor-openai-showdown-2026.jpg",
+    "fit": "cover",
+    "caption": "A photo-realistic reusable rocket lifting off at dawn. Photo: The Signal / AI-generated.",
+    "alt": "Reusable rocket launch at dawn"
+  },
+  "links": [
+    {
+      "label": "CNBC — OpenAI cuts off Cursor's access to its models after SpaceX deal (Aug 29, 2026)",
+      "url": "https://www.cnbc.com/2026/08/29/openai-cursor-spacex-model-access.html"
+    },
+    {
+      "label": "CNBC — SpaceX agrees to acquire Cursor maker Anysphere for $60B (Jun 16, 2026)",
+      "url": "https://www.cnbc.com/2026/06/16/spacex-spcx-cursor-acquisition-ipo.html"
+    },
+    {
+      "label": "CNBC — SpaceX Q2 2026 earnings live updates (Aug 4, 2026)",
+      "url": "https://www.cnbc.com/2026/08/04/spacex-spcx-earnings-live-updates-q2-2026.html"
+    },
+    {
+      "label": "Nasdaq Newsroom — SpaceX launches historic IPO (Jun 12, 2026)",
+      "url": "https://www.nasdaq.com/newsroom/spacex-ipo-rocket-company-launches-historic-ipo"
+    },
+    {
+      "label": "Reuters — SpaceX to buy Anysphere for $60 billion (Jun 16, 2026)",
+      "url": "https://www.reuters.com/legal/transactional/spacex-buy-anysphere-60-billion-2026-06-16"
+    },
+    {
+      "label": "Yahoo Finance — Musk vs. Altman: SpaceX stock in focus as OpenAI ends Cursor access",
+      "url": "https://finance.yahoo.com/technology/article/musk-vs-altman-spacex-stock-in-focus-as-openai-ends-cursor-access-to-ai-models-142228912.html"
+    }
+  ],
+  "meta": {
+    "author": "The Signal",
+    "estimatedReadTime": 4,
+    "editorialTags": [
+      "SpaceX",
+      "Cursor",
+      "OpenAI",
+      "AI coding",
+      "Grok"
+    ],
+    "seoKeywords": "SpaceX, Cursor, OpenAI, Anysphere, AI coding, Musk, Altman, Grok, SPCX",
+    "relatedTickers": [
+      "MSFT",
+      "GOOGL",
+      "AMZN"
+    ],
+    "keyMetrics": {
+      "SPCX Price": "$143.69",
+      "Market Cap": "$1.9T",
+      "Forward P/E": "89.1",
+      "Total Revenue (TTM)": "$23.0B",
+      "52-Week Low": "$104.83",
+      "52-Week High": "$225.64",
+      "Analyst Consensus": "Buy",
+      "Analyst Target Mean": "$219.22"
+    }
+  },
+  "bodyHtml": "<p>OpenAI just cut off Cursor — and the feud between Sam Altman and Elon Musk now runs straight through the AI coding market. Late Friday, August 28, OpenAI said it will wind down the contract that lets Cursor use its models, with a proposed shutoff date of November 12 — because, in its words, it “cannot be confident that SpaceX will use our technology within our terms of service, based on our experience with Elon Musk's companies violating contracts.”</p>\n\n<p>Here's the thing to understand about SpaceX, because the ticker hides the story. It's not just the rocket company — though Falcon 9, Starship, and Dragon make it the most famous one on Earth. SpaceX runs three businesses: Space (reusable rockets), Connectivity (Starlink, with 12 million-plus subscribers and more than 10,000 satellites in low Earth orbit), and AI — the Grok frontier models, the X platform, and Colossus, a supercomputer built from roughly a million H100-class GPUs. It's Musk's vertically integrated AI play: compute, model, distribution, and now developer tools, all under one roof.</p>\n\n<div class=\"stats-card\">\n  <div class=\"stats-card-grid\">\n    <div class=\"stats-row\"><span class=\"stats-label\">Price</span><span class=\"stats-value\"><td class=\"stats-value\" data-live-ticker=\"SPCX\" data-live-field=\"price\">$143.69</td><span class=\"stats-live-badge\">LIVE</span></span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">Market Cap</span><span class=\"stats-value\">$1.9T</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">Forward P/E</span><span class=\"stats-value\">89.1</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">Total Revenue (TTM)</span><span class=\"stats-value\">$23.0B</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">52-Week Low</span><span class=\"stats-value\">$104.83</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">52-Week High</span><span class=\"stats-value\">$225.64</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">Analyst Consensus</span><span class=\"stats-value\">Buy</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">Analyst Target Mean</span><span class=\"stats-value\">$219.22</span></div>\n  </div>\n  <div class=\"stats-card-note\">Price refreshes live · All other figures as of September 1, 2026</div>\n</div>\n\n<p>That last piece is what this week is really about. In June, SpaceX agreed to buy Anysphere — the startup behind Cursor — for $60 billion in an all-stock deal, and closed it in mid-August, folding the company into a rebranded SpaceXAI division. It was the largest startup acquisition on record, and the capstone of a courtship that began in April with an option worth $10 billion as a partnership or $60 billion as a buyout. Cursor, in case you haven't met it, is the AI coding assistant developers actually love — the tool that autocompletes your code and, increasingly, writes it.</p>\n\n<p>So why would OpenAI walk away from its own customer? Because Cursor is no longer just a customer — it's Musk's. No future models, including the upcoming frontier model Astra, will go to Cursor. This is the feud made concrete: Musk sued OpenAI earlier this year over its for-profit conversion, and a jury tossed the case on statute-of-limitations grounds. OpenAI just fired the first real shot in the developer-tools war.</p>\n\n<p>The counterpoints are worth hearing. Cursor co-founder Michael Truell says OpenAI models are only about 5% of Cursor's traffic, and that the two sides are still talking. Musk's response: “I couldn't care less.” And Anthropic, sensing an opening, pledged more Claude compute for Cursor. Translation: even if OpenAI walks, Cursor won't run dry.</p>\n\n<p>The numbers behind the bravado are real. SpaceX went public in June in the largest IPO in history, raising $75 billion and landing a day-one valuation above $2 trillion. Its first earnings report since then showed revenue of $7.81 billion, up 92% year over year, with the AI segment alone up 213% quarter over quarter. The company poured $15.8 billion into AI capex in a single quarter and booked $14.1 billion in contracted cloud compute sales. Management talks about a run rate near $100 billion in annual revenue by year-end, Cursor included. The S-1 framed the ambition in one number: a total addressable market of $28.5 trillion, 93% of it AI.</p>\n\n<p>That's what makes this fight matter beyond the soap opera. The most valuable turf in AI is no longer just the models — it's the layer where developers actually build. OpenAI has ChatGPT, Anthropic has Claude, Google has Gemini, and now Musk has the whole stack: the GPU cluster, the frontier model, the distribution, and the tool developers touch daily. Whoever owns developer tools gets a say in which models win.</p>\n\n<p>Bottom line: SpaceX turned its $60 billion bet on Cursor into the center of the AI sector's biggest grudge match. OpenAI is betting developers won't follow Musk; SpaceX is betting the full-stack story wins them over. Either way, the AI coding market is now contested territory — and the stock, off its highs by roughly a third after a post-IPO pop and pullback, trades as a referendum on the vertical-integration thesis.</p>\n\n<p class=\"disclosure\">Disclosure: The Signal holds no position in SPCX. Positions may change. This is not financial advice.</p>"
+}
