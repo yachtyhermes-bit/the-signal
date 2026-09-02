@@ -1,0 +1,91 @@
+{
+  "slug": "eqix-inference-exchange-2026",
+  "title": "AI's Next Bottleneck Isn't Training — It's Where Models Run. Equinix Just Built the Exchange for That.",
+  "subtitle": "Meet Equinix Inference Exchange: Nvidia-validated architectures plus Together AI's 200+ open models, running across the world's biggest interconnection platform starting Q1 2027. The neutral exchange where the internet does business is going into the inference business — next to your data, not across the ocean.",
+  "summary": "Equinix today launched Equinix Inference Exchange at its inaugural Equinix Horizon customer event — a distributed program that runs open-source AI models inside its global data center network, pairing Nvidia-validated enterprise reference architectures with Together AI's platform of more than 200 open models. Available starting Q1 2027 and interconnected over Equinix Fabric (with a next-gen Fabric One unveiled alongside), it targets metro edge inference, migration from proprietary models to open weights, and sovereign AI for enterprises facing data residency rules. CEO Adaire Fox-Martin's framing: “neutral by design, open by default” — an AI marketplace on the exchange where 10,500-plus businesses, 230 cloud on-ramps, and eight of the top ten AI model providers already meet.",
+  "ticker": "EQIX",
+  "company": "Equinix, Inc.",
+  "sector": "ai",
+  "sentiment": "bullish",
+  "date": "2026-09-02T17:00:00Z",
+  "price": 1027.59,
+  "featured": false,
+  "premium": false,
+  "image": {
+    "src": "/img/articles/eqix-inference-exchange-2026.jpg",
+    "fit": "cover",
+    "caption": "Global business district skyline at golden hour. Photo: The Signal / AI-generated.",
+    "alt": "Global business district skyline at golden hour, glass towers and low-slung data center buildings in the distance"
+  },
+  "tags": [
+    "EQIX",
+    "equinix",
+    "AI inference",
+    "Inference Exchange",
+    "open-source AI",
+    "NVIDIA",
+    "Together AI",
+    "Equinix Horizon",
+    "Equinix Fabric",
+    "sovereign AI"
+  ],
+  "links": [
+    {
+      "label": "Equinix Newsroom — Equinix Accelerates AI Inference for Enterprises with NVIDIA and Together AI →",
+      "url": "https://newsroom.equinix.com/2026-09-02-Equinix-Accelerates-AI-Inference-for-Enterprises-with-NVIDIA-and-Together-AI"
+    },
+    {
+      "label": "Crypto Briefing — Equinix builds inference exchange with Nvidia and Together AI for Q1 2027 launch →",
+      "url": "https://www.cryptobriefing.com/equinix-inference-exchange-nvidia-together-ai/"
+    },
+    {
+      "label": "Yahoo Finance — NVIDIA and Equinix Deepen Their AI Inference Partnership →",
+      "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-equinix-deepen-ai-inference-143402756.html"
+    }
+  ],
+  "meta": {
+    "author": "The Signal",
+    "estimatedReadTime": "4 min",
+    "editorialTags": [
+      "ai",
+      "ai-infrastructure",
+      "ai-inference",
+      "data-center",
+      "open-source-ai",
+      "sovereign-ai"
+    ],
+    "seoKeywords": [
+      "Equinix",
+      "EQIX stock",
+      "AI inference",
+      "Equinix Inference Exchange",
+      "Inference Exchange launch",
+      "Equinix Horizon",
+      "NVIDIA enterprise reference architectures",
+      "Together AI",
+      "open-source AI models",
+      "sovereign AI",
+      "Equinix Fabric One"
+    ],
+    "relatedTickers": [
+      "NVDA"
+    ],
+    "keyMetrics": {
+      "EQIX Price": "$1,027.59",
+      "Market Cap": "$101.4B",
+      "Forward P/E": "54.1",
+      "Total Revenue (TTM)": "$9.9B",
+      "52-Week Low": "$720.62",
+      "52-Week High": "$1,128.68",
+      "Analyst Consensus": "Buy",
+      "Analyst Target Mean": "$1,234.55"
+    },
+    "youtubeIds": [],
+    "sourceLinks": [
+      "https://newsroom.equinix.com/2026-09-02-Equinix-Accelerates-AI-Inference-for-Enterprises-with-NVIDIA-and-Together-AI",
+      "https://www.cryptobriefing.com/equinix-inference-exchange-nvidia-together-ai/",
+      "https://finance.yahoo.com/technology/ai/articles/nvidia-equinix-deepen-ai-inference-143402756.html"
+    ]
+  },
+  "bodyHtml": "<p>Here's where the AI story turns. Phase one was training — hyperscalers stacking GPUs to build ever-smarter models. Phase two is inference: actually running those models, day in and day out, for real businesses with real data. That's a different problem with a different geography, and today Equinix planted a flag on it.</p>\n<p>The sixty-second primer first. Equinix runs the world's biggest network of interconnected data centers — more than 280 of them across 77 metros — where companies, clouds, and networks plug into each other. Think of it as the exchange where the internet does business: a bank in Frankfurt, a cloud in Virginia, a carrier in Singapore all meet inside Equinix buildings, and Equinix collects rent plus a monthly toll for every connection. It's been running that neutral exchange for nearly three decades.</p>\n<p>Now it's selling AI on top of it. At today's inaugural Equinix Horizon customer event, the company unveiled Equinix Inference Exchange — a distributed program that runs open models across its global footprint, stitched together over Equinix Fabric. The recipe: Nvidia-validated enterprise reference architectures plus Together AI's inference platform, which serves more than 200 open models in shared multitenant or dedicated single-tenant setups. Service starts in Q1 2027. Equinix also rolled out Fabric One, the next generation of its interconnection layer.</p>\n<p>Why should you care? Because inference is where AI touches the real world, and the real world runs on latency, cost, and compliance. Streaming answers from a cluster on the other side of the planet gets slow and pricey fast. Run the model next to the data instead — same metro, same exchange — and you fix all three at once.</p>\n<p>That's the “metro edge inference” use case, and it's the wedge. Inference Exchange lands in the same neighborhoods where more than 10,500 businesses already sit on the exchange, so a manufacturer in Munich or a hospital in Toronto can run models right next to data that can't leave. Latency drops, egress bills shrink, and nothing sensitive crosses a border it shouldn't.</p>\n<p>That last bit is the sovereign AI pitch, and it's why Equinix keeps calling itself Switzerland. Data residency rules are tightening across Europe and Asia, and governments want AI running where they can watch it. Equinix argues it's the rare vendor with no dog in the model fight — CEO Adaire Fox-Martin calls the company “neutral by design, open by default” — so running open models on its exchange doesn't mean handing your crown jewels to a cloud rival.</p>\n<p>Then there's the migration play. Plenty of enterprises would love to swap pricey proprietary APIs for open weights; they just don't want to build the GPU plumbing themselves. Together AI CEO Vipul Ved Prakash's platform handles that side, while Equinix supplies the buildings, the power, and the customers. Open-model migration is basically a lock-in escape hatch, sold as a service.</p>\n<p>The credibility comes from what's already plugged in. More than 10,500 businesses and 230-plus cloud on-ramps ride the network, and eight of the top ten AI model providers plus nine of the top ten AI clouds already run with Equinix. Nvidia's Raj Mirpuri, VP of global AI clouds and infrastructure ecosystem, says the program “turns the world's leading digital interconnection platform into a global fabric for AI inference.” The move extends the AI Factory program the two companies have been building together — same partners, next phase of the buildout.</p>\n<p>The financial setup, briefly, because you'll hear it wrong elsewhere. Revenue runs at roughly $10 billion a year, the market values the company north of $100 billion, and a forward multiple in the mid-50s says investors are already paying for the AI narrative. Wall Street still says Buy, with a mean target implying about 20% upside from here. Since Equinix is a REIT, watch AFFO — the cash metric that funds the dividend — rather than headline earnings.</p>\n<p>The honest caveat: inference is the most contested seat in tech right now. The big clouds, Nvidia itself, and a swarm of startups all want it. Equinix's edge isn't the models — it doesn't train a single one. It's distribution: thousands of enterprises already on its exchange, in the metros where their data lives. Neutrality is the product; this announcement just hands it a price list.</p>\n<p>Here's the takeaway. The winners of AI's first act built the smartest brains. The winners of act two will be whoever stands between those brains and the data — and Equinix has spent nearly three decades building exactly that intersection. Starting next year, it's open for inference business.</p>\n<p class=\"disclosure\">Disclosure: The Signal holds no position in EQIX. Positions may change. This is not financial advice.</p>"
+}
