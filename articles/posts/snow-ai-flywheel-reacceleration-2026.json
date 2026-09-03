@@ -1,0 +1,99 @@
+{
+  "slug": "snow-ai-flywheel-reacceleration-2026",
+  "title": "The Flywheel Is Back at Snowflake — CoWork and CoCo Are Why",
+  "subtitle": "Snowflake's AI Data Cloud now runs the agents doing enterprise work: CoWork answers questions with cited sources, CoCo writes production code, and both meter compute. Product revenue grew 37% in Q2 FY27 — a third straight quarter of acceleration — and shares jumped more than 20% at the open.",
+  "summary": "Snowflake just delivered its third straight quarter of accelerating product growth — 37% year over year to $1.49 billion in Q2 FY27 — and management credits AI products for roughly half of the acceleration. The engines are CoWork, its knowledge-worker agent now in 5,800 accounts, and CoCo, its coding agent past 9,100, which the company calls its fastest-growing products ever. Full-year product revenue guidance went up again to $6.07 billion, non-GAAP operating margin expanded by roughly 430 basis points, and shares jumped more than 20% at the open before tagging a fresh 52-week high. The bull case in one line: every agent query meters compute, and Snowflake owns the governed data layer those agents can't live without.",
+  "ticker": "SNOW",
+  "company": "Snowflake Inc.",
+  "sector": "ai",
+  "sentiment": "bullish",
+  "date": "2026-09-03T14:00:00Z",
+  "price": 305.84,
+  "featured": false,
+  "premium": false,
+  "image": {
+    "src": "/img/articles/snow-ai-flywheel-reacceleration-2026.jpg",
+    "fit": "cover",
+    "caption": "Enterprise teams putting AI agents to work on governed data — the flywheel at the heart of Snowflake's re-acceleration. Photo: The Signal / AI-generated.",
+    "alt": "A modern glass-walled enterprise office where professionals collaborate around large wall screens showing data dashboards and an AI agent interface"
+  },
+  "tags": [
+    "SNOW",
+    "snowflake",
+    "Snowflake Inc.",
+    "AI Data Cloud",
+    "CoWork",
+    "CoCo",
+    "agentic AI",
+    "enterprise AI",
+    "data governance",
+    "AI flywheel"
+  ],
+  "links": [
+    {
+      "label": "Snowflake press release — Q2 fiscal 2027 results →",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/snowflake-reports-financial-results-second-200500902.html"
+    },
+    {
+      "label": "Reuters — Snowflake lifts annual product revenue forecast →",
+      "url": "https://www.reuters.com/business/snowflake-lifts-annual-product-revenue-forecast-demand-cloud-data-platform-2026-09-02"
+    },
+    {
+      "label": "TIKR — third straight quarter of acceleration →",
+      "url": "https://www.tikr.com/blog/snowflake-stock-jumped-23-after-q2-earnings-show-a-third-straight-quarter-of-acceleration"
+    },
+    {
+      "label": "Snowflake — CoWork & CoCo (agent products) →",
+      "url": "https://www.snowflake.com/en/product/"
+    },
+    {
+      "label": "Snowflake IR — Q2 fiscal 2027 results →",
+      "url": "https://investors.snowflake.com/news/news-details/2026/Snowflake-Reports-Financial-Results-for-the-Second-Quarter-of-Fiscal-2027/default.aspx"
+    }
+  ],
+  "meta": {
+    "author": "The Signal",
+    "estimatedReadTime": "4 min",
+    "editorialTags": [
+      "ai",
+      "agentic-ai",
+      "data-cloud",
+      "enterprise-software",
+      "cloud-computing"
+    ],
+    "seoKeywords": [
+      "Snowflake",
+      "SNOW stock",
+      "AI Data Cloud",
+      "CoCo",
+      "CoWork",
+      "agentic AI",
+      "Q2 FY27 earnings",
+      "Snowflake earnings",
+      "governed data",
+      "AI flywheel"
+    ],
+    "relatedTickers": [
+      "SNOW"
+    ],
+    "keyMetrics": {
+      "SNOW Price": "$305.84",
+      "Market Cap": "$130.6B",
+      "Forward P/E": "128.4x",
+      "Total Revenue (TTM)": "$5.43B",
+      "52-Week Low": "$118.30",
+      "52-Week High": "$384.55",
+      "Analyst Consensus": "Buy",
+      "Analyst Target Mean": "$331.66"
+    },
+    "youtubeIds": [],
+    "sourceLinks": [
+      "https://finance.yahoo.com/markets/stocks/articles/snowflake-reports-financial-results-second-200500902.html",
+      "https://www.reuters.com/business/snowflake-lifts-annual-product-revenue-forecast-demand-cloud-data-platform-2026-09-02",
+      "https://www.tikr.com/blog/snowflake-stock-jumped-23-after-q2-earnings-show-a-third-straight-quarter-of-acceleration",
+      "https://www.snowflake.com/en/product/",
+      "https://investors.snowflake.com/news/news-details/2026/Snowflake-Reports-Financial-Results-for-the-Second-Quarter-of-Fiscal-2027/default.aspx"
+    ]
+  },
+  "bodyHtml": "<p>Two years ago, the knock on Snowflake was easy to summarize: the AI boom was happening everywhere except on its income statement. Then came a quarter that flipped the script — and another, and another. Product growth ran roughly 30% in Q4 FY26, hit 34% in Q1 FY27, and just landed at 37% for Q2. When Snowflake reported after the close on September 2, shares jumped more than 20% at the open and tagged a fresh 52-week high. The comeback has a name, and it's not a spreadsheet: it's agents.</p>\n\n<p>First, the plain-English version. Snowflake is the AI Data Cloud — the place where thousands of enterprises store their data, query it, move it, and share it. Think system of record for a modern company's information, from finance to supply chain to customer behavior. And it runs everywhere your business already lives: AWS, Azure, and Google Cloud.</p>\n\n<p>Here's why that matters in the agentic era. The next wave of software isn't chatbots that answer questions — it's autonomous agents doing multi-step work across your tools. But no sane enterprise lets an agent roam freely over customer records, payroll, and proprietary models. Agents need guardrails and context, and Snowflake's pitch is that it provides both: a governed layer where AI gets safe, permissioned access to the data that matters, every move audited, every query metered. Because Snowflake charges by consumption, more agent work means more compute — and more compute means more revenue. That's the flywheel, and this quarter it spun in public.</p>\n\n<div class=\"stats-card\">\n  <div class=\"stats-card-grid\">\n    <div class=\"stats-row\"><span class=\"stats-label\">Price</span><span class=\"stats-value\"><td class=\"stats-value\" data-live-ticker=\"SNOW\" data-live-field=\"price\">$305.84</td><span class=\"stats-live-badge\">LIVE</span></span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">Market Cap</span><span class=\"stats-value\">$130.6B</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">Forward P/E</span><span class=\"stats-value\">128.4x</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">Total Revenue (TTM)</span><span class=\"stats-value\">$5.43B</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">52-Week Low</span><span class=\"stats-value\">$118.30</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">52-Week High</span><span class=\"stats-value\">$384.55</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">Analyst Consensus</span><span class=\"stats-value\">Buy</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">Analyst Target Mean</span><span class=\"stats-value\">$331.66</span></div>\n  </div>\n  <div class=\"stats-card-note\">Price refreshes live · All other figures as of September 3, 2026</div>\n</div>\n\n<p>Product revenue hit $1.49 billion in Q2 FY27, up 37% year over year — the third straight quarter of accelerating growth. Total revenue rose 35% to $1.55 billion, and non-GAAP EPS of $0.62 blew past the roughly $0.45 analysts expected, up 77%. Snowflake still reports a GAAP net loss — the beat lives on the non-GAAP lines the Street grades. Non-GAAP operating margin hit 15.3%, about 430 basis points better than a year ago, and management says AI products drove roughly half of the acceleration. Then the guide went up again: full-year product revenue now $6.07 billion, up 36%, raised from the $5.84 billion guided last quarter, with Q3 pointed at $1.588 to $1.593 billion — growth of 37% to 38%.</p>\n\n<p>The stars are two products renamed at Snowflake's June Summit. CoWork — formerly Snowflake Intelligence — is the knowledge-worker agent: ask it anything about your enterprise data and it answers with cited sources, automates the multi-step follow-through, and can act inside Gmail, Jira, Slack, and Salesforce, all within Snowflake's governance. It's already in 5,800 accounts. CoCo — formerly Cortex Code — is Snowflake's coding agent, writing production code and pipelines natively. It just passed 9,100 accounts after adding 2,000 net new in Q2 alone. Management calls the pair the fastest-growing products Snowflake has ever shipped.</p>\n\n<p>The customer list backs up the hype. 1Password and Indeed signed on as AI-focused wins this quarter, and data intelligence firm Sayari says it cut costs by more than half while using CoCo to migrate 12 billion records. Total customers hit 14,554, up 692 net new and 32% year over year. And 828 customers now pay over $1 million a year on product, up 27%. Net revenue retention sits at 126% — a fifth straight quarter at or above 125% — and remaining performance obligations reached $9.00 billion, up 30%.</p>\n\n<p>CEO Sridhar Ramaswamy calls it compounding. \"AI continues to compound our advantages, creating a flywheel effect,\" he says. \"The Agentic Enterprise runs on Snowflake.\" The main rival, Databricks, stays private and formidable. Snowflake's counter is neutrality: agents and data that work across all three hyperscalers, governance baked in at the platform level, and a marketplace that moves data and models as easily as app stores move software.</p>\n\n<p>One nuance worth knowing: the AI-heavy mix trims product gross margin toward the roughly 74% guide even as operating margin expands. Growing faster, slightly less gross-profitable per AI dollar, more profitable overall — that's a trade worth taking.</p>\n\n<p>None of this is risk-free. Databricks is spending heavily on the same problem, agent economics are young, and the stock's valuation still assumes years of compounding. But three straight quarters of acceleration and guidance raised twice — Snowflake isn't chasing the agentic story anymore. It's writing it.</p>\n\n<p class=\"disclosure\">Disclosure: The Signal holds no position in SNOW. Positions may change. This is not financial advice.</p>"
+}
