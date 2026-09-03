@@ -1,0 +1,103 @@
+{
+  "slug": "hpe-juniper-ai-inferencing-record-2026",
+  "title": "AI's Most Under-Appreciated Giant Just Had Its Best Quarter Ever — So Why Did Shares Slip?",
+  "subtitle": "Hewlett Packard Enterprise's first quarter ever with adjusted earnings above $1 a share came with record revenue up 34%, record orders, and a raised outlook for this year and next. Shares slipped anyway — because the only thing slowing the company down is supply, not demand. The full story: the Juniper bet paying off, a $6.8 billion AI backlog, a gigawatt-scale Oracle buildout, and a multi-billion-dollar hyperscaler inferencing deal signed after the quarter closed.",
+  "summary": "The AI story's most overlooked giant just turned in the best quarter of its life. Hewlett Packard Enterprise reported record revenue of $12.2 billion, up 34%, with adjusted EPS above $1 for the first time ever and record orders up 42% — then raised its fiscal 2026 outlook and pre-announced a higher fiscal 2027 framework. Shares slipped anyway, roughly 5% so far, as Wall Street fixated on the supply crunch and a warning that record gross margins will moderate. Underneath the noise: Juniper routing revenue up roughly 270%, data-center networking more than doubled, a $6.8 billion AI-systems backlog, a gigawatt-scale Oracle collaboration, and a multi-billion-dollar hyperscaler inferencing deal signed after the quarter — proof that AI demand is broadening from training runs into the inference economy.",
+  "ticker": "HPE",
+  "company": "Hewlett Packard Enterprise",
+  "sector": "ai",
+  "sentiment": "bullish",
+  "date": "2026-09-03T17:00:00Z",
+  "price": 51.83,
+  "featured": false,
+  "premium": false,
+  "image": {
+    "src": "/img/articles/hpe-juniper-ai-inferencing-record-2026.jpg",
+    "fit": "cover",
+    "caption": "Robotic arms assembling server components on a bright automated line inside a modern electronics factory. Photo: The Signal / AI-generated.",
+    "alt": "Robotic assembly line in a modern electronics factory, automated arms working on server components under bright factory lighting"
+  },
+  "tags": [
+    "HPE",
+    "Hewlett Packard Enterprise",
+    "Juniper Networks",
+    "AI servers",
+    "AI inference",
+    "earnings",
+    "AI infrastructure",
+    "data center networking",
+    "Oracle",
+    "hyperscaler"
+  ],
+  "links": [
+    {
+      "label": "HPE Newsroom — HPE Reports Fiscal 2026 Third Quarter Results →",
+      "url": "https://www.hpe.com/us/en/newsroom/press-release/2026/09/hpe-reports-fiscal-2026-third-quarter-results.html"
+    },
+    {
+      "label": "HPE Investor Relations — Q3 FY26 Earnings Presentation (PDF) →",
+      "url": "https://investors.hpe.com/~/media/Files/H/HP-Enterprise-IR/documents/q3-2026/q3-2026-earnings-presentation.pdf"
+    },
+    {
+      "label": "Reuters — HPE Raises Annual Forecasts on AI Networking Demand →",
+      "url": "https://www.reuters.com/business/hpe-raises-annual-forecasts-ai-networking-demand-lifts-quarterly-revenue-2026-09-02"
+    },
+    {
+      "label": "BigGo Finance — HPE Q3 2026 Earnings Call Summary →",
+      "url": "https://finance.biggo.com/news/US_HPE_2026-09-02"
+    },
+    {
+      "label": "SingjuPost — Transcript: Hewlett Packard (HPE) Q3 FY26 Earnings Call →",
+      "url": "https://singjupost.com/transcript-hewlett-packard-hpe-q3-fy26-earnings-call"
+    }
+  ],
+  "meta": {
+    "author": "The Signal",
+    "estimatedReadTime": "4 min",
+    "editorialTags": [
+      "ai",
+      "ai-infrastructure",
+      "ai-inference",
+      "networking",
+      "juniper-networks",
+      "data-center",
+      "earnings"
+    ],
+    "seoKeywords": [
+      "HPE",
+      "HPE stock",
+      "Hewlett Packard Enterprise earnings",
+      "HPE Q3 2026",
+      "AI servers",
+      "Juniper Networks",
+      "AI inference",
+      "HPE earnings report",
+      "AI infrastructure stocks",
+      "HPE Juniper acquisition",
+      "AI data center networking",
+      "HPE guidance 2027"
+    ],
+    "relatedTickers": [
+      "NVDA"
+    ],
+    "keyMetrics": {
+      "HPE Price": "$51.83",
+      "Market Cap": "$68.6B",
+      "Forward P/E": "11.3",
+      "Total Revenue (TTM)": "$41.9B",
+      "52-Week Low": "$19.84",
+      "52-Week High": "$64.25",
+      "Analyst Consensus": "Buy",
+      "Analyst Target Mean": "$67.48"
+    },
+    "youtubeIds": [],
+    "sourceLinks": [
+      "https://www.hpe.com/us/en/newsroom/press-release/2026/09/hpe-reports-fiscal-2026-third-quarter-results.html",
+      "https://investors.hpe.com/~/media/Files/H/HP-Enterprise-IR/documents/q3-2026/q3-2026-earnings-presentation.pdf",
+      "https://www.reuters.com/business/hpe-raises-annual-forecasts-ai-networking-demand-lifts-quarterly-revenue-2026-09-02",
+      "https://finance.biggo.com/news/US_HPE_2026-09-02",
+      "https://singjupost.com/transcript-hewlett-packard-hpe-q3-fy26-earnings-call"
+    ]
+  },
+  "bodyHtml": "<p>The AI story's most under-appreciated giant just posted the best quarter in its history — and the stock slipped anyway. That gap is the story, so let's sit with it. Hewlett Packard Enterprise delivered its first quarter ever with adjusted EPS above $1, on record revenue, record orders, and a raised outlook for this year and next. Wall Street's takeaway? Focus on the supply squeeze and sell — which is exactly what makes HPE interesting right now.</p>\n<p>Quick primer, because HPE is easy to overlook and hard to overstate: it builds the servers and network gear that run the AI boom. Think the Nvidia-powered AI systems humming inside data centers, plus — since its roughly $14 billion Juniper Networks acquisition closed last year — the routers, switches, and security gear that stitch data centers together. Its buyers run from enterprises modernizing data centers to cloud providers, sovereign AI programs, and banks.</p>\n<p>The numbers, fast, because they're seasoning and not the meal: revenue of $12.2 billion, up 34%, a record. Non-GAAP operating profit of $2.0 billion — about two and a half times a year ago — on a record gross margin of 40.4%. And orders up 42%, more than any quarter in the company's history. That last bit matters most: orders are tomorrow's revenue, and HPE has never booked more of it.</p>\n<p>Here's the signal the market is underweighting: AI demand is broadening out. Phase one of this boom was a handful of hyperscalers buying GPUs by the warehouse to train models. Phase two — visible in HPE's order book right now — is everyone else buying AI-ready machines to run agents and inference workloads on their own turf. Traditional server orders jumped 75% year over year as enterprises stocked up on gear to run models where their data lives. That's enterprise AI graduating from pilot projects into a real, recurring business.</p>\n<p>Then there's Juniper, which is paying off the way management drew it up. Networking revenue hit $2.9 billion, up 75% as reported, with routing up roughly 270% and data-center networking more than doubled — Juniper has become HPE's growth engine, not a merger integration project. Even on a like-for-like basis the segment grew 10%, while networking orders rose 36% — three and a half times the pace of revenue. Demand keeps outrunning supply. The AI-systems backlog reached $6.8 billion exiting the quarter, a record, up about 14% sequentially; fold in AI networking and the total is $7.6 billion. Cumulative AI-networking orders have already blown past the company's original full-year target, so HPE raised it to $2.5–3.0 billion by year-end.</p>\n<p>Two deals show where the demand comes from. Alongside the quarter, HPE expanded its Oracle collaboration into a gigawatt-scale buildout — Oracle is deploying HPE Juniper routers and switches across one of the largest AI cloud infrastructure projects on the planet, multi-gigawatt and multi-year. And after the quarter closed, a hyperscaler handed HPE a deal worth about $3.5 billion to build AI servers for its own internal inferencing. Read that twice: a hyperscaler — the most self-sufficient buyer in tech — decided it was cheaper and faster to buy inference machines from HPE than to build them itself.</p>\n<p>So why did shares slip? Supply. HPE can't get parts fast enough. DDR5, DDR4, and NAND memory, plus wafer and clean-room capacity, are the binding constraint, and management is locking in multi-year supply agreements to fix it — purchase commitments for networking components more than doubled quarter over quarter. They also warned the record gross margin will moderate as the crunch eases. Read that again: demand is not the problem here. The problem is the opposite of the problem.</p>\n<p>The guidance says management sees the same thing. HPE raised its fiscal 2026 outlook to revenue growth of 34–37% and hiked EPS guidance by 40 cents, then did something rare: it pre-announced a higher fiscal 2027 framework — revenue growth of 13–17%, up from 8–12%, with EPS growth of 16–20% — a year early. None of it stopped the post-earnings dip of roughly 5% so far, as the market fixated on margin moderation instead. Worth remembering while that plays out: this is an AI-infrastructure compounder valued at a fraction of Dell — the market is treating a supply problem like a demand problem.</p>\n<p>Bottom line: HPE is the answer to the question of whether the AI trade has room beyond hyperscalers and chipmakers. It does — and the company that builds the plumbing collects tolls on all of it. The bottlenecks here are the good kind: too many orders, not enough wafers. When the market sells that story, patient investors get the durable part of the AI buildout at a discount.</p>\n<p class=\"disclosure\">Disclosure: The Signal holds no position in HPE. Positions may change. This is not financial advice.</p>"
+}
