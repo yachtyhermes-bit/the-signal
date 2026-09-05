@@ -1,0 +1,89 @@
+{
+  "slug": "zs-record-fy26-ai-security-selloff-2026",
+  "title": "Zscaler Just Posted Its Best Year Ever — So Why Did the Market Sell It on Friday?",
+  "subtitle": "Zscaler just capped a record fiscal year — AI-security bookings up 50% quarter over quarter, margins at an all-time high — yet shares fell about 4.5% Friday as the Street balked at FY27 ARR growth stepping from 25% to roughly 17%.",
+  "summary": "Zscaler closed its best year ever — revenue up 25% to $3.4 billion, a record 24.3% operating margin, AI-security bookings past $100 million and up 50% quarter over quarter. Yet shares slid about 4.5% Friday after FY27 ARR guidance stepped from 25% to roughly 17% growth — a slowdown it blames on lapping Red Canary. In the race to secure AI agents, that may be a gift.",
+  "ticker": "ZS",
+  "sector": "cyber",
+  "sentiment": "mixed",
+  "date": "2026-09-05T14:00:00Z",
+  "price": 169.8,
+  "tags": [
+    "ZS",
+    "Zscaler",
+    "cybersecurity",
+    "zero trust",
+    "AI security",
+    "cloud security",
+    "agentic AI",
+    "FY26 earnings"
+  ],
+  "image": {
+    "src": "/img/articles/zs-record-fy26-ai-security-selloff-2026.jpg",
+    "fit": "cover",
+    "caption": "A diverse team of cybersecurity analysts collaborates around a central table in a bright, modern security operations center, facing a large curved video wall showing a live world map of threat activity. Photo: The Signal / AI-generated.",
+    "alt": "Diverse cybersecurity team collaborating in a bright security operations center before a curved world-map telemetry wall"
+  },
+  "links": [
+    {
+      "label": "Zscaler Announces Strong Fourth Quarter and Fiscal 2026 Financial Results",
+      "url": "https://ir.zscaler.com/news-releases/news-release-details/zscaler-announces-strong-fourth-quarter-and-fiscal-2026"
+    },
+    {
+      "label": "Zscaler Q4 Fiscal 2026 Shareholder Letter",
+      "url": "https://ir.zscaler.com/static-files/955e533b-f05c-447e-b2aa-a2f447726159"
+    },
+    {
+      "label": "CNBC: Zscaler beats on earnings, issues upbeat guidance",
+      "url": "https://www.cnbc.com/2026/09/03/zscaler-zs-q4-earnings-2026.html"
+    },
+    {
+      "label": "Investor's Business Daily: Zscaler falls on FY27 outlook for key sales metric",
+      "url": "https://www.investors.com/news/technology/zscaler-stock-zs-zscaler-earnings-news-july26"
+    },
+    {
+      "label": "Yahoo Finance: Zscaler falls 4% as FY2027 growth guidance overshadows results",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/zscaler-falls-4-fy2027-growth-160650814.html"
+    }
+  ],
+  "meta": {
+    "author": "The Signal",
+    "estimatedReadTime": "5 minutes",
+    "editorialTags": [
+      "zscaler",
+      "zs",
+      "cybersecurity",
+      "zero-trust",
+      "ai-security",
+      "fy26-earnings",
+      "cloud-security",
+      "agentic-ai"
+    ],
+    "seoKeywords": [
+      "Zscaler stock",
+      "ZS",
+      "Zscaler earnings",
+      "Zscaler Q4 FY26",
+      "Zscaler AI security",
+      "zero trust",
+      "Zscaler FY27 guidance",
+      "cybersecurity AI"
+    ],
+    "relatedTickers": [
+      "PANW",
+      "CRWD",
+      "NET"
+    ],
+    "keyMetrics": {
+      "ZS Price": "$169.80",
+      "Market Cap": "$27.7B",
+      "Forward P/E": "30.4",
+      "Total Revenue (TTM)": "$3.35B",
+      "52-Week Low": "$114.62",
+      "52-Week High": "$336.99",
+      "Analyst Consensus": "Buy",
+      "Analyst Target Mean": "$206.69"
+    }
+  },
+  "bodyHtml": "<p>Saturday morning, Zscaler holders are asking the same question: how do you post your best quarter ever, wrap your best year ever, and still watch the stock slide about 4.5% on Friday? The answer was never the numbers — it's the forecast, and what that forecast says about the year ahead.</p>\n<p>First, a primer, because this story starts with the product, not the P&amp;L. Zscaler runs the world's largest cloud-native \"zero trust\" security platform.</p>\n<p>Translation: instead of plugging people into a corporate network and hoping the walls hold, it connects every user, device, workload — and now AI agent — directly to the one application they need, with security policy enforced inline on every single connection.</p>\n<p>Attackers can't reach what they can't see, and once someone's inside, there's no network left to roam — no lateral movement, no open hallways. That's the whole trick, and it's now a $3.4-billion-a-year business.</p>\n<p>Here's where it gets interesting for anyone watching the AI buildout. Agentic AI — software agents that act on their own, armed with credentials and real access to company data — is both a brand-new attack surface and a brand-new workload to secure.</p>\n<p>An agent that goes rogue, or gets hijacked mid-task, is a threat no legacy firewall was ever built to imagine. Zscaler's answer: treat a machine agent exactly like a human identity — verify who it is, decide what it's allowed to touch, and connect it to precisely one application.</p>\n<p>Management calls the company \"the cybersecurity platform for the AI era.\" Bold line. The booking numbers say it's landing.</p>\n<p>So, about those numbers. Revenue hit $898.2 million in the fiscal fourth quarter, up 25% and comfortably ahead of the roughly $877 million consensus, while adjusted earnings of $1.19 a share cleared estimates by a dime — the tenth straight EPS beat.</p>\n<p>Operating margin hit a record 24.3%, gross margin held at 80%, and full-year free cash flow reached $779 million at a 23% margin — Rule of 40 math around 49. Customers paying more than $1 million a year now number 785, up 18%. By any sane measure, this was clean.</p>\n<p>Then there's the line that makes this an AI story and not just another security print. Cumulative Security-for-AI bookings crossed $100 million over the past year and jumped 50% quarter over quarter in Q4 alone, and roughly 70% of those wins also bought data security — the cross-sell engine humming.</p>\n<p>Z-Flex, Zscaler's flexible consumption model, booked more than $770 million in contract value in the quarter, up 60% sequentially and past $1.7 billion for the year. That's what it looks like when customers scale their security exactly as fast as their AI deployments scale.</p>\n<p>So what spooked the market? One metric: the ARR outlook.</p>\n<p>Management guided FY27 ARR growth to roughly 17% — a genuine step down from FY26's 25% — and ARR is the number the Street treats as the company's pulse. On the surface, a deceleration that steep reads like the growth story ending.</p>\n<p>Zscaler's rebuttal: it's arithmetic, not demand. Last year's number included Red Canary's roughly $141 million of ARR landing all at once — strip out the acquisition, and organic net new ARR actually accelerated to 17% growth in Q4.</p>\n<p>Context matters, too. Zscaler's shareholders got flattened in May, when a guidance reset sent the stock crashing about 32% in a single day — the worst session in company history — and that scar tissue leaves holders trigger-happy.</p>\n<p>Coming into Friday, shares already traded roughly half off their 52-week high and down about 20% this year, and the wider cyber complex slipped in sympathy. Hand a jumpy crowd a headline metric that steps down, and this is what you get.</p>\n<p>The next acts are already on the calendar: Agentic SecOps gets its launch webcast September 9, and Investor Day follows October 6 — two chances for management to argue the AI-security thesis in full.</p>\n<p>The wedge matters because Zscaler, CrowdStrike, and Palo Alto Networks are all sprinting at the same prize. Whoever owns security for AI agents gets first claim on the next decade of cyber spending.</p>\n<p>So here's the read. The market didn't sell the quarter — it sold the optics of a decelerating headline number, then looked past the fact that the underlying engine accelerated and the AI-security line is compounding at a pace most software companies would kill for.</p>\n<p>Records don't usually get punished like this. If autonomous agents really are the next attack surface — and everything about the industry says they are — Friday's 4.5% shrug looks less like a warning and more like a price of admission to the story that's actually being told.</p>\n<p class=\"disclosure\">Disclosure: The Signal holds no position in ZS. Positions may change. This is not financial advice.</p>"
+}
