@@ -1715,3 +1715,21 @@ html.stock-page.light .wl-star-picker { box-shadow: 0 20px 60px rgba(0, 0, 0, 0.
     box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.45);
   }
 }
+
+/* ── Compliance disclosure (bottom of every Signal Report page) ── */
+.stock-page-disclaimer {
+  max-width: 1120px;
+  margin: -2rem auto 0;
+  padding: 0 24px 56px;
+}
+.stock-page-disclaimer p {
+  font-size: 0.78rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+  margin: 0;
+}
+@media (max-width: 640px) {
+  .stock-page-disclaimer { padding: 0 16px 40px; }
+}

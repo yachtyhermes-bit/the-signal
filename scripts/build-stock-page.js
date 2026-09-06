@@ -679,6 +679,11 @@ function buildStockPage(symbol) {
     <!-- ═══════════ STATISTICS TAB (removed — now on Overview) ═══════════ -->
   </main>
 
+  <!-- ═══════════ DISCLOSURE ═══════════ -->
+  <div class="stock-page-disclaimer">
+    <p>This Signal Report is for informational purposes only and does not constitute investment advice or a recommendation to buy or sell any security. Moat ratings reflect The Signal's independent analysis framework. The Signal may hold positions in securities covered. Past performance is not indicative of future results. Always conduct your own research before making investment decisions.</p>
+  </div>
+
   <script id="chartData-${symbol}" type="application/json">${embeddedData}</script>
   <script src="/js/stock-chart.js?v=16"></script>
   <script>

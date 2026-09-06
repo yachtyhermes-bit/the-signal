@@ -388,6 +388,14 @@ if (!template) {
       if (!slug) continue;
 
       const date = article.date ? article.date.slice(0, 10) : '';
+      // dateModified: use the article JSON's file mtime when it reflects a real
+      // post-publish edit (fact-check fixes etc.); otherwise equal datePublished.
+      let dateModified = article.date || '';
+      try {
+        const postStat = fs.statSync(path.join(POSTS_DIR, slug + '.json'));
+        const mtimeIso = new Date(postStat.mtime).toISOString();
+        if (date && mtimeIso.slice(0, 10) > date) dateModified = mtimeIso;
+      } catch (e) { /* fall back to datePublished */ }
       const readTime = (article.meta && article.meta.estimatedReadTime) || '1 min read';
       const rawSrc = (article.image && article.image.src) || '/img/articles/_default.jpg';
       const imageSrc = (rawSrc.startsWith('/') ? rawSrc : '/' + rawSrc) + '?v=' + BUILD_TS;
@@ -481,6 +489,7 @@ if (!template) {
         .replace(/{{SECTOR_UC}}/g, sectorName)
         .replace(/{{SUBTITLE_HTML}}/g, subtitle)
         .replace(/{{DATE}}/g, article.date || '')
+        .replace(/{{DATEMODIFIED}}/g, dateModified)
         .replace(/{{DATE_FORMATTED}}/g, formatDate(date))
         .replace(/{{READ_TIME}}/g, readTime)
         .replace(/{{IMAGE_SRC}}/g, imageSrc)

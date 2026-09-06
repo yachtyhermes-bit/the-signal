@@ -16,4 +16,5 @@ node_modules
 .vercel
 .git
 *.log
+.venv-tmp
 deploy.tar.gz

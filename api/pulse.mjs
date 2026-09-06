@@ -14,6 +14,9 @@ const CACHE_TTL = 30 * 60 * 1000;
 const CACHE_MAX = 100;
 const answerCache = new Map();
 
+// ─── Disclosure (appended to every AI answer) ───
+const PULSE_DISCLAIMER = '\n\n— AI-generated research summary for informational purposes only — not financial advice. Verify before trading.';
+
 function getCacheKey(q) {
   return q.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s+/g, ' ').trim();
 }
@@ -248,7 +251,7 @@ ${articleContext}`;
     const sources = webSources && webSources.length > 0
       ? webSources.map(s => ({ title: s.title, url: s.url, source: 'web' }))
       : findSources(answer);
-    const result = { answer, sources, searched, tier: userTier };
+    const result = { answer: answer + PULSE_DISCLAIMER, sources, searched, tier: userTier };
 
     // Include quota info for free users
     if (!userIsPremium && token) {
