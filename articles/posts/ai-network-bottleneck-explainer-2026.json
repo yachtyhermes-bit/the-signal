@@ -1,0 +1,79 @@
+{
+  "slug": "ai-network-bottleneck-explainer-2026",
+  "title": "The Network, Explained: AI's Third Bottleneck Hides Between the Chips",
+  "subtitle": "A frontier model is a team sport — 100,000 accelerators that never stop talking. Here's how the Ethernet-versus-NVLink war over the data center's streets works, and why Arista Networks runs the toll booths.",
+  "summary": "The AI buildout's first two bottlenecks — memory and power — get all the headlines. The third is the network between the chips, and it decides how much of that expensive compute actually gets used. This explainer maps the Ethernet-vs-InfiniBand-vs-NVLink war and who profits when the fabric becomes the choke point.",
+  "format": "explainer",
+  "ticker": "ANET",
+  "tickers": [
+    "ANET",
+    "AVGO"
+  ],
+  "sector": "ai",
+  "sentiment": "positive",
+  "date": "2026-09-06T14:00:00Z",
+  "image": {
+    "src": "/img/articles/ai-network-bottleneck-explainer-2026.jpg"
+  },
+  "keyTerms": [
+    {
+      "term": "Network fabric",
+      "definition": "The web of switches, cables, and optics that carries data between accelerators in an AI cluster. If the fabric stalls, the GPUs stall — and you pay for idle compute."
+    },
+    {
+      "term": "Ethernet",
+      "definition": "The open networking standard that powers the internet and most of the modern data center. Once considered too slow for AI's back end, it overtook the incumbent in 2025 and now dominates the AI buildout."
+    },
+    {
+      "term": "InfiniBand",
+      "definition": "The specialized interconnect that powered early AI clusters, with NVIDIA's stack as the dominant force — fast but closed, like a private toll road. Its grip on AI back-end switching has been cracking as Ethernet caught up."
+    },
+    {
+      "term": "NVLink",
+      "definition": "NVIDIA's ultra-fast GPU-to-GPU link for the scale-up layer — the elevator inside a server or rack. The sixth generation moves 3.6 terabytes per second per GPU."
+    },
+    {
+      "term": "Scale-up vs. scale-out",
+      "definition": "Scale-up is the screaming-fast connection between GPUs inside one rack; scale-out is the wider network stitching thousands of racks into one giant machine. AI needs both — and scale-out is the battleground."
+    },
+    {
+      "term": "Optics",
+      "definition": "The lasers and transceivers that turn data into light so it can travel between switches. They are also a growing share of the network's power bill — which is why new designs obsess over cutting it."
+    }
+  ],
+  "bottomLine": "Memory and power are AI's famous bottlenecks; the network is the one hiding in plain sight. As clusters balloon from tens to hundreds of thousands of accelerators, whoever owns the fabric collects the tolls — and Arista Networks is the leading independent franchise on the Ethernet side of that trade, with Broadcom selling the switch silicon and custom-chip shovels one layer down. They are the purest public plays on the interconnect layer of the AI buildout.",
+  "bodyHtml": "<p>Nobody buys a hundred thousand accelerators to use them one at a time. Training a frontier model is a team sport: every accelerator is constantly swapping data with its teammates. Between them runs the network — the switches, cables, and optics carrying the traffic. It's the least glamorous layer in AI, and it decides whether that eye-watering compute spend ever gets used: when the fabric stalls, you pay for idle silicon.</p><p>Meet bottleneck number three. We've covered the memory bolted to the chips and the power coming off the grid — now the layer in between: the network inside the data center. Which brings us to Arista Networks. Arista makes the high-speed Ethernet switches and the software that runs them for the world's biggest data centers. When a hyperscaler builds an AI facility, Arista sells the streets and the traffic system that keeps data from gridlocking.</p><p>For years, the network was an afterthought — you bolted servers together and hoped. Then models got big enough that the interconnect became the choke point — and a civil war broke out over moving oceans of data between chips without making them wait.</p><p>The contenders: InfiniBand, Ethernet, and NVIDIA's NVLink. InfiniBand is the specialized interconnect built for supercomputers, and NVIDIA's stack dominated it — the private toll road of early AI. Ethernet is the open standard that runs the internet — the public highway, built and improved by everyone. The toll road won the first round: Dell'Oro figures InfiniBand took about 80 percent of AI back-end switch sales in 2023. Then the highway caught up — Ethernet overtook InfiniBand in 2025, and by early 2026 it pulled in roughly two-thirds of AI-cluster switch sales, more than doubling year over year.</p><p>AI needs two kinds of network. Scale-up is the screaming-fast link between GPUs sharing a job inside one rack — NVIDIA's NVLink owns that floor: 3.6 terabytes per second per GPU in its sixth generation, 260 terabytes per second across a 72-GPU rack. Scale-out is the wider fabric stitching thousands of racks into one giant machine — and the battleground for the next 10x of AI compute. Even NVIDIA is opening its NVLink Fusion scale-up fabric to partner silicon; Marvell signed on in 2026.</p><p>The pace of change is absurd. Eight-hundred-gigabit links are the volume workhorse — Dell'Oro says they drove the vast majority of AI back-end Ethernet switch revenue in the first quarter of 2026. The industry is already lining up behind 1.6-terabit gear: switches began sampling, volume ramps through the second half of 2026, and Dell'Oro expects 1.6T to pass five million ports within a year or two — faster out of the gate than 800G's run to 20 million.</p><p>This is Arista's moment to cash in. Its 1.6T Etherlink platforms, built around the 7060XE7, push a single system to 100 terabits per second of bandwidth. Arista also championed linear pluggable optics, which cut interconnect power by roughly 60 percent — and in a facility measured in megawatts, every watt the network saves is a watt an accelerator gets to burn.</p><p>One layer down sits Broadcom, just as central: the switch silicon inside much of the AI-Ethernet buildout comes from its Tomahawk and Jericho families. Tomahawk 6 — shipping since mid-2025 — was the world's first single-chip Ethernet switch at 102.4 terabits per second, built for clusters of 100,000 to a million accelerators. Broadcom also designs the custom XPUs at Google, Meta, Apple, OpenAI, and Anthropic, and its AI semiconductor revenue — networking silicon plus custom accelerators — reached $16.7 billion in the quarter ended August 2, 2026, up 221 percent year over year.</p><p>Arista's own numbers show the shift. Revenue through the quarter ended June 30, 2026 ran to about $10.5 billion over the trailing twelve months, powered by its first $3 billion quarter — up 38 percent year over year and past its own $2.8 billion guidance. Management targets roughly $12.6 billion for fiscal 2026 — near 40 percent growth — and at least $3.5 billion of AI-fabrics revenue. The AI buildout is becoming a permanent line of business.</p><p>Zoom out and the thesis writes itself. When AI clusters were small, whoever sold the chips won; now that they span hundreds of thousands of accelerators, value pools in the fabric between them. Bloomberg Intelligence's take: as clusters scale from tens to thousands of accelerators, the network turns into a critical bottleneck. Bottlenecks collect tolls — Arista is the leading independent Ethernet franchise, and Broadcom sells the shovels one layer down. The Signal's deep dives on <a href=\"/ticker/ANET/\">Arista</a> and <a href=\"/ticker/AVGO/\">Broadcom</a> map the moats, margins, and risk factors in detail.</p><p class=\"disclosure\">Disclosure: This article is for informational purposes only and does not constitute investment advice. The Signal maintains public analysis of the companies mentioned; no positions are held by the editorial team.</p>",
+  "tags": [
+    "AI infrastructure",
+    "networking",
+    "Ethernet",
+    "data center",
+    "switches",
+    "optics"
+  ],
+  "links": [
+    {
+      "label": "Arista Q2 2026 results",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/arista-networks-inc-reports-second-200500490.html"
+    },
+    {
+      "label": "Broadcom Q3 FY2026 results",
+      "url": "https://www.prnewswire.com/news-releases/broadcom-inc-announces-third-quarter-fiscal-year-2026-financial-results-and-quarterly-dividend-302868129.html"
+    },
+    {
+      "label": "Dell\u2019Oro: Ethernet extends lead in AI scale-out networks",
+      "url": "https://www.delloro.com/news/ethernet-extends-lead-in-ai-scale-out-networks-despite-strong-infiniband-rebound"
+    },
+    {
+      "label": "Broadcom ships Tomahawk 6: world\u2019s first 102.4 Tbps switch",
+      "url": "https://www.broadcom.com/company/news/product-releases/63146"
+    },
+    {
+      "label": "Arista: powering all-Ethernet AI networking",
+      "url": "https://blogs.arista.com/blog/powering-all-ethernet-ai-networking"
+    }
+  ],
+  "meta": {
+    "estimatedReadTime": "4 min read"
+  }
+}
