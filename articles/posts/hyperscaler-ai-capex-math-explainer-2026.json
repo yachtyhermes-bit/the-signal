@@ -1,0 +1,85 @@
+{
+  "slug": "hyperscaler-ai-capex-math-explainer-2026",
+  "title": "Hyperscalers Are Spending 750 Billion Dollars on AI. The Bill Comes Later.",
+  "subtitle": "Amazon, Microsoft, Alphabet, and Meta are on track to spend roughly 750 billion dollars on AI infrastructure this year. Here's what the money buys, how depreciation hides the cost, and why the suppliers get paid first.",
+  "summary": "Capex is cash out the door today; depreciation spreads the pain over years. That gap is the real story of the AI buildout: 750 billion dollars planned for 2026, income statements that barely flinch, and roughly two trillion dollars of commitments stacking up off the balance sheet. This explainer walks through the math, the bull case, and who gets paid first.",
+  "format": "explainer",
+  "ticker": "AMZN",
+  "tickers": [
+    "AMZN",
+    "GOOGL",
+    "NVDA"
+  ],
+  "sector": "ai",
+  "sentiment": "neutral",
+  "date": "2026-09-06T22:00:00Z",
+  "image": {
+    "src": "/img/articles/hyperscaler-ai-capex-math-explainer-2026.jpg"
+  },
+  "keyTerms": [
+    {
+      "term": "Hyperscaler",
+      "definition": "The giants that run the world's biggest data centers: Amazon, Microsoft, Alphabet, and Meta. Their clouds host a huge share of the planet's computing, and they're writing the biggest checks in the AI buildout."
+    },
+    {
+      "term": "Capex",
+      "definition": "Short for capital expenditures: cash a company spends today on long-lived assets like servers, land, and buildings. The money leaves the bank account now, and the income statement pays it back slowly through depreciation."
+    },
+    {
+      "term": "Depreciation",
+      "definition": "The accounting practice that spreads an asset's cost across its useful life, year by year. It isn't new cash going out, it's old cash finally showing up as an expense, bit by bit."
+    },
+    {
+      "term": "Useful life",
+      "definition": "How many years a company assumes its equipment will keep working. Longer assumptions shrink each year's depreciation, which flatters current profit and delays the true cost."
+    },
+    {
+      "term": "Free cash flow",
+      "definition": "The cash left over after operating costs and capex. It's what a company can actually return to shareholders or reinvest, and it's the number that reveals whether the buildout is paying for itself."
+    },
+    {
+      "term": "Backlog / RPO",
+      "definition": "RPO stands for remaining performance obligations: cloud contracts customers have signed but that haven't been delivered or billed yet. It's a measure of committed future revenue."
+    }
+  ],
+  "bottomLine": "The four hyperscalers are on track to spend roughly 750 billion dollars on AI infrastructure in 2026, about double 2025, while booking only a fraction of that as depreciation. Cash leaves today, the income statement feels it over the next five or six years, and roughly two trillion dollars of signed commitments sit off the balance sheet. AI revenue is real but still small next to the spending, so the companies paid first, NVIDIA above all, are where the money shows up fastest. Watch the gap between cash capex and booked depreciation; it's the scoreboard that matters.",
+  "bodyHtml": "<p>Here's a number that should stop you: roughly 750 billion dollars. Amazon, Microsoft, Alphabet, and Meta are on track to spend that much on AI infrastructure this year. It's about double what they spent in 2025. And their income statements will barely flinch.</p><p>The reason is the gap between cash and cost. Capex, short for capital expenditures, is cash out the door today for servers, land, and power. Depreciation spreads that spending over years, so the bill hits earnings in slow installments. Together, those four are the hyperscalers — the landlords of the AI age, running the planet's biggest data centers.</p><p>Scale check: 750 billion dollars is more than most countries produce in a year. It's about 2.4 percent of everything the United States makes. Amazon is the biggest builder, guiding to roughly 220 billion dollars. CEO Andy Jassy says even that won't cover demand, and Alphabet raised its own plan three times in six months.</p><p>The commitments don't stop at this year's plans. Disclosed purchase obligations at the four roughly doubled in a year, from one trillion to two trillion dollars. That's future cash already promised, sitting off the balance sheet.</p><p>So what does the money buy? Mostly computers: two-thirds to three-quarters of hyperscaler capex goes to compute, the AI servers and GPUs doing the thinking. Networking takes about 15 percent, and shells, land, and power get the rest. At Microsoft, about two-thirds of one recent quarter's capex went to short-lived gear like GPUs and CPUs.</p><p>Here's the accounting move that matters. Hyperscalers used to write off AI servers over three to four years. Now they stretch the useful life to five or six. Microsoft's range runs two to six years, Alphabet lands near six, and Meta uses five to five and a half.</p><p>Longer lives shrink each year's depreciation, which flatters reported profit today. They also stack a catch-up for later. Meta is the starkest case: it spent 72 billion dollars last year and booked only about 18 billion in depreciation. That's a four-to-one gap between cash out the door and cost on the books.</p><p>Now stack the four together. In their last four reported quarters, they spent roughly 490 billion dollars of capex and booked about 160 billion in depreciation. The rest is a deferred bill that hits earnings over the next five or six years, even if spending stopped tomorrow.</p><p>Now the bull case, because the AI revenue is real. Microsoft's AI business is running at roughly 37 billion dollars a year, up 123 percent. Azure grew about 40 percent, and its backlog of signed contracts sits near 627 billion dollars. Google Cloud grew 82 percent in its latest quarter, and AWS's AI business has passed 25 billion dollars a year.</p><p>Here's the uncomfortable part. OpenAI and Anthropic, the model builders in the headlines, are on track for under 35 billion dollars of combined revenue this year. That's about five percent of what the hyperscalers are spending.</p><p>Even the hyperscalers can't fill demand. Microsoft is sitting on roughly 80 billion dollars of Azure orders it can't deliver. The bottleneck isn't customers. It's electricity.</p><p>So how do they pay for it? Free cash flow won't cut it. That's the money left after operating costs and capex, and across the four it fell from 237 billion dollars in 2024 to about 200 billion in 2025. This year's plans imply a much bigger drop, and analysts model negative industry cash flow into 2027 and 2028.</p><p>Debt is filling the gap. Alphabet's long-term debt quadrupled in 2025. Meta has issued roughly 25 billion dollars of net new debt this year. It's the first AI buildout paid for with borrowed money and falling cash balances.</p><p>Now follow the money, because someone gets paid first. About three-quarters of every hyperscaler infrastructure dollar lands in suppliers' revenue. NVIDIA is the biggest single landing spot.</p><p>Its latest quarter brought in 81.6 billion dollars, up 85 percent, at roughly 75 percent gross margins. Data center alone did 75.2 billion of that, up 92 percent. One NVIDIA quarter beats Meta's entire 2024 capex bill. The suppliers collect before anyone knows if the AI pays off.</p><p>Here's the scoreboard that matters. The income statement is the rearview mirror; cash and depreciation are the windshield. Watch the gap between them, and keep an eye on who gets paid first. The builders write the checks, the suppliers cash them, and the cost shows up in earnings for years to come.</p><p class=\"disclosure\">Disclosure: The Signal holds no position in AMZN, GOOGL, or NVDA. Positions may change. This is not financial advice.</p>",
+  "tags": [
+    "AI infrastructure",
+    "hyperscalers",
+    "capex",
+    "depreciation",
+    "cloud",
+    "data center",
+    "NVIDIA"
+  ],
+  "links": [
+    {
+      "label": "Tech AI spending approaches $700 billion in 2026 (CNBC)",
+      "url": "https://www.cnbc.com/2026/02/06/google-microsoft-meta-amazon-ai-cash.html"
+    },
+    {
+      "label": "Microsoft: cloud and AI strength fuels Q3 results",
+      "url": "https://news.microsoft.com/source/2026/04/29/microsoft-cloud-and-ai-strength-fuels-third-quarter-results/"
+    },
+    {
+      "label": "Alphabet Q2 2026 earnings release",
+      "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q2/2026q2-alphabet-earnings-release.pdf"
+    },
+    {
+      "label": "Meta reports second quarter 2026 results",
+      "url": "https://www.prnewswire.com/news-releases/meta-reports-second-quarter-2026-results-302838214.html"
+    },
+    {
+      "label": "FT Alphaville on hyperscaler commitments",
+      "url": "https://www.ft.com/content/1fbe47a6-bbf1-4de1-973b-8ce5baea591d"
+    },
+    {
+      "label": "NVIDIA announces results for Q1 fiscal 2027",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2027"
+    }
+  ],
+  "meta": {
+    "estimatedReadTime": "4 min read"
+  }
+}
