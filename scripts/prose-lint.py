@@ -84,6 +84,18 @@ def lint_file(path):
     if re.search(r"\u2014\s+and\b", title):
         problems.append(("FAIL", "title ends in a '\u2014 and ...' mic-drop"))
 
+    # ---- decay / time-anchor checks (skill v1.3.0: the 2-week test) ----
+    weekday_re = re.compile(r"\b(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)\b", re.I)
+    for field, val in (("title", title),
+                       ("subtitle", d.get("subtitle", "")),
+                       ("summary", d.get("summary", ""))):
+        if val and weekday_re.search(val):
+            problems.append(("FAIL", f"{field} contains a weekday anchor (use the date once, then relative language)"))
+        if field == "title" and re.search(r"\bjust\b", val, re.I):
+            problems.append(("WARN", "title contains decay word 'just' (2-week test)"))
+    if len(weekday_re.findall(body)) > 1:
+        problems.append(("WARN", "body has >1 weekday anchor (anchor the date once)"))
+
     # ---- banned tics ----
     low = body.lower()
     for tic in BANNED:
