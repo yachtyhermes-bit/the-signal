@@ -1,0 +1,94 @@
+{
+  "slug": "baba-blackwell-export-loophole-2026",
+  "title": "Washington Drew a Line on AI Chips. Alibaba's Demand Stepped Over It.",
+  "subtitle": "A New York Times investigation shows how Aivres — the California-based American arm of blacklisted Chinese server giant Inspur — shipped more than $3 billion of Nvidia Blackwell servers to Southeast Asia, where intermediaries route cloud computing to Alibaba and ByteDance. The export ban was supposed to be the leash on China's AI labs. Alibaba's buildout is why it keeps slipping.",
+  "summary": "The New York Times reports that Aivres, the American arm of blacklisted Chinese server giant Inspur, exported more than $3 billion of servers built on Nvidia's Blackwell AI chips to Southeast Asia — where cloud intermediaries serve Alibaba and ByteDance. Federal officials have opened a quiet inquiry into a setup the Times says appears to be taking advantage of several loopholes. For Alibaba, the story is proof of demand-pull: Qwen is the most-downloaded open model family on earth, its cloud just posted its fastest growth in 22 quarters, and it raised $10.2 billion last month purely to fund AI.",
+  "bodyHtml": "Washington drew a line. The chips crossed it anyway. The New York Times published the receipts September 6: more than $3 billion of servers built on Nvidia's Blackwell AI chips flowed toward China's biggest AI labs. The route ran through Southeast Asia — around the export controls that were supposed to stop them.\n\nMeet the company making that demand real: Alibaba — think Amazon, OpenAI, and Google under one Chinese roof. It runs Taobao and Tmall, the e-commerce giants that made it a household name. It runs Alibaba Cloud, the number-one cloud in China. And it builds Qwen, the open-source model family developers worldwide download most.\n\nThat stack is why the sector should care. Models, cloud, and apps under one roof — no other company on earth spans that arc. America splits the same stack across Nvidia, Microsoft, Google, and OpenAI; China keeps it under one ticker.\n\nWhen Qwen improves, Alibaba's cloud gets busier and its apps get smarter. The flywheel is real, and it is ravenous — that hunger is why silicon keeps finding a route across the Pacific.\n\nHere's the loophole: Aivres, a California server maker, is the American arm of Inspur, the Chinese giant the US blacklisted in March 2023. Inspur owns about a third of IEIT Systems, which wholly owns Aivres.\n\nAivres itself never hit the Entity List, and that blind spot has a price tag. Per the Times' analysis of trade records, it shipped at least $5.6 billion of tech to Southeast Asia between April 2024 and February 2026. More than $3 billion of that was Blackwell servers.\n\nThe buyers were cloud middlemen — Megaspeed Malaysia and Aolani Cloud Malaysia — which the Times says provide cloud computing to Alibaba and ByteDance. The hardware never has to touch Chinese soil. It just sits in third-country data centers that Chinese firms reach remotely, beyond the easy reach of US rules.\n\nThere's a second, parallel route. Inspur subsidiaries feed Innospec Malaysia, which ships to China's Maginfra — more than $700 million of servers, 1,500-plus units, in six months. Washington even approved Maginfra for an H200 license earlier in 2026; the H200 sits a step below Blackwell. The system isn't so much broken as porous.\n\nFederal officials have opened a quiet inquiry into Aivres. No charges yet, and no new enforcement. Nvidia, Inspur, and Aivres aren't commenting. The Times' own verdict: the setup appears to be taking advantage of several loopholes.\n\nNow meet the demand side — the numbers explain the contortion. Alibaba says Qwen passed three billion downloads in six months, with 300,000-plus derivative models built on top. Independent counts from Hugging Face put the family above two billion this year — versus 418 million for Google's models and 227 million for Meta's.\n\nThe cloud arm compounds the flywheel. In the June quarter, the renamed AI Cloud segment grew 45% year over year — its fastest growth in 22 quarters. AI-related product revenue rose triple digits for a twelfth straight quarter, and Alibaba Cloud leads China's AI cloud market at 38.1% share, per Omdia.\n\nThe spending is even louder. Total revenue rose 9% to RMB 268.95 billion over the same stretch, while capex hit RMB 67.68 billion — up 75% year over year. Alibaba has committed to at least RMB 380 billion of AI and cloud capex through 2029, and Reuters notes about half is already spent a year in.\n\nInvestors have noticed. Alibaba raised about $10.2 billion in late August — the largest follow-on ever by a Hong Kong-listed company — and earmarked every dollar for AI. Hong Kong shares slipped roughly 10% on the dilution. CEO Eddie Wu expects the AI buildout to break even in about three years, helped by in-house Zhenwu and T-Head chips replacing procured ones.\n\nNone of this means Alibaba ran a smuggling ring — the Times doesn't allege that. What it shows is gravity: when the hungriest AI buyer on earth needs compute, middlemen materialize to supply it. Export policy moves at the speed of government. Alibaba's capex moves at the speed of demand.\n\nBottom line: export controls were supposed to starve China's AI labs of Nvidia's best silicon. They've become paperwork instead — and paperwork struggles against a customer this hungry. Alibaba just needs to keep buying compute at a pace that makes supply chains find a way — and so far, they always have.\n\n<p class=\"disclosure\">Disclosure: The Signal holds no position in BABA. Positions may change. This is not financial advice.</p>",
+  "date": "2026-09-07T14:00:00Z",
+  "ticker": "BABA",
+  "sector": "ai",
+  "sentiment": "positive",
+  "price": 113.24,
+  "premium": false,
+  "tags": [
+    "BABA",
+    "Alibaba",
+    "AI chips",
+    "export controls",
+    "Nvidia Blackwell",
+    "Qwen",
+    "China AI",
+    "cloud"
+  ],
+  "image": {
+    "src": "/img/articles/baba-blackwell-export-loophole-2026.jpg",
+    "fit": "cover",
+    "caption": "Container cranes and stacked shipping containers at a port at dusk, silhouetted against an amber sky — a metaphor for the global silicon trade routes at the heart of the Blackwell export-loophole story. Photo: The Signal / AI-generated.",
+    "alt": "Container cranes and stacked shipping containers at a port at dusk, silhouetted against an amber sky"
+  },
+  "links": [
+    {
+      "label": "How a Blacklisted Chinese Tech Giant Kept Buying America's Best A.I. Chips — NYT",
+      "url": "https://www.nytimes.com/2026/09/06/technology/ai-chips-china-blacklist.html"
+    },
+    {
+      "label": "AI Weekly: Aivres Shipped $3B in Nvidia Blackwell Chips to Southeast Asia",
+      "url": "https://aiweekly.co/alerts/nyt-inspurs-us-subsidiary-aivres-shipped-3b-in-nvidia-blackwell-chips-to"
+    },
+    {
+      "label": "Free Press Journal: Inspur Group Bypassed US AI Chip Curbs via Aivres Subsidiary",
+      "url": "https://www.freepressjournal.in/tech/inspur-group-allegedly-bypassed-us-ai-chip-curbs-sending-56-billion-in-advanced-technology-to-china-via-its-aivres-subsidiary"
+    },
+    {
+      "label": "Alibaba Group Announces June Quarter 2026 Results",
+      "url": "https://www.businesswire.com/news/home/20260818525201/en/Alibaba-Group-Announces-June-Quarter-2026-Results"
+    },
+    {
+      "label": "CNBC: Alibaba Raises $10.2 Billion in Landmark AI Share Placement",
+      "url": "https://www.cnbc.com/2026/08/24/alibaba-share-placement-drop-ai-hong-kong.html"
+    },
+    {
+      "label": "Bloomberg: Alibaba's AI Models Hit 3 Billion Downloads",
+      "url": "https://finance.yahoo.com/technology/ai/articles/alibaba-ai-models-hit-3-091606840.html"
+    }
+  ],
+  "meta": {
+    "author": "The Signal",
+    "estimatedReadTime": "5 minutes",
+    "editorialTags": [
+      "alibaba",
+      "baba",
+      "ai-chips",
+      "export-controls",
+      "nvidia-blackwell",
+      "qwen",
+      "china-ai",
+      "cloud-computing"
+    ],
+    "seoKeywords": [
+      "Alibaba stock",
+      "BABA stock",
+      "Alibaba Qwen downloads",
+      "Alibaba AI cloud growth",
+      "Nvidia Blackwell China export controls",
+      "Aivres Inspur Entity List loophole",
+      "Alibaba record AI share placement",
+      "Alibaba 380 billion yuan capex plan"
+    ],
+    "relatedTickers": [
+      "NVDA",
+      "MSFT",
+      "GOOGL"
+    ],
+    "keyMetrics": {
+      "BABA Price": "$113.24",
+      "Market Cap": "$281.5B",
+      "Forward P/E": "12.1",
+      "Total Revenue (TTM)": "¥1.045T",
+      "52-Week Low": "$91.99",
+      "52-Week High": "$192.67",
+      "Analyst Consensus": "Strong Buy",
+      "Analyst Target Mean": "$187.38"
+    }
+  }
+}
