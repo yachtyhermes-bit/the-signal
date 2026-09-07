@@ -11,8 +11,9 @@
       "dest": "/api/$1"
     },
     {
-      "src": "/stock/(.*)",
-      "dest": "/stocks/$1"
+        "src": "/stock/(.*)",
+        "dest": "/stocks/$1",
+        "statusCode": 301
     },
     {
       "src": "/data/(.*)",
@@ -35,12 +36,14 @@
       "dest": "/signal-vs-the-street.html"
     },
     {
-      "src": "/hiv",
-      "dest": "/hive-landing-sleeper-v2.html"
+        "src": "/hiv",
+        "dest": "/hive/",
+        "statusCode": 301
     },
     {
-      "src": "/hiv/",
-      "dest": "/hive-landing-sleeper-v2.html"
+        "src": "/hiv/",
+        "dest": "/hive/",
+        "statusCode": 301
     },
     {
       "src": "/premium/success/?",
@@ -55,8 +58,9 @@
       "dest": "/premium/index.html"
     },
     {
-      "src": "/art/(.*)",
-      "dest": "/article/$1"
+        "src": "/art/(.*)",
+        "dest": "/article/$1",
+        "statusCode": 301
     },
     {
       "src": "/article/(.*)",

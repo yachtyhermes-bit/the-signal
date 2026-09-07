@@ -205,6 +205,8 @@ function buildStockPage(symbol) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>${esc(symbol)} — The Signal</title>
+  <link rel="canonical" href="https://readthesignal.net/stocks/${esc(symbol)}/">
+  <meta property="og:url" content="https://readthesignal.net/stocks/${esc(symbol)}/">
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Oxanium:wght@400;500;600;700&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/stock-card.css">
   <link rel="stylesheet" href="/css/nav.css">
