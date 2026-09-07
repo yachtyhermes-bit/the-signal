@@ -287,8 +287,10 @@ try {
 const articles = loadArticles();
 console.log(`📝 ${articles.length} articles loaded from articles/posts/*.json`);
 
-// ─── 3. Generate articles-data JSON blob ───
-const articlesJson = JSON.stringify(articles);
+// ─── 3. Generate articles-data JSON blob (client-safe: bodyHtml stripped) ───
+// Audit fix 5 (2026-09-07): page-level corpus inlining removed — search.js
+// fetches /articles/index.json on demand and matches metadata only.
+const articlesJson = JSON.stringify(articles.map(({ bodyHtml, ...meta }) => meta));
 console.log(`  📄 articles-data: ${articlesJson.length} bytes`);
 
 // ─── 4. Sort by date desc, split homepage vs sector ───
@@ -322,9 +324,6 @@ const grid4Html = grid4.map(a => articleCard(a)).join('\n');
 
 // ─── 6. Inject into placeholders ───
 let indexHtml = fs.readFileSync(path.join(DST, 'index.html'), 'utf8');
-
-indexHtml = indexHtml.replace('<!-- ARTICLES_DATA_JSON -->',
-  `<script id="articles-data" type="application/json">${articlesJson}</script>`);
 
 indexHtml = indexHtml.replace('<!-- FEATURED_ARTICLE -->',
   `<section class="featured-hero">\n  <div class="article-grid">\n${featuredHtml}\n  </div>\n</section>`);
@@ -365,13 +364,17 @@ fs.writeFileSync(path.join(DST, 'index.html'), indexHtml);
 const finalSize = fs.statSync(path.join(DST, 'index.html')).size;
 console.log(`  ✅ Homepage built: ${finalSize} bytes`);
 
-// GUARD: Abort if homepage is suspiciously small (< 350KB with 40 articles)
-if (finalSize < 350000) {
-  console.error(`⛔ FATAL: Built index.html is ${finalSize} bytes — expected ~400,000+.`);
+// GUARD: Abort if the homepage rendered no articles. (Audit fix 5, 2026-09-07:
+// the full-corpus blob is no longer inlined, so pages are ~80KB — assert on
+// actual content, not byte size.)
+const articleLinks = (indexHtml.match(/href="\/article\//g) || []).length;
+if (articleLinks < 20) {
+  console.error(`⛔ FATAL: Homepage rendered only ${articleLinks} article links — expected ~40.`);
   console.error('   Article generation may have failed. Check articles/posts/*.json.');
   console.error('   Recovery: npx vercel promote the-signal-nphmhgo0f-beachsquadlas-projects.vercel.app');
   process.exit(1);
 }
+console.log(`  ✅ Homepage built: ${finalSize} bytes with ${articleLinks} article links`);
 
 // ─── 7. Generate article pages ───
 const template = fs.existsSync(ARTICLE_TEMPLATE)
@@ -500,8 +503,6 @@ if (!template) {
         .replace(/{{LINKS_HTML}}/g, linksHtml)
         .replace(/{{IS_PREMIUM}}/g, isPremium)
         .replace(/{{RELATED_ARTICLES}}/g, pickRelated(articles, slug, 4))
-        .replace('<!-- ARTICLES_DATA_JSON -->',
-          `<script id="articles-data" type="application/json">${articlesJson}</script>`)
         .replace(/\{\{[A-Z_]+\}\}/g, '');
 
       // Inject Rocket Lab navigation
@@ -556,8 +557,6 @@ if (!sectorTemplate) {
       .replace(/{{SECTOR}}/g, sector)
       .replace(/{{SECTOR_NAME}}/g, sectorName)
       .replace('{{ARTICLE_CARDS}}', cards)
-      .replace('<!-- ARTICLES_DATA_JSON -->',
-        `<script id="articles-data" type="application/json">${articlesJson}</script>`);
     
     // Inject Rocket Lab navigation
     html = injectRocketNav(html);
@@ -576,8 +575,6 @@ if (!sectorTemplate) {
       .replace(/{{SECTOR}}/g, sector)
       .replace(/{{SECTOR_NAME}}/g, sectorName)
       .replace('{{ARTICLE_CARDS}}', '<p class="sector-empty">Articles coming soon.</p>')
-      .replace('<!-- ARTICLES_DATA_JSON -->',
-        `<script id="articles-data" type="application/json">${articlesJson}</script>`);
     
     // Inject Rocket Lab navigation
     html = injectRocketNav(html);
@@ -611,8 +608,6 @@ if (!explainersTemplate) {
 
   let html = explainersTemplate
     .replace('{{ARTICLE_CARDS}}', cards)
-    .replace('<!-- ARTICLES_DATA_JSON -->',
-      `<script id="articles-data" type="application/json">${articlesJson}</script>`);
 
   html = injectRocketNav(html);
 
