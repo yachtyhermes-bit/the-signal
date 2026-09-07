@@ -13,6 +13,10 @@ readability rules in the signal-article-style skill (2026-09-06):
       nutshell", "it's not just X, it's Y" mic-drop constructions
     - paragraph longer than 6 sentences
     - title longer than 14 words or ending in a "— and ..." mic-drop
+    - title contains 'just' (institutional-register rule 2026-09-07: headlines
+      read like Seeking Alpha/SemiAnalysis, not teasers; 'X Just Did Y' is the
+      #1 corpus crutch) or a cheerleader punchline tail ("and All", "and More",
+      "or Not", "— and the Stock Is Exploding")
 
   WARN (exit 0, printed):
     - sentence 28-34 words
@@ -83,6 +87,10 @@ def lint_file(path):
         problems.append(("FAIL", f"title {len(tw)} words (>14): {title!r}"))
     if re.search(r"\u2014\s+and\b", title):
         problems.append(("FAIL", "title ends in a '\u2014 and ...' mic-drop"))
+    if re.search(r"\bjust\b", title, re.I):
+        problems.append(("FAIL", "title contains 'just' (institutional register: no 'X Just Did Y' openers)"))
+    if re.search(r"\b(and all|and more|and counting|or not|no more|right now|yet again)\b[.!?\"]*$", title, re.I):
+        problems.append(("FAIL", "title ends in a cheerleader punchline tail"))
 
     # ---- decay / time-anchor checks (skill v1.3.0: the 2-week test) ----
     weekday_re = re.compile(r"\b(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)\b", re.I)
@@ -91,8 +99,6 @@ def lint_file(path):
                        ("summary", d.get("summary", ""))):
         if val and weekday_re.search(val):
             problems.append(("FAIL", f"{field} contains a weekday anchor (use the date once, then relative language)"))
-        if field == "title" and re.search(r"\bjust\b", val, re.I):
-            problems.append(("WARN", "title contains decay word 'just' (2-week test)"))
     if len(weekday_re.findall(body)) > 1:
         problems.append(("WARN", "body has >1 weekday anchor (anchor the date once)"))
 
