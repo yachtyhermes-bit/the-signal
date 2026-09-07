@@ -1,0 +1,93 @@
+{
+  "slug": "hood-agentic-finance-everything-app-2026",
+  "title": "Robinhood Built the Everything-App. Now It's the Bank for AI Agents.",
+  "subtitle": "The everything-app that taught a generation to trade now opens brokerage accounts for AI agents, runs its own chain and clearinghouse, and sits atop a federally seeded funnel of 25 million future customers.",
+  "summary": "Robinhood is compounding its everything-app into the financial operating layer of the agent economy — roughly 100,000 customers handed real accounts to AI agents within ten weeks of launch, with no comparable offering from Schwab, Fidelity, or Coinbase. Underneath sit owned rails: a CFTC-licensed clearinghouse, an Ethereum layer-2 that out-earned every blockchain network on September 1, and a Trump Accounts program funneling 25 million future customers in. Q2 revenue rose 32% to a record $1.3 billion at roughly 37x forward earnings; the case is structural moat, not a quarterly beat.",
+  "ticker": "HOOD",
+  "company": "Robinhood Markets, Inc.",
+  "sector": "fintech",
+  "sentiment": "bullish",
+  "date": "2026-09-07T22:00:00Z",
+  "price": 122.11,
+  "featured": false,
+  "premium": false,
+  "image": {
+    "src": "/img/articles/hood-agentic-finance-everything-app-2026.jpg",
+    "fit": "cover",
+    "caption": "Close-up of a hand holding a smartphone with a finance app in a bright modern fintech office, charts softly blurred in the background. Photo: The Signal / AI-generated.",
+    "alt": "Hand holding a smartphone showing a finance app in a bright fintech office with blurred charts on wall monitors"
+  },
+  "tags": [
+    "Robinhood",
+    "HOOD",
+    "Fintech",
+    "Agentic AI",
+    "Tokenized Stocks",
+    "Crypto"
+  ],
+  "links": [
+    {
+      "label": "Robinhood IR — Q2 2026 results →",
+      "url": "https://investors.robinhood.com/news-releases/news-release-details/robinhood-reports-second-quarter-2026-results"
+    },
+    {
+      "label": "CNBC: 'Your AI agent can now trade for you on Robinhood' →",
+      "url": "https://www.cnbc.com/2026/05/27/your-ai-agent-can-now-trade-for-you-on-robinhood-and-buy-stuff-with-your-credit-card-too.html"
+    },
+    {
+      "label": "Robinhood Newsroom — Robinhood Is Now Open to Agents →",
+      "url": "https://robinhood.com/us/en/newsroom/robinhood-is-now-open-to-agents"
+    },
+    {
+      "label": "Robinhood Newsroom — Robinhood Chain mainnet, stock tokens, agentic trading →",
+      "url": "https://robinhood.com/us/en/newsroom/robinhood-accelerates-global-expansion-robinhood-chain-mainnet-stock-tokens-agentic-trading"
+    },
+    {
+      "label": "Robinhood Newsroom — Trump Accounts launch →",
+      "url": "https://robinhood.com/us/en/newsroom/trump-accounts-officially-launch"
+    },
+    {
+      "label": "Yahoo Finance — AMC CEO threatens SEC complaint over tokenized stocks →",
+      "url": "https://uk.finance.yahoo.com/news/amc-ceo-threatens-sec-complaint-142210006.html"
+    }
+  ],
+  "meta": {
+    "author": "The Signal",
+    "estimatedReadTime": "4 min",
+    "editorialTags": [
+      "fintech",
+      "agentic-ai",
+      "tokenized-stocks",
+      "crypto",
+      "everything-app"
+    ],
+    "seoKeywords": [
+      "Robinhood",
+      "HOOD stock",
+      "agentic finance",
+      "AI agents trading",
+      "Robinhood Chain",
+      "tokenized stocks",
+      "Robinhood Gold",
+      "Trump Accounts",
+      "Rothera"
+    ],
+    "relatedTickers": [
+      "COIN",
+      "SOFI",
+      "SCHW",
+      "CRWV"
+    ],
+    "keyMetrics": {
+      "HOOD Price": "$122.11",
+      "Market Cap": "$109.8B",
+      "Forward P/E": "37.0",
+      "Total Revenue (TTM)": "$4.93B",
+      "52-Week Low": "$63.52",
+      "52-Week High": "$153.86",
+      "Analyst Consensus": "Buy",
+      "Analyst Target Mean": "$125.45"
+    }
+  },
+  "bodyHtml": "<p>Somewhere right now, an AI agent is checking its portfolio. It has a brokerage account, a credit card, and a mandate to put money to work — and the firm that opened them is Robinhood.</p>\n\n<p>Robinhood is the app that turned investing into a phone habit — free trades, fractional shares, crypto, retirement accounts, a credit card. Once a meme-stock punchline, it is now a compounding everything-app with 28.4 million funded customers and $369 billion in assets.</p>\n\n<p>Agents are about to move real money — booking travel, paying bills, rebalancing portfolios — and each needs a regulated, liquid account to act through. Robinhood's bet is that it becomes the financial operating layer of the agent economy, not just the app humans trade on.</p>\n\n<p>In May, Robinhood became the first major US broker to open official MCP servers — the open protocol Anthropic created for connecting AI agents to tools. Customers link third-party agents like Claude Code to ring-fenced accounts, letting the agents trade stocks, options, or crypto and spend through an agentic credit card.</p>\n\n<p>Within ten weeks, roughly 100,000 customers had opened agentic accounts holding more than $100 million. Schwab, Fidelity, and Coinbase have nothing comparable yet. CEO Vlad Tenev told CNBC that agentic AI will soon have the trading capability of a human.</p>\n\n<p>The agentic on-ramp sits atop a machine that is already compounding. Thirteen business lines clear $100 million in annualized revenue, and Gold subscriptions hit 4.8 million, up 39%, with roughly 40% of new customers taking the paid tier. ARPU reached $187, up 24%.</p>\n\n<p>The Gold Card passed a million customers and $17 billion in annualized spend; the Legend desktop terminal crossed $100 million roughly 18 months after launch. Retirement assets grew 82% to $34.5 billion, margin balances climbed 127% to $21.6 billion, and Banking holds over $3 billion in deposits.</p>\n\n<p>None of this is hypothetical. Customers added $21.7 billion in net deposits during the quarter — a 28% annualized clip — and $75.7 billion over the trailing twelve months. Second-quarter revenue hit a record $1.3 billion, up 32%, with net income up 48%.</p>\n\n<p>Then there are the rails Robinhood owns. Event contracts brought in $156 million last quarter, up more than tenfold. Rothera — the CFTC-licensed exchange and clearinghouse Robinhood built with Susquehanna — routed 3.5 billion event contracts by late July and added $17 million to Q2 revenue.</p>\n\n<p>Robinhood Chain went live in July, a permissionless Ethereum layer-2 on Arbitrum Orbit that Robinhood itself sequences. On September 1 it posted $3.8 million in daily network revenue — the most of any chain globally, about 38% of the industry total, per Messari. The chain has cleared more than 100 million transactions and $12 billion in DEX volume — the fastest EVM network ever.</p>\n\n<p>Tokenized stocks ride the same thesis. Robinhood Wallet lists more than 190 US stocks as tokens, trading 24/7 in over 120 countries. They are Jersey debt securities — economic exposure, not ownership — and US persons can't buy them. The category has grown from $2.5 billion at the start of 2026 to roughly $13.4 billion, and Nasdaq and NYSE are both building around-the-clock stock trading.</p>\n\n<p>Trump Accounts are the distribution funnel no rival can copy. Robinhood Securities is the initial federal trustee; the Treasury seeds $1,000 per child born 2025–2028. More than 7 million opened within weeks, holding roughly $1.5 billion — and employers can add to them, with Dell alone pledging more than $6 billion. Politics aside, the government just handed Robinhood roughly 25 million future customers.</p>\n\n<p>The bear case deserves airtime. Tokenized stocks are unregistered Jersey debt securities issued without issuer consent, and AMC's CEO has threatened an SEC complaint. Crypto revenue fell 38% year over year — retail flows are cyclical — and the new rails are barely in reported results yet.</p>\n\n<p>Valuation is the second concern — roughly 54x trailing earnings, 37x forward, 22x sales — with consensus targets sitting right at the price. Competition presses on every flank: Coinbase runs its own layer-2, banks are circling, and incumbents are finally moving. The sharpest edge cuts both ways: agents could commoditize execution, because open standards make switching as easy as joining.</p>\n\n<p>So here is the bet. Robinhood has stopped being just an app. It is becoming the account, the exchange, the chain, and the rails — one operating layer for human and machine money alike.</p>\n\n<p>The multiple is rich and the regulators are watching. The structure compounding beneath — 28 million customers, owned rails, a federal funnel, a head start in agents — is not something a rival copies in a quarter. That compounding, not any single quarter, is the investment case.</p>\n\n<p class=\"disclosure\">Disclosure: The Signal holds no position in HOOD. Positions may change. This is not financial advice.</p>"
+}
