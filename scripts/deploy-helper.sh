@@ -48,6 +48,13 @@ signal_deploy() {
 
   rm -rf /tmp/signal-dist
   cp -r dist /tmp/signal-dist
+  # vercel.json MUST ship with every deploy — it carries the SEO legacy 301
+  # redirects (/stock/, /art/, /hiv) + trailingSlash canonical enforcement.
+  # Deploying dist alone silently drops routes (deploy-race, see
+  # references/deploy-races.md) and re-opens duplicate-URL indexing.
+  if [ -f "$SIGNAL_ROOT/vercel.json" ]; then
+    cp "$SIGNAL_ROOT/vercel.json" /tmp/signal-dist/vercel.json
+  fi
   cd /tmp/signal-dist
 
   # Ensure we deploy to the correct Vercel project (not auto-created signal-dist)
