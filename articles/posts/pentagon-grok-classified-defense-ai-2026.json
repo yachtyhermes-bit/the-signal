@@ -1,19 +1,44 @@
 {
   "slug": "pentagon-grok-classified-defense-ai-2026",
-  "title": "The Pentagon Just Opened the Door to Grok — Defense AI Is Now a Tidal Wave",
+  "title": "Defense AI's First Big Shakeout: Pentagon Clears Grok While Palantir Holds the Center",
   "subtitle": "Musk's xAI wins Pentagon approval for Grok on classified systems. Anthropic gets blacklisted. The defense AI race just divided into winners and losers — and Palantir sits at the center of it all.",
   "summary": "The Pentagon has approved Elon Musk's xAI to integrate Grok into classified military networks, marking one of the most significant defense AI deals of 2026. The decision comes as Anthropic was deemed a 'national security threat' for refusing military contracts. Palantir, with its existing AIP platform and deep Pentagon relationships, stands to benefit as the defense AI sector undergoes a wholesale shift toward AI-powered military operations across every domain.",
   "ticker": "PLTR",
   "sector": "cyber",
   "sentiment": "bullish",
   "date": "2026-05-23T21:00:00.000Z",
-  "image": { "src": "/img/articles/pentagon-grok-classified-defense-ai-2026.jpg", "caption": "The Pentagon — the world's largest office building and the epicenter of a defense AI revolution that just got a lot bigger with xAI's Grok approval for classified systems" },
-  "tags": ["xAI", "Grok", "Pentagon", "Defense AI", "PLTR", "Palantir", "Classified Systems", "Military AI", "Elon Musk"],
+  "image": {
+    "src": "/img/articles/pentagon-grok-classified-defense-ai-2026.jpg",
+    "caption": "The Pentagon — the world's largest office building and the epicenter of a defense AI revolution that just got a lot bigger with xAI's Grok approval for classified systems"
+  },
+  "tags": [
+    "xAI",
+    "Grok",
+    "Pentagon",
+    "Defense AI",
+    "PLTR",
+    "Palantir",
+    "Classified Systems",
+    "Military AI",
+    "Elon Musk"
+  ],
   "links": [
-    { "label": "Musk's xAI and Pentagon reach deal to use Grok in classified systems (Axios) →", "url": "https://www.axios.com/2026/05/23/xai-pentagon-grok-classified-systems" },
-    { "label": "Pentagon signs deal with Musk's xAI to use Grok in classified military systems (The Guardian) →", "url": "https://www.theguardian.com/technology/2026/may/23/pentagon-xai-grok-classified-military" },
-    { "label": "Warren presses Pentagon over decision to grant xAI access to classified networks (TechCrunch) →", "url": "https://techcrunch.com/2026/05/23/warren-pentagon-xai-grok-classified/" },
-    { "label": "Hegseth warns Anthropic to let the military use its AI tech (AP/Bloomberg) →", "url": "https://apnews.com/article/pentagon-anthropic-hegseth-ai-military-palantir" }
+    {
+      "label": "Musk's xAI and Pentagon reach deal to use Grok in classified systems (Axios) →",
+      "url": "https://www.axios.com/2026/05/23/xai-pentagon-grok-classified-systems"
+    },
+    {
+      "label": "Pentagon signs deal with Musk's xAI to use Grok in classified military systems (The Guardian) →",
+      "url": "https://www.theguardian.com/technology/2026/may/23/pentagon-xai-grok-classified-military"
+    },
+    {
+      "label": "Warren presses Pentagon over decision to grant xAI access to classified networks (TechCrunch) →",
+      "url": "https://techcrunch.com/2026/05/23/warren-pentagon-xai-grok-classified/"
+    },
+    {
+      "label": "Hegseth warns Anthropic to let the military use its AI tech (AP/Bloomberg) →",
+      "url": "https://apnews.com/article/pentagon-anthropic-hegseth-ai-military-palantir"
+    }
   ],
   "videos": [
     {
@@ -26,9 +51,45 @@
   "meta": {
     "author": "The Signal Editorial Team",
     "estimatedReadTime": "4 minutes",
-    "editorialTags": ["xAI", "Grok", "Pentagon", "Defense AI", "Palantir", "PLTR", "Classified Systems", "Military AI", "Elon Musk", "National Security"],
-    "seoKeywords": ["Pentagon Grok deal", "xAI classified systems", "defense AI stocks", "Palantir PLTR stock", "Pentagon AI approval", "Grok military", "Anthropic defense blacklist", "AI defense contracts 2026"],
-    "relatedTickers": ["CRWD", "PANW", "DDOG", "ANET", "RTX"],
-    "keyMetrics": { "price": "$136.88", "marketCap": "$328B", "revenueGrowth": "84.7%", "profitMargin": "43.7%", "forwardPE": "66x", "targetPriceMean": "$183.73", "52wHigh": "$207.52", "52wLow": "$118.93", "analystConsensus": "Strong Buy (1.9)" }
+    "editorialTags": [
+      "xAI",
+      "Grok",
+      "Pentagon",
+      "Defense AI",
+      "Palantir",
+      "PLTR",
+      "Classified Systems",
+      "Military AI",
+      "Elon Musk",
+      "National Security"
+    ],
+    "seoKeywords": [
+      "Pentagon Grok deal",
+      "xAI classified systems",
+      "defense AI stocks",
+      "Palantir PLTR stock",
+      "Pentagon AI approval",
+      "Grok military",
+      "Anthropic defense blacklist",
+      "AI defense contracts 2026"
+    ],
+    "relatedTickers": [
+      "CRWD",
+      "PANW",
+      "DDOG",
+      "ANET",
+      "RTX"
+    ],
+    "keyMetrics": {
+      "price": "$136.88",
+      "marketCap": "$328B",
+      "revenueGrowth": "84.7%",
+      "profitMargin": "43.7%",
+      "forwardPE": "66x",
+      "targetPriceMean": "$183.73",
+      "52wHigh": "$207.52",
+      "52wLow": "$118.93",
+      "analystConsensus": "Strong Buy (1.9)"
+    }
   }
 }
