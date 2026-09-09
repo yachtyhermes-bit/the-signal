@@ -1,0 +1,86 @@
+{
+  "slug": "qcom-amazon-custom-ai-chips-2026",
+  "title": "Qualcomm's Amazon Deal Brings the Phone-Chip King Into AI's Data Centers",
+  "subtitle": "Qualcomm will design custom AI inference silicon and optical connectivity for AWS under a multi-generational pact, with Amazon's affiliate taking a warrant tied to actual chip purchases — up to a $60 billion ceiling over ten years. The smartphone-chip heavyweight finally has a credible seat in the AI buildout, and AWS gains a third external custom-silicon supplier.",
+  "summary": "Qualcomm signed a landmark multi-generational pact with Amazon to build custom AI inference chips and optical connectivity for AWS — the phone-chip king's biggest move yet into the AI data center. The twist: Amazon took a warrant tied to actual chip purchases, up to a $60 billion ceiling over a decade, so both sides only win if Qualcomm delivers at scale. AWS gains a third external custom-silicon supplier, and the inference battleground just got more interesting.",
+  "bodyHtml": "<p>Qualcomm put the computer in your pocket. Amazon just asked it to help build the AI data centers running the next era of computing, and the two made it official September 8.</p><p>Quick primer. Qualcomm designs the Snapdragon chips and modems inside most of the world's smartphones, plus the licensing business that made it mobile's toll booth. Roughly two-thirds of its revenue still rides on handsets. Now it's pushing into edge AI, automotive, and data-center silicon, and this deal is that pivot getting real.</p><p>Here's the bigger picture. Training models was the first gold rush; running them is the next one. Inference is where AI meets the real world, and it needs chips that deliver serious compute without guzzling a power plant's worth of electricity. That efficiency problem is literally Qualcomm's origin story — it spent 25 years making phone chips sip battery.</p><p>Here's what Amazon actually bought. Qualcomm will design custom AI inference chips for AWS. It's also supplying optical connectivity — up to 1.6 terabits per second — to ease the data-movement bottleneck inside AI clusters, with future generations already planned.</p><p>Add a nice symmetry: Qualcomm is moving more of its own chip-design work onto AWS, Amazon Bedrock included. Amazon ends up customer, platform, and investor in one deal.</p><p>Now the part that made this deal worth a second read. Amazon's affiliate received a warrant for up to 25 million Qualcomm shares — roughly 2.3% of the company — exercisable for a decade, until September 2036. The exercise price was set just below where the stock traded before the announcement, which is why coverage pegged the warrant at about $4 billion.</p><p>Here's the kicker: those shares vest in tranches tied to actual AWS purchases of Qualcomm server chips. Full vesting requires up to $60 billion in payments over the ten-year term. At signing, only 3.75 million shares — about 15% — had vested on the initial commitments. Amazon's upside grows only if Qualcomm ships silicon at serious scale.</p><p>Why take equity instead of a steeper cash discount? Because it keeps both sides honest. Amazon's payoff only compounds if Qualcomm's silicon actually lands in its data centers at scale — which means Amazon's incentives now point the same way as Qualcomm's shareholders. That kind of alignment is rare in chip deals, and it's why this one reads differently.</p><p>Now the competitive shift. AWS already designs its own chips through Annapurna Labs, the Graviton CPUs and Trainium accelerators that anchor much of its cloud. Qualcomm becomes a third external custom-silicon supplier to the hyperscalers, alongside Broadcom and Marvell. The optical leg targets the data-movement chokepoint inside AI clusters — terrain Broadcom's Tomahawk networking chips have long owned.</p><p>Nobody's calling this a Nvidia overthrow. The Barron's read: a real win that still leaves Nvidia on top, with Wells Fargo pegging a $100 billion-plus opportunity in AI inference. AWS simply has options now, and hyperscalers love having leverage over their silicon suppliers.</p><p>The market's first read was enthusiastic, then measured. Shares jumped as much as 9% before the open and closed up about 3% on roughly double the usual volume — a classic fade of the opening pop. Context helps: shares still trade about a third below their high after a rough stretch on weak phone demand, and Street consensus is a Hold.</p><p>Now the honest part. That $60 billion is a ceiling over ten years, not a signed order book, and the warrant vests only as AWS actually buys. Just 15% of the shares had vested at signing. Until the purchase orders show up, the whole thing is optionality priced in on faith — delivery is what turns it into revenue.</p><p>Management's targets give that optionality a shape: about $5 billion in data-center revenue by fiscal 2027, rising toward $15 billion by fiscal 2029. Non-handset sales would climb from roughly a quarter of revenue toward more than 60%. Those are goals, not guarantees — they come with a customer attached, an equity stake behind them, and a reason for both sides to make it work.</p><p>The bottom line: Qualcomm just bought itself a credible place in the AI buildout, and Amazon bought itself leverage over its silicon supply. The warrant structure means the market gets to grade Qualcomm on delivery, not promises. For a company defending a shrinking phone business all year, that's the best kind of problem to have.</p><p class=\"disclosure\">Disclosure: The Signal holds no position in QCOM. Positions may change. This is not financial advice.</p>",
+  "date": "2026-09-09T14:00:00Z",
+  "ticker": "QCOM",
+  "sector": "ai",
+  "sentiment": "bullish",
+  "price": 174.09,
+  "tags": [
+    "QCOM",
+    "Qualcomm",
+    "AI",
+    "AWS",
+    "custom silicon",
+    "inference",
+    "semiconductors"
+  ],
+  "image": {
+    "src": "/img/articles/qcom-amazon-custom-ai-chips-2026.jpg"
+  },
+  "links": [
+    {
+      "label": "Qualcomm: Multi-Generational Product Collaboration with Amazon",
+      "url": "https://www.qualcomm.com/news/releases/2026/09/qualcomm-announces-multi-generational-product-collaboration-with"
+    },
+    {
+      "label": "Bloomberg via Yahoo Finance: Qualcomm signs deal with Amazon for custom AI chips",
+      "url": "https://finance.yahoo.com/technology/ai/articles/qualcomm-signs-deal-amazon-custom-131045053.html"
+    },
+    {
+      "label": "BigGo Finance: Qualcomm-Amazon deal details and warrant terms",
+      "url": "https://finance.biggo.com/news/bc5eab2d-55a5-4f56-854c-bd7059841d94"
+    },
+    {
+      "label": "Data Center Knowledge: Qualcomm enters the data-center AI chip fray vs. Nvidia and AMD",
+      "url": "https://www.datacenterknowledge.com/data-center-chips/qualcomm-enters-data-center-ai-chip-fray-vs-nvidia-amd"
+    },
+    {
+      "label": "ForkLog: Qualcomm and Amazon sign $60 billion AI chip deal",
+      "url": "https://forklog.com/en/qualcomm-and-amazon-sign-60-billion-ai-chip-deal"
+    }
+  ],
+  "meta": {
+    "author": "The Signal",
+    "estimatedReadTime": "7 min read",
+    "editorialTags": [
+      "qualcomm",
+      "qcom",
+      "amazon",
+      "aws",
+      "custom-silicon",
+      "ai-inference",
+      "optical-connectivity",
+      "data-center"
+    ],
+    "seoKeywords": [
+      "Qualcomm stock",
+      "QCOM stock",
+      "Qualcomm Amazon AI chip deal",
+      "AWS custom AI silicon",
+      "Qualcomm data center AI chips",
+      "Qualcomm warrant Amazon",
+      "AI inference market",
+      "custom silicon stocks"
+    ],
+    "relatedTickers": [
+      "NVDA",
+      "AVGO",
+      "MRVL",
+      "AMD"
+    ],
+    "keyMetrics": {
+      "QCOM Price": "$174.09",
+      "Market Cap": "$185.9B",
+      "Forward P/E": "17.4",
+      "Total Revenue (TTM)": "$44.07B",
+      "52-Week Low": "$121.99",
+      "52-Week High": "$259.92",
+      "Analyst Consensus": "Hold",
+      "Analyst Target Mean": "$193.90"
+    }
+  }
+}
