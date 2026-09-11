@@ -1,0 +1,83 @@
+{
+  "slug": "spcx-ai-compute-landlord-2026",
+  "title": "SpaceX Is Becoming the AI Industry's Compute Landlord",
+  "subtitle": "A new $1.11 billion-a-month AI hosting deal pushes SpaceX's disclosed compute book past $3.4 billion a month. The same week, a data-center overhaul threatened to slow the very capacity those contracts depend on.",
+  "summary": "SpaceX disclosed a fresh AI-compute hosting contract worth $1.11 billion a month starting December 1, lifting its disclosed hosting book past $3.4 billion a month. Anthropic, Google, and Reflection AI already anchor the business, while a data-center reliability overhaul and a Memphis outage test whether SpaceX can deliver.",
+  "ticker": "SPCX",
+  "sector": "space",
+  "sentiment": "bullish",
+  "date": "2026-09-11T14:00:00Z",
+  "price": 148.18,
+  "tags": [
+    "spacex",
+    "spcx",
+    "ai-compute",
+    "colossus",
+    "data-centers",
+    "starlink",
+    "ai-infrastructure",
+    "grok"
+  ],
+  "image": {
+    "src": "/img/articles/spcx-ai-compute-landlord-2026.jpg",
+    "fit": "cover",
+    "caption": "A stainless-steel reusable rocket stands on its launch pad at blue hour. Photo: The Signal / AI-generated.",
+    "alt": "Stainless-steel rocket on a launch pad at blue hour"
+  },
+  "links": [
+    {
+      "label": "Blockonomi — SpaceX discloses a $1.11B-a-month AI hosting deal at the Goldman conference (Sep 11, 2026)",
+      "url": "https://blockonomi.com/spacex-spcx-stock-massive-1-11b-monthly-ai-contract-disclosed-at-goldman-conference/"
+    },
+    {
+      "label": "The Information — SpaceX overhauls its data center build-out, potentially slowing expansion (Sep 2026)",
+      "url": "https://www.theinformation.com/articles/spacex-overhauls-data-center-build-potentially-slowing-expansion"
+    },
+    {
+      "label": "CNBC — Anthropic to use all of SpaceX's Colossus 1 compute capacity (May 6, 2026)",
+      "url": "https://www.cnbc.com/2026/05/06/anthropic-spacex-data-center-capacity.html"
+    },
+    {
+      "label": "CNBC — Google to pay SpaceX $920 million a month for compute (Jun 5, 2026)",
+      "url": "https://www.cnbc.com/2026/06/05/google-to-pay-spacex-920-million-a-month-for-xai-compute-capacity.html"
+    },
+    {
+      "label": "CNBC — SpaceX signs a compute deal with Reflection AI worth up to $6.3 billion (Jun 22, 2026)",
+      "url": "https://www.cnbc.com/2026/06/22/spacex-ai-colossus-data-center-reflection.html"
+    },
+    {
+      "label": "CNBC — SpaceX Q2 2026 earnings live updates (Aug 4, 2026)",
+      "url": "https://www.cnbc.com/2026/08/04/spacex-spcx-earnings-live-updates-q2-2026.html"
+    }
+  ],
+  "meta": {
+    "author": "The Signal",
+    "estimatedReadTime": 4,
+    "editorialTags": [
+      "SpaceX",
+      "AI Compute",
+      "Colossus",
+      "Starlink",
+      "Grok",
+      "Data Centers"
+    ],
+    "seoKeywords": "SpaceX, SPCX, AI compute, Colossus, data centers, Starlink, Grok, AI infrastructure, GPU cloud",
+    "relatedTickers": [
+      "NVDA",
+      "GOOGL",
+      "MSFT",
+      "AMZN"
+    ],
+    "keyMetrics": {
+      "SPCX Price": "$148.18",
+      "Market Cap": "$1.95T",
+      "Forward P/E": "99.5",
+      "Total Revenue (TTM)": "$23.0B",
+      "52-Week Low": "$104.83",
+      "52-Week High": "$225.64",
+      "Analyst Consensus": "Buy",
+      "Analyst Target Mean": "$220.68"
+    }
+  },
+  "bodyHtml": "<p>SpaceX builds reusable rockets and beams internet down from orbit. It also rents out the colossal computers that train and run AI models. That second business is the one setting the tone right now.</p>\n\n<p>The company sells raw computing power by the hour to some of the biggest names in AI. Anthropic, Google, and Reflection AI all pay SpaceX to run their models inside its data centers. Think of it as the landlord of the AI boom. It doesn't have to win the model race, it just has to keep everyone needing power.</p>\n\n<p>Sell shovels. Collect rent.</p>\n\n<div class=\"stats-card\">\n  <div class=\"stats-card-grid\">\n    <div class=\"stats-row\"><span class=\"stats-label\">Price</span><span class=\"stats-value\"><td class=\"stats-value\" data-live-ticker=\"SPCX\" data-live-field=\"price\">$148.18</td><span class=\"stats-live-badge\">LIVE</span></span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">Market Cap</span><span class=\"stats-value\">$1.95T</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">Forward P/E</span><span class=\"stats-value\">99.5</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">Total Revenue (TTM)</span><span class=\"stats-value\">$23.0B</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">52-Week Low</span><span class=\"stats-value\">$104.83</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">52-Week High</span><span class=\"stats-value\">$225.64</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">Analyst Consensus</span><span class=\"stats-value\">Buy</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">Analyst Target Mean</span><span class=\"stats-value\">$220.68</span></div>\n  </div>\n  <div class=\"stats-card-note\">Price refreshes live · All other figures as of September 10, 2026</div>\n</div>\n\n<p>The rent just went up. At the Goldman Sachs Communacopia + Technology Conference on September 10, SpaceX CFO Bret Johnsen disclosed a brand-new hosting contract worth $1.11 billion a month, starting December 1. That's roughly $13 billion of annualized recurring revenue from a single, undisclosed customer.</p>\n\n<p>Johnsen didn't hide his excitement. \u201cEarlier this month, we closed another hosting deal,\u201d he said. That deal, in his words, translates into \u201cabout $1.11 billion a month starting December 1st of this year.\u201d He called it another roughly $13 billion of ARR. The number lands harder once you stack it against the rest of the book.</p>\n\n<p>Anthropic takes all the capacity of Colossus 1 in Memphis, Tennessee, more than 300 megawatts, at $1.25 billion a month through May 2029. Google pays $920 million a month for 32 months, starting in October. Reflection AI signed for $150 million a month, a deal worth up to $6.3 billion.</p>\n\n<p>Add it up and SpaceX's disclosed AI-hosting book tops $3.4 billion a month, or about $41 billion annualized. Not bad for a business that barely existed two years ago.</p>\n\n<p>Leadership wants more. SpaceX is targeting $100 billion in annual recurring revenue by December 2026, and Johnsen said the new deal gives the team \u201ceven more conviction\u201d in that number. That implies roughly $8.3 billion a month, versus about $2.6 billion today.</p>\n\n<p>Here's where it gets interesting. The same week, The Information reported SpaceX is overhauling how it builds data centers. A new management team pulled from its rocket and Starlink divisions is prioritizing reliability over speed. It's adding backup power and cooling, and testing sites harder before they go live.</p>\n\n<p>That could slow new capacity just when demand is exploding. It follows an outage this month at the Memphis site that knocked some Grok models offline and hit paying compute customers Anthropic and Google. Musk said the company is \u201ctaking corrective action.\u201d</p>\n\n<p>The early build-out ran so fast that some facilities operated for months without backup cooling or power. More than a dozen data-center leaders have left. When you're selling reliability to the world's biggest AI labs, that's a problem worth fixing.</p>\n\n<p>SpaceX passed roughly 1.4 gigawatts of computing capacity in the second quarter, up from 0.4 gigawatts a year earlier. It expects more than 2 gigawatts by the end of 2026 and is aiming for about 10 gigawatts by the end of 2027.</p>\n\n<p>The moonshot under all of this is literal. SpaceX wants its first orbital AI-compute satellites in 2027, scaling in 2028. Compute, launched into space.</p>\n\n<p>SpaceX absorbed xAI and its Memphis supercomputer in an early-2026 merger that valued the combined company at $1.25 trillion. It went public on the Nasdaq on June 12, 2026. Starlink now serves 12.0 million subscribers across 167 countries, and the backlog sits at $47.5 billion.</p>\n\n<p>From 2027, the hosting contracts carry 90-day termination clauses, so the ARR label deserves a raised eyebrow. SpaceX says its AI-infrastructure payback is under 12 months. Morgan Stanley's Adam Jonas frames the compute deals as worth about $26 billion annualized.</p>\n\n<p>The market is pricing SpaceX as an AI landlord first, rocket company second. The $1.11 billion deal says the rent keeps coming. The data-center overhaul asks whether the landlord can keep the lights on. For now, the contracts are signed, the cash is booked, and delivery is everything.</p>\n\n<p class=\"disclosure\">Disclosure: The Signal holds no position in SPCX. Positions may change. This is not financial advice.</p>"
+}
