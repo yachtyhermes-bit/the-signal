@@ -1,0 +1,83 @@
+{
+  "slug": "ionq-superion-256-quantum-foundry-2026",
+  "title": "IonQ Bets Vertical Integration Can Turn Quantum Hype Into Revenue",
+  "subtitle": "IonQ's sixth-generation Superion 256 is the first quantum computer it fabricated in its own foundry. The chip is real, the ions are trapped, and the deliveries start next year.",
+  "summary": "IonQ unveiled Superion 256, its sixth-generation quantum platform and the first built on chips fabricated at its own SkyWater foundry. Electronic Qubit Control moves quantum hardware from laser racks toward semiconductor manufacturing, with orders open and deliveries expected in early 2027.",
+  "ticker": "IONQ",
+  "sector": "quantum",
+  "sentiment": "bullish",
+  "date": "2026-09-11T15:00:00Z",
+  "price": 36.84,
+  "tags": [
+    "ionq",
+    "quantum",
+    "quantum-computing",
+    "superion-256",
+    "skywater",
+    "foundry",
+    "trapped-ion",
+    "ai-infrastructure"
+  ],
+  "image": {
+    "src": "/img/articles/ionq-superion-256-quantum-foundry-2026.jpg",
+    "fit": "cover",
+    "caption": "A gold-plated trapped-ion quantum processor sits inside a cryogenic rack. Photo: The Signal / AI-generated.",
+    "alt": "Trapped-ion quantum processor mounted inside a cryogenic rack"
+  },
+  "links": [
+    {
+      "label": "IonQ — IonQ Launches Superion Product Line, its sixth-generation platform (Sep 8, 2026)",
+      "url": "https://www.ionq.com/news/ionq-launches-superion-product-line-industry-leading-upgradeable-platform-designed-to-scale-manufacturable-fault-tolerant-quantum-computing"
+    },
+    {
+      "label": "IonQ Investor Relations — Superion product line announcement and Investor Day materials (Sep 8, 2026)",
+      "url": "https://investors.ionq.com/news/news-details/2026/IonQ-Launches-Superion-Product-Line-Industry-Leading-Upgradeable-Platform-Designed-to-Scale-Manufacturable-Fault-Tolerant-Quantum-Computing/default.aspx"
+    },
+    {
+      "label": "HPCwire — IonQ Unveils Superion 256 Trapped-Ion Quantum Platform (Sep 8, 2026)",
+      "url": "https://www.hpcwire.com/off-the-wire/ionq-unveils-superion-256-trapped-ion-quantum-platform"
+    },
+    {
+      "label": "The Quantum Insider — IonQ uses Investor Day to detail Superion roadmap, SkyWater strategy and quantum security (Sep 8, 2026)",
+      "url": "https://thequantuminsider.com/2026/09/08/ionq-uses-investor-day-to-detail-superion-roadmap-skywater-strategy-and-quantum-security-plans"
+    },
+    {
+      "label": "SiliconANGLE — IonQ launches Superion 256, a quantum computer built for volume production (Sep 8, 2026)",
+      "url": "https://siliconangle.com/2026/09/08/ionq-launches-superion-256-a-quantum-computer-built-for-volume-production"
+    },
+    {
+      "label": "PostQuantum — IonQ secp256k1 resource estimate: 19,397 qubits, 26 days per attempt (Sep 8, 2026)",
+      "url": "https://postquantum.com/post-quantum/ionq-secp256k1-resource-estimate"
+    }
+  ],
+  "meta": {
+    "author": "The Signal",
+    "estimatedReadTime": 4,
+    "editorialTags": [
+      "IonQ",
+      "Quantum Computing",
+      "Superion 256",
+      "SkyWater",
+      "Trapped Ion",
+      "Foundry"
+    ],
+    "seoKeywords": "IonQ, IONQ stock, Superion 256, quantum computing, SkyWater foundry, trapped ion, Electronic Qubit Control, quantum-safe security, vertical integration",
+    "relatedTickers": [
+      "NVDA",
+      "AMZN",
+      "MSFT",
+      "GOOGL"
+    ],
+    "keyMetrics": {
+      "IONQ Price": "$36.84",
+      "Market Cap": "$15.3B",
+      "Forward P/E": "N/M (unprofitable)",
+      "Total Revenue (TTM)": "$246.5M",
+      "52-Week Low": "$25.89",
+      "52-Week High": "$84.64",
+      "Analyst Consensus": "Strong Buy",
+      "Analyst Target Mean": "$69.25"
+    }
+  },
+  "bodyHtml": "<p>IonQ builds quantum computers. Real ones, not slide-deck ones. The company traps individual ions, holds them in electromagnetic fields, and uses their quantum states as the raw material for computation. Customers rent time on those machines through the cloud.</p>\n\n<p>Who actually buys them? Lockheed Martin, AstraZeneca, and NVIDIA all run work on IonQ hardware. You can reach it through Amazon Braket, Microsoft Azure Quantum, or Google Cloud Marketplace. That is the business: build the machines of the next computing era, then keep selling the generation after.</p>\n\n<p>Build the machine. Own the road underneath it.</p>\n\n<div class=\"stats-card\">\n  <div class=\"stats-card-grid\">\n    <div class=\"stats-row\"><span class=\"stats-label\">Price</span><span class=\"stats-value\"><td class=\"stats-value\" data-live-ticker=\"IONQ\" data-live-field=\"price\">$36.84</td><span class=\"stats-live-badge\">LIVE</span></span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">Market Cap</span><span class=\"stats-value\">$15.3B</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">Forward P/E</span><span class=\"stats-value\">N/M (unprofitable)</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">Total Revenue (TTM)</span><span class=\"stats-value\">$246.5M</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">52-Week Low</span><span class=\"stats-value\">$25.89</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">52-Week High</span><span class=\"stats-value\">$84.64</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">Analyst Consensus</span><span class=\"stats-value\">Strong Buy</span></div>\n    <div class=\"stats-row\"><span class=\"stats-label\">Analyst Target Mean</span><span class=\"stats-value\">$69.25</span></div>\n  </div>\n  <div class=\"stats-card-note\">Price refreshes live · All other figures as of September 11, 2026</div>\n</div>\n\n<p>On September 8, IonQ used its Investor Day at the New York Stock Exchange to pull back the curtain on Superion 256, its sixth-generation quantum platform. It is the first machine in a product line every future IonQ computer is expected to build on. More importantly, it is the first one IonQ fabricated itself.</p>\n\n<p>The chip came out of SkyWater Technology, the foundry IonQ bought for roughly $1.8 billion in a deal that closed July 31. That purchase changed the shape of the company. IonQ no longer only designs quantum processors. Now it prints them on its own semiconductor lines, on American soil.</p>\n\n<p>The 256-qubit processor went through six tapeouts in the first half of 2026 alone. First ions are already trapped in prototype systems being assembled in parallel at multiple American facilities. Orders are open now, with customer deliveries expected in early 2027. IonQ pre-sold its first Superion 256 system in the first quarter of 2026, months before the platform had a public name.</p>\n\n<p>Here is the part that matters for scale. IonQ's new Electronic Qubit Control puts the control electronics directly on the chip. That replaces racks of lasers and precision optics with something that behaves like standard semiconductor hardware.</p>\n\n<p>The technology came from Oxford Ionics, a roughly $1.065 billion acquisition. The pitch is simple: lasers do not scale the way chips do. If quantum computing is going to be built at volume, it has to look like a fab, not a physics lab.</p>\n\n<p>IonQ also clocked a world-record 99.99% two-qubit gate fidelity with its trapped-ion design. That is the kind of number that makes error correction practical instead of theoretical. Higher fidelity means fewer physical qubits doing the work of one good one.</p>\n\n<p>The roadmap is aggressive. Superion 10K is already in concurrent development, built to run IonQ's Walking Cat architecture. IonQ is targeting a fully fault-tolerant 10,000-physical-qubit system for 2027 and two million physical qubits by 2030.</p>\n\n<p>Why should anyone watching the AI trade care? Two reasons. Quantum-safe security gets urgent as AI scales, because the same compute curve that trains better models also shortens the odds against today's encryption. Quantum machines are also genuinely good at optimization and chemistry problems that classical AI just brute-forces.</p>\n\n<p>IonQ published the first fully compiled, end-to-end resource estimate for running Shor's algorithm against 256-bit elliptic-curve signatures. That is a roughly 19,400-physical-qubit computation on the secp256k1 curve, an architectural blueprint aimed at a 2028 timeframe. To be precise: it is not a demonstrated break.</p>\n\n<p>It also signed a quantum-safe security agreement with Congruity360 worth about $8.18 million. Small money, big direction. IonQ is assembling a full stack of computing, networking, sensing, and security through SkyWater, Oxford Ionics, Capella Space, ID Quantique, and Lightsynq.</p>\n\n<p>Now the honest part. IonQ booked $246.5 million in trailing revenue while burning roughly $484 million in trailing free cash flow. It funded part of this build-out with stock, which means dilution, and the revenue behind its raised full-year guide still lands years out.</p>\n\n<p>The bull case is that IonQ is building the shovel factory for a market that has not fully arrived. The bear case is that you are paying today for a payoff that keeps sliding right. Both can be true while the hardware roadmap quietly gets more real.</p>\n\n<p>What is not in dispute is the strategy. IonQ decided that whoever controls the fabrication controls the pace. Buying a foundry is a bet that quantum computing stops being a research project and starts being a supply chain. Superion 256 is the first machine that bet produced.</p>\n\n<p class=\"disclosure\">Disclosure: The Signal holds no position in IONQ. Positions may change. This is not financial advice.</p>"
+}
