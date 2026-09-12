@@ -1,0 +1,130 @@
+{
+  "slug": "msft-38gw-power-buildout-2026",
+  "title": "Microsoft Turned Away AI Customers. Its Answer Is 38 Gigawatts.",
+  "subtitle": "Bloomberg reports Microsoft will grow its data-center footprint from roughly 12 gigawatts today to more than 38 by 2032, a buildout that would outdraw New York State at peak and is funded on calendar-2026 capex guidance of about 175 billion dollars. Only about 2 of today's 12 gigawatts are AI-specific chips, yet Microsoft expects AI to reach roughly a third of the larger fleet. The company has already turned away cloud and AI customers, capped some subscriptions, and absorbed service disruptions. The constraint has moved from silicon to megawatts, shells, and transformers.",
+  "summary": "Microsoft plans to more than triple its global data-center capacity from roughly 12 gigawatts to more than 38 gigawatts by 2032, according to a Bloomberg Big Take corroborated in outline by Reuters and DataCenterDynamics, with AI-dedicated capacity rising from about 2 gigawatts to roughly a third of the total. The buildout, supported by calendar-2026 capex guidance of about 175 billion dollars, follows an admission that compute shortages forced Microsoft to turn away AI and cloud business. The evidence is that the industry's binding constraint has shifted from chips to electricity and physical capacity.",
+  "ticker": "MSFT",
+  "company": "Microsoft Corporation",
+  "sector": "mega-cap",
+  "sentiment": "positive",
+  "date": "2026-09-12T14:00:00Z",
+  "price": 495.63,
+  "featured": false,
+  "premium": false,
+  "image": {
+    "src": "/img/articles/msft-38gw-power-buildout-2026.jpg",
+    "fit": "cover",
+    "alt": "A high-voltage electrical substation with large transformers and steel lattice transmission pylons in open countryside at golden hour, power lines receding toward the horizon",
+    "caption": "Microsoft's push from roughly 12 gigawatts today to more than 38 gigawatts by 2032 would make electricity — not chips — the binding constraint on AI growth."
+  },
+  "tags": [
+    "microsoft",
+    "azure",
+    "ai-data-centers",
+    "power",
+    "gigawatts",
+    "hyperscalers",
+    "capex",
+    "mega-cap"
+  ],
+  "links": [
+    {
+      "label": "Reuters — Microsoft plans 38 gigawatts of data-center capacity by 2032, Bloomberg reports →",
+      "url": "https://www.reuters.com/business/microsoft-plans-38-gigawatts-data-center-capacity-by-2032-bloomberg-news-reports-2026-09-10"
+    },
+    {
+      "label": "Bloomberg — Microsoft's AI-focused data-center plan to add 26 gigawatts of compute →",
+      "url": "https://www.bloomberg.com/news/features/2026-09-10/microsoft-ai-focused-data-center-plan-to-add-26-gigawatts-of-compute"
+    },
+    {
+      "label": "DataCenterDynamics — Microsoft targets 38GW of data center capacity in 2032 →",
+      "url": "https://www.datacenterdynamics.com/en/news/microsoft-targets-38gw-of-data-center-capacity-in-2032-report"
+    },
+    {
+      "label": "Microsoft Investor Relations — Q4 FY2026 earnings press release and webcast →",
+      "url": "https://www.microsoft.com/en-us/investor/earnings/fy-2026-q4/press-release-webcast"
+    },
+    {
+      "label": "CNBC — Microsoft Q4 FY2026 earnings report →",
+      "url": "https://www.cnbc.com/2026/07/29/microsoft-msft-q4-earnings-report-2026.html"
+    },
+    {
+      "label": "Reuters — Microsoft pulls back more data-center leases, TD Cowen analysts say →",
+      "url": "https://www.reuters.com/technology/microsoft-pulls-back-more-data-center-leases-us-europe-analysts-say-2025-03-26"
+    },
+    {
+      "label": "Yahoo Finance — Microsoft inks $33 billion in deals with neoclouds like Nebius and CoreWeave →",
+      "url": "https://finance.yahoo.com/news/microsoft-inks-33-billion-deals-191655037.html"
+    },
+    {
+      "label": "NYISO — Understanding summer energy demand →",
+      "url": "https://www.nyiso.com/-/understanding-summer-energy-demand"
+    },
+    {
+      "label": "MLQ — Big Tech's 2026 capex range reaches $720 billion to $745 billion →",
+      "url": "https://mlq.ai/news/big-techs-2026-capex-range-reaches-720-billion-to-745-billion"
+    },
+    {
+      "label": "MSFT on Yahoo Finance →",
+      "url": "https://finance.yahoo.com/quote/MSFT/"
+    }
+  ],
+  "meta": {
+    "author": "The Signal",
+    "estimatedReadTime": "7 min",
+    "editorialTags": [
+      "microsoft",
+      "azure",
+      "ai-data-centers",
+      "power",
+      "gigawatts",
+      "hyperscalers",
+      "capex",
+      "mega-cap",
+      "electricity",
+      "data-center-buildout"
+    ],
+    "seoKeywords": [
+      "Microsoft 38 gigawatts data center 2032",
+      "Microsoft data center power buildout",
+      "Azure AI capacity shortage",
+      "hyperscaler capex 2026",
+      "Microsoft neocloud CoreWeave Nebius",
+      "AI bottleneck electricity grid",
+      "MSFT stock analysis"
+    ],
+    "relatedTickers": [
+      "NVDA",
+      "AMZN",
+      "GOOGL",
+      "META",
+      "CRWV",
+      "NBIS",
+      "IREN"
+    ],
+    "keyMetrics": {
+      "MSFT Price": "$495.63",
+      "Market Cap": "$3.68T",
+      "Forward P/E": "21.0",
+      "Total Revenue (TTM)": "$331.8B",
+      "52-Week Low": "$349.20",
+      "52-Week High": "$553.72",
+      "Analyst Consensus": "Strong Buy",
+      "Analyst Target Mean": "$572.92"
+    },
+    "youtubeIds": [],
+    "sourceLinks": [
+      "https://www.reuters.com/business/microsoft-plans-38-gigawatts-data-center-capacity-by-2032-bloomberg-news-reports-2026-09-10",
+      "https://www.bloomberg.com/news/features/2026-09-10/microsoft-ai-focused-data-center-plan-to-add-26-gigawatts-of-compute",
+      "https://www.datacenterdynamics.com/en/news/microsoft-targets-38gw-of-data-center-capacity-in-2032-report",
+      "https://www.microsoft.com/en-us/investor/earnings/fy-2026-q4/press-release-webcast",
+      "https://www.cnbc.com/2026/07/29/microsoft-msft-q4-earnings-report-2026.html",
+      "https://www.reuters.com/technology/microsoft-pulls-back-more-data-center-leases-us-europe-analysts-say-2025-03-26",
+      "https://finance.yahoo.com/news/microsoft-inks-33-billion-deals-191655037.html",
+      "https://www.nyiso.com/-/understanding-summer-energy-demand",
+      "https://mlq.ai/news/big-techs-2026-capex-range-reaches-720-billion-to-745-billion",
+      "https://finance.yahoo.com/quote/MSFT/"
+    ]
+  },
+  "bodyHtml": "<p>Start with what Microsoft actually sells, because the scale only lands once you know. Azure rents out computing by the hour. Windows and Office run on hundreds of millions of desks. Copilot is the AI layer bolted on top. Add it up and Microsoft is, more than anything else, a landlord for other companies' software.</p>\n<p>Now the landlord wants to triple the building. Microsoft plans to grow its global data-center capacity from roughly 12 gigawatts today to more than 38 gigawatts by 2032. Bloomberg reported the target on September 10, and Reuters and DataCenterDynamics corroborated the outline. A footprint that size would outdraw New York State at peak, whose all-time record demand of 33,956 megawatts landed back in July 2013.</p>\n<p>Here is the part that reframes the whole company. Only about 2 of today's 12 gigawatts are built around AI-specific chips. Microsoft expects AI-dedicated capacity to reach roughly a third of the 38-gigawatt fleet by 2032. So the AI buildout is not a side project bolted onto a cloud business. It is becoming the organizing principle of the entire footprint.</p>\n<div class=\"stats-card\"><div class=\"stats-card-title\">The Numbers That Matter</div><table class=\"stats-table\"><tr><td class=\"stat-label\">Price <span class=\"stats-live-badge\">LIVE</span></td><td class=\"stat-value\" data-live-ticker=\"MSFT\" data-live-field=\"price\">$495.63</td></tr><tr><td class=\"stat-label\">Market Cap</td><td class=\"stat-value\">$3.68T</td></tr><tr><td class=\"stat-label\">Forward P/E</td><td class=\"stat-value\">21.0</td></tr><tr><td class=\"stat-label\">Total Revenue (TTM)</td><td class=\"stat-value\">$331.8B</td></tr><tr><td class=\"stat-label\">52-Week Low</td><td class=\"stat-value\">$349.20</td></tr><tr><td class=\"stat-label\">52-Week High</td><td class=\"stat-value\">$553.72</td></tr><tr><td class=\"stat-label\">Analyst Consensus</td><td class=\"stat-value\">Strong Buy</td></tr><tr><td class=\"stat-label\">Analyst Target Mean</td><td class=\"stat-value\">$572.92</td></tr></table><div class=\"stats-card-note\">Price refreshes live. All other figures as of September 12, 2026.</div></div>\n<p>The uncomfortable detail is what Bloomberg says is already happening. Compute shortages have forced Microsoft to turn away cloud and AI business, restrict some subscriptions, and absorb service disruptions over the past year, according to people familiar with the plans. Read that again. The company with the deepest pockets in tech could not sell what it had no room to run.</p>\n<p>That is the real story, and it is bigger than Microsoft. For three years the AI conversation was about chips, with Nvidia's order book as the scoreboard. The constraint has moved. A megawatt now takes longer to secure than a GPU, because you cannot ship a substation. Transformers, turbines, and grid interconnection queues are the new bottleneck — and they answer to physics, not to a fab ramp.</p>\n<p>Microsoft is spending like it means it. Calendar-2026 capex guidance sits at about $175 billion, and the current quarter alone is guided above $50 billion. That 175-billion figure was revised down from roughly 190 billion, but not because demand cooled. It reflects some data-center leases shifting from finance to operating, and leases now spreading over 25 years instead of 15.</p>\n<p>Not all of it gets built by Microsoft. The plan mixes owned facilities with leased capacity from so-called neoclouds: CoreWeave, Nscale, Lambda, IREN, and Nebius. Those partnerships let Microsoft add megawatts without owning every shell and substation. Bloomberg puts committed neocloud spending in the tens of billions, a structure that trades some margin for speed.</p>\n<p>The neocloud math is getting real. Microsoft has committed roughly $33 billion across those partnerships, including a chunk with Nebius for 100,000 Nvidia GB300 chips and another with Nscale for 200,000 more. By late 2025, estimated neocloud spending had climbed toward $60 billion. When you would rather rent megawatts than build them, that says plenty about your own clock.</p>\n<p>The whiplash is worth sitting with. In early 2025, TD Cowen reported Microsoft abandoning data-center projects good for up to 2 gigawatts, read at the time as a sign of oversupply. Eighteen months later, the same company is rationing compute and adding 26 gigawatts of net new capacity. Whatever changed, it was not Microsoft's appetite.</p>\n<p>Microsoft is not alone in this, which is the point. Combined hyperscaler capex guidance for 2026 runs $720 billion to $745 billion: Amazon near $220 billion, Alphabet $195 billion to $205 billion, Meta $130 billion to $145 billion, and Microsoft about $175 billion. Every one of them is racing the same grid. When the whole cohort buys at once, the scarce thing is not capital. It is a live breaker and a signed interconnection agreement.</p>\n<p>None of this is frictionless. Turning business away costs revenue today, and rivals are happy to catch it. Subscription caps annoy the customers Microsoft most wants to keep. And the stock has barely moved on the news, which suggests investors still treat megawatts as someone else's line item.</p>\n<p>That is the bet Microsoft is making. In the AI era, whoever controls electricity wins, and Microsoft is spending to own the plug. Chips get faster on an eighteen-month rhythm. A transmission line takes a decade. The bottleneck moved, and the biggest cloud on Earth just admitted it.</p>\n<p class=\"disclosure\">Disclosure: The Signal holds no position in MSFT. Positions may change. This is not financial advice.</p>"
+}
