@@ -1,0 +1,47 @@
+{
+  "slug": "pwr-ai-power-grid-bottleneck-2026",
+  "title": "The AI Boom's Next Bottleneck Is the Grid. Quanta Services Builds It.",
+  "subtitle": "Chips get the headlines, but the constraint on AI expansion has moved to the wire. Quanta Services is the contractor stringing it, and a record $53.4 billion backlog says its customers are already counting on it.",
+  "summary": "The AI buildout has run into a physical wall: the electric grid. Quanta Services, North America's largest electrical-infrastructure contractor, does the transmission, substation and interconnection work that plugs giant data centers into the power system. A record $53.4 billion backlog, raised full-year guidance and a new board seat for an AWS and AI-software veteran all point the same direction.",
+  "date": "2026-09-12T17:00:00Z",
+  "ticker": "PWR",
+  "sector": "ai-power",
+  "sentiment": "bullish",
+  "price": 650.58,
+  "tags": ["quanta services", "pwr", "ai power", "transmission", "electric grid", "data centers", "load growth", "infrastructure"],
+  "image": {
+    "src": "/img/articles/pwr-ai-power-grid-bottleneck-2026.jpg",
+    "fit": "cover",
+    "caption": "Linemen rigging a steel lattice high-voltage transmission tower at golden hour, long catenary power lines running to the horizon. Photo: The Signal / AI-generated.",
+    "alt": "Linemen working atop a high-voltage steel lattice transmission tower at golden hour, with power lines running to the horizon"
+  },
+  "links": [
+    {"label": "Quanta Services Reports Second Quarter 2026 Results (PR Newswire)", "url": "https://www.prnewswire.com/news-releases/quanta-services-reports-second-quarter-2026-results-302838646.html"},
+    {"label": "Ellen Rubin Joins Quanta Services Board of Directors (PR Newswire)", "url": "https://www.prnewswire.com/news-releases/ellen-rubin-joins-quanta-services-board-of-directors-302874266.html"},
+    {"label": "US Census Bureau \u2014 Value of Construction Put in Place (private, seasonally adjusted annual rate)", "url": "https://www.census.gov/construction/c30/pdf/privsa.pdf"},
+    {"label": "IEA \u2014 Energy and AI: Energy demand from AI", "url": "https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai"},
+    {"label": "US Department of Energy \u2014 Clean energy resources to meet data center electricity demand", "url": "https://www.energy.gov/oe/clean-energy-resources-meet-data-center-electricity-demand"},
+    {"label": "EIA \u2014 Today in Energy: US power use", "url": "https://www.eia.gov/todayinenergy/detail.php?id=67344"},
+    {"label": "PJM Inside Lines \u2014 New interconnection process delivers", "url": "https://insidelines.pjm.com/new-interconnection-process-delivers"},
+    {"label": "AEP and Quanta Services Announce Strategic Partnership to Advance Transmission and Power Infrastructure", "url": "https://www.stocktitan.net/news/PWR/aep-and-quanta-services-announce-strategic-partnership-to-advance-fa917tbeuufz.html"},
+    {"label": "MarketBeat \u2014 Quanta Services analyst forecast and consensus price target", "url": "https://www.marketbeat.com/stocks/NYSE/PWR/forecast/"}
+  ],
+  "meta": {
+    "author": "The Signal",
+    "estimatedReadTime": "6 min read",
+    "editorialTags": ["pwr", "quanta-services", "ai-power", "grid-bottleneck", "transmission", "data-center-buildout", "electrification"],
+    "seoKeywords": ["Quanta Services AI power grid", "PWR backlog 2026", "AI data center electricity demand", "Quanta Services transmission", "grid bottleneck AI buildout", "Quanta Services board AI", "PWR analyst price target", "electrical infrastructure contractor"],
+    "relatedTickers": ["ETN","PWR","GEV","AEP","CEG"],
+    "keyMetrics": {
+      "PWR Price": "$650.58",
+      "Market Cap": "$97.8B",
+      "Forward P/E": "33.0",
+      "Total Revenue (TTM)": "$32.9B",
+      "52-Week Low": "$373.40",
+      "52-Week High": "$788.75",
+      "Analyst Consensus": "Moderate Buy",
+      "Analyst Target Mean": "$767.72"
+    }
+  },
+  "bodyHtml": "<p>Everyone has been watching the chips. The real fight is over the wire. For three years the AI trade ran on one question: who can build the fastest GPU, and Nvidia answered it. The harder question comes next: who physically plugs all those machines into a grid that was never built for them?</p>\n\n<p>Quanta Services builds the high-voltage power lines that feed America's AI data centers. It is North America's largest electrical-infrastructure contractor, 69,500 people strong, handling the unglamorous work that has to happen before a single GPU powers on. Transmission lines. Substations. The interconnection gear that ties a giant computing campus into the bulk power system.</p>\n\n<p>No Quanta crews, no compute. That is the pitch, and the market is starting to price it. Quanta sits at the exact spot where the AI buildout collides with physical reality: the grid itself.</p>\n\n<p>The evidence shows up in the backlog. Quanta ended June with a record $53.4 billion in total backlog, more than a year and a half of revenue already booked. Those are signed contracts, not a slide in an investor deck.</p>\n\n<p>Management raised full-year guidance at the same time, guiding 2026 revenue to roughly $39.5 billion and lifting every other line that matters. When a contractor raises guidance, the bids are usually won and the crews already scheduled.</p>\n\n<p>The latest quarter shows where the money comes from. Revenue climbed about 41 percent year over year to $9.56 billion, and the Electric segment accounted for roughly 82 percent of it. That is transmission, distribution and substations \u2014 the AI-exposed heart of the business.</p>\n\n<p>Why this matters for the AI trade: the buildout has hit a physical wall. US data center construction spending ran at a record $75.2 billion annual rate in July, up 57 percent from a year earlier. All that concrete needs electrons the grid does not have.</p>\n\n<p>The demand forecasts are enormous. The IEA expects US data-center electricity consumption to rise by roughly 240 terawatt-hours by 2030, about a 130 percent jump over 2024. The Department of Energy, citing EPRI, sees data centers reaching as much as 9 percent of US generation by 2030, up from 4 percent of load in 2023.</p>\n\n<p>Grid operator PJM has fielded roughly 54 gigawatts of large-load requests. It has more than 21 gigawatts of projects in engineering-procurement status and 8.2 gigawatts under construction. Those are not hypotheticals. They are waiting on steel, transformers and crews.</p>\n\n<p>That is where Quanta's competitive position gets interesting. The company is described as the most experienced 765-kilovolt constructor in the United States, the extra-high-voltage class that long-haul transmission runs on.</p>\n\n<p>In late 2025 it signed a strategic partnership with American Electric Power to put that expertise to work. When a hyperscaler needs a gigawatt campus connected, the list of contractors who can pull it off is short.</p>\n\n<p>Quanta has also been buying its way deeper into the data-center lane. In the second quarter it closed on Phalcon, an electrical contractor with about 4,100 employees serving utility, technology and load-center markets. Phalcon brings more than 400,000 square feet of fabrication and modular facilities. Add Percheron, PSD and Enerfab, and the new pieces should contribute $1.2 billion to $1.4 billion of 2026 revenue.</p>\n\n<p>Then there is the governance tell. On September 9, Quanta seated Ellen Rubin on its board. Rubin is an operating partner at Glasswing Ventures, which backs AI and frontier technology, and she founded and ran Causely, an AI software company. Before that she ran Hybrid Cloud Storage Services at Amazon Web Services.</p>\n\n<p>Sit with that. A company built on steel, copper and climbing crews is staffing its boardroom for a world where demand is set by compute load. Quanta's independent chairman said her expertise spans AI and cloud computing, technology strategy and cybersecurity risk management. That is not a vanity seat. It is a signal about where the next decade of orders comes from.</p>\n\n<p>Wall Street has taken notice. The consensus rating across 33 analysts sits at Moderate Buy, and the average twelve-month price target is roughly 18 percent above the last close. Fresh buy-side initiations landed this past week. Shares have run hard, which is what you would expect from a business this levered to the spending cycle.</p>\n\n<p>None of this makes Quanta a chip stock. That is the point. The first leg of the AI trade rewarded the companies that built the compute. The next leg rewards the ones that make the compute possible \u2014 the transmission line, the substation, the interconnection. Quanta is the purest large-scale play on that layer, and a record backlog says its customers already believe it.</p>\n\n<p class=\"disclosure\">Disclosure: The Signal holds no position in PWR. Positions may change. This is not financial advice.</p>"
+}
