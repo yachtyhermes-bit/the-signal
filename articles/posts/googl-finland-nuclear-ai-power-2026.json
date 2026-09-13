@@ -1,0 +1,106 @@
+{
+  "slug": "googl-finland-nuclear-ai-power-2026",
+  "title": "Google Is Paying to Extend a Nuclear Plant Because AI Runs on Watts",
+  "subtitle": "Alphabet's €13 billion Finland buildout includes a 22-year Fortum agreement for up to half the Loviisa plant's output. It is Google's first nuclear power contract outside the United States.",
+  "summary": "Alphabet will spend at least €13 billion in Finland across 2027 and 2028, its largest single investment in Europe, spanning data centres, grid upgrades, wind and battery storage. The centrepiece is a 22-year power purchase agreement with Fortum for up to half the output of the Loviisa nuclear plant, Google's first nuclear deal outside the United States. That contract gives Fortum the revenue certainty to extend the plant's life to 2050, keeping a nationally significant source of carbon-free electricity online instead of retiring it around 2030. It reads cleanly on where the AI buildout has moved: away from chips alone and toward securing electrons. Google's own emissions are still climbing faster than its clean-power contracts.",
+  "ticker": "GOOGL",
+  "sector": "ai-power",
+  "sentiment": "positive",
+  "date": "2026-09-13T16:00:00Z",
+  "price": 338.50,
+  "image": {
+    "src": "/img/articles/googl-finland-nuclear-ai-power-2026.jpg",
+    "fit": "cover",
+    "caption": "A coastal view of the Loviisa nuclear plant on Finland's Baltic coast at first light, reactor buildings and steam plumes rising over ice-edged water as boreal forest stretches inland. Photo: The Signal / AI-generated.",
+    "alt": "Coastal first-light view of the Loviisa nuclear power plant on Finland's Baltic coast, showing reactor buildings, steam plumes and an ice-edged sea"
+  },
+  "tags": [
+    "GOOGL",
+    "Alphabet",
+    "Google Cloud",
+    "nuclear power",
+    "AI infrastructure",
+    "Fortum",
+    "Loviisa",
+    "clean energy"
+  ],
+  "videos": [],
+  "links": [
+    {
+      "label": "Google to Invest $15 Billion in AI Infrastructure in Finland (Reuters)",
+      "url": "https://www.reuters.com/business/media-telecom/google-invest-15-billion-ai-infrastructure-finland-2026-09-09"
+    },
+    {
+      "label": "Google Deepens Commitment to Finland with €13 Billion AI Infrastructure Investment (Google Cloud)",
+      "url": "https://www.googlecloudpresscorner.com/2026-09-09-Google-Deepens-Commitment-to-Finland-with-Two-Year-EUR13-Billion-investment-in-AI-Infrastructure"
+    },
+    {
+      "label": "Fortum and Google Partner to Drive Sustainable Growth in Finland, Sign Nuclear Power Purchase Agreement (Fortum)",
+      "url": "https://www.fortum.com/en/media/2026/09/inside-information-fortum-and-google-partner-drive-sustainable-growth-finland-sign-nuclear-power-purchase-agreement"
+    },
+    {
+      "label": "Google's $15.1B Finland Deal Takes On AI Data Center Power Limits (TechTarget)",
+      "url": "https://www.techtarget.com/it-infrastructure/news/366650234/Googles-151B-Finland-deal-takes-on-AI-data-center-power-limits"
+    },
+    {
+      "label": "Alphabet Announces Second Quarter 2026 Results (Alphabet, PDF)",
+      "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q2/2026q2-alphabet-earnings-release.pdf"
+    },
+    {
+      "label": "Microsoft Would Restart Three Mile Island Nuclear Plant to Power AI (POWER Magazine)",
+      "url": "https://www.powermag.com/microsoft-would-restart-three-mile-island-nuclear-plant-to-power-ai"
+    },
+    {
+      "label": "Talen and Amazon Launch an $18B Nuclear PPA for the Data Center Era (Utility Dive)",
+      "url": "https://www.utilitydive.com/news/talen-amazon-aws-susquehanna-nuclear-data-centert/750440"
+    },
+    {
+      "label": "Google Announces €13 Billion AI and Energy Investment in Finland (Deutsche Welle)",
+      "url": "https://www.dw.com/en/finland-google-announces-13-billion-ai-energy-investment/a-79208034"
+    }
+  ],
+  "meta": {
+    "author": "The Signal",
+    "estimatedReadTime": "7 min read",
+    "editorialTags": [
+      "google",
+      "alphabet",
+      "googl",
+      "nuclear-power",
+      "ai-infrastructure",
+      "fortum",
+      "finland-data-centers",
+      "power-purchase-agreement",
+      "ai-energy-demand",
+      "loviisa"
+    ],
+    "seoKeywords": [
+      "googl stock",
+      "alphabet finland investment",
+      "google nuclear power deal",
+      "fortum google ppa",
+      "loviisa nuclear life extension",
+      "ai data center power demand",
+      "google cloud backlog",
+      "alphabet capex 2026"
+    ],
+    "relatedTickers": [
+      "MSFT",
+      "AMZN",
+      "CEG",
+      "VST",
+      "NVDA"
+    ],
+    "keyMetrics": {
+      "Price": "$338.50",
+      "Market Cap": "$4.14T",
+      "Forward P/E": "22.8",
+      "Total Revenue (TTM)": "$445.87B",
+      "52-Week Low": "$235.84",
+      "52-Week High": "$408.61",
+      "Analyst Consensus": "Strong Buy",
+      "Analyst Target Mean": "$428.07"
+    }
+  },
+  "bodyHtml": "<p>Alphabet runs Google Search, YouTube and the ads business behind them. It sells compute and AI to businesses through Google Cloud, ships its own Gemini models, and designs TPUs instead of buying every chip from Nvidia. Powering all of it is now the hard part.</p>\n\n<p>On September 9, Google said it will invest at least €13 billion, about $15.1 billion, in Finland's digital infrastructure across 2027 and 2028. It is Google's largest single investment in Europe. The scope spans Hamina, Kajaani, Muhos and Vaala: data centres, grid upgrades, clean energy, batteries.</p>\n\n<p>Power, not chips, is the binding constraint on AI, and Google went shopping for electrons. It signed a 22-year power purchase agreement with Fortum for up to half the output of Finland's Loviisa nuclear station.</p>\n\n<div class=\"stats-card\"><div class=\"stats-card-title\">The Numbers That Matter</div><table class=\"stats-table\"><tr><td class=\"stat-label\">Price <span class=\"stats-live-badge\">LIVE</span></td><td class=\"stat-value\" data-live-ticker=\"GOOGL\" data-live-field=\"price\">$338.50</td></tr><tr><td class=\"stat-label\">Market Cap</td><td class=\"stat-value\">$4.14T</td></tr><tr><td class=\"stat-label\">Forward P/E</td><td class=\"stat-value\">22.8</td></tr><tr><td class=\"stat-label\">Total Revenue (TTM)</td><td class=\"stat-value\">$445.87B</td></tr><tr><td class=\"stat-label\">52-Week Low</td><td class=\"stat-value\">$235.84</td></tr><tr><td class=\"stat-label\">52-Week High</td><td class=\"stat-value\">$408.61</td></tr><tr><td class=\"stat-label\">Analyst Consensus</td><td class=\"stat-value\">Strong Buy</td></tr><tr><td class=\"stat-label\">Analyst Target Mean</td><td class=\"stat-value\">$428.07</td></tr></table><div class=\"stats-card-note\">Price refreshes live. All other figures as of September 13, 2026.</div></div>\n\n<p>Loviisa is two Soviet-designed VVER-440 reactors, about 507 megawatts each, supplying more than 10% of Finland's electricity. The contract starts smaller in 2028, then climbs to 50% of plant capacity from 2030 to 2049. Fortum says it provides the certainty to fund a lifetime extension to 2050. Without that investment, Loviisa could not run past 2030.</p>\n\n<p>The deal also enables a further +10 megawatts, on top of a planned +38 megawatt turbine uprate due in 2028. Modest, and deliberately so.</p>\n\n<p>Be precise about what this is not. The agreement covers Loviisa's existing reactors and their life extension only. It is not a bet on small modular reactors or any future new-build nuclear project.</p>\n\n<p>Ruth Porat, Alphabet's president and chief investment officer, told reporters in Helsinki: \"We call this BYOP, bring your own power.\" She noted it is Google's first nuclear deal outside the United States.</p>\n\n<p>Fortum's shares jumped about 15% on the news, their best level in years. A hyperscaler signed a long contract so a utility can spend on assets it already owns.</p>\n\n<p>Microsoft is paying Constellation to restart Three Mile Island Unit 1: 835 megawatts for 20 years, with roughly $1.6 billion going into the restart. Amazon has a 17-year Talen deal through 2042 for up to 1,920 megawatts from Susquehanna.</p>\n\n<p>Both are restarts and merchant offtakes. Google is underwriting the life extension of a plant that already runs and already matters. That is capital as insurance, not a new-build gamble.</p>\n\n<p>Nuclear is one slice. Onshore wind PPAs with Valorem and Suomen Hyötytuuli lift Google-supported, new-to-the-grid Finnish wind to 629 megawatts. A contracted 94-megawatt battery near Kajaani connects in late 2027, and Fortum will optimise it.</p>\n\n<p>Google works with grid operator Fingrid and Business Finland to site new capacity in northern Finland, where transmission already exists and production runs ahead of demand. Skipping a grid buildout saves everyone money.</p>\n\n<p>None of this is Google's first Finnish rodeo. It bought Hamina's old paper mill in 2009 and opened a data centre there in 2011. It has spent about €3.5 billion on Hamina, and says 98% of its Finnish energy was carbon-free in 2023. New European sites are heat-recovery ready, and Hamina's offsite heat recovery is designed to cover 80% of the town's district heating needs.</p>\n\n<p>Google's economic math is bullish. It projects a €3.6 billion annual average contribution to Finland's GDP during construction and more than 37,000 jobs nationwide. Afterwards: 7,000 roles at wages 24% above Finland's median, and €31 million for the four host communities over four years.</p>\n\n<p>Alphabet's second-quarter revenue reached $119.8 billion, up 24%. Google Cloud brought in $24.8 billion, up 82%, on $8.8 billion of operating income. Its backlog sits at $514 billion, and management expects to convert just over half within two years.</p>\n\n<p>Capital spending tells the other side. Alphabet spent $44.9 billion in the quarter and guided full-year 2026 capex to $195–205 billion, with more to come in 2027. Free cash flow went slightly negative as the buildout outran the cash the business generates.</p>\n\n<p>Google wants net-zero emissions by 2030 and 24/7 carbon-free energy. Its 2025 carbon footprint was still 81% above its 2019 baseline, with emissions up 18% year over year, and the company blames AI.</p>\n\n<p>Does one nuclear contract fix that? Partly. It locks in carbon-free baseload that wind and solar cannot promise on a windless Finnish night. It does not close the gap alone, because the gap keeps growing.</p>\n\n<p>The biggest cloud builders spent two years racing for GPUs. Now they are racing for megawatts, and the first to lock down the grid may win.</p>\n\n<p>Finland gets the money and the jobs. Google gets 22 years of electrons. AI does not run on hype. It runs on watts.</p>\n\n<p class=\"disclosure\">Disclosure: The Signal holds no position in GOOGL. Positions may change. This is not financial advice.</p>"
+}
