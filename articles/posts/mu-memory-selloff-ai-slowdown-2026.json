@@ -1,0 +1,107 @@
+{
+  "slug": "mu-memory-selloff-ai-slowdown-2026",
+  "title": "An AI Slowdown Call Sank Memory Stocks. Micron's Contracts Say Otherwise",
+  "subtitle": "The essay that sank memory names came from a Micron customer, and Micron's take-or-pay agreements already cover roughly $100 billion of minimum contracted revenue.",
+  "summary": "A call from Anthropic's chief executive to pace frontier AI development knocked memory stocks lower, but the reaction misreads a company that has moved its business onto take-or-pay contracts. Sixteen signed agreements, roughly $100 billion of minimum contracted revenue, and Anthropic itself as a customer make Micron far less spot-exposed than a one-day selloff implies.",
+  "ticker": "MU",
+  "company": "Micron Technology",
+  "sector": "ai",
+  "sentiment": "bullish",
+  "date": "2026-09-14T17:00:00Z",
+  "price": 975.26,
+  "featured": false,
+  "premium": false,
+  "image": {
+    "src": "/img/articles/mu-memory-selloff-ai-slowdown-2026.jpg",
+    "fit": "cover",
+    "caption": "An extreme macro view of bare DRAM memory modules with gold contact fingers on a dark surface, with a stack of polished silicon memory dies standing in the foreground under cool blue light and warm amber rim highlights. Photo: The Signal / AI-generated.",
+    "alt": "Macro photo of bare DRAM memory modules with gold contact fingers and a stack of polished silicon memory dies under cool blue light with amber highlights"
+  },
+  "tags": [
+    "MU",
+    "Micron",
+    "memory",
+    "DRAM",
+    "HBM",
+    "NAND",
+    "AI infrastructure",
+    "Anthropic"
+  ],
+  "links": [
+    {
+      "label": "The New York Times \u2014 Anthropic CEO Calls for Slowing the Pace of AI Development \u2192",
+      "url": "https://www.nytimes.com/2026/09/12/technology/anthropic-dario-amodei-ai-slowdown.html"
+    },
+    {
+      "label": "Micron Investor Relations \u2014 Micron and Anthropic Announce Strategic Agreement to Scale AI Infrastructure \u2192",
+      "url": "https://www.investors.micron.com/news/press-release/2026/Micron-and-Anthropic-Announce-Strategic-Agreement-to-Scale-Next-Generation-AI-Infrastructure/default.aspx"
+    },
+    {
+      "label": "Tom's Hardware \u2014 Micron Inks Long-Term Supply Agreements Worth $100 Billion \u2192",
+      "url": "https://www.tomshardware.com/pc-components/dram/micron-inks-long-term-supply-agreements-worth-usd100-billion-says-it-has-no-idea-when-ram-crisis-will-end"
+    },
+    {
+      "label": "24/7 Wall St. \u2014 Memory Stocks Lead AI Selloff as Anthropic and OpenAI Chiefs Urge Slower Development \u2192",
+      "url": "https://247wallst.com/investing/2026/09/14/memory-stocks-lead-ai-selloff-as-anthropic-and-openai-chiefs-urge-slower-development-micron-and-sandisk-sink-6-sk-hynix-drops-7"
+    },
+    {
+      "label": "SEC \u2014 Micron Fiscal Q3 2026 Earnings Release \u2192",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000013/a2026q3ex991-pressrelease.htm"
+    },
+    {
+      "label": "CNBC \u2014 Oil Prices Rise as Saudi Pipeline Attack Threatens Export Routes \u2192",
+      "url": "https://www.cnbc.com/2026/09/13/oil-price-iran-war-strait-hormuz-saudi-pipeline.html"
+    }
+  ],
+  "meta": {
+    "author": "The Signal",
+    "estimatedReadTime": "5 min",
+    "editorialTags": [
+      "micron",
+      "memory",
+      "hbm",
+      "dram",
+      "memory-shortage",
+      "ai-capex",
+      "anthropic",
+      "strategic-customer-agreements",
+      "ai-infrastructure"
+    ],
+    "seoKeywords": [
+      "Micron MU stock analysis",
+      "AI slowdown memory stocks selloff",
+      "Micron take-or-pay contracts",
+      "Micron strategic customer agreements $100 billion",
+      "Micron HBM4 ramp",
+      "Micron Anthropic supply deal",
+      "memory shortage through 2027",
+      "HBM memory wall GPU",
+      "Micron fiscal Q4 2026 earnings date"
+    ],
+    "relatedTickers": [
+      "MU",
+      "NVDA",
+      "AMAT"
+    ],
+    "keyMetrics": {
+      "MU Price": "$975.26",
+      "Market Cap": "$1.10T",
+      "Forward P/E": "6.25",
+      "Total Revenue (TTM)": "$90.3B",
+      "52-Week Low": "$154.65",
+      "52-Week High": "$1,255.00",
+      "Analyst Consensus": "Strong Buy",
+      "Analyst Target Mean": "$1,513.11"
+    },
+    "youtubeIds": [],
+    "sourceLinks": [
+      "https://www.nytimes.com/2026/09/12/technology/anthropic-dario-amodei-ai-slowdown.html",
+      "https://www.investors.micron.com/news/press-release/2026/Micron-and-Anthropic-Announce-Strategic-Agreement-to-Scale-Next-Generation-AI-Infrastructure/default.aspx",
+      "https://www.tomshardware.com/pc-components/dram/micron-inks-long-term-supply-agreements-worth-usd100-billion-says-it-has-no-idea-when-ram-crisis-will-end",
+      "https://247wallst.com/investing/2026/09/14/memory-stocks-lead-ai-selloff-as-anthropic-and-openai-chiefs-urge-slower-development-micron-and-sandisk-sink-6-sk-hynix-drops-7",
+      "https://www.sec.gov/Archives/edgar/data/723125/000072312526000013/a2026q3ex991-pressrelease.htm",
+      "https://www.cnbc.com/2026/09/13/oil-price-iran-war-strait-hormuz-saudi-pipeline.html"
+    ]
+  },
+  "bodyHtml": "<p>Start with what Micron actually does. It builds memory, the chips that hold data and feed it to processors. DRAM is the working memory a chip reads from all day, and NAND flash is the storage that survives a power cut. Buyers run from hyperscalers to automakers to the SSD in your laptop.</p>\n<p>The product that matters most to AI is high-bandwidth memory. HBM stacks DRAM dies vertically and sits on the interposer right next to the GPU, feeding it data. Compute has scaled faster than memory bandwidth for years, which is why memory gates how fast AI systems run.</p>\n<div class=\"stats-card\"><div class=\"stats-card-title\">The Numbers That Matter</div><table class=\"stats-table\"><tr><td class=\"stat-label\">Price <span class=\"stats-live-badge\">LIVE</span></td><td class=\"stat-value\" data-live-ticker=\"MU\" data-live-field=\"price\">$975.26</td></tr><tr><td class=\"stat-label\">Market Cap</td><td class=\"stat-value\">$1.10T</td></tr><tr><td class=\"stat-label\">Forward P/E</td><td class=\"stat-value\">6.25</td></tr><tr><td class=\"stat-label\">Total Revenue (TTM)</td><td class=\"stat-value\">$90.3B</td></tr><tr><td class=\"stat-label\">52-Week Low</td><td class=\"stat-value\">$154.65</td></tr><tr><td class=\"stat-label\">52-Week High</td><td class=\"stat-value\">$1,255.00</td></tr><tr><td class=\"stat-label\">Analyst Consensus</td><td class=\"stat-value\">Strong Buy</td></tr><tr><td class=\"stat-label\">Analyst Target Mean</td><td class=\"stat-value\">$1,513.11</td></tr></table><div class=\"stats-card-note\">Price refreshes live. All other figures as of September 11, 2026.</div></div>\n<p>That puts Micron at the center of a brutal session. Memory and AI-infrastructure names sold off together. Micron fell roughly 6% in early trading and traded as much as 7.5% below the prior close. SanDisk dropped about 6%, SK Hynix fell 6% to 7% in Korea, and Nvidia slipped about 3%.</p>\n<p>The catalyst was an essay, not an earnings miss. Micron's own customer wrote it. \u201cWe Must Pace the Frontier\u201d landed on Saturday, published by Anthropic chief executive Dario Amodei.</p>\n<p>He wants the industry to slow how fast it pushes frontier models, leaving room for alignment work and outside evaluation. Sam Altman agreed. Elon Musk said Amodei is right.</p>\n<p>The selling was concentrated, which says this was a sentiment trade. The Roundhill Memory ETF fell roughly 7% while the Nasdaq-100 dipped less than 1%. Oil spiked after Saudi Arabia shut a major pipeline. Micron is up more than 200% this year, so a drop this size answers a headline, not a rewrite of the business.</p>\n<p>Read the essay closely and the fear thins. Nobody proposed cutting capital budgets or stopping training runs, and no hyperscaler has changed a spending plan. Bernstein's Madison Rezaei framed it plainly: this is not a call to lower capex, but investors are asking what happens if training slows.</p>\n<p>Here is where the panic and the paperwork part ways. Micron has signed 16 Strategic Customer Agreements, take-or-pay deals where customers commit to volumes over multi-year terms with defined price floors and ceilings. Fourteen carry roughly $100 billion of cumulative revenue at minimum contract prices.</p>\n<p>That covers about 20% of Micron's DRAM volume and a third of its NAND volume. Management expects them to reach half or more of total revenue. Micron projects about $22 billion of customer deposits under them. Those are commitments, not forecasts.</p>\n<p>Chief executive Sanjay Mehrotra does not sound like a man watching a cycle roll over. Tight conditions should \u201cpersist beyond calendar 2027,\u201d he says, with no line of sight to supply catching up with demand. That framing is narrower than the viral claim that every 2027 wafer is already sold.</p>\n<p>And the man who wrote that essay runs a Micron customer. In June, Micron and Anthropic announced a strategic agreement. It covers memory and storage co-design, a multi-year supply deal across HBM, DRAM and data-center SSDs, and Claude running inside Micron.</p>\n<p>Micron also took a stake in Anthropic's funding round. The lab has raised $65 billion at a $965 billion valuation and filed confidentially for a US listing. Anthropic is asking the industry to slow down while locking in the memory it needs to speed up.</p>\n<p>Supply has not blinked either. Micron has already shipped more than $1 billion of HBM4 revenue, and the 12-high version is ramping about twice as fast as its predecessor. Its capital budget keeps climbing, because falling behind in memory means losing the platform.</p>\n<p>Competition is real, but narrower than headlines imply. Samsung, SK Hynix and Micron control roughly 90% of memory, and Micron is the only one headquartered in the United States. China's CXMT is scaling fast, approaching 10% of DRAM shipments, but most of that sells inside China. HBM remains the incumbents' game.</p>\n<p>So the bear case is a bet on the customers, not the company. Anthropic and OpenAI are private, and neither has cut a training budget. The memory chokepoint beside every GPU has not moved an inch. Micron's answer is already contractual: the buildout may pace itself, and the invoices are committed.</p>\n<p>Micron reports fiscal fourth-quarter results on September 30. The stock trades near six times forward earnings, a multiple that assumes a wobble. If the slowdown camp is right, the contracts still pay. If it is wrong, memory stays the scarcest input in computing.</p>\n<p class=\"disclosure\">Disclosure: The Signal holds no position in MU. Positions may change. This is not financial advice.</p>"
+}
