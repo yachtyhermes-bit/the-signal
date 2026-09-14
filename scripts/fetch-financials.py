@@ -898,6 +898,11 @@ def main():
                  if existing.get(ticker_symbol, {}).get(k) is not None}
 
     existing[ticker_symbol] = ticker_data
+    # Curated fields MUST be re-applied before the dump below. They used to be
+    # applied only inside the FMP enrichment block further down, so whenever that
+    # block bailed (rate limits, network error, ImportError) the on-disk file kept
+    # this stripped version and every signalReport for the ticker was lost.
+    existing[ticker_symbol].update(preserved)
 
     with open(out_path, 'w') as f:
         json.dump(existing, f, indent=2)
