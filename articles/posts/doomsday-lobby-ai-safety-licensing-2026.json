@@ -1,0 +1,113 @@
+{
+  "slug": "doomsday-lobby-ai-safety-licensing-2026",
+  "title": "Is AI Really Going to Kill Us All, or Is Big Tech Just Trying to Crush the Competition?",
+  "subtitle": "The same CEOs spending billions to build AI are telling Congress it could end the world. But look past the Hollywood drama: scaring the government into passing crazy regulations is the oldest trick in the book to kill free, open-source competition and lock in their own profits. Here's what's really going on.",
+  "summary": "The same executives building frontier AI tell Congress it might end the world \u2014 then keep shipping it at $20 a month. The bills now moving in Sacramento and Washington add reporting, audits and liability exposure, and compliance cost scales with lawyers rather than capability. That is regulatory capture with a paper trail.",
+  "format": "explainer",
+  "ticker": "META",
+  "tickers": [
+    "META",
+    "GOOGL",
+    "MSFT"
+  ],
+  "sector": "ai",
+  "sentiment": "neutral",
+  "date": "2026-09-14T21:45:00Z",
+  "image": {
+    "src": "/img/articles/doomsday-lobby-ai-safety-licensing-2026.jpg",
+    "fit": "cover",
+    "caption": "Suits at the table, laptops in the garage: the licensing fight is settled by who can afford the paperwork.",
+    "alt": "Illustration: executives in a boardroom pull strings connecting to a glowing red robotic skull, while engineers in a graffiti-covered workshop work on laptops behind a glass partition, with the Capitol lit in the distance."
+  },
+  "keyTerms": [
+    {
+      "term": "Regulatory capture",
+      "definition": "When the industry being regulated ends up shaping the rules that govern it, so compliance cost becomes a barrier to entry instead of a public safeguard."
+    },
+    {
+      "term": "Open weights",
+      "definition": "A model released as downloadable files rather than only behind an API. Anyone can run it offline, fine-tune it, or build on it for the cost of the hardware."
+    },
+    {
+      "term": "Frontier model",
+      "definition": "A model at the leading edge of capability \u2014 defined in practice, and increasingly in law, by how much compute it took to train."
+    },
+    {
+      "term": "Compute threshold",
+      "definition": "The training-compute cut-off that decides whether a model counts as 'frontier' and therefore which developers the rules bind."
+    },
+    {
+      "term": "Licensing regime",
+      "definition": "A requirement that developers win government approval before releasing a model. Critics call it a de facto ban on anyone without a legal department."
+    },
+    {
+      "term": "SB 53 (Transparency in Frontier AI Act)",
+      "definition": "California's 2025 frontier AI law: large developers must publish safety frameworks, report critical incidents and protect whistleblowers. Transparency only \u2014 no licence requirement and no liability for third-party use."
+    }
+  ],
+  "bottomLine": "Can bad people use technology to do bad things? Of course. But the idea that computers are going to become self-aware and destroy the human race isn't backed by hard science \u2014 it's a marketing strategy designed to scare politicians into building a legal wall around a few giant tech companies. Don't trade on sci-fi horror movies. Watch the real fundamentals: who owns the actual power lines, who makes the physical chips, and who's cutting down real business costs. The rest is just noise to keep you paying $20 a month.",
+  "bodyHtml": "<p>Picture this scenario for a second.</p>\n\n<p>Imagine a supplement company owner walking up to you at the gym and saying, \"Bro, this new pre-workout I'm making has a 20% chance of blowing up your heart and ending human life.\"</p>\n\n<p>What would happen? The cops would show up, the FDA would raid his warehouse, and he'd be locked up before lunch.</p>\n\n<p>Now look at Silicon Valley. The top tech CEOs fly out to Washington, sit in front of Congress, and say with a straight face: \"Hey, the AI we're building is so dangerous it might wipe out humanity like a nuclear bomb.\" Then they jump back on their private jets, hit up Wall Street, and raise another $10 billion to build even bigger computer clusters.</p>\n\n<p>If these guys honestly thought their software was about to turn into the Terminator and destroy their own families, they'd pull the plug on the servers today.</p>\n\n<p>They aren't pulling any plugs. They're running them 24/7.</p>\n\n<p>So why the huge doomsday act? Because the real threat keeping them up at night isn't an evil robot. It's the fact that someone might give AI away for free.</p>\n\n<h2>1. The $20-a-Month Trap vs. The Free Alternative</h2>\n\n<p>To see what's really going on, you just have to look at how these companies make money.</p>\n\n<p>Right now, big closed-door labs like OpenAI want to be like a toll booth:</p>\n<ul>\n<li>They spend tens of billions building a massive AI model.</li>\n<li>They lock it behind their own website.</li>\n<li>They charge you or your company $20 to $200 a month to use it.</li>\n</ul>\n\n<p>That works great \u2014 until open-source AI shows up.</p>\n\n<p>Open-source models (like Meta's Llama, Mistral, or DeepSeek) give the \"recipe\" away for free. Anyone can download the code, install it on their own computers, tweak it for their own business, and run it offline for just the cost of electricity.</p>\n\n<p>Think about it: if someone built a home gym in your garage that worked just as well as Equinox, and it was 100% free forever, Equinox would be in serious trouble.</p>\n\n<p>That's the nightmare scenario for closed AI companies. If free, downloadable models get just as smart as their paid ones, their entire subscription business model goes down the drain.</p>\n\n<h2>2. The Playbook: How to Kill Free Competition With \"Safety\" Rules</h2>\n\n<p>Since these companies can't just go on TV and say, \"Please ban free software so we can stay rich,\" they do what big corporations have always done: they use fear to get politicians to pass laws that protect them.</p>\n\n<p>In business, this is called regulatory capture \u2014 getting the government to set up rules so complicated and expensive that only the richest players can survive.</p>\n\n<p>Here are the two main ways they try to pull it off.</p>\n\n<h3>Trap 1: The \"License\" Play</h3>\n\n<p>They push politicians to require special government licenses for anyone building powerful AI models. It is already in draft form: a bipartisan bill introduced in July 2026 would put frontier models behind a government licence, with mandatory third-party audits to match.</p>\n\n<ul>\n<li>If you're a trillion-dollar company like Microsoft or Google, hiring a team of 200 lawyers and safety auditors to fill out government paperwork is just pocket change.</li>\n<li>But what happens to a couple of sharp engineers working in a garage, or an independent research group? They can't afford that. They get squeezed out before they even get started.</li>\n</ul>\n\n<h3>Trap 2: The Legal Liability Trap</h3>\n\n<p>Another move is trying to pass laws that make the creator of an AI model legally responsible for anything anyone does with it.</p>\n\n<ul>\n<li>Imagine if Ford was sued every time someone used an F-150 to get away from a bank robbery. Ford would have to stop selling trucks.</li>\n<li>If a tech company releases free, downloadable AI code, they can't control what people do with it offline. So if politicians make developers legally liable for how a stranger uses their math, no one can risk giving away open-source code anymore.</li>\n</ul>\n\n<p>It's an easy way to kill open-source software without ever having to pass a law that says \"we're banning open-source.\"</p>\n\n<p>As Chris Padilla, an executive at IBM, put it plainly: \"It's sort of a classic regulatory capture approach of trying to raise fears about open-source innovation.\"</p>\n\n<h2>3. The Real-World Pushback</h2>\n\n<p>Not everyone is buying the doom-and-gloom act.</p>\n\n<p>Top computer scientists like Yann LeCun \u2014 who spent twelve years as Meta's chief AI scientist before leaving in November 2025 to found his own lab \u2014 have been calling this out directly:</p>\n\n<ul>\n<li><strong>Open source makes tech safer, not more dangerous.</strong> The internet, smartphones, and major banking networks all run on open-source code (like Linux). Why? Because when the code is out in the open, millions of developers can find bugs and fix security holes immediately, instead of waiting for a single company to do it.</li>\n<li><strong>If we ban it, others won't.</strong> If the U.S. handcuffs its own developers with red tape, foreign competitors like China (who are already releasing massive open models like Qwen and DeepSeek) will gladly take over the open-source world.</li>\n</ul>\n<p class=\"disclosure\">Disclosure: The Signal holds no position in META. Positions may change. This is not financial advice.</p>",
+  "tags": [
+    "open source",
+    "META",
+    "big tech",
+    "AI safety",
+    "regulatory capture",
+    "open weights",
+    "DeepSeek",
+    "IBM"
+  ],
+  "links": [
+    {
+      "label": "Center for AI Safety \u2014 Statement on AI Risk (May 2023)",
+      "url": "https://www.safe.ai/work/statement-on-ai-risk"
+    },
+    {
+      "label": "The Hill \u2014 Trump restrictions on private AI models turn attention to open source",
+      "url": "https://thehill.com/policy/technology/5952253-trump-administration-ai-restrictions-opens"
+    },
+    {
+      "label": "Kingy AI \u2014 Is an Open-Source AI Ban Coming? Analysis of Compute Thresholds",
+      "url": "https://kingy.ai/blog/open-source-ai-ban-david-sacks-analysis"
+    },
+    {
+      "label": "Axios \u2014 Amodei: there's a 25% chance things go really, really badly",
+      "url": "https://www.axios.com/2025/09/17/anthropic-dario-amodei-p-doom-25-percent"
+    },
+    {
+      "label": "Brookings \u2014 Congress must pass a new federal law on AI governance",
+      "url": "https://www.brookings.edu/articles/congress-must-pass-a-new-federal-law-on-ai-governance"
+    },
+    {
+      "label": "CSIS \u2014 Toward a Federal Framework: Lessons from State and International Frontier AI Regulation",
+      "url": "https://www.csis.org/analysis/toward-federal-framework-lessons-state-and-international-frontier-ai-regulation"
+    },
+    {
+      "label": "Gibson Dunn \u2014 Eight key takeaways from California's SB 1047, vetoed by Governor Newsom",
+      "url": "https://www.gibsondunn.com/regulating-the-future-eight-key-takeaways-from-californias-sb-1047-vetoed-by-governor-newsom"
+    },
+    {
+      "label": "Future of Privacy Forum \u2014 California's SB 53: the first frontier AI law, explained",
+      "url": "https://fpf.org/blog/californias-sb-53-the-first-frontier-ai-law-explained"
+    },
+    {
+      "label": "Brookings \u2014 What is California's AI safety law?",
+      "url": "https://www.brookings.edu/articles/what-is-californias-ai-safety-law"
+    },
+    {
+      "label": "TechPolicy Press \u2014 Where state AI legislation stands halfway into 2026",
+      "url": "https://techpolicy.press/where-state-ai-legislation-stands-half-way-into-2026"
+    },
+    {
+      "label": "WebProNews \u2014 Yann LeCun leaves Meta to launch AMI Labs",
+      "url": "https://www.webpronews.com/yann-lecun-leaves-meta-to-launch-ami-labs-critiques-llm-hype"
+    },
+    {
+      "label": "The Signal \u2014 Nebius becomes the compute layer inside Palantir's perimeter",
+      "url": "/article/nbis-palantir-sovereign-ai-stack-2026/"
+    }
+  ],
+  "meta": {
+    "estimatedReadTime": "6 min read"
+  }
+}
