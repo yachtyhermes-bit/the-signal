@@ -1,0 +1,110 @@
+{
+  "slug": "salesforce-koa-reasoning-model-agentforce-2026",
+  "title": "Salesforce Built Its Own Reasoning Model to Stop Renting Intelligence",
+  "subtitle": "Salesforce post-trained Nvidia's open Nemotron on 27 years of CRM knowledge, keeps the weights inside its own trust boundary, and says the same agent work burns fewer tokens than Claude or ChatGPT.",
+  "summary": "Salesforce and Nvidia unveiled Koa at Dreamforce, a CRM reasoning model post-trained on Nvidia's open-weight Nemotron 3 Super using a synthetic dataset modeled on 27 years of CRM deployments, with no customer data involved. Salesforce controls the weights and runs inference inside its own trust boundary. The company says Koa matches leading models on its internal CRM benchmark with three times fewer errors and burns fewer tokens than routing the same jobs to Claude or ChatGPT. If that holds, frontier-lab enterprise pricing power has a ceiling and the scarce asset becomes proprietary workflow data. Koa is pilot-only, with general availability expected in winter 2026.",
+  "ticker": "CRM",
+  "tickerName": "Salesforce",
+  "company": "Salesforce",
+  "sector": "ai",
+  "sentiment": "bullish",
+  "date": "2026-09-15T17:00:00Z",
+  "price": 259.43,
+  "featured": false,
+  "premium": false,
+  "image": {
+    "src": "/img/articles/salesforce-koa-reasoning-model-agentforce-2026.jpg",
+    "fit": "cover",
+    "caption": "A customer service professional mid-conversation on a headset at their desk in a bright open-plan office, seen from behind and slightly to the side, colleagues at work in the soft bokeh beyond. Photo: The Signal / AI-generated.",
+    "alt": "A customer service professional wearing a headset talking at their desk in a bright open-plan office, seen over the shoulder from behind, with colleagues at work blurring into the background"
+  },
+  "tags": [
+    "CRM",
+    "Salesforce",
+    "Koa",
+    "Agentforce",
+    "Nvidia",
+    "Nemotron",
+    "reasoning models",
+    "enterprise AI",
+    "Dreamforce"
+  ],
+  "links": [
+    {
+      "label": "Salesforce introduces Koa, its first CRM reasoning model →",
+      "url": "https://www.salesforce.com/news/stories/koa-reasoning-model/"
+    },
+    {
+      "label": "TechCrunch: Salesforce and Nvidia's reasoning model is everything the AI labs should fear →",
+      "url": "https://techcrunch.com/2026/09/15/salesforce-and-nvidias-new-reasoning-model-is-everything-the-ai-labs-should-fear"
+    },
+    {
+      "label": "SiliconANGLE: Salesforce debuts Koa, a model built to reason over CRM data →",
+      "url": "https://siliconangle.com/2026/09/15/salesforce-debuts-koa-a-specialized-model-built-to-reason-over-crm-data"
+    },
+    {
+      "label": "Salesforce fiscal Q2 2027 results, SEC 8-K Exhibit 99.1 →",
+      "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000187/crm-q2fy27xexhibit991.htm"
+    },
+    {
+      "label": "Salesforce engineering: cutting inference spend by right-sizing models →",
+      "url": "https://www.salesforce.com/news/stories/cutting-inference-spend-by-right-sizing-models/"
+    },
+    {
+      "label": "Gartner: $234 billion of enterprise application spend at risk from agentic AI →",
+      "url": "https://businessnewsthisweek.com/business/gartner-says-dollar-234-billion-in-enterprise-application-software-spend-is-at-risk-from-agentic-ai"
+    }
+  ],
+  "meta": {
+    "author": "The Signal",
+    "estimatedReadTime": "4 min",
+    "editorialTags": [
+      "salesforce",
+      "crm",
+      "koa",
+      "agentforce",
+      "nvidia",
+      "nemotron",
+      "enterprise-ai",
+      "reasoning-models",
+      "ai-monetization",
+      "dreamforce"
+    ],
+    "seoKeywords": [
+      "Salesforce CRM stock analysis",
+      "Salesforce Koa reasoning model",
+      "Koa Agentforce",
+      "Salesforce Nvidia Nemotron",
+      "enterprise AI reasoning model",
+      "AI token costs enterprise",
+      "frontier lab pricing power",
+      "Agentforce ARR growth",
+      "CRM synthetic training data"
+    ],
+    "relatedTickers": [
+      "CRM",
+      "NVDA",
+      "MSFT"
+    ],
+    "keyMetrics": {
+      "Price": "$259.43",
+      "Market Cap": "$211.4B",
+      "Forward P/E": "16.0",
+      "Total Revenue (TTM)": "$43.94B",
+      "52-Week Low": "$146.32",
+      "52-Week High": "$269.11",
+      "Analyst Consensus": "Buy",
+      "Analyst Target Mean": "$275.60"
+    },
+    "youtubeIds": [],
+    "sourceLinks": [
+      "https://www.salesforce.com/news/stories/koa-reasoning-model/",
+      "https://techcrunch.com/2026/09/15/salesforce-and-nvidias-new-reasoning-model-is-everything-the-ai-labs-should-fear",
+      "https://siliconangle.com/2026/09/15/salesforce-debuts-koa-a-specialized-model-built-to-reason-over-crm-data",
+      "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000187/crm-q2fy27xexhibit991.htm",
+      "https://www.salesforce.com/news/stories/cutting-inference-spend-by-right-sizing-models/",
+      "https://businessnewsthisweek.com/business/gartner-says-dollar-234-billion-in-enterprise-application-software-spend-is-at-risk-from-agentic-ai"
+    ]
+  },
+  "bodyHtml": "<p>Start with what Salesforce actually sells. It runs the customer database for a huge share of the enterprise world: sales pipelines, service cases and the marketing lists behind the software big companies already pay for.</p>\n<p>That puts the company in the middle of the AI buildout. Every agent that quotes a price, routes a ticket or books a follow-up needs somewhere to look up the customer, and Salesforce charges for that layer.</p>\n<div class=\"stats-card\"><div class=\"stats-card-title\">The Numbers That Matter</div><table class=\"stats-table\"><tr><td class=\"stat-label\">Price <span class=\"stats-live-badge\">LIVE</span></td><td class=\"stats-value\" data-live-ticker=\"CRM\" data-live-field=\"price\">$259.43</td></tr><tr><td class=\"stat-label\">Market Cap</td><td class=\"stat-value\">$211.4B</td></tr><tr><td class=\"stat-label\">Forward P/E</td><td class=\"stat-value\">16.0</td></tr><tr><td class=\"stat-label\">Total Revenue (TTM)</td><td class=\"stat-value\">$43.94B</td></tr><tr><td class=\"stat-label\">52-Week Low</td><td class=\"stat-value\">$146.32</td></tr><tr><td class=\"stat-label\">52-Week High</td><td class=\"stat-value\">$269.11</td></tr><tr><td class=\"stat-label\">Analyst Consensus</td><td class=\"stat-value\">Buy</td></tr><tr><td class=\"stat-label\">Analyst Target Mean</td><td class=\"stat-value\">$275.60</td></tr></table><div class=\"stats-card-note\">Price refreshes live. All other figures as of September 15, 2026.</div></div>\n<p>At Dreamforce, the company's annual customer conference, Salesforce and Nvidia unveiled Koa, its first reasoning model for CRM work on the Agentforce agent platform. Koa is not trained from scratch.</p>\n<p>Salesforce post-trained Nvidia's open-weight Nemotron 3 Super with supervised fine-tuning and reinforcement learning, using Nvidia's NeMo tooling.</p>\n<p>The training corpus is a synthetic dataset modeled on 27 years of CRM deployments across more than a dozen industries. No customer data was used at all.</p>\n<p>Salesforce says Koa matches or beats leading general models on its internal CRM benchmark, real tasks like updating an opportunity, routing a case or scheduling a follow-up.</p>\n<p>By the company's own accounting, it gets there with three times fewer errors. No methodology has been published, so treat that as a claim.</p>\n<p>The cost line travels further. Salesforce says Koa burns fewer tokens than sending the same work to Claude or ChatGPT, and the token bill is where an agent platform's economics live. No magnitude has been disclosed.</p>\n<p>Control is the other half of the pitch. Salesforce owns the weights and runs inference inside its own trust boundary, so customer data never crosses it. That is not how renting a frontier model works.</p>\n<p>Jayesh Govindarajan, who runs Salesforce AI, says the company built plenty of small task-specific models. Reasoning, though, was always something it relied on the frontier labs for, until now.</p>\n<p>Then came the sharper admission. Until Nemotron, he said, there was no American pre-trained model that was state of the art with clear data provenance. Salesforce, in his words, has no idea what Qwen trains on.</p>\n<p>The backdrop explains the urgency. Enterprise software spent two years renting its intelligence. Salesforce's own engineers wrote in July that Agentforce once ran on a single rented model, with a token bill that grew with traffic.</p>\n<p>For Nvidia this is distribution, not competition. Nemotron lands inside software that already holds the customer records, and Nvidia never sells a CRM. Jensen Huang, in Salesforce's announcement, calls AI a much larger opportunity for software.</p>\n<p>The payoff is larger than one model. Frontier labs sell capability by the token. Salesforce argues the durable advantage belongs to whoever owns the workflow knowledge, and a model trained on 27 years of it beats a bigger generalist at the job.</p>\n<p>Benioff makes the same case. The most valuable thing Salesforce has built is not the platform but the accumulated knowledge of how enterprise business works, and Koa puts that inside the model.</p>\n<p>None of this is a break with the labs. Salesforce still routes plenty of work to the frontier providers, and it launched Anthropic-powered agents inside Agentforce in August. Koa is another option, and it runs cheaper.</p>\n<p>Availability is the honest caveat. Koa is pilot-only, with general availability expected in winter 2026 in U.S. regions. It already runs internally in a Slack agent, and named pilots include Formula 1, Xero, UChicago Medicine, Engine, Baxter Credit Union and 1-800Accountant.</p>\n<p>Missionforce carries the same idea into government. Salesforce and Nvidia are putting Nemotron-based models into that platform for regulated customers, including private clouds and air-gapped networks. Missionforce Operations is available now, and post-trained Nvidia models reach select customers in October.</p>\n<p>Zoom out and the timing is loud. Software spent 2026 priced as AI's victim, on the theory that agents let customers cancel seats. Agentforce ARR is above $1.5 billion, up more than 240% year over year, and the shares have climbed roughly 75% off their June low.</p>\n<p>The timing is the tell. The frontier labs are asking for a slower pace. Their largest software customers are quietly working out how not to need them.</p>\n<p>If Koa's economics hold at scale, the ceiling on frontier-lab enterprise pricing keeps dropping and the moat moves to process data.</p>\n<p>Watch the general availability date, then the first independent numbers on error rates and token cost.</p>\n<p class=\"disclosure\">Disclosure: The Signal holds no position in CRM. Positions may change. This is not financial advice.</p>"
+}
