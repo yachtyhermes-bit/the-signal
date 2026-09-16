@@ -3,7 +3,7 @@
 // .mjs for ESM on Vercel
 
 const TICKERS = [
-  'NVDA','AMD','AVGO','MRVL','TSM','ASML','MU','CBRS','CRWV','NBIS','INTC','IREN','LRCX','AMAT','QCOM','SMCI','ANET',
+  'NVDA','AMD','AVGO','MRVL','TSM','ASML','MU','CBRS','CRWV','NBIS','INTC','IREN','LRCX','AMAT','KLAC','QCOM','SMCI','ANET',
   'CRWD','PANW','FTNT','ZS','S','CHKP','CYBR','TENB','RBRK',
   'LMT','RTX','NOC','GD','LHX','KTOS','AVAV','PL','AXON','GE','PLTR',
   'RKLB','RDW','LUNR','ASTS',
