@@ -1,0 +1,108 @@
+{
+  "slug": "ibm-anderon-quantum-foundry-chips-award-2026",
+  "title": "IBM's Anderon Finalizes $1B Quantum Foundry Award as Rivals Integrate",
+  "subtitle": "The definitive agreement turns a May letter of intent into a funded 300-millimeter quantum fab in Albany, with IBM matching the money and a 2029 fault-tolerant roadmap that needs the capacity.",
+  "summary": "Anderon, IBM's standalone quantum foundry company, finalized a $1 billion CHIPS and Science Act award with the Commerce Department, turning a May letter of intent into a funded 300-millimeter quantum wafer fab in Albany, New York. IBM adds a matching $1 billion plus significant IP, assets and workforce, taking the total commitment near $2 billion inside a wider federal quantum package of about $2 billion spread across nine companies. Anderon sells superconducting qubit wafers, quantum I/O signaling and readout signal-chain components as a service, and it has already begun running its first quantum wafers. The tension sits in the equity: IBM trades at the average analyst target and roughly a quarter below its 52-week high, so the re-rating depends on merchant customers, and IonQ, which closed its acquisition of SkyWater Technology on July 31, is now a vertically integrated rival that never has to buy.",
+  "ticker": "IBM",
+  "tickerName": "IBM",
+  "company": "International Business Machines",
+  "sector": "quantum",
+  "sentiment": "bullish",
+  "date": "2026-09-16T14:00:00Z",
+  "price": 248.37,
+  "featured": false,
+  "premium": false,
+  "image": {
+    "src": "/img/articles/ibm-anderon-quantum-foundry-chips-award-2026.jpg",
+    "fit": "cover",
+    "caption": "Two engineers in full cleanroom suits lean over an open wafer carrier, inspecting a 300-millimeter quantum wafer under the pale blue light of the Albany fab. Photo: The Signal / AI-generated.",
+    "alt": "Two engineers in white cleanroom suits, hoods and gloves examine a round 300-millimeter semiconductor wafer held in a carrier, with rows of fabrication tools blurred behind them under cool blue lighting."
+  },
+  "tags": [
+    "IBM",
+    "Anderon",
+    "quantum computing",
+    "CHIPS Act",
+    "quantum foundry",
+    "300mm wafers",
+    "superconducting qubits",
+    "SkyWater"
+  ],
+  "links": [
+    {
+      "label": "IBM newsroom: Anderon, an IBM company, finalizes $1B CHIPS award for a U.S. pure-play quantum foundry →",
+      "url": "https://newsroom.ibm.com/2026-09-16-anderon,-an-ibm-company,-finalizes-agreement-with-the-u-s-department-of-commerce-for-a-1-billion-chips-award-to-accelerate-r-d-for-u-s-based-pure-play-quantum-foundry"
+    },
+    {
+      "label": "StockTitan: Anderon, an IBM company, finalizes agreement with the U.S. Department of Commerce →",
+      "url": "https://www.stocktitan.net/news/IBM/anderon-an-ibm-company-finalizes-agreement-with-the-u-s-department-jo6v6hssar88.html"
+    },
+    {
+      "label": "Futurum Group: the $2B CHIPS Act quantum bet on IBM's 300mm superconducting silicon →",
+      "url": "https://futurumgroup.com/insights/2-billion-chips-act-investment-in-quantum-bets-on-ibms-300mm-superconducting-silicon"
+    },
+    {
+      "label": "Barron's: IBM and the quantum computing chip foundry →",
+      "url": "https://www.barrons.com/articles/ibm-stock-quantum-computing-chip-foundry-71b67f2b"
+    },
+    {
+      "label": "IBM quantum roadmap: Nighthawk, Starling and Blue Jay →",
+      "url": "https://www.ibm.com/roadmaps/quantum"
+    },
+    {
+      "label": "IonQ completes acquisition of SkyWater Technology (Jul 31, 2026) →",
+      "url": "https://www.ionq.com/news/ionq-completes-acquisition-of-skywater-technology"
+    }
+  ],
+  "meta": {
+    "author": "The Signal Editorial",
+    "estimatedReadTime": "4 min",
+    "editorialTags": [
+      "ibm",
+      "anderon",
+      "quantum-computing",
+      "chips-act",
+      "quantum-foundry",
+      "superconducting-qubits",
+      "300mm-wafers",
+      "ionq-skywater"
+    ],
+    "seoKeywords": [
+      "IBM",
+      "IBM stock",
+      "Anderon",
+      "Anderon quantum foundry",
+      "IBM quantum computing",
+      "CHIPS Act quantum award",
+      "quantum chip foundry",
+      "300mm quantum wafers",
+      "IBM quantum roadmap",
+      "IonQ SkyWater"
+    ],
+    "relatedTickers": [
+      "IONQ",
+      "RGTI",
+      "NVDA"
+    ],
+    "keyMetrics": {
+      "Price": "$248.37",
+      "Market Cap": "$234.0B",
+      "Forward P/E": "18.3",
+      "Total Revenue (TTM)": "$69.1B",
+      "52-Week Low": "$199.19",
+      "52-Week High": "$332.46",
+      "Analyst Consensus": "Buy",
+      "Analyst Target Mean": "$245.35"
+    },
+    "youtubeIds": [],
+    "sourceLinks": [
+      "https://newsroom.ibm.com/2026-09-16-anderon,-an-ibm-company,-finalizes-agreement-with-the-u-s-department-of-commerce-for-a-1-billion-chips-award-to-accelerate-r-d-for-u-s-based-pure-play-quantum-foundry",
+      "https://www.stocktitan.net/news/IBM/anderon-an-ibm-company-finalizes-agreement-with-the-u-s-department-jo6v6hssar88.html",
+      "https://futurumgroup.com/insights/2-billion-chips-act-investment-in-quantum-bets-on-ibms-300mm-superconducting-silicon",
+      "https://www.barrons.com/articles/ibm-stock-quantum-computing-chip-foundry-71b67f2b",
+      "https://www.ibm.com/roadmaps/quantum",
+      "https://www.ionq.com/news/ionq-completes-acquisition-of-skywater-technology"
+    ]
+  },
+  "bodyHtml": "<p>Somewhere in Albany, New York, a machine is printing quantum chips onto discs the width of a dinner plate. Anderon, an IBM company, has started running its first quantum wafers through that 300-millimeter foundry, the only plant in America built purely to make them.</p>\n<p>In plain English: Anderon sells the wafers quantum computers get built on. Superconducting qubit arrays, the wiring that carries signals in and out, the readout chain behind them. Anyone building a quantum processor can buy that work as a service instead of standing up a fab, and customers across the ecosystem already do.</p>\n<div class=\"stats-card\"><div class=\"stats-card-title\">The Numbers That Matter</div><table class=\"stats-table\"><tr><td class=\"stat-label\">Price <span class=\"stats-live-badge\">LIVE</span></td><td class=\"stat-value\" data-live-ticker=\"IBM\" data-live-field=\"price\">$248.37</td></tr><tr><td class=\"stat-label\">Market Cap</td><td class=\"stat-value\">$234.0B</td></tr><tr><td class=\"stat-label\">Forward P/E</td><td class=\"stat-value\">18.3</td></tr><tr><td class=\"stat-label\">Total Revenue (TTM)</td><td class=\"stat-value\">$69.1B</td></tr><tr><td class=\"stat-label\">52-Week Low</td><td class=\"stat-value\">$199.19</td></tr><tr><td class=\"stat-label\">52-Week High</td><td class=\"stat-value\">$332.46</td></tr><tr><td class=\"stat-label\">Analyst Consensus</td><td class=\"stat-value\">Buy</td></tr><tr><td class=\"stat-label\">Analyst Target Mean</td><td class=\"stat-value\">$245.35</td></tr></table><div class=\"stats-card-note\">Price refreshes live. All other figures as of September 16, 2026.</div></div>\n<p>At 7 a.m. Eastern on Sept. 16, Anderon and the Commerce Department signed the definitive agreement for a $1 billion CHIPS and Science Act award. It locks in the May 21 letter of intent. IBM adds $1 billion of its own cash plus significant IP, assets and workforce, pushing the total commitment to roughly $2 billion.</p>\n<p>Anderon is the largest slice of a federal quantum package worth about $2 billion across nine companies. GlobalFoundries takes $375 million. D-Wave Quantum, Rigetti Computing, Infleqtion, Atom Computing, PsiQuantum and Quantinuum each draw roughly $100 million, and Diraq draws $38 million. Washington takes minority equity stakes.</p>\n<p>\u201cThis agreement with the Department of Commerce strengthens our ability to deliver the manufacturing scale the quantum industry needs,\u201d said Mukesh Khare, CEO of Anderon. Jay Gambetta, Director of IBM Research and IBM Fellow, made the case from inside the parent. \u201cIBM's quantum roadmap requires a manufacturing foundation that can scale at the pace our work demands.\u201d</p>\n<p>Everyone watched Nvidia get rich selling shovels for the AI boom. Quantum has the same shape, and this shovel is a wafer. IBM's Nighthawk processor runs 7,500-gate circuits across up to three modules today.</p>\n<p>Starling, due in 2029, is the first large-scale fault-tolerant system, with 200 logical qubits and 100 million gates built in Poughkeepsie. Blue Jay aims at 2,000 logical qubits after that.</p>\n<p>The 300-millimeter line is why this is the story. It lets engineers iterate on devices roughly 30 times faster than 200-millimeter wafers, so a bad design gets caught in weeks instead of quarters. Everything past 2026 needs parts at a volume nobody has made.</p>\n<p>Here is the part you actually trade. IBM changes hands near 18.3 times forward earnings, throws off $13.1 billion in trailing free cash flow, and sits roughly a quarter below its 52-week high. The average analyst target is essentially where the shares trade, which is Wall Street saying it sees no re-rating ahead.</p>\n<p>The catalyst that could change that sits in Albany, not in software or consulting. If Anderon wins outside customers and turns quantum wafers into a real revenue line, IBM gets a second growth engine bolted onto a modest multiple. If it cannot, the foundry is a well-funded cost center.</p>\n<p>So is the market pricing IBM right? Mostly, yes. You pay a mid-teens multiple for software, consulting and a mainframe annuity, and the foundry rides along as a free call option. That is not a mistake, though it is not the version of IBM that makes anyone rich.</p>\n<p>The short case deserves its hearing. IonQ closed its $1.8 billion purchase of SkyWater Technology on July 31. SkyWater already makes quantum chips and is the largest pure-play U.S. foundry, so IonQ now owns its supplier and never needs an Anderon customer.</p>\n<p>That leaves Anderon chasing merchant business against a vertically integrated rival, in a year when the pure plays got shredded. IonQ, D-Wave, Rigetti and Quantum Computing Inc. all sit far below their 52-week highs.</p>\n<p>Watch one thing: outside customer logos, and how fast they arrive. No third-party contracts within a year proves the bears right and turns the $1 billion into a subsidy hunting for a market. Anderon's plan to expand into other quantum modalities is a quiet admission that superconducting qubits might not win.</p>\n<p>The tape is no help. The Fed announces its decision later in the session, with markets braced for the first quarter-point hike since 2023. The 10-year Treasury sits near 5%, a backdrop that punishes long-duration stories.</p>\n<p>IBM's $65.3 billion of debt against $8.1 billion of cash and short-term investments buys it patience. Patience is not a catalyst.</p>\n<p>IBM now owns the only pure-play quantum foundry in the country and handed it a government check to match its own money. What nobody can promise yet is a customer list. The foundry is not the hard part. Customers are.</p>\n<p class=\"disclosure\">Disclosure: The Signal holds no position in IBM. Positions may change. This is not financial advice.</p>"
+}
