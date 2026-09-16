@@ -1,0 +1,110 @@
+{
+  "slug": "afrm-affirm-underwriting-moat-fintech-2026",
+  "title": "Affirm Built a Network. Wall Street Priced a Loan Book.",
+  "subtitle": "Affirm closed fiscal 2026 with $50 billion of platform volume and a fee line that needs no balance sheet. The market is still paying for the lender underneath it.",
+  "summary": "The buy-now-pay-later button at checkout hides the business behind it. Affirm underwrites every purchase at the transaction level, turning one sale into more than 1,000 data points, with models calibrated on roughly 553 million loans. That engine is why its offers now appear inside Google Search and the Gemini app, where shopping agents need a fixed, fully disclosed plan rather than a revolving balance. Fiscal 2026 delivered a 9.8% GAAP operating margin, and management guides fiscal 2027 above 14.5% while revenue less transaction costs stays flat. Merchant and card network fees, 34% of revenue and growing 30%, deserve a network multiple. Wall Street keeps paying a lender's multiple instead.",
+  "ticker": "AFRM",
+  "tickerName": "Affirm Holdings",
+  "company": "Affirm Holdings, Inc.",
+  "sector": "fintech",
+  "sentiment": "bullish",
+  "date": "2026-09-16T23:00:00Z",
+  "price": 71.58,
+  "featured": false,
+  "premium": false,
+  "image": {
+    "src": "/img/articles/afrm-affirm-underwriting-moat-fintech-2026.jpg",
+    "fit": "cover",
+    "caption": "A shopper's hand taps a dark-screened phone against a compact card terminal on a boutique checkout counter, a shop assistant softly out of focus behind the register in warm light. Photo: The Signal / AI-generated.",
+    "alt": "A shopper's hand taps a dark-screened phone on a small card terminal at a warm-lit boutique checkout counter, with a shop assistant visible but softly out of focus behind it."
+  },
+  "tags": [
+    "AFRM",
+    "Affirm Holdings",
+    "buy now pay later",
+    "BNPL",
+    "fintech",
+    "underwriting",
+    "consumer credit",
+    "agentic commerce"
+  ],
+  "links": [
+    {
+      "label": "Affirm Holdings FY2026 Form 10-K (Aug 27, 2026) →",
+      "url": "https://www.sec.gov/Archives/edgar/data/1820953/000162828026059279/afrm-20260630.htm"
+    },
+    {
+      "label": "FY Q4 2026 earnings supplement (Aug 27, 2026) →",
+      "url": "https://investors.affirm.com/static-files/c160ce8f-a9b5-4896-b8ed-6544ac430809"
+    },
+    {
+      "label": "Affirm reports fourth fiscal quarter 2026 results (Aug 27, 2026) →",
+      "url": "https://www.stocktitan.net/news/AFRM/affirm-reports-fourth-fiscal-quarter-2026-etfvk0xl7p2j.html"
+    },
+    {
+      "label": "Affirm adds real-time cash-flow signals to underwriting (Jan 14, 2026) →",
+      "url": "https://www.stocktitan.net/news/AFRM/affirm-updates-underwriting-with-enhanced-signals-to-better-reflect-vcoo4aqv9ta0.html"
+    },
+    {
+      "label": "Affirm brings pay-over-time into Google Search and Gemini (May 12, 2026) →",
+      "url": "https://www.stocktitan.net/news/AFRM/affirm-works-with-google-to-make-ai-shopping-payments-clear-and-44z1z6wyozyk.html"
+    },
+    {
+      "label": "Banks bring BNPL rivalry (Payments Dive, Jun 17, 2026) →",
+      "url": "https://www.paymentsdive.com/news/banks-bring-bnpl-rivalry/823141"
+    },
+    {
+      "label": "Wolfe Research upgrades Affirm to Outperform (Sept 14, 2026) →",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/affirm-stock-rises-wolfe-upgrade-160807498.html"
+    }
+  ],
+  "meta": {
+    "author": "The Signal Editorial",
+    "estimatedReadTime": "4 min",
+    "editorialTags": [
+      "afrm",
+      "affirm-holdings",
+      "buy-now-pay-later",
+      "bnpl",
+      "fintech",
+      "underwriting",
+      "consumer-credit",
+      "agentic-commerce"
+    ],
+    "seoKeywords": [
+      "Affirm Holdings",
+      "AFRM stock",
+      "AFRM stock analysis",
+      "buy now pay later underwriting",
+      "Affirm fiscal 2027 guidance",
+      "merchant network revenue",
+      "agentic commerce payments",
+      "BNPL credit risk"
+    ],
+    "relatedTickers": [
+      "SOFI",
+      "HOOD"
+    ],
+    "youtubeIds": [],
+    "sourceLinks": [
+      "https://www.sec.gov/Archives/edgar/data/1820953/000162828026059279/afrm-20260630.htm",
+      "https://investors.affirm.com/static-files/c160ce8f-a9b5-4896-b8ed-6544ac430809",
+      "https://www.stocktitan.net/news/AFRM/affirm-reports-fourth-fiscal-quarter-2026-etfvk0xl7p2j.html",
+      "https://www.stocktitan.net/news/AFRM/affirm-updates-underwriting-with-enhanced-signals-to-better-reflect-vcoo4aqv9ta0.html",
+      "https://www.stocktitan.net/news/AFRM/affirm-works-with-google-to-make-ai-shopping-payments-clear-and-44z1z6wyozyk.html",
+      "https://www.paymentsdive.com/news/banks-bring-bnpl-rivalry/823141",
+      "https://finance.yahoo.com/markets/stocks/articles/affirm-stock-rises-wolfe-upgrade-160807498.html"
+    ],
+    "keyMetrics": {
+      "Price": "$71.58",
+      "Market Cap": "$24.15B",
+      "Forward P/E": "14.48",
+      "Total Revenue (TTM)": "$4.261B",
+      "52-Week Low": "$42.10",
+      "52-Week High": "$92.56",
+      "Analyst Consensus": "Buy",
+      "Analyst Target Mean": "$99.09"
+    }
+  },
+  "bodyHtml": "<p>The buy-now-pay-later button you tap at checkout looks like a payments feature. Then you notice the merchant is paying to keep it there, and the picture flips. Affirm runs a credit model, and the button is the front door.</p>\n<p>A shopper splits a purchase into a fixed set of payments, on a website or in the app, and sees the exact total before tapping. The merchant pays Affirm a fee to close the sale. The consumer sometimes pays interest. That is the whole product.</p>\n<p>Affirm closed its fiscal year with $50.2 billion of volume running through the platform, up 37%. Everything after that number is worth arguing about.</p>\n<div class=\"stats-card\"><div class=\"stats-card-title\">The Numbers That Matter</div><table class=\"stats-table\"><tr><td class=\"stat-label\">Price <span class=\"stats-live-badge\">LIVE</span></td><td class=\"stat-value\" data-live-ticker=\"AFRM\" data-live-field=\"price\">$71.58</td></tr><tr><td class=\"stat-label\">Market Cap</td><td class=\"stat-value\">$24.15B</td></tr><tr><td class=\"stat-label\">Forward P/E</td><td class=\"stat-value\">14.48</td></tr><tr><td class=\"stat-label\">Total Revenue (TTM)</td><td class=\"stat-value\">$4.261B</td></tr><tr><td class=\"stat-label\">52-Week Low</td><td class=\"stat-value\">$42.10</td></tr><tr><td class=\"stat-label\">52-Week High</td><td class=\"stat-value\">$92.56</td></tr><tr><td class=\"stat-label\">Analyst Consensus</td><td class=\"stat-value\">Buy</td></tr><tr><td class=\"stat-label\">Analyst Target Mean</td><td class=\"stat-value\">$99.09</td></tr></table><div class=\"stats-card-note\">Price refreshes live. All other figures as of Sept. 16, 2026</div></div>\n<p>Strip away the checkout branding and Affirm is an underwriting machine. Every purchase gets scored on its own, at the transaction level, not at the account level the way a credit card does.</p>\n<p>The credit model turns one transaction into more than 1,000 data points. The fraud model runs roughly 350. Both are calibrated on about 553 million loans to date, which is a closed feedback loop no credit bureau sells.</p>\n<p>In January, Affirm wired live bank-account balances and cash-flow trends into that engine. The decision now reflects the money a shopper actually has, not a score pulled when an account opened. Affirm says early results lifted purchasing power by about 12% on average where it rises.</p>\n<p>There is a second-order reason this is an AI story. Shopping agents need a payment method they can read. A fixed plan with a disclosed total cost and a payoff date is machine-legible. A revolving balance with a variable rate is not.</p>\n<p>So Affirm's options now sit inside Google Search and the Gemini app through Google Pay checkout, with a real eligibility check before the purchase. Affirm framed the rollout as built for the agentic commerce shift.</p>\n<p>Now the part that decides the multiple. Fiscal 2026 delivered a 9.8% GAAP operating margin. Management guides fiscal 2027 above 14.5%, roughly 470 basis points of expansion on about 27% volume growth, with adjusted operating margin guided above 30.5%.</p>\n<p>Read that guide closely, though. Revenue less transaction costs is guided roughly flat at 4.16% of GMV. The gain has to come from operating leverage and mix, not from fatter credit spreads.</p>\n<p>The half of the income statement that deserves a network multiple is the half with no balance sheet attached. Merchant and card network revenue hit $1.44 billion, 34% of fiscal 2026 revenue, up 30%. Those are fees for routing demand, not interest on a loan.</p>\n<p>Wall Street pays a lender multiple instead, a mid-teens forward earnings multiple, for a business that is a third network. Wolfe Research upgraded the shares to Outperform in mid-September and called Affirm a structural winner. What has to change is the label, not the forecast.</p>\n<p>Here is the short case, and it is not weak. Affirm's $1.93 billion of fiscal 2026 GAAP net income was manufactured by a $1.44 billion non-cash deferred-tax valuation-allowance release. Pre-tax income was $493 million. Underwrite that earnings line and you are underwriting a tax event.</p>\n<p>Credit is not improving, either. Thirty-day-plus delinquencies on the monthly installment book, excluding short-term Pay-in-X, were 2.5% at June 30 against 2.3% a year earlier. They read 2.7% and 2.8% in the December and March quarters. Net charge-offs were $611.6 million, and the allowance was built to $563 million from $397 million.</p>\n<p>The book is the riskiest in its own peer set, too. Forty-four percent of receivables are non-prime, against 26% to 35% for three named consumer lenders. Reserves are climbing on a portfolio that reprices every quarter.</p>\n<p>Concentration is the third problem. Amazon alone is 22% of volume and the top five partners are 44%. Management has already disclosed that one enterprise merchant moved its pay-later volume into its own wallet.</p>\n<p>Then there is funding. Roughly 52% of the $20.2 billion platform portfolio sits off balance sheet with institutions the 10-K itself calls private credit funds and institutional investors. Some covenants are tied to consumer default rates.</p>\n<p>Here is what proves the bears right. Thirty-day-plus delinquencies back above 3.0% with an allowance above 6.5%. Or fiscal 2027 GAAP operating margin missing the 14.5% guide. Or a second top-five partner walking into its own wallet.</p>\n<p>Anyone can ship a payment button. Nobody can buy 553 million loans worth of hindsight.</p>\n<p>Wall Street is paying for the balance sheet. What compounds is the model.</p>\n<p class=\"disclosure\">Disclosure: The Signal holds no position in AFRM. Positions may change. This is not financial advice.</p>"
+}
