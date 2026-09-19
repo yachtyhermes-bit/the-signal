@@ -1,0 +1,80 @@
+{
+  "slug": "irdm-rocket-lab-acquisition-spectrum-2026",
+  "title": "Iridium's L-Band License Is the Prize Inside Rocket Lab's $8 Billion Deal",
+  "subtitle": "Rocket Lab is paying roughly $8 billion for a satellite operator whose real asset is a frequency block no rival can manufacture, and shareholders vote on it with the equity riding inside a 25% collar.",
+  "summary": "Iridium Communications holds 8.725 MHz of contiguous L-band spectrum coordinated and recorded with the ITU, giving it the only truly global mobile satellite network of its kind. Rocket Lab agreed in June 2026 to buy the company for $27.00 a share in cash plus Rocket Lab stock, a notional $54.00 per Iridium share, with the stock half collared between Rocket Lab prices of $67.50 and $112.50. Shareholders vote Sept 24, 2026, the FCC comment cycle then runs through Nov 9, and closing is targeted for mid-2027. Management's own forecast in the proxy shows unlevered free cash flow turning negative in 2031 as the next constellation's capex lands.",
+  "ticker": "IRDM",
+  "tickerName": "Iridium Communications",
+  "company": "Iridium Communications Inc.",
+  "sector": "space",
+  "sentiment": "neutral",
+  "date": "2026-09-19T23:00:00Z",
+  "price": 46.77,
+  "featured": false,
+  "premium": false,
+  "image": {
+    "src": "/img/articles/irdm-rocket-lab-acquisition-spectrum-2026.jpg",
+    "fit": "cover",
+    "caption": "A satellite phone and paper charts on a working ship's bridge: the customer Iridium's L-band network was built for, and the address Rocket Lab is buying. Photo: The Signal / AI-generated.",
+    "alt": "A rugged handheld satellite phone with a thick stubby antenna resting on a paper nautical chart on a weathered wooden chart table aboard a ship's bridge, with a brass parallel ruler and a coffee mug beside it and a flat grey overcast ocean visible through the bridge window behind."
+  },
+  "tags": ["Iridium", "Rocket Lab", "Space", "Satellite Communications", "L-Band Spectrum", "M&A"],
+  "links": [
+    {
+      "label": "Iridium / Rocket Lab merger announcement press release (SEC, June 29, 2026) →",
+      "url": "https://www.sec.gov/Archives/edgar/data/1418819/000110465926078482/tm2619278d1_ex99-1.htm"
+    },
+    {
+      "label": "Definitive proxy statement and Rocket Lab prospectus (SEC, Aug 26, 2026) →",
+      "url": "https://www.sec.gov/Archives/edgar/data/1418819/000175392626001637/g085903_def14am.htm"
+    },
+    {
+      "label": "Rocket Lab fully funds the Iridium acquisition, including the $1.944 billion ATM (GlobeNewswire, Sept 15, 2026) →",
+      "url": "https://www.globenewswire.com/news-release/2026/09/15/3361819/0/en/rocket-lab-fully-funds-iridium-acquisition-including-completion-of-1-94-billion-atm.html"
+    },
+    {
+      "label": "Iridium Q2 2026 results and subscriber tables (SEC, July 22, 2026) →",
+      "url": "https://www.sec.gov/Archives/edgar/data/1418819/000141881926000046/pressreleaseq22026.htm"
+    },
+    {
+      "label": "Iridium Form 10-Q for the quarter ended June 30, 2026 (SEC) →",
+      "url": "https://www.sec.gov/Archives/edgar/data/1418819/000141881926000045/irdm-20260630.htm"
+    },
+    {
+      "label": "Iridium 8-K: special meeting date, litigation and supplemental disclosures (SEC, Sept 18, 2026) →",
+      "url": "https://www.sec.gov/Archives/edgar/data/1418819/000095010326014197/dp253526_8k.htm"
+    },
+    {
+      "label": "Rocket Lab on track to complete Iridium acquisition (SpaceNews, Sept 17, 2026) →",
+      "url": "https://spacenews.com/rocket-lab-on-track-to-complete-iridium-acquisition/"
+    }
+  ],
+  "meta": {
+    "author": "The Signal Editorial",
+    "estimatedReadTime": "4 min",
+    "editorialTags": ["space", "M&A", "satellite communications", "spectrum", "deep dive"],
+    "seoKeywords": ["Iridium Communications", "IRDM stock", "Rocket Lab Iridium acquisition", "L-band spectrum", "satellite communications", "satellite direct-to-device"],
+    "relatedTickers": ["RKLB", "ASTS"],
+    "keyMetrics": {
+      "Price": "$46.77",
+      "Market Cap": "$4.96B",
+      "Forward P/E": "27.27",
+      "Total Revenue (TTM)": "$884.2M",
+      "52-Week Low": "$15.65",
+      "52-Week High": "$57.18",
+      "Analyst Consensus": "Buy",
+      "Analyst Target Mean": "$42.00"
+    },
+    "youtubeIds": [],
+    "sourceLinks": [
+      "https://www.sec.gov/Archives/edgar/data/1418819/000110465926078482/tm2619278d1_ex99-1.htm",
+      "https://www.sec.gov/Archives/edgar/data/1418819/000175392626001637/g085903_def14am.htm",
+      "https://www.globenewswire.com/news-release/2026/09/15/3361819/0/en/rocket-lab-fully-funds-iridium-acquisition-including-completion-of-1-94-billion-atm.html",
+      "https://www.sec.gov/Archives/edgar/data/1418819/000141881926000046/pressreleaseq22026.htm",
+      "https://www.sec.gov/Archives/edgar/data/1418819/000141881926000045/irdm-20260630.htm",
+      "https://www.sec.gov/Archives/edgar/data/1418819/000095010326014197/dp253526_8k.htm",
+      "https://spacenews.com/rocket-lab-on-track-to-complete-iridium-acquisition/"
+    ]
+  },
+  "bodyHtml": "<p>Out past the last cell tower on Earth, roughly 2.6 million devices are still talking to the sky. Cargo ships, fishing fleets, offshore rigs, expedition boats, government aircraft. They run on Iridium (NASDAQ: IRDM), and Iridium runs on something nobody can launch into orbit or manufacture a substitute for.</p><p>In plain English, Iridium is the phone company for everywhere that is not covered. It flies 66 operational satellites plus in-orbit spares, linked satellite to satellite, so a rugged handheld can push a message through from the middle of the Pacific. Its customers need exactly that: shipping, aviation, energy and the U.S. government, its largest single customer.</p><div class=\"stats-card\"><div class=\"stats-card-title\">The Numbers That Matter</div><table class=\"stats-table\"><tr><td class=\"stat-label\">Price <span class=\"stats-live-badge\">LIVE</span></td><td class=\"stat-value\" data-live-ticker=\"IRDM\" data-live-field=\"price\">$46.77</td></tr><tr><td class=\"stat-label\">Market Cap</td><td class=\"stat-value\">$4.96B</td></tr><tr><td class=\"stat-label\">Forward P/E</td><td class=\"stat-value\">27.27</td></tr><tr><td class=\"stat-label\">Total Revenue (TTM)</td><td class=\"stat-value\">$884.2M</td></tr><tr><td class=\"stat-label\">52-Week Low</td><td class=\"stat-value\">$15.65</td></tr><tr><td class=\"stat-label\">52-Week High</td><td class=\"stat-value\">$57.18</td></tr><tr><td class=\"stat-label\">Analyst Consensus</td><td class=\"stat-value\">Buy</td></tr><tr><td class=\"stat-label\">Analyst Target Mean</td><td class=\"stat-value\">$42.00</td></tr></table><div class=\"stats-card-note\">Price refreshes live. All other figures as of September 18, 2026.</div></div><p>The asset underneath is 8.725 MHz of contiguous L-band spectrum, coordinated and recorded with the International Telecommunication Union. Same frequencies, every country, all at once. That last part is the story.</p><p>Every layer of the tech buildout has a chokepoint: power for data centers, advanced packaging for AI chips, and spectrum for anything connected outdoors. Spectrum is the one input nobody can manufacture. You can build more fabs. You cannot build more L-band.</p><p>Think of Iridium as the landlord of the only building with a globally registered address. Launching more satellites gets you a tenant's lease. It does not get you the address. That is what Rocket Lab (RKLB) is paying roughly $8 billion to own: $27.00 a share in cash plus Rocket Lab stock, a notional $54.00 per Iridium share.</p><p>The structure got there the hard way. Iridium's board fielded three escalating offers in ten weeks, then wrapped the stock half in a 25% collar. The ratio locks at 0.4000 if Rocket Lab trades at or below $67.50, and at 0.2400 at or above $112.50. Iridium holders end up with roughly 5% of the combined company.</p><p>Rocket Lab is not really buying subscribers. It is buying a network that already works, a customer base that pays monthly, and the one input its own manufacturing cannot replicate. It also picks up Aireon, the space-based aircraft surveillance business Iridium bought outright in July.</p><p>So what has to happen for this equity to re-rate? Iridium stopped trading on Iridium the day the deal was signed. It now moves on Rocket Lab's share price inside that collar, plus the odds the vote clears.</p><p>The gap between the market price and the notional $54.00 is the going rate for deal risk. Small wonder the average analyst target sits near $42, against a range of $36 to $54.</p><p>Here is the bear case, stated the way a short would state it. The buyer is paying above every valuation its own banker produced, since Evercore's methodologies topped out at $47.77, $45.54, $42.78, $41.07 and $38.54 a share, each under the deal price. The premium leans on where the stock traded before the first press report of Amazon's Globalstar deal, which had already sent it vertical.</p><p>The operating case is thinner than the label. Subscriber growth of 6% comes almost entirely from IoT devices paying $7.64 a month, down from $7.83, while commercial voice and data subscribers shrank. Guidance is gone, earnings calls are gone, and the government contract supplying 17% of service revenue is up for renewal.</p><p>Then there is 2031. Management's own forecast in the proxy shows unlevered free cash flow turning negative as the next constellation's capex lands, even as OEBITDA climbs past $1 billion. Bears are proved right if Rocket Lab slides back toward the $67.50 collar floor, if the vote fails on abstentions, or if that 2031 number arrives on schedule.</p><p>What we are watching from here is a calendar. The special meeting lands Sept 24 and needs a majority of every share outstanding, so not voting counts as a no. Then the FCC's comment cycle runs Oct 15, Oct 30 and Nov 9, with SpaceX asking regulators to examine Iridium's conduct, before a close still targeted for mid-2027.</p><p>Strip away the tickers and the collar math, and the thing being bought here is an address. Iridium spent three decades building a network that works where nothing else does, on a license no rival can replicate. Whether it is worth $54.00 is now a question about Rocket Lab's stock, and shareholders answer it this week.</p><p class=\"disclosure\">Disclosure: The Signal holds no position in IRDM. Positions may change. This is not financial advice.</p>"
+}
