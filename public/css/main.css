@@ -113,6 +113,103 @@ body::before {
 main {
   padding-top: 56px;
 }
+/* Desktop nav links (hidden below 1024px — hamburger drawer takes over) */
+.nav-links {
+  display: none;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .nav-links {
+    display: flex;
+    margin-left: 20px;
+    gap: 2px;
+  }
+  .nav-link {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: color 0.2s ease, background 0.2s ease;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+  }
+  .nav-link:hover {
+    color: var(--text-primary);
+    background: rgba(59, 130, 246, 0.08);
+  }
+  .nav-link::after { display: none !important; }
+
+  /* Premium pill */
+  .nav-link-premium {
+    padding: 5px 14px !important;
+    border-radius: 999px !important;
+    border: 1px solid rgba(139, 92, 246, 0.35);
+    background: linear-gradient(135deg, rgba(99,102,241,0.12), rgba(168,85,247,0.08));
+    color: #c4b5fd !important;
+    font-weight: 600 !important;
+    margin-left: 6px;
+  }
+  .nav-link-premium:hover {
+    border-color: rgba(139, 92, 246, 0.6);
+    background: linear-gradient(135deg, rgba(99,102,241,0.2), rgba(168,85,247,0.15));
+  }
+
+  /* Sectors dropdown */
+  .nav-drop { position: relative; }
+  .nav-drop-toggle { cursor: pointer; }
+  .nav-drop-chevron { transition: transform 0.2s ease; }
+  .nav-drop:hover .nav-drop-chevron { transform: rotate(180deg); }
+  .nav-drop-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    min-width: 170px;
+    background: #0b1220;
+    border: 1px solid rgba(59,130,246,0.2);
+    border-radius: 10px;
+    padding: 6px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(6px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+    z-index: 100;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.45);
+  }
+  .nav-drop:hover .nav-drop-menu,
+  .nav-drop:focus-within .nav-drop-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  .nav-drop-link {
+    display: block;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(229,229,229,0.8);
+    text-decoration: none;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .nav-drop-link:hover {
+    color: #fff;
+    background: rgba(59,130,246,0.15);
+  }
+
+  /* Hide hamburger on desktop */
+  .hamburger-btn { display: none; }
+}
+
 /* Featured nav links */
 .nav-link-hive {
   padding: 5px 12px !important;
@@ -3052,6 +3149,18 @@ main {
   }
 }
 
+/* Desktop: cover the fixed navbar (z-index 1000) so the header is
+   never cut off, and pull the panel out to half the screen */
+@media (min-width: 769px) {
+  .pulse-overlay-bg {
+    z-index: 1000;
+  }
+  .pulse-overlay {
+    z-index: 1001;
+    max-width: 50vw;
+  }
+}
+
 /* Context banner */
 .pulse-context-banner {
   padding: 10px 20px;
@@ -5215,6 +5324,14 @@ body.pulse-modal-open {
   padding: 24px;
   margin: 0 16px;
 }
+/* Desktop: widen the Hive app from the thin 960px slice and center it */
+@media (min-width: 1024px) {
+  .hive-app {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 32px 40px 60px;
+  }
+}
 .hive-app .hive-header-title {
   font-family: 'Anton', 'Impact', sans-serif;
   font-size: 32px;
@@ -5866,6 +5983,27 @@ body.pulse-modal-open {
 }
 [data-theme="light"] .nav-link-svs:hover {
   background: linear-gradient(135deg, rgba(59,130,246,0.1) 0%, rgba(139,92,246,0.08) 100%) !important;
+}
+[data-theme="light"] .nav-drop-menu {
+  background: #ffffff;
+  border-color: #d0d0da;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+}
+[data-theme="light"] .nav-drop-link {
+  color: #555570;
+}
+[data-theme="light"] .nav-drop-link:hover {
+  color: #1a1a2e;
+  background: rgba(0,0,0,0.04);
+}
+[data-theme="light"] .nav-link-premium {
+  border-color: rgba(139,92,246,0.3);
+  background: linear-gradient(135deg, rgba(99,102,241,0.06), rgba(168,85,247,0.05));
+  color: #7c3aed !important;
+}
+[data-theme="light"] .nav-link-premium:hover {
+  border-color: rgba(139,92,246,0.55);
+  background: linear-gradient(135deg, rgba(99,102,241,0.12), rgba(168,85,247,0.1));
 }
 [data-theme="light"] .logo-text {
   color: #1a1a2e;
