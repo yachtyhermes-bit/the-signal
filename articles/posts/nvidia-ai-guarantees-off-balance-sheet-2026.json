@@ -1,0 +1,134 @@
+{
+  "slug": "nvidia-ai-guarantees-off-balance-sheet-2026",
+  "title": "Nvidia Is Now Underwriting the Demand It Books as Revenue",
+  "subtitle": "Big Tech keeps roughly $300bn of AI exposure off its books through residual value guarantees, and Nvidia carries the largest single piece.",
+  "summary": "The Financial Times reports Big Tech holding roughly $300bn of AI data-centre and chip exposure off balance sheet through residual value guarantees, with Nvidia the largest guarantor at a $105bn cap. For the stock the question is narrow: does the support stay costless, or does it start reading like contingent debt?",
+  "ticker": "NVDA",
+  "tickerName": "NVIDIA",
+  "company": "NVIDIA Corporation",
+  "sector": "ai",
+  "sentiment": "neutral",
+  "date": "2026-09-20T16:00:00Z",
+  "price": 222.27,
+  "featured": false,
+  "premium": false,
+  "image": {
+    "src": "/img/articles/nvidia-ai-guarantees-off-balance-sheet-2026.jpg",
+    "fit": "cover",
+    "caption": "Two gloved hands hold an unmarked accelerator board over a wooden bench, the hardware every guarantee in this story depends on. Photo: The Signal / AI-generated.",
+    "alt": "Two white-gloved hands holding a green accelerator circuit board with a blank polished-metal chip package at its centre, warm raking bench lamp, wooden ESD bench, lab background in bokeh"
+  },
+  "tags": [
+    "nvidia",
+    "nvda",
+    "residual-value-guarantees",
+    "off-balance-sheet",
+    "ai-infrastructure",
+    "openai",
+    "data-centers",
+    "special-purpose-vehicles",
+    "credit-risk",
+    "ai-capex",
+    "broadcom",
+    "alphabet"
+  ],
+  "links": [
+    {
+      "label": "NVIDIA Corporation SEC filing index (8-K, August 17, 2026) →",
+      "title": "NVIDIA Corporation SEC filing index",
+      "source": "SEC EDGAR",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001045810&type=8-K"
+    },
+    {
+      "label": "Nvidia backs OpenAI's Ohio data center buildout with $105B guarantee (Data Center Knowledge) →",
+      "title": "Nvidia backs OpenAI's Ohio data center buildout with $105B guarantee",
+      "source": "Data Center Knowledge",
+      "url": "https://www.datacenterknowledge.com/data-center-construction/nvidia-backs-openai-s-ohio-data-center-buildout-with-105b-guarantee"
+    },
+    {
+      "label": "Big Tech uses financing guarantees to support more than $200 billion of AI infrastructure exposure (Data Studios) →",
+      "title": "Big Tech uses financing guarantees to support AI infrastructure exposure",
+      "source": "Data Studios",
+      "url": "https://www.datastudios.org/post/big-tech-uses-financing-guarantees-to-support-more-than-200-billion-of-ai-infrastructure-exposure"
+    },
+    {
+      "label": "Big Tech uses corporate guarantees to keep $300 billion of AI debt off its books (Startup Fortune) →",
+      "title": "Big Tech uses corporate guarantees to keep $300 billion of AI debt off its books",
+      "source": "Startup Fortune",
+      "url": "https://startupfortune.com/big-tech-uses-corporate-guarantees-to-keep-300-billion-of-ai-debt-off-its-books/"
+    },
+    {
+      "label": "Bond traders agonise over $70bn of shadow credit backstops for AI firms (Business Standard) →",
+      "title": "Bond traders agonise over $70bn of shadow credit backstops for AI firms",
+      "source": "Business Standard",
+      "url": "https://www.business-standard.com/world-news/bond-traders-agonise-over-70-bn-of-shadow-credit-backstops-for-ai-firms-126081600051_1.html"
+    },
+    {
+      "label": "Contingent AI credit backstops under scrutiny (The Edge Malaysia) →",
+      "title": "Contingent AI credit backstops under scrutiny",
+      "source": "The Edge Malaysia",
+      "url": "https://theedgemalaysia.com/node/814667"
+    },
+    {
+      "label": "Nvidia partners with Wall Street asset managers on $500 billion AI push (CNBC, August 10, 2026) →",
+      "title": "Nvidia partners with Wall Street asset managers on $500 billion AI push",
+      "source": "CNBC",
+      "url": "https://www.cnbc.com/2026/08/10/nvidia-wall-street-asset-managers-500-billion-ai-push.html"
+    },
+    {
+      "label": "Nvidia blog: AI factory compute →",
+      "title": "AI factory compute",
+      "source": "NVIDIA Blog",
+      "url": "https://blogs.nvidia.com/blog/nvidia-ai-factory-compute/"
+    },
+    {
+      "label": "Nvidia pauses AI cloud revenue deals over antitrust concerns (Yahoo Finance) →",
+      "title": "Nvidia pauses AI cloud revenue deals over antitrust concerns",
+      "source": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-pauses-ai-cloud-revenue-120700044.html"
+    }
+  ],
+  "meta": {
+    "author": "The Signal Editorial",
+    "estimatedReadTime": "4 min",
+    "editorialTags": [
+      "AI Infrastructure",
+      "Credit Risk",
+      "Off-Balance-Sheet Finance",
+      "Mega-Cap Tech",
+      "Data Centres"
+    ],
+    "seoKeywords": [
+      "nvidia residual value guarantee",
+      "nvidia $105 billion guarantee",
+      "off balance sheet AI debt",
+      "nvidia OpenAI Ohio data center",
+      "AI infrastructure financing",
+      "nvidia $108.5 billion guarantee exposure"
+    ],
+    "relatedTickers": [
+      "AVGO",
+      "AMD",
+      "MSFT"
+    ],
+    "keyMetrics": {
+      "Price": "$222.27",
+      "Market Cap": "$5.37T",
+      "Forward P/E": "14.17",
+      "Total Revenue (TTM)": "$303.0B",
+      "52-Week Low": "$164.27",
+      "52-Week High": "$236.54",
+      "Analyst Consensus": "Strong Buy",
+      "Analyst Target Mean": "$327.70"
+    },
+    "youtubeIds": [],
+    "sourceLinks": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001045810&type=8-K",
+      "https://www.datacenterknowledge.com/data-center-construction/nvidia-backs-openai-s-ohio-data-center-buildout-with-105b-guarantee",
+      "https://startupfortune.com/big-tech-uses-corporate-guarantees-to-keep-300-billion-of-ai-debt-off-its-books/",
+      "https://www.cnbc.com/2026/08/10/nvidia-wall-street-asset-managers-500-billion-ai-push.html",
+      "https://finance.yahoo.com/technology/ai/articles/nvidia-pauses-ai-cloud-revenue-120700044.html"
+    ]
+  },
+  "bodyHtml": "<p>Nvidia designs the chips and rack-scale systems that run modern AI, then sells them to the hyperscalers and labs buying in bulk. That franchise made it the most valuable company on the planet.</p><p>Nvidia has taken on a second job. Reporting on September 20 puts roughly $300bn of AI data-centre and chip exposure off Big Tech's books, with Nvidia the largest guarantor of the pile.</p><div class=\"stats-card\"><div class=\"stats-card-title\">The Numbers That Matter</div><table class=\"stats-table\"><tr><td class=\"stat-label\">Price <span class=\"stats-live-badge\">LIVE</span></td><td class=\"stat-value\" data-live-ticker=\"NVDA\" data-live-field=\"price\">$222.27</td></tr><tr><td class=\"stat-label\">Market Cap</td><td class=\"stat-value\">$5.37T</td></tr><tr><td class=\"stat-label\">Forward P/E</td><td class=\"stat-value\">14.17</td></tr><tr><td class=\"stat-label\">Total Revenue (TTM)</td><td class=\"stat-value\">$303.0B</td></tr><tr><td class=\"stat-label\">52-Week Low</td><td class=\"stat-value\">$164.27</td></tr><tr><td class=\"stat-label\">52-Week High</td><td class=\"stat-value\">$236.54</td></tr><tr><td class=\"stat-label\">Analyst Consensus</td><td class=\"stat-value\">Strong Buy</td></tr><tr><td class=\"stat-label\">Analyst Target Mean</td><td class=\"stat-value\">$327.70</td></tr></table><div class=\"stats-card-note\">Price refreshes live. All other figures as of September 18, 2026.</div></div><p>A residual value guarantee is simple. A lender funds a special-purpose vehicle that owns a data centre or a batch of chips, and the tech company promises a minimum value. If that gear later sells for less, the guarantor pays the gap.</p><p>The promise lives in the footnotes, not the balance sheet. Nvidia filed its version on August 17, under an item reserved for off-balance-sheet arrangements. The lessor is SB Energy, the tenant is an OpenAI affiliate, and the load is about 4.25 GW at its Ohio campus.</p><p>Nvidia's obligation is cumulatively capped at $105 billion for the initial commitment. Capped is the word: a ceiling on a guarantee, not cash already spent.</p><p>Payment triggers are narrow. Nvidia pays only if OpenAI becomes insolvent and breaks the lease, then recovers less than the guaranteed floor from the assets. OpenAI has agreed to indemnify Nvidia.</p><p>The quarter ended July 26 puts numbers on it. Maximum gross guarantee exposure reads $108.5bn: $105.0bn of SB Energy guarantees plus $3.5bn covering land, power and shell for other AI-cloud partners. Partners placed $712m in escrow against that piece.</p><p>Total future commitments reach $366bn at July 26, with supply and capacity alone up to $279bn from $119bn a quarter earlier, mostly on memory.</p><p>That is the part the sector should sit with. Nvidia sells the shovels and now co-signs the loan for the mine. When the biggest supplier in a boom guarantees the credit of its own customers, demand stops being a pure function of appetite.</p><p>The ambition is explicit. In August Nvidia launched a financing platform with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to mobilise over $500bn of outside capital. Huang has said Nvidia may back up to 25% of an opportunity, case by case. The $500bn is third-party money, not revenue.</p><p>Peers run the same trade. Broadcom carries roughly $29bn of maximum potential liability on the first tranche of its AI XPV platform, which financed chips leased to Anthropic. Meta's Hyperion data centre sits behind a roughly $28bn residual-value threshold, and Alphabet's guarantees climbed from $16.9bn to $43.8bn in six months.</p><p>For the stock, the message matters more than the mechanics. Markets pay a premium for durable demand, and a slice of that demand is now credit-supported by the seller. A re-rating needs evidence the support stays costless, which means the guarantee table in the next 10-Q reading smaller, not larger.</p><p>Phasing is the detail to hold onto. Each guarantee becomes effective as leases commence, with the nine data-centre phases expected to begin in fiscal 2029. Exposure should fall as OpenAI pays rent, and today the market prices roughly zero chance of a trigger.</p><p>A short-seller reads the same filings and reaches a darker conclusion. CreditSights calls the support a put Nvidia is effectively writing: costless in a boom, heaviest in a severe downturn, exactly when customers default and hardware resale values fall. The structure is pro-cyclical by design.</p><p>The receivables line tells the same story in numbers. Accounts receivable jumped from $40.7bn to $63.1bn in one quarter, and the MD&A blames extended payment terms that can run from 90 days to a year.</p><p>There is a legal ceiling on the model too. Nvidia paused some deals inside the financing initiative in late August over antitrust sensitivities. A trigger event, guarantee amounts climbing rather than falling, or a programme quietly rescinded would prove the bears right.</p><p>The counter-argument has real force. Janus Henderson argues a trigger would need token-usage growth to fall off a cliff, which nobody is seeing. Nvidia is not hiding the liability, it is trying to get the thing financed.</p><p>The shovel seller has become the guarantor, and a guarantor is only as strong as the boom underneath it. The next 10-Q is the tell: if guarantee exposure climbs past $108.5bn while rent receipts lag, trigger risk gets a price. If it falls as OpenAI's payments land, the bulls get proof.</p><p class=\"disclosure\">Disclosure: The Signal holds no position in NVDA. Positions may change. This is not financial advice.</p>"
+}
