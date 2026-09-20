@@ -1,0 +1,97 @@
+{
+  "slug": "ai-etfs-passive-flows-explainer-2026",
+  "title": "The Index Rulebook Decides What Your AI ETF Actually Owns",
+  "subtitle": "Two funds can carry the same AI label and hold structurally different portfolios, because index rules, weight caps and reconstitution calendars set the weights rather than conviction. That mechanical ownership has become a force in AI stocks in its own right, and it moves on dates published months in advance.",
+  "summary": "The funds sold as AI exposure are not one product. They copy different indexes, which means different names, different weight caps and different portfolios under near-identical labels. Because those indexes rebuild on fixed calendars, index membership and weight limits now decide who is compelled to buy which AI stock, and when. For investors, the label is a starting point rather than a description.",
+  "format": "explainer",
+  "ticker": "SMH",
+  "tickers": [
+    "NVDA",
+    "AVGO",
+    "MU"
+  ],
+  "sector": "etfs",
+  "sentiment": "neutral",
+  "date": "2026-09-20T22:00:00Z",
+  "image": {
+    "src": "/img/articles/ai-etfs-passive-flows-explainer-2026.jpg",
+    "fit": "cover",
+    "caption": "A row of trading workstations on an institutional dealing desk at market open, with a standing trader facing a far wall of large monitors glowing as soft blue and amber fields of light. Photo: The Signal / AI-generated.",
+    "alt": "An asset-management dealing desk at market open, a row of workstations in front of a trader standing with their back to the camera, and a far wall of large monitors glowing soft blue and amber."
+  },
+  "keyTerms": [
+    {
+      "term": "Float-adjusted market-cap weighting",
+      "definition": "A way of sizing an index weight from a company's market value while counting only shares that actually trade. It is why the same company carries very different weights in two indexes claiming the same theme."
+    },
+    {
+      "term": "Index reconstitution versus rebalance",
+      "definition": "Reconstitution re-selects which securities are in an index, while rebalancing keeps the members and recalcs the weights. Rulebooks set both, so one theme can be rebuilt on two completely different schedules."
+    },
+    {
+      "term": "Authorised participant and creation unit",
+      "definition": "An authorised participant is a clearing firm with a contract to deal directly with an ETF. It trades in large blocks called creation units, swapping them for a basket of the fund's underlying shares rather than cash."
+    },
+    {
+      "term": "In-kind creation and redemption",
+      "definition": "Swapping ETF shares for the fund's actual holdings instead of cash. Because the fund hands over stock rather than selling it, it avoids realising capital gains that would otherwise land in your tax bill."
+    },
+    {
+      "term": "Rule 6c-11",
+      "definition": "The 2019 SEC rule that let most ETFs launch without a one-off approval, provided they post holdings daily and show investors premiums, discounts and spreads. Leveraged, inverse and non-transparent funds cannot use it."
+    },
+    {
+      "term": "Weight cap",
+      "definition": "A limit on how much any single holding or group can count inside an index. SOXX caps names at 8% and 4%, SMH caps its large-weights group at 50% with a 20% ceiling, and AIQ caps most names at 3% or 1%."
+    }
+  ],
+  "bottomLine": "The funds with the same AI label do not hold the same stocks, and they never did. Their weights come from index rulebooks, which decide who qualifies, how heavy a name can get and when the basket is rebuilt, so mechanical demand rather than conviction decides who owns AI silicon. That makes the calendar a real driver: cap changes, index additions and reconstitution dates move shares regardless of earnings. Read the methodology before you read the marketing, because the rulebook that wrote those positions in can write them out.",
+  "bodyHtml": "<p>The biggest buyer of AI chip stocks has no opinion about AI. It has no model and no thesis. It is a rulebook. Every fund with an AI label owns what a document says, in the size and on the date that document chooses.</p><p>Start with the wrapper. An ETF is a basket of shares you trade all day like a single stock, instead of waiting for a closing price. You get diversification, liquidity and a low fee. What you give up is any say over the contents.</p><p>The basket is not assembled by a manager hunting winners. It copies an index, which is a published rule set: who qualifies, how heavy each name gets and when it all gets rebuilt. Think of a subscription you cannot cancel, where someone else swaps the playlist.</p><p>Now line up two famous tickers. SOXX and SMH both sell US-listed semiconductor exposure, and the names sound interchangeable.</p><p>SOXX tracks 30 names built by ICE. SMH tracks 25, built by MarketVector. SOXX's top ten is 61.29% of the portfolio against 71.57% for SMH, so the same theme is a different bet. SOXX's biggest holding is 8.54%, while NVIDIA alone is 21.38% of SMH.</p><p>The cap rules explain the gap. ICE holds every SOXX name to 8%, smaller ones to 4%, and caps depositary receipts at 10%. MarketVector lets its biggest names run as a group to 50%, capping any single one at 20%. A cap sets how much of a stock the fund must hold.</p><p>Then there is the label problem. BOTZ sells itself as Robotics and Artificial Intelligence, yet it is 43.73% industrials, with only 9.70% in semiconductors and 30.22% of the portfolio in Japan. Buy it for AI compute and you own industrial automation instead.</p><p>So when a fund says AI, skip the label. Ask which index it hugs, how that index caps its names and when it rebuilds. Those answers decide who is forced to buy which AI stock, in what size, on which date.</p><p>For the stocks, that mechanical demand is real money. Research on S&amp;P 500 additions puts index inclusion at roughly 2% of value per point of new indexed ownership, plus a standing premium near 1.7% a point. A fund tracking the index has to buy, and the market prices only part of that.</p><p>The overlap compounds it. NVIDIA, Broadcom, Micron, AMD, Applied Materials and Lam Research all sit in both big semiconductor funds, so one AI-capex story runs through several index vehicles. Marvell joined the S&amp;P 500 in June while already a top-ten holding in SOXX.</p><p>None of this runs through a manager clicking buy. ETFs do not sell shares to you directly. Clearing firms called authorised participants trade in blocks, handing over a basket of underlying shares instead of cash. Because redemptions arrive in kind, the fund hands back stock rather than selling it, so it rarely realises a gain.</p><p>Rule 6c-11 is why so many of these wrappers exist: the SEC's 2019 rule let a plain ETF launch fast if it posts holdings daily. Keep the scale honest, though: index funds and ETFs held about 19% of US stock value at the end of 2025, a huge force and still no monopoly.</p><p>Here is the bear case, undiluted. Concentration is not a side effect of these funds; it is the product. Top tens run 61% to 72%, so a diversified AI wrapper can lose a quarter of its value from one stock. The labels do not match the holdings.</p><p>The measured record is worse. Specialised and thematic funds delivered about minus 6% a year in risk-adjusted returns over five years, near 30% of cumulative losses. Broad funds delivered roughly zero. Investors captured 2.4% a year while the funds earned 7.3%.</p><p>You pay 0.68% for the privilege, against 0.14% for the average index equity ETF. What proves the bears right? One mega-cap AI name that stops compounding, or a sustained reversal where creation units get redeemed and the shares come back out.</p><p>Watch the calendar, because it is the one you can see. The rewritten NYSE Semiconductor Index reconstitution took effect on and around 21 September 2026. The semiconductor funds' quarterly reweight lands on the third Friday of December 2026, and the Indxx AI indexes reselect in late January before a July reweight.</p><p>The tell is the announced weight change, not the headline. When a cap lifts, the fund has to buy regardless of earnings. Your AI ETF did not pick these stocks; the rulebook did. And a rulebook that wrote them in can write them out, on a date it already published.</p><p class=\u0022disclosure\u0022>Disclosure: The Signal holds no position in NVDA, AVGO, or MU. Positions may change. This is not financial advice.</p>",
+  "tags": [
+    "ETFs",
+    "index funds",
+    "passive flows",
+    "semiconductor ETFs",
+    "market structure",
+    "index reconstitution",
+    "SOXX",
+    "SMH"
+  ],
+  "links": [
+    {
+      "label": "iShares Semiconductor ETF (SOXX) fact sheet",
+      "url": "https://www.ishares.com/us/literature/fact-sheet/soxx-ishares-semiconductor-etf-fund-fact-sheet-en-us.pdf"
+    },
+    {
+      "label": "ICE index methodology, iShares form 497",
+      "url": "https://www.sec.gov/Archives/edgar/data/1100663/000119312521126827/d82642d497.htm"
+    },
+    {
+      "label": "MarketVector US Listed Semiconductor 25 index guide",
+      "url": "https://www.marketvector.com/rulebooks/download/MVSMH_Index_Guide.pdf"
+    },
+    {
+      "label": "Global X Robotics & Artificial Intelligence ETF (BOTZ)",
+      "url": "https://www.globalxetfs.com/funds/botz"
+    },
+    {
+      "label": "Indxx Global Robotics & AI index methodology",
+      "url": "https://assets.globalxetfs.com/funds/documents/botz/Index-Methodology-Summary.pdf"
+    },
+    {
+      "label": "SEC adopts Rule 6c-11, press release 2019-190",
+      "url": "https://www.sec.gov/newsroom/press-releases/2019-190"
+    },
+    {
+      "label": "ICI 2026 Factbook",
+      "url": "https://www.ici.org/system/files/2026-04/2026-factbook.pdf"
+    },
+    {
+      "label": "Morningstar: Thematic funds, Mind the Gap",
+      "url": "https://assets.contentstack.io/v3/assets/blt4eb669caa7dc65b2/blt4359151d085b2ff6/6568d5f2ca38f060fed31877/2023_Thematic_Mind_the_Gap.pdf"
+    }
+  ],
+  "meta": {
+    "estimatedReadTime": "4 min read"
+  }
+}
