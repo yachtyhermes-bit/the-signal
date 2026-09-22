@@ -416,7 +416,13 @@ if (!template) {
       }
 
       let linksHtml = '';
-      const links = article.links || [];
+      // Accept both shapes for links: a list of {label,url} objects, or a plain {label: url}
+      // object. Two articles shipped with the object shape, which made links.length undefined
+      // so their whole Sources & References block silently disappeared from the page.
+      const __rawLinks = Array.isArray(article.links)
+        ? article.links
+        : Object.entries(article.links || {}).map(([k, v]) => ({ label: k, url: v }));
+      const links = __rawLinks;
       if (links.length > 0) {
         linksHtml = '<div class="article-links"><h4>📎 Sources &amp; References</h4><ul>' +
           links.map(l => `<li><a href="${escapeAttr(l.url)}" target="_blank" rel="noopener">${escapeHtml(l.label || l.url)}</a></li>`).join('') +
