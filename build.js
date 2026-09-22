@@ -54,10 +54,10 @@ const ROCKET_DRAWER = `  <!-- Rocket Lab-Style Drawer -->
         <a href="javascript:void(0)" class="drawer-link" onclick="openSubDrawer()">SECTORS</a>
         <a href="/stocks/" class="drawer-link">STOCK PAGES</a>
         <a href="/#scorecard" class="drawer-link">SIGNAL SCORECARD</a>
-        <a href="/hive" class="drawer-link">HIVE</a>
-        <a href="/signal-vs-the-street" class="drawer-link">SIGNAL VS. STREET</a>
-        <a href="/pricing" class="drawer-link">SIGNAL PREMIUM</a>
-        <a href="/pricing" class="drawer-cta">GET PREMIUM ACCESS</a>
+        <a href="/hive/" class="drawer-link">HIVE</a>
+        <a href="/signal-vs-the-street/" class="drawer-link">SIGNAL VS. STREET</a>
+        <a href="/pricing/" class="drawer-link">SIGNAL PREMIUM</a>
+        <a href="/pricing/" class="drawer-cta">GET PREMIUM ACCESS</a>
       </div>
       <div class="drawer-sub" id="drawerSub">
         <div class="sub-header" onclick="closeSubDrawer()">
@@ -339,7 +339,7 @@ if (explainers.length > 0) {
   const shelfCards = explainers.slice(0, 3).map(a => {
     const readTime = (a.meta && a.meta.estimatedReadTime) || '1 min read';
     const termCount = (a.keyTerms || []).length;
-    return `<a href="/article/${a.slug}" class="expl-shelf-card">\n` +
+    return `<a href="/article/${a.slug}/" class="expl-shelf-card">\n` +
       `  <span class="expl-shelf-kicker">EXPLAINER</span>\n` +
       `  <span class="expl-shelf-title">${escapeHtml(a.title || '')}</span>\n` +
       `  <span class="expl-shelf-meta">${termCount} key terms &middot; ${readTime}</span>\n</a>`;
@@ -426,8 +426,23 @@ if (!template) {
       let bodyHtml = article.bodyHtml || '';
       bodyHtml = bodyHtml.replace(/\\"/g, '"');
       bodyHtml = bodyHtml.replace(/\\n/g, '\n');
-      // Rewrite /ticker/SYMBOL links to stock pages (single + double quotes)
-      bodyHtml = bodyHtml.replace(/href=['"]\/ticker\/([A-Z]+)['"]/g, 'href="https://readthesignal.net/stocks/$1/"');
+      // Rewrite /ticker/SYMBOL links to stock pages (single + double quotes).
+      // Two bugs fixed 2026-09-19 after GSC showed /ticker/<T>/ URLs being crawled and 404ing:
+      //   1. the old pattern required the href to END right after the symbol, so the
+      //      trailing-slash form (/ticker/MRVL/) slipped through untouched;
+      //   2. it linked every ticker, including the ~35 with no /stocks/<T>/ page — Google
+      //      crawled those internal links and filed them as "Not found (404)".
+      // Rule now: rewrite to the absolute canonical stock URL when that page exists,
+      // otherwise drop the anchor and keep the visible "$TICKER" text.
+      bodyHtml = bodyHtml.replace(
+        /<a\b[^>]*href=['"]\/ticker\/([A-Za-z]+)\/?['"][^>]*>[\s\S]*?<\/a>/g,
+        (whole, sym) => {
+          const s = sym.toUpperCase();
+          if (!fs.existsSync(path.join(DST, 'stocks', s, 'index.html'))) {
+            return whole.replace(/^<a\b[^>]*>/, '').replace(/<\/a>$/, '');
+          }
+          return whole.replace(/href=['"]\/ticker\/[A-Za-z]+\/?['"]/, `href="https://readthesignal.net/stocks/${s}/"`);
+        });
 
       // ── Auto-inject "The Numbers That Matter" stats card from meta.keyMetrics ──
       // (new-article convention: fill meta.keyMetrics {label: value}; build renders the table)
@@ -874,7 +889,7 @@ function featuredCard(a) {
   const premiumBadge = a.premium === true ? '<span class="premium-badge">PREMIUM</span>' : '';
   const containClass = (a.image && a.image.fit === 'contain') ? ' card-image--contain' : '';
 
-  return `<a href="/article/${a.slug}" class="article-card featured-card">
+  return `<a href="/article/${a.slug}/" class="article-card featured-card">
     <div class="card-image${containClass}"><img src="${img}" alt="${escapeAttr(a.title || '')}" loading="eager" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -895,7 +910,7 @@ function articleCard(a) {
   const premiumBadge = a.premium === true ? '<span class="premium-badge">PREMIUM</span>' : '';
   const containClass = (a.image && a.image.fit === 'contain') ? ' card-image--contain' : '';
 
-  return `<a href="/article/${a.slug}" class="article-card">
+  return `<a href="/article/${a.slug}/" class="article-card">
     <div class="card-image${containClass}"><img src="${img}" alt="${escapeAttr(a.title || '')}" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -914,7 +929,7 @@ function pickRelated(allArticles, currentSlug, count) {
   const picked = shuffled.slice(0, count);
   return picked.map(a => {
     const img = ((a.image && a.image.src) || '/img/articles/_default.jpg') + '?v=' + BUILD_TS;
-    return `<a href="/article/${a.slug}" class="related-card">
+    return `<a href="/article/${a.slug}/" class="related-card">
       <div class="card-image"><img src="${img}" alt="${escapeAttr(a.title || '')}" loading="lazy" decoding="async" width="1200" height="675"></div>
       <div class="card-body">
         <h3 class="card-title">${escapeHtml(a.title || '')}</h3>

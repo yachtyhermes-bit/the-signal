@@ -11,9 +11,9 @@
       "dest": "/api/$1"
     },
     {
-        "src": "/stock/(.*)",
-        "dest": "/stocks/$1",
-        "statusCode": 301
+      "src": "/stock/(.*)",
+      "dest": "/stocks/$1",
+      "statusCode": 301
     },
     {
       "src": "/data/(.*)",
@@ -36,14 +36,14 @@
       "dest": "/signal-vs-the-street.html"
     },
     {
-        "src": "/hiv",
-        "dest": "/hive/",
-        "statusCode": 301
+      "src": "/hiv",
+      "dest": "/hive/",
+      "statusCode": 301
     },
     {
-        "src": "/hiv/",
-        "dest": "/hive/",
-        "statusCode": 301
+      "src": "/hiv/",
+      "dest": "/hive/",
+      "statusCode": 301
     },
     {
       "src": "/premium/success/?",
@@ -58,9 +58,19 @@
       "dest": "/premium/index.html"
     },
     {
-        "src": "/art/(.*)",
-        "dest": "/article/$1",
-        "statusCode": 301
+      "src": "/art/(.*)",
+      "dest": "/article/$1",
+      "statusCode": 301
+    },
+    {
+      "src": "/ticker/(AMAT|AMD|AMZN|ANET|AVAV|AVGO|AXON|CEG|CRWV|GOOGL|KTOS|META|MRVL|MSFT|MU|NFLX|NVDA|PLTR|RBRK|RKLB|RTX|SOFI|SPCX|TSLA|VST|ZS)",
+      "dest": "/stocks/$1/",
+      "statusCode": 301
+    },
+    {
+      "src": "/ticker/(AMAT|AMD|AMZN|ANET|AVAV|AVGO|AXON|CEG|CRWV|GOOGL|KTOS|META|MRVL|MSFT|MU|NFLX|NVDA|PLTR|RBRK|RKLB|RTX|SOFI|SPCX|TSLA|VST|ZS)/",
+      "dest": "/stocks/$1/",
+      "statusCode": 301
     },
     {
       "src": "/article/(.*)",
