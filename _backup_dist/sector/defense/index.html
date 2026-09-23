@@ -10,7 +10,7 @@
   <meta name="robots" content="max-image-preview:large">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Oxanium:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/main.css?v=22">
+  <link rel="stylesheet" href="/css/main.css?v=31">
   <link rel="stylesheet" href="/css/pulse-badge.css">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-98KDVDFBCW"></script>
@@ -49,15 +49,7 @@
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "The Signal",
-      "url": "https://readthesignal.net",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://readthesignal.net/?q={search_term_string}"
-        },
-        "query-input": "required name=search_term_string"
-      }
+      "url": "https://readthesignal.net"
     }
     </script>
 <link rel="stylesheet" href="/css/nav.css">
@@ -111,20 +103,20 @@
                 </div>
                 <div class="auth-drop-divider"></div>
                 <div class="auth-profile-nav">
-                  <a href="/sector/ai" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
-                  <a href="/sector/cyber" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
-                  <a href="/sector/defense" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
-                  <a href="/sector/space" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
-                  <a href="/sector/mega-cap" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
-                  <a href="/sector/quantum" class="auth-nav-item"><span class="auth-nav-icon">🔬</span> Quantum</a>
+                  <a href="/sector/ai/" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
+                  <a href="/sector/cyber/" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
+                  <a href="/sector/defense/" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
+                  <a href="/sector/space/" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
+                  <a href="/sector/mega-cap/" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
+                  <a href="/sector/quantum/" class="auth-nav-item"><span class="auth-nav-icon">🔬</span> Quantum</a>
                   <div class="auth-nav-section-header">FEATURES</div>
-                  <a href="/hive" class="auth-nav-item"><span class="auth-nav-icon">🐝</span> Hive</a>
-                  <a href="/signal-vs-the-street" class="auth-nav-item"><span class="auth-nav-icon">📈</span> Signal vs. Street</a>
+                  <a href="/hive/" class="auth-nav-item"><span class="auth-nav-icon">🐝</span> Hive</a>
+                  <a href="/signal-vs-the-street/" class="auth-nav-item"><span class="auth-nav-icon">📈</span> Signal vs. Street</a>
                 </div>
                 <div class="auth-drop-divider"></div>
                 <div class="auth-profile-footer">
-                  <a href="/hive" class="auth-footer-link" onclick="navigateToHiveLeaderboard(event)">Leaderboard</a>
-                  <a href="/account/settings" class="auth-footer-link">Settings</a>
+                  <a href="/hive/" class="auth-footer-link" onclick="navigateToHiveLeaderboard(event)">Leaderboard</a>
+                  <a href="/account/settings/" class="auth-footer-link">Settings</a>
                   <button class="auth-signout-btn" id="authSignOut">Sign Out</button>
                 </div>
               </div>
@@ -142,15 +134,15 @@
                 </button>
                 <div class="auth-drop-divider"></div>
                 <div class="auth-profile-nav">
-                  <a href="/sector/ai" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
-                  <a href="/sector/cyber" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
-                  <a href="/sector/defense" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
-                  <a href="/sector/space" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
-                  <a href="/sector/mega-cap" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
-                  <a href="/sector/quantum" class="auth-nav-item"><span class="auth-nav-icon">🔬</span> Quantum</a>
+                  <a href="/sector/ai/" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
+                  <a href="/sector/cyber/" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
+                  <a href="/sector/defense/" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
+                  <a href="/sector/space/" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
+                  <a href="/sector/mega-cap/" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
+                  <a href="/sector/quantum/" class="auth-nav-item"><span class="auth-nav-icon">🔬</span> Quantum</a>
                   <div class="auth-nav-section-header">FEATURES</div>
-                  <a href="/hive" class="auth-nav-item"><span class="auth-nav-icon">🐝</span> Hive</a>
-                  <a href="/signal-vs-the-street" class="auth-nav-item"><span class="auth-nav-icon">📈</span> Signal vs. Street</a>
+                  <a href="/hive/" class="auth-nav-item"><span class="auth-nav-icon">🐝</span> Hive</a>
+                  <a href="/signal-vs-the-street/" class="auth-nav-item"><span class="auth-nav-icon">📈</span> Signal vs. Street</a>
                 </div>
               </div>
           </div>
@@ -178,16 +170,16 @@
     </div>
     <div class="drawer-body">
       <div class="drawer-section-label">SECTORS</div>
-      <a href="/sector/ai" class="drawer-link">AI</a>
-      <a href="/sector/cyber" class="drawer-link">Cyber</a>
-      <a href="/sector/defense" class="drawer-link">Defense</a>
-      <a href="/sector/space" class="drawer-link">Space</a>
-      <a href="/sector/mega-cap" class="drawer-link">Mega-Cap</a>
-      <a href="/sector/quantum" class="drawer-link">Quantum</a>
+      <a href="/sector/ai/" class="drawer-link">AI</a>
+      <a href="/sector/cyber/" class="drawer-link">Cyber</a>
+      <a href="/sector/defense/" class="drawer-link">Defense</a>
+      <a href="/sector/space/" class="drawer-link">Space</a>
+      <a href="/sector/mega-cap/" class="drawer-link">Mega-Cap</a>
+      <a href="/sector/quantum/" class="drawer-link">Quantum</a>
       <hr class="drawer-divider">
       <div class="drawer-section-label">FEATURES</div>
-      <a href="/hive" class="drawer-link drawer-link-hive">Hive</a>
-      <a href="/signal-vs-the-street" class="drawer-link drawer-link-svs">Signal vs. Street</a>
+      <a href="/hive/" class="drawer-link drawer-link-hive">Hive</a>
+      <a href="/signal-vs-the-street/" class="drawer-link drawer-link-svs">Signal vs. Street</a>
     </div>
   </div>Search Overlay -->
   <div class="search-overlay" id="searchOverlay">
@@ -267,7 +259,7 @@
     </a>
     </div>
     <div class="article-grid">
-      <a href="/article/onds-autonomous-drones-defense-2026" class="article-card">
+      <a href="/article/onds-autonomous-drones-defense-2026/" class="article-card">
     <div class="card-image"><img src="/img/articles/onds-autonomous-drones.jpg" alt="Ondas Inc. Just Became a Defense Powerhouse — $1B Raised, Revenue Up 605%, and It&#39;s Still Flying Under the Radar" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -283,7 +275,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/shld-defense-etf-crushing-market-2026" class="article-card">
+      <a href="/article/shld-defense-etf-crushing-market-2026/" class="article-card">
     <div class="card-image"><img src="/img/articles/shld-defense-etf-crushing-market-2026.jpg" alt="The Defense ETF That Quietly Tripled While You Were Staring at AI Stocks" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -299,7 +291,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/golden-dome-space-force-2026" class="article-card">
+      <a href="/article/golden-dome-space-force-2026/" class="article-card">
     <div class="card-image"><img src="/img/articles/golden-dome-space-force-2026.jpg" alt="Space Force Just Dropped $3.2 Billion on Golden Dome — The Biggest Missile Defense Play Since Star Wars" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -315,7 +307,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/iran-threatens-tech-defense-2026" class="article-card">
+      <a href="/article/iran-threatens-tech-defense-2026/" class="article-card">
     <div class="card-image"><img src="/img/articles/iran-threatens-tech-defense-2026.jpg" alt="Iran Just Threatened U.S. Tech Giants — Defense Stocks Are the Only Safe Haven" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -331,7 +323,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/palantir-q1-earnings-miss-2026" class="article-card">
+      <a href="/article/palantir-q1-earnings-miss-2026/" class="article-card">
     <div class="card-image"><img src="/img/articles/palantir-q1-earnings-miss-2026.jpg" alt="Palantir Grew Revenue 85% and Raised Guidance — So Why Is PLTR Down 26% YTD?" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -347,7 +339,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/gd-defense-contracts-earnings" class="article-card">
+      <a href="/article/gd-defense-contracts-earnings/" class="article-card">
     <div class="card-image"><img src="/img/articles/gd-defense-contracts-2026.jpg" alt="General Dynamics Just Dropped a Monster Earnings Beat — And Defense Spending Is About to Go Nuclear" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -363,7 +355,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/kratos-defense-drones-valkyrie-2026" class="article-card">
+      <a href="/article/kratos-defense-drones-valkyrie-2026/" class="article-card">
     <div class="card-image"><img src="/img/articles/kratos-defense-drones-valkyrie-2026.jpg" alt="Kratos Is Quietly Building the Pentagon&#39;s Drone Army — $KTOS Is the Purest Defense AI Play" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -379,7 +371,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/palantir-pentagon-intel-contract-battle-2026" class="article-card">
+      <a href="/article/palantir-pentagon-intel-contract-battle-2026/" class="article-card">
     <div class="card-image"><img src="/img/articles/palantir-pentagon-intel-contract-battle-2026.jpg" alt="Palantir vs The Pentagon: America&#39;s AI Darling Just Bit the Hand That Feeds It" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -395,7 +387,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/rheinmetall-defense-europe-2026" class="article-card">
+      <a href="/article/rheinmetall-defense-europe-2026/" class="article-card">
     <div class="card-image"><img src="/img/articles/rheinmetall-defense-europe-2026.jpg" alt="Rheinmetall Is the Centerpiece of Europe&#39;s Rearmament — And It&#39;s Still Early" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -411,7 +403,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/axon-q1-earnings-contrarian" class="article-card">
+      <a href="/article/axon-q1-earnings-contrarian/" class="article-card">
     <div class="card-image"><img src="/img/articles/axon-q1-earnings-contrarian.jpg" alt="Axon Just Dropped a 34% Revenue Beat and the Market Punched It. That&#39;s Your Signal." loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -427,7 +419,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/ge-aerospace-sleeping-giant" class="article-card">
+      <a href="/article/ge-aerospace-sleeping-giant/" class="article-card">
     <div class="card-image"><img src="/img/articles/ge-aerospace-sleeping-giant.jpg" alt="GE Aerospace Is the Sleeping Giant Nobody&#39;s Watching — Up 35% With Room to Run" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -443,7 +435,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/rtx-defense-buy-opportunity" class="article-card">
+      <a href="/article/rtx-defense-buy-opportunity/" class="article-card">
     <div class="card-image"><img src="/img/articles/rtx-defense.jpg" alt="RTX Just Dipped 18% From Its Highs. Here&#39;s Why That&#39;s Your Entry Point." loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -459,7 +451,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/axon-enterprise-ai-monopoly" class="article-card">
+      <a href="/article/axon-enterprise-ai-monopoly/" class="article-card">
     <div class="card-image"><img src="/img/articles/axon-ai-software.jpg" alt="Why AXON is the Ultimate Unkillable Portfolio Diversifier" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">

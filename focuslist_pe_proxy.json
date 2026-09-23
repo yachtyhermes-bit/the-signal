@@ -1,0 +1,50 @@
+{
+ "AVGO": {
+  "pe_5y_avg": 32.0,
+  "pe_5y_median": 30.8,
+  "pe_min": 12.7,
+  "pe_max": 64.1,
+  "pe_now_trailing": 34.8,
+  "n_months": 61,
+  "quarters_used": 49,
+  "first_q": "2014-08-28",
+  "last_q": "2026-09-02",
+  "ttm_eps_now": 9.76
+ },
+ "CEG": {
+  "pe_5y_avg": 30.8,
+  "pe_5y_median": 30.5,
+  "pe_min": 16.4,
+  "pe_max": 44.3,
+  "pe_now_trailing": 24.4,
+  "n_months": 47,
+  "quarters_used": 19,
+  "first_q": "2022-02-25",
+  "last_q": "2026-08-06",
+  "ttm_eps_now": 10.63
+ },
+ "SOFI": {
+  "pe_5y_avg": 81.1,
+  "pe_5y_median": 87.3,
+  "pe_min": 35.5,
+  "pe_max": 133.2,
+  "pe_now_trailing": 36.6,
+  "n_months": 27,
+  "quarters_used": 21,
+  "first_q": "2021-08-12",
+  "last_q": "2026-07-29",
+  "ttm_eps_now": 0.46
+ },
+ "NFLX": {
+  "pe_5y_avg": 40.1,
+  "pe_5y_median": 42.5,
+  "pe_min": 15.9,
+  "pe_max": 63.2,
+  "pe_now_trailing": 24.0,
+  "n_months": 61,
+  "quarters_used": 49,
+  "first_q": "2014-07-21",
+  "last_q": "2026-07-16",
+  "ttm_eps_now": 3.18
+ }
+}

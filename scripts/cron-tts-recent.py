@@ -1,6 +1,14 @@
 #!/usr/bin/env python3
 """Generate Andrew TTS audio for articles published in the last 48 hours and upload to R2."""
 import asyncio, edge_tts, json, os, sys, re, time
+# ── shared TTS text extraction (drops the 'Numbers That Matter' stats card) ──
+try:
+    from tts_text import strip_nonprose  # noqa: E402
+except ImportError:  # executed from another cwd
+    import sys as _sys
+    _sys.path.insert(0, '/home/chino/thesignal/scripts')
+    from tts_text import strip_nonprose  # noqa: E402
+
 import urllib.request, urllib.error
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
@@ -91,7 +99,7 @@ async def main():
         title = article.get("title", "")
         body_html = article.get("bodyHtml", "")
         if body_html:
-            text = re.sub(r"<[^>]+>", " ", body_html)
+            text = re.sub(r"<[^>]+>", " ", strip_nonprose(body_html))
             for a, b in [("&amp;", "&"), ("&lt;", "<"), ("&gt;", ">"),
                          ("&quot;", '"'), ("&#39;", "'"), ("&nbsp;", " ")]:
                 text = text.replace(a, b)

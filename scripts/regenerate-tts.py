@@ -2,6 +2,14 @@
 """Force-regenerate TTS audio for a single article, bypassing the R2 cache check.
 Usage: python3 scripts/regenerate-tts.py <slug>"""
 import asyncio, json, os, re, subprocess, sys
+# ── shared TTS text extraction (drops the 'Numbers That Matter' stats card) ──
+try:
+    from tts_text import strip_nonprose  # noqa: E402
+except ImportError:  # executed from another cwd
+    import sys as _sys
+    _sys.path.insert(0, '/home/chino/thesignal/scripts')
+    from tts_text import strip_nonprose  # noqa: E402
+
 from pathlib import Path
 from tempfile import NamedTemporaryFile
 
@@ -31,7 +39,7 @@ def strip_html(html):
 
 parts = [article.get("title", "")]
 body_html = article.get("bodyHtml", "")
-parts.append(strip_html(body_html) if body_html else article.get("summary", ""))
+parts.append(strip_html(strip_nonprose(body_html)) if body_html else article.get("summary", ""))
 text = ". ".join(p for p in parts if p)
 
 print(f"🎙 {article.get('title','')[:80]}...")

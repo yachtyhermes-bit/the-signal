@@ -1,6 +1,14 @@
 #!/usr/bin/env python3
 """Generate Andrew TTS for the latest article and upload to R2."""
 import asyncio, edge_tts, json, os, re, subprocess, sys
+# ── shared TTS text extraction (drops the 'Numbers That Matter' stats card) ──
+try:
+    from tts_text import strip_nonprose  # noqa: E402
+except ImportError:  # executed from another cwd
+    import sys as _sys
+    _sys.path.insert(0, '/home/chino/thesignal/scripts')
+    from tts_text import strip_nonprose  # noqa: E402
+
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -33,7 +41,7 @@ async def main():
         body_html = article.get('bodyHtml', '')
         
         if body_html:
-            text = re.sub(r'<[^>]+>', ' ', body_html)
+            text = re.sub(r'<[^>]+>', ' ', strip_nonprose(body_html))
             text = text.replace('&amp;', '&').replace('&lt;', '<').replace('&gt;', '>')
             text = text.replace('&quot;', '"').replace('&#39;', "'").replace('&nbsp;', ' ')
             text = re.sub(r'\s+', ' ', text).strip()

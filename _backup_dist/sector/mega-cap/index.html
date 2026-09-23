@@ -10,7 +10,7 @@
   <meta name="robots" content="max-image-preview:large">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Oxanium:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/main.css?v=22">
+  <link rel="stylesheet" href="/css/main.css?v=31">
   <link rel="stylesheet" href="/css/pulse-badge.css">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-98KDVDFBCW"></script>
@@ -49,15 +49,7 @@
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "The Signal",
-      "url": "https://readthesignal.net",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://readthesignal.net/?q={search_term_string}"
-        },
-        "query-input": "required name=search_term_string"
-      }
+      "url": "https://readthesignal.net"
     }
     </script>
 <link rel="stylesheet" href="/css/nav.css">
@@ -111,20 +103,20 @@
                 </div>
                 <div class="auth-drop-divider"></div>
                 <div class="auth-profile-nav">
-                  <a href="/sector/ai" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
-                  <a href="/sector/cyber" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
-                  <a href="/sector/defense" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
-                  <a href="/sector/space" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
-                  <a href="/sector/mega-cap" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
-                  <a href="/sector/quantum" class="auth-nav-item"><span class="auth-nav-icon">🔬</span> Quantum</a>
+                  <a href="/sector/ai/" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
+                  <a href="/sector/cyber/" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
+                  <a href="/sector/defense/" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
+                  <a href="/sector/space/" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
+                  <a href="/sector/mega-cap/" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
+                  <a href="/sector/quantum/" class="auth-nav-item"><span class="auth-nav-icon">🔬</span> Quantum</a>
                   <div class="auth-nav-section-header">FEATURES</div>
-                  <a href="/hive" class="auth-nav-item"><span class="auth-nav-icon">🐝</span> Hive</a>
-                  <a href="/signal-vs-the-street" class="auth-nav-item"><span class="auth-nav-icon">📈</span> Signal vs. Street</a>
+                  <a href="/hive/" class="auth-nav-item"><span class="auth-nav-icon">🐝</span> Hive</a>
+                  <a href="/signal-vs-the-street/" class="auth-nav-item"><span class="auth-nav-icon">📈</span> Signal vs. Street</a>
                 </div>
                 <div class="auth-drop-divider"></div>
                 <div class="auth-profile-footer">
-                  <a href="/hive" class="auth-footer-link" onclick="navigateToHiveLeaderboard(event)">Leaderboard</a>
-                  <a href="/account/settings" class="auth-footer-link">Settings</a>
+                  <a href="/hive/" class="auth-footer-link" onclick="navigateToHiveLeaderboard(event)">Leaderboard</a>
+                  <a href="/account/settings/" class="auth-footer-link">Settings</a>
                   <button class="auth-signout-btn" id="authSignOut">Sign Out</button>
                 </div>
               </div>
@@ -142,15 +134,15 @@
                 </button>
                 <div class="auth-drop-divider"></div>
                 <div class="auth-profile-nav">
-                  <a href="/sector/ai" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
-                  <a href="/sector/cyber" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
-                  <a href="/sector/defense" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
-                  <a href="/sector/space" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
-                  <a href="/sector/mega-cap" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
-                  <a href="/sector/quantum" class="auth-nav-item"><span class="auth-nav-icon">🔬</span> Quantum</a>
+                  <a href="/sector/ai/" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
+                  <a href="/sector/cyber/" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
+                  <a href="/sector/defense/" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
+                  <a href="/sector/space/" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
+                  <a href="/sector/mega-cap/" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
+                  <a href="/sector/quantum/" class="auth-nav-item"><span class="auth-nav-icon">🔬</span> Quantum</a>
                   <div class="auth-nav-section-header">FEATURES</div>
-                  <a href="/hive" class="auth-nav-item"><span class="auth-nav-icon">🐝</span> Hive</a>
-                  <a href="/signal-vs-the-street" class="auth-nav-item"><span class="auth-nav-icon">📈</span> Signal vs. Street</a>
+                  <a href="/hive/" class="auth-nav-item"><span class="auth-nav-icon">🐝</span> Hive</a>
+                  <a href="/signal-vs-the-street/" class="auth-nav-item"><span class="auth-nav-icon">📈</span> Signal vs. Street</a>
                 </div>
               </div>
           </div>
@@ -178,16 +170,16 @@
     </div>
     <div class="drawer-body">
       <div class="drawer-section-label">SECTORS</div>
-      <a href="/sector/ai" class="drawer-link">AI</a>
-      <a href="/sector/cyber" class="drawer-link">Cyber</a>
-      <a href="/sector/defense" class="drawer-link">Defense</a>
-      <a href="/sector/space" class="drawer-link">Space</a>
-      <a href="/sector/mega-cap" class="drawer-link">Mega-Cap</a>
-      <a href="/sector/quantum" class="drawer-link">Quantum</a>
+      <a href="/sector/ai/" class="drawer-link">AI</a>
+      <a href="/sector/cyber/" class="drawer-link">Cyber</a>
+      <a href="/sector/defense/" class="drawer-link">Defense</a>
+      <a href="/sector/space/" class="drawer-link">Space</a>
+      <a href="/sector/mega-cap/" class="drawer-link">Mega-Cap</a>
+      <a href="/sector/quantum/" class="drawer-link">Quantum</a>
       <hr class="drawer-divider">
       <div class="drawer-section-label">FEATURES</div>
-      <a href="/hive" class="drawer-link drawer-link-hive">Hive</a>
-      <a href="/signal-vs-the-street" class="drawer-link drawer-link-svs">Signal vs. Street</a>
+      <a href="/hive/" class="drawer-link drawer-link-hive">Hive</a>
+      <a href="/signal-vs-the-street/" class="drawer-link drawer-link-svs">Signal vs. Street</a>
     </div>
   </div>Search Overlay -->
   <div class="search-overlay" id="searchOverlay">
@@ -247,7 +239,7 @@
     </a>
     </div>
     <div class="article-grid">
-      <a href="/article/may-jobs-report-preview-2026" class="article-card">
+      <a href="/article/may-jobs-report-preview-2026/" class="article-card">
     <div class="card-image"><img src="/img/articles/_default.jpg" alt="May Jobs Report Preview: The One Number That Could Decide the Market&#39;s Next Move" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -263,7 +255,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/amzn-new-glenn-explosion-kuiper-2026" class="article-card">
+      <a href="/article/amzn-new-glenn-explosion-kuiper-2026/" class="article-card">
     <div class="card-image"><img src="/img/articles/amzn-new-glenn-explosion-kuiper-2026.jpg" alt="Blue Origin&#39;s New Glenn Explodes at Cape Canaveral — What the $2.8 Trillion Elephant in the Room Means for AMZN&#39;s Satellite Ambitions" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -279,7 +271,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/if-i-could-hold-one-stock-for-5-years-id-pick-google" class="article-card">
+      <a href="/article/if-i-could-hold-one-stock-for-5-years-id-pick-google/" class="article-card">
     <div class="card-image"><img src="/img/articles/if-i-could-hold-one-stock-for-5-years-id-pick-google.jpg" alt="If I Could Hold One Stock for the Next 5 Years, I&#39;d Pick Google — Here&#39;s Why" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -295,7 +287,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/google-pentagon-classified-ai-deal" class="article-card">
+      <a href="/article/google-pentagon-classified-ai-deal/" class="article-card">
     <div class="card-image"><img src="/img/articles/google-pentagon-classified-ai-deal.jpg" alt="Google Just Signed a Classified AI Deal With the Pentagon — $GOOGL Is Picking Sides in the $7 Trillion Defense AI Revolution" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -311,7 +303,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/tesla-spacex-merger-chatter-2026" class="article-card">
+      <a href="/article/tesla-spacex-merger-chatter-2026/" class="article-card">
     <div class="card-image"><img src="/img/articles/tesla-spacex-merger-chatter-2026.jpg" alt="SpaceX-Tesla Merger Buzz Hits a Fever Pitch — $TSLA Could Be the Vehicle for the Biggest Deal in History" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -327,7 +319,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/apple-ath-2026" class="article-card">
+      <a href="/article/apple-ath-2026/" class="article-card">
     <div class="card-image"><img src="/img/articles/apple-ath-2026.jpg" alt="AAPL at $312: Tim Cook Never Hyped AI — And That&#39;s Why Apple Stock Just Hit an All-Time High" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -343,7 +335,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/google-ai-price-war-2026" class="article-card">
+      <a href="/article/google-ai-price-war-2026/" class="article-card">
     <div class="card-image"><img src="/img/articles/google-ai-price-war-2026.jpg" alt="Google Just Launched a $1 Billion AI Price War — Here&#39;s What It Means for $GOOGL" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -359,7 +351,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/oracle-cloud-ai-earnings-2026" class="article-card">
+      <a href="/article/oracle-cloud-ai-earnings-2026/" class="article-card">
     <div class="card-image"><img src="/img/articles/oracle-cloud-ai-earnings-2026.jpg" alt="Oracle Beat Earnings Again — The Sleeping Giant of AI Cloud Is Wide Awake" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -375,7 +367,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/salesforce-earnings-buyback-2026" class="article-card">
+      <a href="/article/salesforce-earnings-buyback-2026/" class="article-card">
     <div class="card-image"><img src="/img/articles/salesforce-earnings-buyback-2026.jpg" alt="$CRM at 12x Earnings: The Market Is Pricing Salesforce Like a Has-Been. The $50 Billion Buyback Says Otherwise." loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -391,7 +383,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/amzn-ai-cloud-logistics-2026" class="article-card">
+      <a href="/article/amzn-ai-cloud-logistics-2026/" class="article-card">
     <div class="card-image"><img src="/img/articles/amzn-ai-cloud-logistics-2026.jpg" alt="$AMZN at $2.86 Trillion: Why AWS AI Growth Is About to Price In Before You Do" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -407,7 +399,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/ai-inversion-white-collar-blue-collar" class="article-card">
+      <a href="/article/ai-inversion-white-collar-blue-collar/" class="article-card">
     <div class="card-image"><img src="/img/articles/ai-inversion-treemap.jpg" alt="The Great AI Inversion: White-Collar Wipeout &amp; The Blue-Collar Boom" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -423,7 +415,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/tesla-cybertruck-robotaxi-2026" class="article-card">
+      <a href="/article/tesla-cybertruck-robotaxi-2026/" class="article-card">
     <div class="card-image"><img src="/img/articles/tesla-cybertruck-robotaxi-2026.jpg" alt="Tesla Is a $1.6T Data Company Hiding Inside an Automaker" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -439,7 +431,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/ackman-microsoft-ai-bet" class="article-card">
+      <a href="/article/ackman-microsoft-ai-bet/" class="article-card">
     <div class="card-image"><img src="/img/articles/ackman-microsoft-ai-bet.jpg" alt="Ackman Dumps Alphabet, Loads Up on Microsoft in $2.1B AI Bet" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -455,7 +447,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/apple-undervalued-mega-cap-2026" class="article-card">
+      <a href="/article/apple-undervalued-mega-cap-2026/" class="article-card">
     <div class="card-image"><img src="/img/articles/apple-undervalued-mega-cap-2026.jpg" alt="Apple Is the Most Boring Mega-Cap in 2026. That&#39;s Exactly Why It&#39;ll Win." loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -471,7 +463,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/alphabet-5-trillion-milestone" class="article-card">
+      <a href="/article/alphabet-5-trillion-milestone/" class="article-card">
     <div class="card-image"><img src="/img/articles/alphabet-5-trillion-milestone.jpg" alt="Google Just Hit $4.64 Trillion. Wall Street Still Isn&#39;t Listening." loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -487,7 +479,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/meta-rayban-display-launch-2026" class="article-card">
+      <a href="/article/meta-rayban-display-launch-2026/" class="article-card">
     <div class="card-image"><img src="/img/articles/meta-rayban-display-launch-2026.jpg" alt="Meta&#39;s Smart Glasses Are Here — And They&#39;re Already Too Popular" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -503,7 +495,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/meta-layoffs-8000-ai" class="article-card">
+      <a href="/article/meta-layoffs-8000-ai/" class="article-card">
     <div class="card-image"><img src="/img/articles/meta-zuckerberg-layoffs.png" alt="Zuckerberg Fires 8,000 in Brutal AI Restructuring — &#39;Success Isn&#39;t a Given&#39;" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -519,7 +511,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/amazon-q1-2026-aws-reacceleration" class="article-card">
+      <a href="/article/amazon-q1-2026-aws-reacceleration/" class="article-card">
     <div class="card-image"><img src="/img/articles/amazon-q1-2026-aws-reacceleration.jpg" alt="AWS Reacceleration Fuels Amazon&#39;s Q1 Earnings Beat as EPS More Than Doubles" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -535,7 +527,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/meta-ai-budget-blowout" class="article-card">
+      <a href="/article/meta-ai-budget-blowout/" class="article-card">
     <div class="card-image"><img src="/img/articles/meta-ai-budget-blowout.jpg" alt="Meta Just Dropped a $145B AI Bombshell — The Market Panicked. That&#39;s Your Signal." loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -551,7 +543,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/meta-ai-capex-deep-dive" class="article-card">
+      <a href="/article/meta-ai-capex-deep-dive/" class="article-card">
     <div class="card-image"><img src="/img/articles/meta-server-racks.jpg" alt="Meta Is Spending $65B on AI in 2026 — Smart Bet or Billionaire&#39;s Gamble?" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -567,7 +559,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/bill-gates-selling-microsoft" class="article-card">
+      <a href="/article/bill-gates-selling-microsoft/" class="article-card">
     <div class="card-image"><img src="/img/articles/microsoft-surface.jpg" alt="Bill Gates Has Sold $20B+ of Microsoft Stock. Should You Follow?" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">

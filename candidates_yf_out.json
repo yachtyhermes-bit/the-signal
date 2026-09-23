@@ -1,0 +1,610 @@
+{
+ "ASTS": {
+  "fast_info": {
+   "currency": "USD",
+   "dayHigh": "70.09230041503906",
+   "dayLow": "64.9000015258789",
+   "exchange": "NMS",
+   "fiftyDayAverage": "70.91019966125488",
+   "lastPrice": "68.58000183105469",
+   "lastVolume": "5669210",
+   "marketCap": "20559551085.830612",
+   "open": "67.125",
+   "previousClose": "65.17",
+   "quoteType": "EQUITY",
+   "regularMarketPreviousClose": "65.05999755859375",
+   "shares": "299789305",
+   "tenDayAverageVolume": "10609310",
+   "threeMonthAverageVolume": "19708312",
+   "timezone": "America/New_York",
+   "twoHundredDayAverage": "81.66664981842041",
+   "yearChange": "0.3821966853708669",
+   "yearHigh": "133.86000061035156",
+   "yearLow": "36.08000183105469"
+  },
+  "info": {
+   "beta": 2.745,
+   "forwardPE": -56.57296,
+   "marketCap": 26689107968,
+   "fiftyTwoWeekLow": 36.08,
+   "fiftyTwoWeekHigh": 133.86,
+   "enterpriseValue": 20713330688,
+   "profitMargins": 0.0,
+   "sharesOutstanding": 299789305,
+   "shortPercentOfFloat": 0.1909,
+   "trailingEps": -2.15,
+   "forwardEps": -1.21224,
+   "currentPrice": 68.58,
+   "targetHighPrice": 108.0,
+   "targetLowPrice": 42.5,
+   "targetMeanPrice": 78.48182,
+   "recommendationKey": "hold",
+   "numberOfAnalystOpinions": 11,
+   "totalCash": 2288252928,
+   "ebitda": -406319008,
+   "totalDebt": 2993731072,
+   "totalRevenue": 115299000,
+   "freeCashflow": -1799572992,
+   "revenueGrowth": 26.266,
+   "grossMargins": 0.38914,
+   "operatingMargins": -5.44626
+  },
+  "news": [
+   {
+    "title": null,
+    "publisher": null,
+    "link": null,
+    "providerPublishTime": null
+   },
+   {
+    "title": null,
+    "publisher": null,
+    "link": null,
+    "providerPublishTime": null
+   },
+   {
+    "title": null,
+    "publisher": null,
+    "link": null,
+    "providerPublishTime": null
+   },
+   {
+    "title": null,
+    "publisher": null,
+    "link": null,
+    "providerPublishTime": null
+   },
+   {
+    "title": null,
+    "publisher": null,
+    "link": null,
+    "providerPublishTime": null
+   },
+   {
+    "title": null,
+    "publisher": null,
+    "link": null,
+    "providerPublishTime": null
+   },
+   {
+    "title": null,
+    "publisher": null,
+    "link": null,
+    "providerPublishTime": null
+   },
+   {
+    "title": null,
+    "publisher": null,
+    "link": null,
+    "providerPublishTime": null
+   }
+  ],
+  "rec": {
+   "period": {
+    "0": "0m",
+    "1": "-1m",
+    "2": "-2m",
+    "3": "-3m"
+   },
+   "strongBuy": {
+    "0": 1,
+    "1": 1,
+    "2": 0,
+    "3": 0
+   },
+   "buy": {
+    "0": 3,
+    "1": 3,
+    "2": 2,
+    "3": 2
+   },
+   "hold": {
+    "0": 7,
+    "1": 7,
+    "2": 7,
+    "3": 7
+   },
+   "sell": {
+    "0": 1,
+    "1": 1,
+    "2": 0,
+    "3": 0
+   },
+   "strongSell": {
+    "0": 1,
+    "1": 1,
+    "2": 2,
+    "3": 2
+   }
+  },
+  "calendar": {
+   "Earnings Date": [
+    "2026-11-09"
+   ],
+   "Earnings High": -0.16,
+   "Earnings Low": -0.6,
+   "Earnings Average": -0.35122,
+   "Revenue High": 40000000,
+   "Revenue Low": 25000000,
+   "Revenue Average": 33859380
+  }
+ },
+ "VRT": {
+  "fast_info": {
+   "currency": "USD",
+   "dayHigh": "268.20001220703125",
+   "dayLow": "257.4849853515625",
+   "exchange": "NYQ",
+   "fiftyDayAverage": "294.2691995239258",
+   "lastPrice": "259.4750061035156",
+   "lastVolume": "1478327",
+   "marketCap": "99894808538.95633",
+   "open": "268.20001220703125",
+   "previousClose": "264.3629",
+   "quoteType": "EQUITY",
+   "regularMarketPreviousClose": "264.6300048828125",
+   "shares": "384988173",
+   "tenDayAverageVolume": "4134810",
+   "threeMonthAverageVolume": "6164195",
+   "timezone": "America/New_York",
+   "twoHundredDayAverage": "252.8212503051758",
+   "yearChange": "1.1007382894215663",
+   "yearHigh": "379.93499755859375",
+   "yearLow": "118.69999694824219"
+  },
+  "info": {
+   "beta": 2.077,
+   "trailingPE": 58.70475,
+   "forwardPE": 28.517529,
+   "marketCap": 99894804480,
+   "fiftyTwoWeekLow": 118.7,
+   "fiftyTwoWeekHigh": 379.935,
+   "enterpriseValue": 102107021312,
+   "profitMargins": 0.15088001,
+   "sharesOutstanding": 384988173,
+   "shortPercentOfFloat": 0.0321,
+   "trailingEps": 4.42,
+   "forwardEps": 9.09879,
+   "currentPrice": 259.475,
+   "targetHighPrice": 427.0,
+   "targetLowPrice": 236.0,
+   "targetMeanPrice": 338.15384,
+   "recommendationKey": "strong_buy",
+   "numberOfAnalystOpinions": 26,
+   "totalCash": 3110599936,
+   "ebitda": 2678799872,
+   "totalDebt": 3338200064,
+   "totalRevenue": 11479600128,
+   "freeCashflow": 2696537600,
+   "earningsGrowth": 0.53,
+   "revenueGrowth": 0.241,
+   "grossMargins": 0.38039002,
+   "operatingMargins": 0.20362
+  },
+  "news": [
+   {
+    "title": null,
+    "publisher": null,
+    "link": null,
+    "providerPublishTime": null
+   },
+   {
+    "title": null,
+    "publisher": null,
+    "link": null,
+    "providerPublishTime": null
+   },
+   {
+    "title": null,
+    "publisher": null,
+    "link": null,
+    "providerPublishTime": null
+   },
+   {
+    "title": null,
+    "publisher": null,
+    "link": null,
+    "providerPublishTime": null
+   },
+   {
+    "title": null,
+    "publisher": null,
+    "link": null,
+    "providerPublishTime": null
+   },
+   {
+    "title": null,
+    "publisher": null,
+    "link": null,
+    "providerPublishTime": null
+   },
+   {
+    "title": null,
+    "publisher": null,
+    "link": null,
+    "providerPublishTime": null
+   },
+   {
+    "title": null,
+    "publisher": null,
+    "link": null,
+    "providerPublishTime": null
+   }
+  ],
+  "rec": {
+   "period": {
+    "0": "0m",
+    "1": "-1m",
+    "2": "-2m",
+    "3": "-3m"
+   },
+   "strongBuy": {
+    "0": 3,
+    "1": 3,
+    "2": 3,
+    "3": 4
+   },
+   "buy": {
+    "0": 21,
+    "1": 21,
+    "2": 19,
+    "3": 18
+   },
+   "hold": {
+    "0": 4,
+    "1": 4,
+    "2": 3,
+    "3": 3
+   },
+   "sell": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 0
+   },
+   "strongSell": {
+    "0": 0,
+    "1": 0,
+    "2": 1,
+    "3": 1
+   }
+  },
+  "calendar": {
+   "Dividend Date": "2026-06-25",
+   "Ex-Dividend Date": "2026-06-15",
+   "Earnings Date": [
+    "2026-10-21"
+   ],
+   "Earnings High": 1.92,
+   "Earnings Low": 1.79,
+   "Earnings Average": 1.82173,
+   "Revenue High": 3896000000,
+   "Revenue Low": 3707945670,
+   "Revenue Average": 3771039770
+  }
+ },
+ "HOOD": {
+  "fast_info": {
+   "currency": "USD",
+   "dayHigh": "109.70999908447266",
+   "dayLow": "98.7699966430664",
+   "exchange": "NMS",
+   "fiftyDayAverage": "99.87420028686523",
+   "lastPrice": "106.70500183105469",
+   "lastVolume": "31217921",
+   "marketCap": "95936575586.73381",
+   "open": "100.87999725341797",
+   "previousClose": "95.2378",
+   "quoteType": "EQUITY",
+   "regularMarketPreviousClose": "95.0999984741211",
+   "shares": "899082273",
+   "tenDayAverageVolume": "15847530",
+   "threeMonthAverageVolume": "25840492",
+   "timezone": "America/New_York",
+   "twoHundredDayAverage": "96.2763750076294",
+   "yearChange": "-0.130076850168308",
+   "yearHigh": "153.86000061035156",
+   "yearLow": "63.51499938964844"
+  },
+  "info": {
+   "beta": 2.321,
+   "trailingPE": 47.214603,
+   "forwardPE": 32.85283,
+   "marketCap": 95936577536,
+   "fiftyTwoWeekLow": 63.515,
+   "fiftyTwoWeekHigh": 153.86,
+   "enterpriseValue": 84583727104,
+   "profitMargins": 0.42011002,
+   "sharesOutstanding": 790630234,
+   "shortPercentOfFloat": 0.0424,
+   "trailingEps": 2.26,
+   "forwardEps": 3.24797,
+   "currentPrice": 106.705,
+   "targetHighPrice": 163.6,
+   "targetLowPrice": 57.0,
+   "targetMeanPrice": 119.93077,
+   "recommendationKey": "buy",
+   "numberOfAnalystOpinions": 26,
+   "totalCash": 23904999424,
+   "totalDebt": 22925000704,
+   "totalRevenue": 4931999744,
+   "earningsGrowth": 0.476,
+   "revenueGrowth": 0.323,
+   "grossMargins": 0.9189,
+   "operatingMargins": 0.43884
+  },
+  "news": [
+   {
+    "title": null,
+    "publisher": null,
+    "link": null,
+    "providerPublishTime": null
+   },
+   {
+    "title": null,
+    "publisher": null,
+    "link": null,
+    "providerPublishTime": null
+   },
+   {
+    "title": null,
+    "publisher": null,
+    "link": null,
+    "providerPublishTime": null
+   },
+   {
+    "title": null,
+    "publisher": null,
+    "link": null,
+    "providerPublishTime": null
+   },
+   {
+    "title": null,
+    "publisher": null,
+    "link": null,
+    "providerPublishTime": null
+   },
+   {
+    "title": null,
+    "publisher": null,
+    "link": null,
+    "providerPublishTime": null
+   },
+   {
+    "title": null,
+    "publisher": null,
+    "link": null,
+    "providerPublishTime": null
+   },
+   {
+    "title": null,
+    "publisher": null,
+    "link": null,
+    "providerPublishTime": null
+   }
+  ],
+  "rec": {
+   "period": {
+    "0": "0m",
+    "1": "-1m",
+    "2": "-2m",
+    "3": "-3m"
+   },
+   "strongBuy": {
+    "0": 4,
+    "1": 4,
+    "2": 4,
+    "3": 4
+   },
+   "buy": {
+    "0": 18,
+    "1": 18,
+    "2": 17,
+    "3": 16
+   },
+   "hold": {
+    "0": 4,
+    "1": 4,
+    "2": 4,
+    "3": 4
+   },
+   "sell": {
+    "0": 1,
+    "1": 1,
+    "2": 2,
+    "3": 3
+   },
+   "strongSell": {
+    "0": 1,
+    "1": 1,
+    "2": 0,
+    "3": 0
+   }
+  },
+  "calendar": {
+   "Earnings Date": [
+    "2026-11-04"
+   ],
+   "Earnings High": 0.64,
+   "Earnings Low": 0.61362,
+   "Earnings Average": 0.62681,
+   "Revenue High": 1443100000,
+   "Revenue Low": 1257900000,
+   "Revenue Average": 1347430070
+  }
+ },
+ "CEG": {
+  "fast_info": {
+   "currency": "USD",
+   "dayHigh": "277.2099914550781",
+   "dayLow": "270.57000732421875",
+   "exchange": "NMS",
+   "fiftyDayAverage": "262.5041015625",
+   "lastPrice": "275.4324951171875",
+   "lastVolume": "889327",
+   "marketCap": "97587765436.401",
+   "open": "275.5",
+   "previousClose": "271.75",
+   "quoteType": "EQUITY",
+   "regularMarketPreviousClose": "272.9200134277344",
+   "shares": "354307379",
+   "tenDayAverageVolume": "2502860",
+   "threeMonthAverageVolume": "3455506",
+   "timezone": "America/New_York",
+   "twoHundredDayAverage": "300.36380043029783",
+   "yearChange": "-0.12006702925804877",
+   "yearHigh": "412.70001220703125",
+   "yearLow": "228.6300048828125"
+  },
+  "info": {
+   "beta": 1.118,
+   "trailingPE": 26.923998,
+   "forwardPE": 20.69886,
+   "marketCap": 97587765248,
+   "fiftyTwoWeekLow": 228.63,
+   "fiftyTwoWeekHigh": 412.7,
+   "enterpriseValue": 121045573632,
+   "profitMargins": 0.110810004,
+   "sharesOutstanding": 354307379,
+   "shortPercentOfFloat": 0.032899998,
+   "trailingEps": 10.23,
+   "forwardEps": 13.30665,
+   "currentPrice": 275.4325,
+   "targetHighPrice": 441.0,
+   "targetLowPrice": 290.0,
+   "targetMeanPrice": 347.504,
+   "recommendationKey": "buy",
+   "numberOfAnalystOpinions": 20,
+   "totalCash": 697000000,
+   "ebitda": 7952000000,
+   "totalDebt": 24700000256,
+   "totalRevenue": 31270000640,
+   "freeCashflow": -6625124864,
+   "earningsGrowth": -0.468,
+   "revenueGrowth": 0.23,
+   "grossMargins": 0.22107,
+   "operatingMargins": 0.086619996
+  },
+  "news": [
+   {
+    "title": null,
+    "publisher": null,
+    "link": null,
+    "providerPublishTime": null
+   },
+   {
+    "title": null,
+    "publisher": null,
+    "link": null,
+    "providerPublishTime": null
+   },
+   {
+    "title": null,
+    "publisher": null,
+    "link": null,
+    "providerPublishTime": null
+   },
+   {
+    "title": null,
+    "publisher": null,
+    "link": null,
+    "providerPublishTime": null
+   },
+   {
+    "title": null,
+    "publisher": null,
+    "link": null,
+    "providerPublishTime": null
+   },
+   {
+    "title": null,
+    "publisher": null,
+    "link": null,
+    "providerPublishTime": null
+   },
+   {
+    "title": null,
+    "publisher": null,
+    "link": null,
+    "providerPublishTime": null
+   },
+   {
+    "title": null,
+    "publisher": null,
+    "link": null,
+    "providerPublishTime": null
+   }
+  ],
+  "rec": {
+   "period": {
+    "0": "0m",
+    "1": "-1m",
+    "2": "-2m",
+    "3": "-3m"
+   },
+   "strongBuy": {
+    "0": 6,
+    "1": 6,
+    "2": 6,
+    "3": 6
+   },
+   "buy": {
+    "0": 13,
+    "1": 14,
+    "2": 14,
+    "3": 13
+   },
+   "hold": {
+    "0": 3,
+    "1": 3,
+    "2": 3,
+    "3": 2
+   },
+   "sell": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 0
+   },
+   "strongSell": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 0
+   }
+  },
+  "calendar": {
+   "Dividend Date": "2026-09-04",
+   "Ex-Dividend Date": "2026-08-18",
+   "Earnings Date": [
+    "2026-11-09"
+   ],
+   "Earnings High": 4.4,
+   "Earnings Low": 3.53,
+   "Earnings Average": 3.81199,
+   "Revenue High": 11287000000,
+   "Revenue Low": 7812760640,
+   "Revenue Average": 9279136340
+  }
+ }
+}

@@ -15,9 +15,14 @@
     return m ? m[1] : null;
   }
 
+  // Blocks that are data, not prose — never narrated (the "Numbers That Matter"
+  // stats card and friends). Mirrors scripts/tts_text.py SKIP_CLASSES.
+  const NON_PROSE = '.stats-card, .stats-table, .stats-row, .stats-grid, .stat-card, .stats-card-note, .stats-live-badge, .data-card';
+
   function getFullText() {
     const els = articleBody.querySelectorAll('p, h2, h3, li');
     return Array.from(els)
+      .filter(el => !el.closest(NON_PROSE))
       .map(el => el.textContent.trim())
       .filter(t => t.length > 10)
       .join('. ');

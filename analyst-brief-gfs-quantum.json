@@ -1,0 +1,468 @@
+{
+  "slug_confirmed": "globalfoundries-quantum-foundry-chips-award-2026",
+  "as_of": "2026-09-20 (Sunday, US markets closed; last completed close Friday 2026-09-18)",
+  "headline_correction_for_orchestrator": {
+    "issue": "The task brief dated the CHIPS R&D finalization to Sept 19-20, 2026. Every primary source says SEPTEMBER 8, 2026.",
+    "evidence": [
+      "GF press release dateline: 'MALTA, N.Y., Sept. 08, 2026' - https://gf.com/news-and-events/news/globalfoundries-and-us-department-of-commerce-finalize-375m-r-and-d-award-to-advance-american-quantum-leadership/",
+      "NIST/Commerce release: 'Released September 8, 2026' - https://www.nist.gov/news-events/news/2026/09/department-commerce-announces-finalization-chips-rd-award-globalfoundries",
+      "StockTitan timestamp on the syndicated release: '09/08/2026 - 08:31 AM' - https://www.stocktitan.net/news/GFS/global-foundries-and-u-s-department-of-commerce-finalize-375m-r-d-xga255k5d04r.html"
+    ],
+    "what_actually_happened_sept_15_20": "The Sept 15-19 news cycle was about the GOVERNMENT'S EXIT: GF filed a Form F-3ASR shelf on ~Sept 15 registering the Commerce Department's 9,907,399 shares for resale (StreetInsider Sept 15; Barchart Sept 18). Separately, GF announced a Marvell SiGe capacity expansion (Sept 17) and a Monolithic Power Systems manufacturing partnership (Sept 9). If the article is written as 'this week', it is wrong by 12 days.",
+    "recommendation": "Date the award correctly (Sept 8, 2026) and use the Sept 15-18 government-resale shelf as the news hook / bear-case beat if a timely angle is needed."
+  },
+  "verified_facts": [
+    {
+      "claim": "Exact award language (definitive agreement)",
+      "value_or_text": "\"GlobalFoundries (Nasdaq: GFS) (GF) today announced it has finalized a definitive agreement with the U.S. Department of Commerce's CHIPS Research and Development Office for a $375 million award for research and development to accelerate the company's Quantum Technology Solutions (QTS) business, designed to help scale domestic quantum semiconductor manufacturing and strengthen the United States' leadership in quantum technologies.\"",
+      "source_url": "https://gf.com/news-and-events/news/globalfoundries-and-us-department-of-commerce-finalize-375m-r-and-d-award-to-advance-american-quantum-leadership/",
+      "source_type": "company_press_release_primary"
+    },
+    {
+      "claim": "Exact milestone language",
+      "value_or_text": "\"Under the agreement, GF is eligible to receive up to $375 million in funding over a five-year period tied to the achievement of specified milestones.\"",
+      "source_url": "https://gf.com/news-and-events/news/globalfoundries-and-us-department-of-commerce-finalize-375m-r-and-d-award-to-advance-american-quantum-leadership/",
+      "source_type": "company_press_release_primary"
+    },
+    {
+      "claim": "Date of definitive agreement",
+      "value_or_text": "September 8, 2026 (dateline 'MALTA, N.Y., Sept. 08, 2026'; page timestamp 'September 8, 2026')",
+      "source_url": "https://gf.com/news-and-events/news/globalfoundries-and-us-department-of-commerce-finalize-375m-r-and-d-award-to-advance-american-quantum-leadership/",
+      "source_type": "company_press_release_primary"
+    },
+    {
+      "claim": "US government confirmation of the finalized award (independent of the company)",
+      "value_or_text": "\"WASHINGTON, D.C. - The U.S. Department of Commerce announced the signing of a final award of up to $375 million to GlobalFoundries under the CHIPS and Science Act. This award provides funding towards R&D to support the establishment of a secure, domestic quantum foundry that will serve multiple quantum architectures and modalities, as well as R&D related to differentiated capabilities in cryogenic CMOS process design kits, advanced packaging and heterogenous integration.\" Released September 8, 2026.",
+      "source_url": "https://www.nist.gov/news-events/news/2026/09/department-commerce-announces-finalization-chips-rd-award-globalfoundries",
+      "source_type": "government_primary_nist"
+    },
+    {
+      "claim": "QTS unit name, executive, and quoted rationale",
+      "value_or_text": "Unit: Quantum Technology Solutions (QTS). \"said Nicholas Sergeant, vice president and general manager of Quantum Technology Solutions at GlobalFoundries.\" Quote: \"This is another important milestone for Quantum Technology Solutions and our efforts to build a scalable domestic quantum manufacturing ecosystem... Since launching, we have expanded engagement with customers and ecosystem partners who are leveraging GF's R&D and manufacturing expertise to address some of the industry's most challenging scaling requirements.\"",
+      "source_url": "https://gf.com/news-and-events/news/globalfoundries-and-us-department-of-commerce-finalize-375m-r-and-d-award-to-advance-american-quantum-leadership/",
+      "source_type": "company_press_release_primary"
+    },
+    {
+      "claim": "What the money is for (company's own wording)",
+      "value_or_text": "\"...differentiated capabilities in cryogenic CMOS technologies, advanced packaging and heterogeneous integration, helping position GF as a foundry partner of choice for emerging quantum applications.\"",
+      "source_url": "https://gf.com/news-and-events/news/globalfoundries-and-us-department-of-commerce-finalize-375m-r-and-d-award-to-advance-american-quantum-leadership/",
+      "source_type": "company_press_release_primary"
+    },
+    {
+      "claim": "$300M silicon photonics LOI - exact language, amount and timing",
+      "value_or_text": "\"GF has also recently announced it has entered into a $300 million letter of intent with the Department's CHIPS Research and Development Office to accelerate R&D in silicon photonics.\" The underlying LOI was announced July 29, 2026 (GF newsroom item dated Wed, 29 Jul 2026, 'GlobalFoundries signs letter of intent with the U.S. Department of Commerce for a $300 million award to accelerate U.S. silicon photonics leadership'). Q2 release adds scope: \"next-generation optical materials, wafer technologies and advanced packaging.\"",
+      "source_url": "https://gf.com/news-and-events/news/globalfoundries-and-us-department-of-commerce-finalize-375m-r-and-d-award-to-advance-american-quantum-leadership/",
+      "source_type": "company_press_release_primary",
+      "secondary_source_url": "https://www.sec.gov/Archives/edgar/data/1709048/000170904826000218/globalfoundries2q2026earni.htm"
+    },
+    {
+      "claim": "QTS launch date and original structure (LOI, not definitive)",
+      "value_or_text": "\"MALTA, N.Y., May 21, 2026 - GlobalFoundries (Nasdaq: GFS) (GF) today launched Quantum Technology Solutions, a new quantum business to scale the manufacturing capabilities the quantum industry needs to achieve utility-scale quantum computing... The U.S. Department of Commerce and GF have entered into a letter of intent to award GF $375M to accelerate the build-out of Quantum Technology Solutions... In a separate agreement, the U.S. Department of Commerce will receive a strategic equity investment in GF, representing approximately one percent ownership as of today's date.\" CEO Tim Breen: \"Deepening our partnership with the United States Government will support a coordinated national push to expand domestic manufacturing...\"",
+      "source_url": "https://gf.com/news-and-events/news/globalfoundries-launches-quantum-technology-solutions-to-scale-us-quantum-manufacturing/",
+      "source_type": "company_press_release_primary"
+    },
+    {
+      "claim": "The five qubit modalities named by GF",
+      "value_or_text": "\"GF is developing the manufacturing platforms to build QPUs across multiple qubit modalities - including superconducting, trapped ion, photonic, topological and spin - along with the cryogenic and superconducting heterogeneous interconnect platform that integrates these components into utility-scale quantum systems.\" GF CTO Gregg Bartlett: \"Just as CPUs and GPUs underpin classical compute, GF is building the QPU...\"",
+      "source_url": "https://gf.com/news-and-events/news/globalfoundries-launches-quantum-technology-solutions-to-scale-us-quantum-manufacturing/",
+      "source_type": "company_press_release_primary"
+    },
+    {
+      "claim": "Process-node language as stated BY GF vs as stated by third parties",
+      "value_or_text": "GF's own PRs say \"GF's proven FDX(TM) platform delivers the cryogenic CMOS\" and do NOT name 22FDX or eMRAM in either the May 21 or Sept 8 release. The specific '22FDX (22nm FD-SOI) with embedded eMRAM' characterisation comes from third-party coverage (Quantum Computing Report; quantumintel.tech). QCR also notes 22FDX is fabricated in GF's Dresden fab, and that its differentiator is a BACKSIDE connection that lets users tune transistor threshold voltage - useful precisely because cryo process models are uncharacterised.",
+      "source_url": "https://quantumcomputingreport.com/globalfoundries-finalizes-375-million-chips-act-award-for-onshore-quantum-semiconductor-fabrication/",
+      "source_type": "trade_press_secondary",
+      "flag": "Do not attribute '22FDX + eMRAM' to GF's own press release. Attribute it to coverage, or to GF's technology/product pages."
+    },
+    {
+      "claim": "Fab location claimed for QTS",
+      "value_or_text": "GF's release datelines the news from its 'Malta, N.Y.' campus; QCR states the QTS business unit expansion is at \"its Malta, New York manufacturing hub\" and describes \"Malta, NY 300mm Fab Complex\" scope. GF's own Sept 8 release does not use the word Malta beyond the dateline - it says the award is to \"scale domestic quantum semiconductor manufacturing,\" leaving site allocation implicit.",
+      "source_url": "https://quantumcomputingreport.com/globalfoundries-finalizes-375-million-chips-act-award-for-onshore-quantum-semiconductor-fabrication/",
+      "source_type": "trade_press_secondary",
+      "flag": "Say 'GF's Malta, New York campus' but note GF itself only datelines from Malta rather than specifying the site."
+    },
+    {
+      "claim": "Named QTS customers/partners (third-party compilation)",
+      "value_or_text": "QCR's scope table lists: Silicon-Spin (Diraq, Quantum Motion); Trapped-Ion/Photonics (Quantinuum); Silicon Photonics (PsiQuantum). GF's own May 21 release carries an on-record quote from Diraq founder/CEO Andrew Dzurak: \"Diraq's work with GlobalFoundries on FDX(TM) has been central to advancing our cryogenic CMOS and silicon spin qubit technologies on an established manufacturing node.\"",
+      "source_url": "https://quantumcomputingreport.com/globalfoundries-finalizes-375-million-chips-act-award-for-onshore-quantum-semiconductor-fabrication/",
+      "source_type": "trade_press_secondary",
+      "secondary_source_url": "https://gf.com/news-and-events/news/globalfoundries-launches-quantum-technology-solutions-to-scale-us-quantum-manufacturing/"
+    },
+    {
+      "claim": "Customer count and commercial engagements (CEO, on the record)",
+      "value_or_text": "\"we are working closely with 8 of the world's leading quantum computing players, including partnerships with PsiQuantum, Quantinuum and Quantum Motion as well as new endorsements from the quantum arms of large hyperscalers. Since launching just 3 months ago, we have already embarked on 4 new customer-specific quantum engagements with accelerating commercial momentum ahead.\"",
+      "source_url": "https://finance.yahoo.com/markets/stocks/articles/globalfoundries-gfs-q2-2026-earnings-143239740.html",
+      "source_type": "earnings_call_transcript"
+    },
+    {
+      "claim": "Equity component: exact share count, price, and agreement date",
+      "value_or_text": "\"On September 3, 2026, GlobalFoundries Inc. ('GF') entered into a Securities Issuance Agreement, dated as of September 3, 2026 (the 'Agreement'), with the U.S. Department of Commerce ('DOC'). Pursuant to the Agreement, GF will issue to the DOC 9,907,399 ordinary shares, par value $0.02 per share, of GF (the 'Shares'), at an issuance price of $37.85 per share.\" Plus: transfer restrictions (no privately negotiated transfers to any GF competitor) and voting restrictions (any US governmental entity holding the shares will not vote them except on limited class/merger matters).",
+      "source_url": "https://app.edgar.tools/filing/1709048/0001709048-26-000234/a6-ksiaclean.htm",
+      "source_type": "sec_filing_6k"
+    },
+    {
+      "claim": "The equity stake is being registered for resale by the government (the Sept 15-18 news)",
+      "value_or_text": "Form F-3ASR: \"The United States Department of Commerce (the 'Selling Shareholder') may from time to time offer up to 9,907,399 aggregate ordinary shares...\" / \"As of September 11, 2026, there were 557,418,603 ordinary shares issued, fully paid and outstanding.\" / \"we will bear all fees and expenses in connection with the registration and offering of the Shares.\" / \"For so long as the Selling Shareholder is (or remains) a U.S. governmental entity, the Selling Shareholder has agreed not to vote the Shares.\" Last reported sale price on Nasdaq on September 11, 2026 was $46.95.",
+      "source_url": "https://app.edgar.tools/filing/1709048/0001709048-26-000239/globalfoundriesincf-3asr.htm",
+      "source_type": "sec_filing_f3asr"
+    },
+    {
+      "claim": "Arithmetic identity between the 'award' and the equity issuance",
+      "value_or_text": "9,907,399 shares x $37.85 = $374,995,052 - i.e. the notional value of the government's shares equals the headline $375M award to within $5,000. This is the key structural nuance: the CHIPS money is paired 1:1 with an equity issuance, so the $375M arrives with ~1.78% dilution rather than as pure grant money. Note the ambiguity: GF's release describes milestone-gated funding; the SIA describes GF ISSUING shares at $37.85. Both are primary-source facts; the releases do not reconcile them.",
+      "source_url": "https://app.edgar.tools/filing/1709048/0001709048-26-000234/a6-ksiaclean.htm",
+      "source_type": "computed_from_sec_filing"
+    },
+    {
+      "claim": "Same-wave quantum CHIPS awards finalized (context)",
+      "value_or_text": "Rigetti, D-Wave and Quantinuum each finalized an award of up to $100M on September 8, 2026; Commerce takes a minority, non-controlling equity stake in each as a condition of the funds (WSJ headline: 'U.S. Gets Minority Stakes in D-Wave, Rigetti, Quantinuum' in a $300M CHIPS deal). Total finalized in this wave: GF $375M (Sept 8) + three $100M awards (Sept 8) + Anderon/IBM $1B (Sept 16) = $1.675B.",
+      "source_url": "https://www.nist.gov/news-events/news/2026/09/department-commerce-announces-finalization-chips-rd-award-rigetti",
+      "source_type": "government_primary_nist",
+      "additional_sources": [
+        "https://www.nist.gov/news-events/news/2026/09/department-commerce-announces-finalization-chips-rd-award-d-wave",
+        "https://www.nist.gov/news-events/news/2026/09/department-commerce-announces-finalization-chips-rd-award-quantinuum",
+        "https://www.dwavequantum.com/company/newsroom/press-release/d-wave-finalizes-agreement-with-u-s-department-of-commerce-for-up-to-100-million/",
+        "https://www.wsj.com/tech/u-s-gets-minority-stakes-in-d-wave-rigetti-quantinuum-in-300-million-chips-act-funding-deal-a7bad600"
+      ]
+    },
+    {
+      "claim": "IBM Anderon $1B finalization (the anchor comparison)",
+      "value_or_text": "\"ALBANY, N.Y., Sept. 16, 2026 /PRNewswire/ - Today, Anderon LLC ('Anderon'), an IBM (NYSE: IBM) company, announced the finalization of a $1 billion award under the CHIPS and Science Act... Anderon operates a state-of-the-art 300-millimeter pure-play quantum wafer foundry, backed by an additional $1 billion investment from IBM. Headquartered in Albany, New York...\" NIST confirms the final award on September 16, 2026.",
+      "source_url": "https://www.nist.gov/news-events/news/2026/09/department-commerce-announces-finalization-chips-rd-award-anderon",
+      "source_type": "government_primary_nist",
+      "additional_sources": ["https://www.prnewswire.com/news-releases/anderon-an-ibm-company-finalizes-agreement-with-the-us-department-of-commerce-for-a-1-billion-chips-award-to-accelerate-rd-for-us-based-pure-play-quantum-foundry-302879775.html"]
+    },
+    {
+      "claim": "Total May-2026 CHIPS quantum LOI package (basket context)",
+      "value_or_text": "Analysis puts the May 2026 CHIPS quantum package at $2.013B across nine letters of intent: IBM/Anderon $1B; GF $375M; seven computing companies (Atom Computing, Diraq, D-Wave, Infleqtion, PsiQuantum, Quantinuum, Rigetti) splitting roughly $640M, mostly $100M checks with Diraq at a reported $38M. GF's $375M is therefore ~18.6% of that package.",
+      "source_url": "https://quantumfrontier.substack.com/p/is-it-too-early-to-scale-quantum",
+      "source_type": "analyst_newsletter_secondary"
+    },
+    {
+      "claim": "GF already holds a much larger CHIPS award (essential-chips, not quantum)",
+      "value_or_text": "Up to $1.5 billion in direct funding finalized November 20, 2024 for three projects (Malta NY expansion, Essex Junction VT modernization/GaN, and a new Malta fab), supporting $13B+ of U.S. investment over 10+ years, plus more than $550M from New York State's Green CHIPS program. A Nov 2024 Commerce release also states: \"GF is the only one of those companies that is headquartered in the United States\" among non-China mature-node foundries at scale.",
+      "source_url": "https://gf.com/news-and-events/news/globalfoundries-and-u-s-department-of-commerce-announce-award-agreement-on-chips-act-funding-for-essential-chip-manufacturing/",
+      "source_type": "company_press_release_primary",
+      "additional_sources": ["https://www.reuters.com/technology/us-finalizes-15-billion-chips-award-globalfoundries-expand-production-2024-11-20/"]
+    },
+    {
+      "claim": "Q2 2026 results (all figures from the 6-K)",
+      "value_or_text": "Revenue $1,786M; gross margin 28.3% (non-IFRS 29.9%); operating margin 9.7% (non-IFRS 16.7%); net income $167M; diluted EPS $0.30 (non-IFRS $0.46); non-IFRS adjusted EBITDA $587M (32.9%); cash from operations $405M; non-IFRS adjusted free cash flow $(3)M; wafer shipments 625k 300mm-equivalent (+8% q/q, +8% y/y); ending cash, cash equivalents and marketable securities $3.3B.",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1709048/000170904826000218/globalfoundries2q2026earni.htm",
+      "source_type": "sec_filing_6k"
+    },
+    {
+      "claim": "Q3 2026 guidance (as issued Aug 5, 2026)",
+      "value_or_text": "Net revenue $1,885M +/- $25M; IFRS gross margin 29.5% +/- 100bps (non-IFRS 30.5%); operating expenses $318M +/- $10M (non-IFRS $260M); IFRS operating margin 12.7% +/- 170bps (non-IFRS 16.7%); IFRS diluted EPS $0.37 +/- $0.05 (non-IFRS $0.51); fully diluted share count ~556M.",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1709048/000170904826000218/globalfoundries2q2026earni.htm",
+      "source_type": "sec_filing_6k"
+    },
+    {
+      "claim": "Dividend",
+      "value_or_text": "First-ever quarterly cash dividend of $0.12/share paid July 14, 2026. Board approved a further $0.12/share payable October 9, 2026 to holders of record September 23, 2026. Annual rate $0.48; ex-dividend date September 23, 2026 per stockanalysis.com. CEO also noted on the Q2 call that approximately $100 million remains under the board's share repurchase authorization.",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1709048/000170904826000218/globalfoundries2q2026earni.htm",
+      "source_type": "sec_filing_6k",
+      "additional_sources": ["https://stockanalysis.com/stocks/GFS/", "https://finance.yahoo.com/markets/stocks/articles/globalfoundries-gfs-q2-2026-earnings-143239740.html"]
+    },
+    {
+      "claim": "FY2025 revenue by geography (China is NOT broken out)",
+      "value_or_text": "Revenue by Geography FY2025: United States $3,395M (50.0%); Europe, the Middle East and Africa $1,710M (25.2%); Other $1,686M (24.8%); Total $6,791M. Annual report: 'Revenue based on customers' headquarters.' Percentages computed by me. The 20-F does not disclose a separate China revenue figure; the risk factors say only that 'We have a material amount of direct business in China.'",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1709048/000170904826000022/gfs-20251231.htm",
+      "source_type": "sec_filing_20f"
+    },
+    {
+      "claim": "FY2025 operating metrics",
+      "value_or_text": "Average shipment utilisation across global fabs: 86% in 2025 vs 77% in 2024. FY2025 revenue $6,791M (+0.6% vs $6,750M); gross margin 24.9% vs 24.5%; R&D $518M (7.6% of revenue) vs $496M (7.3%). Wafer shipments 2.3M 300mm-equivalent (+10.4%) while average selling prices fell 10.4% - growth was volume-led and price-negative. Remaining LTA revenue commitment ~$11B as of Dec 31, 2025.",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1709048/000170904826000022/gfs-20251231.htm",
+      "source_type": "sec_filing_20f"
+    },
+    {
+      "claim": "Customer and supplier concentration",
+      "value_or_text": "Three customers dominate: 'Customer A amounted to 16.4%, 15.7% and 17.0% of total wafer revenue' in 2025/2024/2023; Customer C was 13.9% in 2025. The company purchased 71.4% of its SOI wafers - a key input - from a single supplier in 2025 (60.9% in 2024).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1709048/000170904826000022/gfs-20251231.htm",
+      "source_type": "sec_filing_20f"
+    },
+    {
+      "claim": "Company's own risk language that CHIPS money can be withheld",
+      "value_or_text": "\"we may fail to achieve the anticipated results or benefits from funding received (including awards under the U.S. CHIPS and Science Act and New York State Green CHIPS) and our expected results and planned or further expansions and operations may not proceed as planned if funding we expect to receive is delayed or withheld for any reason.\" (forward-looking statement paragraph carried on each GF release)",
+      "source_url": "https://gf.com/news-and-events/news/globalfoundries-and-us-department-of-commerce-finalize-375m-r-and-d-award-to-advance-american-quantum-leadership/",
+      "source_type": "company_press_release_primary"
+    },
+    {
+      "claim": "Quantum computing market size projection (comparison point)",
+      "value_or_text": "Precedence Research: global quantum computing market valued at $1.44B in 2025, $1.88B in 2026, projected to reach approximately $19.44B by 2035, a 29.73% CAGR 2026-2035. Report last updated Aug 10, 2026. Note: this is the whole quantum-computing market - the cryogenic-control-IC slice of it is a fraction of that.",
+      "source_url": "https://www.precedenceresearch.com/quantum-computing-market",
+      "source_type": "market_research_secondary"
+    },
+    {
+      "claim": "Competitive structural change: IonQ buying SkyWater",
+      "value_or_text": "SkyWater Technology (NASDAQ: SKYT) is subject to a pending ~$1.8B acquisition by IonQ (NASDAQ: IONQ), which would make SkyWater IonQ's in-house fabrication platform. SkyWater holds US DoD Trusted Foundry status, runs 130-65nm nodes with niobium superconducting integrations, cryogenic CMOS and photonics, and built its quantum franchise starting with D-Wave. IonQ CEO commentary in the Q2 call flagged this: an analyst asked Breen whether GF had 'seen more interest or share gains given IonQ just recently closed acquisition of SkyWater'.",
+      "source_url": "https://www.jaredwatkins.com/research/quantum-computing/skywater-technology/",
+      "source_type": "analyst_research_secondary",
+      "additional_sources": ["https://finance.yahoo.com/markets/stocks/articles/globalfoundries-gfs-q2-2026-earnings-143239740.html", "https://quantumfrontier.substack.com/p/is-it-too-early-to-scale-quantum"]
+    },
+    {
+      "claim": "Alternative cryo-control technologies that could bypass 22FDX",
+      "value_or_text": "Single-Flux-Quantum (SFQ) logic is the main substitution threat: SEEQC runs its own superconducting line and an in-house PDK with no corner simulation or automated place-and-route; Snowcap has a 28nm 300mm line plus Cadence EDA support; SkyWater/QuamCore are co-engineering SFQ digital control circuits for superconducting qubits (announced Nov 6, 2025, targeting 12-18 month milestones) claiming up to 1,000x cabling reduction. Intel has its own cryo-CMOS line (Horse Ridge II, Pando Tree) and, per conference coverage, claims an 18A-anchored quantum PDK with corner methodology, automated place-and-route, full-chip extraction and a 1.6K cryoprober closing the design loop in a day.",
+      "source_url": "https://quantumcomputingreport.com/a-tale-of-two-semiconductor-companies/",
+      "source_type": "trade_press_secondary",
+      "additional_sources": ["https://quantumfrontier.substack.com/p/is-it-too-early-to-scale-quantum", "https://www.jaredwatkins.com/research/quantum-computing/skywater-technology/"]
+    },
+    {
+      "claim": "GF CTO's own framing of the quantum PDK problem (moat durability caveat)",
+      "value_or_text": "\"GF CTO Gregg Bartlett was explicit that the company is building full PDKs for 22FDX and adjacent nodes as standard cryo-CMOS platforms specifically to avoid repeating its silicon photonics experience, where every customer showed up with a bespoke integration, and that quantum 'does not look like semiconductor volume manufacturing', it is low-volume, high-value work where well-funded customers pay NRE to adapt existing tools rather than wait for volume to justify them.\" Same coverage: collecting device statistics across 10 mK to 20 K is expensive, so today's customers 'tape out, measure at their own temperatures, and wrap a homemade mini-PDK around the foundry's.'",
+      "source_url": "https://quantumfrontier.substack.com/p/is-it-too-early-to-scale-quantum",
+      "source_type": "analyst_newsletter_secondary"
+    }
+  ],
+  "yfinance_data": {
+    "last_completed_close": {
+      "date": "2026-09-18",
+      "weekday": "Friday",
+      "close": 47.82,
+      "previous_close": 45.84,
+      "day_range": [45.25, 47.865],
+      "volume": 6583600,
+      "note": "Exact Friday Sept 18, 2026 close, verified against raw history(period='12d', auto_adjust=False). This is the ONLY place an exact price belongs; do not put it in prose."
+    },
+    "raw_last_5_closes_with_weekday": [
+      {"weekday": "Monday", "date": "2026-09-14", "close": 43.54},
+      {"weekday": "Tuesday", "date": "2026-09-15", "close": 42.75},
+      {"weekday": "Wednesday", "date": "2026-09-16", "close": 43.03},
+      {"weekday": "Thursday", "date": "2026-09-17", "close": 45.84},
+      {"weekday": "Friday", "date": "2026-09-18", "close": 47.82}
+    ],
+    "raw_12d_closes": {
+      "2026-09-02": 43.97, "2026-09-03": 44.53, "2026-09-04": 45.21,
+      "2026-09-08": 45.09, "2026-09-09": 45.95, "2026-09-10": 45.96,
+      "2026-09-11": 46.95, "2026-09-14": 43.54, "2026-09-15": 42.75,
+      "2026-09-16": 43.03, "2026-09-17": 45.84, "2026-09-18": 47.82
+    },
+    "market_cap": {
+      "yfinance": 26655758336,
+      "cross_check_yfinance_shares_x_close": "557,418,603 x 47.82 = $26.66B, matches yfinance marketCap",
+      "stockanalysis_com": 26240000000,
+      "stockanalysis_basis": "548,751,082 shares (the June 30, 2026 issued count) x close = $26.24B",
+      "discrepancy_note": "The ~$0.42B gap is purely a share-count definition difference. GF's own F-3 states 557,418,603 ordinary shares outstanding as of Sept 11, 2026 (which INCLUDES the 9.91M shares issued to Commerce). Use ~$26.6B, or quote 'roughly $26-27B'."
+    },
+    "forward_pe": {
+      "yfinance": 18.22,
+      "stockanalysis_com": 22.06,
+      "discrepancy_note": "yfinance implies forward EPS ~2.62 (its 'forwardEps' field is 2.62411); stockanalysis implies ~2.17. There is no primary-source forward EPS, so present the forward multiple as a range or attribute the source."
+    },
+    "trailing_pe": 37.36,
+    "trailing_eps": 1.28,
+    "price_to_book": 2.22,
+    "ttm_revenue": {
+      "yfinance_info_totalRevenue": 6937999872,
+      "reconciled_sum_of_last_4_quarters": 6938000000,
+      "quarters_used": {"2026-06-30": 1786, "2026-03-31": 1634, "2025-12-31": 1830, "2025-09-30": 1688},
+      "reconciliation": "1,786 + 1,634 + 1,830 + 1,688 = $6,938M - reconciles exactly to yfinance info ($6.938B). info is NOT stale.",
+      "revenue_growth_yoy": 0.058,
+      "earnings_growth_yoy": -0.268
+    },
+    "margin_trend": {
+      "gross_margin_pct": [
+        {"period": "Q2 2025", "ifrs": 24.2, "non_ifrs": 25.2},
+        {"period": "Q1 2026", "ifrs": 27.6, "non_ifrs": 29.0},
+        {"period": "Q2 2026", "ifrs": 28.3, "non_ifrs": 29.9},
+        {"period": "Q3 2026 guide", "ifrs": 29.5, "non_ifrs": 30.5}
+      ],
+      "operating_margin_pct": [
+        {"period": "Q2 2025", "ifrs": 11.6, "non_ifrs": 15.3},
+        {"period": "Q1 2026", "ifrs": 11.0, "non_ifrs": 16.6},
+        {"period": "Q2 2026", "ifrs": 9.7, "non_ifrs": 16.7},
+        {"period": "Q3 2026 guide", "ifrs": 12.7, "non_ifrs": 16.7}
+      ],
+      "key_observation": "Gross margin has expanded every quarter since Q2 2025 (+410bps y/y to 28.3%), but IFRS operating margin DECLINED y/y in Q2 2026 (9.7% vs 11.6%) and sequentially (from 11.0%), because IFRS opex rose to $331M from $212M a year earlier (+56%). Non-IFRS operating margin held at 16.7%. The gap is acquisitions ($440M of business purchases in Q2 2026 alone) and share-based compensation.",
+      "gbm_2025_actual": 0.2714,
+      "opm_2025_actual": 0.09742
+    },
+    "ttm_free_cash_flow": {
+      "ttm_ocf": 1916000000,
+      "ttm_capex": 1120000000,
+      "method": "FCF = OCF + capex, where yfinance capex rows are already NEGATIVE: (405+542+374+595) + (-411-312-208-189) = $1,916M - $1,120M",
+      "ttm_fcf": 796000000,
+      "fcf_yield_pct": 2.99,
+      "quarterly_fcf_m": {"2026-06-30": -6, "2026-03-31": 230, "2025-12-31": 166, "2025-09-30": 406},
+      "company_reported_check": "GF reports Q2 2026 non-IFRS adjusted FCF of $(3)M vs yfinance's $(6)M - small definitional gap, directionally identical."
+    },
+    "total_debt": 1678000000,
+    "cash_and_short_term_investments": {
+      "yfinance_info_totalCash": 2356999936,
+      "balance_sheet_cash_plus_st_investments": 2388000000,
+      "cash_and_equivalents": 1087000000,
+      "short_term_investments": 1301000000,
+      "company_reported": 3300000000,
+      "reconciliation_note": "GF's headline '$3.3 billion ending cash, cash equivalents and marketable securities' is broader than yfinance's $2.39B cash + short-term investments; the ~$0.9B gap is non-current marketable securities. Net debt per yfinance at 6/30/26 was only $35M."
+    },
+    "fifty_two_week": {
+      "from_yfinance_history_1y_auto_adjust_false": {"low": 32.02, "low_date": "2025-11-20", "high": 92.55, "high_date": "2026-05-26", "rows": 251},
+      "from_yfinance_info_fields": {"fiftyTwoWeekLow": 32.02, "fiftyTwoWeekHigh": 92.55},
+      "company_published_range": "GF does not publish a 52-week range in its releases or 20-F; stockanalysis.com independently shows the same range, so the low/high agree across all three sources - no discrepancy.",
+      "position": "The shares sit ~48% below the 52-week high and ~49% above the 52-week low."
+    },
+    "analyst_consensus": {
+      "recommendation_key": "buy",
+      "recommendation_mean": 1.95455,
+      "number_of_analyst_opinions": 22,
+      "target_mean_price": 76.0,
+      "target_median_price": 73.5,
+      "target_high_price": 140.0,
+      "target_low_price": 55.0,
+      "implied_upside_pct_from_friday_close": 58.9,
+      "cross_check": "stockanalysis.com agrees: 'According to 22 analysts, the average rating for GFS stock is Buy. The 12-month stock price target is $76.0.' Same mean, same analyst count.",
+      "recent_rating_actions_on_record": [
+        "Stifel initiated Buy, $60 PT (18 days before Sept 20, 2026)",
+        "Deutsche Bank lowered PT to $75 from $80, keeps Buy",
+        "Morgan Stanley raised PT to $60 from $57, Equal Weight",
+        "Baird raised PT to $140 from $100, Outperform",
+        "TD Cowen lowered PT to $75 from $85, keeps Buy",
+        "Citi lowered PT to $58 from $70, Neutral"
+      ]
+    },
+    "shares_outstanding": {
+      "yfinance_info_sharesOutstanding": 557418603,
+      "from_gf_form_f3_as_of_2026_09_11": 557418603,
+      "balance_sheet_issued_2026_06_30": 548751082,
+      "shares_outstanding_20f_fy2025_avg_diluted": 560000000,
+      "q3_2026_guided_fully_diluted_count": 556000000,
+      "market_cap_cross_check": "557,418,603 x 47.82 = $26.66B = yfinance marketCap exactly. Shares outstanding is verified.",
+      "float_shares_yfinance": 148420705,
+      "float_pct_computed": 26.63
+    },
+    "dividend": {
+      "quarterly_per_share": 0.12,
+      "annual_rate": 0.48,
+      "dividend_yield_pct": 1.0,
+      "payout_ratio": 0.0938,
+      "first_payment": "2026-07-14 (first-ever GF dividend)",
+      "next_payment": "2026-10-09, record date 2026-09-23",
+      "ex_dividend_date": "2026-09-23"
+    },
+    "other_info_fields": {
+      "beta": 1.774,
+      "fifty_day_average": 50.6002,
+      "two_hundred_day_average": 53.78235,
+      "enterprise_value": 25618276352,
+      "country": "United States",
+      "sector": "Technology",
+      "industry": "Semiconductors",
+      "full_time_employees": 14000,
+      "note_on_averages": "The shares closed Friday below both the 50-day and 200-day averages."
+    },
+    "computed_valuation_extras": {
+      "ttm_non_ifrs_adjusted_ebitda_m": 2389,
+      "ev_to_ttm_adjusted_ebitda": 10.72,
+      "ttm_net_income_m": 718,
+      "basis": "TTM adjusted EBITDA = Q2'26 587 + Q1'26 561 + Q4'25 732 + Q3'25 509 = $2,389M; EV $25.618B / $2.389B = 10.7x."
+    }
+  },
+  "revenue_reality": {
+    "quantum_revenue_disclosed": false,
+    "detail": "GF does not disclose quantum or QTS revenue in any source I could reach - not in the Sept 8 release, not in the May 21 QTS launch release, not in the Q2 2026 earnings 6-K, and not in the FY2025 Form 20-F. The company reports a single operating segment. CEO Tim Breen addressed this head-on on the Q2 2026 call: 'Over the next 1 to 3 years, we expect to generate quantum-related revenue largely through engineering engagements with customers reported within our technology services revenue. As customer platforms qualify and move into volume production, we expect quantum-related revenue from manufacturing services to ramp towards the end of the decade.' He then framed the whole thing as an option: 'Think of it more medium term as a kind of call option on the scale to high-volume module manufacturing. Too early to call exactly when those ramps will happen.'",
+    "where_it_is_hiding": "Technology services revenue was ~11% of Q2 2026 revenue (11% of $1,786M = ~$196M) - and that line is not a quantum line. It includes 'IP, licensing, software, reticles, nonrecurring engineering, expedite fees and other items.' Management guided the MIPS and Synopsys ARC IP acquisitions alone to contribute $100-120M of FY2026 technology services revenue (raised from a prior $60-100M expectation), so the majority of the bucket is classical IP/EDA, not quantum.",
+    "best_estimate_and_basis": "No defensible dollar figure exists and the article should not invent one. The honest framing: quantum-related revenue today is engineering/NRE work, almost certainly well under $100M/yr, and is probably in the tens of millions at most - because (a) it is a subset of a ~$196M/quarter technology-services line that is dominated by the MIPS/Synopsys IP businesses contributing $100-120M for the full year, (b) the CEO says volume manufacturing revenue comes 'towards the end of the decade,' and (c) the CTO says quantum 'does not look like semiconductor volume manufacturing' - it is low-volume, high-value NRE work. Order of magnitude against GF's ~$6.9B TTM revenue: quantum is well under 2% today. For scale: the $375M award spread over five years is ~$75M/yr, about 1.1% of TTM revenue; the full $375M is about 5.4% of one year of revenue.",
+    "what_would_change_it": "Watch the technology services revenue line and any disclosure of manufacturing-services quantum revenue. Management's own milestones: engineering revenue now through ~2029, volume manufacturing 'towards the end of the decade.'"
+  },
+  "moat": [
+    "GF's moat claim rests on 22FDX's BACKSIDE BIAS connection, not just on being cryo-capable. QCR: 'The advantage of the 22FDX process is its backside connection, which allows a user to control the VT (transistor threshold voltage). Therefore, even if a company cannot model the characteristics at low temperatures, they can adjust the voltage applied to this backside connection until they achieve the appropriate transistor characteristics.' That is a specific, hard-to-copy answer to the central cryo-CMOS problem - that SPICE models simply are not characterised at 15 mK, where a transistor behaves nothing like it does at 0-70 degrees C. Source: https://quantumcomputingreport.com/a-tale-of-two-semiconductor-companies/",
+    "The addressable functional layer is genuinely cross-modal, which is the real strategic point. Cryogenic CMOS control and readout ICs, 3D heterogeneous packaging and superconducting interconnects are needed regardless of whether superconducting, trapped-ion, photonic, topological or spin qubits win - and the CHIPS award is explicitly for 'cryogenic CMOS process design kits, advanced packaging and heterogenous integration' across 'multiple quantum architectures and modalities' (NIST). A qubit-agnostic position is defensible precisely because the modality winner is unknown. Sources: https://www.nist.gov/news-events/news/2026/09/department-commerce-announces-finalization-chips-rd-award-globalfoundries and https://gf.com/news-and-events/news/globalfoundries-launches-quantum-technology-solutions-to-scale-us-quantum-manufacturing/",
+    "Customer traction is real but narrow, and mostly non-US. GF claims '8 of the world's leading quantum computing players' with 4 new engagements since May, naming PsiQuantum, Quantinuum and Quantum Motion, with an on-record endorsement from Diraq. But 22FDX spin-qubit work for Diraq and Quantum Motion has historically run out of DRESDEN, not upstate New York - so the $375M is partly about relocating an existing European capability into a US, ITAR-adjacent footprint rather than creating capability from zero. Sources: https://finance.yahoo.com/markets/stocks/articles/globalfoundries-gfs-q2-2026-earnings-143239740.html, https://quantumcomputingreport.com/a-tale-of-two-semiconductor-companies/",
+    "US-sited, trusted, specialty foundry supply is the strategic moat, not the node. Commerce in 2024: 'there are only four companies outside of China that provide current and mature foundry capabilities at the scale of GF, and GF is the only one of those companies that is headquartered in the United States.' GF is a Trusted Foundry with US-government business and is building against explicit defense-procurement demands for domestic sourcing \"down to the component level\" (SkyWater CSO Ross Miller, on the same panel as GF). Source: https://gf.com/news-and-events/news/globalfoundries-and-u-s-department-of-commerce-announce-award-agreement-on-chips-act-funding-for-essential-chip-manufacturing/ and https://quantumfrontier.substack.com/p/is-it-too-early-to-scale-quantum",
+    "The moat is NOT a PDK standard, and GF's own CTO says so - while substitutes keep moving. There is no quantum equivalent of the classical PDK: 'a PDK lives on millions of statistical data points, but in quantum, collecting device statistics across an operating space from 10 millikelvin to 20 kelvin is expensive, so today's customers tape out, measure at their own temperatures, and wrap a homemade mini-PDK around the foundry's.' Bartlett says GF is building full 22FDX cryo PDKs to avoid repeating its silicon photonics experience 'where every customer showed up with a bespoke integration.' Meanwhile Intel has its own cryo line (Horse Ridge II, Pando Tree) and, per the same conference coverage, an 18A-anchored quantum PDK with corner methodology, automated place-and-route, full-chip extraction and a 1.6K cryoprober closing the design loop in a day; SEEQC (own superconducting line, mini-IDM with 6-8 week design-to-silicon), Snowcap (28nm, 300mm, Cadence EDA support) and SkyWater with QuamCore (SFQ control circuits, claiming up to 1,000x cabling reduction) are pursuing Single-Flux-Quantum logic that runs natively at cryogenic temperatures and could shrink or remove the cryo-CMOS control layer altogether. Until a real PDK standard exists, switching costs are lower than a foundry moat normally implies. Sources: https://quantumfrontier.substack.com/p/is-it-too-early-to-scale-quantum and https://quantumcomputingreport.com/a-tale-of-two-semiconductor-companies/"
+  ],
+  "bear_case": [
+    {
+      "point": "The $375M 'award' is an equity issuance, not free money - the government got 9,907,399 shares at $37.85, and it is already selling them.",
+      "numbers": "9,907,399 x $37.85 = $374,995,052. The issuance price is a 19.4% discount to GF's Sept 11 close of $46.95. The shares are ~1.78% of the 557,418,603 shares outstanding as of Sept 11, 2026. At Friday's close the stake is worth ~$474M, a ~26% gain for the government roughly 7 weeks after issuance.",
+      "source": "https://app.edgar.tools/filing/1709048/0001709048-26-000234/a6-ksiaclean.htm and https://app.edgar.tools/filing/1709048/0001709048-26-000239/globalfoundriesincf-3asr.htm",
+      "meaning": "Two honest readings, both sourced: either the CHIPS money is being delivered via government equity participation (so the cash comes with dilution and the taxpayer shares the downside), or the equity is a separate condition on the grant. Present the facts, flag the ambiguity - GF's own two documents do not reconcile them."
+    },
+    {
+      "point": "A registered overhang: Commerce filed an automatic shelf (Form F-3ASR) to resell all 9.91M shares.",
+      "numbers": "9.91M shares vs GF's ~6.6M-share average daily volume on Sept 17-18 - roughly 1.5 days of volume, but on a stock with only ~148.4M float shares (26.6%).",
+      "source": "https://app.edgar.tools/filing/1709048/0001709048-26-000239/globalfoundriesincf-3asr.htm | news coverage: https://cryptobriefing.com/commerce-department-globalfoundries-shares-sale/ (Sep 15, 2026), Barchart 'The U.S. Government Is Preparing to Offload Over 9 Million GlobalFoundries Shares' (Sep 18, 2026)",
+      "meaning": "The government can sell 'from time to time' with GF bearing the registration costs. GF itself receives no proceeds.",
+      "contradiction_flag": "cryptobriefing writes that the plan is to sell 'without the Commerce Department receiving proceeds.' The F-3ASR states the opposite: 'The Selling Shareholders will receive all of the net proceeds from any sale of the Shares under this prospectus. We are not selling any ordinary shares under this prospectus.' The outlet appears to have inverted whose proceeds are excluded. Do not repeat that claim."
+    },
+    {
+      "point": "Mubadala still controls the company the US government just funded - roughly 400 million shares, about 72% of the Sept 11 share count.",
+      "numbers": "22M shares sold in a May 26, 2026 block at $89.96 via Morgan Stanley, raising ~$1.9-2.0B, taking Mubadala from 77% to 400M shares / ~73% (of the ~548M count then outstanding); 400M / 557.4M = 71.8% today. Commerce's 9.9M shares add up to a combined 73.5%, leaving ~26.5% free float - which independently matches yfinance's 148,420,705 float shares.",
+      "source": "https://www.agbi.com/finance/2026/05/mubadala-raises-2bn-from-globalfoundries-share-sale/ | 20-F: 'Mubadala beneficially owns, in the aggregate, approximately 81% of our outstanding ordinary shares' - https://www.sec.gov/Archives/edgar/data/1709048/000170904826000022/gfs-20251231.htm",
+      "meaning": "An Abu Dhabi sovereign fund has voting control of the flagship 'secure domestic quantum supply chain.' The 20-F itself frames GF as a 'Controlled Company' and a foreign private issuer (not subject to US proxy rules), with a shareholder agreement giving Mubadala consent rights, director nomination rights and de facto veto over a change of control. Also note a share-count conflict: StockTitan reported the May sale as 28.8M shares, other outlets as 22M - the 22M figure is the one consistent with the 77%-to-73% stake math."
+    },
+    {
+      "point": "The money is milestone-gated cost-share, and GF's own forward-looking language admits it can be withheld.",
+      "numbers": "$375M over five years = ~$75M/yr, ~1.1% of TTM revenue of $6,938M, and ~5.4% of a single year's revenue if received in full. It is R&D funding against milestones, not product orders. GF's release: 'eligible to receive up to $375 million in funding over a five-year period tied to the achievement of specified milestones.' GF's own risk language: funding may be 'delayed or withheld for any reason.'",
+      "source": "https://gf.com/news-and-events/news/globalfoundries-and-us-department-of-commerce-finalize-375m-r-and-d-award-to-advance-american-quantum-leadership/",
+      "meaning": "A grant that flows into R&D expense does not move the P&L like revenue does, and 'up to' survives contact with nothing."
+    },
+    {
+      "point": "Margins are being spent to build this: IFRS operating margin fell year over year despite record gross margin.",
+      "numbers": "Gross margin improved every quarter: 24.2% (Q2'25) to 27.6% (Q1'26) to 28.3% (Q2'26), +410bps year over year. But IFRS operating margin went 11.6% (Q2'25) to 11.0% (Q1'26) to 9.7% (Q2'26), because IFRS operating expenses jumped to $331M from $212M a year earlier, +56%. Q2 2026 also included $440M of cash spent on acquisitions (MIPS, Synopsys ARC IP, Photeon IVR). Q2 2026 free cash flow was negative: $(3)M non-IFRS adjusted, $(6)M per yfinance. TTM FCF of $796M on TTM capex of $1,120M is a ~3.0% FCF yield.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1709048/000170904826000218/globalfoundries2q2026earni.htm",
+      "meaning": "The equity de-rated ~48% from its 52-week high even as the CHIPS narrative strengthened - the market is paying for the opex, not the option. The Aug 5 earnings release drew a -4.9% 24-hour reaction, and the Sept 8 award announcement drew a -0.27% move (StockTitan Argus session data) - i.e. the market barely noticed the award itself."
+    },
+    {
+      "point": "The core business is price-negative and highly concentrated.",
+      "numbers": "FY2025: revenue $6,791M (+0.6%), wafer shipments 2.3M 300mm-equivalent (+10.4%), average selling prices -10.4%. Customer A = 16.4% of total wafer revenue in 2025 (17.0% in 2023); Customer C = 13.9%. 71.4% of SOI wafers - a key input - came from a single supplier in 2025. Shipment utilisation 86% in FY2025 vs 77% in FY2024.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1709048/000170904826000022/gfs-20251231.htm",
+      "meaning": "Volume up 10.4% and ASPs down 10.4% is a business running to stand still. And GF does not disclose China revenue at all: FY2025 geography is US $3,395M (50.0%), EMEA $1,710M (25.2%), Other $1,686M (24.8%), with the 20-F saying only that 'we have a material amount of direct business in China' and flagging Chinese mature-node overcapacity leading to 'underutilisation or significant ASP erosion.'"
+    },
+    {
+      "point": "Technological substitution risk: the cryo-CMOS control layer itself is contestable.",
+      "numbers": "No quantum PDK standard exists (GF CTO's own admission), and SFQ logic - SEEQC (own line, 6-8 week design-to-silicon), Snowcap (28nm/300mm), SkyWater+QuamCore (SFQ control circuits, claiming up to 1,000x cabling reduction) - operates natively at ~10 mK and could shrink the cryo-CMOS layer. Intel has Horse Ridge II/Pando Tree plus a claimed 18A-anchored quantum PDK with a 1.6K cryoprober. IonQ is buying SkyWater (~$1.8B) - a rival now owning a foundry that used to serve rivals.",
+      "source": "https://quantumfrontier.substack.com/p/is-it-too-early-to-scale-quantum | https://quantumcomputingreport.com/a-tale-of-two-semiconductor-companies/ | https://www.jaredwatkins.com/research/quantum-computing/skywater-technology/",
+      "meaning": "GF is selling a control layer, not a qubit. If the winning architectures need less of it, or a captive/rival fab supplies it more cheaply, the TAM shrinks under GF's feet. The open engineering question the award is designed to answer, per third-party coverage, is whether 22FDX eMRAM retains data acceptably at millikelvin across high-volume lots - not just in a lab."
+    }
+  ],
+  "stock_relevance": "The equity has already paid for the option, not the revenue: it sits roughly 48% below its 52-week high even though the $375M award was finalized Sept 8 and the government's resale shelf only became the news a week later. For a re-rate, GF has to convert quantum engineering engagements into a disclosed revenue line - the proof point is manufacturing-services revenue inside quantum becoming separable from the ~11%-of-revenue technology services bucket that is currently dominated by the MIPS and Synopsys ARC IP businesses ($100-120M of FY2026 contribution on their own), or management breaking out QTS revenue at all. Management's own milestones put that 'ramp towards the end of the decade,' so the more actionable near-term markers are the milestone disbursements themselves (each one proving the government is actually paying against deliverables) and whether the 8 named quantum partners plus 4 new engagements graduate to multi-year purchase commitments like the ~$11B of remaining LTA backlog. Meanwhile the bear case is priced in through dilution mechanics rather than narrative: the government took its 9.91M shares at a 19.4% discount to the Sept 11 close and has registered them for resale while Mubadala still holds roughly 72% of the company, so any re-rate has to outrun a ~1.8% registered overhang, a compressing IFRS operating margin (9.7% in Q2 2026 versus 11.6% a year earlier), and a ~3% FCF yield on $796M of trailing free cash flow against $1,120M of trailing capex.",
+  "five_title_candidates": [
+    {
+      "title": "GlobalFoundries' $375M Quantum Award Is Milestone Money, Not Orders",
+      "words": 9,
+      "strongest": true,
+      "why": "Captures the single most important verified nuance - the award is milestone-gated R&D funding, not revenue - and is falsifiable against the press release."
+    },
+    {
+      "title": "The CHIPS Check Is Signed; GlobalFoundries' Quantum Revenue Is Not",
+      "words": 10,
+      "strongest": false,
+      "why": "Sharp structural contrast, fully supported: agreement Sept 8 versus no quantum revenue disclosure and a management timeline running to the end of the decade."
+    },
+    {
+      "title": "GlobalFoundries Quantum Award Finalized; Commerce Books a 1.8% Stake",
+      "words": 9,
+      "strongest": false,
+      "why": "Leads with the fact that the money and the equity issuance are the same number, 9,907,399 shares at $37.85."
+    },
+    {
+      "title": "Quantum Foundry Money Arrives at GlobalFoundries Before Quantum Revenue Does",
+      "words": 10,
+      "strongest": false,
+      "why": "Honest framing for a reader deciding whether the news matters to the model."
+    },
+    {
+      "title": "GlobalFoundries Books $375M for Quantum While Revenue Waits for Decade's End",
+      "words": 11,
+      "strongest": false,
+      "why": "Uses management's own words - volume manufacturing 'towards the end of the decade.'"
+    }
+  ],
+  "writer_notes": {
+    "source_access_note": "The SEC Archives URLs (sec.gov/Archives/...) and the edgar.tools mirrors return HTTP 403 to browser user-agents from this host. I retrieved and read all of that content successfully earlier in this session (SEC requires a declared UA; edgar.tools uses bot protection). The links are correct and open normally in a browser - do not assume they are dead. GF's own newsroom served the Sept 8 release and the May 21 QTS launch release with HTTP 200, so prefer those for reader-facing citations.",
+    "no_prices_in_prose": "Do not put 47.82 or any exact share price in article prose. Use percentages: ~48% below the 52-week high, ~49% above the 52-week low, ~59% implied upside to the analyst mean target. The exact Friday close lives only in the keyMetrics card / price field.",
+    "comparison_points_that_work": [
+      "The CHIPS quantum package: $2.013B across nine May-2026 LOIs (IBM/Anderon $1B, GF $375M = 18.6%, seven computing companies splitting ~$640M). Finalized same-wave money: GF $375M + Rigetti/D-Wave/Quantinuum $100M each (Sept 8) + Anderon $1B (Sept 16) = $1.675B.",
+      "Whole quantum-computing market: $1.88B in 2026 on the way to $19.44B by 2035 (Precedence Research, 29.73% CAGR) - and GF's cryo-control-IC slice is a fraction of that.",
+      "IBM is matching its $1B award with $1B of its own capital and already has wafers in process at Anderon; GF's $375M has no announced company match."
+    ],
+    "do_not_claim": [
+      "Do not say GF finalized the agreement 'this week' or on Sept 19-20 - it was Sept 8, 2026.",
+      "Do not attribute '22FDX with eMRAM' to GF's press release - GF says 'FDX(TM) platform'; the 22FDX/eMRAM detail is third-party.",
+      "Do not state a quantum revenue dollar figure. None is disclosed; the CEO says manufacturing revenue ramps 'towards the end of the decade.'",
+      "Do not repeat cryptobriefing's claim that Commerce will not receive proceeds from the share sale - the F-3ASR says the selling shareholder receives all net proceeds."
+    ]
+  },
+  "brief_path": "/home/chino/thesignal/analyst-brief-gfs-quantum.json"
+}

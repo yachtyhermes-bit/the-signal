@@ -1,6 +1,14 @@
 #!/usr/bin/env python3
 """Generate Andrew TTS for specific missing slugs and upload to R2."""
 import asyncio, edge_tts, json, os, subprocess, re, urllib.request
+# ── shared TTS text extraction (drops the 'Numbers That Matter' stats card) ──
+try:
+    from tts_text import strip_nonprose  # noqa: E402
+except ImportError:  # executed from another cwd
+    import sys as _sys
+    _sys.path.insert(0, '/home/chino/thesignal/scripts')
+    from tts_text import strip_nonprose  # noqa: E402
+
 
 VOICE = 'en-US-AndrewNeural'
 MAX_CHARS = 5000
@@ -37,7 +45,7 @@ async def gen_one(slug):
         a = json.load(f)
     title = a.get('title', '')
     body = a.get('bodyHtml', '')
-    text = re.sub(r'<[^>]+>', ' ', body)
+    text = re.sub(r'<[^>]+>', ' ', strip_nonprose(body))
     text = f'{title}. {text}'[:MAX_CHARS]
     
     out = os.path.join(TMP, f'{slug}.mp3')

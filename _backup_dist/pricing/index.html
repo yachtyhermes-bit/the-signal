@@ -93,7 +93,10 @@
       .pricing-page { padding: 2rem 1rem 4rem; }
       .compare-table th, .compare-table td { padding: 10px 12px; font-size: .8rem; }
     }
-  </style>
+    .pricing-terms-note { max-width: 720px; margin: 8px auto 0; padding: 0 24px; font-size: 13px; line-height: 1.6; color: var(--text-muted, #8b95a7); text-align: center; }
+  .pricing-terms-note a { color: var(--accent, #3b82f6); text-decoration: none; }
+  .pricing-terms-note a:hover { text-decoration: underline; }
+</style>
 </head>
 <body>
   <!-- Nav -->
@@ -335,6 +338,8 @@
       <!-- FAQ -->
       <div class="pricing-faq">
         <h2>Frequently Asked Questions</h2>
+    <p class="pricing-terms-note">By subscribing you agree to our <a href="/terms/">Terms of Service</a>, and you acknowledge our <a href="/disclaimer/">Disclaimer</a> and <a href="/privacy/">Privacy Policy</a>. Subscriptions are for personal, non-commercial use and renew automatically until cancelled.</p>
+
         <details class="faq-item"><summary>Can I start with Free and upgrade later?</summary><p>Absolutely. Free is yours forever. Upgrade to Premium or Pro whenever you're ready — your data and settings carry over seamlessly.</p></details>
         <details class="faq-item"><summary>Is there a free trial?</summary><p>Yes. Premium includes a 7-day free trial, Pro a 14-day trial. Cancel before it ends and you won't be charged.</p></details>
         <details class="faq-item"><summary>What payment methods do you accept?</summary><p>All major credit/debit cards via Stripe, plus Apple Pay and Google Pay.</p></details>

@@ -10,7 +10,7 @@
   <meta name="robots" content="max-image-preview:large">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Oxanium:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/main.css?v=22">
+  <link rel="stylesheet" href="/css/main.css?v=31">
   <link rel="stylesheet" href="/css/pulse-badge.css">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-98KDVDFBCW"></script>
@@ -49,15 +49,7 @@
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "The Signal",
-      "url": "https://readthesignal.net",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://readthesignal.net/?q={search_term_string}"
-        },
-        "query-input": "required name=search_term_string"
-      }
+      "url": "https://readthesignal.net"
     }
     </script>
 <link rel="stylesheet" href="/css/nav.css">
@@ -111,20 +103,20 @@
                 </div>
                 <div class="auth-drop-divider"></div>
                 <div class="auth-profile-nav">
-                  <a href="/sector/ai" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
-                  <a href="/sector/cyber" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
-                  <a href="/sector/defense" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
-                  <a href="/sector/space" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
-                  <a href="/sector/mega-cap" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
-                  <a href="/sector/quantum" class="auth-nav-item"><span class="auth-nav-icon">🔬</span> Quantum</a>
+                  <a href="/sector/ai/" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
+                  <a href="/sector/cyber/" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
+                  <a href="/sector/defense/" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
+                  <a href="/sector/space/" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
+                  <a href="/sector/mega-cap/" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
+                  <a href="/sector/quantum/" class="auth-nav-item"><span class="auth-nav-icon">🔬</span> Quantum</a>
                   <div class="auth-nav-section-header">FEATURES</div>
-                  <a href="/hive" class="auth-nav-item"><span class="auth-nav-icon">🐝</span> Hive</a>
-                  <a href="/signal-vs-the-street" class="auth-nav-item"><span class="auth-nav-icon">📈</span> Signal vs. Street</a>
+                  <a href="/hive/" class="auth-nav-item"><span class="auth-nav-icon">🐝</span> Hive</a>
+                  <a href="/signal-vs-the-street/" class="auth-nav-item"><span class="auth-nav-icon">📈</span> Signal vs. Street</a>
                 </div>
                 <div class="auth-drop-divider"></div>
                 <div class="auth-profile-footer">
-                  <a href="/hive" class="auth-footer-link" onclick="navigateToHiveLeaderboard(event)">Leaderboard</a>
-                  <a href="/account/settings" class="auth-footer-link">Settings</a>
+                  <a href="/hive/" class="auth-footer-link" onclick="navigateToHiveLeaderboard(event)">Leaderboard</a>
+                  <a href="/account/settings/" class="auth-footer-link">Settings</a>
                   <button class="auth-signout-btn" id="authSignOut">Sign Out</button>
                 </div>
               </div>
@@ -142,15 +134,15 @@
                 </button>
                 <div class="auth-drop-divider"></div>
                 <div class="auth-profile-nav">
-                  <a href="/sector/ai" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
-                  <a href="/sector/cyber" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
-                  <a href="/sector/defense" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
-                  <a href="/sector/space" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
-                  <a href="/sector/mega-cap" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
-                  <a href="/sector/quantum" class="auth-nav-item"><span class="auth-nav-icon">🔬</span> Quantum</a>
+                  <a href="/sector/ai/" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
+                  <a href="/sector/cyber/" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
+                  <a href="/sector/defense/" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
+                  <a href="/sector/space/" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
+                  <a href="/sector/mega-cap/" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
+                  <a href="/sector/quantum/" class="auth-nav-item"><span class="auth-nav-icon">🔬</span> Quantum</a>
                   <div class="auth-nav-section-header">FEATURES</div>
-                  <a href="/hive" class="auth-nav-item"><span class="auth-nav-icon">🐝</span> Hive</a>
-                  <a href="/signal-vs-the-street" class="auth-nav-item"><span class="auth-nav-icon">📈</span> Signal vs. Street</a>
+                  <a href="/hive/" class="auth-nav-item"><span class="auth-nav-icon">🐝</span> Hive</a>
+                  <a href="/signal-vs-the-street/" class="auth-nav-item"><span class="auth-nav-icon">📈</span> Signal vs. Street</a>
                 </div>
               </div>
           </div>
@@ -178,16 +170,16 @@
     </div>
     <div class="drawer-body">
       <div class="drawer-section-label">SECTORS</div>
-      <a href="/sector/ai" class="drawer-link">AI</a>
-      <a href="/sector/cyber" class="drawer-link">Cyber</a>
-      <a href="/sector/defense" class="drawer-link">Defense</a>
-      <a href="/sector/space" class="drawer-link">Space</a>
-      <a href="/sector/mega-cap" class="drawer-link">Mega-Cap</a>
-      <a href="/sector/quantum" class="drawer-link">Quantum</a>
+      <a href="/sector/ai/" class="drawer-link">AI</a>
+      <a href="/sector/cyber/" class="drawer-link">Cyber</a>
+      <a href="/sector/defense/" class="drawer-link">Defense</a>
+      <a href="/sector/space/" class="drawer-link">Space</a>
+      <a href="/sector/mega-cap/" class="drawer-link">Mega-Cap</a>
+      <a href="/sector/quantum/" class="drawer-link">Quantum</a>
       <hr class="drawer-divider">
       <div class="drawer-section-label">FEATURES</div>
-      <a href="/hive" class="drawer-link drawer-link-hive">Hive</a>
-      <a href="/signal-vs-the-street" class="drawer-link drawer-link-svs">Signal vs. Street</a>
+      <a href="/hive/" class="drawer-link drawer-link-hive">Hive</a>
+      <a href="/signal-vs-the-street/" class="drawer-link drawer-link-svs">Signal vs. Street</a>
     </div>
   </div>Search Overlay -->
   <div class="search-overlay" id="searchOverlay">
@@ -272,23 +264,8 @@
     </a>
     </div>
     <div class="article-grid">
-      <a href="/article/nvidia-vera-rubin-arizona-fab-2026" class="article-card">
-    <div class="card-image"><img src="/img/articles/nvidia-vera-rubin-arizona-fab-2026.jpg" alt="Jensen Drops the Hammer at Computex 2026 — NVIDIA&#39;s Vera Rubin Platform and Arizona Fab Redraw the AI Map" loading="lazy" decoding="async" width="1200" height="675"></div>
-    <div class="card-body">
-    <div class="card-top">
-      <span class="ticker-badge bullish">NVDA</span>
-      <span class="price-chip up">$224.55 <span>+6.35%</span></span>
-      <span class="sentiment-label bullish">▲ Bullish</span>
-    </div>
-    <h3 class="card-title">Jensen Drops the Hammer at Computex 2026 — NVIDIA&#39;s Vera Rubin Platform and Arizona Fab Redraw the AI Map</h3>
-    <p class="card-summary">NVIDIA CEO Jensen Huang used his Computex 2026 keynote to confirm Vera Rubin is ramping into full production — delivering 10x agent throughput over Grace Blackwell — and announced a joint TSMC partner...</p>
-    <div class="card-meta">
-      <span>Jun 2, 2026</span>
-      <span>1 min read</span>
-    </div>
-    </div>
-  </a>
-      <a href="/article/anthropic-ipo-filing-2026" class="article-card">
+      
+      <a href="/article/anthropic-ipo-filing-2026/" class="article-card">
     <div class="card-image"><img src="/img/articles/anthropic-ipo-filing-2026.jpg" alt="The $965 Billion AI Giant Is Going Public — Anthropic Files for Landmark IPO" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -304,7 +281,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/bigbear-ai-defense-contracts-panama-2026" class="article-card">
+      <a href="/article/bigbear-ai-defense-contracts-panama-2026/" class="article-card">
     <div class="card-image"><img src="/img/articles/bigbear-ai-defense-contracts-panama-2026.jpg" alt="BigBear.ai Stock Surges 20% as $60M Defense Contracts and Panama AI Deal Reshape the Narrative" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -320,7 +297,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/nvidia-windows-pc-chip-2026" class="article-card">
+      <a href="/article/nvidia-windows-pc-chip-2026/" class="article-card">
     <div class="card-image"><img src="/img/articles/nvidia-windows-pc-chip-2026.jpg" alt="Nvidia Is Finally Coming for Your Windows PC — N1X Arm Chip Set to Debut at Computex Next Week" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -336,7 +313,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/smci-dell-ai-server-wave-2026" class="article-card">
+      <a href="/article/smci-dell-ai-server-wave-2026/" class="article-card">
     <div class="card-image"><img src="/img/articles/smci-dell-ai-server-wave-2026.jpg" alt="$SMCI Rallies 11% as Dell&#39;s Blowout Earnings Validate the AI Server Thesis" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -352,7 +329,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/palantir-surges-ai-factory-dell-partnership" class="article-card">
+      <a href="/article/palantir-surges-ai-factory-dell-partnership/" class="article-card">
     <div class="card-image"><img src="/img/articles/palantir-surges-ai-factory-dell-partnership.jpg" alt="Palantir Surges 10% as Dell&#39;s Blowout Earnings Validate AI Factory Partnership" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -368,7 +345,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/arm-first-chip-pivot-2026" class="article-card">
+      <a href="/article/arm-first-chip-pivot-2026/" class="article-card">
     <div class="card-image"><img src="/img/articles/arm-first-ai-chip.jpg" alt="ARM Just Did Something It Hasn&#39;t Done in 35 Years — and the Stock Is Exploding" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -384,7 +361,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/astera-labs-ai-connectivity-2026" class="article-card">
+      <a href="/article/astera-labs-ai-connectivity-2026/" class="article-card">
     <div class="card-image"><img src="/img/articles/astera-labs-ai-connectivity-2026.jpg" alt="$ALAB Up 311% from 52-Week Low: The AI Connectivity Company Powering Every Data Center" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -400,7 +377,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/tsm-blueprint" class="article-card">
+      <a href="/article/tsm-blueprint/" class="article-card">
     <div class="card-image"><img src="/img/articles/tsm-blueprint-wafers.jpg" alt="The Blueprint: Why Nobody Moves in AI Without TSM" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -416,7 +393,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/nebius-q1-earnings-ai-cloud-2026" class="article-card">
+      <a href="/article/nebius-q1-earnings-ai-cloud-2026/" class="article-card">
     <div class="card-image"><img src="/img/articles/nebius-q1-earnings-ai-cloud-2026.jpg" alt="Nebius Just Dropped Q1 Earnings — Europe&#39;s AI Cloud Dark Horse Is Scaling Fast" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -432,7 +409,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/arm-holdings-ai-chip-architecture" class="article-card">
+      <a href="/article/arm-holdings-ai-chip-architecture/" class="article-card">
     <div class="card-image"><img src="/img/articles/arm-chip-architecture.jpg" alt="Arm Holdings Is the Hidden Architecture Powering the AI Revolution — and It&#39;s Just Getting Started" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -448,7 +425,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/qualcomm-edge-ai-awakening" class="article-card">
+      <a href="/article/qualcomm-edge-ai-awakening/" class="article-card">
     <div class="card-image"><img src="/img/articles/qualcomm-edge-ai-awakening.jpg" alt="Qualcomm Just Popped 11.6% as Wall Street Finally Wakes Up to the Edge AI Revolution" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -464,7 +441,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/tower-semiconductor-ai-chip-deals" class="article-card">
+      <a href="/article/tower-semiconductor-ai-chip-deals/" class="article-card">
     <div class="card-image"><img src="/img/articles/tower-semiconductor-ai-chip-deals.jpg" alt="Tower Semiconductor Just Signed $1.3 Billion in AI Chip Deals — This Tiny Foundry Is Becoming a Silicon Photonics Powerhouse" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -480,7 +457,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/smci-q3-earnings-surge-ai-value" class="article-card">
+      <a href="/article/smci-q3-earnings-surge-ai-value/" class="article-card">
     <div class="card-image"><img src="/img/articles/smci-q3-earnings-surge-ai-value.jpg" alt="Super Micro Just Doubled Revenue — And Trades at 11x Earnings. The Market Is Priced for a Slowdown That Isn&#39;t Coming." loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -496,7 +473,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/amd-meta-chips-deal-100b" class="article-card">
+      <a href="/article/amd-meta-chips-deal-100b/" class="article-card">
     <div class="card-image"><img src="/img/articles/amd-meta-chips-deal-100b.jpg" alt="AMD Just Locked Down a $100 Billion AI Deal With Meta — And Wall Street Is Still Underpricing It" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -512,7 +489,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/broadcom-google-anthropic-expanded-deal" class="article-card">
+      <a href="/article/broadcom-google-anthropic-expanded-deal/" class="article-card">
     <div class="card-image"><img src="/img/articles/broadcom-google-anthropic-expanded-deal.jpg" alt="Broadcom Just Locked In $200 Billion in AI Compute Deals — And It&#39;s Still the Cheapest Way to Play the Boom" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -528,7 +505,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/intel-tesla-14a-terafab-deal" class="article-card">
+      <a href="/article/intel-tesla-14a-terafab-deal/" class="article-card">
     <div class="card-image"><img src="/img/articles/intel-tesla-14a-terafab-deal.jpg" alt="Intel&#39;s Comeback Is Real — Tesla Just Bet $20 Billion on Its 14A Chips" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -544,7 +521,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/broadcom-wall-street-top-pick-2026" class="article-card">
+      <a href="/article/broadcom-wall-street-top-pick-2026/" class="article-card">
     <div class="card-image"><img src="/img/articles/broadcom-wall-street-top-pick-2026.jpg" alt="Broadcom Just Hit a 52-Week High. Wall Street Says It&#39;s Still Cheap." loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -560,7 +537,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/micron-hbm-ai-chip-2026" class="article-card">
+      <a href="/article/micron-hbm-ai-chip-2026/" class="article-card">
     <div class="card-image"><img src="/img/articles/micron-hbm-ai-chip-2026.jpg" alt="Micron at 7.3x Forward PE: The Insanely Cheap AI Stock Analysts Still Don&#39;t Get" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -576,7 +553,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/iren-nvidia-deal-ai-cloud-controversy" class="article-card">
+      <a href="/article/iren-nvidia-deal-ai-cloud-controversy/" class="article-card">
     <div class="card-image"><img src="/img/articles/iren-datacenter.jpg" alt="IREN Went From Bitcoin Miner to $3.4B NVIDIA Partner — Wall Street Is Just Waking Up" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -592,7 +569,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/amd-quietly-crushing-nvidia-2026" class="article-card">
+      <a href="/article/amd-quietly-crushing-nvidia-2026/" class="article-card">
     <div class="card-image"><img src="/img/articles/amd-quietly-crushing-nvidia-2026.jpg" alt="AMD Is Quietly Crushing Nvidia In 2026 — Up 118% While Everyone Watched NVDA" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -608,7 +585,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/nvidia-post-earnings-analysis-2026" class="article-card">
+      <a href="/article/nvidia-post-earnings-analysis-2026/" class="article-card">
     <div class="card-image"><img src="/img/articles/nvidia-post-earnings-analysis-2026.jpg" alt="Nvidia Just Dropped a $58.3 Billion Profit — And the AI Supercycle Is Barely Started" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -624,7 +601,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/trump-ai-eo-cancel" class="article-card">
+      <a href="/article/trump-ai-eo-cancel/" class="article-card">
     <div class="card-image"><img src="/img/articles/trump-ai-eo-cancel.jpg" alt="Trump Torpedoes AI Executive Order — And Markets Are Loving It" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -640,7 +617,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/broadcom-custom-ai-asic-dominance-2026" class="article-card">
+      <a href="/article/broadcom-custom-ai-asic-dominance-2026/" class="article-card">
     <div class="card-image"><img src="/img/articles/broadcom-custom-ai-asic-dominance-2026.jpg" alt="Nvidia Gets the Headlines. Broadcom Gets the Checks." loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -656,7 +633,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/nvidia-80b-buyback-signal" class="article-card">
+      <a href="/article/nvidia-80b-buyback-signal/" class="article-card">
     <div class="card-image"><img src="/img/articles/nvidia-80b-buyback-signal.jpg" alt="Nvidia&#39;s $80B Buyback Is the Loudest Whisper in the Market — Are You Listening?" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -672,7 +649,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/nebius-group-growth-2026" class="article-card">
+      <a href="/article/nebius-group-growth-2026/" class="article-card">
     <div class="card-image"><img src="/img/articles/nebius-group-growth-2026.jpg" alt="Europe&#39;s AI Infrastructure Giant: Nebius Is Building the GPU Empire You Haven&#39;t Noticed" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -688,7 +665,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/marvell-ai-silicon-sleeper" class="article-card">
+      <a href="/article/marvell-ai-silicon-sleeper/" class="article-card">
     <div class="card-image"><img src="/img/articles/marvell-ai-chip.jpg" alt="Marvell Is the AI Semiconductor Giant Wall Street Is Ignoring" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -704,7 +681,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/coreweave-ai-cloud-dark-horse" class="article-card">
+      <a href="/article/coreweave-ai-cloud-dark-horse/" class="article-card">
     <div class="card-image"><img src="/img/articles/coreweave-hero.jpg" alt="CoreWeave Is the AI Cloud Dark Horse Nobody&#39;s Talking About" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -720,7 +697,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/karpathy-anthropic" class="article-card">
+      <a href="/article/karpathy-anthropic/" class="article-card">
     <div class="card-image"><img src="/img/articles/karpathy-hero.jpg" alt="Andrej Karpathy Joins Anthropic: Why This Changes the AI Landscape" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -736,7 +713,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/broadcom-ai-networking-dominance" class="article-card">
+      <a href="/article/broadcom-ai-networking-dominance/" class="article-card">
     <div class="card-image"><img src="/img/articles/broadcom-jericho4-chip.jpg" alt="Broadcom&#39;s AI Networking Dominance: Tomahawk, Custom ASICs, and the VMware Pivot" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -752,7 +729,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/amd-vs-nvidia-ai-2026" class="article-card">
+      <a href="/article/amd-vs-nvidia-ai-2026/" class="article-card">
     <div class="card-image"><img src="/img/articles/amd-vs-nvidia.jpg" alt="AMD vs Nvidia in AI: Is 2026 Finally AMD&#39;s Year to Compete?" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -768,7 +745,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/palantir-aip-government-ai" class="article-card">
+      <a href="/article/palantir-aip-government-ai/" class="article-card">
     <div class="card-image"><img src="/img/articles/palantir-data.jpg" alt="Palantir&#39;s AIP Is the Government AI Engine — Here&#39;s the Bull Case for $PLTR" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -784,7 +761,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/nvidia-blackwell-ramp-2026" class="article-card">
+      <a href="/article/nvidia-blackwell-ramp-2026/" class="article-card">
     <div class="card-image"><img src="/img/articles/nvidia-vera-rubin-chip.jpg" alt="Nvidia&#39;s Blackwell Ramp: Inside the $100B AI Infrastructure Super-Cycle" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -800,7 +777,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/google-io-2026-takeaways" class="article-card">
+      <a href="/article/google-io-2026-takeaways/" class="article-card">
     <div class="card-image"><img src="/img/articles/google-io-2026.jpg" alt="Google I/O 2026: 5 Takeaways That Reshape the AI Landscape" loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">
@@ -816,7 +793,7 @@
     </div>
     </div>
   </a>
-      <a href="/article/cerebras-ipo-nvidia-threat-analysis" class="article-card">
+      <a href="/article/cerebras-ipo-nvidia-threat-analysis/" class="article-card">
     <div class="card-image"><img src="/img/articles/cerebras-hero-chip.jpg" alt="Cerebras Landed 2026&#39;s Biggest IPO. Here&#39;s Why Nvidia Isn&#39;t Losing Sleep." loading="lazy" decoding="async" width="1200" height="675"></div>
     <div class="card-body">
     <div class="card-top">

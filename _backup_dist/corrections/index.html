@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08080e">
+  <link rel="canonical" href="https://readthesignal.net/corrections/">
+  <meta name="robots" content="max-image-preview:large">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css?v=31">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-98KDVDFBCW"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-98KDVDFBCW');</script>
+  <script src="/js/prices.js" defer></script>
+  <script src="/js/search.js" defer></script>
+  <script src="/js/auth.js?v=2" defer></script>
+  <script src="/js/theme.js?v=2" defer></script>
+  <title>Corrections Policy — The Signal</title>
+  <meta name="description" content="The Signal's corrections policy: how we fix errors, how we log them publicly, and how to report one. Claims are held to primary sources.">
+  <meta property="og:title" content="Corrections Policy — The Signal">
+  <meta property="og:description" content="How The Signal's AI-assisted, human-reviewed editorial content should be read. Ratings are our own; not affiliated with Morningstar, Inc.">
+  <meta property="og:image" content="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/logo-hex.jpg">
+  <meta property="og:url" content="https://readthesignal.net/disclaimer/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Disclaimer — The Signal">
+  <meta name="twitter:description" content="How The Signal's AI-assisted, human-reviewed editorial content should be read. Ratings are our own; not affiliated with Morningstar, Inc.">
+  <style>
+    .legal-page { max-width: 760px; margin: 0 auto; padding: 48px 24px 64px; }
+    .legal-page h1 { font-family: 'Anton', 'Impact', sans-serif; font-size: 36px; letter-spacing: 1px; margin-bottom: 8px; color: var(--text-primary); }
+    .legal-page .legal-subtitle { color: var(--accent); font-size: 14px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 32px; }
+    .legal-page h2 { font-family: 'Anton', 'Impact', sans-serif; font-size: 22px; letter-spacing: 1px; margin: 40px 0 12px; color: var(--text-primary); }
+    .legal-page h3 { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin: 24px 0 8px; color: var(--text-primary); }
+    .legal-page p { color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px; font-size: 15px; }
+    .legal-page ul { margin: 0 0 16px 22px; }
+    .legal-page li { color: var(--text-secondary); line-height: 1.7; margin-bottom: 10px; font-size: 15px; }
+    .legal-page a { color: var(--accent); text-decoration: none; }
+    .legal-page a:hover { text-decoration: underline; }
+    .legal-page strong { color: var(--text-primary); }
+    .legal-page .legal-meta { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-muted); margin-bottom: 28px; }
+    .legal-page .legal-note { background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 8px; padding: 18px 20px; margin: 28px 0 0; }
+    .legal-page .legal-note p { margin-bottom: 0; }
+    .legal-page .legal-divider { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+    @media (max-width: 600px) { .legal-page { padding: 24px 16px 48px; } .legal-page h1 { font-size: 28px; } .legal-page h2 { font-size: 19px; } }
+  </style>
+<link rel="stylesheet" href="/css/nav.css">
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo"><img src="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/logo-hex.jpg" alt="The Signal" class="logo-img"><span class="logo-text"><span class="logo-the">THE</span> <strong>SIGNAL</strong></span></a>
+      <div class="nav-actions">
+        <button class="nav-btn search-btn" id="searchToggle" aria-label="Search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+        <div class="auth-container" id="authContainer">
+          <button class="nav-btn auth-btn" id="authToggle" aria-label="Sign In">
+            <div class="auth-btn-avatar" id="authBtnAvatar">
+              <span class="auth-btn-initial" id="authBtnInitial"></span>
+              <img class="auth-btn-img" id="authBtnImg" src="" alt="" style="display:none">
+            </div>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="auth-btn-icon" id="authBtnIcon"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <span class="auth-label" id="authLabel">Sign In</span>
+          </button>
+          <div class="auth-dropdown" id="authDropdown">
+            <div class="auth-profile" id="authProfile" style="display:none">
+              <div class="auth-profile-header">
+                <div class="auth-profile-avatar" id="authProfileAvatar">
+                  <img id="authProfileImg" src="" alt="" style="display:none">
+                  <span class="auth-profile-initial" id="authProfileInitial"></span>
+                </div>
+                <div class="auth-profile-info">
+                  <span class="auth-profile-name" id="authProfileName"></span>
+                  <span class="auth-profile-username" id="authProfileUsername"></span>
+                </div>
+                <div class="auth-profile-badge">HIVE</div>
+              </div>
+              <div class="auth-profile-stats" id="authProfileStats">
+                <div class="auth-stat"><span class="auth-stat-label">Portfolio</span><span class="auth-stat-value" id="authStatValue">-</span></div>
+                <div class="auth-stat"><span class="auth-stat-label">Return</span><span class="auth-stat-value" id="authStatReturn">-</span></div>
+              </div>
+              <div class="auth-drop-divider"></div>
+              <div class="auth-profile-nav">
+                <a href="/sector/ai" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
+                <a href="/sector/cyber" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
+                <a href="/sector/defense" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
+                <a href="/sector/space" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
+                <a href="/sector/mega-cap/" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
+                <div class="auth-nav-section-header">FEATURES</div>
+                <a href="/stocks/" class="auth-nav-item">📈 Stock Pages</a>
+                <a href="/about/" class="auth-nav-item">📋 About</a>
+              </div>
+              <div class="auth-drop-divider"></div>
+              <div class="auth-profile-footer">
+                <a href="/about/" class="auth-footer-link">Contact Us</a>
+                <button class="auth-signout-btn" id="authSignOut">Sign Out</button>
+              </div>
+            </div>
+            <div class="auth-guest" id="authGuest">
+              <div class="auth-guest-brand"><span class="auth-guest-title">Welcome to <strong>The Signal</strong></span><span class="auth-guest-sub">Market intelligence that moves before the headlines.</span></div>
+              <button class="auth-option auth-option-primary" onclick="showHiveJoinModal('login')"><span class="auth-option-icon">🔑</span> Sign In</button>
+              <button class="auth-option" onclick="showHiveJoinModal('register')"><span class="auth-option-icon">✨</span> Create Account</button>
+              <div class="auth-drop-divider"></div>
+              <div class="auth-profile-nav">
+                <a href="/sector/ai" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
+                <a href="/sector/cyber" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
+                <a href="/sector/defense" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
+                <a href="/sector/space" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
+                <a href="/sector/mega-cap/" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
+                <div class="auth-nav-section-header">FEATURES</div>
+                <a href="/stocks/" class="auth-nav-item">📈 Stock Pages</a>
+                <a href="/about/" class="auth-nav-item">📋 About</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="nav-btn hamburger-btn" id="hamburgerToggle" aria-label="Menu"><span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span></button>
+        <button class="nav-btn theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle theme" style="display:flex;align-items:center;gap:4px;background:none;border:1px solid var(--border);border-radius:6px;padding:6px 8px;cursor:pointer;color:var(--text-secondary);font-size:12px">
+          <svg class="theme-icon-sun" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <svg class="theme-icon-moon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- DRAWER -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <div class="drawer" id="drawer">
+    <div class="drawer-header">
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
+      <a href="/" class="drawer-logo"><img src="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/logo-hex.jpg" alt="The Signal" class="drawer-logo-img"><span class="drawer-logo-text">SIGNAL</span></a>
+    </div>
+    <div class="drawer-body">
+      <div class="drawer-section-label">SECTORS</div>
+      <a href="/sector/ai" class="drawer-link">AI</a>
+      <a href="/sector/cyber" class="drawer-link">Cyber</a>
+      <a href="/sector/defense" class="drawer-link">Defense</a>
+      <a href="/sector/space" class="drawer-link">Space</a>
+      <a href="/sector/mega-cap" class="drawer-link">Mega-Cap</a>
+      <a href="/sector/quantum" class="drawer-link">Quantum</a>
+      <a href="/sector/ai-power" class="drawer-link">AI Power</a>
+      <a href="/sector/etfs" class="drawer-link">ETFs</a>
+      <hr class="drawer-divider">
+      <div class="drawer-section-label">FEATURES</div>
+      <a href="/stocks/" class="drawer-link drawer-link-stocks">📈 Stock Pages</a>
+      <a href="/about/" class="drawer-link">📋 About</a>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div class="legal-page">
+      <div class="legal-subtitle">Trust</div>
+      <h1>Corrections Policy</h1>
+      <p class="legal-meta">Effective date: September 23, 2026 &middot; Last updated: September 23, 2026</p>
+
+      <p><strong>We correct errors publicly and promptly.</strong> If The Signal gets something wrong, the article is fixed and the change is recorded here.</p>
+
+      <h2>How corrections work</h2>
+      <ul>
+        <li><strong>Factual errors are corrected in the article</strong> and logged below with the date, what changed, and why.</li>
+        <li><strong>Price and market data carry &ldquo;as of&rdquo; timestamps.</strong> When data is refreshed, the previous value and the date of the change are noted.</li>
+        <li><strong>Claims are held to primary sources.</strong> If a claim cannot be verified against a filing, a company statement, or another primary record, it is not published as fact.</li>
+        <li><strong>Reader-reported errors go to the top of the queue.</strong></li>
+      </ul>
+
+      <h2>How to report an error</h2>
+      <p>Email <a href="mailto:hello@readthesignal.net">hello@readthesignal.net</a> with the article link and the sentence you believe is wrong. If you have it, include the primary source &mdash; a filing, an earnings-call transcript, or a company release. Every report is read by a human.</p>
+
+      <h2>What a correction looks like</h2>
+      <p>Corrections are recorded below, newest first, as: <em>date &middot; article &middot; what was wrong &middot; what it now says</em>. Where a correction changes the substance of a claim, the article notes it in place rather than silently editing.</p>
+
+      <h2>Correction log</h2>
+      <p>This log begins <strong>September 23, 2026</strong>. Editorial fixes made before that date are not itemised here; from this date forward, every factual correction is logged.</p>
+      <p class="legal-meta">No corrections logged yet.</p>
+
+      <hr class="legal-divider">
+      <div class="legal-note">
+        <p><strong>How our articles are made.</strong> They are AI-assisted &mdash; drafted from market data and systematic research, then fact-checked, edited and approved by a human before publication. Sources are listed at the foot of every article under &ldquo;Sources &amp; fact-check&rdquo;. See <a href="/disclaimer/">how our content is produced</a> and our <a href="/disclosure/">disclosure</a>
+          <a href="/corrections/">Corrections Policy</a>.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <div class="footer-brand"><img src="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/logo-hex.jpg" alt="The Signal" class="footer-logo"> THE <strong>SIGNAL</strong></div>
+          <p>Market intelligence for AI, defense, space, and cybersecurity stocks. Data-driven analysis that moves before the headlines.</p>
+          <div class="footer-social">
+            <a href="https://x.com/ReadTheSignal21" target="_blank" rel="noopener" aria-label="X / Twitter">𝕏</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Sectors</h4>
+          <a href="/sector/ai">AI</a>
+          <a href="/sector/defense">Defense</a>
+          <a href="/sector/cyber">Cyber</a>
+          <a href="/sector/space">Space</a>
+          <a href="/sector/mega-cap">Mega-Cap</a>
+          <a href="/sector/ai-power">AI Power</a>
+        </div>
+        <div class="footer-col">
+          <h4>Features</h4>
+          <a href="/stocks/">Stock Pages</a>
+          <a href="/about/">About</a>
+        </div>
+        <div class="footer-col">
+          <h4>More</h4>
+          <a href="/about/">Contact Us</a>
+          <a href="/">Home</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+          <a href="/disclaimer/">Disclaimer</a>
+          <a href="/disclosure/">Disclosure</a>
+          <a href="/corrections/">Corrections Policy</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-tag">The Signal Editorial Team · readthesignal.net</div>
+        <div class="footer-copy">© 2026 The Signal — Market Intelligence. Data from public sources. Not investment advice.</div>
+      </div>
+    </div>
+  </footer>
+  <script>
+  // Hamburger drawer
+  document.addEventListener('DOMContentLoaded', function(){
+    var btn = document.getElementById('hamburgerToggle');
+    var drawer = document.getElementById('drawer');
+    var overlay = document.getElementById('drawerOverlay');
+    var closeBtn = document.getElementById('drawerClose');
+    function openDrawer(){ drawer.classList.add('open'); overlay.classList.add('open'); document.body.style.overflow='hidden'; }
+    function closeDrawer(){ drawer.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow=''; }
+    if(btn&&drawer&&overlay){ btn.addEventListener('click',openDrawer); overlay.addEventListener('click',closeDrawer); if(closeBtn)closeBtn.addEventListener('click',closeDrawer);
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&drawer.classList.contains('open'))closeDrawer(); });
+    drawer.querySelectorAll('a').forEach(function(a){ a.addEventListener('click',closeDrawer); }); }
+  });
+  </script>
+</body>
+</html>

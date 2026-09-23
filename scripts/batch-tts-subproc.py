@@ -2,6 +2,14 @@
 """Generate TTS for all articles using edge-tts CLI subprocess with parallel workers."""
 
 import subprocess, json, os, sys, re, time, glob, urllib.request, urllib.error
+# ── shared TTS text extraction (drops the 'Numbers That Matter' stats card) ──
+try:
+    from tts_text import strip_nonprose  # noqa: E402
+except ImportError:  # executed from another cwd
+    import sys as _sys
+    _sys.path.insert(0, '/home/chino/thesignal/scripts')
+    from tts_text import strip_nonprose  # noqa: E402
+
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
@@ -66,7 +74,7 @@ def prepare_articles():
         title = article.get("title", "")
         body_html = article.get("bodyHtml", "")
         if body_html:
-            text = re.sub(r"<[^>]+>", " ", body_html)
+            text = re.sub(r"<[^>]+>", " ", strip_nonprose(body_html))
             for a, b in [("&amp;", "&"), ("&lt;", "<"), ("&gt;", ">"),
                          ("&quot;", '"'), ("&#39;", "'"), ("&nbsp;", " ")]:
                 text = text.replace(a, b)

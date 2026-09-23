@@ -1,6 +1,14 @@
 #!/usr/bin/env python3
 """Batch generate Andrew TTS for all articles and upload to R2 (parallel version)."""
 import asyncio, edge_tts, json, os, sys, time, glob, re, urllib.request, urllib.error
+# ── shared TTS text extraction (drops the 'Numbers That Matter' stats card) ──
+try:
+    from tts_text import strip_nonprose  # noqa: E402
+except ImportError:  # executed from another cwd
+    import sys as _sys
+    _sys.path.insert(0, '/home/chino/thesignal/scripts')
+    from tts_text import strip_nonprose  # noqa: E402
+
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -29,7 +37,7 @@ def text_from_article(article):
     title = article.get("title", "")
     body_html = article.get("bodyHtml", "")
     if body_html:
-        text = re.sub(r"<[^>]+>", " ", body_html)
+        text = re.sub(r"<[^>]+>", " ", strip_nonprose(body_html))
         for a, b in [("&amp;", "&"), ("&lt;", "<"), ("&gt;", ">"),
                      ("&quot;", '"'), ("&#39;", "'"), ("&nbsp;", " ")]:
             text = text.replace(a, b)

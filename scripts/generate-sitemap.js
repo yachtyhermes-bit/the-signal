@@ -89,6 +89,7 @@ add(`${SITE}/signal-vs-the-street`, '0.5', 'weekly');
   add(`${SITE}/terms`, '0.4', 'yearly');
   add(`${SITE}/disclaimer`, '0.4', 'yearly');
   add(`${SITE}/disclosure`, '0.4', 'yearly');
+  add(`${SITE}/corrections`, '0.4', 'yearly');
 add(`${SITE}/about`, '0.3', 'monthly');
 add(`${SITE}/premium`, '0.5', 'monthly');
 add(`${SITE}/insights`, '0.6', 'weekly');

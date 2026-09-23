@@ -424,9 +424,12 @@ if (!template) {
         : Object.entries(article.links || {}).map(([k, v]) => ({ label: k, url: v }));
       const links = __rawLinks;
       if (links.length > 0) {
-        linksHtml = '<div class="article-links"><h4>📎 Sources &amp; References</h4><ul>' +
+        const __factDate = formatDate(String(article.date || '').slice(0, 10));
+        linksHtml = '<div class="article-links"><h4>📎 Sources &amp; fact-check</h4>' +
+          `<p class="factcheck-line">Fact-checked: ${escapeHtml(__factDate)}</p><ul>` +
           links.map(l => `<li><a href="${escapeAttr(l.url)}" target="_blank" rel="noopener">${escapeHtml(l.label || l.url)}</a></li>`).join('') +
-          '</ul></div>';
+          '</ul><p class="corrections-line">Every claim in this article should be checkable against the linked source.' +
+          ' If you spot an error, <a href="/corrections/">corrections are published publicly</a>.</p></div>';
       }
 
       let bodyHtml = article.bodyHtml || '';
@@ -829,6 +832,18 @@ if (fs.existsSync(postsSrc)) {
     }
   }
 })();
+
+// ─── About page: live article count (never hardcode a stale number again) ───
+const aboutDst = path.join(DST, 'about', 'index.html');
+if (fs.existsSync(aboutDst)) {
+  let aboutContent = fs.readFileSync(aboutDst, 'utf8');
+  const liveCount = articles.length;
+  aboutContent = aboutContent.replace(/{{ARTICLE_COUNT}}/g, String(liveCount));
+  // belt and braces: also fix any hardcoded "N articles" stat left in the prose
+  aboutContent = aboutContent.replace(/(<div class="stat-num">)\d+\+?(<\/div>\s*<div class="stat-label">Articles Published)/g, `$1${liveCount}$2`);
+  fs.writeFileSync(aboutDst, aboutContent);
+  console.log(`  ✅ About page: article count set to ${liveCount}`);
+}
 
 // ─── 10. Rewrite all /img/ paths in HTML to absolute R2 URLs ───
 // This ensures img/articles/* images are served from R2 CDN, bypassing

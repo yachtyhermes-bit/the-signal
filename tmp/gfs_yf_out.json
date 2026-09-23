@@ -1,0 +1,159 @@
+{
+ "info": {
+  "shortName": "GlobalFoundries Inc.",
+  "longName": "GLOBALFOUNDRIES Inc.",
+  "currentPrice": 47.82,
+  "previousClose": 45.84,
+  "regularMarketPrice": 47.82,
+  "marketCap": 26655758336,
+  "trailingPE": 37.359375,
+  "forwardPE": 18.223322,
+  "priceToBook": 2.220468,
+  "sharesOutstanding": 557418603,
+  "floatShares": 148420705,
+  "totalCash": 2356999936,
+  "totalDebt": 1678000000,
+  "freeCashflow": 758249984,
+  "operatingCashflow": 1916000000,
+  "totalRevenue": 6937999872,
+  "grossMargins": 0.2714,
+  "operatingMargins": 0.09742,
+  "profitMargins": 0.103199996,
+  "ebitdaMargins": 0.28553,
+  "revenueGrowth": 0.058,
+  "earningsGrowth": -0.268,
+  "dividendRate": 0.48,
+  "dividendYield": 1.0,
+  "payoutRatio": 0.0938,
+  "targetMeanPrice": 76.0,
+  "targetHighPrice": 140.0,
+  "targetLowPrice": 55.0,
+  "targetMedianPrice": 73.5,
+  "recommendationKey": "buy",
+  "recommendationMean": 1.95455,
+  "numberOfAnalystOpinions": 22,
+  "fiftyTwoWeekHigh": 92.55,
+  "fiftyTwoWeekLow": 32.02,
+  "fiftyDayAverage": 50.6002,
+  "twoHundredDayAverage": 53.78235,
+  "beta": 1.774,
+  "trailingEps": 1.28,
+  "forwardEps": 2.62411,
+  "totalCashPerShare": 4.295,
+  "enterpriseValue": 25618276352,
+  "country": "United States",
+  "sector": "Technology",
+  "industry": "Semiconductors",
+  "fullTimeEmployees": 14000
+ },
+ "info_all_keys_ok": true,
+ "history_12d": {
+  "2026-09-02": {
+   "open": 44.42,
+   "high": 44.53,
+   "low": 43.17,
+   "close": 43.97,
+   "adjclose": 43.97,
+   "volume": 3413300
+  },
+  "2026-09-03": {
+   "open": 43.24,
+   "high": 44.53,
+   "low": 42.7,
+   "close": 44.53,
+   "adjclose": 44.53,
+   "volume": 4321000
+  },
+  "2026-09-04": {
+   "open": 44.88,
+   "high": 45.62,
+   "low": 44.53,
+   "close": 45.21,
+   "adjclose": 45.21,
+   "volume": 2631300
+  },
+  "2026-09-08": {
+   "open": 46.3,
+   "high": 46.69,
+   "low": 44.9,
+   "close": 45.09,
+   "adjclose": 45.09,
+   "volume": 5471400
+  },
+  "2026-09-09": {
+   "open": 45.09,
+   "high": 46.34,
+   "low": 45.0,
+   "close": 45.95,
+   "adjclose": 45.95,
+   "volume": 3281700
+  },
+  "2026-09-10": {
+   "open": 44.83,
+   "high": 46.3,
+   "low": 44.64,
+   "close": 45.96,
+   "adjclose": 45.96,
+   "volume": 3028700
+  },
+  "2026-09-11": {
+   "open": 46.44,
+   "high": 47.33,
+   "low": 46.03,
+   "close": 46.95,
+   "adjclose": 46.95,
+   "volume": 3695500
+  },
+  "2026-09-14": {
+   "open": 44.37,
+   "high": 45.365,
+   "low": 43.51,
+   "close": 43.54,
+   "adjclose": 43.54,
+   "volume": 3994800
+  },
+  "2026-09-15": {
+   "open": 43.58,
+   "high": 44.41,
+   "low": 42.15,
+   "close": 42.75,
+   "adjclose": 42.75,
+   "volume": 3909700
+  },
+  "2026-09-16": {
+   "open": 43.91,
+   "high": 44.16,
+   "low": 42.555,
+   "close": 43.03,
+   "adjclose": 43.03,
+   "volume": 2752500
+  },
+  "2026-09-17": {
+   "open": 44.87,
+   "high": 47.1,
+   "low": 44.56,
+   "close": 45.84,
+   "adjclose": 45.84,
+   "volume": 6381200
+  },
+  "2026-09-18": {
+   "open": 46.2,
+   "high": 47.865,
+   "low": 45.25,
+   "close": 47.82,
+   "adjclose": 47.82,
+   "volume": 6568300
+  }
+ },
+ "hist_1y_rows": 251,
+ "hist_1y_low": {
+  "close_min": 32.24,
+  "low_min": 32.02,
+  "date_low": "2025-11-20"
+ },
+ "hist_1y_high": {
+  "close_max": 89.96,
+  "high_max": 92.55,
+  "date_high": "2026-05-26"
+ }
+}

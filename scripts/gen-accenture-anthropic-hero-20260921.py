@@ -233,6 +233,206 @@ PROMPTS = {
         + PHOTO_TAIL
         + NO_TEXT
     ),
+    # 4 — HANDS-FREE REGEN (2026-09-27, user report): earlier frames put hands
+    #     and forearms in the sharp foreground and flux kept producing an
+    #     ambiguous "ghost" hand — an arm whose owner reads as missing, or a
+    #     duplicated writing hand. This composition removes the risk at the
+    #     source: the room is read down its length and every person is seen
+    #     from BEHIND, cropped at the shoulders, hands and arms below the
+    #     table and outside the frame. Nobody holds anything.
+    "4": (
+        "Photo-realistic editorial press photograph, shot on a 35mm lens at "
+        "f/2.0 on a full-frame camera from just inside the doorway of a "
+        "bright glass-walled corporate audit room high in an office tower, "
+        "eye level, looking straight down the length of a long pale oak "
+        "meeting table that runs away from the camera toward a floor-to-"
+        "ceiling glass partition. The near and middle distance of the room "
+        "is unoccupied: the foreground is the plain table edge and the "
+        "polished oak surface, softly lit, holding a thick printed report "
+        "lying CLOSED with its pale blank cover facing up, a plain white "
+        "ceramic coffee cup, a small unbranded glass water carafe, a closed "
+        "dark notebook and two blank loose sheets of paper, all plain, "
+        "unmarked and unlettered. At the very far end of the table, small "
+        "in the frame and slightly out of focus, two professionally dressed "
+        "colleagues sit with their backs to the camera in dark tailored "
+        "jackets, seen only from behind and cropped cleanly at the "
+        "shoulders, their heads and shoulders the highest points of their "
+        "bodies in the frame, their hands, arms, elbows and laps completely "
+        "below the table top and entirely outside the picture. Nobody in "
+        "the frame is holding anything. Behind the glass partition, filling "
+        "the whole background and dissolving into creamy bokeh, is the deep "
+        "open-plan office floor with pale desks and a wall of tall windows "
+        "blazing with bright overexposed daylight that blooms into soft "
+        "haze across the upper frame. A faint vertical smear of reflection "
+        "slides down the interior surface of the glass. Cool natural "
+        "daylight rakes low across the table from the tall window wall on "
+        "the left, catching the rim of the cup and the edge of the closed "
+        "report, while the near side of the room falls into soft warm "
+        "shadow. Very shallow depth of field: the closed report, the cup "
+        "and the table edge crisp, the two seated backs and the glass wall "
+        "softening, the far office floor melting into smooth bokeh. The "
+        "frame reads as the room where an outside evaluator does its work — "
+        "quiet, unoccupied, waiting, serious. No hands, no fingers, no "
+        "wrists, no forearms, no arms, no elbows, no fists and no hand-held "
+        "objects anywhere in the frame; no hands resting on the table; no "
+        "limbs visible at all; every person is cropped at the shoulders or "
+        "seen from behind. No extra limbs, no duplicated people, no "
+        "duplicated hands, no disembodied limbs, no floating hands, no "
+        "anatomically impossible anatomy of any kind. "
+        + PHOTO_TAIL
+        + NO_TEXT
+    ),
+    # 5 — TEXT-SAFE VARIANT of 4 (2026-09-27): attempt 4 was clean of hands and
+    #     charts but flux lettered the foreground object ("COLSED REPORT") —
+    #     loose/rolled paper is what invites a garbled label, so there is no
+    #     paper anywhere in this frame. The table carries only objects that
+    #     cannot be lettered: a plain cup, a carafe, a matte black notebook.
+    "5": (
+        "Photo-realistic editorial press photograph, shot on a 35mm lens at "
+        "f/2.0 on a full-frame camera from just inside the doorway of a "
+        "bright glass-walled corporate meeting room high in an office tower, "
+        "eye level, looking straight down the length of a long pale oak "
+        "boardroom table that runs away from the camera toward a floor-to-"
+        "ceiling glass wall. The table is completely clear of paper: there "
+        "are no documents, no reports, no folders, no sheets, no paper of "
+        "any kind anywhere in the frame. On the polished oak surface in the "
+        "near foreground sit only a plain white ceramic coffee cup with no "
+        "printing on it, a small clear glass water carafe and a blank matte "
+        "black closed notebook with a completely plain unmarked cover — no "
+        "label, no title, no embossed or printed lettering on any object in "
+        "the frame. Along both sides of the table, pale empty office chairs "
+        "are pushed in, evenly spaced. At the far end of the table, small in "
+        "the frame, softly out of focus and turned away from the camera, a "
+        "single professionally dressed figure sits in a dark tailored "
+        "jacket seen only from behind, still and upright, shoulders squared, "
+        "arms down and completely hidden below the table with no hands, no "
+        "arms and no elbows visible anywhere in the frame. Behind the glass "
+        "wall, filling the background and dissolving into creamy bokeh, is "
+        "the deep open-plan office floor with pale desks and a wall of tall "
+        "windows blazing with bright overexposed daylight that blooms into "
+        "soft haze across the upper frame, with a faint vertical smear of "
+        "reflection sliding down the interior surface of the glass. Cool "
+        "natural daylight rakes low across the table from the tall window "
+        "wall on the left, catching the rim of the cup and the shoulder line "
+        "of the seated figure, while the near side of the room falls into "
+        "soft warm shadow. Very shallow depth of field: the cup, the carafe "
+        "and the notebook crisp, the table edge and chairs softening, the "
+        "glass wall and the far office floor melting into smooth bokeh. The "
+        "frame reads as the room where outside scrutiny happens — quiet, "
+        "orderly, serious, waiting. Absolutely no lettering anywhere: no "
+        "text, no words, no letters, no numbers on any surface, no printed "
+        "label, no title, no embossed lettering, no stickers, no stickers on "
+        "the notebook, no branding on the cup or the carafe, no signage on "
+        "the glass, no markings of any kind on any object. No hands, no "
+        "fingers, no wrists, no forearms, no arms, no elbows, no fists and "
+        "no hand-held objects anywhere in the frame; nobody holds anything; "
+        "every person is seen from behind or cropped at the shoulders with "
+        "no limbs visible. No extra limbs, no duplicated people, no "
+        "duplicated hands, no disembodied limbs, no floating hands, no "
+        "anatomically impossible anatomy. No rolled paper, no scroll, no "
+        "paper roll, no documents, no printed pages, no charts, no graphs. "
+        + PHOTO_TAIL
+        + NO_TEXT
+    ),
+    # 6 — NO PEOPLE AT ALL (2026-09-27): five attempts in, every frame that put
+    #     a person in it eventually grew a hand somewhere (foreground ghost arm,
+    #     hand raised to the face). A human-free read down the room removes the
+    #     failure mode entirely: the audit room itself, waiting.
+    "6": (
+        "Photo-realistic editorial press photograph, shot on a 35mm lens at "
+        "f/2.0 on a full-frame camera from just inside the doorway of a pale "
+        "bright glass-walled corporate meeting room high in an office tower, "
+        "eye level, looking straight down the length of a long pale oak "
+        "boardroom table toward a floor-to-ceiling glass wall. The room is "
+        "completely deserted: there is nobody in the frame at all — no "
+        "people, no figures, no human presence, no silhouettes of anybody, "
+        "no hands, no arms, no limbs, no bodies anywhere in the picture, not "
+        "in the foreground, not through the glass, not in the distance. The "
+        "table is clear of paper: only a plain white ceramic coffee cup on "
+        "its saucer in the near foreground, a clear glass water carafe "
+        "holding water on a plain dark grey mat in the middle of the table, "
+        "and a closed matte black notebook with a blank unmarked cover "
+        "beside it — no documents, no reports, no folders, no loose sheets, "
+        "no paper of any kind. Pale upholstered office chairs with slim "
+        "metal frames are pushed neatly in along both sides of the table, "
+        "six a side, empty and evenly spaced, receding into the distance. "
+        "The smooth oak surface carries a soft sheen and a faint smeared "
+        "reflection of the window light. Behind the head of the table, "
+        "filling the whole background and dissolving into creamy bokeh, is "
+        "the floor-to-ceiling glass wall and, beyond it, the deep open-plan "
+        "office floor with pale desks and a wall of tall windows blazing "
+        "with bright overexposed daylight that blooms into soft haze across "
+        "the upper frame, with a faint vertical smear of reflection sliding "
+        "down the interior surface of the glass. Cool natural daylight rakes "
+        "low across the table from the tall window wall on the left, and the "
+        "near side of the room falls into soft warm shadow. Very shallow "
+        "depth of field: the cup, the carafe and the notebook crisp, the "
+        "table edge and chairs softening, the glass wall and the far office "
+        "floor melting into smooth bokeh. The frame reads as the room where "
+        "outside scrutiny happens, empty and waiting, quietly serious. "
+        "Absolutely no lettering anywhere: no text, no words, no letters, "
+        "no numbers on any surface, no printed label, no title, no "
+        "lettering on the notebook, no branding on the cup or the carafe, "
+        "no signage on the glass, no whiteboard, no notice board, no framed "
+        "sign, no markings of any kind on any object. No people anywhere "
+        "and therefore no hands, no fingers, no wrists, no forearms, no "
+        "arms, no elbows, no faces, no heads, no torsos. No charts, no "
+        "graphs, no diagrams. "
+        + PHOTO_TAIL
+        + NO_TEXT
+    ),
+    # 7 — ONE FIGURE, HANDS STRICTLY OUT (2026-09-27): keeps a human note but
+    #     frames the person from behind with the head upright and both arms
+    #     hidden below the table line, so there is no hand to get wrong.
+    "7": (
+        "Photo-realistic editorial press photograph, shot on an 85mm lens at "
+        "f/2.0 on a full-frame camera from just inside the doorway of a pale "
+        "bright glass-walled corporate meeting room high in an office tower, "
+        "eye level, looking straight down the length of a long pale oak "
+        "boardroom table toward a floor-to-ceiling glass wall. On the table "
+        "in the near foreground, crisp and softly lit, are only a plain "
+        "white ceramic coffee cup on its saucer and a closed matte black "
+        "notebook with a blank unmarked cover; there is no paper anywhere in "
+        "the room — no documents, no reports, no loose sheets, no folders. "
+        "Pale upholstered office chairs with slim metal frames are pushed in "
+        "along both sides of the table. At the far end of the table, small "
+        "in the frame and thrown softly out of focus, one professionally "
+        "dressed person sits in a dark tailored jacket with their back to "
+        "the camera, seen strictly from behind and cropped just above the "
+        "shoulders, still, upright and composed, looking away down the room. "
+        "Their arms hang straight down at their sides, entirely hidden from "
+        "view behind the chair back and below the table line, so that no "
+        "hand, no wrist, no forearm, no elbow and no arm is visible anywhere "
+        "in the frame. Their head is upright and well clear of everything "
+        "else: nobody is touching their face, no hand near the mouth or "
+        "chin, nobody is writing, holding, pointing, shaking hands, gesturing "
+        "or resting their head on anything. Behind the glass wall, filling "
+        "the background and dissolving into creamy bokeh, is the deep "
+        "open-plan office floor with pale desks and a wall of tall windows "
+        "blazing with bright overexposed daylight, with a faint vertical "
+        "smear of reflection sliding down the interior surface of the glass. "
+        "Cool natural daylight rakes low across the table from the window "
+        "wall on the left, catching the rim of the cup and the shoulder line "
+        "of the seated figure, while the near side of the room falls into "
+        "soft warm shadow. Very shallow depth of field: the cup and the "
+        "notebook crisp, the table edge and chairs softening, the seated "
+        "figure and the glass wall melting into smooth bokeh. The frame "
+        "reads as the room where outside scrutiny happens — quiet, orderly, "
+        "serious. Absolutely no lettering anywhere: no text, no words, no "
+        "letters, no numbers on any surface, no printed label, no title, no "
+        "lettering on the notebook, no branding on the cup, no signage on "
+        "the glass, no whiteboard, no notice board, no framed sign, no "
+        "markings of any kind on any object. No hands, no fingers, no "
+        "wrists, no forearms, no arms, no elbows, no fists and no hand-held "
+        "objects anywhere in the frame; no hands resting on the table; no "
+        "limb visible at all; nobody touches their face; every person is "
+        "seen from behind with no limbs in frame. No extra limbs, no "
+        "duplicated people, no duplicated hands, no disembodied limbs, no "
+        "floating hands, no anatomically impossible anatomy. No charts, no "
+        "graphs, no diagrams. "
+        + PHOTO_TAIL
+        + NO_TEXT
+    ),
 }
 
 
