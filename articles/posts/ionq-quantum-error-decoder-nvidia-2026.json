@@ -1,0 +1,106 @@
+{
+  "slug": "ionq-quantum-error-decoder-nvidia-2026",
+  "title": "IonQ's Error Decoder Is Ready Years Before the Qubits Are",
+  "subtitle": "IonQ benchmarked its real-time error decoder on simulated circuits and booked its next machine into NVIDIA's research center for next year. The hardware that would make either matter does not exist yet.",
+  "summary": "IonQ announced an end-to-end real-time quantum error decoder that runs on a single off-the-shelf CPU, benchmarked across up to 408 logical qubits and more than 31.5 million quantum operations. Within a day it also lined up its Superion 256 as the first on-premise quantum computer at NVIDIA's Accelerated Quantum Research Center, linked to a GB200 NVL72 through NVQLink and orchestrated by CUDA-Q, with installation set for next year. Both announcements point the same direction: the control layer that keeps a quantum chip honest is ordinary classical compute. The catch is that the benchmark circuits were simulated, IonQ's shipping machines hold 36 physical qubits, and the stock trades at roughly 70 times trailing sales on a delivery roadmap that starts in 2027.",
+  "ticker": "IONQ",
+  "sector": "quantum",
+  "sentiment": "bullish",
+  "date": "2026-09-23T14:00:00Z",
+  "price": 40.74,
+  "tags": [
+    "ionq",
+    "quantum",
+    "quantum-computing",
+    "error-correction",
+    "nvidia",
+    "nvqlink",
+    "cuda-q",
+    "trapped-ion",
+    "superion-256",
+    "ai-infrastructure"
+  ],
+  "image": {
+    "src": "/img/articles/ionq-quantum-error-decoder-nvidia-2026.jpg",
+    "fit": "cover",
+    "caption": "The gold-plated wiring stack inside a dilution refrigerator. Photo: The Signal / AI-generated.",
+    "alt": "Gold-plated copper wiring inside a cryogenic dilution refrigerator in a quantum computing lab"
+  },
+  "links": [
+    {
+      "label": "IonQ — IonQ Demonstrates Industry's First End-to-End Real-Time Quantum Error Decoder (Sep 22, 2026)",
+      "url": "https://www.ionq.com/news/ionq-demonstrates-industrys-first-end-to-end-real-time-quantum-error-decoder"
+    },
+    {
+      "label": "IonQ — IonQ to Advance Quantum Supercomputing by Bringing First QPU to NVIDIA Accelerated Quantum Research Center (Sep 23, 2026)",
+      "url": "https://www.ionq.com/news/ionq-to-advance-quantum-supercomputing-by-bringing-first-qpu-to-nvidia-accelerated-quantum-research-center"
+    },
+    {
+      "label": "arXiv — Real-time decoder for a MegaQuOp quantum computer using a single CPU (Aug 2026)",
+      "url": "https://arxiv.org/abs/2608.25027"
+    },
+    {
+      "label": "Nasdaq — IonQ Demonstrates Industry's First End-to-End Real-Time Quantum Error Decoder (Sep 22, 2026, 4:00pm EDT)",
+      "url": "https://www.nasdaq.com/press-release/ionq-demonstrates-industrys-first-end-end-real-time-quantum-error-decoder-2026-09-22"
+    },
+    {
+      "label": "IonQ — IonQ and SDT Announce Partnership to Bring Quantum Computing and Networking to Asia-Pacific (Sep 21, 2026)",
+      "url": "https://www.ionq.com/news/ionq-and-sdt-announce-the-first-strategic-partnership-to-bring-both-advanced-quantum-computing-and-quantum-networking-to-the-asia-pacific-region"
+    },
+    {
+      "label": "Google Research — Making quantum error correction work (Dec 2024)",
+      "url": "https://research.google/blog/making-quantum-error-correction-work/"
+    },
+    {
+      "label": "Quantinuum — Real-time error correction at increased scale (Mar 2026)",
+      "url": "https://www.quantinuum.com/blog/real-time-error-correction-at-increased-scale"
+    },
+    {
+      "label": "IonQ — Form 10-Q for the quarter ended June 30, 2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/1824920/000119312526341001/ionq-20260630.htm"
+    }
+  ],
+  "meta": {
+    "author": "The Signal Editorial",
+    "estimatedReadTime": "4 min",
+    "editorialTags": [
+      "IonQ",
+      "Quantum Computing",
+      "Error Correction",
+      "NVIDIA",
+      "NVQLink",
+      "CUDA-Q",
+      "Superion 256",
+      "Trapped Ion"
+    ],
+    "seoKeywords": [
+      "IonQ stock",
+      "IONQ stock",
+      "IonQ error decoder",
+      "real-time quantum error correction",
+      "IonQ NVIDIA NVAQC",
+      "NVQLink CUDA-Q",
+      "Superion 256",
+      "logical qubits",
+      "MegaQuOp scale",
+      "quantum computing stocks"
+    ],
+    "relatedTickers": [
+      "NVDA",
+      "GOOGL",
+      "MSFT",
+      "IBM"
+    ],
+    "keyMetrics": {
+      "Price": "$40.74",
+      "Market Cap": "$17.3B",
+      "Forward P/E": "N/A (loss-making)",
+      "Total Revenue (TTM)": "$246.5M",
+      "52-Week Low": "$25.89",
+      "52-Week High": "$84.64",
+      "Analyst Consensus": "Strong Buy (13 analysts)",
+      "Analyst Target Mean": "$67.14"
+    }
+  },
+  "bodyHtml": "<p>Quantum computers have a reputation problem: the machines are brilliant at being wrong. IonQ (NYSE: IONQ) builds them anyway, trapping individual ions in magnetic fields and using their quantum states to compute. The shipping hardware is Forte, at 36 physical qubits, with the 100-qubit Tempo as the flagship. Customers rent time on those machines through the cloud.</p>\n\n<p>Who buys? Research labs, governments, and a handful of enterprises that want to be early. The prize is what classical computers cannot crack at any price: portfolio optimization, materials science, chemistry for drug discovery. “Our roadmap to 10,000 qubits and full fault tolerance is accelerating through vertical integration of our SkyWater CMOS foundry,” says CEO Niccolo de Masi.</p>\n\n<p>Now the two-day news drop. On September 22 IonQ published an end-to-end real-time quantum error decoder that runs on one off-the-shelf CPU. It fixes errors in the background instead of pausing the processor. IonQ benchmarked it across up to 408 logical qubits and more than 31.5 million operations, for a fraction of a percent in added stretch time.</p>\n\n<p>The next morning brought the second piece. IonQ’s Superion 256 will become the first on-premise quantum computer at NVIDIA’s Accelerated Quantum Research Center. It wires into a GB200 NVL72 through NVQLink and CUDA-Q, with the install set for next year.</p>\n\n<p>The decoder is the interesting half. Think of autocorrect for a keyboard in a language with no fixed spelling. The quantum chip keeps computing while a classical chip quietly fixes the typos in real time. Doing that on commodity silicon matters: dedicated control hardware is expensive and scarce.</p>\n\n<p>Here is the part the release does not shout: those 408 logical qubits were simulated circuits, not a machine holding them. The decoder paper assumes a trapped-ion design, and its own layout implies roughly 11,680 physical qubits. IonQ has 36 in the field. The software is years ahead of the silicon it is written for.</p>\n\n<p>And “first” carries a qualifier. Real-time decoding has been done before: Google showed it with its Willow chip in December 2024, and Quantinuum did it over NVQLink earlier this year. IonQ’s novelty is end-to-end: memories, logical operations and magic-state factories, all on one commodity CPU.</p>\n\n<p>Why this matters to AI is worth internalizing. NVIDIA does not want the QPU to replace the GPU. It wants it in the same rack, a co-processor answering what an accelerator cannot. “Every supercomputer will become a quantum supercomputer,” says Timothy Costa, who runs quantum at NVIDIA.</p>\n\n<p>Now the stock, which is the argument. IonQ trades at roughly 70 times trailing sales, or about 38 times the midpoint of its combined 2026 guidance. Nobody pays that for cloud time on 36 qubits. They pay for fault tolerance, because a quantum computer that cannot correct its errors is an expensive physics demo.</p>\n\n<p>Name the drivers: Superion 256 shipping on schedule in 2027, fault tolerance shown on real hardware, gross margin climbing off the 24.9% it printed in the second quarter. Today’s headlines move none of those, and the tape says so. IONQ opened up about 12% and gave back half by mid-morning, while D-Wave and Rigetti went flat inside half an hour.</p>\n\n<p>Zoom out and there is no melt-up here: roughly half off the 52-week high, up about 65% off the March low, down about 43% over the past year.</p>\n\n<p>The bear case deserves a straight hearing. You are paying about 70 times trailing sales for a business that burned roughly $484 million in free cash flow across the last year. Growth is being bought with margin: gross margin fell to 24.9% from 59.8% as hardware and foundry work took the mix.</p>\n\n<p>The bears get the technical point too. The decoder that sparked the move ran on simulated circuits, and Google and Quantinuum got to real-time decoding first. The CHIPS Act’s $100 million in quantum awards went to D-Wave, Rigetti and Quantinuum, not IonQ.</p>\n\n<p>Share count is up 46.5% year over year, the tab for two stock-funded deals. Two customers were 33% of second-quarter revenue, but it is still two customers.</p>\n\n<p>What proves them right is specific: another year of guidance increases arriving mostly from acquisitions, or Superion 256 slipping past 2027.</p>\n\n<p>So watch what always mattered. Superion 256 is orderable now, and its first customer deliveries and the NVAQC installation both land in 2027. If either slips, the multiple has nothing under it.</p>\n\n<p>Anyone who has watched a video call freeze mid-sentence knows the difference between a delay you notice and one that ruins the call. That is the product IonQ demonstrated: not more qubits, but a machine you can trust while it works.</p>\n\n<p>The decoder does not make a quantum computer faster. It makes it honest, and honest is the only version anyone will pay to run.</p>\n\n<p class=\"disclosure\">Disclosure: The Signal holds no position in IONQ. Positions may change. This is not financial advice.</p>"
+}
