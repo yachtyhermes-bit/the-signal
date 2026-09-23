@@ -48,6 +48,14 @@ signal_deploy() {
 
   rm -rf /tmp/signal-dist
   cp -r dist /tmp/signal-dist
+  # dist/audio and dist/img hold file-level symlinks into public/{audio,img}, which
+  # signal_strip has just moved away. Copied verbatim they are dangling, and the Vercel
+  # archiver dies on them with
+  #   ENOENT: no such file or directory, lstat '/tmp/signal-dist/audio/<file>.mp3'
+  # — after "[DEPLOY] Complete" is printed, so the deploy silently never happens and the
+  # domain keeps serving the previous build. Strip the broken links from the COPY only;
+  # dist/ itself is left alone.
+  find /tmp/signal-dist -xtype l -delete 2>/dev/null || true
   # vercel.json MUST ship with every deploy — it carries the SEO legacy 301
   # redirects (/stock/, /art/, /hiv) + trailingSlash canonical enforcement.
   # Deploying dist alone silently drops routes (deploy-race, see
@@ -62,14 +70,32 @@ signal_deploy() {
   npx vercel link --project the-signal --yes > /dev/null 2>&1
 
   echo "  [DEPLOY] Vercel prod..."
-  local OUT=$(npx vercel --prod --archive=tgz --yes 2>&1)
+  # `local OUT=$(...)` swallows the exit status, so capture it explicitly: without this a
+  # failed Vercel run still printed "[DEPLOY] Complete" and exited 0 while the alias never
+  # moved (silent failure — the live site kept serving the previous build).
+  local OUT
+  if ! OUT=$(npx vercel --prod --archive=tgz --yes 2>&1); then
+    echo "$OUT" | tail -8
+    echo "  [DEPLOY] FAILED: vercel exited non-zero — nothing was published."
+    cd "$SIGNAL_ROOT"
+    return 1
+  fi
   echo "$OUT" | tail -5
 
   if [ -n "$ALIAS" ]; then
     local URL=$(echo "$OUT" | grep -oP 'https://[a-z0-9-]+\.vercel\.app' | head -1)
-    if [ -n "$URL" ]; then
-      echo "  [ALIAS] $ALIAS"
-      npx vercel alias set "$URL" "$ALIAS" 2>&1 | tail -3
+    if [ -z "$URL" ]; then
+      echo "  [DEPLOY] FAILED: no deployment URL in vercel output."
+      cd "$SIGNAL_ROOT"
+      return 1
+    fi
+    echo "  [ALIAS] $ALIAS"
+    local ALIASOUT=$(npx vercel alias set "$URL" "$ALIAS" 2>&1)
+    echo "$ALIASOUT" | tail -3
+    if ! echo "$ALIASOUT" | grep -qi 'success'; then
+      echo "  [DEPLOY] FAILED: alias $ALIAS was not moved — $URL is live but the domain still serves the old build."
+      cd "$SIGNAL_ROOT"
+      return 1
     fi
   fi
 

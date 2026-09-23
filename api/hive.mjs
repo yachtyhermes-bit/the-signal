@@ -278,6 +278,67 @@ async function getPricesForTickers(tickers, data) {
   return prices;
 }
 
+// === Historical closes for the weekly / 30-day leaderboards ===
+// Those periods need each holding's price AT the period cutoff. Valuing the period-start
+// portfolio with today's prices makes every position the trader did not touch cancel out
+// to exactly 0.00%, which is why "30-DAY ALPHA" read as all zeros for every trader.
+// Yahoo's chart endpoint gives us the daily closes; we cache one entry per ticker+day so a
+// page view costs at most one round of fetches per day.
+function histDayKey(cutoffMs) {
+  return new Date(cutoffMs).toISOString().slice(0, 10);
+}
+function readHistoricalClose(ticker, cutoffMs, data) {
+  const hit = data.histCache && data.histCache[ticker + ':' + histDayKey(cutoffMs)];
+  return hit && hit.price ? hit.price : null;
+}
+async function fetchHistoricalClose(ticker, cutoffMs, data) {
+  const key = ticker + ':' + histDayKey(cutoffMs);
+  data.histCache = data.histCache || {};
+  if (data.histCache[key] && data.histCache[key].price) return data.histCache[key].price;
+  try {
+    const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(ticker)}?interval=1d&range=3mo`;
+    const resp = await fetch(url, {
+      headers: { 'User-Agent': 'Mozilla/5.0' },
+      signal: AbortSignal.timeout(6000)
+    });
+    if (!resp.ok) return null;
+    const j = await resp.json();
+    const r = j.chart && j.chart.result && j.chart.result[0];
+    const ts = (r && r.timestamp) || [];
+    const quote = r && r.indicators && r.indicators.quote && r.indicators.quote[0];
+    const closes = (quote && quote.close) || [];
+    let best = null;
+    for (let i = 0; i < ts.length; i++) {
+      if (closes[i] == null) continue;
+      if (ts[i] * 1000 <= cutoffMs) best = closes[i];
+      else break;                      // timestamps ascend: stop at the first close after the cutoff
+    }
+    if (best == null) {                // ticker younger than the window: fall back to its first close
+      for (let i = 0; i < closes.length; i++) { if (closes[i] != null) { best = closes[i]; break; } }
+    }
+    if (best != null) data.histCache[key] = { price: best, updatedAt: new Date().toISOString() };
+    return best;
+  } catch {
+    return null;
+  }
+}
+async function prefetchHistoricalCloses(tickers, cutoffMs, data) {
+  const day = histDayKey(cutoffMs);
+  data.histCache = data.histCache || {};
+  // drop entries older than 20 days so the cache cannot grow without bound
+  const keepFrom = histDayKey(Date.now() - 20 * 86400000);
+  for (const k of Object.keys(data.histCache)) {
+    const d = k.split(':').pop();
+    if (d < keepFrom) delete data.histCache[k];
+  }
+  const todo = tickers.filter(t => !(data.histCache[t + ':' + day] && data.histCache[t + ':' + day].price));
+  const LIMIT = 8;                     // keep the serverless invocation well inside its timeout
+  for (let i = 0; i < todo.length; i += LIMIT) {
+    await Promise.all(todo.slice(i, i + LIMIT).map(t => fetchHistoricalClose(t, cutoffMs, data)));
+  }
+  return data.histCache;
+}
+
 function calcPortfolioValue(portfolio, prices) {
   let holdingsValue = 0;
   for (const [ticker, shares] of Object.entries(portfolio.holdings || {})) {
@@ -763,6 +824,21 @@ export default async function handler(req, res) {
       const now = new Date();
       const periodMs = period === 'weekly' ? 7 * 24 * 60 * 60 * 1000 :
                        period === 'monthly' ? 30 * 24 * 60 * 60 * 1000 : null;
+      const cutoffMs = periodMs ? now.getTime() - periodMs : 0;
+
+      // Fetch the closes for the cutoff date before the entries are built: without them the
+      // period-start portfolio can only be valued at today's prices, which zeroes out every
+      // position the trader did not touch during the window.
+      if (periodMs) {
+        const heldTickers = new Set();
+        for (const p of portfolios) {
+          for (const [tk, sh] of Object.entries(p.holdings || {})) {
+            if (sh > 0) heldTickers.add(tk);
+          }
+        }
+        await prefetchHistoricalCloses(Array.from(heldTickers), cutoffMs, data);
+        await writeData(data);
+      }
 
       const entries = portfolios.map(p => {
         const currentValue = calcPortfolioValue(p, prices);
@@ -803,11 +879,14 @@ export default async function handler(req, res) {
           }
         }
 
-        // Calculate start value at current prices (best approximation without historical prices)
+        // Calculate start value at the cutoff close, falling back to today's price when the
+        // historical lookup failed (offline ticker, rate limit) so a period never reads 0.00%
+        // just because a fetch failed.
         let startHoldingsValue = 0;
         for (const [ticker, shares] of Object.entries(startHoldings)) {
           if (shares > 0) {
-            startHoldingsValue += shares * (prices[ticker] || 0);
+            const hist = readHistoricalClose(ticker, cutoffMs, data);
+            startHoldingsValue += shares * (hist || prices[ticker] || 0);
           }
         }
         const startValue = startCash + startHoldingsValue;
