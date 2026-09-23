@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08080e">
+  <link rel="canonical" href="https://readthesignal.net/disclaimer/">
+  <meta name="robots" content="max-image-preview:large">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css?v=31">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-98KDVDFBCW"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-98KDVDFBCW');</script>
+  <script src="/js/prices.js" defer></script>
+  <script src="/js/search.js" defer></script>
+  <script src="/js/auth.js?v=2" defer></script>
+  <script src="/js/theme.js?v=2" defer></script>
+  <title>Disclaimer — The Signal</title>
+  <meta name="description" content="How The Signal's editorial content is produced: AI-assisted research reviewed and edited by a human before publication. Sources are linked, third-party sources are quoted not endorsed, ratings are our own and are not affiliated with Morningstar, Inc.">
+  <meta property="og:title" content="Disclaimer — The Signal">
+  <meta property="og:description" content="How The Signal's AI-assisted, human-reviewed editorial content should be read. Ratings are our own; not affiliated with Morningstar, Inc.">
+  <meta property="og:image" content="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/logo-hex.jpg">
+  <meta property="og:url" content="https://readthesignal.net/disclaimer/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Disclaimer — The Signal">
+  <meta name="twitter:description" content="How The Signal's AI-assisted, human-reviewed editorial content should be read. Ratings are our own; not affiliated with Morningstar, Inc.">
+  <style>
+    .legal-page { max-width: 760px; margin: 0 auto; padding: 48px 24px 64px; }
+    .legal-page h1 { font-family: 'Anton', 'Impact', sans-serif; font-size: 36px; letter-spacing: 1px; margin-bottom: 8px; color: var(--text-primary); }
+    .legal-page .legal-subtitle { color: var(--accent); font-size: 14px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 32px; }
+    .legal-page h2 { font-family: 'Anton', 'Impact', sans-serif; font-size: 22px; letter-spacing: 1px; margin: 40px 0 12px; color: var(--text-primary); }
+    .legal-page h3 { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin: 24px 0 8px; color: var(--text-primary); }
+    .legal-page p { color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px; font-size: 15px; }
+    .legal-page ul { margin: 0 0 16px 22px; }
+    .legal-page li { color: var(--text-secondary); line-height: 1.7; margin-bottom: 10px; font-size: 15px; }
+    .legal-page a { color: var(--accent); text-decoration: none; }
+    .legal-page a:hover { text-decoration: underline; }
+    .legal-page strong { color: var(--text-primary); }
+    .legal-page .legal-meta { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-muted); margin-bottom: 28px; }
+    .legal-page .legal-note { background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 8px; padding: 18px 20px; margin: 28px 0 0; }
+    .legal-page .legal-note p { margin-bottom: 0; }
+    .legal-page .legal-divider { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+    @media (max-width: 600px) { .legal-page { padding: 24px 16px 48px; } .legal-page h1 { font-size: 28px; } .legal-page h2 { font-size: 19px; } }
+  </style>
+<link rel="stylesheet" href="/css/nav.css">
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo"><img src="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/logo-hex.jpg" alt="The Signal" class="logo-img"><span class="logo-text"><span class="logo-the">THE</span> <strong>SIGNAL</strong></span></a>
+      <div class="nav-actions">
+        <button class="nav-btn search-btn" id="searchToggle" aria-label="Search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+        <div class="auth-container" id="authContainer">
+          <button class="nav-btn auth-btn" id="authToggle" aria-label="Sign In">
+            <div class="auth-btn-avatar" id="authBtnAvatar">
+              <span class="auth-btn-initial" id="authBtnInitial"></span>
+              <img class="auth-btn-img" id="authBtnImg" src="" alt="" style="display:none">
+            </div>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="auth-btn-icon" id="authBtnIcon"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <span class="auth-label" id="authLabel">Sign In</span>
+          </button>
+          <div class="auth-dropdown" id="authDropdown">
+            <div class="auth-profile" id="authProfile" style="display:none">
+              <div class="auth-profile-header">
+                <div class="auth-profile-avatar" id="authProfileAvatar">
+                  <img id="authProfileImg" src="" alt="" style="display:none">
+                  <span class="auth-profile-initial" id="authProfileInitial"></span>
+                </div>
+                <div class="auth-profile-info">
+                  <span class="auth-profile-name" id="authProfileName"></span>
+                  <span class="auth-profile-username" id="authProfileUsername"></span>
+                </div>
+                <div class="auth-profile-badge">HIVE</div>
+              </div>
+              <div class="auth-profile-stats" id="authProfileStats">
+                <div class="auth-stat"><span class="auth-stat-label">Portfolio</span><span class="auth-stat-value" id="authStatValue">-</span></div>
+                <div class="auth-stat"><span class="auth-stat-label">Return</span><span class="auth-stat-value" id="authStatReturn">-</span></div>
+              </div>
+              <div class="auth-drop-divider"></div>
+              <div class="auth-profile-nav">
+                <a href="/sector/ai" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
+                <a href="/sector/cyber" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
+                <a href="/sector/defense" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
+                <a href="/sector/space" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
+                <a href="/sector/mega-cap/" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
+                <div class="auth-nav-section-header">FEATURES</div>
+                <a href="/stocks/" class="auth-nav-item">📈 Stock Pages</a>
+                <a href="/about/" class="auth-nav-item">📋 About</a>
+              </div>
+              <div class="auth-drop-divider"></div>
+              <div class="auth-profile-footer">
+                <a href="/about/" class="auth-footer-link">Contact Us</a>
+                <button class="auth-signout-btn" id="authSignOut">Sign Out</button>
+              </div>
+            </div>
+            <div class="auth-guest" id="authGuest">
+              <div class="auth-guest-brand"><span class="auth-guest-title">Welcome to <strong>The Signal</strong></span><span class="auth-guest-sub">Market intelligence that moves before the headlines.</span></div>
+              <button class="auth-option auth-option-primary" onclick="showHiveJoinModal('login')"><span class="auth-option-icon">🔑</span> Sign In</button>
+              <button class="auth-option" onclick="showHiveJoinModal('register')"><span class="auth-option-icon">✨</span> Create Account</button>
+              <div class="auth-drop-divider"></div>
+              <div class="auth-profile-nav">
+                <a href="/sector/ai" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
+                <a href="/sector/cyber" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
+                <a href="/sector/defense" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
+                <a href="/sector/space" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
+                <a href="/sector/mega-cap/" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
+                <div class="auth-nav-section-header">FEATURES</div>
+                <a href="/stocks/" class="auth-nav-item">📈 Stock Pages</a>
+                <a href="/about/" class="auth-nav-item">📋 About</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="nav-btn hamburger-btn" id="hamburgerToggle" aria-label="Menu"><span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span></button>
+        <button class="nav-btn theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle theme" style="display:flex;align-items:center;gap:4px;background:none;border:1px solid var(--border);border-radius:6px;padding:6px 8px;cursor:pointer;color:var(--text-secondary);font-size:12px">
+          <svg class="theme-icon-sun" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <svg class="theme-icon-moon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- DRAWER -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <div class="drawer" id="drawer">
+    <div class="drawer-header">
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
+      <a href="/" class="drawer-logo"><img src="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/logo-hex.jpg" alt="The Signal" class="drawer-logo-img"><span class="drawer-logo-text">SIGNAL</span></a>
+    </div>
+    <div class="drawer-body">
+      <div class="drawer-section-label">SECTORS</div>
+      <a href="/sector/ai" class="drawer-link">AI</a>
+      <a href="/sector/cyber" class="drawer-link">Cyber</a>
+      <a href="/sector/defense" class="drawer-link">Defense</a>
+      <a href="/sector/space" class="drawer-link">Space</a>
+      <a href="/sector/mega-cap" class="drawer-link">Mega-Cap</a>
+      <a href="/sector/quantum" class="drawer-link">Quantum</a>
+      <a href="/sector/ai-power" class="drawer-link">AI Power</a>
+      <a href="/sector/etfs" class="drawer-link">ETFs</a>
+      <hr class="drawer-divider">
+      <div class="drawer-section-label">FEATURES</div>
+      <a href="/stocks/" class="drawer-link drawer-link-stocks">📈 Stock Pages</a>
+      <a href="/about/" class="drawer-link">📋 About</a>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div class="legal-page">
+      <div class="legal-subtitle">Legal</div>
+      <h1>Disclaimer</h1>
+      <p class="legal-meta">Effective date: September 22, 2026 &middot; Last updated: September 22, 2026</p>
+
+      <p>This page explains how The Signal's editorial content is produced and how you should read it. It applies to every article, brief, market note, scorecard output, newsletter and AI-assisted response we publish.</p>
+
+      <h2>1. We Are a Publication, Not Your Adviser</h2>
+      <p>The Signal publishes general financial commentary, research and market data for an audience of readers interested in the companies we cover. Nothing we publish is investment, legal, tax or accounting advice, and nothing we publish is a personal recommendation to you. Our content is not tailored to your objectives, financial situation or risk tolerance, we do not know your portfolio, and we do not monitor it. Reading The Signal creates no adviser, broker, fiduciary or agency relationship of any kind. See section 3 of our <a href="/terms/">Terms of Service</a> for the full statement.</p>
+      <!-- LAWYER REVIEW: confirm the publisher/general-commentary characterisation and that this disclosure is sufficient alongside the Terms of Service. -->
+
+      <h2>2. How Our Articles Are Made: AI-Assisted, Human-Reviewed</h2>
+      <p>Our editorial content is AI-assisted research. Articles are drafted with AI tooling against live market data, filings and primary sources, then reviewed, fact-checked and edited by a human editor before publication. The byline on each piece is The Signal Editorial Team.</p>
+      <p>That process lets us cover a large number of companies quickly, but it also means an error can survive review. We correct errors when we find them. If you spot one, email <a href="mailto:hello@readthesignal.net">hello@readthesignal.net</a> and we will look at it.</p>
+
+      <h2>3. Sources</h2>
+      <p>Where an article relies on outside material, the sources are linked at the bottom of that article in its Sources &amp; References list, and in-line links take you to the underlying filing, press release or report where one exists. We link to primary sources &mdash; company filings, investor-relations pages, government and exchange data &mdash; wherever we can, and clearly attribute commentary we did not write ourselves. We aim to attribute our sources accurately; we cannot guarantee that a third-party source is itself accurate, complete or still live at the URL we cite.</p>
+
+      <h2>4. Third-Party Sources Are Quoted, Not Endorsed</h2>
+      <p>Articles may quote, summarise or link to third-party reporting, analyst notes, research publications or press coverage. Quoting a source means we considered it relevant and attributed it, not that we endorse the source, its author, its owner or its conclusions, and not that the source endorses us. Third-party company names, ticker symbols, logos and publication names are used for identification, news reporting and commentary, and remain the property of their respective owners.</p>
+
+      <h2>5. Our Ratings and Opinions Are Our Own</h2>
+      <p>Any score, rating, signal, grade or verdict you see on the Site &mdash; including our scorecard and Signal Scorecard outputs &mdash; is our own editorial opinion, produced by our own methodology from publicly available data. It is not a rating issued by any rating agency, and it is not a substitute for one.</p>
+      <p>Our ratings and opinions are not affiliated with, endorsed by, sponsored by, or derived from Morningstar, Inc. or any other rating agency, and no rating agency has reviewed or approved any rating, score or opinion we publish. Where we mention a rating or research publication by name, we are reporting on what that publisher said, with attribution, and nothing more.</p>
+      <!-- LAWYER REVIEW: confirm the trademark non-affiliation statement satisfies the requirements of the relevant rating agency (Morningstar, Inc. and any other named agency) as to form and prominence, and confirm the nominated framing of our own scores so they cannot be confused with third-party ratings. -->
+
+      <h2>6. Forward-Looking Statements</h2>
+      <p>Our content often discusses what may happen next: revenue growth, contract awards, capacity ramps, margins, product roadmaps and share-price scenarios. Those are forward-looking statements based on assumptions, models and publicly available information as of the date of publication. They are inherently uncertain, they are not predictions or guarantees, and actual results will often differ &mdash; sometimes materially &mdash; from what we describe. Any price target, scenario or valuation we discuss is an illustration of a thesis, not a forecast of a future price, and it is not a recommendation to transact.</p>
+
+      <h2>7. Data, Prices and Timeliness</h2>
+      <p>Market data, quotes, fundamentals and scorecard metrics shown on the Site may be delayed, rounded, estimated, manually entered or served from a third-party feed, and may change without notice after publication. An article reflects the information available to us on the date it was published; we do not undertake to update every article when facts change. Always confirm figures against a primary source before relying on them.</p>
+
+      <h2>8. Past Performance</h2>
+      <p>Past performance, including the historical performance of any company, sector, index or portfolio we discuss or track, is not indicative of future results. Investing involves risk, including the risk of losing the entire amount invested. You are solely responsible for your own research and investment decisions, and you should consult a licensed adviser who understands your circumstances before acting on anything you read on the Site.</p>
+
+      <h2>9. Automated Tools and AI Responses</h2>
+      <p>Parts of the Service, including our Pulse research assistant and any AI-generated summaries or scorecard explanations, are generated by automated systems in response to your input. Those outputs can be wrong, incomplete or out of date, and they can state incorrect figures with confidence. They are provided for research convenience only, they are not reviewed by a human editor before you see them, and they are not advice. Independent verification is your responsibility.</p>
+      <!-- LAWYER REVIEW: confirm the scope of disclaimers required for consumer-facing generative AI outputs, including whether an AI-specific disclosure or a statement about automated decision-making is required in target jurisdictions. -->
+
+      <h2>10. Positions and Conflicts</h2>
+      <p>The Signal is an independent publication. Our editorial team may hold positions in securities we cover, and nothing we publish should be read as a promise of impartiality toward any company. We do not accept payment from the companies we cover in exchange for coverage, ratings or revisions to our editorial content.</p>
+      <!-- LAWYER REVIEW: confirm the conflicts-of-interest disclosure standard to meet (including whether positions must be disclosed per-article rather than in a general policy) and approve the "no paid coverage" representation against actual commercial practice. -->
+
+      <h2>11. No Warranty; Limitation of Liability</h2>
+      <p>Content is provided "as is" and "as available", without warranties of any kind, and The Signal accepts no liability for any loss arising from your use of, or reliance on, anything published on the Site. The warranty disclaimer and limitation of liability in our <a href="/terms/">Terms of Service</a> apply to this Disclaimer as well.</p>
+
+      <h2>12. Corrections</h2>
+      <p>We want to be accurate. Send corrections, source documents or clarifications to <a href="mailto:hello@readthesignal.net">hello@readthesignal.net</a>. Where a correction changes the meaning of a published article, we will update the article.</p>
+
+      <h2>13. Contact</h2>
+      <p>Questions about this Disclaimer: <a href="mailto:hello@readthesignal.net">hello@readthesignal.net</a>.</p>
+
+      <div class="legal-note">
+        <p>See also our <a href="/terms/">Terms of Service</a> and <a href="/privacy/">Privacy Policy</a>.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <div class="footer-brand"><img src="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/logo-hex.jpg" alt="The Signal" class="footer-logo"> THE <strong>SIGNAL</strong></div>
+          <p>Market intelligence for AI, defense, space, and cybersecurity stocks. Data-driven analysis that moves before the headlines.</p>
+          <div class="footer-social">
+            <a href="https://x.com/ReadTheSignal21" target="_blank" rel="noopener" aria-label="X / Twitter">𝕏</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Sectors</h4>
+          <a href="/sector/ai">AI</a>
+          <a href="/sector/defense">Defense</a>
+          <a href="/sector/cyber">Cyber</a>
+          <a href="/sector/space">Space</a>
+          <a href="/sector/mega-cap">Mega-Cap</a>
+          <a href="/sector/ai-power">AI Power</a>
+        </div>
+        <div class="footer-col">
+          <h4>Features</h4>
+          <a href="/stocks/">Stock Pages</a>
+          <a href="/about/">About</a>
+        </div>
+        <div class="footer-col">
+          <h4>More</h4>
+          <a href="/about/">Contact Us</a>
+          <a href="/">Home</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+          <a href="/disclaimer/">Disclaimer</a>
+          <a href="/disclosure/">Disclosure</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-tag">The Signal Editorial Team · readthesignal.net</div>
+        <div class="footer-copy">© 2026 The Signal — Market Intelligence. Data from public sources. Not investment advice.</div>
+      </div>
+    </div>
+  </footer>
+  <script>
+  // Hamburger drawer
+  document.addEventListener('DOMContentLoaded', function(){
+    var btn = document.getElementById('hamburgerToggle');
+    var drawer = document.getElementById('drawer');
+    var overlay = document.getElementById('drawerOverlay');
+    var closeBtn = document.getElementById('drawerClose');
+    function openDrawer(){ drawer.classList.add('open'); overlay.classList.add('open'); document.body.style.overflow='hidden'; }
+    function closeDrawer(){ drawer.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow=''; }
+    if(btn&&drawer&&overlay){ btn.addEventListener('click',openDrawer); overlay.addEventListener('click',closeDrawer); if(closeBtn)closeBtn.addEventListener('click',closeDrawer);
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&drawer.classList.contains('open'))closeDrawer(); });
+    drawer.querySelectorAll('a').forEach(function(a){ a.addEventListener('click',closeDrawer); }); }
+  });
+  </script>
+</body>
+</html>

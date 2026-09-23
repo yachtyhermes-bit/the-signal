@@ -1033,4 +1033,30 @@ if (fs.existsSync(pulseJsSrc) && fs.existsSync(path.dirname(pulseJsDst))) {
 }
 
 // ─── Sitemap generation (last — needs all pages built) ───
+// ─── Canonical internal links (added 2026-09-22) ───
+// Generated pages (nav/footer templates inside generators, public/ copies) kept emitting
+// no-slash internal hrefs, so every build re-created tens of thousands of links that hit a
+// 308 redirect. Manual fix-ups regressed on the next build; this enforces it in the build.
+(function canonicaliseInternalLinks() {
+  let fixed = 0, files = 0;
+  const walk = (dir) => {
+    for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, e.name);
+      if (e.isDirectory()) { walk(full); continue; }
+      if (!e.name.endsWith('.html')) continue;
+      const t = fs.readFileSync(full, 'utf8');
+      const t2 = t.replace(/(href=")(\/[a-z0-9][a-z0-9./-]*?)(")/g, (m, pre, href, post) => {
+        const last = href.split('/').pop();
+        if (href.endsWith('/') || last.includes('.')) return m;
+        if (!fs.existsSync(path.join(DST, href.replace(/^\//, ''), 'index.html'))) return m;
+        fixed++;
+        return pre + href + '/' + post;
+      });
+      if (t2 !== t) { fs.writeFileSync(full, t2); files++; }
+    }
+  };
+  walk(DST);
+  console.log(`  🔗 ${fixed} internal links canonicalised across ${files} pages`);
+})();
+
 require('./scripts/generate-sitemap.js');

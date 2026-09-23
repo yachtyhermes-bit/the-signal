@@ -10,7 +10,7 @@
   <meta name="robots" content="max-image-preview:large">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Oxanium:wght@400;500;600;700&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/main.css?v=27">
+  <link rel="stylesheet" href="/css/main.css?v=31">
   <link rel="stylesheet" href="/css/pulse-badge.css">
   <link rel="stylesheet" href="/css/tts.css">
   <link rel="stylesheet" href="/css/nav.css">
@@ -60,6 +60,30 @@
   <nav class="nav">
     <div class="nav-inner">
       <a href="/" class="logo"><img src="/img/logo-hex.jpg" alt="The Signal" class="logo-img"><span class="logo-text"><span class="logo-the">THE</span> <strong>SIGNAL</strong></span></a>
+      <div class="nav-links">
+        <div class="nav-drop">
+          <a href="/sector/ai/" class="nav-link nav-drop-toggle">Sectors
+            <svg class="nav-drop-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+          <div class="nav-drop-menu">
+            <a href="/sector/ai/" class="nav-drop-link">AI</a>
+            <a href="/sector/cyber/" class="nav-drop-link">Cyber</a>
+            <a href="/sector/defense/" class="nav-drop-link">Defense</a>
+            <a href="/sector/space/" class="nav-drop-link">Space</a>
+            <a href="/sector/mega-cap/" class="nav-drop-link">Mega-Cap</a>
+            <a href="/sector/quantum/" class="nav-drop-link">Quantum</a>
+            <a href="/sector/fintech/" class="nav-drop-link">Fintech</a>
+            <a href="/sector/ai-power/" class="nav-drop-link">AI Power</a>
+            <a href="/sector/etfs/" class="nav-drop-link">ETFs</a>
+          </div>
+        </div>
+        <a href="/stocks/" class="nav-link">Stock Pages</a>
+        <a href="/explainers/" class="nav-link">Explainers</a>
+        <a href="/#scorecard" class="nav-link">Scorecard</a>
+        <a href="/hive/" class="nav-link nav-link-hive">Hive</a>
+        <a href="/signal-vs-the-street/" class="nav-link nav-link-svs"><span class="gradient-text">Signal vs. Street</span></a>
+        <a href="/premium/" class="nav-link nav-link-premium">Premium</a>
+      </div>
       <div class="nav-actions">
         <button class="nav-btn search-btn" id="searchToggle" aria-label="Search">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
@@ -99,24 +123,24 @@
               </div>
               <div class="auth-drop-divider"></div>
               <div class="auth-profile-nav">
-                <a href="/sector/ai" class="auth-nav-item">AI</a>
-                <a href="/sector/cyber" class="auth-nav-item">Cyber</a>
-                <a href="/sector/defense" class="auth-nav-item">Defense</a>
-                <a href="/sector/space" class="auth-nav-item">Space</a>
-                <a href="/sector/mega-cap" class="auth-nav-item">Mega-Cap</a>
-                <a href="/sector/quantum" class="auth-nav-item">Quantum</a>
-                <a href="/sector/ai-power" class="auth-nav-item">AI Power</a>
-                <a href="/sector/fintech" class="auth-nav-item">FinTech</a>
-                <a href="/sector/etfs" class="auth-nav-item">ETFs</a>
+                <a href="/sector/ai/" class="auth-nav-item">AI</a>
+                <a href="/sector/cyber/" class="auth-nav-item">Cyber</a>
+                <a href="/sector/defense/" class="auth-nav-item">Defense</a>
+                <a href="/sector/space/" class="auth-nav-item">Space</a>
+                <a href="/sector/mega-cap/" class="auth-nav-item">Mega-Cap</a>
+                <a href="/sector/quantum/" class="auth-nav-item">Quantum</a>
+                <a href="/sector/ai-power/" class="auth-nav-item">AI Power</a>
+                <a href="/sector/fintech/" class="auth-nav-item">FinTech</a>
+                <a href="/sector/etfs/" class="auth-nav-item">ETFs</a>
                 <div class="auth-nav-section-header">FEATURES</div>
-                <a href="/hive" class="auth-nav-item">Hive</a>
-                <a href="/signal-vs-the-street" class="auth-nav-item">Signal vs. Street</a>
+                <a href="/hive/" class="auth-nav-item">Hive</a>
+                <a href="/signal-vs-the-street/" class="auth-nav-item">Signal vs. Street</a>
                 <a href="/stocks/" class="auth-nav-item">Stock Pages</a>
               </div>
               <div class="auth-drop-divider"></div>
               <div class="auth-profile-footer">
-                <a href="/account/settings" class="auth-footer-link">✏️ Edit Profile</a>
-                <a href="/hive" class="auth-footer-link" onclick="navigateToHiveLeaderboard(event)">Leaderboard</a>
+                <a href="/account/settings/" class="auth-footer-link">✏️ Edit Profile</a>
+                <a href="/hive/" class="auth-footer-link" onclick="navigateToHiveLeaderboard(event)">Leaderboard</a>
                 <button class="auth-signout-btn" id="authSignOut">Sign Out</button>
               </div>
             </div>
@@ -134,18 +158,18 @@
               </button>
               <div class="auth-drop-divider"></div>
               <div class="auth-profile-nav">
-                <a href="/sector/ai" class="auth-nav-item">AI</a>
-                <a href="/sector/cyber" class="auth-nav-item">Cyber</a>
-                <a href="/sector/defense" class="auth-nav-item">Defense</a>
-                <a href="/sector/space" class="auth-nav-item">Space</a>
-                <a href="/sector/mega-cap" class="auth-nav-item">Mega-Cap</a>
-                <a href="/sector/quantum" class="auth-nav-item">Quantum</a>
-                <a href="/sector/ai-power" class="auth-nav-item">AI Power</a>
-                <a href="/sector/fintech" class="auth-nav-item">FinTech</a>
-                <a href="/sector/etfs" class="auth-nav-item">ETFs</a>
+                <a href="/sector/ai/" class="auth-nav-item">AI</a>
+                <a href="/sector/cyber/" class="auth-nav-item">Cyber</a>
+                <a href="/sector/defense/" class="auth-nav-item">Defense</a>
+                <a href="/sector/space/" class="auth-nav-item">Space</a>
+                <a href="/sector/mega-cap/" class="auth-nav-item">Mega-Cap</a>
+                <a href="/sector/quantum/" class="auth-nav-item">Quantum</a>
+                <a href="/sector/ai-power/" class="auth-nav-item">AI Power</a>
+                <a href="/sector/fintech/" class="auth-nav-item">FinTech</a>
+                <a href="/sector/etfs/" class="auth-nav-item">ETFs</a>
                 <div class="auth-nav-section-header">FEATURES</div>
-                <a href="/hive" class="auth-nav-item">Hive</a>
-                <a href="/signal-vs-the-street" class="auth-nav-item">Signal vs. Street</a>
+                <a href="/hive/" class="auth-nav-item">Hive</a>
+                <a href="/signal-vs-the-street/" class="auth-nav-item">Signal vs. Street</a>
                 <a href="/stocks/" class="auth-nav-item">Stock Pages</a>
               </div>
             </div>
@@ -178,26 +202,26 @@
         <a href="/stocks/" class="drawer-link">STOCK PAGES</a>
         <a href="/explainers/" class="drawer-link">EXPLAINERS</a>
         <a href="/#scorecard" class="drawer-link">SIGNAL SCORECARD</a>
-        <a href="/hive" class="drawer-link">HIVE</a>
-        <a href="/signal-vs-the-street" class="drawer-link">SIGNAL VS. STREET</a>
-        <a href="/pricing" class="drawer-link">SIGNAL PREMIUM</a>
-        <a href="/pricing" class="drawer-cta">GET PREMIUM ACCESS</a>
+        <a href="/hive/" class="drawer-link">HIVE</a>
+        <a href="/signal-vs-the-street/" class="drawer-link">SIGNAL VS. STREET</a>
+        <a href="/pricing/" class="drawer-link">SIGNAL PREMIUM</a>
+        <a href="/pricing/" class="drawer-cta">GET PREMIUM ACCESS</a>
       </div>
       <div class="drawer-sub" id="drawerSub">
         <div class="sub-header" onclick="closeSubDrawer()">
           <span class="sub-back">&#8249;</span>
           <span class="sub-title">SECTORS</span>
         </div>
-        <a href="/sector/ai" class="drawer-link">AI</a>
-        <a href="/sector/cyber" class="drawer-link">CYBER</a>
-        <a href="/sector/defense" class="drawer-link">DEFENSE</a>
-        <a href="/sector/space" class="drawer-link">SPACE</a>
-        <a href="/sector/mega-cap" class="drawer-link">MEGA-CAP</a>
-        <a href="/sector/quantum" class="drawer-link">QUANTUM</a>
-        <a href="/sector/fintech" class="drawer-link">FINTECH</a>
-        <a href="/sector/ai-power" class="drawer-link">AI POWER</a>
-        <a href="/sector/fintech" class="drawer-link">FINTECH</a>
-        <a href="/sector/etfs" class="drawer-link">ETFS</a>
+        <a href="/sector/ai/" class="drawer-link">AI</a>
+        <a href="/sector/cyber/" class="drawer-link">CYBER</a>
+        <a href="/sector/defense/" class="drawer-link">DEFENSE</a>
+        <a href="/sector/space/" class="drawer-link">SPACE</a>
+        <a href="/sector/mega-cap/" class="drawer-link">MEGA-CAP</a>
+        <a href="/sector/quantum/" class="drawer-link">QUANTUM</a>
+        <a href="/sector/fintech/" class="drawer-link">FINTECH</a>
+        <a href="/sector/ai-power/" class="drawer-link">AI POWER</a>
+        <a href="/sector/fintech/" class="drawer-link">FINTECH</a>
+        <a href="/sector/etfs/" class="drawer-link">ETFS</a>
       </div>
     </div>
   </div>
@@ -248,7 +272,7 @@
           <h2 class="premium-paywall-title">Premium Article</h2>
           <p class="premium-paywall-desc">This article is available exclusively to Signal Premium subscribers. Upgrade for full access to all premium analysis, deep research, and exclusive market intelligence.</p>
           <div class="premium-paywall-actions">
-            <a href="/pricing" class="premium-paywall-cta">Upgrade to Premium</a>
+            <a href="/pricing/" class="premium-paywall-cta">Upgrade to Premium</a>
             <button class="premium-paywall-sso" onclick="premiumCheck()">Already a subscriber? <strong>Sign in</strong></button>
           </div>
         </div>
@@ -328,15 +352,15 @@
         </div>
         <div class="footer-col">
           <h4>Sectors</h4>
-          <a href="/sector/ai">AI</a>
-          <a href="/sector/defense">Defense</a>
-          <a href="/sector/cyber">Cyber</a>
-          <a href="/sector/space">Space</a>
-          <a href="/sector/mega-cap">Mega-Cap</a>
-          <a href="/sector/quantum">Quantum</a>
-          <a href="/sector/ai-power">AI Power</a>
-          <a href="/sector/fintech">FinTech</a>
-          <a href="/sector/etfs">ETFs</a>
+          <a href="/sector/ai/">AI</a>
+          <a href="/sector/defense/">Defense</a>
+          <a href="/sector/cyber/">Cyber</a>
+          <a href="/sector/space/">Space</a>
+          <a href="/sector/mega-cap/">Mega-Cap</a>
+          <a href="/sector/quantum/">Quantum</a>
+          <a href="/sector/ai-power/">AI Power</a>
+          <a href="/sector/fintech/">FinTech</a>
+          <a href="/sector/etfs/">ETFs</a>
         </div>
         <div class="footer-col">
           <h4>Features</h4>

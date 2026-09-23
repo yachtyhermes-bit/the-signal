@@ -84,6 +84,11 @@ add(`${SITE}/pricing`, '0.7', 'monthly');
 add(`${SITE}/hive`, '0.5', 'weekly');
 add(`${SITE}/hive/boardroom`, '0.4', 'weekly');
 add(`${SITE}/signal-vs-the-street`, '0.5', 'weekly');
+  // Policy pages added 2026-09-22 with the legal build-out.
+  add(`${SITE}/privacy`, '0.4', 'yearly');
+  add(`${SITE}/terms`, '0.4', 'yearly');
+  add(`${SITE}/disclaimer`, '0.4', 'yearly');
+  add(`${SITE}/disclosure`, '0.4', 'yearly');
 add(`${SITE}/about`, '0.3', 'monthly');
 add(`${SITE}/premium`, '0.5', 'monthly');
 add(`${SITE}/insights`, '0.6', 'weekly');

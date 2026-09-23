@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08080e">
+  <link rel="canonical" href="https://readthesignal.net/disclosure/">
+  <meta name="robots" content="max-image-preview:large">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css?v=31">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-98KDVDFBCW"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-98KDVDFBCW');</script>
+  <script src="/js/prices.js" defer></script>
+  <script src="/js/search.js" defer></script>
+  <script src="/js/auth.js?v=2" defer></script>
+  <script src="/js/theme.js?v=2" defer></script>
+  <title>Disclosure — The Signal</title>
+  <meta name="description" content="Important disclosures regarding editorial standards, holdings, and corrections for The Signal.">
+  <meta property="og:title" content="Disclosure — The Signal">
+  <meta property="og:description" content="Important disclosures regarding editorial standards, holdings, and corrections for The Signal.">
+  <meta property="og:url" content="https://readthesignal.net/disclosure/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Disclosure — The Signal">
+  <meta name="twitter:description" content="Important disclosures regarding editorial standards, holdings, and corrections for The Signal.">
+  <style>
+    .disclosure-page { max-width: 720px; margin: 0 auto; padding: 48px 24px 64px; }
+    .disclosure-page h1 { font-family: 'Anton', 'Impact', sans-serif; font-size: 36px; letter-spacing: 1px; margin-bottom: 8px; color: var(--text-primary); }
+    .disclosure-page .disclosure-subtitle { color: var(--accent); font-size: 14px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 32px; }
+    .disclosure-page h2 { font-family: 'Anton', 'Impact', sans-serif; font-size: 22px; letter-spacing: 1px; margin: 40px 0 12px; color: var(--text-primary); }
+    .disclosure-page p, .disclosure-page ul { color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px; font-size: 15px; }
+    .disclosure-page ul { list-style: disc; margin-left: 20px; }
+    .disclosure-page ul li { margin-bottom: 8px; }
+    @media (max-width: 600px) { .disclosure-page { padding: 24px 16px 48px; } .disclosure-page h1 { font-size: 28px; } }
+  </style>
+<link rel="stylesheet" href="/css/nav.css">
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo"><img src="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/logo-hex.jpg" alt="The Signal" class="logo-img"><span class="logo-text"><span class="logo-the">THE</span> <strong>SIGNAL</strong></span></a>
+      <div class="nav-actions">
+        <button class="nav-btn search-btn" id="searchToggle" aria-label="Search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+        <div class="auth-container" id="authContainer">
+          <button class="nav-btn auth-btn" id="authToggle" aria-label="Sign In">
+            <div class="auth-btn-avatar" id="authBtnAvatar">
+              <span class="auth-btn-initial" id="authBtnInitial"></span>
+              <img class="auth-btn-img" id="authBtnImg" src="" alt="" style="display:none">
+            </div>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="auth-btn-icon" id="authBtnIcon"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <span class="auth-label" id="authLabel">Sign In</span>
+          </button>
+          <div class="auth-dropdown" id="authDropdown">
+            <div class="auth-profile" id="authProfile" style="display:none">
+              <div class="auth-profile-header">
+                <div class="auth-profile-avatar" id="authProfileAvatar">
+                  <img id="authProfileImg" src="" alt="" style="display:none">
+                  <span class="auth-profile-initial" id="authProfileInitial"></span>
+                </div>
+                <div class="auth-profile-info">
+                  <span class="auth-profile-name" id="authProfileName"></span>
+                  <span class="auth-profile-username" id="authProfileUsername"></span>
+                </div>
+                <div class="auth-profile-badge">HIVE</div>
+              </div>
+              <div class="auth-profile-stats" id="authProfileStats">
+                <div class="auth-stat"><span class="auth-stat-label">Portfolio</span><span class="auth-stat-value" id="authStatValue">-</span></div>
+                <div class="auth-stat"><span class="auth-stat-label">Return</span><span class="auth-stat-value" id="authStatReturn">-</span></div>
+              </div>
+              <div class="auth-drop-divider"></div>
+              <div class="auth-profile-nav">
+                <a href="/sector/ai/" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
+                <a href="/sector/cyber/" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
+                <a href="/sector/defense/" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
+                <a href="/sector/space/" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
+                <a href="/sector/mega-cap/" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
+                <div class="auth-nav-section-header">FEATURES</div>
+                <a href="/stocks/" class="auth-nav-item">📈 Stock Pages</a>
+                <a href="/about/" class="auth-nav-item">📋 About</a>
+              </div>
+              <div class="auth-drop-divider"></div>
+              <div class="auth-profile-footer">
+                <a href="/about/" class="auth-footer-link">Contact Us</a>
+                <button class="auth-signout-btn" id="authSignOut">Sign Out</button>
+              </div>
+            </div>
+            <div class="auth-guest" id="authGuest">
+              <div class="auth-guest-brand"><span class="auth-guest-title">Welcome to <strong>The Signal</strong></span><span class="auth-guest-sub">Market intelligence that moves before the headlines.</span></div>
+              <button class="auth-option auth-option-primary" onclick="showHiveJoinModal('login')"><span class="auth-option-icon">🔑</span> Sign In</button>
+              <button class="auth-option" onclick="showHiveJoinModal('register')"><span class="auth-option-icon">✨</span> Create Account</button>
+              <div class="auth-drop-divider"></div>
+              <div class="auth-profile-nav">
+                <a href="/sector/ai/" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
+                <a href="/sector/cyber/" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
+                <a href="/sector/defense/" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
+                <a href="/sector/space/" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
+                <a href="/sector/mega-cap/" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
+                <div class="auth-nav-section-header">FEATURES</div>
+                <a href="/stocks/" class="auth-nav-item">📈 Stock Pages</a>
+                <a href="/about/" class="auth-nav-item">📋 About</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="nav-btn hamburger-btn" id="hamburgerToggle" aria-label="Menu"><span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span></button>
+        <button class="nav-btn theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle theme" style="display:flex;align-items:center;gap:4px;background:none;border:1px solid var(--border);border-radius:6px;padding:6px 8px;cursor:pointer;color:var(--text-secondary);font-size:12px">
+          <svg class="theme-icon-sun" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <svg class="theme-icon-moon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- DRAWER -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <div class="drawer" id="drawer">
+    <div class="drawer-header">
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
+      <a href="/" class="drawer-logo"><img src="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/logo-hex.jpg" alt="The Signal" class="drawer-logo-img"><span class="drawer-logo-text">SIGNAL</span></a>
+    </div>
+    <div class="drawer-body">
+      <div class="drawer-section-label">SECTORS</div>
+      <a href="/sector/ai/" class="drawer-link">AI</a>
+      <a href="/sector/cyber/" class="drawer-link">Cyber</a>
+      <a href="/sector/defense/" class="drawer-link">Defense</a>
+      <a href="/sector/space/" class="drawer-link">Space</a>
+      <a href="/sector/mega-cap/" class="drawer-link">Mega-Cap</a>
+      <a href="/sector/quantum/" class="drawer-link">Quantum</a>
+      <a href="/sector/ai-power/" class="drawer-link">AI Power</a>
+      <a href="/sector/etfs/" class="drawer-link">ETFs</a>
+      <hr class="drawer-divider">
+      <div class="drawer-section-label">FEATURES</div>
+      <a href="/stocks/" class="drawer-link drawer-link-stocks">📈 Stock Pages</a>
+      <a href="/about/" class="drawer-link">📋 About</a>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div class="disclosure-page">
+      <div class="disclosure-subtitle">Transparency and Trust</div>
+      <h1>Disclosure Policy</h1>
+
+      <h2>Editorial Standards</h2>
+      <p>Our commitment is to deliver accurate, data-driven analysis. All articles published by The Signal adhere to the following principles:</p>
+      <ul>
+        <li><strong>Sourcing:</strong> Every article links to its primary sources at the bottom, including earnings reports, SEC filings, and reputable financial news.</li>
+        <li><strong>AI Assistance:</strong> Drafts are frequently AI-assisted to process large datasets and identify trends. However, all content undergoes rigorous human review, fact-checking, editing, and approval by our editorial team prior to publication.</li>
+        <li><strong>Objectivity:</strong> Our analysis focuses on verifiable data and its implications for investment rather than speculation or hype.</li>
+      </ul>
+
+      <h2>Positions and Holdings Policy</h2>
+      <p>We believe in transparency regarding potential conflicts of interest. <!-- LAWYER REVIEW: This is a legal statement about transparency. --></p>
+      <ul>
+        <li>The Signal, its writers, or contributors may hold positions in securities, including those discussed or covered in our publications.</li>
+        <li>Any such holdings will be disclosed within the relevant article.</li>
+        <li>Our coverage is never a solicitation to buy or sell any security. Investment decisions should always be based on your own thorough research and financial advice. <!-- LAWYER REVIEW: This is a legal statement about non-solicitation and independent research. --></li>
+      </ul>
+
+      <h2>No Investment Adviser Statement</h2>
+      <p>The Signal is an independent financial publisher and is not a registered investment adviser or broker-dealer. The information provided on readthesignal.net is for informational and educational purposes only and does not constitute financial advice. We do not provide personalized investment recommendations or advice. <!-- LAWYER REVIEW: This is a legal disclaimer of advisory services. --></p>
+
+      <h2>No Performance Guarantee</h2>
+      <p>Past performance is not indicative of future results. All investments involve risk, and the value of investments and the income from them can go down as well as up. You may not get back the amount you originally invested. <!-- LAWYER REVIEW: This is a legal disclaimer about investment risk and past performance. --></p>
+
+      <h2>Corrections Policy</h2>
+      <p>We are committed to accuracy and promptly correcting any factual errors. If you identify an error in our content, please contact us with the details. We will review the information and issue a correction as appropriate.</p>
+      <p>To report a correction, please email us at: <a href="mailto:hello@readthesignal.net">hello@readthesignal.net</a></p>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <div class="footer-brand"><img src="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/logo-hex.jpg" alt="The Signal" class="footer-logo"> THE <strong>SIGNAL</strong></div>
+          <p>Market intelligence for AI, defense, space, and cybersecurity stocks. Data-driven analysis that moves before the headlines.</p>
+          <div class="footer-social">
+            <a href="https://x.com/ReadTheSignal21" target="_blank" rel="noopener" aria-label="X / Twitter">𝕏</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Sectors</h4>
+          <a href="/sector/ai/">AI</a>
+          <a href="/sector/defense/">Defense</a>
+          <a href="/sector/cyber/">Cyber</a>
+          <a href="/sector/space/">Space</a>
+          <a href="/sector/mega-cap/">Mega-Cap</a>
+          <a href="/sector/ai-power/">AI Power</a>
+        </div>
+        <div class="footer-col">
+          <h4>Features</h4>
+          <a href="/stocks/">Stock Pages</a>
+          <a href="/about/">About</a>
+        </div>
+        <div class="footer-col">
+          <h4>More</h4>
+          <a href="/about/">Contact Us</a>
+          <a href="/disclosure/">Disclosure</a> <!-- Added disclosure link -->
+          <a href="/">Home</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+          <a href="/disclaimer/">Disclaimer</a>
+          <a href="/disclosure/">Disclosure</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-tag">The Signal Editorial Team · readthesignal.net</div>
+        <div class="footer-copy">© 2026 The Signal — Market Intelligence. Data from public sources. Not investment advice.</div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
