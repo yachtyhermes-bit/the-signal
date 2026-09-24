@@ -1,0 +1,140 @@
+{
+  "slug": "intc-agentic-cpu-14a-wildcard-2026",
+  "title": "Intel Is an Agentic CPU Story Again, With 14A as the Wildcard",
+  "subtitle": "Meta's Muse sparked the agentic stampede and the CPU:GPU mix is drifting back toward the CPU. Intel's next re-rating still hinges on naming a 14A foundry customer.",
+  "summary": "Agentic AI is pulling the CPU back into the rack, and Intel is the purest way to own that shift: its Xeon franchise sells the chips and its fabs are processing more High-NA EUV wafers than anyone. But the equity trades at a low-60s forward multiple with a mean analyst target below the market price, because no external customer has been announced for its 14A node. That headline, not the download counts, is the swing factor.",
+  "ticker": "INTC",
+  "tickerName": "Intel Corporation",
+  "company": "Intel Corporation",
+  "sector": "ai",
+  "sentiment": "bullish",
+  "date": "2026-09-24T14:00:00Z",
+  "price": 122.6,
+  "featured": false,
+  "premium": false,
+  "image": {
+    "src": "/img/articles/intc-agentic-cpu-14a-wildcard-2026.jpg",
+    "fit": "cover",
+    "caption": "A bare microprocessor chip held in a technician's gloved fingertips above a dark anti-static work mat. Photo: The Signal / AI-generated.",
+    "alt": "A bare microprocessor chip held in a technician's gloved fingertips above a dark anti-static work mat"
+  },
+  "tags": [
+    "intc",
+    "intel",
+    "intel-foundry",
+    "14a",
+    "agentic-ai",
+    "ai-cpus",
+    "xeon",
+    "cpu-gpu-ratio",
+    "high-na-euv",
+    "18a",
+    "foundry-customers",
+    "meta-muse"
+  ],
+  "links": [
+    {
+      "label": "Intel press release (Sept. 7, 2026): \"Intel Foundry and ASML Collaborate to Accelerate Industry Readiness for High NA EUV\" - more than one million wafers processed, with ASML CEO Christophe Fouquet on Intel shipping the first high-volume logic product made with High NA",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQSGoxM1M5c3RhLWI4amZzVEFQZ2h0MEVNZ1htd21SSmtsY0ZJTm00Zzd1TENxRUV4QVBjVlE1VUNhZFVPRjZtTHBfZ0FNdkxtREdSUm9QY0UzWExNVVMwRGhYRlBudVBVcnB3TkFOanMzOGhaSWFkdTlIS2FzTk5ZSnAtY3JZaDQ5Q0JRRE9HcTREVUpoWXV4S1ZiUGUxQlRNeTE4VndzY2w0QU1VcnJrNjdvWXFjVkQxb19hcnZhT05lUmp1cHZNUThENndmMm5kMGFv?oc=5"
+    },
+    {
+      "label": "Tom's Hardware (July 15, 2026): \"Intel becomes the first company to ship high-volume logic chips made with ASML's High NA EUV\" - 18A layers dual-qualified across 0.33 NA and 0.55 NA scanners, running in Oregon",
+      "url": "https://www.tomshardware.com/tech-industry/semiconductors/intel-becomes-the-first-company-to-ship-high-volume-logic-chips-made-with-asmls-high-na-euv-select-panther-lake-layers-on-18a-are-now-dual-qualified-for-0-55-na-scanners"
+    },
+    {
+      "label": "Intel press release (June 16, 2026, VLSI Symposium): \"Intel Foundry Details Process Milestones and Future Innovation\" - 18A-P enters risk production with 9% higher performance at iso-power or 18% lower power",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPZExxV2dqbUtoU3dvckhSZFV3Y0IycXkxQ2plcE92MkRuTEZXSm1UclVoRDl5VjNJS016cU51UkNfeEU1bllpaTVrT2RncDJjTXNzTXdMaFZnMkVpQmRHWGMzMmVMbnBpaFVyNnVRMGRDSUhXWjZTc3FhQVp6TE9fVk1kX0ZKXzdHcWJZUWJWU2duREQxVzlCNVoteFh2TnJXOVlhU3Zua2lxcU1CZnlrS1F2Q2l3dDdlNVZ1eHR1QXc2YjY1N2RiQ1gxVVN2a1dKR2pYTFd6T2xVVFhqTFE?oc=5"
+    },
+    {
+      "label": "CNBC (Sept. 21, 2026): \"Meta's Muse AI agent downloads are surging. Here's how it compares to ChatGPT, Grok and Claude\" - 730,000 downloads in about five days and more than 2.5 million cumulative, per Sensor Tower estimates",
+      "url": "https://www.cnbc.com/2026/09/21/meta-muse-personal-ai-agent-downloads.html"
+    },
+    {
+      "label": "TechCrunch (Sept. 21, 2026): \"Meta's Muse is outpacing ChatGPT's early mobile launch\" - Apptopia estimates of 642,000 U.S. daily active users versus ChatGPT's 231,000, and the note that the figures are third-party estimates Meta has not confirmed",
+      "url": "https://techcrunch.com/2026/09/21/metas-muse-is-outpacing-chatgpts-early-mobile-launch/"
+    },
+    {
+      "label": "Tom's Hardware (April 24, 2026): \"Shifting need for CPUs in AI workloads drives intensifying shortages\" - Intel's Q1 2026 earnings call, where CFO David Zinsner described the data-center CPU:GPU ratio moving from 1:8 to 1:4",
+      "url": "https://www.tomshardware.com/pc-components/cpus/shifting-need-for-cpus-in-ai-workloads-drives-intensifying-shortages-price-hikes"
+    },
+    {
+      "label": "Wccftech (Aug. 15, 2026), citing BofA Global Research's Vivek Arya: server-CPU total addressable market crossing $210 billion by 2030 with AI CPUs about 86% of the mix, and Intel's unit share sliding from 62% to roughly 36%",
+      "url": "https://wccftech.com/amd-arm-have-eaten-intels-server-lead-yet-x86-is-poised-to-own-the-ai-cpu-wave-through-2030-as-tam-crosses-200b/"
+    },
+    {
+      "label": "Yahoo Finance (June 3, 2026): AMD CFO Jean Hu, at the Bank of America conference, on agentic AI driving the server-CPU market past $120 billion by 2030",
+      "url": "https://finance.yahoo.com/technology/ai/articles/amd-cfo-says-agentic-ai-driving-120000000.html"
+    },
+    {
+      "label": "Tom's Hardware (July 24, 2026): \"Intel commits to 14A mass production in 2028\" - Lip-Bu Tan's Q2 2026 call language on 14A risk production in the second half of 2027, and the finding that no external client had committed to the node",
+      "url": "https://www.tomshardware.com/pc-components/cpus/intel-commits-to-14a-mass-production-in-2028-as-its-sales-rise-25-percent-year-over-year"
+    },
+    {
+      "label": "Bits&Chips (Sept. 2, 2026): \"Intel signals external customer wins for 14A foundry process\" - CFO Dave Zinsner at a Deutsche Bank investor conference saying external foundry engagements have \"significantly increased,\" with no customer announced",
+      "url": "https://bits-chips.com/article/intel-signals-external-customer-wins-for-14a-foundry-process/"
+    },
+    {
+      "label": "Reuters (April 22, 2026): \"Tesla CEO Musk says company plans to use Intel's 14A process for Terafab\" - a stated plan, not a signed volume commitment",
+      "url": "https://www.reuters.com/business/autos-transportation/tesla-ceo-musk-says-company-plans-use-intels-14a-process-terafab-2026-04-22/"
+    },
+    {
+      "label": "CNBC (July 21, 2026): \"Nvidia details its next-generation Vera CPU for AI, setting up challenge to AMD and Intel\" - Nvidia's own data-center CPU, its agent-performance claim over x86, and Wolfe Research's unit and price estimates",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBCbmVqVGRCbVNSa24yODRDdU9YVWVLbFdiNWg2UWVPVE9hcHZwNlIxRlVSSS1JSWpkNlZsWS1GeDZRNEdXMndVUTIzNC1Ddy1oTElYdFpXcmIzVjlaaUlPWHdrSWczdU12NjZ6WkRvMUZ0WE0?oc=5"
+    }
+  ],
+  "meta": {
+    "author": "The Signal Editorial",
+    "estimatedReadTime": "4 min",
+    "editorialTags": [
+      "intel",
+      "agentic-ai",
+      "ai-cpus",
+      "semiconductor-foundry",
+      "high-na-euv",
+      "valuation",
+      "cpu-gpu-ratio"
+    ],
+    "seoKeywords": [
+      "Intel stock",
+      "INTC stock",
+      "agentic AI CPU",
+      "Intel 14A",
+      "Intel Foundry customers",
+      "CPU to GPU ratio",
+      "Xeon",
+      "Meta Muse"
+    ],
+    "relatedTickers": [
+      "AMD",
+      "ARM",
+      "NVDA",
+      "TSM",
+      "MU"
+    ],
+    "sourceLinks": [
+      "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQSGoxM1M5c3RhLWI4amZzVEFQZ2h0MEVNZ1htd21SSmtsY0ZJTm00Zzd1TENxRUV4QVBjVlE1VUNhZFVPRjZtTHBfZ0FNdkxtREdSUm9QY0UzWExNVVMwRGhYRlBudVBVcnB3TkFOanMzOGhaSWFkdTlIS2FzTk5ZSnAtY3JZaDQ5Q0JRRE9HcTREVUpoWXV4S1ZiUGUxQlRNeTE4VndzY2w0QU1VcnJrNjdvWXFjVkQxb19hcnZhT05lUmp1cHZNUThENndmMm5kMGFv?oc=5",
+      "https://www.tomshardware.com/tech-industry/semiconductors/intel-becomes-the-first-company-to-ship-high-volume-logic-chips-made-with-asmls-high-na-euv-select-panther-lake-layers-on-18a-are-now-dual-qualified-for-0-55-na-scanners",
+      "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPZExxV2dqbUtoU3dvckhSZFV3Y0IycXkxQ2plcE92MkRuTEZXSm1UclVoRDl5VjNJS016cU51UkNfeEU1bllpaTVrT2RncDJjTXNzTXdMaFZnMkVpQmRHWGMzMmVMbnBpaFVyNnVRMGRDSUhXWjZTc3FhQVp6TE9fVk1kX0ZKXzdHcWJZUWJWU2duREQxVzlCNVoteFh2TnJXOVlhU3Zua2lxcU1CZnlrS1F2Q2l3dDdlNVZ1eHR1QXc2YjY1N2RiQ1gxVVN2a1dKR2pYTFd6T2xVVFhqTFE?oc=5",
+      "https://www.cnbc.com/2026/09/21/meta-muse-personal-ai-agent-downloads.html",
+      "https://techcrunch.com/2026/09/21/metas-muse-is-outpacing-chatgpts-early-mobile-launch/",
+      "https://www.tomshardware.com/pc-components/cpus/shifting-need-for-cpus-in-ai-workloads-drives-intensifying-shortages-price-hikes",
+      "https://wccftech.com/amd-arm-have-eaten-intels-server-lead-yet-x86-is-poised-to-own-the-ai-cpu-wave-through-2030-as-tam-crosses-200b/",
+      "https://finance.yahoo.com/technology/ai/articles/amd-cfo-says-agentic-ai-driving-120000000.html",
+      "https://www.tomshardware.com/pc-components/cpus/intel-commits-to-14a-mass-production-in-2028-as-its-sales-rise-25-percent-year-over-year",
+      "https://bits-chips.com/article/intel-signals-external-customer-wins-for-14a-foundry-process/",
+      "https://www.reuters.com/business/autos-transportation/tesla-ceo-musk-says-company-plans-use-intels-14a-process-terafab-2026-04-22/",
+      "https://news.google.com/rss/articles/CBMic0FVX3lxTFBCbmVqVGRCbVNSa24yODRDdU9YVWVLbFdiNWg2UWVPVE9hcHZwNlIxRlVSSS1JSWpkNlZsWS1GeDZRNEdXMndVUTIzNC1Ddy1oTElYdFpXcmIzVjlaaUlPWHdrSWczdU12NjZ6WkRvMUZ0WE0?oc=5"
+    ],
+    "keyMetrics": {
+      "Price": "$122.60",
+      "Market Cap": "$660.3B",
+      "Forward P/E": "60.57",
+      "Revenue (TTM)": "$57.03B",
+      "52-Week Low": "$31.21",
+      "52-Week High": "$142.35",
+      "Analyst Consensus": "Buy (42)",
+      "Analyst Target Mean": "$116.40"
+    }
+  },
+  "bodyHtml": "<p>Muse, Meta's new personal AI agent, hit the top of the US App Store free chart within ten days of its September 8 launch, per third-party estimates. The ticker that woke up with it wasn't Meta's. It was Intel.</p><p>Intel sells the brains of computers: Xeon chips for data centers, Core chips for laptops and desktops, printed in factories it owns. Its buyers are cloud providers filling racks, PC makers, and, increasingly, other chip designers renting its production lines.</p><p>The chart run behind that wake-up call is real, but the numbers are third-party estimates and should be read that way. Sensor Tower, via CNBC, counts 730,000 Muse downloads in its first five days and more than 2.5 million by September 21.</p><p>Apptopia's read, via TechCrunch, puts US daily active users at 642,000 versus the 231,000 ChatGPT logged at the same age. Neither firm sees Meta's internal data, and Meta hasn't published its own.</p><div class=\"stats-card\"><div class=\"stats-card-title\">The Numbers That Matter</div><table class=\"stats-table\"><tr><td class=\"stat-label\">Price <span class=\"stats-live-badge\">LIVE</span></td><td class=\"stat-value\" data-live-ticker=\"INTC\" data-live-field=\"price\">$122.60</td></tr><tr><td class=\"stat-label\">Market Cap</td><td class=\"stat-value\">$660.3B</td></tr><tr><td class=\"stat-label\">Forward P/E</td><td class=\"stat-value\">60.57</td></tr><tr><td class=\"stat-label\">Revenue (TTM)</td><td class=\"stat-value\">$57.03B</td></tr><tr><td class=\"stat-label\">52-Week Low</td><td class=\"stat-value\">$31.21</td></tr><tr><td class=\"stat-label\">52-Week High</td><td class=\"stat-value\">$142.35</td></tr><tr><td class=\"stat-label\">Analyst Consensus</td><td class=\"stat-value\">Buy (42)</td></tr><tr><td class=\"stat-label\">Analyst Target Mean</td><td class=\"stat-value\">$116.40</td></tr></table><div class=\"stats-card-note\">Price refreshes live. All other figures as of September 23, 2026.</div></div><p>Here's the part the tape missed while it counted installs: agents put the CPU back in the rack. Intel's CFO David Zinsner told the Q1 2026 earnings call that the data-center CPU-to-GPU ratio already sits near 1:4, up from 1:8.</p><p>It can converge toward 1:1 as inference and agentic workloads load the CPU layer. Intel CEO Lip-Bu Tan told CNBC's Mad Money the ratio has become 1:4 and, in some cases, 1:1. </p><p>The sell side has moved. BofA Global Research models the server-CPU market above $210 billion by 2030, with AI CPUs about 86% of the mix. AMD's Lisa Su expects the old four-to-five GPUs per CPU setup to compress toward 1:1. Her company lifted its 2030 server-CPU forecast to more than $120 billion, a pace above 35% a year.</p><p>Intel's answer is its factory floor. Intel and ASML said on September 7 that High-NA EUV tools have processed more than one million wafers at Intel Foundry. ASML's CEO credited Intel with shipping the first high-volume logic product manufactured with High NA.</p><p>On July 15, Intel became the first company to ship high-volume logic built on those machines, dual-qualifying 18A layers across older and newer scanners. Its 18A-P node entered risk production in June, and 14A is still guided to volume production in 2028.</p><p>So what actually re-rates the stock? A name. A verified external customer on 14A turns a factory built for Intel's own chips into a margin business funded by somebody else's demand.</p><p>Right now the market is pricing the option, not the contract. Intel trades at a forward multiple in the low 60s with negative trailing earnings, and the average analyst target across 42 opinions sits below the current price.</p><p>The bear case writes itself, and it's a good one. Nvidia is shipping its own data-center CPU, Vera, and claims it beats x86 silicon by 50% on agent workloads, with OpenAI, Anthropic and SpaceX already holding chips. Wolfe Research expected about 1.3 million units this year at roughly $5,000 each.</p><p>BofA sees Intel's server-CPU unit share sliding from 62% to about 36% by 2030, and UBS has Arm taking 40% to 45% of unit share. As of July, Intel had no committed external 14A customer, only a Tesla plan for Terafab that Reuters reported in April.</p><p>The bears' marker is specific: another quarter of falling Xeon unit share and no signature, which turns the 2028 ramp into a factory with no tenants.</p><p>Think of Intel as the chef who built his own kitchen. TSMC rents out a commercial one that everybody queues for; a bad process hurts Intel twice, and a good one pays twice.</p><p>That's why this flipped so fast. Apptopia found more than 95% of Muse users are Facebook users and 63% are on Instagram, so the agent rode distribution the way a viral clip rides a feed.</p><p>Every AI rack is a shopping list, and the CPU line keeps getting longer. Tan told CNBC's Mad Money that Intel has \"multiple customers engaged\" and declined to name them. In early September, CFO Zinsner told a Deutsche Bank conference that external foundry engagements had \"significantly increased\".</p><p>What we're watching: whether Intel names an external 14A customer before the 2028 ramp, and whether 14A defect density reaches the 0.1 to 0.2 target by early 2027 that Wccftech reported.</p><p>Server-CPU prices already rose 27% in the first quarter as Intel sold parts it would normally scrap. The event that settles this thesis is a signature on a wafer agreement, not another chart-topping app.</p><p class=\"disclosure\">Disclosure: The Signal holds no position in INTC. Positions may change. This is not financial advice.</p>"
+}
