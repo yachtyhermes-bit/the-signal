@@ -1,0 +1,120 @@
+{
+  "slug": "orcl-force-majeure-jupiter-2026",
+  "title": "Oracle's Force Majeure Notice Shifts Project Jupiter's Delay Risk to Lenders",
+  "subtitle": "The reported notice lets Oracle defer payments if the New Mexico campus slips past 2028, while the banks holding project paper near 89 cents absorb the timing risk.",
+  "summary": "Oracle's AI backlog reached $664 billion on the strength of one counterparty and a balance sheet that burned free cash flow last quarter. A reported force majeure notice on the 2.45-gigawatt Project Jupiter campus protects Oracle's cash if the power pipeline slips, and hands that uncertainty to lenders already quoting the project debt below par. The equity re-rates only when backlog turns into cash.",
+  "ticker": "ORCL",
+  "tickerName": "Oracle Corporation",
+  "company": "Oracle Corporation",
+  "sector": "ai-power",
+  "sentiment": "neutral",
+  "date": "2026-09-24T17:00:00Z",
+  "price": 144.56,
+  "featured": false,
+  "premium": false,
+  "image": {
+    "src": "/img/articles/orcl-force-majeure-jupiter-2026.jpg",
+    "fit": "cover",
+    "caption": "High-voltage transmission towers crossing high-desert scrubland at golden hour, with earthmoving equipment working a distant access road. Photo: The Signal / AI-generated.",
+    "alt": "High-voltage transmission towers crossing desert scrubland at golden hour, with construction equipment working in the far distance"
+  },
+  "tags": [
+    "orcl",
+    "oracle",
+    "project-jupiter",
+    "force-majeure",
+    "stargate",
+    "ai-data-centers",
+    "blue-owl",
+    "openai",
+    "new-mexico",
+    "bloom-energy",
+    "data-center-debt",
+    "ai-power"
+  ],
+  "links": [
+    {
+      "label": "CNBC (Sept. 24, 2026): \"Oracle sends 'force majeure' notice about data center project - stock sinks 5%\" - the report that the notice went to a Blue Owl unit, and the market's reaction",
+      "url": "https://www.cnbc.com/2026/09/24/oracle-data-center-force-majeure.html"
+    },
+    {
+      "label": "Bloomberg (full text via the Financial Post): \"Oracle cites force majeure on controversial data center\" - the contractual move to put off payments if Project Jupiter does not come online in 2028",
+      "url": "https://financialpost.com/technology/oracle-cites-force-majeure-controversial-data-center"
+    },
+    {
+      "label": "Reuters (Sept. 18, 2026), citing the FT: the debt behind the project is trading under pressure, with Santander and Jefferies among the roughly 20 banks holding it",
+      "url": "https://www.reuters.com/business/finance/oracles-18-billion-data-center-debt-under-pressure-ft-reports-2026-09-18/"
+    },
+    {
+      "label": "Energy Connect (Bloomberg, Aug. 2026): \"Gas pipeline for proposed Oracle data center delayed to 2027\" - Energy Transfer's 17-mile Green Chile line pushed to Feb. 1, 2027 after permit denials",
+      "url": "https://www.energyconnects.com/news/gas-lng/2026/august/gas-pipeline-for-proposed-oracle-data-center-delayed-to-2027/"
+    },
+    {
+      "label": "Albuquerque Journal: Project Jupiter's permit trips over the pipeline denial - including an Oracle vice president telling a Dona Ana County commission he did not know how to power the data center",
+      "url": "https://www.abqjournal.com/news/project-jupiter-permit-trips-over-pipeline-denial/3097673"
+    },
+    {
+      "label": "Albuquerque Journal: Project Jupiter joins the 500 billion dollar Stargate initiative - the 1,400-acre campus, its 2.45 GW of planned capacity, and the industrial revenue bond the county approved",
+      "url": "https://www.abqjournal.com/business/doa-ana-countys-project-jupiter-joins-500-billion-stargate-initiative-led-by-openai-oracle/493927"
+    },
+    {
+      "label": "Oracle press release (Sept. 10, 2026): Q1 FY27 results - backlog of $664 billion, cloud infrastructure revenue up 121%, and FY27 revenue guidance of at least $90 billion",
+      "url": "https://www.prnewswire.com/news-releases/oracle-announces-q1-results-driven-by-triple-digit-growth-in-cloud-infrastructure-revenues-302875728.html"
+    },
+    {
+      "label": "Reuters via Channel News Asia: Oracle's high-stakes ratings gamble in AI - S&P's July cut to BBB- with a stable outlook, and the leverage behind it",
+      "url": "https://www.channelnewsasia.com/business/analysisoracle-corp-goes-high-stakes-ratings-gamble-in-ai-strategy-6298706"
+    }
+  ],
+  "meta": {
+    "author": "The Signal",
+    "estimatedReadTime": "4 minutes",
+    "editorialTags": [
+      "oracle",
+      "ai-data-centers",
+      "project-jupiter",
+      "credit-risk",
+      "stargate",
+      "valuation",
+      "ai-power"
+    ],
+    "seoKeywords": [
+      "Oracle stock",
+      "ORCL stock",
+      "Project Jupiter",
+      "Oracle force majeure",
+      "Stargate data center",
+      "Oracle debt",
+      "Blue Owl Capital",
+      "OpenAI backlog"
+    ],
+    "relatedTickers": [
+      "OWL",
+      "BE",
+      "MSFT",
+      "AMZN",
+      "GOOGL"
+    ],
+    "sourceLinks": [
+      "https://www.cnbc.com/2026/09/24/oracle-data-center-force-majeure.html",
+      "https://financialpost.com/technology/oracle-cites-force-majeure-controversial-data-center",
+      "https://www.reuters.com/business/finance/oracles-18-billion-data-center-debt-under-pressure-ft-reports-2026-09-18/",
+      "https://www.energyconnects.com/news/gas-lng/2026/august/gas-pipeline-for-proposed-oracle-data-center-delayed-to-2027/",
+      "https://www.abqjournal.com/news/project-jupiter-permit-trips-over-pipeline-denial/3097673",
+      "https://www.abqjournal.com/business/doa-ana-countys-project-jupiter-joins-500-billion-stargate-initiative-led-by-openai-oracle/493927",
+      "https://www.prnewswire.com/news-releases/oracle-announces-q1-results-driven-by-triple-digit-growth-in-cloud-infrastructure-revenues-302875728.html",
+      "https://www.channelnewsasia.com/business/analysisoracle-corp-goes-high-stakes-ratings-gamble-in-ai-strategy-6298706"
+    ],
+    "keyMetrics": {
+      "Price": "$144.56",
+      "Market Cap": "~$420B",
+      "Forward P/E": "12.6",
+      "Total Revenue (TTM)": "$71.78B",
+      "52-Week Low": "$114.50",
+      "52-Week High": "$322.54",
+      "Analyst Consensus": "Buy",
+      "Analyst Target Mean": "$237.97"
+    }
+  },
+  "bodyHtml": "<p>Oracle's newest superpower is contract language. On September 24, Bloomberg and CNBC reported that Oracle sent a force majeure notice to the developer of Project Jupiter. The campus is the New Mexico site Oracle anchored inside Stargate.</p><p>Oracle sells the unglamorous software that runs payroll and billing, then rents the servers that train and serve AI models. The rent is the growth engine: cloud infrastructure revenue rose 121% to $7.4 billion last quarter.</p><p>Project Jupiter is that bet at maximum size. The campus covers 1,400 acres, plans for 2.45 gigawatts, and has been described as drawing up to 165 billion dollars. It is one site in Stargate, the build-out Oracle, OpenAI and SoftBank announced together.</p><p>A force majeure notice is a pause button written into a contract, not a cancellation. It would let Oracle defer payments if the campus misses its 2028 online date. Oracle has not confirmed the notice. A spokesperson said Project Jupiter \"remains on our planned schedule\" and that the company is \"fully committed to New Mexico\", without saying when the power arrives.</p><p>The developer is a unit of Blue Owl Capital, which lends against other companies' infrastructure. Blue Owl said the notice does not change its \"financial commitments to this multi-year project\", and the debt market reads it differently. Roughly 18 billion dollars of debt from about 20 banks is quoted at 89 to 91 cents, and syndication stalled.</p><p>The proximate trigger is electricity. Energy Transfer's 17-mile Green Chile gas line, meant to feed the campus, slipped roughly six months to February 1, 2027. New Mexico's land office denied its permits twice. The campus was designed around Bloom Energy fuel cells, which burn gas.</p><p>Investors read the clause as a warning. Oracle shares slid roughly 5%, the worst performance among S&P 500 technology stocks, per Bloomberg. The stock is down about 30% this year and more than half off its high. Blue Owl fell with it, and Oracle's credit-risk gauge hit a record, as Bloomberg Law reported.</p><p>None of that shows up in the franchise. Backlog reached $664 billion, up $209 billion year over year and $26 billion in one quarter, beating the $630.6 billion StreetAccount consensus. Revenue rose 30% to 19.345 billion dollars, and fiscal 2027 is guided to at least $90 billion, up 34%.</p><p>The machine that funds it looks thinner. An S&P estimate ties roughly half the backlog to OpenAI. Oracle burned $5.396 billion of free cash flow last quarter, on $28.5 billion of capex. It carries 155.9 billion dollars of total debt, including $30.6 billion of capital leases.</p><p>Against that sits $37.1 billion of cash. Quarterly interest expense ran $1.428 billion, up 55% year over year. S&P cut Oracle to BBB- in July, one notch above junk, on adjusted leverage in the mid-4x range. The capex plan for fiscal 2027 runs $90 to 95 billion.</p><p>Money got more expensive at the same time: the 10-year Treasury yield touched roughly 5.1%, its highest since 2007, and October rate-hike odds jumped.</p><p>Three things re-rate this equity. The backlog has to convert into cash, which depends on OpenAI paying a contract worth more than $300 billion. The power pipeline has to get built, and leverage has to fall while capex outruns cash flow. A forward multiple near 13 prices the growth, not the funding risk behind it.</p><p>The bears call this the first crack. Debt at 89 cents and stalled syndication say lenders doubt the campus opens on time. The pipeline has been denied twice, and the power plan is fuel cells waiting on gas. An Oracle vice president said he didn't know how to power the campus, per the Albuquerque Journal. Mid-4x leverage and another negative free-cash-flow quarter are the proof.</p><p>The analogy is a landlord who cosigned his tenant's mortgage. Oracle's rent is contracted for years, so the backlog looks bulletproof, but collection starts when the building works. It is the data-center version of a furniture delivery window: the order is real, the date is negotiable.</p><p>What to watch is specific. Oracle reports fiscal second-quarter results on December 10, when backlog conversion and capex land in the same document. Then the permits: the state land office can still clear the Green Chile line, and each month of delay pushes revenue out.</p><p>Oracle's backlog is a promise with a date on it, and the clause it reached for protects the cash if the date slips. The gas line is the date.</p><p class=\"disclosure\">Disclosure: The Signal holds no position in ORCL. Positions may change. This is not financial advice.</p>"
+}
