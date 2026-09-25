@@ -1,0 +1,121 @@
+{
+  "slug": "planet-labs-google-suncatcher-orbital-ai-2026",
+  "title": "Google Is Taking AI Compute to Orbit, and Planet Labs Builds the Hardware",
+  "subtitle": "Google's first orbital AI test puts its TPUs on a satellite bus Planet Labs already knows how to build. Suncatcher is a satellite-services reference win, not a revenue line.",
+  "summary": "Google will launch the first Project Suncatcher prototype around Oct. 1, a refrigerator-sized satellite carrying four Trillium TPUs that can run for about 15 minutes at a stretch. The spacecraft uses the same bus as Planet's Owl mission, which makes Google a reference customer for Planet's satellite-services business. The imagery subscriptions that fund the company take 70% of revenue from defense and intelligence and have never produced a GAAP profit.",
+  "ticker": "PL",
+  "tickerName": "Planet Labs PBC",
+  "company": "Planet Labs",
+  "sector": "space",
+  "sentiment": "neutral",
+  "date": "2026-09-25T14:00:00Z",
+  "price": 17.62,
+  "featured": false,
+  "premium": false,
+  "image": {
+    "src": "/img/articles/planet-labs-google-suncatcher-orbital-ai-2026.jpg",
+    "fit": "cover",
+    "caption": "Two technicians in white cleanroom coveralls work over a refrigerator-sized satellite bus on a wheeled integration cart, its upper half still wrapped in crinkled silver thermal blanket, in a warm-lit satellite cleanroom high bay. Illustrative image, not an actual photo of Google's spacecraft. Photo: The Signal / AI-generated.",
+    "alt": "Two cleanroom technicians working over a refrigerator-sized satellite bus half-wrapped in silver thermal blanket on an integration cart in a satellite cleanroom high bay"
+  },
+  "tags": [
+    "PL",
+    "planet-labs",
+    "google",
+    "project-suncatcher",
+    "orbital-data-centers",
+    "space-based-compute",
+    "earth-observation",
+    "satellite-services",
+    "owl",
+    "tpu",
+    "space",
+    "defense-intelligence"
+  ],
+  "links": [
+    {
+      "label": "Google: “Behind Project Suncatcher, our moonshot to put AI in space” (Sept 24, 2026) →",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/google-project-suncatcher-facts/"
+    },
+    {
+      "label": "Google Research: “Exploring a space-based, scalable AI infrastructure system design” →",
+      "url": "https://research.google/blog/exploring-a-space-based-scalable-ai-infrastructure-system-design/"
+    },
+    {
+      "label": "Reuters: “Google plans first test of AI chips in space under Project Suncatcher” (Sept 24, 2026) →",
+      "url": "https://www.reuters.com/business/media-telecom/google-plans-first-test-ai-chips-space-under-project-suncatcher-2026-09-24/"
+    },
+    {
+      "label": "Ars Technica: “Google's first Suncatcher orbital data center test launches October 1” →",
+      "url": "https://arstechnica.com/google/2026/09/googles-first-suncatcher-orbital-data-center-test-launches-october-1/"
+    },
+    {
+      "label": "The Register: “Google's TPUs to catch some rays in orbit next week” (Sept 24, 2026) →",
+      "url": "https://www.theregister.com/systems/2026/09/24/googles-tpus-to-catch-some-rays-in-orbit-next-week/5298990"
+    },
+    {
+      "label": "Planet: “Planet to Build and Operate Advanced Space Platform for Google's Project Suncatcher Moonshot” (Nov 4, 2025) →",
+      "url": "https://www.planet.com/pulse/planet-to-build-and-operate-advanced-space-platform-for-project-suncatcher-moonshot/"
+    },
+    {
+      "label": "Planet Labs Q2 FY2027 results, SEC Exhibit 99.1 (Sept 3, 2026) →",
+      "url": "https://www.sec.gov/Archives/edgar/data/1836833/000119312526381874/pl-ex99_1.htm"
+    },
+    {
+      "label": "Planet Labs Form 10-Q for the quarter ended July 31, 2026 →",
+      "url": "https://www.sec.gov/Archives/edgar/data/1836833/000119312526382016/pl-20260731.htm"
+    }
+  ],
+  "meta": {
+    "author": "The Signal Editorial",
+    "estimatedReadTime": "4 min",
+    "editorialTags": [
+      "planet-labs",
+      "project-suncatcher",
+      "orbital-compute",
+      "space-based-ai",
+      "earth-observation",
+      "satellite-services",
+      "defense-intelligence",
+      "valuation"
+    ],
+    "seoKeywords": [
+      "Planet Labs stock",
+      "PL stock",
+      "Project Suncatcher",
+      "Google AI chips in space",
+      "orbital data center",
+      "Planet Labs Owl",
+      "satellite services",
+      "Earth observation subscription"
+    ],
+    "relatedTickers": [
+      "GOOGL",
+      "RKLB",
+      "SPCX",
+      "RTX",
+      "AVAV"
+    ],
+    "sourceLinks": [
+      "https://blog.google/innovation-and-ai/models-and-research/google-research/google-project-suncatcher-facts/",
+      "https://research.google/blog/exploring-a-space-based-scalable-ai-infrastructure-system-design/",
+      "https://www.reuters.com/business/media-telecom/google-plans-first-test-ai-chips-space-under-project-suncatcher-2026-09-24/",
+      "https://arstechnica.com/google/2026/09/googles-first-suncatcher-orbital-data-center-test-launches-october-1/",
+      "https://www.theregister.com/systems/2026/09/24/googles-tpus-to-catch-some-rays-in-orbit-next-week/5298990",
+      "https://www.planet.com/pulse/planet-to-build-and-operate-advanced-space-platform-for-project-suncatcher-moonshot/",
+      "https://www.sec.gov/Archives/edgar/data/1836833/000119312526381874/pl-ex99_1.htm",
+      "https://www.sec.gov/Archives/edgar/data/1836833/000119312526382016/pl-20260731.htm"
+    ],
+    "keyMetrics": {
+      "Price": "$17.62",
+      "Market Cap": "$6.41B",
+      "Forward P/E": "N/A",
+      "Total Revenue (TTM)": "$378.3M",
+      "52-Week Low": "$10.52",
+      "52-Week High": "$51.76",
+      "Analyst Consensus": "Buy",
+      "Analyst Target Mean": "$33.40"
+    }
+  },
+  "bodyHtml": "<p>Google said on Sept. 24 that the first Project Suncatcher spacecraft launches around Oct. 1 on a SpaceX Falcon 9. The satellite, named MVP, is refrigerator-sized and carries four Google TPUs.</p><p>Planet Labs built it. Planet runs the largest fleet of Earth-imaging satellites ever assembled, roughly 200 of them, imaging the whole land mass of the planet daily. It sells subscriptions to those pictures and the analytics on top, mostly to defense and intelligence buyers that renew.</p><p>MVP is a test bench, not a data center. Its panels supply about one kilowatt, enough to run a microwave, and its chips are existing Trillium-generation Cloud TPUs, lightly modified, since no space-rated TPU exists. The radiator holds for about 15 minutes, so Gemini will run on them in bursts.</p><div class=\"stats-card\"><div class=\"stats-card-title\">The Numbers That Matter</div><table class=\"stats-table\"><tr><td class=\"stat-label\">Price <span class=\"stats-live-badge\">LIVE</span></td><td class=\"stat-value\" data-live-ticker=\"PL\" data-live-field=\"price\">$17.62</td></tr><tr><td class=\"stat-label\">Market Cap</td><td class=\"stat-value\">$6.41B</td></tr><tr><td class=\"stat-label\">Forward P/E</td><td class=\"stat-value\">N/A</td></tr><tr><td class=\"stat-label\">Total Revenue (TTM)</td><td class=\"stat-value\">$378.3M</td></tr><tr><td class=\"stat-label\">52-Week Low</td><td class=\"stat-value\">$10.52</td></tr><tr><td class=\"stat-label\">52-Week High</td><td class=\"stat-value\">$51.76</td></tr><tr><td class=\"stat-label\">Analyst Consensus</td><td class=\"stat-value\">Buy</td></tr><tr><td class=\"stat-label\">Analyst Target Mean</td><td class=\"stat-value\">$33.40</td></tr></table><div class=\"stats-card-note\">Price refreshes live. All other figures as of September 24, 2026.</div></div><p>Power and land are the binding constraints on data centers on the ground, and Google is now testing whether compute can leave the planet. In orbit, a satellite sees near-constant sunlight and can generate up to eight times more solar power.</p><p>The chips have been through a proton beam at UC Davis and a three-axis shake test. Google still calls Suncatcher a long-term research moonshot, and the team told Ars Technica it expects years before the project becomes a product.</p><p>Planet is not competing with Google; it is building the bus. Suncatcher uses the same satellite bus as Planet's forthcoming Owl mission. CEO Will Marshall told investors on the Q3 FY2026 call that it “aligns well with our technology development roadmap for OWL, leveraging the same satellite bus.”</p><p>The accounting differs. Planet calls Suncatcher funded R&D: a satellite-services job where it builds and operates a spacecraft for a customer, and it excludes those contracts from the annual contract value it reports.</p><p>The subscription business is growing fast on paper. Revenue in the quarter ended July 31, 2026 was a record $116.1 million, up 58% year over year, with a $9.4 million GAAP net loss and $13.9 million of adjusted EBITDA profit.</p><p>Defense and intelligence was 70% of revenue, commercial 15% and civil government 15%. That segment grew more than 90% year over year.</p><p>The stock case rests on Suncatcher as a reference, not on revenue. Planet has identified more than $4 billion of satellite-services opportunities, and Google makes that line credible. The market is not paying much for that option yet.</p><p>Shares rose about 7.6% on Sept. 24, and the market value sits near $6.4 billion. The stock is still roughly two-thirds below a 52-week high set in late May 2026, and it trades at roughly 17 times trailing revenue.</p><p>A short-seller starts with the growth quality. Point-in-time revenue was 12% of the quarter against 1% a year earlier, mostly a satellite handover to the Swedish Armed Forces that pulled revenue forward. Guidance implies growth halving to about 27% next quarter, and three customers were 17%, 11% and 10% of revenue.</p><p>Planet has never posted a GAAP profit in five reported fiscal years. It guides to $3 million to $10 million of adjusted EBITDA on $430 million to $441 million of revenue, against $100 million to $115 million of capex.</p><p>It also sold roughly $120 million of stock in the quarter at an average net price above where the shares trade now. Its share count is up about 11.5% in a year.</p><p>FY2027 revenue below the low end of that $430 million guide, or adjusted EBITDA turning negative again, would prove the bears right. Gartner analyst Bill Ray calls orbital data centers “peak insanity” and argues they will not be viable for decades, as reported by The Register.</p><p>“This first launch is about seeing what works, identifying points of failure and applying those findings to future missions,” wrote Travis Beals, a senior director on Google's Paradigms of Intelligence research team. The Sept. 24 news is Google's; Planet has issued no fresh release, and its own Suncatcher announcement is dated Nov. 4, 2025.</p><p>Google is booking the experiment; Planet owns the bus and gets paid either way. The satellite business stopped being about better pictures the moment the biggest technology company in the world decided to test whether compute can leave the ground.</p><p>What to watch is specific. The launch comes around Oct. 1, and a two-satellite laser-crosslink mission Planet will also build follows in 2027. On Planet's tape, the tests are whether the satellite-services pipeline converts and whether growth holds up without the one-off. For now the rent still comes from the pictures.</p><p class=\"disclosure\">Disclosure: The Signal holds no position in PL. Positions may change. This is not financial advice.</p>"
+}
