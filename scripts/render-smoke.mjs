@@ -33,6 +33,11 @@ const argOf = (flag, dflt) => {
 };
 const ORIGIN = argOf('--origin', 'https://readthesignal.net').replace(/\/$/, '');
 const JSON_OUT = argOf('--json', '');
+// Ad-hoc single-page mode: --url <path> [--img "<css selector>"] [--min-width 600]
+// Handy right after a hero swap: proves the image files really LOAD (naturalWidth > 0),
+// not merely that its URL appears in the HTML.
+const ADHOC_URL = argOf('--url', '');
+const ADHOC_IMG = argOf('--img', '');
 const PORT = 9411;
 
 // Pages worth watching, with the evidence that proves each one really rendered.
@@ -133,6 +138,13 @@ const DIAGNOSTIC = (page) => `(() => {
   }
   out.trapped = Array.from(new Set(out.trapped)).slice(0, 6);
   ${page.rows ? `out.rows = document.querySelectorAll(${JSON.stringify(page.rows && page.rows.selector)}).length;` : ''}
+  ${page.image ? `(() => {
+    const im = document.querySelector(${JSON.stringify(page.image.selector)});
+    out.image = im
+      ? { complete: im.complete, naturalWidth: im.naturalWidth, naturalHeight: im.naturalHeight,
+          currentSrc: im.currentSrc || im.src }
+      : 'MISSING';
+  })();` : ''}
   return out;
 })()`;
 
@@ -211,9 +223,19 @@ async function checkPage(client, page) {
   if (page.rows && typeof diag.rows === 'number' && diag.rows < page.rows.min) {
     findings.push(`expected >= ${page.rows.min} rows for ${page.rows.selector}, found ${diag.rows}`);
   }
+  if (page.image && page.image.selector) {
+    const im = diag.image;
+    if (!im || im === 'MISSING') findings.push(`hero image not in the DOM: ${page.image.selector}`);
+    else if (!im.complete || !im.naturalWidth) findings.push(`hero image did not load: ${im.currentSrc || '(no src)'}`);
+    else if (im.naturalWidth < (page.image.minWidth || 600)) {
+      findings.push(`hero image is only ${im.naturalWidth}px wide: ${im.currentSrc}`);
+    }
+  }
   if (errors.length) findings.push(...errors.slice(0, 3).map((e) => 'js ' + e));
 
-  return { url: page.url, status, ok: findings.length === 0, documentHeight: diag.documentHeight, findings };
+  return { url: page.url, status, ok: findings.length === 0, documentHeight: diag.documentHeight,
+           image: diag.image && diag.image !== 'MISSING' ? `${diag.image.naturalWidth}x${diag.image.naturalHeight}` : null,
+           findings };
 }
 
 (async () => {
@@ -236,7 +258,16 @@ async function checkPage(client, page) {
     const pageWs = pageTarget ? pageTarget.webSocketDebuggerUrl : wsUrl;
     client = await cdpClient(pageWs);
 
-    for (const p of PAGES) {
+    const pages = ADHOC_URL
+      ? [{
+          url: ADHOC_URL,
+          markers: [],
+          watch: [],
+          image: ADHOC_IMG ? { selector: ADHOC_IMG, minWidth: Number(argOf('--min-width', '600')) } : null,
+        }]
+      : PAGES;
+
+    for (const p of pages) {
       try {
         results.push(await checkPage(client, p));
       } catch (e) {
