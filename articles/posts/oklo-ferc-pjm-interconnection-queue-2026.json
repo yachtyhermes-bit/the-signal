@@ -1,0 +1,105 @@
+{
+  "slug": "oklo-ferc-pjm-interconnection-queue-2026",
+  "title": "Oklo's FERC Denial Is a Grid Queue Problem, Not a Reactor Problem",
+  "subtitle": "The agency refused to force Oklo's 750 MW Virginia project back into PJM's study cycle, so the megawatts now wait on a filing. Six developers are stacked at FERC over the same queue, and the order quietly points to a faster lane that closes at the end of 2027.",
+  "summary": "Oklo spent August and September trying to force PJM, the largest U.S. grid operator, to put its 750 MW Virginia project back into the interconnection study cycle it was pulled from in early August. FERC rejected the complaint on September 24, finding Oklo had not shown a tariff violation, and the project's delay now runs to more than a year. That denial is the first ruling in a wider wave: PJM's reformed queue drew 811 requests worth more than 200 GW, roughly 80 projects failed the application gate, and six of those developers have taken the operator to FERC. The order also names the remedy almost nobody has reported, PJM's Expedited Interconnection Track, open through the end of 2027. Oklo still has a first-mover fast-reactor design, DOE permits, a Meta-backed 1.2 GW Ohio campus and about $3 billion of cash, but no commercial power revenue and a share count that grew 34% in 18 months.",
+  "ticker": "OKLO",
+  "tickerName": "Oklo",
+  "company": "Oklo",
+  "sector": "ai-power",
+  "sentiment": "negative",
+  "date": "2026-09-27T17:00:00Z",
+  "price": 38.04,
+  "featured": false,
+  "premium": false,
+  "image": {
+    "src": "/img/articles/oklo-ferc-pjm-interconnection-queue-2026.jpg",
+    "fit": "cover",
+    "caption": "Lattice transmission towers carrying high-voltage lines out of a rural substation. Oklo's 750 MW Virginia project was pulled from PJM's interconnection study cycle in August and will not be ordered back in. Photo: The Signal / AI-generated.",
+    "alt": "A high-voltage electrical substation at golden hour, its grey steel lattice transmission towers and insulators standing above green rural Virginia farmland, with conductors running toward a low tree line under a warm amber sky."
+  },
+  "tags": [
+    "oklo",
+    "oklo-inc",
+    "ferc",
+    "pjm-interconnection",
+    "interconnection-queue",
+    "ai-power",
+    "advanced-nuclear",
+    "aurora-powerhouse",
+    "data-center-power",
+    "small-modular-reactors",
+    "grid-queue",
+    "meta"
+  ],
+  "links": [
+    {
+      "label": "Utility Dive: FERC rejects Oklo's complaint seeking to reinstate its project to PJM's interconnection study cycle (Sept. 25, 2026) →",
+      "url": "https://www.utilitydive.com/news/ferc-rejects-oklo-complaint-pjm-interconnection/"
+    },
+    {
+      "label": "Utility Dive: PJM drops Oklo's advanced nuclear project from an interconnection study cycle (Aug. 31, 2026) →",
+      "url": "https://www.utilitydive.com/news/pjm-oklo-advanced-nuclear-ferc-interconnection/"
+    },
+    {
+      "label": "FERC eLibrary: Order Denying Complaint, Oklo Inc. v. PJM Interconnection, docket EL26-101-000, accession 20260924-3089 (Sept. 24, 2026) →",
+      "url": "https://elibrary.ferc.gov/eLibrary/filelist?accession_number=20260924-3089"
+    },
+    {
+      "label": "Oklo: Groves reactor achieves first criticality in under a year, the first DOE pilot reactor to do so on private land (company release, Aug. 6, 2026) →",
+      "url": "https://oklo.com/newsroom/oklos-groves-reactor-achieves-first-criticality-in-under-a-year"
+    },
+    {
+      "label": "Oklo: agreement with Meta in support of 1.2 GW of nuclear energy development in southern Ohio, first phase targeted as early as 2030 (company release, Jan. 9, 2026) →",
+      "url": "https://oklo.com/newsroom/oklo-meta-announce-agreement-in-support-of-1-2-gw-nuclear-energy-development-in-southern-ohio"
+    },
+    {
+      "label": "Oklo: second-quarter 2026 financial results and business update, including $3.0 billion of liquidity and the first revenue line (company release, Aug. 7, 2026) →",
+      "url": "https://oklo.com/newsroom/oklo-publishes-second-quarter-2026-financial-results-and-business-update"
+    },
+    {
+      "label": "Oklo: NRC principal design criteria topical report approved for the Aurora powerhouse in Idaho, the licensing milestone behind the bull case (company release, May 6, 2026) →",
+      "url": "https://oklo.com/newsroom/oklos-nrc-principal-design-criteria-topical-report-approved-for-aurora-powerhouse-in-idaho"
+    },
+    {
+      "label": "MarketBeat: Oklo analyst ratings, including UBS's Jon Windham lowering his target to $41 from $55 at Neutral, now the lowest on the street (updated Sept. 25, 2026) →",
+      "url": "https://www.marketbeat.com/stocks/NYSE/OKLO/analyst-ratings/"
+    }
+  ],
+  "meta": {
+    "author": "The Signal Editorial",
+    "estimatedReadTime": "4 min",
+    "editorialTags": [
+      "oklo",
+      "ferc",
+      "pjm",
+      "interconnection-queue",
+      "ai-power",
+      "advanced-nuclear",
+      "data-center-power"
+    ],
+    "seoKeywords": [
+      "Oklo stock",
+      "OKLO FERC ruling",
+      "Oklo PJM interconnection queue",
+      "EL26-101 Oklo v PJM",
+      "PJM Expedited Interconnection Track",
+      "Oklo 750 MW Virginia project",
+      "AI data center nuclear power",
+      "Aurora powerhouse"
+    ],
+    "keyMetrics": {
+      "Price": 38.04,
+      "Market Cap": "$7.1B",
+      "Forward P/E": "n/a",
+      "Total Revenue (TTM)": "$1.2M",
+      "52-Week Low": 34.38,
+      "52-Week High": 193.84,
+      "Analyst Consensus": "Buy (20 analysts)",
+      "Analyst Target Mean": 76.43
+    },
+    "relatedTickers": ["SMR", "NNE", "LEU", "CEG"],
+    "youtubeIds": []
+  },
+  "bodyHtml": "<p>Power stories get told from the reactor outward. Here is the version from the line: Oklo spent the summer fighting for a spot in a queue, and on September 24 it lost.</p>\n\n<p>Oklo builds small nuclear plants, fast reactors it calls Aurora powerhouses and sizes between 15 and 75 megawatts. The business is selling electricity, not reactors, to buyers with an around-the-clock appetite: data centers, industry, the U.S. military.</p>\n\n<div class=\"stats-card\"><div class=\"stats-card-title\">The Numbers That Matter</div><table class=\"stats-table\"><tr><td class=\"stat-label\">Price <span class=\"stats-live-badge\">LIVE</span></td><td class=\"stat-value\" data-live-ticker=\"OKLO\" data-live-field=\"price\">$38.04</td></tr><tr><td class=\"stat-label\">Market Cap</td><td class=\"stat-value\">$7.1B</td></tr><tr><td class=\"stat-label\">Forward P/E</td><td class=\"stat-value\">n/a</td></tr><tr><td class=\"stat-label\">Total Revenue (TTM)</td><td class=\"stat-value\">$1.2M</td></tr><tr><td class=\"stat-label\">52-Week Low</td><td class=\"stat-value\">$34.38</td></tr><tr><td class=\"stat-label\">52-Week High</td><td class=\"stat-value\">$193.84</td></tr><tr><td class=\"stat-label\">Analyst Consensus</td><td class=\"stat-value\">Buy (20 analysts)</td></tr><tr><td class=\"stat-label\">Analyst Target Mean</td><td class=\"stat-value\">$76.43</td></tr></table><div class=\"stats-card-note\">Price refreshes live. All other figures as of September 25, 2026.</div></div>\n\n<p>PJM's interconnection queue is the line outside a nightclub. The door opens when the operator says so and everyone inside is studied in one batch. Get bounced and you don't sneak back to the front. You wait for the next opening.</p>\n\n<p>That is why this reads as an AI story wearing legal clothes. The reactors get the press, but the grid sets the schedule, and every hyperscaler chasing firm, carbon-free power is stuck behind the same rope.</p>\n\n<p>What Oklo lost was no pilot: 750 megawatts broken into 150 MW of advanced nuclear, 300 MW of fuel cells and 300 MW of gas, sited at two Dominion Energy substations in Virginia. PJM pulled it from the cycle on August 3, Oklo filed a complaint on August 27 and revised it on September 1, and FERC declined on September 24.</p>\n\n<p>The backdrop is bigger than one company. PJM's first reformed study cycle drew 811 requests totaling more than 200 GW, and the operator says nearly 90% cleared the application gate. That leaves roughly 80 rejected projects, and six of those developers have now taken PJM to FERC. Oklo's case, docket EL26-101, is the first decided.</p>\n\n<p>FERC found Oklo never showed PJM broke its own tariff, and left application flaws unresolved. The denial came with a lecture, telling PJM to collaborate with developers before, during and after the process. The commission sided with the queue and scolded the bouncer.</p>\n\n<p>Tucked into the order is the part coverage skipped. FERC pointed Oklo to PJM's Expedited Interconnection Track, a faster lane open through December 31, 2027. For a project Oklo says slips by more than a year, that door is the ballgame.</p>\n\n<p>So what has to happen for this to re-rate? A filing. Oklo needs those megawatts visible in the Expedited Track or the next study cycle, because that turns a pipeline of announcements into a construction calendar. Until then, investors are paying for a schedule they cannot audit, and the market is right to wait.</p>\n\n<p>Be fair to the bull case. Oklo has an approved NRC design-criteria report for its Idaho reactor, a DOE site permit and a HALEU fuel award from Idaho National Laboratory. Meta is prepaying for fuel and development on a 1.2 GW Ohio campus, and Groves, its isotope test reactor, went critical in under a year.</p>\n\n<p>Now read it the way a short seller would. Oklo has never sold a commercial kilowatt: trailing revenue is about $1.2 million, all of it from two small engineering acquisitions this June. That is a stock trading near 5,800 times sales.</p>\n\n<p>The real bear case is the funding model. The share count went from about 138 million to 185 million in 18 months, and three at-the-market programs are stacked behind it, including a fresh $1 billion one from September 11.</p>\n\n<p>Free cash flow was roughly negative $142 million last quarter against negative $19 million a year earlier, about five years of runway on $3 billion of cash. First power on that Meta campus is targeted for as early as 2030, and gas turbines get built in about two years.</p>\n\n<p>Competitors don't wait that long. A 1.2 GW campus of 15-to-75 MW modules needs dozens of reactors, not one.</p>\n\n<p>Wall Street is repricing too. UBS cut its target to $41 from $55 on September 25, the same day the FERC news landed. Consensus still reads buy with a mean in the high $70s, so the dispersion is the story.</p>\n\n<p>What proves the bears right is checkable. If the Virginia project is not in either PJM lane by the middle of next year, the delay stops being a missed cycle and becomes the operating model.</p>\n\n<p>Two dates matter. Watch whether Oklo re-files the 750 MW project into the Expedited Track before December 31, 2027, or into PJM's next cycle. Then read the third-quarter 10-Q in early November to see how much of that $1 billion has been drawn.</p>\n\n<p>Oklo's problem is no longer reactor engineering. It is a queue run by an operator that keeps score in paperwork, and the fix is a filing, not a breakthrough. Until those Virginia megawatts reappear in a PJM lane, this stock is a bet on a calendar.</p>\n\n<p class=\"disclosure\">Disclosure: The Signal holds no position in OKLO. Positions may change. This is not financial advice.</p>"
+}
