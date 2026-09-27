@@ -1,0 +1,114 @@
+{
+  "slug": "economic-moat-test-ai-durability-2026",
+  "title": "How to Test an AI Moat: Five Sources, ROIC Persistence, Nvidia vs AMD",
+  "subtitle": "A moat is not a growth rate, it is a spread that refuses to close. Here is a five-part test any investor can run on an AI name, and why Nvidia and AMD score so differently on it.",
+  "summary": "An economic moat is a structural feature that keeps a company earning more on its invested capital than that capital costs. That makes it measurable rather than a vibe, using five sources of advantage, a fade horizon, and a margin record that spans a full cycle. Nvidia and AMD give the cleanest contrast in the AI trade: the same demand, very different durability.",
+  "format": "explainer",
+  "ticker": "NVDA",
+  "tickers": [
+    "NVDA",
+    "AMD",
+    "ZS"
+  ],
+  "sector": "ai",
+  "sentiment": "neutral",
+  "date": "2026-09-27T22:00:00Z",
+  "image": {
+    "src": "/img/articles/economic-moat-test-ai-durability-2026.jpg",
+    "fit": "cover",
+    "caption": "A cargo ship easing through a canal lock at dawn, water still draining in the chamber beside it. Moats are the chokepoints a business makes everyone cross. Photo: The Signal / AI-generated.",
+    "alt": "A long bulk carrier held between the concrete walls of a canal lock at golden hour, lock gates and bollards in the foreground."
+  },
+  "keyTerms": [
+    {
+      "term": "Economic moat",
+      "definition": "A structural feature that lets a company earn excess returns on capital for years while keeping rivals at bay. Morningstar rates a wide moat as an advantage expected to last more than twenty years, and a narrow moat as roughly ten."
+    },
+    {
+      "term": "Return on invested capital vs cost of capital",
+      "definition": "ROIC is the profit a business earns on the money tied up in it; the cost of capital is what that money costs to raise. A positive spread between the two is the definition of value creation, and the width and duration of that spread is what an investor actually pays for."
+    },
+    {
+      "term": "Switching costs",
+      "definition": "The money, time and disruption a customer absorbs by leaving. When the product sits inline in a workflow, leaving means re-architecting operations rather than cancelling a subscription."
+    },
+    {
+      "term": "Network effects",
+      "definition": "When each additional user makes the product more useful to every other user. The value sits in the size and density of the network, which is why network-effect businesses were the most resilient group in Morningstar's AI stress test."
+    },
+    {
+      "term": "Intangible assets",
+      "definition": "Brand, patents, regulatory licenses and proprietary software that rivals cannot legally copy. In AI the strongest version is compiled rather than trademarked: a software ecosystem that takes years to replicate."
+    },
+    {
+      "term": "Fade rate (competitive advantage period)",
+      "definition": "How long a company can keep earning above its cost of capital before competition grinds the spread down. High returns attract capital, so every advantage has a horizon, and estimating that horizon is the whole job."
+    }
+  ],
+  "bottomLine": "The test is five questions, and you can run it on any ticker. What is the spread between return on invested capital and the cost of capital, averaged over five to ten years? Have gross margin and operating margin held in a tight band through a full cycle, or is this one good quarter? Which of the five sources produces the spread, and is it the one AI damages most, switching costs, or the one it has mostly spared, network effects? Is market share stable or rotating? And what specifically ends the advantage in year eight? If you cannot name the thing that ends it, you are not underwriting a moat. You are underwriting momentum.",
+  "bodyHtml": "<p>Every AI investor is really asking one question: is this a durable winner, or momentum wearing a ticker? A moat is supposed to answer it. Most people treat a moat as a vibe. It is a spread you can measure.</p><p>Morningstar defines an economic moat as what lets a company earn excess returns on capital for years while keeping rivals at bay. The testable version is a structural feature that holds returns on invested capital above the cost of capital. Wide moats should last more than twenty years, narrow moats about ten.</p><p>Think of a canal lock. The water does the work, but every ship still pays to pass. A moat is the chokepoint a business makes everyone cross, and the toll shows up as margin. Morningstar groups the sources into five: intangible assets, switching costs, network effects, cost advantage, and efficient scale.</p><p>Nvidia owns intangible assets in a way that is compiled rather than trademarked. CUDA has compounded since 2006 into more than 400 libraries, with over six million developers and 40,000 companies building on it. A patent expires; a twenty-year ecosystem does not.</p><p>Switching costs look softer until you try to leave. Zscaler sits inline in every session it inspects, so replacing it means re-architecting a network, not cancelling a license. Dollar-based net retention of 115% says that base keeps spending more without new logos.</p><p>Network effects run on the logic of the group chat nobody can leave. More than 60% of Amazon store sales come from independent sellers, who go where the buyers already are. In AI that flywheel now applies to compute: the platform with the most developers attracts the most tooling.</p><p>Cost advantage is not being cheaper; it is a structurally lower unit cost at the same price. Nvidia runs a 75% gross margin and roughly a 66% operating margin, against AMD's 54% and 17% at the same point in the cycle. Efficient scale shows up in memory, where three suppliers hold roughly 95% of global DRAM.</p><p>Here is why measurement beats narrative. The ROIC gap between the best and worst quintile of companies compresses from roughly 35 percentage points to 15 over five years. Nvidia's gross margin fell to 56.9% in fiscal 2023, then printed 75.0%. Intel slid the other way, from a 61.7% gross margin to 34.8%.</p><p>Our own moat files draw the contrast this piece exists to teach. Nvidia is rated Wide with five stars; AMD is Narrow with three. The gap sits almost entirely in switching costs and intangible assets, which is the CUDA-versus-ROCm question.</p><p>Porting a large training stack off CUDA is a multi-quarter engineering program, because cuDNN, TensorRT-LLM and NCCL have no full equivalents on the AMD side. One independent benchmarking study put the H100 near 93% of theoretical peak throughput and the MI300X near 45%. That gap is the moat, measured in workload efficiency rather than slides.</p><p>The scale gap is starker: Nvidia's Data Center revenue hit $89.0B in a quarter against AMD's $6.718B, roughly thirteen times the size. AMD's bull case is direction of travel, with gross margin up from 40% to 54% and operating margin from negative to 17%.</p><p>Now take the other side, the way a short seller would. Morningstar's own AI stress test downgraded 22 of the 54 wide-moat companies it examined, roughly 40%, and found switching costs were the weakest defense of all. The source this framework leans on most is the one AI damaged first.</p><p>Capital is cheap enough to buy what cannot be out-engineered. AMD attached warrants for up to 320 million shares to two six-gigawatt partnerships, and hyperscalers are deploying over $700 billion of capital expenditure a year. That resets the advantage every cycle.</p><p>So what makes a moaty stock re-rate? Duration, not another beat. Given the same spread between returns and cost of capital, pay more for a company whose spread lasts fifteen years than for one whose spread lasts three. Re-rating happens when the market revises the fade horizon, not when a quarter beats.</p><p>AMD is the live version: a rating that moves from Narrow toward Wide is the largest re-rating event in this framework. Nvidia already gets paid for duration, so good news alone will not lift it.</p><p>Cisco kept growing through the bust while its stock fell roughly 80% after it became the most valuable company in the world. That is the trap: a great business bought at a price that already assumes perfection.</p><p>So run the test yourself. What is the spread, how long has it held, which of the five sources produces it, is market share stable, and what ends it in year eight? Watch Nvidia's gross margin through the next memory cycle and AMD's data center mix. If AMD's premium mix keeps climbing, the fade horizon is moving.</p><p class=\"disclosure\">Analysis, not advice. We may own these names and we may sell them at any time.</p>",
+  "tags": [
+    "economic moat",
+    "ROIC",
+    "switching costs",
+    "network effects",
+    "Nvidia",
+    "AMD",
+    "AI durables",
+    "fade rate",
+    "moat test"
+  ],
+  "links": [
+    {
+      "label": "Morningstar, Economic Moat (definition and rating thresholds)",
+      "url": "https://www.morningstar.com/investing-terms/economic-moat"
+    },
+    {
+      "label": "Counterpoint Global, Measuring the Moat (PDF)",
+      "url": "https://www.morganstanley.com/im/publication/insights/articles/article_measuringthemoat.pdf"
+    },
+    {
+      "label": "Counterpoint Global, ROIC and the Investment Process (PDF)",
+      "url": "https://www.morganstanley.com/im/publication/insights/articles/article_roicandtheinvestmentprocess.pdf"
+    },
+    {
+      "label": "Morningstar, AI Isn't an Economic Moat Killer, but It Will Disrupt Industries",
+      "url": "https://www.morningstar.com/stocks/ai-isnt-an-economic-moat-killer-it-will-disrupt-industries"
+    },
+    {
+      "label": "Nvidia second-quarter fiscal 2027 results",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027"
+    },
+    {
+      "label": "AMD second-quarter 2026 results",
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1295/amd-reports-second-quarter-2026-financial-results"
+    },
+    {
+      "label": "Zscaler fourth-quarter and fiscal 2026 results",
+      "url": "https://ir.zscaler.com/news-releases/news-release-details/zscaler-announces-strong-fourth-quarter-and-fiscal-2026"
+    },
+    {
+      "label": "Intel fourth-quarter and full-year 2025 results",
+      "url": "https://www.intc.com/news-events/press-releases/detail/1759/intel-reports-fourth-quarter-and-full-year-2025-financial"
+    },
+    {
+      "label": "Amazon selling stats (independent sellers' share of store sales)",
+      "url": "https://sell.amazon.com/blog/amazon-stats"
+    },
+    {
+      "label": "Counterpoint Research, global DRAM and HBM market share",
+      "url": "https://counterpointresearch.com/en/insights/global-dram-and-hbm-market-share"
+    },
+    {
+      "label": "Independent GPU utilisation benchmarking study (arXiv 2510.27583)",
+      "url": "https://arxiv.org/abs/2510.27583"
+    },
+    {
+      "label": "Harding Loevner, Nvidia and the cautionary tale of Cisco Systems",
+      "url": "https://www.hardingloevner.com/insights/nvidia-and-the-cautionary-tale-of-cisco-systems/"
+    }
+  ],
+  "meta": {
+    "estimatedReadTime": "4 min read"
+  }
+}
