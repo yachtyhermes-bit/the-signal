@@ -1,0 +1,116 @@
+{
+  "slug": "crwv-ai-compute-credit-residual-value-2026",
+  "title": "AI Compute Has Become a Credit Market. CoreWeave Is Where That Gets Decided.",
+  "subtitle": "CoreWeave buys GPUs with borrowed money and rents them out, so its cost of capital is effectively its cost of goods. Nvidia is now talking to insurers about underwriting what those chips will be worth in five years, and that one question sets the cost curve for the entire AI build-out.",
+  "summary": "CoreWeave is the landlord of the AI boom, buying Nvidia GPUs on borrowed money and renting the compute by the hour. That makes it the cleanest test of a question the whole build-out now rests on: what a used GPU is worth in five years. Nvidia has reportedly opened talks with insurers to underwrite that residual-value risk, which would move the depreciation guess off lenders' books. Meanwhile Anthropic's IPO prospectus describes a $518 billion build-out, roughly 80% of it non-cancellable, and the 30-year Treasury yield has climbed to its highest since 2002. JPMorgan upgraded CoreWeave on compute pricing power, but the financing terms, not the demand, decide what happens next.",
+  "ticker": "CRWV",
+  "tickerName": "CoreWeave",
+  "company": "CoreWeave, Inc.",
+  "sector": "ai",
+  "sentiment": "neutral",
+  "date": "2026-09-29T17:00:00Z",
+  "price": 85.07,
+  "featured": false,
+  "premium": false,
+  "image": {
+    "src": "/img/articles/crwv-ai-compute-credit-residual-value-2026.jpg",
+    "fit": "cover",
+    "caption": "A purpose-built AI compute campus at dusk, its full-length cooling wall still going up and high-voltage pylons at the edge of frame. CoreWeave's business turns on the same question the credit market is being asked to price. Photo: The Signal / AI-generated.",
+    "alt": "A long low warehouse-scale AI data center under construction at dusk, banks of louvered cooling running the full length of the wall, a steel frame and tower crane at the far end, a wet floodlit concrete apron in the foreground and high-voltage lattice transmission pylons at the edge of frame beneath a long-exposure twilight sky."
+  },
+  "tags": [
+    "coreweave",
+    "crwv",
+    "ai-compute",
+    "credit-market",
+    "residual-value",
+    "gpu-depreciation",
+    "nvidia",
+    "neocloud",
+    "convertible-notes",
+    "cost-of-capital",
+    "ai-datacenter",
+    "leveraged-buildout"
+  ],
+  "links": [
+    {
+      "label": "FT: Nvidia turns to insurers to spread the risk of the AI build-out →",
+      "url": "https://www.ft.com/content/d6a9f5df-08d0-4f80-ad2d-5d8a17e2cc82"
+    },
+    {
+      "label": "Startup Fortune: Nvidia is quietly pushing AI data center risk onto insurers →",
+      "url": "https://startupfortune.com/nvidia-is-quietly-pushing-ai-data-center-risk-onto-insurance-companies/"
+    },
+    {
+      "label": "PYMNTS: Anthropic's prospectus shows what a $2 trillion AI company costs to run →",
+      "url": "https://www.pymnts.com/news/artificial-intelligence/2026/anthropic-prospectus-shows-what-2-trillion-dollar-ai-company-costs-run/"
+    },
+    {
+      "label": "Yahoo Finance (Barchart): JPMorgan upgrades CoreWeave stock on pricing power →",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/jpmorgan-just-upgraded-coreweave-stock-210240824.html"
+    },
+    {
+      "label": "Yahoo Finance (Benzinga): AI boom adds customers, but spending stays highly concentrated →",
+      "url": "https://finance.yahoo.com/technology/ai/articles/ai-boom-adds-more-customers-202558180.html"
+    },
+    {
+      "label": "Yahoo Finance: CoreWeave-linked data center raises $1.1 billion in junk bonds →",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/coreweave-linked-data-center-raises-235813953.html"
+    },
+    {
+      "label": "Motley Fool: CoreWeave points to higher-priced capacity, 4.2 GW and $25B of new commitments →",
+      "url": "https://www.fool.com/investing/2026/09/28/coreweave-just-gave-investors-multiple-reasons-to-remain-bullish-on-its-stock/"
+    },
+    {
+      "label": "24/7 Wall St: Michael Burry covers his Nebius short and several AI names, CoreWeave included →",
+      "url": "https://247wallst.com/investing/2026/09/29/nebius-climbs-4-despite-michael-burrys-bigger-bearish-bet-coreweave-ticks-up-cloudflare-slips/"
+    },
+    {
+      "label": "TIKR: Rising Treasury yields threaten higher debt costs for AI infrastructure providers →",
+      "url": "https://www.tikr.com/blog/rising-treasury-yields-threaten-to-increase-debt-costs-for-ai-infrastructure-providers"
+    }
+  ],
+  "meta": {
+    "author": "The Signal Editorial",
+    "estimatedReadTime": "4 min",
+    "editorialTags": [
+      "coreweave",
+      "ai-compute",
+      "credit-market",
+      "residual-value",
+      "gpu-depreciation",
+      "cost-of-capital",
+      "neocloud",
+      "ai-datacenter"
+    ],
+    "seoKeywords": [
+      "CoreWeave stock",
+      "CRWV stock",
+      "AI compute credit market",
+      "GPU residual value",
+      "Nvidia insurers residual value",
+      "CoreWeave debt",
+      "AI data center financing",
+      "Anthropic IPO prospectus",
+      "cost of capital AI infrastructure"
+    ],
+    "relatedTickers": [
+      "NVDA",
+      "MRVL",
+      "META",
+      "AVGO"
+    ],
+    "keyMetrics": {
+      "CRWV Price": "$85.07",
+      "Market Cap": "$47.8B",
+      "Forward P/E": "N/A",
+      "Total Revenue (TTM)": "$7.6B",
+      "52-Week Low": "$60.55",
+      "52-Week High": "$153.20",
+      "Analyst Consensus": "Buy (38 analysts)",
+      "Analyst Target Mean": "$141.58"
+    },
+    "youtubeIds": []
+  },
+  "bodyHtml": "<p>There is a question buried under every AI data center, and almost nobody asks it out loud. What is a used GPU worth in five years? The whole build-out is financed as if the answer is comfortable. The insurance industry is about to be handed the job of finding out.</p>\n\n<div class=\"stats-card\"><div class=\"stats-card-title\">The Numbers That Matter</div><table class=\"stats-table\"><tr><td class=\"stat-label\">Price <span class=\"stats-live-badge\">LIVE</span></td><td class=\"stat-value\" data-live-ticker=\"CRWV\" data-live-field=\"price\">$85.07</td></tr><tr><td class=\"stat-label\">Market Cap</td><td class=\"stat-value\">$47.8B</td></tr><tr><td class=\"stat-label\">Forward P/E</td><td class=\"stat-value\">N/A</td></tr><tr><td class=\"stat-label\">Total Revenue (TTM)</td><td class=\"stat-value\">$7.6B</td></tr><tr><td class=\"stat-label\">52-Week Low</td><td class=\"stat-value\">$60.55</td></tr><tr><td class=\"stat-label\">52-Week High</td><td class=\"stat-value\">$153.20</td></tr><tr><td class=\"stat-label\">Analyst Consensus</td><td class=\"stat-value\">Buy (38 analysts)</td></tr><tr><td class=\"stat-label\">Analyst Target Mean</td><td class=\"stat-value\">$141.58</td></tr></table><div class=\"stats-card-note\">Price refreshes live. All other figures as of September 29, 2026.</div></div>\n\n<p>CoreWeave is where that question gets a price. The company buys Nvidia GPUs by the tens of thousands and bolts them into purpose-built data centers. Then it rents that compute by the hour to a few enormous AI customers. Think of it as the landlord of the AI boom, except the landlord bought the building with a mortgage.</p>\n\n<p>That mortgage is the story. CoreWeave carries roughly $51.6 billion of debt against about $5.0 billion of equity, and spent about $20.6 billion on capex over the last four quarters. For a business shaped like this, cost of capital is not a footnote. It is the cost of goods.</p>\n\n<p>Here is what reaches past one stock. Every GPU cluster on earth is bought with somebody else's money, so compute supply depends on how credit prices the collateral. If lenders decide a seven-year chip is worth half what they assumed, advance rates fall and every AI cost curve shifts up.</p>\n\n<p>That is why a report out of London matters. Nvidia has been in talks with insurers to underwrite the residual-value risk on chip-backed loans. That shifts the depreciation guess off a lender's books and onto a policy. Nvidia has already lined up Apollo, BlackRock, Blackstone, Brookfield and KKR behind agreements targeting more than $500 billion.</p>\n\n<p>Anthropic's IPO prospectus makes the stakes concrete. It sketches a $518 billion build-out, roughly 80% of it in deals that cannot be cancelled, against a net loss near $42 billion on $4.6 billion of revenue. When contracts that large are signed years ahead, the financing terms stop being a detail and become the business.</p>\n\n<p>The credit market has noticed. A CoreWeave-linked data center raised $1.1 billion of junk bonds, CoreWeave itself priced $3.7 billion of convertible notes, and the 30-year Treasury yield touched its highest since 2002. Every basis point up there raises the cost of the next dollar of debt.</p>\n\n<p>Then there is the other side of the ledger, and it is real. JPMorgan upgraded CoreWeave to Overweight on compute pricing power, lifting its target to $125 from $120. The company says new capacity is contracting at higher prices, lifted contracted power from 3.7 to 4.2 gigawatts, and flagged about $25 billion of new commitments not yet in backlog.</p>\n\n<p>What re-rates this stock is the spread between what compute rents for and what the debt costs. If insurers underwrite residual values, advance rates rise and CoreWeave keeps more of every rental dollar. Today the market prices it as a leveraged depreciating-asset story, not a cash-flow one. That is roughly fair, and also the whole opportunity.</p>\n\n<p>Now read it the way a short seller does. The equity is a thin $5 billion sliver under $51.6 billion of debt, and the assets depreciate faster than the contracts. Three customers produced 72% of last quarter's revenue, and free cash flow ran about $13.7 billion negative across four quarters. The bull case assumes refinancing stays cheap, and multi-decade-high yields argue otherwise.</p>\n\n<p>What proves the bears right is checkable. A debt raise at materially worse terms, a cancelled contract, or renewal pricing rolling over would settle it. A car lease works because somebody is confident about the residual value in three years. Strip that confidence out of AI compute and the leases get very expensive.</p>\n\n<p>The Street is nowhere near agreement. One desk upgraded on pricing power while Rothschild &amp; Co Redburn initiated at Sell days earlier, with targets spread from the high $30s to above $300. Nobody is arguing about demand, only about the financing.</p>\n\n<p>Michael Burry keeps making the other argument. In commentary on his Substack, he disclosed he had covered his Nebius short and closed shorts in several AI names, CoreWeave among them. Covering a short is only a change of timing.</p>\n\n<p>The line worth remembering: CoreWeave's cost of capital is its cost of goods. Watch the terms on the next debt raise and the contracted-power figure in the next quarterly print. Side by side, those two numbers decide whether the AI build-out is a cash-flow business or a depreciating one.</p>\n\n<p class=\"disclosure\">Disclosure: The Signal holds no position in CRWV. Positions may change. This is not financial advice.</p>"
+}
