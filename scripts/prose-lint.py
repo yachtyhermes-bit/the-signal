@@ -89,6 +89,11 @@ def lint_file(path):
         problems.append(("FAIL", "title ends in a '\u2014 and ...' mic-drop"))
     if re.search(r"\bjust\b", title, re.I):
         problems.append(("FAIL", "title contains 'just' (institutional register: no 'X Just Did Y' openers)"))
+    # ONE sentence (user rule 2026-09-29): a second sentence carrying a verdict/contrast is rejected.
+    # Abbreviations are neutralised first so 'U.S.' / 'Inc.' don't read as sentence breaks.
+    _t = re.sub(r"\b(?:U\.S|U\.K|E\.U|Inc|Corp|Ltd|Co|Mr|Ms|Dr|St|vs|No|Q[1-4]|e\.g|i\.e|etc)\.", "X", title)
+    if re.search(r'[.!?]\s+["\u201c]?[A-Z0-9]', _t):
+        problems.append(("FAIL", f"title is more than one sentence — one plain sentence only: {title!r}"))
     if re.search(r"\b(and all|and more|and counting|or not|no more|right now|yet again)\b[.!?\"]*$", title, re.I):
         problems.append(("FAIL", "title ends in a cheerleader punchline tail"))
 
