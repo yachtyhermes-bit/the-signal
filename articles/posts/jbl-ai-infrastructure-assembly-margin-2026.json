@@ -1,0 +1,117 @@
+{
+  "slug": "jbl-ai-infrastructure-assembly-margin-2026",
+  "title": "Jabil's AI Revenue Is Approaching 40% of a $36 Billion Business",
+  "subtitle": "The contract manufacturer beat quarterly estimates by roughly 10% and guided fiscal 2027 well above consensus. The shares fell anyway, because thin assembly margins left investors wanting more.",
+  "summary": "Jabil reported fiscal fourth-quarter revenue of $10.62 billion, up 28.6%, and core EPS of $4.40, both ahead of estimates, then guided fiscal 2027 revenue to $44.5 billion and core EPS to $17.55. The shares fell anyway, because thin contract-manufacturing margins and ballooning working capital left investors wanting more proof from the AI story.",
+  "ticker": "JBL",
+  "tickerName": "Jabil",
+  "company": "Jabil Inc.",
+  "sector": "ai",
+  "sentiment": "positive",
+  "date": "2026-09-30T16:00:00Z",
+  "price": 318.84,
+  "featured": false,
+  "premium": false,
+  "image": {
+    "src": "/img/articles/jbl-ai-infrastructure-assembly-margin-2026.jpg",
+    "fit": "cover",
+    "caption": "A worker in an anti-static coat fits an open grey server-rack enclosure on a build stand in a bright electronics assembly hall, cable harness exposed, with more workers at benches down the line."
+  },
+  "tags": [
+    "JBL",
+    "jabil",
+    "contract-manufacturing",
+    "ai-infrastructure",
+    "data-center-hardware",
+    "liquid-cooling",
+    "gross-margin",
+    "working-capital",
+    "hyperscaler-capex",
+    "akamai",
+    "anthropic",
+    "earnings"
+  ],
+  "links": [
+    {
+      "label": "Jabil: fiscal fourth-quarter and full-year 2026 results with fiscal 2027 guidance (SEC Exhibit 99.1, Sept. 30, 2026) →",
+      "url": "https://www.sec.gov/Archives/edgar/data/898293/000162828026063890/jbl-20260930ex991.htm"
+    },
+    {
+      "label": "Jabil: fiscal third-quarter 2026 results and the AI revenue outlook (SEC Exhibit 99.1, June 17, 2026) →",
+      "url": "https://www.sec.gov/Archives/edgar/data/898293/000162828026043719/jbl-20260617ex991.htm"
+    },
+    {
+      "label": "Akamai Form 8-K: the Sept. 24, 2026 build request authorizing about $1.7 billion of Jabil memory purchases (SEC, filed Sept. 25, 2026) →",
+      "url": "https://www.sec.gov/Archives/edgar/data/1086222/000119312526401048/d288154d8k.htm"
+    },
+    {
+      "label": "Barron's: Jabil stock falls as a blistering AI demand outlook proves insufficient (via TradingView, Sept. 30, 2026) →",
+      "url": "https://www.tradingview.com/news/DJN_DN20260930003635:0/"
+    },
+    {
+      "label": "Investing.com: Jabil shares fall despite the earnings beat (via Yahoo Finance, Sept. 30, 2026) →",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/jabil-shares-fall-despite-earnings-121102497.html"
+    },
+    {
+      "label": "Zacks: JBL fourth-quarter earnings beat estimates as revenue climbs (via Yahoo Finance, Sept. 30, 2026) →",
+      "url": "https://finance.yahoo.com/technology/ai/articles/jbl-q4-earnings-beat-estimates-135600309.html"
+    },
+    {
+      "label": "UBS raises Jabil to buy on AI demand and healthcare growth (via Yahoo Finance) →",
+      "url": "https://finance.yahoo.com/technology/ai/articles/ubs-upgrades-jabil-buy-ai-162441554.html"
+    },
+    {
+      "label": "Proactive: Jabil upgraded by UBS as AI demand supports the outlook →",
+      "url": "https://www.proactiveinvestors.co.uk/companies/news/1096900/jabil-upgraded-by-ubs-as-ai-demand-healthcare-growth-support-outlook-1096900.html"
+    },
+    {
+      "label": "Barron's: Jabil earnings and the stock price reaction →",
+      "url": "https://www.barrons.com/articles/jabil-earnings-stock-price-bbd35003"
+    },
+    {
+      "label": "Briefing.com: lofty AI expectations, not the numbers, drove the selling (via Stocktwits, Sept. 30, 2026) →",
+      "url": "https://stocktwits.com/briefingcom/message/665436523"
+    }
+  ],
+  "meta": {
+    "author": "The Signal",
+    "estimatedReadTime": "4 min",
+    "editorialTags": [
+      "jabil",
+      "ai-infrastructure",
+      "contract-manufacturing",
+      "data-center-hardware",
+      "liquid-cooling",
+      "working-capital",
+      "earnings",
+      "hyperscaler-capex"
+    ],
+    "seoKeywords": [
+      "Jabil stock",
+      "JBL stock",
+      "Jabil earnings Q4 2026",
+      "Jabil fiscal 2027 guidance",
+      "Jabil AI revenue",
+      "Jabil Akamai Anthropic",
+      "contract manufacturer AI data center",
+      "Jabil gross margin"
+    ],
+    "relatedTickers": [
+      "AKAM",
+      "AMZN",
+      "META"
+    ],
+    "keyMetrics": {
+      "Price": 318.84,
+      "Market Cap": "$33B",
+      "Forward P/E": "18.9",
+      "Total Revenue (TTM)": "$36.0B",
+      "52-Week Low": 189.6,
+      "52-Week High": 428.93,
+      "Analyst Consensus": "Strong Buy (9 analysts)",
+      "Analyst Target Mean": 427.33
+    },
+    "youtubeIds": []
+  },
+  "bodyHtml": "<p>In a Florida assembly hall, a worker in an anti-static coat is fitting a server rack that will spend a decade inside an AI data center. Jabil built that machine, and thousands like it, for somebody else's logo.</p>\n\n<p>Here is the plain version. Jabil is a contract manufacturer, an electronics manufacturing services company. It takes another company's design and turns it into a physical product, at more than 120 sites in 30-plus countries, with roughly 140,000 employees.</p>\n\n<p>That makes Jabil the physical layer of the AI buildout. Not the chip, not the model: the box those things live in. It assembles rack-level systems for AI data centers, covering compute, storage, switching, photonics, power and cooling.</p>\n\n<div class=\"stats-card\"><div class=\"stats-card-title\">The Numbers That Matter</div><table class=\"stats-table\"><tr><td class=\"stat-label\">Price <span class=\"stats-live-badge\">LIVE</span></td><td class=\"stat-value\" data-live-ticker=\"JBL\" data-live-field=\"price\">$318.84</td></tr><tr><td class=\"stat-label\">Market Cap</td><td class=\"stat-value\">$33B</td></tr><tr><td class=\"stat-label\">Forward P/E</td><td class=\"stat-value\">18.9</td></tr><tr><td class=\"stat-label\">Total Revenue (TTM)</td><td class=\"stat-value\">$36.0B</td></tr><tr><td class=\"stat-label\">52-Week Low</td><td class=\"stat-value\">$189.60</td></tr><tr><td class=\"stat-label\">52-Week High</td><td class=\"stat-value\">$428.93</td></tr><tr><td class=\"stat-label\">Analyst Consensus</td><td class=\"stat-value\">Strong Buy (9 analysts)</td></tr><tr><td class=\"stat-label\">Analyst Target Mean</td><td class=\"stat-value\">$427.33</td></tr></table><div class=\"stats-card-note\">Price refreshes live. All other figures as of September 30, 2026.</div></div>\n\n<p>Liquid cooling runs from cold plates to coolant distribution units, via the Mikros Technologies acquisition. Jabil also builds power distribution units, UPS and switchgear, plus OpenBMC and DC-MHS servers. It also makes wafer-fab and semiconductor test equipment.</p>\n\n<p>So why did a company that beat estimates and raised guidance sell off on the day it reported? Because the AI trade stopped paying for volume and started charging for proof.</p>\n\n<p>The quarter was loud. Net revenue hit $10.62 billion, up 28.6%, roughly 10% ahead of the $9.6 billion analysts expected. Core EPS came in at $4.40 against about $4.07. GAAP diluted EPS was $3.76.</p>\n\n<p>Full fiscal 2026 revenue reached $36.0 billion, up 21%, and adjusted free cash flow cleared $1.5 billion. In the fourth quarter, gross margin was 9.43% and core operating margin 6.4%.</p>\n\n<p>Guidance was better. Management guided fiscal 2027 revenue to $44.5 billion, up 24% and above the roughly $42.8 billion consensus. Core EPS was guided to $17.55, up 34%, and adjusted free cash flow to about $1.6 billion.</p>\n\n<p>AI does the heavy lifting. Jabil guided AI-related revenue to about $13.6 billion for fiscal 2026, roughly 50% growth and about 38% of total revenue. Sell-side work puts next year near $20 billion.</p>\n\n<p>The order book has real names. Akamai authorized Jabil to buy about $1.7 billion of memory on its behalf, tied to Akamai's own Anthropic commitment worth roughly $11.6 billion. The shares jumped on that news.</p>\n\n<p>Dastoor framed the year plainly. \"Our fiscal 2027 outlook reflects the strength of Jabil's diversified portfolio, with accelerating AI demand complemented by solid growth in automotive, healthcare, energy infrastructure, defense and aerospace.\"</p>\n\n<p>Here is what decides your return. For this equity to re-rate, Jabil has to stop being read as an assembler and start being read as an infrastructure supplier. The driver is mix: push core operating margin from about 5.9% toward 6.1% and beyond, and scale AI revenue from $13.6 billion toward $20 billion.</p>\n\n<p>Is the market pricing that correctly? Not yet: you are still paying an assembler's multiple.</p>\n\n<p>Think of a ghost kitchen. You order from an app, the food arrives under that brand's name, and the kitchen that cooked it belongs to nobody you know. Jabil is the industrial version, and customers keep handing it the harder dishes.</p>\n\n<p>Now the short-seller's version, because you should hear it before you size a position. Jabil earns roughly 9% gross margin, about 5.9% operating and about 3.75% net. That is a rounding error away from a bad quarter.</p>\n\n<p>Working capital is swallowing the growth. Inventories jumped to $7.413 billion from $4.681 billion, and receivables to $6.513 billion from $4.039 billion. Adjusted free cash flow is guided roughly flat near $1.6 billion while revenue grows 24%.</p>\n\n<p>A handful of hyperscalers hold the pricing power, and $7.4 billion of inventory becomes a write-down if AI capex slows. Against $25.8 billion of liabilities sits $1.6 billion of stockholders' equity. That is leverage on somebody else's demand.</p>\n\n<p>The bears are proven right if inventories keep climbing while free cash flow stalls and margin slips under 6%. The number that marks it is simple: cash flow per dollar of revenue going the wrong way.</p>\n\n<p>No source blamed a fundamental miss. The read is expectations. Intelligent Infrastructure is guided to grow about 43% to roughly $25.6 billion, and investors wanted more. The stock is well below its summer high.</p>\n\n<p>At the next print, watch two numbers. Core operating margin holding at or above 6% tells you the mix shift is real. Inventories starting to unwind tells you the AI builds are shipping, not stacking up in a warehouse.</p>\n\n<p>Jabil builds the racks the AI boom runs on. The open question is whether the market ever pays it for that.</p>\n\n<p class=\"disclosure\">Disclosure: The Signal holds no position in JBL. Positions may change. This is not financial advice.</p>"
+}
