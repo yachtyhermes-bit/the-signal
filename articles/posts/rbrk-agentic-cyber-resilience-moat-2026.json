@@ -1,0 +1,103 @@
+{
+  "slug": "rbrk-agentic-cyber-resilience-moat-2026",
+  "title": "Rubrik Is Selling the Undo Button for AI Agents",
+  "subtitle": "Rubrik spent a decade as the backup vendor nobody called. It now sells an immutable, identity-aware copy of a company's data, and since this summer, governed access for the autonomous agents allowed to act on it.",
+  "summary": "Rubrik built a quiet business keeping the copy enterprises rebuild from. That copy is now the thing standing between a company and an autonomous agent that deletes the wrong system, so Rubrik has started selling governance for the agents themselves. Subscription ARR grew 33% to $1.66 billion last quarter and the company raised guidance, but adjusted net new cloud ARR has slipped for three straight quarters. The market pays roughly 72 times this year's guided free cash flow, so the October launch of MCP support matters less than whether net new ARR turns back up.",
+  "ticker": "RBRK",
+  "tickerName": "Rubrik",
+  "company": "Rubrik, Inc.",
+  "sector": "cyber",
+  "sentiment": "neutral",
+  "date": "2026-09-30T21:00:00Z",
+  "price": 114.47,
+  "featured": false,
+  "premium": false,
+  "image": {
+    "src": "/img/articles/rbrk-agentic-cyber-resilience-moat-2026.jpg",
+    "fit": "cover",
+    "caption": "An enterprise records archive behind an open steel door — the recoverable copy a business rebuilds from. Photo: The Signal / AI-generated.",
+    "alt": "A heavy steel records-room door standing open, with a single open archive box resting on a bare steel table in the foreground and storage furniture receding into the dim interior."
+  },
+  "tags": [
+    "rubrik",
+    "rbrk",
+    "cyber-resilience",
+    "agentic-ai",
+    "data-security",
+    "ransomware"
+  ],
+  "links": [
+    {
+      "label": "Rubrik Q2 FY2027 results (SEC 8-K, Exhibit 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1943896/000194389626000055/rubrikinc-991pressrelease7.htm"
+    },
+    {
+      "label": "Rubrik Q2 FY2027 investor presentation (PDF)",
+      "url": "https://s203.q4cdn.com/667520861/files/doc_financials/2027/q2/RBRK-Q2-FY27-Investor-Presentation-FINAL.pdf"
+    },
+    {
+      "label": "Rubrik analyst day long-term model (June 2026, PDF)",
+      "url": "https://s203.q4cdn.com/667520861/files/doc_events/2026/RBRK-Analyst-Day_vJune12.pdf"
+    },
+    {
+      "label": "Rubrik adds MCP support for agentic cyber resilience",
+      "url": "https://www.zawya.com/en/press-release/companies-news/rubrik-adds-new-mcp-support-to-expand-access-to-agentic-cyber-resilience-1344134"
+    },
+    {
+      "label": "Rubrik FY2026 Form 10-K (SEC)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1943896/000194389626000013/rbrk-20260131.htm"
+    },
+    {
+      "label": "Dario Amodei, We Must Pace the Frontier",
+      "url": "https://darioamodei.com/post/we-must-pace-the-frontier"
+    },
+    {
+      "label": "Forbes: how rogue-AI fears lifted Rubrik",
+      "url": "https://www.forbes.com/sites/aliciapark/2026/09/16/cyber-company-rubriks-stock-surges-over-fears-of-rogue-ai-making-its-cofounders-billionaires/"
+    },
+    {
+      "label": "Yahoo Finance: why Rubrik's CEO wants to let AI cook",
+      "url": "https://finance.yahoo.com/video/why-rubrik-ceo-wants-let-151400870.html"
+    }
+  ],
+  "meta": {
+    "author": "The Signal Editorial",
+    "estimatedReadTime": "4 min",
+    "editorialTags": [
+      "rubrik",
+      "cyber-resilience",
+      "agentic-ai",
+      "data-security",
+      "ransomware",
+      "identity-security"
+    ],
+    "seoKeywords": [
+      "Rubrik stock",
+      "RBRK stock",
+      "cyber resilience",
+      "agent governance",
+      "Rubrik MCP",
+      "AI agent data recovery",
+      "Rubrik Q2 FY2027 earnings",
+      "immutable backup"
+    ],
+    "relatedTickers": [
+      "CRWD",
+      "MSFT",
+      "PANW",
+      "ZS"
+    ],
+    "youtubeIds": [],
+    "keyMetrics": {
+      "RBRK Price": "$114.47",
+      "Market Cap": "$23.6B",
+      "Forward P/E": "149.1",
+      "Total Revenue (TTM)": "$1.54B",
+      "52-Week Low": "$42.25",
+      "52-Week High": "$116.75",
+      "Analyst Consensus": "Strong Buy (27 analysts)",
+      "Analyst Target Mean": "$120.15"
+    }
+  },
+  "bodyHtml": "<p>Somewhere inside your company right now, a software agent is being handed the keys. It opens tickets, moves money, rewrites records, and occasionally deletes things. The question nobody in the boardroom asks is the expensive one: when that agent has a very bad afternoon, how do you put it back?</p>\n\n<p>Rubrik is the company that keeps the copy you rebuild from. It walks an enterprise's whole data estate, from on-prem servers and public cloud to SaaS apps and code repositories, into an immutable, identity-aware snapshot. Ransomware can encrypt production systems. It cannot touch the copy behind the air gap.</p>\n\n<p>The newer half of the pitch is the agent layer. In August Rubrik shipped Agent Identity, which watches autonomous agents act in real time. September brought MCP support, a secure, programmable path for a company's own AI agents into Rubrik's data, identity and application intelligence. Permissions carry over, and the guardrails line up with the OWASP MCP Top 10.</p>\n\n<div class=\"stats-card\"><div class=\"stats-card-title\">The Numbers That Matter.</div><table class=\"stats-table\"><tr><td class=\"stat-label\">Price <span class=\"stats-live-badge\">LIVE</span></td><td class=\"stat-value\" data-live-ticker=\"RBRK\" data-live-field=\"price\">$114.47</td></tr><tr><td class=\"stat-label\">Market Cap</td><td class=\"stat-value\">$23.6B</td></tr><tr><td class=\"stat-label\">Forward P/E</td><td class=\"stat-value\">149.1</td></tr><tr><td class=\"stat-label\">Total Revenue (TTM)</td><td class=\"stat-value\">$1.54B</td></tr><tr><td class=\"stat-label\">52-Week Low</td><td class=\"stat-value\">$42.25</td></tr><tr><td class=\"stat-label\">52-Week High</td><td class=\"stat-value\">$116.75</td></tr><tr><td class=\"stat-label\">Analyst Consensus</td><td class=\"stat-value\">Strong Buy (27 analysts)</td></tr><tr><td class=\"stat-label\">Analyst Target Mean</td><td class=\"stat-value\">$120.15</td></tr></table><div class=\"stats-card-note\">Price refreshes live. All other figures as of September 30, 2026.</div></div>\n\n<p>Here is why a backup vendor suddenly matters to the AI trade. Every agent granted permission to touch a production system is a fresh way to lose the company's data. Logs tell you what an agent did. Rubrik sells the fact that you can take it back.</p>\n\n<p>You already let software act on your behalf. Your phone's assistant books the table; your bank's model freezes the card. Enterprises are about to hand that class of software power over the systems the business runs on.</p>\n\n<p>Think of the difference between an alarm and a rebuildable building. Alarm vendors sell you the warning, and half a dozen of them sell the same warning. Rubrik sells the part where the company still exists afterward.</p>\n\n<p>The quarter's launches stacked up fast. Rubrik partnered with CrowdStrike on automation for identity attacks, extended protection to Apache Iceberg data lakes on AWS, and staged the MCP release. The company says its AI products now reach a third of its global customers.</p>\n\n<p>Rubrik frames the opportunity as a $125 billion market by 2029, growing near 20% a year at non-GAAP gross margins above 80%. Stickiness is the point: once the archive holds the audit trail and the recovery plan, ripping it out means rebuilding the disaster plan from scratch.</p>\n\n<p>The numbers say the market noticed. Subscription ARR reached $1.66 billion, up 33% year over year, and cloud ARR hit $1.48 billion, up 39%. Revenue of $427.3 million grew 38%, and that turned into $65.7 million of free cash flow. Some 3,084 customers now spend at least $100,000 a year on subscription ARR, up 23%.</p>\n\n<p>What matters to the stock is the next turn, not the last one. Management raised guidance to $1.88 billion of subscription ARR and $323–333 million of free cash flow. The model it laid out at its June analyst day calls for free cash flow margins above 25% at scale. Get net new ARR climbing again and turn agent governance into a paid line item, and the multiple holds.</p>\n\n<p>At roughly 72 times this year's guided cash flow, about 14 times revenue and 149 times forward earnings, the market is not pricing the risk. It is pricing the story. The stock is also trading for a premium while the company still loses money on a GAAP basis.</p>\n\n<p>The share move tells you what people are buying. After Anthropic's chief executive published an essay arguing model capability is outrunning the labs' ability to manage risk, AI semiconductors sold off and data-resilience names ran. Rubrik posted its biggest one-day gain of 2026.</p>\n\n<p>Now the bear case, and it is not small. Strip out migrations and adjusted net new cloud ARR has fallen for three straight quarters, sliding from $110 million to $99 million to $86 million. Management guides to roughly 29% ARR growth this year, against roughly 34% last year. GAAP gross margin is 78%.</p>\n\n<p>Its own 10-K puts Dell, IBM, Veeam, Commvault and Cohesity in the same ring. CrowdStrike, Microsoft and Palo Alto can fold data protection into suites customers already own. Secure agent access is a feature every vendor is racing to ship this year, and Rubrik's version sits in private preview. Paying 72 times free cash flow for decelerating growth is how sentiment trades end.</p>\n\n<p>Which makes October the month to watch. MCP general availability is targeted then. The number that decides the next quarter is whether net new cloud ARR turns back up from $86 million, or stalls there.</p>\n\n<p>Rubrik's chief executive, Bipul Sinha, told Yahoo Finance he wants to \"let AI cook\", adding that guardrails and boundary conditions are what keep the consequences contained. That is a fair summary of the trade. The market is buying insurance on the agentic era, and it is paying a full insurance price for it.</p>\n\n<p class=\"disclosure\">Disclosure: The Signal holds no position in RBRK. Positions may change. This is not financial advice.</p>"
+}
