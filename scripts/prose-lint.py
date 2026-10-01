@@ -59,6 +59,61 @@ BANNED = [
 
 EM_DASH = "\u2014"
 
+# ---- voice / rhythm metrics (added 2026-09-30 after the writer bake-off) ----
+# The corpus problem is not slop vocabulary (mean 0.3 hits per 1k words) — it is FLATNESS:
+# half the live articles run a sentence-length SD below 9, and 63% are dash-heavy.
+SLOP = [
+    "delve", "landscape", "testament", "tapestry", "game-changer", "game changer",
+    "unlock", "seamless", "robust", "cutting-edge", "revolutionize", "revolutionary",
+    "in today's", "moreover", "furthermore", "it's worth noting", "at the end of the day",
+    "when it comes to", "realm", "underscore", "paradigm", "synergy", "holistic",
+    "the bottom line is", "boasts", "plethora", "myriad", "crucial", "pivotal", "vital",
+    "navigate the",
+]
+SD_FAIL, SD_WARN = 6.0, 9.0        # sentence-length standard deviation
+SLOP_FAIL_PER_1K, SLOP_WARN_PER_1K = 3.0, 1.5
+DASH_WARN_PER_1K = 15.0
+
+VOWELS = "aeiouy"
+
+def _syllables(word):
+    w = re.sub(r"[^a-z]", "", word.lower())
+    if not w:
+        return 0
+    n, prev = 0, False
+    for ch in w:
+        v = ch in VOWELS
+        if v and not prev:
+            n += 1
+        prev = v
+    if w.endswith("e") and n > 1:
+        n -= 1
+    return max(1, n)
+
+def voice_metrics(title, body, sents):
+    """Rhythm, slop and reading-ease numbers. Rhythm is the dial that decides whether
+    an article reads like writing or like a filing."""
+    words = re.findall(r"[A-Za-z][A-Za-z'\-]*", body)
+    nw = max(1, len(words))
+    lens = [len(s.split()) for s in sents] or [0]
+    asl = sum(lens) / len(lens)
+    if len(lens) > 1:
+        mean = asl
+        sd = (sum((x - mean) ** 2 for x in lens) / len(lens)) ** 0.5
+    else:
+        sd = 0.0
+    asw = sum(_syllables(w) for w in words) / nw
+    flesch = 206.835 - 1.015 * asl - 84.6 * asw
+    low = body.lower()
+    slop_hits = [(t, low.count(t)) for t in SLOP if t in low]
+    slop_total = sum(n for _, n in slop_hits)
+    slop_per_1k = slop_total / nw * 1000
+    dashes = body.count(EM_DASH)
+    dash_per_1k = dashes / nw * 1000
+    return dict(nw=nw, asl=asl, sd=sd, flesch=flesch, slop_total=slop_total,
+                slop_per_1k=slop_per_1k, dash_per_1k=dash_per_1k, dashes=dashes,
+                slop_hits=[t for t, _ in slop_hits])
+
 def strip_html(s):
     s = re.sub(r"<[^>]+>", " ", s)
     s = s.replace("&amp;", "&").replace("&#39;", "'").replace("&quot;", '"')
@@ -143,6 +198,24 @@ def lint_file(path):
     nw = len(words)
     if nw < MIN_WORDS or nw > MAX_WORDS:
         problems.append(("WARN", f"article {nw} words (target {MIN_WORDS}-{MAX_WORDS})"))
+
+    # ---- voice / rhythm (the dial the bake-off showed actually decides readability) ----
+    vm = voice_metrics(title, body, sents)
+    if len(sents) >= 30:                      # SD is meaningless on a short piece
+        if vm["sd"] < SD_FAIL:
+            problems.append(("FAIL", f"flat rhythm: sentence-length SD {vm['sd']:.1f} (< {SD_FAIL}) — vary long and short"))
+        elif vm["sd"] < SD_WARN:
+            problems.append(("WARN", f"even rhythm: sentence-length SD {vm['sd']:.1f} (< {SD_WARN})"))
+    if vm["slop_per_1k"] >= SLOP_FAIL_PER_1K:
+        problems.append(("FAIL", f"AI-slop density {vm['slop_per_1k']:.1f}/1k words: {', '.join(vm['slop_hits'])}"))
+    elif vm["slop_per_1k"] >= SLOP_WARN_PER_1K:
+        problems.append(("WARN", f"slop words present ({vm['slop_per_1k']:.1f}/1k): {', '.join(vm['slop_hits'])}"))
+    if vm["dash_per_1k"] > DASH_WARN_PER_1K:
+        problems.append(("WARN", f"dash-heavy: {vm['dashes']} em-dashes ({vm['dash_per_1k']:.1f}/1k words)"))
+    problems.append(("VOICE",
+                     f"rhythm SD {vm['sd']:.1f} | avg sentence {vm['asl']:.1f} words | "
+                     f"reading ease {vm['flesch']:.0f} | slop {vm['slop_per_1k']:.1f}/1k | "
+                     f"em-dashes {vm['dashes']} ({vm['dash_per_1k']:.1f}/1k)"))
 
     return slug, problems, len(words), len(sents)
 
