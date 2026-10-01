@@ -1,0 +1,113 @@
+{
+  "slug": "googl-project-suncatcher-orbital-tpu-2026",
+  "title": "Google's First Orbital TPU Test Rides a SpaceX Falcon 9",
+  "subtitle": "The refrigerator-sized satellite carries four of Google's own AI chips and will ride a SpaceX rideshare out of California. It is a hardware experiment, not a data center — and if it works, it points at where AI's power problem goes next.",
+  "summary": "Google is flying its first orbital hardware test under Project Suncatcher: a refrigerator-sized Planet-built satellite carrying four of its TPUs on a SpaceX Falcon 9 rideshare. The mission is a few months of radiation, thermal, and compute data, not an operational data center. Alphabet's stock didn't move on it, and the real re-rating driver remains capex discipline against Cloud growth.",
+  "ticker": "GOOGL",
+  "tickerName": "Alphabet",
+  "company": "Alphabet Inc.",
+  "sector": "ai",
+  "sentiment": "positive",
+  "date": "2026-10-01T16:20:00Z",
+  "price": 344.08,
+  "featured": false,
+  "premium": false,
+  "image": {
+    "src": "/img/articles/googl-project-suncatcher-orbital-tpu-2026.jpg",
+    "fit": "cover",
+    "caption": "A SpaceX Falcon 9 lifting off at night from a Florida launch pad, engines flaring, exhaust plume lit against a dark sky."
+  },
+  "tags": [
+    "google",
+    "alphabet",
+    "googl",
+    "project-suncatcher",
+    "tpu",
+    "space-data-centers",
+    "orbital-compute",
+    "spacex",
+    "planet-labs",
+    "ai-infrastructure",
+    "data-centers",
+    "ai-chips"
+  ],
+  "links": [
+    {
+      "label": "Google: Project Suncatcher's first hardware test — what's flying and why (Sept 24, 2026) →",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/google-project-suncatcher-facts"
+    },
+    {
+      "label": "Google Research: the case for solar-powered TPU constellations in orbit (Nov 4, 2025) →",
+      "url": "https://research.google/blog/exploring-a-space-based-scalable-ai-infrastructure-system-design"
+    },
+    {
+      "label": "Google Research: full Suncatcher system-design paper (PDF) →",
+      "url": "https://services.google.com/fh/files/misc/suncatcher_paper.pdf"
+    },
+    {
+      "label": "CNBC: Google's AI chips ride a SpaceX rideshare with Planet satellites (Oct 1, 2026) →",
+      "url": "https://www.cnbc.com/2026/10/01/spacex-to-launch-google-ai-chips-to-orbit-with-planet-labs-satellites.html"
+    },
+    {
+      "label": "Ars Technica: Google's first orbital data-center test and its 15-minute cooling limit (Sept 2026) →",
+      "url": "https://arstechnica.com/google/2026/09/googles-first-suncatcher-orbital-data-center-test-launches-october-1"
+    },
+    {
+      "label": "Reuters: Google plans first test of AI chips in space under Project Suncatcher (Sept 24, 2026) →",
+      "url": "https://www.reuters.com/business/media-telecom/google-plans-first-test-ai-chips-space-under-project-suncatcher-2026-09-24"
+    },
+    {
+      "label": "SpaceX: Transporter-18 rideshare mission page →",
+      "url": "https://www.spacex.com/launches/transporter18"
+    },
+    {
+      "label": "Futurum Group: Suncatcher, TPUs, and the orbital-AI race (Manyika quote) →",
+      "url": "https://futurumgroup.com/insights/project-suncatcher-prepares-to-launch-tpus-is-google-ahead-in-the-orbital-ai-race"
+    },
+    {
+      "label": "SemiAnalysis: the cost case against space data centers →",
+      "url": "https://newsletter.semianalysis.com/p/to-boldly-go-the-case-for-space-datacenters"
+    }
+  ],
+  "meta": {
+    "author": "The Signal",
+    "estimatedReadTime": "4 min",
+    "editorialTags": [
+      "google",
+      "alphabet",
+      "googl",
+      "project-suncatcher",
+      "tpu",
+      "orbital-compute",
+      "ai-capex",
+      "space-datacenters"
+    ],
+    "seoKeywords": [
+      "Google stock",
+      "GOOGL stock",
+      "Project Suncatcher",
+      "Google TPU in space",
+      "orbital data center",
+      "Alphabet AI chips",
+      "Transporter-18",
+      "space data centers"
+    ],
+    "relatedTickers": [
+      "SPCX",
+      "NVDA",
+      "AMZN"
+    ],
+    "keyMetrics": {
+      "Price": 344.08,
+      "Market Cap": "$4.16T",
+      "Forward P/E": "22.8",
+      "Total Revenue (TTM)": "$445.9B",
+      "52-Week Low": 235.84,
+      "52-Week High": 408.61,
+      "Analyst Consensus": "Strong Buy (54 analysts)",
+      "Analyst Target Mean": 429.36
+    },
+    "youtubeIds": []
+  },
+  "bodyHtml": "<p>The hardest part of building an AI data center is no longer the chips. It's the land, the grid hookup, and the power contract that can take years to line up. Google wants to move the whole thing to where the sunlight never stops. Its first piece of hardware is now sitting on a launch pad.</p>\n\n<p>Google is Alphabet's search-and-advertising engine, and it also runs YouTube, Android, and Google Cloud. It designs its own AI chips, called TPUs, instead of buying every accelerator from Nvidia.</p>\n\n<p>Project Suncatcher, announced in November 2025, is its plan to put solar-powered compute in orbit. The refrigerator-sized satellite riding the next SpaceX Falcon 9, named MVP, carries four of those TPUs — the first time Google has flown this hardware.</p>\n\n<div class=\"stats-card\"><div class=\"stats-card-title\">The Numbers That Matter</div><table class=\"stats-table\"><tr><td class=\"stat-label\">Price <span class=\"stats-live-badge\">LIVE</span></td><td class=\"stat-value\" data-live-ticker=\"GOOGL\" data-live-field=\"price\">$344.08</td></tr><tr><td class=\"stat-label\">Market Cap</td><td class=\"stat-value\">$4.16T</td></tr><tr><td class=\"stat-label\">Forward P/E</td><td class=\"stat-value\">22.8</td></tr><tr><td class=\"stat-label\">Total Revenue (TTM)</td><td class=\"stat-value\">$445.9B</td></tr><tr><td class=\"stat-label\">52-Week Low</td><td class=\"stat-value\">$235.84</td></tr><tr><td class=\"stat-label\">52-Week High</td><td class=\"stat-value\">$408.61</td></tr><tr><td class=\"stat-label\">Analyst Consensus</td><td class=\"stat-value\">Strong Buy (54 analysts)</td></tr><tr><td class=\"stat-label\">Analyst Target Mean</td><td class=\"stat-value\">$429.36</td></tr></table><div class=\"stats-card-note\">Price refreshes live. All other figures as of October 1, 2026.</div></div>\n\n<p>The flight is Transporter-18, a Falcon 9 rideshare set to lift off from Vandenberg Space Force Base. It carries 130 payloads toward a sun-synchronous orbit, with the Suncatcher payload listed for deployment about an hour later. The spacecraft belongs to Planet Labs, so Google hitched its chips to a satellite Planet had already built rather than wait for the two custom craft planned for 2027.</p>\n\n<p>Once it's up, Google will run Gemini — the same assistant that answers questions on your phone — on those chips to see how they behave outside the atmosphere. It already fired the hardware through a 67 MeV proton beam at UC Davis, where the memory proved the most radiation-sensitive part. Google expects the mission to last a few months, possibly longer.</p>\n\n<p>That matters well beyond Google. Data centers on Earth are running into power, land, and permitting walls that no amount of chip design fixes. Space offers near-continuous sun and cooling by radiation.</p>\n\n<p>Google is unusual in that it designs its own accelerators and owns a stake in SpaceX, so it can test this without buying a launch from a stranger.</p>\n\n<p>Think of it as moving the factory next to the fuel. A data center's real constraint is its power contract, and in the right orbit a solar panel can be up to eight times more productive than one on the ground. Sunlight there is nearly around the clock. Google isn't paying for the land or the substation.</p>\n\n<p>None of that changes what Alphabet is worth this year. The stock didn't move on the launch; shares traded slightly lower during the session. What actually re-rates GOOGL is capex discipline meeting Cloud growth.</p>\n\n<p>Last quarter revenue reached $119.8 billion, up 24%, and Google Cloud reached $24.8 billion, up 82%. Capital spending ran $44.9 billion in the quarter, full-year guidance sits at $195–205 billion, and free cash flow came in negative at $5.9 billion.</p>\n\n<p>The trigger that lifts the multiple is narrow: capex growth decelerating while Cloud revenue keeps compounding, so free cash flow turns back up. This orbital test is not that. It's option value on the far end of the decade, and the market isn't pricing it.</p>\n\n<p>The bear case is physics and arithmetic, and it's unforgiving. There's no airflow in a vacuum, so the demo can run only about 15 minutes at a time before the radiators must catch up. A data center that works in quarter-hour bursts isn't a data center.</p>\n\n<p>The economics are just as lopsided. BCG puts an orbital data center at two-and-a-half to three times the cost of a terrestrial one today, narrowing toward about 1.5x as launch prices fall. SemiAnalysis prices space inference near $590 per billion tokens against $135 on Earth.</p>\n\n<p>Google's own paper needs launch at $200 per kilogram or less by the mid-2030s, which implies about 1,800 Starship launches of cumulative mass at roughly 180 a year. Bears are proven right if that crossover never arrives, or if Google quietly shelves the two-satellite optical-link step scheduled for 2027.</p>\n\n<p>Even Google is telling you to be patient. James Manyika, its senior vice president for research, has said the company doesn't expect <a href=\"https://futurumgroup.com/insights/project-suncatcher-prepares-to-launch-tpus-is-google-ahead-in-the-orbital-ai-race\">“anything usefully operational in the next few years”</a>. That is the most senior research voice at the company asking you not to expect revenue from this decade.</p>\n\n<p>The next checkpoint is early 2027, when Google plans to launch two Planet-built prototype satellites to validate optical links. Watch whether those links hit multi-hundred-gigabit to multi-terabit rates; today's commercial optical crosslinks run 1 to 100 gigabits, and Google's design calls for about 10 terabits per link. Watch, too, whether Google keeps funding the program at all.</p>\n\n<p class=\"disclosure\">Disclosure: The Signal holds no position in GOOGL. Positions may change. This is not financial advice.</p>"
+}
