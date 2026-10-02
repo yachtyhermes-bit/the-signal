@@ -1,0 +1,145 @@
+{
+  "slug": "orcl-tencent-offshore-compute-lease-2026",
+  "title": "Oracle Leases Tencent 100,000 AI Chips Under a Rule Congress Wants to Change",
+  "subtitle": "Oracle has reportedly agreed to a five-year, roughly $7 billion lease that gives Tencent about 100,000 advanced AI chips in Southeast Asian data centers, where US rules still allow rented compute even when they bar a purchase.",
+  "summary": "The Financial Times reported that Oracle has signed a five-year lease worth about $7 billion, giving Tencent access to roughly 100,000 advanced AI chips in Oracle data centers across Southeast Asia. Neither company has confirmed the deal, and US export rules allow the arrangement because the chips never enter China. The report lands on a company carrying a record backlog, negative free cash flow, and a policy fight over remote access to AI compute that Congress could close.",
+  "ticker": "ORCL",
+  "tickerName": "Oracle Corporation",
+  "company": "Oracle Corporation",
+  "sector": "ai",
+  "sentiment": "neutral",
+  "date": "2026-10-02T16:00:00Z",
+  "price": 138.07,
+  "featured": false,
+  "premium": false,
+  "image": {
+    "src": "/img/articles/orcl-tencent-offshore-compute-lease-2026.jpg",
+    "fit": "cover",
+    "caption": "The rooftop cooling plant and backup generators of a data centre. What a leased-compute contract really buys is power, cooling and land, not just silicon. Photo: Wikimedia Commons, CC0.",
+    "alt": "Rooftop view of a large data centre, with rows of cooling towers and backup generator units laid out across the building's roof."
+  },
+  "tags": [
+    "orcl",
+    "oracle",
+    "tencent",
+    "export-controls",
+    "ai-compute",
+    "southeast-asia",
+    "data-centers",
+    "cloud-infrastructure",
+    "h200",
+    "bis",
+    "ai",
+    "china"
+  ],
+  "links": [
+    {
+      "label": "Reuters (Oct. 1, 2026), citing the Financial Times: Tencent signs a five-year lease for roughly 100,000 advanced AI chips in Oracle data centers across Southeast Asia - including Reuters' statement that it could not verify the report",
+      "url": "https://www.reuters.com/world/china/chinas-tencent-leases-100000-chips-oracle-accelerate-ai-push-ft-reports-2026-10-01"
+    },
+    {
+      "label": "MarketWatch: the reported $7 billion value, the roughly 30% paid upfront, and why the deal could relieve a stock that has been under pressure",
+      "url": "https://www.marketwatch.com/story/oracle-has-reportedly-signed-a-7-billion-deal-with-tencent-it-could-provide-relief-for-the-troubled-stock-abd428f5"
+    },
+    {
+      "label": "Investing.com, citing the FT: the five-year term, the ~100,000-chip count, and the US rules that block Chinese firms from buying advanced chips while still permitting them to lease capacity abroad",
+      "url": "https://www.investing.com/news/stock-market-news/tencent-leases-100000-chips-from-oracle-for-7-bln-ft-4926203"
+    },
+    {
+      "label": "TrendForce: the deal as Tencent's largest overseas lease, plus the ByteDance-Nscale Norway precedent for leasing compute offshore",
+      "url": "https://www.trendforce.com/news/2026/10/01/news-tencent-reportedly-signs-7b-deal-to-lease-100000-ai-chips-from-oracle-in-southeast-asia"
+    },
+    {
+      "label": "Oracle press release (Sept. 10, 2026): Q1 FY27 results - cloud infrastructure revenue up 121%, backlog of $664 billion, and FY27 revenue guidance of at least $90 billion",
+      "url": "https://www.prnewswire.com/news-releases/oracle-announces-q1-results-driven-by-triple-digit-growth-in-cloud-infrastructure-revenues-302875728.html"
+    },
+    {
+      "label": "Oracle's Q1 FY27 earnings press release PDF - the capex plan and the free cash flow line behind the funding question",
+      "url": "https://s23.q4cdn.com/440135859/files/content_files/1q27-pressrelease-September_FINAL.pdf"
+    },
+    {
+      "label": "Cloud Wars: the $664 billion backlog, its roughly $26 billion sequential increase, and the 121% cloud infrastructure growth rate",
+      "url": "https://cloudwars.com/cloud/oracle-q1-cloud-infrastructure-soars-121-rpo-up-46-to-664-billion"
+    },
+    {
+      "label": "Latham & Watkins: what the Remote Access Security Act (H.R. 2683) would do - extend export-control authority over remote access to controlled chips; passed the House 369-22 in January 2026 and pending in the Senate",
+      "url": "https://www.lw.com/en/insights/what-the-remote-access-security-act-means-for-export-controls-compliance-programs"
+    },
+    {
+      "label": "Rep. Gottheimer's office: the bipartisan Cloud Security Act, introduced to close the \"rent instead of buy\" workaround in advanced AI chip export controls",
+      "url": "https://gottheimer.house.gov/posts/release-gottheimer-moolenaar-introduce-bipartisan-bill-to-close-loophole-in-advanced-ai-chip-export-controls"
+    },
+    {
+      "label": "Report on the Commerce Department rule in drafting that would bar Chinese firms from remotely leasing Nvidia GPUs via data centers in Thailand, Singapore, Malaysia and Japan - and the questions over its statutory authority",
+      "url": "https://www.winzheng.com/en/article/us-commerce-remote-gpu-ban-china-ai-compute-crackdown-2026"
+    },
+    {
+      "label": "CNBC: Oracle's Q1 FY27 earnings report, including the GAAP earnings figure and the capex number",
+      "url": "https://www.cnbc.com/2026/09/10/oracle-orcl-q1-earnings-report-2027.html"
+    },
+    {
+      "label": "Reuters via Channel News Asia: S&P's July 2026 downgrade of Oracle to BBB- with a stable outlook, and the leverage behind it",
+      "url": "https://www.channelnewsasia.com/business/analysisoracle-corp-goes-high-stakes-ratings-gamble-in-ai-strategy-6298706"
+    },
+    {
+      "label": "Benzinga: the reported lease and the context around it, including Tencent's push to fold AI agents into WeChat, the messaging app with more than 1.4 billion users",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62102026/oracle-lands-7-billion-tencent-ai-deal-chinese-tech-giant-to-access-100000-advanced-chips-through-southeast-asia-data-centers-report"
+    }
+  ],
+  "meta": {
+    "author": "The Signal",
+    "estimatedReadTime": "4 minutes",
+    "editorialTags": [
+      "oracle",
+      "tencent",
+      "export-controls",
+      "ai-compute",
+      "cloud-infrastructure",
+      "china",
+      "ai"
+    ],
+    "seoKeywords": [
+      "Oracle stock",
+      "ORCL stock",
+      "Tencent Oracle deal",
+      "AI chip export controls",
+      "remote compute leasing",
+      "Oracle backlog",
+      "OCI revenue",
+      "AI data centers Southeast Asia"
+    ],
+    "relatedTickers": [
+      "NVDA",
+      "MSFT",
+      "AMZN",
+      "GOOGL",
+      "BABA"
+    ],
+    "sourceLinks": [
+      "https://www.reuters.com/world/china/chinas-tencent-leases-100000-chips-oracle-accelerate-ai-push-ft-reports-2026-10-01",
+      "https://www.marketwatch.com/story/oracle-has-reportedly-signed-a-7-billion-deal-with-tencent-it-could-provide-relief-for-the-troubled-stock-abd428f5",
+      "https://www.investing.com/news/stock-market-news/tencent-leases-100000-chips-from-oracle-for-7-bln-ft-4926203",
+      "https://www.trendforce.com/news/2026/10/01/news-tencent-reportedly-signs-7b-deal-to-lease-100000-ai-chips-from-oracle-in-southeast-asia",
+      "https://www.prnewswire.com/news-releases/oracle-announces-q1-results-driven-by-triple-digit-growth-in-cloud-infrastructure-revenues-302875728.html",
+      "https://s23.q4cdn.com/440135859/files/content_files/1q27-pressrelease-September_FINAL.pdf",
+      "https://cloudwars.com/cloud/oracle-q1-cloud-infrastructure-soars-121-rpo-up-46-to-664-billion",
+      "https://www.lw.com/en/insights/what-the-remote-access-security-act-means-for-export-controls-compliance-programs",
+      "https://gottheimer.house.gov/posts/release-gottheimer-moolenaar-introduce-bipartisan-bill-to-close-loophole-in-advanced-ai-chip-export-controls",
+      "https://www.winzheng.com/en/article/us-commerce-remote-gpu-ban-china-ai-compute-crackdown-2026",
+      "https://www.cnbc.com/2026/09/10/oracle-orcl-q1-earnings-report-2027.html",
+      "https://www.channelnewsasia.com/business/analysisoracle-corp-goes-high-stakes-ratings-gamble-in-ai-strategy-6298706",
+      "https://www.benzinga.com/markets/tech/26/10/62102026/oracle-lands-7-billion-tencent-ai-deal-chinese-tech-giant-to-access-100000-advanced-chips-through-southeast-asia-data-centers-report"
+    ],
+    "keyMetrics": {
+      "Price": "$138.07",
+      "Market Cap": "$418.6B",
+      "Forward P/E": "12.56",
+      "Total Revenue (TTM)": "$71.78B",
+      "52-Week Low": "$114.50",
+      "52-Week High": "$322.54",
+      "Analyst Consensus": "Buy (41 analysts)",
+      "Analyst Target Mean": "$237.97"
+    }
+  },
+  "bodyHtml": "<p>Somewhere in Southeast Asia, inside Oracle-run data centers, sit about 100,000 advanced AI chips that a Chinese company may rent but never own. That's the arrangement the Financial Times reported on September 30: a five-year lease between Oracle and Tencent worth roughly $7 billion, with about 30% paid upfront.</p>\n\n<p>The FT called it Tencent's largest overseas lease to date. It's unconfirmed. Neither company has said a word about it, and Reuters says it couldn't verify the report.</p>\n\n<p>Start with what Oracle actually sells. It runs the databases that hold corporate records and the business software behind payroll and supply chains. It also rents out raw computing power, by the hour, from its own cloud. That last piece is the one that matters here, because the buyers are AI labs and cloud giants that need more chips than they can build.</p>\n\n<p>Oracle spent the past few years remaking itself from an enterprise software vendor into an AI infrastructure play. That makes it something rare in the buildout: not the chip designer, not the model trainer, but the landlord. It builds the building, signs the tenant, and collects rent whether the tenant's product ever works.</p>\n\n<p>The tenant is Tencent, the company behind WeChat, the app more than 1.4 billion people open in a day. Tencent is spending hard to put AI inside products it already owns.</p><p>Here's the twist. The US won't sell Tencent the equipment outright, so Tencent rents it instead. That turns a routine contract into a test case for how far export controls actually reach.</p>\n\n<p>The loophole is legal, not technical. US export rules bar Chinese firms from buying advanced AI chips. They don't bar the same firms from renting those chips in data centers outside China.</p>\n\n<p>The hardware never crosses the border. Tencent would pay Oracle for time on machines it could never legally own, and Oracle would book the revenue without shipping a single chip across the Pacific. No export required.</p>\n\n<p>There's precedent, and it's recent. The FT reported that ByteDance's Singapore subsidiary, Spring, reached 2,304 Nvidia B200 GPUs through a UK provider's data center in Norway. Nvidia has also resumed shipping H200 chips into China under Beijing's watch, with Tencent and ByteDance each taking roughly 10,000 units. US rules cap any single buyer at 75,000 of those chips.</p>\n\n<p>Now the part that actually decides the stock. Oracle's bull case was never this quarter's earnings; it's the backlog. The company closed its August quarter with $664 billion of signed future work, up about 46% year over year. That's the bet.</p>\n\n<p>For the shares to re-rate, that backlog has to convert into cash faster than the capex that builds it. The market has spent a year declining to pay up for that promise, and the stock sits at less than half its peak. Everything hinges there.</p>\n\n<p>The bear case isn't subtle. The math is unforgiving. Oracle spent about $28 billion on capex in a single quarter and guided to $90 billion to $95 billion for the year. Free cash flow ran negative by roughly $5 billion in that quarter, and it's negative by about $28.7 billion across the last four.</p>\n\n<p>That sits against $169 billion of debt and $37 billion of cash, on a balance sheet S&P cut to BBB- in July. If the backlog is concentrated in a few AI customers who are themselves borrowing to pay, the structure leans on just a handful of names. The number that would prove the bears right is free cash flow turning positive, and it isn't close.</p>\n\n<p>The live threat is Washington. The Remote Access Security Act passed the House 369–22 in January and now sits in the Senate Banking Committee. It would give the Bureau of Industry and Security authority over remote access to controlled chips.</p>\n\n<p>Commerce is separately drafting a rule to bar Chinese firms from leasing Nvidia GPUs through data centers in Thailand, Singapore, Malaysia and Japan. Its legal footing is contested, and a challenge would likely end in court.</p>\n\n<p>Two House members went further in June, introducing a Cloud Security Act aimed squarely at the rent-instead-of-buy workaround. No regulator or lawmaker has publicly reacted to this lease. That silence is the space Oracle's deal lives in.</p>\n\n<p>Watch the Senate's handling of the Remote Access Security Act, and watch Oracle's next print for two numbers: a rising backlog and a bending capex guide. A lease is a small line item. But Oracle has found a way to rent compute to a customer it can't sell to, and keeping that customer is no longer Oracle's call.</p>\n\n<p class=\"disclosure\">Disclosure: The Signal holds no position in ORCL. Positions may change. This is not financial advice.</p>"
+}
