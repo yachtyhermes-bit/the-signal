@@ -1,0 +1,102 @@
+{
+  "slug": "onsemi-synaptics-edge-ai-acquisition-2026",
+  "title": "onsemi Turns Its Synaptics Deal All-Cash to Skip the Dilution",
+  "subtitle": "onsemi is paying $123.00 a share in cash for Synaptics, funding a roughly $5.7 billion enterprise value with cash on hand and an up-to-$2.45 billion term loan, after June's all-stock version cost a quarter of its share price in a single session.",
+  "summary": "onsemi rewrote its Synaptics acquisition as an all-cash deal at $123.00 per share, valuing it at roughly $5.7 billion versus about $7 billion for the original all-stock structure. The switch removes the dilution that sent onsemi's own shares down nearly 24% the day after the June announcement, and the stock rose on the revision while Synaptics jumped roughly 14% as a floating exchange ratio became a fixed cash price. The bet now rests on a cash-and-debt structure that protects the buyback, an immediately accretive close expected by mid-2027, and whether a cheap multiple ever starts reflecting onsemi's doubling AI data-center power business.",
+  "ticker": "ON",
+  "tickerName": "onsemi",
+  "company": "onsemi",
+  "sector": "ai",
+  "sentiment": "positive",
+  "date": "2026-10-02T14:00:00Z",
+  "price": 80.08,
+  "featured": true,
+  "premium": false,
+  "image": {
+    "src": "/img/articles/onsemi-synaptics-edge-ai-acquisition-2026.jpg",
+    "fit": "cover",
+    "caption": "An IGBT power module with its cover removed, exposing the silicon dies and bond wires that switch high current inside an electric vehicle or an industrial drive. Photo: Pslawinski, CC BY-SA 3.0, via Wikimedia Commons.",
+    "alt": "The inside of an open IGBT power module resting on a workbench, showing several rectangular silicon dies soldered to a copper base plate and linked by fine aluminium bond wires, with the module's white ceramic housing and metal terminals visible around the edge."
+  },
+  "tags": [
+    "onsemi",
+    "synaptics",
+    "edge-ai",
+    "power-semiconductors",
+    "acquisitions",
+    "physical-ai"
+  ],
+  "links": [
+    {
+      "label": "onsemi 8-K: amended merger agreement and debt financing (SEC EDGAR)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1097864/000114036126038294/ef20083030_8k.htm"
+    },
+    {
+      "label": "Amended and Restated Merger Agreement, $123.00 per share (SEC EDGAR)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1097864/000114036126038294/ef20083030_ex2-1.htm"
+    },
+    {
+      "label": "Synaptics 8-K with the joint press release on the revised terms (SEC EDGAR)",
+      "url": "https://www.sec.gov/Archives/edgar/data/817720/000114036126038301/ef20083029_ex99-1.htm"
+    },
+    {
+      "label": "onsemi 8-K: the original June all-stock deal and 1.350 exchange ratio (SEC EDGAR)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1097864/000114036126026395/ef20076747_8k.htm"
+    },
+    {
+      "label": "onsemi Q2 2026 earnings release with free cash flow and buybacks (SEC EDGAR)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1097864/000114036126030989/ef20079200_ex99-1.htm"
+    },
+    {
+      "label": "Synaptics Q3 FY2026 results and Core IoT outlook (SEC EDGAR)",
+      "url": "https://www.sec.gov/Archives/edgar/data/817720/000081772026000035/syna-q3268kexx991.htm"
+    },
+    {
+      "label": "24/7 Wall St: onsemi climbs as Synaptics surges on the $5.7B cash bid",
+      "url": "https://247wallst.com/investing/2026/10/02/on-semiconductor-climbs-8-synaptics-surges-14-as-5-7b-cash-bid-replaces-7b-stock-deal/"
+    },
+    {
+      "label": "onsemi and Synaptics announce the revised merger agreement (Yahoo Finance)",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/onsemi-synaptics-announce-revised-merger-203400670.html"
+    }
+  ],
+  "meta": {
+    "author": "The Signal Editorial",
+    "estimatedReadTime": "4 min",
+    "editorialTags": [
+      "onsemi",
+      "synaptics",
+      "edge-ai",
+      "power-semiconductors",
+      "acquisitions",
+      "physical-ai"
+    ],
+    "seoKeywords": [
+      "onsemi Synaptics deal",
+      "ON stock all-cash acquisition",
+      "$123 per share Synaptics",
+      "onsemi $5.7 billion deal",
+      "edge AI chips",
+      "physical AI semiconductors",
+      "onsemi AI data center power",
+      "Synaptics Core IoT"
+    ],
+    "relatedTickers": [
+      "ON",
+      "SYNA",
+      "ADI"
+    ],
+    "youtubeIds": [],
+    "keyMetrics": {
+      "Price": "$80.08",
+      "Market Cap": "$31.2B",
+      "Forward P/E": "17.7",
+      "Total Revenue (TTM)": "$6.20B",
+      "52-Week Low": "$44.56",
+      "52-Week High": "$134.92",
+      "Analyst Consensus": "Buy (26 analysts)",
+      "Analyst Target Mean": "$103.69"
+    }
+  },
+  "bodyHtml": "<p>In June, onsemi offered to buy Synaptics with its own stock, and the market hated it: the shares fell about 24% the next session. This morning onsemi offered cash instead, and the shares rose. Same buyer, same target, same logic — only the wallet changed.</p>\n\n<p>onsemi makes the power chips that move and shape electricity. Think silicon-carbide switches and modules inside electric cars, factory gear, and the racks that train AI models. Its customers are automakers, industrial suppliers, and cloud operators wiring up data centers.</p>\n\n<p>Synaptics, the target, sells the other half. It builds connected-compute and sensing chips, the kind that let a device decide on its own with no server in the loop, plus the touch and display silicon in laptops and phones. Together, onsemi wants to own power, sensing, and edge intelligence, what it calls the four pillars of Physical AI.</p>\n\n<div class=\"stats-card\"><div class=\"stats-card-title\">The Numbers That Matter</div><table class=\"stats-table\"><tr><td class=\"stat-label\">Price <span class=\"stats-live-badge\">LIVE</span></td><td class=\"stat-value\" data-live-ticker=\"ON\" data-live-field=\"price\">$80.08</td></tr><tr><td class=\"stat-label\">Market Cap</td><td class=\"stat-value\">$31.2B</td></tr><tr><td class=\"stat-label\">Forward P/E</td><td class=\"stat-value\">17.7x</td></tr><tr><td class=\"stat-label\">Total Revenue (TTM)</td><td class=\"stat-value\">$6.20B</td></tr><tr><td class=\"stat-label\">52-Week Low</td><td class=\"stat-value\">$44.56</td></tr><tr><td class=\"stat-label\">52-Week High</td><td class=\"stat-value\">$134.92</td></tr><tr><td class=\"stat-label\">Analyst Consensus</td><td class=\"stat-value\">Buy (26 analysts)</td></tr><tr><td class=\"stat-label\">Analyst Target Mean</td><td class=\"stat-value\">$103.69</td></tr></table><div class=\"stats-card-note\">Price refreshes live · All other figures as of October 2, 2026</div></div>\n\n<p>Why does a power-chip maker buy a connectivity company? The AI buildout is spilling out of the data center. The racks need onsemi's silicon to convert power efficiently, and the robots and cameras at the edge need Synaptics' compute to act on what they see.</p>\n\n<p>The new terms are blunt. onsemi pays $123.00 a share in cash and values the deal at roughly $5.7 billion, the enterprise value it is quoting, down from about $7 billion for June's all-stock version. There is no financing closing condition, and a committed Morgan Stanley senior secured term loan of up to $2.45 billion sits behind it.</p>\n\n<p>That last detail is the point. The June deal handed Synaptics holders 1.350 onsemi shares for each share they owned, printing roughly 12% more stock and diluting everyone who stayed. Buyers punish that, and they did. Cash asks nothing of the share count, so the buyback that soaked up $332 million in the second quarter keeps running.</p>\n\n<p>Think of it as swapping a barter for a debit card. When you pay with your own stock, the seller is really betting on you, so every wobble in your price becomes their problem. Pay in cash, and the seller knows what they are getting, and so does your share count.</p>\n\n<p>The tape agreed. Synaptics jumped roughly 14% as a floating share exchange hardened into a fixed cash price. onsemi added about 5.6% by mid-morning after touching 8%.</p>\n\n<p>So what re-rates ON from here? Start with the share count. Cash protects it, the buyback keeps working, and per-share earnings stay intact. That is why the deal is guided to be immediately accretive on closing instead of eighteen months out.</p>\n\n<p>The catch is the debt. Up to $2.45 billion of term loan lands while government bond yields sit at their highest in more than twenty years, and that interest is a recurring cost. Cheap multiple or not, the coupon is real.</p>\n\n<p>Is the market pricing it right? Not obviously. onsemi trades near 18 times forward earnings and roughly 40% below its 52-week high, a discount that still reads as a cyclical auto supplier, not the AI power franchise management describes.</p>\n\n<p>The bears read it differently. onsemi is paying roughly $5.7 billion for a company whose real growth engine, Core IoT, is guided to just over $385 million of revenue this year. Synaptics fielded an unsolicited competing approach, and the buyer still paid less than in June, so the auction never produced a premium bid.</p>\n\n<p>The rest is worse. onsemi is spending cash while its own shares sit near a multi-year low, so either management thinks the equity is too cheap to issue or holders will not accept more paper.</p>\n\n<p>It is also buying into soft auto demand, where onsemi's automotive segment shrank 2% year over year. Watch the $385 million Core IoT line: if it misses while the new interest expense lands, the accretion is a spreadsheet, not a business.</p>\n\n<p>That makes the next quarterly print the checkpoint. onsemi reports its third quarter within weeks, and the number to watch is revenue against the $1.65 billion to $1.75 billion it has guided. A print at the top of that range, with AI data-center power still doubling, says the story is compounding.</p>\n\n<p>The cleanest way to read today: onsemi traded a promise for a bill. In June it asked shareholders to fund a $7 billion bet with their own ownership, and the shares paid for it. Now it is buying a cheaper target with cash and credit, and the market is applauding.</p>\n\n<p class=\"disclosure\">Disclosure: The Signal holds no position in ON. Positions may change. This is not financial advice.</p>"
+}
