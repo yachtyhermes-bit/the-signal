@@ -1,0 +1,110 @@
+{
+  "slug": "snps-openai-eda-growth-reset-2026",
+  "title": "Synopsys Resets Growth Targets to Become AI's Chip-Design Gatekeeper",
+  "subtitle": "The design-software house lifted its long-term targets and signed OpenAI and Amazon on the same day, tightening its grip on the layer every AI chip must clear.",
+  "summary": "Synopsys used its late-September Investor Day to raise fiscal 2027 revenue guidance to an $11.15 billion midpoint, about 15% growth, alongside a long-term operating-margin target near 50%. It also unveiled a multi-year OpenAI partnership to build GPT-Synopsys, a frontier model that runs its design tools, and an Amazon IP deal worth more than $1 billion tied to a licence-plus-royalty model. The re-rate case rests on a mix shift toward recurring revenue, but China, Ansys goodwill and undisclosed deal revenue keep the bears in the room.",
+  "ticker": "SNPS",
+  "tickerName": "Synopsys, Inc.",
+  "company": "Synopsys, Inc.",
+  "sector": "ai",
+  "sentiment": "bullish",
+  "date": "2026-10-03T14:00:00Z",
+  "price": 489.9,
+  "featured": false,
+  "premium": false,
+  "image": {
+    "src": "/img/articles/snps-openai-eda-growth-reset-2026.jpg",
+    "fit": "cover",
+    "caption": "Fine metal probe needles make contact with a strip of silicon dies on a test bench - the verification step every chip has to clear before it ships, which is the layer Synopsys' tools own. Photo: Iuri Kothe / Wikimedia Commons, CC BY 2.0",
+    "alt": "A macro photograph of fine probe needles contacting a strip of silicon dies with microscopic circuit patterns, resting on a polished bench between pieces of white felt."
+  },
+  "tags": [
+    "snps",
+    "synopsys",
+    "eda",
+    "chip-design",
+    "openai",
+    "amazon-aws",
+    "semiconductors",
+    "ai-chips",
+    "ansys",
+    "intellectual-property"
+  ],
+  "links": [
+    {
+      "label": "Synopsys and OpenAI: the multi-year GPT-Synopsys partnership",
+      "url": "https://news.synopsys.com/2026-09-30-OpenAI-and-Synopsys-Announce-GPT-Synopsys-Frontier-Intelligence-to-Revolutionize-Chip-Design"
+    },
+    {
+      "label": "Synopsys Investor Day: FY27 guidance and the FY26E-FY30E financial model",
+      "url": "https://news.synopsys.com/2026-09-30-Synopsys-Details-Growth-Strategy-and-Long-term-Financial-Model-at-2026-Investor-Day"
+    },
+    {
+      "label": "Synopsys and Amazon: the multi-year custom-silicon IP agreement worth more than $1 billion",
+      "url": "https://news.synopsys.com/2026-09-30-Synopsys-and-Amazon-Announce-Strategic,-Multi-year-IP-Agreement-for-Custom-Silicon-Collaboration-Also-Extends-to-Cloud-and-AI-Powered-Engineering"
+    },
+    {
+      "label": "Investor Day release with the FY27 reconciliation tables",
+      "url": "https://www.prnewswire.com/news-releases/synopsys-details-growth-strategy-and-long-term-financial-model-at-2026-investor-day-302894684.html"
+    },
+    {
+      "label": "Form 10-Q for the quarter ended July 31, 2026: China revenue, segment detail, debt",
+      "url": "https://www.sec.gov/Archives/edgar/data/883241/000088324126000025/snps-20260731.htm"
+    },
+    {
+      "label": "Synopsys Autopilot and the long-horizon agent portfolio",
+      "url": "https://news.synopsys.com/2026-09-28-Synopsys-Powers-Autonomous-Engineering-with-a-Broad-Portfolio-of-Long-Horizon-Agents-and-Autopilot-Platform"
+    }
+  ],
+  "videos": [],
+  "meta": {
+    "author": "The Signal",
+    "estimatedReadTime": "4 minutes",
+    "editorialTags": [
+      "synopsys",
+      "eda-software",
+      "chip-design",
+      "openai-partnership",
+      "amazon-aws",
+      "ai-semiconductors",
+      "ansys-acquisition",
+      "recurring-revenue",
+      "investor-day",
+      "chip-design-ip"
+    ],
+    "seoKeywords": [
+      "Synopsys stock analysis",
+      "SNPS OpenAI partnership",
+      "GPT-Synopsys",
+      "Synopsys Amazon IP deal",
+      "EDA software growth",
+      "SNPS valuation",
+      "Synopsys Investor Day 2026",
+      "chip design AI investment"
+    ],
+    "relatedTickers": [
+      "CDNS",
+      "AMZN",
+      "NVDA"
+    ],
+    "sourceLinks": [
+      "https://news.synopsys.com/2026-09-30-OpenAI-and-Synopsys-Announce-GPT-Synopsys-Frontier-Intelligence-to-Revolutionize-Chip-Design",
+      "https://news.synopsys.com/2026-09-30-Synopsys-Details-Growth-Strategy-and-Long-term-Financial-Model-at-2026-Investor-Day",
+      "https://news.synopsys.com/2026-09-30-Synopsys-and-Amazon-Announce-Strategic,-Multi-year-IP-Agreement-for-Custom-Silicon-Collaboration-Also-Extends-to-Cloud-and-AI-Powered-Engineering",
+      "https://www.prnewswire.com/news-releases/synopsys-details-growth-strategy-and-long-term-financial-model-at-2026-investor-day-302894684.html",
+      "https://www.sec.gov/Archives/edgar/data/883241/000088324126000025/snps-20260731.htm",
+      "https://news.synopsys.com/2026-09-28-Synopsys-Powers-Autonomous-Engineering-with-a-Broad-Portfolio-of-Long-Horizon-Agents-and-Autopilot-Platform"
+    ],
+    "keyMetrics": {
+      "Price": "$489.90",
+      "Market Cap": "$93.9B",
+      "Forward P/E": "26.4x",
+      "Total Revenue (TTM)": "$9.42B",
+      "52-Week Low": "$362.55",
+      "52-Week High": "$539.48",
+      "Analyst Consensus": "Strong Buy (26 analysts)",
+      "Analyst Target Mean": "$569.78"
+    }
+  },
+  "bodyHtml": "<p>Your phone's assistant, the email draft sitting in your inbox, the accelerator humming in a data center — every one of them cleared the same checkpoint before it existed. That checkpoint belongs to Synopsys.</p>\n\n<p>Synopsys doesn't make chips. It sells the software every advanced chip is designed in, plus prebuilt circuit blocks, called IP, that engineers license instead of designing from scratch. Nothing gets manufactured until it clears Synopsys' tools.</p>\n\n<p>Think of it as the building department for silicon, the office that signs the drawing before anyone pours concrete. You don't have to pick a winner. It gets paid either way.</p>\n\n<div class=\"stats-card\"><div class=\"stats-card-title\">The Numbers That Matter</div><table class=\"stats-table\"><tr><td class=\"stat-label\">Price <span class=\"stats-live-badge\">LIVE</span></td><td class=\"stat-value\" data-live-ticker=\"SNPS\" data-live-field=\"price\">$489.90</td></tr><tr><td class=\"stat-label\">Market Cap</td><td class=\"stat-value\">$93.9B</td></tr><tr><td class=\"stat-label\">Forward P/E</td><td class=\"stat-value\">26.4x</td></tr><tr><td class=\"stat-label\">Total Revenue (TTM)</td><td class=\"stat-value\">$9.42B</td></tr><span hidden>.</span><tr><td class=\"stat-label\">52-Week Low</td><td class=\"stat-value\">$362.55</td></tr><tr><td class=\"stat-label\">52-Week High</td><td class=\"stat-value\">$539.48</td></tr><tr><td class=\"stat-label\">Analyst Consensus</td><td class=\"stat-value\">Strong Buy (26 analysts)</td></tr><tr><td class=\"stat-label\">Analyst Target Mean</td><td class=\"stat-value\">$569.78</td></tr><span hidden>.</span></table><div class=\"stats-card-note\">Price refreshes live · All other figures as of October 3, 2026</div></div>\n\n<p>That position is why the Investor Day mattered. Synopsys guided fiscal 2027 revenue to a midpoint of $11.15 billion, about 15% growth, and set a long-term operating-margin target near 50% by fiscal 2030.</p>\n\n<p>The bigger flex was OpenAI. The two companies signed a multi-year partnership to build GPT-Synopsys, a frontier model that natively drives Synopsys' design tools instead of just chatting about them. It runs on OpenAI-hosted infrastructure and integrates with Synopsys.ai and the Autopilot platform. OpenAI president Greg Brockman says the point is a loop: better chips make better AI.</p>\n\n<p>Today's agentic tools bolt a general model onto EDA software. The stated next leap is making the frontier model an expert user of the tools — running them, reading the output, iterating on power, performance and area. OpenAI licenses the tools to train it, and customer design data is not used for training.</p>\n\n<p>Then there's Amazon. The multi-year agreement is worth more than $1 billion, and Amazon becomes the lead customer for Synopsys' new application-optimized IP. It's a licence-plus-royalty model, so Synopsys' cut grows as AWS production volumes do.</p>\n\n<p>Amazon keeps building Nitro, Graviton and Trainium, and the two have worked together for more than 15 years. Amazon's custom-silicon chief, Peter DeSantis says Synopsys helps Amazon move faster across the design cycle as its chips grow more ambitious.</p>\n\n<p>Step back and the sector logic clicks. EDA, or electronic design automation, sits upstream of every AI chip, so nothing gets designed without touching Synopsys. When the labs building the models start buying the design tools directly, the tool vendor stops being a vendor. It becomes the arms dealer.</p>\n\n<p>For shareholders, the re-rate driver is the mix. Synopsys is shifting away from lumpy upfront licences toward recurring, consumption and royalty revenue. Amazon's licence-plus-royalty structure and OpenAI's revenue share are the templates.</p>\n\n<p>Then comes the margin bridge: 41.5% non-GAAP operating margin in fiscal 2026, 44% guided for fiscal 2027, about 50% by fiscal 2030. Free cash flow is expected to grow in the mid-20s. Up to half of it is earmarked for buybacks, including about $1 billion of repurchases in the coming months.</p>\n\n<p>Synopsys closed its roughly $35 billion Ansys acquisition in July 2025, folding thermal and multiphysics simulation into the design flow. Those first fused products aren't expected to lift EDA growth until 2027. Even after the rally, Synopsys trades near 26 times forward earnings, a discount to Cadence at about 37 times.</p>\n\n<p>The bear case writes itself. China is roughly 10% of revenue and carries export-control history that already cut it once. Ansys left behind about $35 billion of goodwill and roughly $1.6 billion a year of amortisation, which crushes GAAP margins and makes the headline P/E look broken.</p><p>Neither deal discloses revenue Synopsys can book today: the OpenAI partnership is a revenue share with zero booked value, and the Multiphysics Fusion products won't lift EDA growth until 2027. Agentic AI could compress the engineer-seat licensing model that EDA pricing rests on, though Synopsys argues its tools stay the ground-truth sign-off layer. The stock rallied about 18% since the Investor Day. The consensus mean target sits about 16% above the current price. A fiscal Q4 stumble in early December would prove the skeptics right.</p>\n\n<p>Synopsys CEO Sassine Ghazi frames the stakes simply: \"The future of semiconductor engineering requires dramatic acceleration of the chip design process without compromising PPA or first-time-right silicon.\" Whoever owns the sign-off owns the schedule.</p>\n\n<p>What we're watching: fiscal Q4 and full fiscal 2026 results, due in early December. The question is whether fiscal 2027 guidance holds and whether the first AOIP royalty dollars land on schedule. If they do, the discount to Cadence looks like an opportunity rather than a warning.</p>\n\n<p class=\"disclosure\">Disclosure: The Signal holds no position in SNPS. Positions may change. This is not financial advice.</p>"
+}
