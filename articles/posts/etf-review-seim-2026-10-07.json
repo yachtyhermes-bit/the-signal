@@ -1,0 +1,92 @@
+{
+  "slug": "etf-review-seim-2026-10-07",
+  "title": "The ETF Review: The Momentum Fund That Silently Clones the S&P",
+  "subtitle": "SEI's active momentum ETF charges 0.15%, caps big tech, holds 79 stocks, and lagged pure-play momentum rivals by double digits.",
+  "summary": "SEIM pitches an active, quantitative engine to capture market leaders without taking wild bets. But its optimizer forces the portfolio right back toward the Russell 1000. It holds 79 names, caps Nvidia at roughly 6.6%, and keeps its top ten holdings at just 36% of the book. That risk management helped during market chop, but it left SEIM trailing pure momentum rivals by nearly ten percentage points this year. Here is the full breakdown of how SEI's quantitative engine actually trades.",
+  "ticker": "SEIM",
+  "tickerName": "SEI QiM U.S. Large Cap Momentum Active ETF",
+  "tickers": [
+    "NVDA",
+    "GOOGL",
+    "MSFT",
+    "AMAT"
+  ],
+  "company": "SEI Investments Management Corporation",
+  "sector": "etfs",
+  "sentiment": "neutral",
+  "date": "2026-10-07T17:00:00Z",
+  "featured": false,
+  "premium": false,
+  "image": {
+    "src": "/img/articles/etf-review-seim-2026-10-07.jpg",
+    "fit": "cover",
+    "caption": "A pair of unbranded matte linen notebooks, a brass stylus, and a stoneware coffee cup on a dark walnut desk in morning daylight. Photo: The Signal / AI-generated.",
+    "alt": "A clean, modern wooden study desk featuring two blank notebooks, a ceramic coffee mug, and a brass stylus in soft natural window lighting, with no text or people."
+  },
+  "tags": [
+    "SEIM",
+    "NVDA",
+    "GOOGL",
+    "MSFT",
+    "AMAT",
+    "SEI Investments",
+    "ETF review",
+    "momentum investing",
+    "quantitative funds",
+    "factor ETFs",
+    "active management"
+  ],
+  "links": [
+    {
+      "label": "SEIM fund overview and official strategy page \u2192",
+      "url": "https://www.seic.com/financial-advisors/flexible-investment-solutions/etfs/sei-qim-us-large-cap-momentum-active-etf-seim"
+    },
+    {
+      "label": "SEIM summary prospectus on file with the SEC (July 31, 2026) \u2192",
+      "url": "https://seidocs.filepoint.live/assets/pdfs/Summary_Prospectuses/SEIM_Summary-Prospectus.pdf"
+    },
+    {
+      "label": "SEIM statutory prospectus and advisory fee schedule \u2192",
+      "url": "https://seidocs.filepoint.live/assets/pdfs/Prospectuses/SEI_ETF_Prospectus.pdf"
+    },
+    {
+      "label": "SEIM Statement of Additional Information (SAI) \u2192",
+      "url": "https://seidocs.filepoint.live/assets/pdfs/SAIs/SEI_ETF_SAI.pdf"
+    },
+    {
+      "label": "StockAnalysis SEIM profile, assets, and valuation metrics \u2192",
+      "url": "https://stockanalysis.com/etf/seim/"
+    },
+    {
+      "label": "StockAnalysis SEIM complete holdings table \u2192",
+      "url": "https://stockanalysis.com/etf/seim/holdings/"
+    },
+    {
+      "label": "Invesco S&P 500 Momentum ETF (SPMO) profile and performance \u2192",
+      "url": "https://stockanalysis.com/etf/spmo/"
+    },
+    {
+      "label": "iShares MSCI USA Momentum Factor ETF (MTUM) data \u2192",
+      "url": "https://stockanalysis.com/etf/mtum/"
+    },
+    {
+      "label": "Vanguard S&P 500 ETF (VOO) baseline data \u2192",
+      "url": "https://stockanalysis.com/etf/voo/"
+    }
+  ],
+  "meta": {
+    "author": "The Signal Editorial",
+    "estimatedReadTime": "12 min",
+    "editorialTags": [
+      "seim",
+      "nvda",
+      "googl",
+      "msft",
+      "amat",
+      "etf-review",
+      "momentum",
+      "factor-investing"
+    ]
+  },
+  "bodyHtml": "<p>You buy a momentum fund because you want the market's fastest runners. You want the stocks printing new highs every week, unburdened by committee meetings or polite valuation debates. If Nvidia or Alphabet is carrying the entire economy on its shoulders, you want a fund that lets them run.</p><p>That is what most investors assume they get when they buy the SEI QiM U.S. Large Cap Momentum Active ETF. The ticker spells it out.</p><p>The marketing brochure promises an advanced quantitative engine hunting relative strength. Fast, unapologetic, and aggressive.</p><p>Look under the hood, and you find something completely different. SEIM is not a runaway growth fund. It is an actively optimized index hugger in disguise. Its quantitative managers take the strongest stocks in America, then run them through a risk model that systematically strips away their punch.</p><p>The result is a portfolio that looks shockingly like a standard core index. It holds 79 companies, keeps its top ten holdings at just 36% of the fund, and owns defensive dividend stalwarts right alongside semiconductor giants. If you thought you bought a turbocharger, you actually bought a family crossover with a sport badge on the tailgate.</p><h2>What you actually own</h2><p>Here is how the fund is built today. The single largest holding is Nvidia, but it sits at roughly 6.6% of the portfolio. Alphabet follows at 5.9%. Apple takes the third spot at 3.4%.</p><p>Compare that to the benchmark S&amp;P 500, where those three names alone command an almost identical slice of the index. In a mechanical momentum fund like Invesco's SPMO, the top three positions routinely suck up more than a quarter of the entire portfolio. In SEIM, the top ten positions account for just 36% of total assets.</p><p>The rest of the book is where things get curious. Lam Research and Visa each sit above 3%. Dell Technologies holds roughly 3%. Microsoft and Micron sit near 2.8%, followed by Applied Materials at 2.6%.</p><p>Then you hit position number ten: Johnson &amp; Johnson, sitting comfortably at 2.6% of this momentum portfolio. A pharmaceutical giant with single-digit top-line growth is apparently someone's idea of blistering momentum. It is not.</p><p>That odd pairing defines the whole experience. Down the roster, Bank of New York Mellon, Northern Trust, and State Street sit right next to Fortinet and Keysight Technologies. You get genuine market winners, but they are diluted by custodial banks and consumer staples like Ross Stores and eBay.</p><p>The champions in the fund have done their job. Nvidia and Micron carried the load through the AI infrastructure buildout. Lam Research and Applied Materials gave the portfolio direct exposure to semiconductor capital spending.</p><p>The losers, however, are dead weight that an aggressive trend-follower would have cut months ago. Holdings like Ciena, Cardinal Health, and Caterpillar have drifted sideways or lagged broader tech by double digits. Because the fund balances momentum against secondary risk factors, those laggards stick around.</p><h2>How the sausage is made</h2><p>SEIM is an actively managed exchange-traded fund run by SEI Investments Management Corporation, operating out of Oaks, Pennsylvania. The day-to-day controls belong to SEI's Quantitative Investment Management team, led by portfolio managers Eugene Barbaneagra and Jianan Chen.</p><p>Unlike index funds that track a published rulebook, SEIM has no third-party index sponsor. It relies on a proprietary two-step quantitative framework. First comes the screening model; second comes the portfolio optimizer.</p><p>The screening model sweeps the large-cap universe, defined primarily by the Russell 1000 Index. It looks for companies exhibiting strong performance across multiple time horizons. It does not just look at raw price momentum. The model also checks for earnings revisions, profitability trends, and positive analyst surprises.</p><p>Then the optimizer steps in, and this is where the teeth are pulled. Instead of simply buying the top-scoring momentum names, the optimizer seeks to construct a portfolio with high momentum exposure while concurrently managing secondary factor risks. It deliberately controls for value, quality, and low volatility.</p><p>In plain English, the computer is forbidden from taking concentrated bets. If semiconductor stocks have the highest momentum in the world, the optimizer refuses to overweight them beyond strict risk boundaries. It forces the managers to buy utility-like healthcare names or cheap regional banks to keep the fund's sector weights tethered to the Russell 1000.</p><p>Replication is fully physical. SEIM owns the underlying shares directly. It executes creations and redemptions through standard ETF in-kind mechanisms. That structure preserves tax efficiency: when the quantitative model dumps a losing stock, it can offload appreciated shares through authorized participants without passing capital gains along to you.</p><p>Trading frequency is another quiet surprise. While the fund is actively managed and can trade daily, portfolio turnover ran at 81% in its most recent annual reporting period. For an active momentum strategy, that is actually restrained. Pure quantitative momentum products often churn through 100% to 200% of their holdings annually.</p><h2>The bill</h2><p>The headline cost is one of the few places where SEIM genuinely shines. The fund charges a net expense ratio of 0.15%. Cheap. That is fifteen dollars a year for every ten thousand dollars invested.</p><p>For an actively managed quantitative fund, that is remarkably cheap. It matches the fee on iShares MSCI USA Momentum Factor ETF and sits just two basis points above Invesco's SPMO at 0.13%. SEI uses a unitary management fee structure, meaning the adviser pays all ordinary operating expenses out of that 0.15% cut.</p><p>Over a ten-year holding period on a fifty-thousand-dollar balance, assuming a seven percent annual return, that fee costs you roughly twelve hundred dollars in total drag. Compare that to a typical active quantitative mutual fund charging 0.75%, which would shave off more than six thousand dollars over the same stretch.</p><p>Trading friction is modest as well. With assets under management standing at roughly 1.56 billion dollars, SEIM trades with a median bid-ask spread near 0.04%. Liquidity is supported by daily institutional volume around fifty thousand shares, meaning retail orders execute right against the tape without meaningful slippage.</p><p>Premium and discount swings against net asset value have remained tightly bounded. Over the past twelve months, the fund traded within ten basis points of its daily NAV calculation. Because SEIM holds liquid US mega-caps, market makers keep the arbitrage loop tight.</p><h2>The scoreboard</h2><p>Low fees only matter if the strategy delivers. Here, it didn't. That is where SEIM's defensive design begins to look like an expensive handicap.</p><p>Year to date through early October 2026, SEIM has gained roughly 19.5%. That sounds respectable until you line it up against its peers. Invesco's SPMO surged roughly 28.9% over the exact same period. The iShares MTUM fund posted a 29.4% gain.</p><p>Trailing by nine to ten percentage points in a raging bull market is a massive performance drag. It happens because SPMO and MTUM took huge, unapologetic bets on the mega-cap tech winners that drove the rally. SEIM's optimizer forced it to own Johnson &amp; Johnson, State Street, and Ross Stores instead.</p><p>Over a trailing one-year stretch, the pattern repeats. SEIM returned roughly 22.3%, while both SPMO and MTUM delivered near 28%. The plain-vanilla S&amp;P 500, tracked by VOO, gained roughly 17.4% over that window. SEIM beat the broad market, but it captured only a fraction of the momentum factor premium.</p><p>Stretch the tape to three years annualized, and SEIM puts up an impressive 31.1% annual return. That easily outpaces the S&amp;P 500 at 24.2%. Yet SPMO delivered over 40% annualized across that same three-year window.</p><p>Valuation reveals the nature of the compromise. SEIM trades at a trailing price-to-earnings ratio of roughly 27.7, with a dividend yield near 0.58%. It is cheaper than the pure-play momentum indices, which routinely trade north of 32 times earnings. But you are paying a near-index multiple for what has essentially become an index-plus product.</p><h2>What you're really betting on \u2014 and the bear case</h2><p>When you buy SEIM, you are not betting on unchecked momentum. You are betting that SEI's quantitative risk model knows how to dodge the cliff when market leaders finally roll over.</p><p>Pure momentum investing has a notorious flaw known as the momentum crash. When the market regime abruptly shifts, the stocks that led the market upward tend to plummet the hardest. Pure-play funds get caught holding high-beta winners at the exact moment the trap door opens, suffering brutal drawdowns before their semi-annual reconstitution can save them.</p><p>SEIM's entire thesis is that its secondary factor constraints will cushion that blow. By forcing the portfolio to hold quality and low-volatility names alongside momentum champions, the managers hope to protect your capital during violent rotations.</p><p>Now hear the bear case, because it is substantial. SEIM gives you the worst of both worlds. In bull markets, strict optimization caps your upside while pure momentum funds pull away by hundreds of basis points. You pay an active management fee and take on tracking error, yet the portfolio's factor exposure is so diluted that it struggles to justify itself.</p><p>What would prove the bears right? A market correction where SEIM falls just as hard as the S&amp;P 500 while lagging behind it during the recovery. If the fund cannot beat VOO during rallies and fails to protect during selloffs, the investor simply absorbs active risk for beta returns.</p><h2>How to use it</h2><p>SEIM does not fit the role most people imagine for a momentum ETF. If you are looking for an aggressive satellite holding to maximize exposure to market breakouts, this is not your vehicle. Look toward SPMO or concentrated momentum vehicles instead.</p><p>Where SEIM actually works is as a core equity replacement. If you want to replace an S&amp;P 500 fund with something tilted toward winners without wild volatility, SEIM fits. Its 0.15% fee makes it practical for permanent allocation.</p><p>It suits conservative wealth builders who want factor diversification but lose sleep over high portfolio concentration. It does not suit tactical traders or growth maximalists who demand pure, unadulterated exposure to the fastest-moving stocks in the market.</p><h2>The verdict</h2><p>SEIM is a capable, highly disciplined quantitative fund with an institutional pedigree and an exceptionally fair fee. But know what you own. This is momentum wrapped in bubble wrap.</p><p>What to watch next. Keep an eye on how the fund navigates upcoming mega-cap earnings reports. If semiconductor leaders continue to gap higher while defensive sectors stall, watch whether SEIM's performance gap against SPMO widens even further.</p><p class=\"disclosure\">Analysis, not advice. We may own these names and we may sell them at any time.</p>"
+}
