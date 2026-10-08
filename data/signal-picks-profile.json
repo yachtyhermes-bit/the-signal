@@ -1,0 +1,155 @@
+{
+  "version": 1,
+  "updated": "2026-10-06",
+  "derived_from": "the 15 names on the Signal Scorecard + Signal Highlights panels (NVDA sits in both), analysed 2026-10-06",
+  "core_thesis": "AI infrastructure is the spine of the book: power, compute, memory, networking, cloud. Every other slot must be either AI-leveraged or a defensible niche leader. Picks-and-shovels beat AI-software narratives.",
+  "clusters": [
+    {
+      "name": "ai-power",
+      "label": "AI Power & Energy",
+      "target": 3,
+      "tickers": [
+        "CEG",
+        "VST",
+        "GEV",
+        "ETR",
+        "NRG",
+        "TLN"
+      ]
+    },
+    {
+      "name": "semis",
+      "label": "Semiconductors & Networking",
+      "target": 3,
+      "tickers": [
+        "NVDA",
+        "MU",
+        "AVGO",
+        "AMD",
+        "MRVL",
+        "AMAT",
+        "ANET"
+      ]
+    },
+    {
+      "name": "defense",
+      "label": "Defense & Autonomy",
+      "target": 3,
+      "tickers": [
+        "AVAV",
+        "KTOS",
+        "AXON",
+        "RTX",
+        "RKLB",
+        "SPCX",
+        "SPACEX"
+      ]
+    },
+    {
+      "name": "megacap",
+      "label": "Mega-Cap AI Platforms",
+      "target": 3,
+      "tickers": [
+        "META",
+        "MSFT",
+        "GOOGL",
+        "AMZN",
+        "NFLX",
+        "TSLA"
+      ]
+    },
+    {
+      "name": "ai-cloud",
+      "label": "AI Cloud & Data Centers",
+      "target": 1,
+      "tickers": [
+        "CRWV"
+      ]
+    },
+    {
+      "name": "software",
+      "label": "AI Software & Cyber",
+      "target": 2,
+      "tickers": [
+        "ZS",
+        "RBRK",
+        "PLTR"
+      ]
+    },
+    {
+      "name": "fintech",
+      "label": "Fintech & Consumer Platforms",
+      "target": 1,
+      "tickers": [
+        "SOFI"
+      ]
+    }
+  ],
+  "hard_rules": [
+    "Incumbents are grandfathered: a name already on a panel may stay even if it has no curated moat file (GEV is the live example).",
+    "New candidates must have a curated moat file in data/moat-*.json \u2014 we only promote names we have actually rated.",
+    "Real revenue only. No pre-revenue names. Unprofitable is allowed when it is hyperscale or strategic (CRWV precedent: -$1.93B net income, still on the panel).",
+    "Revenue floor: roughly $300M TTM. No micro-caps.",
+    "Analyst coverage required, consensus Buy or better.",
+    "Diversity is a stated goal: no cluster may exceed its target by more than 1, so the panels cannot collapse into five semiconductor names."
+  ],
+  "score_weights": {
+    "moat": {
+      "max": 25,
+      "note": "Wide=25, Narrow=16, None=6; from the curated moat-*.json rating. Absent file = 10 for incumbents, disqualified for new names."
+    },
+    "theme_fit": {
+      "max": 20,
+      "note": "20 if the name sits in a cluster at or under target, 10 if the cluster is already full, 0 if it is unknown to every cluster."
+    },
+    "growth": {
+      "max": 20,
+      "note": "min(rev_growth_yoy * 0.5, 20); negative growth scores 0 and is a red flag."
+    },
+    "profitability": {
+      "max": 15,
+      "note": "15 if net income positive, 6 if negative but revenue > $1B (hyperscale tolerance), 0 otherwise."
+    },
+    "valuation": {
+      "max": 10,
+      "note": "10 if P/E under 25, 6 under 40, 3 under 80, 0 above or N/A."
+    },
+    "coverage": {
+      "max": 10,
+      "note": "min(buy_count * 0.5, 10) from the analyst breakdown; 0 sells weighted as a plus."
+    }
+  },
+  "churn_rule": {
+    "summary": "A rolling rotation. Each bi-weekly cycle targets three refreshed names, not a token one.",
+    "target_swaps": 3,
+    "max_swaps_per_cycle": 3,
+    "min_uplift": 3,
+    "margin": 8,
+    "floor": 55,
+    "swap_when": [
+      "excluded by policy (see exclusions) \u2014 always removed",
+      "profile score falls below the floor (55) and a challenger beats it by the margin (8)",
+      "otherwise, up to the per-cycle target: the weakest incumbents are replaced by the strongest eligible challengers whenever the challenger outscores them by at least min_uplift (3)"
+    ],
+    "note": "The cycle target is 3 swaps. If fewer than 3 candidates clear min_uplift the curator stops early and reports a smaller diff \u2014 quality still outranks hitting the number."
+  },
+  "panels": {
+    "scorecard": {
+      "slots": 8,
+      "order": "highest profile score first",
+      "file": "data/scorecard-tickers.json"
+    },
+    "highlights": {
+      "slots": 8,
+      "order": "detail-card panel; prefer names with the largest analyst coverage and a clean fair-value upside",
+      "file": "data/signal-highlights-tickers.json"
+    }
+  },
+  "review_gate": "A proposal is never applied automatically. The bi-weekly job delivers the proposal to Telegram; a human approves before tickers are written and the homepage is rebuilt. Nothing on the homepage changes without that approval.",
+  "exclusions": [
+    {
+      "ticker": "CRWV",
+      "reason": "Standing instruction: CRWV has no strong moat. Taken off the panels 2026-10-06; may return only with a corrected moat rating and a fresh justification."
+    }
+  ]
+}
