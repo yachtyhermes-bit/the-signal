@@ -120,6 +120,15 @@ def main():
         cost = u.get('prompt_tokens', 0) / 1e6 * pin + u.get('completion_tokens', 0) / 1e6 * pout
         out_path.write_text(text.strip() + '\n')
         words = len(text.split())
+        # log spend: this call bypasses Hermes session accounting, so the budget guard reads it here
+        try:
+            import time as _t
+            with open(ROOT / 'data' / 'writer-spend.jsonl', 'a') as lf:
+                lf.write(json.dumps({'ts': _t.time(), 'model': model, 'words': words,
+                                     'in': u.get('prompt_tokens', 0), 'out': u.get('completion_tokens', 0),
+                                     'cost': round(cost, 6)}) + '\n')
+        except Exception:
+            pass
         print(f'  [writer] {model}: {words} words, '
               f'{u.get("prompt_tokens", 0)} in / {u.get("completion_tokens", 0)} out '
               f'= ${cost:.4f}', file=sys.stderr)
