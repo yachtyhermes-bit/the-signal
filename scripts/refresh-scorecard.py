@@ -9,11 +9,19 @@ except ImportError:
     import yfinance as yf
 
 TICKERS = ['GEV', 'META', 'CEG', 'MU', 'NFLX', 'VST', 'NVDA', 'AVAV']
+# Bi-weekly curation overrides this list (scripts/curate-signal-picks.py -> data/scorecard-tickers.json)
+_TICKER_FILE = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'data', 'scorecard-tickers.json')
+if os.path.exists(_TICKER_FILE):
+    with open(_TICKER_FILE) as f:
+        TICKERS = [t.strip().upper() for t in json.load(f)]
+    print(f'  [TICKERS] using curated panel: {TICKERS}')
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'data')
 os.makedirs(DATA_DIR, exist_ok=True)
 
 # Company metadata
 COMPANIES = {
+    'GOOGL': {'name': 'Alphabet Inc.', 'sector': 'Internet Content', 'logo': ''},
+    'PLTR': {'name': 'Palantir Technologies Inc.', 'sector': 'AI Software', 'logo': ''},
     'GEV': {'name': 'GE Vernova', 'sector': 'AI Power', 'logo': ''},
     'META': {'name': 'Meta Platforms', 'sector': 'Social Media', 'logo': ''},
     'CEG': {'name': 'Constellation Energy', 'sector': 'AI Power', 'logo': ''},
@@ -159,14 +167,14 @@ def build_scorecard():
             
             entry = {
                 'ticker': ticker,
-                'name': COMPANIES[ticker]['name'],
-                'sector': COMPANIES[ticker]['sector'],
+                'name': (COMPANIES.get(ticker) or {}).get('name') or ticker,
+                'sector': (COMPANIES.get(ticker) or {}).get('sector') or 'Equity',
                 'signal': signal,
                 'score': score,
                 'color': color,
                 'drivers': drivers,
                 'upside': fmt_pct(upside),
-                'logo': COMPANIES[ticker]['logo'],
+                'logo': (COMPANIES.get(ticker) or {}).get('logo') or '',
                 'metrics': {
                     'revenue': fmt_billions(revenue),
                     'growth': fmt_pct(rev_growth_yoy),

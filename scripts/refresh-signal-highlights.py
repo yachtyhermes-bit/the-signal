@@ -14,7 +14,17 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(ROOT, 'data')
 os.makedirs(DATA_DIR, exist_ok=True)
 
+# Cached fundamentals, used to derive metadata for names without a hand annotation
+_FIN_PATH = os.path.join(DATA_DIR, 'financials.json')
+_FIN = json.load(open(_FIN_PATH)) if os.path.exists(_FIN_PATH) else {}
+
 TICKERS = ['KTOS', 'CRWV', 'AXON', 'MSFT', 'SOFI', 'ZS', 'NVDA', 'AVGO']
+# Bi-weekly curation overrides this list (scripts/curate-signal-picks.py -> data/signal-highlights-tickers.json)
+_TICKER_FILE = os.path.join(ROOT, 'data', 'signal-highlights-tickers.json')
+if os.path.exists(_TICKER_FILE):
+    with open(_TICKER_FILE) as f:
+        TICKERS = [t.strip().upper() for t in json.load(f)]
+    print(f'  [TICKERS] using curated panel: {TICKERS}')
 
 # Stable metadata (names, fair value methodology, analyst breakdowns)
 META = {
@@ -64,7 +74,20 @@ def fetch_one(ticker):
     pe = info.get('trailingPE')
     ps = info.get('priceToSalesTrailing12Months')
 
-    meta = META[ticker]
+    meta = META.get(ticker)
+    if meta is None:
+        # Not hand-annotated: derive from cached fundamentals so newly curated panel names work.
+        fin = _FIN.get(ticker, {})
+        cons = fin.get('consensus') or {}
+        buys = (cons.get('strongBuy') or 0) + (cons.get('buy') or 0)
+        holds = cons.get('hold') or 0
+        sells = (cons.get('sell') or 0) + (cons.get('strongSell') or 0)
+        meta = {
+            'name': ((fin.get('company') or {}).get('name')) or ticker,
+            'analystConsensus': 'Strong Buy' if buys >= 20 else 'Buy' if buys >= 8 else 'Hold',
+            'analystBuys': buys, 'analystHolds': holds, 'analystSells': sells,
+        }
+        print(f'  [meta] {ticker}: derived from cached fundamentals ({meta["analystConsensus"]}, {buys} buys)')
     fallback = LAST_KNOWN.get(ticker, {})
 
     current_price = round(float(price), 2) if price else fallback.get('currentPrice', 0)
