@@ -182,28 +182,28 @@
     }
   },
   {
-    "ticker": "ZS",
-    "name": "Zscaler Inc.",
-    "currentPrice": 213.55,
-    "changePercent": 0.61,
-    "changeDirection": "up",
+    "ticker": "RKLB",
+    "name": "Rocket Lab Corporation",
+    "currentPrice": 71.92,
+    "changePercent": -4.18,
+    "changeDirection": "down",
     "fairValue": {
-      "status": "Fairly Valued",
-      "price": 211.04,
-      "upside": "-1.2%"
+      "status": "Undervalued",
+      "price": 109.15,
+      "upside": "+51.8%"
     },
     "earnings": {
-      "revTtm": "$3.35B",
-      "revGrowth": "+24.9%",
-      "netIncome": "$-63.18M",
+      "revTtm": "$769.15M",
+      "revGrowth": "+62.0%",
+      "netIncome": "$-165.46M",
       "peRatio": "N/A",
-      "psRatio": "10.4x"
+      "psRatio": "59.8x"
     },
     "analyst": {
-      "consensus": "Strong Buy",
-      "target": 211.04,
-      "buys": 24,
-      "holds": 6,
+      "consensus": "Buy",
+      "target": 109.15,
+      "buys": 17,
+      "holds": 4,
       "sells": 0
     }
   }

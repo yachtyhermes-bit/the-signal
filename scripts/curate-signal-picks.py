@@ -195,6 +195,27 @@ def main():
                     'why': (f"excluded by policy ({EXCLUDED[inc['ticker']]})" if excluded
                             else f"{c['score']} vs {inc['score']} — incumbent under floor {CHURN['floor']}")})
 
+    # pass 1.5 — manual inclusions: owner directives, placed outside the churn budget
+    manual = {e['ticker'].upper(): e for e in PROFILE.get('manual_inclusions', [])}
+    for t, entry in manual.items():
+        if t in {r['ticker'] for p in panels.values() for r in p['chosen']}:
+            continue
+        panel_name = entry.get('panel') or 'highlights'
+        p = panels[panel_name]
+        newcomer = BY_TICKER.get(t) or placeholder(t)
+        evictable = [r for r in p['chosen'] if not r.get('no_data')
+                     and r['ticker'] not in EXCLUDED and r['ticker'] not in manual]
+        if evictable:
+            weakest = min(evictable, key=lambda r: r['score'])
+            p['chosen'][p['chosen'].index(weakest)] = newcomer
+            p['swaps'].append({'panel': panel_name, 'in': t, 'out': weakest['ticker'],
+                               'why': f"owner's call ({entry.get('reason', 'manual inclusion')})"})
+        else:
+            p['chosen'].append(newcomer)
+            p['swaps'].append({'panel': panel_name, 'in': t, 'out': '-',
+                               'why': "owner's call, panel had no evictable incumbent"})
+        used.add(t)
+
     # pass 2 — discretionary rotation toward the per-cycle target
     for name, p in panels.items():
         while budget['left'] > 0:

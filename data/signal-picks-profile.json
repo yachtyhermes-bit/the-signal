@@ -151,5 +151,13 @@
       "ticker": "CRWV",
       "reason": "Standing instruction: CRWV has no strong moat. Taken off the panels 2026-10-06; may return only with a corrected moat rating and a fresh justification."
     }
+  ],
+  "manual_inclusions": [
+    {
+      "ticker": "RKLB",
+      "panel": "highlights",
+      "added": "2026-10-08",
+      "reason": "Owner's call: prefers Rocket Lab over CoreWeave. Placed on the highlights panel, which is where CRWV sat."
+    }
   ]
 }
