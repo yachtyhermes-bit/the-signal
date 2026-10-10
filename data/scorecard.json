@@ -4,21 +4,21 @@
     "name": "Micron Technology, Inc.",
     "sector": "Semiconductors",
     "signal": "Strong Bullish",
-    "score": 94,
+    "score": 95,
     "color": "#10b981",
     "drivers": [
       "Revenue up +48.9% YoY to $133.19B",
-      "P/E at 14.1x \u2014 attractively valued",
-      "Target upside +42.5%"
+      "P/E at 13.8x \u2014 attractively valued",
+      "Target upside +50.6%"
     ],
-    "upside": "+42.5%",
+    "upside": "+50.6%",
     "logo": "",
     "metrics": {
       "revenue": "$133.19B",
       "growth": "+48.9%",
       "netIncome": "$84.97B",
-      "pe": "14.1x",
-      "ps": "9.2x"
+      "pe": "13.8x",
+      "ps": "8.7x"
     }
   },
   {
@@ -26,21 +26,21 @@
     "name": "NVIDIA Corporation",
     "sector": "Semiconductors",
     "signal": "Strong Bullish",
-    "score": 93,
+    "score": 94,
     "color": "#10b981",
     "drivers": [
       "Revenue up +65.5% YoY to $302.97B",
-      "Target upside +32.6%",
-      "Net income $192.88B"
+      "P/E at 29.0x \u2014 attractively valued",
+      "Target upside +37.4%"
     ],
-    "upside": "+32.6%",
+    "upside": "+37.4%",
     "logo": "",
     "metrics": {
       "revenue": "$302.97B",
       "growth": "+65.5%",
       "netIncome": "$192.88B",
-      "pe": "30.0x",
-      "ps": "18.9x"
+      "pe": "29.0x",
+      "ps": "18.3x"
     }
   },
   {
@@ -52,16 +52,16 @@
     "color": "#10b981",
     "drivers": [
       "Revenue up +15.1% YoY to $445.87B",
-      "P/E at 17.4x \u2014 attractively valued",
-      "Target upside +22.7%"
+      "P/E at 17.6x \u2014 attractively valued",
+      "Target upside +22.3%"
     ],
-    "upside": "+22.7%",
+    "upside": "+22.3%",
     "logo": "",
     "metrics": {
       "revenue": "$445.87B",
       "growth": "+15.1%",
       "netIncome": "$244.12B",
-      "pe": "17.4x",
+      "pe": "17.6x",
       "ps": "9.6x"
     }
   },
@@ -74,39 +74,39 @@
     "color": "#84cc16",
     "drivers": [
       "Revenue up +22.2% YoY to $228.25B",
-      "P/E at 27.2x \u2014 attractively valued",
-      "Moderate upside +10.9%"
+      "P/E at 27.1x \u2014 attractively valued",
+      "Moderate upside +11.3%"
     ],
-    "upside": "+10.9%",
+    "upside": "+11.3%",
     "logo": "",
     "metrics": {
       "revenue": "$228.25B",
       "growth": "+22.2%",
       "netIncome": "$68.10B",
-      "pe": "27.2x",
-      "ps": "8.1x"
+      "pe": "27.1x",
+      "ps": "8.0x"
     }
   },
   {
     "ticker": "PLTR",
     "name": "Palantir Technologies Inc.",
     "sector": "AI Software",
-    "signal": "Strong Bullish",
-    "score": 78,
-    "color": "#10b981",
+    "signal": "Bullish",
+    "score": 77,
+    "color": "#84cc16",
     "drivers": [
       "Revenue up +56.2% YoY to $6.16B",
-      "Premium valuation at 167x P/E",
+      "Premium valuation at 180x P/E",
       "Net income $3.02B"
     ],
-    "upside": "+5.6%",
+    "upside": "-1.9%",
     "logo": "",
     "metrics": {
       "revenue": "$6.16B",
       "growth": "+56.2%",
       "netIncome": "$3.02B",
-      "pe": "167.3x",
-      "ps": "75.8x"
+      "pe": "180.2x",
+      "ps": "81.6x"
     }
   },
   {
@@ -118,16 +118,16 @@
     "color": "#84cc16",
     "drivers": [
       "Revenue up +8.3% YoY to $31.27B",
-      "P/E at 29.3x \u2014 attractively valued",
-      "Moderate upside +15.3%"
+      "P/E at 29.1x \u2014 attractively valued",
+      "Moderate upside +15.9%"
     ],
-    "upside": "+15.3%",
+    "upside": "+15.9%",
     "logo": "",
     "metrics": {
       "revenue": "$31.27B",
       "growth": "+8.3%",
       "netIncome": "$3.46B",
-      "pe": "29.3x",
+      "pe": "29.1x",
       "ps": "3.4x"
     }
   },
@@ -140,17 +140,17 @@
     "color": "#10b981",
     "drivers": [
       "Revenue up +15.9% YoY to $48.37B",
-      "P/E at 21.6x \u2014 attractively valued",
-      "Target upside +29.1%"
+      "P/E at 22.1x \u2014 attractively valued",
+      "Target upside +28.0%"
     ],
-    "upside": "+29.1%",
+    "upside": "+28.0%",
     "logo": "",
     "metrics": {
       "revenue": "$48.37B",
       "growth": "+15.9%",
       "netIncome": "$13.65B",
-      "pe": "21.6x",
-      "ps": "6.0x"
+      "pe": "22.1x",
+      "ps": "6.1x"
     }
   },
   {
@@ -162,17 +162,17 @@
     "color": "#84cc16",
     "drivers": [
       "Revenue up +9.0% YoY to $41.37B",
-      "P/E at 28.6x \u2014 attractively valued",
-      "Target upside +25.4%"
+      "P/E at 28.8x \u2014 attractively valued",
+      "Target upside +24.4%"
     ],
-    "upside": "+25.4%",
+    "upside": "+24.4%",
     "logo": "",
     "metrics": {
       "revenue": "$41.37B",
       "growth": "+9.0%",
       "netIncome": "$9.53B",
-      "pe": "28.6x",
-      "ps": "6.4x"
+      "pe": "28.8x",
+      "ps": "6.5x"
     }
   }
 ]

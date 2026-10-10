@@ -115,6 +115,8 @@ def voice_metrics(title, body, sents):
                 slop_hits=[t for t, _ in slop_hits])
 
 def strip_html(s):
+    # Remove stats-card block before stripping tags so table contents don't form a 50-word sentence
+    s = re.sub(r'<div class="stats-card">.*?</div>\s*</div>', ' ', s, flags=re.S)
     s = re.sub(r"<[^>]+>", " ", s)
     s = s.replace("&amp;", "&").replace("&#39;", "'").replace("&quot;", '"')
     return re.sub(r"\s+", " ", s).strip()
