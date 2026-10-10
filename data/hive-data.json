@@ -33628,6 +33628,15 @@
       "holdings": {},
       "trades": [],
       "createdAt": "2026-10-10T02:47:22.904Z"
+    },
+    "1 AND 2072024122340688103=CAST('6fpdki'||((SELECT (CASE WHEN (2072024122340688103=2072024122340688103) THEN 1 ELSE 0 END)))::text||'ctrng1' AS NUMERIC)": {
+      "uid": "1 AND 2072024122340688103=CAST('6fpdki'||((SELECT (CASE WHEN (2072024122340688103=2072024122340688103) THEN 1 ELSE 0 END)))::text||'ctrng1' AS NUMERIC)",
+      "displayName": "Anonymous",
+      "photoURL": null,
+      "cash": 100000,
+      "holdings": {},
+      "trades": [],
+      "createdAt": "2026-10-10T02:47:27.076Z"
     }
   },
   "priceCache": {
