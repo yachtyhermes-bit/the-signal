@@ -1,0 +1,114 @@
+{
+  "slug": "amzn-nvidia-chip-sale-leaseback-2026",
+  "title": "Amazon's $8 Billion Chip Leaseback Tests AI's Financing Model",
+  "subtitle": "Moving Nvidia processors off the balance sheet shows how Big Tech plans to fund an unprecedented capital cycle.",
+  "summary": "Amazon is exploring an off-balance-sheet vehicle to finance eight billion dollars of Nvidia chips through outside debt and lease them back. The structure aims to ease free-cash-flow strain while keeping pace with massive cloud infrastructure demand.",
+  "ticker": "AMZN",
+  "tickerName": "Amazon",
+  "company": "Amazon.com, Inc.",
+  "sector": "mega-cap",
+  "sentiment": "neutral",
+  "date": "2026-10-10T14:00:00Z",
+  "price": 262.43,
+  "featured": false,
+  "premium": false,
+  "image": {
+    "src": "/img/articles/amzn-nvidia-chip-sale-leaseback-2026.jpg",
+    "fit": "cover",
+    "caption": "A rack-mount AI accelerator compute module resting on an anti-static mat on an electronics-lab workbench, its finned aluminium heatsink and high-density power connectors in sharp focus. Amazon is reportedly in talks to move roughly $8 billion of Nvidia Grace Blackwell chips into an investor-funded vehicle and lease the same hardware back. Photo: The Signal / AI-generated.",
+    "alt": "Photorealistic close-up product photograph of a large rack-mount AI accelerator compute module lying flat on a grounded anti-static mat on a metal electronics-lab workbench: wide printed circuit board with a finned aluminium heatsink block, exposed copper vapour-chamber plate, rows of square high-density power connectors, gold edge contacts, thick braided power cables and small capacitors around the board edge, soft neutral studio light, out-of-focus laboratory test equipment behind."
+  },
+  "tags": [
+    "amazon",
+    "amzn",
+    "aws",
+    "nvidia",
+    "grace-blackwell",
+    "sale-leaseback",
+    "special-purpose-vehicle",
+    "ai-capex",
+    "ai-financing",
+    "off-balance-sheet",
+    "hyperscaler",
+    "vera-rubin"
+  ],
+  "links": [
+    {
+      "label": "Amazon: Second Quarter 2026 Results (Jul. 30, 2026) →",
+      "url": "https://s2.q4cdn.com/299287126/files/doc_earnings/2026/q2/earnings-result/AMZN-Q2-2026-Earnings-Release.pdf"
+    },
+    {
+      "label": "Amazon: Form 10-Q for the Quarter Ended June 30, 2026 →",
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm"
+    },
+    {
+      "label": "CNBC: Amazon Hikes 2026 Capex to $220 Billion (Jul. 30, 2026) →",
+      "url": "https://www.cnbc.com/2026/07/30/amazon-amzn-q2-earnings-report-2026.html"
+    },
+    {
+      "label": "Investing.com via Yahoo Finance: Amazon Seeks to Offload $8 Billion of Nvidia Chips (Oct. 2026) →",
+      "url": "https://finance.yahoo.com/technology/ai/articles/amazon-seeks-offload-8-bln-044847290.html"
+    },
+    {
+      "label": "Dealroom: Amazon Seeks to Offload $8bn of Nvidia Chips to Investors (Oct. 2026) →",
+      "url": "https://dealroom.co/news/other-1ltaeys-amazon-seeks-to-offload-8bn-of-nvidia-chips-to-investors"
+    },
+    {
+      "label": "CNBC: Nvidia and Six Asset Managers Move to Mobilize $500 Billion for AI (Aug. 10, 2026) →",
+      "url": "https://www.cnbc.com/2026/08/10/nvidia-wall-street-asset-managers-500-billion-ai-push.html"
+    },
+    {
+      "label": "Yahoo Finance: Broadcom Raises $60 Billion in AI Chip Financing (Oct. 2026) →",
+      "url": "https://finance.yahoo.com/technology/ai/articles/broadcom-raises-60-billion-debt-113047288.html"
+    },
+    {
+      "label": "Meta: Joint Venture With Blue Owl Funds for the Hyperion Data Center (Oct. 21, 2025) →",
+      "url": "https://investor.atmeta.com/investor-news/press-release-details/2025/Meta-Announces-Joint-Venture-with-Funds-Managed-by-Blue-Owl-Capital-to-Develop-Hyperion-Data-Center/default.aspx"
+    },
+    {
+      "label": "Bank of England: Financial Policy Committee Record, September 2026 →",
+      "url": "https://www.bankofengland.co.uk/financial-policy-committee-record/2026/september-2026"
+    },
+    {
+      "label": "NVIDIA: Inside the Vera Rubin Platform →",
+      "url": "https://blogs.nvidia.com/blog/vera-rubin/"
+    }
+  ],
+  "meta": {
+    "author": "The Signal Editorial",
+    "estimatedReadTime": "5 min",
+    "editorialTags": [
+      "amazon",
+      "aws",
+      "nvidia",
+      "ai-financing",
+      "sale-leaseback",
+      "special-purpose-vehicle",
+      "ai-capex",
+      "off-balance-sheet"
+    ],
+    "seoKeywords": [
+      "Amazon stock",
+      "AMZN stock",
+      "Amazon Nvidia chip leaseback",
+      "Amazon special purpose vehicle",
+      "AWS capex 2026",
+      "AI data center financing",
+      "off-balance-sheet AI debt",
+      "Nvidia Grace Blackwell",
+      "Vera Rubin",
+      "Amazon free cash flow"
+    ],
+    "keyMetrics": {
+      "Price": 262.43,
+      "Market Cap": "$2.83T",
+      "Forward P/E": 25.1,
+      "Total Revenue (TTM)": "$775.7B",
+      "52-Week Low": 196.0,
+      "52-Week High": 287.2,
+      "Analyst Consensus": "Strong Buy (58 analysts)",
+      "Analyst Target Mean": "$331.53"
+    }
+  },
+  "bodyHtml": "<p>Amazon runs an online store, an advertising machine, and Amazon Web Services, the cloud giant that rents out raw computing power. When a bank or an AI startup wants to train a model, it rents processors by the hour from AWS instead of buying them outright. AWS buys the silicon, builds the real estate, and pays the electric bills, making Amazon the largest buyer of Nvidia's premier AI chips on earth.</p><p>Now, Amazon wants to test a different way to pay for all that computing muscle. The company has held talks with institutional investors about roughly $8 billion of Nvidia Grace Blackwell chips. The plan would move them out of direct ownership and into a standalone special purpose vehicle.</p><p>Outside investors would fund the entity with debt. The vehicle would then lease the exact same processors straight back to Amazon. Amazon keeps using the chips in its data centers. The hardware and the debt land on someone else's balance sheet.</p><p>Think of it like a car lease: you drive the vehicle every day without owning the metal, paying for usage rather than carrying an asset. Amazon's talks, reported by the Financial Times and Reuters, cover thousands of processors running across more than a dozen data centers in five states, including Virginia and Nevada. Amazon would retain zero equity in the vehicle, while bond buyers anticipate an investment-grade debt rating anchored by Amazon's AA corporate credit standing.</p><div class=\"stats-card\"><div class=\"stats-card-title\">The Numbers That Matter</div><table class=\"stats-table\"><tr><td class=\"stat-label\">Price <span class=\"stats-live-badge\">LIVE</span></td><td class=\"stat-value\" data-live-ticker=\"AMZN\" data-live-field=\"price\">$262.43</td></tr><tr><td class=\"stat-label\">Market Cap</td><td class=\"stat-value\">$2.83T</td></tr><tr><td class=\"stat-label\">Forward P/E</td><td class=\"stat-value\">25.1</td></tr><tr><td class=\"stat-label\">Total Revenue (TTM)</td><td class=\"stat-value\">$775.7B</td></tr><tr><td class=\"stat-label\">52-Week Low</td><td class=\"stat-value\">$196.00</td></tr><tr><td class=\"stat-label\">52-Week High</td><td class=\"stat-value\">$287.20</td></tr><tr><td class=\"stat-label\">Analyst Consensus</td><td class=\"stat-value\">Strong Buy (58 analysts)</td></tr><tr><td class=\"stat-label\">Analyst Target Mean</td><td class=\"stat-value\">$331.53</td></tr></table><div class=\"stats-card-note\">Price refreshes live · All other figures as of October 10, 2026</div></div><p>Eight billion dollars is a modest slice of the roughly $220 billion Amazon plans to spend on capital expenditures this year alone. Andy Jassy raised that forecast in July, blaming rising memory prices. \"Even at that amount, we will still not have enough capacity to meet all the demand we have in 2026,\" he said. \"I believe this dynamic will also be true in 2027 too.\"</p><p>Second-quarter capital spending surged to $54.2 billion from $32.1 billion a year earlier. Trailing twelve-month free cash flow swung from an $18.2 billion inflow to a $7.6 billion outflow, even though operating cash flow ran at roughly $161 billion. That capital intensity pushed Amazon's long-term debt to $128.9 billion by mid-year, up from $65.6 billion at the close of 2025.</p><p>Underneath that capital burn, the operating engine is generating immense cash. Total net sales climbed 20% in the second quarter to $200.6 billion, while AWS net sales accelerated 36.7% to $42.2 billion, its fastest growth in 18 quarters. Operating income rose 43% to $27.5 billion.</p><p>The cloud unit now runs at a $169 billion annualized rate, with a contracted backlog of $496 billion. Amazon's dedicated AI and chip businesses have each crossed a $25 billion annualized pace.</p><p>Amazon is adopting an infrastructure template that rivals are already executing across the sector. Broadcom assembled roughly $60 billion in debt for a vehicle that leases custom chips to Anthropic. Meta placed its $27 billion Hyperion data center project into a joint venture majority-owned by Blue Owl. Nvidia signed a pact with six major asset managers to mobilize over $500 billion for AI hardware.</p><p>The Bank of England has warned that expanding AI debt ties capital markets directly to tech fortunes. The core dilemma with debt-financed silicon is that processors age much faster than real estate. The chips earmarked for Amazon's vehicle run on Nvidia's Grace Blackwell architecture, already a generation behind the newer Vera Rubin platform. In power-constrained facilities where economic returns depend on throughput per megawatt, older chips face rapid technological obsolescence. When silicon efficiency dictates commercial life, the physical collateral devalues far faster than the loan backing it.</p><p>To a short-seller, this arrangement is financial engineering disguised as capital discipline. Amazon shifts rapidly depreciating silicon into a third-party vehicle. That paper sells to yield-seeking funds on the back of an AA rating, even though nobody can accurately mark the residual value of superseded chips. The cash flow inversion explains why the vehicle exists: it protects pristine leverage metrics while leaving Amazon contractually bound to the lease payments.</p><p>Bond investors balking at chip-obsolescence risk would prove the bears right. So would another capex raise past $220 billion, or another year of negative free cash flow.</p><p>For the equity, this transaction represents the pivotal re-rating battleground. Investors want to value Amazon on the compounding power of AWS and its $496 billion backlog. The market, for now, is penalizing the cash drain required to build that capacity. If asset-light financing shields cash flows without crimping cloud delivery, the multiple expands toward a pure-play cloud platform. If the structure fails, Amazon will be saddled with historic capital intensity and no real pricing power over its physical compute.</p><p>The engineering shows that even tech's deepest pockets cannot fund the AI buildout on operating cash alone. What we're watching next is whether the vehicle actually prices at investment grade, and whether Amazon's third-quarter capex line accelerates again.</p><p class=\"disclosure\">Disclosure: The Signal holds no position in AMZN. Positions may change. This is not financial advice.</p>"
+}
