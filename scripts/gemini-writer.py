@@ -53,15 +53,17 @@ TITLE: <one institutional line, subject + event + angle>
 SUBTITLE: <one line, the specific hook>
 SUMMARY: <two sentences, plain, no price levels>
 ---BODY---
-<the article body in Markdown, using ## for section headings>
+<the article body as plain paragraphs>
 
 Start the body with the opening paragraphs — do not repeat the title as a heading. Never invent a
 number, a quotation, or a source: everything must come from the brief. If the brief lacks something
 the style asks for, write around it rather than inventing it.
 
-LENGTH: aim for 1,500-1,900 words. Break the body into 4-7 sections using ## headings (short, plain,
-no numbering). Always include a dedicated bear-case section. Ending on a plain, declarative line —
-no summary paragraph, no call to action.
+LENGTH AND STRUCTURE: the brief OVERRIDES this paragraph. Follow its word count and its structural
+instructions exactly. If the brief specifies no headings, write flowing paragraphs with NO headings
+of any kind. Use ## section headings ONLY when the brief explicitly asks for them (the weekly
+long-form editions do; the daily editions do not). Whichever the length, always include a dedicated
+bear-case passage. End on a plain, declarative line — no summary paragraph, no call to action.
 
 ---
 
