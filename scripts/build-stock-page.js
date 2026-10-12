@@ -319,7 +319,7 @@ function buildStockPage(symbol) {
       <section class="stock-section signal-report-section">
         <div class="signal-report-header">
           <div class="signal-report-title-row">
-            <img src="https://readthesignal.net/img/logo-original.png" alt="The Signal" class="signal-report-logo" />
+            <img src="https://readthesignal.net/img/logo-hex.jpg" alt="The Signal" class="signal-report-logo" />
             <h2 class="stock-section-title">The Signal Report</h2>
             <span class="signal-report-badge">PREMIUM</span>
           </div>
