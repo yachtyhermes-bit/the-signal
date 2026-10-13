@@ -1,0 +1,137 @@
+{
+  "slug": "msft-maia-300-microsoft-custom-silicon-gigawatts-2026",
+  "title": "Microsoft Moves to Replace Nvidia Silicon Across Its Internal AI Fleet",
+  "subtitle": "The Maia 300 accelerator targets inference costs as Microsoft's annual capital spending nears $116 billion.",
+  "summary": "Microsoft revealed plans to deploy its custom Maia 300 silicon at multi-gigawatt scale to power internal AI workloads. The transition shifts high-margin inference demand away from merchant chipmakers and onto proprietary infrastructure.",
+  "ticker": "MSFT",
+  "tickerName": "Microsoft",
+  "company": "Microsoft Corporation",
+  "sector": "mega-cap",
+  "sentiment": "neutral",
+  "date": "2026-10-13T16:00:00Z",
+  "price": 541.15,
+  "featured": false,
+  "premium": false,
+  "tags": [
+    "MSFT",
+    "Microsoft",
+    "Maia-300",
+    "Maia-200",
+    "Azure",
+    "custom-silicon",
+    "AI-inference",
+    "Nvidia",
+    "AMD",
+    "TSMC",
+    "N2P",
+    "HBM4",
+    "data-centers",
+    "AI-capex",
+    "hyperscalers",
+    "Copilot"
+  ],
+  "links": [
+    {
+      "label": "Microsoft Official Blog: Scott Guthrie, EVP Cloud + AI — 'Microsoft to expand Azure Maia system to multi-gigawatt deployments', Maia 300 coming in 2027, 40% more tokens per megawatt, 96 accelerators within a 167-kilowatt rack (Oct. 12, 2026) →",
+      "url": "https://blogs.microsoft.com/blog/2026/10/12/microsoft-to-expand-azure-maia-system-to-multi-gigawatt-deployments"
+    },
+    {
+      "label": "Microsoft Azure blog: Deep dive into Azure Maia 300 architecture — TSMC N2P compute chiplets, eight HBM4 stacks at 288 GB and 18 TB/s per accelerator, 12,288-accelerator superpod (Oct. 12, 2026) →",
+      "url": "https://azure.microsoft.com/en-us/blog/deep-dive-into-azure-maia-300-architecture"
+    },
+    {
+      "label": "Microsoft Investor Relations: FY26 fourth-quarter results — Microsoft Cloud revenue $59.3B, up 27%; Azure and other cloud services up 43%; commercial remaining performance obligations up 84% to $678B; Microsoft 365 Copilot above 30 million paid seats (July 29, 2026) →",
+      "url": "https://www.microsoft.com/en-us/investor/earnings/fy-2026-q4/press-release-webcast"
+    },
+    {
+      "label": "Reuters: Microsoft plans huge deployment of its own AI chips, with an eye on saving costs — more than a million Maia 300 chips targeted for next year (Oct. 12, 2026) →",
+      "url": "https://www.reuters.com/business/microsoft-plans-huge-deployment-its-own-ai-chips-with-an-eye-saving-costs-2026-10-12"
+    },
+    {
+      "label": "CNBC: Microsoft to rely more on homegrown AI chips, reducing dependence on Nvidia — Alistair Speirs on keeping 'a little bit of optionality', training still on Nvidia and AMD, Evercore ISI's estimate that Maia reaches about 10% of Microsoft's AI-chip spending by early 2027 (Oct. 12, 2026) →",
+      "url": "https://www.cnbc.com/2026/10/12/microsoft-will-mainly-use-its-maia-chips-for-ai-inference.html"
+    },
+    {
+      "label": "The Information: Microsoft debuts new homegrown AI chip, plans to deploy multiple gigawatts next year (Oct. 12, 2026) →",
+      "url": "https://www.theinformation.com/briefings/microsoft-debuts-new-homegrown-ai-chip-plans-deploy-multiple-gigawatts-next-year"
+    },
+    {
+      "label": "Data Center Dynamics: Microsoft unveils Azure Maia 300, says chip will be its 'primary inference system' — rack-level 27.6 TB of HBM capacity and 1.7 PB/s of aggregate bandwidth (Oct. 13, 2026) →",
+      "url": "https://www.datacenterdynamics.com/en/news/microsoft-unveils-azure-maia-300-says-chip-will-be-its-primary-inference-system"
+    },
+    {
+      "label": "The Register: Microsoft plans multi-gigawatt rollout of next-gen Azure Maia AI accelerator racks (Oct. 13, 2026) →",
+      "url": "https://www.theregister.com/systems/2026/10/13/microsoft-plans-multi-gigawatt-rollout-of-next-gen-azure-maia-ai-accelerator-racks/5302802"
+    },
+    {
+      "label": "Axios via Yahoo Finance: Every major Nvidia customer is now a competitor as Microsoft reveals new Maia chip — Rani Borkar on building whole systems, from memory and networking to software and power (Oct. 13, 2026) →",
+      "url": "https://finance.yahoo.com/technology/ai/articles/every-major-nvidia-customer-now-090007471.html"
+    },
+    {
+      "label": "The Futurum Group: Microsoft Maia 300 bets gigawatts on dataflow inference silicon (Oct. 13, 2026) →",
+      "url": "https://futurumgroup.com/insights/microsoft-maia-300-bets-gigawatts-on-dataflow-inference-silicon"
+    }
+  ],
+  "meta": {
+    "author": "The Signal Editorial",
+    "estimatedReadTime": "4 min",
+    "editorialTags": [
+      "microsoft",
+      "msft",
+      "maia-300",
+      "custom-silicon",
+      "azure-maia",
+      "inference-economics",
+      "tokens-per-megawatt",
+      "nvidia-dependence",
+      "hyperscaler-capex",
+      "cloud-gross-margin"
+    ],
+    "seoKeywords": [
+      "Microsoft Maia 300",
+      "MSFT stock",
+      "Microsoft custom AI chip",
+      "Azure Maia multi-gigawatt",
+      "Nvidia dependence inference",
+      "Microsoft capital expenditure 2026",
+      "Azure revenue growth",
+      "tokens per megawatt",
+      "Microsoft AI gross margin",
+      "hyperscaler custom silicon"
+    ],
+    "relatedTickers": [
+      "MSFT",
+      "NVDA",
+      "AMD"
+    ],
+    "keyMetrics": {
+      "Price": 541.15,
+      "Market Cap": "$4.1T",
+      "Forward P/E": "23.2x",
+      "Total Revenue (TTM)": "$331.8B",
+      "52-Week Low": 349.2,
+      "52-Week High": 553.72,
+      "Analyst Consensus": "Strong Buy (53 analysts)",
+      "Analyst Target Mean": 589.6
+    },
+    "sourceLinks": [
+      "https://blogs.microsoft.com/blog/2026/10/12/microsoft-to-expand-azure-maia-system-to-multi-gigawatt-deployments",
+      "https://azure.microsoft.com/en-us/blog/deep-dive-into-azure-maia-300-architecture",
+      "https://www.microsoft.com/en-us/investor/earnings/fy-2026-q4/press-release-webcast",
+      "https://www.reuters.com/business/microsoft-plans-huge-deployment-its-own-ai-chips-with-an-eye-saving-costs-2026-10-12",
+      "https://www.cnbc.com/2026/10/12/microsoft-will-mainly-use-its-maia-chips-for-ai-inference.html",
+      "https://www.theinformation.com/briefings/microsoft-debuts-new-homegrown-ai-chip-plans-deploy-multiple-gigawatts-next-year",
+      "https://www.datacenterdynamics.com/en/news/microsoft-unveils-azure-maia-300-says-chip-will-be-its-primary-inference-system",
+      "https://www.theregister.com/systems/2026/10/13/microsoft-plans-multi-gigawatt-rollout-of-next-gen-azure-maia-ai-accelerator-racks/5302802",
+      "https://finance.yahoo.com/technology/ai/articles/every-major-nvidia-customer-now-090007471.html",
+      "https://futurumgroup.com/insights/microsoft-maia-300-bets-gigawatts-on-dataflow-inference-silicon"
+    ]
+  },
+  "image": {
+    "src": "/img/articles/msft-maia-300-microsoft-custom-silicon-gigawatts-2026.jpg",
+    "fit": "cover",
+    "caption": "A multi-chiplet AI accelerator package photographed on an anti-static tray. Microsoft said on Oct. 12, 2026 that it will scale its in-house Azure Maia family to multi-gigawatt deployments starting in 2027, making Maia the primary inference system for Microsoft products and services. Photo: The Signal / AI-generated.",
+    "alt": "Photorealistic macro studio photograph of a large square multi-chiplet AI accelerator chip package with rows of high-bandwidth memory stacks along two edges, resting on a brushed-metal anti-static tray against a clean light-grey background under soft studio lighting."
+  },
+  "bodyHtml": "<p>For three years, Microsoft acted as the artificial intelligence boom’s most generous landlord. It bought high-end appliances from Nvidia and AMD, wired them into sprawling warehouses, and rented the horsepower back to the world. Then, on Oct. 12, as global chip stocks were already tumbling, the landlord announced a major renovation. Microsoft will now build its own appliances at an industrial scale.</p><p>Strip away the marketing, and Microsoft runs two straightforward businesses. First, it sells software you likely touch every workday: Windows, Microsoft 365, Teams, and the Copilot assistant woven into all of them. Second, it operates Azure, a massive computing grid that rents out servers by the second while powering Microsoft's internal software fleet. To keep that empire running, Microsoft spent just under $116 billion on capital expenditures over the past fiscal year, nearly doubling its outlays from twelve months earlier. Buying someone else’s processors at peak margins is an expensive habit.</p><div class=\"stats-card\"><div class=\"stats-card-title\">The Numbers That Matter</div><table class=\"stats-table\"><tr><td class=\"stat-label\">Price <span class=\"stats-live-badge\">LIVE</span></td><td class=\"stat-value\" data-live-ticker=\"MSFT\" data-live-field=\"price\">$541.15</td></tr><tr><td class=\"stat-label\">Market Cap</td><td class=\"stat-value\">$4.1T</td></tr><tr><td class=\"stat-label\">Forward P/E</td><td class=\"stat-value\">23.2x</td></tr><tr><td class=\"stat-label\">Total Revenue (TTM)</td><td class=\"stat-value\">$331.8B</td></tr><tr><td class=\"stat-label\">52-Week Low</td><td class=\"stat-value\">$349.20</td></tr><tr><td class=\"stat-label\">52-Week High</td><td class=\"stat-value\">$553.72</td></tr><tr><td class=\"stat-label\">Analyst Consensus</td><td class=\"stat-value\">Strong Buy (53 analysts)</td></tr><tr><td class=\"stat-label\">Analyst Target Mean</td><td class=\"stat-value\">$589.60</td></tr></table><div class=\"stats-card-note\">Price refreshes live · All other figures as of Oct. 13, 2026</div></div><p>Maia 300 is Microsoft’s bid to break it. Designed on TSMC’s two-nanometer process, the new processor packs 288 gigabytes of ultra-fast memory to handle generative AI queries. Microsoft packages 96 of these accelerators into a single 167-kilowatt rack. More importantly, executive vice president Scott Guthrie claims the setup yields 40% more tokens per megawatt than leading merchant GPU systems. In plain terms, tokens per megawatt are the fuel efficiency rating of the modern data center. It measures how much actual computational work you get out of a power grid, deciding whether a facility prints money or simply burns through cash.</p><p>Targeting inference rather than training is the smart operational angle. Training an AI model is like building a car from scratch in a factory; you pay a staggering upfront cost to assemble the engine. Inference is driving that car to work every single morning. When you prompt an AI assistant or renew your monthly software subscription, that ongoing computational load adds up fast.</p><p>With Microsoft 365 Copilot surpassing 30 million paid seats, serving those routine prompts on third-party silicon effectively hands a slice of every software subscription directly to chip suppliers. By deploying potentially more than a million Maia chips starting in 2027, Microsoft wants to internalize those margins. It will still buy plenty of hardware from Nvidia and AMD to train foundation models. But it no longer wants to pay them a toll every time a corporate employee asks Copilot to summarize an email.</p><p>A short seller would counter that Microsoft is asking Wall Street to trust a black box. That headline 40% efficiency boost comes entirely from internal projections without a named benchmark, a published model test, or independent verification. Patrick Moorhead of Moor Insights and Strategy pointed out plainly that nobody outside Microsoft has tested a Maia part yet.</p><p>Maia also brings in zero direct cloud rental revenue. Unlike Amazon’s Trainium or Google’s TPU, outside Azure customers cannot rent Maia instances, meaning the chip cannot open up a fresh revenue pipeline. It is strictly an internal cost-cutting project. If production slips past 2027, or if Azure’s relentless expansion still requires identical volumes of merchant silicon, the capex bill keeps rising without the margin payoff.</p><p>For equity investors, this shift is the missing puzzle piece for multiple expansion. Azure grew 43% last quarter, and commercial remaining performance obligations ballooned 84% year-over-year to $678 billion. Demand is not the issue. The friction lies in cash conversion: quarterly free cash flow dropped roughly 23% to $19.6 billion as data center infrastructure consumed capital faster than operations produced it. Every token served on proprietary silicon bypasses external component markups, offering the cleanest route to cloud gross margin expansion Microsoft has had in years. The stock does not need Azure to grow faster; it needs Azure to become cheaper to operate.</p><p>What we are watching next is whether capital expenditure growth begins to decelerate while Azure sustains mid-forties growth rates, alongside management's upcoming fiscal first-quarter print against capital spending guidance of more than $50 billion. If Microsoft starts disclosing the exact share of internal inference running on homegrown silicon, the market will know the landlord has finally taken control of the building.</p><p class=\"disclosure\">Disclosure: The Signal holds no position in MSFT. Positions may change. This is not financial advice.</p>"
+}
