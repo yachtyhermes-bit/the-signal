@@ -1,0 +1,132 @@
+{
+ "slug": "mrvl-ocp-open-rack-interconnect-2026",
+ "title": "Marvell's New Interconnect Chips Target the Wiring Bottleneck in AI Racks",
+ "subtitle": "New high-speed retimers and open rack silicon aim to keep Marvell's chips inside every hyperscaler rack.",
+ "summary": "Marvell unveiled high-bandwidth retimers and security silicon at the Open Compute Project summit to strengthen its position across multi-protocol AI racks. While data-center sales are surging, the company faces mounting scrutiny over custom chip margins and premium valuation multiples.",
+ "ticker": "MRVL",
+ "tickerName": "Marvell Technology, Inc.",
+ "company": "Marvell Technology, Inc.",
+ "sector": "ai",
+ "sentiment": "neutral",
+ "date": "2026-10-14T16:00:00Z",
+ "price": 268.73,
+ "featured": false,
+ "premium": false,
+ "image": {
+  "src": "/img/articles/mrvl-ocp-open-rack-interconnect-2026.jpg",
+  "fit": "cover",
+  "caption": "A high-speed optical transceiver module seated in a signal-integrity test board on an engineering lab bench. Marvell used the OCP Global Summit in San Jose on Oct. 13, 2026 to launch a 3.2 Tbps retimer and a second-generation 1.6T active electrical cable DSP for AI rack scale-up. Photo: The Signal / AI-generated.",
+  "alt": "A metal-cased optical transceiver module plugged into a green printed circuit test board on a dark lab bench, with copper twinaxial cables and a blurred oscilloscope in the background."
+ },
+ "tags": [
+  "MRVL",
+  "Marvell Technology",
+  "OCP Global Summit",
+  "retimer",
+  "224G",
+  "UALink",
+  "CXL",
+  "data center",
+  "interconnect",
+  "AI infrastructure"
+ ],
+ "links": [
+  {
+   "label": "Marvell adds a 3.2T protocol-aware retimer and a second-generation 1.6T AEC DSP (Oct 13, 2026) →",
+   "url": "https://investor.marvell.com/news-events/press-releases/detail/1039/marvell-bolsters-connectivity-portfolio-with-new-3-2t-protocol-aware-retimer-and-second-generation-1-6t-aec-dsp"
+  },
+  {
+   "label": "Marvell, Microsoft and Oracle establish an OCP working group on data center hardware security (Oct 13, 2026) →",
+   "url": "https://investor.marvell.com/news-events/press-releases/detail/1038/marvell-microsoft-and-oracle-establish-ocp-working-group-to-standardize-data-center-hardware-security"
+  },
+  {
+   "label": "Marvell unveils second-generation Structera X six-channel CXL 3.2 memory expanders (Oct 12, 2026) →",
+   "url": "https://investor.marvell.com/news-events/press-releases/detail/1037/marvell-unveils-second-generation-structera-x-industry-first-six-channel-cxl-3-2-memory-expanders-for-ai-inference"
+  },
+  {
+   "label": "Marvell's OCP Global Summit 2026 showcase →",
+   "url": "https://investor.marvell.com/news-events/press-releases/detail/1036/marvell-to-showcase-open-ai-infrastructure-solutions-at-ocp-global-summit-2026"
+  },
+  {
+   "label": "Marvell fiscal Q2 2027 results and October-quarter guidance (Aug 27, 2026) →",
+   "url": "https://investor.marvell.com/news-events/press-releases/detail/1031/marvell-technology-inc-reports-second-quarter-of-fiscal-year-2027-financial-results"
+  },
+  {
+   "label": "Microsoft Azure: advancing hardware security with open-source integrated HSM technology →",
+   "url": "https://azure.microsoft.com/en-us/blog/advancing-hardware-security-with-open-source-integrated-hsm-technology/"
+  },
+  {
+   "label": "StreetInsider: Marvell launches 3.2T retimer and upgraded 1.6T AEC DSP →",
+   "url": "https://www.streetinsider.com/Corporate+News/Marvell+launches+3.2T+retimer+and+upgraded+1.6T+AEC+DSP+chips/27178580.html"
+  },
+  {
+   "label": "MarketScreener: Evercore ISI adjusts its Marvell price target →",
+   "url": "https://www.marketscreener.com/news/evercore-isi-adjusts-price-target-on-marvell-technology-to-275-from-433-ce785ddfdb80f527"
+  },
+  {
+   "label": "Tickeron: why Marvell traded lower in the October selloff →",
+   "url": "https://tickeron.com/blogs/why-is-marvell-technology-mrvl-stock-down-4-09-today-18368/"
+  },
+  {
+   "label": "Marvell: scale-up network solutions for AI infrastructure →",
+   "url": "https://www.marvell.com/blogs/scale-up-network-solutions-for-ai-infrastructure.html"
+  },
+  {
+   "label": "OCP Global Summit 2026 →",
+   "url": "https://www.opencompute.org/events/ocp-summit/2026-ocp-global-summit/recorded-content/"
+  }
+ ],
+ "bodyHtml": "<p>Think about dropping a Formula 1 engine into a golf cart chassis. That mismatch is the exact engineering headache confronting AI data centers today. Hyperscalers are packing thousands of ultra-fast processors into server racks, only to find the machines spend half their time waiting for data to travel across the room.</p><div class=\"stats-card\"><div class=\"stats-card-title\">The Numbers That Matter</div><table class=\"stats-table\"><tr><td class=\"stat-label\">Price <span class=\"stats-live-badge\">LIVE</span></td><td class=\"stat-value\" data-live-ticker=\"MRVL\" data-live-field=\"price\">$268.73</td></tr><tr><td class=\"stat-label\">Market Cap</td><td class=\"stat-value\">$235.7B</td></tr><tr><td class=\"stat-label\">Forward P/E</td><td class=\"stat-value\">36.9x</td></tr><tr><td class=\"stat-label\">Total Revenue (TTM)</td><td class=\"stat-value\">$9.45B</td></tr><span hidden>.</span><tr><td class=\"stat-label\">52-Week Low</td><td class=\"stat-value\">$70.69</td></tr><tr><td class=\"stat-label\">52-Week High</td><td class=\"stat-value\">$329.88</td></tr><tr><td class=\"stat-label\">Analyst Consensus</td><td class=\"stat-value\">Strong Buy (44 analysts)</td></tr><tr><td class=\"stat-label\">Analyst Target Mean</td><td class=\"stat-value\">$339.36</td></tr></table><span hidden>.</span><div class=\"stats-card-note\">Price refreshes live &middot; All other figures as of October 13, 2026</div></div><p>Marvell Technology builds the high-speed nervous systems that keep those server farms from choking. The company makes two core hardware lines. One is custom AI processors co-designed with hyperscalers. The other is the electrical and optical plumbing that ties those chips into a single, unified supercomputer.</p><p>If Nvidia sells the off-the-rack designer suit, Marvell provides the bespoke seams, fabric lining, and buttons that hold the open-source alternative together. Broadcom remains the heavyweight champion in custom silicon, but Marvell has carved out an indispensable role as the agile second supplier every cloud giant needs.</p><p>Today, data-center infrastructure drives 79% of Marvell's business, and total quarterly revenue climbed 37% year-over-year to $2.739 billion, with the data-center slice growing 46%. Chip stocks pulled back this week on fresh doubts about capital spending. Marvell used the OCP Global Summit in San Jose to spotlight the unglamorous copper and silicon running between the racks.</p><p>Why does this matter so much to the AI buildout? Because compute scaling has slammed directly into physical limits. At OCP, Marvell rolled out its Alaska E 3.2T retimer and second-generation Alaska A 1.6T active electrical cable DSP.</p><p>When servers communicate over bleeding-edge 224G signaling, electrical interference degrades packets across mere inches of copper trace. Marvell's new 3-nanometer silicon acts like noise-canceling headphones for raw electrons. It cleans up signals over 45 decibels of loss while cutting roughly eight watts of power per connection. By stretching copper cable reach beyond six meters, hyperscalers can spread out blistering hot server trays without losing data.</p><p>With market researcher LightCounting estimating scale-up networking will top $50 billion by 2030, whoever commands this wiring controls how data centers are built. Own the wiring and you shape the rack.</p><p>Marvell is hedging its architecture bet. Its new retimers speak Ethernet, UALink and ESUN, and the company also builds switch silicon for Nvidia's NVLink ecosystem. At the summit, Marvell teamed with Microsoft and Oracle on Project Tessera, standardizing hardware security modules to protect hyperscale key vaults.</p><p>Cloud providers want to avoid single-vendor lock-in. Marvell wants its controllers on both sides of the cable, whatever logo sits on the primary processor.</p><p>For the equity, the story hinges on pricing power and margin preservation. The stock has already more than tripled off its February low. An investor day in early October teased long-term annual revenue reaching as high as $90 billion by fiscal 2031. But trading around 37 times forward earnings, the market is pricing in perfection. That leaves no room for a miss.</p><p>A Wall Street downgrade this month citing stretched valuation sparked a quick selloff, underscoring how jittery investors are. Marvell generated $1.72 billion in trailing free cash flow on $9.45 billion in revenue, but custom silicon historically carries lower margins than proprietary chips.</p><p>Management already guided non-GAAP gross margins down to between 57.5% and 58.5% for the October quarter. To re-rate higher, Marvell has to prove its high-speed plumbing can defend overall profitability as lower-margin custom volume ramps.</p><p>The bear case is not abstract. Nvidia does not just sell accelerators; it sells complete, proprietary computing systems, threatening to push open networking standards into the budget tier. In custom silicon, Broadcom still captures the crown-jewel hyperscaler contracts, leaving Marvell vulnerable as a secondary source.</p><p>Cable DSPs and signal retimers are a tiny fraction of a rack's overall bill of materials. Marvell's new Structera X CXL memory expanders do not even sample until early 2027. If cloud giants tap the brakes on infrastructure spending, custom silicon gross margins will compress just as high-margin networking demand cools, leaving a rich multiple exposed.</p><p>What we are watching is the fiscal third-quarter print in early December. Can Marvell hold its upgraded 60% data-center growth forecast without gross margins slipping below 57.5%? The plumbing inside the AI factory is indispensable, but the stock will only run as far as its profit margins let it.</p><p class=\"disclosure\">Disclosure: The Signal holds no position in MRVL. Positions may change. This is not financial advice.</p>",
+ "meta": {
+  "author": "The Signal",
+  "estimatedReadTime": "4 minutes",
+  "editorialTags": [
+   "interconnect",
+   "scale-up-fabric",
+   "ai-infrastructure",
+   "custom-silicon",
+   "open-standards",
+   "margin-mix",
+   "mrvl"
+  ],
+  "seoKeywords": [
+   "Marvell retimer",
+   "MRVL stock",
+   "OCP Global Summit 2026",
+   "Alaska E 3.2T retimer",
+   "1.6T AEC DSP",
+   "UALink",
+   "scale-up networking",
+   "Marvell CXL memory expander",
+   "Project Tessera"
+  ],
+  "relatedTickers": [
+   "AVGO",
+   "NVDA",
+   "ANET"
+  ],
+  "sourceLinks": [
+   "https://investor.marvell.com/news-events/press-releases/detail/1039/marvell-bolsters-connectivity-portfolio-with-new-3-2t-protocol-aware-retimer-and-second-generation-1-6t-aec-dsp",
+   "https://investor.marvell.com/news-events/press-releases/detail/1038/marvell-microsoft-and-oracle-establish-ocp-working-group-to-standardize-data-center-hardware-security",
+   "https://investor.marvell.com/news-events/press-releases/detail/1037/marvell-unveils-second-generation-structera-x-industry-first-six-channel-cxl-3-2-memory-expanders-for-ai-inference",
+   "https://investor.marvell.com/news-events/press-releases/detail/1036/marvell-to-showcase-open-ai-infrastructure-solutions-at-ocp-global-summit-2026",
+   "https://investor.marvell.com/news-events/press-releases/detail/1031/marvell-technology-inc-reports-second-quarter-of-fiscal-year-2027-financial-results",
+   "https://azure.microsoft.com/en-us/blog/advancing-hardware-security-with-open-source-integrated-hsm-technology/",
+   "https://www.streetinsider.com/Corporate+News/Marvell+launches+3.2T+retimer+and+upgraded+1.6T+AEC+DSP+chips/27178580.html",
+   "https://www.marketscreener.com/news/evercore-isi-adjusts-price-target-on-marvell-technology-to-275-from-433-ce785ddfdb80f527",
+   "https://tickeron.com/blogs/why-is-marvell-technology-mrvl-stock-down-4-09-today-18368/",
+   "https://www.marvell.com/blogs/scale-up-network-solutions-for-ai-infrastructure.html",
+   "https://www.opencompute.org/events/ocp-summit/2026-ocp-global-summit/recorded-content/"
+  ],
+  "keyMetrics": {
+   "Price": "$268.73",
+   "Market Cap": "$235.7B",
+   "Forward P/E": "36.9x",
+   "Total Revenue (TTM)": "$9.45B",
+   "52-Week Low": "$70.69",
+   "52-Week High": "$329.88",
+   "Analyst Consensus": "Strong Buy (44 analysts)",
+   "Analyst Target Mean": "$339.36"
+  }
+ }
+}
