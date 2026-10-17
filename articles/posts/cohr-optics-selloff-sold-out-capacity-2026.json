@@ -1,0 +1,83 @@
+{
+  "slug": "cohr-optics-selloff-sold-out-capacity-2026",
+  "title": "Coherent's Sold-Out Optics Business Is Now a Bet on the Cost of Capital",
+  "subtitle": "The order book stretches into 2028. The capital spending needed to fill it consumed roughly a billion dollars of cash in fiscal 2026.",
+  "summary": "Coherent shed a quarter of its value in five sessions despite having its optical capacity booked out through fiscal 2027. The trigger was not demand. Two chip chief executives warned that capital and the cost of debt are now the binding constraint on the AI buildout, and the optics complex fell two to three times harder than the chip index. The question for the stock is whether sold-out factories convert into margin before the bill for building them comes due.",
+  "ticker": "COHR",
+  "sector": "ai",
+  "sentiment": "neutral",
+  "date": "2026-10-17T16:00:00Z",
+  "price": 232.9,
+  "image": {
+    "src": "/img/articles/cohr-optics-selloff-sold-out-capacity-2026.jpg"
+  },
+  "bodyHtml": "<p>Copper has a distance problem. Inside an artificial intelligence server rack, electrons zip along copper traces with ease. Stretch that wire past a few meters to link the next row of servers, and physics steps in. Copper chokes on heat, eats power, and drops data packets. Light is the only viable replacement.</p>\n\n<p>Coherent builds the components that turn electrical signals into photons and back again. Think of an AI cluster as a dense metropolis. Copper is the sidewalk outside an apartment building, but Coherent builds the express subway system moving millions of commuters between distant neighborhoods. Its indium phosphide lasers, optical transceivers, and co-packaged optical modules carry the traffic that keeps supercomputers humming. Hyperscale cloud providers, network switch vendors, and Nvidia all depend on its hardware.</p>\n\n<p>Optics has quietly become the primary bottleneck in the AI infrastructure buildout. Graphics processors cannot train large language models if they spend half their clock cycles waiting for data to travel across the floor. Datacenter and communications gear drove 79% of Coherent's revenue last quarter, up 59% from the prior year. Chief Executive Jim Anderson says fiscal 2027 is essentially completely booked out, with customer orders extending into calendar 2028. Long-term supply agreements run through the end of the decade, backed by minimum purchase clauses.</p>\n\n<p>To meet that demand, Coherent is doubling internal laser production ahead of schedule. Its six-inch indium phosphide platform turns out roughly four times the output of the older three-inch lines at about half the cost per laser. A third six-inch site comes online in the first half of calendar 2027. Nvidia validated the roadmap by buying $2 billion of Coherent stock in cash and committing to a multibillion-dollar purchase agreement, with access to five more product families tied to co-packaged optics.</p>\n\n<p>Yet the stock dropped roughly 25% over the five sessions to Oct. 16, leaving it about 47% below its 52-week peak. The selloff was not triggered by customer cancellations or slowing adoption. Instead, Broadcom's Hock Tan and Intel's Lip-Bu Tan told an audience in Singapore that capital availability and the cost of debt have become the real constraints on data center construction.</p>\n\n<p>Credit markets took the cue. Five-year credit default swaps on CoreWeave jumped into distressed territory, and analysts cut server makers, arguing their hardware revenue reflects memory prices more than AI demand. Chip stocks fell about 10% over the same stretch. The S&amp;P 500 fell about 2%.</p>\n\n<p>The equity is now wrestling with a much tougher question. For the stock to re-rate, Coherent must prove that sold-out factories translate into durable pricing power rather than low-margin volume. Shares trade near 25 times fiscal 2027 earnings and about 17 times fiscal 2028. The market will not hold that multiple if customer balance sheets tighten before operating margins reach management's 42% target. When capital gets expensive, investors stop rewarding booked orders and start hunting for cash.</p>\n\n<p>A dedicated short-seller would argue Coherent is spending like a utility to serve customers who hold the pricing leverage. Operating cash flow collapsed to $79.5 million in fiscal 2026 from $633.6 million a year earlier. Capital spending climbed above $1.1 billion, driving free cash flow to negative $1.02 billion. To ramp lasers, the company spent 27% of fourth-quarter revenue on factory additions alone. Sold-out order books always invite competition. Applied Optoelectronics closed a $600 million equity raise to fund a large Texas campus, and Lumentum is expanding against the same demand curve.</p>\n\n<p>Two customers each supplied more than a tenth of fiscal 2026 revenue, and the Nvidia agreement is explicitly nonexclusive. Industrial laser revenue fell 16% last quarter, so optics has to carry the whole company. If datacenter revenue jumps by half again on Nov. 4 while non-GAAP gross margin lands at or below the 39.5% guidance floor, Coherent is buying growth with price.</p>\n\n<p>It rhymes with a gym that sells out every membership tier, then discovers it has to spend more than a quarter of each month's dues on new equipment before the profits show up. Running at total capacity means little if the capital required to serve it outruns the operating cash it throws off.</p>\n\n<p>The next test lands Nov. 4, when Coherent reports. Watch non-GAAP gross margin against the 39.5% floor and the 42% target management is chasing, then check how much of the fiscal 2027 capex number arrives with it. If margins push toward 42% while spending steadies, the order book does its job. The market just repriced the cost of money, and photonics was standing in the doorway.</p>\n\n<p class=\"disclosure\">Disclosure: The Signal holds no position in COHR. Positions may change. This is not financial advice.</p>",
+  "tags": [
+    "COHR",
+    "Coherent",
+    "optical transceivers",
+    "indium phosphide",
+    "AI data center",
+    "photonics",
+    "co-packaged optics"
+  ],
+  "links": [
+    {
+      "label": "Coherent Corp. Reports Fourth Quarter and Full Year Fiscal 2026 Results",
+      "url": "https://www.coherent.com/news/press-releases/fourth-quarter-and-fiscal-year-2026-results"
+    },
+    {
+      "label": "Coherent Q4 FY26 earnings release and cash flow statement (PDF)",
+      "url": "https://www.coherent.com/content/dam/coherent/site/en/documents/investors/financial-releases/2026/august-12/earnings-release-fy26-q4.pdf"
+    },
+    {
+      "label": "Coherent Q4 FY26 investor presentation: InP capacity, CHIPS letter of intent, Sherman expansion (PDF)",
+      "url": "https://www.coherent.com/content/dam/coherent/site/en/documents/investors/investor-presentations/2026/august-12/investor-presentation-20260812.pdf"
+    },
+    {
+      "label": "NVIDIA and Coherent Announce Strategic Partnership",
+      "url": "https://www.coherent.com/news/press-releases/nvidia-and-coherent-announce-strategic-partnership"
+    },
+    {
+      "label": "Coherent Form 8-K: terms of NVIDIA's $2 billion private placement",
+      "url": "https://www.sec.gov/Archives/edgar/data/820318/000119312526084366/d42735d8k.htm"
+    },
+    {
+      "label": "CNBC: Intel and Broadcom CEOs warn capital crunch could become AI bottleneck",
+      "url": "https://www.cnbc.com/2026/10/12/intel-broadcom-ceos-warn-capital-crunch-could-become-ai-bottleneck.html"
+    },
+    {
+      "label": "CNBC: CoreWeave credit default swaps hit distress levels as investors sour on AI debt",
+      "url": "https://www.cnbc.com/2026/10/15/coreweave-credit-default-swaps-hit-distress-levels-as-investors-sour-on-ai-debt.html"
+    },
+    {
+      "label": "Futurum Group: Coherent Q4 FY2026 earnings, 1.6T transceivers ramp and CPO revenue",
+      "url": "https://futurumgroup.com/insights/coherent-q4-fy-2026-earnings-1-6t-transceivers-ramp-cpo-revenue-approaches/"
+    },
+    {
+      "label": "TrendForce: InP shortage emerges as AI optical interconnect bottleneck",
+      "url": "https://www.trendforce.com/news/2026/08/06/news-inp-shortage-emerges-as-ai-optical-interconnect-bottleneck/"
+    },
+    {
+      "label": "24/7 Wall St.: Coherent's booked-out fiscal 2027 and the analyst calling for a double",
+      "url": "https://247wallst.com/investing/2026/10/15/coherent-has-massively-diappointed-investors-for-6-months-a-respected-analyst-predicts-it-will-double-moving-forward/"
+    },
+    {
+      "label": "StockAnalysis: Coherent consensus estimates and analyst price targets",
+      "url": "https://stockanalysis.com/stocks/COHR/forecast/"
+    }
+  ],
+  "meta": {
+    "keyMetrics": {
+      "Price": "$232.90",
+      "Market Cap": "$45.9B",
+      "Forward P/E": "24.7",
+      "Total Revenue (TTM)": "$7.12B",
+      "52-Week Low": "$112.96",
+      "52-Week High": "$440.00",
+      "Analyst Consensus": "Buy",
+      "Analyst Target Mean": "$410.43"
+    },
+    "estimatedReadTime": "4 min read"
+  }
+}
