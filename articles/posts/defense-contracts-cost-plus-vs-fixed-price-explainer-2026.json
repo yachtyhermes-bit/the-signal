@@ -1,0 +1,121 @@
+{
+  "slug": "defense-contracts-cost-plus-vs-fixed-price-explainer-2026",
+  "title": "Defense Contracting Overhaul Shifts Pricing Risk to Wall Street",
+  "subtitle": "The Pentagon is moving off cost-plus deals, turning defense margins into an execution gamble",
+  "summary": "The Pentagon is moving away from guaranteed cost-plus contracts to favor fixed-price production and commercial off-the-shelf buying. That shift boosts operating margins on mature assembly lines, but it punishes contractors that take on unproven development hardware.",
+  "format": "explainer",
+  "ticker": "RTX",
+  "tickers": [
+    "RTX",
+    "KTOS",
+    "AVAV"
+  ],
+  "sector": "defense",
+  "sentiment": "neutral",
+  "date": "2026-10-18T22:00:00Z",
+  "image": {
+    "src": "/img/articles/defense-contracts-cost-plus-vs-fixed-price-explainer-2026.jpg",
+    "fit": "cover",
+    "caption": "A bare machined aluminium aerostructure rib clamped in a steel fixture on a CNC machining bed, curled swarf and pooled cutting fluid in the foreground under warm workshop light. A defence programme's margin is decided long before the first chip is cut. Photo: The Signal / AI-generated.",
+    "alt": "A close photograph of a ribbed bare-aluminium aerospace component clamped in a heavy steel fixture on a machining bed, with curled aluminium shavings and cutting fluid in the foreground under amber workshop light"
+  },
+  "keyTerms": [
+    {
+      "term": "Cost-reimbursement (cost-plus)",
+      "definition": "A contract where the government pays the contractor's allowable costs plus a negotiated fee. It is the right tool when nobody can define the requirement precisely enough to fix a price, and the wrong tool for anything the government can buy commercially."
+    },
+    {
+      "term": "Firm-fixed-price",
+      "definition": "A single price for a defined job. The contractor keeps whatever it saves and eats whatever it overspends, which is why fixed-price rewards a mature production line and punishes a bad estimate on hardware that does not exist yet."
+    },
+    {
+      "term": "Fixed-price incentive",
+      "definition": "The middle case: the government pays allowable costs up to a ceiling, then a pre-agreed sharing formula splits underruns and overruns. It keeps the cost-control incentive but puts a collar on the contractor's downside."
+    },
+    {
+      "term": "Statutory fee ceiling",
+      "definition": "The legal cap on profit in a cost-plus-fixed-fee deal: 15% of estimated cost for experimental, developmental or research work, and 10% otherwise. The ceiling is why a cost-plus franchise produces a utility-like return no matter how well the program runs."
+    },
+    {
+      "term": "Funded vs unfunded backlog",
+      "definition": "Funded backlog is work for which Congress has actually appropriated money and the agency has authorised spending. Unfunded backlog is the rest of the award, which is a plan rather than a receivable."
+    },
+    {
+      "term": "Termination for convenience",
+      "definition": "The government's right to cancel a contract it no longer wants. The contractor is compensated for work done and preparations made, not for the revenue it would have booked on the unperformed remainder."
+    }
+  ],
+  "bottomLine": "A defense programme's margin is set in the contracting office, long before the factory sees a drawing. A cost-plus deal caps the fee by statute, so it behaves like a bond: low variance, low return. A fixed-price deal hands the cost risk to the company, which is a compounding advantage on a mature production line and a reach-forward loss waiting to happen on a development programme nobody has built before. The Pentagon is steering toward commercial buying and fixed-price production, which favours suppliers whose edge is volume and learning-curve cost, and squeezes anyone whose business model was a negotiated fee on bespoke hardware. The test for the stocks is not the size of the backlog. It is how much of that backlog is funded, and whether the company has already climbed the learning curve the price assumes.",
+  "bodyHtml": "<p>The real fate of a missile is decided years before a welder strikes an arc. It happens across a desk in Northern Virginia, where a contracting officer decides who shoulders unexpected expenses. That single bureaucratic choice sets an aerospace contractor's profit margins for the next decade.</p>\n<p>RTX sits right at the center of this machinery. Its Raytheon division builds Patriot air defense systems, AMRAAM missiles, and ground radar, while Pratt & Whitney makes jet engines and Collins Aerospace builds aircraft systems. Alongside traditional primes like Northrop Grumman, specialized suppliers build the autonomous fleet. Kratos makes target drones, hypersonic test vehicles, and cheap jet-powered attritable aircraft. AeroVironment builds small uncrewed systems like the Switchblade and P550, alongside loitering munitions and space antennas.</p>\n<p>Think of government contracting like hiring someone to remodel your kitchen. A cost-plus contract works like a contractor billing on an open tab for materials and hours. By law, the Federal Acquisition Regulation caps that fee at 15% of estimated costs for experimental research, and 10% for standard work. The fee stays fixed once awarded, even if the job gets harder. The contractor earns a safe, utility-style return, and taxpayers eat the cost overruns.</p>\n<p>Fixed-price contracts flip that risk back onto the company. You agree on a flat fee up front and keep whatever cash remains. That structure mints money on a mature production line where every extra unit rolling off the line costs less to build. But if you fix a price on hardware that does not exist yet, a single engineering snag triggers immediate charges.</p>\n<p>Boeing remains the textbook case for fixed-price pain. Roughly 60% of its defense revenue came from fixed-price contracts in 2025. Five development programs did the damage: the KC-46A tanker, the T-7A trainer, Commercial Crew, the VC-25B presidential aircraft and the MQ-25 drone. Together they cost Boeing $5,013 million in losses in 2024 and another $802 million in 2025. The tanker alone accounted for $714 million of the 2025 hit.</p>\n<p>Investors often treat defense backlogs like bank deposits, but a government backlog is merely an expression of intent. Kratos reported a total backlog of $1,573.4 million at the end of 2025, but only $1,232.0 million was funded by appropriated dollars. The rest was unfunded paperwork that can vanish on a whim. When the Space Force cancelled AeroVironment’s SCAR antenna contract, $1.49 billion in unfunded backlog disappeared in a single quarter. That termination forced a non-cash goodwill impairment of $240.7 million, even though AeroVironment's funded backlog actually rose from $726.6 million to $1,183.0 million.</p>\n<p>The procurement landscape is now tilting permanently toward fixed pricing. Executive Order 14265 directed a first preference for commercial solutions and Other Transactions Authority, pushing the military toward fast, fixed-price production. Raytheon’s disclosures show the upside when this pivot works. Its fixed-price sales jumped from $13,164 million in 2023 to $16,647 million in 2025, while cost-type sales slid from $13,056 million to $11,245 million. Over those same three years, Raytheon’s GAAP segment operating margin climbed from 9.0% to 9.7% to 11.5%. Northrop Grumman sits at a clean balance, splitting 2025 sales between $20,944 million in cost-type work and $21,010 million in fixed-price work against a $95.7 billion backlog.</p>\n<p>This contracting divide governs how these stocks re-rate. Wall Street pays a premium when a contractor demonstrates that its factory has mastered the learning curve, driving unit costs below contract caps. It also rewards companies selling commercially designed systems where they set prices rather than negotiating statutory markups. Kratos and AeroVironment sit in that sweet spot, since attritable drones depend on rapid factory volume instead of cost-plus research agreements. But when an established prime signs a fixed-price development deal for paper concepts, the stock de-rates because investors must discount inevitable cost overruns.</p>\n<p>Skeptics argue that contract structure is a red herring. The Government Accountability Office studied 21 major acquisition programs and found no clear link between contract types and program outcomes. Disciplined engineering practices determined success, not contract clauses. Cross-sectionally, Lockheed Martin generated a 10.3% GAAP operating margin with roughly 60% fixed-price exposure, virtually identical to Northrop’s 10.8% GAAP operating margin on an even split. Boeing swung its defense unit from a $5,413 million GAAP operating loss in 2024 to a $128 million loss in 2025 without materially changing its contract mix. Cost-plus contracting also exists for a reason: private contractors will not build unproven experimental tech without a government safety net unless they charge prohibitive risk premiums.</p>\n<p>What we are watching is Raytheon’s segment operating margin over the coming year to see if its fixed-price volume can break past 12.0%. The Pentagon's procurement shift rewards companies that treat defense production like an efficient assembly line rather than a protected research lab.</p>\n<p class=\"disclosure\">Analysis, not advice. We may own these names and we may sell them at any time.</p>",
+  "tags": [
+    "defense contracting",
+    "cost-plus",
+    "fixed-price",
+    "procurement reform",
+    "backlog",
+    "funded backlog",
+    "termination for convenience",
+    "learning curve",
+    "RTX",
+    "Kratos",
+    "AeroVironment",
+    "Executive Order 14265"
+  ],
+  "links": [
+    {
+      "label": "CRS, Types of Federal Procurement Contracts (R48784)",
+      "url": "https://www.congress.gov/crs_external_products/R/PDF/R48784/R48784.4.pdf"
+    },
+    {
+      "label": "GAO-20-352, Cost-Type Contracts: Procedures Needed for Sharing Information on Contract Choice",
+      "url": "https://www.gao.gov/products/gao-20-352"
+    },
+    {
+      "label": "FAR 15.404-4, Profit (statutory fee limitations)",
+      "url": "https://www.acquisition.gov/far/15.404-4"
+    },
+    {
+      "label": "FAR 16.306, Cost-plus-fixed-fee contracts",
+      "url": "https://www.acquisition.gov/far/16.306"
+    },
+    {
+      "label": "FAR 49.201, Termination settlement",
+      "url": "https://www.acquisition.gov/far/49.201"
+    },
+    {
+      "label": "Boeing, 2025 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/12927/000162828026004357/ba-20251231.htm"
+    },
+    {
+      "label": "RTX, 2025 Form 10-K (Raytheon contract-type and margin disclosure)",
+      "url": "https://www.sec.gov/Archives/edgar/data/101829/000010182926000006/rtx-20251231.htm"
+    },
+    {
+      "label": "Northrop Grumman, 2025 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1133421/000113342126000003/noc-20251231.htm"
+    },
+    {
+      "label": "Lockheed Martin, 2025 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/936468/000162828026004195/lmt-20251231.htm"
+    },
+    {
+      "label": "Kratos, 2025 Form 10-K (funded vs unfunded backlog)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1069258/000106925826000013/ktos-20251228.htm"
+    },
+    {
+      "label": "AeroVironment, FY2026 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1368622/000110465926078906/avav-20260430x10k.htm"
+    },
+    {
+      "label": "SpaceNews, Space Force terminates AeroVironment contract for satellite-control antennas",
+      "url": "https://spacenews.com/space-force-officially-terminates-aerovironment-contract-for-satellite-control-antennas/"
+    },
+    {
+      "label": "Executive Order 14265, Modernizing Defense Acquisitions and Spurring Innovation in the Defense Industrial Base",
+      "url": "https://www.whitehouse.gov/presidential-actions/2025/04/modernizing-defense-acquisitions-and-spurring-innovation-in-the-defense-industrial-base/"
+    }
+  ],
+  "meta": {
+    "estimatedReadTime": "4 min read"
+  }
+}
