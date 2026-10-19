@@ -1,0 +1,119 @@
+{
+  "slug": "orcl-credit-default-swap-ai-debt-2026",
+  "title": "Oracle Is the AI Buildout's First Real Credit Test",
+  "subtitle": "Bond markets are pricing a default risk the equity market hasn't fully digested",
+  "summary": "Oracle's debt-funded data center buildout has pushed its credit default swaps to levels typically reserved for junk issuers. While enterprise software demand remains robust, the stock's valuation is now trapped by its rising cost of capital rather than its sales pipeline.",
+  "ticker": "ORCL",
+  "tickerName": "Oracle",
+  "company": "Oracle Corporation",
+  "sector": "ai",
+  "sentiment": "neutral",
+  "date": "2026-10-19T16:00:00Z",
+  "price": 128.23,
+  "featured": false,
+  "premium": false,
+  "tags": [
+    "ORCL",
+    "Oracle",
+    "AI infrastructure",
+    "credit default swaps",
+    "AI capex",
+    "data centers",
+    "investment grade",
+    "S&P Global Ratings",
+    "Moody's",
+    "OpenAI",
+    "Oracle Cloud Infrastructure",
+    "AI debt",
+    "corporate credit"
+  ],
+  "links": [
+    {
+      "label": "CNBC: Oracle's debt faces an AI stress test, and why some investors aren't worried (October 19, 2026) →",
+      "url": "https://www.cnbc.com/2026/10/19/oracle-debt-faces-an-ai-stress-test-why-some-investors-arent-worried-.html"
+    },
+    {
+      "label": "CNBC: CoreWeave credit default swaps hit distress levels as investors sour on AI debt (October 15, 2026) →",
+      "url": "https://www.cnbc.com/2026/10/15/coreweave-credit-default-swaps-hit-distress-levels-as-investors-sour-on-ai-debt.html"
+    },
+    {
+      "label": "Oracle fiscal 2026 fourth-quarter and full-year results, including free cash flow of negative $23.7 billion and capex of $55.7 billion →",
+      "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526265848/orcl-ex99_1.htm"
+    },
+    {
+      "label": "Oracle fiscal 2027 first-quarter results, including remaining performance obligations of $664 billion at August 31, 2026 →",
+      "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526387905/orcl-ex99_1.htm"
+    },
+    {
+      "label": "Oracle Form 10-Q for the quarter ended August 31, 2026: total debt of $169.1 billion including leases →",
+      "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/orcl-20260831.htm"
+    },
+    {
+      "label": "S&amp;P Global Ratings: Oracle rating action →",
+      "url": "https://www.spglobal.com/ratings/en/regulatory/article/-/view/sourceId/101695609"
+    },
+    {
+      "label": "heise online: S&amp;P downgrades Oracle to BBB-, one notch above junk (July 2026) →",
+      "url": "https://www.heise.de/en/news/S-P-downgrades-Oracle-to-BBB-only-one-notch-above-junk-level-11363472.html"
+    },
+    {
+      "label": "StreetInsider: Moody's affirms Oracle at Baa2 with a negative outlook →",
+      "url": "https://www.streetinsider.com/Corporate+News/Moodys+affirms+Oracle+rating+at+Baa2+with+negative+outlook/25927273.html"
+    },
+    {
+      "label": "TIKR: Oracle courts Apollo and Goldman Sachs for AI chip financing as debt tops $169 billion →",
+      "url": "https://www.tikr.com/blog/oracle-courts-apollo-and-goldman-for-ai-chip-financing-as-debt-tops-169-billion"
+    }
+  ],
+  "meta": {
+    "author": "Charles Osi",
+    "estimatedReadTime": "4 min",
+    "editorialTags": [
+      "oracle",
+      "ai-infrastructure",
+      "credit-markets",
+      "ai-capex",
+      "data-centers",
+      "investment-grade-credit",
+      "openai",
+      "oracle-cloud-infrastructure",
+      "corporate-bonds",
+      "ai-debt"
+    ],
+    "seoKeywords": [
+      "Oracle stock",
+      "ORCL credit default swaps",
+      "Oracle debt",
+      "Oracle AI data centers",
+      "Oracle BBB- rating",
+      "AI infrastructure debt",
+      "Oracle free cash flow",
+      "Oracle backlog",
+      "Oracle Apollo Goldman chips",
+      "AI credit risk"
+    ],
+    "relatedTickers": [
+      "ORCL",
+      "CRWV",
+      "AVGO",
+      "NVDA"
+    ],
+    "keyMetrics": {
+      "Price": 128.23,
+      "Market Cap": "$388.7B",
+      "Forward P/E": "11.7x",
+      "Total Revenue (TTM)": "$71.78B",
+      "52-Week Low": 114.5,
+      "52-Week High": 289.24,
+      "Analyst Consensus": "Buy (41 analysts)",
+      "Analyst Target Mean": 237.36
+    }
+  },
+  "image": {
+    "src": "/img/articles/orcl-credit-default-swap-ai-debt-2026.jpg",
+    "fit": "cover",
+    "caption": "A data center under construction at dusk. Oracle is borrowing to build AI capacity faster than its customers pay for it, which is why its credit default swaps now say more about the AI trade than its earnings do. Photo: The Signal / AI-generated.",
+    "alt": "Photorealistic photograph of a large data center construction site at dusk, with steel framing, cranes and cooling pipes on half-finished halls lit by warm work lights."
+  },
+  "bodyHtml": "<div class=\"stats-card\"><div class=\"stats-card-title\">The Numbers That Matter</div><table class=\"stats-table\"><tr><td class=\"stat-label\">Price <span class=\"stats-live-badge\">LIVE</span></td><td class=\"stat-value\" data-live-ticker=\"ORCL\" data-live-field=\"price\">$128.23</td></tr><tr><td class=\"stat-label\">Market Cap</td><td class=\"stat-value\">$388.7B</td></tr><tr><td class=\"stat-label\">Forward P/E</td><td class=\"stat-value\">11.7x</td></tr><tr><td class=\"stat-label\">Total Revenue (TTM)</td><td class=\"stat-value\">$71.78B</td></tr><tr><td class=\"stat-label\">52-Week Low</td><td class=\"stat-value\">$114.50</td></tr><tr><td class=\"stat-label\">52-Week High</td><td class=\"stat-value\">$289.24</td></tr><tr><td class=\"stat-label\">Analyst Consensus</td><td class=\"stat-value\">Buy (41 analysts)</td></tr><tr><td class=\"stat-label\">Analyst Target Mean</td><td class=\"stat-value\">$237.36</td></tr></table><div class=\"stats-card-note\">Price refreshes live &middot; All other figures as of October 16, 2026</div></div><p>Oracle sells the mission-critical database software and enterprise applications that quietly run the back office of global banks, major airlines, and federal agencies. It is unglamorous corporate plumbing that takes years to install and proves almost impossible to rip out. That legacy software footprint is an absolute cash machine.</p><p>Over the past two years, Oracle bolted a massive new business on top of that base: Oracle Cloud Infrastructure. It rents specialized computing power to artificial intelligence labs like OpenAI, xAI, and Meta. If traditional Oracle is the dependable landlord collecting steady commercial rents, its cloud division is an ambitious developer trying to construct whole city blocks on borrowed money.</p><p>That pivot makes Oracle the key benchmark for the entire compute cycle. It is no longer just selling software licenses. It is pouring concrete, securing massive power hookups, and buying leading-edge processors by the hundred thousand to build mega-campuses. That infrastructure needs staggering sums of capital upfront, before a client runs a single workload. That dynamic has turned Oracle into the primary fault line where AI stops being a pure software earnings story and becomes a high-stakes credit test.</p><p>The bond market has already moved ahead of both the equity crowd and the official rating agencies. Credit default swaps, which work like insurance policies against a company stiffing its lenders, on Oracle recently touched 300 basis points. In plain terms, traders are paying around three dollars a year to insure one hundred dollars of Oracle debt against default. That implies a five-year default probability topping 20%.</p><p>Oracle's thirty-year debt has seen spreads blow out by roughly 150 basis points over the past year. It now trades like paper from lower-rated junk issuers, even while S&amp;P officially holds the company at BBB-, one thin notch above speculative grade.</p><p>The stock is down more than half from its peak and off roughly a third this year. Even so, equity investors still treat this as an earnings-multiple dip. It is not.</p><p>Total debt hit $169.1 billion at the end of August, while capital expenditures of $55.7 billion last fiscal year pushed free cash flow to negative $23.7 billion. Over the last four reported quarters, that cash bleed reached negative $28.7 billion. The market is no longer wondering if companies want AI capacity. The question is whether Oracle can afford the interest payments required to supply it.</p><p>The bear case here does not require enterprise demand to evaporate. The contracted backlog, which hit $664 billion in August, is a collection of long-term promises, not cash on the balance sheet. S&amp;P notes that OpenAI accounts for roughly half of the fiscal year-end backlog. That is acute counterparty concentration: Oracle is borrowing tens of billions to build capacity for an unprofitable AI lab that needs this very infrastructure to generate future revenue.</p><p>If S&amp;P or Moody's cuts Oracle to junk, roughly $120 billion of its debt could be dumped by index funds that can only hold investment-grade assets. Borrowing costs would reset permanently higher, right ahead of major 2028 debt maturities. If the fiscal 2027 cash deficit prints worse than S&amp;P's estimated $42 billion, the equity re-rates downward regardless of how many billions sit in backlog.</p><p>What has to happen for the stock to recover is entirely mechanical. At roughly 12 times forward earnings, Oracle is priced like a dying legacy hardware business rather than a hyperscaler growing its top line. To unlock that multiple, Oracle has to prove it can fund its buildout without losing its investment-grade status.</p><p>The market is watching whether talks with Apollo and Goldman Sachs turn into off-balance-sheet vehicles that buy the chips and lease them back. That would relieve the direct strain immediately. If Oracle protects its investment-grade badge while converting backlog into real operating cash flow, today's compressed valuation is an obvious disconnect. If a downgrade hits first, the cost of capital resets higher and leaves the equity stranded.</p><p>The marker to watch over coming quarters is operating cash flow. It has to climb fast enough to narrow that $42 billion projected deficit before the rating agencies force the issue. Until those balance-sheet questions resolve, the equity remains an option on bond market patience. Oracle's future will be dictated by bond traders rather than software buyers.</p><p class=\"disclosure\">Disclosure: The Signal holds no position in ORCL. Positions may change. This is not financial advice.</p>"
+}
