@@ -1,0 +1,120 @@
+{
+  "slug": "sndk-dram-scare-nand-mispricing-2026",
+  "title": "The Market Repriced Sandisk for a Product It Does Not Make",
+  "subtitle": "A scare over Chinese DRAM knocked 18% off a flash memory giant whose guidance never flinched.",
+  "summary": "Sandisk shares dropped sharply last week after Chinese chipmaker CXMT announced a DRAM milestone, even though Sandisk exclusively produces NAND flash. Trading at roughly half its historical multiple, the equity now hinges on proving its record contract margins can outlast the price cycle.",
+  "ticker": "SNDK",
+  "tickerName": "Sandisk",
+  "company": "Sandisk Corporation",
+  "sector": "ai",
+  "sentiment": "neutral",
+  "date": "2026-10-19T17:00:00Z",
+  "price": 1299.3,
+  "featured": false,
+  "premium": false,
+  "tags": [
+    "SNDK",
+    "Sandisk",
+    "NAND flash",
+    "memory pricing",
+    "CXMT",
+    "YMTC",
+    "AI storage",
+    "datacenter SSDs",
+    "contract pricing",
+    "memory cycle",
+    "earnings preview"
+  ],
+  "links": [
+    {
+      "label": "Sandisk fiscal Q4 and full-year 2026 results: revenue $8.965 billion, gross margin 84.6%, Q1 guidance $10.30-10.80 billion (August 5, 2026) →",
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026053346/sndkq4-26ex991xpressrelease.htm"
+    },
+    {
+      "label": "Sandisk fiscal 2026 Form 10-K: New Business Model terms, $59.8 billion of remaining performance obligations, no funded debt, customer concentration (August 17, 2026) →",
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm"
+    },
+    {
+      "label": "Sandisk Investor Day long-term model: ~80% non-GAAP gross margin target, ~50% of FY2027 bits under contract (August 13, 2026) →",
+      "url": "https://www.sandisk.com/company/newsroom/press-releases/2026/2026-08-13-sandisk-investor-day-2026"
+    },
+    {
+      "label": "Sandisk sets fiscal first-quarter 2027 results for Thursday, October 29, 2026 →",
+      "url": "https://investor.sandisk.com/news-releases/news-release-details/sandisk-report-first-quarter-fiscal-year-2027-results-october-29"
+    },
+    {
+      "label": "Yahoo Finance: Sandisk fell 18% on a DRAM scare, now trades near half its one-year earnings multiple (October 19, 2026) →",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/sandisk-stock-fell-18-dram-104331842.html"
+    },
+    {
+      "label": "Reuters: US chip stocks extend slide as China memory report and AI spending jitters hit the sector (October 13, 2026) →",
+      "url": "https://www.investing.com/news/stock-market-news/us-chip-stocks-extend-slide-as-china-memory-report-ai-spending-jitters-hit-sector-4947160"
+    },
+    {
+      "label": "TradingKey: memory stocks slide again as Goldman Sachs says the market overestimated CXMT's technology impact (October 16, 2026) →",
+      "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262221356-memory-stocks-fall-sk-hynix-sandisk-micron-cxmt-4f2-dram-hbm-goldman-tradingkey"
+    },
+    {
+      "label": "TrendForce: NAND contract prices up 15-20% in the December quarter, with the pace of increases moderating (September 30, 2026) →",
+      "url": "https://www.trendforce.com/presscenter/news/20260930-13258.html"
+    },
+    {
+      "label": "The Korea Herald: YMTC to lift NAND output from 2.01 million to 2.50 million wafers in 2027 as its third Wuhan fab ramps (August 30, 2026) →",
+      "url": "https://www.koreaherald.com/article/10856454"
+    },
+    {
+      "label": "Western Digital fiscal 2023 Form 10-K: flash revenue fell 38% and flash gross margin fell 29.1 points to 7.1% →",
+      "url": "https://www.sec.gov/Archives/edgar/data/106040/000010604023000024/wdc-20230630.htm"
+    }
+  ],
+  "meta": {
+    "author": "Charles Osi",
+    "estimatedReadTime": "4 min",
+    "editorialTags": [
+      "sandisk",
+      "nand-flash",
+      "memory-cycle",
+      "dram-vs-nand",
+      "cxmt",
+      "ymtc",
+      "contract-pricing",
+      "datacenter-storage",
+      "ai-infrastructure",
+      "earnings-preview"
+    ],
+    "seoKeywords": [
+      "Sandisk stock",
+      "SNDK stock",
+      "Sandisk NAND flash",
+      "CXMT DRAM scare",
+      "YMTC NAND supply",
+      "NAND contract prices 2026",
+      "Sandisk earnings October 29 2026",
+      "Sandisk gross margin guidance",
+      "memory stock selloff",
+      "Sandisk New Business Model contracts"
+    ],
+    "relatedTickers": [
+      "SNDK",
+      "MU",
+      "WDC"
+    ],
+    "keyMetrics": {
+      "Price": 1299.3,
+      "Market Cap": "$187.8B",
+      "Forward P/E": "4.9x",
+      "Total Revenue (TTM)": "$20.25B",
+      "52-Week Low": 142.76,
+      "52-Week High": 2354.39,
+      "Analyst Consensus": "Buy (24 analysts)",
+      "Analyst Target Mean": 2173
+    }
+  },
+  "image": {
+    "src": "/img/articles/sndk-dram-scare-nand-mispricing-2026.jpg",
+    "fit": "cover",
+    "caption": "Three blank SD memory cards on a desk in late-afternoon window light. NAND flash is the storage inside phones, laptops and the enterprise drives now bolted into AI data centers. Photo: The Signal / AI-generated.",
+    "alt": "Photorealistic macro photograph of three blank matte-black SD memory cards fanned out on a walnut desk, a brushed aluminium card reader and the blurred shoulder of a camera body behind them, warm afternoon sunlight raking across the wood."
+  },
+  "bodyHtml": "Every time you open your phone to scroll past 40,000 unorganized photos, you are leaning on NAND flash. Unlike computer processors that run hot and forget everything the instant you cut power, flash memory holds onto data in the dark. It is the digital bedrock inside your laptop, your phone, and the enterprise solid-state drives now bolted into AI clusters.\nThink of an AI server as a trading desk. DRAM is the surface area where the trader shuffles active sheets, while NAND is the fireproof vault down the hall holding every record. Sandisk builds the vaults. Spun out of Western Digital in early 2025, the company designs flash chips, controls its process technology, and manufactures hardware through its Flash Ventures joint venture with Kioxia. It does not sell processors or servers. It sells the permanent storage clusters require to train models and log checkpoints, generating $5.153 billion from datacenter customers in fiscal 2026.\n<div class=\"stats-card\">\n<div class=\"stats-card-title\">The Numbers That Matter</div>\n<table class=\"stats-table\">\n<tr><td class=\"stat-label\">Price <span class=\"stats-live-badge\">LIVE</span></td><td class=\"stat-value\" data-live-ticker=\"SNDK\" data-live-field=\"price\">$1,299.30</td></tr>\n<tr><td class=\"stat-label\">Market Cap</td><td class=\"stat-value\">$187.8B</td></tr>\n<tr><td class=\"stat-label\">Forward P/E</td><td class=\"stat-value\">4.9x</td></tr>\n<tr><td class=\"stat-label\">Total Revenue (TTM)</td><td class=\"stat-value\">$20.25B</td></tr>\n<tr><td class=\"stat-label\">52-Week Low</td><td class=\"stat-value\">$142.76</td></tr>\n<tr><td class=\"stat-label\">52-Week High</td><td class=\"stat-value\">$2,354.39</td></tr>\n<tr><td class=\"stat-label\">Analyst Consensus</td><td class=\"stat-value\">Buy (24 analysts)</td></tr>\n<tr><td class=\"stat-label\">Analyst Target Mean</td><td class=\"stat-value\">$2,173</td></tr>\n</table>\n<div class=\"stats-card-note\">Price refreshes live &middot; All other figures as of October 16, 2026</div>\n</div>\nLast week, traders dumped the vault maker because someone built a faster desk. Sandisk plunged 17.86% over seven straight negative sessions, leaving it more than 40% below its summer peak. The catalyst arrived when Cao Kanyu, president of Chinese memory maker CXMT, announced a denser DDR5 server module scheduled for late 2026. CXMT builds DRAM, a market where Sandisk does not compete. Yet Sandisk fell harder that Monday than Micron, the company CXMT actually competes with. A hot inflation print and a broad tech pullback accelerated the slide. Even after Goldman Sachs told clients the market had overestimated CXMT's technological impact, the selling persisted.\nThrough the entire rout, Sandisk never touched its guidance. The fiscal first-quarter forecast issued in August still calls for $10.30 billion to $10.80 billion in revenue and non-GAAP gross margins between 83% and 85%. On Oct. 19 the stock was up roughly 7% in midday trading, but the discount lingered.\nThe market's skepticism centers on how Sandisk sells its capacity. To avoid the boom-and-bust whiplash common to memory hardware, management signed multi-year New Business Model agreements covering roughly half of next fiscal year's output. These ten contracts with eight enterprise and edge clients include hard price floors and price caps, backed by $16.5 billion in customer financial guarantees. As Chief Financial Officer Luis Visoso told investors, \"The total expected revenue from all our NBMs we have signed is a minimum of $93.9 billion, assuming floor pricing. We believe actual revenue will be above that minimum.\"\nThat setup alters the equity math entirely. Sandisk trades at about 6x normalized forward earnings, per TIKR data cited by Yahoo Finance, half its one-year average of 11.68x. Wall Street refuses to pay full price for an 84.6% gross margin because it views those profits as cyclical windfalls rather than permanent contract pricing. For the stock to re-rate, Sandisk must prove its price floors insulate earnings even as broader spot pricing cools. The multiple will stay depressed until the company shows that volume growth, rather than temporary market shortages, is carrying the top line.\nShort sellers have heard this promise before. Inside Western Digital during fiscal 2023, this exact flash portfolio saw revenue drop 37.8% as gross margin collapsed 29.1 points, sinking from 36.2% to just 7.1%. That downturn forced $404 million in inventory writedowns and a $2.143 billion net loss. Today, TrendForce warns that while NAND contract prices will rise 15% to 20% in the December quarter, the pace of increases is moderating. Worse, the real overseas threat is not CXMT but YMTC. It surpassed Kioxia as the third-largest NAND supplier by volume, with output rising to about 2.50 million wafers in 2027. Sandisk's contract floors only guarantee roughly $23 billion annually, far below its current annualized run-rate, while receivables spiked to $4.708 billion alongside customer refund liabilities.\nWhat we are watching is the October 29 earnings release. If non-GAAP gross margin slips below the 83% guidance floor, or the December-quarter revenue outlook falls short of $11.5 billion, the bears win their case. Sandisk does not need to answer for the DRAM market, but it must prove its flash contracts can defend an unprecedented margin.\n<p class=\"disclosure\">Disclosure: The Signal holds no position in SNDK. Positions may change. This is not financial advice.</p>"
+}
