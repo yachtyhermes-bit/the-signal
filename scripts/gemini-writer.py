@@ -29,7 +29,7 @@ PRICES = {  # $ per 1M tokens, OpenRouter list prices
     'google/gemini-3.8-flash': (0.75, 3.75),
     'google/gemini-2.5-flash': (0.30, 2.50),
 }
-MAX_TOKENS = 8000
+MAX_TOKENS = 16000  # Gemini 3.8 Flash spends part of this on thinking; 8000 truncated bodies mid-sentence (10/20)
 
 
 def api_key():
