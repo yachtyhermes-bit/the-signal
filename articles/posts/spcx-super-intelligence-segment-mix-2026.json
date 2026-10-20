@@ -1,0 +1,107 @@
+{
+  "slug": "spcx-super-intelligence-segment-mix-2026",
+  "title": "SpaceX Leans Into Compute as AI Revenue Surpasses Rocketry",
+  "subtitle": "Super Intelligence now drives the top line, dragging the equity into the data center crosshairs",
+  "summary": "SpaceX posted record revenue as its new Super Intelligence unit crossed half of total sales, outgrowing launch and Starlink combined. The shift ties the company's valuation to capital spending and hardware depreciation rather than launch cadence.",
+  "ticker": "SPCX",
+  "tickerName": "SpaceX",
+  "company": "Space Exploration Technologies Corp.",
+  "sector": "space",
+  "sentiment": "neutral",
+  "date": "2026-10-20T21:30:00Z",
+  "price": 147.79,
+  "featured": false,
+  "premium": false,
+  "image": {
+    "src": "/img/articles/spcx-super-intelligence-segment-mix-2026.jpg",
+    "fit": "cover",
+    "caption": "A stainless-steel super-heavy launch vehicle vents cryogenic vapor on a coastal pad at golden hour. SpaceX reported $14.6 billion of September-quarter revenue on Oct. 20, 2026, with its Super Intelligence segment supplying 52% of the total. Photo: The Signal / AI-generated.",
+    "alt": "Photorealistic golden-hour photograph of a tall stainless-steel rocket standing upright on a coastal launch pad, thick white vapor venting from its mid-body and base, floodlight masts throwing warm halos against a twilight sky graded from pale amber to deep blue."
+  },
+  "tags": [
+    "spacex",
+    "spcx",
+    "super-intelligence",
+    "grok",
+    "cursor",
+    "ai-infrastructure",
+    "compute",
+    "depreciation",
+    "capex",
+    "starlink",
+    "q3-2026-earnings",
+    "colossus"
+  ],
+  "links": [
+    {
+      "label": "SpaceX: Q3 2026 earnings release (SEC 8-K exhibit 99.1) →",
+      "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026066482/spaceexplorationtechnologi.htm"
+    },
+    {
+      "label": "SpaceX: Q2 2026 Form 10-Q, segment detail and customer concentration →",
+      "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026052535/spcx-20260630.htm"
+    },
+    {
+      "label": "CNBC: SpaceX Q3 2026 earnings live updates and analyst reaction →",
+      "url": "https://www.cnbc.com/2026/10/20/spacex-spcx-earnings-live-updates-q3-2026html.html"
+    },
+    {
+      "label": "Investing.com: SpaceX tops Q3 estimates as revenue surges 161% →",
+      "url": "https://www.investing.com/news/stock-market-news/spacex-tops-q3-estimates-as-revenue-surges-161-on-starlink-ai-compute-expansion-4960964"
+    },
+    {
+      "label": "CoreWeave: Q2 2026 results, for the capex and depreciation comparison →",
+      "url": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Second-Quarter-2026-Results/default.aspx"
+    },
+    {
+      "label": "Nebius: Q2 2026 release, server useful life extended to five years →",
+      "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812xex99d1.htm"
+    }
+  ],
+  "meta": {
+    "author": "Charles Osi",
+    "estimatedReadTime": "4 min",
+    "editorialTags": [
+      "spacex",
+      "super-intelligence-segment",
+      "ai-infrastructure-economics",
+      "depreciation-cycle",
+      "capex-intensity",
+      "starlink-arpu",
+      "cursor-acquisition",
+      "compute-capacity",
+      "customer-concentration",
+      "cost-of-capital"
+    ],
+    "seoKeywords": [
+      "SpaceX stock",
+      "SPCX stock",
+      "SpaceX Q3 2026 earnings",
+      "SpaceX AI revenue",
+      "SpaceX Super Intelligence segment",
+      "SpaceX depreciation costs",
+      "SpaceX capex 2026",
+      "Starlink ARPU",
+      "Cursor acquisition SpaceX",
+      "SpaceX market cap",
+      "SpaceX vs CoreWeave"
+    ],
+    "keyMetrics": {
+      "Price": 147.79,
+      "Market Cap": "$2.0T",
+      "Forward P/E": "72.3",
+      "Total Revenue (TTM)": "$32.0B",
+      "52-Week Low": 104.83,
+      "52-Week High": 225.64,
+      "Analyst Consensus": "Buy (31 analysts)",
+      "Analyst Target Mean": 222.71
+    },
+    "relatedTickers": [
+      "RKLB",
+      "ASTS",
+      "IRDM"
+    ],
+    "youtubeIds": []
+  },
+  "bodyHtml": "<p>You thought you bought a front-row seat to the colonization of Mars. What you actually own is an electric utility wired for artificial intelligence. SpaceX launched 35 rockets last quarter, but the launch pad is no longer the main event.</p><p>In plain English, SpaceX used to be simple to understand. It builds reusable rockets that haul cargo into orbit, and it flies a satellite constellation called Starlink that sells broadband to 13.6 million subscribers streaming Netflix in rural cabins or working on commercial flights. But earlier this year, it absorbed xAI and X into a division named Super Intelligence. Now it sells frontier AI models, raw cloud compute, and Cursor, the AI code editor your software engineer friends cannot stop talking about.</p><p>Think of old SpaceX as a railroad company laying steel track to the stars. Today, it operates more like a power authority that built massive generation plants to sell digital horsepower. In the modern AI race, compute capacity is the primary bottleneck. By plugging 1.7 gigawatts of nameplate capacity into facilities like its Colossus cluster, SpaceX sells the picks, the shovels, and the power grid running the mine.</p><div class=\"stats-card\"><div class=\"stats-card-title\">The Numbers That Matter</div><table class=\"stats-table\"><tr><td class=\"stat-label\">Price <span class=\"stats-live-badge\">LIVE</span></td><td class=\"stat-value\" data-live-ticker=\"SPCX\" data-live-field=\"price\">$147.79</td></tr><tr><td class=\"stat-label\">Market Cap</td><td class=\"stat-value\">$2.0T</td></tr><tr><td class=\"stat-label\">Forward P/E</td><td class=\"stat-value\">72.3</td></tr><tr><td class=\"stat-label\">Total Revenue (TTM)</td><td class=\"stat-value\">$32.0B</td></tr><tr><td class=\"stat-label\">52-Week Low</td><td class=\"stat-value\">$104.83</td></tr><tr><td class=\"stat-label\">52-Week High</td><td class=\"stat-value\">$225.64</td></tr><tr><td class=\"stat-label\">Analyst Consensus</td><td class=\"stat-value\">Buy (31 analysts)</td></tr><tr><td class=\"stat-label\">Analyst Target Mean</td><td class=\"stat-value\">$222.71</td></tr></table><div class=\"stats-card-note\">Price refreshes live. All other figures as of October 20, 2026.</div></div><p>The September quarter made that pivot irreversible. Super Intelligence generated $7.56 billion, up 830% from a year earlier. That single segment now delivers 52% of company revenue, dwarfing the legacy launch business at $1.77 billion. The rocket company is an AI infrastructure landlord wearing an astronaut suit.</p><p>Yet running a digital utility comes with brutal accounting mechanics. When a company buys tens of billions of dollars in AI chips, it does not deduct the bill on day one. Instead, it depreciates the gear over its expected lifespan, taking a steady accounting hit as the hardware quietly ages in a rack. Super Intelligence reported an adjusted EBITDA margin of 65%, which sounds like software royalty. But once you subtract $2.47 billion in depreciation and stock-based compensation, the actual operating margin shrivels to just 5.7%.</p><p>Feeding that beast requires eye-watering cash. SpaceX plowed $16.4 billion into AI capital spending in just three months, which equals 2.2 times the segment's entire revenue. Across nine months, $13.1 billion in operating cash flow could not match $48.1 billion in total capital outlays. An $89.9 billion stockpile of cash and securities keeps the engine running, aided by customer prepayments of $17.5 billion. Still, the burn rate is staggering.</p><p>A short-seller looking at this tape sees growth that is bought, not earned. When capital spending runs at double your revenue and you bolt on acquired sales from Cursor, you flatter the top line long before the depreciation bill matures. Management still does not disclose the assumed lifespan of its server racks, even as rivals stretch their schedules to manufacture paper profits. Meanwhile, Starlink's consumer revenue per user dropped from $83 to $69 over the past year, quarterly interest expense hit $675 million, and a single customer represents nearly a fifth of all sales. If operating margins stay stuck in the single digits while quarterly capex exceeds $15 billion, the company begins to look less like an untouchable tech titan and more like an overleveraged data center.</p><p>That risk explains why the equity sits roughly a third below its June peak despite blowing past consensus estimates. Rocket launches will not re-rate this stock. The equity moves only when Super Intelligence proves its GAAP operating margin can push toward the 20% mark after the full wear-and-tear of its hardware hits the books. Until SpaceX proves its silicon earns cash faster than it rusts, the market will price it alongside the rest of the troubled compute sector.</p><p>What we are watching next quarter is whether management discloses its server depreciation schedules and whether that single corporate whale's revenue concentration begins to decline.</p><p class=\"disclosure\">Disclosure: The Signal holds no position in SPCX. Positions may change. This is not financial advice.</p>"
+}
