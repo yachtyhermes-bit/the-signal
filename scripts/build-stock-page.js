@@ -205,11 +205,14 @@ function buildStockPage(symbol) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>${esc(symbol)} — The Signal</title>
+  <title>${esc(symbol)} Stock Analysis, Moat &amp; Financials — The Signal</title>
+  <meta name="description" content="${esc(symbol)} stock analysis from The Signal: moat rating, revenue and earnings history, valuation and price action for ${esc(company.name || symbol)}.">
+  <meta property="og:title" content="${esc(symbol)} Stock Analysis, Moat &amp; Financials — The Signal">
+  <meta property="og:description" content="${esc(symbol)} stock analysis from The Signal: moat rating, revenue and earnings history, valuation and price action for ${esc(company.name || symbol)}.">
   <link rel="canonical" href="https://readthesignal.net/stocks/${esc(symbol)}/">
   <meta property="og:url" content="https://readthesignal.net/stocks/${esc(symbol)}/">
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Oxanium:wght@400;500;600;700&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/stock-card.css">
+  <link rel="stylesheet" href="/css/stock-card.css?v=2">
   <link rel="stylesheet" href="/css/nav.css">
   <script src="https://cdn.jsdelivr.net/npm/lightweight-charts@4.1.3/dist/lightweight-charts.standalone.production.js"></script>
   <script src="/js/watchlist.js?v=2" defer></script>
@@ -688,7 +691,7 @@ function buildStockPage(symbol) {
   </div>
 
   <script id="chartData-${symbol}" type="application/json">${embeddedData}</script>
-  <script src="/js/stock-chart.js?v=16"></script>
+  <script src="/js/stock-chart.js?v=18"></script>
   <script>
 (function() {
   const saved = localStorage.getItem('stock-theme');

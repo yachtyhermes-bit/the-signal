@@ -140,33 +140,114 @@
   function getSnapUnit(val) { if (val >= 100e9) return 20e9; if (val >= 10e9) return 5e9; if (val >= 1e9) return 1e9; if (val >= 100e6) return 100e6; if (val >= 10e6) return 10e6; return 1e6; }
   function fmtTick(n) { if (n === 0) return '0'; if (n >= 1e12) return parseFloat((n/1e12).toFixed(1))+'T'; if (n >= 1e9) return parseFloat((n/1e9).toFixed(1))+'B'; if (n >= 1e6) return parseFloat((n/1e6).toFixed(0))+'M'; return parseFloat((n/1e3).toFixed(0))+'K'; }
 
+  // ── Shared grouped-bar renderer: paired bars anchored on a zero baseline ──
+  function niceTicks(min, max) {
+    const span = (max - min) || 1;
+    const raw = span / 4;
+    const mag = Math.pow(10, Math.floor(Math.log10(raw)));
+    const norm = raw / mag;
+    const step = (norm <= 1 ? 1 : norm <= 2 ? 2 : norm <= 2.5 ? 2.5 : norm <= 5 ? 5 : 10) * mag;
+    const start = Math.floor(min / step) * step;
+    const end = Math.ceil(max / step) * step;
+    const out = [];
+    for (let v = start; v <= end + step * 0.001; v += step) out.push(Math.round(v));
+    return out.length > 1 ? out : [min, max];
+  }
+  function axisMoney(v) { return (v < 0 ? '-$' : '$') + fmtTick(Math.abs(v)); }
+
+  function drawFinChart(areaEl, rows, opts) {
+    if (!areaEl || !rows.length) return;
+    areaEl.querySelectorAll('svg.fin-chart-svg').forEach(n => n.remove());
+    const W = Math.max(240, areaEl.clientWidth || 320);
+    const H = Math.max(150, areaEl.clientHeight || 260);
+    const rotate = rows.length > 4;
+    const m = { t: 12, r: 10, b: rotate ? 46 : 26, l: 52 };
+    const plotW = W - m.l - m.r;
+    const plotH = H - m.t - m.b;
+    const all = [];
+    rows.forEach(r => { all.push(r.a, r.b); });
+    const ticks = niceTicks(Math.min(0, Math.min.apply(null, all)), Math.max(0, Math.max.apply(null, all)));
+    const min = Math.min(ticks[0], 0);
+    const max = Math.max(ticks[ticks.length - 1], 0);
+    const y = v => m.t + (1 - (v - min) / ((max - min) || 1)) * plotH;
+    const NS = 'http://www.w3.org/2000/svg';
+
+    const svg = document.createElementNS(NS, 'svg');
+    svg.setAttribute('class', 'fin-chart-svg');
+    svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+    svg.setAttribute('role', 'img');
+    svg.setAttribute('aria-label', (opts.aLabel || 'Series A') + ' and ' + (opts.bLabel || 'Series B') + ' by period');
+    areaEl.appendChild(svg);
+
+    ticks.forEach(v => {
+      if (v !== 0) {
+        const g = document.createElementNS(NS, 'line');
+        g.setAttribute('class', 'fc-grid');
+        g.setAttribute('x1', m.l); g.setAttribute('x2', W - m.r);
+        g.setAttribute('y1', y(v)); g.setAttribute('y2', y(v));
+        svg.appendChild(g);
+      }
+      const t = document.createElementNS(NS, 'text');
+      t.setAttribute('class', v === 0 ? 'fc-tick fc-zero' : 'fc-tick');
+      t.setAttribute('x', m.l - 8); t.setAttribute('y', y(v) + 4);
+      t.setAttribute('text-anchor', 'end');
+      t.textContent = v === 0 ? '$0' : axisMoney(v);
+      svg.appendChild(t);
+    });
+
+    const zero = document.createElementNS(NS, 'line');
+    zero.setAttribute('class', 'fc-zero-line');
+    zero.setAttribute('x1', m.l); zero.setAttribute('x2', W - m.r);
+    zero.setAttribute('y1', y(0)); zero.setAttribute('y2', y(0));
+    svg.appendChild(zero);
+
+    const groupW = plotW / rows.length;
+    const pairW = Math.min(groupW * 0.62, 60);
+    const barW = pairW / 2;
+
+    rows.forEach((r, i) => {
+      const x0 = m.l + i * groupW + (groupW - pairW) / 2;
+      [[r.a, 'fc-bar-a', opts.aLabel], [r.b, 'fc-bar-b', opts.bLabel]].forEach((sp, j) => {
+        const val = sp[0];
+        if (val === null || val === undefined || isNaN(val)) return;
+        const top = Math.min(y(val), y(0));
+        const h = Math.max(2, Math.abs(y(val) - y(0)));
+        const rect = document.createElementNS(NS, 'rect');
+        rect.setAttribute('class', sp[1]);
+        rect.setAttribute('x', x0 + j * barW - (j ? 0.6 : 0));
+        rect.setAttribute('y', top);
+        rect.setAttribute('width', barW + (j ? 0.6 : 0));
+        rect.setAttribute('height', h);
+        const title = document.createElementNS(NS, 'title');
+        title.textContent = r.label + ' · ' + sp[2] + ' ' + fmtB(val);
+        rect.appendChild(title);
+        svg.appendChild(rect);
+      });
+      const lab = document.createElementNS(NS, 'text');
+      lab.setAttribute('class', 'fc-tick');
+      const lx = x0 + pairW / 2;
+      const ly = H - m.b + 14;
+      lab.setAttribute('x', lx); lab.setAttribute('y', ly);
+      lab.setAttribute('text-anchor', rotate ? 'end' : 'middle');
+      if (rotate) lab.setAttribute('transform', 'rotate(-40 ' + lx + ' ' + ly + ')');
+      lab.textContent = r.label;
+      svg.appendChild(lab);
+    });
+  }
+
   // Quarter label mapping: "2026/Q2" → "Q2 2026"
   function qLabel(p) {
     const m = String(p).match(/(\d{4})\/Q(\d)/);
     return m ? 'Q'+m[2]+' '+m[1] : p;
   }
-  // Quarter → date: "2026/Q2" → "Jul 31, 2025" (NVDA FY ends Jan, so Q2 ≈ Jul)
-  function qDate(p) {
-    const m = String(p).match(/(\d{4})\/Q(\d)/);
-    if (!m) return p;
-    const q = parseInt(m[2]), yr = parseInt(m[1]);
-    const months = ['Jan','Apr','Jul','Oct'];
-    const calYr = q === 1 ? yr - 1 : yr; // FY Q1 is in prior calendar year
-    return months[q-1] + ' ' + ['31','30','31','31'][q-1] + ', ' + calYr;
-  }
-  // Annual date: "01/2026" → "Jan 24, 2026" (NVDA FY ends ~Jan 24-31)
+  // Period labels: never invent a calendar date. A fiscal period is shown as
+  // the fiscal quarter / month it actually is, so MU (Aug FY) is not stamped "Jan".
+  function qDate(p) { return qLabel(p); }
   function aDate(p) {
     const m = String(p).match(/(\d{2})\/(\d{4})/);
     if (!m) return p;
-    const mo = parseInt(m[1]), yr = parseInt(m[2]);
-    const days = ['','24','24','24','24','24','24','29','27','25','24','24','24'];
-    const mon = ['','Jan','Jan','Jan','Jan','Jan','Jan','Jul','Oct','Jan','Jan','Jan','Jan'];
-    // NVDA fiscal year: Jan 2026 = period ending ~Jan 24, 2026
-    // Jan 2025 = Jan 25, 2025, Jul 2024 = Jul 28, 2024, Oct 2023 = Oct 29, 2023
-    // Use a simple mapping
-    const approxDays = {1:'24',4:'27',7:'28',10:'27'};
-    const approxMon = {1:'Jan',4:'Apr',7:'Jul',10:'Oct'};
-    return (approxMon[mo]||'Jan')+' '+(approxDays[mo]||'31')+', '+yr;
+    const mon = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    return (mon[parseInt(m[1], 10)] || '') + ' ' + m[2];
   }
 
   // ═══ INIT FINANCIALS CHARTS ════════════════════════════════
@@ -200,38 +281,32 @@
         return qRev.map(r => {
           const niEntry = (quarterly.netIncome||[]).find(n => n.period === r.period);
           return { period: qLabel(r.period), fullDate: qDate(r.period),
-            rev: r.actual || 0, gp: (r.actual||0) * 0.7, ni: niEntry ? niEntry.actual : 0 };
+            rev: r.actual || 0, gp: null, ni: niEntry ? niEntry.actual : 0 };
         });
       }
     }
 
     function renderIS(mode) {
       const data = buildIS(mode);
+      if (!data.length) return;
+      isGrid.innerHTML = ''; isYAxis.innerHTML = ''; isXAxis.innerHTML = ''; isBars.innerHTML = '';
+      drawFinChart(isBars.parentElement, data.map(d => ({ label: d.period, a: d.rev, b: d.ni })),
+        { aLabel: 'Total Revenues', bLabel: 'Net Income' });
 
-      // Dynamic Y-axis scale from actual data
-      const maxVal = Math.max(1e6, ...data.map(d => Math.max(d.rev, d.gp, d.ni || 0))) * 1.1;
-      const snap = getSnapUnit(maxVal);
-      const MAX_IS = Math.ceil(maxVal / snap) * snap;
-      const Y_TICKS_IS = [MAX_IS, MAX_IS*5/6, MAX_IS*4/6, MAX_IS*3/6, MAX_IS*2/6, MAX_IS*1/6, 0];
-
-      // Update grid and Y-axis
-      isGrid.innerHTML = Y_TICKS_IS.map(() => '<div class="fin-chart-grid-line"></div>').join('');
-      isYAxis.innerHTML = Y_TICKS_IS.map(v => '<span>'+fmtTick(v)+'</span>').join('');
-
-      isBars.innerHTML = data.map(d => {
-        const revH = Math.max(0.5, (d.rev / MAX_IS) * 100);
-        const niH = Math.max(0.5, (d.ni / MAX_IS) * 100);
-        return `<div class="fin-bar-group"><div class="fin-bar-tooltip">${d.period} | Rev: ${fmtB(d.rev)} | Net: ${fmtB(d.ni)}</div><div class="fin-bar-rev" style="height:${revH}%"></div><div class="fin-bar-ni" style="height:${niH}%"></div></div>`;
-      }).join('');
-      isXAxis.innerHTML = data.map(d => '<span>'+d.period+'</span>').join('');
-      // Data table
       const table = document.getElementById('finDataTable');
       if (table) {
-        const rev = data.slice().reverse().slice(0, 3);
-        table.querySelector('thead tr').innerHTML = '<th>Period Ending:</th>' + rev.map(d => '<th>'+d.fullDate+'</th>').join('');
-        table.querySelector('tbody').innerHTML =
-          '<tr class="fin-data-row"><td class="fin-data-label">Total Revenues</td>'+rev.map(d => '<td>'+fmtComma(d.rev)+'</td>').join('')+'</tr>'+
-          '<tr class="fin-data-row"><td class="fin-data-label">Gross Profit</td>'+rev.map(d => '<td>'+fmtComma(d.gp)+'</td>').join('')+'</tr>';
+        const rows = data.slice().reverse().slice(0, 3);
+        const showGp = rows.some(d => d.gp !== null && d.gp !== undefined);
+        table.querySelector('thead tr').innerHTML = '<th>Period:</th>' + rows.map(d => '<th>'+d.fullDate+'</th>').join('');
+        let html = '<tr class="fin-data-row"><td class="fin-data-label">Total Revenues</td>' +
+          rows.map(d => '<td>'+fmtComma(d.rev)+'</td>').join('') + '</tr>';
+        if (showGp) {
+          html += '<tr class="fin-data-row"><td class="fin-data-label">Gross Profit</td>' +
+            rows.map(d => '<td>'+(d.gp == null ? '—' : fmtComma(d.gp))+'</td>').join('') + '</tr>';
+        }
+        html += '<tr class="fin-data-row"><td class="fin-data-label">Net Income</td>' +
+          rows.map(d => '<td'+(d.ni < 0 ? ' class="neg"' : '')+'>'+fmtComma(d.ni)+'</td>').join('') + '</tr>';
+        table.querySelector('tbody').innerHTML = html;
       }
     }
 
@@ -255,30 +330,23 @@
 
     function renderBS(mode) {
       const data = buildBS(mode);
+      if (!data.length) return;
+      if (bsGrid) bsGrid.innerHTML = '';
+      if (bsYAxis) bsYAxis.innerHTML = '';
+      if (bsXAxis) bsXAxis.innerHTML = '';
+      if (bsBars) {
+        bsBars.innerHTML = '';
+        drawFinChart(bsBars.parentElement, data.map(d => ({ label: d.period, a: d.assets, b: d.liab })),
+          { aLabel: 'Total Assets', bLabel: 'Total Liabilities' });
+      }
 
-      // Dynamic Y-axis scale from actual data
-      const maxVal = Math.max(1e9, ...data.map(d => Math.max(d.assets, d.liab))) * 1.1;
-      const snap = getSnapUnit(maxVal);
-      const MAX_BS = Math.ceil(maxVal / snap) * snap;
-      const BS_TICKS = [MAX_BS, MAX_BS*5/6, MAX_BS*4/6, MAX_BS*3/6, MAX_BS*2/6, MAX_BS*1/6, 0];
-
-      if (bsGrid) bsGrid.innerHTML = BS_TICKS.map(() => '<div class="fin-chart-grid-line"></div>').join('');
-      if (bsYAxis) bsYAxis.innerHTML = BS_TICKS.map(v => '<span>'+fmtTick(v)+'</span>').join('');
-
-      if (bsBars) bsBars.innerHTML = data.map(d => {
-        const taH = Math.max(0.5, (d.assets / MAX_BS) * 100);
-        const tlH = Math.max(0.5, (d.liab / MAX_BS) * 100);
-        return `<div class="fin-bar-group"><div class="fin-bar-tooltip">${d.period} | Assets: ${fmtB(d.assets)} | Liab: ${fmtB(d.liab)}</div><div class="fin-bar-rev" style="height:${taH}%"></div><div class="fin-bar-ni" style="height:${tlH}%"></div></div>`;
-      }).join('');
-      if (bsXAxis) bsXAxis.innerHTML = data.map(d => '<span>'+d.period+'</span>').join('');
-      // BS data table
       const bsTable = document.getElementById('finBsTable');
       if (bsTable) {
-        const rev = data.slice().reverse().slice(0, 3);
-        bsTable.querySelector('thead tr').innerHTML = '<th>Period Ending:</th>' + rev.map(d => '<th>'+d.fullDate+'</th>').join('');
+        const rows = data.slice().reverse().slice(0, 3);
+        bsTable.querySelector('thead tr').innerHTML = '<th>Period:</th>' + rows.map(d => '<th>'+d.fullDate+'</th>').join('');
         bsTable.querySelector('tbody').innerHTML =
-          '<tr class="fin-data-row"><td class="fin-data-label">Total Assets</td>'+rev.map(d => '<td>'+fmtComma(d.assets)+'</td>').join('')+'</tr>'+
-          '<tr class="fin-data-row"><td class="fin-data-label">Total Liabilities</td>'+rev.map(d => '<td>'+fmtComma(d.liab)+'</td>').join('')+'</tr>';
+          '<tr class="fin-data-row"><td class="fin-data-label">Total Assets</td>'+rows.map(d => '<td>'+fmtComma(d.assets)+'</td>').join('')+'</tr>'+
+          '<tr class="fin-data-row"><td class="fin-data-label">Total Liabilities</td>'+rows.map(d => '<td>'+fmtComma(d.liab)+'</td>').join('')+'</tr>';
       }
     }
 
