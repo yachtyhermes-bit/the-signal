@@ -1,0 +1,114 @@
+{
+  "slug": "credo-aec-moat-competition-test-2026",
+  "title": "Credo Technology Faces Its First Real AI Cable Showdown",
+  "subtitle": "A rival just put a number on Credo's market share, right as hyperscalers prepare to break up the bundle.",
+  "summary": "Credo built a virtual monopoly selling the specialized copper cables that keep AI clusters wired together at fat margins. Now rivals and hyperscalers are designing around its proprietary socket just as the industry shifts to next-generation speeds.",
+  "ticker": "CRDO",
+  "tickerName": "Credo Technology Group",
+  "company": "Credo Technology Group Holding Ltd",
+  "sector": "ai",
+  "sentiment": "neutral",
+  "date": "2026-10-23T17:05:00Z",
+  "price": 162.77,
+  "featured": false,
+  "premium": false,
+  "tags": [
+    "credo",
+    "crdo",
+    "active-electrical-cable",
+    "aec",
+    "ai-connectivity",
+    "maxlinear",
+    "broadcom",
+    "cisco",
+    "1-6t",
+    "serdes",
+    "hyperscaler",
+    "price-war",
+    "moat",
+    "ai-interconnect"
+  ],
+  "links": [
+    {
+      "label": "Credo: “Credo Reports First Quarter of Fiscal Year 2027” — revenue $479.0 million, up 114.7% year over year, non-GAAP gross margin 68.0%, Q2 guide of $525–535 million (Sept. 1, 2026) →",
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026059795/credoq12027ex-991.htm"
+    },
+    {
+      "label": "Credo Form 10-Q for the quarter ended Aug. 1, 2026 — two customers at 43% and 28% of revenue; 1.6T deployment risk language →",
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026060111/crdo-20260801.htm"
+    },
+    {
+      "label": "Credo Form 10-K for fiscal 2026 — revenue $1.34 billion, top 10 customers about 90% of sales →",
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026043303/crdo-20260502.htm"
+    },
+    {
+      "label": "Investing.com via Yahoo Finance: “Credo slides 7.5% as competition, slower 1.6T rollout weigh” — MaxLinear CEO puts Credo at 93–99% of the AEC market; Edgewater Research on Cisco’s 1.6T cable program (Oct. 23, 2026) →",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/credo-slides-7-5-competition-140812320.html"
+    },
+    {
+      "label": "MaxLinear third-quarter 2026 results — revenue $218.1 million, infrastructure revenue up 210% year over year, Q4 guide of $240–260 million (Oct. 22, 2026) →",
+      "url": "https://stocktitan.net/news/MXL/"
+    },
+    {
+      "label": "MaxLinear newsroom →",
+      "url": "https://www.maxlinear.com/news"
+    },
+    {
+      "label": "Credo: 1.6T ZeroFlap active light cable, shipping in 2027 (Oct. 2026) →",
+      "url": "https://investors.credosemi.com/news-events/news/news-details/2026/Credo-Unveils-1-6T-ZeroFlap-Active-Light-Cable-Industrys-First-Row-Scale-Wide-Parallel-Optical-Interconnect-for-AI-Data-Centers/default.aspx"
+    }
+  ],
+  "meta": {
+    "author": "Charles Osi",
+    "estimatedReadTime": "5 min",
+    "editorialTags": [
+      "credo",
+      "crdo",
+      "active-electrical-cable",
+      "aec",
+      "ai-connectivity",
+      "maxlinear",
+      "broadcom",
+      "cisco",
+      "serdes",
+      "hyperscaler-capex",
+      "valuation",
+      "october-2026-selloff"
+    ],
+    "seoKeywords": [
+      "CRDO stock",
+      "Credo Technology AEC",
+      "active electrical cable market",
+      "Credo MaxLinear competition",
+      "Credo 1.6T ramp",
+      "Credo market share 93%",
+      "Credo gross margin 68%",
+      "Cisco 1.6T AEC program",
+      "Credo customer concentration",
+      "Credo analyst price target"
+    ],
+    "relatedTickers": [
+      "CRDO",
+      "AVGO",
+      "MRVL",
+      "ANET"
+    ],
+    "keyMetrics": {
+      "Price": 162.77,
+      "Market Cap": "$28.7B",
+      "Forward P/E": "16.8x",
+      "Total Revenue (TTM)": "$1.59B",
+      "52-Week Low": 86.49,
+      "52-Week High": 308.67,
+      "Analyst Consensus": "Strong Buy (20 analysts)",
+      "Analyst Target Mean": 279.09
+    }
+  },
+  "bodyHtml": "<p>When a rival chief executive gets on an earnings call and says you control 93% to 99% of the market, you might expect a victory lap. For Credo Technology, it felt more like a target painted on its back. That staggering market share, blurted out by MaxLinear’s CEO, explains why Credo has been a darling of the AI hardware trade. It also explains why the stock has been cut roughly in half from its summer peak.</p>\n\n<p>When you run a toll booth collecting 68% gross margins, everyone behind you starts scouting alternate routes.</p>\n\n<p>Credo sells the short, chunky copper cords connecting servers to switches inside an AI rack, alongside the proprietary brains inside the plug. High-speed data is messy. Shove 800 gigabits per second down a standard copper wire, and basic physics turns the electrical signal into unreadable static after just a couple of meters. Credo solves this by embedding tiny digital signal processing chips right inside the cable’s connector heads. Those chips listen to the degraded signal, clean out the noise, re-time the pulses, and pass crisp data along.</p>\n\n<p>It is the data center equivalent of Apple’s old Lightning cable: a proprietary bundle of copper and custom silicon. You cannot swap it for a generic cord from a gas station.</p>\n\n<p>That link matters enormously to the broader AI buildout. A modern AI cluster is just as much a plumbing challenge as a supercomputing feat. Tens of thousands of GPUs must talk to networking switches simultaneously without dropping a packet or melting the power grid. Running fiber-optic glass cables over short two-meter rack distances is both expensive and an unnecessary power hog. Copper runs cool and cheap, but it needs serious silicon wizardry to handle terabit speeds. By packaging that wizardry into finished cables, Credo became the indispensable chokepoint between monster processors and the network.</p>\n\n<div class=\"stats-card\">\n<div class=\"stats-card-title\">The Numbers That Matter</div>\n<table class=\"stats-table\">\n<tr><td class=\"stat-label\">Price <span class=\"stats-live-badge\">LIVE</span></td><td class=\"stat-value\" data-live-ticker=\"CRDO\" data-live-field=\"price\">$162.77</td></tr>\n<tr><td class=\"stat-label\">Market Cap</td><td class=\"stat-value\">$28.7B</td></tr>\n<tr><td class=\"stat-label\">Forward P/E</td><td class=\"stat-value\">16.8x</td></tr>\n<tr><td class=\"stat-label\">Total Revenue (TTM)</td><td class=\"stat-value\">$1.59B</td></tr>\n<tr><td class=\"stat-label\">52-Week Low</td><td class=\"stat-value\">$86.49</td></tr>\n<tr><td class=\"stat-label\">52-Week High</td><td class=\"stat-value\">$308.67</td></tr>\n<tr><td class=\"stat-label\">Analyst Consensus</td><td class=\"stat-value\">Strong Buy (20 analysts)</td></tr>\n<tr><td class=\"stat-label\">Analyst Target Mean</td><td class=\"stat-value\">$279.09</td></tr>\n</table>\n<div class=\"stats-card-note\">Price refreshes live &middot; All other figures as of October 23, 2026</div>\n</div>\n\n<p>The business has printed cash as a result. In its latest reported quarter, Credo posted revenue of $479 million, up 115% from a year earlier. It carries a net-cash balance sheet and non-GAAP gross margins of 68%. Annual sales tripled in fiscal 2026, generating roughly $439 million in trailing free cash flow. But Wall Street is not trading the rear-view mirror; it is trading who owns the socket in 2027. Hyperscalers hate single-source monopolies, especially when two customers generate 43% and 28% of Credo’s revenue.</p>\n\n<p>Now the unbundling is starting. MaxLinear announced it will sell raw chips directly to traditional cable assemblers rather than selling finished cables, gunning for up to 30% of the upcoming 1.6-terabit market. An officer disclosed selling roughly $4.75 million of stock, adding to investor nerves. The sell-side consensus remains a bullish buy, but the hardware landscape is shifting underfoot.</p>\n\n<p>The short case is straightforward: Credo’s moat is a product bundle, and the world's biggest networking buyers are preparing to break it. The real threat is not a tiny chipmaker; it is Cisco. Research firms are already tracking a proprietary Cisco program seeking quotes for 100,000 1.6-terabit cables a month. Cisco could pair its own switching silicon with Broadcom DSP chips. Assembly goes to incumbent cable manufacturers like Amphenol or TE Connectivity, and Credo is designed straight out of the bill of materials.</p>\n\n<p>Broadcom already owns the network switch; discounting an attached DSP is child's play. If Credo has to fight a price war against a merchant-silicon ecosystem, that 68% gross margin collapses into standard contract-manufacturing territory. The stock still trades around 18 times trailing sales. Any quarter where revenue climbs while gross-margin guidance drops below 67% confirms the toll booth is broken.</p>\n\n<p>For the equity to reverse its slide and re-rate higher, Credo must prove its bundle cannot be easily replaced. That requires two specific milestones. First, management must convert 1.6-terabit design buzz into a signed hyperscale production contract that delivers recognizable revenue in the back half of fiscal 2027. Second, non-GAAP gross margins must hold at or above 67% for two straight quarters once competing silicon hits data center floors.</p>\n\n<p>What we are watching is the second half of fiscal 2027, when Credo expects its 1.6-terabit volume to ramp against Broadcom's bundled alternative.</p>\n\n<p>Until those production orders land, the market will treat Credo's toll booth like a public road under construction.</p>\n\n<p class=\"disclosure\">Disclosure: The Signal holds no position in CRDO. Positions may change. This is not financial advice.</p>",
+  "image": {
+    "src": "/img/articles/credo-aec-moat-competition-test-2026.jpg",
+    "fit": "cover",
+    "caption": "A dense twinaxial cable harness seated in a network switch port. Credo's active electrical cables carry the silicon that lets copper do fiber's job across a rack. Photo: The Signal / AI-generated.",
+    "alt": "Photorealistic macro photograph of a short active electrical cable connector with a flat pull-tab latch plugged into a brushed metal switch port, a dense ribbon of charcoal twinaxial pairs sweeping out of the backshell past three empty unlit ports, bright soft studio lighting and shallow depth of field."
+  }
+}
