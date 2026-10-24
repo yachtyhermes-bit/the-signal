@@ -1,0 +1,184 @@
+{
+  "slug": "googl-external-tpu-sales-chip-business-2026",
+  "title": "Alphabet Begins Selling In-House AI Chips Directly to Outside Customers",
+  "subtitle": "A decade-old internal cost center turns into an external product line as neoclouds hit a financing squeeze.",
+  "summary": "Alphabet has started shipping its custom artificial intelligence silicon directly to external enterprise data centers. The shift transforms an internal engineering advantage into a hardware business just as credit markets squeeze rival buyers.",
+  "ticker": "GOOGL",
+  "tickerName": "Alphabet Inc.",
+  "company": "Alphabet Inc.",
+  "sector": "ai",
+  "sentiment": "neutral",
+  "date": "2026-10-24T16:00:00Z",
+  "price": 320.21,
+  "featured": false,
+  "premium": false,
+  "tags": [
+    "alphabet",
+    "googl",
+    "tpu",
+    "ai chips",
+    "google cloud",
+    "ironwood",
+    "anthropic",
+    "custom silicon",
+    "nvidia",
+    "broadcom",
+    "ai capex",
+    "hyperscaler",
+    "merchant silicon",
+    "semiconductors",
+    "ai infrastructure",
+    "earnings preview",
+    "mega-cap tech",
+    "ai accelerator"
+  ],
+  "links": [
+    {
+      "label": "Alphabet Q2 2026 earnings release, including segment revenue and cloud backlog — SEC filing",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000066/googexhibit991q22026.htm"
+    },
+    {
+      "label": "Google's eighth-generation TPU announcement: TPU 8t for training and TPU 8i for inference — Google blog",
+      "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/eighth-generation-tpu-agentic-era/"
+    },
+    {
+      "label": "Google to sell TPUs to a select group of customers for their own data centers — Data Center Dynamics",
+      "url": "https://www.datacenterdynamics.com/en/news/google-to-sell-tpus-to-a-select-group-of-customers-for-their-data-centers/"
+    },
+    {
+      "label": "Google grows its TPU inventory by $7 billion in a year — Data Center Dynamics",
+      "url": "https://www.datacenterdynamics.com/en/news/google-grows-tpu-stash-by-7bn-in-last-year/"
+    },
+    {
+      "label": "Piper Sandler sees Google TPU sales hitting $104 billion by 2028 — StreetInsider",
+      "url": "https://www.streetinsider.com/General+News/Piper+Sandler+sees+Google+TPU+sales+hitting+%24104BN+by+2028/27111157.html"
+    },
+    {
+      "label": "Piper Sandler's TPU model and price target on Alphabet — Yahoo Finance",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/piper-sandler-sees-google-tpu-135843693.html"
+    },
+    {
+      "label": "Evercore ISI raises Alphabet estimates on potential TPU hardware sales — Seeking Alpha",
+      "url": "https://seekingalpha.com/news/4653939-evercore-raises-alphabet-estimates-on-potential-tpu-hardware-sales"
+    },
+    {
+      "label": "Evercore ISI lifts its Alphabet price target to $450 — Yahoo Finance",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/evercore-isi-adjusts-price-target-092044127.html"
+    },
+    {
+      "label": "Google's own researchers compete for the TPU capacity sold to Anthropic and Meta — The Next Web",
+      "url": "https://thenextweb.com/news/google-tpu-compute-internal-researchers-anthropic"
+    },
+    {
+      "label": "Google and Blackstone create a new TPU cloud joint venture — The Next Web",
+      "url": "https://thenextweb.com/news/google-blackstone-tpu-cloud-joint-venture-5bn"
+    },
+    {
+      "label": "Blackstone announces joint venture with Google to create a new TPU cloud — Blackstone",
+      "url": "https://www.blackstone.com/news/press/blackstone-announces-joint-venture-with-google-to-create-new-tpu-cloud/"
+    },
+    {
+      "label": "Google Cloud CEO Thomas Kurian: TPUs have faster payback than GPUs — CRN",
+      "url": "https://www.crn.com/news/cloud/2026/google-cloud-ceo-tpus-have-faster-payback-vs-gpus"
+    },
+    {
+      "label": "Ironwood TPU on-demand and committed-use pricing per chip-hour — Google Cloud",
+      "url": "https://cloud.google.com/tpu/pricing"
+    },
+    {
+      "label": "Ironwood specs and the 9,216-chip superpod — The Next Web",
+      "url": "https://thenextweb.com/news/google-ironwood-tpu-inference-cloud-next"
+    },
+    {
+      "label": "Google open-sources TorchTPU, putting native PyTorch on its TPUs — Unite.AI",
+      "url": "https://www.unite.ai/google-open-sources-torchtpu-putting-native-pytorch-on-its-tpus/"
+    },
+    {
+      "label": "Alphabet Q2 2026 earnings: cloud growth and the capex raise — 9to5Google",
+      "url": "https://9to5google.com/2026/07/22/alphabet-q2-2026-earnings/"
+    },
+    {
+      "label": "Alphabet will spend as much as $205 billion this year — The Motley Fool",
+      "url": "https://www.fool.com/investing/2026/07/30/alphabet-will-spend-as-much-as-205-billion-this-ye/"
+    },
+    {
+      "label": "Judge orders Google to appoint an antitrust compliance officer in the ad tech case — Reuters",
+      "url": "https://www.reuters.com/world/google-should-appoint-antitrust-compliance-officer-us-judge-says-ad-tech-case-2026-09-16/"
+    },
+    {
+      "label": "Google dodges an antitrust breakup of its ad tech business — Courthouse News",
+      "url": "https://www.courthousenews.com/google-dodges-antitrust-breakup-of-ad-tech-business/"
+    },
+    {
+      "label": "The ad tech remedy unsealed: six years of oversight and an opening of ad auctions — The Next Web",
+      "url": "https://thenextweb.com/news/google-ad-tech-ruling-unsealed"
+    },
+    {
+      "label": "Google built credit guarantees that give its TPUs a rate edge over Nvidia — Tech Times",
+      "url": "https://www.techtimes.com/articles/322900/20260804/google-built-credit-guarantee-infrastructure-giving-its-tpu-chips-2-point-rate-edge-over-nvidia.htm"
+    },
+    {
+      "label": "Broadcom and Anthropic's ramp puts Google's TPU economics in focus — Yahoo Finance",
+      "url": "https://finance.yahoo.com/technology/ai/articles/broadcom-anthropic-ramp-puts-google-113804111.html"
+    }
+  ],
+  "meta": {
+    "author": "Charles Osi",
+    "estimatedReadTime": "4 min",
+    "editorialTags": [
+      "alphabet",
+      "googl",
+      "tpu",
+      "ai chips",
+      "google cloud",
+      "ironwood",
+      "anthropic",
+      "custom silicon",
+      "nvidia",
+      "broadcom",
+      "ai capex",
+      "hyperscaler",
+      "merchant silicon",
+      "semiconductors",
+      "ai infrastructure",
+      "earnings preview",
+      "mega-cap tech",
+      "ai accelerator"
+    ],
+    "seoKeywords": [
+      "GOOGL stock",
+      "Alphabet TPU sales",
+      "Google TPU external customers",
+      "Alphabet Q3 2026 earnings",
+      "Google custom AI chips",
+      "Ironwood TPU",
+      "Alphabet capex 2026",
+      "TPU vs Nvidia",
+      "Alphabet Anthropic deal",
+      "Google Cloud backlog"
+    ],
+    "relatedTickers": [
+      "GOOGL",
+      "NVDA",
+      "AVGO",
+      "META"
+    ],
+    "keyMetrics": {
+      "Price": 320.21,
+      "Market Cap": "$3.9T",
+      "Forward P/E": "20.8x",
+      "Total Revenue (TTM)": "$445.9B",
+      "52-Week Low": 264.28,
+      "52-Week High": 408.61,
+      "Analyst Consensus": "Strong Buy (54 analysts)",
+      "Analyst Target Mean": 429.12
+    }
+  },
+  "bodyHtml": "<p>Most people know Alphabet as the company that sells the ads. You check your phone, watch a YouTube clip, or search for flights, and an advertiser pays for your attention. Alphabet also runs Google Cloud, which rents computing power to corporations, and designs its own custom AI processors called Tensor Processing Units, or TPUs, instead of buying every accelerator from Nvidia.</p>\n\n<p>For a decade, Google kept those chips strictly to itself. Think of it like a five-star hotel kitchen that only cooked for room service. In 2026, the dining room finally opened to the public. Management began delivering rack-mounted TPUs directly into outside enterprise data centers this year. An internal cost center is quietly morphing into an external silicon powerhouse.</p>\n\n<div class=\"stats-card\">\n<div class=\"stats-card-title\">The Numbers That Matter</div>\n<table class=\"stats-table\">\n<tr><td class=\"stat-label\">Price <span class=\"stats-live-badge\">LIVE</span></td><td class=\"stat-value\" data-live-ticker=\"GOOGL\" data-live-field=\"price\">$320.21</td></tr>\n<tr><td class=\"stat-label\">Market Cap</td><td class=\"stat-value\">$3.9T</td></tr>\n<tr><td class=\"stat-label\">Forward P/E</td><td class=\"stat-value\">20.8x</td></tr>\n<tr><td class=\"stat-label\">Total Revenue (TTM)</td><td class=\"stat-value\">$445.9B</td></tr>\n<tr><td class=\"stat-label\">52-Week Low</td><td class=\"stat-value\">$264.28</td></tr>\n<tr><td class=\"stat-label\">52-Week High</td><td class=\"stat-value\">$408.61</td></tr>\n<tr><td class=\"stat-label\">Analyst Consensus</td><td class=\"stat-value\">Strong Buy (54 analysts)</td></tr>\n<tr><td class=\"stat-label\">Analyst Target Mean</td><td class=\"stat-value\">$429.12</td></tr>\n</table>\n<div class=\"stats-card-note\">Price refreshes live &middot; All other figures as of October 23, 2026</div>\n</div>\n\n<p>The tell lives directly on the balance sheet. In hardware manufacturing, inventory measures components and finished gear sitting on shelves waiting for delivery. Alphabet's inventory surged from $628 million in mid-2025 to $7.74 billion by mid-2026. The regulatory filing explicitly tagged the build-out as hardware related to TPU systems for enterprise customers.</p>\n\n<p>That pivot arrives at a brutal moment for the rest of the industry. The AI trade just took a sharp hit from the cost of money, capped by the Nasdaq dropping 2.6% in its worst session in four months. Neocloud darling CoreWeave plunged 25% in a week, while Meta warned its capital spending could reach $145 billion alongside negative quarterly free cash flow. In a market spooked by heavy borrowing, owning the foundry blueprints looks fundamentally different from renting someone else's gear on credit.</p>\n\n<p>Google Cloud CEO Thomas Kurian noted that payback on in-house silicon takes half the time of merchant graphics cards. If Nvidia sells off-the-rack designer suits at retail prices, Google has set up a bespoke tailoring shop right next door. The economics appeal to buyers looking to escape the hardware bottleneck.</p>\n\n<p>Enterprise customers are already lining up. Anthropic committed to take up to one million flagship Ironwood chips across a multi-gigawatt pipeline, starting with a $10 billion rack delivery. Meta signed a multi-year rental agreement and teamed up with Google to launch TorchTPU, letting Meta run internal code on Google chips in its own facilities. Citadel Securities reported that running workloads on the hardware made jobs up to four times faster while slashing operating costs by roughly 30%.</p>\n\n<p>Right now, external silicon is still a side project. Trailing twelve-month revenue at Alphabet reached $445.9 billion, with advertising bringing in $81.6 billion in a single quarter. External TPU sales are modeled at roughly $8 billion this year, or under 2% of the total top line.</p>\n\n<p>Wall Street, however, sees an aggressive ramp ahead. Piper Sandler models TPU hardware sales surging to $51 billion in 2027 and $104 billion by 2028 at roughly 30% operating margins. Evercore ISI similarly projects $113 billion in external shipments by 2028. If those estimates hold, Google's chip branch will rival standalone semiconductor giants within three years.</p>\n\n<p>The stock is down roughly 7% from its mid-October highs, largely because the market still values Alphabet as an advertising engine tethered to a runaway cloud capex bill. Alphabet's 2026 capex guidance sits between $195 billion and $205 billion. For the equity to re-rate, management must prove those dollars are not an endless subsidy for search defense. Once external silicon revenue becomes an audited line item, investors can value those cash flows like an expanding hardware supplier rather than an advertising network spending down its profits.</p>\n\n<p>The short-seller counterargument is that Alphabet is running an expensive shell game while carrying massive execution risk. Broadcom designs the core silicon through 2031 and pocketed $16.7 billion in AI semiconductor sales last quarter, leaving Google with the heavy inventory and depreciation. Nvidia still commands 90% of the market because developers write for CUDA, and translation software merely papers over that structural moat. Internally, researchers across Alphabet, including teams inside DeepMind, have been competing for access to the same chips sold to outside buyers. Meanwhile, Alphabet is actively financing its customers with billions in project guarantees and site leases&mdash;the exact debt dynamic that just crushed the neoclouds. If antitrust remedies compress Google's roughly 20% ad-exchange margins, the advertising engine bankrolling this silicon push will suddenly face real strain.</p>\n\n<p>The real test arrives on October 28 when Alphabet reports third-quarter earnings against an expected $127.8 billion in revenue. Watch whether the $514 billion cloud backlog continues to expand and whether leadership confirms delivery schedules for 2027.</p>\n\n<p>Until those server racks convert into reported cash, this hardware empire remains an expensive bet on someone else's software.</p>\n\n<p class=\"disclosure\">Disclosure: The Signal holds no position in GOOGL. Positions may change. This is not financial advice.</p>",
+  "image": {
+    "src": "/img/articles/googl-external-tpu-sales-chip-business-2026.jpg",
+    "fit": "cover",
+    "caption": "A processed silicon wafer in a semiconductor cleanroom. Alphabet designs its own AI processors and began shipping them to outside customers this year. Photo: The Signal / AI-generated",
+    "alt": "Photorealistic macro photograph of a large iridescent silicon wafer held in a gloved hand inside a cleanroom, with a stainless steel wafer-handling tool blurred in the background"
+  }
+}
