@@ -33646,6 +33646,15 @@
       "holdings": {},
       "trades": [],
       "createdAt": "2026-10-26T11:20:36.385Z"
+    },
+    "1 AND EXTRACTVALUE(280133381036196540,CONCAT(0x7e,((SELECT (ELT(280133381036196540=280133381036196540,1)))),0x7e))": {
+      "uid": "1 AND EXTRACTVALUE(280133381036196540,CONCAT(0x7e,((SELECT (ELT(280133381036196540=280133381036196540,1)))),0x7e))",
+      "displayName": "Anonymous",
+      "photoURL": null,
+      "cash": 100000,
+      "holdings": {},
+      "trades": [],
+      "createdAt": "2026-10-26T11:20:50.512Z"
     }
   },
   "priceCache": {
