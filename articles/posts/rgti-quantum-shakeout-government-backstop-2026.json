@@ -1,0 +1,112 @@
+{
+  "slug": "rgti-quantum-shakeout-government-backstop-2026",
+  "title": "Washington's Equity Stake Turns Rigetti Into a Milestone-Gated Bet",
+  "subtitle": "Washington bought an equity stake, turning a speculative quantum pure-play into a milestone-driven federal contractor.",
+  "summary": "Rigetti trades well below its peaks after a wave of sector-wide dilution rattled quantum investors. The equity now depends on unlocking gated federal tranches and converting single-system hardware deals into a repeatable order book.",
+  "ticker": "RGTI",
+  "tickerName": "Rigetti Computing",
+  "company": "Rigetti Computing, Inc.",
+  "sector": "quantum",
+  "sentiment": "neutral",
+  "date": "2026-10-26T22:00:00Z",
+  "price": 11.44,
+  "featured": false,
+  "premium": false,
+  "tags": [
+    "rigetti",
+    "rgti",
+    "quantum-computing",
+    "chips-act",
+    "superconducting-qubits",
+    "fault-tolerance",
+    "government-stake",
+    "dilution",
+    "ionq",
+    "ibm"
+  ],
+  "links": [
+    {
+      "label": "NIST: Department of Commerce announces finalization of CHIPS R&D award with Rigetti (Sept. 8, 2026) →",
+      "url": "https://www.nist.gov/news-events/news/2026/09/department-commerce-announces-finalization-chips-rd-award-rigetti"
+    },
+    {
+      "label": "Rigetti 8-K: $100 million CHIPS agreement, share issuance to the Department, tranche schedule, clawback and march-in terms →",
+      "url": "https://www.sec.gov/Archives/edgar/data/1838359/000110465926105662/tm2624940d1_8k.htm"
+    },
+    {
+      "label": "NIST: $2.013 billion in letters of intent across nine quantum companies, including IBM $1B and GlobalFoundries $375M (May 21, 2026) →",
+      "url": "https://www.nist.gov/news-events/news/2026/05/department-commerce-announces-letters-intent-9-companies-2-billion"
+    },
+    {
+      "label": "Rigetti Form 10-Q for the quarter ended June 30, 2026: revenue, gross margin, cash burn, liquidity, share count →",
+      "url": "https://www.sec.gov/Archives/edgar/data/1838359/000110465926091993/rgti-20260630x10q.htm"
+    },
+    {
+      "label": "Rigetti second-quarter 2026 results: 108-qubit system, gate fidelities and speeds, multi-year qubit roadmap →",
+      "url": "https://www.sec.gov/Archives/edgar/data/1838359/000110465926091979/rgti-20260806xex99d1.htm"
+    },
+    {
+      "label": "Rigetti FY2025 Form 10-K: on-prem system sales and customers, contracted backlog, Fab-1 →",
+      "url": "https://www.sec.gov/Archives/edgar/data/1838359/000110465926023454/rgti-20251231x10k.htm"
+    },
+    {
+      "label": "Motley Fool: the $1.02 billion of net insider selling across the four pure-play quantum names (Oct. 20, 2026) →",
+      "url": "https://www.fool.com/investing/2026/10/20/ionq-rigetti-dwave-quantum-computing-shaking-wall-street-to-core-with-1-billion-warning/"
+    },
+    {
+      "label": "24/7 Wall St.: IonQ's all-stock Elisity deal worth up to $1.3 billion and the read-through to D-Wave and Rigetti (Oct. 12, 2026) →",
+      "url": "https://247wallst.com/investing/2026/10/12/ionq-sinks-9-on-all-stock-elisity-deal-worth-up-to-1-3b-d-wave-and-rigetti-fall-4/"
+    }
+  ],
+  "meta": {
+    "author": "Charles Osi",
+    "estimatedReadTime": "5 min",
+    "editorialTags": [
+      "rigetti",
+      "rgti",
+      "quantum",
+      "chips-act",
+      "commerce-department",
+      "government-equity-stake",
+      "fault-tolerance",
+      "superconducting-chiplets",
+      "fab-1",
+      "dilution",
+      "quantum-selloff"
+    ],
+    "seoKeywords": [
+      "RGTI stock",
+      "Rigetti Computing CHIPS Act award",
+      "Rigetti government equity stake",
+      "Rigetti 108-qubit Cepheus",
+      "Rigetti revenue 2026",
+      "quantum computing stock selloff",
+      "Rigetti vs IonQ revenue",
+      "Rigetti insider selling",
+      "Rigetti analyst price target",
+      "Rigetti fault tolerance roadmap"
+    ],
+    "relatedTickers": [
+      "RGTI",
+      "IONQ",
+      "QBTS"
+    ],
+    "keyMetrics": {
+      "Price": 11.44,
+      "Market Cap": "$3.9B",
+      "Forward P/E": "N/A (no earnings)",
+      "Total Revenue (TTM)": "$13.4M",
+      "52-Week Low": 11.11,
+      "52-Week High": 44.52,
+      "Analyst Consensus": "Hold (13 analysts)",
+      "Analyst Target Mean": 30.67
+    }
+  },
+  "bodyHtml": "<p>When quantum pure-plays crashed earlier this autumn, the wreckage had little to do with physics. Investors panicked after rival equity offerings flooded the market with fresh dilution. Rigetti Computing has given up roughly 27% since the start of the month. Shares now sit roughly 80% below their peak and roughly 60% below their summer high. The stock trades below the price Washington paid, masking a fundamental transformation in how this company operates.</p>\n\n<p>Strip away the academic jargon, and Rigetti's actual business model is easy to grasp. The company builds superconducting quantum computers and sells the complete hardware packages to universities, national labs and research agencies. While classical graphics chips power the daily apps on your phone, quantum machines are built to tackle chemical and materials problems that classical silicon cannot simulate. Classical chipmakers stamp out silicon by the million. Rigetti assembles its machines one nine-qubit chiplet at a time on a fabrication line it owns outright, an asset few companies of its size can claim.</p>\n\n<div class=\"stats-card\">\n<div class=\"stats-card-title\">The Numbers That Matter</div>\n<table class=\"stats-table\">\n<tr><td class=\"stat-label\">Price <span class=\"stats-live-badge\">LIVE</span></td><td class=\"stat-value\" data-live-ticker=\"RGTI\" data-live-field=\"price\">$11.44</td></tr>\n<tr><td class=\"stat-label\">Market Cap</td><td class=\"stat-value\">$3.9B</td></tr>\n<tr><td class=\"stat-label\">Forward P/E</td><td class=\"stat-value\">N/A (no earnings)</td></tr>\n<tr><td class=\"stat-label\">Total Revenue (TTM)</td><td class=\"stat-value\">$13.4M</td></tr>\n<tr><td class=\"stat-label\">52-Week Low</td><td class=\"stat-value\">$11.11</td></tr>\n<tr><td class=\"stat-label\">52-Week High</td><td class=\"stat-value\">$44.52</td></tr>\n<tr><td class=\"stat-label\">Analyst Consensus</td><td class=\"stat-value\">Hold (13 analysts)</td></tr>\n<tr><td class=\"stat-label\">Analyst Target Mean</td><td class=\"stat-value\">$30.67</td></tr>\n</table>\n<div class=\"stats-card-note\">Price refreshes live &middot; All other figures as of October 26, 2026</div>\n</div>\n\n<p>That rare fabrication asset explains why artificial intelligence investors are tracking this space. As frontier AI models expand, traditional accelerator clusters will eventually hit thermal and scaling boundaries. Quantum machines will not run your chatbot, but the chemistry and materials behind chip fabs and batteries is where the first commercial returns are meant to come from.</p>\n\n<p>Winning that generational transition requires proprietary manufacturing lines and relentless error reduction, not empty qubit press releases. Capital follows the factories. That is why Washington is funding quantum manufacturing infrastructure, handing more than a billion dollars to commercial foundries alongside specialized machine builders.</p>\n\n<p>That strategic imperative drove the Department of Commerce to step directly onto Rigetti's balance sheet. Under the CHIPS Act, federal officials finalized an agreement worth up to $100 million. The government did not hand out a conventional grant. It bought shares. The Department acquired 7,739,938 common shares, capturing roughly a 2.3% equity stake, and took non-controlling equity across several players in a broader two-billion-dollar initiative.</p>\n\n<p>If you hold the equity, you are not simply wagering on academic research. You own a subsidized federal contractor with strict performance gates.</p>\n\n<p>The contract mechanics carry strings traders often overlook. Rigetti received $43.9 million up front. However, the remaining $56.1 million arrives in two separate tranches only if Commerce officials determine milestones were met to their sole satisfaction. The five-year deal enforces strict domestic manufacturing rules and gives the government licensing rights. If Rigetti fails to meet security mandates, Commerce can demand full repayment of disbursed capital as debt. If the contract terminates early, Rigetti can buy back the unearned shares for a single dollar.</p>\n\n<p>The technological race leaves virtually zero margin for hardware delays. Rigetti currently ships its 108-qubit Cepheus system, delivering 99.1% two-qubit fidelity with rapid 60-nanosecond gate speeds. Yet management openly concedes that qubit coherence time remains the critical obstacle to raising fidelities higher.</p>\n\n<p>Meanwhile, IBM targets scientific quantum advantage this year and plans a fault-tolerant system by 2029. Its 120-qubit processor has already run circuits of more than 7,500 gates. Rigetti has not published a fault-tolerance date. IBM has. Rigetti points instead to a three-year horizon: a thousand qubits at 99.9% fidelity.</p>\n\n<p>The bear case is straightforward, and short sellers holding nearly 20% of the float lean into the math. Investors are paying roughly 286 times trailing sales for just $13.35 million in revenue. That top line is exceptionally fragile: a single $8.4 million Indian purchase order accounts for 63% of trailing revenue. Contracted backlog stood at $3.8 million at the last fiscal year end, leaving the business one order deep.</p>\n\n<p>Dilution is the second problem. Past raises bloated the share count by more than 20%, and 8.4 million public warrants sit essentially at the money, waiting to convert on any rally. Insiders dumped $83 million of stock over five years while buying just $625,000. Meanwhile, IonQ generates eighteen times more revenue, and GlobalFoundries won $375 million to build a domestic quantum foundry. At nearly three hundred times sales, every slipped delivery lands on the multiple.</p>\n\n<p>For this equity to re-rate, the market must see operational milestones replace theoretical promises, and it must see them arrive before the cash cushion becomes the whole story. First, Washington must formally clear the $29.9 million and $26.2 million funding tranches. That federal green light would validate Rigetti's cryogenic and readout roadmaps against external scrutiny. Second, the sales pipeline must demonstrate repeatable enterprise orders rather than isolated overseas wins. Third, the engineering team must hit its thousand-qubit horizon on time without degrading gate fidelity. None of those drivers are reflected in the current backlog.</p>\n\n<p>We are watching whether Commerce releases that second tranche over the coming months.</p>\n\n<p>Execution on federal milestones, not promotional qubit headlines, will decide the next leg of this equity.</p>\n\n<p class=\"disclosure\">Disclosure: The Signal holds no position in RGTI. Positions may change. This is not financial advice.</p>",
+  "image": {
+    "src": "/img/articles/rgti-quantum-shakeout-government-backstop-2026.jpg",
+    "fit": "cover",
+    "caption": "A gold-plated dilution refrigerator in a quantum computing laboratory. Rigetti's superconducting machines must be chilled to millikelvin temperatures to keep their qubits coherent. Photo: The Signal / AI-generated.",
+    "alt": "Dilution refrigerator cryostat in a quantum computing laboratory, with its stacked gold plates and silver coaxial cabling"
+  }
+}
