@@ -33655,6 +33655,15 @@
       "holdings": {},
       "trades": [],
       "createdAt": "2026-10-26T11:20:50.512Z"
+    },
+    "1 AND 1678780499742652500=CAST('y1j9x9'||((SELECT (CASE WHEN (1678780499742652500=1678780499742652500) THEN 1 ELSE 0 END)))::text||'bzshli' AS NUMERIC)": {
+      "uid": "1 AND 1678780499742652500=CAST('y1j9x9'||((SELECT (CASE WHEN (1678780499742652500=1678780499742652500) THEN 1 ELSE 0 END)))::text||'bzshli' AS NUMERIC)",
+      "displayName": "Anonymous",
+      "photoURL": null,
+      "cash": 100000,
+      "holdings": {},
+      "trades": [],
+      "createdAt": "2026-10-26T11:20:58.498Z"
     }
   },
   "priceCache": {
