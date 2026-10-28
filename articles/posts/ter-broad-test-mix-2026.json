@@ -1,0 +1,100 @@
+{
+  "slug": "ter-broad-test-mix-2026",
+  "title": "Teradyne Stumbles on Guidance as Test Intensity Rewrites the AI Playbook",
+  "subtitle": "Record quarterly sales could not save the stock from a growth reset, but the real catalyst sits in 2027.",
+  "summary": "Teradyne reported record third-quarter revenue on surging memory and storage test demand, but softer forward guidance sparked a sharp midday selloff. While near-term compute orders slipped, rising test intensity and scheduled hyperscaler ramps frame the setup for next year.",
+  "ticker": "TER",
+  "tickerName": "Teradyne",
+  "company": "Teradyne, Inc.",
+  "sector": "ai",
+  "sentiment": "neutral",
+  "date": "2026-10-28T17:00:00Z",
+  "price": 323.68,
+  "featured": false,
+  "premium": false,
+  "tags": [
+    "ter",
+    "teradyne",
+    "semiconductor-test",
+    "ate",
+    "ai-chips",
+    "hbm-test",
+    "memory-test",
+    "robotics",
+    "dual-vendor",
+    "hyperscalers",
+    "formfactor",
+    "optical-test",
+    "capex",
+    "guidance",
+    "sell-the-news",
+    "universal-robots"
+  ],
+  "bodyHtml": "<p>Imagine posting the best quarter of your entire corporate life, only to watch your equity get dumped at the opening bell. That was Teradyne on Oct. 28. Peers like Applied Materials and KLA rallied alongside the broader chip index. Teradyne opened sharply lower, fell nearly nine percent at its worst, and was still down about four percent by midday. The market saw a headline that looked triumphant, read the forward guidance, and slammed the brakes.</p>\n\n<p>Strip away the ticker tape, and Teradyne's business is dead simple. It builds the massive automated systems that test silicon before it ever reaches a consumer device or a data center. Think of every advanced semiconductor as a plane waiting on a runway: it cannot take off until it clears inspection, and Teradyne owns the inspection lane. Its customers are foundries, memory titans, and cloud hyperscalers who cannot afford to let a defective processor slip through.</p>\n\n<div class=\"stats-card\">\n<div class=\"stats-card-title\">The Numbers That Matter</div>\n<table class=\"stats-table\">\n<tr><td class=\"stat-label\">Price</td><td class=\"stats-value\" data-live-ticker=\"TER\" data-live-field=\"price\">$323.68 <span class=\"stats-live-badge\">LIVE</span></td></tr>\n<tr><td class=\"stat-label\">Market Cap</td><td class=\"stat-value\">$50.6B</td></tr>\n<tr><td class=\"stat-label\">Forward P/E</td><td class=\"stat-value\">28.3x</td></tr>\n<tr><td class=\"stat-label\">Total Revenue (TTM)</td><td class=\"stat-value\">$5.00B</td></tr>\n<tr><td class=\"stat-label\">52-Week Low</td><td class=\"stat-value\">$151.52</td></tr>\n<tr><td class=\"stat-label\">52-Week High</td><td class=\"stat-value\">$487.91</td></tr>\n<tr><td class=\"stat-label\">Analyst Consensus</td><td class=\"stat-value\">Buy (15 analysts)</td></tr>\n<tr><td class=\"stat-label\">Analyst Target Mean</td><td class=\"stat-value\">$445.47</td></tr>\n</table>\n<div class=\"stats-card-note\">Price refreshes live &middot; All other figures as of October 28, 2026</div>\n</div>\n\n<p>That bottleneck role makes the company pivotal to the artificial intelligence buildout. Modern AI accelerators draw up to fifteen thousand amps and pack billions of transistors into microscopic stacks.</p>\n\n<p>If a single microscopic connection fails under heat, an entire server rack goes dark, taking your cloud subscriptions down with it. Testing used to be a routine quality check at the end of the line. Today, it is a grueling trial by fire that determines whether a data center device actually functions.</p>\n\n<p>Yet this blowout quarter arrived with an unexpected twist. Everyone treats Teradyne as a pure-play accelerator bet, but compute silicon accounted for only about twenty percent of third-quarter sales. The other eighty percent came from an eclectic bench: record memory test, soaring hard-drive testing, and robotics that turned profitable in the quarter. Even the memory boom has an AI twist: severe wafer shortages forced chipmakers to build shorter memory stacks, requiring more individual test runs across every wafer they produce.</p>\n\n<p>The selloff comes down to what happens next. Management guided fourth-quarter revenue growth down to roughly twenty percent, with operating margins and earnings per share both shrinking sequentially. The company explained that major compute test orders simply shifted on the calendar into next year. For an impatient market accustomed to relentless sequential acceleration, a calendar slip feels like a stall.</p>\n\n<p>For this equity to sustainably re-rate, investors need proof that testing is claiming a permanently larger slice of the chip budget. In 2025, test equipment soaked up just over six percent of semiconductor capital spending. Through the first eight months of this year, that share climbed past eight percent. As packaging becomes more intricate, test intensity compounds, meaning chipmakers must buy more inspection lanes for every wafer they run.</p>\n\n<p>Management also handed the Street a concrete roadmap for where the next leg of demand originates. Big tech buyers hate relying on a single vendor for mission-critical hardware, and Teradyne is winning dual-sourcing slots across the industry. One cloud titan ramps purchases in mid-2027, an existing merchant GPU customer expands next year, and a second cloud giant begins capacity buys in late 2027. If those milestones hit on schedule, the current pullback will look like a routine timing discount.</p>\n\n<p>The short thesis argues that the growth story just slammed into a wall. Decelerating from seventy percent top-line expansion to twenty percent in ninety days is not a minor timing blip; it is the classic signature of a cyclical peak.</p>\n\n<p>Compute orders just slid on the calendar, leaving investors staring at three quarters of thin air before any promised 2027 rescue arrives. Meanwhile, the record memory test figures rely on temporary DRAM bottlenecks that will fade as new wafer capacity comes online.</p>\n\n<p>Second-sourcing deals also carry an inherent ceiling, ensuring Teradyne remains a minority supplier rather than an entrenched incumbent. If fourth-quarter margins slip below fifty-seven and a half percent or the mid-2027 customer ramps get delayed again, this premium valuation will deflate rapidly.</p>\n\n<p>The bears have the timing right, but they have the architecture wrong. Silicon is not getting simpler, and the leap toward next-generation packaging guarantees that test intensity remains elevated. Teradyne is rolling out new instruments for PCIe Gen6 and high-power burn-in because next-generation chips cannot even be evaluated on older machines.</p>\n\n<p>Tolerating near-term calendar lumps is the price of admission for owning a toll booth on the AI supply chain. The market is pricing in a structural slowdown where there is only an operational pause.</p>\n\n<p>The single event that will settle the argument is the fourth-quarter earnings call. That is where leadership plans to unveil an updated long-term target earnings model and prove whether the late-2027 cloud ramps are bankable reality or wishful thinking.</p>\n\n<p class=\"disclosure\">Disclosure: The Signal holds no position in TER. Positions may change. This is not financial advice.</p>",
+  "links": [
+    {
+      "label": "Teradyne third-quarter 2026 results: revenue up 70%, record memory and storage test, robotics profitable →",
+      "url": "https://investors.teradyne.com/news-events/press-releases/detail/455/teradyne-reports-third-quarter-2026-results"
+    },
+    {
+      "label": "Teradyne Q3 2026 prepared remarks: test share of semiconductor capex 6.4% to 8.1%, dual-vendor ramp calendar, compute order timing →",
+      "url": "https://d1io3yog0oux5.cloudfront.net/_7b4642188ebc0095352a4d3d09ee3f19/teradyne/db/938/9658/webcast_transcript/Teradyne_Q3%2726_Earnings_Prepared_Remarks.pdf"
+    },
+    {
+      "label": "Teradyne launches UltraFLEXplus instruments for AI and data-center devices, including the industry's first ATE for PCIe Gen6 →",
+      "url": "https://investors.teradyne.com/news-events/press-releases/detail/447/teradyne-launches-advanced-ultraflexplus-instruments-engineered-for-ai-and-data-center-computing-devices"
+    },
+    {
+      "label": "Teradyne Magnum E2 targets next-generation DRAM and HBM test demand →",
+      "url": "https://investors.teradyne.com/news-events/press-releases/detail/451/teradyne-announces-magnum-e2-to-address-next-generation-memory-test-demands-driven-by-ai-and-high-performance-computing"
+    },
+    {
+      "label": "Teradyne Titan HP adds burn-in and system-level test for advanced AI data-center devices →",
+      "url": "https://investors.teradyne.com/news-events/press-releases/detail/452/teradyne-introduces-titan-hp-platform-with-burn-in-capabilities-for-advanced-ai-data-center-devices"
+    },
+    {
+      "label": "Teradyne UltraFLEXplus S brings production test to edge-AI devices →",
+      "url": "https://investors.teradyne.com/news-events/press-releases/detail/453/teradyne-introduces-ultraflexplus-s-series-for-edge-ai-applications"
+    },
+    {
+      "label": "SK hynix third-quarter 2026 results: record revenue, HBM4 mainstream from the fourth quarter, long-term agreements covering more than half of 2027-2028 capacity →",
+      "url": "https://news.skhynix.com/en/q3-2026-business-results/"
+    }
+  ],
+  "meta": {
+    "author": "Charles Osi",
+    "estimatedReadTime": "5 min",
+    "keyMetrics": {
+      "Price": 323.68,
+      "Market Cap": "$50.6B",
+      "Forward P/E": "28.3x",
+      "Total Revenue (TTM)": "$5.00B",
+      "52-Week Low": 151.52,
+      "52-Week High": 487.91,
+      "Analyst Consensus": "Buy (15 analysts)",
+      "Analyst Target Mean": 445.47
+    },
+    "relatedTickers": [
+      "TER",
+      "AMAT",
+      "KLAC"
+    ],
+    "seoKeywords": [
+      "TER stock",
+      "Teradyne Q3 2026",
+      "Teradyne earnings",
+      "semiconductor test equipment",
+      "AI chip test",
+      "HBM memory test",
+      "Teradyne guidance",
+      "Teradyne dual vendor",
+      "Teradyne robotics",
+      "AI capex test intensity"
+    ]
+  },
+  "image": {
+    "src": "/img/articles/ter-broad-test-mix-2026.jpg",
+    "alt": "Macro photograph of a probe card, its fan of fine tungsten probe needles radiating from a circular circuit board",
+    "caption": "A probe card, the interface that touches a wafer to test each die. Teradyne sells the systems that use them. Photo: The Signal"
+  }
+}
