@@ -13,8 +13,22 @@ const DATA = path.join(__dirname, '..', 'data');
 const ARTICLES = path.join(__dirname, '..', 'articles', 'posts');
 const FINANCIALS_PATH = path.join(DATA, 'financials.json');
 
-// Load financial data
-const financials = JSON.parse(fs.readFileSync(FINANCIALS_PATH, 'utf8'));
+// Load financial data.
+// financials.json is ~8 MB and several scripts rewrite it. A plain read can land
+// mid-write (truncated property names → SyntaxError at load), which silently dropped
+// 11 of 26 tickers on the 2026-10-18 run. Retry the read, and below write atomically.
+const financials = (function loadFinancials() {
+  let lastErr;
+  for (let attempt = 1; attempt <= 5; attempt++) {
+    try {
+      return JSON.parse(fs.readFileSync(FINANCIALS_PATH, 'utf8'));
+    } catch (e) {
+      lastErr = e;
+      if (attempt < 5) Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 400 * attempt);
+    }
+  }
+  throw lastErr;
+})();
 
 // Load all articles mentioning the ticker
 function loadRelatedArticles(ticker) {
@@ -266,8 +280,10 @@ async function main() {
     financials[ticker].signalReport = report;
     financials[ticker].signalReportGenerated = new Date().toISOString();
     
-    // Save
-    fs.writeFileSync(FINANCIALS_PATH, JSON.stringify(financials, null, 2));
+    // Atomic write: tmp + rename, so a concurrent reader never sees a half-written file.
+    const tmpPath = FINANCIALS_PATH + '.tmp-' + process.pid;
+    fs.writeFileSync(tmpPath, JSON.stringify(financials, null, 2));
+    fs.renameSync(tmpPath, FINANCIALS_PATH);
     
     console.log(`✅ Signal Report generated for ${ticker}`);
     console.log(`   AI Analysis: ${report.aiAnalysis.slice(0, 100)}...`);

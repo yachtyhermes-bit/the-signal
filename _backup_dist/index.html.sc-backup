@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08080e">
+    <link rel="canonical" href="https://readthesignal.net/">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <meta name="robots" content="max-image-preview:large">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Oxanium:wght@400;500;600;700&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css?v=32">
+  <link rel="stylesheet" href="/css/pulse-badge.css">
+  <link rel="stylesheet" href="/css/nav.css?v=5">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-98KDVDFBCW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-98KDVDFBCW');
+  </script>
+  <script src="/js/prices.js" defer></script>
+  <script src="/js/search.js" defer></script>
+  <script src="/js/auth.js?v=2" defer></script>
+  <script src="/js/pulse.js" defer></script>
+  <script src="/js/theme.js?v=2" defer></script>
+  <script src="/js/comments.js" defer></script>
+  <script src="/js/share.js" defer></script>
+  <script src="/js/hive.js?v=3" defer></script>
+  <script src="/js/carousel.js" defer></script>
+  <script src="/js/nav.js?v=3" defer></script>
+  <title>The Signal — Market Intelligence for AI, Defense, Space &amp; Cyber</title>
+  <meta name="description" content="The Signal delivers sharp analysis on AI, defense, space, and cybersecurity stocks. Earnings deep-dives, contract analysis, and market-moving insights.">
+  <meta property="og:title" content="The Signal — Market Intelligence for AI, Defense, Space &amp; Cyber">
+  <meta property="og:description" content="The Signal delivers sharp analysis on AI, defense, space, and cybersecurity stocks. Earnings deep-dives, contract analysis, and market-moving insights.">
+  <meta property="og:image" content="https://readthesignal.net/img/logo-hex.jpg">
+  <meta property="og:url" content="https://readthesignal.net/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Signal — Market Intelligence for AI, Defense, Space &amp; Cyber">
+  <meta name="twitter:description" content="The Signal delivers sharp analysis on AI, defense, space, and cybersecurity stocks. Earnings deep-dives, contract analysis, and market-moving insights.">
+  <meta name="twitter:image" content="https://readthesignal.net/img/logo-hex.jpg">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "The Signal",
+      "url": "https://readthesignal.net",
+      "logo": {"@type":"ImageObject","url":"https://readthesignal.net/img/logo-hex.jpg","width":600,"height":60},
+      "description": "Market intelligence for AI, defense, space, and cybersecurity stocks."
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "The Signal",
+      "url": "https://readthesignal.net"
+    }
+    </script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo"><img src="/img/logo-hex.jpg" alt="The Signal" class="logo-img"><span class="logo-text"><span class="logo-the">THE</span> <strong>SIGNAL</strong></span></a>
+      <div class="nav-links">
+        <div class="nav-drop">
+          <a href="/sector/ai/" class="nav-link nav-drop-toggle">Sectors
+            <svg class="nav-drop-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+          <div class="nav-drop-menu">
+            <a href="/sector/ai/" class="nav-drop-link">AI</a>
+            <a href="/sector/cyber/" class="nav-drop-link">Cyber</a>
+            <a href="/sector/defense/" class="nav-drop-link">Defense</a>
+            <a href="/sector/space/" class="nav-drop-link">Space</a>
+            <a href="/sector/mega-cap/" class="nav-drop-link">Mega-Cap</a>
+            <a href="/sector/quantum/" class="nav-drop-link">Quantum</a>
+            <a href="/sector/fintech/" class="nav-drop-link">Fintech</a>
+            <a href="/sector/ai-power/" class="nav-drop-link">AI Power</a>
+            <a href="/sector/etfs/" class="nav-drop-link">ETFs</a>
+          </div>
+        </div>
+        <a href="/stocks/" class="nav-link">Stock Pages</a>
+        <a href="/explainers/" class="nav-link">Explainers</a>
+        <a href="/#scorecard" class="nav-link">Scorecard</a>
+        <a href="/hive/" class="nav-link nav-link-hive">Hive</a>
+        <a href="/signal-vs-the-street/" class="nav-link nav-link-svs"><span class="gradient-text">Signal vs. Street</span></a>
+        <a href="/premium/" class="nav-link nav-link-premium">Premium</a>
+      </div>
+      <div class="nav-actions">
+        <a class="nav-quick" href="/insights/">Insights</a>
+        <a class="nav-quick" href="/watchlist/">Watchlist</a>
+        <button class="nav-btn search-btn" id="searchToggle" aria-label="Search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <div class="auth-container" id="authContainer">
+            <button class="nav-btn auth-btn" id="authToggle" aria-label="Sign In">
+              <div class="auth-btn-avatar" id="authBtnAvatar">
+                <span class="auth-btn-initial" id="authBtnInitial"></span>
+                <img class="auth-btn-img" id="authBtnImg" src="" alt="" style="display:none">
+              </div>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="auth-btn-icon" id="authBtnIcon">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              <span class="auth-label" id="authLabel">Sign In</span>
+            </button>
+            <div class="auth-dropdown" id="authDropdown">
+              <!-- Signed-in Profile -->
+              <div class="auth-profile" id="authProfile" style="display:none">
+                <div class="auth-profile-header">
+                  <div class="auth-profile-avatar" id="authProfileAvatar">
+                    <img id="authProfileImg" src="" alt="" style="display:none">
+                    <span class="auth-profile-initial" id="authProfileInitial"></span>
+                  </div>
+                  <div class="auth-profile-info">
+                    <span class="auth-profile-name" id="authProfileName"></span>
+                    <span class="auth-profile-username" id="authProfileUsername"></span>
+                  </div>
+                  <div class="auth-profile-badge">HIVE</div>
+                </div>
+                <div class="auth-profile-stats" id="authProfileStats">
+                  <div class="auth-stat">
+                    <span class="auth-stat-label">Portfolio</span>
+                    <span class="auth-stat-value" id="authStatValue">-</span>
+                  </div>
+                  <div class="auth-stat">
+                    <span class="auth-stat-label">Return</span>
+                    <span class="auth-stat-value" id="authStatReturn">-</span>
+                  </div>
+                </div>
+                <div class="auth-drop-divider"></div>
+                <div class="auth-profile-nav">
+                  <a href="/sector/ai/" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
+                  <a href="/sector/cyber/" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
+                  <a href="/sector/defense/" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
+                  <a href="/sector/space/" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
+                  <a href="/sector/mega-cap/" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
+                  <a href="/sector/quantum/" class="auth-nav-item"><span class="auth-nav-icon">🔬</span> Quantum</a>
+                  <a href="/sector/ai-power/" class="auth-nav-item"><span class="auth-nav-icon">⚡</span> AI Power</a>
+                  <a href="/sector/etfs/" class="auth-nav-item"><span class="auth-nav-icon">💼</span> ETFs</a>
+                  <div class="auth-nav-section-header">FEATURES</div>
+                  <a href="/hive/" class="auth-nav-item"><span class="auth-nav-icon">🐝</span> Hive</a>
+                  <a href="/signal-vs-the-street/" class="auth-nav-item"><span class="auth-nav-icon">📈</span> Signal vs. Street</a>
+                  <a href="/stocks/" class="auth-nav-item"><span class="auth-nav-icon">📉</span> Stock Pages</a>
+                  <a href="/#scorecard" class="auth-nav-item"><span class="auth-nav-icon">📊</span> Signal Scorecard</a>
+                </div>
+                <div class="auth-drop-divider"></div>
+                <div class="auth-profile-footer">
+                  <a href="/hive/" class="auth-footer-link" onclick="navigateToHiveLeaderboard(event)">Leaderboard</a>
+                  <a href="/account/settings/" class="auth-footer-link">Settings</a>
+                  <button class="auth-signout-btn" id="authSignOut">Sign Out</button>
+                </div>
+              </div>
+              <!-- Guest View -->
+              <div class="auth-guest" id="authGuest">
+                <div class="auth-guest-brand">
+                  <span class="auth-guest-title">Welcome to <strong>The Signal</strong></span>
+                  <span class="auth-guest-sub">Join the hive to track your portfolio</span>
+                </div>
+                <button class="auth-option auth-option-primary" onclick="showHiveJoinModal(&#39;login&#39;)">
+                  <span class="auth-option-icon">🔑</span> Sign In
+                </button>
+                <button class="auth-option" onclick="showHiveJoinModal(&#39;register&#39;)">
+                  <span class="auth-option-icon">✨</span> Create Account
+                </button>
+                <div class="auth-drop-divider"></div>
+                <div class="auth-profile-nav">
+                  <a href="/sector/ai/" class="auth-nav-item"><span class="auth-nav-icon">📡</span> AI</a>
+                  <a href="/sector/cyber/" class="auth-nav-item"><span class="auth-nav-icon">🛡️</span> Cyber</a>
+                  <a href="/sector/defense/" class="auth-nav-item"><span class="auth-nav-icon">⚔️</span> Defense</a>
+                  <a href="/sector/space/" class="auth-nav-item"><span class="auth-nav-icon">🚀</span> Space</a>
+                  <a href="/sector/mega-cap/" class="auth-nav-item"><span class="auth-nav-icon">🏢</span> Mega-Cap</a>
+                  <a href="/sector/quantum/" class="auth-nav-item"><span class="auth-nav-icon">🔬</span> Quantum</a>
+                  <a href="/sector/ai-power/" class="auth-nav-item"><span class="auth-nav-icon">⚡</span> AI Power</a>
+                  <a href="/sector/etfs/" class="auth-nav-item"><span class="auth-nav-icon">💼</span> ETFs</a>
+                  <div class="auth-nav-section-header">FEATURES</div>
+                  <a href="/hive/" class="auth-nav-item"><span class="auth-nav-icon">🐝</span> Hive</a>
+                  <a href="/signal-vs-the-street/" class="auth-nav-item"><span class="auth-nav-icon">📈</span> Signal vs. Street</a>
+                  <a href="/stocks/" class="auth-nav-item"><span class="auth-nav-icon">📉</span> Stock Pages</a>
+                  <a href="/#scorecard" class="auth-nav-item"><span class="auth-nav-icon">📊</span> Signal Scorecard</a>
+                </div>
+              </div>
+          </div>
+        </div>
+        <button class="nav-btn hamburger-btn" id="hamburgerToggle" aria-label="Menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      
+      </div>
+    </div>
+  </nav>
+
+        <!-- Rocket Lab-Style Drawer -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <div class="drawer" id="drawer">
+    <div class="drawer-header">
+      <a href="/" class="drawer-logo">
+        <span class="the">THE</span>
+        <span class="signal">SIGNAL</span>
+      </a>
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">&#10005;</button>
+    </div>
+    <div class="drawer-body" id="drawerBody">
+      <div class="drawer-main" id="drawerMain">
+        <a href="javascript:void(0)" class="drawer-link" onclick="openSubDrawer('drawerSubSectors')">SECTORS</a>
+        <a href="/stocks/" class="drawer-link">STOCK PAGES</a>
+        <a href="/explainers/" class="drawer-link">EXPLAINERS</a>
+        <a href="/#scorecard" class="drawer-link">SIGNAL SCORECARD</a>
+        <a href="/hive/" class="drawer-link">HIVE</a>
+        <a href="/signal-vs-the-street/" class="drawer-link">SIGNAL VS. STREET</a>
+        <a href="/insights/" class="drawer-link">TRADER INSIGHTS</a>
+        <a href="javascript:void(0)" class="drawer-link" onclick="openSubDrawer('drawerSubAccount')">MY ACCOUNT</a>
+        <a href="/pricing/" class="drawer-cta">GET PREMIUM ACCESS</a>
+      </div>
+      <div class="drawer-sub" id="drawerSubSectors">
+        <div class="sub-header" onclick="closeSubDrawer()">
+          <span class="sub-back">&#8249;</span>
+          <span class="sub-title">SECTORS</span>
+        </div>
+        <a href="/sector/ai/" class="drawer-link">AI</a>
+        <a href="/sector/cyber/" class="drawer-link">CYBER</a>
+        <a href="/sector/defense/" class="drawer-link">DEFENSE</a>
+        <a href="/sector/space/" class="drawer-link">SPACE</a>
+        <a href="/sector/mega-cap/" class="drawer-link">MEGA-CAP</a>
+        <a href="/sector/quantum/" class="drawer-link">QUANTUM</a>
+        <a href="/sector/fintech/" class="drawer-link">FINTECH</a>
+        <a href="/sector/ai-power/" class="drawer-link">AI POWER</a>
+        <a href="/sector/etfs/" class="drawer-link">ETFS</a>
+      </div>
+      <div class="drawer-sub" id="drawerSubAccount">
+        <div class="sub-header" onclick="closeSubDrawer()">
+          <span class="sub-back">&#8249;</span>
+          <span class="sub-title">MY ACCOUNT</span>
+        </div>
+        <a href="/premium/" class="drawer-link">PREMIUM DASHBOARD</a>
+        <a href="/watchlist/" class="drawer-link">MY WATCHLIST</a>
+        <a href="/pricing/" class="drawer-link">SIGNAL PREMIUM</a>
+      </div>
+    </div>
+  </div><!-- Search Overlay -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-backdrop" id="searchBackdrop"></div>
+    <div class="search-modal">
+      <div class="search-header">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search stocks &amp; articles…" autofocus>
+        <button class="search-close" id="searchClose" aria-label="Close search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+      <div class="search-empty" id="searchEmpty">Start typing to search articles…</div>
+    </div>
+  </div>
+
+  
+  <main class="main"><div class="ticker-tape"><div class="ticker-track"><span class="ticker-item"><span class="ticker-sym">NVDA</span><span class="ticker-prc">$224.55</span><span class="ticker-chg up">+6.35%</span></span><span class="ticker-item"><span class="ticker-sym">PLTR</span><span class="ticker-prc">$162.45</span><span class="ticker-chg up">+3.78%</span></span><span class="ticker-item"><span class="ticker-sym">AVGO</span><span class="ticker-prc">$460.80</span><span class="ticker-chg up">+3.14%</span></span><span class="ticker-item"><span class="ticker-sym">AMD</span><span class="ticker-prc">$513.52</span><span class="ticker-chg down">-0.50%</span></span><span class="ticker-item"><span class="ticker-sym">GOOGL</span><span class="ticker-prc">$377.33</span><span class="ticker-chg down">-0.79%</span></span><span class="ticker-item"><span class="ticker-sym">META</span><span class="ticker-prc">$607.56</span><span class="ticker-chg down">-3.94%</span></span><span class="ticker-item"><span class="ticker-sym">MSFT</span><span class="ticker-prc">$460.77</span><span class="ticker-chg up">+2.34%</span></span><span class="ticker-item"><span class="ticker-sym">AMZN</span><span class="ticker-prc">$262.42</span><span class="ticker-chg down">-3.04%</span></span><span class="ticker-item"><span class="ticker-sym">TSLA</span><span class="ticker-prc">$420.19</span><span class="ticker-chg down">-3.58%</span></span><span class="ticker-item"><span class="ticker-sym">MU</span><span class="ticker-prc">$1036.95</span><span class="ticker-chg up">+6.79%</span></span><span class="ticker-item"><span class="ticker-sym">NVDA</span><span class="ticker-prc">$224.55</span><span class="ticker-chg up">+6.35%</span></span><span class="ticker-item"><span class="ticker-sym">PLTR</span><span class="ticker-prc">$162.45</span><span class="ticker-chg up">+3.78%</span></span><span class="ticker-item"><span class="ticker-sym">AVGO</span><span class="ticker-prc">$460.80</span><span class="ticker-chg up">+3.14%</span></span><span class="ticker-item"><span class="ticker-sym">AMD</span><span class="ticker-prc">$513.52</span><span class="ticker-chg down">-0.50%</span></span><span class="ticker-item"><span class="ticker-sym">GOOGL</span><span class="ticker-prc">$377.33</span><span class="ticker-chg down">-0.79%</span></span><span class="ticker-item"><span class="ticker-sym">META</span><span class="ticker-prc">$607.56</span><span class="ticker-chg down">-3.94%</span></span><span class="ticker-item"><span class="ticker-sym">MSFT</span><span class="ticker-prc">$460.77</span><span class="ticker-chg up">+2.34%</span></span><span class="ticker-item"><span class="ticker-sym">AMZN</span><span class="ticker-prc">$262.42</span><span class="ticker-chg down">-3.04%</span></span><span class="ticker-item"><span class="ticker-sym">TSLA</span><span class="ticker-prc">$420.19</span><span class="ticker-chg down">-3.58%</span></span><span class="ticker-item"><span class="ticker-sym">MU</span><span class="ticker-prc">$1036.95</span><span class="ticker-chg up">+6.79%</span></span></div></div><section class="hero">
+    <div class="hero-video-bg">
+      <video class="hero-video" autoplay muted loop playsinline preload="none" aria-hidden="true" disablepictureinpicture
+             poster="/img/hero-bg-poster.jpg"
+             data-src-desktop="/img/hero-bg.mp4"
+             data-src-mobile="/img/hero-bg-mobile.mp4"
+             style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:0.75;pointer-events:none;"></video>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Live Market Intelligence
+      </div>
+      <h1 class="hero-title">Read the <span class="hero-gradient">signal</span> before the market moves</h1>
+      <p class="hero-sub">Deep-dive analysis on the stocks shaping the future — AI, defense, space, cybersecurity, and the mega-cap giants that connect them all.</p>
+      <p class="hero-desc">The Signal delivers sharp analysis on the stocks shaping tomorrow — AI, defense, space, cybersecurity, and the mega-cap movers that connect them all. Earnings deep-dives, contract analysis, and market-moving insights. No fluff, no noise — just what matters for your portfolio.</p>
+    </div>
+  </section>
+  <div class="focus-bar">
+    <a href="/sector/ai/" class="focus-item focus-ai">AI</a>
+    <span class="focus-divider">|</span>
+    <a href="/sector/cyber/" class="focus-item focus-cyber">Cyber</a>
+    <span class="focus-divider">|</span>
+    <a href="/sector/defense/" class="focus-item focus-defense">Defense</a>
+    <span class="focus-divider">|</span>
+    <a href="/sector/space/" class="focus-item focus-space">Space</a>
+    <span class="focus-divider">|</span>
+    <a href="/sector/mega-cap/" class="focus-item focus-mega">Mega-Cap</a>
+    <span class="focus-divider">|</span>
+    <a href="/sector/ai-power/" class="focus-item focus-ai-power">AI Power ⚡</a>
+    <span class="focus-divider">|</span>
+    <a href="/sector/etfs/" class="focus-item focus-etfs">ETFs</a>
+    <span class="focus-divider">|</span>
+    <a href="/sector/fintech/" class="focus-item focus-fintech">FinTech</a>
+    <span class="focus-divider">|</span>
+    <a href="/sector/quantum/" class="focus-item focus-quantum">Quantum</a>
+  </div>
+  <div class="hero-theme-toggle">
+    <button class="theme-toggle-btn homepage-theme-btn" onclick="toggleTheme()" aria-label="Toggle theme">
+      <svg class="theme-icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      <svg class="theme-icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <span>Switch to <span class="theme-label-target">Light</span></span>
+    </button>
+  </div>
+<section class="featured-pulse-row">
+  <div class="featured-pulse-feat">
+  <!-- FEATURED_ARTICLE -->
+  </div>
+  <div class="featured-pulse-aside" onclick="window.pulseOpenPanel ? pulseOpenPanel() : (window.togglePulseOverlay ? togglePulseOverlay() : null)" style="cursor: pointer;">
+    <section class="pulse-section" id="pulseSection">
+    <div class="pulse-header">
+      <img src="/img/logo-hex.jpg" alt="Pulse" class="pulse-avatar">
+      <div class="pulse-header-text">
+        <h2 class="pulse-title">Ask <span class="pulse-gradient">Pulse</span></h2>
+        <p class="pulse-desc">Your AI research agent — ask about real-time market data, earnings, contracts, or any covered stock. Pulse searches the web to get you answers that go beyond our articles.</p>
+      </div>
+    </div>
+    <div class="pulse-chat" id="pulseChat">
+      <div class="pulse-messages" id="pulseMessages">
+        <div class="pulse-message pulse-message-bot">
+          <img src="/img/logo-hex.jpg" alt="Pulse" class="pulse-message-avatar">
+          <div class="pulse-bubble">Hey, I'm <strong>Pulse</strong>. Ask me anything — earnings data, stock analysis, market moves, or company filings. I search the web for real-time info.</div>
+        </div>
+      </div>
+      <div class="pulse-input-area" onclick="event.stopPropagation()">
+        <input type="text" class="pulse-input" id="pulseInput" placeholder="e.g. What were Nvidia's latest earnings?">
+        <button class="pulse-send" id="pulseSend" aria-label="Send">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+  </div>
+</section>
+  <!-- GRID_1 -->
+  <div class="section-divider"></div>
+  <!-- TRENDING + HIVE SIDE BY SIDE ON MOBILE -->
+  <div class="trending-hive-row">
+    <div class="trending-newsletter-row">
+      <section class="trending-section">
+        <div class="trending-header">
+          <h2 class="trending-title">Trending Stocks</h2>
+          <a href="/stocks/" class="trending-view-all">View All Stocks →</a>
+        </div>
+        <div class="trending-list">TRENDING_STOCKS_PLACEHOLDER</div>
+      </section>
+      <section class="newsletter-section" id="subscribe"><div class="newsletter-inner"><div class="newsletter-badge">Coming Soon</div><h2 class="newsletter-title">Get the <span class="newsletter-gradient">Signal</span> in your inbox</h2><p class="newsletter-desc">Weekly stock intelligence on AI, defense, space &amp; cyber. The newsletter is not live yet &mdash; no email addresses are being collected.</p><p class="newsletter-status" id="newsletterStatus">Coming soon. There is no signup yet, so no email addresses are collected. Questions in the meantime: <a href="/about/">get in touch</a>.</p><p class="newsletter-status" id="newsletterStatus"></p></div></section>
+    </div>
+  </div>
+  <div class="section-divider"></div>
+<section class="scorecard-section" id="scorecard"><div class="scorecard-inner"><div class="scorecard-header-top"><img class="sc-header-logo" src="/img/logo-hex.jpg" alt="The Signal"><h2 class="scorecard-title">Signal <span>Scorecard</span></h2></div><p class="scorecard-subtitle">High-signal intelligence, researched with AI and reviewed by humans</p><div class="scorecard-grid" id="scorecardGrid"><a href="/stocks/MU/" class="sc-card" data-sc-idx="0"><div class="sc-card-header"><img class="sc-logo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%2310b981'/%3E%3Ctext x='20' y='26' text-anchor='middle' font-family='Arial,sans-serif' font-size='18' font-weight='bold' fill='white'%3EM%3C/text%3E%3C/svg%3E" alt="MU" onerror="this.style.display='none'" crossorigin="anonymous"><div class="sc-card-info"><div class="sc-card-name">MU</div><div class="sc-card-sub">Micron Technology, Inc.</div></div></div><div class="sc-gauge-wrap"><svg width="100" height="48" viewBox="0 0 100 48" class="sc-gauge-svg"><defs><filter id="glow-MU"><feGaussianBlur stdDeviation="3" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter><filter id="arcglow-MU"><feGaussianBlur stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><path d="M 10 46 A 40 40 0 0 1 90 46" fill="none" stroke="#1e293b" stroke-width="8" stroke-linecap="round"/><path d="M 10 46 A 40 40 0 0 1 90 46" fill="none" stroke="#10b981" stroke-width="8" stroke-linecap="round" stroke-dasharray="125.66370614359172" stroke-dashoffset="2.51327412287184" filter="url(#arcglow-MU)"/><polygon points="46,44 54,44 50,8" fill="#10b981" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" transform="rotate(86.4, 50, 46)" filter="url(#glow-MU)"/></svg></div><div class="sc-signal-label" style="color:#10b981">STRONG BULLISH SIGNAL 98</div><div class="sc-drivers"><div class="sc-driver"><span class="sc-dot" style="background:#10b981"></span>Revenue up +256.3% YoY to $133.19B</div><div class="sc-driver"><span class="sc-dot" style="background:#10b981"></span>P/E at 13.2x — attractively valued</div><div class="sc-driver"><span class="sc-dot" style="background:#10b981"></span>Target upside +57.6%</div></div></a><a href="/stocks/NVDA/" class="sc-card" data-sc-idx="1"><div class="sc-card-header"><img class="sc-logo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%2310b981'/%3E%3Ctext x='20' y='26' text-anchor='middle' font-family='Arial,sans-serif' font-size='18' font-weight='bold' fill='white'%3EN%3C/text%3E%3C/svg%3E" alt="NVDA" onerror="this.style.display='none'" crossorigin="anonymous"><div class="sc-card-info"><div class="sc-card-name">NVDA</div><div class="sc-card-sub">NVIDIA Corporation</div></div></div><div class="sc-gauge-wrap"><svg width="100" height="48" viewBox="0 0 100 48" class="sc-gauge-svg"><defs><filter id="glow-NVDA"><feGaussianBlur stdDeviation="3" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter><filter id="arcglow-NVDA"><feGaussianBlur stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><path d="M 10 46 A 40 40 0 0 1 90 46" fill="none" stroke="#1e293b" stroke-width="8" stroke-linecap="round"/><path d="M 10 46 A 40 40 0 0 1 90 46" fill="none" stroke="#10b981" stroke-width="8" stroke-linecap="round" stroke-dasharray="125.66370614359172" stroke-dashoffset="6.28318530717959" filter="url(#arcglow-NVDA)"/><polygon points="46,44 54,44 50,8" fill="#10b981" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" transform="rotate(81.0, 50, 46)" filter="url(#glow-NVDA)"/></svg></div><div class="sc-signal-label" style="color:#10b981">STRONG BULLISH SIGNAL 95</div><div class="sc-drivers"><div class="sc-driver"><span class="sc-dot" style="background:#10b981"></span>Revenue up +65.5% YoY to $302.97B</div><div class="sc-driver"><span class="sc-dot" style="background:#10b981"></span>P/E at 27.2x — attractively valued</div><div class="sc-driver"><span class="sc-dot" style="background:#10b981"></span>Target upside +46.3%</div></div></a><a href="/stocks/GOOGL/" class="sc-card" data-sc-idx="2"><div class="sc-card-header"><img class="sc-logo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%2310b981'/%3E%3Ctext x='20' y='26' text-anchor='middle' font-family='Arial,sans-serif' font-size='18' font-weight='bold' fill='white'%3EG%3C/text%3E%3C/svg%3E" alt="GOOGL" onerror="this.style.display='none'" crossorigin="anonymous"><div class="sc-card-info"><div class="sc-card-name">GOOGL</div><div class="sc-card-sub">Alphabet Inc.</div></div></div><div class="sc-gauge-wrap"><svg width="100" height="48" viewBox="0 0 100 48" class="sc-gauge-svg"><defs><filter id="glow-GOOGL"><feGaussianBlur stdDeviation="3" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter><filter id="arcglow-GOOGL"><feGaussianBlur stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><path d="M 10 46 A 40 40 0 0 1 90 46" fill="none" stroke="#1e293b" stroke-width="8" stroke-linecap="round"/><path d="M 10 46 A 40 40 0 0 1 90 46" fill="none" stroke="#10b981" stroke-width="8" stroke-linecap="round" stroke-dasharray="125.66370614359172" stroke-dashoffset="26.38937829015426" filter="url(#arcglow-GOOGL)"/><polygon points="46,44 54,44 50,8" fill="#10b981" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" transform="rotate(52.2, 50, 46)" filter="url(#glow-GOOGL)"/></svg></div><div class="sc-signal-label" style="color:#10b981">STRONG BULLISH SIGNAL 79</div><div class="sc-drivers"><div class="sc-driver"><span class="sc-dot" style="background:#10b981"></span>Revenue up +15.1% YoY to $445.87B</div><div class="sc-driver"><span class="sc-dot" style="background:#10b981"></span>P/E at 17.0x — attractively valued</div><div class="sc-driver"><span class="sc-dot" style="background:#10b981"></span>Target upside +32.4%</div></div></a><a href="/stocks/META/" class="sc-card" data-sc-idx="3"><div class="sc-card-header"><img class="sc-logo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%2310b981'/%3E%3Ctext x='20' y='26' text-anchor='middle' font-family='Arial,sans-serif' font-size='18' font-weight='bold' fill='white'%3EM%3C/text%3E%3C/svg%3E" alt="META" onerror="this.style.display='none'" crossorigin="anonymous"><div class="sc-card-info"><div class="sc-card-name">META</div><div class="sc-card-sub">Meta Platforms</div></div></div><div class="sc-gauge-wrap"><svg width="100" height="48" viewBox="0 0 100 48" class="sc-gauge-svg"><defs><filter id="glow-META"><feGaussianBlur stdDeviation="3" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter><filter id="arcglow-META"><feGaussianBlur stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><path d="M 10 46 A 40 40 0 0 1 90 46" fill="none" stroke="#1e293b" stroke-width="8" stroke-linecap="round"/><path d="M 10 46 A 40 40 0 0 1 90 46" fill="none" stroke="#10b981" stroke-width="8" stroke-linecap="round" stroke-dasharray="125.66370614359172" stroke-dashoffset="21.3628300444106" filter="url(#arcglow-META)"/><polygon points="46,44 54,44 50,8" fill="#10b981" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" transform="rotate(59.4, 50, 46)" filter="url(#glow-META)"/></svg></div><div class="sc-signal-label" style="color:#10b981">STRONG BULLISH SIGNAL 83</div><div class="sc-drivers"><div class="sc-driver"><span class="sc-dot" style="background:#10b981"></span>Revenue up +22.2% YoY to $241.61B</div><div class="sc-driver"><span class="sc-dot" style="background:#10b981"></span>P/E at 20.9x — attractively valued</div><div class="sc-driver"><span class="sc-dot" style="background:#10b981"></span>Target upside +38.8%</div></div></a><a href="/stocks/PLTR/" class="sc-card" data-sc-idx="4"><div class="sc-card-header"><img class="sc-logo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%2310b981'/%3E%3Ctext x='20' y='26' text-anchor='middle' font-family='Arial,sans-serif' font-size='18' font-weight='bold' fill='white'%3EP%3C/text%3E%3C/svg%3E" alt="PLTR" onerror="this.style.display='none'" crossorigin="anonymous"><div class="sc-card-info"><div class="sc-card-name">PLTR</div><div class="sc-card-sub">Palantir Technologies Inc.</div></div></div><div class="sc-gauge-wrap"><svg width="100" height="48" viewBox="0 0 100 48" class="sc-gauge-svg"><defs><filter id="glow-PLTR"><feGaussianBlur stdDeviation="3" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter><filter id="arcglow-PLTR"><feGaussianBlur stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><path d="M 10 46 A 40 40 0 0 1 90 46" fill="none" stroke="#1e293b" stroke-width="8" stroke-linecap="round"/><path d="M 10 46 A 40 40 0 0 1 90 46" fill="none" stroke="#10b981" stroke-width="8" stroke-linecap="round" stroke-dasharray="125.66370614359172" stroke-dashoffset="26.38937829015426" filter="url(#arcglow-PLTR)"/><polygon points="46,44 54,44 50,8" fill="#10b981" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" transform="rotate(52.2, 50, 46)" filter="url(#glow-PLTR)"/></svg></div><div class="sc-signal-label" style="color:#10b981">STRONG BULLISH SIGNAL 79</div><div class="sc-drivers"><div class="sc-driver"><span class="sc-dot" style="background:#10b981"></span>Revenue up +56.2% YoY to $6.16B</div><div class="sc-driver"><span class="sc-dot" style="background:#10b981"></span>Premium valuation at 170x P/E</div><div class="sc-driver"><span class="sc-dot" style="background:#10b981"></span>Moderate upside +12.5%</div></div></a><a href="/stocks/CEG/" class="sc-card" data-sc-idx="5"><div class="sc-card-header"><img class="sc-logo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%2384cc16'/%3E%3Ctext x='20' y='26' text-anchor='middle' font-family='Arial,sans-serif' font-size='18' font-weight='bold' fill='white'%3EC%3C/text%3E%3C/svg%3E" alt="CEG" onerror="this.style.display='none'" crossorigin="anonymous"><div class="sc-card-info"><div class="sc-card-name">CEG</div><div class="sc-card-sub">Constellation Energy</div></div></div><div class="sc-gauge-wrap"><svg width="100" height="48" viewBox="0 0 100 48" class="sc-gauge-svg"><defs><filter id="glow-CEG"><feGaussianBlur stdDeviation="3" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter><filter id="arcglow-CEG"><feGaussianBlur stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><path d="M 10 46 A 40 40 0 0 1 90 46" fill="none" stroke="#1e293b" stroke-width="8" stroke-linecap="round"/><path d="M 10 46 A 40 40 0 0 1 90 46" fill="none" stroke="#84cc16" stroke-width="8" stroke-linecap="round" stroke-dasharray="125.66370614359172" stroke-dashoffset="35.18583772020568" filter="url(#arcglow-CEG)"/><polygon points="46,44 54,44 50,8" fill="#84cc16" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" transform="rotate(39.6, 50, 46)" filter="url(#glow-CEG)"/></svg></div><div class="sc-signal-label" style="color:#84cc16">BULLISH SIGNAL 72</div><div class="sc-drivers"><div class="sc-driver"><span class="sc-dot" style="background:#84cc16"></span>Revenue up +8.3% YoY to $31.27B</div><div class="sc-driver"><span class="sc-dot" style="background:#84cc16"></span>P/E at 25.2x — attractively valued</div><div class="sc-driver"><span class="sc-dot" style="background:#84cc16"></span>Target upside +32.9%</div></div></a><a href="/stocks/NFLX/" class="sc-card" data-sc-idx="6"><div class="sc-card-header"><img class="sc-logo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%2310b981'/%3E%3Ctext x='20' y='26' text-anchor='middle' font-family='Arial,sans-serif' font-size='18' font-weight='bold' fill='white'%3EN%3C/text%3E%3C/svg%3E" alt="NFLX" onerror="this.style.display='none'" crossorigin="anonymous"><div class="sc-card-info"><div class="sc-card-name">NFLX</div><div class="sc-card-sub">Netflix Inc.</div></div></div><div class="sc-gauge-wrap"><svg width="100" height="48" viewBox="0 0 100 48" class="sc-gauge-svg"><defs><filter id="glow-NFLX"><feGaussianBlur stdDeviation="3" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter><filter id="arcglow-NFLX"><feGaussianBlur stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><path d="M 10 46 A 40 40 0 0 1 90 46" fill="none" stroke="#1e293b" stroke-width="8" stroke-linecap="round"/><path d="M 10 46 A 40 40 0 0 1 90 46" fill="none" stroke="#10b981" stroke-width="8" stroke-linecap="round" stroke-dasharray="125.66370614359172" stroke-dashoffset="25.13274122871834" filter="url(#arcglow-NFLX)"/><polygon points="46,44 54,44 50,8" fill="#10b981" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" transform="rotate(54.0, 50, 46)" filter="url(#glow-NFLX)"/></svg></div><div class="sc-signal-label" style="color:#10b981">STRONG BULLISH SIGNAL 80</div><div class="sc-drivers"><div class="sc-driver"><span class="sc-dot" style="background:#10b981"></span>Revenue up +15.9% YoY to $49.73B</div><div class="sc-driver"><span class="sc-dot" style="background:#10b981"></span>P/E at 17.9x — attractively valued</div><div class="sc-driver"><span class="sc-dot" style="background:#10b981"></span>Target upside +32.3%</div></div></a><a href="/stocks/GEV/" class="sc-card" data-sc-idx="7"><div class="sc-card-header"><img class="sc-logo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%2384cc16'/%3E%3Ctext x='20' y='26' text-anchor='middle' font-family='Arial,sans-serif' font-size='18' font-weight='bold' fill='white'%3EG%3C/text%3E%3C/svg%3E" alt="GEV" onerror="this.style.display='none'" crossorigin="anonymous"><div class="sc-card-info"><div class="sc-card-name">GEV</div><div class="sc-card-sub">GE Vernova</div></div></div><div class="sc-gauge-wrap"><svg width="100" height="48" viewBox="0 0 100 48" class="sc-gauge-svg"><defs><filter id="glow-GEV"><feGaussianBlur stdDeviation="3" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter><filter id="arcglow-GEV"><feGaussianBlur stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><path d="M 10 46 A 40 40 0 0 1 90 46" fill="none" stroke="#1e293b" stroke-width="8" stroke-linecap="round"/><path d="M 10 46 A 40 40 0 0 1 90 46" fill="none" stroke="#84cc16" stroke-width="8" stroke-linecap="round" stroke-dasharray="125.66370614359172" stroke-dashoffset="33.92920065876977" filter="url(#arcglow-GEV)"/><polygon points="46,44 54,44 50,8" fill="#84cc16" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" transform="rotate(41.4, 50, 46)" filter="url(#glow-GEV)"/></svg></div><div class="sc-signal-label" style="color:#84cc16">BULLISH SIGNAL 73</div><div class="sc-drivers"><div class="sc-driver"><span class="sc-dot" style="background:#84cc16"></span>Revenue up +9.0% YoY to $41.37B</div><div class="sc-driver"><span class="sc-dot" style="background:#84cc16"></span>P/E at 25.2x — attractively valued</div><div class="sc-driver"><span class="sc-dot" style="background:#84cc16"></span>Target upside +39.5%</div></div></a></div><div class="sc-table-container"><div class="sc-table-header"><h3><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:6px"><rect x="3" y="12" width="4" height="8"/><rect x="10" y="6" width="4" height="14"/><rect x="17" y="2" width="4" height="18"/></svg>Key Metrics (TTM)</h3></div><div class="sc-table-scroll"><table class="sc-table"><thead><tr><th>Metric</th><th>MU</th><th>NVDA</th><th>GOOGL</th><th>META</th><th>PLTR</th><th>CEG</th><th>NFLX</th><th>GEV</th></tr></thead><tbody><tr><td class="metric-label">Revenue (TTM)</td><td>$133.19B</td><td>$302.97B</td><td>$445.87B</td><td>$241.61B</td><td>$6.16B</td><td>$31.27B</td><td>$49.73B</td><td>$41.37B</td></tr><tr><td class="metric-label">Rev Growth (YoY)</td><td class="positive">+256.3%</td><td class="positive">+65.5%</td><td class="positive">+15.1%</td><td class="positive">+22.2%</td><td class="positive">+56.2%</td><td class="positive">+8.3%</td><td class="positive">+15.9%</td><td class="positive">+9.0%</td></tr><tr><td class="metric-label">Net Income</td><td>$84.97B</td><td>$192.88B</td><td>$244.12B</td><td>$75.25B</td><td>$3.02B</td><td>$3.46B</td><td>$14.77B</td><td>$9.53B</td></tr><tr><td class="metric-label">P/E Ratio</td><td>13.2x</td><td>27.2x</td><td>17.0x</td><td>20.9x</td><td>169.7x</td><td>25.2x</td><td>17.9x</td><td>25.2x</td></tr><tr><td class="metric-label">Price/Sales</td><td>8.4x</td><td>17.2x</td><td>8.9x</td><td>6.6x</td><td>76.8x</td><td>2.9x</td><td>5.2x</td><td>5.7x</td></tr><tr><td class="metric-label">Target Upside</td><td class="positive">+57.6%</td><td class="positive">+46.3%</td><td class="positive">+32.4%</td><td class="positive">+38.8%</td><td class="positive">+12.5%</td><td class="positive">+32.9%</td><td class="positive">+32.3%</td><td class="positive">+39.5%</td></tr></tbody></table></div></div></div></section>
+  <section class="hive-home-section" id="hiveHomeSection"><div class="hive-home-bg"></div><div class="hive-home-inner"><div class="hive-home-badge">🐝 Community Trading</div><h2 class="hive-home-headline">Where the <span class="hive-gradient-text">community</span> beats the market</h2><p class="hive-home-desc">Join free simulated trading competitions — build a $100K portfolio, compete against other traders, and prove your signal beats the noise. Weekly sprints, monthly leaderboards, and bragging rights.</p><div class="hive-home-stats"><div class="hive-home-stat"><span class="hive-stat-number">$100K</span><span class="hive-stat-label">Starting Portfolio</span></div><div class="hive-home-stat"><span class="hive-stat-number">70+</span><span class="hive-stat-label">Covered Stocks</span></div><div class="hive-home-stat"><span class="hive-stat-number">Real-Time</span><span class="hive-stat-label">Rankings</span></div><div class="hive-home-stat"><span class="hive-stat-number">Free</span><span class="hive-stat-label">To Play &amp; Compete</span></div></div><div class="hive-home-actions"><a href="/hive/boardroom/" class="hive-home-cta hive-home-cta-primary">⚡ Claim Your $100K Fund</a><a href="/hive/boardroom/" class="hive-home-cta hive-home-cta-secondary">View Leaderboard →</a></div></div></section>
+  <!-- GRID_2 -->
+<section class="detail-stocks-section"><div class="detail-stocks-header"><span class="detail-star">*</span> Signal Highlights</div><div class="detail-stocks-carousel-wrap" data-carousel>
+  <button class="detail-carousel-arrow detail-carousel-prev" data-carousel-prev aria-label="Previous">‹</button>
+  <div class="detail-stocks-carousel" data-carousel-track>SIGNAL_HIGHLIGHTS_PLACEHOLDER</div>
+  <button class="detail-carousel-arrow detail-carousel-next" data-carousel-next aria-label="Next">›</button>
+  <div class="detail-carousel-dots" data-carousel-dots></div>
+</div></section>
+  <div class="section-divider"></div>
+  <!-- GRID_3 -->
+  <div class="section-divider"></div>
+  <!-- GRID_4 -->
+
+<footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <div class="footer-brand"><img src="/img/logo-hex.jpg" alt="The Signal" class="footer-logo"> THE <strong>SIGNAL</strong></div>
+          <p>Market intelligence for AI, defense, space, and cybersecurity stocks. Data-driven analysis that moves before the headlines.</p>
+          <div class="footer-social">
+            <a href="https://x.com/ReadTheSignal21" target="_blank" rel="noopener" aria-label="X / Twitter">𝕏</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Sectors</h4>
+          <a href="/sector/ai/">AI</a>
+          <a href="/sector/defense/">Defense</a>
+          <a href="/sector/cyber/">Cyber</a>
+          <a href="/sector/space/">Space</a>
+          <a href="/sector/mega-cap/">Mega-Cap</a>
+          <a href="/sector/ai-power/">AI Power</a>
+        </div>
+        <div class="footer-col">
+          <h4>Features</h4>
+          <a href="/stocks/">Stock Pages</a>
+          <a href="/about/">About</a>
+        </div>
+        <div class="footer-col">
+          <h4>More</h4>
+          <a href="/about/">Contact Us</a>
+          <a href="/">Home</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+          <a href="/disclaimer/">Disclaimer</a>
+          <a href="/disclosure/">Disclosure</a>
+          <a href="/corrections/">Corrections Policy</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-tag">The Signal Editorial Team · readthesignal.net</div>
+        <div class="footer-copy">© 2026 The Signal — Market Intelligence. Data from public sources. Not investment advice.</div>
+      </div>
+    </div>
+  </footer>
+  <script src="/js/prices.js" defer></script>
+  <script src="/js/search.js" defer></script>
+  <script src="/js/auth.js?v=2" defer></script>
+  <script src="/js/pulse.js" defer></script>
+  <script src="/js/theme.js?v=2" defer></script>
+  <script src="/js/comments.js" defer></script>
+  <script src="/js/share.js" defer></script>
+  <script src="/js/hive.js?v=3" defer></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function(){
+    var btn = document.getElementById('hamburgerToggle');
+    var drawer = document.getElementById('drawer');
+    var overlay = document.getElementById('drawerOverlay');
+    var closeBtn = document.getElementById('drawerClose');
+    function openDrawer() {
+      drawer.classList.add('open');
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDrawer() {
+      drawer.classList.remove('open');
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    if (btn && drawer && overlay) {
+      btn.addEventListener('click', function(){ openDrawer(); });
+      overlay.addEventListener('click', function(){ closeDrawer(); });
+      if (closeBtn) closeBtn.addEventListener('click', function(){ closeDrawer(); });
+      // Close on Escape key
+      document.addEventListener('keydown', function(e){
+        if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
+      });
+      // Close on link click inside drawer
+      drawer.querySelectorAll('a').forEach(function(a){
+        a.addEventListener('click', function(){ closeDrawer(); });
+      });
+    }
+  });
+  </script>
+  <script>
+  // Pause hero video when scrolled past to save GPU/CPU
+  (function(){
+    var video = document.querySelector('.hero-video-bg video');
+    if (!video) return;
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { video.play(); }
+        else { video.pause(); }
+      });
+    }, { threshold: 0.1 });
+    obs.observe(video.parentElement);
+  })();
+  </script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function(){
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('reveal'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.sc-card, .detail-card-link, .sc-table-container, .newsletter-inner').forEach(function(el){ observer.observe(el); });
+  });
+  </script>
+  <script src="/js/hero-video.js?v=1" defer></script>
+</html>

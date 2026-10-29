@@ -1,0 +1,211 @@
+
+ Exploring a space-based, scalable AI infrastructure system design 
+ Skip to main content 
+ Explore our many areas of focus 
+ Explore all research areas
+ Applied AI & sciences 
+ Earth AI 
+ Health AI 
+ Science AI 
+ Sustainability & crisis resilience 
+ Foundational ML & algorithms 
+ Algorithms & theory 
+ Information retrieval 
+ Machine intelligence 
+ Machine perception 
+ Natural language processing 
+ People, systems & quantum AI 
+ Human-computer interaction and visualization 
+ Networking 
+ Quantum AI 
+ Responsible AI 
+ Anti abuse 
+ Software engineering 
+ Software systems 
+ Learn More 
+ Publications 
+ Projects 
+ Building a collaborative ecosystem 
+ Datasets 
+ Access high-quality datasets to accelerate your research. 
+ Tools & services 
+ Explore our latest AI models and products. 
+ Open source 
+ Discover open-source code and collaborate with the community. 
+ Shaping the future together 
+ See all programs
+ Faculty programs 
+ Participating in the academic research community through meaningful engagement with university faculty. 
+ Student programs 
+ Supporting the next generation of researchers through a wide range of programming. 
+ R&D programs 
+ Collaborating with industry and academic experts to support foundational science and innovation. 
+ Locations 
+ Find your place in our global offices and research labs. 
+ Translating discovery into real-world impact 
+ People 
+ Our researchers drive advancements in computer science through both fundamental and applied research. 
+ Teams 
+ Collaborative groups tackling the world's most challenging AI problems. 
+ Research 
+ Explore our many areas of focus 
+ Explore all research areas
+ Applied AI & sciences 
+ Earth AI 
+ Health AI 
+ Science AI 
+ Sustainability & crisis resilience 
+ Foundational ML & algorithms 
+ Algorithms & theory 
+ Information retrieval 
+ Machine intelligence 
+ Machine perception 
+ Natural language processing 
+ People, systems & quantum AI 
+ Human-computer interaction and visualization 
+ Networking 
+ Quantum AI 
+ Responsible AI 
+ Anti abuse 
+ Software engineering 
+ Software systems 
+ Learn More 
+ Publications 
+ Projects 
+ Resources 
+ Building a collaborative ecosystem 
+ Datasets 
+ Access high-quality datasets to accelerate your research. 
+ Tools & services 
+ Explore our latest AI models and products. 
+ Open source 
+ Discover open-source code and collaborate with the community. 
+ Conferences & events
+ Careers 
+ Shaping the future together 
+ See all programs
+ Faculty programs 
+ Participating in the academic research community through meaningful engagement with university faculty. 
+ Student programs 
+ Supporting the next generation of researchers through a wide range of programming. 
+ R&D programs 
+ Collaborating with industry and academic experts to support foundational science and innovation. 
+ Locations 
+ Find your place in our global offices and research labs. 
+ Blog
+ About 
+ Translating discovery into real-world impact 
+ People 
+ Our researchers drive advancements in computer science through both fundamental and applied research. 
+ Teams 
+ Collaborative groups tackling the world's most challenging AI problems. 
+ Google 
+ Research 
+ Google AI 
+ Learn about all our AI 
+ Google DeepMind 
+ Explore the frontier of AI 
+ Google Labs 
+ Try our AI experiments 
+ Research
+ Resources
+ Conferences & events
+ Careers
+ Blog
+ About
+ Search 
+ Home 
+ Blog 
+ Exploring a space-based, scalable AI infrastructure system design 
+ November 4, 2025 Travis Beals, Senior Director, Paradigms of Intelligence 
+ Project Suncatcher is a moonshot exploring a new frontier: equipping solar-powered satellite constellations with TPUs and free-space optical links to one day scale machine learning compute in space. 
+ Quick links 
+ Paper 
+ Share 
+ Copy link 
+ ×
+ Artificial intelligence (AI) is a foundational technology that could reshape our world, driving new scientific discoveries and helping us tackle humanity's greatest challenges. Now, we're asking where we can go to unlock its fullest potential. The Sun is the ultimate energy source in our solar system, emitting more power than 100 trillion times humanity’s total electricity production. In the right orbit, a solar panel can be up to 8 times more productive than on earth, and produce power nearly continuously, reducing the need for batteries. In the future, space may be the best place to scale AI compute. Working backwards from there, our new research moonshot, Project Suncatcher, envisions compact constellations of solar-powered satellites, carrying Google TPUs and connected by free-space optical links . This approach would have tremendous potential for scale, and also minimizes impact on terrestrial resources. We’re excited about this growing area of exploration, and our early research, shared today in “ Towards a future space-based, highly scalable AI infrastructure system design, ” a preprint paper, which describes our progress toward tackling the foundational challenges of this ambitious endeavor — including high-bandwidth communication between satellites, orbital dynamics, and radiation effects on computing. By focusing on a modular design of smaller, interconnected satellites, we are laying the groundwork for a highly scalable, future space-based AI infrastructure. Project Suncatcher is part of Google’s long tradition of taking on moonshots that tackle tough scientific and engineering problems. Like all moonshots, there will be unknowns, but it’s in this spirit that we embarked on building a large-scale quantum computer a decade ago — before it was considered a realistic engineering goal — and envisioned an autonomous vehicle over 15 years ago , which eventually became Waymo and now serves millions of passenger trips around the globe. 
+ System design and key challenges 
+ The proposed system consists of a constellation of networked satellites, likely operating in a dawn–dusk sun-synchronous low earth orbit , where they would be exposed to near-constant sunlight. This orbital choice maximizes solar energy collection and reduces the need for heavy onboard batteries. For this system to be viable, several technical hurdles must be overcome: 
+ 1. Achieving data center-scale inter-satellite links 
+ Large-scale ML workloads require distributing tasks across numerous accelerators with high-bandwidth, low-latency connections. Delivering performance comparable to terrestrial data centers requires links between satellites that support tens of terabits per second. Our analysis indicates that this should be possible with multi-channel dense wavelength-division multiplexing (DWDM) transceivers and spatial multiplexing . However, achieving this kind of bandwidth requires received power levels thousands of times higher than typical in conventional, long-range deployments. Since received power scales inversely with the square of the distance, we can overcome this challenge by flying the satellites in a very close formation (kilometers or less), thus closing the link budget (i.e., the accounting of the end-to-end signal power losses in the communications system). Our team has already begun validating this approach with a bench-scale demonstrator that successfully achieved 800 Gbps each-way transmission (1.6 Tbps total) using a single transceiver pair. 
+ 2. Controlling large, tightly-clustered satellite formations 
+ High-bandwidth inter-satellite links require our satellites to fly in a much more compact formation than any current system. We developed numerical and analytic physics models to analyze the orbital dynamics of such a constellation. We used an approximation starting from the Hill-Clohessy-Wiltshire equations (which describe the orbital motion of a satellite relative to a circular reference orbit in a Keplerian approximation ) and a JAX -based differentiable model for the numerical refinement that accounts for further perturbations. At the altitude of our planned constellation, the non-sphericity of Earth's gravitational field, and potentially atmospheric drag, are the dominant non-Keplerian effects impacting satellite orbital dynamics. In the figure below, we show trajectories (over one full orbit) for an illustrative 81-satellite constellation configuration in the orbital plane, at a mean cluster altitude of 650 km. The cluster radius is R=1 km, with the distance between next-nearest-neighbor satellites oscillating between ~100–200m, under the influence of Earth’s gravity. The models show that, with satellites positioned just hundreds of meters apart, we will likely only require modest station-keeping maneuvers to maintain stable constellations within our desired sun-synchronous orbit. 
+ play silent looping video 
+ pause silent looping video 
+ unmute video 
+ mute video 
+ Evolution of a free-fall (“no thrust”) constellation under Earth’s gravitational attraction, modeled to the level of detail required to obtain sun-synchronous orbits, in a non-rotating coordinate system, relative to a central reference satellite S0. Arrow points towards Earth’s center. Magenta: nearest neighbors of satellite S0. Orange: Example "peripheral" satellite S1. Orange dashed: S1’s positions relative to the cluster center (in the non-rotating coordinate frame). 
+ 3. Radiation tolerance of TPUs 
+ For ML accelerators to be effective in space, they must withstand the environment of low-Earth orbit. We tested Trillium , Google’s v6e Cloud TPU, in a 67MeV proton beam to test for impact from total ionizing dose (TID) and single event effects (SEEs). The results were promising. While the High Bandwidth Memory (HBM) subsystems were the most sensitive component, they only began showing irregularities after a cumulative dose of 2 krad(Si) — nearly three times the expected (shielded) five year mission dose of 750 rad(Si). No hard failures were attributable to TID up to the maximum tested dose of 15 krad(Si) on a single chip, indicating that Trillium TPUs are surprisingly radiation-hard for space applications. 
+ 4. Economic feasibility and launch costs 
+ Historically, high launch costs have been a primary barrier to large-scale space-based systems. However, our analysis of historical and projected launch pricing data suggests that with a sustained learning rate, prices may fall to less than $200/kg by the mid-2030s . At that price point, the cost of launching and operating a space-based data center could become roughly comparable to the reported energy costs of an equivalent terrestrial data center on a per-kilowatt/year basis [608112] . See the preprint paper for more details. 
+ Future directions 
+ Our initial analysis shows that the core concepts of space-based ML compute are not precluded by fundamental physics or insurmountable economic barriers. However, significant engineering challenges remain, such as thermal management, high-bandwidth ground communications, and on-orbit system reliability. To begin addressing these challenges, our next milestone is a learning mission in partnership with Planet , slated to launch two prototype satellites by early 2027. This experiment will test how our models and TPU hardware operate in space and validate the use of optical inter-satellite links for distributed ML tasks. Eventually, gigawatt-scale constellations may benefit from a more radical satellite design; this may combine new compute architectures more naturally suited to the space environment with a mechanical design in which solar power collection, compute, and thermal management are tightly integrated. Just as the development of complex system-on-chip technology was motivated by and enabled by modern smartphones, scale and integration will advance what’s possible in space. 
+ Acknowledgements 
+ “Towards a future space-based, highly scalable AI infrastructure system design” was authored by Blaise Agüera y Arcas, Travis Beals, Maria Biggs, Jessica V. Bloom, Thomas Fischbacher, Konstantin Gromov, Urs Köster, Rishiraj Pravahan and James Manyika. We thank Amaan Pirani for critical contributions to cost modeling and overall feasibility analysis, Marcin Kowalczyk for independent numerical validation calculations, Paul Epp and Stephen Palese for input on the ISL concept, Thomas Zurbuchen for his contributions to the systems and architecture concepts, and Kenny Vassigh and Jerry Chiu for technical input on system and thermal design. We also thank Muon Space for general discussions and for technical and economic feasibility analysis of the concept. 
+ Labels: 
+ General Science 
+ Responsible AI 
+ Based on publicly reported energy costs for the data center industry. 
+ Quick links 
+ Paper 
+ Share 
+ Copy link 
+ ×
+ Other posts of interest 
+ September 3, 2026 
+ Transfer learning for genomic prediction in underrepresented populations
+ General Science
+ · 
+ Machine Intelligence
+ September 3, 2026 
+ A connectomics milestone: Mapping the complete male fruit fly brain
+ General Science
+ · 
+ Health & Bioscience
+ · 
+ Machine Intelligence
+ · 
+ Open Source Models & Datasets
+ August 17, 2026 
+ Seeing beyond BMI: Estimating cardiometabolic risk with smartphone imagery
+ General Science
+ · 
+ Health & Bioscience
+ · 
+ Machine Intelligence
+ Follow us
+ Explore our other initiatives 
+ Google AI 
+ Discover how Google AI is committed to enriching knowledge and solving complex challenges 
+ Products
+ Build
+ Research
+ Responsibility
+ Societal Impact
+ About
+ Google Cloud 
+ High-performance infrastructure for cloud computing, data analytics & machine learning 
+ Overview
+ Solutions
+ Products
+ Pricing
+ Resources
+ Google DeepMind 
+ Our mission is to build AI responsibly to benefit humanity 
+ Models
+ Research
+ Science
+ About
+ Google Labs 
+ Explore the future of AI responsibly with Google Labs 
+ About
+ Experiments
+ Stay connected
+ About Google 
+ Google Products 
+ Privacy 
+ Terms 
+ Cookies management controls
+ × 

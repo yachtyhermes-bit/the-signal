@@ -1,7 +1,7 @@
 {
-  "generated": "2026-10-08",
+  "generated": "2026-10-15",
   "profile_version": 1,
-  "target_swaps": 1,
+  "target_swaps": 3,
   "incumbents": {
     "scorecard": [
       "MU",
@@ -21,7 +21,7 @@
       "KTOS",
       "AXON",
       "SOFI",
-      "ZS"
+      "RKLB"
     ]
   },
   "scorecard": [
@@ -30,33 +30,49 @@
     "GOOGL",
     "META",
     "PLTR",
-    "CEG",
-    "NFLX",
+    "AMZN",
+    "AMAT",
     "GEV"
   ],
   "highlights": [
     "NVDA",
     "AVGO",
-    "MSFT",
     "ANET",
     "KTOS",
+    "MSFT",
+    "MRVL",
     "AXON",
-    "SOFI",
-    "RKLB"
+    "SOFI"
   ],
   "swaps": [
     {
+      "panel": "scorecard",
+      "in": "AMZN",
+      "out": "NFLX",
+      "why": "cycle rotation: 89.8 vs 77.7"
+    },
+    {
+      "panel": "scorecard",
+      "in": "AMAT",
+      "out": "CEG",
+      "why": "cycle rotation: 85.4 vs 78.0"
+    },
+    {
       "panel": "highlights",
-      "in": "RKLB",
-      "out": "ZS",
-      "why": "owner's call (Owner's call: prefers Rocket Lab over CoreWeave. Placed on the highlights panel, which is where CRWV sat.)"
+      "in": "MRVL",
+      "out": "RKLB",
+      "why": "cycle rotation: 82.2 vs 65.0"
     }
   ],
   "entering": [
-    "RKLB"
+    "AMAT",
+    "AMZN",
+    "MRVL"
   ],
   "leaving": [
-    "ZS"
+    "CEG",
+    "NFLX",
+    "RKLB"
   ],
   "unscored": [
     "GEV"
@@ -75,8 +91,8 @@
       "moat": "Wide",
       "cluster": "semis",
       "growth_pct": 24.8,
-      "pe": 45.8,
-      "upside": 22.7,
+      "pe": 40.1,
+      "upside": 42.2,
       "buys": 33,
       "blocked": []
     },
@@ -93,8 +109,8 @@
       "moat": "Narrow",
       "cluster": "semis",
       "growth_pct": 50.1,
-      "pe": 164.8,
-      "upside": -1.5,
+      "pe": 145.6,
+      "upside": 11.5,
       "buys": 44,
       "blocked": []
     },
@@ -111,9 +127,9 @@
       "moat": "Wide",
       "cluster": "megacap",
       "growth_pct": 19.6,
-      "pe": 20.9,
-      "upside": 27.2,
-      "buys": 57,
+      "pe": 20.4,
+      "upside": 30.4,
+      "buys": 58,
       "blocked": []
     },
     "ANET": {
@@ -129,8 +145,8 @@
       "moat": "Wide",
       "cluster": "semis",
       "growth_pct": 37.7,
-      "pe": 68.1,
-      "upside": 12.2,
+      "pe": 61.6,
+      "upside": 25.4,
       "buys": 31,
       "blocked": []
     },
@@ -148,7 +164,7 @@
       "cluster": "defense",
       "growth_pct": 5.7,
       "pe": null,
-      "upside": 56.0,
+      "upside": 79.5,
       "buys": 17,
       "blocked": []
     },
@@ -165,8 +181,8 @@
       "moat": "Wide",
       "cluster": "semis",
       "growth_pct": 85.5,
-      "pe": 48.1,
-      "upside": 41.1,
+      "pe": 44.2,
+      "upside": 52.4,
       "buys": 47,
       "blocked": []
     },
@@ -183,8 +199,8 @@
       "moat": "Wide",
       "cluster": "defense",
       "growth_pct": 35.3,
-      "pe": 173.5,
-      "upside": 73.4,
+      "pe": 171.6,
+      "upside": 70.7,
       "buys": 18,
       "blocked": []
     },
@@ -201,8 +217,8 @@
       "moat": "Narrow",
       "cluster": "ai-power",
       "growth_pct": 23.0,
-      "pe": 29.3,
-      "upside": 14.0,
+      "pe": 27.3,
+      "upside": 22.2,
       "buys": 19,
       "blocked": []
     },
@@ -220,7 +236,7 @@
       "cluster": "ai-cloud",
       "growth_pct": 112.5,
       "pe": null,
-      "upside": 58.9,
+      "upside": 115.1,
       "buys": 31,
       "blocked": [
         "excluded by policy"
@@ -253,8 +269,8 @@
       "cluster": "megacap",
       "growth_pct": 24.2,
       "pe": 17.4,
-      "upside": 22.5,
-      "buys": 56,
+      "upside": 23.8,
+      "buys": 57,
       "blocked": []
     },
     "KTOS": {
@@ -265,14 +281,14 @@
         "growth": 15.25,
         "profitability": 15,
         "valuation": 0,
-        "coverage": 10.0
+        "coverage": 10
       },
       "moat": "Narrow",
       "cluster": "defense",
       "growth_pct": 30.5,
-      "pe": 246.7,
-      "upside": 140.2,
-      "buys": 20,
+      "pe": 231.3,
+      "upside": 153.2,
+      "buys": 22,
       "blocked": []
     },
     "META": {
@@ -288,27 +304,27 @@
       "moat": "Wide",
       "cluster": "megacap",
       "growth_pct": 28.0,
-      "pe": 27.2,
-      "upside": 10.2,
+      "pe": 27.8,
+      "upside": 10.3,
       "buys": 55,
       "blocked": []
     },
     "MRVL": {
-      "score": 79.2,
+      "score": 82.2,
       "parts": {
         "moat": 16,
         "theme_fit": 20,
         "growth": 18.25,
         "profitability": 15,
-        "valuation": 0,
+        "valuation": 3,
         "coverage": 10
       },
       "moat": "Narrow",
       "cluster": "semis",
       "growth_pct": 36.5,
-      "pe": 93.6,
-      "upside": 3.2,
-      "buys": 40,
+      "pe": 77.9,
+      "upside": 38.4,
+      "buys": 42,
       "blocked": []
     },
     "MSFT": {
@@ -324,9 +340,9 @@
       "moat": "Wide",
       "cluster": "megacap",
       "growth_pct": 17.7,
-      "pe": 29.5,
-      "upside": 10.5,
-      "buys": 55,
+      "pe": 30.1,
+      "upside": 10.6,
+      "buys": 53,
       "blocked": []
     },
     "MU": {
@@ -342,8 +358,8 @@
       "moat": "Wide",
       "cluster": "semis",
       "growth_pct": 379.3,
-      "pe": 14.1,
-      "upside": 41.1,
+      "pe": 12.8,
+      "upside": 70.7,
       "buys": 45,
       "blocked": []
     },
@@ -360,8 +376,8 @@
       "moat": "Narrow",
       "cluster": "megacap",
       "growth_pct": 13.4,
-      "pe": 21.6,
-      "upside": 33.2,
+      "pe": 22.2,
+      "upside": 30.5,
       "buys": 35,
       "blocked": []
     },
@@ -378,27 +394,27 @@
       "moat": "Wide",
       "cluster": "semis",
       "growth_pct": 105.9,
-      "pe": 30.0,
-      "upside": 38.4,
-      "buys": 58,
+      "pe": 28.9,
+      "upside": 48.5,
+      "buys": 59,
       "blocked": []
     },
     "PLTR": {
-      "score": 90.0,
+      "score": 90,
       "parts": {
         "moat": 25,
         "theme_fit": 20,
         "growth": 20,
         "profitability": 15,
         "valuation": 0,
-        "coverage": 10.0
+        "coverage": 10
       },
       "moat": "Wide",
       "cluster": "software",
       "growth_pct": 92.8,
-      "pe": 167.3,
-      "upside": 0.7,
-      "buys": 20,
+      "pe": 173.2,
+      "upside": 2.1,
+      "buys": 21,
       "blocked": []
     },
     "RBRK": {
@@ -415,26 +431,26 @@
       "cluster": "software",
       "growth_pct": 37.9,
       "pe": null,
-      "upside": -2.9,
+      "upside": 5.5,
       "buys": 28,
       "blocked": []
     },
     "RKLB": {
-      "score": 64.5,
+      "score": 65.0,
       "parts": {
         "moat": 16,
         "theme_fit": 20,
         "growth": 20,
         "profitability": 0,
         "valuation": 0,
-        "coverage": 8.5
+        "coverage": 9.0
       },
       "moat": "Narrow",
       "cluster": "defense",
       "growth_pct": 62.0,
       "pe": null,
-      "upside": 51.8,
-      "buys": 17,
+      "upside": 77.5,
+      "buys": 18,
       "blocked": []
     },
     "RTX": {
@@ -451,26 +467,26 @@
       "cluster": "defense",
       "growth_pct": 14.5,
       "pe": 32.2,
-      "upside": 29.9,
+      "upside": 22.7,
       "buys": 16,
       "blocked": []
     },
     "SOFI": {
-      "score": 90.5,
+      "score": 91.0,
       "parts": {
         "moat": 25,
         "theme_fit": 20,
         "growth": 20,
         "profitability": 15,
         "valuation": 6,
-        "coverage": 4.5
+        "coverage": 5.0
       },
       "moat": "Wide",
       "cluster": "fintech",
       "growth_pct": 42.6,
-      "pe": 32.0,
-      "upside": 29.8,
-      "buys": 9,
+      "pe": 29.0,
+      "upside": 43.2,
+      "buys": 10,
       "blocked": []
     },
     "SPCX": {
@@ -487,8 +503,8 @@
       "cluster": "defense",
       "growth_pct": 91.9,
       "pe": null,
-      "upside": 35.8,
-      "buys": 29,
+      "upside": 45.4,
+      "buys": 30,
       "blocked": []
     },
     "TSLA": {
@@ -504,8 +520,8 @@
       "moat": "Wide",
       "cluster": "megacap",
       "growth_pct": 25.5,
-      "pe": 349.8,
-      "upside": 4.9,
+      "pe": 340.0,
+      "upside": 8.4,
       "buys": 19,
       "blocked": []
     },
@@ -522,8 +538,8 @@
       "moat": "Narrow",
       "cluster": "ai-power",
       "growth_pct": -5.5,
-      "pe": 27.1,
-      "upside": 26.1,
+      "pe": 27.4,
+      "upside": 38.5,
       "buys": 20,
       "blocked": []
     },
@@ -541,7 +557,7 @@
       "cluster": "software",
       "growth_pct": 24.9,
       "pe": null,
-      "upside": -1.2,
+      "upside": 5.7,
       "buys": 36,
       "blocked": []
     }

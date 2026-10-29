@@ -130,16 +130,17 @@ const html = `<!DOCTYPE html>
     </div>
     <div class="drawer-body" id="drawerBody">
       <div class="drawer-main" id="drawerMain">
-        <div class="drawer-section-label">SECTORS</div>
-        <a href="javascript:void(0)" class="drawer-link" onclick="openSubDrawer()">SECTORS</a>
+        <a href="javascript:void(0)" class="drawer-link" onclick="openSubDrawer('drawerSubSectors')">SECTORS</a>
         <a href="/stocks/" class="drawer-link">STOCK PAGES</a>
+        <a href="/explainers/" class="drawer-link">EXPLAINERS</a>
         <a href="/#scorecard" class="drawer-link">SIGNAL SCORECARD</a>
         <a href="/hive/" class="drawer-link">HIVE</a>
         <a href="/signal-vs-the-street/" class="drawer-link">SIGNAL VS. STREET</a>
-        <a href="/pricing/" class="drawer-link">SIGNAL PREMIUM</a>
+        <a href="/insights/" class="drawer-link">TRADER INSIGHTS</a>
+        <a href="javascript:void(0)" class="drawer-link" onclick="openSubDrawer('drawerSubAccount')">MY ACCOUNT</a>
         <a href="/pricing/" class="drawer-cta">GET PREMIUM ACCESS</a>
       </div>
-      <div class="drawer-sub" id="drawerSub">
+      <div class="drawer-sub" id="drawerSubSectors">
         <div class="sub-header" onclick="closeSubDrawer()">
           <span class="sub-back">&#8249;</span>
           <span class="sub-title">SECTORS</span>
@@ -150,8 +151,18 @@ const html = `<!DOCTYPE html>
         <a href="/sector/space/" class="drawer-link">SPACE</a>
         <a href="/sector/mega-cap/" class="drawer-link">MEGA-CAP</a>
         <a href="/sector/quantum/" class="drawer-link">QUANTUM</a>
+        <a href="/sector/fintech/" class="drawer-link">FINTECH</a>
         <a href="/sector/ai-power/" class="drawer-link">AI POWER</a>
         <a href="/sector/etfs/" class="drawer-link">ETFS</a>
+      </div>
+      <div class="drawer-sub" id="drawerSubAccount">
+        <div class="sub-header" onclick="closeSubDrawer()">
+          <span class="sub-back">&#8249;</span>
+          <span class="sub-title">MY ACCOUNT</span>
+        </div>
+        <a href="/premium/" class="drawer-link">PREMIUM DASHBOARD</a>
+        <a href="/watchlist/" class="drawer-link">MY WATCHLIST</a>
+        <a href="/pricing/" class="drawer-link">SIGNAL PREMIUM</a>
       </div>
     </div>
   </div>

@@ -1,0 +1,57 @@
+=== GOOGL FUNDAMENTALS (yfinance, pulled 2026-10-01 ~16:00 UTC / intraday US session) ===
+Alphabet Inc. (GOOGL) — NASDAQ (NMS), USD
+
+Revenue / cash flow (TTM, from quarterly statements):
+  Revenues, TTM (sum of last 4 quarters)   : $445,867,000,000
+    Q2 2026 (Jun-30-2026)                  : $119,796,000,000
+    Q1 2026 (Mar-31-2026)                  : $109,896,000,000
+    Q4 2025 (Dec-31-2025)                  : $113,829,000,000
+    Q3 2025 (Sep-30-2025)                  : $102,346,000,000
+  (yfinance info.totalRevenue (TTM)        : $445,865,984,000 — reconciles)
+  Operating Cash Flow, TTM (last 4 qtrs)   : $185,675,000,000
+    Q2'26 $39,069,000,000 | Q1'26 $45,790,000,000 | Q4'25 $52,402,000,000 | Q3'25 $48,414,000,000
+  Capital Expenditure, TTM (last 4 qtrs)   : -$132,402,000,000   (negative, as reported)
+    Q2'26 -$44,924,000,000 | Q1'26 -$35,674,000,000 | Q4'25 -$27,851,000,000 | Q3'25 -$23,953,000,000
+  FREE CASH FLOW, TTM (OCF + capex)        : $53,273,000,000
+    (yfinance quarterly "Free Cash Flow" row sums to the same $53,273,000,000 — reconciles)
+  Net income, TTM (last 4 qtrs)            : $244,205,000,000
+
+Balance sheet / valuation (yfinance info):
+  totalDebt                                : $120,790,999,040
+  totalCash                                : $242,473,992,192
+  sharesOutstanding                        : 5,867,155,790
+  marketCap                                : $4,161,357,742,080
+  forwardPE                                : 22.58
+  trailingPE                               : 17.08
+  forwardEps                               : 15.07154
+  trailingEps                              : 19.92
+  fiftyTwoWeekLow                          : $235.84
+  fiftyTwoWeekHigh                         : $408.61
+
+Analyst consensus:
+  recommendationKey                        : strong_buy  (recommendationMean 1.38)
+  targetMeanPrice                          : $429.36  (median $430.00; low $340.00; high $515.00)
+  numberOfAnalystOpinions                  : 54
+
+Price — last 10 daily closes (auto_adjust=False):
+  2026-09-17   close 347.33   (open 348.68, vol 19,238,400)
+  2026-09-18   close 349.54   (open 357.31, vol 47,631,800)
+  2026-09-21   close 354.97   (open 350.64, vol 30,455,400)
+  2026-09-22   close 351.16   (open 357.65, vol 29,788,600)
+  2026-09-23   close 337.83   (open 349.86, vol 35,576,200)
+  2026-09-24   close 342.36   (open 336.22, vol 23,777,200)
+  2026-09-25   close 343.92   (open 342.35, vol 21,880,800)
+  2026-09-28   close 342.75   (open 340.70, vol 19,318,300)
+  2026-09-29   close 340.92   (open 341.95, vol 21,066,900)
+  2026-09-30   close 344.08   (open 344.15, high 352.60, low 340.99, vol 37,196,700)
+
+  Last COMPLETED close before 2026-10-01 (US market open) = 2026-09-30: $344.08
+  Current intraday session (2026-10-01): last print $340.26 (open $350.79, high $353.22, low $339.50,
+  vol 14,837,020) — i.e. GOOGL is DOWN ~1.1% on the day of the Transporter-18 launch.
+
+Notes:
+  - info marketCap / PE / EPS fields reflect the intraday 2026-10-01 price of $340.26.
+  - Q2 2026 FCF was NEGATIVE (-$5.855 bn) — the only negative quarter in the TTM window — because capex
+    ($44.9 bn) exceeded OCF ($39.1 bn). This is the number that makes the orbital-compute/terrestrial-
+    constraint thesis legible: capex is consuming the entire operating cash flow.
+  - Source: /home/chino/video-venv/bin/python3 + yfinance (script: /home/chino/googl_fund.py)

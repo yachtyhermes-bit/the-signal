@@ -34,7 +34,7 @@ if DEV_VARS.exists():
 TMP_DIR = "/tmp/signal-tts"
 VOICE = "en-US-AndrewNeural"
 MAX_CHARS = 5000
-GEN_TIMEOUT = 120  # seconds per article
+GEN_TIMEOUT = 420  # seconds per article — 5000 chars streams at roughly realtime, so 120s guaranteed a timeout
 
 os.makedirs(TMP_DIR, exist_ok=True)
 
@@ -81,6 +81,10 @@ async def gen_all():
         if d is not None and d >= cutoff:
             fresh.append(jf)
     print(f"Gen TTS for {len(fresh)} new articles (last 48h, cutoff={cutoff.isoformat()}); skipped {len(json_files)-len(fresh)} older", flush=True)
+    only = {s.strip() for s in os.environ.get("SLUGS", "").split(",") if s.strip()}
+    if only:
+        fresh = [jf for jf in fresh if jf.stem in only]
+        print(f"SLUGS filter active: {len(fresh)} matched of {len(only)} requested", flush=True)
     json_files = fresh
     print(f"Gen TTS for {len(json_files)} articles...", flush=True)
     gen_ok = gen_skip = gen_fail = 0
@@ -107,18 +111,22 @@ async def gen_all():
             text = f"{title}. {article.get('summary', '')}"
         if len(text) < 50:
             continue
-        try:
-            await asyncio.wait_for(
-                generate_one(slug, text, out_path), timeout=GEN_TIMEOUT
-            )
-            gen_ok += 1
-        except asyncio.TimeoutError:
-            gen_fail += 1
-            if os.path.exists(out_path):
-                os.unlink(out_path)
-        except Exception as e:
-            gen_fail += 1
-            print(f"  Error {slug}: {e}", flush=True)
+        for attempt in (1, 2):
+            try:
+                await asyncio.wait_for(
+                    generate_one(slug, text, out_path), timeout=GEN_TIMEOUT
+                )
+                gen_ok += 1
+                break
+            except Exception as e:
+                if os.path.exists(out_path):
+                    os.unlink(out_path)
+                if attempt == 2:
+                    gen_fail += 1
+                    print(f"  Fail {slug}: {type(e).__name__} {e}", flush=True)
+                else:
+                    print(f"  Retry {slug}: {type(e).__name__}", flush=True)
+                    await asyncio.sleep(3)
         if (i + 1) % 30 == 0:
             print(f"  ... {gen_ok} ok, {gen_fail} fail ({i+1}/{len(json_files)})", flush=True)
         await asyncio.sleep(0.1)

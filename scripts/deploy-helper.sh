@@ -38,6 +38,15 @@ signal_restore() {
 
 signal_deploy() {
   local ALIAS="$1"  # optional: "readthesignal.net"
+
+  # Serialise deploys. Two cron jobs deploy within minutes of each other; interleaved
+  # runs made the post-deploy domain check read whichever build landed last.
+  exec 9>/tmp/signal-deploy.lock
+  if ! flock -w 420 9; then
+    echo "  [DEPLOY] FAILED: another deploy held the lock for 7 minutes."
+    return 1
+  fi
+
   signal_strip
   trap signal_restore EXIT
 
@@ -56,6 +65,9 @@ signal_deploy() {
   # domain keeps serving the previous build. Strip the broken links from the COPY only;
   # dist/ itself is left alone.
   find /tmp/signal-dist -xtype l -delete 2>/dev/null || true
+  # Belt and braces: -xtype l misses links whose target is itself a link, and a broken
+  # link anywhere in the tree kills the whole archive step.
+  find /tmp/signal-dist -type l ! -exec test -e {} \; -delete 2>/dev/null || true
   # vercel.json MUST ship with every deploy — it carries the SEO legacy 301
   # redirects (/stock/, /art/, /hiv) + trailingSlash canonical enforcement.
   # Deploying dist alone silently drops routes (deploy-race, see
@@ -73,13 +85,23 @@ signal_deploy() {
   # `local OUT=$(...)` swallows the exit status, so capture it explicitly: without this a
   # failed Vercel run still printed "[DEPLOY] Complete" and exited 0 while the alias never
   # moved (silent failure — the live site kept serving the previous build).
-  local OUT
-  if ! OUT=$(npx vercel --prod --archive=tgz --yes 2>&1); then
-    echo "$OUT" | tail -8
+  local OUT attempt
+  for attempt in 1 2; do
+    if OUT=$(npx vercel --prod --archive=tgz --yes 2>&1); then
+      break
+    fi
+    echo "$OUT" | tail -6
+    if [ "$attempt" = 1 ] && echo "$OUT" | grep -qE "ENOENT|lstat"; then
+      # Archive step tripped over a path that vanished after the copy. Re-prune, retry once.
+      echo "  [DEPLOY] broken path in the deploy copy — re-pruning and retrying once"
+      find /tmp/signal-dist -xtype l -delete 2>/dev/null || true
+      find /tmp/signal-dist -type l ! -exec test -e {} \; -delete 2>/dev/null || true
+      continue
+    fi
     echo "  [DEPLOY] FAILED: vercel exited non-zero — nothing was published."
     cd "$SIGNAL_ROOT"
     return 1
-  fi
+  done
   echo "$OUT" | tail -5
 
   if [ -n "$ALIAS" ]; then
@@ -89,13 +111,41 @@ signal_deploy() {
       cd "$SIGNAL_ROOT"
       return 1
     fi
-    echo "  [ALIAS] $ALIAS"
-    local ALIASOUT=$(npx vercel alias set "$URL" "$ALIAS" 2>&1)
-    echo "$ALIASOUT" | tail -3
-    if ! echo "$ALIASOUT" | grep -qi 'success'; then
-      echo "  [DEPLOY] FAILED: alias $ALIAS was not moved — $URL is live but the domain still serves the old build."
-      cd "$SIGNAL_ROOT"
+
+    # A `--prod` deploy already promotes the project's production domain, so the old
+    # `vercel alias set` gate was redundant — and in CLI 56 it fails hard
+    # ("unknown or unexpected option: --yes"), which turned green deploys into reported
+    # failures. Prove it instead: compare the build marker this build just wrote against
+    # what the live domain actually serves.
+    local MARKER=""
+    MARKER=$(python3 -c "import json,sys;print(json.load(open(sys.argv[1]))['built'])" "$SIGNAL_ROOT/dist/data/build-info.json" 2>/dev/null || true)
+
+    domain_serves_build() {
+      local i body
+      for i in $(seq 1 12); do
+        body=$(curl -s --max-time 10 "https://${ALIAS}/data/build-info.json?cb=$(date +%s%N)" 2>/dev/null || true)
+        if [ -n "$MARKER" ] && echo "$body" | grep -q "$MARKER"; then
+          echo "  [VERIFY] ${ALIAS} is serving this build (${MARKER})"
+          return 0
+        fi
+        sleep 10
+      done
       return 1
+    }
+
+    if domain_serves_build; then
+      :
+    else
+      echo "  [ALIAS] domain has not picked up the build yet — forcing the alias"
+      npx vercel alias set "$URL" "$ALIAS" 2>&1 | tail -3 || true
+      if domain_serves_build; then
+        :
+      else
+        echo "  [DEPLOY] FAILED: $URL deployed, but ${ALIAS} never served this build after ~2 minutes + an explicit alias set."
+        echo "           last build marker wanted: ${MARKER}"
+        cd "$SIGNAL_ROOT"
+        return 1
+      fi
     fi
   fi
 

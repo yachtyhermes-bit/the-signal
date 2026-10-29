@@ -1,0 +1,192 @@
+ 
+ Google's TPUs to catch some rays in orbit next week 
+ Jump to main content 
+ Search 
+ TOPICS 
+ Security 
+ All Security 
+ Cyber-crime 
+ Patches 
+ Research 
+ CSO 
+ Off-Prem 
+ All Off-Prem 
+ Edge and IoT 
+ Channel 
+ PaaS and IaaS 
+ SaaS 
+ On-Prem 
+ All On-Prem 
+ Systems 
+ Storage 
+ Networks 
+ HPC 
+ Personal Tech 
+ Cx0 
+ Public Sector 
+ Software 
+ All Software 
+ AI and ML 
+ Applications 
+ Databases 
+ DevOps 
+ OS Platforms 
+ Virtualization 
+ Offbeat 
+ All Offbeat 
+ Columnists 
+ Science 
+ BOFH 
+ Legal 
+ Site News 
+ About Us 
+ Special Features 
+ All Special Features 
+ VMware Explore 2026 
+ Cloud Infrastructure Month 2026 
+ HPE: AI Explainers 
+ Agentic AI 
+ The Future of the Datacenter 
+ AWS:Reinvent 
+ Nvidia GTC 
+ Supercomputing Month 
+ Computex 2026 
+ AI Infrastructure Month 2026 
+ The State of Storage 2026 
+ RSA Conference 
+ Vendor Voice 
+ All Vendor Voice 
+ Modernizing Financial Services with FIS and AWS 
+ Barco 
+ Infinidat 
+ Everpure 
+ Rubrik 
+ Make it real with Capgemini and AWS 
+ Money Movement Hub 
+ ZTE 
+ Nutanix: Scale Kubernetes. Not Chaos. 
+ AWS New Horizon 
+ Digicert 
+ Netscout 
+ Resources 
+ Intelligence 
+ Webinars & Events 
+ Newsletters 
+ Search 
+ Sign in 
+ AI 
+ Security 
+ Software 
+ Microsoft 
+ Developer 
+ Open Source 
+ BOFH 
+ Who, Me? 
+ On Call 
+ Science 
+ REG AD 
+ systems
+ Google's TPUs to catch some rays in orbit next week
+ Part of Project Suncatcher, the proof of concept aims to see how well lightly modified compute fares in orbit
+ Tobias Mann 
+ Tobias 
+ Mann 
+ SYSTEMS EDITOR 
+ Published 
+ thu 24 Sep 2026 // 23:12 UTC 
+ READ MORE 
+ Astronomer watches Starlink satellites sinking to build a ‘planetary barometer’ 
+ 8 hours ago 
+ Google Gemini can present cartoon or lifelike avatars to lip-sync generative chatter 
+ 13 hours ago 
+ Meta's new AI fidget is a ... Tamagotchi? 
+ 19 hours ago 
+ CVE flood pushes Ubuntu onto weekly kernel release cycle 
+ 20 hours ago 
+ Google to critical infra orgs: Our AI scanners won't be evil, promise 
+ 1 day ago 
+ Google will loft its tensor processing units (TPUs) into orbit aboard a SpaceX rocket next week, in the latest phase of its previously announced Project Suncatcher space datacenter initiative. The launch is part of a test mission to better understand how its homegrown compute platform will handle both the rigors of launch and the harsh environment of space. Long term, the Chocolate Factory believes that space-based datacenter clusters powered by a limitless supply of solar energy from our sun could hold the answer to more sustainable AI. Not everyone is convinced. Earlier this year, Gartner analyst Bill Ray described the idea as “peak insanity.” He argued that space-based datacenters won't be viable for decades and in the end won't serve terrestrial needs. 
+ REG AD 
+ But that hasn't stopped the likes of Nvidia and Google from trying. Google has been particularly pragmatic relative to others like SpaceXAI, which like any other Musk-run outfit can't help but set ambitious targets like 250-kilowatt satellites . 
+ REG AD 
+ Rather than grand plans and satellite concepts backed by dubious launch economics, Google's Project Suncatcher is being treated for what it is: a moonshot. Like past moonshots, it may ultimately go nowhere. Remember Project Loon ? Google is still in the early stages of development here. It hasn't announced a space-rated TPU and instead has subjected its existing Trillium accelerators, which we looked at back in 2024, to a series of tests here on Earth to understand whether it can be done. The challenges are numerous, as Suncatcher's project leaders explained in a recent blog post touting the proof-of-concept launch. The first challenge is surviving the trip into space. During launch, they explain that the chips will be subjected to as much as 50-100 gravities worth of amplified forces. If not accounted for, the systems could literally shake themselves to pieces. Since announcing Project Suncatcher last year, Google's moonshot team has conducted several tests, including one involving a vibration table, to simulate these forces, but it won't know for sure if its kit will survive until it's actually in orbit. As you probably already guessed, once in orbit, the challenges facing Google's systems are far from over. Beyond the atmosphere, the chips will be subject to solar activity and cosmic rays that could cause single-event upsets, such as bit flips, as well as cumulative damage from ionizing radiation. By bombarding its TPUs with energetic particles using UC Davis' Crocker Nuclear Laboratory's proton beam, Google is reasonably confident that its TPUs won't fizzle out shortly after reaching their target orbit, but once again lab tests can only tell you so much, and there is a lot more that can go wrong. In particular, there's the issue of cooling. Heat can't be carried away by convection in the vacuum of space, and so these satellites will ultimately have to rely on radiation to reject it. According to Google, it will need roughly 1.3 square meters of radiator area to dissipate the heat generated by a single TPU, and the search and advertising giant hopes to pack dozens of TPUs into each satellite. This translates to a rather large radiator area. Once again, Google arrived at this conclusion based on testing within a temperature controlled vacuum chamber. However, this is only part of the challenge. There's also the issue of getting the heat from the TPU to the radiators in the first place. Here Google is exploring existing technologies like heat pipes and pumped coolants. 
+ REG AD 
+ With its first launch, Google aims to see what works, what doesn't, and to identify points of failure that can be addressed in future missions. The test sat is scheduled to launch aboard the Transporter-18 rideshare mission aboard a SpaceX Falcon 9 rocket on October 1. However, Google's challenges extend far beyond the chips themselves. Even if Google can figure out how to build space-rated TPUs without breaking the bank, the available launch systems put a practical limit on how big they can be built. Because of this, space-based AI training and inference will have to be spread across multiple satellites, necessitating high-speed interconnects. At the distances required, this means laser-based communication, which Google argues is well understood, but hasn't been adapted for the requirements of orbital AI just yet. Most existing inter-satellite communications have relatively low bandwidth over a wide area. Its clusters will need the exact opposite: extremely high bandwidth over relatively small distances. But even if Google can prove that orbital datacenter clusters can be made to work, there's no guarantee it'll be economical. Speaking with El Reg earlier this year, space datacenter startup Orbital admitted the entire venture depends on rockets from SpaceX and others driving the cost to orbit from around $7,000 per kilogram today to just $10 per kilogram, a target that many have expressed skepticism SpaceX will actually be able to deliver. Speaking of SpaceX, the rocket company's AI wing SpaceXAI aims to put its first space-based test systems into orbit by the end of next year . If all goes to plan, the simplified system will be the first of what could eventually become a constellation of up to one million satellites. But as is often the case with Elon Musk's claims, and Google's moonshots for that matter, their dreams don't always become reality and even when they do, it doesn't always happen as quickly as they'd hope. ® 
+ ai 
+ space 
+ systems 
+ tpu 
+ google 
+ REG AD 
+ Uncle Sam wants in on Musk's €120M fight with Brussels
+ Justice Department claims the EU overreached by pursuing X's owner and wider corporate empire
+ Asahi fork embraces LLMs and lands Linux on the M4 Mac mini
+ Coding agents helped two developers build an accelerated desktop and graphics driver in weeks
+ Huawei Cloud Rolls Out Enterprise AI Products Across the Board, Building an Open Agentic Cloud
+ PARTNER CONTENT: Huawei Cloud strengthens the silicon bedrock on the cloud
+ Amazon sellers watch as inventory vanishes into pending-order purgatory
+ High-value goods remain tied up as merchants debate attack or platform glitch
+systems approach
+ In the age of AI, teaching networking principles remains more important than learning protocols
+ Kids can learn why BGP matters in a semester, but that won’t leave them ready to implement it
+EPISODE 18
+ BOFH: The Helldesk opens its third eye and ascends to a higher plane of troubleshooting
+ Putting the 'om' in computing
+ TOP STORIES
+ Anthropic decides to support OpenAI's markdown instructions spec 
+ Microsoft agentically ports Copilot runtime to Rust for $120K 
+ KPMG tech cuts come with a severance sum some staff call insulting 
+ on call 
+ Techie fixed Wi-Fi dead zone with a drill 
+ ShinyHunters claims FBI hack: 'This is NOT financially motivated' 
+ Researchers find way to listen in on headphones from afar 
+ AI 
+ Google's TPUs to catch some rays in orbit next week 
+ Part of Project Suncatcher, the proof of concept aims to see how well lightly modified compute fares in orbit 
+ Meta's new AI fidget is a ... Tamagotchi? 
+ We hope Zuck's Muse Charm doesn't die if you neglect it 
+ CVE flood pushes Ubuntu onto weekly kernel release cycle 
+ AI-assisted bug hunting is helping pile up vulnerabilities faster than defenders can patch them, so Canonical is picking up the pace 
+ Google to critical infra orgs: Our AI scanners won't be evil, promise 
+ Gemini 3.8 Flash Cyber and Wiz's Red Agent team up to protect hospitals, public transit, and tech 
+ Shut up and calculate: Jev's new AI primitives for coders 
+ Developers test what they can build with TypeSafe's fast, typed decision model 
+ Infosec 
+ Security 
+ Russians are posing as Signal support to launch phishing attacks 
+ PLUS: US takes down Iranian propaganda sites; Marketing company asks 'Why Do We Have Your Information?' And more! 
+ Security 
+ Microsoft patches failed to fix on-prem SharePoint, which is now under zero-day attack 
+ PLUS: China upgrades smartphone surveillance tools; Ring eases anti-snooping stance; and more 
+ Black Hat and DEF CON 
+ DEF CON Franklin project enlists hackers to harden critical infrastructure 
+ Voting village reports have been so successful, says Jeff Moss, that the whole of DEF CON will now be included 
+ Security 
+ EQT buys majority share in Swiss cybersecurity biz Acronis 
+ Went at equivalent of $3.5B+ valuation for entire firm, though portion sold not specified 
+ Malware Month 
+ Ten years since the first corp ransomware, Mikko Hyppönen sees no end in sight 
+ On the plus side, infosec's a good bet for a long, stable career 
+ FOSS 
+ KDE turns 30 and someone's brought an AI-native desktop proposal 
+ Akademy talk imagines Plasma assembling itself around a personal model of each user 
+ Shopify extends lifeline to Tailwind as vibe coding erodes web dev platform's bottom line 
+ Acquisition gives open source CSS framework 'a stable long-term home' 
+ Switzerland tests a FOSS escape route from Microsoft 365 
+ Swiss Army sticks a knife in American cloud apps with its own FOSS push 
+ Feel peak Windows was 7? You might like Kumander Linux 
+ Debian and Xfce – solid, sensible choices – with a pretty skin 
+ Canonical shuttering some of its legacy chat channels 
+ The Ubuntu Pastebin went in June, IRC gets demoted next 
+ Audacity audio-editing app no longer looks like it's from the early 2000s 
+ The FOSS tool for audio editing has a fresh coat of paint, and new features to boot 
+ ✕ 
+ Biting the hand that feeds IT 
+ About Us
+ Contact us Advertise with us Who we are Newsletter 
+ Our Websites
+ The Next Platform DevClass Blocks and Files Situation Publishing 
+ Your Privacy
+ Cookies Policy Privacy Policy Ts & Cs Do not share my personal information Your Consent Options 
+ Archives 27 years of articles 
+ Copyright. All rights reserved © 1998-2026.

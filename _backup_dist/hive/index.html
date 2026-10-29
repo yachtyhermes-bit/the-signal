@@ -10,7 +10,7 @@
   <meta name="robots" content="max-image-preview:large">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Oxanium:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/main.css?v=31">
+  <link rel="stylesheet" href="/css/main.css?v=32">
   <link rel="stylesheet" href="/css/pulse-badge.css">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-98KDVDFBCW"></script>
@@ -59,6 +59,8 @@
     <div class="nav-inner">
       <a href="/" class="logo"><img src="/img/logo-hex.jpg" alt="The Signal" class="logo-img"><span class="logo-text"><span class="logo-the">THE</span> <strong>SIGNAL</strong></span></a>
       <div class="nav-actions">
+        <a class="nav-quick" href="/insights/">Insights</a>
+        <a class="nav-quick" href="/watchlist/">Watchlist</a>
         <button class="nav-btn search-btn" id="searchToggle" aria-label="Search">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="11" cy="11" r="8"></circle>
@@ -162,24 +164,48 @@
   <div class="drawer-overlay" id="drawerOverlay"></div>
   <div class="drawer" id="drawer">
     <div class="drawer-header">
-      <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
       <a href="/" class="drawer-logo">
-        <img src="/img/logo-hex.jpg" alt="The Signal" class="drawer-logo-img">
-        <span class="drawer-logo-text">SIGNAL</span>
+        <span class="the">THE</span>
+        <span class="signal">SIGNAL</span>
       </a>
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">&#10005;</button>
     </div>
-    <div class="drawer-body">
-      <div class="drawer-section-label">SECTORS</div>
-      <a href="/sector/ai/" class="drawer-link">AI</a>
-      <a href="/sector/cyber/" class="drawer-link">Cyber</a>
-      <a href="/sector/defense/" class="drawer-link">Defense</a>
-      <a href="/sector/space/" class="drawer-link">Space</a>
-      <a href="/sector/mega-cap/" class="drawer-link">Mega-Cap</a>
-      <a href="/sector/quantum/" class="drawer-link">Quantum</a>
-      <hr class="drawer-divider">
-      <div class="drawer-section-label">FEATURES</div>
-      <a href="/hive/" class="drawer-link drawer-link-hive">Hive</a>
-      <a href="/signal-vs-the-street/" class="drawer-link drawer-link-svs">Signal vs. Street</a>
+    <div class="drawer-body" id="drawerBody">
+      <div class="drawer-main" id="drawerMain">
+        <a href="javascript:void(0)" class="drawer-link" onclick="openSubDrawer('drawerSubSectors')">SECTORS</a>
+        <a href="/stocks/" class="drawer-link">STOCK PAGES</a>
+        <a href="/explainers/" class="drawer-link">EXPLAINERS</a>
+        <a href="/#scorecard" class="drawer-link">SIGNAL SCORECARD</a>
+        <a href="/hive/" class="drawer-link">HIVE</a>
+        <a href="/signal-vs-the-street/" class="drawer-link">SIGNAL VS. STREET</a>
+        <a href="/insights/" class="drawer-link">TRADER INSIGHTS</a>
+        <a href="javascript:void(0)" class="drawer-link" onclick="openSubDrawer('drawerSubAccount')">MY ACCOUNT</a>
+        <a href="/pricing/" class="drawer-cta">GET PREMIUM ACCESS</a>
+      </div>
+      <div class="drawer-sub" id="drawerSubSectors">
+        <div class="sub-header" onclick="closeSubDrawer()">
+          <span class="sub-back">&#8249;</span>
+          <span class="sub-title">SECTORS</span>
+        </div>
+        <a href="/sector/ai/" class="drawer-link">AI</a>
+        <a href="/sector/cyber/" class="drawer-link">CYBER</a>
+        <a href="/sector/defense/" class="drawer-link">DEFENSE</a>
+        <a href="/sector/space/" class="drawer-link">SPACE</a>
+        <a href="/sector/mega-cap/" class="drawer-link">MEGA-CAP</a>
+        <a href="/sector/quantum/" class="drawer-link">QUANTUM</a>
+        <a href="/sector/fintech/" class="drawer-link">FINTECH</a>
+        <a href="/sector/ai-power/" class="drawer-link">AI POWER</a>
+        <a href="/sector/etfs/" class="drawer-link">ETFS</a>
+      </div>
+      <div class="drawer-sub" id="drawerSubAccount">
+        <div class="sub-header" onclick="closeSubDrawer()">
+          <span class="sub-back">&#8249;</span>
+          <span class="sub-title">MY ACCOUNT</span>
+        </div>
+        <a href="/premium/" class="drawer-link">PREMIUM DASHBOARD</a>
+        <a href="/watchlist/" class="drawer-link">MY WATCHLIST</a>
+        <a href="/pricing/" class="drawer-link">SIGNAL PREMIUM</a>
+      </div>
     </div>
   </div>Search Overlay -->
   <div class="search-overlay" id="searchOverlay">
@@ -199,7 +225,7 @@
     </div>
   </div>
 
-    <main class="main"><div class="hive-app"><div class="hive-header-area"><div><div class="hive-header-title"><span class="hive-header-icon">🐝</span> The Hive</div><div class="hive-header-sub">Simulated trading &amp; portfolio leaderboard for The Signal community</div></div></div><div class="hive-auth-bar" id="hiveAuthSection"><div id="authOptions"><button class="hive-cta-btn" onclick="showHiveJoinModal('login')" style="font-size:12px;padding:6px 14px">Sign In</button><button class="hive-cta-btn hive-cta-sm" onclick="showHiveJoinModal('register')" style="font-size:12px;padding:6px 14px;background:transparent;border:1px solid var(--border);color:var(--text-secondary)">Register</button></div><div id="authUserInfo" style="display:none;align-items:center;gap:8px"><span id="authName" class="hive-auth-name"></span><button class="hive-cta-btn" onclick="hiveLogout()" style="font-size:11px;padding:4px 12px;background:transparent;border:1px solid var(--border);color:var(--text-muted)">Sign Out</button></div></div><div class="hive-tabs" id="hiveTabs"><button class="hive-tab hive-tab-active" data-tab="portfolio">Portfolio</button><button class="hive-tab" data-tab="leaderboard">Leaderboard</button><button class="hive-tab" data-tab="signalmaster">Signal Master</button><button class="hive-tab" data-tab="stocks">Stocks</button><button class="hive-tab" data-tab="rules">Rules</button></div><div id="hiveTabPortfolio" class="hive-tab-content hive-tab-active"><div id="hivePortfolioContent"><div class="hive-loading"><div class="hive-spinner"></div><span>Loading portfolio...</span></div></div></div><div id="hiveTabLeaderboard" class="hive-tab-content"><div class="hive-lb-periods"><button class="hive-lb-period-btn" data-period="weekly">Weekly</button><button class="hive-lb-period-btn hive-lb-period-active" data-period="monthly">30 Day</button><button class="hive-lb-period-btn" data-period="alltime">All-Time</button></div><div id="hiveLeaderboardContent"><div class="hive-loading"><div class="hive-spinner"></div><span>Loading leaderboard...</span></div></div></div><div id="hiveTabSignalmaster" class="hive-tab-content"><div id="hiveSignalMasterContent"><div class="hive-loading"><div class="hive-spinner"></div><span>Loading Signal Master...</span></div></div></div><div id="hiveTabStocks" class="hive-tab-content"><div id="hiveStocksContent"><div class="hive-loading"><div class="hive-spinner"></div><span>Loading stocks...</span></div></div></div><div id="hiveTabRules" class="hive-tab-content"><div id="hiveRulesContent"></div></div></div>  </main>
+    <main class="main"><div class="hive-app"><div class="hive-header-area"><div><h1 class="hive-header-title"><span class="hive-header-icon">🐝</span> The Hive</h1><div class="hive-header-sub">Simulated trading &amp; portfolio leaderboard for The Signal community</div></div></div><div class="hive-auth-bar" id="hiveAuthSection"><div id="authOptions"><button class="hive-cta-btn" onclick="showHiveJoinModal('login')" style="font-size:12px;padding:6px 14px">Sign In</button><button class="hive-cta-btn hive-cta-sm" onclick="showHiveJoinModal('register')" style="font-size:12px;padding:6px 14px;background:transparent;border:1px solid var(--border);color:var(--text-secondary)">Register</button></div><div id="authUserInfo" style="display:none;align-items:center;gap:8px"><span id="authName" class="hive-auth-name"></span><button class="hive-cta-btn" onclick="hiveLogout()" style="font-size:11px;padding:4px 12px;background:transparent;border:1px solid var(--border);color:var(--text-muted)">Sign Out</button></div></div><div class="hive-tabs" id="hiveTabs"><button class="hive-tab hive-tab-active" data-tab="portfolio">Portfolio</button><button class="hive-tab" data-tab="leaderboard">Leaderboard</button><button class="hive-tab" data-tab="signalmaster">Signal Master</button><button class="hive-tab" data-tab="stocks">Stocks</button><button class="hive-tab" data-tab="rules">Rules</button></div><div id="hiveTabPortfolio" class="hive-tab-content hive-tab-active"><div id="hivePortfolioContent"><div class="hive-loading"><div class="hive-spinner"></div><span>Loading portfolio...</span></div></div></div><div id="hiveTabLeaderboard" class="hive-tab-content"><div class="hive-lb-periods"><button class="hive-lb-period-btn" data-period="weekly">Weekly</button><button class="hive-lb-period-btn hive-lb-period-active" data-period="monthly">30 Day</button><button class="hive-lb-period-btn" data-period="alltime">All-Time</button></div><div id="hiveLeaderboardContent"><div class="hive-loading"><div class="hive-spinner"></div><span>Loading leaderboard...</span></div></div></div><div id="hiveTabSignalmaster" class="hive-tab-content"><div id="hiveSignalMasterContent"><div class="hive-loading"><div class="hive-spinner"></div><span>Loading Signal Master...</span></div></div></div><div id="hiveTabStocks" class="hive-tab-content"><div id="hiveStocksContent"><div class="hive-loading"><div class="hive-spinner"></div><span>Loading stocks...</span></div></div></div><div id="hiveTabRules" class="hive-tab-content"><div id="hiveRulesContent"></div></div></div>  </main>
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-brand"><img src="/img/logo-hex.jpg" alt="The Signal" class="footer-logo"> THE <strong>SIGNAL</strong></div>

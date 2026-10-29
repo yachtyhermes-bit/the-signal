@@ -663,6 +663,8 @@
     <div class="nav-inner">
       <a href="/" class="logo"><img src="https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev/img/logo-hex.jpg" alt="The Signal" class="logo-img"><span class="logo-text"><span class="logo-the">THE</span> <strong>SIGNAL</strong></span></a>
       <div class="nav-actions">
+        <a class="nav-quick" href="/insights/">Insights</a>
+        <a class="nav-quick" href="/watchlist/">Watchlist</a>
         <button class="nav-btn search-btn" id="searchToggle" aria-label="Search">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="11" cy="11" r="8"></circle>
@@ -781,31 +783,39 @@
     </div>
     <div class="drawer-body" id="drawerBody">
       <div class="drawer-main" id="drawerMain">
-        <div class="drawer-section-label">SECTORS</div>
-        <a href="javascript:void(0)" class="drawer-link" onclick="openSubDrawer()">SECTORS</a>
+        <a href="javascript:void(0)" class="drawer-link" onclick="openSubDrawer('drawerSubSectors')">SECTORS</a>
         <a href="/stocks/" class="drawer-link">STOCK PAGES</a>
+        <a href="/explainers/" class="drawer-link">EXPLAINERS</a>
         <a href="/#scorecard" class="drawer-link">SIGNAL SCORECARD</a>
-        <a href="/hive" class="drawer-link">HIVE</a>
-        <a href="/signal-vs-the-street" class="drawer-link">SIGNAL VS. STREET</a>
-        <a href="/premium" class="drawer-link">PREMIUM DASHBOARD</a>
-        <a href="/insights" class="drawer-link">TRADER INSIGHTS</a>
-        <a href="/watchlist" class="drawer-link">MY WATCHLIST</a>
-        <a href="/pricing" class="drawer-link">SIGNAL PREMIUM</a>
-        <a href="/pricing" class="drawer-cta">GET PREMIUM ACCESS</a>
+        <a href="/hive/" class="drawer-link">HIVE</a>
+        <a href="/signal-vs-the-street/" class="drawer-link">SIGNAL VS. STREET</a>
+        <a href="/insights/" class="drawer-link">TRADER INSIGHTS</a>
+        <a href="javascript:void(0)" class="drawer-link" onclick="openSubDrawer('drawerSubAccount')">MY ACCOUNT</a>
+        <a href="/pricing/" class="drawer-cta">GET PREMIUM ACCESS</a>
       </div>
-      <div class="drawer-sub" id="drawerSub">
+      <div class="drawer-sub" id="drawerSubSectors">
         <div class="sub-header" onclick="closeSubDrawer()">
           <span class="sub-back">&#8249;</span>
           <span class="sub-title">SECTORS</span>
         </div>
-        <a href="/sector/ai" class="drawer-link">AI</a>
-        <a href="/sector/cyber" class="drawer-link">CYBER</a>
-        <a href="/sector/defense" class="drawer-link">DEFENSE</a>
-        <a href="/sector/space" class="drawer-link">SPACE</a>
-        <a href="/sector/mega-cap" class="drawer-link">MEGA-CAP</a>
-        <a href="/sector/quantum" class="drawer-link">QUANTUM</a>
-        <a href="/sector/ai-power" class="drawer-link">AI POWER</a>
-        <a href="/sector/etfs" class="drawer-link">ETFS</a>
+        <a href="/sector/ai/" class="drawer-link">AI</a>
+        <a href="/sector/cyber/" class="drawer-link">CYBER</a>
+        <a href="/sector/defense/" class="drawer-link">DEFENSE</a>
+        <a href="/sector/space/" class="drawer-link">SPACE</a>
+        <a href="/sector/mega-cap/" class="drawer-link">MEGA-CAP</a>
+        <a href="/sector/quantum/" class="drawer-link">QUANTUM</a>
+        <a href="/sector/fintech/" class="drawer-link">FINTECH</a>
+        <a href="/sector/ai-power/" class="drawer-link">AI POWER</a>
+        <a href="/sector/etfs/" class="drawer-link">ETFS</a>
+      </div>
+      <div class="drawer-sub" id="drawerSubAccount">
+        <div class="sub-header" onclick="closeSubDrawer()">
+          <span class="sub-back">&#8249;</span>
+          <span class="sub-title">MY ACCOUNT</span>
+        </div>
+        <a href="/premium/" class="drawer-link">PREMIUM DASHBOARD</a>
+        <a href="/watchlist/" class="drawer-link">MY WATCHLIST</a>
+        <a href="/pricing/" class="drawer-link">SIGNAL PREMIUM</a>
       </div>
     </div>
   </div><!-- Search Overlay -->
@@ -944,7 +954,7 @@
 
   </div>
 
-  <script src="/js/nav.js?v=1" defer></script>
+  <script src="/js/nav.js?v=3" defer></script>
   <script src="/js/search.js" defer></script>
   <script src="/js/auth.js?v=2" defer></script>
   <script src="/js/hive.js?v=3" defer></script>

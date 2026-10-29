@@ -38,44 +38,15 @@ const R2_IMG_BASE = 'https://pub-4b6ad449790f433c8b0fde9b167147c9.r2.dev';
 
 // ─── Rocket Lab Drawer-Only Navigation Block ───
 // Only the drawer — original Signal nav bar stays unchanged
-const ROCKET_DRAWER = `  <!-- Rocket Lab-Style Drawer -->
-  <div class="drawer-overlay" id="drawerOverlay"></div>
-  <div class="drawer" id="drawer">
-    <div class="drawer-header">
-      <a href="/" class="drawer-logo">
-        <span class="the">THE</span>
-        <span class="signal">SIGNAL</span>
-      </a>
-      <button class="drawer-close" id="drawerClose" aria-label="Close menu">&#10005;</button>
-    </div>
-    <div class="drawer-body" id="drawerBody">
-      <div class="drawer-main" id="drawerMain">
-        <div class="drawer-section-label">SECTORS</div>
-        <a href="javascript:void(0)" class="drawer-link" onclick="openSubDrawer()">SECTORS</a>
-        <a href="/stocks/" class="drawer-link">STOCK PAGES</a>
-        <a href="/#scorecard" class="drawer-link">SIGNAL SCORECARD</a>
-        <a href="/hive/" class="drawer-link">HIVE</a>
-        <a href="/signal-vs-the-street/" class="drawer-link">SIGNAL VS. STREET</a>
-        <a href="/pricing/" class="drawer-link">SIGNAL PREMIUM</a>
-        <a href="/pricing/" class="drawer-cta">GET PREMIUM ACCESS</a>
-      </div>
-      <div class="drawer-sub" id="drawerSub">
-        <div class="sub-header" onclick="closeSubDrawer()">
-          <span class="sub-back">&#8249;</span>
-          <span class="sub-title">SECTORS</span>
-        </div>
-        <a href="/sector/ai/" class="drawer-link">AI</a>
-        <a href="/sector/cyber/" class="drawer-link">CYBER</a>
-        <a href="/sector/defense/" class="drawer-link">DEFENSE</a>
-        <a href="/sector/space/" class="drawer-link">SPACE</a>
-        <a href="/sector/mega-cap/" class="drawer-link">MEGA-CAP</a>
-        <a href="/sector/quantum/" class="drawer-link">QUANTUM</a>
-        <a href="/sector/ai-power/" class="drawer-link">AI POWER</a>
-        <a href="/sector/fintech/" class="drawer-link">FINTECH</a>
-        <a href="/sector/etfs/" class="drawer-link">ETFS</a>
-      </div>
-    </div>
-  </div>`;
+// Drawer navigation: single source of truth is articles/partials/drawer.html
+// (extracted from the homepage, which carries all 19 menu items). This used to be a
+// third hardcoded copy with only 15 items, which is why sector pages lost EXPLAINERS,
+// PREMIUM DASHBOARD, TRADER INSIGHTS and MY WATCHLIST.
+const DRAWER_PARTIAL = path.join(ROOT, 'articles', 'partials', 'drawer.html');
+const ROCKET_DRAWER = fs.existsSync(DRAWER_PARTIAL)
+  ? '  <!-- Rocket Lab-Style Drawer -->\n  <div class="drawer-overlay" id="drawerOverlay"></div>\n' +
+    fs.readFileSync(DRAWER_PARTIAL, 'utf8').trim()
+  : '';
 
 // ─── Inject Rocket Lab Drawer into generated HTML (keeps original nav bar) ───
 function injectRocketNav(html) {
@@ -89,12 +60,12 @@ function injectRocketNav(html) {
 
   // 2. Add nav.css stylesheet before </head> if not already present
   if (!html.includes('/css/nav.css')) {
-    html = html.replace('</head>', '  <link rel="stylesheet" href="/css/nav.css?v=1">\n</head>');
+    html = html.replace('</head>', '  <link rel="stylesheet" href="/css/nav.css?v=4">\n</head>');
   }
 
   // 2b. Add nav.js script before </head> if not already present
   if (!html.includes('/js/nav.js')) {
-    html = html.replace('</head>', '  <script src="/js/nav.js?v=1" defer></script>\n</head>');
+    html = html.replace('</head>', '  <script src="/js/nav.js?v=3" defer></script>\n</head>');
   }
 
   // 3. Replace DRAWER placeholder with Rocket Lab drawer
@@ -227,36 +198,23 @@ if (fs.existsSync(landingSrc)) {
   console.log('  ✅ hive-landing-sleeper-v2.html → dist/ (served at /hiv)');
 }
 
-// ─── 1.5.5555. Copy canonical nav.js (public source of truth → dist) ───
-const navJsSrc = path.join(ROOT, 'public', 'js', 'nav.js');
-const navJsDst = path.join(DST, 'js', 'nav.js');
-if (fs.existsSync(navJsSrc)) {
-  fs.copyFileSync(navJsSrc, navJsDst);
-  console.log('  ✅ public/js/nav.js → dist/js/nav.js (sub-drawer-safe close-on-click)');
+// ─── 1.5.5555. Copy canonical JS (public source of truth → dist) ───
+// public/js is authoritative for these files; _backup_dist/js holds older copies and
+// dist/js is only populated from it, so anything not listed here never reaches the site.
+for (const jsFile of ['nav.js', 'hero-video.js']) {
+  const jsSrc = path.join(ROOT, 'public', 'js', jsFile);
+  const jsDst = path.join(DST, 'js', jsFile);
+  if (fs.existsSync(jsSrc)) {
+    fs.copyFileSync(jsSrc, jsDst);
+    console.log(`  ✅ public/js/${jsFile} → dist/js/${jsFile}`);
+  }
 }
 
-// ─── 1.5.6. Check for missing TTS audio ───
-(function checkMissingAudio() {
-  if (!fs.existsSync(POSTS_DIR)) return;
-  const jsonFiles = fs.readdirSync(POSTS_DIR).filter(f => f.endsWith('.json'));
-  const missing = [];
-  for (const file of jsonFiles) {
-    try {
-      const article = JSON.parse(fs.readFileSync(path.join(POSTS_DIR, file), 'utf8'));
-      if (!article.slug) continue;
-      const mp3Path = path.join(ROOT, 'public', 'audio', `${article.slug}.mp3`);
-      if (!fs.existsSync(mp3Path)) {
-        missing.push(article.slug);
-      }
-    } catch {}
-  }
-  if (missing.length > 0) {
-    console.log(`  ⚠️  ${missing.length} articles missing TTS audio. Generate with:`);
-    for (const slug of missing) {
-      console.log(`     python3 scripts/regenerate-tts.py ${slug}`);
-    }
-  }
-})();
+// ─── 1.5.6. TTS audio ───
+// Audio is pre-generated into R2 (bucket the-signal-audio, key v2/<slug>.mp3) and
+// served to the player by /api/tts/, which reads that cache. There is no local
+// public/audio folder to check, so the old "N articles missing TTS audio" warning
+// counted every article in the site and printed 500+ false lines per build.
 
 // ─── 1.6. Build stock pages ───
 console.log('📊 Building stock pages...');
@@ -780,7 +738,10 @@ if (fs.existsSync(postsSrc)) {
 // metadata into a JS module that the function imports directly.
 (function generateArticlesDataModule() {
   const postsDir = path.join(ROOT, 'articles', 'posts');
-  const outputPath = path.join(DST, 'api', 'articles-data.mjs');
+  // NOT api/: Vercel compiles every .js/.mjs in api/ as a serverless function, and this
+  // module has no handler export, so it crashed with FUNCTION_INVOCATION_FAILED on every
+  // request. Static under data/ + the vercel.json route keeps the old URL alive.
+  const outputPath = path.join(DST, 'data', 'articles-data.mjs');
   if (!fs.existsSync(postsDir)) {
     console.log('  ⚠️  No articles/posts/ — skipping articles-data.mjs');
     return;
@@ -800,6 +761,7 @@ if (fs.existsSync(postsSrc)) {
     } catch (e) { /* skip corrupt */ }
   }
   articles.sort((a, b) => new Date(b.date) - new Date(a.date));
+  fs.mkdirSync(path.dirname(outputPath), { recursive: true });
   const moduleContent = '// Auto-generated by build.js — do not edit\n' +
     '// Contains article metadata for Pulse AI\n' +
     `const ARTICLES = ${JSON.stringify(articles, null, 2)};\n` +
@@ -994,6 +956,15 @@ if (fs.existsSync(dataDir)) {
   console.log(`  ✅ ${dataCount} data files → dist/data/`);
 }
 
+// ─── Build marker: lets deploy-helper prove the domain is serving THIS build ───
+// Deploy verification compares this exact timestamp on the live domain, so a deploy
+// that silently fails to promote is caught instead of reported as success.
+fs.mkdirSync(distDataDir, { recursive: true });
+fs.writeFileSync(
+  path.join(distDataDir, 'build-info.json'),
+  JSON.stringify({ built: new Date().toISOString(), pid: process.pid }, null, 2)
+);
+
 // ─── Signal vs. Street page — always use latest source ───
 const svsSrc = path.join(ROOT, 'signal-vs-the-street.html');
 const svsDst = path.join(DST, 'signal-vs-the-street', 'index.html');
@@ -1072,6 +1043,42 @@ if (fs.existsSync(pulseJsSrc) && fs.existsSync(path.dirname(pulseJsDst))) {
   };
   walk(DST);
   console.log(`  🔗 ${fixed} internal links canonicalised across ${files} pages`);
+})();
+
+// ─── Drawer consistency: every page ships the same hamburger menu ───
+// Static pages under _backup_dist carry their own copy of the drawer, and they had drifted
+// (10, 14, 15, 17 and 19 items across page types). Normalise every built page to the partial.
+(function normaliseDrawer() {
+  if (!fs.existsSync(DRAWER_PARTIAL)) return;
+  const canonical = fs.readFileSync(DRAWER_PARTIAL, 'utf8').trim();
+  const count = (s) => (s.match(/class="[^"]*drawer-link/g) || []).length;
+  const canonicalCount = count(canonical);
+  let fixed = 0, scanned = 0;
+  const walk = (dir) => {
+    for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, e.name);
+      if (e.isDirectory()) { walk(full); continue; }
+      if (!e.name.endsWith('.html')) continue;
+      scanned++;
+      const t = fs.readFileSync(full, 'utf8');
+      const m = /<div[^>]*\bid\s*=\s*["']drawer["'][^>]*>/i.exec(t);
+      if (!m) continue;
+      const start = m.index, tagRe = /<(\/?)div\b[^>]*>/gi;
+      tagRe.lastIndex = start + m[0].length;
+      let depth = 1, mm, end = -1;
+      while ((mm = tagRe.exec(t))) {
+        depth += mm[1] ? -1 : 1;
+        if (depth === 0) { end = mm.index + mm[0].length; break; }
+      }
+      if (end < 0) continue;
+      const current = t.slice(start, end);
+      if (current.trim() === canonical && count(current) === canonicalCount) continue;
+      fs.writeFileSync(full, t.slice(0, start) + canonical + t.slice(end));
+      fixed++;
+    }
+  };
+  walk(DST);
+  console.log(`  ☰ drawer normalised on ${fixed} of ${scanned} pages (${canonicalCount} items)`);
 })();
 
 require('./scripts/generate-sitemap.js');

@@ -941,3 +941,58 @@ html.stock-page.light .auth-btn {
 html.stock-page.light .auth-btn-icon {
   color: #555570;
 }
+
+/* ─── Compact drawer on phones ───
+   Eight rows plus the CTA have to fit a ~600px viewport without scrolling,
+   so the row height drops from 67px to ~47px and the header loses its air. */
+@media (max-width: 640px) {
+  .drawer-header { padding: 14px 20px; min-height: 60px; }
+  .drawer-link { padding: 13px 20px; font-size: 16px; letter-spacing: 0.14em; }
+  .drawer-link::after { font-size: 18px; }
+  .drawer-cta { margin: 14px 20px 18px; padding: 12px 18px; font-size: 11px; }
+  .sub-header { padding: 13px 20px; }
+  .drawer-sub .drawer-link { padding: 13px 20px; font-size: 16px; }
+}
+
+/* Short viewports (small phones, landscape-ish) — keeps the SECTORS sub-drawer
+   from needing a scroll on a 553px-tall viewport. */
+@media (max-height: 620px) {
+  .drawer-header { padding: 10px 18px; min-height: 52px; }
+  .drawer-link { padding: 9px 18px; font-size: 15px; }
+  .drawer-sub .drawer-link { padding: 9px 18px; font-size: 15px; }
+  .drawer-cta { margin: 10px 18px 14px; padding: 10px 16px; }
+  .sub-header { padding: 9px 18px; }
+}
+
+
+/* ============================================================
+   DESKTOP NAV (preview): centred nav, hamburger retired, quick links.
+   ============================================================ */
+.nav-quick { display: none; }
+@media (min-width: 1024px) {
+  .nav-inner {
+    max-width: 1280px;
+    margin-inline: auto;
+    padding-inline: 32px;
+  }
+  #hamburgerToggle { display: none !important; }
+  .nav-quick {
+    display: inline-flex;
+    align-items: center;
+    height: 32px;
+    padding: 0 10px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--text-secondary, #9aa3b2);
+    text-decoration: none;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+  .nav-quick:hover {
+    color: var(--text-primary, #ffffff);
+    background: rgba(255, 255, 255, 0.06);
+  }
+}

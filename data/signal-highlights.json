@@ -2,24 +2,24 @@
   {
     "ticker": "NVDA",
     "name": "NVIDIA Corporation",
-    "currentPrice": 229.28,
-    "changePercent": -0.52,
+    "currentPrice": 215.38,
+    "changePercent": -1.17,
     "changeDirection": "down",
     "fairValue": {
       "status": "Undervalued",
-      "price": 328.72,
-      "upside": "+43.4%"
+      "price": 328.95,
+      "upside": "+52.7%"
     },
     "earnings": {
       "revTtm": "$302.97B",
       "revGrowth": "+105.9%",
       "netIncome": "$192.88B",
-      "peRatio": "29.0x",
-      "psRatio": "18.3x"
+      "peRatio": "27.2x",
+      "psRatio": "17.2x"
     },
     "analyst": {
       "consensus": "Strong Buy",
-      "target": 328.72,
+      "target": 328.95,
       "buys": 49,
       "holds": 2,
       "sells": 1
@@ -28,24 +28,24 @@
   {
     "ticker": "AVGO",
     "name": "Broadcom Inc.",
-    "currentPrice": 361.54,
-    "changePercent": 0.39,
+    "currentPrice": 351.81,
+    "changePercent": 2.77,
     "changeDirection": "up",
     "fairValue": {
       "status": "Undervalued",
-      "price": 531.31,
-      "upside": "+47.0%"
+      "price": 530.14,
+      "upside": "+50.7%"
     },
     "earnings": {
       "revTtm": "$89.10B",
       "revGrowth": "+85.5%",
       "netIncome": "$38.26B",
-      "peRatio": "46.2x",
-      "psRatio": "19.4x"
+      "peRatio": "44.9x",
+      "psRatio": "18.8x"
     },
     "analyst": {
       "consensus": "Strong Buy",
-      "target": 531.31,
+      "target": 530.14,
       "buys": 28,
       "holds": 3,
       "sells": 0
@@ -54,24 +54,24 @@
   {
     "ticker": "MSFT",
     "name": "Microsoft Corporation",
-    "currentPrice": 535.07,
-    "changePercent": 2.38,
-    "changeDirection": "up",
+    "currentPrice": 531.01,
+    "changePercent": -0.06,
+    "changeDirection": "down",
     "fairValue": {
       "status": "Undervalued",
-      "price": 587.63,
-      "upside": "+9.8%"
+      "price": 605.12,
+      "upside": "+14.0%"
     },
     "earnings": {
       "revTtm": "$331.84B",
       "revGrowth": "+17.7%",
       "netIncome": "$133.75B",
-      "peRatio": "29.8x",
-      "psRatio": "12.0x"
+      "peRatio": "29.6x",
+      "psRatio": "11.9x"
     },
     "analyst": {
       "consensus": "Strong Buy",
-      "target": 587.63,
+      "target": 605.12,
       "buys": 36,
       "holds": 4,
       "sells": 0
@@ -80,24 +80,24 @@
   {
     "ticker": "ANET",
     "name": "Arista Networks, Inc.",
-    "currentPrice": 216.74,
-    "changePercent": 2.73,
-    "changeDirection": "up",
+    "currentPrice": 186.72,
+    "changePercent": -0.15,
+    "changeDirection": "down",
     "fairValue": {
       "status": "Undervalued",
-      "price": 242.55,
-      "upside": "+11.9%"
+      "price": 243.59,
+      "upside": "+30.5%"
     },
     "earnings": {
       "revTtm": "$10.54B",
       "revGrowth": "+37.7%",
       "netIncome": "$4.04B",
-      "peRatio": "68.4x",
-      "psRatio": "25.9x"
+      "peRatio": "58.9x",
+      "psRatio": "22.3x"
     },
     "analyst": {
       "consensus": "Strong Buy",
-      "target": 242.55,
+      "target": 243.59,
       "buys": 31,
       "holds": 1,
       "sells": 0
@@ -106,24 +106,24 @@
   {
     "ticker": "KTOS",
     "name": "Kratos Defense & Security",
-    "currentPrice": 42.36,
-    "changePercent": 1.03,
-    "changeDirection": "up",
+    "currentPrice": 41.17,
+    "changePercent": -0.35,
+    "changeDirection": "down",
     "fairValue": {
       "status": "Undervalued",
-      "price": 100.73,
-      "upside": "+137.8%"
+      "price": 94.44,
+      "upside": "+129.4%"
     },
     "earnings": {
       "revTtm": "$1.52B",
       "revGrowth": "+30.5%",
       "netIncome": "$30.90M",
-      "peRatio": "249.2x",
-      "psRatio": "5.2x"
+      "peRatio": "242.2x",
+      "psRatio": "5.1x"
     },
     "analyst": {
       "consensus": "Strong Buy",
-      "target": 100.73,
+      "target": 94.44,
       "buys": 15,
       "holds": 5,
       "sells": 0
@@ -132,24 +132,24 @@
   {
     "ticker": "AXON",
     "name": "Axon Enterprise Inc.",
-    "currentPrice": 422.89,
-    "changePercent": 1.34,
-    "changeDirection": "up",
+    "currentPrice": 423.17,
+    "changePercent": -0.63,
+    "changeDirection": "down",
     "fairValue": {
       "status": "Undervalued",
-      "price": 704.11,
-      "upside": "+66.5%"
+      "price": 680.37,
+      "upside": "+60.8%"
     },
     "earnings": {
       "revTtm": "$3.22B",
       "revGrowth": "+35.3%",
       "netIncome": "$199.30M",
-      "peRatio": "175.5x",
+      "peRatio": "175.6x",
       "psRatio": "10.7x"
     },
     "analyst": {
       "consensus": "Strong Buy",
-      "target": 704.11,
+      "target": 680.37,
       "buys": 12,
       "holds": 8,
       "sells": 0
@@ -158,24 +158,24 @@
   {
     "ticker": "SOFI",
     "name": "SoFi Technologies Inc.",
-    "currentPrice": 15.8,
-    "changePercent": 1.22,
+    "currentPrice": 17.14,
+    "changePercent": 4.51,
     "changeDirection": "up",
     "fairValue": {
       "status": "Undervalued",
-      "price": 20.33,
-      "upside": "+28.7%"
+      "price": 20.6,
+      "upside": "+20.2%"
     },
     "earnings": {
-      "revTtm": "$4.27B",
-      "revGrowth": "+42.6%",
-      "netIncome": "$636.26M",
-      "peRatio": "32.2x",
-      "psRatio": "4.8x"
+      "revTtm": "$4.69B",
+      "revGrowth": "+43.9%",
+      "netIncome": "$737.86M",
+      "peRatio": "31.2x",
+      "psRatio": "4.7x"
     },
     "analyst": {
       "consensus": "Buy",
-      "target": 20.33,
+      "target": 20.6,
       "buys": 11,
       "holds": 7,
       "sells": 0
@@ -184,25 +184,25 @@
   {
     "ticker": "RKLB",
     "name": "Rocket Lab Corporation",
-    "currentPrice": 68.21,
-    "changePercent": -0.28,
-    "changeDirection": "down",
+    "currentPrice": 58.6,
+    "changePercent": 0.5,
+    "changeDirection": "up",
     "fairValue": {
       "status": "Undervalued",
-      "price": 109.15,
-      "upside": "+60.0%"
+      "price": 102.15,
+      "upside": "+74.3%"
     },
     "earnings": {
       "revTtm": "$769.15M",
       "revGrowth": "+62.0%",
       "netIncome": "$-165.46M",
       "peRatio": "N/A",
-      "psRatio": "56.7x"
+      "psRatio": "48.7x"
     },
     "analyst": {
       "consensus": "Buy",
-      "target": 109.15,
-      "buys": 17,
+      "target": 102.15,
+      "buys": 18,
       "holds": 4,
       "sells": 0
     }

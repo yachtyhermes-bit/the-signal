@@ -4601,6 +4601,8 @@ body.pulse-modal-open {
   gap: 12px;
 }
 .hive-header-title {
+  margin: 0;
+  line-height: 1.15;
   font-size: 28px;
   font-weight: 800;
   letter-spacing: -0.3px;
@@ -7802,3 +7804,37 @@ body.pulse-modal-open {
 .about-page .about-author-name { font-family: 'Anton', Impact, sans-serif; font-size: 22px; letter-spacing: .5px; color: var(--text-primary); }
 .about-page .about-author-role { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); margin-top: 4px; line-height: 1.5; }
 @media (max-width: 600px) { .about-page .about-headshot { width: 72px; height: 72px; flex-basis: 72px; } }
+
+
+/* ============================================================
+   DESKTOP LAYOUT PASS (preview)
+   Goals: one content column on wide screens, readable article measure,
+   desktop nav without the mobile hamburger. Scoped to >=1024px so phones
+   are untouched.
+   ============================================================ */
+@media (min-width: 1024px) {
+  /* Sections keep their full-bleed backgrounds; their direct children are
+     capped and centred so text, grids and carousels share one column. */
+  .main > section:not(.hero) > * {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Reading measure: ~100 characters per line at 17px was too wide. */
+  .article-body {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* But let data-heavy blocks breathe wider than the text. */
+  .article-body figure,
+  .article-body img,
+  .article-body table,
+  .article-body .stats-card,
+  .article-body .article-links {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

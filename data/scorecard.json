@@ -4,21 +4,21 @@
     "name": "Micron Technology, Inc.",
     "sector": "Semiconductors",
     "signal": "Strong Bullish",
-    "score": 95,
+    "score": 98,
     "color": "#10b981",
     "drivers": [
-      "Revenue up +48.9% YoY to $133.19B",
-      "P/E at 13.8x \u2014 attractively valued",
-      "Target upside +50.6%"
+      "Revenue up +256.3% YoY to $133.19B",
+      "P/E at 13.2x \u2014 attractively valued",
+      "Target upside +57.6%"
     ],
-    "upside": "+50.6%",
+    "upside": "+57.6%",
     "logo": "",
     "metrics": {
       "revenue": "$133.19B",
-      "growth": "+48.9%",
+      "growth": "+256.3%",
       "netIncome": "$84.97B",
-      "pe": "13.8x",
-      "ps": "8.7x"
+      "pe": "13.2x",
+      "ps": "8.4x"
     }
   },
   {
@@ -26,21 +26,21 @@
     "name": "NVIDIA Corporation",
     "sector": "Semiconductors",
     "signal": "Strong Bullish",
-    "score": 94,
+    "score": 95,
     "color": "#10b981",
     "drivers": [
       "Revenue up +65.5% YoY to $302.97B",
-      "P/E at 29.0x \u2014 attractively valued",
-      "Target upside +37.4%"
+      "P/E at 27.2x \u2014 attractively valued",
+      "Target upside +46.3%"
     ],
-    "upside": "+37.4%",
+    "upside": "+46.3%",
     "logo": "",
     "metrics": {
       "revenue": "$302.97B",
       "growth": "+65.5%",
       "netIncome": "$192.88B",
-      "pe": "29.0x",
-      "ps": "18.3x"
+      "pe": "27.2x",
+      "ps": "17.2x"
     }
   },
   {
@@ -48,65 +48,65 @@
     "name": "Alphabet Inc.",
     "sector": "Internet Content",
     "signal": "Strong Bullish",
-    "score": 78,
+    "score": 79,
     "color": "#10b981",
     "drivers": [
       "Revenue up +15.1% YoY to $445.87B",
-      "P/E at 17.6x \u2014 attractively valued",
-      "Target upside +22.3%"
+      "P/E at 17.0x \u2014 attractively valued",
+      "Target upside +32.4%"
     ],
-    "upside": "+22.3%",
+    "upside": "+32.4%",
     "logo": "",
     "metrics": {
       "revenue": "$445.87B",
       "growth": "+15.1%",
       "netIncome": "$244.12B",
-      "pe": "17.6x",
-      "ps": "9.6x"
+      "pe": "17.0x",
+      "ps": "8.9x"
     }
   },
   {
     "ticker": "META",
     "name": "Meta Platforms",
     "sector": "Social Media",
-    "signal": "Bullish",
-    "score": 75,
-    "color": "#84cc16",
+    "signal": "Strong Bullish",
+    "score": 83,
+    "color": "#10b981",
     "drivers": [
-      "Revenue up +22.2% YoY to $228.25B",
-      "P/E at 27.1x \u2014 attractively valued",
-      "Moderate upside +11.3%"
+      "Revenue up +22.2% YoY to $241.61B",
+      "P/E at 20.9x \u2014 attractively valued",
+      "Target upside +38.8%"
     ],
-    "upside": "+11.3%",
+    "upside": "+38.8%",
     "logo": "",
     "metrics": {
-      "revenue": "$228.25B",
+      "revenue": "$241.61B",
       "growth": "+22.2%",
-      "netIncome": "$68.10B",
-      "pe": "27.1x",
-      "ps": "8.0x"
+      "netIncome": "$75.25B",
+      "pe": "20.9x",
+      "ps": "6.6x"
     }
   },
   {
     "ticker": "PLTR",
     "name": "Palantir Technologies Inc.",
     "sector": "AI Software",
-    "signal": "Bullish",
-    "score": 77,
-    "color": "#84cc16",
+    "signal": "Strong Bullish",
+    "score": 79,
+    "color": "#10b981",
     "drivers": [
       "Revenue up +56.2% YoY to $6.16B",
-      "Premium valuation at 180x P/E",
-      "Net income $3.02B"
+      "Premium valuation at 170x P/E",
+      "Moderate upside +12.5%"
     ],
-    "upside": "-1.9%",
+    "upside": "+12.5%",
     "logo": "",
     "metrics": {
       "revenue": "$6.16B",
       "growth": "+56.2%",
       "netIncome": "$3.02B",
-      "pe": "180.2x",
-      "ps": "81.6x"
+      "pe": "169.7x",
+      "ps": "76.8x"
     }
   },
   {
@@ -114,21 +114,21 @@
     "name": "Constellation Energy",
     "sector": "AI Power",
     "signal": "Bullish",
-    "score": 70,
+    "score": 72,
     "color": "#84cc16",
     "drivers": [
       "Revenue up +8.3% YoY to $31.27B",
-      "P/E at 29.1x \u2014 attractively valued",
-      "Moderate upside +15.9%"
+      "P/E at 25.2x \u2014 attractively valued",
+      "Target upside +32.9%"
     ],
-    "upside": "+15.9%",
+    "upside": "+32.9%",
     "logo": "",
     "metrics": {
       "revenue": "$31.27B",
       "growth": "+8.3%",
       "netIncome": "$3.46B",
-      "pe": "29.1x",
-      "ps": "3.4x"
+      "pe": "25.2x",
+      "ps": "2.9x"
     }
   },
   {
@@ -136,21 +136,21 @@
     "name": "Netflix Inc.",
     "sector": "Entertainment",
     "signal": "Strong Bullish",
-    "score": 79,
+    "score": 80,
     "color": "#10b981",
     "drivers": [
-      "Revenue up +15.9% YoY to $48.37B",
-      "P/E at 22.1x \u2014 attractively valued",
-      "Target upside +28.0%"
+      "Revenue up +15.9% YoY to $49.73B",
+      "P/E at 17.9x \u2014 attractively valued",
+      "Target upside +32.3%"
     ],
-    "upside": "+28.0%",
+    "upside": "+32.3%",
     "logo": "",
     "metrics": {
-      "revenue": "$48.37B",
+      "revenue": "$49.73B",
       "growth": "+15.9%",
-      "netIncome": "$13.65B",
-      "pe": "22.1x",
-      "ps": "6.1x"
+      "netIncome": "$14.77B",
+      "pe": "17.9x",
+      "ps": "5.2x"
     }
   },
   {
@@ -158,21 +158,21 @@
     "name": "GE Vernova",
     "sector": "AI Power",
     "signal": "Bullish",
-    "score": 71,
+    "score": 78,
     "color": "#84cc16",
     "drivers": [
       "Revenue up +9.0% YoY to $41.37B",
-      "P/E at 28.8x \u2014 attractively valued",
-      "Target upside +24.4%"
+      "P/E at 23.1x \u2014 attractively valued",
+      "Target upside +39.5%"
     ],
-    "upside": "+24.4%",
+    "upside": "+39.5%",
     "logo": "",
     "metrics": {
       "revenue": "$41.37B",
       "growth": "+9.0%",
       "netIncome": "$9.53B",
-      "pe": "28.8x",
-      "ps": "6.5x"
+      "pe": "23.1x",
+      "ps": "5.7x"
     }
   }
 ]

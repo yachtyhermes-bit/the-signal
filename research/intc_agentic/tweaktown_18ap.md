@@ -1,0 +1,8 @@
+Title: Google News
+
+URL Source: https://news.google.com/rss/articles/CBMi5gFBVV95cUxNV0dzSDFEdnRFVnh4eklZNFRxaTdySHB6LTN5cEdnbzYtNlBRc3V3MXhZU25XN3ZHeHVYb2E1YlFWOU9HY0RpeWg3MkRJdUdqMTAzSGx5QnpuWDc0RlY2YzhuU213ZHNEbHo3MkJtblpYNzlGVTBPVXVCMUxvVGIycTMtZU5POVRFQU1vSldwdG8tMVhVR0x4c0R4aUFWeFVLNDY3VGNHREpqd2oyQ2U2eGx1MnpMZ1Iya2h6clBVXzd1ajBHZHduRFgwRmN2U2luN3E5RC0weXF1ZnRQSS1HWUxNcDdkUQ?oc=5
+
+Markdown Content:
+## Redirect Notice
+
+The page you were on is trying to send you to an invalid web address.
