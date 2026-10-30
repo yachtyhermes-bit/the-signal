@@ -85,8 +85,9 @@ def build_prompt(subject, label, details):
     parts.append(
         "Wide 16:9 composition, the running figure or central subject as the "
         "clear focal point, onlookers reacting in the foreground. "
-        "No signature, no artist's mark, no watermark, no caption, no border "
-        "text anywhere."
+        "Absolutely no artist signature, no initials, no stamp, no logo and no "
+        "handwritten marks in any corner — the paper margins stay blank. No "
+        "watermark, no caption, no border text."
     )
     return "\n\n".join(parts)
 
