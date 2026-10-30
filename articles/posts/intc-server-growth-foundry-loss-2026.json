@@ -1,0 +1,116 @@
+{
+  "slug": "intc-server-growth-foundry-loss-2026",
+  "title": "Intel Sold Record Server Chips and Its Foundry Still Lost $1.9 Billion",
+  "subtitle": "Server revenue jumped 78%, but a PC slump and factory losses drove the stock toward its worst session since 1974.",
+  "summary": "Intel posted record server chip sales in the third quarter, yet the stock plunged on weak fourth-quarter guidance and heavy manufacturing losses. The divergence highlights how traditional PC weakness and expensive fab buildouts can overwhelm genuine artificial intelligence demand.",
+  "ticker": "INTC",
+  "tickerName": "Intel",
+  "company": "Intel Corporation",
+  "sector": "ai",
+  "sentiment": "neutral",
+  "date": "2026-10-30T16:45:00Z",
+  "price": 92.07,
+  "featured": false,
+  "premium": false,
+  "tags": [
+    "intc",
+    "intel",
+    "semiconductors",
+    "earnings",
+    "q3-2026",
+    "data-center",
+    "xeon",
+    "foundry",
+    "intel-18a",
+    "intel-14a",
+    "emib",
+    "substrates",
+    "pc-market",
+    "memory-prices",
+    "gross-margin",
+    "guidance",
+    "fab-28",
+    "ai-capex",
+    "turnaround"
+  ],
+  "bodyHtml": "<p>When you wake up to your screen glowing red, you usually assume the artificial intelligence trade has finally run out of steam. That was the instant verdict on Oct. 30, when Intel plunged more than a quarter of its value, on track for its worst single trading session since 1974.</p>\n\n<p>Yet Intel did not stumble on AI demand. The company just delivered its fastest server-chip growth in 15 years, with data center revenue rocketing 78% and operating margins topping 41%. The AI boom did not crack. Intel's legacy cash cow did.</p>\n\n<p>To understand the split, look at what Intel actually does. The company designs the microprocessors at the center of the world's computers, from the Xeon chips running cloud networks to the Core processors inside your home office desktop. Unlike Nvidia, which hands its blueprints to third parties, Intel builds its own silicon in its own factories. The gamble is simple. Intel spent three years trying to become the TSMC of the West. The foundry is the whole bet, and every other division is the funding mechanism.</p>\n\n<p>This week the entire tech sector was gripped by one anxiety. Is the massive infrastructure spending ever going to pay off? Alphabet had its worst day as a public company. Amazon's free cash flow swung negative by $42.4 billion over the past year under the weight of AI capex.</p>\n\n<p>Intel's quarter presents that crisis in miniature. Hyperscalers and cloud startups bought $7.32 billion of its server silicon because modern clusters cannot coordinate complex computing tasks without heavy-duty CPUs. The appetite is undeniable.</p>\n\n<p>Demand isn't Intel's problem. Paying for the supply is. Building the factories to serve it is what's crushing the income statement.</p>\n\n<p>What actually broke the stock was the guide, and then the quiet consumer half of the business. Intel told investors to expect $15 billion to $16 billion of revenue this quarter, against roughly $17 billion on the Street. Gross margin is guided down to 38% from 44.1%. When memory prices spike, computer makers hold off ordering processors because a consumer laptop suddenly costs too much to build. That inventory freeze pushed PC revenue down 5% to $8.1 billion, with management guiding a sequential tumble of more than 20% into year-end.</p>\n\n<p>Supply capped the other side too. Intel named an industry-wide shortage of the advanced substrates used in its EMIB packaging as one of three things limiting output. And a gas cylinder explosion at Fab 28 in Israel killed two workers and shut the plant for two weeks. That accident will cost roughly $300 million of revenue and 200 basis points of margin this quarter.</p>\n\n<p>For the equity to recover, the market has to stop viewing Intel as a sputtering PC maker dragging an expensive manufacturing hobby behind it. The single number that decides the stock is the foundry operating loss. Intel Foundry lost $1.853 billion this quarter, eating the cash the server group generates. External customers brought in only $411 million, and even that was lifted by a one-off project. The stock re-rates when that multi-billion-dollar loss marches toward zero and outside designers start paying real money for Intel's production lines.</p>\n\n<p>The short thesis is that Intel's server boom is a temporary supply squeeze masking a structural failure. Intel does not sell the accelerators that train frontier models. It sells Xeon host chips that happen to benefit from an industry-wide hardware bottleneck. When the crunch unwinds, that 41.5% server margin normalizes. Meanwhile the foundry burns billions while capital spending climbs significantly next year to fund new nodes. If PC demand drops another 10% next year, as Intel itself forecasts, the client business stops funding the fab.</p>\n\n<p>There is a bull answer to that, and it's why the selloff may have overshot. Intel's own numbers call for server CPU units to grow more than 30% in both 2026 and 2027. Management sees the server CPU market going from $40 billion to more than $200 billion over five years. That is not a cyclical bounce. It's the argument that agentic AI needs a conductor, not just a soloist, because orchestration, memory and tool calls all land on the CPU. Whether you buy that forecast is the entire trade.</p>\n\n<p>What we're watching is Intel's 14A process entering risk production next year, and specifically the first major outside customer it names.</p>\n\n<p class=\"disclosure\">Disclosure: The Signal holds no position in INTC. Positions may change. This is not financial advice.</p>",
+  "links": [
+    {
+      "label": "Intel Q3 2026 results: revenue $16.5B up 21%, DCAI $7.3B up 78%, Foundry operating loss $1.85B, Q4 guide $15.0-16.0B",
+      "url": "https://www.intc.com/news-events/press-releases/detail/1786/intel-reports-third-quarter-2026-financial-results"
+    },
+    {
+      "label": "Intel Form 10-Q for the quarter ended Sept. 26, 2026: segment tables, external foundry revenue of $411M, Israel Fab Business Disruption",
+      "url": "https://www.intc.com/filings-reports/all-sec-filings/content/0000050863-26-000191/intc-20260926.htm"
+    },
+    {
+      "label": "Yahoo Finance: Intel stock plunges nearly 30% on pace for its worst day since 1974",
+      "url": "https://finance.yahoo.com/markets/article/intel-stock-plunges-nearly-30-on-pace-for-its-worst-day-since-1974-135850305.html"
+    },
+    {
+      "label": "CNBC: Intel Q3 2026 earnings report, including the Q4 revenue and EPS guidance shortfall against consensus",
+      "url": "https://www.cnbc.com/2026/10/29/intel-intc-q3-earnings-report-2026-.html"
+    },
+    {
+      "label": "Intel Q3 2026 earnings call transcript: substrate and Intel 3 supply constraints, 2026 and 2027 PC unit forecasts, server CPU TAM",
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/10/30/intel-intc-q3-2026-earnings-call-transcript/"
+    },
+    {
+      "label": "The Jerusalem Post: explosion at Intel's Kiryat Gat plant killed two workers",
+      "url": "https://www.jpost.com/israel-news/article-911777"
+    },
+    {
+      "label": "Calcalist: what happened at the Fab 28 gas facility and the plant shutdown that followed",
+      "url": "https://www.calcalistech.com/ctechnews/article/ay5slvopq"
+    },
+    {
+      "label": "Fortune: Big Tech earnings became the AI boom's report card as capex outran cash flow",
+      "url": "https://fortune.com/2026/10/30/why-big-tech-earnings-are-a-crucial-report-card-for-the-ai-boom-and-its-future/"
+    },
+    {
+      "label": "Hot Hardware: Intel data center revenue surges 78% while the memory crunch crushes the stock",
+      "url": "https://hothardware.com/news/intel-data-center-surges-78-lingering-pc-slump-crushes-shares"
+    },
+    {
+      "label": "StockAnalysis: full Intel Q3 2026 earnings call transcript",
+      "url": "https://stockanalysis.com/stocks/intc/transcripts/714242-q3-2026/"
+    }
+  ],
+  "meta": {
+    "author": "Charles Osi",
+    "estimatedReadTime": "4 min",
+    "keyMetrics": {
+      "Price": 92.07,
+      "Market Cap": "$488.9B",
+      "Forward P/E": "42.0x",
+      "Total Revenue (TTM)": "$59.9B",
+      "52-Week Low": 32.89,
+      "52-Week High": 142.35,
+      "Analyst Consensus": "Buy (42 analysts)",
+      "Analyst Target Mean": 117.71
+    },
+    "relatedTickers": [
+      "INTC",
+      "AMD",
+      "AVGO"
+    ],
+    "seoKeywords": [
+      "INTC stock",
+      "Intel Q3 2026 earnings",
+      "Intel foundry loss",
+      "Intel data center AI revenue",
+      "Intel 18A",
+      "Intel 14A",
+      "Intel Fab 28 explosion",
+      "Intel Q4 2026 guidance",
+      "Intel PC market decline",
+      "server CPU demand",
+      "Intel turnaround"
+    ]
+  },
+  "image": {
+    "src": "/img/articles/intc-server-growth-foundry-loss-2026.jpg",
+    "alt": "A lone figure in a white cleanroom suit walks away down a semiconductor fabrication corridor toward a lithography scanner, wafer-handling robots at the walls under warm yellow light",
+    "caption": "Intel now runs its factories as a business, and the outside customers are still a rounding error. Photo: The Signal"
+  }
+}
