@@ -1,0 +1,99 @@
+{
+  "slug": "ai-gpu-depreciation-accounting-explainer-2026",
+  "title": "Hyperscalers Extended Server Lifespans to Shield AI Profits From Surging Depreciation",
+  "subtitle": "A quiet accounting choice added billions to tech earnings while cash flowed out the door.",
+  "summary": "Tech giants have stretched the accounting lifespan of their servers to as long as six years, cushioning reported profits against historic capital spending. The widening gap between cash spent on chips and the non-cash depreciation charged against earnings sets up a reckoning when hardware turns over.",
+  "format": "explainer",
+  "ticker": "MSFT",
+  "tickers": [
+    "MSFT",
+    "GOOGL",
+    "CRWV"
+  ],
+  "sector": "ai",
+  "sentiment": "neutral",
+  "date": "2026-11-01T23:00:00Z",
+  "image": {
+    "src": "/img/articles/ai-gpu-depreciation-accounting-explainer-2026.jpg",
+    "fit": "cover",
+    "caption": "A retired two-fan data-center accelerator card sits on a bare desk beside a sheet of ruled paper, its shroud dust-dulled, its gold connector still bright. The asset every AI earnings number gets divided across. Photo: The Signal / AI-generated.",
+    "alt": "A used two-fan GPU accelerator card lying diagonally on a wooden desk next to a blank ruled spreadsheet printout, lit by low window light, shallow depth of field."
+  },
+  "keyTerms": [
+    {
+      "term": "Depreciation",
+      "definition": "The annual expense that allocates the cost of a long-lived physical asset over the years a company expects to use it, so a forty-thousand-dollar server hits the income statement in slices rather than all at once."
+    },
+    {
+      "term": "Useful life",
+      "definition": "Management's estimate of how many years an asset stays economically productive. It is a judgment call, not a fact, and changing it moves reported profit immediately and prospectively."
+    },
+    {
+      "term": "D&A and EBITDA",
+      "definition": "Depreciation and amortization are non-cash charges deducted before operating income. EBITDA adds them back, which is why EBITDA can look healthy while the asset base quietly consumes cash."
+    },
+    {
+      "term": "Free cash flow",
+      "definition": "Operating cash flow minus capital expenditures. Depreciation is added back because it is non-cash, but the capex that created the asset is subtracted in full, so free cash flow and EBITDA can diverge violently during a buildout."
+    },
+    {
+      "term": "Residual value",
+      "definition": "The estimated worth of an asset at the end of its useful life. A higher assumed residual value means smaller annual charges; zero assumes the thing is scrap when the schedule ends."
+    },
+    {
+      "term": "Impairment",
+      "definition": "A write-down taken when an asset's carrying value exceeds what it can recover. Unlike a useful-life change, it hits earnings all at once, and it is the event that turns a slow accounting debate into a profit shock."
+    }
+  ],
+  "bottomLine": "Depreciation is where accounting estimates meet industrial reality, and in the AI buildout the estimate has moved in management's favor for years. Microsoft, Alphabet, Amazon, Meta and Oracle all lengthened the assumed lives of servers and network gear toward six years, and the disclosed benefits ran into the billions — Meta alone booked roughly a dollar of diluted EPS from a five-and-a-half-year server life. That is not fraud; straight-line depreciation over a reasonable estimate is what the rules require. But it does mean reported AI profits are partly a function of a number management picks, that EBITDA and free cash flow now tell opposite stories at more than $800 billion of annual capex, and that the depreciation wave is still arriving, because capex is growing two to three times faster than the charge it will eventually generate. Watch the tells: the next hyperscaler to shorten AI hardware lives, the first material GPU impairment, or any quarter where depreciation outgrows revenue.",
+  "bodyHtml": "<p>Think about the last time you bought a new smartphone. You hand over the cash on day one, but corporate accounting does not make a company swallow that cost all at once. Buy a server and the rules tell management to carve the purchase price into equal slices and charge them against earnings one year at a time. That slicing is depreciation. The number of years management decides the machine will survive is its “useful life.” It is not an engineering law handed down from a lab. It is an executive estimate, and stretching it from four years to six makes every slice thinner, which instantly makes reported profit look fatter.</p>\n<p>The cash, of course, has already left the building. That distinction sits at the heart of the AI boom. Microsoft, Alphabet, Amazon and Meta sell cloud infrastructure and software to millions of businesses. Right now they are also the physical landlords of generative AI, writing the largest capital equipment checks in corporate history. Their reported profits depend on how long they assume those racks stay useful.</p>\n<p>The mismatch is simple. A data center shell is a fifteen-year building. A cutting-edge AI accelerator turns over in a fraction of that. Pretending an AI cluster lasts six years is like financing a track car on a seventy-two-month auto loan when you plan to burn through the engine and tires in twenty-four. When the accounting life runs longer than the economic life, earnings look resilient while the spending is happening. The bill arrives later, as a write-down, an early retirement charge, or a sudden spike in annual depreciation.</p>\n<p>Run the arithmetic on one hypothetical forty-thousand-dollar accelerator. Straight-line over six years with zero salvage value, it costs $6,667 a year and still carries $20,000 on the books after three. At four years the annual charge is $10,000. At three years it is $13,333, and the asset is gone by year three. Same box, same check to the vendor, three different stories for Wall Street.</p>\n<p>At Microsoft's scale the lever gets enormous. Its fiscal 2026 annual report carried $215.9 billion of gross servers, network equipment and software inside $431.8 billion of gross property and equipment, against $118.7 billion of accumulated depreciation. Six years on that bucket is roughly $36 billion of annual expense. Five years is roughly $43 billion. One year of management optimism is worth about $7 billion of operating income before the fleet grows at all.</p>\n<p>Every hyperscaler found this arithmetic at roughly the same moment, and the filings show what the shift was worth. Microsoft stretched server and network lives from four years to six for fiscal 2023. It disclosed that the change added $3.7 billion to operating income, $3.0 billion to net income and forty cents a share. Alphabet went to six years in January 2023, cutting depreciation $3.9 billion and lifting net income $3.0 billion, or twenty-four cents a share. Amazon moved servers from five to six years in 2024, lowering depreciation $3.2 billion and adding twenty-three cents.</p>\n<p>Meta pushed its fleet to five and a half years in 2025. That shaved $2.92 billion off depreciation and delivered a full dollar per diluted share of accounting profit. Oracle's leap to six years padded fiscal 2025 net income by $573 million.</p>\n<p>Only one of them has publicly dialed the assumption backward. Amazon shortened the life on a subset of servers and networking gear from six years to five. It cited “the increased pace of technology development, particularly in the area of artificial intelligence and machine learning.” That reversal added $1.4 billion to depreciation and cut net income $1.0 billion, mostly in AWS. Amazon also booked roughly $920 million of accelerated depreciation for servers retired ahead of schedule, a charge it said would cut 2025 operating income by about $0.6 billion.</p>\n<p>Cash out and depreciation in are diverging. Across Microsoft, Alphabet, Amazon, Meta and Oracle, depreciation totaled roughly $122.9 billion against roughly $464.5 billion of capital spending. In every case capex grew two to three times faster than depreciation. Meta expanded capex 87% while depreciation rose 18%. Microsoft lifted fiscal 2026 capex 80% to $115.9 billion while depreciation rose 56% to $34.3 billion.</p>\n<p>Those five companies plus SpaceX are on track to spend $803 billion to $828 billion of capex in calendar 2026. The spending wave is cresting now. The depreciation wave is still behind it.</p>\n<p>That gap makes this a stock story, not an accounting seminar. It separates earnings multiples from cash reality. Free cash flow is where the check actually lands, and Amazon defines it as operating cash flow minus property and equipment purchases. Alphabet's free cash flow went negative in a quarter for the first time, and analysts tracked by FactSet expect Microsoft's to do the same for the first time since at least 2001. For these equities to re-rate higher, AI revenue has to scale fast enough to absorb the coming depreciation wave before the cash deficit gets uncomfortable.</p>\n<p>For a preview of the model without legacy software to hide behind, look at CoreWeave. The pure-play GPU cloud grew revenue to $5.131 billion in 2025 and still lost $1.2 billion. Depreciation and amortization reached $2.3 billion, roughly 45% of the top line, on $20.9 billion of gross technology equipment depreciated over six years. Its filing warns that it cannot guarantee those estimates are accurate. It also warns that an inability to redeploy hardware past its contracted life could significantly affect the business, and discloses material weaknesses in internal control with no auditor attestation as a newly public company.</p>\n<p>The bear case says the boom rests on an accounting convention borrowed from slower hardware. Short sellers argue that running high-intensity Nvidia clusters on a six-year life, when architectures turn over every two to three years, understates industry costs by tens of billions a year. Michael Burry put it bluntly. “Understating depreciation by extending useful life of assets artificially boosts earnings — one of the more common frauds of the modern era.” He argued that ramping capex on Nvidia chips with a two-to-three-year product cycle should not extend compute equipment's useful lives. He put the industry's understatement at about $176 billion across 2026 to 2028, overstating earnings 26.9% at Oracle and 20.8% at Meta.</p>\n<p>Barclays' Ross Sandler made the valuation version of the same point. He argued that depreciation of AI compute is the biggest expense these companies carry. The risk, he wrote, “may rear its ugly head.” His team modeled Meta's depreciation far above consensus and concluded the shares were 5% to 25% more expensive than the Street assumed. What proves the bears right is specific: a major GPU impairment, a second hyperscaler shortening hardware lives, or several quarters where depreciation outgrows revenue.</p>\n<p>To be fair, straight-line depreciation over a management team's best estimate is what accounting standards require. Hyperscalers argue older racks get shifted to secondary workloads, internal testing and cheap storage once frontier training moves to newer silicon. The dollar impacts are footnoted and audited rather than buried. The debate is not about malice. It is about whether a corporate estimate can withstand the pace of hardware obsolescence.</p>\n<p>Watch two things from here. Whether Amazon's server-life reduction spreads across its fleet, and whether Microsoft narrows its two-to-six-year range as its capex budget approaches $170 billion. If useful lives get dialed back across the industry, the earnings cushion disappears quickly. Accounting can postpone the cost of building the future. It cannot cancel the invoice.</p>\n<p class=\"disclosure\">Disclosure: The Signal holds no position in MSFT, GOOGL or CRWV. Positions may change. This is not financial advice.</p>",
+  "tags": [
+    "depreciation",
+    "useful life",
+    "AI capex",
+    "hyperscalers",
+    "CoreWeave",
+    "EBITDA",
+    "free cash flow",
+    "accounting estimates",
+    "GPU obsolescence",
+    "AI infrastructure"
+  ],
+  "links": [
+    {
+      "label": "Microsoft, fiscal 2026 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm"
+    },
+    {
+      "label": "Alphabet, 2025 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+    },
+    {
+      "label": "Amazon, 2025 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm"
+    },
+    {
+      "label": "Meta, 2025 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+    },
+    {
+      "label": "CoreWeave, 2025 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm"
+    },
+    {
+      "label": "Oracle, fiscal 2025 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1341439/000095017025087926/orcl-20250531.htm"
+    },
+    {
+      "label": "CNBC: Michael Burry accuses AI hyperscalers of artificially boosting earnings",
+      "url": "https://www.cnbc.com/2025/11/11/big-short-investor-michael-burry-accuses-ai-hyperscalers-of-artificially-boosting-earnings.html"
+    },
+    {
+      "label": "Business Insider: hyperscalers on track to spend up to $828 billion on capex in 2026",
+      "url": "https://www.businessinsider.com/amazon-alphabet-meta-microsoft-spacex-capex-ai-spending-total-2026-10"
+    }
+  ],
+  "meta": {
+    "estimatedReadTime": "5 min read"
+  }
+}
