@@ -1,0 +1,120 @@
+{
+  "slug": "cohr-last-standalone-optics-2026",
+  "title": "Coherent Faces a Cash Flow Reckoning as Marvell Consolidates AI Optics",
+  "subtitle": "A massive buyout leaves Coherent as the sole independent laser giant, but building that moat is burning cash.",
+  "summary": "Marvell's $115 billion takeover of Lumentum prices optical capacity at an astronomical premium while leaving Coherent as the last independent supplier standing. Whether that scarcity translates to equity upside depends on the fiscal first-quarter report on Nov. 4 proving its heavy capital spending can finally yield free cash flow.",
+  "ticker": "COHR",
+  "tickerName": "Coherent Corp.",
+  "company": "Coherent Corp.",
+  "sector": "ai",
+  "sentiment": "neutral",
+  "date": "2026-11-02T17:10:00Z",
+  "price": 210.32,
+  "featured": false,
+  "premium": false,
+  "tags": [
+    "cohr",
+    "coherent",
+    "ai-optics",
+    "optical-transceivers",
+    "indium-phosphide",
+    "lasers",
+    "co-packaged-optics",
+    "marvell",
+    "lumentum",
+    "nvidia",
+    "free-cash-flow",
+    "capex",
+    "earnings",
+    "fiscal-q1-2027",
+    "photonics"
+  ],
+  "bodyHtml": "<p>The market gave Coherent an open-field scarcity bid on Monday morning, and then took it back before lunch. When Marvell agreed to buy rival Lumentum for $115 billion in stock, optical networking capacity suddenly carried a massive public price tag. Coherent jumped roughly 2% at the open and touched a 4% gain by late morning. Investors were pricing the transaction's real consequence: it leaves Coherent as the last large independent merchant supplier of artificial intelligence laser optics. Yet the euphoria evaporated within two hours. By midday, shares round-tripped into the red, trading roughly 1% below Friday's close as enthusiasm collided with balance-sheet reality.</p>\n\n<p>To understand why optical capacity commands an eleven-figure valuation, look at the physical bottleneck inside artificial intelligence data centers. Thousands of processors must swap data at near-instant speeds. Copper wires run out of road here because electrical resistance generates crippling heat and signal decay.</p>\n\n<p>Coherent manufactures the light engines that solve this problem. The company grows microscopic indium phosphide lasers on semiconductor wafers and packages them into high-speed optical transceivers. These parts convert electrical voltage into beams of light, shooting data between chips at up to 1.6 terabits per second. If AI processors are jet engines, Coherent builds the fuel lines.</p>\n\n<p>Only a handful of companies on earth can manufacture these photonics chips at volume, which is why the sector is consolidating.\n\n<div class=\"stats-card\">\n<div class=\"stats-card-title\">The Numbers That Matter</div>\n<table class=\"stats-table\">\n<tr><td class=\"stat-label\">Price</td><td class=\"stats-value\" data-live-ticker=\"COHR\" data-live-field=\"price\">$210.32 <span class=\"stats-live-badge\">LIVE</span></td></tr>\n<tr><td class=\"stat-label\">Market Cap</td><td class=\"stats-value\">$41.4B</td></tr>\n<tr><td class=\"stat-label\">Forward P/E</td><td class=\"stats-value\">15.0x</td></tr>\n<tr><td class=\"stat-label\">Total Revenue (TTM)</td><td class=\"stats-value\">$7.12B</td></tr>\n<tr><td class=\"stat-label\">52-Week Low</td><td class=\"stats-value\">$123.75</td></tr>\n<tr><td class=\"stat-label\">52-Week High</td><td class=\"stats-value\">$440.00</td></tr>\n<tr><td class=\"stat-label\">Analyst Consensus</td><td class=\"stats-value\">Buy (26 analysts)</td></tr>\n<tr><td class=\"stat-label\">Analyst Target Mean</td><td class=\"stats-value\">$391.00</td></tr>\n</table>\n<div class=\"stats-card-note\">Price refreshes live &middot; All other figures as of October 30, 2026</div>\n</div>\n\n<p>In March, Nvidia struck matching $2 billion non-exclusive equity deals with both Coherent and Lumentum, pairing capital with massive purchase commitments to guarantee dual-sourced optics. Marvell's buyout collapses that balance into a single independent supplier. Lumentum's optical capacity is already completely sold out into early 2029. Any chipmaker or cloud giant wanting advanced optics without buying from a direct competitor in Marvell now has exactly one phone call to make.</p>\n\n<p>Yet public investors spent autumn dumping Coherent. Shares fell roughly 27% in October and sit roughly half off their June highs, even as earnings estimates moved higher.</p>\n\n<p>The disconnect points directly to what must happen for this equity to re-rate: cash flow needs to catch up to demand. The business generated $7.1 billion in revenue across fiscal 2026, but it burned roughly $1 billion in free cash flow. Building foundries cost $1.1 billion in capital spending against just $80 million in operating cash. Trading near six times trailing sales and roughly 22 times fiscal 2027 earnings, the stock cannot expand its multiple until that spending crests. To prove the market is overshooting, management must lift gross margins toward its 42% target as six-inch wafers ramp. It also has to fund the promised $3 billion quarterly revenue run rate without blowing out capital intensity.</p>\n\n<p>A dedicated short seller would argue that Coherent is trapped on an expensive capital treadmill. Management promises an eighteen-month payback on data center capacity, but that remains an assertion while free cash flow bleeds red and a crucial six-inch fab in Zurich stays dark until calendar 2027. If Wednesday's fiscal first-quarter report prints capex over $600 million alongside operating cash flow under $150 million, the bears will claim their prize. Structural integration worsens the threat. Marvell can bundle custom compute silicon with in-house optics at prices merchant suppliers cannot match. Add heavy customer concentration—two buyers each drive over 10% of revenue, with Nvidia doubling as a customer, shareholder, and contract counterparty—and Coherent looks dangerously tethered to a single ecosystem's wallet.</p>\n\n<p>Still, the operational engine has not cracked. Coherent posted two consecutive earnings beats, with data center revenue up roughly 66% year-over-year in the June quarter. The October slide stemmed from a broader sector de-rating rather than an execution stumble. Its legacy industrial laser arm is shrinking, down nearly 16% year-over-year, but data center connectivity now generates nearly four-fifths of the enterprise.</p>\n\n<p>What we are watching after Wednesday's closing bell is the second-quarter revenue guidance. Management promised a three-billion-dollar quarter before the end of fiscal 2027, which requires step-ups toward $2.7 billion in short order. Analysts will also press management on how a combined Marvell and Lumentum changes the customer map, and whether the merchant model can survive as the biggest AI silicon vendors internalize optics. Demand for optical bandwidth is guaranteed, but the stock only works if the lasers generate cash faster than the cleanrooms consume it.</p>\n\n<p class=\"disclosure\">Disclosure: The Signal holds no position in Coherent Corp (COHR). Positions may change. This is not financial advice.</p>",
+  "links": [
+    {
+      "label": "Coherent fiscal fourth-quarter and full-year 2026 results: $2.05B of revenue in the June quarter, non-GAAP gross margin of 40.2%, $1.74 of non-GAAP EPS, the datacenter segment at 79% of revenue, and the exact first-quarter fiscal 2027 guidance of $2.2-2.4B in revenue with $1.85-$2.05 of non-GAAP EPS →",
+      "url": "https://www.sec.gov/Archives/edgar/data/820318/000119312526346860/d128030dex991.htm"
+    },
+    {
+      "label": "Marvell and Lumentum agree to combine: a fixed exchange ratio of 4.500 Marvell shares per Lumentum share, $115B of implied enterprise value, a 23.9% premium to unaffected Oct. 28 closes, a 67/33 ownership split, a first-half-2028 close and a $550B combined addressable market →",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/1040/marvell-and-lumentum-to-combine-creating-a-category-leader-in-ai-connectivity"
+    },
+    {
+      "label": "JPMorgan's Joseph Cardoso cuts his price target to $385 from $465 while keeping Overweight, and Northland upgrades to Outperform with a $280 target, both on the scarcity value of AI photonics →",
+      "url": "https://www.tradingview.com/news/stocktwits:9f9c1a148094b:0-cohr-stock-draws-upgrade-as-marvell-s-115b-lumentum-deal-highlights-value-of-scarce-ai-optics"
+    },
+    {
+      "label": "The opening tape on the deal: Coherent higher, Marvell and Lumentum sharply lower, after a slide of roughly a quarter in Coherent over the past month →",
+      "url": "https://247wallst.com/investing/2026/11/02/marvell-slides-3-lumentum-drops-6-on-115-billion-all-stock-merger-deal-coherent-climbs-2"
+    },
+    {
+      "label": "Futurum on the June-quarter call: indium phosphide output doubling a quarter early, six-inch wafers delivering about four times the output of three-inch at roughly half the cost, co-packaged optics revenue starting in the December quarter, and capex of about $556M in the quarter →",
+      "url": "https://futurumgroup.com/insights/coherent-q4-fy-2026-earnings-1-6t-transceivers-ramp-cpo-revenue-approaches"
+    },
+    {
+      "label": "NVIDIA and Coherent announce a strategic partnership: a $2B equity investment, a multibillion-dollar purchase commitment, capacity access rights and U.S. manufacturing funding, signed the same day NVIDIA made a matching $2B commitment to Lumentum →",
+      "url": "https://www.coherent.com/news/press-releases/nvidia-and-coherent-announce-strategic-partnership"
+    },
+    {
+      "label": "Lumentum's chief executive says its optical components are completely sold out through early 2029, the scarcity this consolidation is priced on →",
+      "url": "https://www.bloomberg.com/news/articles/2026-10-09/nvidia-backed-lumentum-sees-opto-parts-capacity-sold-out-to-2029"
+    },
+    {
+      "label": "Coherent's fiscal 2026 annual report, including the disclosure that two customers each accounted for more than 10% of revenue →",
+      "url": "https://www.sec.gov/Archives/edgar/data/820318/000082031826000020/iivi-20260630.htm"
+    },
+    {
+      "label": "Consensus and estimates: 26 analysts at Buy, an average target of $391, and fiscal 2027 and 2028 revenue near $10.6B and $14.7B →",
+      "url": "https://stockanalysis.com/stocks/COHR/forecast/"
+    },
+    {
+      "label": "TIKR on management's target of a first $3B revenue quarter before the end of fiscal 2027, and the capacity commentary behind it →",
+      "url": "https://www.tikr.com/blog/coherents-q4-earnings-call-set-a-new-target-3-billion-in-quarterly-revenue-heres-what-that-means-for-the-stock"
+    },
+    {
+      "label": "Reuters confirms the terms of the Marvell-Lumentum transaction →",
+      "url": "https://www.reuters.com/legal/transactional/marvell-buy-lumentum-115-billion-deal-ai-data-center-bet-2026-11-02"
+    },
+    {
+      "label": "Coherent's investor calendar confirming the fiscal first-quarter report on Wednesday, Nov. 4, after the close →",
+      "url": "https://ir.coherent.com/news-events/financial-releases"
+    }
+  ],
+  "meta": {
+    "author": "Charles Osi",
+    "estimatedReadTime": "4 min",
+    "keyMetrics": {
+      "Price": 210.32,
+      "Market Cap": "$41.4B",
+      "Forward P/E": "15.0x",
+      "Total Revenue (TTM)": "$7.12B",
+      "52-Week Low": 123.75,
+      "52-Week High": 440.0,
+      "Analyst Consensus": "Buy (26 analysts)",
+      "Analyst Target Mean": 391.0
+    },
+    "relatedTickers": [
+      "COHR",
+      "MRVL",
+      "LITE",
+      "NVDA"
+    ],
+    "seoKeywords": [
+      "COHR stock",
+      "Coherent earnings",
+      "Coherent fiscal Q1 2027",
+      "indium phosphide lasers",
+      "AI optical transceivers",
+      "co-packaged optics",
+      "Marvell Lumentum deal",
+      "optical capacity shortage",
+      "NVIDIA photonics investment",
+      "Coherent free cash flow"
+    ]
+  },
+  "image": {
+    "src": "/img/articles/cohr-last-standalone-optics-2026.jpg",
+    "alt": "Workers and inspection benches on an optical fiber assembly floor, with spools of buff-colored fiber stacked on steel shelving",
+    "caption": "Optical capacity is sold out into calendar 2028. Paying for more of it comes out of operating cash. Photo: The Signal"
+  }
+}
