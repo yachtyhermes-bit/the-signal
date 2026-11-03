@@ -1,0 +1,103 @@
+{
+  "slug": "anet-ethernet-scale-up-fabrics-2026",
+  "title": "Arista Networks Posts Record Growth as AI Hyperscalers Squeeze Margins",
+  "subtitle": "A blowout quarter masks the growing leverage of cloud titans who demand price cuts on every switch.",
+  "summary": "Arista delivered its fastest revenue expansion since going public, propelled by unrelenting demand for AI data center networking gear. Yet contracting gross margins and rising competition from custom manufacturers show the limits of selling hardware to tech giants.",
+  "ticker": "ANET",
+  "tickerName": "Arista Networks",
+  "company": "Arista Networks, Inc.",
+  "sector": "ai",
+  "sentiment": "neutral",
+  "date": "2026-11-03T22:00:00Z",
+  "price": 169.91,
+  "featured": false,
+  "premium": false,
+  "tags": [
+    "ANET",
+    "Arista Networks",
+    "Ethernet scale-up",
+    "ESUN",
+    "Etherlink SU-144",
+    "Broadcom",
+    "merchant silicon",
+    "AI networking",
+    "gross margin",
+    "Q3 2026 earnings",
+    "Celestica",
+    "Nvidia Spectrum-X",
+    "data center switching",
+    "EOS",
+    "hyperscaler capex",
+    "white box switches",
+    "S&P 100"
+  ],
+  "links": [
+    {
+      "label": "Arista Networks reports third quarter 2026 results: revenue of $3.66 billion, up 58.5% year over year, non-GAAP operating margin of 49.1%, fourth-quarter guidance of $3.9 to $4.0 billion (Nov. 3, 2026) →",
+      "url": "https://www.arista.com/en/company/news/press-release/25025-pr-20261103"
+    },
+    {
+      "label": "Q3 2026 earnings release, SEC Form 8-K exhibit 99.1: gross margin of 63.6% GAAP, deferred revenue of $6.84 billion, zero shares repurchased in the first nine months →",
+      "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000252/ex991q326-earningsrelease.htm"
+    },
+    {
+      "label": "Arista Networks FY2025 Form 10-K: two customers above 10% of revenue, reliance on a single merchant silicon supplier, risk from white-box switching →",
+      "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000013/anet-20251231.htm"
+    },
+    {
+      "label": "Arista Q2 2026 Form 10-Q: pricing discounts on large-scale orders pressure gross margins, and $9.7 billion of non-cancellable purchase commitments →",
+      "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000175/anet-20260630.htm"
+    },
+    {
+      "label": "Arista announces open Ethernet rack-scale architectures for scale-up and scale-out AI fabrics, with AMD, Arm, Broadcom, d-Matrix, Meta, Microsoft and Qualcomm (Oct. 7, 2026) →",
+      "url": "https://www.arista.com/en/company/news/press-release/24818-pr-20261007"
+    },
+    {
+      "label": "IDC: Ethernet switch market surges 43.4% to $18.9 billion in 2Q26, with Nvidia holding 20.4% of data-center Ethernet and Arista 18.7% →",
+      "url": "https://www.idc.com/resource-center/blog/ethernet-switch-market-surges-43-4-to-18-9b-in-2q26-as-ai-infrastructure-demand-drives-record-datacenter-spending"
+    },
+    {
+      "label": "Dell'Oro Group: AI back-end Ethernet switch sales pass front-end for the first time, with Celestica leading, Nvidia second and Arista third →",
+      "url": "https://www.delloro.com/news/ai-back-end-networks-switch-sales-surpass-front-end-networks-for-the-first-time-in-2q2026"
+    }
+  ],
+  "meta": {
+    "author": "Charles Osi",
+    "estimatedReadTime": "4 min",
+    "keyMetrics": {
+      "Price": 169.91,
+      "Market Cap": "$214.3B",
+      "Forward P/E": "32.5x",
+      "Total Revenue (TTM)": "$11.9B",
+      "52-Week Low": 114.52,
+      "52-Week High": 217.41,
+      "Analyst Consensus": "Strong Buy (28 analysts)",
+      "Analyst Target Mean": 245.5
+    },
+    "relatedTickers": [
+      "NVDA",
+      "AVGO",
+      "MRVL"
+    ],
+    "seoKeywords": [
+      "ANET stock",
+      "Arista Networks Q3 2026",
+      "Arista earnings",
+      "Arista gross margin",
+      "AI networking",
+      "Ethernet scale-up",
+      "Etherlink",
+      "Broadcom Tomahawk",
+      "Celestica AI switches",
+      "Nvidia Spectrum-X",
+      "Arista vs Nvidia networking",
+      "Arista stock analysis"
+    ]
+  },
+  "image": {
+    "src": "/img/articles/anet-ethernet-scale-up-fabrics-2026.jpg",
+    "alt": "A network engineer's hands sliding an optical transceiver into a switch port on a brushed aluminium chassis",
+    "caption": "Arista builds the switches and the software around Broadcom silicon. The quarter says the demand is real; the margin line says who has the leverage. Photo: The Signal"
+  },
+  "bodyHtml": "<p>You can throw the biggest party on Wall Street and still watch the room clear out early. Arista Networks just posted its fastest quarterly revenue expansion since going public in 2014, beating the Street's revenue estimate by roughly 10% and guiding the current quarter to grow at nearly the same clip. Yet even after a post-earnings pop, the stock trades roughly a fifth below its early-October highs. The market is not questioning whether AI infrastructure is booming. It is asking who actually captures the value when the dust settles.</p>\n\n<p>To understand the hesitation, look at what Arista actually sells. If an AI data center is a sprawling metropolis, Arista builds the superhighways. It makes the high-speed Ethernet switches that ferry data packets between server racks, backed by its own EOS software that keeps traffic flowing. Arista does not fabricate its own silicon. It buys merchant chips from Broadcom and wraps them in custom hardware and networking software.</p>\n\n<p>That plumbing is the quiet bottleneck of the generative AI boom. When you query a chatbot or train an image model, thousands of processors must sync their math at once. If the network stutters, nine-figure computing clusters sit idle, burning expensive power while they wait for data. Ethernet already won the contest to connect racks across the facility, pushing InfiniBand into a minority role. The next battleground sits inside the rack itself, right next to the accelerators.</p>\n\n<div class=\"stats-card\">\n<div class=\"stats-card-title\">The Numbers That Matter</div>\n<table class=\"stats-table\">\n<tr><td class=\"stat-label\">Price</td><td class=\"stats-value\" data-live-ticker=\"ANET\" data-live-field=\"price\">$169.91 <span class=\"stats-live-badge\">LIVE</span></td></tr>\n<tr><td class=\"stat-label\">Market Cap</td><td class=\"stats-value\">$214.3B</td></tr>\n<tr><td class=\"stat-label\">Forward P/E</td><td class=\"stats-value\">32.5x</td></tr>\n<tr><td class=\"stat-label\">Total Revenue (TTM)</td><td class=\"stats-value\">$11.9B</td></tr>\n<tr><td class=\"stat-label\">52-Week Low</td><td class=\"stats-value\">$114.52</td></tr>\n<tr><td class=\"stat-label\">52-Week High</td><td class=\"stats-value\">$217.41</td></tr>\n<tr><td class=\"stat-label\">Analyst Consensus</td><td class=\"stats-value\">Strong Buy (28 analysts)</td></tr>\n<tr><td class=\"stat-label\">Analyst Target Mean</td><td class=\"stats-value\">$245.50</td></tr>\n</table>\n<div class=\"stats-card-note\">Price refreshes live &middot; All other figures as of November 3, 2026</div>\n</div>\n\n<p>Arista's latest print laid bare the financial mechanics of that race. Revenue surged 58.5% to $3.66 billion, easily clearing projections of roughly $3.33 billion. Demand is being pulled rather than pushed: sales and marketing expenses rose just 3.6%. Yet beneath that blowout top line, gross margins tell a sober story. GAAP gross margin contracted roughly one hundred basis points to 63.6%. Growth got cheaper to book and more expensive to earn.</p>\n\n<p>The compression happens because hyperscale cloud operators possess terrifying leverage. Think of your annual smartphone upgrade: carriers offer sweet trade-ins because they know you have nowhere else to go. In Arista's world, cloud giants buy switches by the container ship and demand punishing price concessions. The company's filings openly admit that the discounts on massive orders hurt gross margins. Selling more gear to the world's largest balance sheets is a great way to grow, but a tricky way to expand profitability.</p>\n\n<p>Arista's answer is to march into the server rack before rivals lock it down. Nvidia ruled internal rack communications with its proprietary NVLink interconnect. Arista is pushing back with an open rack architecture called Etherlink SU-144, built with a partner list that includes Meta, Microsoft, AMD and Broadcom. The goal is to link up to 144 accelerators in a single hop, then scale past a thousand across racks. If that standard catches on, Arista sells the entire nervous system. If it stalls, it stays a peripheral vendor.</p>\n\n<p>A seasoned short-seller would look at this quarter and spot a commodity trap in disguise. Arista relies on Broadcom for silicon while selling into two unnamed cloud giants that generate 42% of revenue. Industry data shows contract manufacturer Celestica already outsells Arista in back-end AI Ethernet switches, a sign that hyperscalers are happy to buy unbadged white boxes. Meanwhile Nvidia grabbed the top spot in data-center Ethernet with more than 20% share by bundling network hardware directly with its GPUs. When your gross margin leaks while your biggest customers buy unbranded boxes, blowout growth looks less like a moat and more like a treadmill.</p>\n\n<p>For the equity to break out, Arista has to show it owns the network rather than merely visiting it. Investors need its rack-scale Ethernet portfolio to deliver material revenue in 2027 while gross margin holds inside management's 62% to 64% corridor. Campus and enterprise sales, a goal of at least $1.25 billion this year, have to dilute the top-heavy customer base. If pricing power holds against the cloud giants, the discount vanishes. If margins erode further, the skepticism is justified.</p>\n\n<p>What we're watching is the gross margin line in the fourth-quarter report, where the company guided revenue to between $3.9 billion and $4.0 billion. A top-line beat tells you cloud spending is healthy. Margin stability tells you who holds the power. In the AI infrastructure race, raw volume is easy to find. Pricing leverage is the only thing that lasts.</p>\n\n<p class=\"disclosure\">Disclosure: The Signal holds no position in ANET. Positions may change. This is not financial advice.</p>"
+}
