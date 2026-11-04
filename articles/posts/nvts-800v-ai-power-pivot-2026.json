@@ -1,0 +1,99 @@
+{
+  "slug": "nvts-800v-ai-power-pivot-2026",
+  "title": "Navitas Grew 38% by Shrinking Its Way Into AI Data Center Power",
+  "subtitle": "A clean exit from phone chargers gave Navitas its first year-over-year revenue growth since 2024, but the next leg requires data centers to overhaul their wiring.",
+  "summary": "Navitas Semiconductor posted its first year-over-year revenue expansion in two years after ditching consumer charging to focus on high-voltage AI power systems. The pivot drove third-quarter sales up 38%, but a sudden spike in operating expenses means the equity still has to prove its operating leverage.",
+  "ticker": "NVTS",
+  "tickerName": "Navitas Semiconductor",
+  "company": "Navitas Semiconductor Corporation",
+  "sector": "ai",
+  "sentiment": "neutral",
+  "date": "2026-11-04T15:00:00Z",
+  "price": 8.56,
+  "featured": false,
+  "premium": false,
+  "tags": [
+    "NVTS",
+    "Navitas Semiconductor",
+    "GaN",
+    "gallium nitride",
+    "silicon carbide",
+    "800 VDC",
+    "AI data center power",
+    "power semiconductors",
+    "Q3 2026 earnings",
+    "grid-to-xPU",
+    "Claros",
+    "integrated voltage regulator",
+    "Nvidia 800V",
+    "Wolfspeed lawsuit",
+    "AI infrastructure"
+  ],
+  "links": [
+    {
+      "label": "Navitas Semiconductor third quarter 2026 results: revenue of $14.0 million, up 38% year over year, first growth since 2024, fourth-quarter guidance of $16.0 million (Nov. 3, 2026) →",
+      "url": "https://navitassemi.com/en/press-releases/navitas-semiconductor-announces-third-quarter-2026-financial-results"
+    },
+    {
+      "label": "Q3 2026 Form 10-Q: 269.5 million shares outstanding, two distributors at 76% of revenue, $531.5 million of cash, Wolfspeed and Renesas litigation notes →",
+      "url": "https://www.sec.gov/Archives/edgar/data/1821769/000162828026069551/nvts-20260930.htm"
+    },
+    {
+      "label": "Navitas closes the Claros acquisition: up to $232.8 million including roughly $126 million in cash for integrated voltage regulator technology (Oct. 6, 2026) →",
+      "url": "https://www.sec.gov/Archives/edgar/data/1821769/000110465926100478/tm2623854d1_ex99-1.htm"
+    },
+    {
+      "label": "Navitas FY2025 Form 10-K: the company's own competitor list across GaN, SiC and silicon, and the customer-concentration risk factors →",
+      "url": "https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm"
+    },
+    {
+      "label": "24/7 Wall St.: Navitas Q3 2026 recap, AI infrastructure above 40% of the mix by year-end and the $8 billion 2030 addressable market →",
+      "url": "https://247wallst.com/cards/navitas-semiconductor-q3-2026-earnings-nvts-01m6hm399mnvq0rwktwa20sb3q"
+    },
+    {
+      "label": "NVIDIA's 800 VDC data center architecture: why racks are moving to 800 volts and stepping down at the processor →",
+      "url": "https://www.nvidia.com/en-us/data-center/technologies/800-vdc-architecture"
+    },
+    {
+      "label": "The October 2026 chip rout: eight straight down sessions for semiconductors erased roughly $2 trillion in market value →",
+      "url": "https://stocktwits.com/news-articles/markets/equity/semiconductor-stocks-sox-losing-streak-2-trillion-ai-selloff/cZxKaOoRBsy"
+    }
+  ],
+  "meta": {
+    "author": "Charles Osi",
+    "estimatedReadTime": "4 min",
+    "keyMetrics": {
+      "Price": 8.56,
+      "Market Cap": "$2.3B",
+      "Forward P/E": "N/A (net loss)",
+      "Total Revenue (TTM)": "$40.4M",
+      "52-Week Low": 6.85,
+      "52-Week High": 34.17,
+      "Analyst Consensus": "Hold (7 analysts)",
+      "Analyst Target Mean": 14.39
+    },
+    "relatedTickers": [
+      "NVDA",
+      "VST",
+      "CEG"
+    ],
+    "seoKeywords": [
+      "NVTS stock",
+      "Navitas Semiconductor Q3 2026",
+      "Navitas earnings",
+      "Navitas 800 volt DC",
+      "GaN power semiconductors",
+      "silicon carbide data center",
+      "AI data center power bottleneck",
+      "Navitas Claros acquisition",
+      "Navitas vs Infineon",
+      "NVTS stock analysis"
+    ]
+  },
+  "image": {
+    "src": "/img/articles/nvts-800v-ai-power-pivot-2026.jpg",
+    "alt": "Gloved hands holding a silver gallium nitride wafer at a cleanroom inspection stage, a technician in white coveralls blurred behind",
+    "caption": "Navitas designs the power chips and has foundries build them; its first U.S.-made Gen 5 GaN wafers shipped from GlobalFoundries in September."
+  },
+  "bodyHtml": "<p>Most semiconductor turnarounds look like desperate expansion. Navitas did the opposite: it cut off its own limbs on purpose. Across 2025 and 2026, the company systematically abandoned the cheap mobile charging market that once made up the bulk of its business, retooling every bench toward artificial intelligence.</p>\n\n<p>Navitas designs power chips. Instead of processing logic like an accelerator chip does, these semiconductors take raw electricity from a wall socket or grid and step it down into the exact current silicon requires. Gallium nitride, or GaN, is the compound that shrank your everyday phone charger from an unwieldy brick into a pocket-sized pebble. Silicon carbide, or SiC, does the same heavy lifting at thousands of volts. Navitas creates the blueprints, lets foundries like TSMC and GlobalFoundries build them, and sells the silicon to power-supply vendors and hyperscale data center operators.</p>\n\n<p>The company is effectively the electrical plumber of the AI buildout. Modern server racks are rapidly becoming multi-hundred-kilowatt machines. Try routing that much raw power at traditional low voltages and your copper busbars melt into slag under the electrical current.</p>\n\n<p>To survive, data center operators are raising the internal voltage to 800 volts DC, only stepping the power down directly at the processor. Higher voltage means lower current, less heat, and far thinner wiring. Every step-down stage along that rack requires specialized switches. Navitas sells the chips that sit at those bottlenecks.</p>\n\n<div class=\"stats-card\">\n<div class=\"stats-card-title\">The Numbers That Matter</div>\n<table class=\"stats-table\">\n<tr><td class=\"stat-label\">Price</td><td class=\"stats-value\" data-live-ticker=\"NVTS\" data-live-field=\"price\">$8.56 <span class=\"stats-live-badge\">LIVE</span></td></tr>\n<tr><td class=\"stat-label\">Market Cap</td><td class=\"stats-value\">$2.3B</td></tr>\n<tr><td class=\"stat-label\">Forward P/E</td><td class=\"stats-value\">N/A (net loss)</td></tr>\n<tr><td class=\"stat-label\">Total Revenue (TTM)</td><td class=\"stats-value\">$40.4M</td></tr>\n<tr><td class=\"stat-label\">52-Week Low</td><td class=\"stats-value\">$6.85</td></tr>\n<tr><td class=\"stat-label\">52-Week High</td><td class=\"stats-value\">$34.17</td></tr>\n<tr><td class=\"stat-label\">Analyst Consensus</td><td class=\"stats-value\">Hold (7 analysts)</td></tr>\n<tr><td class=\"stat-label\">Analyst Target Mean</td><td class=\"stats-value\">$14.39</td></tr>\n</table>\n<div class=\"stats-card-note\">Price refreshes live &middot; All other figures as of November 4, 2026</div>\n</div>\n\n<p>The deliberate downsizing is finally showing up in the numbers. Third-quarter revenue came in at $14.0 million, up 38% year over year and 33% sequentially. It was the company's first year-over-year growth since 2024. Adjusted gross margin reached 40.0%, while GAAP gross margin bounced to 21.5% as older acquisition intangibles finished amortizing. High-power systems revenue jumped 125% this year as mobile sales dropped to low single digits. Navitas even cleared an adjusted loss per share of three cents, beating Wall Street targets.</p>\n\n<p>For the stock to justify a durable re-rating, the market has to believe in 2027. Investors are not buying a $16 million quarter; they are front-running an architectural shift. Management expects AI infrastructure sales to more than triple next year, underpinned by a book-to-bill ratio of roughly two-to-one and a backlog stretching into mid-2027. The company collaborated with Nvidia on an 800-volt-to-12-volt power board, while early 1.2-kilovolt silicon carbide supplies are already shipping to server builders. If those 800-volt sidecar racks ship in volume while corporate overhead sits still, operating margins will explode.</p>\n\n<p>A short seller, however, would call this an expensive call option tethered to an unproven ramp. Only the first of management’s four celebrated inflections generates revenue today; the rest are backlogs, lab samples, and distant 2028 targets. The recently acquired Claros platform targets integrated voltage regulators directly beneath processor packaging, but its anchor customer will not ramp until late 2028 or 2029.</p>\n\n<p>Meanwhile, the bill has already arrived. Fourth-quarter operating expenses are guided to jump roughly 51% to $25.0 million. Against roughly $6.5 million in gross profit, operating losses will widen sharply. The business has funded its runway by diluting shareholders, pushing share count up 25% over thirteen months with $244 million remaining on its equity facility. To make matters worse, Wolfspeed sued in July alleging patent infringement and seeking an injunction on GaN and SiC lines, while Renesas filed suit against the company and its chief executive over trade secrets.</p>\n\n<p>A court injunction against core power lines would dismantle the thesis overnight.</p>\n\n<p>Navitas does hold real cards. It carries roughly $405 million in pro forma cash, zero debt, and sole-sourced sockets on several upcoming high-voltage racks. Its stack connects grid transformers all the way down to motherboard sockets.</p>\n\n<p>The entire story now pivots on operating discipline. What we are watching is whether fourth-quarter revenue lands near its $16.0 million target and if operating expenses stay flat through early 2027. If revenue scales at double digits while that overhead holds, the operating leverage is real. If expenses creep higher before server racks ship, the turnaround stays on the drawing board.</p>\n\n<p class=\"disclosure\">Disclosure: The Signal holds no position in NVTS. Positions may change. This is not financial advice.</p>"
+}
