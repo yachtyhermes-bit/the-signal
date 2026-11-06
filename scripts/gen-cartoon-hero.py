@@ -68,7 +68,7 @@ def load_fal_key():
     return os.environ.get("FAL_KEY")
 
 
-def build_prompt(subject, label, details):
+def build_prompt(subject, label, details, sign_place="building"):
     parts = [STYLE, subject.strip().rstrip(".") + "."]
     if details:
         parts.append(details.strip().rstrip(".") + ".")
@@ -76,9 +76,9 @@ def build_prompt(subject, label, details):
         word = label.strip()
         spelled = " ".join(word)
         parts.append(
-            'A single crooked sign on the building carries exactly the %d '
+            'A single crooked sign %s carries exactly the %d '
             'characters "%s" (%s) and nothing else — large, clean, correctly '
-            "spelled, no doubled or extra letters." % (len(word), word, spelled)
+            "spelled, no doubled or extra letters." % (sign_place, len(word), word, spelled)
         )
     else:
         parts.append("No text, no lettering, no signage anywhere in the image.")
@@ -162,7 +162,8 @@ def main():
     if not slug or not subject:
         print("ERROR: SLUG and SUBJECT are required (see docstring)")
         sys.exit(1)
-    prompt = build_prompt(subject, label, details)
+    prompt = build_prompt(subject, label, details,
+                          os.environ.get("SIGN_PLACE", "building").strip() or "building")
     if os.environ.get("DRY_RUN") == "1":
         print(prompt)
         return
