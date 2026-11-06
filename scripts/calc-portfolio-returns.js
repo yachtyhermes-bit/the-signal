@@ -19,6 +19,16 @@ const BENCHMARKS = [
   { ticker: 'QQQ', label: "Nasdaq 100" }
 ];
 
+// Anchors are derived from the run date so the windows never go stale.
+// 1Y = trailing twelve months (this is what the page labels "Trailing 12 Months").
+function daysAgoISO(days) {
+  const d = new Date();
+  d.setUTCDate(d.getUTCDate() - days);
+  return d.toISOString().slice(0, 10);
+}
+const YTD_ANCHOR = `${new Date().getUTCFullYear()}-01-01`;
+const ONE_YEAR_ANCHOR = daysAgoISO(365);
+
 async function fetchClosePrice(ticker, dateStr) {
   const fromTs = Math.floor(new Date(dateStr).getTime() / 1000);
   const toTs = fromTs + 86400 * 3;
@@ -87,10 +97,10 @@ async function main() {
     const inc = await fetchClosePrice(ticker, '2024-06-01');
     priceData[ticker].inception = inc?.price || null;
 
-    const ytd = await fetchClosePrice(ticker, '2026-01-01');
+    const ytd = await fetchClosePrice(ticker, YTD_ANCHOR);
     priceData[ticker].ytd = ytd?.price || null;
 
-    const oneY = await fetchClosePrice(ticker, '2025-05-30');
+    const oneY = await fetchClosePrice(ticker, ONE_YEAR_ANCHOR);
     priceData[ticker].oneYear = oneY?.price || null;
 
     const cur = await fetchCurrentPrice(ticker);
@@ -154,14 +164,12 @@ async function main() {
     };
   });
 
-  // Override 1Y with actual brokerage figure
-  if (results.periods.oneYear) {
-    results.periods.oneYear.portfolioReturn = 81.49;
-    const spy = results.periods.oneYear.spyReturn;
-    const qqq = results.periods.oneYear.qqqReturn;
-    results.periods.oneYear.vsSPY = spy ? Math.round((81.49 - spy) * 100) / 100 : null;
-    results.periods.oneYear.vsQQQ = qqq ? Math.round((81.49 - qqq) * 100) / 100 : null;
-  }
+  // NOTE: this block used to hardcode the 1Y figure to 81.49% (an "actual brokerage
+  // figure" captured 2026-06-05, when the anchor was pinned at 2025-05-30). Both the
+  // pinned date and the constant went stale: by Nov 2026 the window was ~17 months
+  // while the page still labelled it "Trailing 12 Months". Every period now computes
+  // from price history. Re-enter a fresh brokerage number here only if it is current,
+  // and delete it once it ages out.
 
   fs.writeFileSync(RETURNS_PATH, JSON.stringify(results, null, 2));
 
