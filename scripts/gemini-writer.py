@@ -32,16 +32,25 @@ PRICES = {  # $ per 1M tokens, OpenRouter list prices
 MAX_TOKENS = 16000  # Gemini 3.8 Flash spends part of this on thinking; 8000 truncated bodies mid-sentence (10/20)
 
 
+def _usable(key):
+    # A truncated/placeholder OPENROUTER_API_KEY in the process env (seen 11/7/26: an 11-char
+    # env value shadowing the real key in the profile .env → HTTP 401 "Missing Authentication
+    # header" on every writer call) must fall through to the profile .env file.
+    return bool(key) and len(key) > 40 and key.startswith('sk-or')
+
+
 def api_key():
     key = os.environ.get('OPENROUTER_API_KEY')
-    if key:
+    if _usable(key):
         return key
     if ENV.exists():
         for line in ENV.read_text().splitlines():
             m = re.match(r'\s*(?:export\s+)?OPENROUTER_API_KEY\s*=\s*(.+)\s*$', line)
             if m:
-                return m.group(1).strip().strip('"').strip("'")
-    sys.exit('FAIL: OPENROUTER_API_KEY not found (env or profile .env)')
+                cand = m.group(1).strip().strip('"').strip("'")
+                if _usable(cand):
+                    return cand
+    sys.exit('FAIL: no usable OPENROUTER_API_KEY (env value too short or malformed, profile .env missing/blank)')
 
 
 SYSTEM = """You are the writer for The Signal (readthesignal.net). You write ONE article from a
