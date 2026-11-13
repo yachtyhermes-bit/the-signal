@@ -1,0 +1,96 @@
+{
+  "slug": "amat-record-quarter-dram-mix-2026",
+  "title": "Applied Materials Posts Record Quarter as Memory Takes the Wheel",
+  "subtitle": "A record quarter and a 58% growth guide cannot hide Wall Street's fear that chip-making equipment has already peaked.",
+  "summary": "Applied Materials delivered its largest quarter ever and guided for nearly 60% growth as high-bandwidth memory reshaped its tool demand. Yet the stock sits roughly half off its summer highs as skeptical analysts brace for an eventual hangover in memory equipment spending.",
+  "ticker": "AMAT",
+  "tickerName": "Applied Materials",
+  "company": "Applied Materials, Inc.",
+  "sector": "ai",
+  "sentiment": "neutral",
+  "date": "2026-11-13T22:00:00Z",
+  "price": 370.5,
+  "featured": false,
+  "premium": false,
+  "tags": [
+    "AMAT",
+    "Applied Materials",
+    "semiconductor equipment",
+    "DRAM",
+    "HBM",
+    "memory capex",
+    "wafer fab equipment",
+    "hybrid bonding",
+    "Besi",
+    "EPIC Center",
+    "China export controls",
+    "Q4 fiscal 2026"
+  ],
+  "links": [
+    {
+      "label": "Applied Materials announces fourth quarter and fiscal year 2026 results (SEC EX-99.1, Nov. 12, 2026)",
+      "url": "https://www.sec.gov/Archives/edgar/data/6951/000162828026073360/exhibit991q42026earningsre.htm"
+    },
+    {
+      "label": "Applied Materials forecasts quarterly revenue above estimates on strong AI chip demand (Reuters, via The Straits Times)",
+      "url": "https://www.straitstimes.com/business/applied-materials-forecasts-quarterly-revenue-above-estimates-on-strong-ai-chip-demand"
+    },
+    {
+      "label": "Applied Materials drops 6% despite beat-and-raise quarter as JPMorgan and Goldman Sachs cut price targets; KLA falls 6%, Lam Research retreats 5% (24/7 Wall St, Nov. 13, 2026)",
+      "url": "https://247wallst.com/investing/2026/11/13/applied-materials-drops-6-despite-beat-and-raise-quarter-as-jpmorgan-and-goldman-sachs-cut-price-targets-kla-falls-6-lam-research-retreats-5"
+    },
+    {
+      "label": "Applied Materials beats fiscal Q4 targets on strong chip-gear sales (Investor's Business Daily, Nov. 12, 2026)",
+      "url": "https://www.investors.com/news/technology/applied-materials-amat-stock-fiscal-q4-2026-earnings"
+    },
+    {
+      "label": "Applied Materials Q4 2026: AI demand drives record quarter (24/7 Wall St, Nov. 12, 2026)",
+      "url": "https://247wallst.com/cards/applied-materials-q4-2026-earnings-amat-01m78sfxmebhwnkwkxckx3vv6x"
+    },
+    {
+      "label": "AMAT price history and 52-week range (StockAnalysis)",
+      "url": "https://stockanalysis.com/stocks/amat/history/"
+    }
+  ],
+  "image": {
+    "src": "/img/articles/amat-record-quarter-dram-mix-2026.jpg",
+    "fit": "cover",
+    "caption": "A process engineer inspects a 300mm wafer in a deposition tool bay. Memory, not logic, drove Applied Materials' record quarter. Photo: The Signal / AI-generated.",
+    "alt": "A process engineer in a white cleanroom suit holding a 300mm silicon wafer up to the light inside a semiconductor fab, deposition tool bays softly out of focus behind them"
+  },
+  "meta": {
+    "author": "Charles Osi",
+    "estimatedReadTime": "4 min",
+    "editorialTags": [
+      "amat",
+      "applied-materials",
+      "dram-mix",
+      "memory-capex",
+      "wafer-fab-equipment",
+      "hybrid-bonding",
+      "besi",
+      "export-controls",
+      "guidance"
+    ],
+    "seoKeywords": [
+      "Applied Materials stock",
+      "AMAT stock",
+      "Applied Materials Q4 fiscal 2026 earnings",
+      "Applied Materials DRAM revenue mix",
+      "semiconductor equipment spending 2027",
+      "HBM wafer capacity",
+      "Applied Materials guidance Q1 2027"
+    ],
+    "keyMetrics": {
+      "Price": 370.5,
+      "Market Cap": "$294.0B",
+      "Forward P/E": "15.1x",
+      "Total Revenue (TTM)": "$34.45B",
+      "52-Week Low": 203.4,
+      "52-Week High": 739.67,
+      "Analyst Consensus": "Strong Buy (36 analysts)",
+      "Analyst Target Mean": 608.28
+    }
+  },
+  "bodyHtml": "<p>Applied Materials just printed the biggest quarter in its history, raised its forecast well past Wall Street targets, and watched its stock slip anyway. If you want to understand the disconnect, look at a roller coaster. The ride is never more thrilling than right before the drop, and the market is convinced the equipment sector just reached the top of the track.</p><p>What Applied Materials actually does is sell the heavy industrial machinery required to build computer chips. Think of chip designers like Nvidia as architects drawing up blueprints; Applied Materials is the company supplying the high-precision cranes, bulldozers, and polishing gear needed to construct the building. Its tools handle atomic-level deposition, chemical etching, and wafer polishing for the world's premier chipmakers, including TSMC, Samsung, Intel, and Micron. The hardware segment, called Semiconductor Systems, accounts for over three-quarters of overall revenue, flanked by an aftermarket services arm that sells replacement parts and maintenance contracts.</p><div class=\"stats-card\"><div class=\"stats-card-title\">The Numbers That Matter</div><table class=\"stats-table\"><tr><td class=\"stat-label\">Price <span class=\"stats-live-badge\">LIVE</span></td><td class=\"stats-value\" data-live-ticker=\"AMAT\" data-live-field=\"price\">$370.50</td></tr><tr><td class=\"stat-label\">Market Cap</td><td class=\"stat-value\">$294.0B</td></tr><tr><td class=\"stat-label\">Forward P/E</td><td class=\"stat-value\">15.1x</td></tr><tr><td class=\"stat-label\">Total Revenue (TTM)</td><td class=\"stat-value\">$34.45B</td></tr><tr><td class=\"stat-label\">52-Week Low</td><td class=\"stat-value\">$203.40</td></tr><tr><td class=\"stat-label\">52-Week High</td><td class=\"stat-value\">$739.67</td></tr><tr><td class=\"stat-label\">Analyst Consensus</td><td class=\"stat-value\">Strong Buy (36 analysts)</td></tr><tr><td class=\"stat-label\">Analyst Target Mean</td><td class=\"stat-value\">$608.28</td></tr></table><div class=\"stats-card-note\">Price refreshes live &middot; All other figures as of Nov. 13, 2026</div></div><p>For the past two years, the artificial intelligence boom was primarily a logic story. Investors obsessed over graphics chips and advanced foundry capacity. But an AI processor without high-bandwidth memory is like a top-tier smartphone stuck on an ancient cellular network: all processing power, zero throughput. Stacking dense memory dies right next to compute cores requires immense wafer capacity. Because high-bandwidth memory chips are physically larger and far more complex than standard PC memory, manufacturing them burns through factory capacity at an unprecedented clip.</p><p>That dynamic just upended Applied's revenue mix. Inside its core Semiconductor Systems division, DRAM equipment surged from 28% to 33% of sales year over year. Add in flash memory, and total memory jumped from 34% to 42% of the unit. That shift carried total fourth-quarter revenue to a record $10.409 billion, up 53% from a year earlier, while adjusted earnings per share jumped 92% to $4.16. For the coming quarter, management guided to an $11.10 billion revenue midpoint, implying roughly 58% growth. The bottleneck in AI hardware has moved into memory, and Applied is cashing the checks.</p><p>To cement its position, the company is pushing directly into the physical packaging steps that bind these memory stacks together. Applied initiated an accelerated share purchase to lift its stake in Dutch packaging specialist Besi to roughly 20%, betting heavily on hybrid bonding. At the same time, the recurring revenue engine hummed in the background. Applied Global Services pulled in $1.896 billion, growing 26% with operating margins over 30%. That services division works like an enterprise software subscription tied to heavy iron; as long as the fabs keep their cleanroom lights on, the service revenue keeps landing.</p><p>Yet the stock tells a starkly different story, sitting roughly half below its late-June record. At least ten brokerage firms trimmed their price targets following the earnings release, with JPMorgan describing the valuation compression as severe. The equity trades at roughly 15 times forward earnings despite guidance for near-60% top-line growth. The market refuses to reward the record numbers because investors believe memory equipment purchases are borrowing demand from tomorrow.</p><p>The bear case argues that Applied just posted an artificial peak powered by the most cyclical dollar in the entire semiconductor ecosystem. Memory makers famously panic-buy equipment during shortages, only to slash capital expenditures by a third or more within two quarters of a price inflection. Applied has no pricing power over that choice; it merely ships whatever tools fabs order.</p><p>Furthermore, trade friction is hitting reported income rather than lingering as boilerplate risk. A $253 million export-controls settlement with the Commerce Department landed this quarter, even as China still accounts for a quarter of revenue. The smoking gun that proves the short sellers right would be second-quarter guidance falling below the $11.10 billion midpoint. Or first-quarter revenue landing below the $10.60 billion guidance floor. Or non-GAAP gross margins slipping back under 50%.</p><p>What we are watching over the next two quarters is whether DRAM equipment orders hold steady through mid-2027 or show the first signs of delivery pushbacks from Korean and domestic memory fabs.</p><p>For the stock to re-rate, the market has to accept that memory capex is turning into a multi-year annuity rather than a temporary spike. If Applied can string together two more quarters of sequential top-line growth while keeping tool gross margins near 55%, the multiple will expand. Until Wall Street sees that stability, it will keep pricing this historic ramp as an exit rally.</p><p class=\"disclosure\">Disclosure: The Signal holds no position in AMAT. Positions may change. This is not financial advice.</p>"
+}
