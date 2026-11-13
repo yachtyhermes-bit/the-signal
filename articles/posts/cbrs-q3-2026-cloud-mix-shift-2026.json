@@ -1,0 +1,106 @@
+{
+  "slug": "cbrs-q3-2026-cloud-mix-shift-2026",
+  "title": "Cerebras Systems Q3 2026: The Chipmaker That Became a Landlord",
+  "subtitle": "A twenty-six billion dollar backlog cannot disguise collapsing margins and an eight billion dollar lease bill.",
+  "summary": "Cerebras posted record revenue driven by renting out compute capacity rather than shipping hardware, turning a silicon pioneer into a capital-intensive hosting business. While massive forward contracts prove inference demand is real, off-balance-sheet leases and compressed gross margins leave the equity exposed to a steep financing hurdle.",
+  "ticker": "CBRS",
+  "tickerName": "Cerebras Systems",
+  "company": "Cerebras Systems Inc.",
+  "sector": "ai",
+  "sentiment": "neutral",
+  "date": "2026-11-13T15:30:00Z",
+  "price": 97.75,
+  "featured": true,
+  "premium": false,
+  "tags": [
+    "CBRS",
+    "Cerebras Systems",
+    "AI inference",
+    "wafer-scale",
+    "gross margin",
+    "data center leases",
+    "remaining performance obligations",
+    "OpenAI",
+    "Oracle",
+    "Microsoft",
+    "capital intensity",
+    "customer concentration"
+  ],
+  "links": [
+    {
+      "label": "Cerebras: third quarter 2026 results — record GAAP revenue of $210.8 million, core revenue of $230.9 million, 700 MW of contracted data center capacity, $26.1 billion of remaining performance obligations (Nov. 12, 2026)",
+      "url": "https://www.cerebras.ai/press-release/cerebras-systems-delivers-record-revenue-in-third-quarter-2026-raises-full-yea-3402195"
+    },
+    {
+      "label": "Cerebras: third quarter 2026 Form 10-Q — 243.0 million shares outstanding, 38% MBZUAI and 34% OpenAI customer concentration, $8.5 billion of signed but not yet commenced data center leases (Nov. 12, 2026)",
+      "url": "https://www.sec.gov/Archives/edgar/data/2021728/000162828026073494/cbrs-20260930.htm"
+    },
+    {
+      "label": "Cerebras third quarter 2026 results recap — GAAP versus core margin bridge, hardware revenue down 29%, cloud at 67% of revenue (StockTitan, Nov. 12, 2026)",
+      "url": "https://www.stocktitan.net/articles/cerebras-cbrs-third-quarter-2026-results"
+    },
+    {
+      "label": "Cerebras third quarter 2026 earnings call transcript — CFO Bob Komin on the $1 billion working capital loan funding 2026 capital expenses, and CEO Andrew Feldman naming Microsoft as the new hyperscaler deal",
+      "url": "https://stockanalysis.com/stocks/cbrs/transcripts/731670-q3-2026"
+    },
+    {
+      "label": "Cerebras earnings: CEO says the company is evaluating financing options to meet ramping demand (CNBC, Nov. 12, 2026)",
+      "url": "https://www.cnbc.com/2026/11/12/cerebras-systems-cbrs-q3-earnings-report-2026.html"
+    },
+    {
+      "label": "Cerebras third quarter 2026 results and raised full-year outlook — core gross margin 41%, fourth quarter core revenue guided to $310-330 million (Yahoo Finance, Nov. 12, 2026)",
+      "url": "https://finance.yahoo.com/technology/ai/articles/cerebras-systems-delivers-record-revenue-210500164.html"
+    },
+    {
+      "label": "Cerebras analyst ratings and price targets — 11 analysts, Strong Buy consensus, average target of $239.73 (StockAnalysis)",
+      "url": "https://stockanalysis.com/stocks/cbrs/forecast/"
+    },
+    {
+      "label": "Cerebras and Oracle team up to bring Cerebras inference to Oracle Cloud Infrastructure, available in 2027 (Oct. 27, 2026)",
+      "url": "https://www.stocktitan.net/news/CBRS/cerebras-and-oracle-team-up-to-bring-cerebras-ai-inference-to-oracle-7d1b2g7cd50l.html"
+    }
+  ],
+  "bodyHtml": "<p>Cerebras builds the most audacious silicon in tech: a single, dinner-plate-sized wafer that functions as one giant computer chip instead of being sliced into hundreds of tiny processors. Think of traditional chip clusters as an office park where data crawls across jammed access roads between buildings; Cerebras turns the entire complex into a single, high-speed campus. </p><p>That architecture cuts out networking bottlenecks and makes the system exceptionally fast at inference, which is the computing muscle required to actually run a trained AI model and spit out an answer. Customers can buy one of its refrigerator-sized server units to park in their own facility, or rent time on Cerebras hardware over the web.</p><div class=\"stats-card\"><div class=\"stats-card-title\">The Numbers That Matter</div><table class=\"stats-table\"><tr><td class=\"stat-label\">Price <span class=\"stats-live-badge\">LIVE</span></td><td class=\"stat-value\" data-live-ticker=\"CBRS\" data-live-field=\"price\">$97.75</td></tr><tr><td class=\"stat-label\">Market Cap</td><td class=\"stat-value\">$23.8B</td></tr><tr><td class=\"stat-label\">Forward P/E</td><td class=\"stat-value\">74.3x</td></tr><tr><td class=\"stat-label\">Total Revenue (TTM)</td><td class=\"stat-value\">$755.8M</td></tr><tr><td class=\"stat-label\">52-Week Low</td><td class=\"stat-value\">$77.84</td></tr><tr><td class=\"stat-label\">52-Week High</td><td class=\"stat-value\">$386.34</td></tr><tr><td class=\"stat-label\">Analyst Consensus</td><td class=\"stat-value\">Strong Buy (11 analysts)</td></tr><tr><td class=\"stat-label\">Analyst Target Mean</td><td class=\"stat-value\">$239.73</td></tr></table><div class=\"stats-card-note\">Price refreshes live &middot; All other figures as of November 12, 2026</div></div><p>Buying the refrigerator is no longer the main event. Two-thirds of revenue now comes from renting out compute capacity rather than shipping boxes of silicon. Cloud and services delivered $141.9 million of the company's record $210.8 million top line, exploding 265% compared to the prior year. Twelve months ago, cloud was just 29% of sales. Cerebras started out as an elite architect selling bespoke engines. Today, it operates like a commercial landlord leasing out furnished office floors, taking on hefty utility bills so tenants can simply plug in their laptops.</p><p>That landlord pivot completely alters the financial engine. Chip designers enjoy fat, software-like margins because they design the intellectual property and hand off the manufacturing. Compute providers, on the other hand, absorb real estate overhead, soaring utility bills, and relentless hardware depreciation.</p><p>You can see the collision directly in the gross margins. Cerebras saw its GAAP gross margin cut in half, dropping to 20.0% from 40.6% a year ago. Hardware margins fell to 11% under the weight of customer-warrant amortization and discounted pricing for an early strategic partner, while cloud margins came in at just 24%. Management highlights a \"core\" gross margin of 41%, but that metric only exists after adding back $36.4 million of warrant amortization and $16.5 million of stock compensation in cost of revenue.</p><p>On paper, incoming business looks overwhelming. Cerebras sits on $26.1 billion in remaining performance obligations, anchored by a large master agreement with OpenAI. Oracle and Microsoft have each signed cloud deals since quarter-end. Yet that backlog is slow money. Only about a third of those contracts will convert to revenue over the next two years.</p><p>In the meantime, the expenses required to light up that capacity arrive immediately. Cerebras holds $7.8 billion in total cash and investments, but it has already committed to roughly $8.5 billion in off-balance-sheet data center lease obligations to support 700 megawatts of contracted power. Cash paid for property and equipment hit $1.0 billion in the first nine months alone, up from $301.1 million during the same stretch last year.</p><p>The bear case is that Cerebras has boxed itself into a liquidity trap, running an asset-heavy hosting operation while carrying the premium multiple of a premier chip designer. Revenue growth decelerated for three straight quarters, dropping from 94% down to 55%. Worse, customer concentration is razor-thin: two counterparties—a state-backed Abu Dhabi university and OpenAI—accounted for 72% of the entire quarter. That is not a diverse roster of enterprise software buyers; it is two whale clients propping up an entire public company. With $8.5 billion in undiscounted lease payments looming, manufacturing scaling tenfold, and management admitting to national media that it is evaluating financing options to meet demand, the equity faces inevitable dilution. When hyperscalers finish developing their own custom silicon, Cerebras could easily find itself stuck paying rent on half-empty server rooms.</p><p>What has to happen for the stock to re-rate is simple: the business must prove its cloud rental model can generate chipmaker profitability once servers fill up. Management guided fourth-quarter core revenue to roughly $320 million and promised core operating margins will touch breakeven. Gross margins are guided back to 47% to 49%. If they hold there as commercial revenue from Microsoft and Oracle begins in 2027, the market will overlook the capital intensity and reward the company's unmatched inference performance. But if fourth-quarter profitability sputters while capital spending climbs, Wall Street will price Cerebras like an indebted utility company, grinding the stock lower.</p><p>What we are watching is the core gross margin print when fourth-quarter earnings arrive early next year: crossing the 47% guidance threshold is the only metric that proves the rental model works.</p><p class=\"disclosure\">Disclosure: The Signal holds no position in CBRS. Positions may change. This is not financial advice.</p>",
+  "meta": {
+    "author": "The Signal Editorial",
+    "estimatedReadTime": "5 min",
+    "editorialTags": [
+      "cbrs",
+      "cerebras",
+      "wafer-scale",
+      "cloud-mix",
+      "gross-margin",
+      "customer-concentration",
+      "capital-intensity",
+      "rpo",
+      "data-center-leases",
+      "inference"
+    ],
+    "seoKeywords": [
+      "Cerebras stock",
+      "CBRS stock",
+      "Cerebras Q3 2026 earnings",
+      "Cerebras core revenue",
+      "Cerebras gross margin",
+      "Cerebras backlog",
+      "Cerebras OpenAI deal",
+      "Cerebras cloud revenue"
+    ],
+    "keyMetrics": {
+      "Price": 97.75,
+      "Market Cap": "$23.8B",
+      "Forward P/E": "74.3x",
+      "Total Revenue (TTM)": "$755.8M",
+      "52-Week Low": 77.84,
+      "52-Week High": 386.34,
+      "Analyst Consensus": "Strong Buy (11 analysts)",
+      "Analyst Target Mean": 239.73
+    }
+  },
+  "image": {
+    "src": "/img/articles/cbrs-q3-2026-cloud-mix-shift-2026.jpg",
+    "fit": "cover",
+    "caption": "A processed silicon wafer under inspection in a cleanroom. Cerebras builds wafer-scale engines; two thirds of its third-quarter revenue now came from renting them out by the hour. Photo: The Signal / AI-generated.",
+    "alt": "Photo-realistic macro photograph of an iridescent silicon wafer covered in a grid of processor dies, resting on a precision inspection stage in a semiconductor cleanroom with a gloved hand steadying its rim."
+  }
+}
