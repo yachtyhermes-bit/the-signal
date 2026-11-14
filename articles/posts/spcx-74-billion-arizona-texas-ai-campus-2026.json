@@ -1,0 +1,114 @@
+{
+  "slug": "spcx-74-billion-arizona-texas-ai-campus-2026",
+  "title": "SpaceX Commits $74 Billion to AI Supercomputers as Power Decides Site Selection",
+  "subtitle": "Two opposite utility strategies in Texas and Arizona show why the grid now dictates compute buildouts.",
+  "summary": "SpaceX announced plans to spend more than $74 billion across two massive data center campuses in Texas and Arizona. The dual buildout demonstrates how access to electricity and local zoning boards now govern the pace of AI infrastructure.",
+  "ticker": "SPCX",
+  "tickerName": "SpaceX",
+  "company": "Space Exploration Technologies Corp.",
+  "sector": "space",
+  "sentiment": "neutral",
+  "date": "2026-11-14T15:00:00Z",
+  "price": 139.11,
+  "featured": false,
+  "premium": false,
+  "tags": [
+    "SPCX",
+    "SpaceX",
+    "AI supercomputing",
+    "data center power",
+    "Cochise County",
+    "Starbase",
+    "dry cooling",
+    "grid capacity",
+    "natural gas turbines",
+    "hyperscaler capex",
+    "capital spending",
+    "Apollo lease",
+    "permitting"
+  ],
+  "links": [
+    {
+      "label": "SpaceX plans over $74 billion investment in Texas, Arizona AI campuses (Reuters, Nov. 12, 2026)",
+      "url": "https://www.fresnobee.com/news/nation-world/national/article318047134.html"
+    },
+    {
+      "label": "SpaceX is planning more than $74 billion in AI supercomputing campuses in Texas and Arizona (Quartz, Nov. 12, 2026)",
+      "url": "https://qz.com/spacex-74-billion-ai-supercomputing-texas-arizona-111226"
+    },
+    {
+      "label": "SpaceX Plans More Than $74 Billion in Texas, Arizona Data-Center Investments (The Wall Street Journal, Nov. 12, 2026)",
+      "url": "https://www.wsj.com/business/spacex-plans-more-than-74-billion-in-texas-arizona-data-center-investments-b9ff4ba3"
+    },
+    {
+      "label": "SpaceX's 6-gigawatt campus will use dry cooling, skip groundwater use (Interesting Engineering, Nov. 13, 2026)",
+      "url": "https://interestingengineering.com/ai-robotics/spacex-arizona-supercomputing-campus-dry-cooling"
+    },
+    {
+      "label": "SpaceX commits $74B to AI campuses in Arizona and Texas, with both projects facing Dec. 9 decisions (AI Weekly)",
+      "url": "https://aiweekly.co/alerts/spacex-commits-74b-to-ai-campuses-in-arizona-and-texas"
+    },
+    {
+      "label": "SpaceX plans more than $74 billion of AI supercomputing campuses in Texas and Arizona (MLQ.ai)",
+      "url": "https://mlq.ai/news/spacex-plans-more-than-74-billion-of-ai-supercomputing-campuses-in-texas-and-arizona"
+    },
+    {
+      "label": "Inside the $74B Texas and Arizona campuses: islanded gas generation versus a grid partnership (Tecknexus)",
+      "url": "https://tecknexus.com/spacex-ai-supercomputing-campuses-texas-arizona"
+    },
+    {
+      "label": "SpaceX to invest $74B in supercomputing campuses in Texas, Arizona (GovCon Wire, Nov. 13, 2026)",
+      "url": "https://www.govconwire.com/articles/spacex-ai-supercompute-campuses-starbase-cochise-county"
+    },
+    {
+      "label": "SpaceX's $74 billion AI campus plan faces a 2,400-signature petition ahead of the Arizona hearing (Times of India)",
+      "url": "https://timesofindia.indiatimes.com/technology/tech-news/elon-musks-spacex-plans-more-than-74-billion-in-ai-computing-campuses-across-texas-and-arizona-including-a-50-billion-proposal-that-promises-6500-jobs-but-faces-opposition-from-2400-local-petition-signers/articleshow/135789604.cms"
+    }
+  ],
+  "bodyHtml": "<p>Forget the chips for a second. The biggest bottleneck in artificial intelligence is no longer silicon, but the high-voltage wire keeping your home electric bill from spiking. When SpaceX unveiled a $74 billion push into AI supercomputing campuses this week, the sheer size of the check was a distraction. The real story is how the company plans to power them. Eight hundred miles apart, SpaceX is launching two opposite utility experiments because the grid, not the chipmaker, now sets the calendar.</p>\n\n<div class=\"stats-card\"><div class=\"stats-card-title\">The Numbers That Matter</div><table class=\"stats-table\"><tr><td class=\"stat-label\">Price <span class=\"stats-live-badge\">LIVE</span></td><td class=\"stats-value\" data-live-ticker=\"SPCX\" data-live-field=\"price\">$139.11</td></tr><tr><td class=\"stat-label\">Market Cap</td><td class=\"stats-value\">$1.89T</td></tr><tr><td class=\"stat-label\">Forward P/E</td><td class=\"stats-value\">50.7x</td></tr><tr><td class=\"stat-label\">Total Revenue (TTM)</td><td class=\"stats-value\">$32.0B</td></tr><tr><td class=\"stat-label\">52-Week Low</td><td class=\"stats-value\">$104.83</td></tr><tr><td class=\"stat-label\">52-Week High</td><td class=\"stats-value\">$225.64</td></tr><tr><td class=\"stat-label\">Analyst Consensus</td><td class=\"stats-value\">Buy (37 analysts)</td></tr><tr><td class=\"stat-label\">Analyst Target Mean</td><td class=\"stats-value\">$256.41</td></tr></table><div class=\"stats-card-note\">Price refreshes live &middot; All other figures as of November 13, 2026</div></div>\n\n<p>Most people know SpaceX as the rocket builder that lands boosters and sells Starlink internet subscriptions. Yet behind the launchpads, it has quietly morphed into a computing heavyweight that trains frontier models on massive banks of Nvidia processors. Think of SpaceX as a commercial shipping port that realized renting warehouse electricity makes far more money than moving boats. In the third quarter of 2026, its Super Intelligence division generated $7.6 billion, accounting for more than half of overall company revenue for the first time.</p>\n\n<p>That rapid shift explains why leadership is willing to commit more than double its trailing twelve-month revenue to physical compute campuses. The blueprint splits the $74 billion between Starbase, Texas, and Cochise County, Arizona. Both sites are designed for frontier clusters, but their power architectures could not be further apart. In modern technology infrastructure, power engineering has officially replaced tax breaks as the primary driver of site selection.</p>\n\n<p>In Arizona, SpaceX affiliate Tombstone Resources is pursuing a 747-acre campus across 57 parcels near the Willcox Playa. The master plan calls for nine massive buildings drawing up to six gigawatts across four distinct phases. Because the local aquifer is already overdrafted, the site skips cooling towers entirely in favor of sealed dry loops that consume just ten acre-feet of water each year. Instead of generating its own power, SpaceX is partnering with electric cooperatives, offering $3.6 billion in transmission upgrades handed over at zero cost alongside a massive 24 gigawatt-hour battery system.</p>\n\n<p>Down at Starbase, Texas, SpaceX is taking the go-it-alone route. Rather than waiting on public transmission approvals, the company plans to burn its own fuel behind the meter across roughly 444 acres. A separate state air-permit application describes a gas-fired plant, reported at 35 turbines and roughly 748 megawatts of initial capacity. An affiliate has already filed to build an eight-mile gas pipeline to ensure supply by early 2027, backed by a $220 million water infrastructure package for the Brownsville area. If the public grid cannot feed your compute clusters on time, you simply build your own utility.</p>\n\n<p>None of this civil engineering matters to the stock until heavy capital spending translates into cash returns. SpaceX generated $32.0 billion in trailing revenue, but it consumed $55.9 billion in capex over the same period, leaving trailing free cash flow around negative $40 billion. To fund the hardware, the company signed a $40 billion off-balance-sheet lease with Apollo for Nvidia systems. For the equity to re-rate from here, SpaceX cannot just show top-line growth. It must break out Super Intelligence margins and land named third-party commercial customers, proving these campuses are a durable cloud business rather than captive internal overhead.</p>\n\n<p>The short-seller argument is that this $74 billion announcement is an unfunded commitment running straight into a political wall. Capex is running at 3.5 times operating cash flow, and off-balance-sheet rent comes due whether those Nvidia racks sit idle or train frontier models. Meanwhile, local resistance is fierce: roughly 2,400 residents signed a petition urging regulators to reject the Arizona proposal over groundwater, noise, and dark skies. If the Cochise County board denies the permit or kicks the vote into an election cycle, half of the company's planned compute capacity evaporates overnight. A deferral in Bisbee proves the bears right, leaving SpaceX committed to server leases for power lines it is not allowed to build.</p>\n\n<p>What we are watching lands on a single date: December 9. That evening, the Cochise County Planning and Zoning Commission holds its make-or-break permit hearing in Bisbee, while Starbase commissioners vote on property-tax abatements in Texas. If both local bodies sign off, the buildout moves from slide deck to steel. If either board stalls, investors will quickly remember that computing power means nothing without the local permit to plug it in.</p>\n\n<p class=\"disclosure\">Disclosure: The Signal holds no position in SPCX. Positions may change. This is not financial advice.</p>",
+  "meta": {
+    "author": "The Signal Editorial",
+    "estimatedReadTime": "5 min",
+    "editorialTags": [
+      "spcx",
+      "spacex",
+      "ai-supercomputing",
+      "data-center-power",
+      "cochise-county",
+      "starbase",
+      "dry-cooling",
+      "grid-capacity",
+      "gas-turbines",
+      "capex",
+      "apollo-lease",
+      "permitting"
+    ],
+    "seoKeywords": [
+      "SpaceX stock",
+      "SPCX stock",
+      "SpaceX AI campuses",
+      "SpaceX $74 billion",
+      "SpaceX Cochise County data center",
+      "SpaceX Starbase supercomputer",
+      "SpaceX power strategy",
+      "SpaceX capex",
+      "SpaceX Apollo lease"
+    ],
+    "keyMetrics": {
+      "Price": 139.11,
+      "Market Cap": "$1.89T",
+      "Forward P/E": "50.7x",
+      "Total Revenue (TTM)": "$32.0B",
+      "52-Week Low": 104.83,
+      "52-Week High": 225.64,
+      "Analyst Consensus": "Buy (37 analysts)",
+      "Analyst Target Mean": 256.41
+    }
+  },
+  "image": {
+    "src": "/img/articles/spcx-74-billion-arizona-texas-ai-campus-2026.jpg",
+    "fit": "cover",
+    "caption": "A high-desert AI supercomputing campus under construction at golden hour, transmission lines crossing the site. SpaceX wants to build two of these, 800 miles apart, on opposite power strategies. Illustration: The Signal / AI-generated.",
+    "alt": "Photorealistic wide view of a vast AI data center construction site in the Arizona high desert at golden hour, with long partially clad industrial halls, tower cranes, dry cooling units, and high-voltage transmission pylons crossing the graded dirt toward distant mesas."
+  }
+}
