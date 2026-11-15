@@ -1,0 +1,133 @@
+{
+  "slug": "mu-memory-price-not-volume-peak-margin-2026",
+  "title": "Micron Earns Better Margins Than Nvidia and Still Trades Like a Commodity",
+  "subtitle": "The AI profit pool shifted to memory, but price hikes cannot carry the multiple forever",
+  "summary": "Micron's gross margins now eclipse Nvidia's as memory prices drive record profits, yet Wall Street values the stock at under four times forward earnings. The market is waiting to see whether volume growth can replace fading price hikes before new industry capacity arrives.",
+  "ticker": "MU",
+  "tickerName": "Micron",
+  "company": "Micron Technology, Inc.",
+  "sector": "ai",
+  "sentiment": "neutral",
+  "date": "2026-11-15T18:00:00Z",
+  "price": 778.31,
+  "featured": false,
+  "premium": false,
+  "tags": [
+    "MU",
+    "Micron",
+    "memory",
+    "DRAM",
+    "HBM",
+    "high-bandwidth memory",
+    "memory supercycle",
+    "SK hynix",
+    "Samsung",
+    "CXMT",
+    "Nvidia",
+    "gross margin",
+    "take-or-pay",
+    "AI memory",
+    "memory pricing"
+  ],
+  "links": [
+    {
+      "label": "Micron: fiscal fourth quarter and full-year 2026 results (SEC EX-99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm"
+    },
+    {
+      "label": "Micron: fiscal 2026 Form 10-K, including the $134 billion of remaining performance obligations",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/mu-20260903.htm"
+    },
+    {
+      "label": "Micron: fiscal Q4 2026 prepared remarks (approximately $150 billion of RPO and $32 billion of customer commitments)",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf"
+    },
+    {
+      "label": "Micron: fiscal Q3 2026 prepared remarks (DRAM prices up in the low-60s percentage range, bit shipments up low single digits)",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf"
+    },
+    {
+      "label": "SK hynix says its DRAM and high-bandwidth memory output is effectively sold out through 2029 (Yahoo Finance / PCMag, Oct. 28, 2026)",
+      "url": "https://finance.yahoo.com/technology/articles/major-memory-vendor-were-basically-145447932.html"
+    },
+    {
+      "label": "Korea Daily: Samsung and SK hynix lock up long-term memory supply agreements",
+      "url": "https://en.koreadaily.com/memory-semiconductor-lta-samsung-sk-hynix-sold-out-2029"
+    },
+    {
+      "label": "SemiAnalysis: China's CXMT is set to challenge the DRAM incumbents",
+      "url": "https://newsletter.semianalysis.com/p/chinas-cxmt-is-set-to-challenge-dram"
+    },
+    {
+      "label": "Wccftech: CXMT expected to add more than 100,000 DRAM wafers per month within a year",
+      "url": "https://wccftech.com/cxmt-is-expected-to-add-over-100000-dram-wafers-per-month-within-a-year-aiming-at-consumer-electronics-squeezed-by-the-memory-shortage"
+    },
+    {
+      "label": "Counterpoint Research: global DRAM and HBM market share, Q2 2026",
+      "url": "https://counterpointresearch.com/en/insights/global-dram-and-hbm-market-share"
+    },
+    {
+      "label": "IEEE Spectrum: the DRAM shortage, and why high-bandwidth memory is half the cost of a packaged GPU",
+      "url": "https://spectrum.ieee.org/dram-shortage"
+    },
+    {
+      "label": "TIKR: consensus gross margin trajectory for Micron, fiscal 2027 through fiscal 2030",
+      "url": "https://www.tikr.com/blog/the-worst-bubble-ever-micron-ripped-193-before-its-sell-off-is-it-too-late-to-buy"
+    },
+    {
+      "label": "Micron: fiscal 2024 Form 10-K (fiscal 2022 and fiscal 2023 revenue and the 49.5 percent collapse)",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312524000027/mu-20240829.htm"
+    }
+  ],
+  "bodyHtml": "<p>The strangest distortion in artificial intelligence sits on a factory floor in Boise, Idaho. Micron Technology is extracting fatter gross margins than Nvidia. In its most recent fiscal quarter, Micron posted an 86.8% gross margin, leaving Nvidia's 74.7% trailing by double digits.</p><p>Think of an AI accelerator like an exotic sports car. Nvidia designs the roaring engine, but Micron supplies the high-grade transmission. Without high-bandwidth memory sitting directly next to the processor, the fastest chip on earth starves for data and idles.</p><div class=\"stats-card\"><div class=\"stats-card-title\">The Numbers That Matter</div><table class=\"stats-table\"><tr><td class=\"stat-label\">Price <span class=\"stats-live-badge\">LIVE</span></td><td class=\"stats-value\" data-live-ticker=\"MU\" data-live-field=\"price\">$778.31</td></tr><tr><td class=\"stat-label\">Market Cap</td><td class=\"stats-value\">~$880.6B</td></tr><tr><td class=\"stat-label\">Forward P/E</td><td class=\"stats-value\">3.75</td></tr><tr><td class=\"stat-label\">Total Revenue (TTM)</td><td class=\"stats-value\">$133.19B</td></tr><tr><td class=\"stat-label\">52-Week Low</td><td class=\"stats-value\">$192.59</td></tr><tr><td class=\"stat-label\">52-Week High</td><td class=\"stats-value\">$1,255.00</td></tr><tr><td class=\"stat-label\">Analyst Consensus</td><td class=\"stats-value\">Strong Buy (45 analysts)</td></tr><tr><td class=\"stat-label\">Analyst Target Mean</td><td class=\"stats-value\">$1,561.91</td></tr></table><div class=\"stats-card-note\">Price refreshes live &middot; All other figures as of November 13, 2026</div></div><p>Micron builds DRAM and NAND flash memory chips. DRAM is the short-term working memory where a computer puts data it needs to reach in nanoseconds. Only three companies on the planet can manufacture high-bandwidth memory at scale: Micron, Samsung, and SK hynix.</p><p>That makes memory the ultimate choke point in modern computing. High-bandwidth memory now costs roughly three times as much as regular memory and makes up half or more of the entire manufacturing cost of a packaged graphics processor. When that part gets scarce, Micron sets the price.</p><p>That pricing leverage triggered an astonishing windfall. Over the past fiscal year, Micron generated $133.19 billion in revenue and $107.50 billion in gross profit. For perspective, that gross profit alone was nearly three times the company's entire top line from the previous year.</p><p>You can feel the pinch in the ballooning price tag on a flagship smartphone. Yet despite record earnings, Micron trades at an eye-watering discount: under four times forward earnings, roughly 38% below its June high.</p><p>The market is doing cold arithmetic on the difference between a rental and an annuity. Micron's recent explosion came almost entirely from price rather than physical expansion. Over the full fiscal year, DRAM revenue surged roughly 252%. That came from an approximate 180% leap in average selling prices, while bit shipments only grew in the mid-20s percentage range.</p><p>That price impulse is already decelerating. Sequential price increases cooled from the low-60s percentage range in the spring quarter to the high-teens by August, while shipment volumes barely budged. Two-thirds of Micron's sequential pricing power evaporated in a single step.</p><p>The bull defense is a fortress of signed contracts. Micron has 26 strategic customer agreements, locking in multi-year take-or-pay volumes that cover more than 35% of its revenue through 2030. Remaining performance obligations sit at roughly $150 billion, calculated at committed volumes and minimum pricing, and customers have put up $32 billion of financial commitments, mostly in cash.</p><p>SK hynix says its DRAM and high-bandwidth output is effectively sold out through 2029. Samsung says its 2027 high-bandwidth supply is already committed at target prices. If the industry stays supply-constrained through 2028 as management forecasts, these contracts function as a massive revenue shield.</p><p>Yet the stock will not re-rate simply because Micron prints a mountain of cash. Investors will only award the equity a durable multiple when the composition of its growth fundamentally changes. The stock re-rates when bit shipment volume accelerates toward the industry's low-20s growth rate while gross margins hold steady near the guided 86% floor.</p><p>That shift would prove customers are buying expanding physical capacity under contracted terms, rather than paying an emergency spot surcharge. Until volume takes the baton from price, the market will treat every dollar of Micron profit as temporary.</p><p>The short seller's argument is that memory has never defended its margins across a full capital cycle. Every surge in pricing eventually triggers a wave of supply that crushes real-world prices. China's CXMT has already expanded its DRAM market share from 4% to 10% in twelve months, with plans to add over 100,000 wafers per month.</p><p>Furthermore, Micron's contracts are structured around floor-and-ceiling pricing. If spot rates tumble, contracted floors become a ceiling on revenue rather than an upside catalyst. The historical precedent is brutal: between fiscal 2022 and 2023, Micron's revenue collapsed by 49.5%, producing a $5.8 billion net loss. A stock trading at four times earnings is a classic value trap if the denominator is sitting at the peak of a cycle.</p><p>The moment of truth arrives in December, when Micron reports its next quarterly numbers. We are watching whether gross margin stays near the guided 86% level while bit shipments accelerate, proving that multi-year contracts can finally neutralize the commodity cycle.</p><p>If margins slip while price remains the sole engine of growth, the market's skepticism will be fully vindicated. Micron spent two years proving it could charge whatever it wanted; now it has to prove it built an annuity.</p><p class=\"disclosure\">Disclosure: The Signal holds no position in MU. Positions may change. This is not financial advice.</p>",
+  "meta": {
+    "author": "Charles Osi",
+    "estimatedReadTime": "4 min",
+    "keyMetrics": {
+      "Price": 778.31,
+      "Market Cap": "~$880.6B",
+      "Forward P/E": "3.75",
+      "Total Revenue (TTM)": "$133.19B",
+      "52-Week Low": 192.59,
+      "52-Week High": 1255.0,
+      "Analyst Consensus": "Strong Buy (45 analysts)",
+      "Analyst Target Mean": 1561.91
+    },
+    "relatedTickers": [
+      "NVDA",
+      "AMAT",
+      "AVGO"
+    ],
+    "seoKeywords": [
+      "Micron stock",
+      "MU stock",
+      "Micron earnings December 2026",
+      "Micron gross margin vs Nvidia",
+      "memory supercycle 2026",
+      "DRAM pricing 2027",
+      "HBM sold out 2029",
+      "Micron strategic customer agreements",
+      "CXMT DRAM market share",
+      "AI memory stocks"
+    ],
+    "editorialTags": [
+      "mu",
+      "micron",
+      "memory",
+      "dram",
+      "hbm",
+      "memory-pricing",
+      "gross-margin",
+      "take-or-pay",
+      "sk-hynix",
+      "cxmt"
+    ],
+    "youtubeIds": []
+  },
+  "image": {
+    "src": "/img/articles/mu-memory-price-not-volume-peak-margin-2026.jpg",
+    "fit": "cover",
+    "caption": "An editorial cartoon of HBM memory modules piled like gold bullion on a balance scale, crushing one pan while a single GPU chip floats weightless on the other, with a chip executive below holding an empty wheelbarrow. Micron now earns a fatter gross margin than the company whose accelerators it feeds. Illustration: The Signal / AI-generated.",
+    "alt": "Editorial cartoon in ink and watercolour: a tall stack of HBM memory modules piled like gold bars on a balance scale, outweighing a small GPU chip on the opposite pan, with an anxious chip executive and empty wheelbarrow below in a semiconductor cleanroom."
+  }
+}
