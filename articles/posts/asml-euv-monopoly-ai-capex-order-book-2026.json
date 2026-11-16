@@ -1,0 +1,124 @@
+{
+  "slug": "asml-euv-monopoly-ai-capex-order-book-2026",
+  "title": "ASML's Monopoly Survives the AI Selloff While Order Visibility Vanishes",
+  "subtitle": "The lithography giant stopped disclosing quarterly bookings just before markets started second-guessing the AI capex cycle.",
+  "summary": "ASML shares tumbled alongside the broader semiconductor sector as macro worries and policy curbs rattled the chip trade. The selloff exposes an equity pricing a world-class monopoly through an artificial blind spot of its own making.",
+  "ticker": "ASML",
+  "tickerName": "ASML",
+  "company": "ASML Holding N.V.",
+  "sector": "ai",
+  "sentiment": "neutral",
+  "date": "2026-11-16T22:00:00Z",
+  "price": 1406.79,
+  "featured": false,
+  "premium": false,
+  "tags": [
+    "ASML",
+    "lithography",
+    "EUV",
+    "High-NA EUV",
+    "semiconductor equipment",
+    "order book",
+    "backlog",
+    "TSMC",
+    "Intel",
+    "SK hynix",
+    "China export controls",
+    "MATCH Act",
+    "AI capex",
+    "installed base",
+    "Zeiss"
+  ],
+  "links": [
+    {
+      "label": "ASML: Q3 2026 results — €11.7B net sales, 57.5% gross margin, Q4 and full-year guidance",
+      "url": "https://investor.asml.com/news-releases/news-release-details/asml-reports-eu11.7-billion-total-net-sales-and-eu5.0-billion-net-income-q3-2026"
+    },
+    {
+      "label": "ASML Q3 2026 release, full text with financial tables (Yahoo Finance mirror)",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/asml-reports-11-7-billion-050000954.html"
+    },
+    {
+      "label": "ASML: Q4 2025 results — the last quarterly bookings figure (€13.2B) and €38.8B backlog it ever published",
+      "url": "https://investor.asml.com/news-releases/news-release-details/q4-2025-financial-results"
+    },
+    {
+      "label": "Bloomberg: ASML shares get harder to value as the company stops disclosing orders",
+      "url": "https://www.bloomberg.com/news/articles/2026-04-14/asml-shares-get-harder-to-value-as-firm-stops-disclosing-orders"
+    },
+    {
+      "label": "TrendForce: High-NA EUV advances as 10 systems go live at four customers",
+      "url": "https://www.trendforce.com/news/2026/09/01/news-asml-advances-high-na-euv-toward-high-volume-manufacturing-as-10-systems-reportedly-go-live-at-4-customers"
+    },
+    {
+      "label": "Bloomberg via Yahoo: TSMC says ASML's latest chipmaking tool is too expensive for volume production before 2029",
+      "url": "https://sg.finance.yahoo.com/news/tsmc-says-asml-latest-chipmaking-183735725.html"
+    },
+    {
+      "label": "ASML: 2025 annual report — Zeiss as sole supplier, 95% of systems still active, €8.2B service revenue, China at 29% of sales",
+      "url": "https://ourbrand.asml.com/m/6ea363f69344ebd4/original/asml-2025-annual-report-based-on-ifrs.pdf"
+    },
+    {
+      "label": "Federal Register: one-year suspension of end-user controls for affiliates of listed entities (expired November 9, 2026)",
+      "url": "https://www.federalregister.gov/documents/2025/11/12/2025-19846/one-year-suspension-of-expansion-of-end-user-controls-for-affiliates-of-certain-listed-entities"
+    },
+    {
+      "label": "Congress.gov: MATCH Act text — blanket immersion DUV ban and servicing restrictions aimed at China",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/8170/text"
+    },
+    {
+      "label": "ASML Q3 2026 earnings call transcript — customer order interest into 2029 and 2030",
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/10/14/asml-asml-q3-2026-earnings-call-transcript"
+    }
+  ],
+  "bodyHtml": "<p>Imagine waiting in a virtual queue for an arena tour, watching resale prices swing wildly on your phone. The box office flatly refuses to say how many tickets are left. That is the odd game the market is playing with ASML. The whole semiconductor complex sold off today, ASML down nearly 6% alongside its chipmaking peers.</p><div class=\"stats-card\"><div class=\"stats-card-title\">The Numbers That Matter</div><table class=\"stats-table\"><tr><td class=\"stat-label\">Price <span class=\"stats-live-badge\">LIVE</span></td><td class=\"stats-value\" data-live-ticker=\"ASML\" data-live-field=\"price\">$1,406.79</td></tr><tr><td class=\"stat-label\">Market Cap</td><td class=\"stats-value\">~$542B</td></tr><tr><td class=\"stat-label\">Forward P/E</td><td class=\"stats-value\">22.2</td></tr><tr><td class=\"stat-label\">Total Revenue (TTM)</td><td class=\"stats-value\">&euro;39.5B (~$43.4B)</td></tr><tr><td class=\"stat-label\">52-Week Low</td><td class=\"stats-value\">$946.11</td></tr><tr><td class=\"stat-label\">52-Week High</td><td class=\"stats-value\">$1,999.96</td></tr><tr><td class=\"stat-label\">Analyst Consensus</td><td class=\"stats-value\">Strong Buy (17 analysts)</td></tr><tr><td class=\"stat-label\">Analyst Target Mean</td><td class=\"stats-value\">$2,109.51</td></tr></table><div class=\"stats-card-note\">Price refreshes live &middot; All other figures as of November 16, 2026</div></div><p>Investors were not responding to a documented breakdown in factory orders. They were panicking into a fog.</p><p>In plain English, ASML builds the massive lithography machines that print microscopic circuitry onto silicon wafers. Every leading-edge AI accelerator in a modern data center has its circuitry etched by an ASML extreme ultraviolet, or EUV, system. The Dutch firm does not merely lead this category; it owns a 100% global monopoly on it. Nvidia draws the blueprints for the computing boom.</p><p>ASML owns the only press that can print them.</p><p>Yet after late 2025, management made a controversial call: it stopped reporting quarterly order intake, arguing the lumpy metric caused unnecessary share-price volatility. That decision has backfired. As rising Treasury yields and tighter Washington trade curbs spooked tech investors today, the market wanted concrete proof that cloud giants are still funding chip capacity through 2027.</p><p>Instead of hard bookings data, investors were left relying on year-old backlog figures and executive commentary claiming customers are asking for delivery slots into 2030. When macro anxiety bites, corporate reassurances without quarterly receipts invite an immediate discount.</p><p>Beneath the disclosure blackout, the cash engine remains formidable. ASML generated €11.7 billion in third-quarter revenue, with gross margins widening past 57%. More than a quarter of that revenue comes from Installed Base Management: the maintenance, parts, and software calibrations that keep tools humming around the clock. Here is the part that behaves nothing like a chip cycle.</p><p>95% of the lithography systems ASML has sold in three decades still run in cleanrooms today. That service arm is a high-margin subscription, and it is on track to expand roughly 50% this year.</p><p>The bear case, however, does not require cracking ASML's technological moat to break the stock. It lives in the customer mix. Memory made up 46% of third-quarter system sales. Memory-driven system revenue is climbing roughly 75% this year while advanced logic tools grow just 10%.</p><p>Anyone who tracks chip cycles knows memory capacity overshoots quickly; once high-bandwidth memory queues clear, that capex falls off a cliff. Then there is the MATCH Act, still pending in Congress. It would halt deep ultraviolet tool exports to China, a region representing 20% of sales, and it could strip away service contracts on equipment already running there. Add one more.</p><p>TSMC has pushed high-volume adoption of the newer €350 million High-NA machines toward 2029 on cost grounds. The short thesis crystallizes: ASML is riding an aging memory wave while its next leg of pricing power stalls. A fourth-quarter print below the guided €14.2 billion floor would confirm the cycle is rolling over.</p><p>That vulnerability explains the multiple. The stock trades at roughly 22 times forward earnings while management guides 36% top-line growth. The market is not questioning whether ASML has competitors; it is penalizing management for turning off the dashboard. Analysts cannot verify order momentum in the middle of an AI spending debate.</p><p>So they price the risk twice: once for the cycle, once for the information void. The multiple stays pinned until ASML offers hard proof. That means non-memory logic buyers actively bankrolling the multi-year capacity buildout.</p><p>What we are watching is whether management restores quantitative order commentary in upcoming disclosures, or leaves investors guessing until the 2027 production schedule forces the truth onto the tape.</p><p class=\"disclosure\">Disclosure: The Signal holds no position in ASML. Positions may change. This is not financial advice.</p>",
+  "meta": {
+    "author": "Charles Osi",
+    "estimatedReadTime": "4 min",
+    "keyMetrics": {
+      "Price": 1406.79,
+      "Market Cap": "~$542B",
+      "Forward P/E": "22.2",
+      "Total Revenue (TTM)": "€39.5B (~$43.4B)",
+      "52-Week Low": 946.11,
+      "52-Week High": 1999.96,
+      "Analyst Consensus": "Strong Buy (17 analysts)",
+      "Analyst Target Mean": 2109.51
+    },
+    "relatedTickers": [
+      "NVDA",
+      "AMAT",
+      "TSM"
+    ],
+    "seoKeywords": [
+      "ASML stock",
+      "ASML order book 2026",
+      "ASML stops reporting bookings",
+      "ASML Q3 2026 results",
+      "EUV lithography monopoly",
+      "High-NA EUV cost per wafer",
+      "ASML China export controls",
+      "MATCH Act ASML",
+      "AI capex selloff November 2026",
+      "semiconductor equipment stocks"
+    ],
+    "editorialTags": [
+      "asml",
+      "lithography",
+      "euv",
+      "high-na",
+      "order-book",
+      "backlog",
+      "china-export-controls",
+      "match-act",
+      "ai-capex"
+    ],
+    "youtubeIds": []
+  },
+  "image": {
+    "src": "/img/articles/asml-euv-monopoly-ai-capex-order-book-2026.jpg",
+    "fit": "cover",
+    "caption": "A bare 300mm silicon wafer resting on the vacuum chuck inside an open lithography tool. ASML is the only company that builds the extreme-ultraviolet machines every leading-edge AI chip passes through, and it has stopped telling the market how many it has sold forward. Photo: The Signal / AI-generated.",
+    "alt": "Macro photograph of a mirror-polished silicon wafer on a ceramic vacuum chuck inside an open semiconductor lithography machine, matte grey anodised metal and brushed steel surrounding it."
+  }
+}
