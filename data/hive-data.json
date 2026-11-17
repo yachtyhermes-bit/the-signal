@@ -241,13 +241,6 @@
       "passwordHash": "16188987b79a4c298dd60affa3afac5db7fdd6d2cb5c2d1b32934b30987e00e1",
       "createdAt": "2025-07-01T00:00:00.000Z",
       "uid": "usr_66e847bed142b3d2"
-    },
-    "nexchem": {
-      "username": "nexchem",
-      "displayName": "nexchem",
-      "passwordHash": "a91a4271d0e8e29ed41ec88df5a15d37e19b6183c007e3c9cc4b01e2b2c038fb",
-      "createdAt": "2025-07-01T00:00:00.000Z",
-      "uid": "usr_98d80f29357fc8c5"
     }
   },
   "trades": [
@@ -33679,7 +33672,7 @@
       "cash": 100000,
       "holdings": {},
       "trades": [],
-      "createdAt": "2026-11-17T07:03:09.465Z"
+      "createdAt": "2026-11-17T07:03:53.350Z"
     }
   },
   "priceCache": {
