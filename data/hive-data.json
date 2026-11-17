@@ -241,6 +241,16 @@
       "passwordHash": "16188987b79a4c298dd60affa3afac5db7fdd6d2cb5c2d1b32934b30987e00e1",
       "createdAt": "2025-07-01T00:00:00.000Z",
       "uid": "usr_66e847bed142b3d2"
+    },
+    "google_110965260701223687572": {
+      "username": "google_110965260701223687572",
+      "displayName": "jrobinson",
+      "passwordHash": "",
+      "createdAt": "2025-07-01T00:00:00.000Z",
+      "uid": "usr_b3b2199b26fa286c",
+      "googleId": "110965260701223687572",
+      "email": "jrobinson@playbookfive.com",
+      "photoURL": null
     }
   },
   "trades": [
@@ -33673,6 +33683,15 @@
       "holdings": {},
       "trades": [],
       "createdAt": "2026-11-17T07:03:53.350Z"
+    },
+    "usr_b3b2199b26fa286c": {
+      "uid": "usr_b3b2199b26fa286c",
+      "displayName": "jrobinson",
+      "photoURL": null,
+      "cash": 100000,
+      "holdings": {},
+      "trades": [],
+      "createdAt": "2026-11-17T16:33:36.807Z"
     }
   },
   "priceCache": {
