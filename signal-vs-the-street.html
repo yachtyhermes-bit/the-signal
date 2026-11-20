@@ -1716,6 +1716,11 @@
         if (footer && d.lastUpdated) {
           var dateStr = new Date(d.lastUpdated).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
           footer.textContent = footer.textContent + ' Data as of ' + dateStr + '.';
+          var siCov = d.periods && d.periods.sinceInception;
+          if (siCov && siCov.coveragePct < 100 && siCov.uncovered && siCov.uncovered.length) {
+            var unc = siCov.uncovered;
+            var uncList = unc.length === 1 ? unc[0] : unc.slice(0, -1).join(', ') + ' and ' + unc[unc.length - 1];
+            footer.textContent = footer.textContent + ' Since-inception figures cover ' + siCov.coveragePct.toFixed(1) + '% of portfolio weight; ' + uncList + ' listed after the June 2024 start, so those weights are excluded rather than counted as flat.';
         }
       })
       .catch(function(err) {

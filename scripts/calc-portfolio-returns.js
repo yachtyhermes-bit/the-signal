@@ -141,11 +141,19 @@ async function main() {
     const spyRet = calcReturn(priceData['SPY']?.[period.fromKey], priceData['SPY']?.[period.toKey]);
     const qqqRet = calcReturn(priceData['QQQ']?.[period.fromKey], priceData['QQQ']?.[period.toKey]);
 
-    const portRet = validWeight > 0 ? Math.round(weightedReturn * 100) / 100 : null;
+    // Renormalize over covered weight: positions without a price at the anchor
+    // (IPO'd after inception, e.g. NBIS 2024-10, AIPO 2025-07, MDA 2026-03) are
+    // excluded from the numerator, so the denominator must be their excluded
+    // weight too — otherwise the missing weight silently drags the headline down.
+    const portRet = validWeight > 0
+      ? Math.round((weightedReturn * totalWeight / validWeight) * 100) / 100
+      : null;
 
     results.periods[period.key] = {
       label: period.label,
       portfolioReturn: portRet,
+      coveragePct: Math.round((validWeight / totalWeight) * 10000) / 100,
+      uncovered: positions.filter(pos => calcReturn(priceData[pos.ticker]?.[period.fromKey], priceData[pos.ticker]?.[period.toKey]) === null).map(pos => pos.ticker),
       spyReturn: spyRet !== null ? Math.round(spyRet * 100) / 100 : null,
       qqqReturn: qqqRet !== null ? Math.round(qqqRet * 100) / 100 : null,
       vsSPY: (portRet && spyRet) ? Math.round((portRet - spyRet) * 100) / 100 : null,
