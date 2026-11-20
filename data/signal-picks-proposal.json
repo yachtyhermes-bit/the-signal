@@ -1,98 +1,88 @@
 {
-  "generated": "2026-10-15",
+  "generated": "2026-11-20",
   "profile_version": 1,
-  "target_swaps": 3,
+  "target_swaps": 4,
   "incumbents": {
     "scorecard": [
       "MU",
       "NVDA",
-      "GOOGL",
+      "AMAT",
       "META",
-      "PLTR",
+      "GOOGL",
       "CEG",
-      "NFLX",
+      "PLTR",
       "GEV"
     ],
     "highlights": [
       "NVDA",
       "AVGO",
-      "MSFT",
-      "ANET",
+      "AMZN",
       "KTOS",
-      "AXON",
+      "ANET",
+      "MSFT",
       "SOFI",
-      "RKLB"
+      "VST"
     ]
   },
   "scorecard": [
     "MU",
     "NVDA",
-    "GOOGL",
-    "META",
-    "PLTR",
-    "AMZN",
     "AMAT",
+    "META",
+    "GOOGL",
+    "CEG",
+    "PLTR",
     "GEV"
   ],
   "highlights": [
     "NVDA",
     "AVGO",
-    "ANET",
-    "KTOS",
-    "MSFT",
     "MRVL",
-    "AXON",
-    "SOFI"
+    "AMZN",
+    "ANET",
+    "MSFT",
+    "SOFI",
+    "VST"
   ],
   "swaps": [
     {
-      "panel": "scorecard",
-      "in": "AMZN",
-      "out": "NFLX",
-      "why": "cycle rotation: 89.8 vs 77.7"
-    },
-    {
-      "panel": "scorecard",
-      "in": "AMAT",
-      "out": "CEG",
-      "why": "cycle rotation: 85.4 vs 78.0"
+      "panel": "highlights",
+      "in": "RKLB",
+      "out": "KTOS",
+      "why": "owner's call (Owner's call: prefers Rocket Lab over CoreWeave. Placed on the highlights panel, which is where CRWV sat.)"
     },
     {
       "panel": "highlights",
       "in": "MRVL",
       "out": "RKLB",
-      "why": "cycle rotation: 82.2 vs 65.0"
+      "why": "cycle rotation: 82.2 vs 64.5"
     }
   ],
   "entering": [
-    "AMAT",
-    "AMZN",
     "MRVL"
   ],
   "leaving": [
-    "CEG",
-    "NFLX",
-    "RKLB"
+    "KTOS"
   ],
   "unscored": [
     "GEV"
   ],
   "scores": {
     "AMAT": {
-      "score": 85.4,
+      "score": 96,
       "parts": {
         "moat": 25,
         "theme_fit": 20,
-        "growth": 12.4,
+        "growth": 20,
         "profitability": 15,
-        "valuation": 3,
+        "valuation": 6,
         "coverage": 10
       },
       "moat": "Wide",
       "cluster": "semis",
-      "growth_pct": 24.8,
-      "pe": 40.1,
-      "upside": 42.2,
+      "growth_pct": 53.1,
+      "pe": 25.6,
+      "upside": 72.7,
       "buys": 33,
       "blocked": []
     },
@@ -108,64 +98,64 @@
       },
       "moat": "Narrow",
       "cluster": "semis",
-      "growth_pct": 50.1,
-      "pe": 145.6,
-      "upside": 11.5,
-      "buys": 44,
+      "growth_pct": 44.7,
+      "pe": 108.2,
+      "upside": 40.7,
+      "buys": 47,
       "blocked": []
     },
     "AMZN": {
-      "score": 89.8,
+      "score": 86.0,
       "parts": {
         "moat": 25,
         "theme_fit": 20,
-        "growth": 9.8,
+        "growth": 6.05,
         "profitability": 15,
         "valuation": 10,
         "coverage": 10
       },
       "moat": "Wide",
       "cluster": "megacap",
-      "growth_pct": 19.6,
-      "pe": 20.4,
-      "upside": 30.4,
-      "buys": 58,
+      "growth_pct": 12.1,
+      "pe": 21.0,
+      "upside": 25.9,
+      "buys": 59,
       "blocked": []
     },
     "ANET": {
-      "score": 91.8,
+      "score": 93,
       "parts": {
         "moat": 25,
         "theme_fit": 20,
-        "growth": 18.85,
+        "growth": 20,
         "profitability": 15,
         "valuation": 3,
         "coverage": 10
       },
       "moat": "Wide",
       "cluster": "semis",
-      "growth_pct": 37.7,
-      "pe": 61.6,
-      "upside": 25.4,
-      "buys": 31,
+      "growth_pct": 58.5,
+      "pe": 47.4,
+      "upside": 41.3,
+      "buys": 30,
       "blocked": []
     },
     "AVAV": {
-      "score": 53.4,
+      "score": 54.4,
       "parts": {
         "moat": 16,
         "theme_fit": 20,
         "growth": 2.85,
         "profitability": 6,
         "valuation": 0,
-        "coverage": 8.5
+        "coverage": 9.5
       },
       "moat": "Narrow",
       "cluster": "defense",
       "growth_pct": 5.7,
       "pe": null,
-      "upside": 79.5,
-      "buys": 17,
+      "upside": 121.5,
+      "buys": 19,
       "blocked": []
     },
     "AVGO": {
@@ -181,45 +171,45 @@
       "moat": "Wide",
       "cluster": "semis",
       "growth_pct": 85.5,
-      "pe": 44.2,
-      "upside": 52.4,
-      "buys": 47,
+      "pe": 42.2,
+      "upside": 59.3,
+      "buys": 48,
       "blocked": []
     },
     "AXON": {
-      "score": 86.7,
+      "score": 74.0,
       "parts": {
-        "moat": 25,
+        "moat": 16,
         "theme_fit": 20,
-        "growth": 17.65,
+        "growth": 13.950000000000001,
         "profitability": 15,
         "valuation": 0,
         "coverage": 9.0
       },
-      "moat": "Wide",
+      "moat": "Narrow",
       "cluster": "defense",
-      "growth_pct": 35.3,
-      "pe": 171.6,
-      "upside": 70.7,
+      "growth_pct": 27.9,
+      "pe": 104.1,
+      "upside": 67.2,
       "buys": 18,
       "blocked": []
     },
     "CEG": {
-      "score": 78.0,
+      "score": 91.0,
       "parts": {
         "moat": 16,
         "theme_fit": 20,
-        "growth": 11.5,
+        "growth": 20,
         "profitability": 15,
-        "valuation": 6,
-        "coverage": 9.5
+        "valuation": 10,
+        "coverage": 10.0
       },
       "moat": "Narrow",
       "cluster": "ai-power",
-      "growth_pct": 23.0,
-      "pe": 27.3,
-      "upside": 22.2,
-      "buys": 19,
+      "growth_pct": 45.4,
+      "pe": 19.9,
+      "upside": 37.2,
+      "buys": 20,
       "blocked": []
     },
     "CRWV": {
@@ -234,9 +224,9 @@
       },
       "moat": "Wide",
       "cluster": "ai-cloud",
-      "growth_pct": 112.5,
+      "growth_pct": 168.2,
       "pe": null,
-      "upside": 115.1,
+      "upside": 169.7,
       "buys": 31,
       "blocked": [
         "excluded by policy"
@@ -256,56 +246,56 @@
       ]
     },
     "GOOGL": {
-      "score": 92.1,
+      "score": 92.3,
       "parts": {
         "moat": 25,
         "theme_fit": 20,
-        "growth": 12.1,
+        "growth": 12.35,
         "profitability": 15,
         "valuation": 10,
         "coverage": 10
       },
       "moat": "Wide",
       "cluster": "megacap",
-      "growth_pct": 24.2,
-      "pe": 17.4,
-      "upside": 23.8,
-      "buys": 57,
+      "growth_pct": 24.7,
+      "pe": 14.7,
+      "upside": 42.6,
+      "buys": 53,
       "blocked": []
     },
     "KTOS": {
-      "score": 76.2,
+      "score": 78.8,
       "parts": {
         "moat": 16,
         "theme_fit": 20,
-        "growth": 15.25,
+        "growth": 17.849999999999998,
         "profitability": 15,
         "valuation": 0,
         "coverage": 10
       },
       "moat": "Narrow",
       "cluster": "defense",
-      "growth_pct": 30.5,
-      "pe": 231.3,
-      "upside": 153.2,
-      "buys": 22,
+      "growth_pct": 35.7,
+      "pe": 242.9,
+      "upside": 156.2,
+      "buys": 24,
       "blocked": []
     },
     "META": {
-      "score": 90.0,
+      "score": 93.0,
       "parts": {
         "moat": 25,
         "theme_fit": 20,
-        "growth": 14.000000000000002,
+        "growth": 13.05,
         "profitability": 15,
-        "valuation": 6,
+        "valuation": 10,
         "coverage": 10
       },
       "moat": "Wide",
       "cluster": "megacap",
-      "growth_pct": 28.0,
-      "pe": 27.8,
-      "upside": 10.3,
+      "growth_pct": 26.1,
+      "pe": 20.0,
+      "upside": 44.9,
       "buys": 55,
       "blocked": []
     },
@@ -322,26 +312,26 @@
       "moat": "Narrow",
       "cluster": "semis",
       "growth_pct": 36.5,
-      "pe": 77.9,
-      "upside": 38.4,
-      "buys": 42,
+      "pe": 43.5,
+      "upside": 134.0,
+      "buys": 38,
       "blocked": []
     },
     "MSFT": {
-      "score": 84.8,
+      "score": 85.4,
       "parts": {
         "moat": 25,
         "theme_fit": 20,
-        "growth": 8.85,
+        "growth": 9.4,
         "profitability": 15,
         "valuation": 6,
         "coverage": 10
       },
       "moat": "Wide",
       "cluster": "megacap",
-      "growth_pct": 17.7,
-      "pe": 30.1,
-      "upside": 10.6,
+      "growth_pct": 18.8,
+      "pe": 26.2,
+      "upside": 26.8,
       "buys": 53,
       "blocked": []
     },
@@ -358,45 +348,45 @@
       "moat": "Wide",
       "cluster": "semis",
       "growth_pct": 379.3,
-      "pe": 12.8,
-      "upside": 70.7,
+      "pe": 8.8,
+      "upside": 140.2,
       "buys": 45,
       "blocked": []
     },
     "NFLX": {
-      "score": 77.7,
+      "score": 76.9,
       "parts": {
         "moat": 16,
         "theme_fit": 20,
-        "growth": 6.7,
+        "growth": 5.8999999999999995,
         "profitability": 15,
         "valuation": 10,
         "coverage": 10
       },
       "moat": "Narrow",
       "cluster": "megacap",
-      "growth_pct": 13.4,
-      "pe": 22.2,
-      "upside": 30.5,
-      "buys": 35,
+      "growth_pct": 11.8,
+      "pe": 17.0,
+      "upside": 43.8,
+      "buys": 33,
       "blocked": []
     },
     "NVDA": {
-      "score": 96,
+      "score": 100,
       "parts": {
         "moat": 25,
         "theme_fit": 20,
         "growth": 20,
         "profitability": 15,
-        "valuation": 6,
+        "valuation": 10,
         "coverage": 10
       },
       "moat": "Wide",
       "cluster": "semis",
-      "growth_pct": 105.9,
-      "pe": 28.9,
-      "upside": 48.5,
-      "buys": 59,
+      "growth_pct": 103.2,
+      "pe": 15.3,
+      "upside": 73.6,
+      "buys": 45,
       "blocked": []
     },
     "PLTR": {
@@ -411,10 +401,10 @@
       },
       "moat": "Wide",
       "cluster": "software",
-      "growth_pct": 92.8,
-      "pe": 173.2,
-      "upside": 2.1,
-      "buys": 21,
+      "growth_pct": 95.9,
+      "pe": 107.2,
+      "upside": 46.4,
+      "buys": 24,
       "blocked": []
     },
     "RBRK": {
@@ -431,116 +421,116 @@
       "cluster": "software",
       "growth_pct": 37.9,
       "pe": null,
-      "upside": 5.5,
-      "buys": 28,
+      "upside": 12.1,
+      "buys": 29,
       "blocked": []
     },
     "RKLB": {
-      "score": 65.0,
+      "score": 64.5,
       "parts": {
         "moat": 16,
         "theme_fit": 20,
         "growth": 20,
         "profitability": 0,
         "valuation": 0,
-        "coverage": 9.0
+        "coverage": 8.5
       },
       "moat": "Narrow",
       "cluster": "defense",
-      "growth_pct": 62.0,
+      "growth_pct": 72.7,
       "pe": null,
-      "upside": 77.5,
-      "buys": 18,
+      "upside": 85.1,
+      "buys": 17,
       "blocked": []
     },
     "RTX": {
-      "score": 72.2,
+      "score": 70.5,
       "parts": {
         "moat": 16,
         "theme_fit": 20,
-        "growth": 7.249999999999999,
+        "growth": 5.55,
         "profitability": 15,
         "valuation": 6,
         "coverage": 8.0
       },
       "moat": "Narrow",
       "cluster": "defense",
-      "growth_pct": 14.5,
-      "pe": 32.2,
-      "upside": 22.7,
+      "growth_pct": 11.1,
+      "pe": 31.8,
+      "upside": 16.7,
       "buys": 16,
       "blocked": []
     },
     "SOFI": {
-      "score": 91.0,
+      "score": 95.5,
       "parts": {
         "moat": 25,
         "theme_fit": 20,
         "growth": 20,
         "profitability": 15,
-        "valuation": 6,
-        "coverage": 5.0
+        "valuation": 10,
+        "coverage": 5.5
       },
       "moat": "Wide",
       "cluster": "fintech",
-      "growth_pct": 42.6,
-      "pe": 29.0,
-      "upside": 43.2,
-      "buys": 10,
+      "growth_pct": 43.9,
+      "pe": 24.5,
+      "upside": 54.4,
+      "buys": 11,
       "blocked": []
     },
     "SPCX": {
-      "score": 72,
+      "score": 81,
       "parts": {
-        "moat": 16,
+        "moat": 25,
         "theme_fit": 20,
         "growth": 20,
         "profitability": 6,
         "valuation": 0,
         "coverage": 10
       },
-      "moat": "Narrow",
+      "moat": "Wide",
       "cluster": "defense",
-      "growth_pct": 91.9,
-      "pe": null,
-      "upside": 45.4,
-      "buys": 30,
+      "growth_pct": 161.4,
+      "pe": 577.7,
+      "upside": 93.8,
+      "buys": 32,
       "blocked": []
     },
     "TSLA": {
-      "score": 82.2,
+      "score": 70.0,
       "parts": {
         "moat": 25,
         "theme_fit": 20,
-        "growth": 12.75,
+        "growth": 0,
         "profitability": 15,
         "valuation": 0,
-        "coverage": 9.5
+        "coverage": 10.0
       },
       "moat": "Wide",
       "cluster": "megacap",
-      "growth_pct": 25.5,
-      "pe": 340.0,
-      "upside": 8.4,
-      "buys": 19,
+      "growth_pct": -0.2,
+      "pe": 410.1,
+      "upside": 10.5,
+      "buys": 20,
       "blocked": []
     },
     "VST": {
-      "score": 67.0,
+      "score": 84.8,
       "parts": {
         "moat": 16,
         "theme_fit": 20,
-        "growth": 0,
+        "growth": 13.850000000000001,
         "profitability": 15,
-        "valuation": 6,
-        "coverage": 10.0
+        "valuation": 10,
+        "coverage": 10
       },
       "moat": "Narrow",
       "cluster": "ai-power",
-      "growth_pct": -5.5,
-      "pe": 27.4,
-      "upside": 38.5,
-      "buys": 20,
+      "growth_pct": 27.7,
+      "pe": 16.4,
+      "upside": 62.7,
+      "buys": 23,
       "blocked": []
     },
     "ZS": {
@@ -557,8 +547,8 @@
       "cluster": "software",
       "growth_pct": 24.9,
       "pe": null,
-      "upside": 5.7,
-      "buys": 36,
+      "upside": 18.1,
+      "buys": 37,
       "blocked": []
     }
   }

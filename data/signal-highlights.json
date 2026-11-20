@@ -2,24 +2,24 @@
   {
     "ticker": "NVDA",
     "name": "NVIDIA Corporation",
-    "currentPrice": 204.64,
-    "changePercent": -4.22,
+    "currentPrice": 135.76,
+    "changePercent": -7.0,
     "changeDirection": "down",
     "fairValue": {
       "status": "Undervalued",
-      "price": 328.95,
-      "upside": "+60.7%"
+      "price": 246.67,
+      "upside": "+81.7%"
     },
     "earnings": {
-      "revTtm": "$302.97B",
-      "revGrowth": "+105.9%",
-      "netIncome": "$192.88B",
-      "peRatio": "25.9x",
-      "psRatio": "16.3x"
+      "revTtm": "$361.81B",
+      "revGrowth": "+103.2%",
+      "netIncome": "$226.26B",
+      "peRatio": "14.6x",
+      "psRatio": "9.1x"
     },
     "analyst": {
       "consensus": "Strong Buy",
-      "target": 328.95,
+      "target": 246.67,
       "buys": 49,
       "holds": 2,
       "sells": 1
@@ -28,183 +28,183 @@
   {
     "ticker": "AVGO",
     "name": "Broadcom Inc.",
-    "currentPrice": 326.08,
-    "changePercent": -5.48,
+    "currentPrice": 306.97,
+    "changePercent": -11.45,
     "changeDirection": "down",
     "fairValue": {
       "status": "Undervalued",
-      "price": 530.14,
-      "upside": "+62.6%"
+      "price": 526.47,
+      "upside": "+71.5%"
     },
     "earnings": {
       "revTtm": "$89.10B",
       "revGrowth": "+85.5%",
       "netIncome": "$38.26B",
-      "peRatio": "41.6x",
-      "psRatio": "17.5x"
+      "peRatio": "39.2x",
+      "psRatio": "16.4x"
     },
     "analyst": {
       "consensus": "Strong Buy",
-      "target": 530.14,
+      "target": 526.47,
       "buys": 28,
       "holds": 3,
       "sells": 0
     }
   },
   {
-    "ticker": "MSFT",
-    "name": "Microsoft Corporation",
-    "currentPrice": 521.91,
-    "changePercent": -1.55,
+    "ticker": "AMZN",
+    "name": "Amazon.com, Inc.",
+    "currentPrice": 249.86,
+    "changePercent": -2.92,
     "changeDirection": "down",
     "fairValue": {
       "status": "Undervalued",
-      "price": 627.73,
-      "upside": "+20.3%"
+      "price": 326.51,
+      "upside": "+30.7%"
     },
     "earnings": {
-      "revTtm": "$346.44B",
-      "revGrowth": "+18.8%",
-      "netIncome": "$142.63B",
-      "peRatio": "27.2x",
-      "psRatio": "11.2x"
+      "revTtm": "$797.46B",
+      "revGrowth": "+12.1%",
+      "netIncome": "$134.78B",
+      "peRatio": "20.2x",
+      "psRatio": "3.4x"
     },
     "analyst": {
       "consensus": "Strong Buy",
-      "target": 627.73,
-      "buys": 36,
-      "holds": 4,
-      "sells": 0
-    }
-  },
-  {
-    "ticker": "ANET",
-    "name": "Arista Networks, Inc.",
-    "currentPrice": 168.86,
-    "changePercent": -8.34,
-    "changeDirection": "down",
-    "fairValue": {
-      "status": "Undervalued",
-      "price": 243.59,
-      "upside": "+44.3%"
-    },
-    "earnings": {
-      "revTtm": "$10.54B",
-      "revGrowth": "+37.7%",
-      "netIncome": "$4.04B",
-      "peRatio": "53.3x",
-      "psRatio": "20.2x"
-    },
-    "analyst": {
-      "consensus": "Strong Buy",
-      "target": 243.59,
-      "buys": 31,
-      "holds": 1,
+      "target": 326.51,
+      "buys": 59,
+      "holds": 3,
       "sells": 0
     }
   },
   {
     "ticker": "KTOS",
     "name": "Kratos Defense & Security",
-    "currentPrice": 41.09,
-    "changePercent": -5.74,
+    "currentPrice": 27.47,
+    "changePercent": -7.34,
     "changeDirection": "down",
     "fairValue": {
       "status": "Undervalued",
-      "price": 93.44,
-      "upside": "+127.4%"
+      "price": 74.68,
+      "upside": "+171.9%"
     },
     "earnings": {
-      "revTtm": "$1.52B",
-      "revGrowth": "+30.5%",
-      "netIncome": "$30.90M",
-      "peRatio": "241.7x",
-      "psRatio": "5.1x"
+      "revTtm": "$1.65B",
+      "revGrowth": "+35.7%",
+      "netIncome": "$22.00M",
+      "peRatio": "228.9x",
+      "psRatio": "3.1x"
     },
     "analyst": {
       "consensus": "Strong Buy",
-      "target": 93.44,
+      "target": 74.68,
       "buys": 15,
       "holds": 5,
       "sells": 0
     }
   },
   {
-    "ticker": "AXON",
-    "name": "Axon Enterprise Inc.",
-    "currentPrice": 427.77,
-    "changePercent": -2.35,
+    "ticker": "ANET",
+    "name": "Arista Networks, Inc.",
+    "currentPrice": 168.3,
+    "changePercent": -11.23,
     "changeDirection": "down",
     "fairValue": {
       "status": "Undervalued",
-      "price": 680.37,
-      "upside": "+59.1%"
+      "price": 249.65,
+      "upside": "+48.3%"
     },
     "earnings": {
-      "revTtm": "$3.22B",
-      "revGrowth": "+35.3%",
-      "netIncome": "$199.30M",
-      "peRatio": "177.5x",
-      "psRatio": "10.8x"
+      "revTtm": "$11.89B",
+      "revGrowth": "+58.5%",
+      "netIncome": "$4.75B",
+      "peRatio": "45.1x",
+      "psRatio": "17.9x"
     },
     "analyst": {
       "consensus": "Strong Buy",
-      "target": 680.37,
-      "buys": 12,
-      "holds": 8,
+      "target": 249.65,
+      "buys": 30,
+      "holds": 0,
+      "sells": 0
+    }
+  },
+  {
+    "ticker": "MSFT",
+    "name": "Microsoft Corporation",
+    "currentPrice": 489.45,
+    "changePercent": -1.78,
+    "changeDirection": "down",
+    "fairValue": {
+      "status": "Undervalued",
+      "price": 636.12,
+      "upside": "+30.0%"
+    },
+    "earnings": {
+      "revTtm": "$346.44B",
+      "revGrowth": "+18.8%",
+      "netIncome": "$142.63B",
+      "peRatio": "25.5x",
+      "psRatio": "10.5x"
+    },
+    "analyst": {
+      "consensus": "Strong Buy",
+      "target": 636.12,
+      "buys": 36,
+      "holds": 4,
       "sells": 0
     }
   },
   {
     "ticker": "SOFI",
     "name": "SoFi Technologies Inc.",
-    "currentPrice": 16.76,
-    "changePercent": -4.83,
+    "currentPrice": 12.81,
+    "changePercent": -5.28,
     "changeDirection": "down",
     "fairValue": {
       "status": "Undervalued",
-      "price": 20.75,
-      "upside": "+23.8%"
+      "price": 20.84,
+      "upside": "+62.7%"
     },
     "earnings": {
       "revTtm": "$4.69B",
       "revGrowth": "+43.9%",
       "netIncome": "$737.86M",
-      "peRatio": "30.5x",
-      "psRatio": "4.6x"
+      "peRatio": "23.3x",
+      "psRatio": "3.5x"
     },
     "analyst": {
       "consensus": "Buy",
-      "target": 20.75,
+      "target": 20.84,
       "buys": 11,
       "holds": 7,
       "sells": 0
     }
   },
   {
-    "ticker": "RKLB",
-    "name": "Rocket Lab Corporation",
-    "currentPrice": 54.73,
-    "changePercent": -7.39,
+    "ticker": "VST",
+    "name": "Vistra Corp.",
+    "currentPrice": 117.84,
+    "changePercent": -5.08,
     "changeDirection": "down",
     "fairValue": {
       "status": "Undervalued",
-      "price": 102.15,
-      "upside": "+86.6%"
+      "price": 197.75,
+      "upside": "+67.8%"
     },
     "earnings": {
-      "revTtm": "$769.15M",
-      "revGrowth": "+62.0%",
-      "netIncome": "$-165.46M",
-      "peRatio": "N/A",
-      "psRatio": "45.5x"
+      "revTtm": "$20.59B",
+      "revGrowth": "+27.7%",
+      "netIncome": "$2.52B",
+      "peRatio": "15.9x",
+      "psRatio": "1.9x"
     },
     "analyst": {
-      "consensus": "Buy",
-      "target": 102.15,
-      "buys": 18,
-      "holds": 4,
-      "sells": 0
+      "consensus": "Strong Buy",
+      "target": 197.75,
+      "buys": 23,
+      "holds": 1,
+      "sells": 1
     }
   }
 ]

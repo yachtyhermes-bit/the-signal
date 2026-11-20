@@ -8,17 +8,17 @@
     "color": "#10b981",
     "drivers": [
       "Revenue up +256.3% YoY to $133.19B",
-      "P/E at 11.9x \u2014 attractively valued",
-      "Target upside +75.2%"
+      "P/E at 8.2x \u2014 attractively valued",
+      "Target upside +155.3%"
     ],
-    "upside": "+75.2%",
+    "upside": "+155.3%",
     "logo": "",
     "metrics": {
       "revenue": "$133.19B",
       "growth": "+256.3%",
       "netIncome": "$84.97B",
-      "pe": "11.9x",
-      "ps": "7.5x"
+      "pe": "8.2x",
+      "ps": "5.2x"
     }
   },
   {
@@ -26,43 +26,43 @@
     "name": "NVIDIA Corporation",
     "sector": "Semiconductors",
     "signal": "Strong Bullish",
-    "score": 95,
+    "score": 98,
     "color": "#10b981",
     "drivers": [
-      "Revenue up +65.5% YoY to $302.97B",
-      "P/E at 25.9x \u2014 attractively valued",
-      "Target upside +53.9%"
+      "Revenue up +65.5% YoY to $361.81B",
+      "P/E at 14.6x \u2014 attractively valued",
+      "Target upside +76.8%"
     ],
-    "upside": "+53.9%",
+    "upside": "+76.8%",
     "logo": "",
     "metrics": {
-      "revenue": "$302.97B",
+      "revenue": "$361.81B",
       "growth": "+65.5%",
-      "netIncome": "$192.88B",
-      "pe": "25.9x",
-      "ps": "16.3x"
+      "netIncome": "$226.26B",
+      "pe": "14.6x",
+      "ps": "9.1x"
     }
   },
   {
-    "ticker": "GOOGL",
-    "name": "Alphabet Inc.",
-    "sector": "Internet Content",
+    "ticker": "AMAT",
+    "name": "AMAT",
+    "sector": "Equity",
     "signal": "Strong Bullish",
     "score": 80,
     "color": "#10b981",
     "drivers": [
-      "Revenue up +15.1% YoY to $471.10B",
-      "P/E at 14.6x \u2014 attractively valued",
-      "Target upside +42.9%"
+      "Revenue up +4.4% YoY to $34.45B",
+      "P/E at 24.5x \u2014 attractively valued",
+      "Target upside +82.4%"
     ],
-    "upside": "+42.9%",
+    "upside": "+82.4%",
     "logo": "",
     "metrics": {
-      "revenue": "$471.10B",
-      "growth": "+15.1%",
-      "netIncome": "$235.31B",
-      "pe": "14.6x",
-      "ps": "7.3x"
+      "revenue": "$34.45B",
+      "growth": "+4.4%",
+      "netIncome": "$10.09B",
+      "pe": "24.5x",
+      "ps": "7.1x"
     }
   },
   {
@@ -70,43 +70,43 @@
     "name": "Meta Platforms",
     "sector": "Social Media",
     "signal": "Strong Bullish",
-    "score": 83,
+    "score": 84,
     "color": "#10b981",
     "drivers": [
       "Revenue up +22.2% YoY to $241.61B",
-      "P/E at 21.0x \u2014 attractively valued",
-      "Target upside +38.2%"
+      "P/E at 19.4x \u2014 attractively valued",
+      "Target upside +49.3%"
     ],
-    "upside": "+38.2%",
+    "upside": "+49.3%",
     "logo": "",
     "metrics": {
       "revenue": "$241.61B",
       "growth": "+22.2%",
       "netIncome": "$75.25B",
-      "pe": "21.0x",
-      "ps": "6.5x"
+      "pe": "19.4x",
+      "ps": "6.0x"
     }
   },
   {
-    "ticker": "PLTR",
-    "name": "Palantir Technologies Inc.",
-    "sector": "AI Software",
+    "ticker": "GOOGL",
+    "name": "Alphabet Inc.",
+    "sector": "Internet Content",
     "signal": "Strong Bullish",
-    "score": 80,
+    "score": 81,
     "color": "#10b981",
     "drivers": [
-      "Revenue up +56.2% YoY to $6.16B",
-      "Premium valuation at 159x P/E",
-      "Target upside +21.7%"
+      "Revenue up +15.1% YoY to $471.10B",
+      "P/E at 14.2x \u2014 attractively valued",
+      "Target upside +47.1%"
     ],
-    "upside": "+21.7%",
+    "upside": "+47.1%",
     "logo": "",
     "metrics": {
-      "revenue": "$6.16B",
-      "growth": "+56.2%",
-      "netIncome": "$3.02B",
-      "pe": "158.7x",
-      "ps": "71.9x"
+      "revenue": "$471.10B",
+      "growth": "+15.1%",
+      "netIncome": "$235.69B",
+      "pe": "14.2x",
+      "ps": "7.1x"
     }
   },
   {
@@ -114,65 +114,65 @@
     "name": "Constellation Energy",
     "sector": "AI Power",
     "signal": "Bullish",
-    "score": 71,
+    "score": 77,
     "color": "#84cc16",
     "drivers": [
-      "Revenue up +8.3% YoY to $31.27B",
-      "P/E at 25.6x \u2014 attractively valued",
-      "Target upside +31.5%"
+      "Revenue up +8.3% YoY to $34.25B",
+      "P/E at 19.7x \u2014 attractively valued",
+      "Target upside +41.2%"
     ],
-    "upside": "+31.5%",
+    "upside": "+41.2%",
     "logo": "",
     "metrics": {
-      "revenue": "$31.27B",
+      "revenue": "$34.25B",
       "growth": "+8.3%",
-      "netIncome": "$3.46B",
-      "pe": "25.6x",
-      "ps": "3.0x"
+      "netIncome": "$4.37B",
+      "pe": "19.7x",
+      "ps": "2.5x"
     }
   },
   {
-    "ticker": "NFLX",
-    "name": "Netflix Inc.",
-    "sector": "Entertainment",
+    "ticker": "PLTR",
+    "name": "Palantir Technologies Inc.",
+    "sector": "AI Software",
     "signal": "Strong Bullish",
-    "score": 80,
+    "score": 83,
     "color": "#10b981",
     "drivers": [
-      "Revenue up +15.9% YoY to $49.73B",
-      "P/E at 17.9x \u2014 attractively valued",
-      "Target upside +32.1%"
+      "Revenue up +56.2% YoY to $7.29B",
+      "Premium valuation at 104x P/E",
+      "Target upside +59.9%"
     ],
-    "upside": "+32.1%",
+    "upside": "+59.9%",
     "logo": "",
     "metrics": {
-      "revenue": "$49.73B",
-      "growth": "+15.9%",
-      "netIncome": "$14.77B",
-      "pe": "17.9x",
-      "ps": "5.2x"
+      "revenue": "$7.29B",
+      "growth": "+56.2%",
+      "netIncome": "$3.67B",
+      "pe": "103.5x",
+      "ps": "48.6x"
     }
   },
   {
     "ticker": "GEV",
     "name": "GE Vernova",
     "sector": "AI Power",
-    "signal": "Bullish",
-    "score": 78,
-    "color": "#84cc16",
+    "signal": "Strong Bullish",
+    "score": 81,
+    "color": "#10b981",
     "drivers": [
       "Revenue up +9.0% YoY to $44.04B",
-      "P/E at 22.5x \u2014 attractively valued",
-      "Target upside +39.9%"
+      "P/E at 18.5x \u2014 attractively valued",
+      "Target upside +70.1%"
     ],
-    "upside": "+39.9%",
+    "upside": "+70.1%",
     "logo": "",
     "metrics": {
       "revenue": "$44.04B",
       "growth": "+9.0%",
       "netIncome": "$10.37B",
-      "pe": "22.5x",
-      "ps": "5.2x"
+      "pe": "18.5x",
+      "ps": "4.2x"
     }
   }
 ]
