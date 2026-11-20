@@ -174,12 +174,15 @@ if (fs.existsSync(distArticlesImg)) {
   console.log('  🗑  Removed dist/img/articles/ (served from R2 CDN)');
 }
 
-// ─── 1.5.5. Copy article audio ───
-const audioDir = path.join(ROOT, 'public', 'audio');
+// ─── 1.5.5. Article audio ───
+// TTS audio is served from R2 (bucket the-signal-audio, key v2/<slug>.mp3);
+// no page links a local /audio/ file. Shipping public/audio into dist cost
+// ~345 MB per deployment (10 GB free quota is only ~23 deploys of that size),
+// so dist/audio is cleared instead of populated.
 const distAudioDir = path.join(DST, 'audio');
-if (fs.existsSync(audioDir)) {
-  fs.cpSync(audioDir, distAudioDir, { recursive: true });
-  console.log(`  ✅ ${countFiles(distAudioDir)} audio files → dist/audio/`);
+if (fs.existsSync(distAudioDir)) {
+  fs.rmSync(distAudioDir, { recursive: true, force: true });
+  console.log('  🧹 dist/audio cleared (audio is served from R2)');
 }
 
 // ─── 1.5.55. Copy assets (donut images, etc.) ───
