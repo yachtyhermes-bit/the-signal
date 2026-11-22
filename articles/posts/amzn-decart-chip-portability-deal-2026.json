@@ -1,0 +1,119 @@
+{
+  "slug": "amzn-decart-chip-portability-deal-2026",
+  "title": "Amazon Nears a $7.5 Billion Bet That AI Chips Become Interchangeable",
+  "subtitle": "The reported deal for Decart targets the software moat that keeps cloud giants locked into Nvidia.",
+  "summary": "Amazon is reportedly in advanced talks to acquire artificial intelligence startup Decart for roughly $7.5 billion. The deal targets the software layer that makes Nvidia hardware the default choice for training and running models.",
+  "ticker": "AMZN",
+  "tickerName": "Amazon.com, Inc.",
+  "company": "Amazon.com, Inc.",
+  "sector": "mega-cap",
+  "sentiment": "neutral",
+  "date": "2026-11-22T15:00:00Z",
+  "price": 246.82,
+  "featured": false,
+  "premium": false,
+  "tags": [
+    "AMZN",
+    "Amazon",
+    "Decart",
+    "AWS",
+    "Trainium",
+    "CUDA",
+    "Nvidia",
+    "AI chips",
+    "chip portability",
+    "custom silicon",
+    "acquisition",
+    "AI infrastructure"
+  ],
+  "links": [
+    {
+      "label": "Financial Times report, via Seeking Alpha (Nov. 21, 2026): Amazon in advanced talks to buy Decart for roughly $7.5 billion, with an announcement possible as soon as the coming week →",
+      "url": "https://seekingalpha.com/news/4675396-amazon-nears-75b-deal-buy-ai-start-up-decart"
+    },
+    {
+      "label": "Calcalist/CTech (Nov. 18, 2026): more than $7 billion in cash, stock and deferred payments plus performance earnouts taking the total to nearly $7.5 billion, against an original $5-6 billion valuation; all three founders committed for five years →",
+      "url": "https://www.calcalistech.com/ctechnews/article/uckadwd7r"
+    },
+    {
+      "label": "GeekWire (Oct. 12, 2026): why Amazon would pay billions for Decart, a three-year-old startup that has not disclosed its revenue →",
+      "url": "https://www.geekwire.com/2026/why-amazon-might-pay-billions-for-decart-a-3-year-old-ai-startup-that-hasnt-disclosed-its-revenue/"
+    },
+    {
+      "label": "Amazon press release (Dec. 2, 2025): Trainium3 UltraServers now generally available; Decart achieving 4x faster inference for real-time generative video at half the cost of GPUs →",
+      "url": "https://press.aboutamazon.com/2025/12/trainium3-ultraservers-now-available-enabling-customers-to-train-and-deploy-ai-models-faster-at-lower-cost"
+    },
+    {
+      "label": "Amazon third-quarter 2026 results (Oct. 29, 2026): AWS net sales of $46.0 billion, up 39.3% year over year →",
+      "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Third-Quarter-Results/default.aspx"
+    },
+    {
+      "label": "Tom's Hardware (Nov. 16, 2026): Anthropic says Claude Mythos cut onboarding a model to AMD GPUs from up to 12 months to around three days, writing almost 100 percent of the kernels →",
+      "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropic-says-claude-mythos-slashed-software-work-to-onboard-amd-gpus-from-up-to-12-months-to-around-three-days-writing-almost-100-percent-of-kernels-autonomously-chips-away-at-nvidias-cuda-moat"
+    },
+    {
+      "label": "Anthropic (Apr. 20, 2026): Anthropic and Amazon expand compute collaboration, more than $100 billion over ten years and up to 5 gigawatts of Trainium capacity →",
+      "url": "https://www.anthropic.com/news/anthropic-amazon-compute"
+    },
+    {
+      "label": "Bloomberg Intelligence: Nvidia expected to hold 70-75% of the AI accelerator market through 2030 →",
+      "url": "https://www.bloomberg.com/company/press/ai-accelerator-market-looks-set-to-exceed-600-billion-by-2033-driven-by-hyperscale-spending-and-asic-adoption-according-to-bloomberg-intelligence/"
+    },
+    {
+      "label": "Decart: company background, the Decart Optimization Stack, the Lucy and Oasis models, and the May 2026 $300 million round led by Radical Ventures →",
+      "url": "https://decart.ai/about"
+    }
+  ],
+  "image": {
+    "src": "/img/articles/amzn-decart-chip-portability-deal-2026.jpg",
+    "fit": "cover",
+    "caption": "Two different AI accelerator modules side by side on a lab bench. Amazon is reportedly in advanced talks to buy Decart, whose software lets models move between Nvidia, Google and Amazon chips. Photo: The Signal / AI-generated.",
+    "alt": "Photorealistic close-up of two different AI accelerator modules resting side by side on a grey anti-static mat on a lab workbench, one a broad GPU carrier board with a finned heatsink, the other a smaller custom ASIC module in a metal retention frame, with a technician's gloved hands blurred in the background."
+  },
+  "meta": {
+    "author": "Charles Osi",
+    "estimatedReadTime": "4 min",
+    "editorialTags": [
+      "amazon",
+      "decart",
+      "chip-portability",
+      "cuda-moat",
+      "trainium",
+      "custom-silicon",
+      "aws-margins",
+      "ai-capex",
+      "acquisition",
+      "nvidia"
+    ],
+    "seoKeywords": [
+      "Amazon Decart deal",
+      "AMZN stock",
+      "Decart acquisition $7.5 billion",
+      "Amazon Trainium",
+      "Nvidia CUDA moat",
+      "AWS operating margin",
+      "Amazon custom silicon",
+      "chip portability software",
+      "AI accelerator market share",
+      "Amazon capex 2026"
+    ],
+    "relatedTickers": [
+      "AMZN",
+      "NVDA",
+      "GOOGL",
+      "MSFT",
+      "AVGO"
+    ],
+    "keyMetrics": {
+      "Price": 246.82,
+      "Market Cap": "$2.67T",
+      "Forward P/E": "22.6x",
+      "Total Revenue (TTM)": "$797.5B",
+      "52-Week Low": 196.0,
+      "52-Week High": 287.2,
+      "Analyst Consensus": "Strong Buy (62 analysts)",
+      "Analyst Target Mean": 326.51
+    }
+  },
+  "bodyHtml": "Think about what happens when you try switching from an iPhone to Android. It is never just about buying new hardware. Your apps, your paid subscriptions, your photo libraries, and your muscle memory are all locked into Apple’s garden. Leaving feels exhausting, so you stay put and pay whatever Apple asks for the next upgrade.\n\nThat is precisely how Nvidia conquered artificial intelligence. For two decades, Nvidia did not just sell chips; it gave away CUDA, a proprietary programming platform launched in 2006. AI developers built their code, compiled their math, and tuned their models directly on top of Nvidia’s private software libraries. If you want to run those models on someone else's silicon, you cannot just flip a switch. You have to rewrite the underlying code from scratch.\n\nNow, Amazon is reportedly preparing to take a sledgehammer to that wall. According to the Financial Times, the tech giant is in advanced talks to acquire Decart, a three-year-old AI startup, for roughly $7.5 billion in cash, stock, and earnouts. An agreement could be announced as soon as the coming week, though the discussions could still collapse. Neither company has confirmed the talks, which follow earlier reports of a lower valuation.\n\nTo understand why Amazon would cut a ten-figure check for an unproven startup, look at what both companies actually sell. Amazon runs AWS, the world's largest rented-computing empire, where companies host websites, store data, and train massive AI models. Decart sells portability. Its flagship product, the Decart Optimization Stack, acts as a universal adapter for AI models. It allows code to hop smoothly between Nvidia graphics chips, Google processors, and Amazon’s custom Trainium silicon. Instead of rewiring the entire house just to plug in a different appliance, Decart’s software translates the current on the fly.\n\n<div class=\"stats-card\">\n<div class=\"stats-card-title\">The Numbers That Matter</div>\n<table class=\"stats-table\">\n<tr><td class=\"stats-label\">Price <span class=\"stats-live-badge\">LIVE</span></td><td class=\"stats-value\" data-live-ticker=\"AMZN\" data-live-field=\"price\">$246.82</td></tr>\n<tr><td class=\"stats-label\">Market Cap</td><td class=\"stats-value\">$2.67T</td></tr>\n<tr><td class=\"stats-label\">Forward P/E</td><td class=\"stats-value\">22.6x</td></tr>\n<tr><td class=\"stats-label\">Total Revenue (TTM)</td><td class=\"stats-value\">$797.5B</td></tr>\n<tr><td class=\"stats-label\">52-Week Low</td><td class=\"stats-value\">$196.00</td></tr>\n<tr><td class=\"stats-label\">52-Week High</td><td class=\"stats-value\">$287.20</td></tr>\n<tr><td class=\"stats-label\">Analyst Consensus</td><td class=\"stats-value\">Strong Buy (62 analysts)</td></tr>\n<tr><td class=\"stats-label\">Analyst Target Mean</td><td class=\"stats-value\">$326.51</td></tr>\n</table>\n<div class=\"stats-card-note\">Price refreshes live &middot; All other figures as of November 20, 2026</div>\n</div>\n\nNvidia sells the high-performance sports car, but it built the road so that only its wheels fit the asphalt. Decart repaves the road. We are already seeing the first cracks in that pavement. In its recent public disclosures, AI lab Anthropic revealed that bringing a model up on rival AMD chips used to take six to twelve months and dozens of engineers. Its latest Claude Mythos model did it in about three days by writing almost all of the code autonomously.\n\nThat shift changes the economics of the entire cloud buildout. Amazon is not trying to become a traditional merchant chipmaker. It is buying the software layer that turns everyone else’s silicon into a generic commodity. If software can strip away CUDA's friction, then the massive price premium Nvidia charges stops looking like an impenetrable moat and starts looking like an avoidable expense. That dynamic is worth more to Amazon than to anyone else on Earth, because Amazon designs its own chips.\n\nAmazon's in-house silicon business—spanning Graviton, Nitro, and Trainium—is already massive. The company says the unit surpassed a $25 billion annualized run rate earlier this year. Chief Executive Andy Jassy has pointed to more than $225 billion in revenue commitments for Trainium, arguing the business would be worth roughly $50 billion if priced like an independent supplier. During an on-stage demo at AWS re:Invent, Decart showcased real-time video running on Amazon's Trainium3 hardware, generating frames four times faster than graphics processors at half the cost.\n\nFor equity investors, this deal cuts straight to the core of Amazon's valuation. Amazon trades at roughly 22 times forward earnings while guiding toward a staggering $220 billion in cash capital expenditures this year. Wall Street tolerates that historic spending spree because AWS generates a sparkling 38.7% operating margin. Every time an AWS client trains a model on an in-house Trainium chip instead of renting an expensive Nvidia processor, Amazon keeps that margin for itself. Lowering the switching cost for customers converts a costly hardware purchase into high-margin proprietary software.\n\nThe bear case, however, writes itself. Amazon would be paying an implied multiple comfortably north of 150 times estimated revenue for a utility whose entire value rests on being completely neutral. Decart generated only low tens of millions in estimated revenue, primarily from specialized semiconductor consulting projects. Cloud customers embraced Decart precisely because they did not want to be held hostage by any single vendor. Stick that software inside AWS, and independent AI labs will immediately question its neutrality. Furthermore, chip portability is a double-edged sword: if AI code moves effortlessly across hardware, AWS's rented servers become just as replaceable as Nvidia's chips. Translation layers also routinely sacrifice throughput, and Nvidia still commands an estimated 70% to 75% of the accelerator market. If Decart's technology fails to scale outside of Amazon's walled garden, this reported $7.5 billion deal quickly turns into an eye-watering acqui-hire for three founders.\n\nWhat we are watching closely is whether Amazon keeps Decart's stack fully optimized for Nvidia and Google silicon if a transaction closes. If Amazon preserves open cross-chip support, it is establishing itself as the default software tollbooth for flexible enterprise computing.\n\n<p class=\"disclosure\">Disclosure: The Signal holds no position in AMZN. Positions may change. This is not financial advice.</p>"
+}
