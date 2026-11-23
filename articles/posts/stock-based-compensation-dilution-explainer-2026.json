@@ -1,0 +1,103 @@
+{
+  "slug": "stock-based-compensation-dilution-explainer-2026",
+  "title": "Stock Pay Is Real Pay, and Revenue per Share Is Where It Shows",
+  "subtitle": "Equity awards are added back into cash flow and excluded from non-GAAP profit. Two honest tests separate companies funding dilution with growth from those paying for it with your ownership.",
+  "summary": "Software companies add stock compensation back into operating cash flow and strip it out of non-GAAP profit, which makes reported cash generation look better than the cash available to owners. Deducting equity pay and tracking revenue per share shows which high-growth platforms actually compound for shareholders and which are funding payroll with their own ownership.",
+  "format": "explainer",
+  "ticker": "RBRK",
+  "tickers": [
+    "RBRK",
+    "CRWV",
+    "PLTR"
+  ],
+  "sector": "ai",
+  "sentiment": "neutral",
+  "date": "2026-11-22T22:00:00Z",
+  "image": {
+    "src": "/img/articles/stock-based-compensation-dilution-explainer-2026.jpg"
+  },
+  "keyTerms": [
+    {
+      "term": "Stock-based compensation",
+      "definition": "Pay handed to employees as newly issued shares or options instead of cash. Accounting rules require it to be expensed at grant-date fair value over the vesting period, so it appears as a real cost in GAAP results even though no cash leaves the company on payday."
+    },
+    {
+      "term": "Non-GAAP earnings",
+      "definition": "A company's own profit measure, which usually strips out stock pay and other items management calls non-cash or one-off. There is no standard definition, so the reconciliation back to GAAP profit is the part that matters."
+    },
+    {
+      "term": "Dilution",
+      "definition": "The shrinking of each existing shareholder's slice of a company when new shares are issued. Employee equity awards are the most common source, because the pie does not grow when the slices multiply."
+    },
+    {
+      "term": "Free cash flow after stock pay",
+      "definition": "Operating cash flow minus capital spending, minus the stock-pay expense. That last step charges a company for compensation it settled in ownership rather than cash, which the standard free-cash-flow measure leaves out."
+    },
+    {
+      "term": "Revenue per share",
+      "definition": "Total revenue divided by shares outstanding. It shows whether growth is reaching each share or being spread thin across a growing share count, and it is the cleanest single test of whether dilution is being funded by growth."
+    },
+    {
+      "term": "At-the-market program",
+      "definition": "An arrangement that lets a company drip new shares into the open market at prevailing prices instead of selling one discounted block. Board approval is not a sale: the share count moves only when shares actually trade."
+    }
+  ],
+  "bottomLine": "Stock pay is compensation, and the only question worth asking is who funds it. Reported free cash flow quietly assumes employees work for free, because the expense is added straight back into operating cash flow. Charge it, and Rubrik's trailing cash generation goes from solidly positive to slightly negative, while Palantir keeps a wide margin and CoreWeave's problem turns out to be the debt and depreciation underneath its capital spending. None of that makes dilution a verdict on its own. When revenue per share compounds faster than the share count grows, employees are being paid out of growth. When it does not, they are being paid out of the ownership investors thought they bought. Watch the gap between revenue growth and revenue per share growth, watch whether buybacks actually exceed the shares handed out, and you will know which company you own before the next annual report tells you.",
+  "bodyHtml": "<p>Imagine paying your monthly gym membership not with cash from your checking account, but by handing the front desk a fractional deed to your apartment. You still have money in the bank, and your personal cash flow looks pristine. Over time, though, you wake up to find you only own half your living room.</p><p>That is stock-based compensation in enterprise software. Companies do not write checks for this payroll; they print brand-new equity and hand it to engineers.</p><p>Rubrik sells automated backup and cyber-recovery tools that rescue corporate databases after ransomware attacks. CoreWeave operates as a specialized landlord for the artificial intelligence boom, packing data centers with cutting-edge graphics processors and renting that computing muscle to foundation labs. Palantir sells data-integration engines that let governments and global corporations coordinate operations in real time. All three lean on equity grants to attract scarce technical talent, but how they account for those shares determines whether investors are buying real cash generation or an optical illusion.</p><p>The accounting trick hinges on the non-GAAP earnings bridge and the statement of cash flows. Because equity awards do not drain physical bank reserves on payroll day, financial rules let companies add that expense right back into operating cash flow. In the quarter ended July 31, 2026, Rubrik handed out $101.0 million in stock compensation across research, sales, and administration. That single line equaled 23.6% of its $427.3 million quarterly revenue. More importantly, it was the entire bridge from a GAAP operating loss of $(71.9) million to an adjusted operating profit of $33.5 million. That flip turned a headline loss of $(0.30) per share into non-GAAP earnings of $0.20 per share.</p><p>When you look at the trailing twelve months, the real economics emerge. Rubrik reported $337.1 million of operating cash flow and $286.3 million of free cash flow. Yet its equity pay over that span totaled $341.8 million, swallowing 101.4% of operating cash flow. Treat stock grants as the actual employee pay they are, and that positive free cash flow flips to negative $(55.5) million.</p><p>Contrast that with Palantir, which offers a masterclass in why headline adjustments deceive. Because Palantir is now solidly profitable under standard accounting rules, it actually pays income taxes. In the quarter ended September 30, 2026, Palantir added back $318.9 million in stock pay, but income tax adjustments wiped out $(327.7) million. The net adjusted profit gain from that massive add-back was just $14.3 million, leaving adjusted earnings per share identical to standard earnings at $0.44. The size of the add-back does not equal the size of the benefit once the tax bill arrives.</p><p>Meanwhile, the true cost of equity compensation quietly accumulates on the balance sheet as dilution. When a company issues stock to workers, the overall corporate pie stays the same size while the number of slices multiplies. In the six months ending July 31, 2026, Rubrik settled restricted stock units and option exercises to create roughly 4.96 million net new shares, expanding its count by 2.5%.</p><p>Dilution also stays conveniently invisible in per-share numbers whenever a company runs a net loss. Accounting standards dictate that potential shares from options or stock grants cannot be included in diluted share counts if doing so would reduce the reported loss per share. Rubrik reported 206.1 million diluted shares for standard accounting, identical to its basic count. Its own adjusted calculation, which includes those grants, stood at 226.8 million. Behind the scenes sits another $952.8 million in unrecognized equity expense queued up over the next 1.6 years, representing 62% of trailing annual revenue already legally promised.</p><p>Many management teams claim share buybacks neutralize this dilution, but the math rarely checks out. Palantir authorized a $1.0 billion repurchase program in August 2023, spent $75.0 million buying back 600,446 shares, and terminated the plan in January 2026. Over the first nine months of that year, it issued roughly 18.0 million shares through equity awards. Across the broader market, S&P 500 buybacks reached a record $1.020 trillion over the twelve months through September 2025, yet only 17.1% of index members actually reduced their share counts by 4% or more. A review of ten major software businesses by The Signal found median stock pay consuming 18.2% of trailing revenue.</p><p>For an equity to re-rate sustainably, revenue per share must compound faster than the underlying share count expands. If top-line sales jump 40% while management prints 10% more stock to pay staff, investors capture only a fraction of that operating leverage. Over their trailing twelve months, Palantir saw top-line revenue climb 95.9% while revenue per share rose 93.8%, giving up just two percentage points to dilution. CoreWeave saw sales leap 168.2% while revenue per share climbed 140.9%, surrendering 27 points to private equity placements funding its data centers. Rubrik expanded revenue by 37.9%, but revenue per share grew 31.4%.</p><p>Short sellers view high stock compensation as an existential structural flaw. The bear case argues that stock awards are non-discretionary payroll expenses, and pretending they are non-cash windfalls misprices the business. Rubrik guides for full-year free cash flow between $323 million and $333 million, yet its current stock pay annualizes near $349 million. Deduct that compensation and its guided cash cushion drops to near zero, meaning owners are paying a premium multiple for zero real distributable earnings.</p><p>Four warning signs would prove the bears right. The first is stock-pay expense growing faster than revenue for two straight quarters. The second is a share count rising despite an active buyback. The third is negative cash flow after stock pay while unvested grants exceed a quarter of annual revenue. The fourth is revenue per share lagging top-line growth for four consecutive quarters.</p><p>Next quarter, check whether stock-pay growth stays below top-line growth and subtract stock compensation directly from operating cash flow. Sustainable equity value comes from compounding per-share claims, not subsidizing payroll with ownership.</p><p class=\"disclosure\">Analysis, not advice. We may own these names and we may sell them at any time.</p>",
+  "tags": [
+    "stock-based compensation",
+    "dilution",
+    "share buybacks",
+    "free cash flow",
+    "non-GAAP earnings",
+    "revenue per share",
+    "Rubrik",
+    "CoreWeave",
+    "Palantir"
+  ],
+  "links": [
+    {
+      "label": "Rubrik Q2 fiscal 2027 Form 10-Q (quarter ended July 31, 2026) - SEC filing",
+      "url": "https://www.sec.gov/Archives/edgar/data/1943896/000194389626000060/rbrk-20260731.htm"
+    },
+    {
+      "label": "Rubrik Q2 fiscal 2027 results, including non-GAAP reconciliation - SEC filing",
+      "url": "https://www.sec.gov/Archives/edgar/data/1943896/000194389626000055/rubrikinc-991pressrelease7.htm"
+    },
+    {
+      "label": "CoreWeave Q3 2026 Form 10-Q (quarter ended September 30, 2026) - SEC filing",
+      "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000465/crwv-20260930.htm"
+    },
+    {
+      "label": "CoreWeave Q3 2026 results and Adjusted EBITDA reconciliation - SEC filing",
+      "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000461/coreweave3q26earningspress.htm"
+    },
+    {
+      "label": "Palantir Q3 2026 Form 10-Q (quarter ended September 30, 2026) - SEC filing",
+      "url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000048/pltr-20260930.htm"
+    },
+    {
+      "label": "Palantir Q3 2026 results and adjusted earnings reconciliation - SEC filing",
+      "url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000045/a2026q3ex991pressrelease.htm"
+    },
+    {
+      "label": "Palantir fiscal 2025 Form 10-K (repurchase authorization and termination) - SEC filing",
+      "url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000011/pltr-20251231.htm"
+    },
+    {
+      "label": "Rubrik fiscal 2026 Form 10-K (full-year revenue and stock compensation) - SEC filing",
+      "url": "https://www.sec.gov/Archives/edgar/data/1943896/000194389626000013/rbrk-20260131.htm"
+    },
+    {
+      "label": "S&P Dow Jones Indices: S&P 500 Q3 2025 buybacks report",
+      "url": "https://press.spglobal.com/2025-12-18-S-P-500-Q3-2025-Buybacks-Post-Modest-6-2-Gain-to-249-0-Billion-After-Declining-20-1-Amidst-Uncertainty-in-Q2-Q4-2025-Expenditures-Expected-to-Post-Similar-Growth,-As-2025-Anticipates-a-Record-1-Trillion"
+    },
+    {
+      "label": "SEC Staff Accounting Bulletin No. 107, Topic 14: share-based payment",
+      "url": "https://www.sec.gov/rules-regulations/staff-guidance/staff-accounting-bulletins/staff-accounting-bulletin-no-107"
+    }
+  ],
+  "meta": {
+    "estimatedReadTime": "5 min read"
+  }
+}
