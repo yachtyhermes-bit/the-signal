@@ -1,0 +1,97 @@
+{
+  "slug": "mpwr-800vdc-ai-power-architecture-2026",
+  "title": "Monolithic Power Faces Socket Reset as Data Centers Shift to 800 Volts",
+  "subtitle": "The AI boom turned low-voltage silicon into a billion-dollar business, but next-generation rack designs threaten to bypass its core franchise.",
+  "summary": "Monolithic Power Systems just logged its first billion-dollar quarter on the back of explosive AI server demand. But as next-generation data centers shift toward 800-volt architectures, the chip designer must fight to defend its turf against a major rack redesign.",
+  "ticker": "MPWR",
+  "tickerName": "Monolithic Power Systems, Inc.",
+  "company": "Monolithic Power Systems, Inc.",
+  "sector": "ai",
+  "sentiment": "neutral",
+  "date": "2026-11-25T22:00:00Z",
+  "price": 1194.63,
+  "featured": false,
+  "premium": false,
+  "tags": [
+    "MPWR",
+    "Monolithic Power Systems",
+    "800 VDC",
+    "AI power delivery",
+    "gallium nitride",
+    "data center power",
+    "NVIDIA 800V",
+    "power semiconductors",
+    "Enterprise Data",
+    "Dell'Oro Group",
+    "Infineon",
+    "Navitas"
+  ],
+  "links": [
+    {
+      "label": "Monolithic Power Q3 2026 earnings commentary (Oct. 29, 2026): $1.202 billion revenue, 42% enterprise data, GaN sampling for 800V architectures →",
+      "url": "https://media.monolithicpower.com/investor-relations/press-releases/Q3_2026_MPS_Earnings_Commentary.pdf"
+    },
+    {
+      "label": "Monolithic Power Form 10-Q for the quarter ended Sept. 30, 2026 (SEC EDGAR): segment revenue, distributor concentration, 48.8 million shares →",
+      "url": "https://www.sec.gov/Archives/edgar/data/1280452/000162828026069440/mpwr-20260930.htm"
+    },
+    {
+      "label": "Monolithic Power Q3 2026 earnings call transcript: 800-volt ramp expectations for late 2027 and 2028 →",
+      "url": "https://media.monolithicpower.com/investor-relations/events/Monolithic_Power_Systems_Inc_Q3_2026_Earnings_Call_Transcript.pdf"
+    },
+    {
+      "label": "NVIDIA technical blog (Aug. 11, 2026): MGX 800 VDC power racks arriving in the second half of 2026, up to 2 megawatts per row in 2027 →",
+      "url": "https://blogs.nvidia.com/blog/800-vdc-power-architecture-ai-factory/"
+    },
+    {
+      "label": "NVIDIA developer blog: why 54-volt racks run out of room and copper, and the 2027 Kyber timeline for full-scale 800 VDC →",
+      "url": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation-of-ai-factories/"
+    },
+    {
+      "label": "Infineon press release (Oct. 21, 2026): gallium nitride high-voltage converters for 800 VDC racks, developed with NVIDIA →",
+      "url": "https://www.infineon.com/press-release/2026/infpr202610-012"
+    },
+    {
+      "label": "Navitas press release: 24 kW single-stage 800V-to-12V power delivery board built with NVIDIA →",
+      "url": "https://navitassemi.com/en/press-releases/navitas-collaborates-with-nvidia-on-800-v-to-12-v-power-delivery-board-for-next-generation-ai-infrastructure"
+    },
+    {
+      "label": "Texas Instruments newsroom (Mar. 16, 2026): complete 800 VDC architecture with NVIDIA, including 800V-to-6V gallium nitride conversion →",
+      "url": "https://www.ti.com/en-us/about-ti/newsroom/news-releases/2026/2026-03-16-ti-unveils-complete-800-vdc-power-architecture-for-future-generation-ai-data-centers-with-nvidia"
+    },
+    {
+      "label": "Dell'Oro Group (Nov. 17, 2026): high-density data center power market to top $42 billion by 2030; native 800V trays in volume only from late 2028 →",
+      "url": "https://www.delloro.com/newsroom/data-center-high-density-power-market-42-billion-2030/"
+    },
+    {
+      "label": "Simply Wall St via Yahoo Finance (Nov. 25, 2026): what the 800V gallium nitride sampling means for Monolithic Power →",
+      "url": "https://finance.yahoo.com/technology/ai/articles/800v-gan-sampling-require-action-171227540.html"
+    },
+    {
+      "label": "Electronics Brief: Monolithic Power expands AI power capacity while 800-volt qualification is still pending →",
+      "url": "https://electronicsbrief.com/articles/mps-expands-ai-power-capacity-while-800-v-awaits-qualification"
+    }
+  ],
+  "image": {
+    "src": "/img/articles/mpwr-800vdc-ai-power-architecture-2026.jpg",
+    "fit": "cover",
+    "caption": "An open high-voltage DC power shelf on a bench. The rack's move from 50 volts to 800 volts redraws the silicon that converts power for AI accelerators. Photo: The Signal / AI-generated.",
+    "alt": "Photorealistic close-up of an open high-voltage DC power conversion shelf with finned aluminium heat sinks and a thick copper busbar on a workshop bench"
+  },
+  "meta": {
+    "author": "Charles Osi",
+    "estimatedReadTime": 4,
+    "keyMetrics": {
+      "Price": 1194.63,
+      "Market Cap": "$58.3B",
+      "Forward P/E": "25.6x",
+      "Total Revenue (TTM)": "$3.74B",
+      "52-Week Low": "$894.39",
+      "52-Week High": "$1,714.09",
+      "Analyst Consensus": "Buy (16 analysts)",
+      "Analyst Target Mean": "$1,831.36"
+    },
+    "seoKeywords": "MPWR stock 800 VDC, Monolithic Power Systems 800V GaN, AI data center power architecture, MPWR enterprise data revenue, NVIDIA 800 VDC power rack, Monolithic Power analyst target, power semiconductor AI racks, MPWR gross margin"
+  },
+  "bodyHtml": "<p>A modern artificial intelligence rack consumes as much electricity as a small town, but an advanced processor cannot drink straight from a power station. If you plugged an accelerator chip directly into a wall outlet, it would vaporize instantly. Monolithic Power Systems designs the microscopic silicon converters that catch high-voltage juice off a server's backplane and step it down to the exact sub-one-volt stream a GPU needs to run without frying itself.</p>\n<p>Think of an AI chipmaker like Nvidia as building a Formula 1 engine, while Monolithic Power supplies the bespoke fuel injectors that deliver electricity across the final millimeters of copper wire. The company does not assemble the massive power cabinets you see in server rooms. Instead, it sells specialized power stages and modules to hardware builders like Delta and Lite-On, who wire them into server trays.</p>\n<div class=\"stats-card\">\n<div class=\"stats-card-title\">The Numbers That Matter</div>\n<table class=\"stats-table\">\n<tr><td class=\"stats-label\">Price <span class=\"stats-live-badge\">LIVE</span></td><td class=\"stats-value\" data-live-ticker=\"MPWR\" data-live-field=\"price\">$1,194.63</td></tr>\n<tr><td class=\"stats-label\">Market Cap</td><td class=\"stats-value\">$58.3B</td></tr>\n<tr><td class=\"stats-label\">Forward P/E</td><td class=\"stats-value\">25.6x</td></tr>\n<tr><td class=\"stats-label\">Total Revenue (TTM)</td><td class=\"stats-value\">$3.74B</td></tr>\n<tr><td class=\"stats-label\">52-Week Low</td><td class=\"stats-value\">$894.39</td></tr>\n<tr><td class=\"stats-label\">52-Week High</td><td class=\"stats-value\">$1,714.09</td></tr>\n<tr><td class=\"stats-label\">Analyst Consensus</td><td class=\"stats-value\">Buy (16 analysts)</td></tr>\n<tr><td class=\"stats-label\">Analyst Target Mean</td><td class=\"stats-value\">$1,831.36</td></tr>\n</table>\n<div class=\"stats-card-note\">Price refreshes live &middot; All other figures as of November 25, 2026</div>\n</div>\n<p>That unheralded role turned enterprise data into a monster business, rocketing the segment to 42% of total revenue and handing the company its first billion-dollar quarter.</p>\n<p>The catch is that physics is forcing an overhaul of the entire data center grid. Today's artificial intelligence racks run on 54-volt direct current, a standard that worked well when servers pulled ordinary wattage. But at roughly a megawatt per rack, pushing that much current through a low-voltage line requires up to 200 kilograms of heavy copper busbars and massive interior space just to manage the heat.</p>\n<p>To unclog the plumbing, Nvidia and the open hardware community are standardizing new facilities on 800-volt direct current, moving energy at higher voltage so the copper lines can shrink back to reasonable sizes.</p>\n<p>That transition creates an uncomfortable puzzle for Monolithic Power. In current server setups, voltage drops in two steps: the rack distributes 50 volts, and Monolithic Power steps that down to the processor level. The winning 800-volt architectures emerging across the sector convert high-voltage electricity straight down to 12 volts or 6 volts in a single hop. That single-stage jump effectively deletes the intermediate 50-volt busbar where Monolithic Power built its market-leading franchise.</p>\n<p>A dedicated short seller would argue the equity is priced for perfection right into a structural cliff. The stock trades at more than 60 times trailing GAAP earnings, yet its gross margin has remained dead flat between 55.1% and 55.4% for four straight quarters despite a 63% revenue surge. That flatness reveals that selling more complex modules has not yet unlocked real pricing power.</p>\n<p>Sequential revenue growth is already cooling from 22.6% down to 12.3% guided for the fourth quarter, while stock-based compensation doubled in a single quarter to $106 million. Most critically, while rivals like Texas Instruments, Infineon, and Navitas have publicly rolled out co-designed 800-volt boards with Nvidia, Monolithic Power has yet to announce a single named 800-volt tray win.</p>\n<p>The bull counter is that ripping out and replacing data center standards takes years. Industry researcher Dell'Oro projects that every AI tray shipping through 2026 will continue drawing 50 volts from the rack busbar. That includes Nvidia's Vera Rubin and AMD's Helios systems. Native 800-volt trays ship in real volume only in late 2028. That gives Monolithic Power a runway of several years to ramp its own high-voltage silicon.</p>\n<p>Management is backing that cushion with hard cash, expanding manufacturing capacity to support $8 billion in annual sales by late 2027 while sitting on over a billion dollars in net cash.</p>\n<p>For the stock to re-rate after pulling back roughly 30% from its summer high, the company has to prove its moat survives the voltage reset. That means gross margin must break out of its stubborn 55% band to demonstrate that next-generation modules carry true mix leverage, or management must secure a publicly confirmed socket on a tier-one 800-volt architecture.</p>\n<p>If margins stay pinned and competitors scoop up the primary 800-volt wins, Wall Street will treat the company's remaining 50-volt runway as a countdown rather than a growth story.</p>\n<p>What we are watching is customer qualification data for Monolithic Power's new gallium nitride parts as hyperscale testbeds begin spinning up in late 2027. Monolithic Power proved it could dominate the low-voltage finish line, but keeping its position is much harder when the grid rewrites the track.</p>\n<p class=\"disclosure\">Disclosure: The Signal holds no position in MPWR. Positions may change. This is not financial advice.</p>"
+}
