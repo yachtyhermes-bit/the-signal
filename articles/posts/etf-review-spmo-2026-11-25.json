@@ -1,0 +1,121 @@
+{
+  "slug": "etf-review-spmo-2026-11-25",
+  "title": "The ETF Review: SPMO Is Trapped in a Chip Trade Until March",
+  "subtitle": "The screen rotated into commodity chipmakers weeks before that complex topped, and the rulebook forbids an exit before spring.",
+  "summary": "Invesco's flagship momentum fund surrendered its massive lead over the market after loading up on chipmakers right before tech rolled over. Because its rules allow portfolio changes only twice a year, shareholders must ride out the slump until its next scheduled reset.",
+  "ticker": "SPMO",
+  "tickerName": "Invesco S&P 500 Momentum ETF",
+  "tickers": [
+    "MU",
+    "AMD",
+    "GOOGL",
+    "AMAT"
+  ],
+  "company": "Invesco (adviser: Invesco Capital Management LLC)",
+  "sector": "etfs",
+  "sentiment": "neutral",
+  "date": "2026-11-25T18:00:00Z",
+  "featured": false,
+  "premium": false,
+  "image": {
+    "src": "/img/articles/etf-review-spmo-2026-11-25.jpg",
+    "fit": "cover",
+    "caption": "A stack of plain cream-paper booklets tied with brown twine on a dark walnut desk, a white ceramic cup just behind them, warm morning light raking in from the left. Photo: The Signal / AI-generated.",
+    "alt": "A short stack of plain cream paper booklets bound together with light-brown braided twine sits in sharp focus on a dark walnut desk with visible wood grain. A white matte ceramic mug rests just behind and to the right, softened by shallow depth of field, and a pale window frame is a blurred shape at the far left edge. Warm directional light enters from the left, throwing long soft-edged shadows across the desk and lighting the raw edges of the paper. The palette is muted cream, walnut brown and warm white."
+  },
+  "tags": [
+    "SPMO",
+    "AAPL",
+    "MU",
+    "AMD",
+    "GOOGL",
+    "Invesco",
+    "S&P 500 Momentum",
+    "ETF review",
+    "momentum factor",
+    "index rules",
+    "concentration",
+    "memory chips"
+  ],
+  "links": [
+    {
+      "label": "stockanalysis.com: SPMO fund page, returns and AUM →",
+      "url": "https://stockanalysis.com/etf/spmo/"
+    },
+    {
+      "label": "stockanalysis.com: SPMO holdings and sector weights →",
+      "url": "https://stockanalysis.com/etf/spmo/holdings/"
+    },
+    {
+      "label": "Morningstar: SPMO portfolio and top holdings →",
+      "url": "https://www.morningstar.com/etfs/arcx/spmo/quote"
+    },
+    {
+      "label": "S&P Dow Jones Indices: S&P Momentum Indices methodology →",
+      "url": "https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-momentum-indices.pdf"
+    },
+    {
+      "label": "Seeking Alpha: SPMO's September 2026 reconstitution substitutions →",
+      "url": "https://seekingalpha.com/article/4948435-spmo-54-substitutions-this-september-reconstitution-heres-what-it-means"
+    },
+    {
+      "label": "Seeking Alpha: SPMO rebalanced at the top again →",
+      "url": "https://seekingalpha.com/article/4956221-spmo-rebalanced-at-the-top-again-what-happened-last-time"
+    },
+    {
+      "label": "24/7 Wall St: SPMO and the momentum screen, September 18, 2026 →",
+      "url": "https://247wallst.com/investing/2026/09/18/spmo-owns-the-sp-500s-100-fastest-rising-stocks-its-momentum-screen-has-beaten-the-index-by-67-points-over-"
+    },
+    {
+      "label": "Daniel & Moskowitz: Momentum Crashes, NBER Working Paper 20439 →",
+      "url": "https://www.nber.org/papers/w20439"
+    },
+    {
+      "label": "Klement on Investing: momentum crash warnings →",
+      "url": "https://klementoninvesting.substack.com/p/momentum-crash-warnings-flash-red"
+    },
+    {
+      "label": "AP: markets sell off on AI and midterm fears, November 5, 2026 →",
+      "url": "https://apnews.com/article/stocks-markets-ai-midterm-oil-trump-7ee9c212805aa5e70cf34d25aab7a36e"
+    },
+    {
+      "label": "CNBC: stock market selloff on AI fears, November 5, 2026 →",
+      "url": "https://www.cnbc.com/2026/11/05/stock-market-selloff-ai-fears.html"
+    },
+    {
+      "label": "CNBC: market live updates, November 20, 2026 →",
+      "url": "https://www.cnbc.com/2026/11/19/stock-market-today-live-updates.html"
+    },
+    {
+      "label": "stockanalysis.com: MTUM, the closest momentum rival →",
+      "url": "https://stockanalysis.com/etf/mtum/"
+    },
+    {
+      "label": "stockanalysis.com: JMOM, a diluted momentum alternative →",
+      "url": "https://stockanalysis.com/etf/jmom/"
+    },
+    {
+      "label": "ETF Database: SPMO premium and discount history (archived snapshot) →",
+      "url": "https://web.archive.org/web/20260701133754/https://etfdb.com/etf/SPMO/"
+    }
+  ],
+  "meta": {
+    "author": "The Signal Editorial",
+    "estimatedReadTime": "13 min",
+    "editorialTags": [
+      "spmo",
+      "aapl",
+      "mu",
+      "amd",
+      "googl",
+      "s&p-500-momentum",
+      "etf-review",
+      "momentum-factor",
+      "index-reconstitution",
+      "concentration",
+      "memory-chips",
+      "etf-fees"
+    ]
+  },
+  "bodyHtml": "You probably think you bought a nimble algorithm that cuts losers and rides winners. What you actually bought is a mechanical conveyor belt with no emergency shutoff switch. If a stock flies high enough over twelve months, the machine scoops it up. If that same stock drives off a cliff the following Tuesday, the machine simply stares at it until the calendar permits a change.\n\nWhen this series checked in on the Invesco S&P 500 Momentum ETF back in September, the fund was riding high. Its index had just executed its autumn reconstitution, purging former darlings and reloading on whatever had crushed the tape through mid-summer. Coming into September, SPMO was thrashing the broader S&P 500 by nearly twenty percentage points on the year. It looked like an unstoppable cheat code for large-cap growth.\n\nNine weeks later, that cheat code looks like a bear trap. The fund is down roughly 27% from its June peak and has surrendered its entire lead over the broader market. The very mechanism that made it look brilliant in the summer made it look reckless by Thanksgiving. Even worse, the fund manager cannot make a single adjustment to fix it. \n\nAn investor checking a brokerage account might wonder why Invesco has not cut its losses. The answer lies in the fine print. Nobody sits at a trading desk deciding when to dump Micron or lighten up on semiconductors. The portfolio is frozen in place, and it will remain frozen until the third Friday of March. Frozen by design.\n\n<h2>What you actually own</h2>\n\nPull up the fact sheet and you might think you own a balanced basket of the market’s healthiest leaders. Look closer at the actual holdings. The top ten positions account for 50.2% of the fund’s total assets. For perspective, the standard cap-weighted S&P 500 holds about 37% of its weight across its top ten names, so this fund runs roughly a third more concentrated than the index it is drawn from. SPMO is not a diversified core holding. It is a concentrated wager disguised as a broad index.\n\nThe biggest single piece of the fund belongs to Apple, which makes up 11.91% of the entire book. Right behind it sits Micron Technology at 7.00%. Johnson & Johnson takes the third spot at 5.87%, followed by Alphabet's Class A shares at 4.86% and AMD at 4.74%. Factor in Alphabet's Class C shares at 3.91%, and Google alone commands nearly 8.8% of the fund under two different tickers. Exxon Mobil, Intel, Merck, and Cisco round out the top ten.\n\nSector concentration tells an even louder story. Technology dominates the fund at 46.2% of assets, followed by healthcare at 13.2% and communication services at 8.7%. Industrials take 8.2%, financials claim 7.9%, and energy sits at 6.9%. Consumer staples sit at just 3.3%. \n\nThe real shock is what went missing. Nvidia and Broadcom, the twin engines of the artificial intelligence trade, do not appear anywhere in the top 25 holdings. Nvidia held roughly a 9% allocation in this fund before the September reconstitution. Broadcom held over 6%. Both were ejected when the index rebalanced, replaced by names like Apple, Merck, and UnitedHealth. \n\nInstead of mega-cap AI platforms, roughly a fifth of the fund sits in pure-play semiconductor stocks. Names like Micron, AMD, Intel, Lam Research, Applied Materials, and KLA run the roster. More specifically, about 11% of the portfolio is packed into memory and storage hardware makers like Micron, Western Digital, Seagate, and SanDisk. In essence, the fund swapped the architects of AI infrastructure for the hyper-cyclical suppliers who build their memory chips. It made that switch about three weeks before memory stocks peaked. Then they broke.\n\n<h2>How the sausage is made</h2>\n\nSPMO does not rely on human instincts or macro forecasts. It tracks the S&P 500 Momentum Index, an unmanaged rules-based benchmark designed by S&P Dow Jones Indices. The process begins with every constituent inside the standard S&P 500. The index then calculates each stock’s momentum score using a distinct formula: the price return over the past twelve months, minus the most recent month. \n\nExcluding that most recent month is supposed to keep the fund from getting whipsawed by short-term reversals. In practice, it creates a massive blind spot. When the index reconstituted in mid-September, it calculated stock momentum using prices from late July against prices from fourteen months prior. The screen was reading a mid-summer tape while placing real-world trades in the autumn. \n\nThe raw price momentum is then divided by the volatility of its daily returns over that same trailing period. This volatility adjustment carries a bizarre, counterintuitive catch that S&P highlights in its own technical documentation. When the broad market is rallying, lower volatility boosts a stock's momentum score. But when the entire universe is tumbling, high volatility actually helps a stock score better. In a broad selloff, the math can actively reward erratic losers.\n\nOnce the math finishes, the index ranks the results and selects the top quintile, isolating roughly 100 names out of 500. A 20% buffer rule trims turnover around the cutoff to keep trading fees manageable. Surviving stocks are weighted by multiplying their float-adjusted market capitalization by their momentum score. \n\nThe index caps any individual stock’s weight at the lower of 9% or three times its market-cap weight in the parent S&P 500. On paper, this prevents one mega-cap tech company from hijacking the vehicle. In reality, that 9% cap applies on exactly one day every six months. Between rebalances, weights drift freely wherever the market carries them. The cap is not a safety net. \n\nThat structural loophole explains why Apple now sits at nearly 12% of the fund. At the September rebalance, Apple’s starting weight rested right on the ceiling at roughly 9.19%. As hardware and memory stocks collapsed over the autumn, Apple’s relative stability caused its portfolio percentage to swell. The risk cap only binds twice a year, leaving investors exposed to whatever drift occurs between seasons.\n\nThe most critical feature of the wrapper is its reconstitution calendar. The index rebalances semi-annually, locking in changes after the market close on the third Friday of March and September. There are no emergency off-cycle updates. When the autumn semiconductor selloff struck, Invesco’s portfolio managers were bound by the index rules to hold every falling share.\n\n<h2>The bill</h2>\n\nIf you want an automated portfolio that ruthlessly tracks price action, you will not pay much for the privilege. SPMO carries an expense ratio of 0.13%. That means holding a $10,000 position costs you just $13 a year. Scale that up to a $50,000 core holding, and the annual bill comes out to $65. Over a decade of flat returns, you would part with about $650. \n\nThat makes SPMO remarkably cheap for a specialized factor product. Its most prominent rival, the iShares MSCI USA Momentum Factor ETF, or MTUM, charges 0.15%, which works out to $75 a year on that same $50,000 account. JPMorgan’s diversified alternative, JMOM, sits slightly cheaper at 0.12%, while Vanguard’s active factor vehicle, VFMO, matches SPMO at 0.13%. Fees in this corner of the market amount to loose change. Nobody buys this fund for the fee. The seven-percentage-point performance gap between funds dwarfs any basis points saved on management.\n\nTrading friction is similarly negligible. The fund trades roughly 1.81 million shares each day, representing about $220 million in notional trading volume. That deep pool of liquidity keeps market makers active and ensures the fund closely tracks the value of its underlying basket. \n\nOn an average trading day, the fund’s premium or discount to net asset value sits at a tiny 0.01%, with occasional spikes reaching 0.11%. When institutions need to assemble or dismantle millions of dollars of SPMO, authorized participants exchange the basket for the underlying shares without bleeding cash. That is why the market price tracks net asset value so tightly. Slippage will not kill your returns here. Strategy decisions will.\n\n<h2>The scoreboard</h2>\n\nPerformance marketing deceives you if you only read the top line. Through late November 2026, SPMO shows an annualized three-year return of 26.03%. That crushes the parent S&P 500, which delivered 17.85% annualized over the same span. Over five years, the fund generated 14.52% annually against the index’s 10.36%. Stretch the tape across a decade, and SPMO's 17.78% annual gain easily beats rival MTUM’s 13.79%.\n\nThen you examine the year-to-date column, and the recent damage comes into sharp focus. SPMO is up just 2.46% on the year, trailing the S&P 500’s 6.23% advance. Its primary competitor, MTUM, sits underwater with a 0.70% decline. Meanwhile, JPMorgan’s JMOM, which dilutes its momentum across 292 individual holdings, has climbed 8.95%. Vanguard’s VFMO is up 5.08%. The hyper-concentrated approach that minted fortunes during the tech surge has spent the autumn giving those profits back.\n\nAcross its full eleven-year operating history, SPMO has managed to beat the S&P 500 in six calendar years. When it wins, it wins by a mile. The fund outpaced the market by 20.9 percentage points in 2024 and followed that with an 8.9-point victory in 2025. But when momentum turns, the drawdowns arrive fast and hit hard. The fund lagged the market by substantial margins in 2019, 2021, and 2023.\n\nThe autumn provided a real-time stress test. Between June 22 and November 20, SPMO suffered a peak-to-trough decline of 26.8%. In July alone, the fund sank 10.96% while the broader S&P 500 barely slipped 0.13%. On November 5, tech shares suffered a brutal wave of selling. SPMO dropped 7.26% in a single trading session, marking its worst day of the year, while the semiconductor benchmark sank 12.25%. Micron plunged 17.5% that day, but Apple dropped just 1.5%. \n\nSince the September rebalance closed, SPMO has tumbled 21.8% against a modest 7.3% decline for the broader market. That means the fund surrendered roughly 14.5 points of relative performance in nine short weeks. Nine weeks. The three-year outperformance numbers look magnificent on a sales pitch, but that trailing window reflects gains banked long before the autumn rollover began.\n\nThe fund's valuation creates a strange paradox. SPMO trades at a trailing price-to-earnings ratio of 19.05, compared to 22.02 for the standard S&P 500. Look forward, and the fund trades at just 13.12 times projected earnings, while the market commands 17.61. That gap implies analysts expect these companies to grow profits by roughly 45% over the next year. Because cyclical memory and storage producers carry dirt-cheap multiples on peak earnings, SPMO looks like a bargain right when it is most vulnerable to an inventory bust.\n\n<h2>What you are really betting on — and the bear case</h2>\n\nWhen you buy SPMO today, you are not buying general stock market strength. You are betting that the earnings estimates attached to commodity hardware suppliers will come true. You need the memory chip super-cycle to roar back to life before next spring. If those projected profits fail to materialize, the fund's forward multiple is an illusion.\n\nThe bear case against this fund is structural. Momentum strategies are built to buy high and sell higher. The index rebuilds itself just twice a year. That makes it an automated mechanism for buying late-stage winners at peak valuation, right when crowded trades begin to unravel. Turnover is reported at roughly 44% of the portfolio a year. That high turnover ensures you consistently acquire names with elevated expectations.\n\nAcademics have documented this for decades. In their landmark 2016 study on momentum crashes, Kent Daniel and Tobias Moskowitz showed that momentum strategies suffer their worst collapses during market panics, when volatility is high and prices have already fallen. When market volatility spikes and equities begin to stumble, beaten-down value stocks often stage violent, sudden rallies. In those moments, momentum portfolios stay stuck holding yesterday's winners while yesterday's losers lead the rebound.\n\nLook back at historical stress points and the pattern repeats. During the November 2020 vaccine rotation, the market abandoned quarantine tech to pile into cyclicals. SPMO dropped nearly 3% over five sessions while the broader index rallied over 2%. During the tariff shocks of early 2025, SPMO surrendered 19.67% while the market dropped 18.76%. In sudden rotations, momentum provides zero downside cushion.\n\nThe current tape proves that thesis in real time. If global DRAM and NAND flash prices face a cyclical downshift over the next two years, the 45% earnings growth projected for SPMO’s hardware basket will vanish. Wall Street analysts will slash forward earnings estimates. The cheap multiple will evaporate. And SPMO will hold those falling positions until the March reset forces its hand.\n\nTo be fair, the portfolio is not entirely composed of falling chip stocks. The September rebalance quietly salted the book with heavy allocations to old-economy anchors. Johnson & Johnson makes up nearly 6% of the fund. Exxon Mobil commands 3.7%. Merck, Coca-Cola, Caterpillar, and Goldman Sachs provide substantial defense. \n\nOn sessions where hardware gets battered, that defensive ballast can prevent a complete rout. On November 24, the broader S&P 500 fell half a percent while 342 individual stocks inside the index managed to advance. Healthcare surged nearly 3% that same day. If market leadership broadens permanently away from mega-cap growth and toward traditional value, SPMO accidentally owns a meaningful piece of that rotation.\n\n<h2>How to use it</h2>\n\nSPMO is not a core foundation for your retirement account. You should never treat it as an easy replacement for a low-cost S&P 500 tracker like VOO or SPY. When tech leadership stumbles, an investor holding this fund as a single core equity will suffer severe drawdowns that index investors will largely bypass.\n\nInstead, SPMO functions best as an aggressive satellite allocation. It belongs in a growth-focused portfolio where an investor wants amplified exposure to prevailing market trends without having to pick individual names or guess when the factor turns. Capping the position at 10% to 15% of your total equity sleeve allows you to harness its upside surges while insulating your principal from severe factor unwind events.\n\nThis fund suits aggressive investors with multi-year time horizons who can comfortably stomach 25% drawdowns without panicking. It works for anyone convinced that hardware and memory will stage a fierce recovery. \n\nIt completely fails conservative savers, income seekers, and retirees drawing down their nest egg. If you need low volatility or steady dividend streams, this fund is toxic. Its 0.91% dividend yield offers no meaningful income, and its extreme tech concentration exposes your capital to ruthless sector rotations. If you cannot stomach being trapped in a falling trade for six months at a time, look elsewhere.\n\n<h2>Close</h2>\n\nSPMO offers brilliant exposure when trends run clean, but its rigid operating rules leave investors helpless whenever the market changes its mind. The fund cannot pivot, trim, or hedge until its index recalculates in the spring. \n\nWhat happens next depends on memory pricing. Watch quarterly earnings and contract commentary from Micron and its storage peers over the coming months. If memory pricing cracks, the fund will carry those losses directly into the March rebalance. \n\n<p class=\"disclosure\">Analysis, not advice. We may own these names and we may sell them at any time.</p>"
+}
